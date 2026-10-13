@@ -1,0 +1,30 @@
+{
+  "formal_checks": [
+    {
+      "start": 0,
+      "span": 4,
+      "formal_atoms": 200,
+      "exact_identity": true
+    },
+    {
+      "start": 2,
+      "span": 4,
+      "formal_atoms": 200,
+      "exact_identity": true
+    }
+  ],
+  "orbits": [
+    [
+      0,
+      1,
+      4,
+      5
+    ],
+    [
+      2,
+      3,
+      6,
+      7
+    ]
+  ]
+}

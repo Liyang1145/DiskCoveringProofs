@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "scope": "n21 68-positive-rod core on its entire relaxed necessary angle domain; slack centers/faces not needed",
+  "nodes": 4939,
+  "counts": {
+    "SPLIT": 2469,
+    "DUAL": 2312,
+    "LOCAL": 158
+  },
+  "tree_sha256": "6c43dbe073297715800e562b4e14f728bbbc6b21d3a2c18a6d478aa68673290b",
+  "local_certificate_sha256": "e5fb7dfd85285933139ae4c42f1aa560431d50b88ef95f572a1c29d28819c01c",
+  "global_optimality_proved": false,
+  "source_sha256": "eb4148518fe24c4004f454a9f26cf7c5b8497de311927a620746a0938237cf7f",
+  "reused_kernel_sha256": "5ba4f8036d1b647a88e8b46ab963066f8359f25183e8cf3e9f564891dbcf5c94",
+  "graph_edges": 68,
+  "graph_vertices": 47
+}

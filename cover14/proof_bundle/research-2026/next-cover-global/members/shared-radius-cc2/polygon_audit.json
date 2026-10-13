@@ -1,0 +1,104 @@
+{
+ "PART_I_polygon": {
+  "regular_ngon_constant": {
+   "3": {
+    "area_ratio": 0.1443375672974065,
+    "bound": 0.1443375672974065
+   },
+   "4": {
+    "area_ratio": 0.25000000000000006,
+    "bound": 0.25000000000000006
+   },
+   "5": {
+    "area_ratio": 0.34409548011779345,
+    "bound": 0.34409548011779345
+   },
+   "6": {
+    "area_ratio": 0.43301270189221935,
+    "bound": 0.43301270189221935
+   },
+   "7": {
+    "area_ratio": 0.5191303491430842,
+    "bound": 0.5191303491430842
+   },
+   "8": {
+    "area_ratio": 0.6035533905932737,
+    "bound": 0.6035533905932737
+   },
+   "9": {
+    "area_ratio": 0.6868693548636556,
+    "bound": 0.6868693548636556
+   },
+   "10": {
+    "area_ratio": 0.7694208842938134,
+    "bound": 0.7694208842938135
+   }
+  },
+  "random_closed_ngon_bounds": {
+   "3": {
+    "max_ratio": 0.14432870101898482,
+    "bound": 0.1443375672974065,
+    "bound_ok": true
+   },
+   "4": {
+    "max_ratio": 0.24889522024561117,
+    "bound": 0.25000000000000006,
+    "bound_ok": true
+   },
+   "5": {
+    "max_ratio": 0.336299946933596,
+    "bound": 0.34409548011779345,
+    "bound_ok": true
+   },
+   "6": {
+    "max_ratio": 0.4285893208685367,
+    "bound": 0.43301270189221935,
+    "bound_ok": true
+   },
+   "7": {
+    "max_ratio": 0.4978604451753362,
+    "bound": 0.5191303491430842,
+    "bound_ok": true
+   },
+   "8": {
+    "max_ratio": 0.570118237334112,
+    "bound": 0.6035533905932737,
+    "bound_ok": true
+   },
+   "10": {
+    "max_ratio": 0.721317860412298,
+    "bound": 0.7694208842938135,
+    "bound_ok": true
+   }
+  },
+  "regular_hexagon": {
+   "area": 2.598076211353316,
+   "sum_l2": 6.0,
+   "ratio": 0.43301270189221935,
+   "bound_3sqrt3_over_2": 2.598076211353316
+  },
+  "self_intersecting_hexagon": {
+   "area": 2.25,
+   "sum_l2": 6.803847577293367,
+   "bound": 2.9461524227066316,
+   "ok": true
+  }
+ },
+ "PART_II_cancellation": {
+  "max_abs_diff": 4.440892098500626e-16,
+  "median_abs_diff": 0.0,
+  "equality_holds": true,
+  "note": "sum of the 6 triangle areas == shoelace area of u1,C12,u2,C23,u3,C31"
+ },
+ "PART_II_adversarial": {
+  "best": 0.9855031902993148,
+  "arg": {
+   "T": [
+    0.4610857250817441,
+    0.32993800271518736,
+    0.20069235684770126
+   ]
+  }
+ },
+ "PART_II_bound": 2.598076211353316
+}

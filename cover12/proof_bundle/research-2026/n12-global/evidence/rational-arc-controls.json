@@ -1,0 +1,9 @@
+{
+  "level": "exact rational inequalities with stated analytic sine and inscribed-polygon lemmas",
+  "U_lt_4over11": true,
+  "sin_lower_41over50_minus_8over11": "6869/8250000",
+  "sin_lower_373over1000_minus_4over11": "47153713/66000000000",
+  "sqrt3_upper_square_minus3": "45121/12960000",
+  "angle_sum_upper": "1529/500",
+  "pi_lower": "31/10 via regular inscribed dodecagon"
+}

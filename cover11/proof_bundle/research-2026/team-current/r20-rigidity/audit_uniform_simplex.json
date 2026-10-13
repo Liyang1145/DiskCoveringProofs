@@ -1,0 +1,113 @@
+{
+  "graph_identical": true,
+  "free_divergence_zero": true,
+  "work_theta_dependent": true,
+  "cell_kappa_all_zero": true,
+  "cell_vertex_min_at_19_50": "0.38012312708559108164",
+  "whole_simplex_kappa_zero": true,
+  "whole_simplex_radial": [
+    {
+      "i": 1,
+      "S_range": [
+        "31/450",
+        "101/225"
+      ],
+      "theta_lo": "0.45049058865933237",
+      "theta_hi": "0.729086839815031763",
+      "min_work": "0.0",
+      "nonneg": true,
+      "interior_min_excluded": false
+    },
+    {
+      "i": 2,
+      "S_range": [
+        "31/225",
+        "233/450"
+      ],
+      "theta_lo": "1.17957742847436413",
+      "theta_hi": "1.45817367963006353",
+      "min_work": "0.0",
+      "nonneg": true,
+      "interior_min_excluded": false
+    },
+    {
+      "i": 3,
+      "S_range": [
+        "31/150",
+        "44/75"
+      ],
+      "theta_lo": "1.9086642682893959",
+      "theta_hi": "2.18726051944509529",
+      "min_work": "0.0636162483376657598",
+      "nonneg": true,
+      "interior_min_excluded": true
+    },
+    {
+      "i": 4,
+      "S_range": [
+        "62/225",
+        "59/90"
+      ],
+      "theta_lo": "2.63775110810442766",
+      "theta_hi": "2.91634735926012705",
+      "min_work": "0.0735079059371183035",
+      "nonneg": true,
+      "interior_min_excluded": true
+    },
+    {
+      "i": 5,
+      "S_range": [
+        "31/90",
+        "163/225"
+      ],
+      "theta_lo": "3.36683794791945942",
+      "theta_hi": "3.64543419907515882",
+      "min_work": "0.0454316417467815467",
+      "nonneg": true,
+      "interior_min_excluded": true
+    },
+    {
+      "i": 6,
+      "S_range": [
+        "31/75",
+        "119/150"
+      ],
+      "theta_lo": "4.09592478773449119",
+      "theta_hi": "4.37452103889019058",
+      "min_work": "0.0",
+      "nonneg": true,
+      "interior_min_excluded": false
+    },
+    {
+      "i": 7,
+      "S_range": [
+        "217/450",
+        "194/225"
+      ],
+      "theta_lo": "4.82501162754952295",
+      "theta_hi": "5.10360787870522234",
+      "min_work": "0.0412736300377077684",
+      "nonneg": true,
+      "interior_min_excluded": true
+    },
+    {
+      "i": 8,
+      "S_range": [
+        "124/225",
+        "419/450"
+      ],
+      "theta_lo": "5.55409846736455471",
+      "theta_hi": "5.83269471852025411",
+      "min_work": "0.0743879034178616862",
+      "nonneg": true,
+      "interior_min_excluded": true
+    }
+  ],
+  "kappa_all_zero_on_simplex": true,
+  "a0_nonneg": true,
+  "width_cap_equiv": true,
+  "best_t": "19/50",
+  "best_vertex_min": "0.38012312708559108164",
+  "status": "independent audit; the printed identities/endpoints are the evidence, not PASS flags",
+  "repro": "py -3 -B -X utf8 audit_uniform_simplex.py"
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "N26-sparse-stage-angular-control-selector-regression-v1",
+  "zero_current_force_tree_events_are_a_supported_structural_case": true,
+  "zero_split_force_tree_events_are_a_supported_structural_case": true,
+  "non_tree_events_never_used_as_angular_controls": true,
+  "synthetic_selector_only_not_an_actual_geometry_replay": true,
+  "new_geometric_payments": 0,
+  "tested_control_helper_sha256": "ee2314a9a1d9c5ff94a9859710d5081c858ae582ee52fc9fa41492ad425e8e49",
+  "executed_test_sha256": "c597afabe379813774d925eb5f177a5bc7a0f2a5d51683c6da551ce41ff8240c"
+}

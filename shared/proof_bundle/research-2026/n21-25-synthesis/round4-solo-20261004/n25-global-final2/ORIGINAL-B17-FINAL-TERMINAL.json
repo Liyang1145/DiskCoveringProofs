@@ -1,0 +1,7 @@
+{
+  "OriginalPid": 8644,
+  "OriginalCreationFileTimeIdentity": "134357452587130725",
+  "OriginalCommandLine": "\"C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe\" -u .\\run_n25_B17_final_after_original.py --wait-pid 4004 --output .\\n25-B17-final1",
+  "ActualExitCode": 0,
+  "OriginalCachedProcessHandleTerminalObserved": true
+}

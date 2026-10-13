@@ -1,0 +1,128 @@
+{
+  "status": "inconclusive",
+  "family": "10/4",
+  "index": 547,
+  "upper_exact": "1129265334364529485858649224277187460447824638206820714047810029935013/1766847064778384329583297500742918515827483896875618958121606201292619776",
+  "upper_display": 0.0006391415289280702,
+  "old_upper_display": 0.0006396821038757932,
+  "s_upper": "471686829/500000000",
+  "face_comparisons": [
+    {
+      "face": 0,
+      "old_support": 0.4046323109153576,
+      "cone_support": 0.4046323109153576,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 1,
+      "old_support": 0.3009611980683941,
+      "cone_support": 0.3009611980683941,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 2,
+      "old_support": 0.39312685585002566,
+      "cone_support": 0.39312685585002566,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 3,
+      "old_support": 0.31145856249993153,
+      "cone_support": 0.31145856249993153,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 4,
+      "old_support": 0.08726090601771483,
+      "cone_support": 0.08726090601771483,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 5,
+      "old_support": 0.07227317128436787,
+      "cone_support": 0.07227317128436787,
+      "boundary_positions": []
+    },
+    {
+      "face": 6,
+      "old_support": 0.30090961203224853,
+      "cone_support": 0.30090961203224853,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 7,
+      "old_support": 0.0870072165533347,
+      "cone_support": 0.0870072165533347,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 8,
+      "old_support": 0.4294439555794031,
+      "cone_support": 0.4294439555794031,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 9,
+      "old_support": 0.058631508248383875,
+      "cone_support": 0.058631508248383875,
+      "boundary_positions": []
+    },
+    {
+      "face": 10,
+      "old_support": 0.3840200240667698,
+      "cone_support": 0.3840200240667698,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 11,
+      "old_support": 0.3618820278370792,
+      "cone_support": 0.3618808559894051,
+      "boundary_positions": [
+        0
+      ]
+    },
+    {
+      "face": 12,
+      "old_support": 0.4602381783098794,
+      "cone_support": 0.4602381783098794,
+      "boundary_positions": []
+    },
+    {
+      "face": 13,
+      "old_support": 0.07995424332526728,
+      "cone_support": 0.07995424332526728,
+      "boundary_positions": []
+    },
+    {
+      "face": 14,
+      "old_support": 0.14331651461912906,
+      "cone_support": 0.14331651461912906,
+      "boundary_positions": []
+    },
+    {
+      "face": 15,
+      "old_support": 0.4602381783079624,
+      "cone_support": 0.4602381783079624,
+      "boundary_positions": []
+    }
+  ],
+  "seconds": 36.120970487594604
+}

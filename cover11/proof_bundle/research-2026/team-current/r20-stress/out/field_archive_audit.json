@@ -1,0 +1,73 @@
+{
+ "source": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\cosine_dbm_local919.json",
+ "n_fields": 321,
+ "bulk": {
+  "alpha_len_ne_51": 0,
+  "alpha_not_all_positive": 0,
+  "alpha_sum_ne_1": 0,
+  "max_abs_sum_minus_1": "0",
+  "weights_len_ne_36": 0,
+  "weights_negative": 0,
+  "weights_bad_index": 0,
+  "weights_max_index_seen": 8,
+  "weights_min_value": "1886694044285160090420429850/2459888277895345354078701636026336268655912131",
+  "schema": "(i, j, w): indices + exact weight (source: lead/certify_energy_cell.py line 20)"
+ },
+ "names": {
+  "first": "C911",
+  "last": "dbm_local9194414",
+  "n_with_reflect_in_name": 74,
+  "reflect_examples": [
+   "C911-reflected",
+   "corner0-reflected",
+   "corner1-reflected",
+   "corner2-reflected",
+   "corner3-reflected"
+  ]
+ },
+ "selected": [
+  {
+   "idx": 0,
+   "name": "C911",
+   "alpha_pos": true,
+   "alpha_sum": "1",
+   "weights_nonneg": true,
+   "weight_min_lo": "0",
+   "n_alpha": 51,
+   "n_weights": 36,
+   "schur_reconstruction": "NOT COMPLETED HERE: the 51->36 elimination needs the field system (incidence/geometry) as stored in cosine_dbm_local919.json[\"nodes\"]; reverse-engineering it is beyond this check. The bulk checks above are exact and cover all 321 fields."
+  },
+  {
+   "idx": 74,
+   "name": "C911-reflected",
+   "alpha_pos": true,
+   "alpha_sum": "1",
+   "weights_nonneg": true,
+   "weight_min_lo": "0",
+   "n_alpha": 51,
+   "n_weights": 36,
+   "schur_reconstruction": "NOT COMPLETED HERE: the 51->36 elimination needs the field system (incidence/geometry) as stored in cosine_dbm_local919.json[\"nodes\"]; reverse-engineering it is beyond this check. The bulk checks above are exact and cover all 321 fields."
+  },
+  {
+   "idx": 320,
+   "name": "dbm_local9194414",
+   "alpha_pos": true,
+   "alpha_sum": "1",
+   "weights_nonneg": true,
+   "weight_min_lo": "0",
+   "n_alpha": 51,
+   "n_weights": 36,
+   "schur_reconstruction": "NOT COMPLETED HERE: the 51->36 elimination needs the field system (incidence/geometry) as stored in cosine_dbm_local919.json[\"nodes\"]; reverse-engineering it is beyond this check. The bulk checks above are exact and cover all 321 fields."
+  }
+ ],
+ "nodes_probe": [
+  "id",
+  "db",
+  "status",
+  "depth",
+  "numeric_lower",
+  "pair",
+  "midpoint",
+  "children"
+ ]
+}

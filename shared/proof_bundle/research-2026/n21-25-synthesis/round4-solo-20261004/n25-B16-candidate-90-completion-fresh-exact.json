@@ -1,0 +1,20 @@
+{
+  "verified": true,
+  "N": 25,
+  "B": 16,
+  "groups_sha256": "2c009d1b46691c0af259ed6705bef60f8132297148d009e640c3ca9bc1a6320c",
+  "receipt_sha256": "d23aafa2b0892d7f691005eab2dc6f565078bd19a5bb8a7c0be67a882acc1807",
+  "bindings_sha256": "7f4dd7953db261573b2c187bafa70d44a51da6b86403dcdd4d6a8eac0a755982",
+  "exact_groups_replayed": 90,
+  "pending_groups": 1,
+  "associated_member_count": 90,
+  "minimum_force_margin": "65506006260287842549335228398363/1000011014798244901937000000000000000",
+  "node_counts": {
+    "SPLIT": 335,
+    "DUAL": 425
+  },
+  "embedding_transfers_not_verified_here": true,
+  "global_optimality_proved": false,
+  "source_sha256": "262dd7f0d4c3ed4d5026512f749729796fc936bdca65c3535f24f9d17fa8c4d8",
+  "exact_checker_sha256": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "N26-independent-final-current-inventory-rehash-v1",
+  "all_current_file_digests_rehashed": true,
+  "current_file_digests_rechecked": 89254,
+  "current_audit_sha256": "b0f47cab22d95235382dab8a734ade295d70b9115926f1d8bd82d644fa128c26",
+  "stage_actual_published_replay_exactly_matches_acceptance": true,
+  "catalogue_actual_published_replay_exactly_matches_acceptance": true,
+  "Rstar_conditional_frontier_pending_subtrees": 5942,
+  "new_stage_event_counts": {
+    "split": 3383,
+    "force": 91,
+    "force_tree": 28,
+    "area": 170,
+    "empty": 1126,
+    "terminal": 2
+  },
+  "retained_closed_full_type_codes": 87,
+  "retained_checked_proof_receipts": 215,
+  "candidate_angle_unresolved_closed_boxes": 34,
+  "radius_scope": "at-most-same-root-Rstar-not-original-U",
+  "r_strict_interval": [
+    "0.234700090400448239616790133776692127560495963654971391785924",
+    "0.234700090400448239616790133776692127560495963654971391785925"
+  ],
+  "full_catalog_complete": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_checker_sha256": "338834bd6b1694bacc33e052b095986aaf061a7a5d6098fab09f5fd92453b5ff"
+}

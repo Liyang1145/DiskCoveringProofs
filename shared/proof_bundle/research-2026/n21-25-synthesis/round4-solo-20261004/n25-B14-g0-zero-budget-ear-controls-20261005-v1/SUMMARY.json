@@ -1,0 +1,39 @@
+{
+  "source_collar_sha256": "636fa41457061bfcc25f30814d64fd38ab43020329551c1dd44526f441730727",
+  "existing_closure_sha256": "76e41a273ee6e22226773994b07a5ad7c97555212887f23f9d3edc0c39030cc1",
+  "full_catalog_sha256": "23ff7b615d1b0485b3b4e7d851563cc61163e18b01d73b0e0d19f60e5c4f3134",
+  "source_induction_sha256": "ecf410e8b8cb4e3b64d9e42187910a79a5e5a4669f0c82bcb87489e21d14790d",
+  "source_sha256": "5efea76986c1a9f21f92564d299d8cc525865153b6183383e0a38182e68e9391",
+  "methods": [
+    {
+      "method": "one-per-hole",
+      "complete_paid_full_type_cover_controls": 217,
+      "retained_necessary_branches": 9,
+      "impossible_three-face_edge_branches": 0,
+      "outcomes": {
+        "pending": 2,
+        "exact-tree-excluded": 4,
+        "exact-angle-excluded": 3
+      },
+      "ear_cover_itself_not_a_geometric_exclusion": true,
+      "new_branch_force_trees_independent_process_replay_still_required": true,
+      "new_collar_closure_not_claimed": true
+    },
+    {
+      "method": "two-per-large-hole",
+      "complete_paid_full_type_cover_controls": 217,
+      "retained_necessary_branches": 27,
+      "impossible_three-face_edge_branches": 0,
+      "outcomes": {
+        "exact-tree-excluded": 11,
+        "exact-angle-excluded": 16
+      },
+      "ear_cover_itself_not_a_geometric_exclusion": true,
+      "new_branch_force_trees_independent_process_replay_still_required": true,
+      "new_collar_closure_not_claimed": true
+    }
+  ],
+  "positive_missing_center_budget_rejected": true,
+  "global_optimality_proved": false,
+  "new_collar_closure_not_claimed": true
+}

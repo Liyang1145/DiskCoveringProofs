@@ -1,0 +1,32 @@
+{
+  "scope": "TC->angle map verification and dimension audit; evaluation only, no optimization",
+  "hubmap": [
+    9,
+    10
+  ],
+  "max_angle_deviation": 5.348086196121926e-09,
+  "R_shape_mapped": 0.37998385311983884,
+  "R_TC_minus_Rshape": -1.502777383938639e-16,
+  "constraint_residuals": {
+    "linear": 0.0,
+    "nonlinear": 1.2212453270876722e-15
+  },
+  "DPhi_singular_values": [
+    141.6592570499422,
+    35.74680432446771,
+    15.167022659559343,
+    10.146235760531802,
+    6.262380496163693,
+    4.516633994230258,
+    3.9907969883136887
+  ],
+  "DPhi_rank": 7,
+  "Jc_DPhi_max": 1.5595793962359112e-07,
+  "dims": {
+    "M": 21,
+    "M_sigma": 11,
+    "antisym": 10,
+    "TC_image": 7,
+    "saturation_complement": 4
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "schema": "N26-diagnosed-native-byte-exact-recovery-candidates-v2",
+  "diagnosis_sha256": "397f9718f1b6a4fb7632c31589e6be4f247d670cdeff31ffd530e29d3d6c355b",
+  "current_audit_sha256": "6a46131202a5d2dd732b88622b1cec0e072c7b6ef888f37e70f420b291590203",
+  "recovered_native_events": [
+    {
+      "stage": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-force-stage-v12",
+      "event_index": 2313,
+      "original_bound_dependencies": {
+        "MANIFEST.json": "97bfaa2a68728b7a1b68c6d0e56988485f56cf0548d16e2d0471d2cf4a8f8252",
+        "TRACE.json": "b52babf66db62574cc76153fbdcef082afcce2fd3a19a36c5c0f8f6a7a8092ab",
+        "NATIVE-VERIFIED.json": "827e0c382af102acad95e445852538b46df446af4452a85f3626f60b6b555e8a",
+        "peel_prefix_origin.cpp": "a76a8ce6c0ee0ee0f513ae9eba086d5b6d1b6b3e39440ab0cac59ef5638620c9",
+        "peel_prefix_origin.linux": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25"
+      },
+      "actual_new_path_command": [
+        "wsl.exe",
+        "--",
+        "/lib64/ld-linux-x86-64.so.2",
+        "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-force-stage-v12/peel_prefix_origin.linux",
+        "26",
+        "15",
+        "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-native-integrity-regeneration-20261011-v2/n26-force-stage-v12-native-02313.json",
+        "10000000",
+        "754112",
+        "1555305",
+        "2486507",
+        "3880649",
+        "0",
+        "dfs",
+        "frontier",
+        "2,10,0,0,0,1,0,0,0,0,0,0,0,1,0,0,0,1,0,2,1,1",
+        "1",
+        "1"
+      ],
+      "actual_exit_code": 0,
+      "actual_stdout": "",
+      "actual_stderr": "COMPLETE frontier B=15 calls=2 orbits=0 frontier=1\n",
+      "actual_new_path_receipt": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-force-stage-v12-native-02313-actual-run.json",
+      "actual_new_path_receipt_sha256": "549e18835987cb52488df83b3c58c0545494d998adbfcf7960813ab90c0ae139",
+      "regenerated_result": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-force-stage-v12-native-02313.json",
+      "regenerated_result_sha256": "f0b53cfc81474275bb1cda21c32662bb3b171a425353ef9a484fe6aa807190df",
+      "historical_launch_recovery_candidate": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-force-stage-v12-native-02313-launch.json",
+      "historical_launch_recovery_candidate_sha256": "0efa7c9078c7e104c0c5ea3ed41cd74a8e5c4f6ceb9c6182dd73d425092d163a",
+      "both_candidates_match_original_bound_bytes": true,
+      "restoration_candidates": [
+        {
+          "historical_target": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-force-stage-v12\\native-02313.json",
+          "candidate_file": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-force-stage-v12-native-02313.json",
+          "expected_original_sha256": "f0b53cfc81474275bb1cda21c32662bb3b171a425353ef9a484fe6aa807190df",
+          "diagnosed_corrupt_sha256": "6845ead39a1792197801252c468e2906c3adf37f5e8bd4a3cc2632b9c1aa982f",
+          "preserved_corrupt_snapshot": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-integrity-snapshots-20261011-v1\\00000-native-02313.json.bin"
+        }
+      ]
+    },
+    {
+      "stage": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-conditional-force-stage-v1",
+      "event_index": 42,
+      "original_bound_dependencies": {
+        "MANIFEST.json": "335be7bf2474e95184c2ed37f79d906a6147921c535b31c68678bbd7c9c1a4ad",
+        "TRACE.json": "f15e51cdb809a56ce0f7ceb39aee39b0dc464ef9caebf2efcf00dc534d3411a1",
+        "NATIVE-VERIFIED.json": "18b9dd4e8e0c912df56b24058e21194e5fa1f300e88a75a01fe99f95a55fe06a",
+        "peel_prefix_origin.cpp": "a76a8ce6c0ee0ee0f513ae9eba086d5b6d1b6b3e39440ab0cac59ef5638620c9",
+        "peel_prefix_origin.linux": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25"
+      },
+      "actual_new_path_command": [
+        "wsl.exe",
+        "--",
+        "/lib64/ld-linux-x86-64.so.2",
+        "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-conditional-force-stage-v1/peel_prefix_origin.linux",
+        "26",
+        "16",
+        "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-native-integrity-regeneration-20261011-v2/n26-conditional-force-stage-v1-native-00042.json",
+        "10000000",
+        "754112",
+        "1555305",
+        "2486507",
+        "3880649",
+        "0",
+        "dfs",
+        "frontier",
+        "24,40,7,0,0,0,0,0,1,1,1",
+        "1",
+        "1"
+      ],
+      "actual_exit_code": 0,
+      "actual_stdout": "",
+      "actual_stderr": "COMPLETE frontier B=16 calls=2 orbits=0 frontier=1\n",
+      "actual_new_path_receipt": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-conditional-force-stage-v1-native-00042-actual-run.json",
+      "actual_new_path_receipt_sha256": "b02a4838ed60151154115348dc93eb0f8bfaef71d27f9e8f561ad4e4e97bcc3c",
+      "regenerated_result": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-conditional-force-stage-v1-native-00042.json",
+      "regenerated_result_sha256": "fbee5a1f5860f4379ee3d7ef7153950316b813a56ebfc139e1ba2d919362fa28",
+      "historical_launch_recovery_candidate": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-conditional-force-stage-v1-native-00042-launch.json",
+      "historical_launch_recovery_candidate_sha256": "548c295f202740e73a6551587c42e7ac7654d6159d5a3b9714ee068d619a06d1",
+      "both_candidates_match_original_bound_bytes": true,
+      "restoration_candidates": [
+        {
+          "historical_target": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-conditional-force-stage-v1\\native-00042-launch.json",
+          "candidate_file": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-native-integrity-regeneration-20261011-v2\\n26-conditional-force-stage-v1-native-00042-launch.json",
+          "expected_original_sha256": "548c295f202740e73a6551587c42e7ac7654d6159d5a3b9714ee068d619a06d1",
+          "diagnosed_corrupt_sha256": "1347c2c24e20b6410183184c1fe549e6da4e85d7a371e7e4b72851915952c1b6",
+          "preserved_corrupt_snapshot": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-integrity-snapshots-20261011-v1\\00001-native-00042-launch.json.bin"
+        }
+      ]
+    }
+  ],
+  "affected_target_count": 2,
+  "historical_launch_candidates_are_not_actual_new_run_provenance": true,
+  "historical_targets_not_modified_by_this_script": true,
+  "all_candidates_match_original_bound_bytes": true,
+  "new_geometric_payments": 0,
+  "executed_recovery_script_sha256": "6bf3d3567d81ccf40a741d7389bc6950e7228f0e7d3bfa3366bb2748517eda9b"
+}

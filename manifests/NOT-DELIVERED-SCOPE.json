@@ -1,0 +1,19 @@
+{
+  "complete_individual_inventory": false,
+  "scope_roots": [
+    "C:\\热爱单机但萌新\\ai4math2\\research-2026\\team-current",
+    "C:\\热爱单机但萌新\\ai4math2\\research-2026\\n12-global",
+    "C:\\热爱单机但萌新\\ai4math2\\research-2026\\next-cover-global",
+    "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\workspace\\research-2026\\n21-25-synthesis",
+    "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\workspace\\research-2026\\n21-global",
+    "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\workspace\\research-2026\\n22-global",
+    "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\workspace\\research-2026\\n23-global",
+    "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\workspace\\research-2026\\n24-global",
+    "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\workspace\\research-2026\\n25-global",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs"
+  ],
+  "not_delivered": "Historical per-leaf data, deep checkpoint JSON, most binary executors/caches and nonselected large intermediate reports",
+  "authoritative_delivered_list": "FILES.jsonl",
+  "unselected_files_must_not_be_assumed_present": true
+}

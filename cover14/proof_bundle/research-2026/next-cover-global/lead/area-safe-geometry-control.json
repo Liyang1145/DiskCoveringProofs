@@ -1,0 +1,25 @@
+{
+  "status": "numeric_geometry_controls_only",
+  "object": "C1148savedrationalcover",
+  "edges": 29,
+  "faces": 16,
+  "area": 3.1415926535897922,
+  "angle_sum_max_residual": 8.881784197001252e-16,
+  "congruence_angle_residual": 1.5543122344752192e-15,
+  "boundary_view_angles": [
+    1.9983526352235663,
+    3.141592653589793,
+    2.8191015388543246,
+    2.8191015388543246,
+    1.998352635223566,
+    3.141592653589793,
+    1.9983526352235674,
+    2.819101538854324,
+    2.819101538854325,
+    1.9983526352235652
+  ],
+  "boundary_view_angle_sum": 25.553002003491148,
+  "actual_cap_area": 0.2065119274726845,
+  "cap_bound": 0.2340520659610065,
+  "evaluated_safe_area_bound": 3.188357424103846
+}

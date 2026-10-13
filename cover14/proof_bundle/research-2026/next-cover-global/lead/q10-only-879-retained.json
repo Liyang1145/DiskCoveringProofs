@@ -1,0 +1,19 @@
+{
+  "status": "necessary_catalogue_single_q10_graph_type",
+  "retained": [
+    {
+      "family": "10/4",
+      "index": 879
+    }
+  ],
+  "new_exclusion": {
+    "family": "11/3",
+    "index": 76
+  },
+  "minimum_new_lower": "331751299250650989903369798389235719108756759/1000000000000000000000000000000000000000000000",
+  "sources": {
+    "q11-partition-round-retained.json": "3c30aab68de6205e17283f5e33ff8c342c7f3f1faa3383f715e3e07466029729",
+    "q11-partition-coverage-audit-76.json": "a0bfb68b9373cd7cc45972bd1610278a73fc84a8d5ea60023c787d162f9ffa74"
+  },
+  "scope": "arbitrary14centerunitdiskcovers r<=U; graphuniquenessnotmetricuniqueness"
+}

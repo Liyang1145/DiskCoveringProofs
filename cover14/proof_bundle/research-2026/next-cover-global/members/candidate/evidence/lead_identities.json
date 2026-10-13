@@ -1,0 +1,30 @@
+{
+  "H1 s^2+r^2-1": {
+    "exact_zero": false,
+    "residual": "2.3182953787e-71"
+  },
+  "H2 A-(s+z)/2": {
+    "exact_zero": true,
+    "residual": "0.0"
+  },
+  "H3 (A-z)^2+(B-r)^2-r^2": {
+    "exact_zero": false,
+    "residual": "2.10447549831e-71"
+  },
+  "H4 z^2+t^2-2tr": {
+    "exact_zero": false,
+    "residual": "2.00310905169e-71"
+  },
+  "H5 C^2+(1-D)^2-r^2": {
+    "exact_zero": false,
+    "residual": "-1.24005146928e-71"
+  },
+  "alt C^2+(1-D)^2-s^2-r^2": {
+    "exact_zero": false,
+    "residual": "-0.889953857435"
+  },
+  "alt C^2+D^2-1": {
+    "exact_zero": false,
+    "residual": "-0.205019090579"
+  }
+}

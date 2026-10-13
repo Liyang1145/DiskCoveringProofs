@@ -1,0 +1,98 @@
+{
+  "schema": "N26-latest-signed-full134rod-current-identity-and-final-association-controls-v1",
+  "synthetic_new_schema_ownership_and_final_association_checked": true,
+  "synthetic_invalid_latest_identity_controls_rejected": [
+    "missing-actual-current-semantic-replay",
+    "latest-schema-relabelled-as-old-owned",
+    "own-executor-renamed-to-old-checker",
+    "own-executor-bytes-forged",
+    "own-checker-unbound-from-complete-current",
+    "newest-history-pointer-omitted",
+    "actual-newest-history-bytes-substituted",
+    "full134rod-mode-relabelled-as-old-integral",
+    "actual-own-forest-control-omitted",
+    "ancestor-root-count-changed",
+    "partial-source-ownership-pointers",
+    "bound-candidate-parent-bytes-changed",
+    "bound-candidate-parent-missing",
+    "latest-history-retention-marker-omitted",
+    "entire-source-model-replay-replaced-by-identity",
+    "boolean-whole-root-owner",
+    "duplicate-whole-root-owner",
+    "newest-partial-history-domain-escaped",
+    "newest-partial-history-count-forged",
+    "older-equal-count-source-substituted-for-latest"
+  ],
+  "synthetic_invalid_final_acceptance_controls_rejected": [
+    "final-current-semantic-replay-marker-missing",
+    "final-current-latest-source-marker-missing",
+    "final-current-newest-history-marker-missing",
+    "final-unaccepted-own-geometry",
+    "final-own-geometry-schema-laundered",
+    "final-own-checker-bytes-forged",
+    "final-one-actual-geometry-control-omitted",
+    "final-publication-object-differs",
+    "final-current-semantic-object-differs",
+    "final-full-source-model-marker-omitted",
+    "final-radius-endpoint-promoted-to-U",
+    "final-original-LOCAL-allowance-enlarged",
+    "final-mode-laundered-as-integral",
+    "final-own-partial-geometry-promoted-to-global-optimality",
+    "final-current-partial-layer-promoted-to-global-lower-bound",
+    "final-failed-current-semantic-execution"
+  ],
+  "actual_prior_schema_delegation_identity_snapshot": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "91e9ec1f31ab26cfd6f924cc3c4e7ab4acb14b820d1873cd08436e76d8175688",
+    "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fifth-conditional-current-audit-v25-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "10c31954c30a42227040cdc507c0390c7312d75f16c02362ba13ddbe8aacb49f"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fourth-conditional-current-audit-v24-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "4ad5cda43ef2b9606ed8a054844e0fa43485429bd2fdee2f39b925691ef078bd"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-third-conditional-current-audit-v23-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "cdd3af2afa13028d63d9378480b31ef479972d956af4b9a85704788b88fa0b61"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-second-conditional-current-audit-v22-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f211ad82c936ee0e4c0d50f663dd181b6fec55ebb625490e702004d3c2aec39b"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-first-conditional-current-audit-v21-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "351270611f0273abd38730c99bc268a9338116627164327c8358dd37a1e4fe49"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twentieth-conditional-current-audit-v20-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f722f716e125c1ca8896b9bea83f49b43b0a9d296c3149dc582a5c6c0d2adf37"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v8-strict-parent-v1.json",
+        "sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "actual_snapshot_is_identity_only_NOT_geometry_or_current_adoption": true,
+  "synthetic_latest_receipt_shapes_NOT_an_actual_geometry_acceptance": true,
+  "ENTIRE_geometry_current_join_and_independent_final_NOT_executed": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "tested_identity_module_sha256": "191227d019dbd7c7ea4a8cec796fa53d21d5abff046cb0364b52df4d0579741f",
+  "tested_independent_final_executor_sha256": "5f88fa591f972920fa4def263e4780d453196ec32777626041f732638d0fa5c2",
+  "executed_test_sha256": "f963487bb000b51cd9fce29124eb5a79fe2e2b06eb8fa33cc86add11596dc1e3"
+}

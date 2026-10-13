@@ -1,0 +1,191 @@
+{
+  "schema": "N26-current28-original-owner-shadow-ear-mathematical-transfer-controls-v1",
+  "verified": false,
+  "input_sha256": {
+    "outputs\\n26-twenty-eighth-conditional-current-audit-v28-sparse-v1-strict-with-owned8-scope.json": "d306ec18c476fc4dc40d19284cb0281db82e457201a97f85e361c1b37c6a17ea",
+    "outputs\\n26-twenty-eighth-conditional-final-digest-recheck-v28-sparse-v1-strict-with-owned8.json": "e10b9530e365e29efab09a29c05f62baa9223b65abc5e5b2ebabc497bca0fe55",
+    "outputs\\n26-conditional-force-stage-v28-sparse-v1\\FRONTIER.json": "d82aa773c5dde04d64a83144301018b29dc30a415b9df7bddf0442c637833a15",
+    "outputs\\n26-new-scope-v1\\CONSTANTS.json": "90fa7ff3e11c89953e832c0a97835b5c7256b0b84ffaba37155388d624bee248",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\test_closed_ear_cover_transfer.py": "cc150892fc395c0708e8d0ad0865175fa266ec2cc1cdb147acd2b03057275ff2",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26_closed_ear_cover_transfer.py": "d74623ef2f5f5fa2ccc999d957f899e75ecef961990a4b04ce27302576578024",
+    "outputs\\n26-universal-unit-cap-polynomial-certificate-v1.json": "75b87ff228e6af2c1c7e299648a4288b412eabb795ef08ce19233618d1a6c72d",
+    "outputs\\n26-universal-strict-slack-generic-position-polynomial-certificate-v1.json": "2a12c890aa27a3c698501b9d87be062d820e392fd737da0a49933b083398c42d",
+    "outputs\\n26-empty-circle-corner-starring-universal-algebra-v1.json": "51f7e3a4a3b818eaf622bc2bd7abd0b1f2f223d3899ff833413327a263c349f9",
+    "work\\n26-unit-cap-domination-and-no-return-proof.md": "4624d2a06f96dbeb0ccf55b905e4cf85176cc93b65a9763f553a3df8bc714c40",
+    "work\\n26-strict-slack-generic-position-proof.md": "edaf23d0f00b65c263875e87dd1d4185005b814f43a7dc3f5e666e29d9facfe2",
+    "work\\n26-embedded-dual-and-corner-starring-bridge-proof.md": "a6e8466bd722cd9ae0a267ee9a3060502489dd45200967cc8994ccbdbcffdd2d",
+    "work\\n26-closed-ear-core-capacity-proof.md": "5e2251626d74fadf2b18afb049df33d02d4309b56761427487a7ac8cab26fb0a",
+    "outputs\\n26-empty-circle-corner-starring-independent-controls-v1.json": "cbd21cda53a3f9aa69bae122b6f3e76a0edf4b73ca0b8fd1016658d25b27c95a",
+    "work\\audit_n26_closed_ear_core_capacity.py": "c4c56df67588817432c7131dfbcbccada96c6fd87369411c1a8422b377f2665d",
+    "work\\test_n26_closed_ear_core_capacity.py": "295862fac070a4c484dee2301f41e607e09e1239f9378a343bb235c1397ff86b",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26_force.py": "62ad4e612aac5842433c0962065e18904819586911a4523e6d07a8a51462d9ce",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26_embedded_dual_bridge_algebra.py": "9662e5042c16116b3019bf9697076f360e403150b0047c794f2855b854e33e91",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26_unit_cap_universal_identities.py": "7fcb45d704d5af03f74a2465adcdf0ebf4158f2aca4447bad512d3670f31e4fa",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26_generic_position_universal_polynomials.py": "599b526e2771fa6a6e692942baa3091a4c83ec83df0c33a1c852d555c43a6c94"
+  },
+  "actual_source_mathematical_result": {
+    "entire_actual_source_prefixes_reconstructed": 11183,
+    "closed_ear_whole_prefixes": 643,
+    "closed_ear_boundary_family_counts": {
+      "16": 3,
+      "17": 640
+    },
+    "original_physical_count_cases_checked": 646,
+    "original_physical_count_AND_all_shadow_label_placement_cases_checked": 673,
+    "all_raw_complete_terminals_retained_identically": true,
+    "prefix_free_whole_source_partition_checked": true,
+    "family_conservation": [
+      {
+        "B": 14,
+        "actual_source_subtrees": 296,
+        "strict_closed_ear_whole_subtrees": 0,
+        "retained_subtrees": 296,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 15,
+        "actual_source_subtrees": 1224,
+        "strict_closed_ear_whole_subtrees": 0,
+        "retained_subtrees": 1224,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 16,
+        "actual_source_subtrees": 4542,
+        "strict_closed_ear_whole_subtrees": 3,
+        "retained_subtrees": 4539,
+        "all_raw_terminals_retained": 2
+      },
+      {
+        "B": 17,
+        "actual_source_subtrees": 5121,
+        "strict_closed_ear_whole_subtrees": 640,
+        "retained_subtrees": 4481,
+        "all_raw_terminals_retained": 0
+      }
+    ],
+    "actual_universal_algebra_results": {
+      "cap": {
+        "universal_polynomial_identities_exactly_checked": 8,
+        "ordered_real_hypotheses_and_both_sign_cases_explicitly_bound": true,
+        "identity_checks_are_symbolic_not_finite_point_sampling": true,
+        "Voronoi_irredundancy_arc_and_dual_bridge_still_requires_joint_geometry_acceptance": true,
+        "formal_machine_geometry_proof": false,
+        "new_geometric_payments": 0,
+        "global_lower_bound_proved": false,
+        "global_optimality_proved": false
+      },
+      "generic": {
+        "universal_zero_polynomial_identities_checked": 9,
+        "universal_degeneracy_polynomials_and_nonzero_witnesses_checked": 7,
+        "nonzero_witnesses_cover_every_fixed_radius_in_0_rho_1": true,
+        "continuous_slack_and_density_argument_written_separately": true,
+        "full_triangular_dual_and_final_unrestricted_joint_acceptance": false,
+        "formal_machine_geometry_proof": false,
+        "new_geometric_payments": 0,
+        "global_lower_bound_proved": false,
+        "global_optimality_proved": false
+      },
+      "bridge": {
+        "universal_exact_empty_circle_stellar_identities_checked": 12,
+        "polynomial_checks_symbolic_NOT_finite_point_sampling": true,
+        "written_continuous_disk_dual_and_rotation_argument_still_separate_from_code": true,
+        "corner_copy_shadow_and_embedded_limit_scope_explicit": true,
+        "original_owner_labels_and_zero_shadow_cell_areas_preserved": true,
+        "all_existing_area_formulas_and_source_interfaces_NOT_reproved_by_this_gate": true,
+        "formal_machine_geometric_reduction_proved": false,
+        "new_geometric_payments": 0,
+        "global_lower_bound_proved": false,
+        "global_optimality_proved": false
+      }
+    },
+    "written_continuous_cover_dual_star_and_ear_proofs_bound_NOT_inferred_from_code": true
+  },
+  "all_original_m_and_shadow_label_placement_cases_for_643actual_prefixes_checked": true,
+  "B17_actual_original_count_case": [
+    26
+  ],
+  "B16_actual_original_count_cases": [
+    25,
+    26
+  ],
+  "prospective_filtered_frontier_count_NOT_current": 10540,
+  "prospective_filtered_family_counts_NOT_current": [
+    {
+      "B": 14,
+      "I": 12,
+      "split": 800,
+      "force": 37,
+      "force_tree": 0,
+      "area": 190,
+      "empty": 173,
+      "terminal": 0,
+      "pending_subtrees": 296,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "closed_ear_core_capacity_whole_subtrees": 0
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "split": 714,
+      "force": 0,
+      "force_tree": 0,
+      "area": 64,
+      "empty": 422,
+      "terminal": 0,
+      "pending_subtrees": 1224,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "closed_ear_core_capacity_whole_subtrees": 0
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "split": 1002,
+      "force": 3,
+      "force_tree": 5,
+      "area": 37,
+      "empty": 151,
+      "terminal": 2,
+      "pending_subtrees": 4539,
+      "unresolved_terminal_subtrees": 2,
+      "family_exhausted": false,
+      "closed_ear_core_capacity_whole_subtrees": 3
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "split": 801,
+      "force": 0,
+      "force_tree": 0,
+      "area": 0,
+      "empty": 399,
+      "terminal": 0,
+      "pending_subtrees": 4481,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "closed_ear_core_capacity_whole_subtrees": 640
+    }
+  ],
+  "actual_invalid_count_owner_scope_and_continuous_proof_controls_rejected": [
+    "B17-under26-original-disks-hidden-by-padding",
+    "original-owner-count-dropped",
+    "external-eight-disk-theorem-assumption-hidden",
+    "radius-screen-changed",
+    "inherited-conditional-source-promoted-to-original-U",
+    "shadow-nearest-diagram-substituted-for-original-owner-frame",
+    "continuous-closed-ear-argument-not-bound"
+  ],
+  "actual_full_source_history_geometry_dependency_replay_NOT_performed": true,
+  "not_an_actual_geometry_acceptance_or_current_adoption": true,
+  "all_existing_current_sources_proof_receipts_histories_and_ledgers_UNMODIFIED": true,
+  "actual_current_transport_frontier_STILL": 11183,
+  "actual_current_whole_candidate_roots_STILL": 25,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "frozen_geometric_reduction_proved": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

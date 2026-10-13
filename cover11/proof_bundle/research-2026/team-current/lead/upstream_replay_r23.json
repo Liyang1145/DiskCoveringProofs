@@ -1,0 +1,86 @@
+[
+  {
+    "script": "check_shared_dual_symbolic.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 0.07033705711364746,
+    "sha256": "04d443cda87c4080001b6a77391e1ce4632876a66fe3334c247fd850b7befe36",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\check_shared_dual_symbolic_control_r23.log"
+  },
+  {
+    "script": "check_shared_moment_dense_symbolic.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 0.06741213798522949,
+    "sha256": "37f5582c537a298273806a1978d02f8816e02f07fb97327185b61be13b4a69db",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\check_shared_moment_dense_symbolic_control_r23.log"
+  },
+  {
+    "script": "check_q0_closure_symbolic.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 0.0744161605834961,
+    "sha256": "c0afad256d5a7eaa081ac3ac9b26bbf4267c9d52abaa3a2464850a62224ff043",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\check_q0_closure_symbolic_control_r23.log"
+  },
+  {
+    "script": "check_q0_moment_symbolic.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 0.06698274612426758,
+    "sha256": "ef31de36f91db68c12767e301508d75dc67d73483acd6b0baeef7706d7262f59",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\check_q0_moment_symbolic_control_r23.log"
+  },
+  {
+    "script": "check_quadratic_support.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 0.3627326488494873,
+    "sha256": "fe6c0908c4be0da9a480d566b0100aa7c13a0265bf20833d895bc08f546dc44e",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\check_quadratic_support_control_r23.log"
+  },
+  {
+    "script": "certify_shared_moments_dense.py",
+    "args": [
+      "0",
+      "4"
+    ],
+    "returncode": 0,
+    "seconds": 56.82908320426941,
+    "sha256": "002630257e799e41b699bcd68c9bd0674a244d05ba48e3c704e7e2f8666c3b2a",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\certify_shared_moments_dense_0_4_r23.log"
+  },
+  {
+    "script": "certify_shared_moments_dense.py",
+    "args": [
+      "2",
+      "4"
+    ],
+    "returncode": 0,
+    "seconds": 62.264978885650635,
+    "sha256": "002630257e799e41b699bcd68c9bd0674a244d05ba48e3c704e7e2f8666c3b2a",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\certify_shared_moments_dense_2_4_r23.log"
+  },
+  {
+    "script": "certify_q0_closure.py",
+    "args": [
+      "0",
+      "3"
+    ],
+    "returncode": 0,
+    "seconds": 126.68769359588623,
+    "sha256": "901dca3e9c87c8dc6950ec90c5f300fd8ce62ff9341bbab932fb65e2de913e69",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\certify_q0_closure_0_3_r23.log"
+  },
+  {
+    "script": "certify_q0_moments.py",
+    "args": [
+      "0",
+      "2"
+    ],
+    "returncode": 0,
+    "seconds": 20.059969186782837,
+    "sha256": "c07f87e0843d09ad3b29f40230315d354b11573b7e7b4716c5e093f26f46cbb9",
+    "log": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\lead\\certify_q0_moments_0_2_r23.log"
+  }
+]

@@ -1,0 +1,57 @@
+{
+  "snapshot": {
+    "file": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\team-current\\r20-rigidity\\r20_anti_block_interval.py",
+    "sha256": "4d11dc36084d1e473a548c4ee5efcf99ff447395835c2ac7ea3071aaa503dcc4",
+    "bytes": 27122,
+    "point_log_sha256": "fccc38964ea749972be448a18fa8176898a6dbb1ab863160bc8b517ba2ff7d8b"
+  },
+  "T1": {
+    "G_minus_B_symmetric": false,
+    "eigvalsh_of_nonsymmetric": [
+      -0.13016849701754052,
+      0.8085555444142531,
+      2.890991188289383
+    ],
+    "true_generalized_eigenvalues": [
+      6.212287357551006e-17,
+      0.9244043542661368,
+      2.644973881419957
+    ],
+    "scipy_eigh_B_G": [
+      -8.890457814381136e-18,
+      0.9244043542661369,
+      2.644973881419957
+    ],
+    "cholesky_whitened": [
+      3.155028321932818e-16,
+      0.924404354266137,
+      2.644973881419956
+    ],
+    "rational_2x2_det_and_trace": [
+      "16",
+      "73"
+    ]
+  },
+  "T2": {
+    "null_residual_B3_c": 1.6653345369377348e-16,
+    "eigvalsh_of_nonsymmetric_pencil": [
+      -0.19560271412133823,
+      0.2570399374490872,
+      1.240081794431994
+    ],
+    "scipy_eigh_B_G": [
+      4.683997859674404e-17,
+      0.1405776336172776,
+      1.1609413841424667
+    ],
+    "complement_exact_coef": [
+      0.14057763361727768,
+      1.1609413841424656
+    ],
+    "complement_float_coef": [
+      0.14057763361727768,
+      1.1609413841424656
+    ],
+    "comment": "scipy.eigh(B,G) is the correct pencil tool; np.eigvalsh(solve(G,B)) is invalid for the non-symmetric G^-1 B (see T1); the 2x2 pencil on a G3-complement reproduces the intrinsic pair; float vs exact coefficient changes it only at 1e-15 -- the reason to prefer an exact complement is reproducibility/provability, not magnitude"
+  }
+}

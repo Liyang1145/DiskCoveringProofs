@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "field_relation": "c^2+s^2=1",
+  "parameter": "c=cos(2pi/m),s=sin(2pi/m),m>=6",
+  "radius_squared": "1/(5+12c+8c^2)",
+  "inner_radius_squared": "2(1+c)/(5+12c+8c^2)",
+  "identities": {
+    "anchor_unit": "0",
+    "anchor_high_distance": "0",
+    "anchor_low_distance": "0",
+    "face_0_distance_0": "0",
+    "face_0_distance_1": "0",
+    "face_0_distance_2": "0",
+    "face_1_distance_0": "0",
+    "face_1_distance_1": "0",
+    "face_1_distance_2": "0",
+    "face_2_distance_0": "0",
+    "face_2_distance_1": "0",
+    "face_2_distance_2": "0",
+    "face_3_distance_0": "0",
+    "face_3_distance_1": "0",
+    "face_3_distance_2": "0",
+    "m7_radius_polynomial_divisibility": "0"
+  },
+  "m7_cosine_polynomial": "8*c**3 + 4*c**2 - 4*c - 1",
+  "m7_radius_squared_polynomial": "29*x**3 - 55*x**2 + 19*x - 1",
+  "global_optimality_proved": false,
+  "scope": "exact local geometric identities of a constructed family, not arbitrary-cover optimality",
+  "source_sha256": "72cec576e8ab26d85ba702dee402ab7b03308cbaba69b3fde4ef979bc4cb09b6"
+}

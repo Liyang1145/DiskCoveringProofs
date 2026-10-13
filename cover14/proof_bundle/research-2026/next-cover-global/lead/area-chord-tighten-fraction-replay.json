@@ -1,0 +1,12 @@
+{
+  "status": "independent_fraction_replay",
+  "envelope_constants_certified": true,
+  "runs": [
+    {
+      "family": "10/3",
+      "index": 62,
+      "upper_display": -0.009098787327367215,
+      "upper_exact_rounded_outward": "-9098787327367214700717521647/1000000000000000000000000000000"
+    }
+  ]
+}

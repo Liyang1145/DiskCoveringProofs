@@ -1,0 +1,179 @@
+# Continue after stage34 complete, stage35 and latest-current executors
+
+Observed 2026-10-12 07:20:50 Asia/Shanghai. Goal ACTIVE. This goal turn made
+PROGRESS:stage34 actual ENTIREstandalone chain completed;stage35discovery
+started;distinct latest-current identity/admission/independent-final executors
+implemented and compiled;actual20identity+16final-association controls passed.
+Global n26completeness/lowerbound/optimality UNPROVED;n27NOTstarted.
+
+This supersedes v47runtime statuses. Retain v47/v46/v45for complete earlier
+proof/code paths/hashes/lineage. No subagents. Use apply_patch. Preserve frozen
+executors,ALLfailures,old payments/nonOPENnodes/supportprefixes/strictledgers,
+NEWESTv3/v9history and paidgeometryprefixes. Never restart confirmedLIVE jobs.
+Serialize BOTH current joins and independent finals. No WSL/service restart.
+
+## Stage34 ENTIRE standalone chain COMPLETE
+
+Actual71577own sparse acceptance AND actual SAME frozen sparse-main publication
+terminal0,identicalobject/bytes/SHA:
+385aae388a47a864a8d816c3066f9774b888e959bf210461ccc52a810c33ccd2.
+ALL4800originalnativeevents already complete4d3808e84c5a8a0eb55adb548e637d7d77d1e95242b8e248c10df44ffeb470ed.
+Neither native,acceptance nor publication was repeated.
+
+After actual Linux target/process readiness,ORIGINALLinuxcatalogue main and
+its own native/code/geometry controls actually completed0. SAME frozen
+catalogue-main actual publication,contract and whole-chain association
+then terminal0at07:17:54:
+
+- Catalogue acceptance23e2a52de990148d8a7be88e1e7ec3d4919ee0dec2e58ebdc1968e8bd4dc9778.
+- Actual catalogue publication2c749ff5522306dad140d3316d2747b5e099f51cb73cc79f5112a487f898f7e6.
+- Contract995b58e8718430a87e10ca6d472b7a4650e9a85bcfa8b3826041271ec9df985c.
+
+Objects agree,originalplatformbyte differences retained. All5catalogue/6contract
+controls and oldinvalidnative-v4refusal passed. Two candidate paths/one
+canonicaltype,no freshcompetitor.295strictexclusions,220anglenodes,32positives/
+9negatives.4800events3422SPLIT/81FORCE/18FORCE_TREE/196AREA/1081EMPTY/2TERMINAL.
+Standalone13570,families276/1131/5531/6632,NOT formalcurrent.
+Children1198/1178/1331/1268,total4975:
+13393+4975-3422-295-1081=13570. Everyfamilyconservationpassed.
+Narrative outputs/n26-thirty-fourth-strict-executor-enumeration-progress-20261012.md
+saved before35discovery. Whole-chain association passedAGAINbefore35start.
+Stage34current/final NOT yet started;mustserializeafteroriginaljoins.
+
+### Stage34catalogue launch recovery:exact original main,not compatibility
+
+ActualLinuxreadinesshelper ran and passed sourceacceptance/4800events,
+cataloguetargetABSENT/ZEROactualbuilders. Directoriginalcataloguefile launch
+then returned1without diagnostic;no target. Subsequent silentreadinessprobe
+was NOTusedas process evidence. New interactiveLinuxPython25346actually
+started;original helper body passed readinessAGAIN.
+SAME realLinuxinterpreter then ran unchanged original
+work/build_terminal_catalog.py as __main__ with fullyabsoluteoriginalargv
+and originalworkimportdirectory. Originalnativecatalogueruns and own
+verifier subprocess ACTUALLYexecuted,no traceback;own acceptanceprinted.
+Session25346terminal0after actualcompletion. No monkeypatch,copy,changed
+verifier/kernel,compatibilityreport or WSL/service/APIrestart.
+Recovery record appended work/n26-stage34-native-launch-recovery-20261012-v1.md.
+All failures preserved;doNOTrepeatanycompletedstep.
+
+## Stage35 discovery LIVE3353
+
+Started ONLYaftercompleted34chain+narrative+freshassociation.
+PID11400created07:19:06,confirmedLIVE07:20:50.
+Originalwork/propose_force_stage.py,actualaccepted34FRONTIER/VERIFIED,
+4800steps/63anglechecks,actual candidatepositivecontrol. Target
+work/n26-conditional-stage-proposals-v35-from-strict-v34.json.
+Latest80events,prospectivefamilies273/1133/5531/6633. DiscoveryONLY,
+NOTacceptance/formalcurrent. DoNOTduplicateorreset.
+Terminal0thenfresh35completechain withallactualoriginalnativeevents,
+mandatoryareaBOTHacceptance/publication,originalcatalogue/SAMEpublication,
+contract/association/narrative,then36discovery.
+
+## NEW distinct latest-current admission/identity/final IMPLEMENTED,not executed
+
+- work/n26_candidate_identity_with_latest_signed_forests.py
+  SHA191227d019dbd7c7ea4a8cec796fa53d21d5abff046cb0364b52df4d0579741f.
+- work/recheck_latest_signed_full134_candidate_current.py
+  SHA5f88fa591f972920fa4def263e4780d453196ec32777626041f732638d0fa5c2.
+- work/audit_latest_signed_full134_candidate_current.py
+  SHA17a46bb76af755b260f352b2bcc66cb4955c7540637713b4771d8ecfdecc324d.
+- work/test_latest_signed_full134_current_identity.py
+  SHAf963487bb000b51cd9fce29124eb5a79fe2e2b06eb8fa33cc86add11596dc1e3.
+- work/run_latest_signed_full134_serial_current_final_v1.ps1
+  SHAe16dcaf20b08a436aaf73b0230acbd1b891bc6e6240de9a72e38a215052fe291.
+  Actualsyntaxpassed;runnerUNEXECUTED.
+- Writtenwork/n26-latest-signed-full134rod-current-admission-and-final-proof.md.
+
+Actualfreshidentity/finalcontrols94042terminal0:
+outputs/n26-latest-signed-grown-full134rod-current-identity-and-final-association-controls-v2.json,
+SHAf51643c4358e51d022fa8f234e687561faacc34f177516d960bbe86156413d74.
+20identitycorruption+16independentfinalreceiptassociationcorruptionpaths
+rejected. New-schema/finalreceiptsare SYNTHETICINMEMORYONLY;NOTgeometry/
+currentacceptance. Actualformal26->owned8sourceidentitydelegationchecked,
+acceptancebe3e9e...unchanged. Freshcode/hash/20+16/unpaidscopeassociationpassed.
+
+V1report761f2a...was actuallyvalid for originalfinalcode db8797...but code
+review afterward added unchanged-executor guards and critical-input rehash
+AFTERaccounting in newUNEXECUTED final/admission. V1is preservedSTALE,not
+relabelled. ActuallyrefreshedV2bindsnewfinal5f88fa...;useV2ONLY.
+No live geometry builder/checker/input,old frozen final or runningproofcodeedited.
+
+Newidentity follows boundenumerationancestors,explicitly recognizes actual
+extendedhistory/executor/modes/controlsto preventequalcountstalesourceresets.
+Olderowned/mixed/productdelegatesunchanged.
+Newadmission requiresactualcompletedparent/final,genuinelycurrentcandidate
+source,ownFULLgeometryacceptance+SAMEpublication,entirefrozenmain replayAGAIN,
+independentroot/historyaccounting,actualclosedpool/receipts/terminals,unchanged
+transportfrontier,and ENTIREinventory rehashbeforecurrentpublication.
+Newfinal importsONLYpureaccounting(notgeometry/source/diagnosticproducer),
+rehashesENTIREinventory,actualown/publication/currentsemanticobjects/executor,
+exactroots/newesthistories/frontier/alltypes/receipts/terminals and snapshot.
+Criticalsource/history/ledger/executorinputsrecheckedafteraccounting.
+
+Compile/help/tests/syntheticshapesDO NOT prove actualcompletecurrentadoption.
+ActualadmissionandwholeindependentfinalNOTexecuted. Preparedrunnerrefuses
+livejoins/finals,existingtargets/partials,missingowngeometry/publicationor
+stalecontrols;serialadmission->independentfinalONLY.
+Owngeometryreceiptstillabsent;doNOTrunrunnernow.
+FuturefullSOURCEsemanticadapterforadoptedextendedhistory/furthercontinuation
+stillmissing;newidentityalonecannotloadgeometryor authorizehistoriesreset.
+
+## Original27currentCOMPLETE;independentfinalLIVE42666
+
+Actual27currentcompleted07:04:53:
+outputs/n26-twenty-seventh-conditional-current-audit-v27-sparse-v1-strict-with-owned8-scope.json,
+SHA26d274a012b6ec816313110c488ba79df77133c2fb9c4063f85c306ef0f1afe3.
+263765dependencies,frontier10905,families308/1232/4269/5096,25roots,
+87types/215receipts. ThisaloneNOTformaladoption.
+
+SAME42666nowindependentfinalPID11348created07:04:53,confirmedLIVE07:20:50,
+latest165000/263765fullinventoryrehashes. FinaltargetstillABSENT.
+Originalshellnext28current/final;nooverlappingjoin/final.
+AuthoritativeformalSTILL26+owned8:
+audit91e9ec1f31ab26cfd6f924cc3c4e7ab4acb14b820d1873cd08436e76d8175688,
+final79b29698062ef68e4838340215b8b531a64f79323a5b65b270be5bf9dee828c3,
+254093dependencies,10788frontier,25wholecandidateroots.
+Batch27isn26work,notstartingn=27.
+
+## Ownlatestgeometry79322 and mixedpublication28943 stillLIVE
+
+Latestownchain79322currentbuilder9900created06:32:59,confirmedLIVE07:20:50.
+Proof-timecompletedformal26/actualowned8ownerpair,actualroot25v3/grownv9/
+automaticcontrols31roleguards supplied. Stillbuilderstage;targetMANIFEST/
+VERIFIEDABSENT. ActualCPUprogressobserved,nohaltinferred.
+SAMEshellfutureOWNfrozenENTIREgeometrymainthenSAMEactualpublication.
+DoNOTeditboundmodules,restartbuilderorlaunchduplicatemain.
+Actualgrown0480e491...andcontrols160f1a61...complete96propertargets,
+1551OPEN,288independentchecks/23rejections;noneiscurrentpayment.
+
+Mixed28943publication21224created04:23:50,confirmedLIVE07:20:50.
+Actualwholeoldsource/LOCAL/payments/forestsreplay,no restartonsilence.
+Ownacceptance57682c...complete;actualpublicationpending;standalone16NOTformal25.
+Actualmixedpendingincludes25/28/29. ActualpublicationthenSERIALcurrent/final;
+product29geometrywaitsactualmixedpair.
+
+If mixed16candidateformallyadoptedBEFOREowned8-bound25rootlatestreceipt,
+NEVERsubtract9orrelabellatestreceiptasmixed-sourceacceptance. Newadmission
+willrejectdifferentlatestidentity. Requiregenuinefullmixedsourcereplay/
+completecompositionpreservingallmixedpaymentsANDv3/v9histories.
+
+## Nextsafework
+
+1.Revalidate79322,42666(final27),28943,3353(discovery35);neverrestartLIVE.
+2.Let79322builder->OWNENTIREgeometrymain->SAMEpublication;inspectactual
+  artifactsbeforeanynewadoption. Partialfailurespreserved.
+3.Onlyactual35discoveryterminal0->freshentirestandalonechain;stage34already
+  COMPLETEandmustnotberepeated.
+4.Original42666ownsfinal27->28pair;adopt27onlyactualmatchingfinal. Then
+  serial29--33,34andlatercompletebatches. Nocurrent/finaloverlap.
+5.Ownlatestactualgeometry/publicationrequired before newadmission/final.
+  UsegenuinelycurrentparentsourceandV2identity/finalcontrols+21accountingguards.
+6.Mixedcurrent/finalrequiresitsactualpublicationandserializedslot;product29
+  waitsACTUALpair. Neverlaunderowned25rootsintomixed16orresetlatesthistories.
+7.ImplementdistinctcompleteextendedSOURCEsemanticadapter/futurecontinuation,
+  completecatalogue/allclassifications/unrestrictedfinaljointgate.
+8.n27waitsrigorousn26closure. GoalACTIVE.
+
+Resource935d336...DATAonly,Rstarend924/925,U3922,LOCAL7/800000,
+87types/215receipts,alloldpaymentsandfrozengeometric_reduction_proved=false
+retained. Nogloballowerbound/optimality/unrestrictedjointacceptanceasserted.

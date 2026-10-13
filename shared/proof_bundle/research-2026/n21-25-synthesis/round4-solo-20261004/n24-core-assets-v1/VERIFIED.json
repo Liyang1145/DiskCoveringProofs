@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "schema": "isolated-N24-core-exact-archive-assets-v1",
+  "N": 24,
+  "B": 15,
+  "selected_members": [
+    {
+      "archive": "math-delta-0012.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n24-core-angle-resume2/core-angle-tree.json.gz",
+      "target": "core-angle-tree.json.gz",
+      "bytes": 8697165,
+      "sha256": "cad86f5f8eddfdb6eabc002fb2ba1c4195038a7a70798bdc790fd5de66943752"
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n24/local-isolation-certificate.json",
+      "target": "local-isolation-certificate.json",
+      "bytes": 8996,
+      "sha256": "6ab6d6337732ac366eb038c97dbb3c8de96e6fa4abc52f1da35a15749528afc7"
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n24/algebraic-check1/root-verified.json",
+      "target": "root-verified.json",
+      "bytes": 2293,
+      "sha256": "91e48e25ce5cfc91bc9609fca81d964b0d7c6d229ce15545652d38aed16460ff"
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n24/algebraic-check1/upper-verified.json",
+      "target": "upper-verified.json",
+      "bytes": 6506,
+      "sha256": "47a9eeb34e2f674cc10402145dac28d9ffbc537bd64229b4d81cee236a26a018"
+    }
+  ],
+  "archive_bindings": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\math-delta-0012.zip": {
+      "archive_sha256": "7f5ae7029cc03fd4bb328524609325b637f60473961ecd994102806f3bd89e8a",
+      "metadata_sha256": "1c20fb5e4e77f67ee7ae04a3900ac0ba23a4327dd20624e19910029c91954035",
+      "asset_manifest_sha256": "0e33cacd71fd9fbe84af5b0b6e779ce8e4c0fa4ece45cdca8590b7c01d1535b2"
+    },
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\math-delta-0052.zip": {
+      "archive_sha256": "5b595eb6adeb39f96fe530629e04b4922ee80f04f55dc1c23ec9f8a7f3641a3d",
+      "metadata_sha256": "6b37d1353656149f5441f59e0745a78ceb165c14cc7f203bbb930157347d00ab",
+      "asset_manifest_sha256": "177a41f839a25019811b7bc58ca288b51e4d55d40e6beb460046d3f03ecbea67"
+    }
+  },
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\math-delta-0012.zip.meta.json": "1c20fb5e4e77f67ee7ae04a3900ac0ba23a4327dd20624e19910029c91954035",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\math-delta-0052.zip.meta.json": "6b37d1353656149f5441f59e0745a78ceb165c14cc7f203bbb930157347d00ab",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-core-assets-v1\\core-angle-tree.json.gz": "cad86f5f8eddfdb6eabc002fb2ba1c4195038a7a70798bdc790fd5de66943752",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-core-assets-v1\\local-isolation-certificate.json": "6ab6d6337732ac366eb038c97dbb3c8de96e6fa4abc52f1da35a15749528afc7",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-core-assets-v1\\root-verified.json": "91e48e25ce5cfc91bc9609fca81d964b0d7c6d229ce15545652d38aed16460ff",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-core-assets-v1\\upper-verified.json": "47a9eeb34e2f674cc10402145dac28d9ffbc537bd64229b4d81cee236a26a018",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\recover_n24_core_prerequisites.py": "d33d3da94d3912adda1b68229535e82dc3f1b9df78b9d27c5bc5f8886eda3061",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\evidence\\n24-core-replay-stdlib-resume1.json": "5660265c7835bdd8e95d40e7c5c90fcc80603e93c1d5db32a4ff272efa8bd4c6",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\evidence\\core-reduction\\constants\\n24.json": "90de2d44e0992bd86806645b5e2c3b9c60f27279f204e2d506cf564a34b4952d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-archive-core-inputs-20261005-v1\\n24\\core-system.json": "32def465537d348df93794f721513a9f3baeec58a66037355bfd236795a9a187",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-archive-core-inputs-20261005-v1\\n24\\core-root.json": "8384779f792a2fcec2e897fcaafb8de0a20f9a1d859cb8c6532989d0d8600091",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-archive-core-inputs-20261005-v1\\VERIFIED.json": "fb9c235f371d5b3b2c899fba96d84ae2286349ad9cebaf7dfab0aac39ee2d710",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-core-assets-v1\\ARCHIVE-NAMES.json": "4ceb2741f226c8bd6ece7b1418287b489979a133789a22aea4a346b2d4e4c1dd"
+  },
+  "original_tree_local_and_root_report_match_historical_bound_digests": true,
+  "isolated_reports_bound_to_actual_recovered_original_root_and_system": true,
+  "original_default_evidence_paths_not_created_or_overwritten": true,
+  "mathematical_root_upper_isolation_and_angle_replay_still_required": true,
+  "not_a_complete_type_or_global_payment": true,
+  "source_sha256": "d33d3da94d3912adda1b68229535e82dc3f1b9df78b9d27c5bc5f8886eda3061",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,22 @@
+{
+  "N": 24,
+  "B": 13,
+  "stage": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B13-s1",
+  "lower": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B13-l1",
+  "controls": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\small-order-filling-controls-v2\\VERIFIED.json",
+  "workers": 3,
+  "batch_size": 64,
+  "topology_limit": 10000,
+  "force_limit": 31,
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\small_order_parent_fillings.py": "64024103ee1332335989ecd5b0907e31f85355cfb7b94d87bcfe6e304bf9e6cc",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\small-order-filling-controls-v2\\VERIFIED.json": "a17085a23f70ac165fb4a6285e092a80cb13077e91215537a4aeacafd22f6ea8",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B13-s1\\ACCEPTED\\SOURCE-ACCEPTED.json": "c45f5b2aa707601b07ce1ad05a58be9e5d91d4f638f7b3e53af47bd544a12214",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B13-l1\\ACCEPTED\\VERIFIED.json": "bdb67007577b8c3c37fbbf8c95b10ddf317c62c9449318e70070458f76d30a58",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\small_order_filling_kernel.py": "30bde97dc7ef158d17a6bf9bf491f362d7109bf076318ccfaa9a7a6bcec04191",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\propose_small_order_filling.py": "ee710d385a38bee0db0962db63289c9ef52adec7c0654e313c644dd85f777dce",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\replay_small_order_filling.py": "53ecbdcaee74cf9f8d7d6369d5d40fc1c9077e18a2249f70531319c0b1a3af74"
+  },
+  "source_sha256": "64024103ee1332335989ecd5b0907e31f85355cfb7b94d87bcfe6e304bf9e6cc",
+  "global_optimality_proved": false
+}

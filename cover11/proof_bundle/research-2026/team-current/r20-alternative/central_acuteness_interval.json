@@ -1,0 +1,78 @@
+{
+  "kind": "interval acuteness certification for the two central faces (pilot box)",
+  "box": {
+    "rings": "+/- 1/1000",
+    "r": "UB* +/- 1/10000 (exact rationals)",
+    "a in K_A rectangle": [
+      [
+        "-0.00634855338842646184",
+        "0.00609201456846706572"
+      ],
+      [
+        "-0.213722036539279514",
+        "-0.145309485974857794"
+      ]
+    ],
+    "b in K_B rectangle": [
+      [
+        "-0.00567765407336082249",
+        "0.00634390311974124439"
+      ],
+      [
+        "0.198352720358413004",
+        "0.620116146880161256"
+      ]
+    ]
+  },
+  "faces": {
+    "face_0": {
+      "(a-b).(c-b) > 0  [vertex b]": {
+        "interval": [
+          "0.02658974036602896121039841",
+          "0.4477129253434060096594749"
+        ],
+        "lower_end_positive": true
+      },
+      "(b-a).(c-a) > 0  [vertex a]": {
+        "interval": [
+          "0.07366580589037730053547648",
+          "0.2664023276421921826440098"
+        ],
+        "lower_end_positive": true
+      },
+      "(c-a).(c-b) > 0  [vertex c]": {
+        "interval": [
+          "0.3096425021511019504139028",
+          "0.4675391167752311893934802"
+        ],
+        "lower_end_positive": true
+      }
+    },
+    "face_4": {
+      "(a-b).(c-b) > 0  [vertex b]": {
+        "interval": [
+          "0.02671379571271207190030772",
+          "0.4471099972465558680667641"
+        ],
+        "lower_end_positive": true
+      },
+      "(b-a).(c-a) > 0  [vertex a]": {
+        "interval": [
+          "0.0735415775041720065630102",
+          "0.2670050421205157342718906"
+        ],
+        "lower_end_positive": true
+      },
+      "(c-a).(c-b) > 0  [vertex c]": {
+        "interval": [
+          "0.309314863537608730759132",
+          "0.467743826603773005246012"
+        ],
+        "lower_end_positive": true
+      }
+    }
+  },
+  "uniform_acuteness_certified": true,
+  "consequence": "on the acute domain Rc = MEC, and {MEC <= r} is the projection of the SOC {(a,b,q) : |q-a|,|q-b|,|q-c_i| <= r}, which is convex; hence over this box the two central constraints are convex projections and the joint feasible set in (a,b) is CONVEX (Helly-4 / SOCP available).",
+  "scope": "pilot over the stated ring box only (rings +/- 1/1000, r = UB* +/- 1e-4); the a/b ranges are the K_A / K_B rectangles; NOT a global claim"
+}

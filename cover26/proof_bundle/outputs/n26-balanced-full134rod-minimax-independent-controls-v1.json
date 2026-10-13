@@ -1,0 +1,67 @@
+{
+  "schema": "N26-independent-actual-balanced-full134rod-minimax-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "2612c37a73d206b69c7ae68cf6985060bba72af3a09b47938940c72b488013e8",
+  "actual_balanced_full134rod_point_and_stress_results_independently_reconstructed": [
+    {
+      "checked_v7_OPEN_leaf": 1515,
+      "exact_radius": "240802604229/1000000000000",
+      "exact_below_Rstar_full134rod_NECESSARY_model_realization": false,
+      "fresh_balanced_stress_correlated_whole_leaf_strict": false
+    },
+    {
+      "checked_v7_OPEN_leaf": 1516,
+      "exact_radius": "24045181577/100000000000",
+      "exact_below_Rstar_full134rod_NECESSARY_model_realization": false,
+      "fresh_balanced_stress_correlated_whole_leaf_strict": false
+    }
+  ],
+  "independent_actual_all134rod_interval_distance_checks": 268,
+  "independent_actual_all60_free_unit_disk_checks": 120,
+  "fresh_NEW60ground_harmonic_Schur_and_nonharmonic_identities_checked": 2,
+  "actual_point_radius_stress_rejection_controls_passed": [
+    "minimax-full134rod-old46free-points-substituted",
+    "minimax-full134rod-free-coordinate-omitted",
+    "minimax-full134rod-anchor-frame-dimension",
+    "minimax-full134rod-infeasible-anchor-turn",
+    "minimax-full134rod-nonrational-free-coordinate",
+    "minimax-full134rod-realization-radius-forged",
+    "minimax-full134rod-exact-edge-bound-forged",
+    "minimax-full134rod-unit-disk-margin-forged",
+    "minimax-full134rod-below-radius-claim-flipped",
+    "minimax-full134rod-relaxation-promoted-to-cover",
+    "minimax-full134rod-embedding-acceptance-invented",
+    "minimax-full134rod-optimality-counterexample-invented",
+    "minimax-stress-old92weights-substituted",
+    "minimax-stress-nonpositive-rod-weight",
+    "minimax-stress-false-NEW60inverse",
+    "minimax-stress-old92mode-laundered"
+  ],
+  "actual_balanced_executor_source_scope_rejection_controls_passed": [
+    "balanced-old-numerical-schema-laundered",
+    "balanced-own-executor-spoofed",
+    "balanced-old-source-forest-digest-substituted",
+    "balanced-other-whole-root-owner-imported",
+    "balanced-proof-payment-invented",
+    "balanced-cover-counterexample-invented",
+    "balanced-old100000-objective-relabelled-as1",
+    "balanced-hidden-duplicate-old-leaf-case"
+  ],
+  "old_reports_all_NONOPEN_proofs_and_NEWEST_running_histories_UNMODIFIED": true,
+  "successful_v7_stress_supplement_NEEDS_fresh_actual_v8_OPEN_descendant_reconstruction": true,
+  "continuous_disk_cover_and_global_optimality_counterexample_NOT_proved": true,
+  "arithmetic_only_NOT_complete_latest_model_source_history_or_geometry_acceptance": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "ccfa89e817e867fe6443a40bf1e89d9f0298ed84d1507683e2406f0e291e8ea8",
+  "tested_balanced_probe_sha256": "d2873010200c77b471a453fa17724f3eb44d8bc4570675893e88b663756984bf",
+  "tested_independent_point_stress_module_sha256": "96d4bde3b454cc6b225a28515794d8fb7f90d7eb3a44db17547748cba0f7143a"
+}

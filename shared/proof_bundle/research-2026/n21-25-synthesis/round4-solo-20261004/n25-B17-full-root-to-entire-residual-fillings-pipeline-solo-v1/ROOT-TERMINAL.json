@@ -1,0 +1,7 @@
+{
+  "OriginalPid": 15524,
+  "OriginalCreationFileTimeIdentity": "134356983652331320",
+  "OriginalCommandLine": "\"C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe\" -u run_complete_origin_batches.py --manifest n25-B17-origin-streamed-search-reboot-20261005-v1/N25-B17-complete-origin-sorted-chunks.json --terminal n25-B17-origin-streamed-search-reboot-20261005-v1/NATIVE-TERMINAL.json --union n25-B17-origin-streamed-search-reboot-20261005-v1/UNION/VERIFIED.json --partition n25-B17-complete-origin-bounded-proof-inputs-solo-v1/VERIFIED.json --output n25-B17-complete-origin-root-force-and-audit-solo-v1 --workers 4",
+  "ActualExitCode": 0,
+  "OriginalCachedProcessHandleTerminalObserved": true
+}

@@ -1,0 +1,25 @@
+{
+  "status": "completed",
+  "input_hashes": {
+    "area_capped_chord_probe.py": "b0d29ee503fa27996274b2fa9399bcf3c4a7f36564c147a57accb6873216b399",
+    "area_chord_probe.py": "208846efd69e88dc9136a96d2cef381627445bbd54896250260ab65755bfdc34",
+    "area_safe_certificate.py": "14d3ee13642cc8f12502e6843274555b24c2b2a59effb4659a793458c84576e6",
+    "root_integer_certificate.py": "980a1d8fe8d4332df41c5fddecaf33f93ff0f19610349936206e788f4c2cf9a6",
+    "chord-retained.json": "1da50fe0e6dd7fa8368714c036eed5b071482c6880c284c2f31bcb18363b1837",
+    "area-chord-catalogue.jsonl": "72c8029f76a20b519e2a1c0bae322f45182ce8d03e7c06be8f75d8f5f08737e2",
+    "k10-catalogue-corrected.json": "c7de025f7b089ad3f160c495f4d557d45eac868175c06a0b7faec51fa9911895",
+    "q11-pocket-catalogue.json": "5a01b2280b096bf64e0d5af7bf9adaac5a990281fd26a3a01974a397faafd30b"
+  },
+  "total": 1130,
+  "counts": {
+    "10/4": {
+      "inconclusive": 366,
+      "excluded": 20
+    },
+    "11/3": {
+      "inconclusive": 720,
+      "excluded": 24
+    }
+  },
+  "seconds": 36.36007785797119
+}

@@ -1,0 +1,9 @@
+{
+  "status": "exact rational PASS",
+  "star_coefficient": "53/775",
+  "cos151_upper_degree8": "24504711516622571201/403200000000000000000",
+  "pi_lower_machin": "1339760982986645756/426459285655703125",
+  "star_halfmeasure_upper": "307/100",
+  "two_triple_halfmeasure_upper": "3",
+  "scope": "geometric window inequalities, not full covering optimum"
+}

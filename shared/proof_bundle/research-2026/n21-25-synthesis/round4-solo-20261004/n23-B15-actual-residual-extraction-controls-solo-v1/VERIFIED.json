@@ -1,0 +1,32 @@
+{
+  "verified": true,
+  "schema": "N23-actual-full-residual-extraction-controls-v1",
+  "negative_controls_rejected": [
+    "missing-original-binding",
+    "duplicate-original-binding",
+    "extra-original-binding",
+    "residual-outside-outer-parent",
+    "residual-count-mismatch",
+    "residual-index-duplicate",
+    "residual-index-reversed",
+    "source-truncation",
+    "source-index-gap",
+    "pair-index-mismatch",
+    "center-collision",
+    "wrong-anchor",
+    "wrong-reflection-edge-anchor",
+    "wrong-boundary-shift",
+    "omitted-pure-internal-face",
+    "duplicate-full-face",
+    "wrong-exposed-face",
+    "out-of-range-center-mask",
+    "wrong-original-group-member-count"
+  ],
+  "pure_internal_faces_preserved_positive_control": true,
+  "old_paid_source_rows_not_selected": true,
+  "source_sha256": "4cf0cea4c2e30417df0a6245d38185bc63314ff9fa5cdf01b551ab026f48f945",
+  "extractor_source_sha256": "e101010d7c35f0ca91745f1f6423e94a1f922afeb593aae180a077fc1964f2df",
+  "frozen_mapping_checker_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "functional_masks_not_asserted_planar_or_geometric": true,
+  "global_optimality_proved": false
+}

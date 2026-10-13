@@ -1,0 +1,340 @@
+{
+ "role": "independent full-12D Krawczyk enclosure, own tree-walk engine + own Y",
+ "box": {
+  "center_hex": [
+   "0x1.7cefd3e2947ffp-2",
+   "0x1.5d05f6e5b8555p-2",
+   "0x1.1f8fc82272cc5p-2",
+   "0x1.88344da9606cbp-2",
+   "0x1.178767aa02a21p-2",
+   "-0x1.3207919fda6aep-3",
+   "0x1.851a7cb8a18fbp-2",
+   "-0x1.d2440d1cffcb4p-4",
+   "-0x1.a3cad4ddf3cb9p-6",
+   "-0x1.b382ad399e43dp-8",
+   "-0x1.4536865654152p-6",
+   "-0x1.b0b66f60b890dp-6"
+  ],
+  "radius_hex": "0x1.12e0be826d695p-30",
+  "radius_exact": "1.0000000000000000623e-9",
+  "exact_box_contained": true,
+  "defect": []
+ },
+ "engine": "strict tree-walk over SymPy tree (exact rationals, Pi=iv.pi, Float=hard error)",
+ "iv_dps_primary": 40,
+ "iv_dps_robustness": [
+  30,
+  25
+ ],
+ "Y_own_midpoint_jacobian": {
+  "cond2": 1433.83424921603,
+  "max_abs": 87.94884496006644,
+  "source": "own SymPy derivatives at mp.dps=60"
+ },
+ "Q_exact_num": "3165917149883075392461318896747212561595468071",
+ "Q_exact_den": "730750818665451459101842416358141509827966271488",
+ "Q": 0.004332416836240972,
+ "Q_lt_1": true,
+ "inclusion": true,
+ "max_K_minus_c": "4.3324275e-12",
+ "slack_min": "9.9566757e-10",
+ "slack_per_coord": [
+  "9.9935861e-10",
+  "9.9867748e-10",
+  "9.974216e-10",
+  "9.9934253e-10",
+  "9.9566757e-10",
+  "9.9715097e-10",
+  "9.9999795e-10",
+  "9.9584787e-10",
+  "9.9715894e-10",
+  "9.9939502e-10",
+  "9.9902476e-10",
+  "9.9810486e-10"
+ ],
+ "slack_definition": "min(rad + lo, rad - hi) per coordinate, exact rational (this revision)",
+ "slack_per_coord_withdrawn": [
+  "9.9935861e-10",
+  "9.9867751e-10",
+  "9.9742161e-10",
+  "9.9934253e-10",
+  "9.9566757e-10",
+  "9.9715097e-10",
+  "9.9999795e-10",
+  "9.9584787e-10",
+  "9.9715894e-10",
+  "9.9939502e-10",
+  "9.9902476e-10",
+  "9.9810486e-10"
+ ],
+ "slack_old_overestimate_max": "3.486e-17",
+ "slack_old_overestimate_per_coord": [
+  "0",
+  "3.486e-17",
+  "1.24e-17",
+  "0",
+  "0",
+  "0",
+  "0",
+  "0",
+  "3.116e-18",
+  "0",
+  "1.92e-18",
+  "2.963e-18"
+ ],
+ "slack_pos_iff_inside": true,
+ "outer_distance_bounds": [
+  {
+   "tag": "corner(k=1,l=1)",
+   "dx": [
+    "0.033062058",
+    "0.033062083"
+   ],
+   "dy": [
+    "-0.37854278",
+    "-0.37854276"
+   ],
+   "dx_excludes_0": true,
+   "dy_excludes_0": true,
+   "dx2_lower": "0.001093099671",
+   "dy2_lower": "0.1432946216",
+   "dist2_lower": "0.14438772131016",
+   "conclusive": true,
+   "dy_is_identically_zero": false
+  },
+  {
+   "tag": "corner(k=2,l=0)",
+   "dx": [
+    "0.033062048",
+    "0.033062093"
+   ],
+   "dy": [
+    "-0.37854279",
+    "-0.37854275"
+   ],
+   "dx_excludes_0": true,
+   "dy_excludes_0": true,
+   "dx2_lower": "0.001093099037",
+   "dy2_lower": "0.1432946148",
+   "dist2_lower": "0.14438771384328",
+   "conclusive": true,
+   "dy_is_identically_zero": false
+  },
+  {
+   "tag": "corner(k=3,l=0)",
+   "dx": [
+    "0.30977202",
+    "0.30977224"
+   ],
+   "dy": [
+    "-0.22006582",
+    "-0.22006578"
+   ],
+   "dx_excludes_0": true,
+   "dy_excludes_0": true,
+   "dx2_lower": "0.09595870591",
+   "dy2_lower": "0.04842894649",
+   "dist2_lower": "0.14438765239459",
+   "conclusive": true,
+   "dy_is_identically_zero": false
+  },
+  {
+   "tag": "corner(k=8,l=1)",
+   "dx": [
+    "-0.37998387",
+    "-0.37998384"
+   ],
+   "dy": [
+    "0",
+    "0"
+   ],
+   "dx_excludes_0": true,
+   "dy_excludes_0": false,
+   "dx2_lower": "0.1443877177",
+   "dy2_lower": "0",
+   "dist2_lower": "0.14438771771568",
+   "conclusive": true,
+   "dy_is_identically_zero": true
+  },
+  {
+   "tag": "waist(C6,m,h)",
+   "dx": [
+    "-0.033062076",
+    "-0.033062066"
+   ],
+   "dy": [
+    "-0.37854277",
+    "-0.37854276"
+   ],
+   "dx_excludes_0": true,
+   "dy_excludes_0": true,
+   "dx2_lower": "0.001093100196",
+   "dy2_lower": "0.1432946243",
+   "dist2_lower": "0.14438772446269",
+   "conclusive": true,
+   "dy_is_identically_zero": false
+  }
+ ],
+ "outer_distance_positive": true,
+ "outer_distance_min_dist2_lower": "0.14438765239459",
+ "outer_distance_k8_note": "row corner(k=8,l=1): theta_8 + a_8 = pi exactly (theta_8 = pi - a0, a_8 = a0), so e_8 = (-1,0) and U_8^y = (rho_8-rho_0) sin a0 = 0 by the reflection rho_8 = rho_0; the interval [0,0] is symbolic cancellation, not precision, and dist^2 = dx^2 > 0",
+ "outer_distance_rule": "dx2_lb = (min|endpoint|)^2 if the dx interval excludes 0 else 0; same for dy; bnd = dx2_lb + dy2_lb; inconclusive only if bnd = 0 (both components straddle 0)",
+ "K_minus_c": [
+  [
+   "-6.413450904e-13",
+   "6.413903507e-13"
+  ],
+  [
+   "-1.3225221e-12",
+   "1.322487241e-12"
+  ],
+  [
+   "-2.578403816e-12",
+   "2.57839142e-12"
+  ],
+  [
+   "-6.574362136e-13",
+   "6.574676855e-13"
+  ],
+  [
+   "-4.332406191e-12",
+   "4.332427482e-12"
+  ],
+  [
+   "-2.849027722e-12",
+   "2.849028311e-12"
+  ],
+  [
+   "-2.026810011e-15",
+   "2.052113696e-15"
+  ],
+  [
+   "-4.152113984e-12",
+   "4.152127004e-12"
+  ],
+  [
+   "-2.841064986e-12",
+   "2.84106187e-12"
+  ],
+  [
+   "-6.04982446e-13",
+   "6.049830559e-13"
+  ],
+  [
+   "-9.752438349e-13",
+   "9.752419146e-13"
+  ],
+  [
+   "-1.895142248e-12",
+   "1.895139286e-12"
+  ]
+ ],
+ "F_center": [
+  [
+   "6.98157985523e-17",
+   "6.98157985523e-17"
+  ],
+  [
+   "4.25026369969e-17",
+   "4.25026369969e-17"
+  ],
+  [
+   "3.73430514936e-16",
+   "3.73430514936e-16"
+  ],
+  [
+   "-6.85540359633e-18",
+   "-6.85540359633e-18"
+  ],
+  [
+   "4.8082416002e-17",
+   "4.8082416002e-17"
+  ],
+  [
+   "-1.69066924653e-15",
+   "-1.69066924653e-15"
+  ],
+  [
+   "-1.58595351548e-15",
+   "-1.58595351548e-15"
+  ],
+  [
+   "-1.64652857968e-15",
+   "-1.64652857968e-15"
+  ],
+  [
+   "-1.69393417713e-15",
+   "-1.69393417713e-15"
+  ],
+  [
+   "-3.09425418467e-18",
+   "-3.09425418467e-18"
+  ],
+  [
+   "9.86621236942e-18",
+   "9.86621236942e-18"
+  ],
+  [
+   "-9.21490912389e-16",
+   "-9.21490912389e-16"
+  ]
+ ],
+ "sqrt_args_positive": true,
+ "robustness": {
+  "30": {
+   "Q": 0.004332416836240972,
+   "inside": true
+  },
+  "25": {
+   "Q": 0.004332416836240972,
+   "inside": true
+  }
+ },
+ "controls": {
+  "lambda0 +1e-2": {
+   "Q": "216077134201016411067561732796875610121442552415/730750818665451459101842416358141509827966271488",
+   "inside": false
+  },
+  "F0 row0 +1e-3": {
+   "Q": "3165917149883075392461318896747212561595468071/730750818665451459101842416358141509827966271488",
+   "inside": false
+  },
+  "radius x4": {
+   "Q": "1582959852971073836654779681712793322301969221/91343852333181432387730302044767688728495783936"
+  }
+ },
+ "control_engines": {
+  "first_order_overlap_lambdify": "35/35",
+  "second_order_nonoverlap_lambdify": 0,
+  "lead_J12": {
+   "calibration_leadJ_leadY_Q": 0.004371971621696641,
+   "ownY_minus_leadY_max": 0.0,
+   "lead_reported_Q": "0.00437197162167",
+   "first-order 5x7": {
+    "overlap": "35/35",
+    "max_width_diff": 1.6139972947226382e-06,
+    "lead_max_width": 0.00012308987267375523
+   },
+   "second-order 7x7": {
+    "overlap": "49/49",
+    "max_width_diff": 1.410924743680769e-05,
+    "lead_max_width": 0.0015833157713814527
+   }
+  },
+  "max_Fcenter_diff_vs_lead_58digit": "6.0729309e-40",
+  "wrong_pi": {
+   "F_shift": "4.71348e-15",
+   "Q": 0.0043325427532738495,
+   "inclusion": true
+  }
+ },
+ "verdict": true,
+ "scope": "existence+uniqueness of the zero of the explicitly specified 12D symmetric TC KKT system in ONE box; no covering radius / optimality / global claim",
+ "source_hashes": {
+  "r20_tc_iv3.py": "e13fe3d4d8cfa07e8d754893a97a9bc029ac1112a06f13e51bd5c104c96c8a33",
+  "r20_tc_iv1.py(model)": "6bb8b7f425f27cf1a569c971922b9111a1c0f7cb9065ac0f3caadee82ad9f2f4",
+  "r20_tc_iv3_probe.py": "48f642344b7699594135d687f467e45b8a688f5b6c66eab1d0d9767c2bd97c97",
+  "lead/repaired_tc_krawczyk.json": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5",
+  "lead/repair_tc_krawczyk.py": "08ba43cd3411632c07b3c3c61386320bda5a9f2345a42e474b431520fcffe59f"
+ }
+}

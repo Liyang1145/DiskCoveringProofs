@@ -1,0 +1,37 @@
+=== Part 1: closed-domain discrepancy per pair (certified cover) ===
+  Exact classification: with |h|<=1-r, |h-p_in|<=r and y>=0 one gets |h-p_out|<=r, hence
+  |p_out|<=|h|+r<=1, so |p_out|=1 and h=h*=(1-r)p_out (internal tangency point).  Then
+     h* is a BAD (spurious outward) point  iff y_h* >= 0 (it is then automatically in B(p_in,r)),
+     h* is MISSED by the disk condition    iff y_h* > 0 and |h*-p_in| > r,
+     no discrepancy at all for y_h* < 0.
+   pair   |pout|      d      k    |h*-p_in|-r    y_h*     verdict
+    7- 1  1.000000  0.65947  0.18885   -3.629e-01      -1.908e-01   no discrepancy (inward)
+    1- 8  1.000000  0.65947  0.18885   -3.629e-01      -1.908e-01   no discrepancy (inward)
+    8- 6  1.000000  0.52971  0.27247   -1.836e-01      -9.710e-02   no discrepancy (inward)
+    6- 4  1.000000  0.45110  0.30580   -1.435e-01      -7.233e-02   no discrepancy (inward)
+    4- 9  1.000000  0.55500  0.25958   -2.359e-01      -1.191e-01   no discrepancy (inward)
+    9-10  1.000000  0.59674  0.23529   -2.894e-01      -1.447e-01   no discrepancy (inward)
+   10- 3  1.000000  0.55500  0.25958   -2.359e-01      -1.191e-01   no discrepancy (inward)
+    3- 5  1.000000  0.45110  0.30580   -1.435e-01      -7.233e-02   no discrepancy (inward)
+    5- 7  1.000000  0.52971  0.27247   -1.836e-01      -9.710e-02   no discrepancy (inward)
+
+  Searched admissible tight pairs (|p_out|=1, U covered tie, both centres in B(0,s))
+  for a pair whose tangency point is on the OUTWARD side (y_h* > 0):
+   found 2594 such pairs; example:
+     rU=0.3800 phi=(-1.1810,-1.1482) d=0.012465  y_h*=0.229799  |h*-p_in|-r=+3.226e-01  -> MISSED outward point
+     c1=[0.855612, 0.351482] c2=[0.844161, 0.346557]
+     => non-collinear OUTWARD points in the closed lens DO occur, exactly as h* with
+        |p_out|=1 and y_h*>0, and this is the only way they can occur.
+
+=== Part 2: strict-hub nonemptiness, finite analytic criterion ===
+   hub 2 (4-pair fan)   |fan disks| = 4 ; min|h| over the closed lens = 0.272977466 (at circle-circle, in S)
+       hub itself |h| = 0.272977466 ; 1-r = 0.620016147  -> strict hub EXISTS;  hub in every fan disk: True
+   hub 0 (5-pair fan)   |fan disks| = 5 ; min|h| over the closed lens = 0.149428499 (at circle-circle, in S)
+       hub itself |h| = 0.149428499 ; 1-r = 0.620016147  -> strict hub EXISTS;  hub in every fan disk: True
+
+   adversarial control: closed intersection nonempty but NO strict hub
+     angle=1.00 : closed lens nonempty = True ; min|h| - (1-r) = -6.133e-19  -> strict hub exists
+     angle=1.60 : closed lens nonempty = True ; min|h| - (1-r) = -6.133e-19  -> strict hub exists
+     angle=2.40 : closed lens nonempty = True ; min|h| - (1-r) = +0.000e+00  -> strict hub absent
+
+wrote audit_closed_h_strict_hub.json

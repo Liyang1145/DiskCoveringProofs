@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "positive_controls": 2,
+  "negative_controls_rejected": [
+    "wrong-shared-evaluator",
+    "root-contraction-not-strict",
+    "wrong-geometric-root",
+    "wrong-local-radius",
+    "wrong-scalar-root-report",
+    "wrong-six-trig-source",
+    "wrong-core-force-kernel",
+    "wrong-b14-hierarchy",
+    "wrong-b14-force-replay",
+    "b15-incomplete",
+    "b15-no-force-replay",
+    "stage-threshold-mismatch",
+    "stage-map-count-mismatch",
+    "stage-replay-hash-mismatch"
+  ],
+  "frozen_inputs_modified": false,
+  "snapshot_written": false,
+  "source_sha256": "a1ce7ea95ed3f9df52296adc8c690e5107c1c834250e766e7a3291cc91f162a6",
+  "freezer_sha256": "8c6fb533504915ca8b0a8ffa12ed619d0ef0edfc062e944176e280adbbeb562f",
+  "scope": "completion-gate and input-binding controls, not mathematical proof"
+}

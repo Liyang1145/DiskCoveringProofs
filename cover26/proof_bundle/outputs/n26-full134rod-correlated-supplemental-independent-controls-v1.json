@@ -1,0 +1,112 @@
+{
+  "schema": "N26-independent-actual-full134rod-correlated-supplement-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "8a19e204730eb63d5e5a42971a1bde6e3a7544d8716d3ef656b8d5c77b5b3f89",
+  "checked_v7_forest_sha256": "390c514c230e38da309025467a3e293cd29f23fc7a8b90701af06f99f7e88e08",
+  "prior_full134rod_actual_independent_controls_sha256": "8629f52389f523aa910b8cdd035b71b03c7357dbe016e0a3c846360d71bbe75c",
+  "independent_normalized_Taylor_matrix_gradient_error_closed_secants_and_dual_formula_checked": true,
+  "actual_correlated_closed_leaf_results_independently_reconstructed": [
+    {
+      "checked_v7_OPEN_leaf": 1515,
+      "original_strategy": "universal-checked-kernel-fresh-newest-leaf-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-12826354507857258458230164692918465298265343393735728098233906301789074567551404074883228417356569/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "-363110293542061546186890641573985347135921065452576357605879032481817717/8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_OPEN_leaf": 1515,
+      "original_strategy": "universal-checked-kernel-fresh-newest-leaf-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-520568823097275614345011107830872124194391962853648259086008920445792745236339608833239757979197/100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "-361593879476758182879712180646956126818224904166370240664730785564277447/8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_OPEN_leaf": 1515,
+      "original_strategy": "fresh-adversarial-reference-round1-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-99170035543575366039981837120555401558139496946445452723585087636372843660100030085374670031328983/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "15634890320611228246161147842874277211841076652923513565812119430763904520860143754697170465904706777/800000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_OPEN_leaf": 1515,
+      "original_strategy": "fresh-adversarial-reference-round1-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-104902115588694715907533285979273931431530900063521599414553099292902383794077943775059571007893843/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "-377578254345606985126305491384358575991106726907373309147803139471086421/8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_OPEN_leaf": 1516,
+      "original_strategy": "universal-checked-kernel-fresh-newest-leaf-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-54705918257247945789227591593628866390478446322032494224435427624238986879495035097726961818263543/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "27411103007119294545969805078715349780807774878191305066871484240257011858449829546771409168419424867938510551984641/8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_OPEN_leaf": 1516,
+      "original_strategy": "universal-checked-kernel-fresh-newest-leaf-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-55811046635109949474603758432331228697495167959532620521837713775029298559993036849515176063143337/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "-321687363521816522039326965413314607274422146119548367914454609328891939/8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_OPEN_leaf": 1516,
+      "original_strategy": "fresh-adversarial-reference-round1-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-78873476744783138364797210921357980732462641039137267305345146761341082274492224749458294116578101/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "-18800168300732051537819712609394215315783954313963160716819823585755033/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_OPEN_leaf": 1516,
+      "original_strategy": "fresh-adversarial-reference-round1-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-8127432531691839027058536412793257355598999034196376433533309739036517320470006781772349542103303/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "exact_energy_lower_improvement": "-298810103607911195656728535621040735707857251639598464001864884733964573/8000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "independent_correlated_square_completion_and_sine_square_controls": 24,
+  "known_feasible_tiny_correlated_positive_controls_passed": 8,
+  "arbitrary_rational_tangent_outside_box_correctly_NOT_required_to_be_feasible": true,
+  "actual_correlated_mode_rejection_controls_passed": [
+    "correlated-old-diagonal-certificate-schema",
+    "correlated-unknown-proof-field",
+    "correlated-zero-Taylor-strips",
+    "correlated-boolean-Taylor-strips",
+    "correlated-too-many-Taylor-strips",
+    "correlated-correction-dimension",
+    "correlated-negative-concave-correction",
+    "correlated-boolean-correction",
+    "correlated-unbounded-correction",
+    "correlated-support-point-dimension",
+    "correlated-boolean-support-point",
+    "correlated-unbounded-support-point",
+    "correlated-support-point-omitted",
+    "correlated-old-signed-eta-field-substituted",
+    "correlated-negative-difference-dual",
+    "correlated-duplicate-difference-dual",
+    "correlated-floating-dual-numerator",
+    "correlated-zero-dual-denominator",
+    "correlated-boolean-dual-denominator",
+    "correlated-unknown-dual-proof-field",
+    "correlated-forged-energy-bound",
+    "correlated-operator-rounding-charge-omitted",
+    "correlated-old92kernel-label-forged",
+    "correlated-old62vertex-dimension-substituted"
+  ],
+  "old_diagonal_backend_original92rod_LOCAL_and_NEWEST_v8_histories_UNMODIFIED": true,
+  "successful_v7_supplement_NEEDS_fresh_actual_v8_OPEN_descendant_reconstruction_before_reuse": true,
+  "arithmetic_only_NOT_complete_latest_model_source_history_or_geometry_acceptance": true,
+  "whole_actual_root_cover_NOT_proved": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "a509d77cfc34afc8b7bbb38c08efd1f1020482463dfc3713254d36190b8c5d74",
+  "tested_correlated_module_sha256": "726e9bdf1cb4beb32bdeb4ee75a5bac598164fe00b165cd250ce5288483fdca1",
+  "tested_correlated_probe_sha256": "18cfd504e8c268dda030babf844caeea4bdd94e786bd826287ee6e59c8240491"
+}

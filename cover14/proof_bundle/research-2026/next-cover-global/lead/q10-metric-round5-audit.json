@@ -1,0 +1,125 @@
+{
+  "status": "sourcebound_configured_exterior_audit",
+  "domain_sha256": "1fd6eb81f52de1db116f6b212d6fb0e0d8ec331d17a9573c034b56672820a95b",
+  "results": [
+    {
+      "case": [
+        [
+          0
+        ],
+        "3/128",
+        1
+      ],
+      "source_sha256": "ead150abd4ea81fa85f0617409c0c57f2973e87d2f06c2d02d0974d27012d24b",
+      "nodes": 3,
+      "excluded_leaves": [
+        {
+          "node": 2,
+          "lower_exact": "331733906740917197903016739727386785055793907/1000000000000000000000000000000000000000000000"
+        },
+        {
+          "node": 1,
+          "lower_exact": "165866072685977713067238399144951062304201733/500000000000000000000000000000000000000000000"
+        }
+      ],
+      "open_cells": []
+    },
+    {
+      "case": [
+        [
+          0
+        ],
+        "1/64",
+        -1
+      ],
+      "source_sha256": "1231b5941db87ea1196dc32b269a5e5129429d22bb0cc277ba55c9fddb42eaad",
+      "nodes": 9,
+      "excluded_leaves": [
+        {
+          "node": 6,
+          "lower_exact": "66346820153042369953263014259953038092182487/200000000000000000000000000000000000000000000"
+        },
+        {
+          "node": 5,
+          "lower_exact": "331733812311175898736120483695459728162354549/1000000000000000000000000000000000000000000000"
+        },
+        {
+          "node": 3,
+          "lower_exact": "82933149271502594492453516803582441408878811/250000000000000000000000000000000000000000000"
+        }
+      ],
+      "open_cells": [
+        {
+          "node": 8,
+          "vertices": 960
+        },
+        {
+          "node": 7,
+          "vertices": 1088
+        }
+      ]
+    },
+    {
+      "case": [
+        [
+          2
+        ],
+        "1/256",
+        1
+      ],
+      "source_sha256": "612ee5ac72a6d5588b642ef80671a79e011218cba5a102f5c650af20ac9ad842",
+      "nodes": 1,
+      "excluded_leaves": [
+        {
+          "node": 0,
+          "lower_exact": "331784111208247187333981225348928619026371917/1000000000000000000000000000000000000000000000"
+        }
+      ],
+      "open_cells": []
+    }
+  ],
+  "cuts": [
+    {
+      "indices": [
+        0
+      ],
+      "sense": "less",
+      "fraction_of_total": "3/128"
+    },
+    {
+      "indices": [
+        2
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/256"
+    },
+    {
+      "indices": [
+        4
+      ],
+      "sense": "less",
+      "fraction_of_total": "3/128"
+    },
+    {
+      "indices": [
+        5
+      ],
+      "sense": "less",
+      "fraction_of_total": "3/128"
+    },
+    {
+      "indices": [
+        7
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/256"
+    },
+    {
+      "indices": [
+        9
+      ],
+      "sense": "less",
+      "fraction_of_total": "3/128"
+    }
+  ]
+}

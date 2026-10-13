@@ -1,0 +1,70 @@
+frozen SHA256 : 5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb
+expected SHA  : 5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb
+candidate certified radius interval : [0.37998385311983873, 0.37998385311983873]
+ring owners (cyclic order) : [7, 1, 8, 6, 4, 9, 10, 3, 5]
+hubs (no boundary arc)     : [0, 2]
+
+switch points (pair, angle deg, radius vs certified interval):
+  (7, 1)   theta=  67.69442  rad=0.3799838531198387090485  r/lo=LOW hi=ok
+  (1, 8)   theta= 112.18132  rad=0.3799838531198387042985  r/lo=LOW hi=ok
+  (8, 6)   theta= 156.07126  rad=0.3799838531198387068407  r/lo=LOW hi=ok
+  (6, 4)   theta= 188.25108  rad=0.3799838531198386758576  r/lo=LOW hi=ok
+  (4, 9)   theta= 227.30882  rad=0.3799838531198386965563  r/lo=LOW hi=ok
+  (9, 10)  theta= 269.93787  rad=0.37998385311983868241  r/lo=LOW hi=ok
+  (10, 3)  theta= 312.56692  rad=0.3799838531198386771383  r/lo=LOW hi=ok
+  (3, 5)   theta= 351.62465  rad=0.3799838531198386908735  r/lo=LOW hi=ok
+  (5, 7)   theta= 383.80448  rad=0.379983853119838690759  r/lo=LOW hi=ok
+
+abstract ring order (rotation/reflection of the boundary cycle) : [0, 1, 2, 3, 4, 5, 6, 7, 8]   [frozen graph wants 0,1,...,8]
+
+seven-factor group data (mpmath):
+  sector 1: alpha=2.77782616700429399 u=0.999957508210101818 v=0.999957508210101866
+  sector 2: alpha=2.9673540393362365 u=0.999957508210101866 v=0.999957508210101853
+  sector 3: alpha=2.77782616906864946 u=0.999957508210101853 v=0.99995750821010186
+  switch 1: b=1.05067834203122437 s=0.999957508210101866
+  switch 2: b=1.05067834250907032 s=0.999957508210101853
+  face   1: angles=['1.05067834203122', '0.95311666192272', '1.13779764963585'] rho/R=0.999957508210102
+  face   2: angles=['1.05067834250907', '1.137797649158', '0.95311666192272'] rho/R=0.999957508210102
+
+--- mpmath 50-digit reconstruction ---
+const                     = -23.4412476390749527481886216014
+sum of 29 atom values     = 26.5828402926647459866512649847
+const + sum               = 3.14159265358979323846264338328
+pi                        = 3.14159265358979323846264338328
+slack (const+sum-pi)      = 1.01565e-49
+seven-factor J(x*)        = 28.11447884468304165192883
+22-factor part            = -1.531638552018295665277569
+J - threshold T           = 0.0074334289
+J - certified flat ub (high bearing) = 0.0075300219
+J - numeric flat max (3 starts)      = 0.01024183
+
+chart data      : alpha2 = 2.967354039336236504
+                  A (face1 middle angle) = 1.1377976496358485441
+                  H = |c_hub - c_2| = 0.61954426354822940001
+
+independent chart-legality check at the certificate patch point:
+   min margin = 8.01829e-51 at t-v0
+   tight (<1e-9): [('t-u0', '4.81e-17'), ('t-v0', '8.02e-51'), ('t-u1', '8.02e-51'), ('t-v1', '1.25e-17'), ('t-u2', '1.25e-17'), ('t-v2', '5.81e-18'), ('hi', '2.87e-16'), ('hi', '1.73e-16')]
+
+J from chart parameters (same point, closure recomputed) = 28.11447884468304165192883
+difference to atom-list J                                = -2.13821e-49
+h=1.0e-9   toward flat  (a2+h) : min margin -1.061e-10  J = 28.114478844628023366   dJ = -5.501829e-11
+h=1.0e-9   away from flat (a2-h) : min margin -1.218e-10  J = 28.114478844738059938   dJ = +5.501829e-11
+h=1.0e-7   toward flat  (a2+h) : min margin -1.061e-08  J = 28.114478839181212682   dJ = -5.501829e-09
+h=1.0e-7   away from flat (a2-h) : min margin -1.218e-08  J = 28.114478850184869934   dJ = +5.501828e-09
+h=1.0e-5   toward flat  (a2+h) : min margin -1.061e-06  J = 28.114478294496737716   dJ = -5.501863e-07
+h=1.0e-5   away from flat (a2-h) : min margin -1.218e-06  J = 28.114479394862462946   dJ = +5.501794e-07
+h=0.001    toward flat  (a2+h) : min margin -1.061e-04  J = 28.11442379199724466   dJ = -5.505269e-05
+h=0.001    away from flat (a2-h) : min margin -1.219e-04  J = 28.114533828542421526   dJ = +5.498386e-05
+
+fibre maxima over legal (A,H) at fixed outer data (deterministic grid+refine):
+  pi-alpha2=0.0         J_fibre = 28.102165709884023871   J-T = -4.87971e-03   (A,H)=(1.10186695322,0.616490184414)
+  pi-alpha2=0.005       J_fibre = 28.102526724790913686   J-T = -4.51869e-03   (A,H)=(1.10312721135,0.616490184414)
+  pi-alpha2=0.02        J_fibre = 28.103595027709501371   J-T = -3.45039e-03   (A,H)=(1.10678849752,0.616490184414)
+  pi-alpha2=0.05        J_fibre = 28.105669184723571062   J-T = -1.37623e-03   (A,H)=(1.11427149227,0.616490184414)
+  pi-alpha2=0.07        J_fibre = 28.1070041320642509   J-T = -4.12837e-05   (A,H)=(1.11924213255,0.616490184414)
+  pi-alpha2=0.1         J_fibre = 28.108933232319829192   J-T = +1.88782e-03   (A,H)=(1.12660504719,0.616490184414)
+  pi-alpha2=0.174239    J_fibre = 28.113321928320549722   J-T = +6.27651e-03   (A,H)=(1.14463506679,0.616490184414)
+  pi-alpha2=0.4         J_fibre = 28.123127834473044421   J-T = +1.60824e-02   (A,H)=(1.19780685929,0.616490184414)
+
+wrote verify_indep_candidate.json

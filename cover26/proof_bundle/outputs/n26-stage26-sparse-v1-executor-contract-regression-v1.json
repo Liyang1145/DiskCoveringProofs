@@ -1,0 +1,57 @@
+{
+  "schema": "N26-conditional-executor-contract-diagnostic-v1",
+  "observed_at_utc": "2026-10-11T11:05:43.232547+00:00",
+  "known_good_acceptance_sha256": "fc62bfefa3328c34c6520d3f34641a4862030cbcab2323fbc4189afcf316e290",
+  "known_good_metadata_contract_passed": true,
+  "suspect_acceptance_sha256": "03efa2dfc015c279e42094e647bc5a563bb10f45265b19789103789eb0511b68",
+  "suspect_schema": "N26-successive-radius-conditional-stage-compat-acceptance-v1",
+  "suspect_contract_rejected": true,
+  "suspect_contract_error": "unsupported conditional acceptance executor/schema",
+  "reported_executor_file": "verify_conditional_force_stage.py",
+  "reported_executor_sha256": "8498c30c31d312987c776daafa03d5f855a66ad8c613fb8858df220fc32498ec",
+  "actual_compat_producer_file": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\derive_conditional_stage_compat_acceptance.py",
+  "actual_compat_producer_sha256_now": "d30e896995e18963c99db3d789a8de68f4eba0fb95190e40fa35f87a9e28ed5e",
+  "actual_producer_not_bound_as_own_executor": true,
+  "reported_negative_controls": [
+    "lost-stage-pending-sibling",
+    "missing-stage-native-event",
+    "changed-stage-split-count",
+    "missing-stage-angular-half",
+    "stage-unreachable-angular-node"
+  ],
+  "required_negative_controls": [
+    "conditional-frontier-promoted-to-unconditional-U",
+    "same-root-radius-endpoint-replaced-by-screen-threshold",
+    "conditional-source-family-changed",
+    "lost-conditional-pending-sibling",
+    "missing-conditional-native-event",
+    "changed-conditional-complete-sibling-count",
+    "conditional-angular-closed-half-lost",
+    "conditional-angular-hidden-node",
+    "candidate-full-terminal-replaced-by-ancestor"
+  ],
+  "missing_conditional_negative_controls": [
+    "conditional-frontier-promoted-to-unconditional-U",
+    "same-root-radius-endpoint-replaced-by-screen-threshold",
+    "conditional-source-family-changed",
+    "lost-conditional-pending-sibling",
+    "missing-conditional-native-event",
+    "changed-conditional-complete-sibling-count",
+    "conditional-angular-closed-half-lost",
+    "conditional-angular-hidden-node",
+    "candidate-full-terminal-replaced-by-ancestor"
+  ],
+  "guard_rejection_controls_passed": [
+    "compat-schema-laundered-as-conditional",
+    "missing-four-condition-specific-rejections",
+    "executor-renamed-to-original-semantics",
+    "wrong-executor-hash",
+    "conditional-scope-promoted-to-U",
+    "positive-control-omitted"
+  ],
+  "metadata_only_not_a_geometric_replay": true,
+  "old_files_modified": false,
+  "new_geometric_payments": 0,
+  "global_optimality_proved": false,
+  "executed_diagnostic_sha256": "89142ace493f43ade6b13727b4dd97578078512b2ae50609a0f18c112137cfe5"
+}

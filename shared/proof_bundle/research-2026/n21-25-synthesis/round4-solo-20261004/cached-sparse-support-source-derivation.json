@@ -1,0 +1,72 @@
+{
+  "verified": true,
+  "schema": "bounded-sparse-support-cache-derivation-v1",
+  "source_sha256": "435a65588e1d432abfaf5742dd4d824339d11d14da3830ab8dd42b621b1b664c",
+  "files": [
+    {
+      "source": "sparse_support_matcher.inc",
+      "source_sha256": "eab026957a1e0e453c1a7ad958e597d7a76ac8f976da5f363d1d57b69f926d69",
+      "target": "sparse_support_cached_matcher.inc",
+      "target_sha256": "eefb0276ed09b07ee221360e21a07a64aa500feeccd8687c2d7c7515c525b283",
+      "changes": [
+        [
+          "vector<SparseVariant> sparse_variants;\n",
+          "vector<SparseVariant> sparse_variants;\nmap<array<uint32_t,7>,vector<size_t>> sparse_support_candidates;\nuint64_t sparse_support_candidate_entries=0;\n"
+        ],
+        [
+          " for(auto const& variant:sparse_variants){\n  if(variant.required_faces>(int)raw.size()||\n     (variant.required_boundary_support&~target_boundary_support))continue;\n  bool type_counts_fit=true;\n  for(int type=1;type<=3;type++)\n   if(variant.required_boundary_type_counts[type]>target_boundary_type_counts[type])\n    {type_counts_fit=false;break;}\n  if(!type_counts_fit)continue;\n  int K=variant.K;\n",
+          " array<uint32_t,7> support_key{uint32_t(n),uint32_t(b),target_boundary_support,\n  uint32_t(raw.size()),uint32_t(target_boundary_type_counts[1]),\n  uint32_t(target_boundary_type_counts[2]),uint32_t(target_boundary_type_counts[3])};\n vector<size_t> uncached_support_candidates;\n vector<size_t> const* selected_support_candidates=nullptr;\n auto support_entry=sparse_support_candidates.find(support_key);\n if(support_entry==sparse_support_candidates.end()){\n  vector<size_t> candidates;\n  for(size_t variant_index=0;variant_index<sparse_variants.size();variant_index++){\n   auto const& variant=sparse_variants[variant_index];\n   if(variant.required_faces>(int)raw.size()||\n      (variant.required_boundary_support&~target_boundary_support))continue;\n   bool type_counts_fit=true;\n   for(int type=1;type<=3;type++)\n    if(variant.required_boundary_type_counts[type]>target_boundary_type_counts[type])\n     {type_counts_fit=false;break;}\n   if(type_counts_fit)candidates.push_back(variant_index);\n  }\n  if(candidates.size()>1048576){\n   uncached_support_candidates=move(candidates);\n   selected_support_candidates=&uncached_support_candidates;\n  }else{\n   if(sparse_support_candidates.size()>=4096||\n      sparse_support_candidate_entries+candidates.size()>1048576){\n    sparse_support_candidates.clear();sparse_support_candidate_entries=0;\n   }\n   sparse_support_candidate_entries+=candidates.size();\n   support_entry=sparse_support_candidates.emplace(support_key,move(candidates)).first;\n  }\n }\n if(!selected_support_candidates)selected_support_candidates=&support_entry->second;\n for(size_t variant_index:*selected_support_candidates){\n  auto const& variant=sparse_variants[variant_index];\n  int K=variant.K;\n"
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "sparse_support_match.cpp",
+      "source_sha256": "717f5cce43222150c6691b333ddd933e2774a9b3260ec6faff555c6584e66689",
+      "target": "sparse_support_cached_match.cpp",
+      "target_sha256": "443dc99928506445d58c3f2add2ee03c31eef62d5936d9244f979229fe6053c5",
+      "changes": [
+        [
+          "#include \"sparse_support_matcher.inc\"",
+          "#include \"sparse_support_cached_matcher.inc\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "peel_support_eight_collar.cpp",
+      "source_sha256": "92f62955466d7d50103f8a38bfffc26f58d8a3743b82bf5342829cac92ee9381",
+      "target": "peel_cached_support_eight_collar.cpp",
+      "target_sha256": "e713c46bdd5aebcfb5a7f36f9a68827d4430b11dc63f0f9faf637e5fc07ba5fa",
+      "changes": [
+        [
+          "#include \"sparse_support_matcher.inc\"",
+          "#include \"sparse_support_cached_matcher.inc\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "peel_support_origin_collar.cpp",
+      "source_sha256": "d49a088dfc936c04329a2325fed26d4ba96ee12debaa7574337505122d10859b",
+      "target": "peel_cached_support_origin_collar.cpp",
+      "target_sha256": "480bd5aa13b83dae07d11b8bb9c30ba4b369f819222416af15ee59eacf187c42",
+      "changes": [
+        [
+          "#include \"sparse_support_matcher.inc\"",
+          "#include \"sparse_support_cached_matcher.inc\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    }
+  ],
+  "prior_derivation_sha256": "541b810c7654d88fec746854532372ad36872b2c30f27dbf1d96155787eab132",
+  "source_lemma_sha256": "44c01107bb69557e5e1139324193188f488ab670a358c97e36245aba931d0753",
+  "complete_integer_key_contains_all_filter_target_values": true,
+  "original_variant_and_internal_search_order_preserved": true,
+  "all_positive_checks_and_recursion_unchanged": true,
+  "maximum_cached_keys": 4096,
+  "maximum_cached_candidate_indices": 1048576,
+  "cache_eviction_not_a_recursion_prune": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,39 @@
+{
+  "R_STAR_label": "C529 rational (NOT C891)",
+  "R_star": 0.37998385311983873,
+  "phi0_of_first_switch": 0.41546646819788174,
+  "jacobian_check": {
+    "n_constraints_checked": 69,
+    "n_variables": 53,
+    "max_jac_error": 2.8043132260791026e-09,
+    "worst_constraint": "constraint 10 (type=ineq)",
+    "step": 1e-07
+  },
+  "direct_51_distances_at_saved_candidate": {
+    "min": 0.015612271368200592,
+    "max": 0.016486944150356564,
+    "n_negative_lt_-1e-12": 0,
+    "LABEL": "r = 0.4 at the warm start: this is a STRICTLY FEASIBLE SEED check, NOT the sharp candidate calibration; the sharp check (r = R_STAR) is in candidate_sharp_check.json"
+  },
+  "widths_at_candidate": [
+    0.7660240429427005,
+    0.7764427952729321,
+    0.7660240430956724,
+    0.5616438432767379,
+    0.6816861300678302,
+    0.7440172386630849,
+    0.7440172412752694,
+    0.6816861301310441,
+    0.561643842454315
+  ],
+  "widths_legal": true,
+  "calibration_run": {
+    "V": 0.37998385311983573,
+    "V_minus_R_star": -2.9976021664879227e-15,
+    "success": true,
+    "nit": 4,
+    "min_51_edge_residual": -4.274358644806853e-15,
+    "LABEL": "sharp check: SLSQP from the rotated warm start converges to V = R*"
+  },
+  "PASS": true
+}

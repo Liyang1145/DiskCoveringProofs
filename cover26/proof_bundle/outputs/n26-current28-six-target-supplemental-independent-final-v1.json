@@ -1,0 +1,160 @@
+{
+  "schema": "N26-independent-six-target-source-current-final-rehash-v1",
+  "all_current_file_digests_rehashed": true,
+  "current_file_digests_rechecked": 273526,
+  "current_audit_sha256": "c85e130c935e68e2275e53fa457c9c4d95d8be5416b128f4307a76061057911b",
+  "actual_own_publication_AND_complete_current_semantic_reports_byte_identical": true,
+  "independent_complete_original_source_prefix_reconstruction": 11183,
+  "independent_exact_six_target_source_accounting": {
+    "entire_source_prefixes_independently_scanned": 11183,
+    "strict_six_target_whole_prefixes": 5546,
+    "retained_unpaid_source_prefixes": 5637,
+    "original_physical_count_and_all_shadow_cases": 58916,
+    "independent_family_conservation": [
+      {
+        "B": 14,
+        "actual_source_subtrees": 296,
+        "strict_six_target_whole_subtrees": 0,
+        "retained_subtrees": 296,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 15,
+        "actual_source_subtrees": 1224,
+        "strict_six_target_whole_subtrees": 530,
+        "retained_subtrees": 694,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 16,
+        "actual_source_subtrees": 4542,
+        "strict_six_target_whole_subtrees": 1839,
+        "retained_subtrees": 2703,
+        "all_raw_terminals_retained": 2
+      },
+      {
+        "B": 17,
+        "actual_source_subtrees": 5121,
+        "strict_six_target_whole_subtrees": 3177,
+        "retained_subtrees": 1944,
+        "all_raw_terminals_retained": 0
+      }
+    ],
+    "independent_exact_six_core_target_identities": {
+      "exact_six_targets_x_and_sqrt3_y_coefficients": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "265299/1000000",
+          "265299/1000000"
+        ],
+        [
+          "265299/1000000",
+          "-265299/1000000"
+        ],
+        [
+          "-265299/1000000",
+          "265299/1000000"
+        ],
+        [
+          "-265299/1000000",
+          "-265299/1000000"
+        ],
+        [
+          "-265299/500000",
+          "0"
+        ]
+      ],
+      "exact_core_radius": "265299/500000",
+      "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+      "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+      "exact_ear_to_all_targets_horizontal_distance_lower": "3/10",
+      "exact_horizontal_margin_above_U": "65299/1000000",
+      "six_DISTINCT_ORIGINAL_outside_nonowner_disks_required": 6,
+      "finite_identities_do_NOT_replace_the_written_continuous_cover_and_embedding_proof": true
+    },
+    "all_unpaid_siblings_and_raw_terminals_retained_identically": true,
+    "entire_actual_source_prefix_partition_prefix_free": true,
+    "candidate_whole_roots_removed": 0
+  },
+  "Rstar_conditional_frontier_pending_subtrees": 5637,
+  "Rstar_conditional_frontier_families": [
+    {
+      "B": 14,
+      "I": 12,
+      "split": 800,
+      "force": 37,
+      "force_tree": 0,
+      "area": 190,
+      "empty": 173,
+      "terminal": 0,
+      "pending_subtrees": 296,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 0
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "split": 714,
+      "force": 0,
+      "force_tree": 0,
+      "area": 64,
+      "empty": 422,
+      "terminal": 0,
+      "pending_subtrees": 694,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 530
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "split": 1002,
+      "force": 3,
+      "force_tree": 5,
+      "area": 37,
+      "empty": 151,
+      "terminal": 2,
+      "pending_subtrees": 2703,
+      "unresolved_terminal_subtrees": 2,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 1839
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "split": 801,
+      "force": 0,
+      "force_tree": 0,
+      "area": 0,
+      "empty": 399,
+      "terminal": 0,
+      "pending_subtrees": 1944,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 3177
+    }
+  ],
+  "new_strict_whole_prefixes": 5546,
+  "candidate_whole_roots_removed": 0,
+  "candidate_angle_unresolved_closed_boxes": 25,
+  "all_actual_latest_owned8_histories_and_raw_terminal_obligations_retained": true,
+  "retained_closed_full_type_codes": 87,
+  "retained_checked_proof_receipts": 215,
+  "radius_scope": "at-most-same-root-Rstar-not-original-U",
+  "r_strict_interval": [
+    "0.234700090400448239616790133776692127560495963654971391785924",
+    "0.234700090400448239616790133776692127560495963654971391785925"
+  ],
+  "original_U_frontier_nodes_removed": 0,
+  "unrestricted_reduction_final_joint_acceptance": false,
+  "full_catalog_complete": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_checker_sha256": "7fbc9bcad24fa88195cf16824bd16a9469ca30fa2db901be99d67aa6ab9c7578",
+  "executed_independent_accounting_sha256": "2fb1e4303fadd927c8629d2d53b8fea0d78a2660f270b895f6779029e2ec955e"
+}

@@ -1,0 +1,37 @@
+{
+  "scope": "numeric saved rational rings at candidate floating allowance; no certification",
+  "edge_indices": [
+    4,
+    6,
+    8
+  ],
+  "points": [
+    [
+      -0.37866873651434624,
+      -0.11595586133734863
+    ],
+    [
+      -0.0005741023530978287,
+      -0.5294120407837313
+    ],
+    [
+      0.37841635673703006,
+      -0.11677685837533505
+    ]
+  ],
+  "weights": [
+    0.45997773056271785,
+    0.08004453927415564,
+    0.45997773016312643
+  ],
+  "variance_minus_r2": -1.942890293094024e-16,
+  "circum_polynomial": -7.632783294297951e-17,
+  "rational_weights_numerators": [
+    459977731,
+    80044539,
+    459977730
+  ],
+  "denominator": 1000000000,
+  "rational_variance_minus_r2": -1.942890293094024e-16,
+  "identity_error": 5.551115123125783e-17
+}

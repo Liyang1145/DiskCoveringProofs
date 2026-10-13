@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "schema": "finite-closed-origin-slab-prefix-exact-payments-v1",
+  "N": 25,
+  "B": 16,
+  "selected_source_rows": 64,
+  "strictly_excluded": 64,
+  "pending_rows": 0,
+  "all_selected_canonical_codes_and_identity_maps_checked": true,
+  "all_selected_strict_trees_independent_standard_library_replayed": true,
+  "source_slab_sha256": "3949442a79dfed352306147be1c05e85a1ab42763a7ed5e3859db9a8fb93b0d7",
+  "groups_sha256": "82514050535486dc65c1126e61a47180e0da0fee98373214cc08ce7762fb45d8",
+  "receipt_sha256": "afee182083b5273319f9e078fe0545306424aef01b62279130cf2e217b37dae7",
+  "exact_replay_sha256": "dc6a5682d19b3eb90cb68aa92f0b76eccb9b12999e7553228629e7978a8441ab",
+  "source_sha256": "53f28f355f1a50681c1815634145be6180d1aa55613ce4e9cc6b3bfc449045ac",
+  "not_a_complete_competitor_family_or_union": true,
+  "pending_numeric_diagnostics_never_exclusions_or_actual_covers": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,242 @@
+{
+  "verified": true,
+  "schema": "actual-cover-origin-streamed-enumeration-controls-v1",
+  "source_sha256": "e35589af282995a4a8279d4790b08adfb8bb005ec75fd67301c795e8e002edde",
+  "native_source_sha256": "2fa670b7e10a6fdd869862f821406a5457300983fb8b9cb3f4c886688bd8bd93",
+  "native_binary_sha256": "027383aaeaaf982cc388e6d2b653de02b34f9e9d0709897d79d10211ed1115d3",
+  "origin_guard_sha256": "1fb4da49aa5040d4387a013ea002a5990b42cfe9a1fbf4147dfd84adacc02b19",
+  "merge_source_sha256": "6766df236187d9727de97a42ff8ff74e5baebd94c63181c91b69a65caac4ac95",
+  "graph_requests": 576,
+  "all_native_exposed_masks_match_independent_face_unions": true,
+  "native_origin_obstructions": 213,
+  "all_32_dihedral_attaining_controls_retained": true,
+  "mathematical_controls": {
+    "known_N25_B16_attaining_graph_retained": true,
+    "pure_internal_faces_not_counted_as_exposure": true,
+    "real_N25_B14_V25_source_classified_as_cover_obstruction": true,
+    "quarter_and_larger_radius_rejected": true,
+    "quarter_radius_local_equality_control": true
+  },
+  "complete_small_family_controls": [
+    {
+      "N": 20,
+      "B": 14,
+      "mode": "dfs",
+      "sparse": false,
+      "flag": "0",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 0,
+      "manifest_sha256": "069d8d0407cb6a9ead31d1be047f053d3a43829d03ed9a6be6d5e380387732a2",
+      "union_sha256": "ec7ae92fda8280cfb6da25e8aec8ee582befb87e994df4911aa3c9ee4d19f426"
+    },
+    {
+      "N": 20,
+      "B": 14,
+      "mode": "dfs",
+      "sparse": false,
+      "flag": "1",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 0,
+      "manifest_sha256": "c8abb9d7a74632ad67b820e34a02de70be5c5ba76491828fb24b706f001f56f9",
+      "union_sha256": "6899c0204408c7ed85501ee3714d2e0f0f19e43a6d8c04a4758b824d579f8770"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "dfs",
+      "sparse": false,
+      "flag": "0",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 18,
+      "manifest_sha256": "35d04e03a41b7a82acc429be02954d571902b12de312d1d947a3d2b4d0edd6e3",
+      "union_sha256": "9fdb98daecc5fcbf3f093d398cb54452b4bb6b3e2c22c22bb27ef16bf0da46f4"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "dfs",
+      "sparse": false,
+      "flag": "1",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 18,
+      "manifest_sha256": "fbd5fa3618f4f9a186c2905597f6a92406242ab049d8b7573b7694d18e32ca6c",
+      "union_sha256": "0e09bbe8641c2bb241d6406b546cc780d2c4e3bf89c64b64ba658024b9c9911c"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "audit",
+      "sparse": false,
+      "flag": "0",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 18,
+      "manifest_sha256": "5a8ed7c1f33fdba4f0654fe6fb5c578a31b9f7c99b951eabfeb40602ca5cd191",
+      "union_sha256": "47b95271f72eccf5ed7aad96990eb56cdd7a01a72b7133e7f7a52281fb4dddee"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "audit",
+      "sparse": false,
+      "flag": "1",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 18,
+      "manifest_sha256": "7ca7083e0c0de7613e55fc59c0aab05a5a35c8045c6da85fab1630afbdc117c1",
+      "union_sha256": "83c4488d46c8e47beaa2d4d434453a7d34b1d8290340e118164af40f58db1b37"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "dfs",
+      "sparse": true,
+      "flag": "0",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 1,
+      "manifest_sha256": "6346edb9b52ca76b8e936c3a0f195bcf04af943f2a6c8d1dce2016e7ed11f0ea",
+      "union_sha256": "6471ff9eb37c5c7dc628b9276ebb731bfcec95511cc92657d262b17fc9a0f311"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "dfs",
+      "sparse": true,
+      "flag": "1",
+      "full_boundary_family_control": true,
+      "complete_set_equals_reference": true,
+      "weak_graphs": 1,
+      "manifest_sha256": "53abf071f93219ae4f476979ab2908f15ac5036d7da65e800c38fff57aa1c53f",
+      "union_sha256": "9c43467f64a1e2f450d1c5c45772deb8180f2b2386482825383fc04260e41404"
+    }
+  ],
+  "complete_restricted_N25_seed_controls": [
+    {
+      "B": 14,
+      "centers": 25,
+      "seed": 0,
+      "allocation": [
+        0
+      ],
+      "flag": "0",
+      "complete_restricted_result_paid_or_preserved": true,
+      "not_a_full_boundary_family": true,
+      "manifest_sha256": "42b79756cfa0d0221b4c595ab2cad8b66fb291ca4fb3c0a68b963137e480ee0d",
+      "union_sha256": "0e892ab55aaf8c5e52c23ce7f673ac68f5b41c20cb9f7da75258bc0b12970f3b"
+    },
+    {
+      "B": 14,
+      "centers": 25,
+      "seed": 0,
+      "allocation": [
+        0
+      ],
+      "flag": "1",
+      "complete_restricted_result_paid_or_preserved": true,
+      "not_a_full_boundary_family": true,
+      "manifest_sha256": "47e6a915984e20949c913240c3dce788d0c74193da1b17464316a8382d7987d7",
+      "union_sha256": "aba043a1cd5d6bc840ee808310d691b871a47309583acdef449166ba93b12657"
+    },
+    {
+      "B": 14,
+      "centers": 24,
+      "seed": 1,
+      "allocation": [
+        1
+      ],
+      "flag": "0",
+      "complete_restricted_result_paid_or_preserved": true,
+      "not_a_full_boundary_family": true,
+      "manifest_sha256": "5a84e72aae086abd925c37a78801c98b32da8ee7bb9d7b5ac80e6d230e2791c5",
+      "union_sha256": "fd6f77a98778047284de74fa4497768dc243a5e896dff95485164ce416ee5201"
+    },
+    {
+      "B": 14,
+      "centers": 24,
+      "seed": 1,
+      "allocation": [
+        1
+      ],
+      "flag": "1",
+      "complete_restricted_result_paid_or_preserved": true,
+      "not_a_full_boundary_family": true,
+      "manifest_sha256": "2ab974b7b3ee001847417c2d93c235e1422a003e5c653c7eff6e9564ce2460d2",
+      "union_sha256": "426c49a05cfc939e186697923e90ff99caeb18d644101c0dcc2a2e2fbebe8abd"
+    },
+    {
+      "B": 16,
+      "centers": 24,
+      "seed": 2,
+      "allocation": [
+        1
+      ],
+      "flag": "0",
+      "complete_restricted_result_paid_or_preserved": true,
+      "not_a_full_boundary_family": true,
+      "manifest_sha256": "98e6faf9d8260a6e3095d4cc822044c4db3a1c71ae951464b08e0fc54f5841bb",
+      "union_sha256": "4214cbce611b266bf836b0feca8adf2179dad79c713ef50e1b8203a30cc855f0"
+    },
+    {
+      "B": 16,
+      "centers": 24,
+      "seed": 2,
+      "allocation": [
+        1
+      ],
+      "flag": "1",
+      "complete_restricted_result_paid_or_preserved": true,
+      "not_a_full_boundary_family": true,
+      "manifest_sha256": "6d656476406c3c8d3cc46b19de233f1b6c19d813eabae307c75d8d12e48c7c39",
+      "union_sha256": "4c1ad406b826ad17affae39126bf3f82bd49ebe19e682562171b306a2d9653e6"
+    }
+  ],
+  "complete_N25_other_B_control": {
+    "N": 25,
+    "B": 25,
+    "not_a_required_N25_competitor_family": true,
+    "complete_empty_by_origin_obstruction": true,
+    "manifest_sha256": "ac0f403d38945c8feb72e628bc2f68653dcec06d416f27829f8367de5c7c6e57"
+  },
+  "negative_controls_rejected": [
+    "bad-flag",
+    "node-limit",
+    "bad-N",
+    "bad-B",
+    "nonzero-exit",
+    "prefix-manifest"
+  ],
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-eight-sparse-guard-controls-20261005-v1/N20-B14-eight-baseline.json": "d6b28cd246f9f61e781cb89bc31c148dec384fec9a56e417219738e333dd48b9",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-eight-sparse-guard-controls-20261005-v1/N21-B14-eight-baseline.json": "41d0f8b076a58043b542f5ce993701a750ba32b90024efb2dc0c61f3cfc553ce",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-eight-sparse-guard-controls-20261005-v1/N21-B14-eight-sparse-dfs.json": "7b809f2036f59073baa00f33b8c1334f9570448531f05ad6210ec14850583657",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-g0-simple-hole-completions-20261005-v1/INPUT-COLLAR.json": "636fa41457061bfcc25f30814d64fd38ab43020329551c1dd44526f441730727",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-real-residual20-collar-payments-20261005-v1/parent-0000552/COMPLETIONS/INPUT-COLLAR.json": "0d8de70e09c6d4131a4441a65a7f27ab26f8b32e9f89190aa89580011525ed62",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-origin-collar-controls-20261005-v1/CANDIDATE-COLLAR.json": "20dbe7ffce365beb9368851cc6c66ec34f97b94fce4e35564d195d8e75e202e2",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/test_origin_collar.py": "e35589af282995a4a8279d4790b08adfb8bb005ec75fd67301c795e8e002edde",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/cover_origin_obstruction.inc": "1fb4da49aa5040d4387a013ea002a5990b42cfe9a1fbf4147dfd84adacc02b19",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/peel_origin_streamed_collar.cpp": "2fa670b7e10a6fdd869862f821406a5457300983fb8b9cb3f4c886688bd8bd93",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/peel_origin_streamed_collar-linux": "027383aaeaaf982cc388e6d2b653de02b34f9e9d0709897d79d10211ed1115d3",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/merge_origin_collar_chunks.py": "6766df236187d9727de97a42ff8ff74e5baebd94c63181c91b69a65caac4ac95",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/test_cover_origin.cpp": "e16210cdb178727c422f9bc8024c8e980d5c5e3b4782f5a7abba0c62918430a3",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/test_cover_origin-linux": "4afcb4891900a7a36776fca71e3fb4dcbf40259c4245de027e24c8419e00d18e",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/seed_cover_origin.cpp": "92e78a39cd785c28dfe7300d375eaf5c9a800cf25ec74fa734ae2c732f115344",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/seed_cover_origin-linux": "e8f01926d6d000a4105b5bf66bc54cfe82fd19ea2464f546c9c4b89dec72d097",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/UNEXPOSED-ORIGIN-CENTER-SOURCE.md": "ac47089881d2e51f299cc5c27c4c61720b17c2af18692e5ef4df6feb3de11949",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/origin-streamed-collar-source-derivation.json": "aa96df26ba76d40b65774e114fcb2a431f5919f59b50475c6b60fdf39239de96",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/origin-probe-source-derivation.json": "b7828e270d8091509247905060f638e078b5372836d10bb675f8d0c8696f7614",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/origin-chunk-merge-source-derivation.json": "712e69277f2b6ccd5819a23d3b0889f2cd281937b8a45bc05e29e447a89ddc11",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/refine_collar_origin.py": "05d1e7a54cbe2db4cc835b29a772a3e8e54c2ebc982f26367a83d7b00dc28017",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-origin-collar-controls-20261005-v1/REQUESTS.tsv": "0d206f949f7d85c19ee4553ff4c4179037e575ce2a149e03b79d69e1a4fb35d5",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-origin-collar-controls-20261005-v1/NATIVE-ANSWERS.json": "490ed9e1aeebbe5531701db6907974eef778b350eba1ed034388bbf879378611",
+    "research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-old-collar-paid-partition-20261005-v2/RESIDUAL.jsonl": "df85996dd00f9a873ddc075c9709af5ff6abd7e1ee9815ba43e030216acc3186",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-origin-refined-residual-20261005-v1/VERIFIED.json": "b493bb908ba52f1a4a1318efd1eeec4392a5e354e04fa95dfbb5a83b95e6e325"
+  },
+  "required_full_N25_families_not_run_here": true,
+  "global_optimality_proved": false
+}

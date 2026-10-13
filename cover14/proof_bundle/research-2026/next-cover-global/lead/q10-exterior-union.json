@@ -1,0 +1,92 @@
+{
+  "status": "complete_exterior_union_necessarycuts_only",
+  "trees": [
+    {
+      "index": 0,
+      "audit_sha256": "772750fab9badb1c309bbdc7dda12af6853fe3b6dccac139c17ab2c7e868b6a9",
+      "nodes": 5,
+      "leaves": 3,
+      "minimum_lower": "41468675976895897858301657058867269921173723/125000000000000000000000000000000000000000000"
+    },
+    {
+      "index": 1,
+      "audit_sha256": "a36e85cd8a20cb83d9ba35732b9097dd033eb39f80cc6c2a55d2df51830c8187",
+      "nodes": 5,
+      "leaves": 3,
+      "minimum_lower": "82937517494106575168959256667940204081393709/250000000000000000000000000000000000000000000"
+    },
+    {
+      "index": 2,
+      "audit_sha256": "e0db2be0ea866eacc2159b9dbc44099d011777d7ce422e43895d262d26cc4ee7",
+      "nodes": 5,
+      "leaves": 3,
+      "minimum_lower": "331865801734665841962290674850407009510279477/1000000000000000000000000000000000000000000000"
+    }
+  ],
+  "cuts": [
+    {
+      "indices": [
+        0
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/16"
+    },
+    {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sense": "greater",
+      "fraction_of_total": "7/16"
+    },
+    {
+      "indices": [
+        2
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/32"
+    },
+    {
+      "indices": [
+        4
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/16"
+    },
+    {
+      "indices": [
+        5
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/16"
+    },
+    {
+      "indices": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sense": "greater",
+      "fraction_of_total": "7/16"
+    },
+    {
+      "indices": [
+        7
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/32"
+    },
+    {
+      "indices": [
+        9
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/16"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "proposal-frozen-N23-B15-full-type-origin-partition-v1",
+  "N": 23,
+  "B": 15,
+  "catalog_types": 16790546,
+  "actual_cover_origin_obstructions": 13014588,
+  "pending_full_types": 3775958,
+  "exposed_center_histogram": {
+    "20": 21527,
+    "21": 423132,
+    "22": 3331299,
+    "23": 13014588
+  },
+  "radius_upper": "249953776586051/1000000000000000",
+  "strict_gap_1_minus_4U": "46223413949/250000000000000",
+  "catalog_sha256": "d1489120333b36e31e792bb6b277cd11c2a12fe20f6a51100999ab80f0f71344",
+  "origin_obstructions_sha256": "abbc0220d531e4c5a57a089ebe662beaac3c58c212349900ef23f27465f42dc0",
+  "pending_sha256": "898c7a857d01d49ca88745683627ef78cdece05a4c4ae014c3cd8b8ea2b5fb47",
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-original-archive-dataset-20261005-v1\\VERIFIED.json": "2389953291b84dd5cca140528671cacb32e59717865f5450d032fca02e0fa024",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-original-archive-dataset-20261005-v1\\CATALOG\\N23-B15-dfs.json": "d1489120333b36e31e792bb6b277cd11c2a12fe20f6a51100999ab80f0f71344",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-original-archive-dataset-20261005-v1\\CATALOG\\SUMMARY.json": "fd257b031071dc6a758f8e3218cd7bb705848483b303b043f5c3bfe3a6a7b18d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\evidence\\core-reduction\\constants\\n23.json": "0b08dd350e33852d46207fb709b88ad5535cb2a003a51cf429b7cddb200c8ed1",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-cover-origin-necessity-controls-20261005-v1\\VERIFIED.json": "e37e74163fcf614b5cbf1d608d6378e213d8650b388325ee2900e4d551440a46",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\stream_catalog.py": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\peel_degree.cpp": "5d88bffdc65eb8e19c92ef3eb8732c0ad9ef5868ea18a186074ff759ed8bb6ca",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-N24-UNEXPOSED-ORIGIN-SOURCE.md": "d800a4372b39a4454428abb03fc4455441b093f1ac90f221909ef8698c3846db",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N25-COLLAR-COVER-INTERFACE.md": "80d3d9c7c5e09bee6268ef064dd818c7775c7a96146a94ad38e574fb264a9a74",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\partition_n23_B15_origin_catalog.py": "70e18dcfb8468dbb490a8e60b68e554929e576dfdd3bea65cbc118fa44081733",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\refine_collar_origin.py": "05d1e7a54cbe2db4cc835b29a772a3e8e54c2ebc982f26367a83d7b00dc28017",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_n23_B15_origin_catalog.py": "6b09bd769373cbc8de4d8e817a11b11ef03b4cd393bea8dc06a1e01ef1d14449"
+  },
+  "source_sha256": "70e18dcfb8468dbb490a8e60b68e554929e576dfdd3bea65cbc118fa44081733",
+  "not_independently_accepted_until_separate_fresh_full_scan": true,
+  "global_optimality_proved": false
+}

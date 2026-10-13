@@ -1,0 +1,9 @@
+{
+  "scope": "exact rational configuration upper bound only",
+  "source_sha256": "16d99e074fefeecf463d1f3806b0470af6666810790167b9655d74190a938892",
+  "kernel_sha256": "68c121cccefc6a816b2c7a9c45249e2320045be21392fcff086a0750e8046589",
+  "threshold": "1658660171381170613/5000000000000000000",
+  "candidate_count": 493,
+  "uncovered": [],
+  "certified_by_program": true
+}

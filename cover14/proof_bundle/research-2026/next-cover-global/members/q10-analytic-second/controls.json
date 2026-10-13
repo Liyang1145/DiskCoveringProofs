@@ -1,0 +1,232 @@
+{
+  "status": "analytic theorem separately; finite exact and floating controls, no continuum certificate",
+  "controls": [
+    {
+      "name": "coincident",
+      "actual": true,
+      "expected": true,
+      "arithmetic": "Fraction"
+    },
+    {
+      "name": "collinear_diameter",
+      "actual": true,
+      "expected": true,
+      "arithmetic": "Fraction"
+    },
+    {
+      "name": "right_triangle",
+      "actual": true,
+      "expected": true,
+      "arithmetic": "Fraction"
+    },
+    {
+      "name": "acute_pairwise_not_enough",
+      "actual": false,
+      "expected": false,
+      "arithmetic": "Fraction"
+    },
+    {
+      "name": "obtuse",
+      "actual": true,
+      "expected": true,
+      "arithmetic": "Fraction"
+    },
+    {
+      "name": "duplicate_but_too_far",
+      "actual": false,
+      "expected": false,
+      "arithmetic": "Fraction"
+    },
+    {
+      "name": "one_disk",
+      "expected": true,
+      "nonempty": true,
+      "circle_count": 1,
+      "candidate_count": 1,
+      "passing_count": 1,
+      "first": [
+        2.0,
+        0.0
+      ],
+      "arithmetic": "float, tol=1e-12"
+    },
+    {
+      "name": "tangent_disks",
+      "expected": true,
+      "nonempty": true,
+      "circle_count": 2,
+      "candidate_count": 4,
+      "passing_count": 3,
+      "first": [
+        2.0,
+        0.0
+      ],
+      "arithmetic": "float, tol=1e-12"
+    },
+    {
+      "name": "empty_disks",
+      "expected": false,
+      "nonempty": false,
+      "circle_count": 2,
+      "candidate_count": 2,
+      "passing_count": 0,
+      "first": null,
+      "arithmetic": "float, tol=1e-12"
+    },
+    {
+      "name": "single_endpoint_lens",
+      "expected": true,
+      "nonempty": true,
+      "circle_count": 1,
+      "candidate_count": 1,
+      "passing_count": 1,
+      "first": [
+        1.0,
+        0.0
+      ],
+      "arithmetic": "float, tol=1e-12"
+    },
+    {
+      "name": "two_nondegenerate_lenses",
+      "expected": true,
+      "nonempty": true,
+      "circle_count": 8,
+      "candidate_count": 40,
+      "passing_count": 28,
+      "first": [
+        1.5,
+        0.0
+      ],
+      "arithmetic": "float, tol=1e-12"
+    }
+  ],
+  "graph_pairs10": [
+    [
+      0,
+      1
+    ],
+    [
+      0,
+      9
+    ],
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      11
+    ],
+    [
+      9,
+      13
+    ],
+    [
+      11,
+      13
+    ]
+  ],
+  "graph_pairs12": [
+    [
+      4,
+      5
+    ],
+    [
+      4,
+      11
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      13
+    ],
+    [
+      11,
+      13
+    ]
+  ],
+  "retained": [
+    [
+      2,
+      3,
+      11
+    ],
+    [
+      3,
+      4,
+      11
+    ],
+    [
+      7,
+      8,
+      13
+    ],
+    [
+      8,
+      9,
+      13
+    ]
+  ],
+  "candidate_calibration": {
+    "10": {
+      "saved_hub_passes": true,
+      "elimination": {
+        "nonempty": true,
+        "circle_count": 24,
+        "candidate_count": 466,
+        "passing_count": 10,
+        "first": [
+          0.0,
+          0.38861869679828565
+        ]
+      }
+    },
+    "12": {
+      "saved_hub_passes": true,
+      "elimination": {
+        "nonempty": true,
+        "circle_count": 24,
+        "candidate_count": 466,
+        "passing_count": 10,
+        "first": [
+          0.0,
+          -0.3886186967982857
+        ]
+      }
+    },
+    "3": {
+      "saved_site_passes": true,
+      "elimination": {
+        "nonempty": true,
+        "circle_count": 10,
+        "candidate_count": 88,
+        "passing_count": 5,
+        "first": [
+          0.94337365737811,
+          -2.7755575615628914e-17
+        ]
+      }
+    },
+    "8": {
+      "saved_site_passes": true,
+      "elimination": {
+        "nonempty": true,
+        "circle_count": 10,
+        "candidate_count": 90,
+        "passing_count": 7,
+        "first": [
+          -0.9433736573781099,
+          1.1102230246251565e-16
+        ]
+      }
+    }
+  },
+  "candidate_tolerance": 1e-13
+}

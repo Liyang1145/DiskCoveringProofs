@@ -1,0 +1,31 @@
+{
+  "verified": true,
+  "schema": "N23-actual-full-type-tree-and-candidate-identity-controls-v1",
+  "negative_controls_rejected": [
+    "wrong-order",
+    "wrong-boundary",
+    "weakened-center-count",
+    "wrong-source-index",
+    "omitted-internal-full-face",
+    "wrong-full-input-binding",
+    "wrong-constants-binding",
+    "wrong-radius",
+    "local-leaf-cannot-pay-strict-type",
+    "empty-tree",
+    "candidate-map-center-collision",
+    "candidate-map-anchor-collision",
+    "candidate-map-wrong-reflection",
+    "candidate-map-wrong-shift",
+    "outer-agreement-with-missing-pure-internal-face",
+    "fake-empty-tree-on-real-known-attaining-complete-type"
+  ],
+  "real_original_N23_candidate_full_map_positive_control": true,
+  "syntactic_fixture_not_counted_as_mathematical_force_proof": true,
+  "real_mathematical_empty_leaf_refused": true,
+  "core_sha256": "cb6d87d69e9c4673e47c1e960ca013c5bb5e8e20f72bb2470653e8e11b8dcb10",
+  "constants_sha256": "0b08dd350e33852d46207fb709b88ad5535cb2a003a51cf429b7cddb200c8ed1",
+  "source_sha256": "114ffcbf2325f484499e5c59130793b994bb70ae8f027756635e1e23d6daee1e",
+  "audit_source_sha256": "aee8f393c2ebf483b620af006443b53506a7c1afbfe87c48ca7c78eca328488b",
+  "no_type_payment_or_global_theorem_from_controls": true,
+  "global_optimality_proved": false
+}

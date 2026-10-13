@@ -1,0 +1,23 @@
+{
+  "status": "source_and_union_exact_audit_passed",
+  "producer_count": 436,
+  "replayed_negative": 80,
+  "bounded_five_overlap": 5,
+  "remaining": 356,
+  "counts": {
+    "11/3": 243,
+    "10/4": 113
+  },
+  "scope": "input binding and exact set bookkeeping; mathematical kernel validity inherited from C1246",
+  "sha256": {
+    "all-face-consistency-catalogue.json": "5dc806d38c859abfbfd5748774e2ac7c2c148daab279472ada3fa14078c7dfb7",
+    "all-face-consistency-catalogue.jsonl": "e8006b7c2caa91f73790635303b3dd373e28bc3aac2fc4ffa32380e38c5b6019",
+    "all-face-consistency-catalogue-fraction-replay.json": "38cd9863191a2c0eb2cd977aea866a54c1ae23002d024d356221ac66168feb7f",
+    "all-face-consistency-catalogue-fraction.jsonl": "1bfd90707f57fbdfda13c102b7e2c7134eb862c5bff95bd93511f84f6d744fd7",
+    "all-face-consistency-full-retained.json": "72b7fef0c138b032dcbe3cd05887e73f6913e167ce4ef04e9bde8eb35738e815",
+    "k10-catalogue-corrected.json": "c7de025f7b089ad3f160c495f4d557d45eac868175c06a0b7faec51fa9911895",
+    "q11-pocket-catalogue.json": "5a01b2280b096bf64e0d5af7bf9adaac5a990281fd26a3a01974a397faafd30b",
+    "all_face_consistency_fraction_replay.py": "b94f94aad8f036d480153ddde4d25bf08c5b091ab3a41caf5da342826835d059",
+    "shared_radius_corner_fraction_kernel.py": "c114810933f2cfff081428f01f1dd2540cd9ac374550b935f9db0a9553664be0"
+  }
+}

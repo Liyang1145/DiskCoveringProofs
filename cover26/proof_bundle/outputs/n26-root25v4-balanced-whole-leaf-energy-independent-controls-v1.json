@@ -1,0 +1,254 @@
+{
+  "schema": "N26-independent-root25v4-width-balanced-whole-leaf-energy-controls-v1",
+  "verified": false,
+  "source_OPEN_index": 25,
+  "actual_source_closed_box": {
+    "index": 25,
+    "kind": "OPEN",
+    "depth": 13,
+    "lower": [
+      "123036501/2147483648",
+      "560479679/4294967296",
+      "48142037/268435456",
+      "1053324115/4294967296",
+      "1263117027/4294967296",
+      "197190463/536870912",
+      "197190463/536870912",
+      "30993/78125",
+      "73769/156250",
+      "42776/78125",
+      "19467/31250",
+      "54559/78125",
+      "120901/156250",
+      "66342/78125",
+      "144467/156250"
+    ],
+    "upper": [
+      "246073005/4294967296",
+      "280239841/2147483648",
+      "770272595/4294967296",
+      "526662059/2147483648",
+      "631558515/2147483648",
+      "1577523707/4294967296",
+      "455899177/1073741824",
+      "41943073159221/83886080000000",
+      "48269023115317/83886080000000",
+      "54594973071413/83886080000000",
+      "60920923027509/83886080000000",
+      "13449374596721/16777216000000",
+      "73572822939701/83886080000000",
+      "79898772895797/83886080000000",
+      "1"
+    ],
+    "sharp_radius_domain_empty": false,
+    "sharp_lower": [
+      "123036501/2147483648",
+      "560479679/4294967296",
+      "48142037/268435456",
+      "1053324115/4294967296",
+      "1263117027/4294967296",
+      "197190463/536870912",
+      "197190463/536870912",
+      "495891955832318621662828166597309265737/1250000000000000000000000000000000000000",
+      "4721243690826230351639797166181164860159/10000000000000000000000000000000000000000",
+      "2737675867496955864988484499791927797211/5000000000000000000000000000000000000000",
+      "1245891955832318621662828166597309265737/2000000000000000000000000000000000000000",
+      "1745891955832318621662828166597309265737/2500000000000000000000000000000000000000",
+      "7737675867496955864988484499791927797211/10000000000000000000000000000000000000000",
+      "4245891955832318621662828166597309265737/5000000000000000000000000000000000000000",
+      "9245891955832318621662828166597309265737/10000000000000000000000000000000000000000"
+    ],
+    "sharp_upper": [
+      "246073005/4294967296",
+      "280239841/2147483648",
+      "770272595/4294967296",
+      "526662059/2147483648",
+      "631558515/2147483648",
+      "1577523707/4294967296",
+      "455899177/1073741824",
+      "4999999997054858845683363239652690734263/10000000000000000000000000000000000000000",
+      "2877054020611270112010267536527690734263/5000000000000000000000000000000000000000",
+      "6508216085390221602357706906458072202789/10000000000000000000000000000000000000000",
+      "1815581032389475745173719684965190734263/2500000000000000000000000000000000000000",
+      "1603286434745116871806410114652690734263/2000000000000000000000000000000000000000",
+      "4385270108946632868684611203333072202789/5000000000000000000000000000000000000000",
+      "9524648262060947115706394240068835139841/10000000000000000000000000000000000000000",
+      "1"
+    ],
+    "sharp_radius_domain_inside_local": false
+  },
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "diagnosis_sha256": "172b937b92e97a22e9bc24c4b0e8214582c374e95d52541d62cfb5d2c4c7e959",
+  "actual_original_v4_seed_sha256": "4914725c65f3995014a30484f2e4a37428701efe02bbed2edce98f70d96626cc",
+  "actual_original_v4_controls_sha256": "a9c80ec8bcf6d2d861cbab828e2c3d150d7a230b8a4cef78e5801d651b29a7d0",
+  "all_old2999_domains_and_shared_boundaries_independently_unchanged": true,
+  "all_old_nodes_supports_AND516_strict_ledger_rows_retained": [
+    2999,
+    192,
+    516
+  ],
+  "all_NEW_actual_entire_old_OPEN_energy_witnesses_independently_recomputed": [
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2811,
+      "full_support_index": 1,
+      "strict_radius_margin": "29219776736755850932951739828416176656435392785912498473469891886740058614577033487946844183357493/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2901,
+      "full_support_index": 1,
+      "strict_radius_margin": "3634396932896141854503358221151185342647637567287304838310925713258575917202067057058272887267523/1250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2631,
+      "full_support_index": 1,
+      "strict_radius_margin": "14521691585905395098367350938630956680562460212874408684222046492849790210918969203559847651433501/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2721,
+      "full_support_index": 1,
+      "strict_radius_margin": "7250957161415263256343468288679454996384690799280319653906586182761678239708222368881982328333139/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2787,
+      "full_support_index": 1,
+      "strict_radius_margin": "5303908747720791557518487188348975235476309017440325231991647605828838214384057507883661627930081/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2877,
+      "full_support_index": 1,
+      "strict_radius_margin": "13208949577365016456914225512322972387311575873952389345119532697245662289149080064976916762631759/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2605,
+      "full_support_index": 1,
+      "strict_radius_margin": "13189345931629165123015078468565137261455365532600503865181128417805866817027133503419070028555987/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2697,
+      "full_support_index": 1,
+      "strict_radius_margin": "1314125306532933919094542475866051022360534916618962131988702690929558038147081972121481405873681/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2745,
+      "full_support_index": 1,
+      "strict_radius_margin": "26226017798416273597131091080311587116002403776252030783158475262659820209765228504515483888393083/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2835,
+      "full_support_index": 1,
+      "strict_radius_margin": "13063948377518739514378818187798274542797780712462705483489409479439657785599008733148319624855567/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2559,
+      "full_support_index": 1,
+      "strict_radius_margin": "26089858160019760925202243811007180711754862575992665043155416014729676488952118158515476099083683/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2655,
+      "full_support_index": 1,
+      "strict_radius_margin": "3259176390458436651374345576051911920264304626749879697587307270996838355403803630906786566811153/1250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2363,
+      "full_support_index": 0,
+      "strict_radius_margin": "18459477849024276152541354406143490717838098138436260971510269604241091567130152871884411431241061/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2459,
+      "full_support_index": 0,
+      "strict_radius_margin": "15950824609594006415555898558646613864193410835815514362126953168244878670469709827878620541887851/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2387,
+      "full_support_index": 0,
+      "strict_radius_margin": "398770610781664826201544851944663289655217514522322498145703213640372673298372995919558903800983/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "actual_seed_v4_OPEN_leaf_index": 2483,
+      "full_support_index": 0,
+      "strict_radius_margin": "7975412208972534362537809637918095442885437172661031479412190492280850082687685591670739521291539/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "new_strict_whole_old_OPEN_leaf_count": 16,
+  "remaining_OPEN_leaf_count": 968,
+  "minimum_NEW_strict_radius_margin": "7975412208972534362537809637918095442885437172661031479412190492280850082687685591670739521291539/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "independent_feasible_sine_square_and_positive_quadratic_completion_controls": 48,
+  "old_v4_mathematics_honestly_REUSED_NOT_fresh_all_old_leaf_arithmetic_replayed": true,
+  "actual_scope_retention_subset_and_target_rejection_controls": [
+    "arithmetic-promoted-to-global-proof",
+    "lost-unselected-or-failed-OPEN-leaf",
+    "old-nonOPEN-proof-reset",
+    "old-strict-ledger-row-omitted",
+    "old-positive-support-prefix-truncated",
+    "duplicate-entire-OPEN-payment",
+    "proper-subbox-relabelled-as-whole-old-leaf",
+    "wrong-full134-support-owner"
+  ],
+  "arithmetic_only_NOT_latest_source_geometry_current_admission": true,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "input_sha256": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-supplemental-current-v1.json": "c85e130c935e68e2275e53fa457c9c4d95d8be5416b128f4307a76061057911b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-supplemental-independent-final-v1.json": "7c2d29f19f310de58d03a2043fae3dde8bcaeb69635843086118a91ab9b6db4e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-candidate-root25-preserved-full134rod-regions-forest-diagnosis-v4.json": "4914725c65f3995014a30484f2e4a37428701efe02bbed2edce98f70d96626cc",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-candidate-root25-preserved-full134rod-regions-independent-controls-v1.json": "a9c80ec8bcf6d2d861cbab828e2c3d150d7a230b8a4cef78e5801d651b29a7d0",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-leaf-pinned-candidate-angles-v2/REFERENCE-PINNING.json": "82a87672fe40e532ef46125f1503ccb3209d4347b0d936cea9be0f7ad8942b2e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-partial-prefix-energy-v1/CAP-CERTIFICATE.json": "4b14c48b235a71c461041cc216543c42e482227df6419f145dcccf8b09bea531",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/VERIFIED.json": "cf4be3c59c99cda2e1afc0eab36384d7308028b73ff05c19e2620d68160fa679",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/SYSTEM.json": "61b2fbfe4b0f6b02bbeb1a296c055f4cc936e46dd6456dca82581e33a3b5c83d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/ROOT-CERTIFICATE.json": "0d2c6dcfe8e4a6aef3eb82fef73fcf41f59e261245ccd5fcf5964fefce5186ee",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/ORIGINAL-SYSTEM.json": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/ORIGINAL-ROOT-CERTIFICATE.json": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/verify_positive_stress.py": "e997d6514b246e86c4ce51a484bd5dd0a4f7bdad45bb57a7f3ccf90eb756bc91",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/verify_contact_root.py": "52c896946029c412e87f81daa5d116934fc20d8a60a50ee4acb64ddfda48ec5e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/verify_same_root_cover.py": "8f3ed23bd483b20f64a3a6b9db09bfcb5f4d1c24021c20b81069de8e48c47063",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/PROOF.md": "c7b0a37f6a7103d45ed5a1d344e5a382e28d474e8fb9c381dec6d998fc14954c",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/STRESS-LEDGER.json": "b45ad1944a56120f855e648d97da06a22c13f8d02db2ee718d379edc9c98fb1d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/original/SYSTEM.json": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/original/ROOT-CERTIFICATE.json": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-centered-local-barrier-v2/VERIFIED.json": "b3a665a485a09461d9093af14193da623e8b061c1e08d43337bfb596f10b87ec",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-centered-local-barrier-v2/CERTIFICATE.json": "b17e12708f17ea54583e75b9f7b865c844280f27c3d91a62c55896b0e74b1c57",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-centered-local-barrier-v2/verify_centered_local_barrier.py": "bf4bffb7693718c1aaee39e15a86096f2ee34955b4b7507c995f6ac1ed0927ac",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-centered-local-barrier-v2/verify_local_barrier.py": "e749feb8901a7b52878de440aefe43daaf486f761b7d133b81fdd31365f46cde",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-centered-local-barrier-v2/PROOF.md": "0005aaa63cf42a14db7b0f6b1c3c38d22eca980c1ac2765f0c712a0d1402d2ee",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-candidate-transport-control-v1/VERIFIED.json": "f51c08b8aa34891964e9cda11a4ef581c5d1352e35440df43c86c1d845510ad5",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_candidate_transport.py": "ad861d8784d0416434d20116a469864090fe701f3e254b9f0886d22ac90a4994",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/VERIFIED.json": "5d0f54da9d1648069a65c40661cc4b758700412ccec6d3787bebacf8e04bfe43",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/SYSTEM.json": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/ROOT-CERTIFICATE.json": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-candidate-transport-control-v1/CANDIDATE-PATH.json": "d294177a0dea1924aafc6614256e7c662b9355df10427eed8027c33f6e1732c4",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-candidate-transport-control-v1/NATIVE-FINAL.json": "badeb6ef027d470f5a028858b316e2650bfc8d83cca6f17f3256d09947d50b12",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-candidate-transport-control-v1/NATIVE-LAUNCH.json": "6498f97996ed293f1a58b5d4bec9b2d801f8f905a79d239987c203dd5afae907",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-origin-v1/peel_prefix_origin.linux": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_balanced_correlated_diagonal_suggestion.py": "3181a4662dd4589657e371ad7d95d11801d9f9018119e5b55599988eb8a67833",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_full134rod_correlated_quadratic_energy.py": "726e9bdf1cb4beb32bdeb4ee75a5bac598164fe00b165cd250ce5288483fdca1",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_full_candidate_face_energy.py": "775c227e96f2900a25dceead401f42718094af0aa4c929bfe356dc729f100323",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_signed_hull_energy_minorant.py": "d8455a67918768c9e6c82262476ae58e5fd54e2b3b22013dc021f27ecebed748",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_quadratic_energy_minorant.py": "5b4d5ff874ae0f765ac5461005a9775d6f0c38a58656fe82f576db991e42dd7f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_mixed_full134rod_support_forest.py": "ec7f516fb49ae3d1d493686c004a9b8dc78e533cd814a5796b42dbe500806f23",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_effective_resistance_local_entry.py": "d21eb805208d39232364810b5021368e92031dfab5d8f39a3b9188a5f3593bc0",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/verify_refined_anchor_pinning.py": "f97b5a20c36ce482e7ef4e1373f4592245ccd0c6a6c4f11e6f47682b1ccd6e1b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/verify_anchor_pinning.py": "d6453029298a3e45a0f89637b4aea3d90078b8be0d47ea36cb1373eeadaca21d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/verify_contact_root.py": "52c896946029c412e87f81daa5d116934fc20d8a60a50ee4acb64ddfda48ec5e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/verify_same_root_cover.py": "8f3ed23bd483b20f64a3a6b9db09bfcb5f4d1c24021c20b81069de8e48c47063",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_sharp_radius_constraints.py": "8108bf04221d55308b9e34ab6ca6a01418c106438718e683865f1e401ff96a7f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-force-stage-v3/exact_arcs.py": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/probe_root25_v4_balanced_whole_leaf_energy.py": "ddb721a210ced05e788e8396b400932f47004543571700f332c8df01997ead35",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-root25v4-balanced-whole-leaf-energy-diagnostic-v1.json": "172b937b92e97a22e9bc24c4b0e8214582c374e95d52541d62cfb5d2c4c7e959",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/test_root25_v4_balanced_whole_leaf_energy.py": "b62daec23b3edda25d93188a8357e827dff1a1aee2940c29b725a1def0bb028f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/test_full134rod_correlated_support.py": "a509d77cfc34afc8b7bbb38c08efd1f1020482463dfc3713254d36190b8c5d74",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/test_checked_root28_full134rod_intersections.py": "fb3a7bc31e7bbba11f7041f07db63f84a8b3b409d0c6f9698a34c56740c528fe"
+  },
+  "executed_test_sha256": "b62daec23b3edda25d93188a8357e827dff1a1aee2940c29b725a1def0bb028f"
+}

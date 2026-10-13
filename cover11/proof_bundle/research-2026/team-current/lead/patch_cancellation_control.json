@@ -1,0 +1,5 @@
+{
+  "fullobjectivecancellation": true,
+  "distancehalfangleidentity": true,
+  "scope": "exactsymbolicidentities,notinequality"
+}

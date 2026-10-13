@@ -1,0 +1,155 @@
+{
+ "mode": "freeze",
+ "old_plan": "research-2026/n12-global/members/structure/parallel-domain/final-wave-plan.json",
+ "branch_dir": "research-2026/n12-global/evidence/final-wave-domain",
+ "output_prefix": "research-2026/n12-global/members/structure/parallel-domain/wave4",
+ "outputs": [
+  "research-2026\\n12-global\\members\\structure\\parallel-domain\\wave4-base.json (base)",
+  "research-2026\\n12-global\\members\\structure\\parallel-domain\\wave4-plan.json (plan)",
+  "research-2026\\n12-global\\members\\structure\\parallel-domain\\wave4-manifest.json (manifest)"
+ ],
+ "old_plan_sha256": "e8c9dccba00d74c56adaaea4f0f7e9f75c84b50cf3c9818c4d4a18ea5731f33d",
+ "branches_in_plan": [
+  "b00",
+  "b01",
+  "b02",
+  "b03",
+  "b04",
+  "b05",
+  "b06"
+ ],
+ "branch_files": 7,
+ "merge_status": "partial",
+ "counts": {
+  "processed": 13916,
+  "split": 6964,
+  "certified": 6634,
+  "infeasible": 318,
+  "pending": 10
+ },
+ "status": "ok",
+ "base": {
+  "path": "research-2026\\n12-global\\members\\structure\\parallel-domain\\wave4-base.json",
+  "sha256": "1f5247bb43232f3d4f440aaa31c0806728ad815d39efaee64e7e0d9b04b8e733",
+  "status": "partial",
+  "counts": {
+   "processed": 13916,
+   "split": 6964,
+   "certified": 6634,
+   "infeasible": 318
+  },
+  "leaves": 6952,
+  "pending": 10
+ },
+ "next_plan": {
+  "path": "research-2026\\n12-global\\members\\structure\\parallel-domain\\wave4-plan.json",
+  "sha256": "834bff4e92540bdb987aff0bf7fec5413d7b0fdc14bb9b88103e4f2d781bd6cd",
+  "branch_count": 10,
+  "roots": [
+   {
+    "id": "b00",
+    "parent": 0,
+    "root_sha256": "b321a08d2c6ccb292cf346f46695b058e15ba7a2b15d4ba639a6d0d1f7d927c0",
+    "widths": [
+     "19443935234031792038557518369/1000000000000000000000000000000",
+     "36806064765968207961442481631/2000000000000000000000000000000",
+     "5206805702095376115672555107/500000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b01",
+    "parent": 1,
+    "root_sha256": "7198ded770e9800b1478dd4594794752d32c91303aba77120e6817aee34c7f7e",
+    "widths": [
+     "19443935234031792038557518369/2000000000000000000000000000000",
+     "36806064765968207961442481631/2000000000000000000000000000000",
+     "5206805702095376115672555107/500000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b02",
+    "parent": 2,
+    "root_sha256": "ca848ec5b0e6579053968239dd87e58afd1fd91a803314f2af4b10da4196d70e",
+    "widths": [
+     "19443935234031792038557518369/2000000000000000000000000000000",
+     "36806064765968207961442481631/4000000000000000000000000000000",
+     "5206805702095376115672555107/500000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b03",
+    "parent": 3,
+    "root_sha256": "8c9fb48067aecd55ebe67c9db39f81edb6b6ec2831abd6709b1ffd4141fdf009",
+    "widths": [
+     "19443935234031792038557518369/4000000000000000000000000000000",
+     "36806064765968207961442481631/4000000000000000000000000000000",
+     "5206805702095376115672555107/1000000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b04",
+    "parent": 4,
+    "root_sha256": "d29be4387fa46eb9b1b0ce084c72bea62daf6b34d330190f856259d662aeac8a",
+    "widths": [
+     "19443935234031792038557518369/4000000000000000000000000000000",
+     "36806064765968207961442481631/8000000000000000000000000000000",
+     "5206805702095376115672555107/2000000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b05",
+    "parent": 5,
+    "root_sha256": "898e2a9af120cd5e25ae040bc3a5a3fbbecd2864846988beb7f9dff9cec32794",
+    "widths": [
+     "19443935234031792038557518369/2000000000000000000000000000000",
+     "36806064765968207961442481631/2000000000000000000000000000000",
+     "5206805702095376115672555107/500000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b06",
+    "parent": 6,
+    "root_sha256": "f6bafd8a33c5555e470e27e794f4f136abc0615af33c49dd791617caee152c5c",
+    "widths": [
+     "19443935234031792038557518369/2000000000000000000000000000000",
+     "36806064765968207961442481631/4000000000000000000000000000000",
+     "5206805702095376115672555107/500000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b07",
+    "parent": 7,
+    "root_sha256": "994790be4e5953e94b5d61a8b3e4f8f564fde380b8281c4aae2ce16961086416",
+    "widths": [
+     "19443935234031792038557518369/4000000000000000000000000000000",
+     "36806064765968207961442481631/4000000000000000000000000000000",
+     "5206805702095376115672555107/1000000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b08",
+    "parent": 8,
+    "root_sha256": "4e04e7f6b274d0d292130746cc21d655be69c37677df02dc1cb3b82c097f4680",
+    "widths": [
+     "19443935234031792038557518369/4000000000000000000000000000000",
+     "36806064765968207961442481631/8000000000000000000000000000000",
+     "5206805702095376115672555107/1000000000000000000000000000000"
+    ]
+   },
+   {
+    "id": "b09",
+    "parent": 9,
+    "root_sha256": "8244b7af1adcf0fcb00eaa20c0e44abf914441507a5f3b5243cbb18352cdb2c8",
+    "widths": [
+     "19443935234031792038557518369/4000000000000000000000000000000",
+     "36806064765968207961442481631/8000000000000000000000000000000",
+     "5206805702095376115672555107/1000000000000000000000000000000"
+    ]
+   }
+  ]
+ },
+ "domain_structurally_complete": false,
+ "placement": "placed atomically",
+ "wrote_nothing": false,
+ "note": "a full-domain claim still requires the four-conjunct premise: empty stack, complete exact partition, validated infeasible leaves, integer-replayed atomic leaves"
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "N26-independent-candidate-forest-current-final-digest-recheck-v1",
+  "all_current_file_digests_rehashed": true,
+  "current_file_digests_rechecked": 79597,
+  "current_audit_sha256": "56419048ae8748c59b8daf87b05586196ab877e88a8a951ce9661e8a37cb1110",
+  "candidate_forest_actual_published_replay_exactly_matches_acceptance": true,
+  "new_complete_candidate_source_roots_lower_bounded": 3,
+  "candidate_angle_unresolved_closed_boxes": 34,
+  "Rstar_conditional_frontier_pending_subtrees": 5828,
+  "all_incoming_candidate_source_roots_discharged_or_retained_exactly": true,
+  "LOCAL_equality_regions_never_declared_empty": true,
+  "retained_closed_full_type_codes": 87,
+  "retained_checked_proof_receipts": 215,
+  "radius_scope": "at-most-same-root-Rstar-not-original-U",
+  "r_strict_interval": [
+    "0.234700090400448239616790133776692127560495963654971391785924",
+    "0.234700090400448239616790133776692127560495963654971391785925"
+  ],
+  "full_catalog_complete": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_checker_sha256": "c992666764e87d5566f1e6ab3e24dc019c738a19fb43f3bf772210d4be5c86b5"
+}

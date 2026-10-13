@@ -1,0 +1,346 @@
+{
+ "schema": "n12-merge-manifest/v1",
+ "plan": {
+  "path": "stage11825-plan.json",
+  "sha256": "74683b3d6eb701e7aa175984cf4e28a920fc2ed10e66227ce696081448b91f4d",
+  "branches": 11
+ },
+ "source": {
+  "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\hubline-domain-stage11825.json",
+  "sha256": "26fefd6a842b9ca961498c3fd45fbfa5fd1c7ab4906ef22574bea0e0de42d6d1"
+ },
+ "branches": [
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-0.json",
+   "sha256": "3a349cb49e49f03211728a0349a002a127c66aeca16a3e22ee4a704171593153",
+   "id": 0,
+   "counts": {
+    "infeasible": 0,
+    "certified": 42,
+    "split": 41,
+    "processed": 83
+   },
+   "status": "certified full domain",
+   "n_frontier": 42,
+   "n_atomic": 42,
+   "n_infeasible": 0,
+   "n_pending": 0,
+   "n_split": 41
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-1.json",
+   "sha256": "39453bf8349a2cd7080daca639b98acd341149da9d1287c2732f5a1317d402b2",
+   "id": 1,
+   "counts": {
+    "infeasible": 4,
+    "certified": 64,
+    "split": 67,
+    "processed": 135
+   },
+   "status": "certified full domain",
+   "n_frontier": 68,
+   "n_atomic": 64,
+   "n_infeasible": 4,
+   "n_pending": 0,
+   "n_split": 67
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-2.json",
+   "sha256": "dbbe53a010a1ce8492b357ad65706c62d8161fd8575e7cdf691ea0cf7441df5d",
+   "id": 2,
+   "counts": {
+    "infeasible": 0,
+    "certified": 84,
+    "split": 83,
+    "processed": 167
+   },
+   "status": "certified full domain",
+   "n_frontier": 84,
+   "n_atomic": 84,
+   "n_infeasible": 0,
+   "n_pending": 0,
+   "n_split": 83
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-3.json",
+   "sha256": "71e1c60b804894da385f1db91dabcc2f87384ab73c4ec4bafe49fae8bd4b763b",
+   "id": 3,
+   "counts": {
+    "infeasible": 1,
+    "certified": 103,
+    "split": 103,
+    "processed": 207
+   },
+   "status": "certified full domain",
+   "n_frontier": 104,
+   "n_atomic": 103,
+   "n_infeasible": 1,
+   "n_pending": 0,
+   "n_split": 103
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-4.json",
+   "sha256": "6a199466afb06846a695e213b54e4567c7c256f46d513900b3ac8058efee2c32",
+   "id": 4,
+   "counts": {
+    "infeasible": 0,
+    "certified": 169,
+    "split": 171,
+    "processed": 340
+   },
+   "status": "partial",
+   "n_frontier": 172,
+   "n_atomic": 169,
+   "n_infeasible": 0,
+   "n_pending": 3,
+   "n_split": 171
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-5.json",
+   "sha256": "184302bb133067a6f6b43ede128f34be3e1181602fcb7585ee7b87c9f5313f56",
+   "id": 5,
+   "counts": {
+    "infeasible": 7,
+    "certified": 141,
+    "split": 152,
+    "processed": 300
+   },
+   "status": "partial",
+   "n_frontier": 153,
+   "n_atomic": 141,
+   "n_infeasible": 7,
+   "n_pending": 5,
+   "n_split": 152
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-6.json",
+   "sha256": "10f7e9f996646f77c7c6cd08c31b1f221f2e90c6697cd027640cf7817617888e",
+   "id": 6,
+   "counts": {
+    "infeasible": 0,
+    "certified": 43,
+    "split": 42,
+    "processed": 85
+   },
+   "status": "certified full domain",
+   "n_frontier": 43,
+   "n_atomic": 43,
+   "n_infeasible": 0,
+   "n_pending": 0,
+   "n_split": 42
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-7.json",
+   "sha256": "85d9e5e641b28ea8abfbce41726265797ec68b5d4f1a1c4732632275e287c6c5",
+   "id": 7,
+   "counts": {
+    "infeasible": 0,
+    "certified": 23,
+    "split": 22,
+    "processed": 45
+   },
+   "status": "certified full domain",
+   "n_frontier": 23,
+   "n_atomic": 23,
+   "n_infeasible": 0,
+   "n_pending": 0,
+   "n_split": 22
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-8.json",
+   "sha256": "45fd3e9f263792aa508d2afc63eb6150574c27850f7e05c13f9cf4ebe255e25e",
+   "id": 8,
+   "counts": {
+    "infeasible": 0,
+    "certified": 26,
+    "split": 25,
+    "processed": 51
+   },
+   "status": "certified full domain",
+   "n_frontier": 26,
+   "n_atomic": 26,
+   "n_infeasible": 0,
+   "n_pending": 0,
+   "n_split": 25
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-9.json",
+   "sha256": "0584e28749b9f3fc3da8325da89f54b0ccc60920d4ea077097c903617a86b2af",
+   "id": 9,
+   "counts": {
+    "infeasible": 0,
+    "certified": 1,
+    "split": 0,
+    "processed": 1
+   },
+   "status": "certified full domain",
+   "n_frontier": 1,
+   "n_atomic": 1,
+   "n_infeasible": 0,
+   "n_pending": 0,
+   "n_split": 0
+  },
+  {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\evidence\\parallel-domain\\branch-10.json",
+   "sha256": "dbe7633d5753ac57f664098002755994e1a72f41774dc5d7623f462806ecd3cb",
+   "id": 10,
+   "counts": {
+    "infeasible": 0,
+    "certified": 1,
+    "split": 0,
+    "processed": 1
+   },
+   "status": "certified full domain",
+   "n_frontier": 1,
+   "n_atomic": 1,
+   "n_infeasible": 0,
+   "n_pending": 0,
+   "n_split": 0
+  }
+ ],
+ "replaced_pending": 8,
+ "final_pending": [
+  [
+   [
+    "274995417106286128347017665321/2000000000000000000000000000000",
+    "29443935234031792038557518369/200000000000000000000000000000"
+   ],
+   [
+    "0",
+    "36806064765968207961442481631/4000000000000000000000000000000"
+   ],
+   [
+    "5206805702095376115672555107/250000000000000000000000000000",
+    "15620417106286128347017665321/500000000000000000000000000000"
+   ]
+  ],
+  [
+   [
+    "31943935234031792038557518369/250000000000000000000000000000",
+    "274995417106286128347017665321/2000000000000000000000000000000"
+   ],
+   [
+    "0",
+    "36806064765968207961442481631/2000000000000000000000000000000"
+   ],
+   [
+    "5206805702095376115672555107/250000000000000000000000000000",
+    "15620417106286128347017665321/500000000000000000000000000000"
+   ]
+  ],
+  [
+   [
+    "31943935234031792038557518369/250000000000000000000000000000",
+    "83331805702095376115672555107/500000000000000000000000000000"
+   ],
+   [
+    "0",
+    "36806064765968207961442481631/1000000000000000000000000000000"
+   ],
+   [
+    "0",
+    "5206805702095376115672555107/250000000000000000000000000000"
+   ]
+  ],
+  [
+   [
+    "83331805702095376115672555107/500000000000000000000000000000",
+    "186107546638222544269902628583/1000000000000000000000000000000"
+   ],
+   [
+    "0",
+    "36806064765968207961442481631/2000000000000000000000000000000"
+   ],
+   [
+    "5206805702095376115672555107/250000000000000000000000000000",
+    "15620417106286128347017665321/500000000000000000000000000000"
+   ]
+  ],
+  [
+   [
+    "83331805702095376115672555107/500000000000000000000000000000",
+    "25693935234031792038557518369/125000000000000000000000000000"
+   ],
+   [
+    "0",
+    "36806064765968207961442481631/1000000000000000000000000000000"
+   ],
+   [
+    "0",
+    "5206805702095376115672555107/250000000000000000000000000000"
+   ]
+  ],
+  [
+   [
+    "83331805702095376115672555107/500000000000000000000000000000",
+    "27443935234031792038557518369/160000000000000000000000000000"
+   ],
+   [
+    "36806064765968207961442481631/4000000000000000000000000000000",
+    "110418194297904623884327444893/8000000000000000000000000000000"
+   ],
+   [
+    "15620417106286128347017665321/500000000000000000000000000000",
+    "67688474127239889503743216391/2000000000000000000000000000000"
+   ]
+  ],
+  [
+   [
+    "83331805702095376115672555107/500000000000000000000000000000",
+    "27443935234031792038557518369/160000000000000000000000000000"
+   ],
+   [
+    "36806064765968207961442481631/4000000000000000000000000000000",
+    "110418194297904623884327444893/8000000000000000000000000000000"
+   ],
+   [
+    "67688474127239889503743216391/2000000000000000000000000000000",
+    "36447639914667632809707885749/1000000000000000000000000000000"
+   ]
+  ],
+  [
+   [
+    "83331805702095376115672555107/500000000000000000000000000000",
+    "352771158042413296501247738797/2000000000000000000000000000000"
+   ],
+   [
+    "0",
+    "36806064765968207961442481631/4000000000000000000000000000000"
+   ],
+   [
+    "15620417106286128347017665321/500000000000000000000000000000",
+    "5206805702095376115672555107/125000000000000000000000000000"
+   ]
+  ]
+ ],
+ "counts": {
+  "old": {
+   "infeasible": 306,
+   "certified": 5603,
+   "split": 5916,
+   "processed": 11825
+  },
+  "shard_splits": 3,
+  "branches_sum": {
+   "processed": 1415,
+   "split": 706,
+   "certified": 697,
+   "infeasible": 12,
+   "pending": 8
+  },
+  "totals": {
+   "processed": 13243,
+   "split": 6625,
+   "certified": 6300,
+   "infeasible": 318,
+   "pending": 8
+  }
+ },
+ "volume": {
+  "old_pending": "147631296297447855037210909404713245171532548698543673278866505621818486975576683059878487/128000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "branch_roots": "147631296297447855037210909404713245171532548698543673278866505621818486975576683059878487/128000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "equal": true
+ },
+ "status": "partial",
+ "problems": []
+}

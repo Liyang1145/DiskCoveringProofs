@@ -1,0 +1,550 @@
+{
+  "kind": "interval certificate v3 (lead review: scalar bbox endpoints taken as .a/.b AFTER the interval arithmetic, exact dyadic endpoint dumps, round conservative boxes, no 6e-13 bisection)",
+  "scope": "q0(6,7) ring box around the SAVED RATIONAL UPPER OBJECT (UB*); no global coverage claim, no exact-root inclusion claim",
+  "note_display_strings": "the 30-digit *_str fields are DISPLAY ONLY; the certified endpoints are the exact dyadic (sign, mantissa, exp, bits) tuples emitted in *_dyadic fields, and independently the exact Fraction endpoints of central_crescent_audit2.json",
+  "domain_declared": {
+    "delta": "1/1000 (exact rational)",
+    "w_r": "1/10000 (exact rational)",
+    "note": "the interval engine receives M(F) targets; ring_box widens only by their outward endpoints, so the computed box provably contains the exact rational box c_i +/- 1/1000, r0 +/- 1/10000"
+  },
+  "delta0_w0": {
+    "delta_interval_str": [
+      "0.0",
+      "0.0"
+    ],
+    "w_interval_str": [
+      "0.0",
+      "0.0"
+    ],
+    "r_upper_endpoint_str": "0.3799838531198387325815702",
+    "r_label": "saved rational upper object UB* (C529 line), NOT the exact root; no claim that this box covers the exact optimum",
+    "pin_status": {
+      "0": "inner=p1 (unit-disk criterion)",
+      "1": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "2": "inner=p1 (unit-disk criterion)",
+      "3": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "4": "inner=p1 (unit-disk criterion)",
+      "5": "inner=p1 (unit-disk criterion)",
+      "6": "inner=p1 (unit-disk criterion)",
+      "7": "inner=p1 (unit-disk criterion)",
+      "8": "inner=p1 (unit-disk criterion)"
+    },
+    "hubA_localisation_eps": [
+      "0.00000000613423303092677551189442448974",
+      "0.00000000613423303092677551189442448974"
+    ],
+    "hubA_b": [
+      "-0.000162043213929102304388801814028",
+      "-0.000162043213929102304388801814028",
+      "-0.149428410971705338816661878809",
+      "-0.149428410971705338816661878809"
+    ],
+    "hubB_localisation_eps": [
+      "0.0330620706687240750731859861844",
+      "0.0330620706687240750731859861844"
+    ],
+    "hubB_b": [
+      "0.000331874427032820252213285439069",
+      "0.000331874427032820252213285439069",
+      "0.306039357080660046062092760621",
+      "0.306039357080660046062092760621"
+    ],
+    "K_A_rect_str": [
+      [
+        "-0.000162049348162133231062570493108",
+        "-0.000162037079696071377715033134947"
+      ],
+      [
+        "-0.149428417105938349251914587512",
+        "-0.149428404837472300625833554477"
+      ]
+    ],
+    "K_B_rect_str": [
+      [
+        "-0.00110943206711764589915414358501",
+        "0.00177318092118328640358071446315"
+      ],
+      [
+        "0.203004045739509503265551870754",
+        "0.620016146880161267418429815734"
+      ]
+    ],
+    "K_A_rect_float": [
+      [
+        -0.00016204934816213326,
+        -0.00016203707969607135
+      ],
+      [
+        -0.14942841710593838,
+        -0.14942840483747227
+      ]
+    ],
+    "K_B_rect_float": [
+      [
+        -0.0011094320671176461,
+        0.0017731809211832866
+      ],
+      [
+        0.20300404573950948,
+        0.6200161468801614
+      ]
+    ],
+    "strict_hub_norm_margin": {
+      "|bA|_up + epsA_up": "0.149428504967394182312290240588",
+      "|bB|_up + epsB_up": "0.339101607694545448268286236271",
+      "1 - r  low end": "0.620016146880161267418429815734",
+      "note": "|h_A| <= |b_A| + eps_A and |h_B| <= |b_B| + eps_B for every feasible hub; both must be < 1 - r (strict hub). NOTE: |p_out| = 1 holds in the exact candidate CHART, not at the rounded nominal centres -- no equality is claimed at the nominal data, only the numerical margin below. so this strictness is load-bearing (C879 boundary case)."
+    },
+    "radicand_branch_semantics": "radicands may cross 0 on the box (central circle r^2-|AC|^2/4 and localisation r^2-V). The certificate is stated per tuple as a BRANCH: either (i) |AC| > 2r strictly, where the crescent is empty because rho >= |AC|/2 > r; or (ii) V > r^2, where no hub exists; or (iii) the corresponding exclusion holds with the clamped upper-end radius.  NOTE (auditor correction): the boundary case |AC| = 2r (k = 0) is NOT excluded by the rho-argument (rho >= r does not contradict rho <= r); there q_near = q_far = m, the product identity degenerates to 4y^2(rho^2-r^2) = (|b-m|^2-r^2)^2, and such tuples are excluded by the STRICT G bound itself (|b_B - m| - eps_B > r inside the localisation ball).  Collinear (a,b,c_i) tuples have no circumradius and lie outside the C900 all-cover-graph non-collinear necessary domain -- they are not treated as vacuously true.",
+    "central_radicand_boxes": [
+      [
+        "0.0089151564981901996326252302083",
+        "0.0089151622533304667600484449963"
+      ],
+      [
+        "0.00891515661449551050088402348592",
+        "0.00891516237562475430400432685474"
+      ]
+    ],
+    "faces": {
+      "face_0": {
+        "branch": "+",
+        "G_str": [
+          "0.154158981086670809901306711254",
+          "0.15415902198258399358188341921"
+        ],
+        "G_lo_dyadic_exact": [
+          0,
+          347135164888873,
+          -51,
+          49
+        ],
+        "G_hi_dyadic_exact": [
+          0,
+          5554164111652523,
+          -55,
+          53
+        ],
+        "G_float_directed": [
+          0.15415898108667078,
+          0.15415902198258402
+        ],
+        "certified": true,
+        "near_disk_centre_rect_str": [
+          [
+            "0.315948146566609244789702870548",
+            "0.315948165019417692711556355789"
+          ],
+          [
+            "0.0614318807543165062989842795105",
+            "0.0614319191152929364174717363767"
+          ]
+        ],
+        "near_disk_centre_radius_up_str": "0.0000000212842115922048105375202786162",
+        "screen_disk_radius_up_str": "0.379983874404050292472589944737"
+      },
+      "face_4": {
+        "branch": "-",
+        "G_str": [
+          "0.154158981689190371922038025332",
+          "0.154159022617627927687067312945"
+        ],
+        "G_lo_dyadic_exact": [
+          0,
+          5554162659930023,
+          -55,
+          53
+        ],
+        "G_hi_dyadic_exact": [
+          0,
+          694270516816549,
+          -52,
+          50
+        ],
+        "G_float_directed": [
+          0.15415898168919034,
+          0.15415902261762796
+        ],
+        "certified": true,
+        "near_disk_centre_rect_str": [
+          [
+            "-0.31581418664754018488238784812",
+            "-0.315814168117024840487516712528"
+          ],
+          [
+            "0.0621169759075103702916642589571",
+            "0.0621170142769847735686461476234"
+          ]
+        ],
+        "near_disk_centre_radius_up_str": "0.0000000213049088563640590526776220871",
+        "screen_disk_radius_up_str": "0.379983874424747569698013194284"
+      }
+    },
+    "result": "CERTIFIED (uniform distal exclusion, both central faces)"
+  },
+  "box_delta_1e-3_w0": {
+    "delta_interval_str": [
+      "0.00100000000000000002081668171172",
+      "0.00100000000000000002081668171172"
+    ],
+    "w_interval_str": [
+      "0.0",
+      "0.0"
+    ],
+    "r_upper_endpoint_str": "0.3799838531198387325815702",
+    "r_label": "saved rational upper object UB* (C529 line), NOT the exact root; no claim that this box covers the exact optimum",
+    "pin_status": {
+      "0": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "1": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "2": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "3": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "4": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "5": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "6": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "7": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "8": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)"
+    },
+    "hubA_localisation_eps": [
+      "0.0",
+      "0.0603080081394236078295989500475"
+    ],
+    "hubA_b": [
+      "-0.00448330015692957953299391249402",
+      "0.00415950902509613310714664535794",
+      "-0.151987030537308553945763378579",
+      "-0.146850529516714095601415124293"
+    ],
+    "hubB_localisation_eps": [
+      "0.0",
+      "0.0660291908554906936679174123128"
+    ],
+    "hubB_b": [
+      "-0.00398815178004564060282310933303",
+      "0.00465194356962306092284631375833",
+      "0.303579866173665557926852898163",
+      "0.308480181212143433899797173581"
+    ],
+    "K_A_rect_str": [
+      [
+        "-0.00612362488601237049679060220342",
+        "0.00586707414229463170701750485136"
+      ],
+      [
+        "-0.212295038676732161775362328626",
+        "-0.145571163504373601860208964354"
+      ]
+    ],
+    "K_B_rect_str": [
+      [
+        "-0.00543991927662980986196705757152",
+        "0.00610622297671051771084105297405"
+      ],
+      [
+        "0.198634524000964152179449229152",
+        "0.620016146880161267418429815734"
+      ]
+    ],
+    "K_A_rect_float": [
+      [
+        -0.006123624886012371,
+        0.005867074142294633
+      ],
+      [
+        -0.2122950386767322,
+        -0.14557116350437357
+      ]
+    ],
+    "K_B_rect_float": [
+      [
+        -0.005439919276629811,
+        0.006106222976710519
+      ],
+      [
+        0.19863452400096412,
+        0.6200161468801614
+      ]
+    ],
+    "strict_hub_norm_margin": {
+      "|bA|_up + epsA_up": "0.212361148297218083058623960824",
+      "|bB|_up + epsB_up": "0.374544446198969316341731428111",
+      "1 - r  low end": "0.620016146880161267418429815734",
+      "note": "|h_A| <= |b_A| + eps_A and |h_B| <= |b_B| + eps_B for every feasible hub; both must be < 1 - r (strict hub). NOTE: |p_out| = 1 holds in the exact candidate CHART, not at the rounded nominal centres -- no equality is claimed at the nominal data, only the numerical margin below. so this strictness is load-bearing (C879 boundary case)."
+    },
+    "radicand_branch_semantics": "radicands may cross 0 on the box (central circle r^2-|AC|^2/4 and localisation r^2-V). The certificate is stated per tuple as a BRANCH: either (i) |AC| > 2r strictly, where the crescent is empty because rho >= |AC|/2 > r; or (ii) V > r^2, where no hub exists; or (iii) the corresponding exclusion holds with the clamped upper-end radius.  NOTE (auditor correction): the boundary case |AC| = 2r (k = 0) is NOT excluded by the rho-argument (rho >= r does not contradict rho <= r); there q_near = q_far = m, the product identity degenerates to 4y^2(rho^2-r^2) = (|b-m|^2-r^2)^2, and such tuples are excluded by the STRICT G bound itself (|b_B - m| - eps_B > r inside the localisation ball).  Collinear (a,b,c_i) tuples have no circumradius and lie outside the C900 all-cover-graph non-collinear necessary domain -- they are not treated as vacuously true.",
+    "central_radicand_boxes": [
+      [
+        "-0.00231089954697259606156145572697",
+        "0.011929831575035432580933481006"
+      ],
+      [
+        "-0.00238082635906899453895335661002",
+        "0.0119084234847309840960027926826"
+      ]
+    ],
+    "faces": {
+      "face_0": {
+        "branch": "+",
+        "G_str": [
+          "0.0263000068626259506099351881403",
+          "0.240280609725029403733742583427"
+        ],
+        "G_lo_dyadic_exact": [
+          0,
+          3790230435403639,
+          -57,
+          52
+        ],
+        "G_hi_dyadic_exact": [
+          0,
+          541063832210999,
+          -51,
+          49
+        ],
+        "G_float_directed": [
+          0.026300006862625947,
+          0.24028060972502943
+        ],
+        "certified": true,
+        "near_disk_centre_rect_str": [
+          [
+            "0.29757802349127454588639807298",
+            "0.350696814818309221539749387375"
+          ],
+          [
+            "-0.0596057928856483787427578135976",
+            "0.0800417198271137497744831534874"
+          ]
+        ],
+        "near_disk_centre_radius_up_str": "0.0747044740944378116154211966204",
+        "screen_disk_radius_up_str": "0.454688327214276488685840149628"
+      },
+      "face_4": {
+        "branch": "-",
+        "G_str": [
+          "0.0262715992827020593247677737736",
+          "0.240137792171976588440074351638"
+        ],
+        "G_lo_dyadic_exact": [
+          0,
+          7572272943360255,
+          -58,
+          53
+        ],
+        "G_hi_dyadic_exact": [
+          0,
+          8651875770746299,
+          -55,
+          53
+        ],
+        "G_float_directed": [
+          0.026271599282702056,
+          0.24013779217197662
+        ],
+        "certified": true,
+        "near_disk_centre_rect_str": [
+          [
+            "-0.350722247920980723101536113973",
+            "-0.297422808657848758429054214503"
+          ],
+          [
+            "-0.0588527471789246636735271067664",
+            "0.0806224635458877014748679812328"
+          ]
+        ],
+        "near_disk_centre_radius_up_str": "0.0746561528484007558281732030991",
+        "screen_disk_radius_up_str": "0.454640005968239446776379963921"
+      }
+    },
+    "result": "CERTIFIED (uniform distal exclusion, both central faces)"
+  },
+  "box_delta_1e-3_w_1e-4": {
+    "delta_interval_str": [
+      "0.00100000000000000002081668171172",
+      "0.00100000000000000002081668171172"
+    ],
+    "w_interval_str": [
+      "0.000100000000000000004792173602386",
+      "0.000100000000000000004792173602386"
+    ],
+    "r_upper_endpoint_str": "0.3800838531198387215681578",
+    "r_label": "saved rational upper object UB* (C529 line), NOT the exact root; no claim that this box covers the exact optimum",
+    "pin_status": {
+      "0": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "1": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "2": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "3": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "4": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "5": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "6": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "7": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)",
+      "8": "inner=p1 (smaller-norm criterion; C879 attribution for legal tuples)"
+    },
+    "hubA_localisation_eps": [
+      "0.0",
+      "0.0617173352708297179303187363075"
+    ],
+    "hubA_b": [
+      "-0.00459752387731718684116266615547",
+      "0.0042737602658593819640597821774",
+      "-0.152004701268449810003247080203",
+      "-0.146831795239865836588677439067"
+    ],
+    "hubB_localisation_eps": [
+      "0.0",
+      "0.0673723188561722724498892489464"
+    ],
+    "hubB_b": [
+      "-0.00412531652627217207407461785351",
+      "0.00478910835909287027623015831068",
+      "0.303554109818498119022223136199",
+      "0.30850487849430136000350444192"
+    ],
+    "K_A_rect_str": [
+      [
+        "-0.00634855338842645229580075039166",
+        "0.00609201456846707525838446883881"
+      ],
+      [
+        "-0.213722036539279514055778008697",
+        "-0.145309485974857793832981656124"
+      ]
+    ],
+    "K_B_rect_str": [
+      [
+        "-0.00567765407336082075090422094377",
+        "0.00634390311974125566812920951065"
+      ],
+      [
+        "0.198352720358413003864939128107",
+        "0.620116146880161256405017411453"
+      ]
+    ],
+    "K_A_rect_float": [
+      [
+        -0.006348553388426453,
+        0.006092014568467076
+      ],
+      [
+        -0.21372203653927954,
+        -0.14530948597485777
+      ]
+    ],
+    "K_B_rect_float": [
+      [
+        -0.005677654073360822,
+        0.0063439031197412565
+      ],
+      [
+        0.19835272035841298,
+        0.6201161468801614
+      ]
+    ],
+    "strict_hub_norm_margin": {
+      "|bA|_up + epsA_up": "0.213791548842734019375555476472",
+      "|bB|_up + epsB_up": "0.375914367228284418409600675659",
+      "1 - r  low end": "0.619916146880161278431842220016",
+      "note": "|h_A| <= |b_A| + eps_A and |h_B| <= |b_B| + eps_B for every feasible hub; both must be < 1 - r (strict hub). NOTE: |p_out| = 1 holds in the exact candidate CHART, not at the rounded nominal centres -- no equality is claimed at the nominal data, only the numerical margin below. so this strictness is load-bearing (C879 boundary case)."
+    },
+    "radicand_branch_semantics": "radicands may cross 0 on the box (central circle r^2-|AC|^2/4 and localisation r^2-V). The certificate is stated per tuple as a BRANCH: either (i) |AC| > 2r strictly, where the crescent is empty because rho >= |AC|/2 > r; or (ii) V > r^2, where no hub exists; or (iii) the corresponding exclusion holds with the clamped upper-end radius.  NOTE (auditor correction): the boundary case |AC| = 2r (k = 0) is NOT excluded by the rho-argument (rho >= r does not contradict rho <= r); there q_near = q_far = m, the product identity degenerates to 4y^2(rho^2-r^2) = (|b-m|^2-r^2)^2, and such tuples are excluded by the STRICT G bound itself (|b_B - m| - eps_B > r inside the localisation ball).  Collinear (a,b,c_i) tuples have no circumradius and lie outside the C900 all-cover-graph non-collinear necessary domain -- they are not treated as vacuously true.",
+    "central_radicand_boxes": [
+      [
+        "-0.00268563283391544350628410420256",
+        "0.0121143750609414603547353550539"
+      ],
+      [
+        "-0.00275658643741969909199407418043",
+        "0.0120931079424305646524695490029"
+      ]
+    ],
+    "faces": {
+      "face_0": {
+        "branch": "+",
+        "G_str": [
+          "0.0245686655427838664123019185581",
+          "0.242165131391979426833671595887"
+        ],
+        "G_lo_dyadic_exact": [
+          0,
+          7081435710942193,
+          -58,
+          53
+        ],
+        "G_hi_dyadic_exact": [
+          0,
+          4362459181996183,
+          -54,
+          52
+        ],
+        "G_float_directed": [
+          0.024568665542783863,
+          0.24216513139197945
+        ],
+        "certified": true,
+        "near_disk_centre_rect_str": [
+          [
+            "0.29687526520857776546336026513",
+            "0.350809285031395468035242402038"
+          ],
+          [
+            "-0.0603192918169220548829656536327",
+            "0.0810612891456861522909704831363"
+          ]
+        ],
+        "near_disk_centre_radius_up_str": "0.0756593470226460257377354423625",
+        "screen_disk_radius_up_str": "0.455743200142484761183681030161"
+      },
+      "face_4": {
+        "branch": "-",
+        "G_str": [
+          "0.024540121682103430839072544245",
+          "0.242023417861277512219686514072"
+        ],
+        "G_lo_dyadic_exact": [
+          0,
+          7073208503241449,
+          -58,
+          53
+        ],
+        "G_hi_dyadic_exact": [
+          0,
+          4359906297979933,
+          -54,
+          52
+        ],
+        "G_float_directed": [
+          0.024540121682103427,
+          0.24202341786127754
+        ],
+        "certified": true,
+        "near_disk_centre_rect_str": [
+          [
+            "-0.350834712172187757062147284159",
+            "-0.296717851784088548772189142255"
+          ],
+          [
+            "-0.0595662461101983398137349468016",
+            "0.081642721336265808296239754327"
+          ]
+        ],
+        "near_disk_centre_radius_up_str": "0.0756118493781920281149311335867",
+        "screen_disk_radius_up_str": "0.455695702498030763560876721385"
+      }
+    },
+    "result": "CERTIFIED (uniform distal exclusion, both central faces)"
+  },
+  "distal_fail_control": {
+    "face_0": {
+      "POS_G_lo": "0.0677676723098704497649791278491",
+      "POS_certified": true,
+      "FAIL_G_hi": "-0.136167570579252550366788909741",
+      "FAIL_excluded": true
+    },
+    "face_4": {
+      "POS_G_lo": "0.0677407510226839815192789728826",
+      "POS_certified": true,
+      "FAIL_G_hi": "-0.13632667502574016826777381084",
+      "FAIL_excluded": true
+    },
+    "verdict": "criterion discriminates: POS>0 and FAIL<0"
+  }
+}

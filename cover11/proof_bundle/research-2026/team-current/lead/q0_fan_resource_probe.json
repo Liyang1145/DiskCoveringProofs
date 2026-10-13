@@ -1,0 +1,60 @@
+[
+  {
+    "source": "q0_closure_dual_0_4",
+    "R": 0.38,
+    "side_nodes": 25,
+    "angle_bins": 180,
+    "positive_side_rows": 5231,
+    "face_without_resources": 5.149335009396416,
+    "face_with_resources": 5.147807474034831,
+    "candidate_face": 5.144942448224496,
+    "full_unconstrained_diagnostic": 3.16442110341936,
+    "full_resource_diagnostic": 3.1628935680577754,
+    "seconds": 0.38520216941833496,
+    "argmax": {
+      "hubside_index": 15,
+      "X": [
+        22,
+        23,
+        15
+      ],
+      "Y": [
+        22,
+        23,
+        15
+      ],
+      "budgetA": 106,
+      "budgetB": 114
+    },
+    "scope": "finite positive-side grid with relaxed angular floor budgets plus mandatory genuine candidate; NOT continuum bound"
+  },
+  {
+    "source": "q0_theta_candidate25_dual_0_4",
+    "R": 0.38,
+    "side_nodes": 25,
+    "angle_bins": 180,
+    "positive_side_rows": 5231,
+    "face_without_resources": 5.764589084289513,
+    "face_with_resources": 5.764589084289512,
+    "candidate_face": 5.763407567910713,
+    "full_unconstrained_diagnostic": 3.1567087785660117,
+    "full_resource_diagnostic": 3.156708778566011,
+    "seconds": 0.3863518238067627,
+    "argmax": {
+      "hubside_index": 15,
+      "X": [
+        22,
+        23,
+        15
+      ],
+      "Y": [
+        22,
+        23,
+        15
+      ],
+      "budgetA": 106,
+      "budgetB": 114
+    },
+    "scope": "finite positive-side grid with relaxed angular floor budgets plus mandatory genuine candidate; NOT continuum bound"
+  }
+]

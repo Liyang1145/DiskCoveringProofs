@@ -1,0 +1,27 @@
+{
+  "upper": 28.104358550744024,
+  "constant": [
+    28.502777918395953,
+    28.50277791839596
+  ],
+  "fibers": [
+    {
+      "upper": 0.05756186931377612,
+      "search_floor": 0.05754779969247224,
+      "evaluations": 57,
+      "budget_ended": false
+    },
+    {
+      "upper": 0.047630493739327935,
+      "search_floor": 0.047616911254384726,
+      "evaluations": 47,
+      "budget_ended": false
+    },
+    {
+      "upper": -0.5036117307050416,
+      "search_floor": -0.5036277076268935,
+      "evaluations": 27,
+      "budget_ended": false
+    }
+  ]
+}

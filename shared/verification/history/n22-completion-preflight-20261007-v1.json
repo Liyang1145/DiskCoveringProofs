@@ -1,0 +1,19 @@
+{
+  "schema": "unmodified-completion-gates-on-read-only-archive-workspace-v1",
+  "N": 22,
+  "completion_gates_passed": true,
+  "gate_scope": "N22 completion-interface preflight",
+  "all_original_frozen_input_bytes_independently_verified": true,
+  "byte_audit_sha256": "5262d8711b48d60acfc4e0ab8272e36782f8eec83dcd090f43bfd251116a4f2c",
+  "original_snapshot_sha256": "22aa3a7f8d99ccf0352ca702d74d07918b987b676063baee090392223dd99877",
+  "frozen_file_count": 904281,
+  "original_acceptor_source_sha256": "8c6fb533504915ca8b0a8ffa12ed619d0ef0edfc062e944176e280adbbeb562f",
+  "adapter_sha256": "1e0865d6107d035b6fb08bbe58428cb98ccd5a8fe9f5648027832811c63af1e8",
+  "adapter_missing_input_and_write_rejection_controls_passed": true,
+  "archive_input_reads": 69,
+  "unique_inputs_opened_by_gates": 43,
+  "no_existing_source_or_math_input_modified": true,
+  "mathematical_leaf_certificates_not_freshly_replayed_by_this_gate": true,
+  "failure": null,
+  "seconds": 2.4689999999973224
+}

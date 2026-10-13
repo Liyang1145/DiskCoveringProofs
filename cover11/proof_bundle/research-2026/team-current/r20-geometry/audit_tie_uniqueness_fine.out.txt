@@ -1,0 +1,8 @@
+corrected search: 60 local starts, min F = 8.504175e-06
+   worst point rU=0.500000 phi1=-1.047194 phi2=-1.047191 ; d=0.000001 k=0.500000 m.n=+0.000004 disc-k^2=+4.252e-06
+   t_+ = +0.500000 (t_+-k = +4.597e-11) ; t_- = -0.500009 (t_-+k = -8.504175e-06)
+   |p_in| = 0.999996  |p_out| = 1.000000   (p_in in int D: True)
+grid screen (61x61x11 points): min F = 3.022411e-02 at (0.5, -1.0472, -1.0123)
+over the admissible grid: min(m.n) = -0.858659  min(disc-k^2) = +3.112e-02
+
+wrote audit_tie_uniqueness_fine.json

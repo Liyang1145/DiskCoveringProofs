@@ -1,0 +1,83 @@
+{
+  "schema": "N26-complete-angular-ancestor-closures-acceptance-v1",
+  "verified": true,
+  "whole_ancestor_subtrees_strictly_excluded": 3,
+  "complete_angular_nodes": 9,
+  "complete_angular_splits": 3,
+  "strict_angular_force_leaves": 6,
+  "source_pending_prefixes_covered": 32,
+  "minimum_strict_force_margin": "70368404431862781934349/250000308965662360951000000",
+  "all_incoming_angle_boxes_covered": true,
+  "native_ancestor_states_independently_replayed": 3,
+  "families": [
+    {
+      "B": 14,
+      "I": 12,
+      "source_pending_subtrees": 90,
+      "source_subtrees_covered_by_ancestor_exclusions": 32,
+      "pending_subtrees": 58,
+      "family_exhausted": false
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "source_pending_subtrees": 98,
+      "source_subtrees_covered_by_ancestor_exclusions": 0,
+      "pending_subtrees": 98,
+      "family_exhausted": false
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "source_pending_subtrees": 153,
+      "source_subtrees_covered_by_ancestor_exclusions": 0,
+      "pending_subtrees": 153,
+      "family_exhausted": false
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "source_pending_subtrees": 201,
+      "source_subtrees_covered_by_ancestor_exclusions": 0,
+      "pending_subtrees": 201,
+      "family_exhausted": false
+    }
+  ],
+  "pending_cover_transport_subtrees": 510,
+  "old_forests_and_original_queues_preserved": true,
+  "formal_machine_geometry_proof": false,
+  "unrestricted_reduction_final_joint_acceptance": false,
+  "full_catalog_complete": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "negative_controls_rejected": [
+    "missing-angular-half",
+    "false-empty-angular-box",
+    "unreachable-angular-node",
+    "split-outside-incoming-box",
+    "lost-unexcluded-source-prefix",
+    "wrong-descendant-scope"
+  ],
+  "files": {
+    "MANIFEST.json": "d76405d1673ffe47baf81eff9604a2f43eb25f773fcb4538686e84ff6100c5b9",
+    "TRACE.json": "ade71a15a218611901999a825e9fe1f617df77869f5ddfabc51c084ced751426",
+    "NATIVE-VERIFIED.json": "72417cdb61fe51e4e3d381b63ee6e42ef560be37c66ba9daea26065cab9df677",
+    "FRONTIER.json": "30244d37460a89d429745c2cda2765d6b18a3607fcb4e9da2198bdc98e490ebe",
+    "LOWER-LEDGER.json": "38137614d245d33282d2db40c2059be1a5932a384bb758c89bf6330f1c232a82",
+    "SOURCE-FRONTIER.json": "9065ac1184d92d8aa91b89bd3ef849df4e18b087e7c8b932585fa32d9a45a4b5",
+    "SOURCE-FOREST-ACCEPTANCE.json": "633d3e63f9550572c676e751c7ceb80646f0687b2097271f4bb4636164ba81b5",
+    "SOURCE-CHAIN-ACCEPTANCE.json": "e45db3975d1832ee2b29031aca3eb91aacb65bbad9d8c5c2582773b5a67fb92d",
+    "n26_force.py": "62ad4e612aac5842433c0962065e18904819586911a4523e6d07a8a51462d9ce",
+    "verify_degree_area.py": "a8affb8f8f9e20bbd597abde7869147bb8e50f88666590f279665f94b534fb69",
+    "exact_arcs.py": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "audit_prefix_origin.py": "ec28797070f56bb905ec7db3ad88b164cc6758143f805ddfafc9faeeeab7e557",
+    "audit_prefix_partition.py": "b4b5910832d964e76f801260ae7ecd0965153f4da1060c88b0bb626b5b2692b0",
+    "peel_prefix_origin.cpp": "a76a8ce6c0ee0ee0f513ae9eba086d5b6d1b6b3e39440ab0cac59ef5638620c9",
+    "peel_prefix_origin.linux": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25",
+    "n26_force_angles.py": "dab49d1b21becb02820391f3dc92fbdbebaf352cc5df272f2a09cb5854a138e1",
+    "verify_angular_closures.py": "990d6f8eb86e919eb42538a7e698f52d6b9398315d8aacef638ef5c224380f5a",
+    "audit_angular_closures_native.py": "fa28edd06fdf659b4301acfa4dd753529ed706612b0cf39eb385a8d9159129f5",
+    "PROOF.md": "12212f5cceda437c5cac474c15007a3365b42bfc5c369131c8f190123cbbf240"
+  },
+  "executed_checker_sha256": "990d6f8eb86e919eb42538a7e698f52d6b9398315d8aacef638ef5c224380f5a"
+}

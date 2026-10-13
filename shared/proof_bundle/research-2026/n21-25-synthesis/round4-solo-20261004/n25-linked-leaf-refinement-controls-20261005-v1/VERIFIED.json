@@ -1,0 +1,31 @@
+{
+  "verified": true,
+  "schema": "linked-leaf-only-refinement-controls-v1",
+  "known_exact_N25_attaining_full_type_explicitly_retained_unpaid": true,
+  "known_attaining_pending_node_indices": [
+    249
+  ],
+  "candidate_newly_paid_leaves": 13,
+  "only_original_FULL_PENDING_leaves_changed": true,
+  "negative_controls_rejected": [
+    "deleted-topology-child",
+    "changed-complete-leaf-state",
+    "changed-original-paid-node",
+    "false-changed-leaf-list"
+  ],
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/refine_paid_hole_leaves.py": "ae7ea5728ac75aa9b9f7847c33109c3f52c67596923d1b107d1733fb7b4b39e2",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/refine_linked_collar_leaves.py": "1ec5a6cc1b940988e62f5bcfd95c0062fc6a4b6003f520d5b434985926758874",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/replay_refined_hole_leaves.py": "26ab8c89e1c834f211e81d5c3fbc381bf8c1f84b80e6a13014fd5c1792809fa1",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/replay_refined_linked_leaves.py": "c300fc898697468e8e422a52c1a33ff6fd2640435845fa9e22d2c5b8c8f07a55",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/test_linked_leaf_refinement.py": "7bc77ca232628bd721b3ef01ba3766dfcdaf83b903fb9096bf20d9bebf4fdf96",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/linked-leaf-refinement-source-derivation.json": "999d55866ea51c49ef046a22b4333a8931ebfd3e20f0f8e7c968d73b7da05366",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-collar-candidate-leaf-refinement-force31-20261005-v1.json": "c0d2a44856527faa7ac89040ac84c9bf70401fd63c28faadb3bc6e529bddd73e",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-collar-candidate-leaf-refinement-force31-exact-20261005-v1.json": "0374efedb9443ddc0c5abbe4a32f5b7d350ed7cf3455581b601f456de2b1c369",
+    "research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/case-1/PROPOSAL.json": "480e8a20b369b5110513653db7f87c462123c6c4466a3e376abd9215b4fd392c",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/case-1/EXACT.json": "7123f1f133aa58b7d0d6c3d187cd3e1401138731487e836bd28907fbb281a1e2"
+  },
+  "source_sha256": "7bc77ca232628bd721b3ef01ba3766dfcdaf83b903fb9096bf20d9bebf4fdf96",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,42 @@
+{
+  "N": 25,
+  "B": 16,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "centers": 17,
+      "faces": [
+        6400,
+        77824,
+        114688
+      ],
+      "members": 62
+    },
+    {
+      "id": 1,
+      "centers": 17,
+      "faces": [
+        4864,
+        77824,
+        114688
+      ],
+      "members": 2
+    }
+  ],
+  "group_count": 2,
+  "selected_types": 64,
+  "catalog_types": 64,
+  "catalog_sha256": "0c3986f44753e3e5996380fd26ff889fa1fe366bb05a2a9df38b3cc63525ae51",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "34a3abc3d0f4614787d13d7e7446451fb362c0bc16cfc781707e363f2ec89a26",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "parent_groups_sha256": null,
+  "parent_proof_sha256": null,
+  "not_a_complete_family": true,
+  "members_are_discovery_graphs_not_actual_cover_types": true,
+  "all_boundary_sites_preserved_by_implicit_anchor_rods": true,
+  "source_sha256": "d771301e9bef4dc24d9cb6a8cfaee9b0c1d51cb8ca76b513de1e7887ff08abdd",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,47 @@
+{
+  "status": "numeric_proposals_only",
+  "runs": [
+    {
+      "K": 1,
+      "min_eigenvalue": 0.012783348672312391,
+      "max_eigenvalue": 1.2700691896292406,
+      "min_lambda": 0.03300234839647989
+    },
+    {
+      "K": 3,
+      "min_eigenvalue": 0.027909436764961493,
+      "max_eigenvalue": 3.6140931953030977,
+      "min_lambda": 0.03300234839647989
+    },
+    {
+      "K": 10,
+      "min_eigenvalue": 0.04494312702969393,
+      "max_eigenvalue": 11.832158860750447,
+      "min_lambda": 0.03300234839647989
+    },
+    {
+      "K": 30,
+      "min_eigenvalue": 0.051518850718797374,
+      "max_eigenvalue": 35.31602825073168,
+      "min_lambda": 0.03300234839647989
+    },
+    {
+      "K": 100,
+      "min_eigenvalue": 0.0537902832779413,
+      "max_eigenvalue": 117.51082740257522,
+      "min_lambda": 0.03300234839647989
+    },
+    {
+      "K": 300,
+      "min_eigenvalue": 0.05442678123807814,
+      "max_eigenvalue": 352.3534669735419,
+      "min_lambda": 0.03300234839647989
+    },
+    {
+      "K": 1000,
+      "min_eigenvalue": 0.05464795490400447,
+      "max_eigenvalue": 1174.3028298620486,
+      "min_lambda": 0.03300234839647989
+    }
+  ]
+}

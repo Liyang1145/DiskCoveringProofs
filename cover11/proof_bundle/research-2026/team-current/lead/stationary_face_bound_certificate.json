@@ -1,0 +1,45 @@
+{
+  "scope": "High-bearingface stationaryvalue upper; endpoints requireC863,C869; allface reductionC861",
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      1.0,
+      1.1863995522992576
+    ],
+    [
+      1.0,
+      1.1863995522992576
+    ],
+    [
+      -1.1863995522992576,
+      1.1863995522992576
+    ]
+  ],
+  "count": 3480,
+  "live": 0,
+  "closed": {
+    "illegal": 37,
+    "nonstationary": 1202,
+    "positivecurvature": 0,
+    "value": 502
+  },
+  "terminal": 28.10694882274086,
+  "seconds": 74.05716109275818,
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "source_sha256": {
+    "certify_stationary_face_bound.py": "b0695b73c011d3d9207e12c5bcdf3d6e59ea86effa755216094255df4494bcf6",
+    "face_second_jet.py": "0895040dc5865b6974fc2b0867d39ffb48ba567e51b86d4f07e183779e772c7a",
+    "face_derivative_outer_jet.py": "252754d66db7ffafe82fa820579b24607c9835fae20374de3635b32828281e5c",
+    "patch_smooth_jet.py": "0ea533809a58940014e0fd980d29c80747cb9e05a467936645817bb74b0b68d0",
+    "interval_hub_boundary.py": "16caeaed1d894ae6079554cc41cb8d88fe3f7ce362a54a64a7bf050e79a6c4d4",
+    "interval_cartesian_cancel.py": "3e25905bde400b1a5969667e6f63c7872dccb32567e197d3164b71cd2a7e9851",
+    "interval_collapsed_fibers.py": "3e4be2d15fea51154ba8bc1314c0df14487bb2d3104b7368251463aee2a36711",
+    "interval_cancel_fibers.py": "5452d07a5fe3a81e0734e6975fae8a1ed4b6ac00b140710b912e89f2c3f8fe74",
+    "interval_patch_delta.py": "48bed07cdb5488b92769d7960a9b801da5da20af65c0157d5697c0dbf821f397",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358"
+  },
+  "topboxes": []
+}

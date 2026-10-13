@@ -1,0 +1,45 @@
+{
+  "selected_completed_pending_families": [
+    {
+      "parent_group": 134049,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0134049",
+      "status_sha256": "f05c9feb818042cf2ae77feb8a5c8523309bbdea849f8a666fc3ea2812f324d5",
+      "exact_sha256": "78fa77680b7fdf8e955dc244d0ce715565837c906d4cc5d16f284e02f6cd87d9",
+      "proposal_sha256": "fd5dfbb946cfe1c6053c69325c33f4adc7b4ddc864c174d957bbca284a8d53a5"
+    },
+    {
+      "parent_group": 134728,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0134728",
+      "status_sha256": "3a2f26702e127961fa543aa7fa9ec12092427823259cadbfdc2296807a7b9f28",
+      "exact_sha256": "d795b7014ecf9ad4d54672d96c4744aa8d9b0182cf585a5f517be865f3e2f74a",
+      "proposal_sha256": "202bfa923358eb5f8f601baa596f4166cd337efc9103c4901948a4b79b3bddd5"
+    },
+    {
+      "parent_group": 135083,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0135083",
+      "status_sha256": "b3dba869583a7f1f44a73df49aa64a96bec66c54b694f9e54667ed8feece67bb",
+      "exact_sha256": "68cff889b521d45deec3c4a82ca079b2068cd6a9471e59de9262d75a3c8e1fa3",
+      "proposal_sha256": "2df287988595516cccefc44f358061d0e8767cf6777f76238e3c7f2c6b50075c"
+    },
+    {
+      "parent_group": 135263,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0135263",
+      "status_sha256": "e4e054fbd094e279a8cc78a2262814dc6be8305aadc1a5940c4555bc80e61210",
+      "exact_sha256": "d560690846d4546c8779c5bf7622c24febaafcca92703c250b4002e943902892",
+      "proposal_sha256": "2b950354798d1c4ea51c818a4d378e27238a6051ec3071ad2897cf421a375cea"
+    },
+    {
+      "parent_group": 138416,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0138416",
+      "status_sha256": "e02b3c53d9a15802bfa21cbe2586887b19191db811f814a6a47d4d412631a01f",
+      "exact_sha256": "2c173ad614cf3626166015fbbb364745443e1f8756986f67ce8f7b5e74d65b23",
+      "proposal_sha256": "248f3624159738e4378c916418a24bc9ec3f05f83dc9da5609ec2d4c9b84f257"
+    }
+  ],
+  "not_a_live_stage_restart": true,
+  "not_the_complete_parent_residual_pass": true,
+  "force_limit": 31,
+  "source_sha256": "f04340f5d4d5e5b83a73e11bc84b629cb33256df035da403f912b87b225d5818",
+  "known_attaining_control_sha256": "47b008db4d9986e59b6490cb8784e46d85d5c86b1fbd412abc05a8165f8f0a43",
+  "global_optimality_proved": false
+}

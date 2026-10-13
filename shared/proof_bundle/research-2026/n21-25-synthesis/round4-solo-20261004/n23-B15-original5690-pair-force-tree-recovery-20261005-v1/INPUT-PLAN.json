@@ -1,0 +1,17 @@
+{
+  "N": 23,
+  "B": 15,
+  "selected_strict_trees": 5690,
+  "original_receipt_sha256": "4b2d40d347df500e95874de39439ed4a95cdb3abc0620ae49e07c15a1f050e33",
+  "groups_sha256": "9f9a98ced472a791b257d223bd54b1f02a372630ab4c928dcd5ded0f7e60cb6d",
+  "total_uncompressed_bytes": 6899608,
+  "archive_bindings": {
+    "math-delta-0061.zip": {
+      "archive_sha256": "fbfd82cdcdd64d1e5dad183ae88ea6d4be5a34963be56ca7194a630fba05fdfe",
+      "metadata_sha256": "8a6d4114a5b5cceccdff30eda03a8b9a45bea93c534fc37130611aef9b360ec5",
+      "asset_manifest_sha256": "4c5ad9e8aa6f6573e8a396a68eaa6242b0f3df3313e59dc5a28f649706859bf3"
+    }
+  },
+  "only_original_receipt_strict_tree_whitelist": true,
+  "not_yet_math_replay_or_complete_catalog_mapping": true
+}

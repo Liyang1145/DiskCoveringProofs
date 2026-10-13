@@ -1,0 +1,710 @@
+[
+  {
+    "node": 4283,
+    "depth": 61,
+    "norm_upper": 0.01622932293027135,
+    "patch": null
+  },
+  {
+    "node": 4284,
+    "depth": 61,
+    "norm_upper": 0.017247453484099957,
+    "patch": null
+  },
+  {
+    "node": 4285,
+    "depth": 61,
+    "norm_upper": 0.019656705939368066,
+    "patch": null
+  },
+  {
+    "node": 4286,
+    "depth": 61,
+    "norm_upper": 0.02260344086479639,
+    "patch": null
+  },
+  {
+    "node": 4287,
+    "depth": 61,
+    "norm_upper": 0.017433038225431435,
+    "patch": null
+  },
+  {
+    "node": 4288,
+    "depth": 61,
+    "norm_upper": 0.018384628419849884,
+    "patch": null
+  },
+  {
+    "node": 4289,
+    "depth": 61,
+    "norm_upper": 0.021225690020289182,
+    "patch": null
+  },
+  {
+    "node": 4290,
+    "depth": 61,
+    "norm_upper": 0.022196959781854347,
+    "patch": null
+  },
+  {
+    "node": 4291,
+    "depth": 61,
+    "norm_upper": 0.018366912208349906,
+    "patch": null
+  },
+  {
+    "node": 4292,
+    "depth": 61,
+    "norm_upper": 0.01927244676827079,
+    "patch": null
+  },
+  {
+    "node": 4293,
+    "depth": 61,
+    "norm_upper": 0.018366912208349906,
+    "patch": null
+  },
+  {
+    "node": 4294,
+    "depth": 61,
+    "norm_upper": 0.01927244676827079,
+    "patch": null
+  },
+  {
+    "node": 4295,
+    "depth": 61,
+    "norm_upper": 0.014500673102289651,
+    "patch": null
+  },
+  {
+    "node": 4296,
+    "depth": 61,
+    "norm_upper": 0.014155731932119355,
+    "patch": null
+  },
+  {
+    "node": 4297,
+    "depth": 61,
+    "norm_upper": 0.0165310524970576,
+    "patch": null
+  },
+  {
+    "node": 4298,
+    "depth": 61,
+    "norm_upper": 0.01622932293027135,
+    "patch": null
+  },
+  {
+    "node": 4299,
+    "depth": 61,
+    "norm_upper": 0.02246179459091504,
+    "patch": null
+  },
+  {
+    "node": 4300,
+    "depth": 61,
+    "norm_upper": 0.02246179459091504,
+    "patch": null
+  },
+  {
+    "node": 4301,
+    "depth": 61,
+    "norm_upper": 0.018210195715494846,
+    "patch": null
+  },
+  {
+    "node": 4302,
+    "depth": 61,
+    "norm_upper": 0.019123152678447795,
+    "patch": null
+  },
+  {
+    "node": 4303,
+    "depth": 61,
+    "norm_upper": 0.018758985443371963,
+    "patch": null
+  },
+  {
+    "node": 4304,
+    "depth": 61,
+    "norm_upper": 0.018758985443371963,
+    "patch": null
+  },
+  {
+    "node": 4305,
+    "depth": 61,
+    "norm_upper": 0.020007275714788268,
+    "patch": null
+  },
+  {
+    "node": 4306,
+    "depth": 61,
+    "norm_upper": 0.020007275714788268,
+    "patch": null
+  },
+  {
+    "node": 4307,
+    "depth": 62,
+    "norm_upper": 0.02090108668857924,
+    "patch": null
+  },
+  {
+    "node": 4308,
+    "depth": 62,
+    "norm_upper": 0.0204704613209853,
+    "patch": null
+  },
+  {
+    "node": 4309,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4310,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4311,
+    "depth": 62,
+    "norm_upper": 0.017983641534068853,
+    "patch": null
+  },
+  {
+    "node": 4312,
+    "depth": 62,
+    "norm_upper": 0.017983641534068853,
+    "patch": null
+  },
+  {
+    "node": 4313,
+    "depth": 62,
+    "norm_upper": 0.021182129672219104,
+    "patch": null
+  },
+  {
+    "node": 4314,
+    "depth": 62,
+    "norm_upper": 0.021182129672219104,
+    "patch": null
+  },
+  {
+    "node": 4315,
+    "depth": 62,
+    "norm_upper": 0.019960326961493777,
+    "patch": null
+  },
+  {
+    "node": 4316,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4317,
+    "depth": 62,
+    "norm_upper": 0.01950894703309705,
+    "patch": null
+  },
+  {
+    "node": 4318,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4319,
+    "depth": 62,
+    "norm_upper": 0.020432986557512037,
+    "patch": null
+  },
+  {
+    "node": 4320,
+    "depth": 62,
+    "norm_upper": 0.01999228105019331,
+    "patch": null
+  },
+  {
+    "node": 4321,
+    "depth": 62,
+    "norm_upper": 0.019068329944091987,
+    "patch": null
+  },
+  {
+    "node": 4322,
+    "depth": 62,
+    "norm_upper": 0.019068329944091987,
+    "patch": null
+  },
+  {
+    "node": 4323,
+    "depth": 62,
+    "norm_upper": 0.019068329944091987,
+    "patch": null
+  },
+  {
+    "node": 4324,
+    "depth": 62,
+    "norm_upper": 0.019068329944091987,
+    "patch": null
+  },
+  {
+    "node": 4325,
+    "depth": 62,
+    "norm_upper": 0.014698424438297154,
+    "patch": null
+  },
+  {
+    "node": 4326,
+    "depth": 62,
+    "norm_upper": 0.017684539483570478,
+    "patch": null
+  },
+  {
+    "node": 4327,
+    "depth": 62,
+    "norm_upper": 0.015292471119380879,
+    "patch": null
+  },
+  {
+    "node": 4328,
+    "depth": 62,
+    "norm_upper": 0.01705760948145266,
+    "patch": null
+  },
+  {
+    "node": 4329,
+    "depth": 62,
+    "norm_upper": 0.012072162881464258,
+    "patch": null
+  },
+  {
+    "node": 4330,
+    "depth": 62,
+    "norm_upper": 0.01246399044454966,
+    "patch": null
+  },
+  {
+    "node": 4331,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4332,
+    "depth": 62,
+    "norm_upper": 0.012776839241933891,
+    "patch": null
+  },
+  {
+    "node": 4333,
+    "depth": 62,
+    "norm_upper": 0.013953544882673832,
+    "patch": null
+  },
+  {
+    "node": 4334,
+    "depth": 62,
+    "norm_upper": 0.014376863390456995,
+    "patch": null
+  },
+  {
+    "node": 4335,
+    "depth": 62,
+    "norm_upper": 0.017684539483570478,
+    "patch": null
+  },
+  {
+    "node": 4336,
+    "depth": 62,
+    "norm_upper": 0.016106880848598515,
+    "patch": null
+  },
+  {
+    "node": 4337,
+    "depth": 62,
+    "norm_upper": 0.012393952145994385,
+    "patch": null
+  },
+  {
+    "node": 4338,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4339,
+    "depth": 62,
+    "norm_upper": 0.007873902420914234,
+    "patch": null
+  },
+  {
+    "node": 4340,
+    "depth": 62,
+    "norm_upper": 0.010036133003144175,
+    "patch": null
+  },
+  {
+    "node": 4341,
+    "depth": 62,
+    "norm_upper": 0.012773839839374806,
+    "patch": null
+  },
+  {
+    "node": 4342,
+    "depth": 62,
+    "norm_upper": 0.013234945046998438,
+    "patch": null
+  },
+  {
+    "node": 4343,
+    "depth": 62,
+    "norm_upper": 0.00956712154735724,
+    "patch": null
+  },
+  {
+    "node": 4344,
+    "depth": 62,
+    "norm_upper": 0.010746762064977843,
+    "patch": null
+  },
+  {
+    "node": 4345,
+    "depth": 62,
+    "norm_upper": 0.010535053295861543,
+    "patch": null
+  },
+  {
+    "node": 4346,
+    "depth": 62,
+    "norm_upper": 0.009019717460914452,
+    "patch": null
+  },
+  {
+    "node": 4347,
+    "depth": 62,
+    "norm_upper": 0.010057025199686487,
+    "patch": null
+  },
+  {
+    "node": 4348,
+    "depth": 62,
+    "norm_upper": 0.009519188463404276,
+    "patch": null
+  },
+  {
+    "node": 4349,
+    "depth": 62,
+    "norm_upper": 0.01918790168915233,
+    "patch": null
+  },
+  {
+    "node": 4350,
+    "depth": 62,
+    "norm_upper": 0.018717904080399216,
+    "patch": null
+  },
+  {
+    "node": 4351,
+    "depth": 62,
+    "norm_upper": 0.022196959741688373,
+    "patch": null
+  },
+  {
+    "node": 4352,
+    "depth": 62,
+    "norm_upper": 0.021791956858083793,
+    "patch": null
+  },
+  {
+    "node": 4353,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4354,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4355,
+    "depth": 62,
+    "norm_upper": 0.0182145350465832,
+    "patch": null
+  },
+  {
+    "node": 4356,
+    "depth": 62,
+    "norm_upper": 0.0182145350465832,
+    "patch": null
+  },
+  {
+    "node": 4357,
+    "depth": 62,
+    "norm_upper": 0.01836691247165799,
+    "patch": null
+  },
+  {
+    "node": 4358,
+    "depth": 62,
+    "norm_upper": 0.017596677465986574,
+    "patch": null
+  },
+  {
+    "node": 4359,
+    "depth": 62,
+    "norm_upper": 0.012473037238540933,
+    "patch": null
+  },
+  {
+    "node": 4360,
+    "depth": 62,
+    "norm_upper": 0.012473037238540933,
+    "patch": null
+  },
+  {
+    "node": 4361,
+    "depth": 62,
+    "norm_upper": 0.014784547142034369,
+    "patch": null
+  },
+  {
+    "node": 4362,
+    "depth": 62,
+    "norm_upper": 0.014784547142034369,
+    "patch": null
+  },
+  {
+    "node": 4363,
+    "depth": 62,
+    "norm_upper": 0.017173274391502208,
+    "patch": null
+  },
+  {
+    "node": 4364,
+    "depth": 62,
+    "norm_upper": 0.017173274391502208,
+    "patch": null
+  },
+  {
+    "node": 4365,
+    "depth": 62,
+    "norm_upper": 0.018138497243073527,
+    "patch": null
+  },
+  {
+    "node": 4366,
+    "depth": 62,
+    "norm_upper": 0.018138497243073527,
+    "patch": null
+  },
+  {
+    "node": 4367,
+    "depth": 62,
+    "norm_upper": 0.019493659582535433,
+    "patch": null
+  },
+  {
+    "node": 4368,
+    "depth": 62,
+    "norm_upper": 0.019493659582535433,
+    "patch": null
+  },
+  {
+    "node": 4369,
+    "depth": 62,
+    "norm_upper": 0.012158175203860984,
+    "patch": null
+  },
+  {
+    "node": 4370,
+    "depth": 62,
+    "norm_upper": 0.015947771898017778,
+    "patch": null
+  },
+  {
+    "node": 4371,
+    "depth": 62,
+    "norm_upper": 0.010783820924745826,
+    "patch": null
+  },
+  {
+    "node": 4372,
+    "depth": 62,
+    "norm_upper": 0.01505426891654389,
+    "patch": null
+  },
+  {
+    "node": 4373,
+    "depth": 62,
+    "norm_upper": 0.013121845916847397,
+    "patch": null
+  },
+  {
+    "node": 4374,
+    "depth": 62,
+    "norm_upper": 0.01821019598106895,
+    "patch": null
+  },
+  {
+    "node": 4375,
+    "depth": 62,
+    "norm_upper": 0.011859696864367596,
+    "patch": null
+  },
+  {
+    "node": 4376,
+    "depth": 62,
+    "norm_upper": 0.017433038225431435,
+    "patch": null
+  },
+  {
+    "node": 4377,
+    "depth": 62,
+    "norm_upper": 0.018366912208349906,
+    "patch": null
+  },
+  {
+    "node": 4378,
+    "depth": 62,
+    "norm_upper": 0.015814969278831775,
+    "patch": null
+  },
+  {
+    "node": 4379,
+    "depth": 62,
+    "norm_upper": 0.013800826954327943,
+    "patch": null
+  },
+  {
+    "node": 4380,
+    "depth": 62,
+    "norm_upper": 0.018955517505365366,
+    "patch": null
+  },
+  {
+    "node": 4381,
+    "depth": 62,
+    "norm_upper": 0.013121845916847397,
+    "patch": null
+  },
+  {
+    "node": 4382,
+    "depth": 62,
+    "norm_upper": 0.018955517505365366,
+    "patch": null
+  },
+  {
+    "node": 4383,
+    "depth": 62,
+    "norm_upper": 0.018231395694782434,
+    "patch": null
+  },
+  {
+    "node": 4384,
+    "depth": 62,
+    "norm_upper": 0.019353524115767316,
+    "patch": null
+  },
+  {
+    "node": 4385,
+    "depth": 62,
+    "norm_upper": 0.021375528988104388,
+    "patch": null
+  },
+  {
+    "node": 4386,
+    "depth": 62,
+    "norm_upper": 0.022340285276628558,
+    "patch": null
+  },
+  {
+    "node": 4387,
+    "depth": 62,
+    "norm_upper": 0.01536087061386061,
+    "patch": null
+  },
+  {
+    "node": 4388,
+    "depth": 62,
+    "norm_upper": 0.016432896469653936,
+    "patch": null
+  },
+  {
+    "node": 4389,
+    "depth": 62,
+    "norm_upper": 0.0182145350465832,
+    "patch": null
+  },
+  {
+    "node": 4390,
+    "depth": 62,
+    "norm_upper": 0.01912728489174054,
+    "patch": null
+  },
+  {
+    "node": 4391,
+    "depth": 62,
+    "norm_upper": 0.017596677465986574,
+    "patch": null
+  },
+  {
+    "node": 4392,
+    "depth": 62,
+    "norm_upper": 0.01853987050139666,
+    "patch": null
+  },
+  {
+    "node": 4393,
+    "depth": 62,
+    "norm_upper": 0.012473037238540933,
+    "patch": null
+  },
+  {
+    "node": 4394,
+    "depth": 62,
+    "norm_upper": 0.014784547142034369,
+    "patch": null
+  },
+  {
+    "node": 4395,
+    "depth": 62,
+    "norm_upper": 0.013771724595003604,
+    "patch": null
+  },
+  {
+    "node": 4396,
+    "depth": 62,
+    "norm_upper": 0.01589548912621549,
+    "patch": null
+  },
+  {
+    "node": 4397,
+    "depth": 62,
+    "norm_upper": 0.014155731932119355,
+    "patch": null
+  },
+  {
+    "node": 4398,
+    "depth": 62,
+    "norm_upper": 0.009808004911858844,
+    "patch": null
+  },
+  {
+    "node": 4399,
+    "depth": 62,
+    "norm_upper": 0.015312363483315826,
+    "patch": null
+  },
+  {
+    "node": 4400,
+    "depth": 62,
+    "norm_upper": 0.011535830774310028,
+    "patch": null
+  }
+]

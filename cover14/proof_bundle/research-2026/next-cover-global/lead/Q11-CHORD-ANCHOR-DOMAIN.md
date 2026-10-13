@@ -1,0 +1,8 @@
+# q11 chord angular domain and implementation indexing
+C1177's chordcontainerproof gives for a chord joiningOWNERlabels(i−1,i+1): the THREEownerarc lengths sum<=B=2asin(2U). Thus ownerdeficits sum>=G=3L−B. It appliespopulatedpockets: only chordendpointsneedcommonfacewitness; their entireownedarcs lieinS1∩B(witness,2U). Thatconnectedarc containsoneofthe twointervalsbetweenownerarcs. Fourwholeowners cannotfit since B+7L<2pi; hence itcontainsshorttriple,notlongdirection. All inequalitiesclosed undercompactlimits.
+
+IMPORTANTindexmapping: productionfixedanchorprogramusesA_i atboundaryedgebetweenowners i andi+1. With t0=0 andtheta_j=t_{j+1}−t_j, gapjbelongsOWNERj+1(mod11). Thus a chord withmiddleOWNERi constrains GAPindices{i−2,i−1,i} modulo11. Memberreportusesownerindexedtheta,correctbutdifferent; translatebeforecode. Deficitsd_j=L−theta_j have sum11L−2pi and0<=d<=L.
+
+D11 intersecteachtriplehalfspace isnecessaryouterdomain. NeedALLnewintersectionvertices, notonlysurvivingold110. Forup totwochords, anyvertexhasatmost3freecoordinates; chooseindependentactivechordconstraints(k=0,1,2), freesize1+k, setothersto0orL. Since L<Delta11<2L, atmostoneboundcoordinatecanbeL. Solve thesmall(k+1)squarelinear system overQ with RHSlinearformsin(L,B,2pi); verify ALLinequalitiesbydirectedintervals. Symboliczeroformsareexactequalities. Independentbasisrepresentationcoveragefollows standardpolytopevertexrankcriterion. Thisisnotclaimofcertificationuntilexecuted/audited.
+
+Derivedshared-deficit boundfor2chords isREDUNDANTwiththeirconstraints+sum+nonnegativity: d_shared>=2G−Delta11=2pi−2B−5L>0. Itdoesnotfurthertrimthealreadyintersectedpolytope. Numericaldisplayerrorsinmemberreportdonotenterkernel; allconstantsrecomputed.

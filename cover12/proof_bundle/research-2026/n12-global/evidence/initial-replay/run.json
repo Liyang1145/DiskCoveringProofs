@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-B",
+    "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\session2\\n1314\\py\\certify_cfg.py",
+    "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\session2\\n1314\\cfg\\cert_n12_othern.json",
+    "--key",
+    "centers_dec17",
+    "--nd",
+    "17",
+    "--claim",
+    "0.361102963744508672616920293904"
+  ],
+  "exit": 0,
+  "seconds": 5.554120779037476
+}

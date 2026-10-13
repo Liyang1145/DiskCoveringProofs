@@ -1,0 +1,45 @@
+{
+  "verified": true,
+  "schema": "cached-origin-fixed-seed-control-derivation-v1",
+  "source_sha256": "5334aee1efc860f6ff10b975e6355118df6c6f9052b940eef3561435e80fe1bf",
+  "files": [
+    {
+      "source": "peel_cached_support_origin_collar.cpp",
+      "source_sha256": "480bd5aa13b83dae07d11b8bb9c30ba4b369f819222416af15ee59eacf187c42",
+      "target": "cached_origin_probe_body.inc",
+      "target_sha256": "5369aa3a9a52606b77f3b97b6504c465b8cc57de456610b01bd1f03677dbfd7d",
+      "changes": [
+        [
+          "int main(int argc,char**argv)",
+          "int frozen_cached_origin_main(int argc,char**argv)"
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "seed_cover_origin.cpp",
+      "source_sha256": "92e78a39cd785c28dfe7300d375eaf5c9a800cf25ec74fa734ae2c732f115344",
+      "target": "seed_cached_support_origin.cpp",
+      "target_sha256": "d2a898ad594dd6f6935d8096c841f3a17630085a063665ca054161e537eaec9d",
+      "changes": [
+        [
+          "#include \"origin_collar_probe_body.inc\"",
+          "#include \"cached_origin_probe_body.inc\""
+        ],
+        [
+          " if(argc!=5)throw runtime_error(\"usage: seed-origin input output flag slab\");",
+          " if(argc!=6)throw runtime_error(\"usage: seed-cached-origin input output flag slab strict-table\");"
+        ],
+        [
+          " initialize_cover_origin(argv[3]);initialize_collar_chunks(argv[2],stoull(argv[4]));",
+          " load_sparse_obstacles(argv[5]);\n initialize_cover_origin(argv[3]);initialize_collar_chunks(argv[2],stoull(argv[4]));"
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    }
+  ],
+  "only_main_identity_include_and_strict_table_parameter_changed": true,
+  "all_fixed_seed_recursion_and_origin_checks_unchanged": true,
+  "not_a_complete_boundary_family": true,
+  "global_optimality_proved": false
+}

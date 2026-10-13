@@ -1,0 +1,4 @@
+tested 1462 admissible pairs (r=0.50, s=0.8660); pairs with V covered by BOTH disks: 0
+no adversarial pair found in this grid
+
+wrote audit_tie_uniqueness.json

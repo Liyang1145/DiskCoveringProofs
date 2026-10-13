@@ -1,0 +1,25 @@
+{
+  "schema": "N26-actual-snapshot-fresh-seeded-root-ownership-regression-v1",
+  "actual_source_acceptance_sha256": "26ce8b89bcf0dff276e494511ae10d3f1bfedd3caab41574c8dfb3bf6738d15a",
+  "actual_pending_roots_sha256": "cf98971b46533fe46ecfdaaa285b019bda95fa69874288adf4d943034374a086",
+  "fresh_current_root_index": 1,
+  "seeded_current_root_index": 957,
+  "actual_snapshot_FRESH_and_SEEDED_mode_control_passed": true,
+  "invalid_actual_snapshot_ownership_controls_rejected": [
+    "duplicate-current-owned-root",
+    "previously-discharged-root-reopened",
+    "boolean-current-root-owner",
+    "actual-full-root-bounds-changed",
+    "unattempted-root-given-invented-seed",
+    "newest-accepted-seed-reset-as-fresh",
+    "accepted-seed-source-substituted",
+    "previous-accepted-energy-leaf-overwritten"
+  ],
+  "source_snapshot_only_with_mocked_geometry_not_a_geometric_replay": true,
+  "new_geometric_candidate_payments": 0,
+  "tested_source_sha256": "283c32a6cb4388d1d88ac8ea4d2b896c1003fe7b6997f7d683bd0e78bcf70272",
+  "tested_ownership_checker_sha256": "9e0c72baf4c5d9228857859236e7e76fe3e897a034c54f8b7627ede64f4ca870",
+  "executed_test_sha256": "89ce09163f6ff294524e81f668ef3c6d492d848178d7a1b8cacfe65e2a094771",
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false
+}

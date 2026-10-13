@@ -1,0 +1,10 @@
+# Team activation: latest human authorization overrides solo restriction
+User explicitly requests ~6 concurrent Team members on new cline2 / cline-pass/deepseek-v4.1-flash. Main target unchanged: unconditional sharp optimality n11 or n14, chosen n11. Read STATUS.md and DEAD.md before exploring; history contains obsolete conclusions, use newest milestone. Do not modify lead files, STATUS/DEAD, goal, or other members' directories. No further delegation.
+
+Current proved: C818 excludes ALL q1; C819 excludes q0(4,9) atR=.38. Remaining q0(5,8),(6,7). Ring9+hub2 reduction and inward-root model established, but no symmetry or zero overlap. Exact upper Tcert=0.379983853119838689722261606136093214308718957. Original global optimum UNPROVED.
+
+Round4 pending result: boundary cyclic closure adds local equations T_i+L_(i+1)+2b_i+(w_i+w_(i+1))/2=pi. Proof draft lead/BOUNDARY-CYCLIC-CLOSURE.md. Numeric calibration21 coordinate diagrams passed. q0(5,8) continuous interval certificate now reports area<=3.095793009121803<pi in lead/q0_closure_dual_certificate_0_3.json; NOT YET registered, needs geometry/kernel audit. Domain adds q>=4sin(pi−8asinR)^2/R² from w_i>=2pi−16asinR>0. lead/certify_q0_closure.py includes qmin filter and atan2 derivative bounds. Earlier jobs with origin singularity stalled; current completes. q0(6,7) sampled closure dual3.17570256>pi, numeric only. Need sharper coupling for sharp candidate.
+
+Key files in research-2026/team-current/lead/: Q0-DEGREE4-EXCLUSION.md; BOUNDARY-CYCLIC-CLOSURE.md; SHARED-MOMENT-DUAL.md; SHARED-RADIUS-REDUCTION.md; q0_graphs.json; q0_closure_dual.py; certify_q0_closure.py; check_boundary_closure.py; check_q0_closure_symbolic.py; q0_shared_radius.py/.json. Saved exact-coordinate upper candidate n11/upper/certified_object.json (UTF8 BOM); hubs original0,2; numeric graph degrees7,6.
+
+Tools Windows PowerShell, use py -3. Research budgets concern experiments not task stopping. No numerical -> proved upgrade. Send concise evidence-backed report with proof scope, falsifier/gap, paths, repro; no acknowledgement loops. Lead will inspect critical evidence rather than accept identity/reviewer labels.

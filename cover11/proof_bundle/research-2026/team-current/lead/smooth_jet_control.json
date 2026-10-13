@@ -1,0 +1,6 @@
+{
+  "samples": 114,
+  "maxvalueerror": 7.105427357601002e-15,
+  "maxgradientFDerror": 1.5180606771636462e-09,
+  "scope": "calibrationonly; no domaincertificate"
+}

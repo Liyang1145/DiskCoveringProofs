@@ -1,0 +1,33 @@
+{
+  "status": "numeric_membership_test_not_covercertificate",
+  "runs": [
+    {
+      "start": 1,
+      "max_aligned_coordinate_error": 2.9472409007746947e-05,
+      "inside_certified_box_numerically": false,
+      "max_equation_residual": 2.281554500882521e-09,
+      "anchor_error": 1.53200696573208e-09
+    },
+    {
+      "start": 2,
+      "max_aligned_coordinate_error": 3.59367427399393e-05,
+      "inside_certified_box_numerically": false,
+      "max_equation_residual": 2.154720846192504e-09,
+      "anchor_error": 1.4421009941756324e-09
+    },
+    {
+      "start": 3,
+      "max_aligned_coordinate_error": 3.095393927443624e-05,
+      "inside_certified_box_numerically": false,
+      "max_equation_residual": 1.2603704746538824e-09,
+      "anchor_error": 8.474054791207664e-10
+    },
+    {
+      "start": 4,
+      "max_aligned_coordinate_error": 3.533347159723199e-05,
+      "inside_certified_box_numerically": false,
+      "max_equation_residual": 1.882012767850938e-09,
+      "anchor_error": 1.2653865733014413e-09
+    }
+  ]
+}

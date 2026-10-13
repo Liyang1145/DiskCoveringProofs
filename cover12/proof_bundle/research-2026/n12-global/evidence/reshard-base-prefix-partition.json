@@ -1,0 +1,20 @@
+{
+  "exact_partition": true,
+  "proof": "complete binary prefix code reconstructed leaf-to-root",
+  "counts": {
+    "atomic": 6372,
+    "infeasible": 318,
+    "pending": 4
+  },
+  "internal": 6693,
+  "max_depth": 45,
+  "global_exclusion": false,
+  "note": "Partition only; predicates and atomic replay are separate obligations.",
+  "root_matches_k10_chart": true,
+  "source": "research-2026\\n12-global\\members\\structure\\parallel-domain\\reshard-base.json",
+  "source_sha256": "86db96297c6cae2fe895ad9faef6d48beb8cf84c365b380463fc36a7af7cfb53",
+  "controls": {
+    "positive": 2,
+    "negative_rejected": 4
+  }
+}

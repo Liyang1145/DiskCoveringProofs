@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "schema": "original-snapshot-gapped-job-partition-controls-v1",
+  "all_selected_original_positions_covered_once_no_paid_gaps_included": true,
+  "negative_controls_rejected": [
+    "duplicate-position",
+    "unordered-position",
+    "negative-position",
+    "boolean-position",
+    "empty-selection",
+    "zero-batch",
+    "oversized-batch",
+    "boolean-batch"
+  ],
+  "source_sha256": "6d0a01bc706f8ddf481ca6ddde8b1fdb1316a1bc2b1089876276de697666e873",
+  "selection_source_sha256": "679f2e6acca7d4c5effbbb99ad1e42b9db9d18520e9a84f209001115fc8f3f6a",
+  "functional_positions_not_family_exclusions": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "N": 24,
+  "B": 13,
+  "pending_parents": 153,
+  "jobs": 3,
+  "all_actual_pending_source_rows_exactly_compared_and_partitioned": true,
+  "job_descriptors_sha256": "fa517ff5e038db2130ab68c06570bb4361485f1884f952963e20fd1e08bfc645",
+  "lower_report_sha256": "bdb67007577b8c3c37fbbf8c95b10ddf317c62c9449318e70070458f76d30a58",
+  "source_sha256": "64024103ee1332335989ecd5b0907e31f85355cfb7b94d87bcfe6e304bf9e6cc",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,18 @@
+{
+  "verified": true,
+  "schema": "all-parent-B14-chain-partition-controls-v1",
+  "valid_disjoint_parent_partition_accepted": true,
+  "negative_controls_rejected": [
+    "missing-parent",
+    "paid-and-residual-overlap",
+    "extra-parent",
+    "duplicate-payment-id",
+    "residual-row-not-the-parent",
+    "altered-exact-replay-receipt"
+  ],
+  "source_sha256": "150778c495717606c982f1e08595c6235b383c1f5d1ac445f5790e889c8a62c9",
+  "auditor_sha256": "68afcfffbc9fc5a8081c5d018a629721852bd689e38b1e300f2817bd9caac8b0",
+  "exact_reference_sha256": "7b9817072d3e9e6e303afe33b97600c4b81895ebc1139e54772cb2406817f40e",
+  "not_an_independent_B14_family_proof_by_itself": true,
+  "global_optimality_proved": false
+}

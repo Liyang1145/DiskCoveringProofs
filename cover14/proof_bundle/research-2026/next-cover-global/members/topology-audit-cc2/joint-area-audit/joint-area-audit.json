@@ -1,0 +1,19 @@
+{
+ "scope": "analytic audit only; no counts, no code",
+ "A1_separate_convexity": {"theta_prime_positive": true, "theta_second_positive": true,
+   "phi_half_plus_mu_theta_second": "sin(theta)/2 >= 0", "d_is_norm_of_affine_map": true,
+   "verdict": "PASS"},
+ "A2_corner_reduction": {"max_grid_over_box_minus_cornerbound": 1.8e-15,
+   "corner_bound_form": "max(r^2 sin(alpha)/2 + g(b_r)/2 + mu b_r, g(A_r)/2 + mu A_r)",
+   "b_r": "2asin(r sin(alpha/2))", "A_r": "2asin(r/2)", "tight": true, "verdict": "PASS"},
+ "A3_concavity": {"F_second_max_numerical": -5.8e-5, "analytic": "F'' <= 0 for all r<=1, mu>=0",
+   "tangent_majorization_violations": 0, "verdict": "PASS"},
+ "A4_transfer": {"rho": "(r+eps)/(1+eps) in (0,U]", "needs_only_r<1": true, "verdict": "PASS"},
+ "A5_degenerate": {"alpha0": 0.0, "d0": "ab sin(alpha)/2", "verdict": "PASS"},
+ "B_interface_gap": {
+   "B1_per_site_area_identity": "verified symbolically only for a=b=r (corner); for a!=b the same formula is an UPPER bound, which is the direction needed; write-up must say bounded above",
+   "B2_global_bookkeeping": "pi = sum cell areas requires coverage; the edge terms must then be additional to the cell partition or the decomposition must be hull-complement; state once",
+   "B3_boundary_edge_witness": "1-ring boundary faces have the boundary switch as witness; r^2 sin(beta) = 0 for beta=pi only under the triangle reading; state explicitly"},
+ "C_verdict": "A1-A5 correct; A2 tight; A3 valid; single open item is the per-site area identity wording for a!=b and the global partition bookkeeping",
+ "D_numerics": "consistency checks only, not evidence"
+}

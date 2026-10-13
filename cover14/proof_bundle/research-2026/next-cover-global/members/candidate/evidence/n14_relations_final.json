@@ -1,0 +1,23 @@
+{
+  "relations": [
+    "A=(s+z)/2",
+    "s^2+r^2=1",
+    "(A-z)^2+(B-r)^2=r^2",
+    "z^2+t^2=2tr",
+    "C^2+(1-D)^2=r^2"
+  ],
+  "rank": 5,
+  "dim_of_solution_set": 3,
+  "free_coordinates_suggestion": [
+    "z",
+    "C",
+    "r"
+  ],
+  "branches": {
+    "t": "r + sqrt(r^2-z^2)",
+    "B": "r - sqrt(r^2-(A-z)^2)",
+    "D": "1 - sqrt(r^2-C^2)",
+    "s": "2A-z"
+  },
+  "note": "all five residuals are <= 2.4e-71 at the data point; E0 is an exact rational zero"
+}

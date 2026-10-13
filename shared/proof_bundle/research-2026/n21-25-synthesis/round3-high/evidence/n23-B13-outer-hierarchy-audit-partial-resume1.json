@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "N": 23,
+  "B": 13,
+  "catalog_sha256": "a5731313f93c965694fdc298a6c2afc9451e511c08cbb33947ab6241b0db626a",
+  "catalog_types": 1530509,
+  "stages": [
+    {
+      "groups_sha256": "029b3b7cc982a1dfd870dcf27a2a00d5c95eb6b611d40582468dcc5c98e92a91",
+      "bindings_sha256": "3847d6e398f3d1dec3f8fb1a6178da43ce73c6446eeaea6a373bba83632dec6e",
+      "threshold": 1,
+      "maps_checked": 1530509,
+      "paid_types": 872204,
+      "remaining_types": 658305,
+      "force_replay_sha256": "b8da841996d2143cab762e7929ef739cc696d4a03207ee4cbecf1431d1174c05"
+    }
+  ],
+  "strict_exclusion_types_with_replayed_certificates": 872204,
+  "pending_types": 658305,
+  "pending_indices_file": "n23-B13-outer-hierarchy-audit-partial-resume1.pending.jsonl",
+  "pending_indices_sha256": "68ce5615aafd31997fc443b679e96bc5c64216df1788d8543d2c8e273a457516",
+  "disjoint_hierarchy_partition_verified": true,
+  "coverage_partition_complete": false,
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "stream_reader_sha256": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d"
+}

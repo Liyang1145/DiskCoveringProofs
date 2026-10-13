@@ -1,0 +1,604 @@
+{
+  "schema": "small-order-core-input-archive-central-directory-observation-v1",
+  "incoming_root": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004",
+  "archives_scanned": [
+    {
+      "archive": "math-delta-0001.zip",
+      "central_directory_members_scanned": 1264
+    },
+    {
+      "archive": "math-delta-0002.zip",
+      "central_directory_members_scanned": 3899
+    },
+    {
+      "archive": "math-delta-0003.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0004.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0005.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0006.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0007.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0008.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0009.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0010.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0011.zip",
+      "central_directory_members_scanned": 79
+    },
+    {
+      "archive": "math-delta-0012.zip",
+      "central_directory_members_scanned": 83
+    },
+    {
+      "archive": "math-delta-0013.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0014.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0015.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0016.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0017.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0018.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0019.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0020.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0021.zip",
+      "central_directory_members_scanned": 81
+    },
+    {
+      "archive": "math-delta-0022.zip",
+      "central_directory_members_scanned": 26
+    },
+    {
+      "archive": "math-delta-0023.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0024.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0025.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0026.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0027.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0028.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "central_directory_members_scanned": 40671
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "central_directory_members_scanned": 87
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "central_directory_members_scanned": 10569
+    },
+    {
+      "archive": "math-delta-0032.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0033.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0034.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0035.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0036.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0037.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0038.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0039.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0040.zip",
+      "central_directory_members_scanned": 2045
+    },
+    {
+      "archive": "math-delta-0041.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0042.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0043.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0044.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0045.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0046.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0047.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0048.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0049.zip",
+      "central_directory_members_scanned": 45543
+    },
+    {
+      "archive": "math-delta-0050.zip",
+      "central_directory_members_scanned": 49964
+    },
+    {
+      "archive": "math-delta-0051.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "central_directory_members_scanned": 46337
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "central_directory_members_scanned": 14725
+    },
+    {
+      "archive": "math-delta-0054.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0055.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0056.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0057.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0058.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0059.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0060.zip",
+      "central_directory_members_scanned": 17712
+    },
+    {
+      "archive": "math-delta-0061.zip",
+      "central_directory_members_scanned": 5695
+    },
+    {
+      "archive": "math-delta-0062.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0063.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0064.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0065.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0066.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0067.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0068.zip",
+      "central_directory_members_scanned": 50001
+    },
+    {
+      "archive": "math-delta-0069.zip",
+      "central_directory_members_scanned": 39408
+    },
+    {
+      "archive": "math-delta-0070.zip",
+      "central_directory_members_scanned": 5
+    },
+    {
+      "archive": "math-delta-0071.zip",
+      "central_directory_members_scanned": 5
+    },
+    {
+      "archive": "math-delta-0072.zip",
+      "central_directory_members_scanned": 5
+    },
+    {
+      "archive": "math-delta-0073.zip",
+      "central_directory_members_scanned": 6
+    },
+    {
+      "archive": "math-delta-0074.zip",
+      "central_directory_members_scanned": 5
+    },
+    {
+      "archive": "math-delta-0075.zip",
+      "central_directory_members_scanned": 6
+    },
+    {
+      "archive": "math-delta-0076.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0077.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0078.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0079.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0080.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0081.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0082.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0083.zip",
+      "central_directory_members_scanned": 88
+    },
+    {
+      "archive": "math-delta-0084.zip",
+      "central_directory_members_scanned": 87
+    },
+    {
+      "archive": "math-delta-0085.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0086.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0087.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0088.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0089.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0090.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0091.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0092.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0093.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0094.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0095.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0096.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0097.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0098.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0099.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0100.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0101.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0102.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0103.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0104.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0105.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0106.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0107.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0108.zip",
+      "central_directory_members_scanned": 80
+    },
+    {
+      "archive": "math-delta-0109.zip",
+      "central_directory_members_scanned": 79
+    },
+    {
+      "archive": "math-delta-0110.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0111.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0112.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0113.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0114.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0115.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0116.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0117.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0118.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0119.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0120.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0121.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0122.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0123.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0124.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0125.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0126.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0127.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0128.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0129.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0130.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0131.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0132.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0133.zip",
+      "central_directory_members_scanned": 78
+    },
+    {
+      "archive": "math-delta-0134.zip",
+      "central_directory_members_scanned": 32
+    }
+  ],
+  "matching_members": [
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n24/candidate-numeric.json",
+      "bytes": 14182,
+      "zip_crc32": 2190284419,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n24/core-root.json",
+      "bytes": 3992573,
+      "zip_crc32": 2642365527,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n24/core-system.json",
+      "bytes": 12939,
+      "zip_crc32": 1595038219,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n24/kkt-numeric.json",
+      "bytes": 11787,
+      "zip_crc32": 1528228421,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n23/candidate-numeric.json",
+      "bytes": 13635,
+      "zip_crc32": 3897748268,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n23/core-root.json",
+      "bytes": 4558897,
+      "zip_crc32": 1390961487,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n23/core-system.json",
+      "bytes": 13663,
+      "zip_crc32": 1065223494,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    },
+    {
+      "archive": "math-delta-0052.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/evidence/n23/kkt-numeric.json",
+      "bytes": 12498,
+      "zip_crc32": 1752556613,
+      "central_directory_only_not_content_or_mathematical_acceptance": true
+    }
+  ],
+  "no_archive_extracted_and_no_existing_math_file_changed": true,
+  "zip_member_names_not_byte_or_mathematical_proof_acceptance": true,
+  "source_sha256": "f3cd7ede5dece7dc4a751d44108822f6f900f41dc854ca3d2ebbc16a0631653b",
+  "global_optimality_proved": false
+}

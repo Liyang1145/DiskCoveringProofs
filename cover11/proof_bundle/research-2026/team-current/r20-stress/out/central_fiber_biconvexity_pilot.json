@@ -1,0 +1,83 @@
+{
+  "kernel": {
+    "name": "r20-stress Fraction interval kernel",
+    "version": 1,
+    "constants_denominators": {
+      "centres": "10^17",
+      "delta": "10^3",
+      "R0": "10^25",
+      "omega": "10^4",
+      "WL": "10^9",
+      "WB": "2"
+    },
+    "strict_k_positive_required": true,
+    "collinearity_policy": "explicit, not vacuous: F_in = F_out > 0 on the collinear stratum",
+    "float_free": true
+  },
+  "pin_attribution": {
+    "0": "p1 smaller norm",
+    "1": "p1 smaller norm",
+    "2": "p1 smaller norm",
+    "3": "p1 smaller norm",
+    "4": "p1 smaller norm",
+    "5": "p1 smaller norm",
+    "6": "p1 smaller norm",
+    "7": "p1 smaller norm",
+    "8": "p1 smaller norm"
+  },
+  "negative_radicands": [],
+  "n_radicand_lower_bounds_seen": 4,
+  "radicand_lower_bound_min": -0.002756586437419697,
+  "radicand_lower_bounds_all_positive": false,
+  "k_strictly_positive_for_mirrored_checks": null,
+  "parameters": {
+    "delta": "1/1000",
+    "omega": "1/10000",
+    "r0": "1899919265599193545242591/5000000000000000000000000",
+    "rates_of_r": [
+      0.3798838531198387,
+      0.3800838531198387
+    ]
+  },
+  "epsA_hi": 0.061717335271,
+  "epsB_hi": 0.067372318856,
+  "original": {
+    "0": {
+      "G_lo": 0.024568665543,
+      "branch": "qm (k=0 stratum inside box: excluded by the strict-gap/equality argument)",
+      "dist": [
+        0.472024837519,
+        0.622048984512
+      ]
+    },
+    "4": {
+      "G_lo": 0.024540121682,
+      "branch": "qp (k=0 stratum inside box: excluded by the strict-gap/equality argument)",
+      "dist": [
+        0.471996293658,
+        0.621907270981
+      ]
+    }
+  },
+  "mirrored": {
+    "0": {
+      "G_lo": 0.047558593752,
+      "branch": "qp",
+      "dist": [
+        0.489359782143,
+        0.675875156111
+      ]
+    },
+    "4": {
+      "G_lo": 0.048043973822,
+      "branch": "qm",
+      "dist": [
+        0.489845162213,
+        0.675669705477
+      ]
+    }
+  },
+  "biconvexity_supported": true,
+  "original_k_strictly_positive": false,
+  "mirrored_k_strictly_positive": true
+}

@@ -1,0 +1,10 @@
+{
+  "source_sha256": "6706b42690a1d99d8f49523ff0d7d82fbc688fd64a18b228512acec139aef987",
+  "counts": {
+    "patch": 120,
+    "energy": 2386,
+    "split": 2505
+  },
+  "seconds": 128.81099581718445,
+  "scope": "all cells replayed, field weights still require Schur evidence"
+}

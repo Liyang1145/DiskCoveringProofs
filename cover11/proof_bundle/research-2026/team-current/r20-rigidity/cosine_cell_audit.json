@@ -1,0 +1,16 @@
+{
+  "cell": "node26",
+  "schur_residual_exactly_zero": true,
+  "n_edges": 51,
+  "n_pairs": 36,
+  "n_minorant_lines": 73,
+  "minorant_target": "intercept - 1e-6",
+  "worst_subdivision_depth": 9,
+  "arcs_expanded": true,
+  "energy_lower_shifted": "0.14777204694551218166",
+  "radius_lower_shifted": "0.38441129919073942546",
+  "radius_lower_shifted_gt_0_38": true,
+  "stored_radius_lower_unshifted_object": "0.38441171006974053937694526841908825192674775547071264060608778363352881361409744",
+  "scope": "kernel audit: exact Schur identity, interval whole-arc minorants, mixture weights, own interval vertex bound with the 1e-6-shifted intercepts; not the modelling step, not the cell coverage, not global",
+  "repro": "py -3 -B -X utf8 cosine_cell_audit.py"
+}

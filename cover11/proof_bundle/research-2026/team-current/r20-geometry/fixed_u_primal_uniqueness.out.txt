@@ -1,0 +1,23 @@
+SELF-TEST (calibration of the routine)
+== self-test A (path, all sites anchored, s0 slack) ==
+  nodes: 5 ; anchors: 2 ; positive edges: 3
+  components: 2 ; components containing an anchor: 1
+  unpinned nodes: 1 ['s0']
+  UNPINNED SITES (must be empty for Lemma 1/Corollary 2): none
+== self-test B (anchor-free cycle -> sites MUST be flagged) ==
+  nodes: 4 ; anchors: 1 ; positive edges: 3
+  components: 2 ; components containing an anchor: 1
+  unpinned nodes: 3 ['c0', 'c1', 'c2']
+  UNPINNED SITES (must be empty for Lemma 1/Corollary 2): ['c0', 'c1', 'c2']
+
+self-test A passes (no unpinned sites): True
+self-test B correctly FLAGS unpinned sites: True
+
+== ORACLE DATA: research-2026/team-current/r20-gluing/r20_fixed_u_dual_export.json ==
+  nodes: 22 ; anchors: 9 ; positive edges: 40
+  components: 1 ; components containing an anchor: 1
+  unpinned nodes: 0 []
+  UNPINNED SITES (must be empty for Lemma 1/Corollary 2): none
+RESULT: all sites lie in anchored components: True
+Note: alpha > 0 tests are performed on the supplied values; if the oracle reports equality at 0,
+      strict positivity is NOT established and the lemma's hypothesis (H1) must be re-examined.

@@ -1,0 +1,52 @@
+base point (certified cover local data):
+  alpha2 = 2.967354039336  (pi-alpha2 = 0.174239)   s1=s2=t=0.999957508210
+  J = 28.114478844683   value - threshold = +7.433429e-03
+  b1=1.050678342 b2=1.050678343  A=1.137797650 B=1.137797649
+
+(i) alpha2 sweep, everything else fixed (s1=s2=t):
+   alpha2        pi-alpha2     b1        b2        B         J          margins(min)  legal
+    0.050000     3.091593    -- infeasible (chart) --
+    0.127290     3.014303    -- infeasible (chart) --
+    0.204580     2.937013    -- infeasible (chart) --
+    0.281869     2.859723    -- infeasible (chart) --
+    0.359159     2.782433    -- infeasible (chart) --
+    0.436449     2.705144    -- infeasible (chart) --
+    0.513739     2.627854    -- infeasible (chart) --
+    0.591029     2.550564    -- infeasible (chart) --
+    0.668319     2.473274    -- infeasible (chart) --
+    0.745608     2.395984    -- infeasible (chart) --
+    0.822898     2.318694    -- infeasible (chart) --
+    0.900188     2.241405    -- infeasible (chart) --
+    0.977478     2.164115    -- infeasible (chart) --
+    1.054768     2.086825    -- infeasible (chart) --
+    1.132057     2.009535    -- infeasible (chart) --
+    1.209347     1.932245    -- infeasible (chart) --
+    1.286637     1.854956    -- infeasible (chart) --
+    1.363927     1.777666    -- infeasible (chart) --
+    1.441217     1.700376    -- infeasible (chart) --
+    1.518507     1.623086    -- infeasible (chart) --
+    1.595796     1.545796    -- infeasible (chart) --
+    1.673086     1.468507    -- infeasible (chart) --
+    1.750376     1.391217    -- infeasible (chart) --
+    1.827666     1.313927    -- infeasible (chart) --
+    1.904956     1.236637    -- infeasible (chart) --
+    1.982245     1.159347    -- infeasible (chart) --
+    2.059535     1.082057    -- infeasible (chart) --
+    2.136825     1.004768    -- infeasible (chart) --
+    2.214115     0.927478    -- infeasible (chart) --
+    2.291405     0.850188    -- infeasible (chart) --
+    2.368694     0.772898    -- infeasible (chart) --
+    2.445984     0.695608    -- infeasible (chart) --
+    2.523274     0.618319    -- infeasible (chart) --
+    2.600564     0.541029    -- infeasible (chart) --
+    2.677854     0.463739    -- infeasible (chart) --
+    2.755144     0.386449    -- infeasible (chart) --
+    2.832433     0.309159    -- infeasible (chart) --
+    2.909723     0.231869    -- infeasible (chart) --
+    2.987013     0.154580    -- infeasible (chart) --
+    3.064303     0.077290    -- infeasible (chart) --
+    3.141593     0.000000    -- infeasible (chart) --
+Traceback (most recent call last):
+  File "C:\Users\Ԭ����\Desktop\ai4math2\research-2026\team-current\r20-geometry\exp2_deformation_scan.py", line 49, in <module>
+    best = max([r for r in rows if r[2]], key=lambda r: r[1])
+ValueError: max() iterable argument is empty

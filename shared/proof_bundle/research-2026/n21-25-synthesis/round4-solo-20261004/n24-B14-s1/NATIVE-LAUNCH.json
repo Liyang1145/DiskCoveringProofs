@@ -1,0 +1,29 @@
+{
+  "windows_native_launcher_pid": 20104,
+  "command": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu2204",
+    "--exec",
+    "/usr/bin/env",
+    "-C",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004",
+    "./peel_small_order_origin_collar-linux",
+    "24",
+    "14",
+    "n24-B14-s1/MANIFEST.json",
+    "10000000",
+    "788872",
+    "1632237",
+    "2632431",
+    "0",
+    "dfs",
+    "-",
+    "-",
+    "4381913",
+    "100000",
+    "1"
+  ],
+  "input_bindings_sha256": "d76884d3c9d60f9a490c78bbbf4a82783ec0bf11f4778dc48da131b9d91e198d",
+  "native_terminal_observed": false
+}

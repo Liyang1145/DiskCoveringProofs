@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "schema": "small-order-complete-source-lower-partition-v1",
+  "N": 24,
+  "B": 16,
+  "parent_rows": 82816,
+  "batch_count": 647,
+  "batch_size": 128,
+  "descriptor_sha256": "aba25ebe0fd86db5689cdf6cab820de5d94dff102b8b6787af3688a754195d72",
+  "source_acceptance_sha256": "f9510e908819e481184c0d45b6014e044a878ecafed29f9b8415e5b66f5da1af",
+  "parent_catalog_sha256": "8acf3838e6c965eabc94bcb9c012d214afa8c4b8744572d8bd199447cb7747bd",
+  "all_parent_rows_and_identity_maps_checked": true,
+  "partition_never_a_lower_bound_payment": true,
+  "source_sha256": "bb775e716915201852d0582643303df9b06c7be219d2eb5f529dbcd34b393fee",
+  "global_optimality_proved": false
+}

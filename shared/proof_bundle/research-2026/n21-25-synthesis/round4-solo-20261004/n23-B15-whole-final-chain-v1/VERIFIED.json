@@ -1,0 +1,92 @@
+{
+  "verified": true,
+  "schema": "N23-B15-entire-original-formal-incremental-chain-and-actual-core-identity-v1",
+  "N": 23,
+  "B": 15,
+  "original_catalog_types": 16790546,
+  "pending_types": 0,
+  "origin_types": 13014588,
+  "disjoint_additional_pair_types": 923482,
+  "outer_incremental_payments": [
+    {
+      "previous": 2852476,
+      "strict_extra": 2058635,
+      "pending": 793841,
+      "report": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-effective-outer-all-source-payment-audit-20261005-v1\\VERIFIED.json",
+      "sha256": "67f516f008c22982d2b37a23a787d317b25e6e2e4c25a32b7421600f888eea21"
+    },
+    {
+      "previous": 793841,
+      "strict_extra": 759980,
+      "pending": 33861,
+      "report": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new6772-outer-full-source-audit-20261005-v1\\VERIFIED.json",
+      "sha256": "932af643f152823c2d1ad9d4ad98aa295d6979265dcef7e2c88fba00a61b4d03"
+    },
+    {
+      "previous": 33861,
+      "strict_extra": 19325,
+      "pending": 14536,
+      "report": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new61-force127-full-source-audit-20261006-v1\\VERIFIED.json",
+      "sha256": "e35d8407ff883267528edd78676c9c5f6f482471528b6a5a1a0c647b1b1bde65"
+    },
+    {
+      "previous": 14536,
+      "strict_extra": 10560,
+      "pending": 3976,
+      "report": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new32-force511-full-source-audit-solo-v1\\VERIFIED.json",
+      "sha256": "7b3d33bebf2c4d69c7560273e36a85a27217b504ba5c2dcc31ffb715603ab237"
+    },
+    {
+      "previous": 3976,
+      "strict_extra": 998,
+      "pending": 2978,
+      "report": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new4-force1001-full-source-audit-solo-v1\\VERIFIED.json",
+      "sha256": "705628b1aeba8b305ebbe6c071c347fd0fbd3e807dc6d16c3fa18ad1f4a38ba6"
+    },
+    {
+      "previous": 2978,
+      "strict_extra": 2149,
+      "pending": 829,
+      "report": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new7-force5001-full-source-audit-solo-v1\\VERIFIED.json",
+      "sha256": "2c86ef05271618cabbd7ac66301b1d49a571f078c1c7f7b99bcf2aa332e4a192"
+    }
+  ],
+  "actual_full_strict_types": 828,
+  "actual_full_same_root_nonstrict_types": 1,
+  "actual_same_root_core_source_index": 16615657,
+  "every_parent_hash_pending_count_and_disjoint_increment_checked": true,
+  "complete_candidate_actual_source_map_and_active_root_graph_freshly_rechecked": true,
+  "old_full_scans_and_tree_mathematics_reused_not_falsely_claimed_new_replay": true,
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-origin-and-original-pair-disjoint-merge-20261005-v1\\VERIFIED.json": "66e00c377718a8c50cadb23ac4fc3822b44be78c96a616b7c25100daf91d8619",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-effective-outer-all-source-payment-audit-20261005-v1\\VERIFIED.json": "67f516f008c22982d2b37a23a787d317b25e6e2e4c25a32b7421600f888eea21",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-effective-outer-all-source-payment-audit-20261005-v1\\PENDING.jsonl": "a82f1d13743402a49b6a935aa9895a14bee56ed8d11af28bb806f7bb74de433e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-effective-outer-all-source-payment-audit-20261005-v1\\ADDITIONAL-PAYMENTS.jsonl": "2c0cbf3e05833a3c29541ea1313081d3d4310870daf085a4802c079825a828c8",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new6772-outer-full-source-audit-20261005-v1\\VERIFIED.json": "932af643f152823c2d1ad9d4ad98aa295d6979265dcef7e2c88fba00a61b4d03",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new6772-outer-full-source-audit-20261005-v1\\PENDING.jsonl": "edef58d1c6e76953da6ccd7db837a7e9625d063c5df254c45b5d047ba2e9cead",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new6772-outer-full-source-audit-20261005-v1\\ADDITIONAL-PAYMENTS.jsonl": "f742a5b96c84fbdbcc85d8d96f4c1d5014dabaa39f75937922bee5e274dadef1",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new61-force127-full-source-audit-20261006-v1\\VERIFIED.json": "e35d8407ff883267528edd78676c9c5f6f482471528b6a5a1a0c647b1b1bde65",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new61-force127-full-source-audit-20261006-v1\\PENDING.jsonl": "1c9c533b8184ceceed153dd2eb3840160117edcb473dfa98f1c92b0f52c92b20",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new61-force127-full-source-audit-20261006-v1\\ADDITIONAL-PAYMENTS.jsonl": "bd4a301168318614c28310b374cd9120c726947dfe31a483934d145937f131fc",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new32-force511-full-source-audit-solo-v1\\VERIFIED.json": "7b3d33bebf2c4d69c7560273e36a85a27217b504ba5c2dcc31ffb715603ab237",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new32-force511-full-source-audit-solo-v1\\PENDING.jsonl": "ff8ad53edf4a6606e6ff63c7cead43ca004d84d3c6205f4378eaa27ce09da5e3",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new32-force511-full-source-audit-solo-v1\\ADDITIONAL-PAYMENTS.jsonl": "c2912808efd9a701f129310dc5b168efb03a6bee142baa319c12d1331c2a3d1e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new4-force1001-full-source-audit-solo-v1\\VERIFIED.json": "705628b1aeba8b305ebbe6c071c347fd0fbd3e807dc6d16c3fa18ad1f4a38ba6",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new4-force1001-full-source-audit-solo-v1\\PENDING.jsonl": "f9f581d2913c9d4f2272e82f34d1fb5e1f3c886a68a7e7bda18b1f22ea79986a",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new4-force1001-full-source-audit-solo-v1\\ADDITIONAL-PAYMENTS.jsonl": "5a95c032088ade5a9401835493c8767ad9ef5bb08cd9db4f307d90e3850a3eea",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new7-force5001-full-source-audit-solo-v1\\VERIFIED.json": "2c86ef05271618cabbd7ac66301b1d49a571f078c1c7f7b99bcf2aa332e4a192",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new7-force5001-full-source-audit-solo-v1\\PENDING.jsonl": "d47655060b712cbfb43a22697217f767ccf9a6ff278830a8dbb0ae4b8f08a58e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-residual-new7-force5001-full-source-audit-solo-v1\\ADDITIONAL-PAYMENTS.jsonl": "7478d9a0f16de3f6b5dd348e51f6db797ea1de4c0a01254af894d75cd854c327",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-actual829-full-residual-types-solo-v1\\VERIFIED.json": "f8ef535a3fa352a77b4017334e88943f30bce06b473afab15d9e641253dacb73",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-actual829-force31-and-nonstrict-core-pipeline-solo-v1\\ACTUAL-TYPE-PAYMENT-AUDIT\\VERIFIED.json": "47b2ea5988a1caa80dbad0821295c34e8586367319e5d6d1632060e5ba763a43",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-final13-actual-full-types-strict-supplement-audit-solo-v1\\VERIFIED.json": "fb91008afbe0be2bca36d4a49573273ee7031a05dabef8a78009655aefb01062",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-nonstrict-core-fresh-root-upper-local-angle-audit-solo-v1\\VERIFIED.json": "f347fc23fbb58a6102de0bd68534c17b5c2dcb2b8ec5bf9a49d5defabfc94324",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-archive-core-inputs-20261005-v1\\n23\\core-system.json": "cb6d87d69e9c4673e47c1e960ca013c5bb5e8e20f72bb2470653e8e11b8dcb10",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-actual829-full-residual-types-solo-v1\\FULL-TYPES.jsonl": "3dff6b49ea1c29baa619afd002e59eac52ab3ef57dfdadc53df9ea9546bcbaa9",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-actual829-force31-and-nonstrict-core-pipeline-solo-v1\\ACTUAL-TYPE-PAYMENT-AUDIT\\PAYMENTS.jsonl": "2164190498a29cfeed721156001f22fc6cfc46ef7aec276049a406bdcd959f09",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\verify_n23_B15_final_chain.py": "d724d8945ed1cbff1314e322836370b932b1e2e33dc75bafa356b80c741413ed"
+  },
+  "source_sha256": "d724d8945ed1cbff1314e322836370b932b1e2e33dc75bafa356b80c741413ed",
+  "source_cover_other_families_and_global_freeze_still_required": true,
+  "global_optimality_proved": false
+}

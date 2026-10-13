@@ -1,0 +1,28 @@
+{
+  "schema": "N26-independent-proper-near-subbox-product-LOCAL-arithmetic-controls-v1",
+  "source_OPEN_index": 29,
+  "proper_near_SUBBOX_only_arithmetic_cover_reconstructed": true,
+  "strict_product_energy_slabs_checked": 14,
+  "original_LOCAL_central_box_checked": true,
+  "outside_near_SUBBOX_whole_root_still_unproved": true,
+  "original_LOCAL_entry_margin": "8800475077071036168245397243744121916451021915381775095899645530850738514912587814902560577749409473715725361526063779103977154102698055393364063527161101272631522584447078823364751054404949316396576656790525547533891512042310169773093980014552348358419/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "invalid_subbox_controls_rejected": [
+    "proper-subbox-promoted-to-whole-root",
+    "source-root-falsely-removed",
+    "lost-closed-energy-slab",
+    "lost-shared-cut-boundary",
+    "negative-product-multiplier",
+    "nonzero-reference-product-charge-omitted",
+    "original-LOCAL-allowance-expanded",
+    "proper-subbox-clipped-outside-actual-source"
+  ],
+  "diagnosis_sha256": "6785597313b6d325a188f7b2fdb69f869ef81af1c2ac3d1a651d2b85baa60038",
+  "complete_latest_model_source_history_replay_NOT_performed": true,
+  "running_mixed_acceptance_does_NOT_admit_this_product_mode": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "tested_product_module_sha256": "b21295921a45d4cc66ebeafb4ef3e18cf6b8290c5eb85c2c93d7478501f66f29",
+  "executed_test_sha256": "1db213bec7796f862cac5a1c0800716b32da824c6fe134e559cf1e810b061d78"
+}

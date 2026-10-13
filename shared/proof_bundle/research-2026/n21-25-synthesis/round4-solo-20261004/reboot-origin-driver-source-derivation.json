@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "schema": "reboot-origin-driver-isolated-derivation-v1",
+  "source_sha256": "946e466e63c4a6d8747dc133fc5b7da68474d12b067506861f7516b02feca807",
+  "file": {
+    "source": "run_origin_streamed_search.py",
+    "source_sha256": "c1daabf67160adfdc4ac0509dd2a03ef44a585b5e4304aa1f3aaaee826619710",
+    "target": "run_reboot_origin_search.py",
+    "target_sha256": "649d41caeef8d2e9add28594025d33d9b78c3e0162f9c9ce4a1dbdd68ba107a4",
+    "changes": [
+      [
+        "from origin_production_gate import origin_gate",
+        "from reboot_interruption_gate import recovery_gate"
+      ],
+      [
+        "    assert B in (16, 17), \"only the terminal-failed B16/B17 runs are replaced\"",
+        "    assert B in (15, 16, 17), \"only authoritatively reboot-interrupted N25 jobs are recovered\""
+      ],
+      [
+        "files.update(origin_gate(args.origin_controls.resolve(), args.failed_search.resolve(), B))",
+        "files.update(recovery_gate(args.origin_controls.resolve(), args.failed_search.resolve(), B))"
+      ]
+    ],
+    "exact_inverse_equals_frozen_source": true
+  },
+  "all_existing_library_angle_injection_guard_storage_and_final_union_checks_unchanged": true,
+  "only_recovery_lifecycle_gate_changed": true,
+  "global_optimality_proved": false
+}

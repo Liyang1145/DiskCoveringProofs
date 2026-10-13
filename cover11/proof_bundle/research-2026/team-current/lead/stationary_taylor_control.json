@@ -1,0 +1,26 @@
+[
+  {
+    "a": -3,
+    "midvalue": "31997/3200",
+    "stationaryvalue": "10",
+    "codeexpression": "10"
+  },
+  {
+    "a": -1,
+    "midvalue": "31999/3200",
+    "stationaryvalue": "10",
+    "codeexpression": "10"
+  },
+  {
+    "a": 1,
+    "midvalue": "32001/3200",
+    "stationaryvalue": "10",
+    "codeexpression": "10"
+  },
+  {
+    "a": 5,
+    "midvalue": "6401/640",
+    "stationaryvalue": "10",
+    "codeexpression": "10"
+  }
+]

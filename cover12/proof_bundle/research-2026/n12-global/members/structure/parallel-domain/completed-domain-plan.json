@@ -1,0 +1,32 @@
+{
+ "schema": "n12-branch-plan/v1",
+ "source": {
+  "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-base.json",
+  "sha256": "7f44132b8dd09c8377b7e300caebe6ca5485b8933bde86455f67062733c1c57a"
+ },
+ "domain": [
+  [
+   "1/20",
+   "22568935234031792038557518369/62500000000000000000000000000"
+  ],
+  [
+   "0",
+   "36806064765968207961442481631/62500000000000000000000000000"
+  ],
+  [
+   "0",
+   "5206805702095376115672555107/62500000000000000000000000000"
+  ]
+ ],
+ "tie_break": "first widest dimension, midpoint split (lead/hubline_domain.py)",
+ "pending_count": 0,
+ "branch_count": 0,
+ "count_snapshot": {
+  "processed": 14081,
+  "split": 7040,
+  "certified": 6723,
+  "infeasible": 318
+ },
+ "refs": [],
+ "branches": []
+}

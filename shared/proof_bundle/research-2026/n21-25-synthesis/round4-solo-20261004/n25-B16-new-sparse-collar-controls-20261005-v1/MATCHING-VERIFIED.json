@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "library_sha256": "9f8b4fa43a626bd1f9d6d34ac79082ad865437e072185768e6c59d7e5d2f730f",
+  "source_sha256": "16e1b65373c8726c24dcc3cca50d42a372fa31636c430b4494d53264a8a244e8",
+  "matcher_include_sha256": "bbc19a7b25785d5c619773a0f53156beca06cf4774a0666fc5b179d52ef496c1",
+  "matcher_binary_sha256": "8bf47664d29453c603f6b7b77d2ae5bd23c073cc6568ec1f88f26718acdccac0",
+  "explicit_maps_checked": 14,
+  "independent_existence_checks": 36,
+  "negative_mapping_controls_rejected": [
+    "wrong-anchor",
+    "center-collision",
+    "lost-face"
+  ],
+  "maps_sha256": "5fad5d9388a0636f26f2ef55cdad07c1a02ccb5862c745f9dd1415103eaee49b",
+  "global_optimality_proved": false
+}

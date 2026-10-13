@@ -1,0 +1,982 @@
+{
+  "verified": true,
+  "N": 22,
+  "B": 15,
+  "groups_sha256": "f3d4d5460721243a37155b349702ddc5cab03ff2636cadb0d520f475d7ee000c",
+  "root_receipt_sha256": "01b9512515ae156551d7bafacb1bec43fbee1a5d9b3672616950618840292f78",
+  "root_replay_sha256": "0851de827f31b288b235950b830eeea05231e84e7c9bf3275c1c1ba1bed769cd",
+  "attempted_adaptive_groups": 53000,
+  "paid_adaptive_groups": 53000,
+  "pending_root_groups_not_paid": 57736,
+  "pending_attempted_groups": 0,
+  "unattempted_root_groups": 57736,
+  "root_plus_adaptive_strict_exclusion_groups": 257567,
+  "minimum_adaptive_margin": "20401428282266355202011310335483/11111112172851125446769000000000000000",
+  "node_counts": {
+    "SPLIT": 53555,
+    "DUAL": 106555
+  },
+  "batches": [
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive500-resume1/SUMMARY.json",
+      "receipt_sha256": "2adc54acc90644aeb26f50b166070642f580a53e62859a33a983aeb68ab2bbb2",
+      "replay_path": "evidence/n22-B15-full-adaptive500-replay-resume1.json",
+      "replay_sha256": "b0f0e0f198b37c1dfb18d987a2ecf94427fecce8a08bb06853bb9bc552ffb622",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6f8dfefca15cde6c49dee711f199b4962709a429301b518e4acda41f66c63e9e",
+      "replay_path": "evidence/n22-B15-full-adaptive-next500-replay-resume1.json",
+      "replay_sha256": "1d882a457e717feb51e2ee79d2878e73fe6f01949564f3bfb4d58d1633c1eaed",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-prefix75000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6e8951176bc7fb517911b31a25c15fe69a5b21d52f5f9d797f876d70a05df8e3",
+      "replay_path": "evidence/n22-B15-full-adaptive-prefix75000-next500-replay-resume1.json",
+      "replay_sha256": "80477bae361fc20ff4ef4d809e60633dd199db36122a7195dfac98efd37fde2a",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-prefix100000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "3af6caa4548e1b660a9d028832f91e578e84a42c4188bf500dc127ee13f82f08",
+      "replay_path": "evidence/n22-B15-full-adaptive-prefix100000-next500-replay-resume1.json",
+      "replay_sha256": "242df501684b3e104fcd52ffdc4be123389382706ab471b8dd6122124260123b",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-prefix130000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "ffa98fbbad441c95a57f5b31efe46bfb38ec47e83af98dd4d8d67363e3436fd1",
+      "replay_path": "evidence/n22-B15-full-adaptive-prefix130000-next500-replay-resume1.json",
+      "replay_sha256": "d46b874eb5465fc0e8e214b80286ff39cfcea225209bc599c0856e8195f19179",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-prefix160000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "308df7f017d430fed9cc41f5756c0992cfb3c49440d74ad861b56a10ca512d14",
+      "replay_path": "evidence/n22-B15-full-adaptive-prefix160000-next500-replay-resume1.json",
+      "replay_sha256": "e4faee34ed52b0b94f5b9e4dffa789661b8469b5e24de89f39df356c63c8a6de",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after3000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "2f34f3763748c76feb1f3504535a8d0eef3256a2684b89d646abd61b83378404",
+      "replay_path": "evidence/n22-B15-full-adaptive-after3000-next500-replay-resume1.json",
+      "replay_sha256": "a27ef8fbf0038de38a38572588a269ec90f638ac8d660a815b0ad5f319689c8c",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after3500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "ae7d6ad9284dfc9eb251b5deb1dc6638dccb93ff91abcea367bab77cbb58a57e",
+      "replay_path": "evidence/n22-B15-full-adaptive-after3500-next500-replay-resume1.json",
+      "replay_sha256": "14018aaf2cdd258b29e356713a39cc8a22fe56f5b3ec9f23f654bd15aef3d069",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after4000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "c56f31107fa5985e8a42baa6ef2ba10a2d9404e668171de7567b11f923fbe194",
+      "replay_path": "evidence/n22-B15-full-adaptive-after4000-next500-replay-resume1.json",
+      "replay_sha256": "f2123d03df613dc44b3bfc12cfa3027f4327b187fea86c53b4de3f758194a06e",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after4500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6149ea5376ccfd7d33c5f92269749d73e80baef90abb9a3330497cd571d80be9",
+      "replay_path": "evidence/n22-B15-full-adaptive-after4500-next500-replay-resume1.json",
+      "replay_sha256": "a916a2038eee7125d853dca9fdd69fd085ae132fd77ad8ddd40992039812b1cb",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after5000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "c0755e8f593524affd84483f514000e1e05992ac2170fc74613c4dbc391946b2",
+      "replay_path": "evidence/n22-B15-full-adaptive-after5000-next500-replay-resume1.json",
+      "replay_sha256": "3f6032be87575efb12842ad02d805526495c3574a0cb793be7f68aa38e7ec158",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after5500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "19290d106709babe4ac3531b2a173c6473c45a0cc2ab63fd9f399782cef798d9",
+      "replay_path": "evidence/n22-B15-full-adaptive-after5500-next500-replay-resume1.json",
+      "replay_sha256": "8e459376a382a63c1a076ccf9bc250ad1765c3676372d58f8d854fc8c1650108",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after6000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6c1be947dab15d22ebf0b7c505eb49af70294e67c9754ab8a7bf90fc85324fd5",
+      "replay_path": "evidence/n22-B15-full-adaptive-after6000-next500-replay-resume1.json",
+      "replay_sha256": "78cc44eb31d7c3cf1149ef352b36d15f6bead523e82d4eff9f599ae23a7f5a5c",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after6500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "85fd809f4a8d58aca5041c6c705bd4a179321dad73d0ee6d18220cdea3ac86cc",
+      "replay_path": "evidence/n22-B15-full-adaptive-after6500-next500-replay-resume1.json",
+      "replay_sha256": "a552fc7a62b520337545f35765aec6d8be3bed0d1d4be9a22a4867afa84a6823",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after7000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "240659f82bd47ff28758dd58885c85ce0326439fe88a72625acdd256cf201f63",
+      "replay_path": "evidence/n22-B15-full-adaptive-after7000-next500-replay-resume1.json",
+      "replay_sha256": "7bd74fe8d51688bc8d725a1f8459ea975a15ec4abc2ba2d1b49f554149d3a095",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after7500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6a3e0aa93b5c154abc418f8ebcbfd82bc0a51b5e0f0208b974cc5307c31d5bf9",
+      "replay_path": "evidence/n22-B15-full-adaptive-after7500-next500-replay-resume1.json",
+      "replay_sha256": "086a516d2ed9ff8c0dd5110d0c1a1a887ce241f6db04efd4ab54c835911e8099",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after8000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "68c994cb76a148c2afd1da2e3f309ac7cb63723d7f99b8d5b54b6f0b118d80dd",
+      "replay_path": "evidence/n22-B15-full-adaptive-after8000-next500-replay-resume1.json",
+      "replay_sha256": "6ad023906593b5aa507db6cf3a76e9e3290151a5416cd23d03d4a88275820c7c",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after8500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "1d968b1ad2949764ad65141ea7d85434c5b0db3984abf83074ee2adb8f8e5959",
+      "replay_path": "evidence/n22-B15-full-adaptive-after8500-next500-replay-resume1.json",
+      "replay_sha256": "aa180ddc1ee70dc0329bba735a4c2fe4dc36144f597a1f31d1ea43dfd26452bd",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after9000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "3b7333e498969111b5e7293cb854bb1421eb91045e9f2cf918584d51f0941e49",
+      "replay_path": "evidence/n22-B15-full-adaptive-after9000-next500-replay-resume1.json",
+      "replay_sha256": "cd06e003cc7ae67af40657090b039660689a203a620ce7cffd3630942736c313",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after9500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "be6beeb4983810331d1c2d20c444b5a7b0038f30b38099e17705bd151092a1ca",
+      "replay_path": "evidence/n22-B15-full-adaptive-after9500-next500-replay-resume1.json",
+      "replay_sha256": "83a033bf512a7ef476776752ca6ceec41b380c1f99bcdacab3b39442b552ab3f",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after10000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "4ae997113206f0f02f7a68f7a47122e6752b50757dd15ff8443126e2b5fe2d5b",
+      "replay_path": "evidence/n22-B15-full-adaptive-after10000-next500-replay-resume1.json",
+      "replay_sha256": "36995fe10776cdf8d1f8705c12bf6e6b8e127443571ec2a2f6ddf230f9623b2a",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after10500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "31fd1cdc321ac9cc8cb948c2c370a64fde1ab4baf64a137574b34f0d65b61be4",
+      "replay_path": "evidence/n22-B15-full-adaptive-after10500-next500-replay-resume1.json",
+      "replay_sha256": "ad935e722dd4ce7c6b6b6cd3f79f9363be40fdf404896c846ab637c1e80228bb",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after11000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "3ce1fcd5de83d31fdcb22181f74a3d698d956d1412ab361cb0016b5167e94a90",
+      "replay_path": "evidence/n22-B15-full-adaptive-after11000-next500-replay-resume1.json",
+      "replay_sha256": "aee43809f31bb8d3cb15da851c278f52872be3adb4405ec673416b07f96db0d3",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after11500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "62643911aac7d25ebe3894f28a7da85f4b59af356a8bd373f730d07f5035e4fa",
+      "replay_path": "evidence/n22-B15-full-adaptive-after11500-next500-replay-resume1.json",
+      "replay_sha256": "7663271fc1387a4463473d73723674a90956664bc3efef11906765c272dca9bb",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after12000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6b2eada575af43bb57b9842f534eaaaf84b698b1acc82e05f0a1554869eefe3c",
+      "replay_path": "evidence/n22-B15-full-adaptive-after12000-next500-replay-resume1.json",
+      "replay_sha256": "e5d29e90465280f6de6e5a9c992662b371d7dee21ed92b167a497dc3fadee89f",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after12500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "39ca10c565481a39c09824b1fc8c5f3ac516fc40460bd13d093dc46b2c17618b",
+      "replay_path": "evidence/n22-B15-full-adaptive-after12500-next500-replay-resume1.json",
+      "replay_sha256": "07753d8b949cae4b8ab8a01311da05b0d324478c802425dbb47d2dc65ec2066d",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after13000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "73fbb15ba1af503f54220d2112c14240bd5f6b3cc05c9b384432d88c9ac11c46",
+      "replay_path": "evidence/n22-B15-full-adaptive-after13000-next500-replay-resume1.json",
+      "replay_sha256": "d75e22fd5472c5fad93561cf78d4f649e109751eb0e65413bfd11a8d3034fe4e",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after13500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "03a922185cdf0606601f1489d0554428a40dc0b8f28a464c3e049794c416a266",
+      "replay_path": "evidence/n22-B15-full-adaptive-after13500-next500-replay-resume1.json",
+      "replay_sha256": "aeea4d7a8811a3b9f38bb736223b880156f8fa88779b354a6c25052da06abded",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after14000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "e9fce5f269fd3bfefbe5187b86328b8d66592dced22c420bb98c62a231fdaa6f",
+      "replay_path": "evidence/n22-B15-full-adaptive-after14000-next500-replay-resume1.json",
+      "replay_sha256": "8028272f75c2887728998cad73c8a9818f35150eb8941cec677012775f59c8da",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after14500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "0f59504dc4d2f31fccece09a56a8949944c1589eefe2f2287e713ed78c1b1800",
+      "replay_path": "evidence/n22-B15-full-adaptive-after14500-next500-replay-resume1.json",
+      "replay_sha256": "5fdc9589148e45417b95ad0fed841929eef16ab607aa842159c227042280ae09",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after15000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6d56d49fbfb6a281ea8842404ee660fc7e885633d8db35b03cd8d2633e3998c3",
+      "replay_path": "evidence/n22-B15-full-adaptive-after15000-next500-replay-resume1.json",
+      "replay_sha256": "d026283419526dcbd1455eac22a0496a122c3d26a0e6ff129b96fc3405606661",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after15500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "043a152a43edfe068d10d001b80fe6f7be4191e11b9b745df502b487eb6c966e",
+      "replay_path": "evidence/n22-B15-full-adaptive-after15500-next500-replay-resume1.json",
+      "replay_sha256": "3e2e098c92a2141efeb03a34ba14cacf6e67e45e017000d974d3fe8a147845d1",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after16000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "7e56d70b6788cb2d4f838d52fc9fd04a5e65c4cc7e50e2a0babbf09b8c640d33",
+      "replay_path": "evidence/n22-B15-full-adaptive-after16000-next500-replay-resume1.json",
+      "replay_sha256": "d9c9e17e39cf333cfbf5a4cab35b8e3ad5c45641ff059d347f0581ad1df52b32",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after16500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "79352723e3898a3e92ec36a9eae080a0e1a37a2965f3b4ca13adac3d2b98b323",
+      "replay_path": "evidence/n22-B15-full-adaptive-after16500-next500-replay-resume1.json",
+      "replay_sha256": "acb68d0cffc9eb96310fc2b67edb8e8ff940e7224fa4f1a349bad8945fefa657",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after17000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "53164dba72eb858b22d799240e2352ddb9bada2bf9037d5680a8dc20437245d2",
+      "replay_path": "evidence/n22-B15-full-adaptive-after17000-next500-replay-resume1.json",
+      "replay_sha256": "3eb0ffb8c023300777fbd1cec70652f7dd699eb696eba67eb7a9f5ac14f178fd",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after17500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "8432725d223c39790e2a736910147b0ffe934bab638135054707bd32bcbe9e4f",
+      "replay_path": "evidence/n22-B15-full-adaptive-after17500-next500-replay-resume1.json",
+      "replay_sha256": "f6d3f57c28fba433a2963b3f1609b84a45825be360e4b6441df911a39a5d28ca",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after18000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "8e3d1fd5e67c182a5a4ffd38bcf5d405ab82f227ae80cf12adf3b92ccb2ab690",
+      "replay_path": "evidence/n22-B15-full-adaptive-after18000-next500-replay-resume1.json",
+      "replay_sha256": "0443bb12d65a2eb6873c21d5c9c97364acfde3250cb5933aeb836435b9ec017f",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after18500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "d6652ea0344f7ca39bcf2b204e424051da8f72d9921ba4b46053beb996c8b758",
+      "replay_path": "evidence/n22-B15-full-adaptive-after18500-next500-replay-resume1.json",
+      "replay_sha256": "0d8018280f3e1341b25b05feef070d8425730c8d51176f381d572f4304008518",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after19000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "e054478c76f6b39d822d9670df2955e8d594f11d24316ee6ec3c3607f1fed7c8",
+      "replay_path": "evidence/n22-B15-full-adaptive-after19000-next500-replay-resume1.json",
+      "replay_sha256": "a478823abaf220bac28a254619fcdb5ac07cd8343ae01953e719efa89d599fc3",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after19500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "2ad1830f7c92bb3166125e593a3bd7fab6914aa2602028a0cfd8bf1411f970f3",
+      "replay_path": "evidence/n22-B15-full-adaptive-after19500-next500-replay-resume1.json",
+      "replay_sha256": "9f86e6ae5492f79b579453fb2d196517dd1992d1111e828f75edc1121ace289d",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after20000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "472857e817e04b97390b19e3104c3c505eeee33207567dc1b855ba005a3248cc",
+      "replay_path": "evidence/n22-B15-full-adaptive-after20000-next500-replay-resume1.json",
+      "replay_sha256": "01a3244499721a9908598cda3f7799b037e2b91b2ca2476c79035858fc2bd66f",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after20500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "e5afd961bee4b8f162f602bd0e0dce83a4a0648080dd48ea32dc568f34e8512c",
+      "replay_path": "evidence/n22-B15-full-adaptive-after20500-next500-replay-resume1.json",
+      "replay_sha256": "b7a1bbe51cc6c5c20a0e8c000141401e60abecf25cc586dca2b42043d7f6c084",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after21000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "e8ada0fbfd659426f111b290fa30e863191529b653e26c65ed2a9f393e2ee2f6",
+      "replay_path": "evidence/n22-B15-full-adaptive-after21000-next500-replay-resume1.json",
+      "replay_sha256": "3e2096e9b7c27757cc3e40eeb783c94ea0060c4928002b39cdc748191c045e34",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after21500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "2c8429e9bda4dfd4ee46c7638914fbb204a6c8ad252f311d433801c0abf68d71",
+      "replay_path": "evidence/n22-B15-full-adaptive-after21500-next500-replay-resume1.json",
+      "replay_sha256": "62f42fb98bce5e6b9db1754e7a495301382c1316360ee9f19d3b79f408be76aa",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after22000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "a9063761e2e3b7e271ec8b49caefe0683a7442a49fc4fddedb0df6bc963b76af",
+      "replay_path": "evidence/n22-B15-full-adaptive-after22000-next500-replay-resume1.json",
+      "replay_sha256": "f4ec9dd0c4344834455902f3834f43147afef202fbf9143382dd76cc5216364d",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after22500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "a17763156c212ecec6924901e0fac39f0c526773d3ca3506332766da9f8a203b",
+      "replay_path": "evidence/n22-B15-full-adaptive-after22500-next500-replay-resume1.json",
+      "replay_sha256": "ac2928b22ebf4baf06a49c5531d36446278ac1219d935884df66e282634a7db9",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after23000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6112ec5fa01e656659474d8aafc20bcbc586e0761f469bb875aff71747369141",
+      "replay_path": "evidence/n22-B15-full-adaptive-after23000-next500-replay-resume1.json",
+      "replay_sha256": "8cd48031fa2115779b21ab4c7a6b5349b7bb5594c9e70bc5b4858718e03bc1dd",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after23500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "159fb3687ef5d9f41d6353818c9a3d33e3857ee22e3fb55f2b74db87acbc66bc",
+      "replay_path": "evidence/n22-B15-full-adaptive-after23500-next500-replay-resume1.json",
+      "replay_sha256": "8d61e076decc6bc1d43f6fd006b748ddc859f1524330bba91fb2592a13bbbe3b",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after24000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "f6d2e771ee3e48a446565e93e7eb1e4e6c99e0bb3c22cf14cbd9876ce178f7a2",
+      "replay_path": "evidence/n22-B15-full-adaptive-after24000-next500-replay-resume1.json",
+      "replay_sha256": "97d390cb49ab4d6d7af0b159650b4dba8b2cffa1af513a89c05f41e74b6893fc",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after24500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "9c6c23d49c93b6e7dbaca96003d916746487eb582450558055c9c82c5a833ddf",
+      "replay_path": "evidence/n22-B15-full-adaptive-after24500-next500-replay-resume1.json",
+      "replay_sha256": "ae213115515e091b0de15794b0309fa7ceef0446c415c16eeb162d0f89c2e95b",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after25000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "ce692e0a3c5593cc9de11d0b1d5a426901ab0a6856a22beca69de1a025096bb6",
+      "replay_path": "evidence/n22-B15-full-adaptive-after25000-next500-replay-resume1.json",
+      "replay_sha256": "d2d6ce8e5fcfaa02374324f4bbab14a423bf51efccc17a7a1ccf0d9886c986cd",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after25500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "88fc0de115a5ca23c9969163d56bfd046748c80c24e89c69e40877509ce8a724",
+      "replay_path": "evidence/n22-B15-full-adaptive-after25500-next500-replay-resume1.json",
+      "replay_sha256": "29a0ce17747aae75e42d18a6be7f6f868ca84fcc8d261bd275e2ba74764aa959",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after26000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "fb5d510603458b0d4c6c02024d4cc09bc65def4cf0d1dfbb06ce6354489e82a4",
+      "replay_path": "evidence/n22-B15-full-adaptive-after26000-next500-replay-resume1.json",
+      "replay_sha256": "f2754b0d6886d27b4fb4140fe7ac6915d8ac46092e875cab7f103572f7773d6b",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after26500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "b1dc84be9c7d675c2e4e5742978d989bb958cb5bc93b2e2745a5f5a1f9985339",
+      "replay_path": "evidence/n22-B15-full-adaptive-after26500-next500-replay-resume1.json",
+      "replay_sha256": "7feec76f98834c32dcc5a3c6ab8c915b3f81f582eb327cf39ebec44205980d97",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after27000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "cf6d5d2be2cb34c8a0a425f46574c69426ab13737ae2f105415f9c5c461aede1",
+      "replay_path": "evidence/n22-B15-full-adaptive-after27000-next500-replay-resume1.json",
+      "replay_sha256": "cd8ffff1fa5dd47593fdb89878b8d46e05be961fb7fb1dd4261176256d19fa02",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after27500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "060d28625785916ceac4ce734715e710dde082d56d78090efb8033eadc480479",
+      "replay_path": "evidence/n22-B15-full-adaptive-after27500-next500-replay-resume1.json",
+      "replay_sha256": "892349b9d68c2958a38cbf4230aa4068a7d94f7b3ce0f3f52676c0f1b1c19888",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after28000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "f29cf087f9af9fac57995390a7618490c980b8ab062e4ea666ce7761e40efdb0",
+      "replay_path": "evidence/n22-B15-full-adaptive-after28000-next500-replay-resume1.json",
+      "replay_sha256": "25cbd3986d3434cdc973696aeafa00de8a5ff1abe6ca96eea96dcb76ed3017c4",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after28500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "aca1229dd886890291dd1a059a68f4902cba2fa99121b37cd79f0b70b6df89bc",
+      "replay_path": "evidence/n22-B15-full-adaptive-after28500-next500-replay-resume1.json",
+      "replay_sha256": "d8e50e6868a32448958e1bb22b54a0d3746a79734c0aab82f9325f9cd4081205",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after29000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "bf159fd1cf99ffb594b5f7013a973f3b95b09077e590ace6c73e25f2adcd0c9f",
+      "replay_path": "evidence/n22-B15-full-adaptive-after29000-next500-replay-resume1.json",
+      "replay_sha256": "8ae12398211969c3766ac167d634c517bb359f42e9b0a868cf63263ec2b60bab",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after29500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "5846a0acd520b3a60676bf8291bf6dc7601ccc71918d6641456fbfb58ff4829b",
+      "replay_path": "evidence/n22-B15-full-adaptive-after29500-next500-replay-resume1.json",
+      "replay_sha256": "de21e965ed0193ef7e1b58c906728c9955d969e427b44e2e1b804f0814d69935",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after30000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "42099d40b74283fb178d5770ff5b5775d1195653e71e10eab45790cb737b6380",
+      "replay_path": "evidence/n22-B15-full-adaptive-after30000-next500-replay-resume1.json",
+      "replay_sha256": "46c4ddad46b31d5bf4b4a1b03f61abbf12dda4517569d221c5b760cf74e78bd5",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after30500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "e222cbc2cc31696029bd0a44602c785870483bbdb4085d1e5488fc63c1205798",
+      "replay_path": "evidence/n22-B15-full-adaptive-after30500-next500-replay-resume1.json",
+      "replay_sha256": "988a99d2b5c4335c33e9796465796208f492e07babea0a4727ad3429811173c2",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after31000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "372fa77dd3e0347fd141291cd4d98a35eeb9ad3b4dd6a457808805b8f0374c23",
+      "replay_path": "evidence/n22-B15-full-adaptive-after31000-next500-replay-resume1.json",
+      "replay_sha256": "60ab127ae0db5931bf6c21d3aad0cb8f8f1ba69a4af3ce8ee150472d2cfad8ab",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after31500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "eaf312e6bcd4d3ceae20a9b1efb1692948e33e3cca172029ae191e0c9157ac26",
+      "replay_path": "evidence/n22-B15-full-adaptive-after31500-next500-replay-resume1.json",
+      "replay_sha256": "091e6098bdbdca407898072a66924eba8e4e0f28bb7c6f83995131f710761555",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after32000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "7f9b82996b2eabdcdf564a5299bb8ba6e07e830e86eb49eefb7b804ec7bc3dba",
+      "replay_path": "evidence/n22-B15-full-adaptive-after32000-next500-replay-resume1.json",
+      "replay_sha256": "58297f9fd270e8c0f8bf34ffbf0b5f4e2bfbcc6c389eadad98598a27d8ee3a63",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after32500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "6a51365097782e20030da553c0d7b04b070e55b7c42dab23eb8d38e9516f4afb",
+      "replay_path": "evidence/n22-B15-full-adaptive-after32500-next500-replay-resume1.json",
+      "replay_sha256": "df739511c1ddb354e7f54756230044a493f4b398f7a4a1777bed3a5238cd9511",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after33000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "b5d5d15879a0ebd97fe5cb1f08edfd8ac36f34bf57d7e200dbbffdc3f565a305",
+      "replay_path": "evidence/n22-B15-full-adaptive-after33000-next500-replay-resume1.json",
+      "replay_sha256": "ede3defdf6c36b33e28d6891a3791e6a2f3d85fa8fe72c491c5a8ea0a3bec5f4",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after33500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "cef61aca16318a7aa5275d3bce841a5d6e3426472a4f8bf48e4f19cce3f686c7",
+      "replay_path": "evidence/n22-B15-full-adaptive-after33500-next500-replay-resume1.json",
+      "replay_sha256": "a706ed1b8510d977b1aeffe09424a0046e3c0d32c26d978010d8b36301c75f3d",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after34000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "f52f7f0a990df212754e08d7f1ab6b86cc5ee0ff7ab0eb3d2a2ca4be298e2c9a",
+      "replay_path": "evidence/n22-B15-full-adaptive-after34000-next500-replay-resume1.json",
+      "replay_sha256": "cd91a4b02a6f531f308311643a8f3bb1dd0413e4af2a8700a40d9dedcaa8d7a2",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after34500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "645d12ac9fc929fcfd6ce5b45a72795186b49a90daac8489adac0b2c8f432755",
+      "replay_path": "evidence/n22-B15-full-adaptive-after34500-next500-replay-resume1.json",
+      "replay_sha256": "009246a0c744cbed437b791a3e4ac92bce4a86960033002c70b24b8c252ce0e4",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after35000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "ca83150d9b8497692f6e398aea3761f0c64689b65242f05ffecdf9214abd0de3",
+      "replay_path": "evidence/n22-B15-full-adaptive-after35000-next500-replay-resume1.json",
+      "replay_sha256": "3408ebb4ec163ede6cf7fa68047016d89deec5a1f8bed836d3d84ede2a748e6d",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after35500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "0ae7ebf31c47f5e5ed2f28d3939289999bd155c4efa1e0bdeca19346e5613508",
+      "replay_path": "evidence/n22-B15-full-adaptive-after35500-next500-replay-resume1.json",
+      "replay_sha256": "568692c7432a86f70778a7e14762cf32639520c55e3653cddf5e508b36e2c851",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after36000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "703d71a54a01c2b26aa21a068ecea64ac69ec855ee6df167924cf3e055048357",
+      "replay_path": "evidence/n22-B15-full-adaptive-after36000-next500-replay-resume1.json",
+      "replay_sha256": "1175011c83b768934ef7dc964b5a6f4c3b9e2a9d0125a6a0f92a2b6ff6d7e5cc",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after36500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "0c507f771c6d562bd12c835b530f1d5826539bcfa85bd49235e60402377be924",
+      "replay_path": "evidence/n22-B15-full-adaptive-after36500-next500-replay-resume1.json",
+      "replay_sha256": "6be5ea721d222fa10061589c7a3aa0225468663c426ef038df71f763df340dc2",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after37000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "ea9573060fdb26703df87de4def7915ecd4c304259e71ad39bd5110384b412b3",
+      "replay_path": "evidence/n22-B15-full-adaptive-after37000-next500-replay-resume1.json",
+      "replay_sha256": "7895955816b1260de8458e702612dcccdba82e34dcff746977ed9be99affddd8",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after37500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "f4286321f529da6633263e1d990ea97ae5b02267e4072475d9e60a600cdabd4d",
+      "replay_path": "evidence/n22-B15-full-adaptive-after37500-next500-replay-resume1.json",
+      "replay_sha256": "ee6df4f70b5f1c548a6960169378843d261e02ee0f2379f215be666927c5cf79",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after38000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "38b91d59c56a67b6894665f4dbae9493c258fb7c72ee0c00a04bb8772793789e",
+      "replay_path": "evidence/n22-B15-full-adaptive-after38000-next500-replay-resume1.json",
+      "replay_sha256": "83a17a02142a0540fb7ab34e0ab57c201a263cbc5b35638f2a67ff88bc344740",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after38500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "33d12c0cf2996de4ba2a5b7df1b23fe970ae462ea10da5673a7b2931965e202a",
+      "replay_path": "evidence/n22-B15-full-adaptive-after38500-next500-replay-resume1.json",
+      "replay_sha256": "e81c8a526c43d10469ee8035d2e3cf790e90c14089f7c09e93df8c12588c6e77",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after39000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "8435db0cad4652a0f97b45e84ee1b7f9f67e29c50a84ba88b8ad24a2113284be",
+      "replay_path": "evidence/n22-B15-full-adaptive-after39000-next500-replay-resume1.json",
+      "replay_sha256": "e612d9f16f37487a5aef4b7b04d191733a744467b3fe7a934c10b942514c7835",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after39500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "582eed9f8c3fdcb57586d2658b1aa1bb4d8368ad543172e9b7736efb24ed0dc9",
+      "replay_path": "evidence/n22-B15-full-adaptive-after39500-next500-replay-resume1.json",
+      "replay_sha256": "485f9f2a39a1a21b5fe1953f9dc9ab5f180421fa0a5094ea1799663926ca9df5",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after40000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "16531dbfb08e84b10e441809e3e5be4ec21d7128adf0ac44d1146a5166b4fa10",
+      "replay_path": "evidence/n22-B15-full-adaptive-after40000-next500-replay-resume1.json",
+      "replay_sha256": "1f50782798229635aced446ef575e0f3eb13356ddae89ebeca34bf0ba0d47758",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after40500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "edebdc376a22c6e1d98593082c60f053bdc34765a86346e97c814bed80f60e8c",
+      "replay_path": "evidence/n22-B15-full-adaptive-after40500-next500-replay-resume1.json",
+      "replay_sha256": "ece1511401253e5e51ffefe2ac5feca0f24e2bbc773ab2b7d3080629d74a183d",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after41000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "f97c18ece39eaf468214a025e89cc7d10595809bb71fe9d05db123614dc8005d",
+      "replay_path": "evidence/n22-B15-full-adaptive-after41000-next500-replay-resume1.json",
+      "replay_sha256": "f324f9c0056c1cfd0a5edc3cc16c3352666b117c9808119e54404fc6a7c29a23",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after41500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "fac331de5589fc8139a5d155a80be4536575698b7002b66b2e4964d366b88ed4",
+      "replay_path": "evidence/n22-B15-full-adaptive-after41500-next500-replay-resume1.json",
+      "replay_sha256": "b768e3e0859640b3317fe2433fafd31c7ce77ee2eabf628b83fcbf16451d914a",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after42000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "2a6a823c476d879e176c3667f2051e301786299303e286ad9c6ad9ac526d899e",
+      "replay_path": "evidence/n22-B15-full-adaptive-after42000-next500-replay-resume1.json",
+      "replay_sha256": "1d581f25df45d2a4255984f2444a56ad121ee7e2c9b707d913a55d803cef6c3b",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after42500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "54561851cf49a7dac1a259f4a8bff0628c591d121f5dbabe3b9054fa8c338695",
+      "replay_path": "evidence/n22-B15-full-adaptive-after42500-next500-replay-resume1.json",
+      "replay_sha256": "65efd9204b415892a6cc3e456fda1a488b8a5271429447f5059e81467d7f1e5e",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after43000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "909fd5d87c7cafcb9a0b12dd81f7f252c2bf3b092a211aacbca4142d008ecb00",
+      "replay_path": "evidence/n22-B15-full-adaptive-after43000-next500-replay-resume1.json",
+      "replay_sha256": "1921ab5cc827db508b7c1e022ec9d86ae810292cccba8f9cbcf891ba2eb96c24",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after43500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "667d4981e7fd7b5a4b4d72a7f0bb48b833673750d12e273f07a48e36d40426fb",
+      "replay_path": "evidence/n22-B15-full-adaptive-after43500-next500-replay-resume1.json",
+      "replay_sha256": "13d0a29096140ed996169924d073eb856a59db40d887a82f1562e0ec4ff75cc5",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after44000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "44618ed3e0089a9b7c58f60b5dd76ea9190fe7ed4d681df993d82f1af3d9c149",
+      "replay_path": "evidence/n22-B15-full-adaptive-after44000-next500-replay-resume1.json",
+      "replay_sha256": "85062ce15695adba7d72609701f1f52182d290f580a208735b607ccf8144ee92",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after44500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "10e8357c9e16816f965d7ab28327f001820fe90fb0ed7ca4b9151099301ebbae",
+      "replay_path": "evidence/n22-B15-full-adaptive-after44500-next500-replay-resume1.json",
+      "replay_sha256": "a1cbc37accaa5cad595ce36eda67f72c57d27a5bb6cdd0cba0cd43a4e4061687",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after45000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "8e2bc5febf3adc446befd97c9557dbed9f2c74f7b2aee7b2870fe35eed364c62",
+      "replay_path": "evidence/n22-B15-full-adaptive-after45000-next500-replay-resume1.json",
+      "replay_sha256": "e63ad21a987d842b78271c3295bde70f40394114b7546b7522ece85c8f511726",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after45500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "39a1999b6e9cb5bdd8ce3e2690e9fabfe589ea4b012737dd6fe16dd62b568865",
+      "replay_path": "evidence/n22-B15-full-adaptive-after45500-next500-replay-resume1.json",
+      "replay_sha256": "4dc6ea589f4247935997f08246f19b9af168687ef1a160ac9cbfb82bccc19a71",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after46000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "386919c33e70d6556e5e35b192f9dc0cf460ce7e5043eb246fb0617d2f1629f6",
+      "replay_path": "evidence/n22-B15-full-adaptive-after46000-next500-replay-resume1.json",
+      "replay_sha256": "f78d4023e96b6502d9a1e520ac0e28dffb7a62d5a126a4953e2b6eb325881eed",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after46500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "a90aa4673a3e2d6c9456982f19b8137fa5a73de0f31d2e951655bef172679705",
+      "replay_path": "evidence/n22-B15-full-adaptive-after46500-next500-replay-resume1.json",
+      "replay_sha256": "cff60df839e7e0ae8bf62316bf6ecc25a41e32533e6d5f2bdb10224a61ba9d2a",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after47000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "c67f7ccf0d9852f5799bb91322c5de8f7c79c212889c5a779971957672606f52",
+      "replay_path": "evidence/n22-B15-full-adaptive-after47000-next500-replay-resume1.json",
+      "replay_sha256": "109919b5887bfb7f16d7feae5bd0ab83adb9a5fa16ee13a48f73263aee824f13",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after47500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "4b679d7342b3ed9b6172d17e0d46ed24779dd8f0d7725ba9dc8bec8f0e5f43e3",
+      "replay_path": "evidence/n22-B15-full-adaptive-after47500-next500-replay-resume1.json",
+      "replay_sha256": "2d5bd4aa4399571d8e59090356a81683e965b7b493fc501b73f10b493cc93330",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after48000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "50de97d9d1656047d1ac824afa2b7c102be11a402098daf3efe4b15a3d4ec444",
+      "replay_path": "evidence/n22-B15-full-adaptive-after48000-next500-replay-resume1.json",
+      "replay_sha256": "49723cefa0c2d8e4444cfc04aa22e47996a2d40f5e6aad7c7fba8f78a566757b",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after48500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "f7a5dd5df74654b9b04449bbc5843601afa6dc0002e635a3b64249bc2e322df7",
+      "replay_path": "evidence/n22-B15-full-adaptive-after48500-next500-replay-resume1.json",
+      "replay_sha256": "4614928e022f33e7edd8b96ef4852d65ce1ebfe2fdea5a7e730f1c9e1dc2c35f",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after49000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "e7b6ae6c6ef2186ab30c46d82fc73ef99664709bb0b9b399495c54d9478099dc",
+      "replay_path": "evidence/n22-B15-full-adaptive-after49000-next500-replay-resume1.json",
+      "replay_sha256": "1e84f4dd57d994adc6b2bbf99a40cdf4e3059953cabd1a5e032835e8b850f29e",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after49500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "c81022bc4c1cf98f678015046fc008e9e324ca162df806921a35fe99f0c4b35f",
+      "replay_path": "evidence/n22-B15-full-adaptive-after49500-next500-replay-resume1.json",
+      "replay_sha256": "3377b0bcc7b574dbe4e91d9c8608fe04246356248b0e4cf277eb7ee14318227b",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after50000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "0ace1fbd16ff7132b204522caf6fd2eb950261db3d393a7c6d7347f395415f38",
+      "replay_path": "evidence/n22-B15-full-adaptive-after50000-next500-replay-resume1.json",
+      "replay_sha256": "e12bd9985bcf80ed0ebd53ad9a6a55c37dece57afc121803f1e4e44cd47d3dfa",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after50500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "3b4678d68b67cc613f13aedd2407afb2dbd31fda571b8a07e4e770a029dd2836",
+      "replay_path": "evidence/n22-B15-full-adaptive-after50500-next500-replay-resume1.json",
+      "replay_sha256": "8872b87a207976fa125f7b6d64a43662682f67e8162fb03b1df64cd34be9ecd6",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after51000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "9de1be0c97bb7d9a9f2bf1b4f172d14505448bd684ab6bd3eac56fbcfd516db5",
+      "replay_path": "evidence/n22-B15-full-adaptive-after51000-next500-replay-resume1.json",
+      "replay_sha256": "499c8c9e45bb0ed28475702632dadf3f146246c0bcf7efbb874c5c795ebdbe33",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after51500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "e9080922df8c829d237c87df028b782a50f496d00ed6720ecd717d00d3c265c6",
+      "replay_path": "evidence/n22-B15-full-adaptive-after51500-next500-replay-resume1.json",
+      "replay_sha256": "8098da98f6a5e16c3c4ea127ff89218df2df905d1a71707e7a59282dc17f425d",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after52000-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "41bf2f9cf9256d7b2952960766f46df867c820fb0803cfa9a74b6e20a5a0ebac",
+      "replay_path": "evidence/n22-B15-full-adaptive-after52000-next500-replay-resume1.json",
+      "replay_sha256": "dfb96b55d402def5fcf649d9292b3437dde84bc8a1664f79786eb5f8191d1415",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    },
+    {
+      "receipt_path": "evidence/n22-B15-full-adaptive-after52500-next500-resume1/SUMMARY.json",
+      "receipt_sha256": "700a6548524b4267fe3f74d05f0d3dbc3cb37468dadca7d9d123a8220ab09916",
+      "replay_path": "evidence/n22-B15-full-adaptive-after52500-next500-replay-resume1.json",
+      "replay_sha256": "629871de6df6651e6fdee1049e9329d667ecf78ff4fe025e75b23fe9b790fa5c",
+      "attempted": 500,
+      "paid": 500,
+      "members": 500
+    }
+  ],
+  "all_component_replays_hash_bound": true,
+  "strict_certificate_byte_hashes_checked": true,
+  "independent_disjoint_group_inventory_checked": true,
+  "force_math_not_recomputed_here": true,
+  "embeddings_not_checked_here": true,
+  "global_optimality_proved": false,
+  "source_sha256": "9f3c75f17f70ef4182d4a587ae0b334fab725c0f0c6eed1a5a5ae0e051fc664d"
+}

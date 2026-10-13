@@ -1,0 +1,38 @@
+{
+  "status": "ALL_EXACT_RATIONAL_ASSERTIONS_PASS",
+  "representation": "rational Taylor remainders, independent Machin pi, isqrt outward bounds",
+  "o8": [
+    0.0004866928204135231,
+    0.0004866928204135231
+  ],
+  "private_min_lower": 0.13098430717958648,
+  "inner_norm2": [
+    0.4228417079678099,
+    0.4228417079678099
+  ],
+  "other_norm2": [
+    1.2045395151528553,
+    1.2045395151528553
+  ],
+  "third_distance2": [
+    0.09261902641776797,
+    0.09261902641776797
+  ],
+  "hole_norm2": [
+    "38729/200000",
+    "193817/1000000",
+    "4849/25000"
+  ],
+  "hole_distance2_lower": [
+    0.14527653317074368,
+    0.23436799289792498,
+    0.24655288542267442
+  ],
+  "pair_distance2": [
+    "145241/250000",
+    "581393/1000000",
+    "581909/1000000"
+  ],
+  "r2": "361/2500",
+  "floating_outputs": "display only; all assertions are exact Fraction comparisons"
+}

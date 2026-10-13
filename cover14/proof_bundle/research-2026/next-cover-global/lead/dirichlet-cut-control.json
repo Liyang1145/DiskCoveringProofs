@@ -1,0 +1,14 @@
+{
+  "status": "numeric_candidate_cuts_and_exact_algebra_controls",
+  "nfaces": 16,
+  "subsets": 65535,
+  "min_lower_cut_margin": [
+    3.141592653589793,
+    1
+  ],
+  "min_upper_cut_margin": [
+    2.9757892295486075,
+    16384
+  ],
+  "exact_rational_layer_controls": 100
+}

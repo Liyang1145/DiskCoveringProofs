@@ -1,0 +1,104 @@
+{
+  "drho_dR": [
+    {
+      "k": 0,
+      "T": "0.11074585",
+      "drho_dR": "-3.4311339"
+    },
+    {
+      "k": 1,
+      "T": "0.18067491",
+      "drho_dR": "-2.1031357"
+    },
+    {
+      "k": 2,
+      "T": "0.25995792",
+      "drho_dR": "-1.4617129"
+    },
+    {
+      "k": 3,
+      "T": "0.068732266",
+      "drho_dR": "-5.5284639"
+    },
+    {
+      "k": 4,
+      "T": "0.033062071",
+      "drho_dR": "-11.493045"
+    }
+  ],
+  "drho_dR_fd_maxdiff": "8.0121753e-27",
+  "content_rows_at_root": {
+    "E1": "5.26044e-17",
+    "E2": "2.01109e-18",
+    "E3": "1.35372e-16"
+  },
+  "y0_y1_elimination_diffs": {
+    "y0": "4.5807e-16",
+    "y1": "6.8554e-18"
+  },
+  "content_count": {
+    "equations": 3,
+    "unknowns": [
+      "a0",
+      "a1",
+      "a2",
+      "a3",
+      "R"
+    ],
+    "eliminated": [
+      "y0 (U_3 row)",
+      "y1 (U_8 row)",
+      "h (derived: sqrt(R^2-d^2))"
+    ]
+  },
+  "fixed_point_map": {
+    "R+0e+00": "6.368e-17",
+    "R+1e-03": "-0.00446",
+    "R-1e-03": "0.004502"
+  },
+  "dE1_dR": "-3.7013398",
+  "dependency_graph": {
+    "a_k": [
+      "sin a_k",
+      "cos a_k",
+      "theta_k",
+      "e_k",
+      "T_k (jointly with R)"
+    ],
+    "R": [
+      "T_k = sqrt(R^2 - sin^2 a_k)",
+      "d = (y1-y0)/2",
+      "h = sqrt(R^2-d^2)",
+      "explicit -R^2 / +R terms in E1,E2,E3"
+    ],
+    "T_k -> rho_k -> C_k -> U_k": [
+      "Re U_k",
+      "Im U_k"
+    ],
+    "U_k, R": [
+      "y0 = 2ReU_3 - rho_4",
+      "y1 = ReU_8 + R",
+      "E1, E2, E3"
+    ]
+  },
+  "branch_facts": {
+    "y0_other_rho4": "0.892521729913",
+    "y1_other": "-0.909396205167",
+    "one_minus_R": "0.62001614688",
+    "note": "both complementary roots make |H| > 1-R; exclusion is conditional on the inner-disk-centre requirement |H| <= 1-R, which is part of the model class, not proved here"
+  },
+  "scope": "symmetric active family (mirror + 5 active rows + boundary saturation), finite branch only; point readings at the certified root, mp.dps=50; no whole-ring-domain claim",
+  "withdrawn": "\"2 angle-only equations + explicit R\": the U_1 rearrangement is a fixed-point map, not an R-elimination; correct count is 3 equations in 5 unknowns (a0..a3,R)",
+  "root": {
+    "a04": [
+      "0.37200861998019257859",
+      "0.34084306504344868971",
+      "0.28082192144638568054",
+      "0.38301202150624352738"
+    ],
+    "y0": "0.27297746634636338436",
+    "y1": "-0.14942849892695647673",
+    "R": "0.37998385311983867707",
+    "box_radius": 1e-09
+  }
+}

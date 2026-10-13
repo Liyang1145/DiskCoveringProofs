@@ -1,0 +1,13 @@
+# Straight owner triangles: alpha=pi is not an unresolved metric degeneration
+
+Extends C1257 only at owner triangles, not collapsed real faces or zero anchor radii.
+
+Hypotheses: all original real triangles and virtual Auv triangles strictly nondegenerate as in FLAT-DISK-ANGLE-INTERFACE.md. Anchor radii positive; owner angles 0<alpha_v<=pi; theta_v=2asin(L_v/2) in(0,pi), sumtheta=2pi. For alpha_v=pi set L_v=a_prev+a_next and endpoint angles delta=0. Require the same exact unwrapped anchor closure. All radius caps <=U<1/3 remain.
+
+Construction: build augmented abstract disk as before, then REMOVE each zero-area owner triangle A_prev-v-A_next with alpha_v=pi. This replaces its boundary edge A_prev A_next by the two edges A_prev-v and v-A_next. The vertex v is now on the boundary, not an interior flat vertex. Removing these boundary ears preserves a triangulated topological disk: the removed triangles have pairwise disjoint interiors and share at most anchors, while each site belongs to only its own owner ear. Every remaining triangle has positive area.
+
+The angle ledger gives total angle pi at each newly exposed v, since the omitted owner angle was pi and the former formal total was2pi. Thus the developed boundary passes straight through v with positive lengths a_prev,a_next. At each anchor the removed triangle contributed zero angle, so its interior angle is unchanged, pi−(theta_u+theta_v)/2. Suppress the marked straight boundary vertices v: edge lengths become a_prev+a_next=L_v=2sin(theta_v/2). The resulting anchor polygon is unitcyclic by C1251. All remaining interior site vertices are flat. The same developing-map and degree argument as C1254 embeds the remaining disk into the anchor polygon; newly exposed sites are marked points on its boundary chords. No limit or approximation of strict solutions is needed.
+
+Coverage: real and virtual triangles are covered as before. Retained owner triangles are in their owner disks. For deleted owner triangles there is no two-dimensional region to cover inside the polygon. The corresponding outer circular segment is still covered by B(v,U): its endpoints have distances a_prev,a_next<=U, their minor arc is covered by the endpoint-arc argument, and convexity covers its convex hull. All unitdisk is covered.
+
+Scope: permits the candidate's alpha=pi at X+/X-, without treating arbitrary zero-angle algebraic solutions as realizable. Still excludes alpha=0, zero radii, collapsed real/virtual triangles and theta=0. Candidate-specific identification of all other strict hypotheses must be checked, though its cover already has C1167 independent certification. No global lower bound follows from this sufficiency extension.

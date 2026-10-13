@@ -1,0 +1,45 @@
+{
+  "verified": true,
+  "schema": "N23-N24-actual-cover-origin-necessity-controls-v1",
+  "recorded_attaining_cases": [
+    {
+      "N": 23,
+      "B": 15,
+      "recorded_attaining_full_graph_explicitly_retained": true,
+      "exposed_centers": 22,
+      "strict_gap": "46223413949/250000000000000"
+    },
+    {
+      "N": 24,
+      "B": 15,
+      "recorded_attaining_full_graph_explicitly_retained": true,
+      "exposed_centers": 23,
+      "strict_gap": "1174587457869/62500000000000"
+    }
+  ],
+  "independent_random_face_union_controls": 200,
+  "quarter_radius_local_equality_not_excluded": true,
+  "negative_controls_rejected": [
+    "N23-non-strict-radius-1/4",
+    "N23-non-strict-radius-13/50",
+    "N24-non-strict-radius-1/4",
+    "N24-non-strict-radius-13/50"
+  ],
+  "no_N25_optimality_or_force_theorem_used": true,
+  "no_live_enumerator_kernel_or_existing_evidence_modified": true,
+  "full_family_partition_and_actual_cover_transport_still_required": true,
+  "source_sha256": "37bcf5200fdb27c6d4628dc178144900b0ff07532ce490e86cddde99dcaa3e34",
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/evidence/core-reduction/constants/n23.json": "0b08dd350e33852d46207fb709b88ad5535cb2a003a51cf429b7cddb200c8ed1",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n23/core-system.json": "cb6d87d69e9c4673e47c1e960ca013c5bb5e8e20f72bb2470653e8e11b8dcb10",
+    "research-2026/n21-25-synthesis/evidence/core-reduction/constants/n24.json": "90de2d44e0992bd86806645b5e2c3b9c60f27279f204e2d506cf564a34b4952d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n24/core-system.json": "32def465537d348df93794f721513a9f3baeec58a66037355bfd236795a9a187",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/test_small_order_cover_origin.py": "37bcf5200fdb27c6d4628dc178144900b0ff07532ce490e86cddde99dcaa3e34",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/VERIFIED.json": "fb9c235f371d5b3b2c899fba96d84ae2286349ad9cebaf7dfab0aac39ee2d710",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/small_order_cover_origin.py": "0ac008683bda4bf12b95cfaabe602be0e97250d30a2a245ba45a0295cfa90ee2",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/refine_collar_origin.py": "05d1e7a54cbe2db4cc835b29a772a3e8e54c2ebc982f26367a83d7b00dc28017",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/N23-N24-UNEXPOSED-ORIGIN-SOURCE.md": "d800a4372b39a4454428abb03fc4455441b093f1ac90f221909ef8698c3846db",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/N25-COLLAR-COVER-INTERFACE.md": "80d3d9c7c5e09bee6268ef064dd818c7775c7a96146a94ad38e574fb264a9a74"
+  },
+  "global_optimality_proved": false
+}

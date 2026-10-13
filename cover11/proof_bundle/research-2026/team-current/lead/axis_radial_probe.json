@@ -1,0 +1,28 @@
+{
+  "scope": "universal3Ddiagnostic no theorem without audit",
+  "count": 1495,
+  "live": 0,
+  "closed": {
+    "distance": 131,
+    "gradient": 283,
+    "curvature": 53,
+    "rootempty": 281,
+    "contracted": 819
+  },
+  "seconds": 8.72232437133789,
+  "domain": [
+    [
+      0.45,
+      1.049
+    ],
+    [
+      -0.76,
+      0.76
+    ],
+    [
+      -0.535,
+      0.535
+    ]
+  ],
+  "topboxes": []
+}

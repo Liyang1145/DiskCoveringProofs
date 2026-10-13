@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "schema": "isolated-n23-B13-final-metadata-byte-recovery-v1",
+  "selected_members": [
+    {
+      "member": "bulk/N23-B13-CATALOGUE-SNAPSHOT-cross-volume-resume1.json",
+      "file": "N23-B13-CATALOGUE-SNAPSHOT-cross-volume-resume1.json",
+      "bytes": 117049720,
+      "sha256": "64578536865f5078df43decda920f9043468f4fc35f1457bdf8cd0af6a8f6f79"
+    },
+    {
+      "member": "bulk/n23-B13-full-disjoint-replayed-union-resume1.json",
+      "file": "n23-B13-full-disjoint-replayed-union-resume1.json",
+      "bytes": 335871429,
+      "sha256": "9b771017fa7b4167e522cb5fa58312a6bee57921c9c3a51f4746ef8ec273f1bc"
+    }
+  ],
+  "archive_bindings": {
+    "math-delta-0053.zip": {
+      "archive_sha256": "5d419d18cf5f19627396a1ca7a234b3ed09ee17257e17a740543e7833cf9b9a6",
+      "archive_metadata_sha256": "921f37c95146754612b3d136648c85285166c85bdbc6a37f3ea627d555334e06",
+      "asset_manifest_sha256": "51abef64b724218c79aa8ab9439c099e1cb13edadb2a07fc9d027e4895023fe3"
+    }
+  },
+  "original_absolute_paths_retained_unchanged": true,
+  "all_snapshot_bound_files_current_integrity_still_required": true,
+  "not_a_new_mathematical_replay_or_global_proof": true,
+  "source_sha256": "92c13014b91916bc3762a7799a6560d5800f23c3584d39f867010ebf6b4784a5",
+  "global_optimality_proved": false
+}

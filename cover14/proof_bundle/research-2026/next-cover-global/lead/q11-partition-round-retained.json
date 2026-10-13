@@ -1,0 +1,1630 @@
+{
+  "status": "necessary_catalogue_after_bounded_q11_partition_round",
+  "source_sha256": {
+    "q10-single-type-retained.json": "9093a766dd0ed6fd8ccb8e6f26e127cca871ce976a589ff46b9523c482a62c25",
+    "q11-partition-coverage-audit-23.json": "824390ed71e6d534fe4c207c7d8f81d934e2dd59c2e0830b61887b029f30521d",
+    "q11-partition-coverage-audit-24.json": "f13a601f81bbc7e71a8a3faebf3c43210df449fc06a3b9b2b91a8340654c1295",
+    "q11-partition-coverage-audit-25.json": "7bf0038870dfeec3a50e2528558ca945330ebb71405ede480564a9176e829471",
+    "q11-partition-coverage-audit-26.json": "e835097dbf3041c3ad56b6fe6b0b8ebfb035f710a6a6b4b4cbe9b1fcf5dda23d",
+    "q11-partition-coverage-audit-27.json": "49508b930e5cd23d3f430f7a33c7c436c16fec85da7955a4656341ae9bb7e5a4",
+    "q11-partition-coverage-audit-35.json": "56bed5ac0e7100fc10c4544981613e1cf1be8814e2c80b5870cef99ebb6cf5cb",
+    "q11-partition-coverage-audit-38.json": "0b8ec2613f5ace8ed0075fd91ea4a69ac72ee852c764cf8f8505f611c13a0e94",
+    "q11-partition-coverage-audit-39.json": "09850eebe933c4ff1ff6adeeb1f09985b368d22a0d11be5901cb6f2202989ba7",
+    "q11-partition-coverage-audit-41.json": "954b818d49c23a4bd78d036617c809d5cff0da2410ce56b79617c3e7a3a69af2",
+    "q11-partition-coverage-audit-42.json": "4f35023f49b9c2c13f95b3a5b7ede50e4fbec8beab6463208dd44720f9909023",
+    "q11-partition-coverage-audit-43.json": "56182832cd83899277051faddf6041f728df13620ea3ffe55b248caca4c3fb4b",
+    "q11-partition-coverage-audit-44.json": "4fae0f7369529ecae441cfd17f7bdd5ad63ca33d7277c2fa5d58c0b06a639faa",
+    "q11-partition-coverage-audit-45.json": "eaf057a2f3542f526f5f99454ee34716ba566a1e0fa5cd8d4e094385b73b8b6d",
+    "q11-partition-coverage-audit-53.json": "5575a293667d45f2a3cacd58966ddc8668b35ddef7fdbe6fca0f34e6614cecfb",
+    "q11-partition-coverage-audit-54.json": "6fd3bc7d24f1fb54b1082382c366de22feba11ed2a36ba6b5175fdbc8602bce4",
+    "q11-partition-coverage-audit-56.json": "62b4c9cc6996594243f9f0e1820f2be99b84f2cc8ad503752e07c235e38d5821",
+    "q11-partition-coverage-audit-57.json": "d61c173e4ad3e17bd8f4573484890c68d02cddc5f717be73c1ca3b01e3a64700",
+    "q11-partition-coverage-audit-58.json": "e26229b3577b48a23a1b63d8521666476050fe352d93aad28686d1931d6f1e3d",
+    "q11-partition-coverage-audit-60.json": "45183e6481e38001029f7594bb8468d34085b0b95dcbd94203c4e2edd63c0bdd",
+    "q11-partition-coverage-audit-61.json": "97eb2be3a17e638abc29b9bc667aada933ceb138c69bd51bb76bfe2d3240e00c",
+    "q11-partition-coverage-audit-62.json": "9080c662d541225b1668553c8e45ccd26b96b605474519022f9eb4259616a179",
+    "q11-partition-coverage-audit-63.json": "554ee4e5371bfdc4172534867bb8ac58d9ca3c80646a4c384a20451271043f15",
+    "q11-partition-coverage-audit-64.json": "2730646061fa0d2fbf988049a1d9cccd4c7c71d440de9f1fcf57686b467d12a0",
+    "q11-partition-coverage-audit-65.json": "2353c0b9db7cbb01e2ae3f7d5da60b1d4ce68135bc778ba9be31989791e09f92",
+    "q11-partition-coverage-audit-66.json": "ad7ac81694e5976ff9ee4f7897575657ed56316bfca7e26eb3879219ce2932bb",
+    "q11-partition-coverage-audit-67.json": "dd8008eed45bd15667f4674749f73bbb6b3824190c8f495f71fc1e480a1a1514",
+    "q11-partition-coverage-audit-73.json": "b055d2e174b5dc44dd45e5dde045de23a98d3eb04e4774fa1dbce4f698dba91a",
+    "q11-partition-coverage-audit-74.json": "62e1e2b5a6b06573c15a1af14e6c17d3adcf90e1a588d5c90a4592c0c5382b38",
+    "q11-partition-coverage-audit-75.json": "1269cdb729c467cddcb11ef4f61937c99505dae870007bd33e6bba8aa9d780c7",
+    "q11-partition-coverage-audit-78.json": "1daa37fcd17d8df256a5e58cdac11e3dd1c940549ed475c4549bcfebf6e8d651",
+    "q11-partition-coverage-audit-79.json": "b1825477f15509f25b1578a3efe5ac10f399c2d43470e1277acd66b69b5c726e",
+    "q11-partition-coverage-audit-80.json": "e28cbad1742b521895b412a7034fd485ad1b5c60e79eaaf81368e1eb96841513",
+    "q11-partition-coverage-audit-81.json": "905a3d3b826688ff8bdcb7e632297507fc4deff7f127032d4e2b2d0d40a5162a",
+    "q11-partition-coverage-audit-82.json": "b61c8bfc20b41569e4a37f03ee4d79a6687e2f9014996e371d69846e395c0378",
+    "q11-partition-coverage-audit-84.json": "bb8766d214990837fb7cfae2eec631e897762b4980819c2d66cc7d0da03c0cfa",
+    "q11-partition-coverage-audit-165.json": "e3adc361afdaea85d1f03c9536009f8c71b93fd35ce9fd8ea79c5ad6cfd751d2",
+    "q11-partition-coverage-audit-175.json": "dea88872dd0baaf14a3fa9c041b19fb3aea91663f1ea2a283e18f16e74528fcd",
+    "q11-partition-coverage-audit-176.json": "7156934f72b40c244b28758aba2499ae231d8d5bdfbec3388b8a0415fd754b10",
+    "q11-partition-coverage-audit-186.json": "589a5deef392f242fd28fe3b855b4da79452550f1d25140782026d8b23fb83d1",
+    "q11-partition-coverage-audit-209.json": "51109a403fb2473af0cc089a639b16b3f91fab2d91ab882845a4bc8ae5abcdb7",
+    "q11-partition-coverage-audit-216.json": "0051c9eecc97663df5878aff2d2ac18c3bdeb81633d32d27d078a75ea8729a3b",
+    "q11-partition-coverage-audit-224.json": "f38804e9cb6bebb23bb4cff5514ea5a506a6e1cad597fafb6f084ad16f319110",
+    "q11-partition-coverage-audit-225.json": "3abeecd7a9c6274509a876a17a190ab18b5dba6e7f837141de3c0939e0158817",
+    "q11-partition-coverage-audit-226.json": "c45101de8c744ec902327dba99786fc2ea2d32c74f2c2d16e9ea81f6d3da1324",
+    "q11-partition-coverage-audit-227.json": "713a35607fcbdb12cb66366df810b66c0ca1faaf00add41c262acfa7b73f3deb",
+    "q11-partition-coverage-audit-228.json": "f6aa2072ca8fcbfc7ac98dc646be4f764bae44cad59ac406ea2076b23159dc9e",
+    "q11-partition-coverage-audit-240.json": "cbcdbf999fced6c927d47be0e77bcf9193f871035e02f6730f748d4e8a077952",
+    "q11-partition-coverage-audit-241.json": "4ada4dd8628030f68c3c2a09bc67200251c7b66a4aef2fd34715d3bac023a33b",
+    "q11-partition-coverage-audit-242.json": "a99cd361cceeca1ec42c9bdff33fe4ca4d22f0110731b2be1ec63ddce53689cd",
+    "q11-partition-coverage-audit-244.json": "dc57c76e41d5066d3d69229eca042b6842dfc68b4a3ee9537ca30350e4e7e44c",
+    "q11-partition-coverage-audit-245.json": "d48f88888c4673914c0b02f1a95834a9906dc70e4f3204ae966c67ce88274781",
+    "q11-partition-coverage-audit-246.json": "7336b62857a80039bebd4054c87e040965625bbf69c9ac9158f5455882793ca8",
+    "q11-partition-coverage-audit-253.json": "3c9b0d1060e55359299d90f4f6ccfdd79aaffd02343f8b49a813b02a6558149d",
+    "q11-partition-coverage-audit-256.json": "8dd13c0455eee8f83b58ad37e835f52b2a5ffde5e69ef2f729ac28226da7b4f8",
+    "q11-partition-coverage-audit-257.json": "3a20edda4f68dad0cabe01d6a41bbbbd6b6ef13668750f9ff0254ca2f7236373",
+    "q11-partition-coverage-audit-258.json": "4dfd4300a89f55042ec3c06c4a66dbec137f2628709a17cfe7a0e258efd9da42",
+    "q11-partition-coverage-audit-260.json": "b99c91934a12be11fb8f1df691a9344b164d27ffdb3d0fb82b6650de73fad577",
+    "q11-partition-coverage-audit-292.json": "52eddad714adc1e0206f45d2299fff44ef8df1f64a1927f8469fe09bd5494df2",
+    "q11-partition-coverage-audit-296.json": "7ce1d916f2bfb45da2a0354895ab811ff9862dbe5c937dae11d6b591efc80756",
+    "q11-partition-coverage-audit-299.json": "d221fc98303320afc165f8a9d1ecb7cc2ace180ec855c3704e420f243ce961e0",
+    "q11-partition-coverage-audit-302.json": "7ecc9d5c15c7ac3d96d2ccc0710c2ca6ab04d68ada8632e5169d8a007e4115a7",
+    "q11-partition-coverage-audit-307.json": "a3dfd658c5e2ba7d81b4e45b99a90946907bc35d83c2fda29edbe22f6f69539b",
+    "q11-partition-coverage-audit-308.json": "08057f26f7e89432c46e6b42a41ecbe64dfc4aa1f28640c48317b1574d5e8e9f",
+    "q11-partition-coverage-audit-309.json": "c356bb6f7c234fbc6458a2ac17f4f3e77b3e7878a00cb98b469e6492130e8972",
+    "q11-partition-coverage-audit-310.json": "00ce9353975a1a2144ed21219ae4d497212d0c5ca8e51e615443dbebaae64649",
+    "q11-partition-coverage-audit-311.json": "e3f34e2b8831e57e04a43fe85c8a9d8ecc911df24b97118fb476b9d9696fe88e",
+    "q11-partition-coverage-audit-321.json": "7e15692c0bddf164d9b1b28ac7d9e81c35a37c532097f512a1169cd4075183c0",
+    "q11-partition-coverage-audit-322.json": "e84dd2ffed05b75aac569cd47d9d5cfe9e242a0893e687f543cbf9592dda6caf",
+    "q11-partition-coverage-audit-323.json": "3f127ee4a2d60ea26830520527c0af2c19662a88f93d3f040bb20b927d1a70b6",
+    "q11-partition-coverage-audit-324.json": "b844e307de168b6efaf5672e71c10616cb54244a24c2152cff39e7a0f308f47a",
+    "q11-partition-coverage-audit-325.json": "74231de1559de687f20459cae67e173ef2c31cc1116b16cff9a074c9b01810d4",
+    "q11-partition-coverage-audit-326.json": "0c879a3e0dcec59591182215d47c9fb63ea8e11b94cdccbdfe2f43283202f7f2",
+    "q11-partition-coverage-audit-327.json": "101c88d7b727623d0e356c002674b43a64bfcf217a302f0dd37c43b2e8b0faba",
+    "q11-partition-coverage-audit-328.json": "e80466288e5bfda395377d1d703539aaaf1e483421f105012df0e63a855082da",
+    "q11-partition-coverage-audit-329.json": "f57172bbb70686248b05282cc8fe58a8fe75f6a5883922892ed7808b7b697a99",
+    "q11-partition-coverage-audit-338.json": "454bef42cbc5e0113273297a27a2eadc2a1681380c902f9bf32d1a3be328e3b3",
+    "q11-partition-coverage-audit-339.json": "d7309f847f522d03b3736cf0483c8f98fd6221f8b212b92701dfcd4c3c9ddd4d",
+    "q11-partition-coverage-audit-340.json": "f821b36e625157b5997228bc3d058ae6015845c58681dc015e06649d69a51d46",
+    "q11-partition-coverage-audit-341.json": "69d726825f58117f58c0a7487008d1aa5f0db748b194567ea78fbd2ba6bd9433",
+    "q11-partition-coverage-audit-343.json": "f67849d1931d03921953720a734885a16c2546a577eb1b6ba19f0d42f769f343",
+    "q11-partition-coverage-audit-344.json": "1308025dc74bd37dd3460b5b3a482fb4c4fdc8c95198566477b1fb4da03d59fb",
+    "q11-partition-coverage-audit-345.json": "87b1f12639c0ad09b1f8dccfa0950a0021d8152c83272abe4c68486a304710a7",
+    "q11-partition-coverage-audit-346.json": "c8d877bb029ecced20730ad738b8ecae605826d69e92369bb944ea131c2dbadb",
+    "q11-partition-coverage-audit-347.json": "f59fef703def2f1b6aa5c888ccae006a66407183e12dfaa42b3eff172b48b438",
+    "q11-partition-coverage-audit-348.json": "8f2859161931e3bb341c7ead72c8a8d72f4f70d0d2fee73146f0e9e5c14a911c",
+    "q11-partition-coverage-audit-349.json": "2b34569d6cc92fa9979711e23ff61b9609f341807a92dd570347a9a87ef9ae83",
+    "q11-partition-coverage-audit-354.json": "45ab3f5b167eae8549b8e96d9e4edc4a30267bd400baaa535be63d2258754fdb",
+    "q11-partition-coverage-audit-357.json": "9adcafa4d4dbbd3e7790d6c0a5969fd95971b57aae17ba405840b5f44d318cdb",
+    "q11-partition-coverage-audit-358.json": "69e7e06779c76ace17463f987cd6aeeded8a4d602cb52b726ce5bac5a0dd8f47",
+    "q11-partition-coverage-audit-359.json": "e55d2b74642e35e3d8b2a8554dc06fe94e02970d9421835aea4c890b411f3342",
+    "q11-partition-coverage-audit-360.json": "e69835b8d210bbca55c1e19e447811a5bb15f78aee6cccd3ba8d36cce9b66b86",
+    "q11-partition-coverage-audit-361.json": "facdcd297ed94e59e725506dbdb3e79c13a1ca30d7f080b1d2817901c1c02329",
+    "q11-partition-coverage-audit-362.json": "212f22550916e6021e8e8597311bc08db7aab2e869cfa5f918f3f85d4799489b",
+    "q11-partition-coverage-audit-363.json": "a9183a74645cbc4ed06533326e10642ca511d15ea7f0d5d91d94da850dffca62",
+    "q11-partition-coverage-audit-364.json": "aa666d24f7141ce6bf9df0f5d682570d61f8bc8c44d7ba78f17dbec487f89b06",
+    "q11-partition-coverage-audit-388.json": "f5769626dbc3bbde301704aa379ef7bdcf6ff2489295ae3693d3c57f01aa5d62",
+    "q11-partition-coverage-audit-393.json": "69444cf1e0a9d13b4cdc5faa99817fa76bdd4d69c3c8af9773c10d0c4e2dd9d7",
+    "q11-partition-coverage-audit-396.json": "14a7adf889e8f84a47c5ddc80337cf25ec5add2945fcbb12fd59aabf8b0b07b0",
+    "q11-partition-coverage-audit-405.json": "5ef3e94eaa257ace45b735e29fef0f3b7acc410665554c021f494b83a8b445cd",
+    "q11-partition-coverage-audit-407.json": "57698a3872002e2e7a0fe6fca21c7270cf477ffebec373a724326b904e2ceee3",
+    "q11-partition-coverage-audit-410.json": "3e902a800dab909f96c7891ebdd41145173c28a0a67b01422c8c541c96fd417a",
+    "q11-partition-coverage-audit-412.json": "3a83e528cb4c0a9b5b673a6056fe1497cff3e3184b7a9fb302517af281e1b2c4",
+    "q11-partition-coverage-audit-413.json": "cac6438afaed4d34063eb347e9244ff99c40630c5230e553bbd6adfb65e54012",
+    "q11-partition-coverage-audit-415.json": "b7ab104857880316a55487dcfa48820a74e5a4bdcfbdf9014102e3b95def19d5",
+    "q11-partition-coverage-audit-418.json": "9dcc38f772ed7c105ed2ce8f4ce508da8faf244db18a5a1f0dbcf59a242beba4",
+    "q11-partition-coverage-audit-419.json": "9ed8a7aff3e154f906090cfea5db50ab1c50d01ce36fcdb4a4f78ce779ed0438",
+    "q11-partition-coverage-audit-421.json": "7744703fe4117a78e8a147c3b1188e6f54202d4a25f20dbe098c72f2740a2af7",
+    "q11-partition-coverage-audit-422.json": "cba837e3d2446dd6f6610856c661d29ab992feb1a5f46c19e4477b84fb714876",
+    "q11-partition-coverage-audit-424.json": "d4ec9701350f1dbd95b748f67c8896ef2ed84d8968fce044f3e04f98da1db822",
+    "q11-partition-coverage-audit-425.json": "e6e4a8714fbb888786ca23a644b428c90fabf1f0375a34ec1bde21170e7ca9a4",
+    "q11-partition-coverage-audit-429.json": "14973be70f1b081259bb9baf0a6210745ff7befe9ea2eb8322e171890dd5fff6",
+    "q11-partition-coverage-audit-430.json": "97fd8433ec13abb6704841fabcbf123b15fd50f9f109cb029924ba263c25edb7",
+    "q11-partition-coverage-audit-431.json": "1d5b81a54934f8d3000e0c795cba7e9080d00a3ab8608c4c1227930f1d29dbd0",
+    "q11-partition-coverage-audit-433.json": "ee644c64f84161d8563d0e6194adb9b4988d34f1fb5b2d319232114eae14e26b",
+    "q11-partition-coverage-audit-434.json": "7a3a40e1d9b4811e2e870bbbf1d074f16747267682ba9350ec4e0f36ab477de6",
+    "q11-partition-coverage-audit-435.json": "7e9b1f37f2094078e97ab452c1291e209de487ffc6628f3b46e92303a6ae3852",
+    "q11-partition-coverage-audit-436.json": "2d64260c3b8f7edbcf485b70716ba9e318ff8c54434cc08db27c42907112e05b",
+    "q11-partition-coverage-audit-437.json": "160587a2a46a7e53654af8e8e5fa5fd4c051b4c025d993fc940ea6feb7e8ba0c",
+    "q11-partition-coverage-audit-438.json": "e80bc6678892ded4818d13c3181c09c599a3de477aee13d75c259d3ecf1e80aa",
+    "q11-partition-coverage-audit-439.json": "29fe2a5d9f59aea17350b3f835ccc9332c990dad55d0507ccdf47125dcd97866",
+    "q11-partition-coverage-audit-443.json": "10f1b5650125de65080cb424bcde010782abfd61d125f3a1d9dfe16b38830851",
+    "q11-partition-coverage-audit-444.json": "b5bae3137524261295773207a044dccec3a6755476d74ec2051ed3e2cb6677d0",
+    "q11-partition-coverage-audit-446.json": "5c31606b8c3dc35d4160b35ed08d3f9f655bfc7c656cae8fd3603273937b35fe",
+    "q11-partition-coverage-audit-447.json": "d821e10bb54e159a5a1107c24e81a3d3440c12e5947451d93a05f3c2f7203e4e",
+    "q11-partition-coverage-audit-448.json": "3ceaf0b86774d6cb4acac050eb943030ddce28480f42b5bd1f861d377002860f",
+    "q11-partition-coverage-audit-449.json": "e6198ef62924ba5ba22839de3ebac23fd6a06604ec01ad357f41a30ef0e1e923",
+    "q11-partition-coverage-audit-450.json": "2c902883b4ed086cf5bf158e67b5308e8f4add942a947745f51071533dab6246",
+    "q11-partition-coverage-audit-451.json": "b61338845361b6d037e6213cb15bcf9e0d961b2c5fb3867d22632899210a2357",
+    "q11-partition-coverage-audit-452.json": "510efa1c52b0c16808b04c3eb874cc95bd364973e2234d136077fd4691e9d024",
+    "q11-partition-coverage-audit-453.json": "9dab9cb8be9fb3982ede65f6e614fe3aad40ba3455d655d8c0bb104bfae59437",
+    "q11-partition-coverage-audit-458.json": "58ce8d9cc59b38fda4753374343d23286cc7dadc1e57a2da0dd920088e89d1c6",
+    "q11-partition-coverage-audit-460.json": "4e554669fcda63bbd572391f4155ce35e5de2192fb9ad75a2176ddac660bb387",
+    "q11-partition-coverage-audit-461.json": "0011c77c6de7e099a92566ca15f7783ba57008dfbf2c6d9d4499e87b6fd33ec9",
+    "q11-partition-coverage-audit-462.json": "5f213250a48b6a7464d1c14294fdb39deb01bc6a1cc645e3705a9b02c96ea5ca",
+    "q11-partition-coverage-audit-463.json": "186546c6c6db5730840bbeb063bbb33eafd11f95bb44d45ca4d8a4470069d5c6",
+    "q11-partition-coverage-audit-464.json": "cf1b9719f71417bc8a9e5067ea28f628cb6cd5f1ae8ac3162732226720fb787a",
+    "q11-partition-coverage-audit-465.json": "4e3f767480082323f83ab9266701c1be1c955a24ebfab356650f378d8ee5f422",
+    "q11-partition-coverage-audit-466.json": "cb604cee8472284b2a2f91cdc8fd5ed1a9854986715d9a2213a2fb74f57c9916",
+    "q11-partition-coverage-audit-467.json": "2fe4cf4d71009b5dfe59903e24a8e14e804b1be748b8471baf18a641cd1f044b",
+    "q11-partition-coverage-audit-468.json": "05ea9ccc2417a1dd4ab4867edebc221db98045908dad4a608d75be7af96a7d58",
+    "q11-partition-coverage-audit-469.json": "d263e2a0be462f9ef20661f1536a8d2b701f7d4120345e32f30d980b0f25da6d",
+    "q11-partition-coverage-audit-471.json": "d09d24dca21e9ddaa2e1839affd4343dbc4df1813e20315addcd2fa7328744be",
+    "q11-partition-coverage-audit-473.json": "5c9d0d09d976fc8ec6f89592a74979732cdbf423a1f12ca14ecd697a1757f53b",
+    "q11-partition-coverage-audit-476.json": "7aebc5f3731b37ae0e960661a31e9b7bcecd35cf4fed98d5de6d74c49e69c024",
+    "q11-partition-coverage-audit-477.json": "a1e76de4fffbce0b5cc586b95028dc387a19b122ea2c9ce1c40b076c2349d899",
+    "q11-partition-coverage-audit-478.json": "76309aad3c15ffaaa99ca168f842d06aea7be8dbf8ab2afc835ee65d414a86af",
+    "q11-partition-coverage-audit-479.json": "411f431139317555de5b1939a07657d70fb8934ab707e73747978e0d8cf6d6b2",
+    "q11-partition-coverage-audit-480.json": "bfec88dcbadb279103a8eb91547b39dbd7829018ae37e08392c4536229c8be15",
+    "q11-partition-coverage-audit-481.json": "8cef8932665ed35e889afd1dfec6e049254446054d4ef4f15d8ed5029b4b544e",
+    "q11-partition-coverage-audit-482.json": "6176e60463af32690adf53fa0bb999351ec71b1593fd5bb7b2518a2bd48dab1b",
+    "q11-partition-coverage-audit-483.json": "fb1d6016703c70a22b5b79b8b4de616153f4d7648905de924fd3c6b7e5579ba1",
+    "q11-partition-coverage-audit-503.json": "4a0f8f03e55debf72a7ccb034dad052a31cb1b31a5222fa7ba8eaa36f02a0620",
+    "q11-partition-coverage-audit-504.json": "5d40f4be970c316ea2bb44883a26939a1ef707083b5e837345bdeba6d6338600",
+    "q11-partition-coverage-audit-505.json": "e1eaf6422b794167383a46f10c8f90f361d374b4e478929c23468ccc287d1d9b",
+    "q11-partition-coverage-audit-508.json": "c49f970280ed016cf227e294ac276886b372fd0ed04de637e5adc95eede0db5f",
+    "q11-partition-coverage-audit-509.json": "e213b15ed0b4bf277c99b8c5efeafcda2421d749889e27f6f03b4a9f6347a339",
+    "q11-partition-coverage-audit-510.json": "17cc5c379fae768a93874f3757823745fd6c53b3b88d9a40d1e7ae4b9603ef0a",
+    "q11-partition-coverage-audit-512.json": "ac9d2f1e49d76de982d2b0e9bffa17eec72e9b6ff1c6a16ace571529741dcf70",
+    "q11-partition-coverage-audit-513.json": "da474ed478dc5818b5bbc3d7a6426923511e1d0b7d77ba2a2579d62e4d8f8a2c",
+    "q11-partition-coverage-audit-515.json": "65930efb1662dc236928c02806a44e8e333ab53f066fddffd5d337165886b6e3",
+    "q11-partition-coverage-audit-529.json": "008ccbf6e5c6762818d46ef50d7c4f2af155c57c73561631634985f344e46d8d",
+    "q11-partition-coverage-audit-530.json": "029bc36ce1289113506dc65b0ac60c4869da6e9d63d25a369720d271fb382cab",
+    "q11-partition-coverage-audit-534.json": "5ea7f4f9544aa96909f0319f703e692a4f69a31e1bc021d037c6d38e3f19bfac",
+    "q11-partition-coverage-audit-537.json": "405866a55c96a841f6c783a01d78bca8ec18417b457a1c427dafac314ce7333c",
+    "q11-partition-coverage-audit-538.json": "43b7f83406370349ffc072935c0b0661dccb3563b5330b08e9911913900e3295",
+    "q11-partition-coverage-audit-539.json": "424bd929d19be74a78dbd7fc607a9b8d7575d04c799097b8c7e90b871fe4c77c",
+    "q11-partition-coverage-audit-544.json": "ca1124e5d2ee19818c3f3057150e6bb43d30183f588d5016a9dc1998fff86c4b",
+    "q11-partition-coverage-audit-545.json": "b4f6e40253b8ae600337dae6889934e5f4d1f8e7fe0aadae0c64cbe3cd142999",
+    "q11-partition-coverage-audit-548.json": "9a1fcec955fc98ea2a6dca7c2559560fb54b6d9acac70691872ce6efd81d6f20",
+    "q11-partition-coverage-audit-549.json": "3bdafb20943d5996ea54c1ee89de0f0e31c28622adfeca294958a4e35c48d4d6",
+    "q11-partition-coverage-audit-554.json": "8570c1cfa2295da82dd14e49edbedf3bebbba4ab6bc0a662242e4cef95dc13a5",
+    "q11-partition-coverage-audit-556.json": "a4f4565426e1fe028317f6e2f3036e9fd1f9e0e114773291cffb5ffee5ec9041",
+    "q11-partition-coverage-audit-557.json": "04c382f8ba3115065df7997803b2574e6a17ff7fa1fe30ab65e6b9d15d5565a7",
+    "q11-partition-coverage-audit-558.json": "e612a75a7bc0417adf5e623f0a21d7d35e86da91a3b904c4b106c8afbef20946",
+    "q11-partition-coverage-audit-559.json": "f7fad4ac9e434fe05db031adc7cae77a6d2ba273f0260dbb3ccfe6d3dba6f129",
+    "q11-partition-coverage-audit-563.json": "6098f9f626b4cae253c886dac97375c9d31acc42c37c8c5831609b888138cb0b",
+    "q11-partition-coverage-audit-565.json": "121864c3b81c8c86a63a39c71e1cb6b396d134e44c8ded5dc2087c2282f9028e",
+    "q11-partition-coverage-audit-566.json": "40f508fb7c83e16a7047440134de58b4af8061e52bd0d4e605f632a8584b2493",
+    "q11-partition-coverage-audit-567.json": "cda9d2773c2ffea1fb655c4f7cdea358679f00d8db7bfbe3f18633f096b81b42",
+    "q11-partition-coverage-audit-568.json": "816e2f2203a5b3682e2249dde73de48c2134628cf883c50f355345546378a3e8",
+    "q11-partition-coverage-audit-569.json": "74fc444f8e243f692391e928864e876f8fffbb3009f2d6b4e4aca58d1e57c679",
+    "q11-partition-coverage-audit-570.json": "174dbc7e428a191342419822d0ee5cc804418684e4675b0dee4afcbf308be4e8",
+    "q11-partition-coverage-audit-575.json": "7f6d78cba8d06d05c575d162c87aa4b0ad4631a8f56bbd0ae91cff02ba045b6f",
+    "q11-partition-coverage-audit-576.json": "d5e1a9a7499eb90e8c2f0dd451660e7d186418333e3fc64e270047032c334b9a",
+    "q11-partition-coverage-audit-577.json": "5363c8e81a9e9f1977b4b24216cfa922394ab622c26241065db58e1b10ccd07e",
+    "q11-partition-coverage-audit-578.json": "939128014b8348afec1bd45818d1f03f763aaf6f3928c6d85282bad9154ea46b",
+    "q11-partition-coverage-audit-579.json": "00dc2ce502d9348c9bf06bf7794c4952f95b97f715189882a043dcb62b0a71a5",
+    "q11-partition-coverage-audit-586.json": "4d9e2f84477173a4b3da9753a034d45fb634b9f0dea57547806031cc354fd99a",
+    "q11-partition-coverage-audit-587.json": "2e0e9a6d9142af268afc864a379e1c12873d6edc87c1caa0838fc88737b05fb9",
+    "q11-partition-coverage-audit-588.json": "77766998d3779dc6eafccaace8a65b08909c91c211e32d028d058a04ef330b56",
+    "q11-partition-coverage-audit-602.json": "0c9264562b9ceb86fa9433c78d4e24c999bf3b9c6bef7c63c2711333a0a0b0f9",
+    "q11-partition-coverage-audit-603.json": "52254d98af5c3ab8debeee4c41a7b36d1d2dea95ff7c748dc5a65f0000de33e0",
+    "q11-partition-coverage-audit-609.json": "1b14d335284cfb89d2f19f7c605e82fda8efb7166ac633c05f49e82bdc92dfc0",
+    "q11-partition-coverage-audit-610.json": "949c1ebdd3352618c93ae8cfbf187cf026f42467085a24d353d7b9a2c884bbc5",
+    "q11-partition-coverage-audit-611.json": "815ce8972cd77efede9d839f4a7561d68774d45795f58793ca33c1c9f4df89aa",
+    "q11-partition-coverage-audit-616.json": "dfb4aad79b125caaee055e7c916c3c5731d0d955dc04b0dfa2753288a49ff522",
+    "q11-partition-coverage-audit-619.json": "0f515bb788d5323d10815adc47f5460f92f35b944cb32bc659626d2fafa68eee",
+    "q11-partition-coverage-audit-620.json": "d7e90efc1a64406dfc62e57c3885dfc2b06e0a00c7d0c658371e91a5a78b8c62",
+    "q11-partition-coverage-audit-628.json": "1e69d19406b7612b15fb5c993c4b74b50fbc64341bd01d076c0e3280364114a0"
+  },
+  "excluded_count": 199,
+  "remaining_count": 2,
+  "counts": {
+    "10/4": 1,
+    "11/3": 1
+  },
+  "minimum_lower_exact": "13270033843820843136114693669203162139201743/40000000000000000000000000000000000000000000",
+  "exclusions": [
+    {
+      "family": "11/3",
+      "index": 23,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "331861788120069745800134705689219187905876979/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 24,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "165930880585720610078063718839544581008242781/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 25,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "331861770409562079002299056410845195297794903/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 26,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "331861761336946626674520891955521236815946393/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 27,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "66372359595967397272721825740362143643661573/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 35,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "344080847636858409764968718565689795289501257/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 38,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "344033592176246130506833967822026948678267941/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 39,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "42819127657347457123246960359087811143757643/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 41,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "172045062174109101918651102075319376385990671/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 42,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "344033252911002941629307938072899341914003667/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 43,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "21505331941283276341616921849503403085872737/62500000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 44,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "172016853640950390009619391782130286757327973/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 45,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "344042953859349790483832720108547956792688953/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 53,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "166567687470396558609628993411079559610380383/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 54,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "83635746715879433232016764426681102769203831/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 56,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "338882794071527448614203016167622115205308291/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 57,
+      "nodes": 15,
+      "leaves": 8,
+      "lower_exact": "83904915454316276748866099520418515196894153/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 58,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "33193479962238998504276127386986545227917817/100000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 60,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332684221883881425082627947978478665707474137/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 61,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "338111587133540303859898272237111275913363801/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 62,
+      "nodes": 27,
+      "leaves": 14,
+      "lower_exact": "83021111812019288388948904086852537275097311/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 63,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "166362142985527022123354671356313045491002321/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 64,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "166123129906194921251521446786972335993324079/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 65,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "84357264576223652086174630441794371909894549/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 66,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "340923850207096292446333039555152315099382659/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 67,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "84386812588884873119059407632344259413297643/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 73,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "82965446330852673722646298742414229720500767/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 74,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "67343810340158547766519518934174263124737999/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 75,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "335908758645771117861448811632925604463543827/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 78,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "67806070071423105732702221874998007499356811/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 79,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "2699237502678622029846805377133303792174739/8000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 80,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "16912602681651214075055795953153901468960831/50000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 81,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "169436872392105168852039479615838153356703927/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 82,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "336454952523477652997585007633542880351563067/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 84,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "168408650116594693686998245996548654709656551/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 165,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "342825843636464746863334702567603475286268693/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 175,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "85706462404162006955315549230374072453192059/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 176,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "171412930956466646454913657701697156441621127/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 186,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "8570646021858079988625994270515660278515583/25000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 209,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "33876654288356985868319384214271727057718027/100000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 216,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "338766096345314239006922142110069265571241991/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 224,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "337926404027872163206067586539594016799707953/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 225,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "168963863581594514943080930087722089561563169/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 226,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "169383205709971735150390282314150860829824203/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 227,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "67753277397871026818066206164199710226278701/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 228,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "67753310130994418275508036690728165646209037/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 240,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "168964013694913230891943615921416605768933253/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 241,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "169383361084837010649323601803858186819235131/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 242,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "337927831485501859087850909649811939071512477/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 244,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "2646616034073472279271063882465007830852091/7812500000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 245,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "338766696683241331564516884516942797896400197/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 246,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "84691714245079790896651189603152231767058201/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 253,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "67585594848385518848224641211820037634511241/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 256,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "338766392110929020418805661861014933555045051/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 257,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "16896359526650286288871497657156610570967169/50000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 258,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "169383301700423041799299233797893240614686501/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 260,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "42240957336619580973892431358660311439523759/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 292,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "8445372149714548345999851295072048187966217/25000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 296,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332162755049374140046278050580701646078392843/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 299,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "334072512604413819839937701317457847872000699/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 302,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "83782273798510302663450725322522429573708609/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 307,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "333048616104717071070332877171117387120333009/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 308,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332162866791220869865594046644544379654089279/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 309,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "341907924815384500549611204510946140726282357/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 310,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "84135038988244230954258550557313423140689323/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 311,
+      "nodes": 15,
+      "leaves": 8,
+      "lower_exact": "331753472370065541290768750632807711815879591/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 321,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "166573789442602932611452300022984079763589323/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 322,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "83286511493657842135055712954552442598993651/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 323,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "333265838001658027872009109030691232323408637/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 324,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "10683583929031989236890709098935504791912557/31250000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 325,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "166497986663518041446036739963155560067532191/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 326,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "166081364696896583180458269469648423746557909/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 327,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "170936515506068118093603061917539815377987767/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 328,
+      "nodes": 11,
+      "leaves": 6,
+      "lower_exact": "170066446831346105916208564880836650008671173/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 329,
+      "nodes": 11,
+      "leaves": 6,
+      "lower_exact": "169006633331167927758525031159828091323530611/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 338,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "333135000076882752151059672981805776425972663/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 339,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "20829117355398013447161629717954476887663379/62500000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 340,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "68374605162482889338447714807996889874319507/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 341,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "16657394385709253583461630573412184663649307/50000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 343,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "4165821688872000426175297116280629695689187/12500000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 344,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "17093636734297711685424699409774943193641777/50000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 345,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "66574622495533435999307320592165017652107947/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 346,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332412938552683980537682303559224186317185589/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 347,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "341873144126318601837413066832346271194337467/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 348,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "332834968973090718159290899913680655111197707/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 349,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "332849514135701772703229872026464001689152787/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 354,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332558003501947083978558422505265473088004261/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 357,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "5282243904038525402839656344046630989624883/15625000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 358,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "41526583604420341350514094868802813465544289/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 359,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "168454483459385218701995397336738603465825289/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 360,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "333147643379547162484702257995346402992885257/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 361,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332362164758088465582144285896351644321665903/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 362,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "84330468369657835511182546496247198814905361/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 363,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "83286680633487992429952023692731849274217707/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 364,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332401103928528527013704533293113095461958893/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 388,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "171336211550790563347044607480676435303364291/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 393,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "67768947310668761264657601758599668614145463/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 396,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "341979988728404143194350446207050955036179351/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 405,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "170574244276103820254023901670689406389837501/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 407,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "33859579603924774312232633308228747930710267/100000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 410,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "337787692184001195538014293733405855759404831/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 412,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "169439081603209186585580882068586934896770867/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 413,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332672773790902533534398344579278476935689177/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 415,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "345286210080962818912653119023494619590167503/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 418,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "21135456812252533284862671022808251593072271/62500000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 419,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "331943411170661233750839805386240015627130661/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 421,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "85073406808913125100499276060314898916895939/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 422,
+      "nodes": 25,
+      "leaves": 13,
+      "lower_exact": "13270033843820843136114693669203162139201743/40000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 424,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "337930878933207598153809002841687277817868989/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 425,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "337388854194841870226966311388588257048827901/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 429,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "69057273846237723223547336036324547319836317/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 430,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "17264304489224854056517190577910573288416017/50000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 431,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "341553133477688231787504279900552860556759669/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 433,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "336084652464304995988301935577379290467899041/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 434,
+      "nodes": 13,
+      "leaves": 7,
+      "lower_exact": "20817403141720276622008669874321803352447539/62500000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 435,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "68657271269718288172568842765182242522333467/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 436,
+      "nodes": 11,
+      "leaves": 6,
+      "lower_exact": "42795537576342319987169073110665554197376919/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 437,
+      "nodes": 51,
+      "leaves": 26,
+      "lower_exact": "331851274193610303179891779914121027780536069/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 438,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "336839944609054152763024836943860861509586911/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 439,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "168806945209102629253018892399172871148886783/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 443,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "43164160317628050616179687986327347548673437/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 444,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "170952864239912432564857546504078392682905303/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 446,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "172643160450587282145541171902833491745169189/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 447,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "340903894094029194180006800076186638735479169/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 448,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "343050261433222873476018886109532749218655219/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 449,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "166807085268975416927553092511162096587816701/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 450,
+      "nodes": 11,
+      "leaves": 6,
+      "lower_exact": "84236212677813780751684756563326659695242569/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 451,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "2144019680356589982350534524819828068510339/6250000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 452,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "166102575608928726715145954403593286975909961/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 453,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "166151248076662311193838944665192894653822601/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 458,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "342094211065374214553607296571705637754063049/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 460,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "345313347171595903627127030224077008931279697/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 461,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "341902680454320718608647481766909153763324699/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 462,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "85177579034991344357100537695380850409981079/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 463,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "345286054139954989755640792773142354172391039/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 464,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "340785404571644137068628231263444376193072497/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 465,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "340216928962021546498744775501595071335901419/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 466,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332261203696241751073981438080370506933531591/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 467,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "166587693545851325332156418093702360223379707/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 468,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "34026653647104036759004293204362650210636017/100000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 469,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "8547822424801456990731617372160821200138037/25000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 471,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "345309349277094557988909255312226150591022653/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 473,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "85523224315222019766809106517134737515411691/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 476,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "341469909143158619569722838524111742477435283/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 477,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "170108441475263753150268634713611411000159123/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 478,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "343368100996095624247221827616534558538166881/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 479,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "68284929370256458969387297523570909324478397/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 480,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "171652574993869284261037882651829847146489929/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 481,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "341884491213583715734217295419185433594397077/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 482,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "83842119068153951151403394912035620870165767/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 483,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "341945595368659450445150003602703238743314947/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 503,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "342816662308416921487856098980056126001352507/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 504,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "168963768998718954485140644306361909720606757/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 505,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "338766666824982411996502768149214221585591017/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 508,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "342706988743867816563520058783203006620875407/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 509,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "342673268604508950821644035726573333044549773/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 510,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "42834191159182086830234234355971185067987391/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 512,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "337927832101617867225872185720542122042731629/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 513,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "337925861374952444549764625129175692812828541/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 515,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "166027991977511222207430296187771036264196899/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 529,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "339322036682577515812716671237783935735353951/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 530,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "43039016366714450803973407831402002524528429/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 534,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "337779440923206111006597141159934894047197699/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 537,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "33904819448202697901588412950432903712174753/100000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 538,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "168806735539676992228819035854348282294841247/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 539,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "13473564465010174885358849181796244639391821/40000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 544,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "168072706153442101910117585721728705238281127/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 545,
+      "nodes": 13,
+      "leaves": 7,
+      "lower_exact": "333156397383193899930209455552396513878051217/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 548,
+      "nodes": 11,
+      "leaves": 6,
+      "lower_exact": "332227806571689426063691192586883140731078437/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 549,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "1318803401675667235674462393110180260699117/3906250000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 554,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "168646612592666884801668380604337723505198509/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 556,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "13514360447708064824544259067843599268774621/40000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 557,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "343139430275108766580986896883426376078619033/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 558,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "332212042282281547050502130066429533459719383/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 559,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "83073982632791540167178169920918864155153173/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 563,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "339851218110833161774004336966117765462340921/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 565,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "166510991023795143772130129479337909537272129/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 566,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "170108591766218303970836288851384524053851383/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 567,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "333265843087017433694630677556198863588117497/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 568,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "34026636664850869373898826482138644849993139/100000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 569,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "85478148410909111332077279942449239160304271/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 570,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "341912989255316097437043003323291872169426737/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 575,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "41638217214970828420108301258754600363697093/125000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 576,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "86328336521355424677548962774949333192586257/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 577,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "345313298436606300846705940586660148171017057/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 578,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "171047974135126962399919785875378082318242117/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 579,
+      "nodes": 5,
+      "leaves": 3,
+      "lower_exact": "170734351022967848989441573944370482685705819/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 586,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "68418442517673767392102159822316847345886257/200000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 587,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "83316325604376108893623415556820823347406661/250000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 588,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "337859001910906599767244761902827732625027713/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 602,
+      "nodes": 7,
+      "leaves": 4,
+      "lower_exact": "332673272881273070009364854219401300698922053/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 603,
+      "nodes": 9,
+      "leaves": 5,
+      "lower_exact": "343932073138684688713599731828684950401149221/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 609,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "337927589057830305544332770413891464764825657/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 610,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "21120417011785348751801837470915961318428677/62500000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 611,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "168419885699048990777743970669188797426823767/500000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 616,
+      "nodes": 11,
+      "leaves": 6,
+      "lower_exact": "338422506679193929679662227497722816008716161/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 619,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "342706639543368135409643519239828721575332029/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 620,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "342673384392931751368594330138583000949360823/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 628,
+      "nodes": 3,
+      "leaves": 2,
+      "lower_exact": "85735215109063919538517025237868708378828829/250000000000000000000000000000000000000000000"
+    }
+  ],
+  "unfinished": [
+    {
+      "index": 76,
+      "reason": "bounded_node_limit",
+      "pending_nodes": [
+        1,
+        61,
+        63,
+        65,
+        66
+      ]
+    }
+  ],
+  "retained": [
+    {
+      "family": "10/4",
+      "index": 879
+    },
+    {
+      "family": "11/3",
+      "index": 76
+    }
+  ]
+}

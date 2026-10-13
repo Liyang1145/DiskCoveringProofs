@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "schema": "complete-collar-actual-cover-origin-refinement-v1",
+  "N": 25,
+  "B": 14,
+  "all_complete_parent_residual_rows_partitioned_once": true,
+  "parent_residual_weak_graphs": 93441,
+  "origin_obstruction_paid": 87333,
+  "remaining_weak_graphs": 6108,
+  "center_count_partition": {
+    "22": 13,
+    "23": 299,
+    "24": 5796,
+    "25": 87333
+  },
+  "radius_upper": "239146311738101/1000000000000000",
+  "strict_gap_1_minus_4U": "10853688261899/250000000000000",
+  "single_unexposed_center_norm_upper_bound_5U_minus_1": "39146311738101/200000000000000",
+  "single_unexposed_norm_bound_not_used_in_current_force_kernel": true,
+  "actual_arbitrary_cover_condition_required": true,
+  "not_a_standalone_geometric_weak_graph_exclusion": true,
+  "source_cover_reduction_and_padding_preserves_origin_owner": true,
+  "control_results": {
+    "known_N25_B16_attaining_graph_retained": true,
+    "pure_internal_faces_not_counted_as_exposure": true,
+    "real_N25_B14_V25_source_classified_as_cover_obstruction": true,
+    "quarter_and_larger_radius_rejected": true,
+    "quarter_radius_local_equality_control": true
+  },
+  "parent_report_sha256": "8fe23d28b46061dafb04593996aefff165d9a541d05416260141c4ef856dd78d",
+  "parent_residual_sha256": "df85996dd00f9a873ddc075c9709af5ff6abd7e1ee9815ba43e030216acc3186",
+  "origin_payments_sha256": "b917d600f19891a8377740669a64d3e65aa514bf850935ca285d9f91752d21ef",
+  "refined_residual_sha256": "4c62bcd18e588aa31f9dec40adf4e11624644c439f374db9a72d87dd02632514",
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/refine_collar_origin.py": "05d1e7a54cbe2db4cc835b29a772a3e8e54c2ebc982f26367a83d7b00dc28017",
+    "research-2026/n21-25-synthesis/evidence/core-reduction/constants/n25.json": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-old-collar-paid-partition-20261005-v2/VERIFIED.json": "8fe23d28b46061dafb04593996aefff165d9a541d05416260141c4ef856dd78d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-old-collar-paid-partition-20261005-v2/RESIDUAL.jsonl": "df85996dd00f9a873ddc075c9709af5ff6abd7e1ee9815ba43e030216acc3186",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/UNEXPOSED-ORIGIN-CENTER-SOURCE.md": "ac47089881d2e51f299cc5c27c4c61720b17c2af18692e5ef4df6feb3de11949",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/N25-COLLAR-COVER-INTERFACE.md": "80d3d9c7c5e09bee6268ef064dd818c7775c7a96146a94ad38e574fb264a9a74",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-g0-simple-hole-completions-20261005-v1/INPUT-COLLAR.json": "636fa41457061bfcc25f30814d64fd38ab43020329551c1dd44526f441730727",
+    "research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e"
+  },
+  "source_sha256": "05d1e7a54cbe2db4cc835b29a772a3e8e54c2ebc982f26367a83d7b00dc28017",
+  "all_other_residual_lower_bounds_not_paid_here": true,
+  "global_optimality_proved": false
+}

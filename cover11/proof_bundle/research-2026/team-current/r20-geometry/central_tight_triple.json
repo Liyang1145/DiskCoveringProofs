@@ -1,0 +1,132 @@
+{
+ "q0": [
+  "0.315948155770522009698690763414076841077924826",
+  "0.0614319001955799029304659378151209481439514841"
+ ],
+ "q4": [
+  "-0.315814177428374334805966491045680490969036149",
+  "0.0621169945710407387764023278286168655711948093"
+ ],
+ "triples": [
+  {
+   "names": [
+    "central4",
+    "pin(6, 4)",
+    "pin(4, 9)"
+   ],
+   "psi_minus_r": -0.15647644296965832,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "central0",
+    "pin(10, 3)",
+    "pin(3, 5)"
+   ],
+   "psi_minus_r": -0.15647644112198913,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "pin(9, 10)",
+    "pin(10, 3)",
+    "pin(3, 5)"
+   ],
+   "psi_minus_r": -0.09984925964620305,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "pin(6, 4)",
+    "pin(4, 9)",
+    "pin(9, 10)"
+   ],
+   "psi_minus_r": -0.09984925836941885,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "pin(4, 9)",
+    "pin(9, 10)",
+    "pin(10, 3)"
+   ],
+   "psi_minus_r": -0.08525199102184905,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "central0",
+    "pin(9, 10)",
+    "pin(10, 3)"
+   ],
+   "psi_minus_r": -0.04484100951444434,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "central0",
+    "pin(9, 10)",
+    "pin(3, 5)"
+   ],
+   "psi_minus_r": -0.04484100951444434,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "central4",
+    "pin(4, 9)",
+    "pin(9, 10)"
+   ],
+   "psi_minus_r": -0.044841008723149695,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "central4",
+    "pin(6, 4)",
+    "pin(9, 10)"
+   ],
+   "psi_minus_r": -0.044841008723149695,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "central0",
+    "central4",
+    "pin(6, 4)"
+   ],
+   "psi_minus_r": -0.021529168051714804,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "central0",
+    "central4",
+    "pin(3, 5)"
+   ],
+   "psi_minus_r": -0.021529167981820765,
+   "branch": "diameter",
+   "singleton": false
+  },
+  {
+   "names": [
+    "pin(4, 9)",
+    "pin(10, 3)",
+    "pin(3, 5)"
+   ],
+   "psi_minus_r": -0.017588019421619413,
+   "branch": "diameter",
+   "singleton": false
+  }
+ ]
+}

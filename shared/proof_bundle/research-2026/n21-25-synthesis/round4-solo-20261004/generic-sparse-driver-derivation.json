@@ -1,0 +1,10 @@
+{
+  "source_driver_sha256": "3753352a075fd107199d34777aaba1ca3aaeb45752b10a78778294dc0763725b",
+  "derived_driver_sha256": "b2eddb0e00541309f03e0e6d4313588651ef944e34ba4bc662b3deaf49de0542",
+  "original_acceptance_body_sha256": "340f62d0760889dc440c7dd3a78ad1533cbc878d23495b60cb08d0842d5fbbf4",
+  "same_native_source_and_recursion_used": true,
+  "boundary_parameter_and_new_control_source_paths_only": true,
+  "extra_generic_gate_files_bound": true,
+  "source_sha256": "3e82cb685e013d7214875d21b49d76b23c5976ae2bc5e7c7b1691666e13bb8b6",
+  "global_optimality_proved": false
+}

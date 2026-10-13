@@ -1,0 +1,16 @@
+{
+  "scope": "Exact rational elementary constants for REPORT.md; not a global optimality certificate",
+  "checks": {
+    "sin338upper_lt3317": true,
+    "sin34lower_gt332": true,
+    "sin288lower_gt28": true,
+    "sin964lower_gt82": true,
+    "cos676upper_lt8": true,
+    "radial_bound": true,
+    "sqrt_bound": true,
+    "final_margin": true
+  },
+  "all_pass": true,
+  "final_separation_lower": "333863/250000",
+  "final_margin_above_1.328": "1863/250000"
+}

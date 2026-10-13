@@ -1,0 +1,25 @@
+{
+  "source_sha256": "3dbc359312e2fa201366e2ca05b8b604e8a9f7f215193bf79d93e4169639c809",
+  "runs": [
+    {
+      "case": "candidate",
+      "status": "integer_interval_flow_replay",
+      "lower_radius_exact": "586119770971301595674881231700390304862749406974750951014982951211913465/1766847064778384329583297500742918515827483896875618958121606201292619776",
+      "lower_radius_display": 0.33173203422947,
+      "excludes_U": false,
+      "incidence_rebuilt": true,
+      "exact_balance_checked": true,
+      "q11_angle_boxes_order_checked": true
+    },
+    {
+      "case": "q11-58",
+      "status": "integer_interval_flow_replay",
+      "lower_radius_exact": "649965013990309626993154109113916961549050428598696809930899739928075651/1766847064778384329583297500742918515827483896875618958121606201292619776",
+      "lower_radius_display": 0.3678671611975849,
+      "excludes_U": true,
+      "incidence_rebuilt": true,
+      "exact_balance_checked": true,
+      "q11_angle_boxes_order_checked": true
+    }
+  ]
+}

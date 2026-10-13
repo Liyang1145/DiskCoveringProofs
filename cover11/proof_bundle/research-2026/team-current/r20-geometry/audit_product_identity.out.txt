@@ -1,0 +1,22 @@
+=== identity spot-check: 4 y^2 (Rc^2-r^2) = F_in*F_out  (random h per edge) ===
+   max |4y^2(Rc^2-r^2) - F_in*F_out| over 360 samples = 2.75506e-40
+
+=== per-edge tangency point h* = (1-r) p_out (certified cover, |p_out| = 1) ===
+   pair  y_h*       |h*-p_in|-r   F_out(h*)     class
+    7- 1  -1.908e-01  -3.629e-01    +0.0e+00   LEGIT inward (F_in<0)
+    1- 8  -1.908e-01  -3.629e-01    +0.0e+00   LEGIT inward (F_in<0)
+    8- 6  -9.710e-02  -1.836e-01    +0.0e+00   LEGIT inward (F_in<0)
+    6- 4  -7.233e-02  -1.435e-01    +0.0e+00   LEGIT inward (F_in<0)
+    4- 9  -1.191e-01  -2.359e-01    +0.0e+00   LEGIT inward (F_in<0)
+    9-10  -1.447e-01  -2.894e-01    +0.0e+00   LEGIT inward (F_in<0)
+   10- 3  -1.191e-01  -2.359e-01    +0.0e+00   LEGIT inward (F_in<0)
+    3- 5  -7.233e-02  -1.435e-01    +0.0e+00   LEGIT inward (F_in<0)
+    5- 7  -9.710e-02  -1.836e-01    +0.0e+00   LEGIT inward (F_in<0)
+
+=== closed domain: no extras (F_out >= 0 there) and crescent = symmetric difference ===
+   sampled closed-domain points: 16903 ; min F_out = 0.000953757 ; points with F_in<=0 and F_out<=0: 0
+   => mechanism condition implies R_c <= r on the closed domain (no extras).
+
+   certified cover: h* classes -> legit-inward 9, missed 0, degenerate 0
+
+wrote audit_product_identity.json

@@ -1,0 +1,78 @@
+{
+  "status": "exact_transport_and_stored_tree_provenance_checked",
+  "scope": "all round2..8 cut lists; leaf bound validity and complete root/clip geometry inherited",
+  "automorphisms": 4,
+  "faces": 16,
+  "owner_pairs": 10,
+  "runs": [
+    {
+      "audit": "q10-metric-round2-audit.json",
+      "closed_cases": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "transported_cuts": 16,
+      "sha256": "42d46b056be135f3e288dff96548227c36899dc2af2b87360d0a909700d3a46a"
+    },
+    {
+      "audit": "q10-metric-round3-audit.json",
+      "closed_cases": [
+        0,
+        1,
+        5
+      ],
+      "transported_cuts": 10,
+      "sha256": "35f477e56ecc07a8ddec68880488041517e70d6f3cfe5d2571e81c0f07a340ff"
+    },
+    {
+      "audit": "q10-metric-round4-audit.json",
+      "closed_cases": [
+        0,
+        1,
+        2
+      ],
+      "transported_cuts": 10,
+      "sha256": "a54489e216ff6df0b4382a8180e17bc50dfde7acae8c82b0ea02a46a2baf0b35"
+    },
+    {
+      "audit": "q10-metric-round5-audit.json",
+      "closed_cases": [
+        0,
+        2
+      ],
+      "transported_cuts": 6,
+      "sha256": "e61262a41d878fbf8973f2512e682179f19782db992ee635975cebc9bb2179f6"
+    },
+    {
+      "audit": "q10-metric-round6-audit.json",
+      "closed_cases": [
+        0,
+        1,
+        2
+      ],
+      "transported_cuts": 12,
+      "sha256": "3b2955f2542adff77af1f6c7f19057f4c2d06d77d6dd88682ca7da7017844ab6"
+    },
+    {
+      "audit": "q10-metric-round7-audit.json",
+      "closed_cases": [
+        0,
+        3
+      ],
+      "transported_cuts": 4,
+      "sha256": "adeaebd2b9634e46dadefa61fca7b8141d79c2f433694ea1ea2ca79ec9da52e5"
+    },
+    {
+      "audit": "q10-metric-round8-audit.json",
+      "closed_cases": [
+        0,
+        2
+      ],
+      "transported_cuts": 8,
+      "sha256": "e6783f57183507f017808ab430b5c705d172b58b7237d85ceda1ca0602230d28"
+    }
+  ]
+}

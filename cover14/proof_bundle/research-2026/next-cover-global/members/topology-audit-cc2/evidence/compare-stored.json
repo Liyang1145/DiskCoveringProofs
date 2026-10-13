@@ -1,0 +1,62 @@
+{
+ "n12_k9_m3": {
+  "name": "n12 graphs.json m=3 (51)",
+  "N": 9,
+  "m": 3,
+  "mine_n": 262,
+  "mine_classes": 51,
+  "theirs_n": 51,
+  "theirs_classes": 51,
+  "theirs_missing_from_mine": 0,
+  "mine_missing_from_theirs": 0,
+  "classes_equal": true
+ },
+ "stored_10/3": {
+  "name": "k-catalogue-n14 10/3",
+  "N": 10,
+  "m": 3,
+  "mine_n": 348,
+  "mine_classes": 68,
+  "theirs_n": 93,
+  "theirs_classes": 68,
+  "theirs_missing_from_mine": 0,
+  "mine_missing_from_theirs": 0,
+  "classes_equal": true
+ },
+ "corrected_10/3": {
+  "name": "k10-catalogue-corrected 10/3",
+  "N": 10,
+  "m": 3,
+  "mine_n": 348,
+  "mine_classes": 68,
+  "theirs_n": 68,
+  "theirs_classes": 68,
+  "theirs_missing_from_mine": 0,
+  "mine_missing_from_theirs": 0,
+  "classes_equal": true
+ },
+ "stored_10/4": {
+  "name": "k-catalogue-n14 10/4",
+  "N": 10,
+  "m": 4,
+  "mine_n": 21084,
+  "mine_classes": 932,
+  "theirs_n": 1442,
+  "theirs_classes": 932,
+  "theirs_missing_from_mine": 0,
+  "mine_missing_from_theirs": 0,
+  "classes_equal": true
+ },
+ "corrected_10/4": {
+  "name": "k10-catalogue-corrected 10/4",
+  "N": 10,
+  "m": 4,
+  "mine_n": 21084,
+  "mine_classes": 932,
+  "theirs_n": 932,
+  "theirs_classes": 932,
+  "theirs_missing_from_mine": 0,
+  "mine_missing_from_theirs": 0,
+  "classes_equal": true
+ }
+}

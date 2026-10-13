@@ -1,0 +1,57 @@
+{
+  "synthetic_repair_free_divergence_zero": true,
+  "volume_identity_holds": true,
+  "corner_set_is_0_to_8": true,
+  "corner_all_lb_above_19_50": true,
+  "corner_norm_le_one_all": true,
+  "corner_rows": [
+    [
+      0,
+      "proved-interval",
+      "2/5"
+    ],
+    [
+      1,
+      "proved-interval",
+      "2/5"
+    ],
+    [
+      2,
+      "proved-interval",
+      "2/5"
+    ],
+    [
+      3,
+      "proved-interval",
+      "1/4"
+    ],
+    [
+      4,
+      "proved-interval",
+      "7/20"
+    ],
+    [
+      5,
+      "proved-interval",
+      "2/5"
+    ],
+    [
+      6,
+      "proved-interval",
+      "2/5"
+    ],
+    [
+      7,
+      "proved-interval",
+      "7/20"
+    ],
+    [
+      8,
+      "proved-interval",
+      "1/4"
+    ]
+  ],
+  "worst_corner_lb": "0.3802826020366288775",
+  "scope": "C914 kernel arithmetic: forest repair, rational ceiling normalization, arc radial kappa, variance penalty 1/8, nine-vertex corner set identity, volume identity",
+  "repro": "py -3 -B -X utf8 c914_audit.py"
+}

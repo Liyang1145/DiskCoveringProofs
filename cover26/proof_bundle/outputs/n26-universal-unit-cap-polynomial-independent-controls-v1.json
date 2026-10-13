@@ -1,0 +1,43 @@
+{
+  "schema": "N26-independent-universal-unit-cap-polynomial-controls-v1",
+  "verified": false,
+  "certificate_sha256": "75b87ff228e6af2c1c7e299648a4288b412eabb795ef08ce19233618d1a6c72d",
+  "actual_universal_symbolic_result": {
+    "universal_polynomial_identities_exactly_checked": 8,
+    "ordered_real_hypotheses_and_both_sign_cases_explicitly_bound": true,
+    "identity_checks_are_symbolic_not_finite_point_sampling": true,
+    "Voronoi_irredundancy_arc_and_dual_bridge_still_requires_joint_geometry_acceptance": true,
+    "formal_machine_geometry_proof": false,
+    "new_geometric_payments": 0,
+    "global_lower_bound_proved": false,
+    "global_optimality_proved": false
+  },
+  "independent_geometry_coordinate_polynomial_identities_checked": 8,
+  "finite_exact_rational_regression_examples_only": 14,
+  "finite_examples_are_NOT_the_universal_identity_or_continuous_geometry_proof": true,
+  "actual_invalid_hypothesis_sign_case_coefficient_relation_scope_controls_rejected": [
+    "cap-radius-strict-hypothesis-omitted",
+    "cap-positive-threshold-weakened",
+    "cap-unit-disk-hypothesis-omitted",
+    "cap-one-sign-case-omitted",
+    "cap-whole-polynomial-identity-omitted",
+    "cap-exact-identity-coefficient-corrupted",
+    "cap-zero-circle-relation-corrupted",
+    "cap-bisector-equality-owner-substituted",
+    "cap-unknown-proof-field-added",
+    "cap-boolean-monomial-exponent",
+    "cap-duplicate-sparse-proof-term",
+    "cap-symbolic-certificate-replaced-by-samples",
+    "cap-algebra-promoted-to-global-geometry-proof"
+  ],
+  "written_ordered_real_and_Voronoi_bridge_proof_sha256": "4624d2a06f96dbeb0ccf55b905e4cf85176cc93b65a9763f553a3df8bc714c40",
+  "not_a_proof_assistant_formalization_or_final_unrestricted_joint_acceptance": true,
+  "frozen_native_geometry_flags_and_all_current_sources_UNMODIFIED": true,
+  "formal_machine_geometry_proof": false,
+  "new_geometric_payments": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "224b7586b7852264271f352bece5c7fdd3d56ac6847e20cac46b70e2ebf0651d",
+  "tested_universal_algebra_module_sha256": "7fcb45d704d5af03f74a2465adcdf0ebf4158f2aca4447bad512d3670f31e4fa"
+}

@@ -1,0 +1,7 @@
+{
+  "disk_completion": true,
+  "ridge_onbothcircles": true,
+  "center_separation_squared": "4r\u00b2cos\u00b2T",
+  "degeneracy": "T=pi/2 facecirclescoincide",
+  "scope": "exactalgebra"
+}

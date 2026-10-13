@@ -1,0 +1,241 @@
+{
+ "merge": {
+  "schema": "n12-merge-manifest/v1",
+  "plan": {
+   "path": "research-2026/n12-global/members/structure/parallel-domain/wave4fix-plan.json",
+   "sha256": "82777c96107b4c3a833b315ed193ed3fefb0f26023df489e28b9591d072ddecf",
+   "branches": 10
+  },
+  "source": {
+   "path": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\members\\structure\\parallel-domain\\wave4fix-base.json",
+   "sha256": "daec632f122cc528eaf05aa49b1841e53f58caef203c49fc18cd53fc04094526",
+   "resolved": "C:\\Users\\\u8881\u529b\u9633\\Desktop\\ai4math2\\research-2026\\n12-global\\members\\structure\\parallel-domain\\wave4fix-base.json"
+  },
+  "branches": [
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-0.json",
+    "sha256": "d9023eae695d692c4471859bce0cc1ecd232891f1cf95ea265f4d59662c5099f",
+    "id": 0,
+    "counts": {
+     "infeasible": 0,
+     "certified": 14,
+     "split": 13,
+     "processed": 27
+    },
+    "status": "branch complete",
+    "n_frontier": 14,
+    "n_atomic": 14,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 13
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-1.json",
+    "sha256": "229dbf5d9936054b74fbf8497bed15f95bc1697c4f2ed74d20a8821357531be2",
+    "id": 1,
+    "counts": {
+     "infeasible": 0,
+     "certified": 17,
+     "split": 16,
+     "processed": 33
+    },
+    "status": "branch complete",
+    "n_frontier": 17,
+    "n_atomic": 17,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 16
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-2.json",
+    "sha256": "6d9187368fe86403f340ad4e086d30d874e9990fd2b29ba557626f5f5f1f8cad",
+    "id": 2,
+    "counts": {
+     "infeasible": 0,
+     "certified": 16,
+     "split": 15,
+     "processed": 31
+    },
+    "status": "branch complete",
+    "n_frontier": 16,
+    "n_atomic": 16,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 15
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-3.json",
+    "sha256": "43663565f33f4a9bec392e3a32a8aa71f5805976b635a0f5988f74d907290902",
+    "id": 3,
+    "counts": {
+     "infeasible": 0,
+     "certified": 3,
+     "split": 2,
+     "processed": 5
+    },
+    "status": "branch complete",
+    "n_frontier": 3,
+    "n_atomic": 3,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 2
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-4.json",
+    "sha256": "e4a8e2ae2a50bf94bc631e3d6cdaaee0ce461b464c2652090f490112bda2191a",
+    "id": 4,
+    "counts": {
+     "infeasible": 0,
+     "certified": 1,
+     "split": 0,
+     "processed": 1
+    },
+    "status": "branch complete",
+    "n_frontier": 1,
+    "n_atomic": 1,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 0
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-5.json",
+    "sha256": "a24e4a14d458a8b838288f84a7585a1a14a1f3ff51845650ecd8d32d7b69b51e",
+    "id": 5,
+    "counts": {
+     "infeasible": 0,
+     "certified": 22,
+     "split": 21,
+     "processed": 43
+    },
+    "status": "branch complete",
+    "n_frontier": 22,
+    "n_atomic": 22,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 21
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-6.json",
+    "sha256": "37790ee9daf8e3b8d5dd1f1fd80f70daef463d1d855a3fd1c46618b50411bf25",
+    "id": 6,
+    "counts": {
+     "infeasible": 0,
+     "certified": 12,
+     "split": 11,
+     "processed": 23
+    },
+    "status": "branch complete",
+    "n_frontier": 12,
+    "n_atomic": 12,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 11
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-7.json",
+    "sha256": "2fda2fd574b7a18831f6e2cedae41911709cbefa2cd2a1d90d1514e9373f88e8",
+    "id": 7,
+    "counts": {
+     "infeasible": 0,
+     "certified": 2,
+     "split": 1,
+     "processed": 3
+    },
+    "status": "branch complete",
+    "n_frontier": 2,
+    "n_atomic": 2,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 1
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-8.json",
+    "sha256": "7353712bd8ef2269e1d1779160f5d7ef209458d18ff9e1bcdfc2dce99154ce98",
+    "id": 8,
+    "counts": {
+     "infeasible": 0,
+     "certified": 1,
+     "split": 0,
+     "processed": 1
+    },
+    "status": "branch complete",
+    "n_frontier": 1,
+    "n_atomic": 1,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 0
+   },
+   {
+    "path": "research-2026\\n12-global\\evidence\\wave4fix-domain\\branch-9.json",
+    "sha256": "60c76aa529aa4b37d555d2c4682492bd8666ebf346aeaa2bad0bd9397c67add7",
+    "id": 9,
+    "counts": {
+     "infeasible": 0,
+     "certified": 1,
+     "split": 0,
+     "processed": 1
+    },
+    "status": "branch complete",
+    "n_frontier": 1,
+    "n_atomic": 1,
+    "n_infeasible": 0,
+    "n_pending": 0,
+    "n_split": 0
+   }
+  ],
+  "replaced_pending": 10,
+  "final_pending": [],
+  "counts": {
+   "old": {
+    "processed": 13913,
+    "split": 6961,
+    "certified": 6634,
+    "infeasible": 318
+   },
+   "shard_splits": 0,
+   "shard_splits_derivation": "sum over source pendings of (roots-1) = branches - pendings = 10 - 10",
+   "per_pending_roots": {
+    "0": 1,
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 1,
+    "5": 1,
+    "6": 1,
+    "7": 1,
+    "8": 1,
+    "9": 1
+   },
+   "source_counts_check": true,
+   "source_counts_note": "ok",
+   "totals_check": true,
+   "totals_note": "ok",
+   "branches_sum": {
+    "processed": 168,
+    "split": 79,
+    "certified": 89,
+    "infeasible": 0,
+    "pending": 0
+   },
+   "totals": {
+    "processed": 14081,
+    "split": 7040,
+    "certified": 6723,
+    "infeasible": 318,
+    "pending": 0
+   }
+  },
+  "volume": {
+   "old_pending": "644645605882492716157335806734531194999246092148919848487945315948777057643422755984729/64000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "branch_roots": "644645605882492716157335806734531194999246092148919848487945315948777057643422755984729/64000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+   "equal": true
+  },
+  "status": "certified-full-domain",
+  "problems": []
+ },
+ "next_plan": {
+  "path": "research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-plan.json",
+  "sha256": "d7a2c27b767e3c7a5217aea9b04dfdb14702948276cfb3950c09a2de8590c964",
+  "branch_count": 0
+ }
+}

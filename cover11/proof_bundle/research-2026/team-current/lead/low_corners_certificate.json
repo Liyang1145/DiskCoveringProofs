@@ -1,0 +1,35 @@
+{
+  "scope": "bothlow normfacecorners andridge diagnostic; coincidentfacecircle separatelycoveredbystationaryarcs",
+  "count": 2839,
+  "live": 0,
+  "closed": {
+    "illegal": 74,
+    "value": 1348
+  },
+  "terminal": 28.10694872459886,
+  "seconds": 65.30988788604736,
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      0.6094608076372535,
+      1
+    ],
+    [
+      0.6094608076372535,
+      1
+    ]
+  ],
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "source_sha256": {
+    "certify_low_corners.py": "bbcfdeb8818d78a8c3c6b6d783bd17a301b5526e3fb60934e44e1e033283ab1f",
+    "low_corner_jet.py": "a91a5bf62eed86399a9d913c9bb3dd21d8f127339d18fc0e8547dce3c1f521c8",
+    "legal_cartesian_value.py": "235777c64cb83ffd6baff6e787b4d9dc44f95f6ed72b5ed5ec3f1b48b7ead72c",
+    "width_endpoint_jet.py": "62cc933c09c27505256fa6069298ade1d3bd59acea59801241147c168d91efb6",
+    "patch_smooth_jet.py": "0ea533809a58940014e0fd980d29c80747cb9e05a467936645817bb74b0b68d0",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358"
+  },
+  "topboxes": []
+}

@@ -1,0 +1,1066 @@
+{
+ "n_checked": 106,
+ "n_feasible": 0,
+ "rows": [
+  {
+   "k": 0,
+   "drop": [],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    0
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    1
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    2
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    3
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    4
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    5
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    6
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 1,
+   "drop": [
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    1
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    2
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    3
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    4
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    5
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    6
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    0,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    2
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    3
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    4
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    5
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    6
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    1,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    3
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    4
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    5
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    6
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    2,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    4
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    5
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    6
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    3,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    5
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    6
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    4,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    6
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    5,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    6,
+    7
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    6,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    6,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    6,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    6,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    6,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    6,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    7,
+    8
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    7,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    7,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    7,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    7,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    7,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    8,
+    9
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    8,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    8,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    8,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    8,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    9,
+    10
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    9,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    9,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    9,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    10,
+    11
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    10,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    10,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    11,
+    12
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    11,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  },
+  {
+   "k": 2,
+   "drop": [
+    12,
+    13
+   ],
+   "feasible": false,
+   "lam_min_1perp": null,
+   "support": 0
+  }
+ ],
+ "soft_kkt_violation_full14": 0.0,
+ "active_gaps": [
+  4,
+  9
+ ],
+ "slack_faces": [
+  [
+   4,
+   6,
+   13
+  ],
+  [
+   5,
+   7,
+   12
+  ]
+ ]
+}

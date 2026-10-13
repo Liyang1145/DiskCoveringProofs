@@ -1,0 +1,6 @@
+{
+  "exactclearingidentity": true,
+  "squaredidentity": true,
+  "degree": 8,
+  "scope": "fixedouter stationary necessary polynomial only, no rootcoveragecertificate"
+}

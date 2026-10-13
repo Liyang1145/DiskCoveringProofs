@@ -1,0 +1,24 @@
+{
+  "schema": "N26-signed-hull-arithmetic-controls-v1",
+  "arithmetic_controls_passed": true,
+  "exact_known_coordinate_minima_checked": 8,
+  "rational_coordinate_value_samples_checked": 8080,
+  "outside_target_reference_hull_formed_and_difference_gate_passed": true,
+  "exact_nonnegative_dual_sign_and_target_support_checked": true,
+  "rejection_controls_passed": [
+    "reversed-coordinate-domain",
+    "reversed-gradient-interval",
+    "reference-outside-necessary-difference-polytope",
+    "target-box-dimension-changed",
+    "negative-difference-multiplier",
+    "duplicate-difference-multiplier",
+    "nonpositive-dual-scale",
+    "self-difference-multiplier",
+    "out-of-range-difference-index",
+    "generic-kernel-relabelled-as-original-candidate"
+  ],
+  "arithmetic_only_not_a_geometry_or_current_source_replay": true,
+  "new_geometric_payments": 0,
+  "tested_signed_hull_module_sha256": "d8455a67918768c9e6c82262476ae58e5fd54e2b3b22013dc021f27ecebed748",
+  "executed_test_sha256": "5504f4db454890c3486f6fb52528a7e05dde823f73fb9d395e97c988d2c3543e"
+}

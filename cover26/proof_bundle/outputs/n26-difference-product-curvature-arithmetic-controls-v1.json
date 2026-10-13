@@ -1,0 +1,25 @@
+{
+  "schema": "N26-difference-product-Taylor-arithmetic-controls-v1",
+  "exact_nonzero_reference_product_constant_and_linear_expansion_checked": true,
+  "exact_rational_feasible_sample_identities_checked": 331,
+  "nonnegative_product_matrix_sign_and_commutative_pair_order_checked": true,
+  "invalid_arithmetic_controls_rejected": [
+    "negative-product-multiplier",
+    "reference-violates-necessary-slack",
+    "boolean-difference-index",
+    "self-difference-constraint",
+    "out-of-range-difference-index",
+    "missing-product-fields",
+    "duplicate-product",
+    "reversed-duplicate-product",
+    "empty-product-certificate",
+    "generic-model-relabelled-as-original-92-rods"
+  ],
+  "arithmetic_only_NOT_geometry_or_complete_latest_source_model_replay": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "tested_product_module_sha256": "b21295921a45d4cc66ebeafb4ef3e18cf6b8290c5eb85c2c93d7478501f66f29",
+  "executed_test_sha256": "67d053af50b7cc695e9e18f07f266aa617540c21336cef977ca9cfcaa5ac8535"
+}

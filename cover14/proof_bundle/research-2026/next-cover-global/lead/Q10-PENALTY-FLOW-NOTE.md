@@ -1,0 +1,3 @@
+# Unregistered secondary test
+
+q10_adaptive_penalty_interval.py currently tests Hessian of G=F+(3/2)sum_b s_b^2 where s_b=capcenter_b+capnormal_b.delta; the JSON scope string inherited F is incomplete: H/f0/gradient are of G, not F. NOT an accepted certificate or bridge. At eps5e-5 exactkernel rowbound .703014, at1e-4 inconclusive1.49676; no independent replay. If pursued, must subtractpenalty in finalTaylor inequality and use -q s-(3/2)s²>=0 for s<=0 sufficientlysmall; capscenter presently uses rationalmidpointL/pi so s<=0 itself notexact andrequiresroundoff allowance. Never apply F<=0 directly toG. Baseline3e-5 certificate unchanged and has independentFraction replay. This is a routeproposal only; do notregister itsHessian ascoverexclusion.

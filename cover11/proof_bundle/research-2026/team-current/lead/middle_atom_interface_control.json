@@ -1,0 +1,5 @@
+{
+  "calibration_points": 576,
+  "all_contained_with_1e-12_double_guard": true,
+  "scope": "different atom assembly vs intervalobjective; NOT continuumproof; randominputboxes only"
+}

@@ -1,0 +1,38 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_source_sha256": "d6e6e37879112bf19e4f9f95a2a628b248f959099915dd3187a9152fac86d27f",
+  "derived_source_sha256": "28f98c05c533f745cf05da78ac6a9af3c3d95a8141467f99c3a407f93166d932",
+  "source_sha256": "df324ee21aa314e119146ec48950df217b813f7ce7bf4591b1ced6945c0947ac",
+  "changes": [
+    [
+      "    ap.add_argument(\"--count\", type=int, default=5)",
+      "    ap.add_argument(\"--residual\", type=Path, required=True)\n    ap.add_argument(\"--exclude-selection\", type=Path, action=\"append\", default=[])\n    ap.add_argument(\"--count\", type=int, default=5)"
+    ],
+    [
+      "    selected = []",
+      "    residual_root = args.residual.resolve()\n    partition = read(residual_root / \"VERIFIED.json\")\n    assert partition[\"verified\"] and partition[\"all_complete_parent_rows_processed_once\"]\n    assert partition[\"schema\"] == \"complete-old-collar-independent-paid-partition-v1\"\n    assert partition[\"source_sha256\"] == sha(ROOT / \"filter_complete_collar_cached.py\")\n    unchanged(partition[\"files_relative_to_workspace\"])\n    assert (partition[\"N\"], partition[\"B\"]) == (source[\"N\"], source[\"B\"])\n    assert partition[\"parent_groups_sha256\"] == source[\"groups_sha256\"]\n    assert sha(residual_root / \"RESIDUAL.jsonl\") == partition[\"residual_sha256\"]\n    residual_ids, last = set(), -1\n    with (residual_root / \"RESIDUAL.jsonl\").open(encoding=\"ascii\") as stream:\n        header = json.loads(next(stream), object_pairs_hook=no_duplicate_keys)\n        assert header[\"source_catalog_sha256\"] == source[\"groups_sha256\"]\n        for line in stream:\n            row = json.loads(line, object_pairs_hook=no_duplicate_keys)\n            assert last < row[\"id\"] < partition[\"parent_weak_graphs\"]\n            last = row[\"id\"]\n            residual_ids.add(last)\n    assert len(residual_ids) == partition[\"residual_weak_graphs\"]\n    excluded_running = set()\n    excluded_selection_hashes = []\n    for path in args.exclude_selection:\n        selection = read(path)\n        assert selection[\"parent_complete_catalog_sha256\"] == source[\"groups_sha256\"]\n        excluded_running.update(selection[\"selected_parent_groups\"])\n        excluded_selection_hashes.append(sha(path))\n    selected = []"
+    ],
+    [
+      "            assert row[\"not_an_exclusion\"]",
+      "            assert row[\"not_an_exclusion\"]\n            if row[\"group\"] not in residual_ids or row[\"group\"] in excluded_running:\n                continue"
+    ],
+    [
+      "        \"selected_parent_groups\": [r[\"group\"] for r in selected],",
+      "        \"selected_parent_groups\": [r[\"group\"] for r in selected],\n        \"real_residual_report_sha256\": sha(residual_root / \"VERIFIED.json\"),\n        \"real_residual_sha256\": partition[\"residual_sha256\"],\n        \"excluded_running_selection_sha256\": excluded_selection_hashes,\n        \"selected_only_actual_unpaid_parents\": True,"
+    ],
+    [
+      "    assert sha(catalog / \"GROUPS.json\") == source[\"groups_sha256\"]",
+      "    assert sha(residual_root / \"RESIDUAL.jsonl\") == partition[\"residual_sha256\"]\n    assert [sha(path) for path in args.exclude_selection] == excluded_selection_hashes\n    assert sha(catalog / \"GROUPS.json\") == source[\"groups_sha256\"]"
+    ]
+  ],
+  "occurrence_counts": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "all_completion_proposal_exact_replay_and_closure_steps_unchanged": true,
+  "genuine_residual_intersection_and_running_selection_exclusion_only": true,
+  "global_optimality_proved": false
+}

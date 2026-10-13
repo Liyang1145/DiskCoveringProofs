@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "two_center_cone_identity_all_coefficients_checked": true,
+  "three_center_variance_identity_all_coefficients_checked": true,
+  "two_center_difference_factor": "s*(s-2)*|p-y|^2",
+  "nonpositive_for_s_in_closed_unit_interval": true,
+  "inequality_requires_nonnegative_normalized_center_weights": true,
+  "no_extra_disk_at_the_witness_used": true,
+  "candidate_geometry_sampling_not_used": true,
+  "source_sha256": "da408b36f1fdc38b8167a3b043896f43709e0b7d9105628e3deaac690dc8099b",
+  "polynomial_kernel_sha256": "75b3b382e34bfa4a1c8cf4172163d3979b38baf45e7c2e601363c0bc5ea74a24",
+  "written_lemma_sha256": "428282b07cfc23e8881a03adf851a42675188018975bb27b5dadad62b6480395",
+  "scope": "complete formal polynomial identities plus elementary sign argument"
+}

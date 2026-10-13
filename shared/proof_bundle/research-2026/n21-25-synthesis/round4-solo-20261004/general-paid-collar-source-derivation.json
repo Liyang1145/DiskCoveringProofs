@@ -1,0 +1,74 @@
+{
+  "verified_mechanical_derivation": true,
+  "files": [
+    {
+      "original": "proof_paid_hole_kernel.py",
+      "derived": "general_paid_collar_kernel.py",
+      "original_sha256": "dffc6f6d60571a86a5b2fc0d570028f36d017405a85a02ed8a209e120ca0454d",
+      "derived_sha256": "a6f199ae438d3611ed2c76d4a413b4e7046da61f05d92daef45697ee019c02f6",
+      "changes": [
+        {
+          "before": "proof-paid-simple-hole-branch-tree-v1",
+          "after": "proof-paid-general-collar-branch-tree-v1",
+          "occurrences": 1
+        },
+        {
+          "before": "def start_states(N, B, centers, outer):\n    assert N == 25 and B in (14, 15, 16, 17)\n    holes = simple_holes(centers, B, outer)\n    return [{\"faces\": list(outer), \"next\": centers,\n             \"pending\": [{\"boundary\": list(cycle), \"interior\": inside}\n                         for cycle, inside in zip(holes, allocation, strict=True)]}\n            for allocation in budgets(N-centers, len(holes))]\n\n\ndef children(state, N, B):\n    \"\"\"Exactly the frozen simple-hole deletion recursion, with all budgets.\"\"\"\n    faces, next_label, pending = state[\"faces\"], state[\"next\"], state[\"pending\"]\n    assert faces == sorted(set(faces))\n    assert all(0 < m < 1 << next_label and m.bit_count() == 3 for m in faces)\n    assert B <= next_label <= N\n    if not pending:\n        assert next_label == N and len(faces) == 2*N-B-2\n        validate_disk(N, B, faces)\n        return None\n    task, rest = pending[-1], pending[:-1]\n    boundary, inside = task[\"boundary\"], task[\"interior\"]\n    assert len(boundary) == len(set(boundary)) and all(B <= v < next_label for v in boundary)\n    size = len(boundary)\n    assert type(inside) is int and inside >= 0\n    if size == 2:\n        return [] if inside else [{\"faces\": faces, \"next\": next_label, \"pending\": rest}]\n    assert size >= 3 and size+inside <= N\n    adjacency = [set() for _ in range(N)]\n    for mask in faces:\n        triangle = bits(mask)\n        for v in triangle:\n            adjacency[v].update(set(triangle)-{v})\n    a, c = boundary[:2]\n    result = []\n    for k in range(2, size):\n        w = boundary[k]\n        if k > 2 and w in adjacency[c]:\n            continue\n        if k < size-1 and w in adjacency[a]:\n            continue\n        mask = (1 << a) | (1 << c) | (1 << w)\n        assert mask not in faces\n        newfaces = sorted(faces+[mask])\n        left, right = [w]+boundary[1:k], [a]+boundary[k:]\n        for left_inside in range(inside+1):\n            if len(left) == 2 and left_inside:\n                continue\n            if len(right) == 2 and inside-left_inside:\n                continue\n            result.append({\"faces\": newfaces, \"next\": next_label,\n                           \"pending\": rest+[{\"boundary\": right, \"interior\": inside-left_inside},\n                                            {\"boundary\": left, \"interior\": left_inside}]})\n    if inside:\n        assert next_label < N\n        mask = (1 << a) | (1 << c) | (1 << next_label)\n        assert mask not in faces\n        result.append({\"faces\": sorted(faces+[mask]), \"next\": next_label+1,\n                       \"pending\": rest+[{\"boundary\": [a, next_label]+boundary[1:], \"interior\": inside-1}]})\n    return result\n\n",
+          "after": "from general_collar_filling import start_states, children\n",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "original": "prove_paid_hole.py",
+      "derived": "prove_general_collar.py",
+      "original_sha256": "3d8213aef5a012849ba7fe32c3f045ab7f51c027b5da06d87a9565d6a4333a15",
+      "derived_sha256": "dc744d07234ba83adf51c33b9ebada20984dae79a00840d910d3960b3270b782",
+      "changes": [
+        {
+          "before": "proof-paid-simple-hole-branch-tree-v1",
+          "after": "proof-paid-general-collar-branch-tree-v1",
+          "occurrences": 1
+        },
+        {
+          "before": "proof_paid_hole_kernel",
+          "after": "general_paid_collar_kernel",
+          "occurrences": 2
+        }
+      ]
+    },
+    {
+      "original": "replay_paid_hole.py",
+      "derived": "replay_general_collar.py",
+      "original_sha256": "66d17899e8c83b639e17c8b10098f10b42caa04d31f0ccf554831cbd1d529937",
+      "derived_sha256": "caea47dd09b3c8a2ddd9d501f5013cea8d2f371adf29c67613459f94b6661bb4",
+      "changes": [
+        {
+          "before": "proof_paid_hole_kernel",
+          "after": "general_paid_collar_kernel",
+          "occurrences": 3
+        },
+        {
+          "before": "prove_paid_hole.py",
+          "after": "prove_general_collar.py",
+          "occurrences": 2
+        },
+        {
+          "before": "proof-paid-simple-hole-independent-replay-v1",
+          "after": "proof-paid-general-collar-independent-replay-v1",
+          "occurrences": 1
+        },
+        {
+          "before": "ROOT / \"SIMPLE-COLLAR-COMPLETION-SOURCE.md\",",
+          "after": "ROOT / \"SIMPLE-COLLAR-COMPLETION-SOURCE.md\", ROOT / \"general_collar_filling.py\",\n        ROOT / \"GENERAL-COLLAR-FILLING-SOURCE.md\", ROOT / \"general-paid-collar-source-derivation.json\",",
+          "occurrences": 1
+        }
+      ]
+    }
+  ],
+  "source_sha256": "c6997401d71bc55bdbaa6085fae26b720664a19ff421b9268365eee67e0b6c49",
+  "topology_provider_sha256": "27a0a86b7899595870b28c172facb86aceb2023f6e39dff1662363a7fd6fd367",
+  "all_exact_force_construction_and_acceptance_checks_preserved": true,
+  "new_domain_requires_general_collar_source_and_controls": true,
+  "global_optimality_proved": false
+}

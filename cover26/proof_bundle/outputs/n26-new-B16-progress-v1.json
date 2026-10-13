@@ -1,0 +1,41 @@
+{
+  "schema": "N26-new-threshold-adaptive-prefix-progress-v1",
+  "N": 26,
+  "B": 16,
+  "verified_partition_bookkeeping": true,
+  "completed_subtrees": 2,
+  "pending_subtrees": 73,
+  "closed_rooted_graphs": 0,
+  "closed_distinct_orbits": 0,
+  "limited_tasks_split_not_excluded": 5,
+  "forced_nodes_refined": 33,
+  "restricted_family_catalog_exhausted": false,
+  "N26_complete_catalog": false,
+  "global_optimality_proved": false,
+  "arbitrary_cover_reduction_accepted": false,
+  "latest_checkpoint": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-new-B16-batch-v1/checkpoint-00040.json",
+  "checkpoint_sha256": "e8a2157b8004b00a910142fe2a0ad1b0c7a4c6207fad3fc1cfb92d61e6fe7272",
+  "negative_controls_rejected": [
+    "omitted-event",
+    "duplicate-event",
+    "changed-angle-budget",
+    "false-global-completion",
+    "lost-pending-subtree"
+  ],
+  "frozen_inputs": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prepare_new_scope_frontiers.py": "aabf77d00387fd40043c311367444f782f068f58ea637fba8798dce681c1cec4",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_prefix_partition.py": "b4b5910832d964e76f801260ae7ecd0965153f4da1060c88b0bb626b5b2692b0",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_prefix_origin.py": "ec28797070f56bb905ec7db3ad88b164cc6758143f805ddfafc9faeeeab7e557",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-origin-v1/peel_prefix_origin.cpp": "a76a8ce6c0ee0ee0f513ae9eba086d5b6d1b6b3e39440ab0cac59ef5638620c9",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-origin-v1/peel_prefix_origin.linux": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-v1/CONSTANTS.json": "90fa7ff3e11c89953e832c0a97835b5c7256b0b84ffaba37155388d624bee248",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-v1/DEPENDENCIES.json": "ceea03c5378abf7e92ca8aaa16af429c5739035b8f7963ff3d87a9e2846f452a",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-v1/VERIFIED.json": "938c6440766c5f975e9b77381fbc837e8da04f143e4accb6d0fad12027cdf82a",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-origin-screen-controls-v1.json": "2d7082b969909d1208979b94355e2a29b051e42fb1b83e10449c7bbcb814cc4f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/run_new_scope_batch.py": "4c6259871019003929c6f8b893e6da1463882daa5723532de7514f0fbed4e4c9",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/run_prefix_batch.py": "c9b0c25b232b5ccbad423a6676c342ddc4d5e6c7eb7f875a22bdeddbf7616fa5",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-frontiers-v1/VERIFIED.json": "0f7441bd89de90937eadd5073f69070204bac90749e561c63494c83e61753b3f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-frontiers-v1/N26-B16-frontier.json": "a87cb6ed05e5d84a16d897c6948b49a0751e9fc76de88a87222ab592563f802c"
+  },
+  "scope": "Restricted combinatorial subtree catalogs only; nonempty survivors are not geometric exclusions."
+}

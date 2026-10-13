@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "schema": "N24-formal-mixed-parent-supplement-controls-v1",
+  "actual_mixed_whole_family_mathematics_freshly_replayed": true,
+  "negative_mixed_parent_controls_rejected": [
+    "N",
+    "B",
+    "base_report_sha256",
+    "duplicate-parent",
+    "unpaid-set-only",
+    "core-cannot-pay-other-parent",
+    "core-recast-as-strict",
+    "proof_sha256",
+    "exact_sha256",
+    "own_core_controls_sha256"
+  ],
+  "no_control_subset_mistaken_for_full_formal_parent_adoption": true,
+  "source_sha256": "fd9f1cb1d72551a6a9b064e7991d80642d22a4e49aaa1b822e93f78dbb03fd56",
+  "audit_source_sha256": "5697bcb1d08014c0c5fdfca3dc1c6325a1643491e437fad322f7a49978e0029c",
+  "actual_formal_parent_report_sha256": "a01b3402f1e868af1a0f10d4bc030bf892ebf9d7ba2553e9b1a33c51500ad0ad",
+  "positive_exact_report_sha256": "1674489719196e1ae4dc0f6068432932c8c328aa861268b025f1387ba5b74979",
+  "global_optimality_proved": false
+}

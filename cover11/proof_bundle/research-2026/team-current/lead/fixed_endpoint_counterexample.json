@@ -1,0 +1,12 @@
+{
+  "r": "3/8",
+  "q": "sqrt(55)/8",
+  "Rc_squared": "71/220 - 23*sqrt(55)/880",
+  "slack_squared": "-641/3520 + 23*sqrt(55)/880",
+  "area_determinant": "-165/512 + 165*sqrt(55)/2048",
+  "strict_slack_integer_control": [
+    465520,
+    410881
+  ],
+  "scope": "exact algebraic base example; strict inward nearby family follows uniform lens confinement and continuity, not sampling"
+}

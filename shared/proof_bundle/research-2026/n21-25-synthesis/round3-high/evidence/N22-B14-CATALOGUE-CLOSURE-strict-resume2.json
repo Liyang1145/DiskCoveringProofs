@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "N": 22,
+  "B": 14,
+  "catalog_types": 3080858,
+  "strict_exclusion_types": 3080857,
+  "attaining_core_types": 1,
+  "pending_catalog_indices": [],
+  "core_paid_catalog_indices": [
+    3080857
+  ],
+  "attaining_catalog_index": 3080857,
+  "attaining_group": 384769,
+  "all_nonattaining_recorded_types_excluded": true,
+  "attaining_type_core_lower_bound_replayed": true,
+  "radius_link_report_sha256": "f8c5248761fd98b0ef97951df71f8384897f5d8544b98c44d97057b8501e5f6d",
+  "hierarchy_audit_sha256": "ad1b94edfea2725571fc90883a82f8ff440df4f237b6bd1b40b4352e54024d3b",
+  "pending_indices_sha256": "6c77ab393eb13c409d1506f10f245ed737cd2ad5ad58e84cdbde16b9fdfdaee4",
+  "core_case_sha256": "41326e112596ff35429e3e5c28f7795f35e34214c88006885315f2271fd68c6c",
+  "full_force_replay_sha256": "11f4269557976b24b1dac79660cdca393493680b5dada92eb661fc6e324fab57",
+  "fresh_interfaces_sha256": "ca6528084b3ca1924930c99c5a5f6bc74d5843bf9d040d019fcd172efd9877bf",
+  "all_components_hash_bound": true,
+  "scope": "complete B14 recorded catalogue branch; not whole n22 theorem",
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "e1e978f444ef10ab0ebdda02271a43823781873b80f0efb9b53cb518c025231f"
+}

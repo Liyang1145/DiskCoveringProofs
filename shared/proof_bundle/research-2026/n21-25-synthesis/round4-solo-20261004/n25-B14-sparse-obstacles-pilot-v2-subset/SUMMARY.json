@@ -1,0 +1,123 @@
+{
+  "N": 25,
+  "B": 14,
+  "groups_sha256": "f58133990b6af51a555948935ee9dcb004481f69bf4b6f22d433559ccc72f9b6",
+  "outcomes": [
+    {
+      "group": 0,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 32,
+      "edges": 37,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14279840535388136531742011539108167/1000013114075904084533000000000000000",
+      "minimum_local_margin": null,
+      "members": 76,
+      "tree_sha256": "8f3595124a6c2433a17e77d7c8a855ba843a0d5780689af3d70c140b2b79ffbd"
+    },
+    {
+      "group": 1,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 33,
+      "edges": 37,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "7140585668941263064324269525853717/500003665073572293983000000000000000",
+      "minimum_local_margin": null,
+      "members": 13,
+      "tree_sha256": "4c350ec41241408597c9e165af26f250b67eef38a935adff1455d2d66916706f"
+    },
+    {
+      "group": 2,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 34,
+      "edges": 37,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2489783424266979693098816465640067/999998544955613942633000000000000000",
+      "minimum_local_margin": null,
+      "members": 3,
+      "tree_sha256": "fbaa9acc78871190b995f0d51ce203825a1be5af22e11c955a96da88fcb81aab"
+    },
+    {
+      "group": 3,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 33,
+      "edges": 37,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14282050619459991964808452999320001/1000011093018453808099000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "71b5ae6c48817aae92d6e70623e0b6610905a97f2b9bca8c9639d44aace451f3"
+    },
+    {
+      "group": 4,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2209689305194927952887794605402947/1000002443096779107753000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "bc9f90777508b4fe9d8bdc4b54074ce9f5608f51288d17fcf964624083127605"
+    },
+    {
+      "group": 5,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 34,
+      "edges": 37,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1925776988888776446290291606982557/1000000744843335569143000000000000000",
+      "minimum_local_margin": null,
+      "members": 5,
+      "tree_sha256": "c9c3211d8ba67b30821ab9f05e69afcfae67db7396790ace2b0d0e023764da7d"
+    },
+    {
+      "group": 6,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1749052410683223991102782636177407/250002223303016659293000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "166453731d54c30fc53c7ded3739f0ece4d85f0dd1b9ab0ed5c20f038b802897"
+    }
+  ],
+  "excluded_groups": 7,
+  "pending_groups": 0,
+  "catalog_members_excluded": 100,
+  "requested_groups_complete": true,
+  "global_optimality_proved": false,
+  "source_sha256": "fab073ec73783ae97d655e6bad6034181a5fe9931ae11b2e166001a813e03be6",
+  "parent_library_sha256": "2f19445f1e5439ffbff93b72351fcf1f181cff7accbc8715b8743e23bd079afc",
+  "parent_face_count": 2457,
+  "reduced_face_count": 302,
+  "deletion_proposals": 2457,
+  "global_face_minimality_not_claimed": true
+}

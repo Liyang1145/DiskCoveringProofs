@@ -1,0 +1,70 @@
+{
+  "schema": "N26-current-signed-hull-cover-guard-controls-v1",
+  "synthetic_metadata_controls_passed": true,
+  "metadata_rejection_controls": [
+    "acceptance-executor-relabelled-as-old-owned-checker",
+    "candidate-radius-scope-promoted-to-original-U",
+    "typed-resource-promoted-to-source-replay-cache",
+    "new-cover-authorized-to-replace-old-forest",
+    "own-sealed-executor-hash-forged",
+    "discovery-promoted-to-accepted-report",
+    "discovery-paid-whole-roots",
+    "arithmetic-regression-promoted-to-source-replay",
+    "arithmetic-test-executor-hash-forged"
+  ],
+  "actual_arithmetic_rejection_control_code_exercised": [
+    "duplicate-whole-root-payment",
+    "previously-paid-whole-root-reopened",
+    "whole-root-sharp-domain-clipped",
+    "first-closed-slab-omitted",
+    "hidden-additional-slab",
+    "shared-closed-cut-boundary-lost",
+    "central-LOCAL-remainder-clipped",
+    "positive-curvature-unsupported-by-exact-LDL",
+    "negative-difference-dual-multiplier",
+    "reference-outside-necessary-polytope",
+    "LOCAL-coordinate-allowance-expanded",
+    "discovery-arithmetic-result-substituted",
+    "latest-accepted-non-OPEN-history-reset"
+  ],
+  "arithmetic_root_covers_checked": 6,
+  "arithmetic_remaining_root_rows": 19,
+  "arithmetic_retained_history_entries": 0,
+  "signed_tiny_positive_controls": [
+    {
+      "source_OPEN_index": 37,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 41,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 45,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 48,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 44,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 40,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    }
+  ],
+  "fixed_resource_used_only_for_arithmetic_control_execution": true,
+  "complete_latest_source_model_and_history_gate_NOT_executed": true,
+  "this_test_is_NOT_standalone_geometry_acceptance": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "diagnosis_sha256": "9d0e8f3de7603dd5d40bd226045d9f4bab2117e659ec47a5e7f9f4fdbd133f11",
+  "tested_own_acceptance_executor_sha256": "195052aa9dbfd744af9c1223b3aad508c3506135acb47a8418febfff130a2ff2",
+  "executed_test_sha256": "3efd67505dac9d67a28bce7a3ee61ee391048555b2fbe07ce982ce4ae8fa14fa",
+  "fixture": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-signed-hull-cover-metadata-guard-fixture-v1"
+}

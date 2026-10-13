@@ -1,0 +1,62 @@
+{
+  "schema": "N26-independent-actual-distinct-full134rod-candidate-energy-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "6dcfd76e9e5b6504b69d87d45fbe5b882faa31e4e9dcc04cfbf5c81c04511acd",
+  "checked_old_leaf_forest_sha256": "56444a10c5822c08906b7bb9161e7412acff7e7162ee5bbba134ce744c401884",
+  "actual_NEW60ground_inverse_incidence_harmonic_Schur_identities_checked": 2,
+  "actual_NEW134rod_closed_leaf_results_independently_reconstructed": [
+    {
+      "old_OPEN_leaf_index": 1132,
+      "strategy": "full134-broader-log",
+      "strict_actual_old_closed_leaf_bound": false,
+      "strict_radius_margin": "-5222986955783354848752093201269784598037240446903403613638430193840720647330827157338123556389801/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "old_OPEN_leaf_index": 1132,
+      "strategy": "full134-positive-simplex",
+      "strict_actual_old_closed_leaf_bound": false,
+      "strict_radius_margin": "-20625193551033279014291131121892072918498177196770400061495377803269209833272719641423427471509119/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "independent_sine_square_feasible_corner_midpoint_checks": 6,
+  "known_feasible_tiny_NEW134rod_positive_controls_passed": 2,
+  "actual_NEW134rod_mode_rejection_controls_passed": [
+    "full134-old46inverse-schema-laundered",
+    "full134-old92positive-mode-laundered",
+    "full134-unknown-kernel-proof-field",
+    "full134-old92weight-table-substituted",
+    "full134-nonpositive-rod-weight",
+    "full134-boolean-weight-not-an-integer",
+    "full134-old46ground-dimension-substituted",
+    "full134-false-NEW60inverse-entry",
+    "full134-negative-inverse-denominator",
+    "full134-zero-NEWweight-scale",
+    "full134-zero-Taylor-strips",
+    "full134-boolean-Taylor-strips",
+    "full134-old-constant-certificate-mode",
+    "full134-unknown-leaf-proof-field",
+    "full134-nonpositive-corrected-LDL",
+    "full134-infeasible-reference",
+    "full134-negative-difference-dual",
+    "full134-duplicate-difference-dual",
+    "full134-forged-exact-radius-margin",
+    "full134-rounding-allowance-omitted"
+  ],
+  "old92rod_flags_inverse_weights_and_LOCAL_model_NOT_forged_or_modified": true,
+  "old_forest_and_latest_running_histories_NOT_reset": true,
+  "successful_old_leaf_NEEDS_fresh_actual_newest_OPEN_descendant_reconstruction_before_reuse": true,
+  "whole_actual_root_cover_NOT_proved": true,
+  "arithmetic_only_NOT_complete_latest_model_source_history_or_geometry_acceptance": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "tested_NEW_full134rod_module_sha256": "775c227e96f2900a25dceead401f42718094af0aa4c929bfe356dc729f100323",
+  "executed_test_sha256": "eadf5853ccd6ab686763ef9a94416d578b2436aed419f9a56a58f0cf691ca169"
+}

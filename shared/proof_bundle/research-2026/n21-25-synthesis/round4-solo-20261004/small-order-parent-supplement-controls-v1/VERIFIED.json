@@ -1,0 +1,20 @@
+{
+  "verified": true,
+  "schema": "small-order-formal-parent-whole-family-supplement-controls-v1",
+  "real_whole_family_positive_freshly_replayed": true,
+  "refusals": [
+    "N",
+    "B",
+    "actual_source_parent_index",
+    "centers",
+    "faces",
+    "status",
+    "not_an_exclusion",
+    "modified-complete-family-proof"
+  ],
+  "control_graph_not_mistaken_for_finished_formal_full_parent": true,
+  "source_sha256": "a3c0d9a7c7423cdd2c631225629dcf434472277ed5096ddb7bb5f240a49ef9ea",
+  "audit_source_sha256": "545789dd0f91a91e7ad6fbfd8331abe2733476cc9eace43291800762fcec5612",
+  "positive_exact_report_sha256": "2ec42176d16cda94000923875d117906c1bfa9e0d53182e4a92f0ca959c32af4",
+  "global_optimality_proved": false
+}

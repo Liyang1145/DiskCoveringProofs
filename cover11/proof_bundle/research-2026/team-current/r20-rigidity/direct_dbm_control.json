@@ -1,0 +1,12 @@
+{
+  "retraction": "earlier \"transposed interval\" finding withdrawn: line 32 correctly encloses t_i - t_6 (what theta_i - theta_6 needs); no code error",
+  "singleton_containment_all_indices": true,
+  "q2_true_dummy_roots": "111266769757919/12985932960000",
+  "q2_interval_from_code_tt": [
+    "111266769757919/12985932960000",
+    "111266769757919/12985932960000"
+  ],
+  "q2_contains_true": true,
+  "scope": "containment controls for the direct-DBM patch; code correct as written",
+  "repro": "py -3 -B -X utf8 direct_dbm_control.py"
+}

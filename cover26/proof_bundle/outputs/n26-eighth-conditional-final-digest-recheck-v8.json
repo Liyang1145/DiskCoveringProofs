@@ -1,0 +1,30 @@
+{
+  "schema": "N26-independent-final-current-inventory-rehash-v1",
+  "all_current_file_digests_rehashed": true,
+  "current_file_digests_rechecked": 79530,
+  "current_audit_sha256": "cfa828c0519df8d523d843d8749007f04d48a4fe7d1788b528e6b359e19daee4",
+  "stage_actual_published_replay_exactly_matches_acceptance": true,
+  "catalogue_actual_published_replay_exactly_matches_acceptance": true,
+  "Rstar_conditional_frontier_pending_subtrees": 5828,
+  "new_stage_event_counts": {
+    "split": 3619,
+    "force": 78,
+    "force_tree": 33,
+    "area": 175,
+    "empty": 893,
+    "terminal": 2
+  },
+  "retained_closed_full_type_codes": 87,
+  "retained_checked_proof_receipts": 215,
+  "candidate_angle_unresolved_closed_boxes": 37,
+  "radius_scope": "at-most-same-root-Rstar-not-original-U",
+  "r_strict_interval": [
+    "0.234700090400448239616790133776692127560495963654971391785924",
+    "0.234700090400448239616790133776692127560495963654971391785925"
+  ],
+  "full_catalog_complete": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_checker_sha256": "338834bd6b1694bacc33e052b095986aaf061a7a5d6098fab09f5fd92453b5ff"
+}

@@ -1,0 +1,16 @@
+{
+  "scheduler_completed": true,
+  "schema": "complete-parent-pending-filling-jobs-v1",
+  "N": 25,
+  "B": 15,
+  "snapshot_sha256": "d0460b8ce550e60c3712b7a95e0b14ddd846e00f17b6c5b63827fe5e62d5c110",
+  "processed_graphs": 23196,
+  "counts": {
+    "strict-complete-filling-family": 23181,
+    "pending": 15
+  },
+  "completed_batches_sha256": "ab0b40949d85186c35770fe23c660fe18963a261df7dd8e9373ba0820c3132be",
+  "source_sha256": "b124007c23d56d9a7f1b42d43dcf92c1958c282d61608ff549d6dde03f4cdd20",
+  "individual_replays_not_a_fresh_full_parent_payment_merge": true,
+  "global_optimality_proved": false
+}

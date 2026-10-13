@@ -1,0 +1,28 @@
+=== ACUTENESS (fresh interval kernel, dps=50) ===
+   faces: 11 ; strictly acute with positive margin: 11 ; worst vertex-angle dot lower bound = 0.0752477797148
+   faces acute: 11/11 (the 9 active faces are a subset of these 11, so they are acute too)
+   per-face (face, acute, margin):
+     [2, 9, 10]     True  0.0752477797148
+     [6, 9, 10]     True  0.0752477797148
+     [0, 1, 10]     True  0.139637891068
+     [1, 2, 10]     True  0.0789703711624
+     [2, 3, 9]      True  0.121252049523
+     [3, 4, 9]      True  0.171434033564
+     [4, 5, 9]      True  0.171434033564
+     [5, 6, 9]      True  0.121252049523
+     [6, 7, 10]     True  0.0789703711624
+     [7, 8, 10]     True  0.139637891068
+     [8, 0, 10]     True  0.178049060035
+=== TIE TANGENTIAL SLOPES (criteria from RAW iv; nstr fields = diagnostic only) ===
+   ties with [two-sided decidable AND opposite signs AND both |slope| >= 0.51]: 9/9
+     tie 0 sites [0, 1] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.785216925834/0.670173823147 ok=True
+     tie 1 sites [1, 2] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.670173830882/0.511187305942 ok=True
+     tie 2 sites [2, 3] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.511187308965/0.844644520423 ok=True
+     tie 3 sites [3, 4] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.844644531885/0.889136680253 ok=True
+     tie 4 sites [4, 5] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.889136690901/0.844644542851 ok=True
+     tie 5 sites [5, 6] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.844644531411/0.511187318584 ok=True
+     tie 6 sites [6, 7] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.511187314904/0.670173840315 ok=True
+     tie 7 sites [7, 8] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.670173832309/0.785216935806 ok=True
+     tie 8 sites [8, 0] decidable=[True, True] neg=[False, True] pos=[True, False] opposite=True |.|>=0.785216931201/0.785216931201 ok=True
+[done] -> out/fresh_acute_slopes_interval.json
+LEAD raw endpoint tests: acute>.07 and 9 slopes>.51

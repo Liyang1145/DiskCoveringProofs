@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "tests": [
+    "negative_force_multiplier",
+    "zero_force_denominator",
+    "unresolved_tree",
+    "duplicate_children",
+    "whole_domain_mislabeled_local",
+    "wrong_constants_binding",
+    "corrupted_root_coordinate",
+    "optimized_python_rejected"
+  ],
+  "count": 8,
+  "global_optimality_proved": false
+}

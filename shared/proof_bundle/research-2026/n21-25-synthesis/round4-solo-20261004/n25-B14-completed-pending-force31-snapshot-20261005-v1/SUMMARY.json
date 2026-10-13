@@ -1,0 +1,54 @@
+{
+  "verified": true,
+  "selected_completed_pending_families": 7,
+  "strictly_paid_after_refinement": 7,
+  "still_unpaid": 0,
+  "results": [
+    {
+      "parent_group": 72262,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "1013e378df253db8ecea171826151be7e175b6769ddfdf8f4bbdd5f037d320c1",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 84339,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "0ca92dc54873e3e9e075f28e5c4780ad2998804b7da721b1b8ebcaf87461edee",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 85213,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "86946f4285e75f6e1a690e8d959d72cd9c67832705a238cde62488b10c0b6c98",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 85337,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "684e7fd5802d557d62e08ae6da5ed7e436a2a49914d750bc48b86d9b73f1f355",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 86210,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "68c0ef7a09875e79c9da36669fea6d2fbb72b55003b93e297e82d239a5c568c5",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 101864,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "6fc98a4b27bf6263dec1945dc4b3a80666b336821335223c99307a3e5971ff4d",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 114369,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "9eb709e7ef4a85c8693cce5b3278fd91ffa1842f87f42143fd2a32c5a99a5a27",
+      "remaining_complete_leaves": 0
+    }
+  ],
+  "source_sha256": "f04340f5d4d5e5b83a73e11bc84b629cb33256df035da403f912b87b225d5818",
+  "snapshot_sha256": "b08d7be5f20b2f1e59dec453bea1727f1686993a7cc3de70cd5dd08fa6a1c12a",
+  "all_other_parent_rows_not_paid_here": true,
+  "global_optimality_proved": false
+}

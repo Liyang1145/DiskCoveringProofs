@@ -1,0 +1,20 @@
+{
+  "verified": true,
+  "schema": "discovery-graph-exact-replay-v1",
+  "snapshot_sha256": "025c5d7c1e2df58e6e308fa1dcb4065d2f81b342c205c544385c84481ac1f154",
+  "receipt_sha256": "cd722af7f5d3c8fdd38b41727d272a91055b55ba4ec49433447c8dd338bf5b3d",
+  "constants_sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+  "exact_checker_sha256": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9",
+  "force_kernel_sha256": "f0fd44362eaede709ec91fe1492073d51ea34757d879089fead8bfe853f614b6",
+  "source_sha256": "0db92888f950b82834ad597f40be6923484d59ce98c5b06bb13d7c6ac18af640",
+  "totals": {
+    "excluded": 32
+  },
+  "node_counts": {
+    "DUAL": 202,
+    "SPLIT": 170
+  },
+  "no_optimizer_imported": true,
+  "complete_family_coverage": false,
+  "global_optimality_proved": false
+}

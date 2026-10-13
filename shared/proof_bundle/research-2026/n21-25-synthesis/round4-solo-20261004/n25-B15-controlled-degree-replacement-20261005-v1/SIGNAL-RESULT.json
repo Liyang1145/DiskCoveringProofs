@@ -1,0 +1,8 @@
+{
+  "exact_owned_native_SIGTERM_sent": true,
+  "signal_command_exit_code": 0,
+  "linux_native_pid": 556,
+  "actual_old_process_terminal_still_must_be_collected": true,
+  "all_old_files_preserved": true,
+  "global_optimality_proved": false
+}

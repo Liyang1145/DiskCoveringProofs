@@ -1,0 +1,20 @@
+[
+  {
+    "start": 0,
+    "span": 2,
+    "formal_atoms": 200,
+    "exact_identity": true
+  },
+  {
+    "start": 0,
+    "span": 3,
+    "formal_atoms": 200,
+    "exact_identity": true
+  },
+  {
+    "start": 0,
+    "span": 4,
+    "formal_atoms": 200,
+    "exact_identity": true
+  }
+]

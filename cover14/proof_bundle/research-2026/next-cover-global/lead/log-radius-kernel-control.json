@@ -1,0 +1,9 @@
+{
+  "status": "numeric_fixed_candidate_kernel_calibration",
+  "gradient_residual": 1.3322676295501878e-15,
+  "finite_difference_error": 4.1187053767544057e-10,
+  "eigenvalue_min": 0.3644787032565027,
+  "eigenvalue_max": 7.16458306380764,
+  "condition_number": 19.65706912309098,
+  "dimension": 16
+}

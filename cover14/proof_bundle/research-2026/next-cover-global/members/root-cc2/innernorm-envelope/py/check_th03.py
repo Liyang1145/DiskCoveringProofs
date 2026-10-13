@@ -1,0 +1,22 @@
+import mpmath as mp
+mp.mp.dps=30
+r=mp.mpf("0.33173203427623414"); s=mp.sqrt(1-r*r); u=mp.asin(r)
+h=mp.mpf("0.15"); th=2*h; H=mp.cos(h); v=mp.sin(h)
+D=mp.sqrt(r*r-v*v); d=D; b=mp.mpf(0)
+c=(H-d,b); xp=(H,v); xm=(H,-v)
+print("theta=%s  H=%s v=%s D=%s" % (th, mp.nstr(H,12), mp.nstr(v,12), mp.nstr(D,12)))
+print("c =(%s, %s)" % (mp.nstr(c[0],12), mp.nstr(c[1],12)))
+unn=(xp[0]-c[0], xp[1]-c[1]); wwn=(xm[0]-c[0], xm[1]-c[1])
+print("|c-x+|=|c-x-|=%s (r=%s)" % (mp.nstr(mp.sqrt(unn[0]**2+unn[1]**2),12), mp.nstr(r,12)))
+alpha=mp.atan2(unn[0]*wwn[1]-unn[1]*wwn[0], unn[0]*wwn[0]+unn[1]*wwn[1])
+print("alpha = %s" % mp.nstr(alpha,12))
+print("|c| = %s ; s = %s" % (mp.nstr(mp.sqrt(c[0]**2+c[1]**2),12), mp.nstr(s,12)))
+# A-branch check: is there T with T <= theta, angle(alpha)=alpha, |cT|=s, |cT-x+|=r?
+print()
+print("A-branch inversion: solve (for alpha) the branch-2 formula a_r(alpha)=A(alpha)")
+print("  a_r(%.6f) = %s" % (alpha, mp.nstr(alpha-mp.acos(s*mp.cos(alpha))+u,12)))
+print("  B-branch: b_r(%.6f) = %s" % (alpha, mp.nstr(2*mp.asin(r*mp.sin(alpha/2)),12)))
+print("  theta = %s" % mp.nstr(th,12))
+print()
+print("so at this configuration: theta=%.6f, A(alpha)=%.6f, B(alpha)=%.6f" % (th, alpha-mp.acos(s*mp.cos(alpha))+u, 2*mp.asin(r*mp.sin(alpha/2))))
+print("theta <= min(A,B)?", th <= min(alpha-mp.acos(s*mp.cos(alpha))+u, 2*mp.asin(r*mp.sin(alpha/2))))

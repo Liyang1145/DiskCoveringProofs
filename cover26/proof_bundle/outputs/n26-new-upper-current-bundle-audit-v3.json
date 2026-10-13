@@ -1,0 +1,43 @@
+{
+  "schema": "N26-new-upper-current-bundle-audit-v1",
+  "current_bound_bytes_rechecked": true,
+  "closed_unit_disk_upper_replayed": true,
+  "rational_radius_upper": "234701/1000000",
+  "external_n8_dependency_explicit": true,
+  "new_family_frontiers_independently_reconstructed": [
+    {
+      "B": 14,
+      "I": 12,
+      "frontier_nodes": 2
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "frontier_nodes": 26
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "frontier_nodes": 70
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "frontier_nodes": 180
+    }
+  ],
+  "full_catalog_complete": false,
+  "global_optimality_proved": false,
+  "files": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_new_upper_bundle.py": "de1c7066ec1d604a544dac2aea9410db1c213143260d28464363bfb191979448",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-STATUS.md": "cb28259610f0be293361a7be0dee373b147c7d7e0239f6a1ef3b73a2710c0040",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-upper-and-scope-20261009.md": "008b67b7e93353c607798d803edf906f135be4dad69f340d33eca38d62772ca8",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-rational-upper-v1/geometry.json": "a5badd7d0f0217ab6594f8231cf7b0951b1489105c420a9b3defbe6f24632735",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-rational-upper-v1/cover-certificate.json": "cf59d11ca971cf16d37da69f4208355f149b55cb9deb77d30e652c33f70beece",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-rational-upper-v1/VERIFIED.json": "f083159efcf6032800cd561f81b696f20107334c21d09cb5c09407f312ec749e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-v1/CONSTANTS.json": "90fa7ff3e11c89953e832c0a97835b5c7256b0b84ffaba37155388d624bee248",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-v1/DEPENDENCIES.json": "ceea03c5378abf7e92ca8aaa16af429c5739035b8f7963ff3d87a9e2846f452a",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-v1/VERIFIED.json": "938c6440766c5f975e9b77381fbc837e8da04f143e4accb6d0fad12027cdf82a",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-frontiers-v1/VERIFIED.json": "0f7441bd89de90937eadd5073f69070204bac90749e561c63494c83e61753b3f"
+  }
+}

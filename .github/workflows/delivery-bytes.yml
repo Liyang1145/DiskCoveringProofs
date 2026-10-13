@@ -1,0 +1,19 @@
+name: Delivery bytes, not mathematical proof
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check for credential-shaped text
+        run: python tools/scan_sensitive.py
+      - name: Check rejection controls without modifying evidence
+        run: python tools/test_delivery_checks.py
+      - name: Check exact delivered bytes and lossless large files
+        run: python -O tools/verify_delivery.py

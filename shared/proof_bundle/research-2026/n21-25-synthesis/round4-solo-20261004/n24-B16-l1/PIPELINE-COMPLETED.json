@@ -1,0 +1,6 @@
+{
+  "actual_all_proof_children_and_independent_audit_terminals_observed": true,
+  "report_sha256": "e0088e7fd1e1389d7a46715b7801cc240379c38fe39024743e74d121e04a6590",
+  "source_sha256": "bb775e716915201852d0582643303df9b06c7be219d2eb5f529dbcd34b393fee",
+  "global_optimality_proved": false
+}

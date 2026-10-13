@@ -1,0 +1,61 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_matcher_sha256": "bbc19a7b25785d5c619773a0f53156beca06cf4774a0666fc5b179d52ef496c1",
+  "derived_matcher_sha256": "fd2a1aef8d4030a4281996d071767980337caace8476b76e64146c28d808ca89",
+  "identifier_renames": {
+    "SparsePattern": "CompletionPattern",
+    "SparseVariant": "CompletionVariant",
+    "already_sparse_paid": "already_completion_paid",
+    "contained_sparse": "contained_completion",
+    "load_sparse_obstacles": "load_completion_obstacles",
+    "sparse": "completion",
+    "sparse_cache": "completion_cache",
+    "sparse_counts": "completion_counts",
+    "sparse_min_faces": "completion_min_faces",
+    "sparse_pattern": "completion_pattern",
+    "sparse_patterns": "completion_patterns",
+    "sparse_patterns_loaded": "completion_patterns_loaded",
+    "sparse_payments": "completion_payments",
+    "sparse_proof_prunes": "completion_proof_prunes",
+    "sparse_prunes": "completion_prunes",
+    "sparse_queries": "completion_queries",
+    "sparse_samples": "completion_samples",
+    "sparse_variants": "completion_variants",
+    "verify_sparse_injection": "verify_completion_injection",
+    "write_sparse_summary": "write_completion_summary"
+  },
+  "explicit_changes": [
+    [
+      "\"strict-completion-outer-obstacle-library-v1\"",
+      "\"paid-simple-collar-completion-library-v1\""
+    ],
+    [
+      "if(path==\"-\")return;\n",
+      "if(path==\"-\")return;\n if(n!=25)throw runtime_error(\"completion theorem requires exactly N25\");\n"
+    ],
+    [
+      "int id,K,shift,sign;",
+      "int id,K,shift,sign,F;"
+    ],
+    [
+      "v.id=pattern.id;v.K=K;v.shift=shift;v.sign=sign;",
+      "v.id=pattern.id;v.K=K;v.shift=shift;v.sign=sign;v.F=pattern.faces.size();"
+    ],
+    [
+      "(used|((uint32_t(1)<<B)-1))!=(uint32_t(1)<<N)-1",
+      "used!=(uint32_t(1)<<N)-1"
+    ],
+    [
+      "if(K>pop(used_inside))continue;",
+      "if(K!=pop(used_inside)||(int)raw.size()!=variant.F)continue;"
+    ],
+    [
+      "if((int)match.centers.size()!=pattern.centers||(int)match.anchors.size()!=b)",
+      "if(raw.size()!=pattern.faces.size()||(int)match.centers.size()!=pattern.centers||(int)match.anchors.size()!=b)"
+    ]
+  ],
+  "exact_N25_and_equal_outer_face_cardinality_required": true,
+  "all_successful_center_anchor_face_injections_still_rechecked": true,
+  "source_sha256": "b6beb99a63829786c0d558c46219822116761671b153372d6f1ce692360d84c1",
+  "global_optimality_proved": false
+}

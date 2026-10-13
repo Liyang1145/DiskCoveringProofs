@@ -1,0 +1,203 @@
+{
+  "status": "sourcebound_configured_exterior_audit",
+  "domain_sha256": "10db11b4c538568f72187d81caec7bc5de2dc85711c7479e43a16081234e7bc3",
+  "results": [
+    {
+      "case": [
+        [
+          0
+        ],
+        "1/64",
+        -1
+      ],
+      "source_sha256": "570795fdd3df98522242c50dbe7c9788c1f0c71221eb59ef5b7131b2cd859261",
+      "nodes": 1,
+      "excluded_leaves": [
+        {
+          "node": 0,
+          "lower_exact": "331732892339390366594691566279432178261470881/1000000000000000000000000000000000000000000000"
+        }
+      ],
+      "open_cells": []
+    },
+    {
+      "case": [
+        [
+          0,
+          1
+        ],
+        "33/128",
+        1
+      ],
+      "source_sha256": "33dc8e0ca0ac6403fa9f7fdca71b99a8fd9c18486570bdf66437d4d8bd35a9f1",
+      "nodes": 3,
+      "excluded_leaves": [
+        {
+          "node": 2,
+          "lower_exact": "165866070277622011918367678886266836889413043/500000000000000000000000000000000000000000000"
+        },
+        {
+          "node": 1,
+          "lower_exact": "82933078907044960616276730783823997249026891/250000000000000000000000000000000000000000000"
+        }
+      ],
+      "open_cells": []
+    },
+    {
+      "case": [
+        [
+          0,
+          1
+        ],
+        "31/128",
+        -1
+      ],
+      "source_sha256": "283acd731e9d30e456e08e242f7d193641669ec716e680d142385b7285eb6ee7",
+      "nodes": 5,
+      "excluded_leaves": [
+        {
+          "node": 4,
+          "lower_exact": "82933057189244775000994463269377738414499113/250000000000000000000000000000000000000000000"
+        },
+        {
+          "node": 3,
+          "lower_exact": "82933094467458147641802801237955081769439883/250000000000000000000000000000000000000000000"
+        },
+        {
+          "node": 1,
+          "lower_exact": "331734644009382872287250354750289569479331891/1000000000000000000000000000000000000000000000"
+        }
+      ],
+      "open_cells": []
+    },
+    {
+      "case": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "63/128",
+        -1
+      ],
+      "source_sha256": "66afec002eee3ef75693db97ae47d2fdcf9681bba84683fd1dafe7ac7f32c7c0",
+      "nodes": 7,
+      "excluded_leaves": [
+        {
+          "node": 4,
+          "lower_exact": "82933130157688806287665173690763056528816887/250000000000000000000000000000000000000000000"
+        },
+        {
+          "node": 3,
+          "lower_exact": "331732577065721842273614473833764379826248207/1000000000000000000000000000000000000000000000"
+        }
+      ],
+      "open_cells": [
+        {
+          "node": 6,
+          "vertices": 512
+        },
+        {
+          "node": 5,
+          "vertices": 448
+        }
+      ]
+    }
+  ],
+  "cuts": [
+    {
+      "indices": [
+        0
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/64"
+    },
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "sense": "greater",
+      "fraction_of_total": "31/128"
+    },
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "sense": "less",
+      "fraction_of_total": "33/128"
+    },
+    {
+      "indices": [
+        3,
+        4
+      ],
+      "sense": "greater",
+      "fraction_of_total": "31/128"
+    },
+    {
+      "indices": [
+        3,
+        4
+      ],
+      "sense": "less",
+      "fraction_of_total": "33/128"
+    },
+    {
+      "indices": [
+        4
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/64"
+    },
+    {
+      "indices": [
+        5
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/64"
+    },
+    {
+      "indices": [
+        5,
+        6
+      ],
+      "sense": "greater",
+      "fraction_of_total": "31/128"
+    },
+    {
+      "indices": [
+        5,
+        6
+      ],
+      "sense": "less",
+      "fraction_of_total": "33/128"
+    },
+    {
+      "indices": [
+        8,
+        9
+      ],
+      "sense": "greater",
+      "fraction_of_total": "31/128"
+    },
+    {
+      "indices": [
+        8,
+        9
+      ],
+      "sense": "less",
+      "fraction_of_total": "33/128"
+    },
+    {
+      "indices": [
+        9
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/64"
+    }
+  ]
+}

@@ -1,0 +1,224 @@
+{
+  "verified": true,
+  "schema": "eight-rod-collar-controls-v1",
+  "source_sha256": "b3d5023d5716cb49acbf925bbff6fccde3325bf8dad1c373c0fbc42dc5350c10",
+  "native_source_sha256": "31df43f9ad8d4d6aa04538c787aee096e992bc1d3116793e0cd2c6eae22a6d26",
+  "native_binary_sha256": "0562cda8e823ea68a3d1554f863f041c8e87334284f7fd13574d9ab0471be1b4",
+  "native_angle_source_sha256": "f3967185aa9ae2a81d0688971e697f7b0c2138da3c3ddc8d55e8bbb6e8198ab2",
+  "independent_cycle_checker_sha256": "99e6edb29d46a6f2b01dee8d6f47eff82d23a65d0f9fb5494bec1487c93b2141",
+  "cap_report_sha256": "93fe9a03e6165bca26ccd3b565512b51cbbca32a586f360002d6e0c6d700a975",
+  "derivation_sha256": "9e12392c3d932e4f86110c2c0e3a2c5dbe6cb954ac517848783eeb3d9ffec761",
+  "native_probe_source_sha256": "7d6a60a5e06af61389b3cb1a68a933595086adac35b53c1810da70d19669977b",
+  "native_probe_binary_sha256": "ed59a8a243cb8cfd933df2659c06083305460dfb558db8ca97829529e1b48c59",
+  "probe_derivation_sha256": "e314ca12682dae7c16f720025eef5298bec95c10c5539603d6044281d7612d90",
+  "requests": 361,
+  "native_results_agree_with_independent_exact_cycles": true,
+  "exact_cycle_exclusions": 228,
+  "additional_exclusions_beyond_old_angles": 148,
+  "all_four_exact_attaining_controls_retained": true,
+  "no_screen_complete_controls": [
+    {
+      "N": 3,
+      "B": 3,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "ede68d0334e43e6410b577a26570cedfd171f90401af899cd40a369924be9fd9",
+      "new_sha256": "568f05324557192f2d6714ac9baabf78975c82f5e36828f3b6d58ae0ebe9ea44"
+    },
+    {
+      "N": 3,
+      "B": 3,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "e69cf13dd3b3ec8af1b0c47942d0b6be7eb12d92946f71486fd720960ad0f29e",
+      "new_sha256": "8447220370a61986e1eea27ea43e1c117ee82ee52172467cdea3f1c4cfa171aa"
+    },
+    {
+      "N": 5,
+      "B": 3,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "56c119f85a1e64a7ee5f654519f310a8ba127afbe0f10e00b39fab260dd01e2f",
+      "new_sha256": "0d73d4a3b2d8c41d3dee24d8fc443df1df8c2cbf115307715b153599843c75dc"
+    },
+    {
+      "N": 5,
+      "B": 3,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "707515ee70aef4a506589f8945c6629d5fc81ec1751b7989807aea4c3d046835",
+      "new_sha256": "073cc01bd55eea0dbb5d88c8bb2f8181e4dd725472d7bc1e645d38a88607d158"
+    },
+    {
+      "N": 6,
+      "B": 4,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "7a74c1edb65572c0f6dd23dfa9f8791d644ed2cec47431ffdec706a9f1950c5e",
+      "new_sha256": "2fb0dcd2c4878b85eeddca7924d5359bbb7b5596258296fd4e5491227b776167"
+    },
+    {
+      "N": 6,
+      "B": 4,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "ddd1c8b42abb6d1b2c1c85dd3a94a80550f8bfe76a3bd40c0e3849295cd97cf6",
+      "new_sha256": "1b9a7fc2f2c71852953503546fe8be25b1ac419f5487867eeeee71c6928c1c28"
+    },
+    {
+      "N": 7,
+      "B": 4,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "a27322ca6cf1bfdeaa7ab518d6e0db7dd19526b9c79325a53a91b3f265d016c5",
+      "new_sha256": "e73776e987af756415ddbf36ff839fac974bd79699c475befcf6efb59761610a"
+    },
+    {
+      "N": 7,
+      "B": 4,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "8d1634ffe15b39dc5c19f3a94692ee68039e945c9303af7c38237668a1e34289",
+      "new_sha256": "f279d23d156d647db95809a59ad7a570515bb024899ce6c65bb7de68def67e6f"
+    },
+    {
+      "N": 8,
+      "B": 5,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "02b5e64ce9b5a51ad0578e45e7b467f1711966765f008ef8a504428bd4ef264f",
+      "new_sha256": "163c5bfc855902c8c7215345475f186689c8e99f42776274904831a61002d00d"
+    },
+    {
+      "N": 8,
+      "B": 5,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "0b4067f82e6ffbb9f4b0c591f260b789babd039d926579c0841d7241296b142a",
+      "new_sha256": "ac1cd74c8f027cf33637b95e4c5465ecddcac90edf4d1b63d9a4b7b71d64d227"
+    },
+    {
+      "N": 9,
+      "B": 6,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "b7b65c161709192ef050bfc5514cdfdd237b3c037a5a27685f4aad863f50c3db",
+      "new_sha256": "8228cf8cad0da5e5dcdfbb27edfd62bea1b17754761c50fc2d380c72920f652d"
+    },
+    {
+      "N": 9,
+      "B": 6,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "bb2b007f4ace01aaae9842ff27532add5ce859bf5e31d0fd748fd7933c14a67f",
+      "new_sha256": "ca42a9b6783e723a654cbba4387e1c74afd76eb715eb043cc4ef7991b47f2eb8"
+    },
+    {
+      "N": 10,
+      "B": 3,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "c7040b636956234cbdf81f164aad7d028ad70654114e3c1ccddb496f01555bad",
+      "new_sha256": "ffd677daa7aba12b18231bf35ac1f5a0a7d333d8836116dc0d5130e250fa011c"
+    },
+    {
+      "N": 10,
+      "B": 3,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "aae70f486eee51c16351b9ad86e8e22b196836fb6edcf330f0dbe66e61dbe9a9",
+      "new_sha256": "f929245fb90f1b46a77c349c5985feb9567b8a5ae43a25b7cfb76716dbda025b"
+    },
+    {
+      "N": 10,
+      "B": 4,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "61b339514fafdd91e969749cbd26b51d1e0d2724190a6e7102c7e03a62b0a4da",
+      "new_sha256": "a106ac2c8565e21b160ed31f8470392a4a43dbc1355e6c4c30c68d3559ee9870"
+    },
+    {
+      "N": 10,
+      "B": 4,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "b2f196eeff6c72d24c97a5757282eb3e6fe2f5aa7ab903a12612ed6facee2f3d",
+      "new_sha256": "592054d7d0f39d2882a7a6a55270bf70b51a34c396e9ee59abe715e408d1eb32"
+    },
+    {
+      "N": 11,
+      "B": 3,
+      "mode": "noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "f744f24e6dcc31a1fa1a9d0b4a0ab4fe56101d23f264c399e5ef18f8f362ba76",
+      "new_sha256": "7807e5eeb835921cb4a0efc9ecdbfc9745e562d5ffe34de744856ef688a1cd34"
+    },
+    {
+      "N": 11,
+      "B": 3,
+      "mode": "audit-noscreen",
+      "complete_set_equal": true,
+      "old_sha256": "3273c7bbba8046bdf1c5e72f5b196e68470be2ba33097a80a5a0b69ec379903f",
+      "new_sha256": "fed4c2885e6c74438ce7000f606e57bae8c5481edc95edf4d20db5342c3f6d22"
+    }
+  ],
+  "complete_screened_reference_controls": [
+    {
+      "N": 20,
+      "B": 14,
+      "mode": "dfs",
+      "reference_complete_graphs": 21,
+      "weak_graphs": 0,
+      "missing_full_graphs_exactly_paid_by_angles": 21,
+      "catalog_sha256": "d6b28cd246f9f61e781cb89bc31c148dec384fec9a56e417219738e333dd48b9"
+    },
+    {
+      "N": 20,
+      "B": 14,
+      "mode": "audit",
+      "reference_complete_graphs": 21,
+      "weak_graphs": 0,
+      "missing_full_graphs_exactly_paid_by_angles": 21,
+      "catalog_sha256": "71239f5f6f4a8cb7e08c25f21b5a9fa132059919e5a026dce1900c7ab5ce7d59"
+    }
+  ],
+  "negative_controls_rejected": [
+    "wrong-weight",
+    "broken-cycle",
+    "too-long-path",
+    "node-limit",
+    "bad-N",
+    "bad-B",
+    "bad-cap8"
+  ],
+  "cycles_sha256": "2e09cc3b6a8a5ee653c6878cc723b80e37b599c18f99497af3948004a570045f",
+  "empty_proxy_retries_after_real_native_absence": [],
+  "input_files": {
+    "../evidence/n25-algebraic-upper-round2/geometry.json": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+    "n25-B14-outer-library-controls-v3-static/N20-B14-no-payment-reference.bin": "0ab032230f4d94b88e3f462175ba2741ee63e40fafd22d4c1bc29d5085632291",
+    "n25-B14-collar-discovery-20261005-v1/budget-3000000.json.discovery.json": "025c5d7c1e2df58e6e308fa1dcb4065d2f81b342c205c544385c84481ac1f154",
+    "n25-B15-collar-discovery-20261005-v1/budget-25000000.json.discovery.json": "1fde939a033b23dbbb91ae0532f814bb6fd3e2cf682a0149a09289db9c8d1761",
+    "n25-B16-collar-discovery-20261005-v1/budget-2000000.json.discovery.json": "0c3986f44753e3e5996380fd26ff889fa1fe366bb05a2a9df38b3cc63525ae51",
+    "n25-B17-collar-discovery-20261005-v1/budget-2000000.json.discovery.json": "92eb1fcd33294ff12200f85577730bc65b61cc4b886922511c0d6d235b92b809",
+    "outer-collar-controls-v3-deep-internal/N3-B3-noscreen-collars.json": "ede68d0334e43e6410b577a26570cedfd171f90401af899cd40a369924be9fd9",
+    "outer-collar-controls-v3-deep-internal/N3-B3-audit-noscreen-collars.json": "e69cf13dd3b3ec8af1b0c47942d0b6be7eb12d92946f71486fd720960ad0f29e",
+    "outer-collar-controls-v3-deep-internal/N5-B3-noscreen-collars.json": "56c119f85a1e64a7ee5f654519f310a8ba127afbe0f10e00b39fab260dd01e2f",
+    "outer-collar-controls-v3-deep-internal/N5-B3-audit-noscreen-collars.json": "707515ee70aef4a506589f8945c6629d5fc81ec1751b7989807aea4c3d046835",
+    "outer-collar-controls-v3-deep-internal/N6-B4-noscreen-collars.json": "7a74c1edb65572c0f6dd23dfa9f8791d644ed2cec47431ffdec706a9f1950c5e",
+    "outer-collar-controls-v3-deep-internal/N6-B4-audit-noscreen-collars.json": "ddd1c8b42abb6d1b2c1c85dd3a94a80550f8bfe76a3bd40c0e3849295cd97cf6",
+    "outer-collar-controls-v3-deep-internal/N7-B4-noscreen-collars.json": "a27322ca6cf1bfdeaa7ab518d6e0db7dd19526b9c79325a53a91b3f265d016c5",
+    "outer-collar-controls-v3-deep-internal/N7-B4-audit-noscreen-collars.json": "8d1634ffe15b39dc5c19f3a94692ee68039e945c9303af7c38237668a1e34289",
+    "outer-collar-controls-v3-deep-internal/N8-B5-noscreen-collars.json": "02b5e64ce9b5a51ad0578e45e7b467f1711966765f008ef8a504428bd4ef264f",
+    "outer-collar-controls-v3-deep-internal/N8-B5-audit-noscreen-collars.json": "0b4067f82e6ffbb9f4b0c591f260b789babd039d926579c0841d7241296b142a",
+    "outer-collar-controls-v3-deep-internal/N9-B6-noscreen-collars.json": "b7b65c161709192ef050bfc5514cdfdd237b3c037a5a27685f4aad863f50c3db",
+    "outer-collar-controls-v3-deep-internal/N9-B6-audit-noscreen-collars.json": "bb2b007f4ace01aaae9842ff27532add5ce859bf5e31d0fd748fd7933c14a67f",
+    "outer-collar-controls-v3-deep-internal/N10-B3-noscreen-collars.json": "c7040b636956234cbdf81f164aad7d028ad70654114e3c1ccddb496f01555bad",
+    "outer-collar-controls-v3-deep-internal/N10-B3-audit-noscreen-collars.json": "aae70f486eee51c16351b9ad86e8e22b196836fb6edcf330f0dbe66e61dbe9a9",
+    "outer-collar-controls-v3-deep-internal/N10-B4-noscreen-collars.json": "61b339514fafdd91e969749cbd26b51d1e0d2724190a6e7102c7e03a62b0a4da",
+    "outer-collar-controls-v3-deep-internal/N10-B4-audit-noscreen-collars.json": "b2f196eeff6c72d24c97a5757282eb3e6fe2f5aa7ab903a12612ed6facee2f3d",
+    "outer-collar-controls-v3-deep-internal/N11-B3-noscreen-collars.json": "f744f24e6dcc31a1fa1a9d0b4a0ab4fe56101d23f264c399e5ef18f8f362ba76",
+    "outer-collar-controls-v3-deep-internal/N11-B3-audit-noscreen-collars.json": "3273c7bbba8046bdf1c5e72f5b196e68470be2ba33097a80a5a0b69ec379903f"
+  },
+  "complete_n25_search_not_run_here": true,
+  "global_optimality_proved": false
+}

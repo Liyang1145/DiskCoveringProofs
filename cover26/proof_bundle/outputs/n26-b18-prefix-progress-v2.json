@@ -1,0 +1,31 @@
+{
+  "schema": "N26-B18-adaptive-prefix-progress-audit-v1",
+  "verified_partition_bookkeeping": true,
+  "global_optimality_proved": false,
+  "arbitrary_cover_reduction_proved": false,
+  "N26_complete_catalog": false,
+  "B18_enumeration_complete": false,
+  "initial_depth2_subtrees": 775,
+  "enumeration_completed_subtrees": 36,
+  "pending_subtrees_retained": 739,
+  "closed_subtree_rooted_graphs": 0,
+  "closed_subtree_distinct_orbits": 0,
+  "node_limited_tasks_split_not_excluded": 124,
+  "events_observed": 160,
+  "latest_checkpoint": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/b18-prefix-batch-v1/checkpoint-00160.json",
+  "checkpoint_sha256": "2a20afecc4d409eaa5f2a464fa85a8c0066b114b5f90125923e4c1b7b171d30e",
+  "negative_controls_rejected": [
+    "lost-pending-frontier",
+    "omitted-search-event",
+    "duplicate-search-event",
+    "false-completion-from-nonzero-exit"
+  ],
+  "frozen_inputs": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/run_prefix_batch.py": "c9b0c25b232b5ccbad423a6676c342ddc4d5e6c7eb7f875a22bdeddbf7616fa5",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_prefix_partition.py": "b4b5910832d964e76f801260ae7ecd0965153f4da1060c88b0bb626b5b2692b0",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/peel_synthesis_n26_cap8_prefix.cpp": "4b172c9236ba49880115dec51f6d3fe401bc495d9497e5e9d9b96e4d1edad724",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/peel_prefix_v1.linux": "209d7dd7eaaf7dee0ba4992e4b1252f8453d7ad40c6698ce91b99d0c61cd8c8d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-regression-v3/VERIFIED.json": "093edbf4c897be8551d21f4831fac9382f145e9d08f4150d54769f1f5461ce31"
+  },
+  "scope": "Exhaustion of named combinatorial subtrees and exact preservation of the remaining frontier, not a geometric lower bound."
+}

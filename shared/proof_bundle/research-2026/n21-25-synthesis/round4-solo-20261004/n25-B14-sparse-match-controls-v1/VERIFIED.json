@@ -1,0 +1,294 @@
+{
+  "verified": true,
+  "source_sha256": "b14e5c6be549f45c982576fc90faafd6540627424060e54ad355c545fb71b693",
+  "library_sha256": "c0ed3c2b0d58bb0e1dfdfb9310da77829b8478bb44a41d8292d91b56cc2036a5",
+  "matcher_source_sha256": "188ab2b44769bf7b21c2b54d1f14be9e76d5a3d0600abac8183faac5c3e2f3fc",
+  "matcher_include_sha256": "bbc19a7b25785d5c619773a0f53156beca06cf4774a0666fc5b179d52ef496c1",
+  "matcher_binary_sha256": "8bf47664d29453c603f6b7b77d2ae5bd23c073cc6568ec1f88f26718acdccac0",
+  "all_required_proper_injections_hit_and_explicitly_rechecked": true,
+  "total_requests": 3902,
+  "explicitly_verified_hits": 3848,
+  "actual_accepted_parent_graphs": 1834,
+  "actual_run_records": 1930,
+  "artificial_strict_supergraph_controls": 36,
+  "independent_python_existence_controls": [
+    {
+      "request": 3836,
+      "existence": true
+    },
+    {
+      "request": 3837,
+      "existence": false
+    },
+    {
+      "request": 3838,
+      "existence": false
+    },
+    {
+      "request": 3839,
+      "existence": true
+    },
+    {
+      "request": 3840,
+      "existence": false
+    },
+    {
+      "request": 3841,
+      "existence": false
+    },
+    {
+      "request": 3842,
+      "existence": true
+    },
+    {
+      "request": 3843,
+      "existence": false
+    },
+    {
+      "request": 3844,
+      "existence": false
+    },
+    {
+      "request": 3845,
+      "existence": true
+    },
+    {
+      "request": 3846,
+      "existence": false
+    },
+    {
+      "request": 3847,
+      "existence": false
+    },
+    {
+      "request": 3848,
+      "existence": true
+    },
+    {
+      "request": 3849,
+      "existence": false
+    },
+    {
+      "request": 3850,
+      "existence": false
+    },
+    {
+      "request": 3851,
+      "existence": true
+    },
+    {
+      "request": 3852,
+      "existence": false
+    },
+    {
+      "request": 3853,
+      "existence": false
+    },
+    {
+      "request": 3854,
+      "existence": true
+    },
+    {
+      "request": 3855,
+      "existence": false
+    },
+    {
+      "request": 3856,
+      "existence": false
+    },
+    {
+      "request": 3857,
+      "existence": true
+    },
+    {
+      "request": 3858,
+      "existence": false
+    },
+    {
+      "request": 3859,
+      "existence": false
+    },
+    {
+      "request": 3860,
+      "existence": true
+    },
+    {
+      "request": 3861,
+      "existence": false
+    },
+    {
+      "request": 3862,
+      "existence": false
+    },
+    {
+      "request": 3863,
+      "existence": true
+    },
+    {
+      "request": 3864,
+      "existence": false
+    },
+    {
+      "request": 3865,
+      "existence": false
+    },
+    {
+      "request": 3866,
+      "existence": true
+    },
+    {
+      "request": 3867,
+      "existence": false
+    },
+    {
+      "request": 3868,
+      "existence": false
+    },
+    {
+      "request": 3869,
+      "existence": true
+    },
+    {
+      "request": 3870,
+      "existence": false
+    },
+    {
+      "request": 3871,
+      "existence": false
+    },
+    {
+      "request": 3872,
+      "existence": false
+    },
+    {
+      "request": 3873,
+      "existence": false
+    },
+    {
+      "request": 3874,
+      "existence": false
+    },
+    {
+      "request": 3875,
+      "existence": false
+    },
+    {
+      "request": 3876,
+      "existence": false
+    },
+    {
+      "request": 3877,
+      "existence": false
+    },
+    {
+      "request": 3878,
+      "existence": false
+    },
+    {
+      "request": 3879,
+      "existence": false
+    },
+    {
+      "request": 3880,
+      "existence": false
+    },
+    {
+      "request": 3881,
+      "existence": false
+    },
+    {
+      "request": 3882,
+      "existence": false
+    },
+    {
+      "request": 3883,
+      "existence": false
+    },
+    {
+      "request": 3884,
+      "existence": false
+    },
+    {
+      "request": 3885,
+      "existence": false
+    },
+    {
+      "request": 3886,
+      "existence": false
+    },
+    {
+      "request": 3887,
+      "existence": false
+    },
+    {
+      "request": 3888,
+      "existence": false
+    },
+    {
+      "request": 3889,
+      "existence": false
+    },
+    {
+      "request": 3890,
+      "existence": false
+    },
+    {
+      "request": 3891,
+      "existence": false
+    },
+    {
+      "request": 3892,
+      "existence": false
+    },
+    {
+      "request": 3893,
+      "existence": false
+    },
+    {
+      "request": 3894,
+      "existence": false
+    },
+    {
+      "request": 3895,
+      "existence": false
+    },
+    {
+      "request": 3896,
+      "existence": false
+    },
+    {
+      "request": 3897,
+      "existence": false
+    },
+    {
+      "request": 3898,
+      "existence": false
+    },
+    {
+      "request": 3899,
+      "existence": false
+    },
+    {
+      "request": 3900,
+      "existence": false
+    },
+    {
+      "request": 3901,
+      "existence": false
+    }
+  ],
+  "negative_controls_rejected": [
+    "wrong-anchor-offset",
+    "center-collision",
+    "missing-face",
+    "bad-schema",
+    "bad-id",
+    "extra-column",
+    "bad-N",
+    "bad-B"
+  ],
+  "maps_sha256": "d57519c4a19c7645078fd5dee7ce4c1dc54fa17fee3e73e7368d2dbe5c4cf87d",
+  "proper_constraint_subset_source_lemma_sha256": "0adbb5592d04513e7ebcb013f743ad29a549ff738c911eb39155b20fbf5d9e65",
+  "complete_production_enumerator_not_implemented_here": true,
+  "global_optimality_proved": false
+}

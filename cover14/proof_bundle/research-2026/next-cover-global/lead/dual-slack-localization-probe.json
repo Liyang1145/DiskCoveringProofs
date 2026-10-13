@@ -1,0 +1,10 @@
+{
+  "status": "numeric_only_stability_budget",
+  "all_sites_positive_support_grounded": false,
+  "max_site_path_resistance": Infinity,
+  "N": 1.0000000000000413,
+  "scale_invariant_NR": Infinity,
+  "normalized_slack_budget_for_half_local_epsilon": 0.0,
+  "zero_anchor_radius_error_assumed": true,
+  "scope": "coarsepathestimate only; alignment residual notcomputed; notcertifiedbridge"
+}

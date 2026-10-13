@@ -1,0 +1,24 @@
+{
+  "matrix_det": 2,
+  "exact_matrix_identity": "(I+shift)*alternating=2I",
+  "candidate_width_error": 9.992007221626409e-16,
+  "candidate_scale_error": 4.996003610813204e-16,
+  "candidate_radii_recovered": [
+    0.37998385311983857,
+    0.37998385311983923,
+    0.3799838531198384,
+    0.37998385311983895,
+    0.37998385311983834,
+    0.3799838531198393,
+    0.37998385311983834,
+    0.3799838531198389,
+    0.379983853119839
+  ],
+  "candidate_radius": 0.3799838531198388,
+  "scale_errors": [
+    6.661338147750939e-16,
+    5.551115123125783e-16,
+    4.996003610813204e-16
+  ],
+  "scope": "exact matrix identity, numeric geometry calibration only"
+}

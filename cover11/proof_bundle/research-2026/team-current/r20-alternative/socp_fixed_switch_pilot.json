@@ -1,0 +1,24 @@
+{
+  "model": "free-site fixed-switch SOCP relaxation (min r); scipy SLSQP w/ analytic jac",
+  "cvxpy_available": false,
+  "R_star": 0.37998385311983873,
+  "optimum_r": 0.3799838531198412,
+  "equals_R_star": true,
+  "gap_R_star_minus_opt": -2.4424906541753444e-15,
+  "chord_lower_bound": 0.37854276920170526,
+  "success": true,
+  "status": "0",
+  "n_iter": 11,
+  "max_violation_final": -9.43689570931383e-16,
+  "active_endpoint_constraints": 18,
+  "active_face_constraints": 33,
+  "has_multipliers": true,
+  "multipliers_tail": [
+    0.0,
+    8.126075072940058e-15,
+    6.053706723265124e-15,
+    0.038487988994316075,
+    0.0500541443369842,
+    0.07388546577008183
+  ]
+}

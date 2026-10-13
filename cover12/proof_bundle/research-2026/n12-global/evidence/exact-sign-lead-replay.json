@@ -1,0 +1,17 @@
+{
+  "ok_at_exact_U": true,
+  "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+  },
+  "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 184
+  },
+  "n": 12,
+  "U": "22568935234031792038557518369/62500000000000000000000000000"
+}

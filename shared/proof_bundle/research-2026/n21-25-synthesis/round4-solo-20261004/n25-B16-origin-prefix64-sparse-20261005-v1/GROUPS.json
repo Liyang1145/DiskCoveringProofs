@@ -1,0 +1,127 @@
+{
+  "N": 25,
+  "B": 16,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "centers": 16,
+      "faces": [
+        896,
+        3584,
+        14336,
+        57344
+      ],
+      "members": 13
+    },
+    {
+      "id": 1,
+      "centers": 20,
+      "faces": [
+        896,
+        3584,
+        196640,
+        272384,
+        565248
+      ],
+      "members": 1
+    },
+    {
+      "id": 2,
+      "centers": 22,
+      "faces": [
+        448,
+        1792,
+        196624,
+        262240,
+        529408,
+        1069056,
+        2146304
+      ],
+      "members": 1
+    },
+    {
+      "id": 3,
+      "centers": 21,
+      "faces": [
+        14336,
+        57344,
+        131712,
+        264704,
+        589832,
+        1048768,
+        1572896
+      ],
+      "members": 1
+    },
+    {
+      "id": 4,
+      "centers": 16,
+      "faces": [
+        448,
+        3584,
+        14336,
+        57344
+      ],
+      "members": 6
+    },
+    {
+      "id": 5,
+      "centers": 16,
+      "faces": [
+        224,
+        3584,
+        14336,
+        57344
+      ],
+      "members": 8
+    },
+    {
+      "id": 6,
+      "centers": 16,
+      "faces": [
+        112,
+        3584,
+        14336,
+        57344
+      ],
+      "members": 22
+    },
+    {
+      "id": 7,
+      "centers": 16,
+      "faces": [
+        56,
+        3584,
+        14336,
+        57344
+      ],
+      "members": 11
+    },
+    {
+      "id": 8,
+      "centers": 17,
+      "faces": [
+        56,
+        224,
+        896,
+        28672,
+        114688
+      ],
+      "members": 1
+    }
+  ],
+  "group_count": 9,
+  "selected_types": 64,
+  "catalog_types": 64,
+  "catalog_sha256": "82514050535486dc65c1126e61a47180e0da0fee98373214cc08ce7762fb45d8",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "da7fdaae20a3fda7123d98d146925bc07fd0a9bd39b0867e9d3ed4285fd6ea4a",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "not_a_complete_family": true,
+  "parents_are_finite_weak_graph_samples": true,
+  "all_boundary_sites_preserved_by_implicit_anchor_rods": true,
+  "source_sha256": "aa5485ead22bf38079cf0f3876c2e94f1361b92ec6399449a643a4f5556c0389",
+  "global_optimality_proved": false
+}

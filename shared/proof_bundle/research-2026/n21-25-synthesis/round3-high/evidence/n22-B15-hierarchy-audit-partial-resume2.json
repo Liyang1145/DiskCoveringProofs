@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "N": 22,
+  "B": 15,
+  "catalog_sha256": "1d4616f73cf759dc59643d48e27312b6c851827cbabf26e0232198217a5be6b2",
+  "catalog_types": 2047149,
+  "stages": [
+    {
+      "groups_sha256": "05ef43c791bff2f4302b514df6aa8c0a72463d613714a04918f050392ce2d2e0",
+      "bindings_sha256": "2db1315945ca068fcfe44a983850d892a1d0de118d9b11b266cf19c27a087ad8",
+      "threshold": 2,
+      "maps_checked": 2047149,
+      "paid_types": 673348,
+      "remaining_types": 1373801,
+      "force_replay_sha256": "c9504ec36f891dff13f299396b43b57588101ec58aa532bad2c09a49ccb29cd8"
+    },
+    {
+      "groups_sha256": "6fd4638bac41c946efc8e841a6789283e64c90a8f20aed6511359939ee01283d",
+      "bindings_sha256": "40229f7ee6baa08ea4e39eb38f6d6b278201f528a84683ff52737e52a5665b23",
+      "threshold": 1,
+      "maps_checked": 1373801,
+      "paid_types": 1058498,
+      "remaining_types": 315303,
+      "force_replay_sha256": "b495312663fce4f720b550aeb1bc0d730429ee14009ac95427f4ba87ac291944"
+    },
+    {
+      "groups_sha256": "f3d4d5460721243a37155b349702ddc5cab03ff2636cadb0d520f475d7ee000c",
+      "bindings_sha256": "e3d4c38025258123e7103dd5ab3d13fc68c764040c8f1615376f6a03c295d22d",
+      "threshold": 0,
+      "maps_checked": 315303,
+      "paid_types": 208567,
+      "remaining_types": 106736,
+      "force_replay_sha256": null
+    }
+  ],
+  "strict_exclusion_types_with_replayed_certificates": 1940413,
+  "pending_types": 106736,
+  "pending_indices_file": "n22-B15-hierarchy-audit-partial-resume2.pending.jsonl",
+  "pending_indices_sha256": "768b982c8a7a704ea060fe9e34291bda5b07242a7d29a2981944a0bd44ac9fe9",
+  "disjoint_hierarchy_partition_verified": true,
+  "coverage_partition_complete": false,
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "2efc7d26799e533a9ad68511391d3ac80cbe37debe01fb2395d928e94ecdc244",
+  "stream_reader_sha256": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d"
+}

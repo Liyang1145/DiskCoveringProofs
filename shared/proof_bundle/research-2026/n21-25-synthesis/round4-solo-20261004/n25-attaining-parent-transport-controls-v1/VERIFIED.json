@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "schema": "N25-exact-whole-parent-nonstrict-transport-controls-v1",
+  "actual_attaining_parent_positive_control": 115569,
+  "real_same_shape_different_parent_rejected": true,
+  "negative_controls_rejected": [
+    "same-size-real47808-is-not-attaining-parent",
+    "wrong-N",
+    "wrong-B",
+    "wrong-source-parent-id",
+    "wrong-parent-center-count",
+    "omitted-parent-outer-face",
+    "duplicated-parent-outer-face",
+    "wrong-original-snapshot-index",
+    "incomplete-candidate-family",
+    "wrong-completion-count",
+    "attainer-miscast-as-strict",
+    "missing-nonstrict-core-payment",
+    "candidate-still-pending",
+    "wrong-exact-lower-radius"
+  ],
+  "snapshot_sha256": "f6cbfb1b074e4019e069b6679e7de2bbed3fedbc51c483ff109037bc0496fe03",
+  "candidate_theorem_sha256": "e142d711e7dd6df2cf0cd2052645acc581319ad20f13756a3fb59d3774670abc",
+  "audit_source_sha256": "467b02f0ae57f181cc364f3c23c71b977b486688dd94401a19508b59a695cf12",
+  "source_sha256": "9663d60ae7eee29a708c0321cb68d1a08b1afecb82f349d72e1e0008b02f8353",
+  "functional_identity_controls_not_new_math_core_replays": true,
+  "global_optimality_proved": false
+}

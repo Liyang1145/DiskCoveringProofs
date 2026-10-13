@@ -1,0 +1,112 @@
+{
+  "verified": true,
+  "schema": "isolated-B15-degree-replacement-derivation-v1",
+  "files": [
+    {
+      "source": "b15_controlled_stop.py",
+      "source_sha256": "65e1249542e9f6d6a71e72fb2e3a7f0c2cdb4ff2e6610d081da70647553854fe",
+      "target": "b15_degree_controlled_stop.py",
+      "target_sha256": "77a25bd54c7d99e8e8038b55685d751230a401b0457e85ed4288896808f0978a",
+      "changes": [
+        [
+          "RECORD_NAME = \"n25-B15-controlled-origin-replacement-20261005-v1\"",
+          "RECORD_NAME = \"n25-B15-controlled-degree-replacement-20261005-v1\""
+        ],
+        [
+          "n25-B15-streamed-eight-sparse-search-20261005-v1",
+          "n25-B15-origin-streamed-search-reboot-20261005-v1"
+        ],
+        [
+          "peel_streamed_collar-linux",
+          "peel_origin_streamed_collar-linux"
+        ],
+        [
+          "    assert expected[-2:] == [\"4058615\", \"100000\"]",
+          "    assert len(expected) == 15 and expected[-3:] == [\"4058615\", \"100000\", \"1\"]"
+        ],
+        [
+          "    checked = inspect_owned(previous)",
+          "    from pending_degree_production_gate import production_gate\n    files.update(production_gate(\n        ROOT / \"n25-B15-offline-contracted-union27-library-20261005-v1/LIBRARY.json\",\n        ROOT / \"n25-B15-union27-sparse-map-controls-20261005-v1/VERIFIED.json\",\n        ROOT / \"n25-B15-union27-eight-sparse-guard-controls-20261005-v1/VERIFIED.json\", 15))\n    checked = inspect_owned(previous)"
+        ],
+        [
+          "\"reason\": \"controlled performance replacement after exact B15 origin controls\",",
+          "\"reason\": \"controlled earlier-degree replacement after full B15 degree and origin controls\",\n        \"degree_controls_sha256\": sha(ROOT / \"n25-pending-degree-upper-full-controls-20261005-v1/VERIFIED.json\"),\n        \"new_driver_derivation_sha256\": sha(ROOT / \"b15-degree-replacement-source-derivation.json\"),"
+        ],
+        [
+          "Exact owned B15 native signalled for verified origin replacement:",
+          "Exact owned reboot B15 native signalled for verified degree replacement:"
+        ]
+      ],
+      "occurrence_counts": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "run_reboot_origin_search.py",
+      "source_sha256": "649d41caeef8d2e9add28594025d33d9b78c3e0162f9c9ce4a1dbdd68ba107a4",
+      "target": "run_b15_degree_origin_replacement.py",
+      "target_sha256": "5fdbd6af5180677f30502477e8d2f66c92d6d8018646e40dbebe65afb6ce794d",
+      "changes": [
+        [
+          "from reboot_interruption_gate import recovery_gate",
+          "from b15_degree_replacement_gate import b15_degree_replacement_gate as recovery_gate"
+        ],
+        [
+          "    maps, eight, guard = map(read, (args.maps, args.eight_controls, args.guard_controls))",
+          "    maps, eight, guard = map(read, (args.maps, args.eight_controls, args.guard_controls))\n    from pending_degree_production_gate import production_gate\n    files.update(production_gate(args.library.resolve(), args.maps.resolve(),\n                                 args.guard_controls.resolve(), B))"
+        ],
+        [
+          "    assert B in (15, 16, 17), \"only authoritatively reboot-interrupted N25 jobs are recovered\"",
+          "    assert B == 15, \"only the identity-checked current B15 job is replaced\""
+        ],
+        [
+          "        \"./peel_origin_streamed_collar-linux\", \"25\", str(B), relative(target),",
+          "        \"./peel_pending_degree_origin_collar-linux\", \"25\", str(B), relative(target),"
+        ],
+        [
+          "        \"0\", \"dfs\", \"-\", relative(table), str(CAP8), \"100000\", \"1\",",
+          "        \"0\", \"dfs\", \"-\", relative(table), str(CAP8), \"100000\", \"1\", \"1\","
+        ],
+        [
+          "\"binary_linux_path\": linux_path(ROOT / \"peel_origin_streamed_collar-linux\"),",
+          "\"binary_linux_path\": linux_path(ROOT / \"peel_pending_degree_origin_collar-linux\"),"
+        ],
+        [
+          "\"native_binary_sha256\": sha(ROOT / \"peel_origin_streamed_collar-linux\"),",
+          "\"native_binary_sha256\": sha(ROOT / \"peel_pending_degree_origin_collar-linux\"),"
+        ],
+        [
+          "    union = merge(target, code, output / \"UNION\")",
+          "    assert header[\"pending_degree_upper_screen\"]\n    assert header[\"pending_degree_upper_queries\"] >= header[\"pending_degree_upper_prunes_not_type_count\"]\n    union = merge(target, code, output / \"UNION\")"
+        ]
+      ],
+      "occurrence_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "exact_inverse_equals_frozen_source": true
+    }
+  ],
+  "source_sha256": "f2add85ec5015cac633970859cbeb06d612488718f24c2ad62ff412d3f67bee2",
+  "production_gate_sha256": "a81edbe595ec6e0f784f21a86b6460efa0558c5c6b2fe92abc3b9ae8357faaca",
+  "lifecycle_gate_sha256": "8fc6dad0395c533fd48f193c671bb11c74c760fa9eac51337ab2cb40e554a837",
+  "old_identity_and_nonzero_observed_terminal_and_duplicate_job_checks_retained": true,
+  "original_exact_library_angle_storage_origin_and_final_union_checks_retained": true,
+  "only_current_reboot_B15_target_and_verified_new_degree_gate_and_binary_changed": true,
+  "all_old_sources_evidence_and_running_jobs_unchanged": true,
+  "no_stop_signal_or_production_launch_performed": true,
+  "global_optimality_proved": false
+}

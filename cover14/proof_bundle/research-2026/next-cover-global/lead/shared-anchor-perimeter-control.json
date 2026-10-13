@@ -1,0 +1,53 @@
+{
+  "status": "symbolic_derivative_identity_and_numeric_calibration",
+  "runs": [
+    {
+      "start": -1,
+      "perimeter_slack": 0.23979718784644977,
+      "anchor_deficit_sum": 7.771561172376096e-16,
+      "linear_deficit_cap": 0.22621835012769012,
+      "mean_radius_lower": 0.30911248621442866,
+      "mean_radius": 0.3317320342762341
+    },
+    {
+      "start": 0,
+      "perimeter_slack": 0.23979718784644888,
+      "anchor_deficit_sum": 9.992007221626409e-16,
+      "linear_deficit_cap": 0.22621835012769012,
+      "mean_radius_lower": 0.30911248621442866,
+      "mean_radius": 0.33173203427623404
+    },
+    {
+      "start": 1,
+      "perimeter_slack": 0.23979718784644932,
+      "anchor_deficit_sum": 0.0,
+      "linear_deficit_cap": 0.22621835012769012,
+      "mean_radius_lower": 0.30911248621442866,
+      "mean_radius": 0.3317320342762341
+    },
+    {
+      "start": 2,
+      "perimeter_slack": 0.23979718784644932,
+      "anchor_deficit_sum": 0.0,
+      "linear_deficit_cap": 0.22621835012769012,
+      "mean_radius_lower": 0.30911248621442866,
+      "mean_radius": 0.3317320342762341
+    },
+    {
+      "start": 3,
+      "perimeter_slack": 0.23979718784644932,
+      "anchor_deficit_sum": 0.0,
+      "linear_deficit_cap": 0.22621835012769012,
+      "mean_radius_lower": 0.30911248621442866,
+      "mean_radius": 0.3317320342762341
+    },
+    {
+      "start": 4,
+      "perimeter_slack": 0.23979718784644932,
+      "anchor_deficit_sum": 0.0,
+      "linear_deficit_cap": 0.22621835012769012,
+      "mean_radius_lower": 0.30911248621442866,
+      "mean_radius": 0.3317320342762341
+    }
+  ]
+}

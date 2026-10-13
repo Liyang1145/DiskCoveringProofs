@@ -1,0 +1,71 @@
+{
+  "verified": true,
+  "schema": "linked-general-collar-filling-controls-v1",
+  "all_no_payment_complete_type_sets_equal_to_references": true,
+  "cases": [
+    {
+      "N": 25,
+      "B": 14,
+      "full_types": 217,
+      "unpaid_enumeration_states": 44938,
+      "whole_complete_set_equals_frozen_simple_hole_reference": true,
+      "known_attaining_retained": false,
+      "paid_tree_nodes": 14,
+      "exact_sha256": "e450923ac28a95dd8597a145d81b4445a333724b19d486cd19f427736947a1d9"
+    },
+    {
+      "N": 25,
+      "B": 16,
+      "full_types": 91,
+      "unpaid_enumeration_states": 141577,
+      "whole_complete_set_equals_frozen_simple_hole_reference": true,
+      "known_attaining_retained": true,
+      "paid_tree_nodes": 250,
+      "exact_sha256": "7123f1f133aa58b7d0d6c3d187cd3e1401138731487e836bd28907fbb281a1e2"
+    }
+  ],
+  "actual_pinched_control_parent": 72263,
+  "pinched_complete_branch_cover_independently_replayed": true,
+  "pinched_control_all_completions_strictly_paid": true,
+  "known_attaining_candidate_not_strictly_paid": true,
+  "negative_controls_rejected": [
+    "deleted-topology-child",
+    "link-degree-three",
+    "closed-link-component-plus-another-component",
+    "node-limit-explicitly-unpaid"
+  ],
+  "source_sha256": "57885268ba79965cd4fbab208aabcbe2ef462564b8d3afaac3723ccbae850a97",
+  "kernel_sha256": "21cc9f477bd17396c321e6747f5d240f1f335ab36720e240aaaff4d874226d8e",
+  "provider_sha256": "2493c7413814d1d9a521473b52c1f41d6e39c3efc2e86ae366ab0b978b730c6c",
+  "proposal_source_sha256": "ec1f5cd7c7c6411f73946bc0e1959ebf68346aa5d0dd3d7931d1664dfb5ff568",
+  "replay_source_sha256": "6a76992eaa6152e3d1b66fc443793297251203b7418fc28d5aa2b8f83fa06fdf",
+  "source_induction_sha256": "e1b0f2e28d1f1df37296d13cdf74192a0a131d70e15e0ba5ce328fea9246abac",
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-g0-simple-hole-completions-20261005-v1/INPUT-COLLAR.json": "636fa41457061bfcc25f30814d64fd38ab43020329551c1dd44526f441730727",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-g0-simple-hole-completions-20261005-v1/GROUPS.json": "23ff7b615d1b0485b3b4e7d851563cc61163e18b01d73b0e0d19f60e5c4f3134",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-complete-g0-simple-hole-completions-20261005-v1/SUMMARY.json": "547a0be4c2369819a65df53c7467d5c6c0a0d7007e1c752140632d26cf3a7dc5",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/case-0/PROPOSAL.json": "a15656a4fbb1940a877f2ad789d61e5648f1d76e43f7efe46c97596306b159fb",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/case-0/EXACT.json": "e450923ac28a95dd8597a145d81b4445a333724b19d486cd19f427736947a1d9",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-candidate-simple-hole-completions-20261005-v1/INPUT-COLLAR.json": "cc4e391eac96967bfcceef12379185f73d9e83893e00396ec8d35c99f2ded8fd",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-candidate-simple-hole-completions-20261005-v1/GROUPS.json": "2c009d1b46691c0af259ed6705bef60f8132297148d009e640c3ca9bc1a6320c",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-candidate-simple-hole-completions-20261005-v1/SUMMARY.json": "9929a3d38f3a7ebf4f2fc053e89612ac4eb9e47011a0070dfb038625e475efac",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/case-1/PROPOSAL.json": "480e8a20b369b5110513653db7f87c462123c6c4466a3e376abd9215b4fd392c",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/case-1/EXACT.json": "7123f1f133aa58b7d0d6c3d187cd3e1401138731487e836bd28907fbb281a1e2",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/test_linked_general_collar.py": "57885268ba79965cd4fbab208aabcbe2ef462564b8d3afaac3723ccbae850a97",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-origin-force-refined-residual-20261005-v1/VERIFIED.json": "b7d4077333a241136e3954986080b6d2679783d979206904dd4fef656ff2dc9d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-origin-force-refined-residual-20261005-v1/RESIDUAL.jsonl": "3dfb7330d4d7bc64acc1c907fae310e6b7d66d8d8981737f0af5da009d5f8710",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/pinched-control/INPUT-COLLAR.json": "71f1438e3a5df3d11bf4665e780619f929628bd9e1cbc1e442e9d9e9ddd811db",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/pinched-control/PROPOSAL.json": "87c599c824f000272a549623dd0d305530e8a9edc4ea566fa147c063642637b1",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-linked-general-collar-controls-20261005-v1/pinched-control/EXACT.json": "f1eed6764b0c61dc77ba9ed8bee6464f9d1366878d34babbee885e9f07f9403d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/linked_general_collar_kernel.py": "21cc9f477bd17396c321e6747f5d240f1f335ab36720e240aaaff4d874226d8e",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/prove_linked_general_collar.py": "ec1f5cd7c7c6411f73946bc0e1959ebf68346aa5d0dd3d7931d1664dfb5ff568",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/replay_linked_general_collar.py": "6a76992eaa6152e3d1b66fc443793297251203b7418fc28d5aa2b8f83fa06fdf",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/general_collar_filling.py": "27a0a86b7899595870b28c172facb86aceb2023f6e39dff1662363a7fd6fd367",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/general_collar_filling_linked.py": "2493c7413814d1d9a521473b52c1f41d6e39c3efc2e86ae366ab0b978b730c6c",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/GENERAL-COLLAR-FILLING-SOURCE.md": "e1b0f2e28d1f1df37296d13cdf74192a0a131d70e15e0ba5ce328fea9246abac",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/general-paid-collar-source-derivation.json": "2efc6e542ea252e16571fcfb3f87dc6136e80e92e4f949d6e833d6314fdae6a1",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/linked-general-paid-collar-source-derivation.json": "ed93c84583f471baa13f56a68419b7e6b954dad7d6e2d3e015f3d79fcd8ae4d8"
+  },
+  "all_pinched_collars_not_claimed": true,
+  "global_optimality_proved": false
+}

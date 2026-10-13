@@ -1,0 +1,31 @@
+{
+  "schema": "N26-byte-exact-diagnosed-historical-native-restoration-v2",
+  "restoration_observed_at": "2026-10-11 09:04:27 +08:00",
+  "recovery_candidate_report": "outputs/n26-historical-native-byte-recovery-candidates-20261011-v3.json",
+  "recovery_candidate_report_sha256": "278ab4dcf8e202d60acd3165db13fb056f63fa678bba87f8d2b70f5f3b26c6db",
+  "restored_files": [
+    {
+      "path": "outputs/n26-force-stage-v12/native-02313.json",
+      "original_sha256_restored": "f0b53cfc81474275bb1cda21c32662bb3b171a425353ef9a484fe6aa807190df",
+      "corrupt_bytes_preserved_in": "work/n26-integrity-snapshots-20261011-v1/00000-native-02313.json.bin",
+      "corrupt_sha256": "6845ead39a1792197801252c468e2906c3adf37f5e8bd4a3cc2632b9c1aa982f"
+    },
+    {
+      "path": "outputs/n26-conditional-force-stage-v1/native-00042-launch.json",
+      "original_sha256_restored": "548c295f202740e73a6551587c42e7ac7654d6159d5a3b9714ee068d619a06d1",
+      "corrupt_bytes_preserved_in": "work/n26-integrity-snapshots-20261011-v1/00001-native-00042-launch.json.bin",
+      "corrupt_sha256": "1347c2c24e20b6410183184c1fe549e6da4e85d7a371e7e4b72851915952c1b6"
+    }
+  ],
+  "all_targets_matched_diagnosed_corrupt_bytes_before_restoration": true,
+  "all_saved_snapshots_matched_diagnosed_corrupt_bytes_before_restoration": true,
+  "all_recovery_candidates_matched_original_bound_digests_before_restoration": true,
+  "all_restored_targets_rehashed_and_matched_original_bound_digests": true,
+  "new_path_execution_and_historical_launch_recovery_distinguished": true,
+  "mathematical_inputs_or_historical_proof_claims_changed": false,
+  "new_geometric_payments": 0,
+  "corruption_cause_established": false,
+  "complete_current_independent_final_rehash_still_required": true,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

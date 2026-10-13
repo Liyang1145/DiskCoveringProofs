@@ -1,0 +1,31 @@
+{
+  "verified": true,
+  "schema": "N24-own-core-complete-fiber-disjunction-controls-v1",
+  "actual_complete_source_parent_index": 29688,
+  "all_original_strict_branch_math_freshly_replayed_with_actual_full_core_leaves": true,
+  "complete_unpaid_fiber_leaves": 13,
+  "same_root_core_leaves": 2,
+  "unpaid_noncore_leaves_retained": 11,
+  "actual_core_constraints_never_paid_as_strict_U24_exclusions": true,
+  "all_original_topology_branch_cover_and_each_actual_full_core_map_replayed": true,
+  "negative_scope_leaf_mapping_and_topology_controls_rejected": [
+    "N",
+    "B",
+    "cap8",
+    "radius_upper",
+    "own_same_root_core_proof_sha256",
+    "wrong-actual-core-center-image",
+    "unbound-core-leaf-theorem",
+    "missing-core-leaf-accounting",
+    "core-cannot-replace-a-topology-split",
+    "additional-unreachable-core-node"
+  ],
+  "not_an_actual_production_worker_or_parent_adoption": true,
+  "source_sha256": "cd3bae4d6d7d281e5acd2945d8a48c9c5224124c000d89dc68263b0bda291bc8",
+  "mixed_source_sha256": "ee73e52e11c76d5fd0be9c94bacfc70411d98929be091201a12e70dc6dbb194e",
+  "own_core_transport_controls_sha256": "575aa0451e262bfaac006394a04b4f2a597a0418e4805c59c94eace5bde98c6f",
+  "own_core_proof_sha256": "c5d4b6cd44b34c913d2e436a6e8021259b180510629c1e78d78849efad6b846a",
+  "original_control_sha256": "43e25d206aa08bc5d8f9eee2dbc7306d4f73603b009c78c1f07f9af3d3ae6785",
+  "mixed_control_sha256": "916e051578574a99bc21d6dc294ea793004b0f5d01add33ae910ea5710d132e6",
+  "global_optimality_proved": false
+}

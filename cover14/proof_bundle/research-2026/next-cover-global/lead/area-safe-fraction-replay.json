@@ -1,0 +1,77 @@
+{
+  "status": "independent_fraction_replay",
+  "runs": [
+    {
+      "index": 0,
+      "excluded": true,
+      "upper_display": -0.27271071795985957,
+      "upper_exact_rounded_outward": "-272710717959859574493929094331/1000000000000000000000000000000"
+    },
+    {
+      "index": 1,
+      "excluded": true,
+      "upper_display": -0.11666171808481474,
+      "upper_exact_rounded_outward": "-116661718084814733665198373571/1000000000000000000000000000000"
+    },
+    {
+      "index": 2,
+      "excluded": true,
+      "upper_display": -0.1530318046508372,
+      "upper_exact_rounded_outward": "-76515902325418607359001720043/500000000000000000000000000000"
+    },
+    {
+      "index": 3,
+      "excluded": true,
+      "upper_display": -0.43845844244660737,
+      "upper_exact_rounded_outward": "-10961461061165183977915260831/25000000000000000000000000000"
+    },
+    {
+      "index": 4,
+      "excluded": false,
+      "upper_display": 0.023847603122631254,
+      "upper_exact_rounded_outward": "953904124905250115996150833/40000000000000000000000000000"
+    },
+    {
+      "index": 5,
+      "excluded": true,
+      "upper_display": -0.024898055614101872,
+      "upper_exact_rounded_outward": "-24898055614101872282131992491/1000000000000000000000000000000"
+    },
+    {
+      "index": 6,
+      "excluded": false,
+      "upper_display": 0.04683524270140069,
+      "upper_exact_rounded_outward": "23417621350700343532100755999/500000000000000000000000000000"
+    },
+    {
+      "index": 7,
+      "excluded": true,
+      "upper_display": -0.34095833194711217,
+      "upper_exact_rounded_outward": "-340958331947112153711091313103/1000000000000000000000000000000"
+    },
+    {
+      "index": 8,
+      "excluded": true,
+      "upper_display": -0.08355919060619271,
+      "upper_exact_rounded_outward": "-83559190606192706600571190433/1000000000000000000000000000000"
+    },
+    {
+      "index": 9,
+      "excluded": true,
+      "upper_display": -0.1673381652210264,
+      "upper_exact_rounded_outward": "-167338165221026403047674321573/1000000000000000000000000000000"
+    },
+    {
+      "index": 10,
+      "excluded": false,
+      "upper_display": 0.09751113232949317,
+      "upper_exact_rounded_outward": "97511132329493163537772111161/1000000000000000000000000000000"
+    },
+    {
+      "index": 11,
+      "excluded": false,
+      "upper_display": 0.10918083559434984,
+      "upper_exact_rounded_outward": "54590417797174920747546244717/500000000000000000000000000000"
+    }
+  ]
+}

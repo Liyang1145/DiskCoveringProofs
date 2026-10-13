@@ -1,0 +1,13 @@
+{
+  "perturbed_site_original_index": 7,
+  "dx_exact": "1/1000000",
+  "coverage_upper": "[0.37998485311983870904851819999999999999999999994695, 0.37998485311983870904851820000000000000000000003453]",
+  "cover_radius_threshold": "19/50",
+  "inward_norm_test_all_rings": true,
+  "all_adjacent_switches_strict_nearest": true,
+  "left_radius_squared": "[0.1443874906125266565185895561693708939445922979884, 0.14438749061252665651858955616937089394459230000277]",
+  "right_radius_squared": "[0.14438795400052006157626818376045664956005221996019, 0.14438795400052006157626818376045664956005222260952]",
+  "left_minus_right_squared": "[-0.00000046338799340505767862759108575561545992462111743976, -0.00000046338799340505767862759108575561545991995742098817]",
+  "coverage_source": "C529 exact threshold for integer/1e17 witness + coordinate-displacement Lipschitz inequality",
+  "statement": "At r=.38 a genuine inward-root cover has unequal previous/next switch radii. Diagonal u=v is NOT universally necessary."
+}

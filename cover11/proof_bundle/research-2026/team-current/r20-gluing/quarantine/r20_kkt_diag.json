@@ -1,0 +1,8 @@
+{
+ "diag": {
+  "cone_kkt": 0,
+  "cone_val": 2,
+  "kkt_val": 2,
+  "all": 2
+ }
+}

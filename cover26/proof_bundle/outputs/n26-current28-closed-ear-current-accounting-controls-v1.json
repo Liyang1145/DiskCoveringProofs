@@ -1,0 +1,98 @@
+{
+  "schema": "N26-closed-ear-current-independent-accounting-controls-v1",
+  "verified": false,
+  "new_geometric_payments": 0,
+  "tested_accounting_sha256": "f5b3c8be0fe5d9a8f44ac5e6cfb715d4682763c13f48ec56f51ac65b679a6ec3",
+  "executed_test_sha256": "941cf83829740fd70c46fa0dca0541bc725fe0c144d8bb45da47bcac8c41a9e3",
+  "actual_parent_current_sha256": "d306ec18c476fc4dc40d19284cb0281db82e457201a97f85e361c1b37c6a17ea",
+  "actual_source_frontier_sha256": "d82aa773c5dde04d64a83144301018b29dc30a415b9df7bddf0442c637833a15",
+  "actual_independent_source_partition": {
+    "entire_source_prefixes_independently_scanned": 11183,
+    "strict_whole_ear_prefixes": 643,
+    "retained_unpaid_source_prefixes": 10540,
+    "original_physical_count_cases": 646,
+    "original_physical_count_and_all_shadow_label_cases": 673,
+    "independent_family_conservation": [
+      {
+        "B": 14,
+        "actual_source_subtrees": 296,
+        "strict_closed_ear_whole_subtrees": 0,
+        "retained_subtrees": 296,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 15,
+        "actual_source_subtrees": 1224,
+        "strict_closed_ear_whole_subtrees": 0,
+        "retained_subtrees": 1224,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 16,
+        "actual_source_subtrees": 4542,
+        "strict_closed_ear_whole_subtrees": 3,
+        "retained_subtrees": 4539,
+        "all_raw_terminals_retained": 2
+      },
+      {
+        "B": 17,
+        "actual_source_subtrees": 5121,
+        "strict_closed_ear_whole_subtrees": 640,
+        "retained_subtrees": 4481,
+        "all_raw_terminals_retained": 0
+      }
+    ],
+    "all_raw_terminals_and_unpaid_siblings_retained_identically": true,
+    "all_original_source_prefixes_prefix_free": true,
+    "continuous_geometry_not_inferred_from_finite_accounting": true,
+    "candidate_whole_roots_removed": 0
+  },
+  "actual_invalid_source_case_and_partition_controls_rejected": [
+    "missing-actual-whole-prefix-payment",
+    "duplicate-actual-whole-prefix-payment",
+    "wrong-source-index-owner",
+    "missing-original-or-shadow-placement-case",
+    "three-instead-of-four-core-owners",
+    "different-filled-boundary-triangle",
+    "conditional-source-promoted-to-U",
+    "external-original-nonowner-bound-hidden",
+    "different-actual-introduced-label-count",
+    "changed-unpaid-sibling",
+    "missing-unpaid-sibling",
+    "duplicated-unpaid-sibling",
+    "raw-complete-candidate-terminal-removed",
+    "lost-strict-entire-ear-projection-margin"
+  ],
+  "synthetic_invalid_receipt_and_scope_controls_rejected": [
+    "unverified-shape",
+    "other-acceptance-schema",
+    "original-U-scope",
+    "different-proof-time-parent",
+    "partial-source-only",
+    "phantom-candidate-root-payment",
+    "shadow-limit-not-justified",
+    "sampled-geometry-substitute",
+    "global-completion-overclaim",
+    "different-actual-owned-source",
+    "old-current-dependency-dropped",
+    "different-actual-publication"
+  ],
+  "synthetic_invalid_current_scope_controls_rejected": [
+    "stale-unfiltered-current-frontier",
+    "false-smaller-candidate-objective",
+    "changed-original-U-frontier",
+    "discarded-LOCAL-allowance",
+    "candidate-source-identity-reset",
+    "wrong-family-partition",
+    "missing-old-proof-receipt",
+    "candidate-raw-path-removed"
+  ],
+  "synthetic_receipts_NOT_actual_geometry_or_current_acceptance": true,
+  "actual_own_geometry_and_current_main_NOT_executed_by_controls": true,
+  "all_existing_current_candidate_histories_proofs_and_ledgers_UNMODIFIED": true,
+  "actual_formal_frontier_STILL": 11183,
+  "actual_candidate_whole_roots_STILL": 25,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

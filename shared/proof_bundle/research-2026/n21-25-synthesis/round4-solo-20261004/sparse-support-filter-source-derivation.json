@@ -1,0 +1,84 @@
+{
+  "verified": true,
+  "schema": "necessary-sparse-support-filter-derivation-v1",
+  "source_sha256": "b84187354cc14715be4818cea8231dd23e706d07d372733b1474272ede9acc9b",
+  "files": [
+    {
+      "source": "sparse_outer_matcher.inc",
+      "source_sha256": "bbc19a7b25785d5c619773a0f53156beca06cf4774a0666fc5b179d52ef496c1",
+      "target": "sparse_support_matcher.inc",
+      "target_sha256": "eab026957a1e0e453c1a7ad958e597d7a76ac8f976da5f363d1d57b69f926d69",
+      "changes": [
+        [
+          " int id,K,shift,sign;\n",
+          " int id,K,shift,sign;\n int required_faces=0;\n array<int,4> required_boundary_type_counts{};\n uint32_t required_boundary_support=0;\n"
+        ],
+        [
+          "   SparseVariant v;v.id=pattern.id;v.K=K;v.shift=shift;v.sign=sign;\n",
+          "   SparseVariant v;v.id=pattern.id;v.K=K;v.shift=shift;v.sign=sign;\n   v.required_faces=pattern.faces.size();\n"
+        ],
+        [
+          "    if(interior.empty())v.all_boundary_faces.push_back(boundary);\n",
+          "    v.required_boundary_support|=boundary;\n    v.required_boundary_type_counts[pop(boundary)]++;\n    if(interior.empty())v.all_boundary_faces.push_back(boundary);\n"
+        ],
+        [
+          " uint32_t used_inside=0,bmask=(uint32_t(1)<<b)-1;\n",
+          " uint32_t used_inside=0,bmask=(uint32_t(1)<<b)-1;\n uint32_t target_boundary_support=0;\n array<int,4> target_boundary_type_counts{};\n"
+        ],
+        [
+          "  uint32_t boundary=face&bmask,inside=face^boundary;\n",
+          "  uint32_t boundary=face&bmask,inside=face^boundary;\n  target_boundary_support|=boundary;\n target_boundary_type_counts[pop(boundary)]++;\n"
+        ],
+        [
+          " for(auto const& variant:sparse_variants){\n  int K=variant.K;\n",
+          " for(auto const& variant:sparse_variants){\n  if(variant.required_faces>(int)raw.size()||\n     (variant.required_boundary_support&~target_boundary_support))continue;\n  bool type_counts_fit=true;\n  for(int type=1;type<=3;type++)\n   if(variant.required_boundary_type_counts[type]>target_boundary_type_counts[type])\n    {type_counts_fit=false;break;}\n  if(!type_counts_fit)continue;\n  int K=variant.K;\n"
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "sparse_outer_match.cpp",
+      "source_sha256": "188ab2b44769bf7b21c2b54d1f14be9e76d5a3d0600abac8183faac5c3e2f3fc",
+      "target": "sparse_support_match.cpp",
+      "target_sha256": "717f5cce43222150c6691b333ddd933e2774a9b3260ec6faff555c6584e66689",
+      "changes": [
+        [
+          "#include \"sparse_outer_matcher.inc\"",
+          "#include \"sparse_support_matcher.inc\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "peel_eight_rod_collar.cpp",
+      "source_sha256": "31df43f9ad8d4d6aa04538c787aee096e992bc1d3116793e0cd2c6eae22a6d26",
+      "target": "peel_support_eight_collar.cpp",
+      "target_sha256": "92f62955466d7d50103f8a38bfffc26f58d8a3743b82bf5342829cac92ee9381",
+      "changes": [
+        [
+          "#include \"sparse_outer_matcher.inc\"",
+          "#include \"sparse_support_matcher.inc\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "peel_origin_streamed_collar.cpp",
+      "source_sha256": "2fa670b7e10a6fdd869862f821406a5457300983fb8b9cb3f4c886688bd8bd93",
+      "target": "peel_support_origin_collar.cpp",
+      "target_sha256": "d49a088dfc936c04329a2325fed26d4ba96ee12debaa7574337505122d10859b",
+      "changes": [
+        [
+          "#include \"sparse_outer_matcher.inc\"",
+          "#include \"sparse_support_matcher.inc\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    }
+  ],
+  "only_necessary_matching_filters_and_include_names_changed": true,
+  "all_existing_candidate_search_and_positive_injection_checks_unchanged": true,
+  "full_search_recursion_angles_storage_and_origin_condition_unchanged": true,
+  "source_lemma_sha256": "318c9b811bf33103f4180b94557170a37f8a3fe378b643e3bf45b9d0f238e9fe",
+  "global_optimality_proved": false
+}

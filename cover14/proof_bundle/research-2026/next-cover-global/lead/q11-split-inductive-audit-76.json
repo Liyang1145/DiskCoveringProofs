@@ -1,0 +1,480 @@
+{
+  "status": "independent_inductive_complete_clipping_vertexsets",
+  "source_sha256": "37953c87fffe5e5ef35783949c441afc1f06f5cae299fb0fa36d06dd8ec79099",
+  "runs": [
+    {
+      "node": 0,
+      "vertices": 110,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 18,
+      "crossing_vertices": 18
+    },
+    {
+      "node": 2,
+      "vertices": 108,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 8,
+      "crossing_vertices": 8
+    },
+    {
+      "node": 4,
+      "vertices": 104,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 7,
+      "crossing_vertices": 7
+    },
+    {
+      "node": 6,
+      "vertices": 98,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 6,
+      "crossing_vertices": 6
+    },
+    {
+      "node": 8,
+      "vertices": 90,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 5,
+      "crossing_vertices": 5
+    },
+    {
+      "node": 10,
+      "vertices": 80,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 4,
+      "crossing_vertices": 4
+    },
+    {
+      "node": 12,
+      "vertices": 68,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 11,
+      "vertices": 44,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 38,
+      "crossing_vertices": 38
+    },
+    {
+      "node": 14,
+      "vertices": 76,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 32,
+      "crossing_vertices": 32
+    },
+    {
+      "node": 16,
+      "vertices": 96,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 26,
+      "crossing_vertices": 26
+    },
+    {
+      "node": 18,
+      "vertices": 104,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 20,
+      "crossing_vertices": 20
+    },
+    {
+      "node": 20,
+      "vertices": 100,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 19,
+      "vertices": 104,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 64,
+      "crossing_vertices": 64
+    },
+    {
+      "node": 22,
+      "vertices": 128,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 21,
+      "vertices": 104,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 17,
+      "vertices": 96,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 60,
+      "crossing_vertices": 60
+    },
+    {
+      "node": 24,
+      "vertices": 120,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 23,
+      "vertices": 96,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 15,
+      "vertices": 76,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 13,
+      "vertices": 44,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 9,
+      "vertices": 45,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 38,
+      "crossing_vertices": 38
+    },
+    {
+      "node": 26,
+      "vertices": 76,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 31,
+      "crossing_vertices": 31
+    },
+    {
+      "node": 28,
+      "vertices": 93,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 24,
+      "crossing_vertices": 24
+    },
+    {
+      "node": 30,
+      "vertices": 96,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 29,
+      "vertices": 93,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 60,
+      "crossing_vertices": 60
+    },
+    {
+      "node": 32,
+      "vertices": 120,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 48,
+      "crossing_vertices": 48
+    },
+    {
+      "node": 34,
+      "vertices": 144,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 33,
+      "vertices": 120,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 31,
+      "vertices": 93,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 27,
+      "vertices": 76,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 25,
+      "vertices": 45,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 7,
+      "vertices": 44,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 36,
+      "crossing_vertices": 36
+    },
+    {
+      "node": 36,
+      "vertices": 72,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 28,
+      "crossing_vertices": 28
+    },
+    {
+      "node": 38,
+      "vertices": 84,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 20,
+      "crossing_vertices": 20
+    },
+    {
+      "node": 40,
+      "vertices": 80,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 39,
+      "vertices": 84,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 54,
+      "crossing_vertices": 54
+    },
+    {
+      "node": 42,
+      "vertices": 108,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 45,
+      "crossing_vertices": 45
+    },
+    {
+      "node": 44,
+      "vertices": 135,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 36,
+      "crossing_vertices": 36
+    },
+    {
+      "node": 46,
+      "vertices": 144,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 45,
+      "vertices": 135,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 43,
+      "vertices": 108,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 41,
+      "vertices": 84,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 37,
+      "vertices": 72,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 35,
+      "vertices": 44,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 5,
+      "vertices": 41,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 32,
+      "crossing_vertices": 32
+    },
+    {
+      "node": 48,
+      "vertices": 64,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 23,
+      "crossing_vertices": 23
+    },
+    {
+      "node": 50,
+      "vertices": 69,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 14,
+      "crossing_vertices": 14
+    },
+    {
+      "node": 52,
+      "vertices": 56,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 51,
+      "vertices": 69,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 42,
+      "crossing_vertices": 42
+    },
+    {
+      "node": 54,
+      "vertices": 84,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 36,
+      "crossing_vertices": 36
+    },
+    {
+      "node": 56,
+      "vertices": 108,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 30,
+      "crossing_vertices": 30
+    },
+    {
+      "node": 58,
+      "vertices": 120,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 24,
+      "crossing_vertices": 24
+    },
+    {
+      "node": 60,
+      "vertices": 120,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 59,
+      "vertices": 120,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 57,
+      "vertices": 108,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 55,
+      "vertices": 84,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 53,
+      "vertices": 69,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 49,
+      "vertices": 64,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 47,
+      "vertices": 41,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 3,
+      "vertices": 36,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 26,
+      "crossing_vertices": 26
+    },
+    {
+      "node": 62,
+      "vertices": 52,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 16,
+      "crossing_vertices": 16
+    },
+    {
+      "node": 64,
+      "vertices": 48,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 56,
+      "crossing_vertices": 56
+    },
+    {
+      "node": 66,
+      "vertices": 84,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 24,
+      "crossing_vertices": 24
+    },
+    {
+      "node": 68,
+      "vertices": 96,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 20,
+      "crossing_vertices": 20
+    },
+    {
+      "node": 70,
+      "vertices": 100,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 16,
+      "crossing_vertices": 16
+    },
+    {
+      "node": 72,
+      "vertices": 96,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 71,
+      "vertices": 100,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 69,
+      "vertices": 96,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 67,
+      "vertices": 84,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 65,
+      "vertices": 76,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 63,
+      "vertices": 52,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 32,
+      "crossing_vertices": 32
+    },
+    {
+      "node": 74,
+      "vertices": 64,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 28,
+      "crossing_vertices": 28
+    },
+    {
+      "node": 76,
+      "vertices": 84,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 75,
+      "vertices": 64,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 73,
+      "vertices": 52,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 61,
+      "vertices": 36,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 24,
+      "crossing_vertices": 24
+    },
+    {
+      "node": 78,
+      "vertices": 48,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 77,
+      "vertices": 36,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 1,
+      "vertices": 38,
+      "exact_vertexsets_equal": true
+    }
+  ],
+  "seconds": 12.664883613586426
+}

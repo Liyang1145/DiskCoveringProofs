@@ -1,0 +1,138 @@
+{
+  "scope": "fixedouteranalyticboundaryenclosure, calibrationnotglobal",
+  "rows": [
+    {
+      "outer": [
+        ".38",
+        "1.107",
+        "1.0695"
+      ],
+      "bound": {
+        "upper": 28.10558175672477,
+        "widths": [
+          {
+            "upper": 0.16141256232403256,
+            "search_floor": 0.1605354766438032,
+            "evaluations": 257,
+            "budget_ended": true
+          },
+          {
+            "upper": 0.15912692371510886,
+            "search_floor": 0.15874941161452188,
+            "evaluations": 257,
+            "budget_ended": true
+          }
+        ],
+        "circles": [
+          {
+            "upper": -0.5037335794934635,
+            "search_floor": -0.5037416220568992,
+            "evaluations": 67,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5037321837622899,
+            "search_floor": -0.5037413759354299,
+            "evaluations": 73,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5903485635618662,
+            "search_floor": -0.5903515188184635,
+            "evaluations": 59,
+            "budget_ended": false
+          }
+        ]
+      }
+    },
+    {
+      "outer": [
+        ".38",
+        "1",
+        "1"
+      ],
+      "bound": {
+        "upper": 28.089248487566095,
+        "widths": [
+          {
+            "upper": 0.14473873708745458,
+            "search_floor": 0.1447287941456394,
+            "evaluations": 225,
+            "budget_ended": false
+          },
+          {
+            "upper": 0.14720198232098802,
+            "search_floor": 0.14719220609469072,
+            "evaluations": 219,
+            "budget_ended": false
+          }
+        ],
+        "circles": [
+          {
+            "upper": -0.4914666862902643,
+            "search_floor": -0.49147653952156417,
+            "evaluations": 203,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.49146835065731265,
+            "search_floor": -0.4914765818562864,
+            "evaluations": 191,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5282427575411631,
+            "search_floor": -0.5282462511787183,
+            "evaluations": 61,
+            "budget_ended": false
+          }
+        ]
+      }
+    },
+    {
+      "outer": [
+        ".375",
+        "1.18",
+        "1.18"
+      ],
+      "bound": {
+        "upper": 28.085976438736026,
+        "widths": [
+          {
+            "upper": 0.171755344469226,
+            "search_floor": 0.1704695825581503,
+            "evaluations": 257,
+            "budget_ended": true
+          },
+          {
+            "upper": 0.1739701261866169,
+            "search_floor": 0.1727149535347557,
+            "evaluations": 257,
+            "budget_ended": true
+          }
+        ],
+        "circles": [
+          {
+            "upper": -0.5427248447103054,
+            "search_floor": -0.5427321286151863,
+            "evaluations": 47,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5427248558631723,
+            "search_floor": -0.5427321397689464,
+            "evaluations": 47,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.6366954630571784,
+            "search_floor": -0.6367028820179691,
+            "evaluations": 57,
+            "budget_ended": false
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 3.315943479537964
+}

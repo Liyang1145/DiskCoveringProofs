@@ -1,0 +1,28 @@
+{
+ "schema": "topology/n14-k10-catalogue/v1",
+ "conditional_inputs": [
+  "k10 boundary cells connected (structure member)",
+  "no chords (structure member)",
+  "coverage at r<=U"
+ ],
+ "conventions": {
+  "rings": "0..9",
+  "hubs": "10..9+m",
+  "anchors": "anchor i between ring i and ring i+1",
+  "faces": "triangles; 10 outer + inner (1R,2H) + hub-only (0R,3H)"
+ },
+ "raw_checked_items_per_skeleton": {
+  "P3": 0,
+  "K3": 0,
+  "P4": 0,
+  "K13": 0,
+  "K3P": 0,
+  "diamond": 0,
+  "K4-123": 0,
+  "K4-023": 0,
+  "K4-013": 0,
+  "K4-012": 0
+ },
+ "catalogue_size": 0,
+ "entries": []
+}

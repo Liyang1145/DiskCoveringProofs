@@ -1,0 +1,7 @@
+{
+  "status": "exact_symbolic_identity_checks",
+  "dot_halfplane_identity": true,
+  "bisector_sum_identity": true,
+  "chord_direction_identities": true,
+  "scope": "Algebra only; sign/domain argument in CLOSURE-COORDINATE-PROOF.md."
+}

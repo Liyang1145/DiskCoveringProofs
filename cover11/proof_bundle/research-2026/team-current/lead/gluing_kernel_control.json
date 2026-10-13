@@ -1,0 +1,6 @@
+{
+  "strict_boundary_root_identity": "zero exact polynomial remainder",
+  "barycentric_squared_distance_identity": "zero expanded polynomial",
+  "fan_radius_completion": "zero expanded polynomial",
+  "scope": "symbolic kernel identities; geometry hypotheses supplied by analytic documents"
+}

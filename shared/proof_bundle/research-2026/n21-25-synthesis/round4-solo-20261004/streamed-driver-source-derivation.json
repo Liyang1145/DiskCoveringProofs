@@ -1,0 +1,85 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_source_sha256": "f448966d252e2517646fe9615dd936414f29fde0eb492f8c146eaebfc9dd6933",
+  "derived_source_sha256": "862781f4f25ece07f6b6db1582901ff76abf75d5995bb735334df217d8d88659",
+  "source_sha256": "230a21bfa5acf59ab41daf659ae142af1b7212dbd52f9cd3f9f0649a927d3878",
+  "changes": [
+    [
+      "from test_outer_collar import collar_codes, linux_path, WSL",
+      "from test_outer_collar import linux_path, WSL\nfrom streamed_storage_gate import storage_gate\nfrom merge_collar_chunks import merge"
+    ],
+    [
+      "    ap.add_argument(\"--output\", type=Path, required=True)",
+      "    ap.add_argument(\"--storage-controls\", type=Path, required=True)\n    ap.add_argument(\"--output\", type=Path, required=True)"
+    ],
+    [
+      "    files.update(maps[\"files_relative_to_workspace\"])",
+      "    assert B == 15, \"only the failed B15 run is replaced by streamed storage\"\n    files.update(storage_gate(args.storage_controls.resolve()))\n    files.update(maps[\"files_relative_to_workspace\"])"
+    ],
+    [
+      "    unchanged(files)\n    output.mkdir()",
+      "    for path in (\n        ROOT / \"run_eight_rod_search.py\", ROOT / \"derive_streamed_driver.py\",\n        ROOT / \"streamed-driver-source-derivation.json\", ROOT / \"streamed_storage_gate.py\",\n        ROOT / \"test_streamed_collar.py\", ROOT / \"derive_streamed_collar.py\",\n        ROOT / \"streamed-collar-source-derivation.json\", ROOT / \"collar_chunk_storage.inc\",\n        ROOT / \"peel_streamed_collar.cpp\", ROOT / \"peel_streamed_collar-linux\",\n        ROOT / \"merge_collar_chunks.py\", args.storage_controls,\n    ):\n        bind(files, path)\n    unchanged(files)\n    output.mkdir()"
+    ],
+    [
+      "f\"N25-B{B}-necessary-eight-rod-collars.json\"",
+      "f\"N25-B{B}-complete-sorted-chunks.json\""
+    ],
+    [
+      "\"./peel_eight_rod_collar-linux\", \"25\", str(B), relative(target)",
+      "\"./peel_streamed_collar-linux\", \"25\", str(B), relative(target)"
+    ],
+    [
+      "\"0\", \"dfs\", \"-\", relative(table), str(CAP8),",
+      "\"0\", \"dfs\", \"-\", relative(table), str(CAP8), \"100000\","
+    ],
+    [
+      "\"cap8\": CAP8, \"same_non_omitted_recursion_and_sparse_injection_checks\": True,",
+      "\"cap8\": CAP8, \"same_non_omitted_recursion_and_sparse_injection_checks\": True,\n        \"slab_limit\": 100000, \"storage_never_used_for_recursion_pruning\": True,"
+    ],
+    [
+      "rf\"EIGHT ROD NATIVE PID=(\\d+) N=25 B={B}\"",
+      "rf\"STREAMED COLLAR NATIVE PID=(\\d+) N=25 B={B}\""
+    ],
+    [
+      "\"binary_linux_path\": linux_path(ROOT / \"peel_eight_rod_collar-linux\"),",
+      "\"binary_linux_path\": linux_path(ROOT / \"peel_streamed_collar-linux\"),"
+    ],
+    [
+      "\"native_binary_sha256\": sha(ROOT / \"peel_eight_rod_collar-linux\"),",
+      "\"native_binary_sha256\": sha(ROOT / \"peel_streamed_collar-linux\"),"
+    ],
+    [
+      "\"native_log_sha256\": sha(output / \"NATIVE-STDERR.log\"), \"global_optimality_proved\": False,",
+      "\"native_log_sha256\": sha(output / \"NATIVE-STDERR.log\"),\n        \"manifest_sha256\": sha(target) if target.exists() else None,\n        \"global_optimality_proved\": False,"
+    ],
+    [
+      "    header, codes = collar_codes(target, 25, B)",
+      "    header = read(target)"
+    ],
+    [
+      "    groups = [{\"id\": gid, **row, \"members\": 1} for gid, row in enumerate(header[\"weak_graphs\"])]\n    bindings = output / \"bindings.jsonl\"\n    with bindings.open(\"x\", encoding=\"utf8\") as stream:\n        for row in groups:\n            stream.write(json.dumps({\n                \"index\": row[\"id\"], \"group\": row[\"id\"],\n                \"map\": {\"centers\": list(range(row[\"centers\"])), \"anchors\": list(range(B)),\n                        \"orientation\": 1, \"shift\": 0},\n            }, separators=(\",\", \":\"))+\"\\n\")\n    publish(output / \"GROUPS.json\", {\n        \"N\": 25, \"B\": B, \"threshold\": 1, \"groups\": groups, \"group_count\": len(groups),\n        \"selected_types\": len(groups), \"catalog_types\": len(groups), \"catalog_sha256\": sha(target),\n        \"bindings_file\": bindings.name, \"bindings_sha256\": sha(bindings),\n        \"verified_embeddings_during_generation\": True, \"full_selected_catalog_scanned\": True,\n        \"parent_groups_sha256\": None, \"parent_proof_sha256\": None,\n        \"members_are_necessary_weak_graphs_not_full_types\": True,\n        \"source_sha256\": sha(Path(__file__)), \"global_optimality_proved\": False,\n    })\n    unchanged(files)\n    publish(output / \"SUMMARY.json\", {\n        \"verified\": True, \"N\": 25, \"B\": B, \"complete_necessary_outer_collar_overapproximation\": True,\n        \"unpaid_weak_graphs\": len(groups), \"all_remaining_weak_lower_bounds_paid\": len(groups) == 0,\n        \"full_triangulations_not_enumerated\": True, \"source_induction_required_for_cover_transport\": True,\n        \"cap8\": CAP8, \"native_catalog_sha256\": sha(target), \"groups_sha256\": sha(output / \"GROUPS.json\"),\n        \"payment_samples_explicitly_mapped\": len(header[\"sparse_payments\"]),\n        \"files_relative_to_workspace\": files, \"source_sha256\": sha(Path(__file__)),\n        \"global_optimality_proved\": False,\n    })\n    print(\"N25/B\", B, \"complete eight-rod necessary catalog accepted:\", len(groups), \"unpaid weak graphs\", flush=True)",
+      "    assert header[\"schema\"] == \"complete-outer-collar-sorted-chunks-v1\"\n    assert header[\"complete_necessary_outer_search\"] and not header[\"complete_full_triangulations\"]\n    assert header[\"N\"] == 25 and header[\"B\"] == B and header[\"slab_limit\"] == 100000\n    union = merge(target, code, output / \"UNION\")\n    unchanged(files)\n    publish(output / \"SUMMARY.json\", {\n        \"verified\": True, \"N\": 25, \"B\": B,\n        \"complete_necessary_outer_collar_overapproximation\": True,\n        \"unpaid_weak_graphs\": union[\"unique_necessary_weak_graphs\"],\n        \"all_remaining_weak_lower_bounds_paid\": union[\"unique_necessary_weak_graphs\"] == 0,\n        \"full_triangulations_not_enumerated\": True,\n        \"source_induction_required_for_cover_transport\": True,\n        \"cap8\": CAP8, \"native_manifest_sha256\": sha(target),\n        \"complete_union_report_sha256\": sha(output / \"UNION/VERIFIED.json\"),\n        \"catalog_sha256\": union[\"catalog_sha256\"],\n        \"payment_samples_explicitly_mapped\": len(header[\"sparse_payments\"]),\n        \"files_relative_to_workspace\": files, \"source_sha256\": sha(Path(__file__)),\n        \"global_optimality_proved\": False,\n    })\n    print(\"N25/B\", B, \"complete streamed necessary union accepted:\",\n          union[\"unique_necessary_weak_graphs\"], \"unpaid weak graphs\", flush=True)"
+    ]
+  ],
+  "occurrence_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "original_mathematical_library_angle_mapping_partition_gates_preserved": true,
+  "new_slab_control_gate_added": true,
+  "actual_zero_exit_required": true,
+  "only_failed_B15_replacement_allowed": true,
+  "global_optimality_proved": false
+}

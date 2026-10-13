@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "schema": "origin-batch-mechanical-and-scope-rejection-controls-v1",
+  "original_bounded_memory_and_fresh_exact_replay_logic_preserved": true,
+  "negative_controls_rejected": [
+    "restricted-N25-seed-not-a-whole-family",
+    "old-unqualified-schema"
+  ],
+  "source_sha256": "9de6a74f6a03c20166ee809b08cc8210451e5283c3677228a76af214c7c83d0b",
+  "partition_source_sha256": "5a4298db6ef57124e731d8fd46e45526f5bf8e98871d55cc1cc889408d90d16e",
+  "audit_source_sha256": "4f03b0ae31a539e6edfebcbeaefa371bbe033e125d1d24bb3820cf8322da1f59",
+  "derivation_sha256": "3dc4ddb06359d7a3a95a0101f5954b26a6c5b89370a773774fa70461762e4a99",
+  "actual_complete_N25_production_parent_not_yet_tested": true,
+  "not_a_complete_competitor_family_payment": true,
+  "global_optimality_proved": false
+}

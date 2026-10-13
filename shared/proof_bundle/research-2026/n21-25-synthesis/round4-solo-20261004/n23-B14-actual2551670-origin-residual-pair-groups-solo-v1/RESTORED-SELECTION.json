@@ -1,0 +1,32 @@
+{
+  "schema": "N23-B14-origin-residual-source-and-exposed-group-restoration-v1",
+  "N": 23,
+  "B": 14,
+  "all_source_types_scanned": 8277632,
+  "actual_selected_residual_types": 2551670,
+  "exposed_pair_groups": 381,
+  "every_selected_original_face_center_anchor_map_checked": true,
+  "all_original_origin_obstructions_skipped_without_recounting": true,
+  "groups_sha256": "098bf3ecee9480178c9288f72a56c1b9b7dd4d63dc16b39ebe37a0f8b72da769",
+  "bindings_sha256": "4a480404ab6cd2c891bf33b41f721783b4e2485895f2537c196e30e60a5a3305",
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-complete-source-and-union-reacceptance-20261005-v1\\VERIFIED.json": "627d6d030d22f0a866c0c382dba9ce88207a8cf1313433d7b0d64dc1cf50159e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-original779-runs-and25-union-assets-20261005-v1\\FINAL\\RESIDUAL.bin": "8fbe6bab7a352046722d423356ef8d44fadc1322c05840edb6b2fa93d8fcb24c",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\evidence\\core-reduction\\constants\\n23.json": "0b08dd350e33852d46207fb709b88ad5535cb2a003a51cf429b7cddb200c8ed1",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-cover-origin-necessity-controls-20261005-v1\\VERIFIED.json": "e37e74163fcf614b5cbf1d608d6378e213d8650b388325ee2900e4d551440a46",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-binary-origin-face-controls-20261005-v1\\VERIFIED.json": "ad30744f963e5bc7e4fca0feb8a4fad3988bb70fab5a946333a9b5af105d4c2f",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\partition_n23_B14_binary_origin.py": "fbd7c0f4300fe1b9b5a57b4e7c0a9057781243c5d655539b1aea0b0d8c56fc5a",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-N24-UNEXPOSED-ORIGIN-SOURCE.md": "d800a4372b39a4454428abb03fc4455441b093f1ac90f221909ef8698c3846db",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\paid_binary_residual.py": "bf6f37d144227befab7ca5c82562d21eedc3173ad3a9fdfaa8b10b5ab5c4edfb",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\stream_catalog.py": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\group_n23_B14_origin_residual.py": "95a11a2cfc5862346eaaac944405e35b14ab9835f60a514ce0fcea8de5c514e6",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-all8277632-binary-origin-partition-20261005-v1\\ACCEPTED\\VERIFIED.json": "703c6e0282373cff3602e2feeffdebda22550ee8933e5779820d8777c7fc9d5d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-all8277632-binary-origin-partition-20261005-v1\\PENDING.jsonl": "accb46ac83ec657753e6fadcacc4475b903dbf838b73db6a88e05121b3cd549d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-actual-origin-residual-grouping-controls-solo-v1\\VERIFIED.json": "4e2433f4c4419287af2052a4168e8e59e68011be6c4325a5d9af34d55b70f55d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\group_catalog.py": "6c15a9dd6df1d24ffd68e3772aa42b7e1e2103d30ad33970ba42e07b0120bf01",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\audit_streamed_hierarchy.py": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3"
+  },
+  "source_sha256": "95a11a2cfc5862346eaaac944405e35b14ab9835f60a514ce0fcea8de5c514e6",
+  "independent_selection_map_audit_and_all_new_force_replays_still_required": true,
+  "global_optimality_proved": false
+}

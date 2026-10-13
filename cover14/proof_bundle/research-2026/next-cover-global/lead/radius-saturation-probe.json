@@ -1,0 +1,480 @@
+{
+  "status": "numeric_proposal_diagnostic_only",
+  "scope": "12jointdualproposals; tangentanglesnotassertedprimalfeasible",
+  "runs": [
+    {
+      "family": "10/4",
+      "index": 141,
+      "upper_bound": 3.543460208486322e-05,
+      "interior_faces": [
+        {
+          "face": 7,
+          "angle_sum_defect": -1.0277187001227932,
+          "min_beta": 0.071318257251,
+          "max_beta": 1.315990090562
+        },
+        {
+          "face": 10,
+          "angle_sum_defect": 0.7040289171632068,
+          "min_beta": 1.135968969361,
+          "max_beta": 1.511895253802
+        },
+        {
+          "face": 12,
+          "angle_sum_defect": 1.3227652293912069,
+          "min_beta": 1.084470670781,
+          "max_beta": 1.867991958407
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -0.23575505779379302,
+          "min_beta": 0.071318257251,
+          "max_beta": 1.670611033981
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": -0.2667765313987931,
+          "min_beta": 0.636355262735,
+          "max_beta": 1.511895253802
+        },
+        {
+          "face": 15,
+          "angle_sum_defect": 0.5266628721162068,
+          "min_beta": 0.636355262735,
+          "max_beta": 1.867991958407
+        }
+      ]
+    },
+    {
+      "family": "10/4",
+      "index": 894,
+      "upper_bound": 0.00039772212462291305,
+      "interior_faces": [
+        {
+          "face": 4,
+          "angle_sum_defect": -0.3899048331957933,
+          "min_beta": 0.51324024681,
+          "max_beta": 1.197757347581
+        },
+        {
+          "face": 7,
+          "angle_sum_defect": -0.776763952623793,
+          "min_beta": 0.636839305855,
+          "max_beta": 1.001423789457
+        },
+        {
+          "face": 9,
+          "angle_sum_defect": 1.8069929276062062,
+          "min_beta": 0.726565605654,
+          "max_beta": 2.199650869981
+        },
+        {
+          "face": 11,
+          "angle_sum_defect": 1.8069929276062062,
+          "min_beta": 0.726565605654,
+          "max_beta": 2.199650869981
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -0.776763952623793,
+          "min_beta": 0.636839305855,
+          "max_beta": 1.001423789457
+        },
+        {
+          "face": 15,
+          "angle_sum_defect": -0.3899048331957933,
+          "min_beta": 0.51324024681,
+          "max_beta": 1.197757347581
+        }
+      ]
+    },
+    {
+      "family": "10/4",
+      "index": 624,
+      "upper_bound": 0.0010449685102203146,
+      "interior_faces": [
+        {
+          "face": 5,
+          "angle_sum_defect": -0.2848972298997934,
+          "min_beta": 0.805094894676,
+          "max_beta": 1.089442997008
+        },
+        {
+          "face": 8,
+          "angle_sum_defect": -0.6857528010277933,
+          "min_beta": 0.577320641878,
+          "max_beta": 0.983513199404
+        },
+        {
+          "face": 11,
+          "angle_sum_defect": 1.3303315739082064,
+          "min_beta": 0.373228260876,
+          "max_beta": 2.061635834755
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": 1.6944337628552066,
+          "min_beta": 0.608775762172,
+          "max_beta": 2.165614819518
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": -0.3034767174887931,
+          "min_beta": 0.795197205671,
+          "max_beta": 1.089442997008
+        },
+        {
+          "face": 15,
+          "angle_sum_defect": -0.7628575309977932,
+          "min_beta": 0.53025337789,
+          "max_beta": 0.953475733422
+        }
+      ]
+    },
+    {
+      "family": "10/4",
+      "index": 183,
+      "upper_bound": 0.001045542578458373,
+      "interior_faces": [
+        {
+          "face": 7,
+          "angle_sum_defect": 0.06947521994620676,
+          "min_beta": 0.255500521462,
+          "max_beta": 1.640008661558
+        },
+        {
+          "face": 9,
+          "angle_sum_defect": 1.0687524776992063,
+          "min_beta": 0.903198883777,
+          "max_beta": 1.708232117993
+        },
+        {
+          "face": 11,
+          "angle_sum_defect": 0.8022548164432068,
+          "min_beta": 0.844545262867,
+          "max_beta": 1.626674322334
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -1.963290649115793,
+          "min_beta": 0.0,
+          "max_beta": 0.726565605641
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": 0.600033926375207,
+          "min_beta": 0.726565605641,
+          "max_beta": 1.626674322334
+        },
+        {
+          "face": 15,
+          "angle_sum_defect": 0.33393455375220693,
+          "min_beta": 0.451736398833,
+          "max_beta": 1.708232117993
+        }
+      ]
+    },
+    {
+      "family": "10/4",
+      "index": 556,
+      "upper_bound": 0.0013060665713923955,
+      "interior_faces": [
+        {
+          "face": 5,
+          "angle_sum_defect": -0.8223873643237933,
+          "min_beta": 0.665595157147,
+          "max_beta": 0.922891480097
+        },
+        {
+          "face": 9,
+          "angle_sum_defect": -0.30563886685479336,
+          "min_beta": 0.7448004625,
+          "max_beta": 1.157053917421
+        },
+        {
+          "face": 11,
+          "angle_sum_defect": 2.1655475724722066,
+          "min_beta": 0.962157532006,
+          "max_beta": 2.361880436587
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -1.0683670607757931,
+          "min_beta": 0.255500521426,
+          "max_beta": 0.934099406814
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": 2.0196301908552075,
+          "min_beta": 0.883625664574,
+          "max_beta": 2.361880436587
+        },
+        {
+          "face": 15,
+          "angle_sum_defect": -0.559022843681793,
+          "min_beta": 0.730718652022,
+          "max_beta": 1.040690226003
+        }
+      ]
+    },
+    {
+      "family": "10/4",
+      "index": 328,
+      "upper_bound": 0.002963347464915615,
+      "interior_faces": [
+        {
+          "face": 6,
+          "angle_sum_defect": -0.9266453804417933,
+          "min_beta": 0.662441747594,
+          "max_beta": 0.853379785894
+        },
+        {
+          "face": 9,
+          "angle_sum_defect": -0.09805335133379334,
+          "min_beta": 0.883625664586,
+          "max_beta": 1.079956818835
+        },
+        {
+          "face": 11,
+          "angle_sum_defect": 2.1876783213862065,
+          "min_beta": 0.969676509406,
+          "max_beta": 2.337225360009
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -0.7355536599997929,
+          "min_beta": 0.530253377908,
+          "max_beta": 1.079956818835
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": 1.8693148978252072,
+          "min_beta": 0.795828796847,
+          "max_beta": 2.337225360009
+        },
+        {
+          "face": 15,
+          "angle_sum_defect": -0.5896384693817929,
+          "min_beta": 0.69912573966,
+          "max_beta": 1.008468322821
+        }
+      ]
+    },
+    {
+      "family": "11/3",
+      "index": 136,
+      "upper_bound": 0.00010639046606916315,
+      "interior_faces": [
+        {
+          "face": 1,
+          "angle_sum_defect": -1.4999760394847932,
+          "min_beta": 0.255500521426,
+          "max_beta": 0.934379693846
+        },
+        {
+          "face": 4,
+          "angle_sum_defect": -1.6182012909797931,
+          "min_beta": 0.255500521426,
+          "max_beta": 0.894662580283
+        },
+        {
+          "face": 6,
+          "angle_sum_defect": 1.9857888815132068,
+          "min_beta": 0.892036857941,
+          "max_beta": 2.140168864143
+        },
+        {
+          "face": 8,
+          "angle_sum_defect": 1.8748586389472068,
+          "min_beta": 0.83254386917,
+          "max_beta": 2.140168864143
+        },
+        {
+          "face": 10,
+          "angle_sum_defect": -0.9700372841907932,
+          "min_beta": 0.373228260901,
+          "max_beta": 1.119223548039
+        }
+      ]
+    },
+    {
+      "family": "11/3",
+      "index": 663,
+      "upper_bound": 0.0001964007429480232,
+      "interior_faces": [
+        {
+          "face": 1,
+          "angle_sum_defect": -1.6789767088957932,
+          "min_beta": 0.137908443496,
+          "max_beta": 0.755193465953
+        },
+        {
+          "face": 2,
+          "angle_sum_defect": -2.2571536792627933,
+          "min_beta": 0.137908443496,
+          "max_beta": 0.530253377908
+        },
+        {
+          "face": 3,
+          "angle_sum_defect": 0.980218345701207,
+          "min_beta": 0.216277152923,
+          "max_beta": 2.021698720352
+        },
+        {
+          "face": 9,
+          "angle_sum_defect": -0.2429825530447931,
+          "min_beta": 0.731512660683,
+          "max_beta": 1.15849039611
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -0.036001559842793185,
+          "min_beta": 0.849033873961,
+          "max_beta": 1.247950176034
+        }
+      ]
+    },
+    {
+      "family": "11/3",
+      "index": 31,
+      "upper_bound": 0.00034417972729271034,
+      "interior_faces": [
+        {
+          "face": 7,
+          "angle_sum_defect": -0.3330992365447929,
+          "min_beta": 0.022672103543,
+          "max_beta": 1.708232117993
+        },
+        {
+          "face": 10,
+          "angle_sum_defect": -0.12372287402179305,
+          "min_beta": 0.210078112431,
+          "max_beta": 1.730202471628
+        },
+        {
+          "face": 12,
+          "angle_sum_defect": -0.12372287402179305,
+          "min_beta": 0.210078112431,
+          "max_beta": 1.730202471628
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": -0.3330992365447929,
+          "min_beta": 0.022672103543,
+          "max_beta": 1.708232117993
+        }
+      ]
+    },
+    {
+      "family": "11/3",
+      "index": 454,
+      "upper_bound": 0.0010424195330269554,
+      "interior_faces": [
+        {
+          "face": 1,
+          "angle_sum_defect": -0.9685376883907932,
+          "min_beta": 0.569514035262,
+          "max_beta": 0.948623305887
+        },
+        {
+          "face": 6,
+          "angle_sum_defect": 1.5017778552042067,
+          "min_beta": 0.469485957706,
+          "max_beta": 2.179435121584
+        },
+        {
+          "face": 8,
+          "angle_sum_defect": 1.2448642124192073,
+          "min_beta": 0.291105008919,
+          "max_beta": 2.100902427586
+        },
+        {
+          "face": 9,
+          "angle_sum_defect": -2.007522964261793,
+          "min_beta": 0.291105008919,
+          "max_beta": 0.537273088765
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": -1.096309101882793,
+          "min_beta": 0.305691591644,
+          "max_beta": 0.934497065387
+        }
+      ]
+    },
+    {
+      "family": "11/3",
+      "index": 906,
+      "upper_bound": 0.002599477401775527,
+      "interior_faces": [
+        {
+          "face": 1,
+          "angle_sum_defect": 0.17678257731020697,
+          "min_beta": 0.201099139115,
+          "max_beta": 1.590430019097
+        },
+        {
+          "face": 3,
+          "angle_sum_defect": 0.29339989982120684,
+          "min_beta": 0.294736054431,
+          "max_beta": 1.613410426292
+        },
+        {
+          "face": 5,
+          "angle_sum_defect": 0.10292080147520677,
+          "min_beta": 0.137908443496,
+          "max_beta": 1.590430019097
+        },
+        {
+          "face": 9,
+          "angle_sum_defect": -0.3500564189257931,
+          "min_beta": 0.647982411079,
+          "max_beta": 1.224657161179
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -0.15818083044179332,
+          "min_beta": 0.762210039697,
+          "max_beta": 1.302305121045
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": 0.24349328660020664,
+          "min_beta": 0.255500521426,
+          "max_beta": 1.613410426292
+        }
+      ]
+    },
+    {
+      "family": "11/3",
+      "index": 34,
+      "upper_bound": 0.002922587555592689,
+      "interior_faces": [
+        {
+          "face": 7,
+          "angle_sum_defect": -1.642488508711793,
+          "min_beta": 0.0,
+          "max_beta": 0.779218849092
+        },
+        {
+          "face": 12,
+          "angle_sum_defect": 1.3951147077922066,
+          "min_beta": 0.412480907962,
+          "max_beta": 2.202488842847
+        },
+        {
+          "face": 13,
+          "angle_sum_defect": -2.5019446061497934,
+          "min_beta": 0.0,
+          "max_beta": 0.384147526014
+        },
+        {
+          "face": 14,
+          "angle_sum_defect": 1.1758143425412069,
+          "min_beta": 0.255500521426,
+          "max_beta": 2.140168864132
+        }
+      ]
+    }
+  ]
+}

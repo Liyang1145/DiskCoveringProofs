@@ -1,0 +1,489 @@
+{
+  "schema": "individually-paid-discovery-graphs-v1",
+  "N": 25,
+  "B": 15,
+  "snapshot_sha256": "1ff3ceefe8a9e03e9b81bba91d7109dce504b041ee94c5fa953ea5b808a3e379",
+  "constants_sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+  "outcomes": [
+    {
+      "group": 0,
+      "centers": 17,
+      "faces": [
+        704,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "19789548351426897367814458865821153/1000015426833656878147000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "cee0b2d2c728243f8b38896a32fdf439e49a0b9873dbf0df82e76e7e779a071c"
+    },
+    {
+      "group": 1,
+      "centers": 17,
+      "faces": [
+        704,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "7897857438880014220035419082095619/1000014363461625698281000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "391cbd7ed4e16594069633c98f47db386f33598d2d9035e96c1305ca98b1734a"
+    },
+    {
+      "group": 2,
+      "centers": 17,
+      "faces": [
+        832,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "19789903534416661288004492500582613/1000010059072025142687000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "b4cfb2c9d8df70edf5027d4ac0e0869d591900731b6532cb83a671f2df4431a5"
+    },
+    {
+      "group": 3,
+      "centers": 17,
+      "faces": [
+        1664,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2444883721341903552694314906745771/1000006516614757519329000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "de6425ec39a783861fcf353da99c2025a8a481f6c62f97a97a61155795173213"
+    },
+    {
+      "group": 4,
+      "centers": 17,
+      "faces": [
+        1664,
+        57344,
+        68608,
+        77824
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14282672239020659232070559818664197/1000003251211581971503000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "1b49170ad7707733728d6f2bd1cc899a638459d7ad66f07c487edfcdb90a3da2"
+    },
+    {
+      "group": 5,
+      "centers": 16,
+      "faces": [
+        2816,
+        38912,
+        57344
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 34,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1784954430894207711225254629094637/125001134804750905063000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "65df9679379d7fdd8a1b40f8dd736105eeb09cc39d13eda57ae386098b66c89f"
+    },
+    {
+      "group": 6,
+      "centers": 17,
+      "faces": [
+        2816,
+        90112,
+        100352
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1784743899486615385815688074722717/125002087899142324983000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "16e65d54eb6fe12272c1ad490f31cc0f815484a1437b1e413d8e058a15d6fadf"
+    },
+    {
+      "group": 7,
+      "centers": 16,
+      "faces": [
+        3328,
+        38912,
+        57344
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 34,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1427931666728357982342021033523639/100003095716823632261000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "76bb9ca8d2c58d2be29638fbb80d118abe287c39d9d5c73436f2c4d3dfbdf4a5"
+    },
+    {
+      "group": 8,
+      "centers": 17,
+      "faces": [
+        3328,
+        71680,
+        114688
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2855550059953214474895209013055717/200000284766661291983000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "d1b20518f713c26b37691686726f0946e62cbc652579b6fd3d497e2d1c379c1a"
+    },
+    {
+      "group": 9,
+      "centers": 17,
+      "faces": [
+        3328,
+        90112,
+        100352
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "4759807836144233269175867873883149/333338373185146503751000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "3ffac7d15f39e99e6c84de4974f6419c8f626b3bf1f48ea519878f9628cb54db"
+    },
+    {
+      "group": 10,
+      "centers": 17,
+      "faces": [
+        26624,
+        68608,
+        98560
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14280186711893401912731443586702643/1000005191729744865657000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "69da7c7c31df666b9fa287850dcf38b9aaaa3f737784268dda0fa5a5ecf40069"
+    },
+    {
+      "group": 11,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        68608,
+        98560
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "250810296926338335392434281696377/1000024341944521197323000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "664dee7aeee4fd1273fe61d5b9967acd6efb7ba89405d6ada49147664842fffa"
+    },
+    {
+      "group": 12,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        71680,
+        98816
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "989787402556607690885977340261821/83333930089780008279000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "a86e38fd6cf4193d7d31803f0880d84caa70bf02ee192d97ffa2e760fae8591b"
+    },
+    {
+      "group": 13,
+      "centers": 17,
+      "faces": [
+        28672,
+        33088,
+        66304,
+        68608
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "5702764970524898237670181515032219/500004329590971221681000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "9d338c574e9bbc223c2611d2996d5a36850e8e59483034393f050c07397fa586"
+    },
+    {
+      "group": 14,
+      "centers": 17,
+      "faces": [
+        28672,
+        33408,
+        67072,
+        71680
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 42,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "3746433018399678872892617342125207/1000000952916023891493000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "cb4b0dedbbcee526c770fd27f05e07628defdaa95796673452d88d65cad5628d"
+    },
+    {
+      "group": 15,
+      "centers": 16,
+      "faces": [
+        28672,
+        33536,
+        38912
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 34,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "11257573399345264342843727405903671/1000001841126285351429000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "69309071fe874c9da87cc5710f823262f259ba60f60c67802b81ed18be1a377b"
+    },
+    {
+      "group": 16,
+      "centers": 17,
+      "faces": [
+        28672,
+        71680,
+        98560
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "281440608725848977077411560199043/25000232722060209257000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "f12c6f81e7201beb602b1858db26d2ee46c38911143d5788fc4398c761cf9874"
+    },
+    {
+      "group": 17,
+      "centers": 18,
+      "faces": [
+        32864,
+        67072,
+        98432,
+        136192,
+        155648
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 45,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "591500114740407090959004290183641/90909568648835228459000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "6429d17af7f4d8040e80b52555a0b59e589133e3f2d621b8e21800f7389ea11e"
+    },
+    {
+      "group": 18,
+      "centers": 17,
+      "faces": [
+        33536,
+        90112,
+        102400
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "62229705377188151180577384805429/24999890363859649471000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "4f4785110b990979e4a4dbf31882df88294c33d009187526f50752a55c11595a"
+    },
+    {
+      "group": 19,
+      "centers": 17,
+      "faces": [
+        34048,
+        90112,
+        100352
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "145394064022780898998056403687903/100000114783599686397000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "20174dda0aa3ddc43ed4da941cac9d53c25b064da6178ab38d63d3482927d79e"
+    },
+    {
+      "group": 20,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        100352
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "148734666179285803069022050352071/10416820475380943029000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "b8e680decc31c3bea4497c1e0731325d2de805623c18a09e01d5bc44bc37ac04"
+    },
+    {
+      "group": 21,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        102400
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 39,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1738299900617637021217314709810423/200002462833308375877000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "8679dceca606cd3d67a80ccbac7244577cdd73ed904584ba166d255bd7f48c2f"
+    },
+    {
+      "group": 22,
+      "centers": 18,
+      "faces": [
+        41984,
+        57344,
+        65632,
+        132608,
+        196736
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 45,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1649014689508008906401102419819617/83333679777610118083000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "2b42eea14edf2a7d4269e80e283d5a01b666289409a51623c9bf4f2de6ceec74"
+    }
+  ],
+  "totals": {
+    "excluded": 23
+  },
+  "source_sha256": "24b56af5db29f983be0e373a62d08b30d7a9961eeb8e86b428229e50338c90db",
+  "source_make_sha256": "d5694f13f571cd70be4f90358fd5d3481347e7459e459e37e0531cf9d485e581",
+  "complete_family_coverage": false,
+  "global_optimality_proved": false
+}

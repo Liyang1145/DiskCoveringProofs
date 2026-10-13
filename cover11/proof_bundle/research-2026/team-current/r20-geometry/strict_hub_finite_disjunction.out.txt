@@ -1,0 +1,129 @@
+====================================================================================================
+PART A.  Certified q0(6,7) object: nine inner intersections, both fan chains (no grid, no hub solve)
+====================================================================================================
+  r in [0.379983853119838709048518179573 , 0.379983853119838709048518179573] (width 0.000000000000000000000000000000000000000000000000000000000004)
+  hub norms: |c_0| = 0.14942849894640002001 (lead 10), |c_2| = 0.27297746635709793372 (lead 9)
+  ring norms (min,max) = (0.700870053859786, 0.892521729905327)  vs rho = 1-r = 0.620016146880161
+  per-edge pins (absolute pair, |p_in|, |p_out|, max |pin - recorded float64|):
+     5- 7  |p_in|=0.486780059281131      |p_out|=1.00000000000000002       cross-check 5.6e-17   d=0.5297128375  k=0.2724679909
+     7- 1  |p_in|=0.622917369273244      |p_out|=1.0                       cross-check 0.0e+00   d=0.6594699943  k=0.1888453343
+     1- 8  |p_in|=0.622917369574585      |p_out|=1.00000000000000001       cross-check 2.8e-17   d=0.6594699944  k=0.1888453342
+     8- 6  |p_in|=0.486780059741571      |p_out|=1.0                       cross-check 0.0e+00   d=0.529712838  k=0.2724679907
+     6- 4  |p_in|=0.396024966121907      |p_out|=1.00000000000000004       cross-check 0.0e+00   d=0.4511043374  k=0.3058005033
+     4- 9  |p_in|=0.484656099835519      |p_out|=1.00000000000000002       cross-check 5.6e-17   d=0.5549960422  k=0.2595815419
+     9-10  |p_in|=0.529412352066239      |p_out|=1.00000000000000004       cross-check 1.1e-19   d=0.5967396251  k=0.235293824
+    10- 3  |p_in|=0.484656102948071      |p_out|=1.00000000000000005       cross-check 5.6e-17   d=0.5549960447  k=0.2595815406
+     3- 5  |p_in|=0.396024966003585      |p_out|=1.00000000000000002       cross-check 0.0e+00   d=0.4511043371  k=0.3058005034
+  [certified lo, hub abs 2 (fan m=4)]
+    m=4 r=0.37998385312 rho=0.62001614688 
+    A) min|h| over S = 0.27297746635709771847  (kind circle-circle#0-2, 3 candidates);  rho - min = 0.347039  -> strict hub EXISTS
+    B) slacks: W1 0.377083 | pair(mu>=rho) 0.347039 | triple(psi>r) 0.00144108  -> no-hub False ; routes agree: True
+       tight triple (0, 1, 3): psi = 0.37854276920170519756 (branch diameter), r - psi = 0.00144108
+      hub |h| = 0.27297746635709793372 ; min_j (r - |h - p_j|) = 4.65739e-17 (hub inside every fan disk: True)
+      active pins at the hub: 4 of 4 ; angular gaps (deg): 49.62, 70.78, 49.62, 189.98
+      max gap > 180 deg  ==>  escape direction exists (S not a singleton); explicit Slater point with |h| = 0.273977466357 < rho and strict disk margins: yes
+  [certified lo, hub abs 0 (fan m=5)]
+    m=5 r=0.37998385312 rho=0.62001614688 
+    A) min|h| over S = 0.14942849894640001756  (kind circle-circle#0-2, 3 candidates);  rho - min = 0.470588  -> strict hub EXISTS
+    B) slacks: W1 0.470588 | pair(mu>=rho) 0.470588 | triple(psi>r) 4.57981e-17  -> no-hub False ; routes agree: True
+       tight triple (0, 2, 4): psi = 0.37998385311983866325 (branch circumcircle), r - psi = 4.57981e-17   <-- EQUALITY class: nonempty triple with psi = r
+      hub |h| = 0.14942849894640002001 ; min_j (r - |h - p_j|) = 2.44278e-18 (hub inside every fan disk: True)
+      active pins at the hub: 3 of 5 ; angular gaps (deg): 94.99, 170.02, 94.99
+      max gap <= 180 deg  ==>  0 in conv(p_j - hub)  ==>  S = {hub}: closed intersection is the SINGLETON {hub} (at the object's saturation level), NO Slater point; the strict verdict comes from min|h| = |hub| < rho only.
+  (cross-check, all nine edges in ONE intersection: min|h| = S = EMPTY, empty (no candidate) -> consistent: no joint hub required, the two fans are served separately)
+  [certified hi, hub abs 2 (fan m=4)]
+    m=4 r=0.37998385312 rho=0.62001614688 
+    A) min|h| over S = 0.27297746635709771847  (kind circle-circle#0-2, 3 candidates);  rho - min = 0.347039  -> strict hub EXISTS
+    B) slacks: W1 0.377083 | pair(mu>=rho) 0.347039 | triple(psi>r) 0.00144108  -> no-hub False ; routes agree: True
+       tight triple (0, 1, 3): psi = 0.37854276920170519756 (branch diameter), r - psi = 0.00144108
+      hub |h| = 0.27297746635709793372 ; min_j (r - |h - p_j|) = 4.65739e-17 (hub inside every fan disk: True)
+      active pins at the hub: 4 of 4 ; angular gaps (deg): 49.62, 70.78, 49.62, 189.98
+      max gap > 180 deg  ==>  escape direction exists (S not a singleton); explicit Slater point with |h| = 0.273977466357 < rho and strict disk margins: yes
+  [certified hi, hub abs 0 (fan m=5)]
+    m=5 r=0.37998385312 rho=0.62001614688 
+    A) min|h| over S = 0.14942849894640001756  (kind circle-circle#0-2, 3 candidates);  rho - min = 0.470588  -> strict hub EXISTS
+    B) slacks: W1 0.470588 | pair(mu>=rho) 0.470588 | triple(psi>r) 4.57981e-17  -> no-hub False ; routes agree: True
+       tight triple (0, 2, 4): psi = 0.37998385311983866325 (branch circumcircle), r - psi = 4.57981e-17   <-- EQUALITY class: nonempty triple with psi = r
+      hub |h| = 0.14942849894640002001 ; min_j (r - |h - p_j|) = 2.44278e-18 (hub inside every fan disk: True)
+      active pins at the hub: 3 of 5 ; angular gaps (deg): 94.99, 170.02, 94.99
+      max gap <= 180 deg  ==>  0 in conv(p_j - hub)  ==>  S = {hub}: closed intersection is the SINGLETON {hub} (at the object's saturation level), NO Slater point; the strict verdict comes from min|h| = |hub| < rho only.
+  (cross-check, all nine edges in ONE intersection: min|h| = S = EMPTY, empty (no candidate) -> consistent: no joint hub required, the two fans are served separately)
+
+====================================================================================================
+PART B.  Constructed exact controls: every disjunct class + both CQ-failure degeneracies
+====================================================================================================
+  [B1 pair-disjoint (2-set witness W2)]
+    m=2 r=0.5 rho=1.0 |p1-p2|=1.2>2r=1
+    A) min|h| over S = S = EMPTY  (kind empty (no candidate), 0 candidates);  rho - min = -inf  -> strict hub ABSENT
+    B) slacks: W1 0.3 | pair(mu>=rho) -inf | triple(psi>r) +inf  -> no-hub True ; routes agree: True
+       tight pair (0, 1): mu = None (rho - mu = -inf)
+  [B2 ball-disk tangency (W1 equality)]
+    m=1 r=0.5 rho=1.0 |p1| = 1.5 = rho+r exactly
+    A) min|h| over S = 1.0  (kind projection#0, 1 candidates);  rho - min = 0.0  -> strict hub ABSENT
+    B) slacks: W1 0.0 | pair(mu>=rho) +inf | triple(psi>r) +inf  -> no-hub True ; routes agree: True
+  [B2' ball-disk strict (W1 strict)]
+    m=1 r=0.5 rho=1.0 |p1| = 1.6 > 1.5
+    A) min|h| over S = 1.1  (kind projection#0, 1 candidates);  rho - min = -0.1  -> strict hub ABSENT
+    B) slacks: W1 -0.1 | pair(mu>=rho) +inf | triple(psi>r) +inf  -> no-hub True ; routes agree: True
+  [B3 tangent lens touching |h|=rho (closed singleton, CQ fails)]
+    m=2 r=0.5 rho=0.5 lens = {t}, |t| = rho exactly -> pair witness with equality
+    A) min|h| over S = 0.5  (kind circle-circle#0-1, 1 candidates);  rho - min = 0.0  -> strict hub ABSENT
+    B) slacks: W1 0.292893 | pair(mu>=rho) 0.0 | triple(psi>r) +inf  -> no-hub True ; routes agree: True
+       tight pair (0, 1): mu = 0.5 (rho - mu = 0.0)
+  [B3' lens strictly outside the open ball (pair witness strict)]
+    m=2 r=0.5 rho=0.5 pair lens = {t}, |t| = 1.2 > rho
+    A) min|h| over S = 1.2  (kind circle-circle#0-1, 1 candidates);  rho - min = -0.7  -> strict hub ABSENT
+    B) slacks: W1 -0.3 | pair(mu>=rho) -0.7 | triple(psi>r) +inf  -> no-hub True ; routes agree: True
+       tight pair (0, 1): mu = 1.2 (rho - mu = -0.7)
+  [B3'' lens strictly inside (strict hub exists, no witness)]
+    m=2 r=0.5 rho=0.5 pair lens = {t}, |t| = 0.3 < rho
+    A) min|h| over S = 0.3  (kind circle-circle#0-1, 1 candidates);  rho - min = 0.2  -> strict hub EXISTS
+    B) slacks: W1 0.416905 | pair(mu>=rho) 0.2 | triple(psi>r) +inf  -> no-hub False ; routes agree: True
+  [B4 3 disks, S = {q} singleton, |q|=0.3 (CQ fails)]
+    m=3 r=0.5 rho=0.5 sum-condition forces S = {q}; no Slater point either way
+    A) min|h| over S = 0.3  (kind circle-circle#1-2, 4 candidates);  rho - min = 0.2  -> strict hub EXISTS
+    B) slacks: W1 0.2 | pair(mu>=rho) 0.2 | triple(psi>r) 0.0  -> no-hub False ; routes agree: True
+       tight triple (0, 1, 2): psi = 0.5 (branch circumcircle), r - psi = 0.0   <-- EQUALITY class: nonempty triple with psi = r
+  [B4 3 disks, S = {q} singleton, |q|=0.6 (CQ fails)]
+    m=3 r=0.5 rho=0.5 sum-condition forces S = {q}; no Slater point either way
+    A) min|h| over S = 0.6  (kind circle-circle#1-2, 4 candidates);  rho - min = -0.1  -> strict hub ABSENT
+    B) slacks: W1 -0.1 | pair(mu>=rho) -0.1 | triple(psi>r) 0.0  -> no-hub True ; routes agree: True
+       tight pair (0, 1): mu = 0.6 (rho - mu = -0.1)
+       tight triple (0, 1, 2): psi = 0.5 (branch circumcircle), r - psi = 0.0   <-- EQUALITY class: nonempty triple with psi = r
+      (B5 MEC check: psi=1.0969655114602889526 branch=circumcircle, |centre|=9.85954191e-52, side=1.9, r=1.0)
+  [B5 triple empty, pairwise nonempty (3-set witness W4)]
+    m=3 r=1.0 rho=1.0 psi = side/sqrt3 = 1.096965511 > r
+    A) min|h| over S = S = EMPTY  (kind empty (no candidate), 0 candidates);  rho - min = -inf  -> strict hub ABSENT
+    B) slacks: W1 0.903034 | pair(mu>=rho) 0.763767 | triple(psi>r) -0.0969655  -> no-hub True ; routes agree: True
+       tight triple (0, 1, 2): psi = 1.0969655114602889526 (branch circumcircle), r - psi = -0.0969655
+      (B6 MEC check: psi=1.2502499750049987503 branch=diameter, |centre|=1.250249975; longest side/2=1.2502499750049987503)
+  [B6 obtuse MEC branch, triple nonempty (projection witness)]
+    m=3 r=1.4 rho=1.3 psi = longest/2 = 1.250249975 <= r
+    A) min|h| over S = 1.1004999500099975007  (kind projection#2, 3 candidates);  rho - min = 0.1995  -> strict hub EXISTS
+    B) slacks: W1 0.1995 | pair(mu>=rho) 0.1995 | triple(psi>r) 0.14975  -> no-hub False ; routes agree: True
+       tight triple (0, 1, 2): psi = 1.2502499750049987503 (branch diameter), r - psi = 0.14975
+  [B7 acute MEC branch, 0 in S (origin witness)]
+    m=3 r=1.2 rho=1.0 psi = 1.096965511 <= r, centre = origin
+    A) min|h| over S = 0.0  (kind origin, 7 candidates);  rho - min = 1.0  -> strict hub EXISTS
+    B) slacks: W1 1.10303 | pair(mu>=rho) 1.0 | triple(psi>r) 0.103034  -> no-hub False ; routes agree: True
+       tight triple (0, 1, 2): psi = 1.0969655114602889526 (branch circumcircle), r - psi = 0.103034
+  [B8 collinear triple (diameter MEC)]
+    m=3 r=1.0 rho=1.0 psi = 1.5 > r
+    A) min|h| over S = S = EMPTY  (kind empty (no candidate), 0 candidates);  rho - min = -inf  -> strict hub ABSENT
+    B) slacks: W1 -1.0 | pair(mu>=rho) -inf | triple(psi>r) -0.5  -> no-hub True ; routes agree: True
+       tight pair (0, 2): mu = None (rho - mu = -inf)
+       tight triple (0, 1, 2): psi = 1.5 (branch diameter), r - psi = -0.5
+
+  control summary: 12 cases, all route-agreement checks passed
+    B1 pair-disjoint (2-set witness W2)                            exists=False no_hub=True  fires=W_pair
+    B2 ball-disk tangency (W1 equality)                            exists=False no_hub=True  fires=W1
+    B2' ball-disk strict (W1 strict)                               exists=False no_hub=True  fires=W1
+    B3 tangent lens touching |h|=rho (closed singleton, CQ fails)  exists=False no_hub=True  fires=W_pair
+    B3' lens strictly outside the open ball (pair witness strict)  exists=False no_hub=True  fires=W1,W_pair
+    B3'' lens strictly inside (strict hub exists, no witness)      exists=True  no_hub=False fires=-
+    B4 3 disks, S = {q} singleton, |q|=0.3 (CQ fails)              exists=True  no_hub=False fires=-
+    B4 3 disks, S = {q} singleton, |q|=0.6 (CQ fails)              exists=False no_hub=True  fires=W1,W_pair
+    B5 triple empty, pairwise nonempty (3-set witness W4)          exists=False no_hub=True  fires=W4
+    B6 obtuse MEC branch, triple nonempty (projection witness)     exists=True  no_hub=False fires=-
+    B7 acute MEC branch, 0 in S (origin witness)                   exists=True  no_hub=False fires=-
+    B8 collinear triple (diameter MEC)                             exists=False no_hub=True  fires=W1,W_pair,W4

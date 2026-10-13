@@ -1,0 +1,8 @@
+{
+  "upper_rational": "785349/250000",
+  "upper_exact": "10994884086914440386387059/3500000000000000000000000",
+  "pi_lower": "3.14159",
+  "strict": true,
+  "N": 16384,
+  "method": "exact Fraction series + analytic concave support tangent"
+}

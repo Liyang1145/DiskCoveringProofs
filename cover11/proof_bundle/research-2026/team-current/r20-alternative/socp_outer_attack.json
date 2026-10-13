@@ -1,0 +1,209 @@
+{
+  "scope": "numeric outer attack of the SOCP relaxation (tests the global relaxation route, NOT the theorem)",
+  "R_star": 0.37998385311983873,
+  "cap": 0.779593,
+  "n_points": 19,
+  "legal_domain": {
+    "L_cap": 0.779593,
+    "m_small_vertex_width": 0.04644130717958639,
+    "candidate_widths": [
+      0.7660240429427005,
+      0.7764427952729321,
+      0.7660240430956724,
+      0.5616438432767379,
+      0.6816861300678302,
+      0.7440172386630849,
+      0.7440172412752694,
+      0.6816861301310441,
+      0.561643842454315
+    ],
+    "candidate_deficits": [
+      0.013568957057299436,
+      0.00315020472706784,
+      0.013568956904327578,
+      0.2179491567232621,
+      0.0979068699321698,
+      0.03557576133691509,
+      0.03557575872473062,
+      0.09790686986895591,
+      0.217949157545685
+    ],
+    "deficit_sum": 0.7331516928204134
+  },
+  "results": [
+    {
+      "name": "calibration_candidate",
+      "legal": true,
+      "V": 0.3799838531198463,
+      "V_minus_R_star": 7.549516567451064e-15,
+      "min_over_51_cone_residual": 1.7208456881689926e-15,
+      "w_max": 0.7764427952729321,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex0(m,L..L)",
+      "legal": true,
+      "V": 0.41280898422221973,
+      "V_minus_R_star": 0.032825131102381,
+      "min_over_51_cone_residual": -2.220446049250313e-16,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex1(m,L..L)",
+      "legal": true,
+      "V": 0.4128089842222197,
+      "V_minus_R_star": 0.032825131102380944,
+      "min_over_51_cone_residual": -6.938893903907228e-16,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex2(m,L..L)",
+      "legal": true,
+      "V": 0.4128089842222197,
+      "V_minus_R_star": 0.032825131102380944,
+      "min_over_51_cone_residual": -8.326672684688674e-16,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex3(m,L..L)",
+      "legal": true,
+      "V": 0.40690157680158023,
+      "V_minus_R_star": 0.0269177236817415,
+      "min_over_51_cone_residual": -1.1102230246251565e-16,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex4(m,L..L)",
+      "legal": true,
+      "V": 0.4069015768012881,
+      "V_minus_R_star": 0.026917723681449346,
+      "min_over_51_cone_residual": -1.3577472479653352e-12,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex5(m,L..L)",
+      "legal": true,
+      "V": 0.4075762302889846,
+      "V_minus_R_star": 0.027592377169145865,
+      "min_over_51_cone_residual": -1.8041124150158794e-15,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex6(m,L..L)",
+      "legal": true,
+      "V": 0.40757623028898543,
+      "V_minus_R_star": 0.027592377169146698,
+      "min_over_51_cone_residual": -1.0824674490095276e-15,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex7(m,L..L)",
+      "legal": true,
+      "V": 0.4069015768015798,
+      "V_minus_R_star": 0.026917723681741057,
+      "min_over_51_cone_residual": -4.718447854656915e-16,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "vertex8(m,L..L)",
+      "legal": true,
+      "V": 0.4069015768015802,
+      "V_minus_R_star": 0.026917723681741446,
+      "min_over_51_cone_residual": -8.326672684688674e-17,
+      "w_max": 0.779593,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex0",
+      "legal": true,
+      "V": 0.39533855668729817,
+      "V_minus_R_star": 0.015354703567459438,
+      "min_over_51_cone_residual": -4.413136522884997e-15,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex1",
+      "legal": true,
+      "V": 0.39533855668730655,
+      "V_minus_R_star": 0.01535470356746782,
+      "min_over_51_cone_residual": 2.525757381022231e-15,
+      "w_max": 0.7728085215478362,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex2",
+      "legal": true,
+      "V": 0.3953385566873013,
+      "V_minus_R_star": 0.015354703567462546,
+      "min_over_51_cone_residual": -4.440892098500626e-16,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex3",
+      "legal": true,
+      "V": 0.3906325226179962,
+      "V_minus_R_star": 0.01064866949815746,
+      "min_over_51_cone_residual": -1.1102230246251565e-16,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex4",
+      "legal": true,
+      "V": 0.39064767950837503,
+      "V_minus_R_star": 0.010663826388536302,
+      "min_over_51_cone_residual": -9.409140133698202e-15,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex5",
+      "legal": true,
+      "V": 0.3913823532066204,
+      "V_minus_R_star": 0.011398500086781671,
+      "min_over_51_cone_residual": -4.996003610813204e-16,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex6",
+      "legal": true,
+      "V": 0.3913823532066211,
+      "V_minus_R_star": 0.011398500086782393,
+      "min_over_51_cone_residual": -2.220446049250313e-16,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex7",
+      "legal": true,
+      "V": 0.3906476795083777,
+      "V_minus_R_star": 0.010663826388538966,
+      "min_over_51_cone_residual": -5.828670879282072e-15,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    },
+    {
+      "name": "halfmix_candidate_vertex8",
+      "legal": true,
+      "V": 0.3906325227171014,
+      "V_minus_R_star": 0.010648669597262683,
+      "min_over_51_cone_residual": -3.0531133177191805e-16,
+      "w_max": 0.778017897636466,
+      "below_R_minus_1e6": false
+    }
+  ],
+  "any_bad_point": false,
+  "bad_point": null,
+  "note": "a bad point is a point of the RELAXATION (necessary conditions only), not yet a cover; realizability and exact rational checking are separate"
+}

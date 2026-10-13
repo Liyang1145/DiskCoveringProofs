@@ -1,0 +1,120 @@
+{
+  "schema": "N26-same-root-current-content-bundle-audit-v1",
+  "current_bound_bytes_rechecked": true,
+  "root_and_geometry_exactly_replayed": true,
+  "published_verifier_replay_bound": true,
+  "same_root_entire_disk_cover_proved": true,
+  "specified_candidate_exact_covering_radius_proved": true,
+  "r_strict_interval": [
+    "0.234700090400448239616790133776692127560495963654971391785924",
+    "0.234700090400448239616790133776692127560495963654971391785925"
+  ],
+  "earlier_rational_cover_and_scope_audit_bound": true,
+  "necessary_families_inherited_below_rational_threshold": [
+    {
+      "B": 14,
+      "I": 12,
+      "frontier_nodes": 2
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "frontier_nodes": 26
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "frontier_nodes": 70
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "frontier_nodes": 180
+    }
+  ],
+  "four_family_checkpoints_replayed": [
+    {
+      "B": 14,
+      "I": 12,
+      "completed_subtrees": 6,
+      "pending_subtrees": 22,
+      "closed_rooted_graphs": 13237,
+      "closed_distinct_orbits": 13237,
+      "limited_tasks_split_not_excluded": 26,
+      "forced_nodes_refined": 8,
+      "restricted_family_catalog_exhausted": false,
+      "checkpoint_sha256": "e70f2bcc0b589ef2c9772fa10a7f8adc2ba4e05f45e5896526146d5e292bc161"
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "completed_subtrees": 1,
+      "pending_subtrees": 30,
+      "closed_rooted_graphs": 0,
+      "closed_distinct_orbits": 0,
+      "limited_tasks_split_not_excluded": 5,
+      "forced_nodes_refined": 34,
+      "restricted_family_catalog_exhausted": false,
+      "checkpoint_sha256": "d65e99b8708bd2df12921c131414f848f7ff117ff2c4a418b3785e6413b1a48c"
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "completed_subtrees": 2,
+      "pending_subtrees": 73,
+      "closed_rooted_graphs": 0,
+      "closed_distinct_orbits": 0,
+      "limited_tasks_split_not_excluded": 5,
+      "forced_nodes_refined": 33,
+      "restricted_family_catalog_exhausted": false,
+      "checkpoint_sha256": "e8a2157b8004b00a910142fe2a0ad1b0c7a4c6207fad3fc1cfb92d61e6fe7272"
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "completed_subtrees": 5,
+      "pending_subtrees": 175,
+      "closed_rooted_graphs": 0,
+      "closed_distinct_orbits": 0,
+      "limited_tasks_split_not_excluded": 0,
+      "forced_nodes_refined": 35,
+      "restricted_family_catalog_exhausted": false,
+      "checkpoint_sha256": "702e4ad27b1f787cadc5c990c43774fc2437f9d8f378000859e951a7439c6001"
+    }
+  ],
+  "external_published_n8_theorem_still_explicit": true,
+  "arbitrary_cover_reduction_final_acceptance": false,
+  "full_catalog_complete": false,
+  "local_optimality_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "files": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_same_root_current_bundle.py": "edd90a4d0920ce1ccf6167b6a1df16385e80ebc7812df348ffb3ae27dcd7d7c9",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-upper-current-bundle-audit-v3.json": "0232f895e7fe323262d64dd20ceeb3e68ee4519a03a937db0c9978bf991e1743",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-STATUS.md": "cb28259610f0be293361a7be0dee373b147c7d7e0239f6a1ef3b73a2710c0040",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-milestone-20261009.md": "82fffff91412798f97e862c5dae9ab0d2009b3118cefe3d9a2f60af4dd197d53",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/SYSTEM.json": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/ROOT-CERTIFICATE.json": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/verify_contact_root.py": "52c896946029c412e87f81daa5d116934fc20d8a60a50ee4acb64ddfda48ec5e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/verify_same_root_cover.py": "8f3ed23bd483b20f64a3a6b9db09bfcb5f4d1c24021c20b81069de8e48c47063",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/PROOF.md": "db1bd5917b492a26d75f64f1f3f4e643a7a29017faaef886087aefb878b36d19",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/VERIFIED.json": "5d0f54da9d1648069a65c40661cc4b758700412ccec6d3787bebacf8e04bfe43",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-published-replay-v1/SYSTEM.json": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-published-replay-v1/ROOT-CERTIFICATE.json": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-published-replay-v1/verify_contact_root.py": "52c896946029c412e87f81daa5d116934fc20d8a60a50ee4acb64ddfda48ec5e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-published-replay-v1/verify_same_root_cover.py": "8f3ed23bd483b20f64a3a6b9db09bfcb5f4d1c24021c20b81069de8e48c47063",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-published-replay-v1/PROOF.md": "db1bd5917b492a26d75f64f1f3f4e643a7a29017faaef886087aefb878b36d19",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-published-replay-v1/VERIFIED.json": "f55c1c1cdf319c3d6b06e8cd6c69ce0acd6fb69e453acf2e1ba78f55be11c225",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_new_scope_checkpoints.py": "64dc6ff3e96bed04043dd631efdc3f382d99b23bb7e420b7170a4f6b7771cc6d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/run_new_scope_batch.py": "4c6259871019003929c6f8b893e6da1463882daa5723532de7514f0fbed4e4c9",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-B14-progress-v1.json": "e78a3250f3643765036f098d254a6a200c986723c28fd2f3041b91d3bccbb13b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-new-B14-batch-v1/checkpoint-00040.json": "e70f2bcc0b589ef2c9772fa10a7f8adc2ba4e05f45e5896526146d5e292bc161",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-B15-progress-v1.json": "ec1402bf6242bd457901093212869231aa63fd38366e82303a6289965b81a409",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-new-B15-batch-v1/checkpoint-00040.json": "d65e99b8708bd2df12921c131414f848f7ff117ff2c4a418b3785e6413b1a48c",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-B16-progress-v1.json": "71d155c60372ff49611d21d768d4eca2c936d0bf9e4ced1a246bb7311a450182",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-new-B16-batch-v1/checkpoint-00040.json": "e8a2157b8004b00a910142fe2a0ad1b0c7a4c6207fad3fc1cfb92d61e6fe7272",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-B17-progress-v1.json": "c774aa00fde6889162d0bc4d230f3bb2603bb1b2b15f0bb33389e493c1fcf3ea",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-new-B17-batch-v1/checkpoint-00040.json": "702e4ad27b1f787cadc5c990c43774fc2437f9d8f378000859e951a7439c6001",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-four-family-checkpoints-v1.json": "72a83bd0caa2fd2b6b73e9e5799654f21d76718e1a06753e5bd3548d9ea449be"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "level": "numeric only",
+  "radius": 0.3611029637445087,
+  "radial_points": 4001,
+  "q_points": 101,
+  "lambda_points": 401,
+  "decision": "negative residual would motivate rigorous continuous certification; positive residual is method diagnostic only",
+  "rows": [
+    {
+      "k": 9,
+      "best_sampled_residual": 0.1162386929888557,
+      "parameters": {
+        "q": 0.46394977057357223,
+        "lambda": 0.145,
+        "hub_halfwidth": 0.891991057409672
+      }
+    },
+    {
+      "k": 10,
+      "best_sampled_residual": 0.26912843335903514,
+      "parameters": {
+        "q": 0.40563401534626586,
+        "lambda": 0.3,
+        "hub_halfwidth": 1.0978249216133953
+      }
+    },
+    {
+      "k": 11,
+      "best_sampled_residual": 0.13025393458713008,
+      "parameters": {
+        "q": 0.36675684519472834,
+        "lambda": 0.455,
+        "hub_halfwidth": 1.3949801889264886
+      }
+    }
+  ]
+}

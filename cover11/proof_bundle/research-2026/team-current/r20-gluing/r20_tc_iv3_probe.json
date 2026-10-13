@@ -1,0 +1,27 @@
+{
+ "compiled": 285,
+ "pi_in_source": [],
+ "non_dyadic_literals": [],
+ "literal_census": {},
+ "control_source": "Created with lambdify. Signature:\n\nfunc(a0)\n\nExpression:\n\npi*a0 + sin(2*a0)\n\nSource code:\n\ndef _lambdifygenerated(a0):\n    return pi*a0 + sin(2*a0)\n\n\nImported modules:\n\n",
+ "control_old_mapping": {
+  "old_mapping_call": "NotImplementedError: "
+ },
+ "control_fixed_mapping": "[2.384790158281864987090004, 7.192482734005268172321307]",
+ "control_x1_pi": "[3.141592653589793238462643, 3.141592653589793238462643]",
+ "q4": {
+  "a_type": "ivmpf",
+  "a_a_mpi": "((0, 1, 0, 1), (0, 1, 0, 1))",
+  "mpf_of_nondeg_raises": "ValueError: can only create mpf from zero-width interval",
+  "cmp_undecided_returns": "None"
+ },
+ "box_audit": {
+  "mp_dps_at_iv2_construction": 15,
+  "iv2_max_outward": 2.7229219705550955e-17,
+  "iv2_max_inward": 5.263559100779585e-19,
+  "iv2_inward_relative_to_radius": 5.263559100779585e-10,
+  "ivonly_max_outward": 0.0,
+  "ivonly_max_inward": 0.0,
+  "ivonly_coords_inexact": []
+ }
+}

@@ -1,0 +1,52 @@
+{
+  "verified": true,
+  "schema": "N25-B16-B17-direct-parent-incremental-controls-v1",
+  "real_independently_accepted_B16_B17_families_checked": [
+    {
+      "parent": 47808,
+      "B": 16,
+      "proof_sha256": "4b697e65b7e9151e9cdcd6ca1121a1f6fd4cb3cd58810d1d929127a764a776f0",
+      "exact_sha256": "03701bb1d63116dfdac425ee4ef6b8fe1656a76992621729a1099a53283bed3e"
+    },
+    {
+      "parent": 5669,
+      "B": 17,
+      "proof_sha256": "67206d87117a47b31ce86b5da3343bcd8c4e81d69c0f9513337b210d0471e279",
+      "exact_sha256": "c0d623fd7e953366db8f38c8e6fa3568a981bf48a46920f5684206dbfc637524"
+    },
+    {
+      "parent": 5679,
+      "B": 17,
+      "proof_sha256": "de25f4d7e7b1f8c483e9f5893c2c07c60f5eae3180578cf00e18d305ceed6d66",
+      "exact_sha256": "48e6d981b9b1e0d609283624e62c1c0f888923664cdebe6817741c4d2a5925c0"
+    },
+    {
+      "parent": 5778,
+      "B": 17,
+      "proof_sha256": "7b48c28a379f2e272db9348b85bbf149a2e8cdb4fc4fdb2a81d4f1e296262a86",
+      "exact_sha256": "b861502d1aed54525ab79421e4ab8706acf2e13536c788c402ac1f80166bebd3"
+    }
+  ],
+  "negative_controls_rejected": [
+    "wrong-parent-source-index",
+    "wrong-original-snapshot-binding",
+    "wrong-N",
+    "wrong-B",
+    "weakened-collar-center-count",
+    "omitted-whole-source-face",
+    "proof-wrong-whole-outer-face-set",
+    "proof-wrong-N",
+    "proof-wrong-B",
+    "proof-wrong-constants",
+    "duplicate-source-parent-supplement",
+    "missing-full-parent-row",
+    "overlapping-old-paid-and-pending",
+    "duplicate-old-paid-row",
+    "extra-full-parent-row"
+  ],
+  "audit_source_sha256": "ffa515b6abb82ec15f7fefbed500915ab3ae813360531d9cdfa37c62c507eee0",
+  "frozen_deeper_family_checker_sha256": "2f80397018956006d24cf1b151d1207f37c9bc4b5f83b36c38d74a5eb7deee36",
+  "source_sha256": "17845997385e4db5216716dddc77a03f2a68ecf4069d3c5ae7887d2bff2f018f",
+  "positive_functional_checks_not_complete_parent_payment_adoption": true,
+  "global_optimality_proved": false
+}

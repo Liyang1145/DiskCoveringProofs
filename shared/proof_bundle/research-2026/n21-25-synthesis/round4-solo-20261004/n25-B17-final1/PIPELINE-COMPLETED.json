@@ -1,0 +1,13 @@
+{
+  "N": 25,
+  "B": 17,
+  "actual_original_and_independent_final_adopter_terminals_observed": true,
+  "complete_parent_weak_graphs": 289140,
+  "remaining_weak_graphs": 0,
+  "whole_necessary_B17_family_lower_paid": true,
+  "ready39_not_substituted_for_real_formal_pending_count": true,
+  "final_parent_report_sha256": "ce3f1f930e538eaad1d2e82c7a43ea7f6e04526f797fbca386b434b380edfb99",
+  "source_sha256": "eb2b52245cd028fbab287166dc340650d26676dead6131e787f9c4fc96e6be6d",
+  "source_cover_same_root_upper_and_global_freeze_still_required": true,
+  "global_optimality_proved": false
+}

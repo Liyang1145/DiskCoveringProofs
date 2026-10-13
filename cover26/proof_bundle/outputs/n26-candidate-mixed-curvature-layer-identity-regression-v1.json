@@ -1,0 +1,42 @@
+{
+  "schema": "N26-explicit-mixed-candidate-identity-regression-v1",
+  "synthetic_new_schema_and_enumeration_ancestry_identity_passed": true,
+  "synthetic_invalid_identity_controls_rejected": [
+    "mixed-admission-semantic-marker-omitted",
+    "new-source-schema-relabelled-as-old-owned",
+    "actual-own-checker-renamed",
+    "actual-own-checker-bytes-changed",
+    "own-checker-not-bound-in-current",
+    "one-curvature-mode-omitted",
+    "an-actual-mode-control-omitted",
+    "remaining-whole-root-count-changed",
+    "half-ownership-pointer-missing",
+    "bound-parent-bytes-changed",
+    "bound-parent-missing",
+    "latest-partial-histories-not-preserved",
+    "source-geometry-gate-omitted",
+    "boolean-root-index",
+    "duplicate-remaining-whole-root-index",
+    "older-source-with-equal-count-and-rows-rejected"
+  ],
+  "actual_old_schema_delegation_identity_snapshot": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "enumeration_only_bound_ancestors_followed": [],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "actual_snapshot_is_identity_only_NOT_geometry_or_final_current_adoption": true,
+  "synthetic_16_root_fixture_is_NOT_an_actual_current_source": true,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "tested_identity_module_sha256": "033b07573b732d9cb01c4a6f441305d674388a4efc5fde0b6805fe3a87ce29f2",
+  "executed_test_sha256": "59a402ef09cb421203af6df252b1dc1b6e450324c6d605310eb7086b144bf708",
+  "global_optimality_proved": false
+}

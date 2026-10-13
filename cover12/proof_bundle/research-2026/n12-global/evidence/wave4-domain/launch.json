@@ -1,0 +1,37 @@
+{
+  "plan_sha256": "8662b5b077bd050fbfa8424efbfb3c4cf830323b373de7aa08bafe13e5b1c425",
+  "pool_pid": 32028,
+  "workers": [
+    {
+      "branch": 0,
+      "pid": 2780,
+      "started": 1790440550.2553587,
+      "exit": null
+    },
+    {
+      "branch": 1,
+      "pid": 38592,
+      "started": 1790440550.262808,
+      "exit": null
+    },
+    {
+      "branch": 2,
+      "pid": 20532,
+      "started": 1790440550.2702801,
+      "exit": null
+    },
+    {
+      "branch": 3,
+      "pid": 24896,
+      "started": 1790440550.2772803,
+      "exit": 0,
+      "finished": 1790440596.2939417
+    },
+    {
+      "branch": 4,
+      "pid": 23444,
+      "started": 1790440596.3017943,
+      "exit": null
+    }
+  ]
+}

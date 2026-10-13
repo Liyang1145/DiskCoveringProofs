@@ -1,0 +1,32 @@
+{
+  "schema": "N26-synthetic-product-current-final-accounting-regression-v1",
+  "synthetic_exact_source_rows_LOCAL_and_latest_history_partition_passed": true,
+  "invalid_accounting_controls_rejected": [
+    "product-duplicate-paid-root",
+    "product-boolean-paid-root",
+    "product-nonexistent-paid-root",
+    "product-whole-root-payment-omitted",
+    "product-paid-root-domain-clipped",
+    "product-uncovered-source-root-omitted",
+    "product-covered-root-reintroduced",
+    "product-LOCAL-equality-region-called-empty",
+    "product-original-LOCAL-preservation-flag-omitted",
+    "product-lower-bound-payment-flag-omitted",
+    "product-latest-root959-history-omitted",
+    "product-latest-root959-history-reset",
+    "product-current-remaining-root-count-changed",
+    "product-accepted-incoming-count-changed",
+    "product-accepted-latest-history-count-changed",
+    "product-duplicate-actual-source-root"
+  ],
+  "actual_newest_root959_history_DATA_retained_identically": true,
+  "source_acceptance_DATA_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+  "source_pending_DATA_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+  "synthetic_remaining_count_NOT_formal_current": 24,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "tested_final_rehash_executor_sha256": "a72e05a961b252f89bfae85764e268a47b6d52f8f6fa6c5253609448e4e5edcf",
+  "executed_test_sha256": "b6badaaa343ec2385fce3df1477b730a800c9fb93cf89904619fe9f035d69561"
+}

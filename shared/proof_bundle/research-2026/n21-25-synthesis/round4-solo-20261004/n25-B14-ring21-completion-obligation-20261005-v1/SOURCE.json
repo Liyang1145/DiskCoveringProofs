@@ -1,0 +1,23 @@
+{
+  "source_catalog_sha256": "7b809f2036f59073baa00f33b8c1334f9570448531f05ad6210ec14850583657",
+  "source_controls_sha256": "9d82cf8d2aafaf6f8a500e98a11c8f020b019b03ec1845ccf939f4ffa0f43767",
+  "source_total_order": 21,
+  "target_completion_order": 25,
+  "source_index": 0,
+  "B": 14,
+  "collar_centers": 21,
+  "holes": [
+    [
+      14,
+      15,
+      16,
+      17,
+      18,
+      20,
+      19
+    ]
+  ],
+  "additional_internal_center_budget": 4,
+  "not_an_unconditional_n25_family": true,
+  "global_optimality_proved": false
+}

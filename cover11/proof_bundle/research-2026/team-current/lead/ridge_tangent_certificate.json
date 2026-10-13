@@ -1,0 +1,45 @@
+{
+  "scope": "HIGHBEARING RIDGE ONLY; fixed tangent tau87/40; actualr.379-.37999; no endpointreduction",
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      1.0,
+      1.1863995522992576
+    ],
+    [
+      0.04644456359141745,
+      0.7795925929485212
+    ]
+  ],
+  "components": [
+    {
+      "j": 0,
+      "upper": -0.047820961396975545,
+      "count": 817,
+      "live": 0,
+      "terminal": -0.047820961396975545,
+      "worst": []
+    },
+    {
+      "j": 1,
+      "upper": -0.04684231595647687,
+      "count": 831,
+      "live": 0,
+      "terminal": -0.04684231595647687,
+      "worst": []
+    }
+  ],
+  "constant": "[28.1999585846619703130692799471, 28.2015638724124935775194169428]",
+  "upper": 28.10690059505904,
+  "seconds": 12.05534815788269,
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "source_sha256": {
+    "ridge_tangent_jet.py": "28c32cfbf7311c71849a6a01dde7cd02cbd397d2242e5f3c168ca37852d9b9eb",
+    "certify_ridge_tangent.py": "298bed95f61e96a0099b24efafb0754b77946787869367119e51280da8e6913d",
+    "patch_smooth_jet.py": "0ea533809a58940014e0fd980d29c80747cb9e05a467936645817bb74b0b68d0",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358"
+  }
+}

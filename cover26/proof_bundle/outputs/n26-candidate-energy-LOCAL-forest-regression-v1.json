@@ -1,0 +1,40 @@
+{
+  "schema": "N26-candidate-energy-LOCAL-closed-partition-regression-evidence-v1",
+  "synthetic_structure_regression_only": true,
+  "independent_BFS_DFS_shared_closed_boundary_control": {
+    "nodes": 3,
+    "counts": {
+      "SPLIT": 1,
+      "ENERGY": 0,
+      "LOCAL": 0,
+      "EMPTY": 0,
+      "OPEN": 2
+    },
+    "maximum_depth": 1,
+    "entire_actual_source_closed_box_covered": true,
+    "independent_BFS_DFS_closed_leaves_agreed": true,
+    "source_candidate_root_fully_lower_bounded": false,
+    "source_candidate_root_strictly_empty": false,
+    "unresolved_closed_leaf_boxes": 2,
+    "minimum_strict_energy_radius_margin": null,
+    "minimum_strict_original_LOCAL_entry_margin": null,
+    "original_52_coordinate_local_allowance_unchanged": "7/800000"
+  },
+  "invalid_partition_controls_rejected": [
+    "lost-shared-closed-half",
+    "hidden-unvisited-OPEN-node",
+    "nonempty-root-marked-empty",
+    "split-at-outer-endpoint",
+    "cyclic-candidate-child",
+    "OPEN-carries-hidden-proof-field",
+    "full-type-energy-leaf-relabelled-as-candidate",
+    "split-has-unknown-field",
+    "LOCAL-hull-supplied-instead-of-reconstructed"
+  ],
+  "actual_candidate_LOCAL_or_energy_certificates_not_proved_by_this_test": true,
+  "current_candidate_source_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "tested_forest_sha256": "da6d4e3de7e40c61df44289922c05ed30ab7862a3d5362235cba18eac2aa7d41",
+  "executed_test_sha256": "49c861a10549e1963c0fff8c2b4c34e490e7878db833ef77e6d534e1fb197c28"
+}

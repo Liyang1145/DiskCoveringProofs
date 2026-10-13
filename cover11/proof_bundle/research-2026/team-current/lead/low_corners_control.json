@@ -1,0 +1,107 @@
+[
+  {
+    "j": 0,
+    "sg": -1,
+    "b1": ".7",
+    "b2": ".8",
+    "value_difference": 0.0
+  },
+  {
+    "j": 0,
+    "sg": -1,
+    "b1": ".84",
+    "b2": ".85",
+    "value_difference": 0.0
+  },
+  {
+    "j": 0,
+    "sg": -1,
+    "b1": "1",
+    "b2": "1",
+    "value_difference": 0.0
+  },
+  {
+    "j": 0,
+    "sg": 1,
+    "b1": ".7",
+    "b2": ".8",
+    "value_difference": 0.0
+  },
+  {
+    "j": 0,
+    "sg": 1,
+    "b1": ".84",
+    "b2": ".85",
+    "value_difference": 0.0
+  },
+  {
+    "j": 0,
+    "sg": 1,
+    "b1": "1",
+    "b2": "1",
+    "value_difference": 0.0
+  },
+  {
+    "j": 1,
+    "sg": -1,
+    "b1": ".7",
+    "b2": ".8",
+    "value_difference": 0.0
+  },
+  {
+    "j": 1,
+    "sg": -1,
+    "b1": ".84",
+    "b2": ".85",
+    "value_difference": 0.0
+  },
+  {
+    "j": 1,
+    "sg": -1,
+    "b1": "1",
+    "b2": "1",
+    "value_difference": 0.0
+  },
+  {
+    "j": 1,
+    "sg": 1,
+    "b1": ".7",
+    "b2": ".8",
+    "value_difference": 0.0
+  },
+  {
+    "j": 1,
+    "sg": 1,
+    "b1": ".84",
+    "b2": ".85",
+    "value_difference": 0.0
+  },
+  {
+    "j": 1,
+    "sg": 1,
+    "b1": "1",
+    "b2": "1",
+    "value_difference": 0.0
+  },
+  {
+    "j": 2,
+    "sg": 1,
+    "b1": ".7",
+    "b2": ".8",
+    "value_difference": 0.0
+  },
+  {
+    "j": 2,
+    "sg": 1,
+    "b1": ".84",
+    "b2": ".85",
+    "value_difference": 0.0
+  },
+  {
+    "j": 2,
+    "sg": 1,
+    "b1": "1",
+    "b2": "1",
+    "value_difference": 0.0
+  }
+]

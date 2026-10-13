@@ -1,0 +1,49 @@
+{
+  "N": 25,
+  "B": 14,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "centers": 21,
+      "faces": [
+        16390,
+        16396,
+        32792,
+        32816,
+        49160,
+        65632,
+        65728,
+        98336,
+        131456,
+        131840,
+        196736,
+        263680,
+        265216,
+        393728,
+        524291,
+        532481,
+        540674,
+        1054720,
+        1060864,
+        1312768,
+        1581056
+      ],
+      "members": 1
+    }
+  ],
+  "group_count": 1,
+  "selected_types": 1,
+  "catalog_types": 1,
+  "catalog_sha256": "7b809f2036f59073baa00f33b8c1334f9570448531f05ad6210ec14850583657",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "7226c3efaa5474cdec4bbf5c1081892cdd7249819cebe9d7c7f011c240bab7d1",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "parent_groups_sha256": null,
+  "parent_proof_sha256": null,
+  "one_fixed_outer_collar_only": true,
+  "not_a_complete_boundary_family": true,
+  "global_optimality_proved": false,
+  "source_sha256": "fd7ccdc713c08e7119ca27c4a7266b373a7cc7f684b4ea0dec1080d73e0e9580"
+}

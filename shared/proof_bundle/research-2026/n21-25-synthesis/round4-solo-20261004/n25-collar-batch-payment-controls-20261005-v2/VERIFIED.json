@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "schema": "complete-collar-bounded-payment-controls-v1",
+  "all_18_parent_graphs_partitioned_once_and_audited": true,
+  "four_real_proposal_and_stdlib_replay_batches_completed": true,
+  "strictly_excluded": 0,
+  "pending_weak_graphs": 18,
+  "pending_not_misreported_as_exclusions": true,
+  "empty_complete_union_partition_checked": true,
+  "negative_controls_rejected": [
+    "nonzero-native-exit",
+    "missing-first-batch",
+    "duplicate-batch",
+    "self-consistent-wrong-anchor-binding"
+  ],
+  "partition_sha256": "99f4b638f647fd332967e2e8b631a930532e66bf4fce7dbbc620f7f488d160ff",
+  "complete_payment_audit_sha256": "dd64b3390732e221f172d2bf943e82e85739dbbb0e63649c5193676f75d26e53",
+  "source_sha256": "9432c31f6ae2e1ffae3b30c56d899fbc113162fc762d905eaa7abba9a00c6ad4",
+  "partition_source_sha256": "cd436eefbb90a70d780059041151c7f63305431ba196bcf37cbc81fe935464c2",
+  "audit_source_sha256": "4b31b4b3209e62a619028b530d32d4ecfd50926ba5a827626d54984e68076b1f",
+  "frozen_proposer_sha256": "d5694f13f571cd70be4f90358fd5d3481347e7459e459e37e0531cf9d485e581",
+  "derived_proposer_sha256": "fb922aae58c58517d28d44a900865b2015352344e41775de7b6dfd69573daac9",
+  "proposer_derivation_sha256": "d27de4c9016dc5123119a6fd41fb56046a15ca8193cec6aa5421ef091d730902",
+  "frozen_replayer_sha256": "262dd7f0d4c3ed4d5026512f749729796fc936bdca65c3535f24f9d17fa8c4d8",
+  "no_production_catalog_paid_by_this_control": true,
+  "global_optimality_proved": false
+}

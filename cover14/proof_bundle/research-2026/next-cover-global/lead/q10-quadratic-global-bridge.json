@@ -1,0 +1,16 @@
+{
+  "status": "exact_global_domain_to_local_bridge",
+  "minorant_source_sha256": "06461ac1550ac6fed0993cfdc9324851a71f8cb04f0ba7771767416af1a79a87",
+  "domain_sha256": "03e6fb869912a7bb9dc23861bb75d32c8f5e8f9f25c57436b627d85bc4252887",
+  "epsilon": "1/200",
+  "gradient_l1_error": "50662857627157956057411198626687170985093/10000000000000000000000000000000000000000000000000000000",
+  "cap_t_upper_bounds": [
+    "-26518398574419006711542881177/100000000000000000000000000000000000000000000",
+    "-67064674744407765336758618243/250000000000000000000000000000000000000000000"
+  ],
+  "caploss": "0",
+  "loss": "126546381496284465742212436320896082079893/2000000000000000000000000000000000000000000000000000000000",
+  "angle_error_squared": "126546381496284465742212436320896082079893/10000000000000000000000000000000000000000000000000000000",
+  "angle_error_upper": "1/1000000",
+  "scope": "Everyfull879 14site/16sharedfacewitness/10orderedunitcircleanchor system in C1366 domain at r<=U (includingallcyclicgapcaps<=L), after productiontoliteralcyclicmap andonecommonrotation, lies in2e-6truecandidateanchorcell by supnorm<=Euclideannorm andexactreferencecomparison; invoke C1355, notC1352growthratio. ConditionalonC1366necessarydomain/completeness andC1355localtheorem; no newglobaltopologyreduction."
+}

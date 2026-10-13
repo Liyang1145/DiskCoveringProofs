@@ -1,0 +1,48 @@
+{
+  "records": [
+    {
+      "original": "test_generic_sparse_collar.py",
+      "derived": "test_b16_sparse_collar.py",
+      "original_sha256": "d11bf009d4f3e76ca49bea43ce2c0fac8d86722ad90f0dffafdab4d0221d1d0a",
+      "derived_sha256": "16e1b65373c8726c24dcc3cca50d42a372fa31636c430b4494d53264a8a244e8",
+      "changes": [
+        [
+          "assert B == 15",
+          "assert B == 16"
+        ],
+        [
+          "for N in range(B+4, B+9):",
+          "for N in (B+1, B+2, B+3, B+6, B+7):"
+        ],
+        [
+          "B15",
+          "B16"
+        ]
+      ]
+    },
+    {
+      "original": "run_family_sparse_collar.py",
+      "derived": "run_b16_sparse_collar.py",
+      "original_sha256": "b2eddb0e00541309f03e0e6d4313588651ef944e34ba4bc662b3deaf49de0542",
+      "derived_sha256": "ba0a9ccdb58902dee0e4b5683dd894b3b800ea22223de2acdfc84fce1724dab1",
+      "changes": [
+        [
+          "assert B == 15",
+          "assert B == 16"
+        ],
+        [
+          "\"test_generic_sparse_collar.py\"",
+          "\"test_b16_sparse_collar.py\""
+        ],
+        [
+          "N25/B15",
+          "N25/B16"
+        ]
+      ]
+    }
+  ],
+  "source_sha256": "1d0b92957331be893a34adcfd3d94d5ea440d002734fabda185b63a66d6a0bb9",
+  "boundary_instantiation_and_test_sizes_only": true,
+  "native_recursion_and_mathematical_acceptance_unchanged": true,
+  "global_optimality_proved": false
+}

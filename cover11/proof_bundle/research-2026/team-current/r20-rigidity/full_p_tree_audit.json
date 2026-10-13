@@ -1,0 +1,15 @@
+{
+  "tree_file": "cosine_dbm_local920.json",
+  "nodes": 5011,
+  "fields": 371,
+  "root_is_closed_simplex": true,
+  "root_widths_all_one": true,
+  "split": 2505,
+  "patch_leaves": 120,
+  "energy_leaves": 2386,
+  "seen_covers_all_ids": true,
+  "children_regenerate_exactly": true,
+  "dichotomy_holds": true,
+  "scope": "read-only structural audit of the closed DBM tree; local constants not re-audited",
+  "repro": "py -3 -B -X utf8 full_p_tree_audit.py"
+}

@@ -1,0 +1,74 @@
+{
+  "status": "exact_halfspace_insertion_chain_checked",
+  "scope": "row necessity inheritance; root/cut proofs and prior vertex completeness inherited",
+  "runs": [
+    {
+      "domain": "q10-c1366-domain.json",
+      "parent": "q10-c1365-domain.json",
+      "audit": "q10-metric-round8-audit.json",
+      "added": 8
+    },
+    {
+      "domain": "q10-c1365-domain.json",
+      "parent": "q10-c1364-domain.json",
+      "audit": "q10-metric-round7-audit.json",
+      "added": 4
+    },
+    {
+      "domain": "q10-c1364-domain.json",
+      "parent": "q10-c1356-domain.json",
+      "audit": "q10-metric-round6-audit.json",
+      "added": 12
+    },
+    {
+      "domain": "q10-c1356-domain.json",
+      "parent": "q10-c1354-domain.json",
+      "audit": "q10-metric-round5-audit.json",
+      "added": 6
+    },
+    {
+      "domain": "q10-c1354-domain.json",
+      "parent": "q10-c1353-domain.json",
+      "audit": "q10-metric-round4-audit.json",
+      "added": 10
+    },
+    {
+      "domain": "q10-c1353-domain.json",
+      "parent": "q10-c1350-domain.json",
+      "audit": "q10-metric-round3-audit.json",
+      "added": 10
+    },
+    {
+      "domain": "q10-c1350-domain.json",
+      "parent": "q10-c1348-domain.json",
+      "audit": "q10-metric-round2-audit.json",
+      "added": 16
+    },
+    {
+      "domain": "q10-c1348-domain.json",
+      "parent": "q10-c1341-domain.json",
+      "audit": "q10-large-union.json",
+      "added": 16
+    },
+    {
+      "domain": "q10-c1341-domain.json",
+      "parent": "q10-c1337-domain.json",
+      "audit": "q10-exterior-union.json",
+      "added": 8
+    },
+    {
+      "domain": "q10-c1337-domain.json",
+      "parent": "q10-c1334-domain.json",
+      "audit": "q10-c1334-slab-audit.json",
+      "added": 8
+    },
+    {
+      "domain": "q10-c1334-domain.json",
+      "parent": "q10-tight-metric-domain.json",
+      "audit": "q10-tight-slab-audit.json",
+      "added": 6
+    }
+  ],
+  "earlier_root": "q10-tight-metric-domain.json",
+  "earlier_root_status": "sourcebound_rational_clip_necessary_domain"
+}

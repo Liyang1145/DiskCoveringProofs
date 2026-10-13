@@ -1,0 +1,78 @@
+{
+  "status": "independent_fraction_replay",
+  "envelope_constants_dependency": "area-chord-tighten-fraction-replay.json",
+  "runs": [
+    {
+      "family": "10/4",
+      "index": 840,
+      "upper_display": -0.013857371429889537,
+      "upper_exact_rounded_outward": "-277147428597790742157613907/20000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 569,
+      "upper_display": -0.012352088570941026,
+      "upper_exact_rounded_outward": "-12352088570941026231973390469/1000000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 312,
+      "upper_display": -0.0119371738822883,
+      "upper_exact_rounded_outward": "-596858694114414972760163721/50000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 696,
+      "upper_display": -0.016114443603898847,
+      "upper_exact_rounded_outward": "-8057221801949423084852952533/500000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 260,
+      "upper_display": -0.010261344509911867,
+      "upper_exact_rounded_outward": "-10261344509911866288121753969/1000000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 648,
+      "upper_display": -0.007984134812894797,
+      "upper_exact_rounded_outward": "-1996033703223699397444994703/250000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 644,
+      "upper_display": -0.012793260949476122,
+      "upper_exact_rounded_outward": "-1279326094947612195220769271/100000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 835,
+      "upper_display": -0.010929710231599518,
+      "upper_exact_rounded_outward": "-2732427557899879605022382317/250000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 1006,
+      "upper_display": -0.020653065038373424,
+      "upper_exact_rounded_outward": "-20653065038373423673802050093/1000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 428,
+      "upper_display": -0.009621499105538849,
+      "upper_exact_rounded_outward": "-9621499105538849555794555297/1000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 351,
+      "upper_display": -0.0029654453261419816,
+      "upper_exact_rounded_outward": "-1482722663070990914397529923/500000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 398,
+      "upper_display": -0.003178158492730578,
+      "upper_exact_rounded_outward": "-3178158492730578137903398287/1000000000000000000000000000000"
+    }
+  ]
+}

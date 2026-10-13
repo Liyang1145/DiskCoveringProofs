@@ -1,0 +1,19 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_source_sha256": "b595d1e4b175fdaa49b35194a0bf7a197100e7e7830d43bfe7ef4ed4d92ea1d8",
+  "derived_source_sha256": "6766df236187d9727de97a42ff8ff74e5baebd94c63181c91b69a65caac4ac95",
+  "source_sha256": "981bd90b8b0c193da924f194cdbe2e336b870d5e16f032a7dee86305c421b829",
+  "changes": [
+    [
+      "    assert manifest[\"schema\"] == \"complete-outer-collar-sorted-chunks-v1\"",
+      "    assert manifest[\"schema\"] == \"complete-cover-origin-collar-sorted-chunks-v1\"\n    assert manifest[\"origin_cover_only_N25\"]\n    assert manifest[\"origin_cover_scope\"] == \"actual arbitrary disk covers only; not weak graph geometry\"\n    assert manifest[\"origin_radius_upper_numerator\"] == 239146311738101\n    assert manifest[\"origin_radius_upper_denominator\"] == 10**15\n    assert 4*manifest[\"origin_radius_upper_numerator\"] < manifest[\"origin_radius_upper_denominator\"]\n    for sample in manifest[\"origin_cover_samples\"]:\n        mask = (1 << manifest[\"B\"])-1\n        for face in sample[\"outer_faces\"]:\n            assert type(face) is int and 0 < face < 1 << 25 and face.bit_count() == 3\n            assert face & ((1 << manifest[\"B\"])-1)\n            mask |= face\n        assert mask == (1 << 25)-1\n    if manifest[\"N\"] != 25 or not manifest[\"origin_cover_screen\"]:\n        assert manifest[\"origin_cover_prunes_not_type_count\"] == 0\n        assert not manifest[\"origin_cover_samples\"]"
+    ],
+    [
+      "                assert B <= centers <= N and faces and faces == sorted(set(faces))",
+      "                maximum = N-1 if N == 25 and manifest[\"origin_cover_screen\"] else N\n                assert B <= centers <= maximum and faces and faces == sorted(set(faces))"
+    ]
+  ],
+  "all_old_complete_zero_exit_slab_union_checks_preserved": true,
+  "new_origin_schema_and_explicit_samples_checked": true,
+  "global_optimality_proved": false
+}

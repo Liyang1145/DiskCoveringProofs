@@ -1,0 +1,47 @@
+{
+ "status": "NUMERIC PROPOSAL ONLY -- not a certificate, does not upgrade any claim",
+ "constants": {
+  "B": 182.0,
+  "A": 1.074,
+  "C_cross": 0.0358,
+  "G": 1.892,
+  "d": 0.08,
+  "mu": 0.002,
+  "tau0": 0.05,
+  "tau": 0.1,
+  "rho": 0.00764
+ },
+ "candidates": [
+  {
+   "S": "1_identity",
+   "B_basis_only": 181.0357091872207,
+   "b_tau_scaled_diag": 11.372054435248403,
+   "lmin_gain": 0.08808171745891342,
+   "flux_term_normA": "NOT COMPUTED (needs the lead module edge list)"
+  },
+  {
+   "S": "2_GtG_invsqrt",
+   "B_basis_only": 527.1998750572214,
+   "b_tau_scaled_diag": 18.103570918722077,
+   "lmin_gain": 0.29678564227218507,
+   "flux_term_normA": "NOT COMPUTED (needs the lead module edge list)"
+  },
+  {
+   "S": "3_col_normalised",
+   "B_basis_only": 76.91410019839144,
+   "b_tau_scaled_diag": 5.413625950896433,
+   "lmin_gain": 0.033065799362953646,
+   "flux_term_normA": "NOT COMPUTED (needs the lead module edge list)"
+  },
+  {
+   "S": "4_K0T_K0_invsqrt",
+   "B_basis_only": 81.69764170067906,
+   "b_tau_scaled_diag": 6.243966478145851,
+   "lmin_gain": 0.030951446069622357,
+   "flux_term_normA": "NOT COMPUTED (needs the lead module edge list)"
+  }
+ ],
+ "scalar_family": {
+  "note": "S=sigma*I: b(S), B(S) scale with sigma and lmin(gain) too, so the ratio is sigma-independent (scale family cannot change the ratio)"
+ }
+}

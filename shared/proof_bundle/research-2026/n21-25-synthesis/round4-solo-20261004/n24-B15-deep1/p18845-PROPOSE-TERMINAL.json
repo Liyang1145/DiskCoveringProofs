@@ -1,0 +1,17 @@
+{
+  "pid": 19880,
+  "actual_exit_code": 0,
+  "actual_child_terminal_observed": true,
+  "command": [
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe",
+    "-u",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\refine_small_order_family.py",
+    "--family",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B15-f1\\batch-000087\\parent-0018845",
+    "--force-limit",
+    "511",
+    "--output",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B15-deep1\\p18845-PROOF.json"
+  ],
+  "source_sha256": "474720f5ed1ae4ce3dbba4969038859d8582fa6a3faa7f6d24b8ea8a53e56af9"
+}

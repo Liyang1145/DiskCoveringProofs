@@ -1,0 +1,118 @@
+{
+ "n_vertices": 896,
+ "dim": 10,
+ "vertices_violating_sum_eq_1": 0,
+ "vertex_inequality_violations": 0,
+ "vertex_equality_violations": 0,
+ "equality_rows": [
+  [
+   "1",
+   "1",
+   "1",
+   "1",
+   "1",
+   "1",
+   "1",
+   "1",
+   "1",
+   "1",
+   "1"
+  ]
+ ],
+ "active_rank_min": 10,
+ "active_rank_max": 10,
+ "cuts": [
+  {
+   "cut": {
+    "indices": [
+     0
+    ],
+    "sense": "less",
+    "fraction_of_total": "11/512"
+   },
+   "before": 960,
+   "after": 960
+  },
+  {
+   "cut": {
+    "indices": [
+     0,
+     1
+    ],
+    "sense": "less",
+    "fraction_of_total": "65/256"
+   },
+   "before": 960,
+   "after": 960
+  },
+  {
+   "cut": {
+    "indices": [
+     3,
+     4
+    ],
+    "sense": "less",
+    "fraction_of_total": "65/256"
+   },
+   "before": 960,
+   "after": 896
+  },
+  {
+   "cut": {
+    "indices": [
+     4
+    ],
+    "sense": "less",
+    "fraction_of_total": "11/512"
+   },
+   "before": 896,
+   "after": 896
+  },
+  {
+   "cut": {
+    "indices": [
+     5
+    ],
+    "sense": "less",
+    "fraction_of_total": "11/512"
+   },
+   "before": 896,
+   "after": 896
+  },
+  {
+   "cut": {
+    "indices": [
+     5,
+     6
+    ],
+    "sense": "less",
+    "fraction_of_total": "65/256"
+   },
+   "before": 896,
+   "after": 928
+  },
+  {
+   "cut": {
+    "indices": [
+     8,
+     9
+    ],
+    "sense": "less",
+    "fraction_of_total": "65/256"
+   },
+   "before": 928,
+   "after": 896
+  },
+  {
+   "cut": {
+    "indices": [
+     9
+    ],
+    "sense": "less",
+    "fraction_of_total": "11/512"
+   },
+   "before": 896,
+   "after": 896
+  }
+ ]
+}

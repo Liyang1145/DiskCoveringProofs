@@ -1,0 +1,44 @@
+{
+  "schema": "N26-complete-current-byte-integrity-diagnosis-v1",
+  "observed_at_utc": "2026-10-11T01:00:59.499335+00:00",
+  "current_audit": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-current-candidate-owned-current-audit-v7.json",
+  "current_audit_sha256": "6a46131202a5d2dd732b88622b1cec0e072c7b6ef888f37e70f420b291590203",
+  "current_audit_unchanged": true,
+  "expected_digest_count": 166960,
+  "matched_digest_count": 166958,
+  "failure_count": 2,
+  "failures_by_status": {
+    "mismatch": 2
+  },
+  "failures": [
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-force-stage-v12/native-02313.json",
+      "expected_sha256": "f0b53cfc81474275bb1cda21c32662bb3b171a425353ef9a484fe6aa807190df",
+      "actual_sha256": "6845ead39a1792197801252c468e2906c3adf37f5e8bd4a3cc2632b9c1aa982f",
+      "size": 1014,
+      "mtime_ns": 1791585708510709900,
+      "stable_during_hash": true,
+      "status": "mismatch",
+      "snapshot_file": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-integrity-snapshots-20261011-v1\\00000-native-02313.json.bin",
+      "snapshot_sha256": "6845ead39a1792197801252c468e2906c3adf37f5e8bd4a3cc2632b9c1aa982f",
+      "snapshot_matches_observed_bytes": true
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-conditional-force-stage-v1/native-00042-launch.json",
+      "expected_sha256": "548c295f202740e73a6551587c42e7ac7654d6159d5a3b9714ee068d619a06d1",
+      "actual_sha256": "1347c2c24e20b6410183184c1fe549e6da4e85d7a371e7e4b72851915952c1b6",
+      "size": 735,
+      "mtime_ns": 1791587736092232100,
+      "stable_during_hash": true,
+      "status": "mismatch",
+      "snapshot_file": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26-integrity-snapshots-20261011-v1\\00001-native-00042-launch.json.bin",
+      "snapshot_sha256": "1347c2c24e20b6410183184c1fe549e6da4e85d7a371e7e4b72851915952c1b6",
+      "snapshot_matches_observed_bytes": true
+    }
+  ],
+  "all_current_bytes_match": false,
+  "historical_targets_modified": false,
+  "mathematical_acceptance_issued": false,
+  "new_geometric_payments": 0,
+  "executed_diagnostic_sha256": "76c95879cebd4f1747b70210f915bc86c7b41068da12d1d63097cf27bfbf7e63"
+}

@@ -1,0 +1,12 @@
+{
+  "scope": "bothlow normfacecorners andridge diagnostic; coincidentfacecircle separatelycoveredbystationaryarcs",
+  "count": 2839,
+  "live": 0,
+  "closed": {
+    "illegal": 74,
+    "value": 1348
+  },
+  "terminal": 28.10694872459886,
+  "seconds": 62.05660557746887,
+  "topboxes": []
+}

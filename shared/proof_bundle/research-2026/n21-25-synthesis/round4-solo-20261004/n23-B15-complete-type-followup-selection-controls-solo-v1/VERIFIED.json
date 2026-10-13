@@ -1,0 +1,22 @@
+{
+  "verified": true,
+  "schema": "N23-complete-type-followup-selection-controls-v1",
+  "negative_controls_rejected": [
+    "wrong-source-index",
+    "wrong-original-group",
+    "known-core-not-new-strict-pending",
+    "old-positive-not-new-pending",
+    "old-positive-payment-reopened",
+    "old-positive-proof-changed",
+    "old-positive-math-result-changed",
+    "attaining-core-recast-as-strict",
+    "attaining-full-map-changed",
+    "previous-pending-pretended-already-paid"
+  ],
+  "unchanged_actual_full_tree_controls_sha256": "6812bb89929d7da8a580b0a172aa445a211289d8020be8adcd420df87d561dee",
+  "frozen_full_tree_identity_checker_sha256": "aee8f393c2ebf483b620af006443b53506a7c1afbfe87c48ca7c78eca328488b",
+  "audit_source_sha256": "389d5b2fd39d444bb3475b260d6ccbece4915d876773836ef85f3bc29ab307e3",
+  "source_sha256": "19aa8aabc361807b9019498aa344e23a4f1742bedff9585d5f6a12b6030fb845",
+  "selection_fixtures_not_mathematical_proof_payments": true,
+  "global_optimality_proved": false
+}

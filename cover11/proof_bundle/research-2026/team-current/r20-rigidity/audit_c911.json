@@ -1,0 +1,69 @@
+{
+  "scope": "all independent angles |theta_i-2pi*i/9|<=1/50 for i1..8, theta0=0; canonical explicit51 graph; lowerbound on oracle radius not squared. No other angular boxes excluded.",
+  "graph_identical_to_stored": true,
+  "faces_identical_to_stored": true,
+  "free_divergence_all_zero": true,
+  "anchor_divergences": [
+    [
+      "373532969/5319148936",
+      "56780114889/999999999968"
+    ],
+    [
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0"
+    ],
+    [
+      "4748332959/499999999984",
+      "42348589273/499999999984"
+    ],
+    [
+      "-69910537931/999999999968",
+      "25445354953/999999999968"
+    ],
+    [
+      "-33633855931/999999999968",
+      "-28313533781/499999999984"
+    ],
+    [
+      "0",
+      "0"
+    ],
+    [
+      "-8449912067/249999999992",
+      "-58588625753/999999999968"
+    ],
+    [
+      "7202897255/124999999996",
+      "-51706955073/999999999968"
+    ]
+  ],
+  "norm_interval": [
+    "0.99999999999881553691",
+    "0.99999999999881553691"
+  ],
+  "norm_lt_one": true,
+  "support_kinds": [
+    "fixed theta0 -> a_0",
+    "zero l_i (exact Fractions)",
+    "zero l_i (exact Fractions)",
+    "no interior min (a.lo>0, h<=0.02<pi/2)",
+    "no interior min (a.lo>0, h<=0.02<pi/2)",
+    "no interior min (a.lo>0, h<=0.02<pi/2)",
+    "zero l_i (exact Fractions)",
+    "no interior min (a.lo>0, h<=0.02<pi/2)",
+    "no interior min (a.lo>0, h<=0.02<pi/2)"
+  ],
+  "lower_interval_independent": [
+    "0.390573202610014606",
+    "0.390573202610014606"
+  ],
+  "lower_gt_39_100": true,
+  "angle0_fixed": true,
+  "angle0_relaxed_still_above": false,
+  "status": "instrument audit; the algebraic identities printed in the log are the evidence, not the PASS flags",
+  "repro": "py -3 -B -X utf8 audit_c911.py"
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "N26-imported-N25-exact-original-cardinality-mathematical-controls-v1",
+  "verified": false,
+  "actual_imported_n25_source_entry": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-global-final5\\ACCEPTED\\GLOBAL-SOURCE-ACCEPTED.json",
+  "actual_imported_n25_source_entry_sha256": "30389bfa3132d08954281e743db670fbb3874785e0d90c9876d4f5ddeec31dd1",
+  "executed_test_sha256": "7fd3755f06087484d68fc6719ac9a0e1ea8b9226c394be6611370ba73e7c4e46",
+  "written_implication_proof_sha256": "5127035db71991d01d40251a5f13c28ad6ff3b53a43bbb888818cd93cf366f22",
+  "actual_exact_radical_cardinality_implication": {
+    "exact_radius_screen": "234701/1000000",
+    "exact_positive_threshold_above_sqrt2": "2834746321797/2000000000000",
+    "exact_threshold_square_margin_above_two": "35786708941620677309209/4000000000000000000000000",
+    "exact_imported_n25_lower_bound_STRICTLY_greater_than_screen": true,
+    "under_IMPORTED_n25_theorem_every_at_most26_cover_in_scope_has26_original_necessary_disks": true,
+    "same_conclusion_after_slack_projection_and_generic_perturbation_below_screen": true,
+    "corner_shadow_padding_NOT_needed_for_genuine_covers_in_this_scope": true
+  },
+  "actual_invalid_import_scope_and_radius_controls_rejected": [
+    "pending-n25-source-proof",
+    "unverified-n25-entry",
+    "wrong-N",
+    "not-arbitrary-or-fewer-disk-scope",
+    "wrong-exact-radical",
+    "pending-family-hidden",
+    "SOURCE-proof-promoted-to-formalization",
+    "screen-at-quarter-not-below-n25-optimum",
+    "negative-radius"
+  ],
+  "n25_theorem_IMPORTED_from_qualified_completed_SOURCE_proof_NOT_reproved_here": true,
+  "actual_n25_ENTIRE_prerequisite_content_rehash_NOT_performed_here": true,
+  "formal_import_geometry_current_AND_final_admission_STILL_required": true,
+  "existing_shadow_inclusive_six_target_bundle_AND_live_jobs_UNMODIFIED": true,
+  "actual_formal_frontier_STILL": 11183,
+  "actual_candidate_whole_roots_STILL": 25,
+  "new_formal_geometric_payments": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "N26-latest-candidate-layer-identity-regression-v1",
+  "synthetic_equal_count_and_equal_full_root_rows_stale_source_rejected": true,
+  "synthetic_invalid_layer_identity_controls_rejected": [
+    "stale-candidate-layer-with-identical-count-and-full-root-rows",
+    "missing-bound-ancestor",
+    "changed-bound-ancestor-bytes",
+    "cyclic-current-ancestry",
+    "half-of-candidate-ownership-pointers-missing",
+    "ancestor-inventory-not-retained-identically",
+    "ancestor-candidate-count-changed",
+    "unsupported-pointerless-schema",
+    "latest-pending-rows-changed",
+    "latest-source-acceptance-bytes-changed"
+  ],
+  "actual_bound_ancestry_snapshot": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "846fd6693600dddba0856c364c95f331d7539153f516bac66f6ec06d9dcf7440",
+    "latest_candidate_current_audit_sha256": "ca9c70e36faf729008bae35f4d1aa490eced49dcf5c32a147c2a50882b952077",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-thirteenth-conditional-current-audit-v13-with-scope.json",
+        "sha256": "23701901856c20a2b04b86721ee0c67b244aa727507f9b28e4922b065211603e"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-seeded-current-audit-v5.json",
+        "sha256": "ca9c70e36faf729008bae35f4d1aa490eced49dcf5c32a147c2a50882b952077"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-seeded-forest-v5/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "11bf3da21a5ade04a3e4b9b957c22261f8c5d051f1dfd17d86957bc5f54ada07",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-seeded-forest-v5/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "861ff2a5bf02aae33f005b8f7faf0f567bb4eb567b7938492156116d20acf058",
+    "actual_remaining_candidate_whole_roots": 26,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "actual_snapshot_identity_only_not_a_geometric_replay": true,
+  "new_geometric_candidate_payments": 0,
+  "tested_identity_checker_sha256": "da848f6dee991f8883ff45150edac3e2e4955c0e9f5ba78c00d646c5e5e35c2b",
+  "executed_test_sha256": "6c51a899aaad30eb608b75b311432274b920eded2b4c1a0c2f088c68a08b3820",
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false
+}

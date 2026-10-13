@@ -1,0 +1,247 @@
+{
+  "schema": "incomplete-collar-discovery-v1",
+  "N": 25,
+  "B": 16,
+  "weak_graph_count": 24,
+  "weak_graphs": [
+    {
+      "centers": 18,
+      "faces": [
+        704,
+        68608,
+        180224,
+        204800
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        832,
+        67072,
+        180224,
+        200704
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        1216,
+        68608,
+        180224,
+        204800
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        1216,
+        71680,
+        180224,
+        204800
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        1600,
+        68608,
+        180224,
+        204800
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        1664,
+        106496,
+        134144,
+        143360
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        3200,
+        71680,
+        180224,
+        204800
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        3200,
+        114688,
+        137216,
+        155648
+      ]
+    },
+    {
+      "centers": 17,
+      "faces": [
+        3328,
+        71680,
+        114688
+      ]
+    },
+    {
+      "centers": 17,
+      "faces": [
+        4864,
+        77824,
+        114688
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        4864,
+        180224,
+        200704
+      ]
+    },
+    {
+      "centers": 17,
+      "faces": [
+        6400,
+        77824,
+        114688
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        6400,
+        143360,
+        229376
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        6400,
+        180224,
+        200704
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        45056,
+        137216,
+        196864
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        51200,
+        134144,
+        196864
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        53248,
+        65856,
+        131840,
+        134144
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        53248,
+        137216,
+        196864
+      ]
+    },
+    {
+      "centers": 19,
+      "faces": [
+        65632,
+        66688,
+        134144,
+        311296,
+        401408
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        66304,
+        180224,
+        204800
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        67840,
+        180224,
+        200704
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        69888,
+        180224,
+        200704
+      ]
+    },
+    {
+      "centers": 18,
+      "faces": [
+        69888,
+        180224,
+        204800
+      ]
+    },
+    {
+      "centers": 19,
+      "faces": [
+        82944,
+        114688,
+        131168,
+        263680,
+        393344
+      ]
+    }
+  ],
+  "original_candidate_indices": [
+    4,
+    6,
+    7,
+    8,
+    12,
+    14,
+    17,
+    19,
+    21,
+    24,
+    25,
+    31,
+    32,
+    33,
+    40,
+    46,
+    48,
+    49,
+    51,
+    56,
+    58,
+    60,
+    61,
+    63
+  ],
+  "source_candidate_snapshot_sha256": "b9101708b14a1c236fdde775de687bf6cb57e6d8dc3d68c5040845bd9b83166b",
+  "source_sha256": "586768552e7e3fb72bd817240b81bece46c4d9fb99009982abb951adaabb5a70",
+  "force_tree_proposals_still_required": true,
+  "no_negative_eight_rod_cycle_found_during_proposal": true,
+  "no_match_is_not_a_realization_or_an_exclusion": true,
+  "complete_necessary_outer_search": false,
+  "complete_family_coverage": false,
+  "global_optimality_proved": false
+}

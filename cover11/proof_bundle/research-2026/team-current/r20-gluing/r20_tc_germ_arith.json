@@ -1,0 +1,17 @@
+{
+  "analytic_point_q": "8.2487989e-16",
+  "analytic_point_q_recorded": 1.2453879418530306e-15,
+  "analytic_own_inverse_q": "1.16682e-61",
+  "analytic_own_float64_q": "3.12206e-16",
+  "analytic_W_diff": "2.21653e-16",
+  "analytic_corner_sweep_max": "1.8458151e-6",
+  "analytic_corner_sweep_within_qbox": true,
+  "algebraic_own_inverse_q": "5.0562e-61",
+  "algebraic_own_float64_q": "5.50905e-16",
+  "algebraic_point_q_recorded": 1.4502906046652535e-14,
+  "algebraic_W_stored_in_json": false,
+  "algebraic_W_float64_kept": "r20_tc_germ_W_B.json",
+  "algebraic_point_q_note": "recorded q_point = 1.450291e-14 is NOT bit-reproduced: an independently computed float64 rounding of the exact inverse of the SAME 35x35 subblock gives 5.51e-16 (26x smaller).  Both are << 1, so the contraction inequality is corroborated, but the recorded W_B is absent from r20_tc_germ.json and its exact pipeline cannot be replayed; the recomputed W_B is stored in r20_tc_germ_W_B.json.",
+  "scope": "independent arithmetic audit of the germ evidence files; point-level checks + analytic corner sweep; no claim registered, no new certificate",
+  "verdict": "analytic: the recorded W_A equals an independently computed inverse up to float64 rounding (max entry diff 2.2e-16), reproduces the point contraction (8.2e-16 vs recorded 1.2e-15) and its corner sweep (1.8e-6) stays below the recorded box bound q_A = 1.0879217e-5.  algebraic: W_B is MISSING from r20_tc_germ.json; an independent recomputation of the same 35x35 subblock gives a float64 contraction of 5.5e-16 instead of the recorded 1.45e-14 (both << 1, inequality corroborated, value not bit-reproduced); the recomputed W_B is stored in r20_tc_germ_W_B.json."
+}

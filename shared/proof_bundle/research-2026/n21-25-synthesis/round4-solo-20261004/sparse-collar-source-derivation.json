@@ -1,0 +1,39 @@
+{
+  "mechanical_derivation_only": true,
+  "base_source_sha256": "ab2dddce3e8521751653a511d14214dc26f236efb2f2a4c40abf9c86842f15dd",
+  "derived_source_sha256": "12f0834444fa74dcb67e15af27f8cda2acd3ee151a895659927641af4b9ec935",
+  "generator_sha256": "bf2facd1133a8befbb1293a9221c473e7c2f7f154463447f725fd83194660672",
+  "changes": [
+    [
+      "#include \"../round3-high/paid_outer_matcher.inc\"\n",
+      "#include \"../round3-high/paid_outer_matcher.inc\"\n#include \"sparse_outer_matcher.inc\"\n"
+    ],
+    [
+      " if(already_paid(s))return;\n",
+      " if(already_sparse_paid(s))return;\n if(already_paid(s))return;\n"
+    ],
+    [
+      " if(argc!=11)throw runtime_error(\"usage: collar N B output scale cap2 cap4 cap6 node-limit mode paid-table-or-minus\");",
+      " if(argc!=12)throw runtime_error(\"usage: sparse-collar N B output scale cap2 cap4 cap6 node-limit mode exact-table-or-minus sparse-table-or-minus\");"
+    ],
+    [
+      " load_obstacles(argv[10]);\n",
+      " load_obstacles(argv[10]);\n load_sparse_obstacles(argv[11]);\n"
+    ],
+    [
+      " write_paid_summary(out);\n",
+      " write_paid_summary(out);\n write_sparse_summary(out);\n"
+    ],
+    [
+      "<<\" proof_prunes=\"<<proof_prunes<<\" seconds=\"",
+      "<<\" proof_prunes=\"<<proof_prunes<<\" sparse_prunes=\"<<sparse_prunes<<\" seconds=\""
+    ],
+    [
+      "<<\" proof_prunes=\"<<proof_prunes<<\"\\n\";",
+      "<<\" proof_prunes=\"<<proof_prunes<<\" sparse_prunes=\"<<sparse_prunes<<\"\\n\";"
+    ]
+  ],
+  "all_original_recursion_and_omission_code_unchanged": true,
+  "new_guard_requires_independent_source_argument_and_controls": true,
+  "global_optimality_proved": false
+}

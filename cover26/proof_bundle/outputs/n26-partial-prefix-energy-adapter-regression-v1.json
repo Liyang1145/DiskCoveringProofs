@@ -1,0 +1,133 @@
+{
+  "schema": "N26-partial-prefix-energy-adapter-regression-evidence-v1",
+  "regression_controls_passed": 12,
+  "controls": [
+    {
+      "B": 14,
+      "next": 14,
+      "present_faces": 0,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 14,
+      "next": 15,
+      "present_faces": 1,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 14,
+      "next": 16,
+      "present_faces": 2,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 15,
+      "next": 15,
+      "present_faces": 0,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 15,
+      "next": 16,
+      "present_faces": 1,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 15,
+      "next": 17,
+      "present_faces": 2,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 16,
+      "next": 16,
+      "present_faces": 0,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 16,
+      "next": 17,
+      "present_faces": 1,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 16,
+      "next": 18,
+      "present_faces": 2,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 17,
+      "next": 17,
+      "present_faces": 0,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 17,
+      "next": 18,
+      "present_faces": 1,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    },
+    {
+      "B": 17,
+      "next": 19,
+      "present_faces": 2,
+      "independent_exact_two_coordinate_partial_square_completion": true,
+      "positive_grounding_without_numerical_eigenvalues": true,
+      "feasible_radius_one_present_rod_control": true,
+      "no_unintroduced_centers_or_future_face_witnesses_added": true
+    }
+  ],
+  "invalid_kernel_controls_rejected": [
+    "sealed-full-type-schema-reused-as-partial-proof",
+    "different-already-present-face-complex",
+    "future-unintroduced-center-added",
+    "zero-positive-rod-weight",
+    "negative-positive-rod-weight",
+    "future-unpresent-rod-added",
+    "changed-exact-ground-inverse",
+    "asymmetric-exact-ground-inverse",
+    "negative-ground-inverse-denominator",
+    "noninteger-positive-weight-scale",
+    "unknown-kernel-payment-field"
+  ],
+  "current_transport_subtrees_removed_by_this_test": 0,
+  "current_source_prefix_and_full_closed_domain_acceptance_still_required": true,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "tested_adapter_sha256": "83fc97416c0b833dc8ac273ea4d57c37213995cb31443f1d03ff3599d1568cd9",
+  "executed_test_sha256": "77c8ac63162276ccb145d582e136e5833b30d1ea20499eb9364ffd031aec50df"
+}

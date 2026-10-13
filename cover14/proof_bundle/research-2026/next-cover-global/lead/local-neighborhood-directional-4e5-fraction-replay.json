@@ -1,0 +1,9 @@
+{
+  "status": "exact_fraction_weighted_matrix_implication_verified",
+  "source": "local-neighborhood-directional-4e5.json",
+  "epsilon": "1/25000",
+  "bound_exact": "32329460190111179347913370585181237411782248092688947590740096248301237880490167680705/86356779550718060718710771113455966495743334607776477214723742562775471373305635667968",
+  "bound_display": 0.3743708410423505,
+  "exact_congruence_rank": 28,
+  "scope": "Matrix implication only; analytic KKT and AD geometric interval correctness remain separate inherited premises."
+}

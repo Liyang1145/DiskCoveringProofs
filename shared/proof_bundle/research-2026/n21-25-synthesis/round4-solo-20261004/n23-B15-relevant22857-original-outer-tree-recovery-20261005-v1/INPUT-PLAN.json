@@ -1,0 +1,58 @@
+{
+  "N": 23,
+  "B": 15,
+  "selected_relevant_strict_trees": 22857,
+  "old_logged_prefix_groups": 436500,
+  "old_total_outer_groups": 535262,
+  "total_uncompressed_bytes": 2790931285,
+  "archive_bindings": {
+    "math-delta-0061.zip": {
+      "archive_sha256": "fbfd82cdcdd64d1e5dad183ae88ea6d4be5a34963be56ca7194a630fba05fdfe",
+      "metadata_sha256": "8a6d4114a5b5cceccdff30eda03a8b9a45bea93c534fc37130611aef9b360ec5",
+      "asset_manifest_sha256": "4c5ad9e8aa6f6573e8a396a68eaa6242b0f3df3313e59dc5a28f649706859bf3"
+    },
+    "math-delta-0062.zip": {
+      "archive_sha256": "bd00f981f652321e94b3990a14b0bb4d5aeeb89cac427e3aca7abf23753bc72f",
+      "metadata_sha256": "b1d0baacba9eff89f1497a1fb741c683c4588908d20063e548ec3e05ae2f04b3",
+      "asset_manifest_sha256": "c8299bb13ac29233ec11fc97d1d231876cd57325f4bc8f25c1d5a6909913d414"
+    },
+    "math-delta-0063.zip": {
+      "archive_sha256": "7e4364ab861b1ec3ef1989e19f4edfeef6177c5a402557be23fb7c15c1f21a17",
+      "metadata_sha256": "cd20d90f7a2570e2a99d201b97d98192685d05bf301bf2649b7098249ae38693",
+      "asset_manifest_sha256": "856b6300ad1dcc6524c0a586d0522b3278bfb23a35f6e3d6547e83d1c11e0cb7"
+    },
+    "math-delta-0064.zip": {
+      "archive_sha256": "7cd1fc22373ec70ca01a3a25c312b48eb02ab7120e821d47a7ea6ca736d5978c",
+      "metadata_sha256": "b207a75e81af3daae099b546f1b838596a11f002e58a905fd260bd0f06359dbd",
+      "asset_manifest_sha256": "dd6b2497f88aa46d145163f62d4eee79a1341afb586ee60614a01666ac1dd0a0"
+    },
+    "math-delta-0065.zip": {
+      "archive_sha256": "7a1754399d1a652fe11d5a2cb08b3235d7f0a72dbba8bcf8a981ec73debd9815",
+      "metadata_sha256": "93cdcc4807ead87e88820357bc78e936c53de79eb4f3f0f9cb331e9c94cd9744",
+      "asset_manifest_sha256": "c135a75231c51a7fee35b27aa2ffbf9ca74084c24ec4e8f845f2b294326cdda8"
+    },
+    "math-delta-0066.zip": {
+      "archive_sha256": "968f327e10cccf795f741d3d49bc40e21c660ad940ad883d8dad9d9747746535",
+      "metadata_sha256": "8b4a5fe3ec3bfb16a826b4814902c3e4bccbda2f79a55d78c340cdd8533c72a3",
+      "asset_manifest_sha256": "1f88cbe4ce2da4bb4c357b5b17cadccc46d822ef4df48a935af62a9a44f5be4b"
+    },
+    "math-delta-0067.zip": {
+      "archive_sha256": "a993f3136ea24cbe2fd2d10895abde809c88c2e9c0c57fbf0f76c6b2a09d094c",
+      "metadata_sha256": "bae23a843866862f949adf7df2f41b5ddd5cbe242dada4c6b6972c784e71bc3a",
+      "asset_manifest_sha256": "60de7c8c909ca233ffd214eb4ccf9113cf702fe8cd2938a293c385f5a937cfff"
+    },
+    "math-delta-0068.zip": {
+      "archive_sha256": "d6952bae952c63f9cdfa8c88d16bc65918ba2ce3df4ba89d04a69d02f2cff8f0",
+      "metadata_sha256": "985b868ebe10ce7b9fa2b34e3523c7bbede4f4421535bded28b39bdfe049b1ed",
+      "asset_manifest_sha256": "99590989f57832ac36fe450b52a7bbce7f8ffe659050f538d4339ff56dcddc0a"
+    },
+    "math-delta-0069.zip": {
+      "archive_sha256": "bd44cf3b9bb2c587ed9b520b4197bced1920d90cdc4eb6a303babd5d65196c9e",
+      "metadata_sha256": "a8a90d199e2ced46759e07c59d019fd9d23f07eec33d61dd58fd312590eee5a7",
+      "asset_manifest_sha256": "4f4375ce6eb5f2afc163df4882bebe878b6adf41162a877d94be3ac31eb2e6cc"
+    }
+  },
+  "old_prefix_not_a_completed_force_job": true,
+  "all_omitted_groups_remain_pending_in_new_receipt": true,
+  "global_optimality_proved": false
+}

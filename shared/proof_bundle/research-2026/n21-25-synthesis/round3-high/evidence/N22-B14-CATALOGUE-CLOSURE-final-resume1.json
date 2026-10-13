@@ -1,0 +1,24 @@
+{
+  "verified": true,
+  "N": 22,
+  "B": 14,
+  "catalog_types": 3080858,
+  "strict_exclusion_types": 3080857,
+  "attaining_core_types": 1,
+  "pending_catalog_indices": [
+    3080857
+  ],
+  "attaining_catalog_index": 3080857,
+  "attaining_group": 384769,
+  "all_nonattaining_recorded_types_excluded": true,
+  "attaining_type_core_lower_bound_replayed": true,
+  "radius_link_report_sha256": "f8c5248761fd98b0ef97951df71f8384897f5d8544b98c44d97057b8501e5f6d",
+  "hierarchy_audit_sha256": "f5cd24089ffd04544ca8c2f8c3e6225757d132c5461fd97431ae0952c0f8401d",
+  "pending_indices_sha256": "6c77ab393eb13c409d1506f10f245ed737cd2ad5ad58e84cdbde16b9fdfdaee4",
+  "core_case_sha256": "41326e112596ff35429e3e5c28f7795f35e34214c88006885315f2271fd68c6c",
+  "scope": "complete B14 recorded catalogue branch; not whole n22 theorem",
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "6db60e46dea6a9d63b08ab60072e5540efb4be54688bf6588dbb9ad5b2507032"
+}

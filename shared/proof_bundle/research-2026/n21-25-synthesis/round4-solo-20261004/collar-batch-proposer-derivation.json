@@ -1,0 +1,29 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_source_sha256": "d5694f13f571cd70be4f90358fd5d3481347e7459e459e37e0531cf9d485e581",
+  "derived_source_sha256": "fb922aae58c58517d28d44a900865b2015352344e41775de7b6dfd69573daac9",
+  "source_sha256": "7e83164d13f5be78b4a240b6c8745050c9530a645be11c5250e3ba54e946155b",
+  "changes": [
+    [
+      "import exact_graph as exact",
+      "import sys\nsys.path.insert(0, str(Path(__file__).resolve().parent.parent / \"round3-high\"))\nimport exact_graph as exact"
+    ],
+    [
+      "ROOT = Path(__file__).resolve().parent",
+      "ROOT = Path(__file__).resolve().parent.parent / \"round3-high\""
+    ],
+    [
+      "    if N < 25:\n        candidate =",
+      "    if N == 21:\n        # Only small storage controls use N21; its absent core file is not\n        # fabricated. Exact force acceptance still checks every exclusion.\n        candidateB, fullfaces = None, None\n    elif N < 25:\n        candidate ="
+    ]
+  ],
+  "occurrence_counts": [
+    1,
+    1,
+    1
+  ],
+  "force_construction_and_exact_acceptance_unchanged": true,
+  "N25_candidate_control_unchanged": true,
+  "N21_no_candidate_core_theorem_asserted": true,
+  "global_optimality_proved": false
+}

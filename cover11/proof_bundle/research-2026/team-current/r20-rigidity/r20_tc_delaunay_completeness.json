@@ -1,0 +1,165 @@
+{
+  "F1_non_crossing": {
+    "pairs_tested": 210,
+    "violations": [],
+    "undecided": [],
+    "pass": true
+  },
+  "F2_site_in_face": {
+    "pairs_tested": 88,
+    "violations": [],
+    "pass": true
+  },
+  "F2b_site_in_edge": {
+    "pairs_tested": 231,
+    "violations": [],
+    "pass": true
+  },
+  "F3_pairwise_disjoint_interiors": {
+    "pairs_tested": 55,
+    "certified": 55,
+    "certified_adjacent": 12,
+    "not_certified": [],
+    "pass": true
+  },
+  "F5_counts": {
+    "V": 11,
+    "E": 21,
+    "F": 11,
+    "euler": 1,
+    "hull_edges_once": true,
+    "sum_face_sides_of_bounded_faces": 33,
+    "three_times_F": 33
+  },
+  "F_triangulation_ok": true,
+  "G_mirror_quadruples": [
+    {
+      "quadruple": [
+        "C0",
+        "C1",
+        "C7",
+        "C8"
+      ],
+      "centre_x_lo_hi": [
+        "-0.11428127828104862681",
+        "-0.1142811591814869412"
+      ],
+      "radius_lo_hi": [
+        "0.7155956051961437356",
+        "0.71559574483184766194"
+      ],
+      "witness_inside": "H1",
+      "witness_margin_lo": "0.68044826445067420006",
+      "strictly_nonempty_on_box": true
+    },
+    {
+      "quadruple": [
+        "C0",
+        "C2",
+        "C6",
+        "C8"
+      ],
+      "centre_x_lo_hi": [
+        "-0.10620838110457470911",
+        "-0.10620833954871190539"
+      ],
+      "radius_lo_hi": [
+        "0.7229411236819446706",
+        "0.72294119283992712052"
+      ],
+      "witness_inside": "H1",
+      "witness_margin_lo": "0.67972096330370009926",
+      "strictly_nonempty_on_box": true
+    },
+    {
+      "quadruple": [
+        "C0",
+        "C3",
+        "C5",
+        "C8"
+      ],
+      "centre_x_lo_hi": [
+        "0.023091366898169581903",
+        "0.023091409000511506797"
+      ],
+      "radius_lo_hi": [
+        "0.84240696116701909352",
+        "0.84240703074027445752"
+      ],
+      "witness_inside": "H1",
+      "witness_margin_lo": "0.66988705223955110999",
+      "strictly_nonempty_on_box": true
+    },
+    {
+      "quadruple": [
+        "C1",
+        "C2",
+        "C6",
+        "C7"
+      ],
+      "centre_x_lo_hi": [
+        "-0.09888267601542215205",
+        "-0.098882610980105075752"
+      ],
+      "radius_lo_hi": [
+        "0.72093824616404288366",
+        "0.72093829252408267754"
+      ],
+      "witness_inside": "H1",
+      "witness_margin_lo": "0.67039235721719148268",
+      "strictly_nonempty_on_box": true
+    },
+    {
+      "quadruple": [
+        "C1",
+        "C3",
+        "C5",
+        "C7"
+      ],
+      "centre_x_lo_hi": [
+        "0.080907635380651645449",
+        "0.080907691760401795144"
+      ],
+      "radius_lo_hi": [
+        "0.80277921318692609896",
+        "0.80277926947463456849"
+      ],
+      "witness_inside": "H0",
+      "witness_margin_lo": "0.61070938122121436004",
+      "strictly_nonempty_on_box": true
+    },
+    {
+      "quadruple": [
+        "C2",
+        "C3",
+        "C5",
+        "C6"
+      ],
+      "centre_x_lo_hi": [
+        "0.23641949355668192458",
+        "0.23641958739805590992"
+      ],
+      "radius_lo_hi": [
+        "0.70871050629353277651",
+        "0.70871053565173228217"
+      ],
+      "witness_inside": "H0",
+      "witness_margin_lo": "0.67215253250385131672",
+      "strictly_nonempty_on_box": true
+    }
+  ],
+  "G_no_empty_cocircular_quadruple": true,
+  "audit_chain": {
+    "F_triangulation_ok": true,
+    "G_no_empty_cocircular_quadruple": true,
+    "stated_chain": [
+      "read-only input: lead Krawczyk certificate -> exactly one root of the 12D symmetric system in the box (existence+uniqueness); nothing below re-proves it.",
+      "exact parameter identities: pin identity |U_k-C_k|=|U_k-C_{k+1}|=R (rho_k solves the quadratic identically: rho^2-2 rho cos a+1=R^2), hub identity (m-y_i)^2+h^2=R^2, and palindromic reflection symmetry theta_{8-k}=-theta_k, rho_{8-k}=rho_k.",
+      "root equations (f5=0 at the root): |U_k-H|=R for k=1,2,3,8 and |(m,h)-C_6|=R => the 9 active faces have circumradius exactly R; the 2 slack faces are < R over the box (from part 1: margin 8.746e-4).",
+      "interval facts over the whole corrected box: branch legality (part 1); every listed face has strictly empty circumcircle (>= 0.1505) and interior circumcentre (>= 0.6120); F1/F2/F2b/F3/F4/F5 above; the 6 cocircular quadruples are all non-empty (G).",
+      "=> the Delaunay subdivision has no >= 4-vertex cell, it is a triangulation, and by F it equals the listed face list; hence the Voronoi vertex list of the configuration is exactly the 11 circumcentres, all strictly inside D.",
+      "boundary: the 9 ring arcs tile dD (sum a = pi identically) and each arc lies within R of its ring centre => every interior local maximum of d = min_i |x-site_i| is a Voronoi vertex and the boundary maximum is <= R => R_D(root configuration) = R exactly, i.e. r_D(11) <= R (UPPER BOUND ONLY).",
+      "NOT established: root existence/uniqueness (read-only certificate); no lower bound; no claim that no 4 sites are cocircular (FALSE: the 6 mirror quadruples are cocircular); the empty-circle margin alone implies nothing about cocircularity in either direction."
+    ]
+  }
+}

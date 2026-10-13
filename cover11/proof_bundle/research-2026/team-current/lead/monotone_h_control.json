@@ -1,0 +1,11 @@
+{
+  "samples": 57,
+  "containment": true,
+  "stats": {
+    "positive": 13,
+    "negative": 0,
+    "fallback": 44,
+    "empty": 0
+  },
+  "scope": "calibrationonly"
+}

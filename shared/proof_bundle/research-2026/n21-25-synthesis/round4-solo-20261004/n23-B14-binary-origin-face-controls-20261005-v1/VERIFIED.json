@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "schema": "N23-B14-binary-origin-functional-face-controls-v1",
+  "all_exposed_positive_and_pure_inner_hidden_label_retained": true,
+  "independent_random_B14_actual_face_unions_compared": 200,
+  "negative_controls_rejected": [
+    "duplicate-face",
+    "unordered-face",
+    "non-triangle",
+    "boolean-mask",
+    "label-out-of-range",
+    "missing-full-source-center-label",
+    "empty-source-faces"
+  ],
+  "source_sha256": "b648bad889ab4f49c0a671d1070b83bd0208bff01477c0f9366107fd61553e20",
+  "partition_and_acceptor_source_sha256": "fbd7c0f4300fe1b9b5a57b4e7c0a9057781243c5d655539b1aea0b0d8c56fc5a",
+  "functional_fixtures_not_full_planar_types_or_mathematical_payment": true,
+  "global_optimality_proved": false
+}

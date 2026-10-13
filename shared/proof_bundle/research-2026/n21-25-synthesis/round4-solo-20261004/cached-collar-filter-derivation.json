@@ -1,0 +1,38 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_source_sha256": "f5524bbdbf3881cfe7272e77aead26bd1cc03c523e7bc51ff08d0f8fec16ba48",
+  "derived_source_sha256": "516002f3948367ebe4e3138f8afed900e0c1dc83c34fb68091a6322afb94f9da",
+  "source_sha256": "60c3e3afd813c282d516f54fc61a2c4f302abd4afec207fac754f5a975f3ba0b",
+  "changes": [
+    [
+      "from verify_sparse_maps_fast import library_gate, batch_match",
+      "from verify_sparse_maps_fast import library_gate\nfrom cached_collar_maps import cached_batch_match"
+    ],
+    [
+      "    ap.add_argument(\"--closure\", type=Path, action=\"append\", default=[])",
+      "    ap.add_argument(\"--cached-run\", type=Path, required=True)\n    ap.add_argument(\"--closure\", type=Path, action=\"append\", default=[])"
+    ],
+    [
+      "    unchanged(files)\n    output.mkdir()",
+      "    cached_bindings = read(args.cached_run.resolve() / \"INPUT-BINDINGS.json\")\n    assert (cached_bindings[\"N\"], cached_bindings[\"B\"], cached_bindings[\"parent_weak_graphs\"]) == (25, B, total)\n    unchanged(cached_bindings[\"files_relative_to_workspace\"])\n    for path in (args.cached_run.resolve() / \"INPUT-BINDINGS.json\",\n                 ROOT / \"cached_collar_maps.py\", ROOT / \"derive_cached_collar_filter.py\",\n                 ROOT / \"filter_complete_collar.py\", ROOT / \"cached-collar-filter-derivation.json\"):\n        bind(files, path)\n    unchanged(files)\n    output.mkdir()"
+    ],
+    [
+      "            answers = batch_match(table, [row[\"faces\"] for row in rows], directory, 25, B)",
+      "            answers = cached_batch_match(table, [row[\"faces\"] for row in rows], directory, 25, B,\n                                         args.cached_run, files)"
+    ],
+    [
+      "        \"not_a_global_n25_proof\": True, \"global_optimality_proved\": False,",
+      "        \"cached_partial_pass_not_accepted_as_complete\": True,\n        \"unavailable_sparse_matches_conservatively_kept_unpaid\": True,\n        \"not_a_global_n25_proof\": True, \"global_optimality_proved\": False,"
+    ]
+  ],
+  "occurrence_counts": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "all_source_row_and_mathematical_payment_checks_unchanged": true,
+  "backend_failure_never_a_geometric_exclusion": true,
+  "global_optimality_proved": false
+}

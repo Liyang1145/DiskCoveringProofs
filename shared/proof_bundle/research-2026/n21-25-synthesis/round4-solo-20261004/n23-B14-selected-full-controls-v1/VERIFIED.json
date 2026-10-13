@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "schema": "N23-B14-proposal-pending-full-supplement-selection-controls-v1",
+  "negative_controls_rejected": [
+    "missing-source-outcome",
+    "duplicate-source-outcome",
+    "extra-source-outcome",
+    "wrong-actual-parent-index",
+    "wrong-full-source-count",
+    "wrong-previous-status-counts",
+    "B15-candidate-status-not-a-B14-supplement",
+    "boolean-source-index"
+  ],
+  "old_full_type_math_controls_sha256": "c200e241dec9d323169f014dae6276f5a23f7badda6ede2b2ebe4a1c4ca32e58",
+  "whole_type_math_checker_sha256": "48da8df65976da108305b066fbe191566e23fc6129f81213f1a92c4e9311ce8c",
+  "audit_source_sha256": "e4f1707a2ce05c45069d1800c53609ac165b9c86c41348b80b5e651c506ecd3c",
+  "proposal_source_sha256": "a28bd8a8c0cb7a5ca06492330905753155d0a375cbe3d13cbc0a1f83d3235f6f",
+  "source_sha256": "ca11a9b1b0b3b1db2a7e0dbad5dbe53675af63f67496c697996000252e123bb2",
+  "functional_fixture_identifiers_not_math_or_formal_parent_payments": true,
+  "global_optimality_proved": false
+}

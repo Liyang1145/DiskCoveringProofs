@@ -1,0 +1,16 @@
+[
+  {
+    "stem": "q0_closure_dual",
+    "scalar_identity_error": 4.440892098500626e-16,
+    "area": 3.141592653589793,
+    "max_normalized_radius": 0.9999575082101021,
+    "note": "375 candidate is OUTSIDE y<=1 domain; identity only, no bound calibration there"
+  },
+  {
+    "stem": "q0_lower375_dual",
+    "scalar_identity_error": 8.881784197001252e-16,
+    "area": 3.141592653589793,
+    "max_normalized_radius": 1.0132902749862367,
+    "note": "375 candidate is OUTSIDE y<=1 domain; identity only, no bound calibration there"
+  }
+]

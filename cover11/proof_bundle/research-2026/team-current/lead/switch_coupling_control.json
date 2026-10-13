@@ -1,0 +1,5 @@
+{
+  "exact_symmetric_norm_identity": true,
+  "fiber_equivalence_controls": 10000,
+  "scope": "analytic proof in INWARD-SWITCH-COUPLING.md; numeric controls not continuumproof"
+}

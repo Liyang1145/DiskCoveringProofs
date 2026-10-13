@@ -1,0 +1,215 @@
+{
+  "schema": "N26-independent-actual-candidate-full134rod-native-bijection-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "3960290648ce75367702c8b67be5119d7263a58daa9c34dcb24703395457b061",
+  "independent_complete_native134rod_and_exact76vertex_bijection_checked": true,
+  "actual_native_to_extended_vertex_bijection_DATA": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4,
+    "5": 5,
+    "6": 6,
+    "7": 7,
+    "8": 8,
+    "9": 9,
+    "10": 10,
+    "11": 11,
+    "12": 12,
+    "13": 13,
+    "14": 14,
+    "15": 15,
+    "16": 16,
+    "17": 17,
+    "18": 18,
+    "19": 19,
+    "20": 20,
+    "21": 21,
+    "22": 22,
+    "23": 23,
+    "24": 24,
+    "25": 25,
+    "26": 26,
+    "27": 27,
+    "28": 28,
+    "29": 29,
+    "30": 30,
+    "31": 31,
+    "32": 33,
+    "33": 40,
+    "34": 39,
+    "35": 38,
+    "36": 37,
+    "37": 36,
+    "38": 35,
+    "39": 34,
+    "40": 32,
+    "41": 41,
+    "42": 62,
+    "43": 63,
+    "44": 49,
+    "45": 45,
+    "46": 69,
+    "47": 57,
+    "48": 53,
+    "49": 52,
+    "50": 56,
+    "51": 68,
+    "52": 44,
+    "53": 48,
+    "54": 67,
+    "55": 66,
+    "56": 47,
+    "57": 43,
+    "58": 65,
+    "59": 55,
+    "60": 51,
+    "61": 50,
+    "62": 54,
+    "63": 64,
+    "64": 42,
+    "65": 46,
+    "66": 70,
+    "67": 71,
+    "68": 59,
+    "69": 73,
+    "70": 61,
+    "71": 75,
+    "72": 74,
+    "73": 60,
+    "74": 72,
+    "75": 58
+  },
+  "original92rod_prefix_identical_and_all14new_faces_already_present": true,
+  "full34face_angular_matrix_independently_reconstructed": true,
+  "full34face_angular_matrix_already_identical_to_existing_necessary_matrix": true,
+  "actual_latest_source_root_DATA_count": 25,
+  "actual_fullface_angular_root_DATA_states": [
+    {
+      "source_OPEN_index": 1,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 5,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 9,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 13,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 17,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 21,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 25,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 29,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 33,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 37,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 41,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 45,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 48,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 44,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 40,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 36,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 32,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 28,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 24,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 20,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 16,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 12,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 8,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 959,
+      "additional_fullface_domain_empty": false
+    },
+    {
+      "source_OPEN_index": 1023,
+      "additional_fullface_domain_empty": false
+    }
+  ],
+  "new_whole_roots_excluded_by_angular_tightening": 0,
+  "actual_independent_graph_scope_rejection_controls_passed": [
+    "fullface-extra-rod-omitted",
+    "fullface-old-rod-prefix-discarded",
+    "fullface-new-rod-duplicated",
+    "fullface-witness-owner-repeated",
+    "fullface-actual-native-face-omitted",
+    "fullface-original46free-dimension-laundered",
+    "fullface-new-inverse-falsely-claimed",
+    "fullface-original92rod-model-falsely-replaced"
+  ],
+  "NEW60by60inverse_NEW_weights_and_energy_bounds_NOT_computed_or_admitted": true,
+  "old_source_forests_proofs_and_original92rod_kernel_UNMODIFIED": true,
+  "complete_latest_model_source_history_geometry_acceptance_NOT_performed": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "8d78b77c2ff83523984169a6825836006c0b4b03f3615b6385e1dd4db6208453"
+}

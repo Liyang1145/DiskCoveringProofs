@@ -1,0 +1,277 @@
+{
+  "route": "cline2/deepseek-v4.1f",
+  "kind": "controls only; no claim registered",
+  "template": [
+    "lead/R20-CENTRAL-SPAN-NECESSITY.md (D=|c0-c4|, d=|hA-hB|)",
+    "lead/HUB-DISTANCE-QUADRATIC-DUAL.md eq.(1) (CQ-free quadratic dual)"
+  ],
+  "A_span": {
+    "A1_identity_4y2(rho2-r2)_minus_(|c-p+|2-r2)(|c-p-|2-r2)": "0",
+    "A2_(4rD-D2-d2)_minus_(4r2-d2-(D-2r)2)": "0",
+    "A3_monotonicity_identity": "0",
+    "A4_exact_sampling": {
+      "samples": 9408,
+      "rho_le_r": 560,
+      "containment_violations": 0,
+      "span_violations": 0,
+      "sampled_pairs": 1600,
+      "branch_D_ge_2r": 429,
+      "branch_violations": 0,
+      "ge4r_pairs": 0
+    },
+    "A5_D_lt_2r_counterexample": {
+      "r": "1",
+      "hA": [
+        "-3/5",
+        "0"
+      ],
+      "hB": [
+        "3/5",
+        "0"
+      ],
+      "c0": [
+        "1/2",
+        "1/10"
+      ],
+      "c4": [
+        "1/2",
+        "-1/10"
+      ],
+      "d": "6/5",
+      "k": "4/5",
+      "rho2_c0": "61/100",
+      "rho2_c4": "61/100",
+      "rho_le_r_both": true,
+      "positive_area_both": true,
+      "D2": "1/25",
+      "D_lt_2r": true,
+      "four_rD_minus_D2_upper": "19/25",
+      "d2": "36/25",
+      "unrestricted_form_fails": true,
+      "note": "D=1/5 < 2r=2, both circumradii <= r, positive area, opposite sides; d^2=36/25 > 4rD-D^2=19/25, so the quarter-disk/4rD-D^2 form is FALSE on D<2r"
+    }
+  },
+  "B_dual": {
+    "B1_separated_unit_disks_L": "1.0",
+    "B2_coincident_disks_L": "-2.0",
+    "B3_two_tangent_disks_singleton": {
+      "L_of_t": [
+        [
+          "1",
+          "5/2",
+          "5/2"
+        ],
+        [
+          "2",
+          "22/7",
+          "22/7"
+        ],
+        [
+          "10",
+          "118/31",
+          "118/31"
+        ],
+        [
+          "100",
+          "1198/301",
+          "1198/301"
+        ]
+      ],
+      "closed_form": "L(t) = (12t-2)/(1+3t) = 4 - 6/(1+3t)",
+      "monotone_increment_L2_minus_L1": "9/14",
+      "increment_formula": "L(t+1)-L(t) = 18/((1+3t)(4+3t)) > 0",
+      "sup": "4 = dist^2(K_A,K_B); finite multipliers never attain it",
+      "K_A": "B((-1,0),1) cap B((1,0),1) = {(0,0)}",
+      "K_B": "B((0,3),1)",
+      "dist": "2",
+      "active_gradients_at_0": [
+        [
+          2,
+          0
+        ],
+        [
+          -2,
+          0
+        ]
+      ],
+      "active_gradient_cone": "x-axis (line)",
+      "normal_cone_of_singleton": "R^2 (tangent cone = {0})",
+      "separating_direction_u": [
+        0,
+        -1
+      ],
+      "u_in_active_cone": false,
+      "KKT_solvable": false
+    },
+    "B4_crossing_lens_Slater_attainment": {
+      "alpha_KKT": "-1/2 + 2*sqrt(3)/3",
+      "beta_KKT": "2 - sqrt(3)/2",
+      "L_symbolic": "19/4 - 2*sqrt(3)",
+      "dist_squared_symbolic": "(4 - sqrt(3))**2/4",
+      "exact_attainment": "0",
+      "K_A": "B((0,0),1) cap B((1,0),1) (genuine lens, Slater holds)",
+      "K_B": "B((1/2,-3),1)",
+      "primal_pair": "a*=(1/2,-sqrt3/2) (lens corner), b*=(1/2,-2)",
+      "stationarity_a": [
+        "0",
+        "0"
+      ],
+      "stationarity_b": [
+        "0",
+        "0"
+      ]
+    },
+    "B5_internal_tangency": {
+      "K_A": "B((0,0),2) cap B((1,0),1) = B((1,0),1) (internal tangency at (2,0))",
+      "active_gradients_at_(2,0)": [
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "active_gradient_cone": "positive x-axis (ray)",
+      "normal_cone": "positive x-axis (ray)",
+      "equal": true
+    },
+    "B5b_containment": {
+      "K_A": "B((0,0),3) cap B((1,0),1) = B((1,0),1) (strict containment)",
+      "active_gradients_at_(2,0)": [
+        [
+          2,
+          0
+        ]
+      ],
+      "active_gradient_cone": "positive x-axis (ray)",
+      "normal_cone": "positive x-axis (ray)",
+      "equal": true
+    },
+    "B6_three_disk_singleton_positively_spanning": {
+      "centers": [
+        "[1, 0]",
+        "[-1/2, sqrt(3)/2]",
+        "[-1/2, -sqrt(3)/2]"
+      ],
+      "radii": "1 each",
+      "claim": "intersection = {0} (all three circles pass through 0)",
+      "sum_of_centers_zero": "Matrix([[0], [0]])",
+      "identity": "sum_i [2<x,e_i>] = 2<x, sum e_i> = 0 >= 3|x|^2  on the intersection",
+      "sum_identity_residual": "0",
+      "active_gradients": [
+        "[-2, 0]",
+        "[1, -sqrt(3)]",
+        "[1, sqrt(3)]"
+      ],
+      "zero_in_int_conv": "Matrix([[0], [0]])",
+      "active_gradient_cone": "R^2 (0 in interior of convex hull of active gradients)",
+      "normal_cone": "R^2 (K is a singleton)",
+      "equal": true
+    },
+    "B7_scope": {
+      "cone_active_gradients_subset_N": "always (weak duality of the linearised cones)",
+      "equality_if_int_K_nonempty": "yes: Slater at a strictly feasible point gives T_K(x)=linearised cone for every x in K, hence N_K(x)=cone{grad g_i(x): i active}",
+      "equality_at_singleton_K={x0}": "N_K(x0)=R^2; equals cone{active gradients} iff 0 in interior of their convex hull",
+      "genuine_failure": "two externally tangent disks (antipodal active gradients): cone = line, N = R^2 (B3)"
+    }
+  },
+  "C_candidate": {
+    "label": "NUMERIC calibration on the saved rational q0 rings; not a certificate",
+    "r_saved_float": 0.3799838531198388,
+    "hub_indices": [
+      "10",
+      "9"
+    ],
+    "hub_points": [
+      [
+        -0.00016204298677169,
+        -0.1494284110851906
+      ],
+      [
+        0.00029602132891929,
+        0.27297730585181135
+      ]
+    ],
+    "hub_distance_d": 0.4224059653034979,
+    "ring_circumradii_minus_r": [
+      -0.0,
+      0.179823739,
+      504734095.3920184,
+      0.17982374,
+      -0.0,
+      0.101883293,
+      0.857280524,
+      0.857280533,
+      0.101883293
+    ],
+    "active_central_rings": [
+      0,
+      4
+    ],
+    "c0": [
+      0.6945265554943238,
+      0.0940834529054354
+    ],
+    "c4": [
+      -0.6943208709559491,
+      0.09558954431888284
+    ],
+    "D": 1.388848243066496,
+    "2r": 0.7599677062396776,
+    "4r": 1.5199354124793552,
+    "D_ge_2r": true,
+    "threshold_T_4rD_minus_D2": 0.18206018492760956,
+    "d_squared": 0.17842679952397986,
+    "slack_T_minus_d2": 0.003633385403629702,
+    "slack_quarter_disk_4r2_minus_d2_minus_(D-2r)2": 0.0036333854036297852,
+    "tight_pins_hubA": [
+      4,
+      6,
+      8
+    ],
+    "tight_pins_hubB": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "loose_pins_hubA": [
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "loose_pins_hubB": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "L_quadratic_dual": 0.0881581221430348,
+    "variance_eps": [
+      1.3938759963117321e-08,
+      0.17141710122141968
+    ],
+    "L_variance_localization": 0.42240595125149843,
+    "filter_excludes_candidate_quad": false,
+    "filter_excludes_candidate_var": false,
+    "consistency": "no exclusion expected: the saved candidate is a valid cover",
+    "L_quadratic_dual_le_d2": true,
+    "L_variance_localization_le_d": true,
+    "exact_mapping_shift_swap": [
+      4,
+      1
+    ],
+    "D_exact_square": "9644497211344459679681165544321949/5000000000000000000000000000000000",
+    "D_enclosure": [
+      1.3888482430664957,
+      1.3888482430664957
+    ],
+    "D_exact_center_float": 1.3888482430664957,
+    "T_upper_from_Dlo": 0.18206018492760992,
+    "D_enclosure_check_ge_2r": true
+  }
+}

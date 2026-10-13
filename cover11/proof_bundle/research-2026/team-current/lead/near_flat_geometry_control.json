@@ -1,0 +1,8 @@
+{
+  "symbolic_norm_expansion": true,
+  "symbolic_cross_product": true,
+  "asymmetric_legal_point_controls": 12305,
+  "asymmetric": 12305,
+  "largest_bound_ratio": 0.7068093682892269,
+  "scope": "analytic proof in NEAR-FLAT-SECTOR-GEOMETRY.md; point controls not completeness"
+}

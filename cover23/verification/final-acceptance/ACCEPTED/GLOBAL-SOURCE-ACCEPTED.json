@@ -1,0 +1,71 @@
+{
+  "verified": true,
+  "schema": "N23-arbitrary-unit-closed-disk-cover-global-computer-assisted-source-proof-v1",
+  "N": 23,
+  "theorem": "r_D(23)=R",
+  "exact_R": "positive square root of t in the isolated unique234-variable own root system; not a float",
+  "root_sha256": "ad18358164d0d36335b54281b2b000efa9f252250aef161c2df87dc7c55a8a45",
+  "system_sha256": "cb6d87d69e9c4673e47c1e960ca013c5bb5e8e20f72bb2470653e8e11b8dcb10",
+  "strict_radius_interval": [
+    "0.249953776586050183252369502777379010046867111695424496992599",
+    "0.249953776586050183252369502777379010046867111695424496992600"
+  ],
+  "arbitrary_plane_centers_repetitions_fewer_disks_and_degeneracies_allowed": true,
+  "no_symmetry_or_fixed_contact_graph_assumed": true,
+  "same_exact_root_entire_closed_disk_upper_and_all_necessary_family_lower_proofs": true,
+  "required_boundary_families": [
+    13,
+    14,
+    15
+  ],
+  "complete_original_catalog_counts": [
+    1530509,
+    8277632,
+    16790546
+  ],
+  "complete_original_catalog_types": 26598687,
+  "every_original_catalog_type_paid_with_actual_cover_necessity_strict_or_same_root_core": true,
+  "all_pending_types": 0,
+  "actual_full_nonstrict_core_types": 1,
+  "written_cover_peeling_and_local_quadratic_mathematics_reviewed_as_source_proof_premises": true,
+  "written_math_not_claimed_machine_proved_by_hash_check": true,
+  "all_old_exact_mathematics_honestly_reused_under_unchanged_full_content_bindings": true,
+  "current_files_and_whole_archives_independently_rechecked": 233801,
+  "B13_all670428_original_members_bound_in_original_current_root_or_verified_whole_archives": true,
+  "old_E_paths_not_rewritten_and_archive_only_members_not_claimed_current_local_files": true,
+  "source_document_sha256": "e0bcb61a36d69eb7c98bcabd099d63f0510bb969e748b13c0dde54b0834144fb",
+  "all_prerequisites_binding_sha256": "0e6ea0f5958958e12118a6aeb823d7e9881458deb33b2c053b85641a1d9f1037",
+  "B15_whole_chain_and_actual_full_core_transport_sha256": "5aa141043e7eaadc935a587c379c8390b18bd19a2b5feb7e5db41c14f2bd7cb2",
+  "three_full_source_interfaces_sha256": "e0f5feba8ab993c15a8097233d8ea749754bb6edf600ef44fec76bf949465541",
+  "frozen_input_ledger_sha256": "b56fa56b2c73bc7e87d76d1da0d7adacb92908894a03530bd23fba3d553ac38b",
+  "new_global_entry_frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\finalize_n23_global_source.py": "f204683487eaeef8ccab433517d815d00a90c04c0ed51e08ded440ce882295d2",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-GLOBAL-SOURCE-PROOF-v1.md": "e0bcb61a36d69eb7c98bcabd099d63f0510bb969e748b13c0dde54b0834144fb",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-whole-final-chain-v1\\VERIFIED.json": "5aa141043e7eaadc935a587c379c8390b18bd19a2b5feb7e5db41c14f2bd7cb2",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-three-full-source-interfaces-v2\\VERIFIED.json": "e0f5feba8ab993c15a8097233d8ea749754bb6edf600ef44fec76bf949465541",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\bind_n23_all_final_prerequisites.py": "dd03b664eff6426fb2b394bdb50f959a1673dd5587b69216bedf1231d9b063e2",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\verify_n23_B15_final_chain.py": "d724d8945ed1cbff1314e322836370b932b1e2e33dc75bafa356b80c741413ed",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-N24-COVER-AND-FULL-PEEL-INDUCTION-v1.md": "8aca653a57a75546a14aa9d51bd013ebf5c2c2047e02c7a350601d81c958cc58",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-SAME-ROOT-CORE-AND-GLOBAL-ASSEMBLY-INTERFACE-v1.md": "bf8419f836d66352a8d7a7ba914e4a00bb35f83730571869bc107a502ba33c4b"
+  },
+  "negative_global_scope_controls_rejected": [
+    "binding-verified",
+    "binding-N",
+    "binding-required_boundary_families",
+    "binding-complete_original_catalog_counts",
+    "binding-all_original_catalog_lower_payment_chains_formally_zero",
+    "binding-actual_same_root_upper_budget_local_and_core_transport_prerequisites_linked",
+    "binding-all_current_content_bindings_checked",
+    "binding-mismatches",
+    "binding-B13_original_all670428_member_byte_theorem_reused_under_unchanged_full_archive_and_local_hashes",
+    "chain-pending_types",
+    "chain-actual_full_same_root_nonstrict_types",
+    "chain-complete_candidate_actual_source_map_and_active_root_graph_freshly_rechecked",
+    "source-families",
+    "source-b13_and_b14_actual_zero_paid_prunes_no_hidden_library_skips"
+  ],
+  "source_sha256": "f204683487eaeef8ccab433517d815d00a90c04c0ed51e08ded440ce882295d2",
+  "not_Lean_Coq_formalization_not_third_party_peer_review_not_all_attaining_configurations_classified": true,
+  "global_source_proof_closed": true,
+  "global_optimality_proved": true
+}

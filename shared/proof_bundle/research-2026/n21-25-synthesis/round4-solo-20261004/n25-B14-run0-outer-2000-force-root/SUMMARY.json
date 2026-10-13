@@ -1,0 +1,30 @@
+{
+  "N": 25,
+  "B": 14,
+  "groups_sha256": "c219f085f950e64951bdb00a465f2cbf2681d515c26a7a42906cdb80d6a83f10",
+  "outcomes": [
+    {
+      "group": 0,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 54,
+      "edges": 88,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "820843244844763812186956699585917/29412003205693381783000000000000000",
+      "minimum_local_margin": null,
+      "members": 2000,
+      "tree_sha256": "08155fe978dec80c715093917c6b3dda2fa152039abb3b419e600f64da5797bf"
+    }
+  ],
+  "excluded_groups": 1,
+  "pending_groups": 0,
+  "catalog_members_excluded": 2000,
+  "requested_groups_complete": true,
+  "whole_catalog_exclusion_proved": false,
+  "global_optimality_proved": false,
+  "source_sha256": "d5694f13f571cd70be4f90358fd5d3481347e7459e459e37e0531cf9d485e581",
+  "known_attaining_group_control": null
+}

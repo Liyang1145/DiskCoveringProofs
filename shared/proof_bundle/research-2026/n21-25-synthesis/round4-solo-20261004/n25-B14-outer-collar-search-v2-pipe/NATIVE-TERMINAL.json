@@ -1,0 +1,9 @@
+{
+  "native_terminal_observed": true,
+  "actual_exit_code": 1,
+  "linux_native_pid": 30192,
+  "owned_wsl_proxy_pid": 14284,
+  "native_log_sha256": "3a4b70dc3f34ac7a13a09f59d4277771baa0e335ead4b3171a1d70fd93e23a18",
+  "seconds": 750.7190000000119,
+  "global_optimality_proved": false
+}

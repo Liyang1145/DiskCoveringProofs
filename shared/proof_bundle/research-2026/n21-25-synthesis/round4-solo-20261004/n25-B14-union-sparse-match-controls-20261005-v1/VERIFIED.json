@@ -1,0 +1,450 @@
+{
+  "verified": true,
+  "source_sha256": "b14e5c6be549f45c982576fc90faafd6540627424060e54ad355c545fb71b693",
+  "library_sha256": "94370b91e42720619b6698a2eeed62a146adcfdb2d6cec39cb25af9682c9fa9a",
+  "matcher_source_sha256": "188ab2b44769bf7b21c2b54d1f14be9e76d5a3d0600abac8183faac5c3e2f3fc",
+  "matcher_include_sha256": "bbc19a7b25785d5c619773a0f53156beca06cf4774a0666fc5b179d52ef496c1",
+  "matcher_binary_sha256": "8bf47664d29453c603f6b7b77d2ae5bd23c073cc6568ec1f88f26718acdccac0",
+  "all_required_proper_injections_hit_and_explicitly_rechecked": true,
+  "total_requests": 4019,
+  "explicitly_verified_hits": 3939,
+  "actual_accepted_parent_graphs": 1834,
+  "actual_run_records": 1930,
+  "artificial_strict_supergraph_controls": 75,
+  "independent_python_existence_controls": [
+    {
+      "request": 3914,
+      "existence": true
+    },
+    {
+      "request": 3915,
+      "existence": false
+    },
+    {
+      "request": 3916,
+      "existence": false
+    },
+    {
+      "request": 3917,
+      "existence": true
+    },
+    {
+      "request": 3918,
+      "existence": false
+    },
+    {
+      "request": 3919,
+      "existence": false
+    },
+    {
+      "request": 3920,
+      "existence": true
+    },
+    {
+      "request": 3921,
+      "existence": false
+    },
+    {
+      "request": 3922,
+      "existence": false
+    },
+    {
+      "request": 3923,
+      "existence": true
+    },
+    {
+      "request": 3924,
+      "existence": false
+    },
+    {
+      "request": 3925,
+      "existence": false
+    },
+    {
+      "request": 3926,
+      "existence": true
+    },
+    {
+      "request": 3927,
+      "existence": false
+    },
+    {
+      "request": 3928,
+      "existence": false
+    },
+    {
+      "request": 3929,
+      "existence": true
+    },
+    {
+      "request": 3930,
+      "existence": false
+    },
+    {
+      "request": 3931,
+      "existence": false
+    },
+    {
+      "request": 3932,
+      "existence": true
+    },
+    {
+      "request": 3933,
+      "existence": false
+    },
+    {
+      "request": 3934,
+      "existence": false
+    },
+    {
+      "request": 3935,
+      "existence": true
+    },
+    {
+      "request": 3936,
+      "existence": false
+    },
+    {
+      "request": 3937,
+      "existence": false
+    },
+    {
+      "request": 3938,
+      "existence": true
+    },
+    {
+      "request": 3939,
+      "existence": false
+    },
+    {
+      "request": 3940,
+      "existence": false
+    },
+    {
+      "request": 3941,
+      "existence": true
+    },
+    {
+      "request": 3942,
+      "existence": false
+    },
+    {
+      "request": 3943,
+      "existence": false
+    },
+    {
+      "request": 3944,
+      "existence": true
+    },
+    {
+      "request": 3945,
+      "existence": false
+    },
+    {
+      "request": 3946,
+      "existence": false
+    },
+    {
+      "request": 3947,
+      "existence": true
+    },
+    {
+      "request": 3948,
+      "existence": false
+    },
+    {
+      "request": 3949,
+      "existence": false
+    },
+    {
+      "request": 3950,
+      "existence": true
+    },
+    {
+      "request": 3951,
+      "existence": false
+    },
+    {
+      "request": 3952,
+      "existence": false
+    },
+    {
+      "request": 3953,
+      "existence": true
+    },
+    {
+      "request": 3954,
+      "existence": false
+    },
+    {
+      "request": 3955,
+      "existence": false
+    },
+    {
+      "request": 3956,
+      "existence": true
+    },
+    {
+      "request": 3957,
+      "existence": false
+    },
+    {
+      "request": 3958,
+      "existence": false
+    },
+    {
+      "request": 3959,
+      "existence": true
+    },
+    {
+      "request": 3960,
+      "existence": false
+    },
+    {
+      "request": 3961,
+      "existence": false
+    },
+    {
+      "request": 3962,
+      "existence": true
+    },
+    {
+      "request": 3963,
+      "existence": false
+    },
+    {
+      "request": 3964,
+      "existence": false
+    },
+    {
+      "request": 3965,
+      "existence": true
+    },
+    {
+      "request": 3966,
+      "existence": false
+    },
+    {
+      "request": 3967,
+      "existence": false
+    },
+    {
+      "request": 3968,
+      "existence": true
+    },
+    {
+      "request": 3969,
+      "existence": false
+    },
+    {
+      "request": 3970,
+      "existence": false
+    },
+    {
+      "request": 3971,
+      "existence": true
+    },
+    {
+      "request": 3972,
+      "existence": false
+    },
+    {
+      "request": 3973,
+      "existence": false
+    },
+    {
+      "request": 3974,
+      "existence": true
+    },
+    {
+      "request": 3975,
+      "existence": false
+    },
+    {
+      "request": 3976,
+      "existence": false
+    },
+    {
+      "request": 3977,
+      "existence": true
+    },
+    {
+      "request": 3978,
+      "existence": false
+    },
+    {
+      "request": 3979,
+      "existence": false
+    },
+    {
+      "request": 3980,
+      "existence": true
+    },
+    {
+      "request": 3981,
+      "existence": false
+    },
+    {
+      "request": 3982,
+      "existence": false
+    },
+    {
+      "request": 3983,
+      "existence": true
+    },
+    {
+      "request": 3984,
+      "existence": false
+    },
+    {
+      "request": 3985,
+      "existence": false
+    },
+    {
+      "request": 3986,
+      "existence": true
+    },
+    {
+      "request": 3987,
+      "existence": false
+    },
+    {
+      "request": 3988,
+      "existence": false
+    },
+    {
+      "request": 3989,
+      "existence": false
+    },
+    {
+      "request": 3990,
+      "existence": false
+    },
+    {
+      "request": 3991,
+      "existence": false
+    },
+    {
+      "request": 3992,
+      "existence": false
+    },
+    {
+      "request": 3993,
+      "existence": false
+    },
+    {
+      "request": 3994,
+      "existence": false
+    },
+    {
+      "request": 3995,
+      "existence": false
+    },
+    {
+      "request": 3996,
+      "existence": false
+    },
+    {
+      "request": 3997,
+      "existence": false
+    },
+    {
+      "request": 3998,
+      "existence": false
+    },
+    {
+      "request": 3999,
+      "existence": false
+    },
+    {
+      "request": 4000,
+      "existence": false
+    },
+    {
+      "request": 4001,
+      "existence": false
+    },
+    {
+      "request": 4002,
+      "existence": false
+    },
+    {
+      "request": 4003,
+      "existence": false
+    },
+    {
+      "request": 4004,
+      "existence": false
+    },
+    {
+      "request": 4005,
+      "existence": false
+    },
+    {
+      "request": 4006,
+      "existence": false
+    },
+    {
+      "request": 4007,
+      "existence": false
+    },
+    {
+      "request": 4008,
+      "existence": false
+    },
+    {
+      "request": 4009,
+      "existence": false
+    },
+    {
+      "request": 4010,
+      "existence": false
+    },
+    {
+      "request": 4011,
+      "existence": false
+    },
+    {
+      "request": 4012,
+      "existence": false
+    },
+    {
+      "request": 4013,
+      "existence": false
+    },
+    {
+      "request": 4014,
+      "existence": false
+    },
+    {
+      "request": 4015,
+      "existence": false
+    },
+    {
+      "request": 4016,
+      "existence": false
+    },
+    {
+      "request": 4017,
+      "existence": false
+    },
+    {
+      "request": 4018,
+      "existence": false
+    }
+  ],
+  "negative_controls_rejected": [
+    "wrong-anchor-offset",
+    "center-collision",
+    "missing-face",
+    "bad-schema",
+    "bad-id",
+    "extra-column",
+    "bad-N",
+    "bad-B"
+  ],
+  "maps_sha256": "f4da567686973908e8d623d91fdfe4d3f041b77d782a8a87660853d7ab2c38d4",
+  "proper_constraint_subset_source_lemma_sha256": "0adbb5592d04513e7ebcb013f743ad29a549ff738c911eb39155b20fbf5d9e65",
+  "complete_production_enumerator_not_implemented_here": true,
+  "global_optimality_proved": false
+}

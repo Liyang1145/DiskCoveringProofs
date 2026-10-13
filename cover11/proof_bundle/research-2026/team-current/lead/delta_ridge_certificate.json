@@ -1,0 +1,15 @@
+{
+  "scope": "sameouterboxash_monotone_box_certificate; feasibleH upperactive; two smoothbranches",
+  "derivatives": [
+    [
+      0.09428709877769867,
+      0.23048129809970228
+    ],
+    [
+      -0.22693326511937814,
+      -0.09032456306487077
+    ]
+  ],
+  "ridge": "delta=b1-b2",
+  "claim": "strictlyincreasing onleftbranch anddecreasing onrightbranch whereverfeasible inbox; ifridgefeasible maximizerthere, else onlyconditionalmonotonicbranchstatement"
+}

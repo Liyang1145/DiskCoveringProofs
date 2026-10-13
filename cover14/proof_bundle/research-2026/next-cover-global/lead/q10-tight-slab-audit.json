@@ -1,0 +1,96 @@
+{
+  "status": "sourcebound_rational_clip_leaf_exclusions_and_finite_transport",
+  "source_sha256": "272906eb6d1e32e2655a88bf90d26679edbb9869b060eb6b048b9fd0737d0a1a",
+  "base_sha256": "fc3012c171ae7a87a442ab25e3b41b424bbe99cccb53818910f46e42f018d1ee",
+  "runs": [
+    {
+      "indices": [
+        2
+      ],
+      "side": 1,
+      "threshold": "1/8",
+      "vertices": 552,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "332334317007282693080292557956547511127324581/1000000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.3323343170072827,
+        "excluded": true,
+        "vertices": 552,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "side": -1,
+      "threshold": "1/8",
+      "vertices": 733,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "165942822193435071334201077137237492295329767/500000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.3318856443868701,
+        "excluded": true,
+        "vertices": 733,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    }
+  ],
+  "cuts": [
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        2
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        3,
+        4
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        5,
+        6
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        7
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        8,
+        9
+      ],
+      "sense": "greater",
+      "fraction_of_total": "1/8"
+    }
+  ]
+}

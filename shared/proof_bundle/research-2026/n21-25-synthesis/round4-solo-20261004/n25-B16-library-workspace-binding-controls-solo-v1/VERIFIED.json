@@ -1,0 +1,18 @@
+{
+  "verified": true,
+  "schema": "origin-library-relative-binding-normalization-controls-v1",
+  "actual_workspace_relative_names_resolve_to_original_absolute_bytes": true,
+  "both_path_separator_styles_checked": true,
+  "negative_controls_rejected": [
+    "absolute-name-in-relative-ledger",
+    "escape-original-workspace",
+    "missing-real-file",
+    "wrong-current-file-bytes",
+    "non-string-path",
+    "duplicate-resolved-file"
+  ],
+  "source_sha256": "253d924ac561fd415da2c64fd0ad0371563cc7ad508b8fc87e33172e4606e295",
+  "audit_source_sha256": "637b37a55bb272703b3001d33f77ff3a96fc4bd56d8d62d4991c29aa9630e19d",
+  "all_mathematical_replays_and_complete_parent_merge_still_required": true,
+  "global_optimality_proved": false
+}

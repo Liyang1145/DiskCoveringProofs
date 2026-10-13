@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "schema": "N23-stronger-pending-group-selection-controls-v1",
+  "previous_positive_groups_not_selected": true,
+  "known_attaining_group_retained": true,
+  "negative_controls_rejected": [
+    "duplicate-selected-group",
+    "unordered-selected-group",
+    "bool-selected-group",
+    "out-of-range-group",
+    "known-group-not-selected",
+    "bool-known-group",
+    "known-attainer-falsely-paid",
+    "original-outcome-id-gap",
+    "unrecognized-outcome-status"
+  ],
+  "source_sha256": "d9d2f1d387e69bdfcf933867aaeea80ad72addb990d462e79f9377209de1b158",
+  "proposal_source_sha256": "e08be16aa4033b6f8d2bfad98948227801831592c1f0c765f126816391a176dc",
+  "functional_fixtures_not_full_types_or_payments": true,
+  "global_optimality_proved": false
+}

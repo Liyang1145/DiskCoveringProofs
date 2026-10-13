@@ -1,0 +1,11 @@
+{
+  "scope": "exact rational constants and40dps interval gap only; analytic proof in TEN-DISK-GAP-COMPACTNESS.md",
+  "s": "19/50",
+  "U": "37999/100000",
+  "delta": "1/50000",
+  "sine_lower": "1/37999",
+  "eight_arcs_square_margin": "9071/390625",
+  "width_gap": "[0.0466175387073278572543423682783089765313423024, 0.0466175387073278572543423682783089765317096443]",
+  "chord_lower": "[0.0466133176137421193344044296808612505118860357, 0.0466133176137421193344044296808612505122533777]",
+  "switch_cos_lower": "3/16"
+}

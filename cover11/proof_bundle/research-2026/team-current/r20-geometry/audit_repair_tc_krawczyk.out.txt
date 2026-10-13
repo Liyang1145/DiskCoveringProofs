@@ -1,0 +1,16 @@
+root read from lead/repaired_tc_krawczyk.json (12 coordinates)
+source hash of the audited script: 08ba43cd3411632c07b3c3c61386320b
+
+[1] system shape: len(F) = 12, J = 12x12 ; N = 12 (7 z + 5 lambda)
+    max |residual| (first 5) = 1.40497e-58 ; max |stationarity residual| (7) = 1.30917e-57
+
+[2] independent central-difference audit of the AD bundle (h = 2^-18):
+    max |FD gradient - AD gradient|        = 5.37414e-5
+    max |FD second deriv - AD second deriv| = 0.345979
+
+[3] manual chain-rule block vs assembled J : max difference = 0.0
+    rank of the 5x7 constraint-gradient block = 5 (needs 5 for unique lambda)
+    smallest NONZERO singular value of that block = 0.666162
+    rank of the 12x12 KKT Jacobian            = 12 (needs 12 for isolation)
+    smallest singular value of the 12x12      = 0.232416
+

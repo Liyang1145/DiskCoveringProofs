@@ -1,0 +1,13 @@
+{
+ "max_fd_grad_error": "5.374139e-5",
+ "max_fd_hess_error": "0.34597866",
+ "max_chain_rule_error": "0.0",
+ "rank_grad_block": 5,
+ "rank_jacobian": 12,
+ "smallest_sv_grad": "0.66616207",
+ "smallest_sv_jac": "0.23241595",
+ "R_enclosure": [
+  "0.379983853119836538651922409253",
+  "0.379983853119840840792600803019"
+ ]
+}

@@ -1,0 +1,509 @@
+{
+  "schema": "individually-paid-discovery-graphs-v1",
+  "N": 25,
+  "B": 16,
+  "snapshot_sha256": "1c9b221c361c8b03ca2ce8a56ec4acc963ff6ebc7c2eb4a55e4c2795deb42649",
+  "constants_sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+  "outcomes": [
+    {
+      "group": 0,
+      "centers": 18,
+      "faces": [
+        704,
+        68608,
+        180224,
+        204800
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "256127202217707038801217422327951/1000006643401299195149000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "9d1b9c695028e82c3532f99cf8c37d9c584e8d702e5030d6ef986e25675491fb"
+    },
+    {
+      "group": 1,
+      "centers": 18,
+      "faces": [
+        832,
+        67072,
+        180224,
+        200704
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "5939478961422493287455907357442237/500002913581950117463000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "d26f41eaf1314f19c1b87fa4023ae1fde8dec0a5188becb59b890ad024123acb"
+    },
+    {
+      "group": 2,
+      "centers": 18,
+      "faces": [
+        1216,
+        68608,
+        180224,
+        204800
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "19789403946531571722135763893882897/1000009891333722222803000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "ca758f63257cad79e8abcf87d38910a1c3acf1b93e4c49771804c3c19060f68f"
+    },
+    {
+      "group": 3,
+      "centers": 18,
+      "faces": [
+        1216,
+        71680,
+        180224,
+        204800
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "3948776360004246463737216080068381/500003441680420537719000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "69355759dd7c1af9c6fcdf588f8a1676bc5353e153c6dc9e92d66cf23f901932"
+    },
+    {
+      "group": 4,
+      "centers": 18,
+      "faces": [
+        1600,
+        68608,
+        180224,
+        204800
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2827175031275123624895652235166369/142860866327585702531000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "ee6123665c22fdc78cd9db57d046df564e9d976ccdaacdfb178f9860edcb1c79"
+    },
+    {
+      "group": 5,
+      "centers": 18,
+      "faces": [
+        1664,
+        106496,
+        134144,
+        143360
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1873727783692735851407667755594361/499998379678403049739000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "c12140cba85bbf39edb12783eda88f2dec7ad352cb01e1c4631fa0f3241a0eb7"
+    },
+    {
+      "group": 6,
+      "centers": 18,
+      "faces": [
+        3200,
+        71680,
+        180224,
+        204800
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2441502385045296147423996628122797/1000009201141019172903000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "eda6ba20654d44f4f408af098e708419d7ed2a72c62083d4c271773011d64bd2"
+    },
+    {
+      "group": 7,
+      "centers": 18,
+      "faces": [
+        3200,
+        114688,
+        137216,
+        155648
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14279896768932093127349091871895003/1000007929008560989297000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "e4250654272894640913becb82c8dcd26aa63832b90e7a12ad5543e827b71b41"
+    },
+    {
+      "group": 8,
+      "centers": 17,
+      "faces": [
+        3328,
+        71680,
+        114688
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "11207893579169483851154222590977763/1000000634300703462537000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "b01dca36f4df9d961f8c86a2bb0e49f29c339a5ae397a8cea3e49ba2ee2a9645"
+    },
+    {
+      "group": 9,
+      "centers": 17,
+      "faces": [
+        4864,
+        77824,
+        114688
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1098493130028865449625665907381317/76923375934476326383000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "caddb96d05b169a181dd3f0f77180c3e5ed667ebef768a0e421324ffa49812a1"
+    },
+    {
+      "group": 10,
+      "centers": 18,
+      "faces": [
+        4864,
+        180224,
+        200704
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14277530614239774794841384468502291/1000024012573925974809000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "66f349871970dc5bfbc47545874ced9f5902fbb2d1dcb3901a60728693be3c95"
+    },
+    {
+      "group": 11,
+      "centers": 17,
+      "faces": [
+        6400,
+        77824,
+        114688
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "713954630950684775219016201232551/50000535210799550549000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "220e38af770d7fdf52937d34c7b00d585b8345c2da490f0cf576fb5bacab5f10"
+    },
+    {
+      "group": 12,
+      "centers": 18,
+      "faces": [
+        6400,
+        143360,
+        229376
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "114228718928087113521597425457107/8000282246656949593000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "39be22a47123dea0e426f72c409c0f58be04b4294e47d09eda9a4d5bcb691027"
+    },
+    {
+      "group": 13,
+      "centers": 18,
+      "faces": [
+        6400,
+        180224,
+        200704
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "4759377570521785293327767447633489/333336276543731307411000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "41bb05100598ff38e79486820a4f96a6008b5d2fb92a0de49d221ecabdc4c3d6"
+    },
+    {
+      "group": 14,
+      "centers": 18,
+      "faces": [
+        45056,
+        137216,
+        196864
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "11207834119535691561178632087457047/1000002006860527263653000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "39f0989f17bc2514d2f0e0f7da9e484f0ca9ba635016c49501aef8d0e2f98999"
+    },
+    {
+      "group": 15,
+      "centers": 18,
+      "faces": [
+        51200,
+        134144,
+        196864
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14279606502085311533960248351855251/1000013202658116797849000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "48d96e8632cfd3e9ceef57b2d2891d249f00725b4cce9c907f1f4f59860976b5"
+    },
+    {
+      "group": 16,
+      "centers": 18,
+      "faces": [
+        53248,
+        65856,
+        131840,
+        134144
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 38,
+      "edges": 44,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "570200788868339862431204542159989/50001192781981430911000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "6b94cbf0698bf027a9d37827e90cb9d1070a5e9da03c476a248164d12102772a"
+    },
+    {
+      "group": 17,
+      "centers": 18,
+      "faces": [
+        53248,
+        137216,
+        196864
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1018893114008785521144699634717639/90909343685173838261000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "d0f1bdf8a2b8864d6173418b42e1e9fa878549934a1c305c0cdb7bace66bfed4"
+    },
+    {
+      "group": 18,
+      "centers": 19,
+      "faces": [
+        65632,
+        66688,
+        134144,
+        311296,
+        401408
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 40,
+      "edges": 47,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2168187852841095702544615057570367/333335258081593442333000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "408f1ffd6a7422156f15703e11a8741ad96a46e12548489826120409595e87c7"
+    },
+    {
+      "group": 19,
+      "centers": 18,
+      "faces": [
+        66304,
+        180224,
+        204800
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "622369828542271542397821334865431/250001037009717845669000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "f9bf43238f4931b28865482251b666bed75c97371ae6938e5c32fb855feb9b33"
+    },
+    {
+      "group": 20,
+      "centers": 18,
+      "faces": [
+        67840,
+        180224,
+        200704
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "363484994361800692450229212118741/250000472314899603359000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "cc4a029fc5b1a9ee16eb9c63e03a7585f998b93ba1782130cb3b1930d1b788fe"
+    },
+    {
+      "group": 21,
+      "centers": 18,
+      "faces": [
+        69888,
+        180224,
+        200704
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "20992857031930264163297591671831/1470616245760879269000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "fa4ed8274a80ac1934f2f3a7fd51b2395f57ee3355a4e3aa95639377a553c687"
+    },
+    {
+      "group": 22,
+      "centers": 18,
+      "faces": [
+        69888,
+        180224,
+        204800
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 37,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "8691092132605445640182938528592773/1000006913593858628527000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "73fd561ad880293a1bcb9c4daeb5fab5a070936fa638110ff95ec03ca3659bfe"
+    },
+    {
+      "group": 23,
+      "centers": 19,
+      "faces": [
+        82944,
+        114688,
+        131168,
+        263680,
+        393344
+      ],
+      "status": "excluded",
+      "verified": true,
+      "vertices": 40,
+      "edges": 47,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "19789340814794992499132430788892373/1000007440521577088927000000000000000",
+      "minimum_local_margin": null,
+      "tree_sha256": "c3215eb225b4a2657c1995905a301735ff7bfa45b1891b663e713516bbc49808"
+    }
+  ],
+  "totals": {
+    "excluded": 24
+  },
+  "source_sha256": "24b56af5db29f983be0e373a62d08b30d7a9961eeb8e86b428229e50338c90db",
+  "source_make_sha256": "d5694f13f571cd70be4f90358fd5d3481347e7459e459e37e0531cf9d485e581",
+  "complete_family_coverage": false,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,70 @@
+[
+  {
+    "script": "certify_shared_factors.py",
+    "args": [
+      "0",
+      "3"
+    ],
+    "returncode": 0,
+    "seconds": 29.0139377117157,
+    "sha256": "430136f6d0c6e8ebcc4d061185b945cf25f9d31f7c67eb7261ca067637f88534",
+    "log": "certify_shared_factors_0_3_final.log"
+  },
+  {
+    "script": "certify_shared_factors.py",
+    "args": [
+      "1",
+      "3"
+    ],
+    "returncode": 0,
+    "seconds": 59.58184790611267,
+    "sha256": "430136f6d0c6e8ebcc4d061185b945cf25f9d31f7c67eb7261ca067637f88534",
+    "log": "certify_shared_factors_1_3_final.log"
+  },
+  {
+    "script": "certify_shared_factors.py",
+    "args": [
+      "2",
+      "3"
+    ],
+    "returncode": 0,
+    "seconds": 29.58929443359375,
+    "sha256": "430136f6d0c6e8ebcc4d061185b945cf25f9d31f7c67eb7261ca067637f88534",
+    "log": "certify_shared_factors_2_3_final.log"
+  },
+  {
+    "script": "certify_shared_factors.py",
+    "args": [
+      "3",
+      "3"
+    ],
+    "returncode": 0,
+    "seconds": 35.230583906173706,
+    "sha256": "430136f6d0c6e8ebcc4d061185b945cf25f9d31f7c67eb7261ca067637f88534",
+    "log": "certify_shared_factors_3_3_final.log"
+  },
+  {
+    "script": "check_compatible_fraction.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 5.688719987869263,
+    "sha256": "cabc0ece88dbe2fc54a5a642470de67244bf34259d4acd0350a80d6189e4440b",
+    "log": "check_compatible_fraction_control_final.log"
+  },
+  {
+    "script": "check_degree3_fraction.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 1.0046467781066895,
+    "sha256": "39588cf11617b9cb00c021596376c0fa4880142279674b1a9bff493e3fe6fd39",
+    "log": "check_degree3_fraction_control_final.log"
+  },
+  {
+    "script": "check_degree4_triple_fraction.py",
+    "args": [],
+    "returncode": 0,
+    "seconds": 5.008202791213989,
+    "sha256": "0db0ec6ee166b0884a59bfb2d0a784b841d212e1204d16fb6156acc7cabe3354",
+    "log": "check_degree4_triple_fraction_control_final.log"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "actual_exit_code": 0,
+  "child_pid": 15484,
+  "source_sha256": "4f03b0ae31a539e6edfebcbeaefa371bbe033e125d1d24bb3820cf8322da1f59",
+  "command": [
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe",
+    "-u",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_origin_collar_batches.py",
+    "--manifest",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-degree-origin-complete-search-20261005-v1\\N25-B15-complete-origin-sorted-chunks.json",
+    "--terminal",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-degree-origin-complete-search-20261005-v1\\NATIVE-TERMINAL.json",
+    "--union",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-degree-origin-complete-search-20261005-v1\\UNION\\VERIFIED.json",
+    "--partition",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-complete-origin-bounded-proof-inputs-20261005-v1\\VERIFIED.json",
+    "--output",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-complete-origin-root-force-and-audit-20261005-v1\\COMPLETE-PAYMENT-AUDIT"
+  ],
+  "stdout_sha256": "aff76afb7c1d39126e93ab10643ffabaf78492f2532505cfa4cd139f6a4dc052",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "seconds": 1217.9219999999987,
+  "exit_zero_is_not_a_mathematical_payment": true
+}

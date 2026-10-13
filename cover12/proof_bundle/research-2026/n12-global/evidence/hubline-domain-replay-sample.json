@@ -1,0 +1,78 @@
+{
+  "status": "partial replay",
+  "partition": "exact recursive full root cover",
+  "leaves": 1097,
+  "pending": 7,
+  "atomic_leaves": 1021,
+  "replayed": 5,
+  "results": [
+    {
+      "index": 0,
+      "result": {
+        "status": "certified",
+        "boxes": 5247,
+        "leaves": 2421,
+        "outside": 203,
+        "max_integer_capture": 32311039270,
+        "total_integer_demand": 323114129254,
+        "gap_integer": 3736554,
+        "atoms": 5532
+      }
+    },
+    {
+      "index": 255,
+      "result": {
+        "status": "certified",
+        "boxes": 3247,
+        "leaves": 1495,
+        "outside": 129,
+        "max_integer_capture": 32450302553,
+        "total_integer_demand": 324512322622,
+        "gap_integer": 9297092,
+        "atoms": 5394
+      }
+    },
+    {
+      "index": 510,
+      "result": {
+        "status": "certified",
+        "boxes": 3805,
+        "leaves": 1770,
+        "outside": 133,
+        "max_integer_capture": 32476589008,
+        "total_integer_demand": 324825787630,
+        "gap_integer": 59897550,
+        "atoms": 5114
+      }
+    },
+    {
+      "index": 765,
+      "result": {
+        "status": "certified",
+        "boxes": 4629,
+        "leaves": 2163,
+        "outside": 152,
+        "max_integer_capture": 32494351981,
+        "total_integer_demand": 324944568245,
+        "gap_integer": 1048435,
+        "atoms": 4930
+      }
+    },
+    {
+      "index": 1020,
+      "result": {
+        "status": "certified",
+        "boxes": 11751,
+        "leaves": 5718,
+        "outside": 158,
+        "max_integer_capture": 32482133638,
+        "total_integer_demand": 324822303191,
+        "gap_integer": 966811,
+        "atoms": 5018
+      }
+    }
+  ],
+  "seconds": 3.528703451156616,
+  "input_sha256": "fd7e2ac05e346bac9cce4752fe49ac317db4754baa617a94d110772391cc0ab7",
+  "canonical_vectors_sha256": "acc14b2c954c91748e38a0e78720d717de8f45ce17456d4f121dc6a4c1085481"
+}

@@ -1,0 +1,36 @@
+{
+  "verified": true,
+  "schema": "cached-support-map-control-mechanical-instantiation-v1",
+  "source": "test_sparse_support_filter.py",
+  "original_source_sha256": "8aeaef543c6f9caa323af7529cde20b5e21594a8bedf61b61bf46553cbd64f61",
+  "target": "test_cached_sparse_support.py",
+  "target_source_sha256": "94fbe3337a44c82cdbbe5d9ca7d875e228c0678e10f35f00112abaaa2f173654",
+  "changes": [
+    [
+      "from support_filter_gate import derivation_gate",
+      "from cached_support_gate import derivation_gate"
+    ],
+    [
+      "sparse_support_match-linux",
+      "sparse_support_cached_match-linux"
+    ],
+    [
+      "necessary-sparse-support-filter-map-controls-v1",
+      "bounded-sparse-support-cache-map-controls-v1"
+    ],
+    [
+      "sparse-support-filter-source-derivation.json",
+      "cached-sparse-support-source-derivation.json"
+    ]
+  ],
+  "occurrence_counts": [
+    1,
+    5,
+    1,
+    1
+  ],
+  "exact_inverse_equals_frozen_source": true,
+  "all_request_equality_positive_maps_and_negative_controls_unchanged": true,
+  "source_sha256": "20a38a1eeabf1b824b0e6d07815ff5e8c4b0ff40514b69f0f3198ec271056758",
+  "global_optimality_proved": false
+}

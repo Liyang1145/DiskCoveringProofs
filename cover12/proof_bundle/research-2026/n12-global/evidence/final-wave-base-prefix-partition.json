@@ -1,0 +1,20 @@
+{
+  "exact_partition": true,
+  "proof": "complete binary prefix code reconstructed leaf-to-root",
+  "counts": {
+    "atomic": 6449,
+    "infeasible": 318,
+    "pending": 7
+  },
+  "internal": 6773,
+  "max_depth": 45,
+  "global_exclusion": false,
+  "note": "Partition only; predicates and atomic replay are separate obligations.",
+  "root_matches_k10_chart": true,
+  "source": "research-2026\\n12-global\\members\\structure\\parallel-domain\\final-wave-base.json",
+  "source_sha256": "71ead0af14ecfc9e105ae60ba1afa3b7f5a569b0b29627738a4b509354d4e665",
+  "controls": {
+    "positive": 2,
+    "negative_rejected": 4
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schema": "N26-per-root-accepted-forest-history-picker-regression-v1",
+  "newest_root_forest_and_other_older_root_forest_preserved": true,
+  "unattempted_current_root_has_no_invented_seed": true,
+  "invalid_history_controls_rejected": [
+    "duplicate-current-root-index",
+    "cyclic-source-history",
+    "historical-full-source-box-changed",
+    "discharged-root-reopened-as-current",
+    "duplicate-historical-classification",
+    "duplicate-historical-forest-owner",
+    "boolean-original-owner",
+    "classification-full-root-owner-substituted"
+  ],
+  "synthetic_history_only_not_an_actual_geometric_source_replay": true,
+  "new_geometric_candidate_payments": 0,
+  "tested_source_sha256": "283c32a6cb4388d1d88ac8ea4d2b896c1003fe7b6997f7d683bd0e78bcf70272",
+  "executed_test_sha256": "23f20bbd88202523f2c30c1f22b01d3d0d8b082b57e1340fe27284b42e501a9d",
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false
+}

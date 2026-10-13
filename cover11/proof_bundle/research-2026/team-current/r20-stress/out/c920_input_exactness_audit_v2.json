@@ -1,0 +1,158 @@
+{
+ "A": {
+  "n_floats": 16,
+  "all_binary64": true,
+  "n_singleton": 16,
+  "n_fraction_equal": 16,
+  "rows": [
+   {
+    "x": "0.0045004849794564325",
+    "singleton": true,
+    "mpf_tuple": [
+     0,
+     "5188705913975425",
+     -60,
+     53
+    ],
+    "reconstructed": "5188705913975425/1152921504606846976",
+    "equals_Fraction_x": true
+   },
+   {
+    "x": "0.0023221765726390764",
+    "singleton": true,
+    "mpf_tuple": [
+     0,
+     "2677287308089815",
+     -60,
+     52
+    ],
+    "reconstructed": "2677287308089815/1152921504606846976",
+    "equals_Fraction_x": true
+   },
+   {
+    "x": "0.0015119777008731222",
+    "singleton": true,
+    "mpf_tuple": [
+     0,
+     "6972766423290565",
+     -62,
+     53
+    ],
+    "reconstructed": "6972766423290565/4611686018427387904",
+    "equals_Fraction_x": true
+   }
+  ],
+  "all_singleton": true,
+  "all_fraction_equal": true
+ },
+ "B": {
+  "node_map": {
+   "ties_0_8": "k -> (k-2) mod 9",
+   "sites_9_19": "s -> (s-2) mod 9 for s<9, hubs 9,10 fixed",
+   "aux_20_j": {
+    "20": 29,
+    "21": 30,
+    "22": 28,
+    "23": 20,
+    "24": 21,
+    "25": 22,
+    "26": 23,
+    "27": 24,
+    "28": 26
+   }
+  },
+  "aux_reindex_map": {
+   "20": 29,
+   "21": 30,
+   "22": 28,
+   "23": 20,
+   "24": 21,
+   "25": 22,
+   "26": 23,
+   "27": 24,
+   "28": 26
+  },
+  "n_rawF": 9,
+  "n_rawE": 45,
+  "n_canF": 11,
+  "n_canE": 51,
+  "n_distinct_canE": 51,
+  "rawF_mapped_all_in_canF": true,
+  "rawE_mapped_all_in_canE": true,
+  "n_mapped_in_canE": 45,
+  "n_distinct_mapped": 45,
+  "rawF_mapped": [
+   [
+    0,
+    9,
+    10
+   ],
+   [
+    4,
+    9,
+    10
+   ],
+   [
+    0,
+    8,
+    10
+   ],
+   [
+    0,
+    1,
+    9
+   ],
+   [
+    1,
+    2,
+    9
+   ],
+   [
+    2,
+    3,
+    9
+   ],
+   [
+    3,
+    4,
+    9
+   ],
+   [
+    4,
+    5,
+    10
+   ],
+   [
+    6,
+    7,
+    10
+   ]
+  ],
+  "canonical_edges_not_hit": [
+   [
+    14,
+    25
+   ],
+   [
+    15,
+    25
+   ],
+   [
+    16,
+    27
+   ],
+   [
+    17,
+    27
+   ],
+   [
+    19,
+    25
+   ],
+   [
+    19,
+    27
+   ]
+  ]
+ }
+}

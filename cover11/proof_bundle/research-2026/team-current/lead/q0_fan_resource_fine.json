@@ -1,0 +1,60 @@
+[
+  {
+    "source": "q0_closure_dual_0_4",
+    "R": 0.38,
+    "side_nodes": 25,
+    "angle_bins": 1440,
+    "positive_side_rows": 5231,
+    "face_without_resources": 5.149335009396416,
+    "face_with_resources": 5.147296370948082,
+    "candidate_face": 5.144942448224496,
+    "full_unconstrained_diagnostic": 3.16442110341936,
+    "full_resource_diagnostic": 3.162382464971026,
+    "seconds": 1.4174249172210693,
+    "argmax": {
+      "hubside_index": 15,
+      "X": [
+        22,
+        23,
+        15
+      ],
+      "Y": [
+        22,
+        23,
+        15
+      ],
+      "budgetA": 848,
+      "budgetB": 906
+    },
+    "scope": "finite positive-side grid with relaxed angular floor budgets plus mandatory genuine candidate; NOT continuum bound"
+  },
+  {
+    "source": "q0_theta_candidate25_dual_0_4",
+    "R": 0.38,
+    "side_nodes": 25,
+    "angle_bins": 1440,
+    "positive_side_rows": 5231,
+    "face_without_resources": 5.764589084289513,
+    "face_with_resources": 5.764057955830101,
+    "candidate_face": 5.763407567910713,
+    "full_unconstrained_diagnostic": 3.1567087785660117,
+    "full_resource_diagnostic": 3.1561776501065992,
+    "seconds": 1.3904414176940918,
+    "argmax": {
+      "hubside_index": 15,
+      "X": [
+        22,
+        23,
+        15
+      ],
+      "Y": [
+        22,
+        23,
+        15
+      ],
+      "budgetA": 848,
+      "budgetB": 906
+    },
+    "scope": "finite positive-side grid with relaxed angular floor budgets plus mandatory genuine candidate; NOT continuum bound"
+  }
+]

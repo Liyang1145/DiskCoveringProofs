@@ -1,0 +1,27 @@
+{
+  "r": [
+    ".379",
+    ".38"
+  ],
+  "b1": [
+    "1.106",
+    "1.108"
+  ],
+  "b2": [
+    "1.068",
+    "1.071"
+  ],
+  "delta_ridge": [
+    0.03499999999999999,
+    0.04
+  ],
+  "Hlower_margin": [
+    0.5916803260682056,
+    0.5993524802011359
+  ],
+  "hubnorm_residual": [
+    -0.3007258282173179,
+    -0.286214164288678
+  ],
+  "scope": "ridgefeasiblethroughout3Dbox; faceupperconstraintsbothsaturatedexactly"
+}

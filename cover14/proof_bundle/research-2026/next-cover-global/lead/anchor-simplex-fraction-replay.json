@@ -1,0 +1,12 @@
+{
+  "status": "independent_fraction_global_anchor_simplex_exclusion",
+  "family": "10/4",
+  "index": 391,
+  "lower_radius_exact": "347746793403525567478711909294111061288470039/1000000000000000000000000000000000000000000000",
+  "lower_radius_display": 0.34774679340352554,
+  "source_sha256": "bad3f692ed8f336ee83f8f3b65e98ad43f737c4a5958237eead004ea3a275f8f",
+  "incidence_rebuilt": true,
+  "exact_balance": true,
+  "domain_9L_lt_2pi_lt_10L": true,
+  "vertices": 10
+}

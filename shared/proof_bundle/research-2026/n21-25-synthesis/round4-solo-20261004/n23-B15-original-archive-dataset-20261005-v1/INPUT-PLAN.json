@@ -1,0 +1,39 @@
+{
+  "schema": "isolated-five-member-N23-B15-byte-recovery-plan-v1",
+  "members": {
+    "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B15-degree-streamed-resume1/N23-B15-dfs.json": "CATALOG/N23-B15-dfs.json",
+    "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B15-degree-streamed-resume1/SUMMARY.json": "CATALOG/SUMMARY.json",
+    "bulk/n23-B15-all-pair-groups-resume1/bindings.jsonl": "PAIR/bindings.jsonl",
+    "bulk/n23-B15-all-pair-groups-resume1/GROUPS.json": "PAIR/GROUPS.json",
+    "bulk/n23-B15-rest-outer-groups-resume1/GROUPS.json": "OUTER/GROUPS.json"
+  },
+  "total_uncompressed_bytes": 7126470053,
+  "archive_bindings": {
+    "math-delta-0022.zip": {
+      "archive_sha256": "60e219e9c8c565c6d8c19364a8aceb66ddf24381e38ffddb2bc29d7197570f2e",
+      "archive_metadata_sha256": "cce32622fb3f66ca72b40e581c38c683f5b70b4a54a8efc91a5037083883fc40",
+      "asset_manifest_sha256": "bac5cc5ed602f84509706189bd40f9a6f03d601b4eaedaf842e793cff8f6b271"
+    },
+    "math-delta-0023.zip": {
+      "archive_sha256": "8cd9ab7812ad52fbe0dc2baa19594da2aa18e00e20cba7fb3c58dcb36c2e0752",
+      "archive_metadata_sha256": "0b3db4e69d7aa9328404ed5094068237a7b89a6365b844303ee4845ad395d75f",
+      "asset_manifest_sha256": "36d2117666d1338bf8bd39566952f2d014026e5bf93c2f121952dc0f98d2b067"
+    },
+    "math-delta-0060.zip": {
+      "archive_sha256": "49a212dd385c036016e4db8fd47d4b2c6fa8b5c5d9ba62d11c4470d6a7b78e9b",
+      "archive_metadata_sha256": "482a7bef925acacf228659d785220c376ca9ffba115b0b998011de32397e96f0",
+      "asset_manifest_sha256": "84d5f93b892fa537462cdefd9ecd1a5e91f14e50f4877f4911c864380159d723"
+    },
+    "math-delta-0061.zip": {
+      "archive_sha256": "fbfd82cdcdd64d1e5dad183ae88ea6d4be5a34963be56ca7194a630fba05fdfe",
+      "archive_metadata_sha256": "8a6d4114a5b5cceccdff30eda03a8b9a45bea93c534fc37130611aef9b360ec5",
+      "asset_manifest_sha256": "4c5ad9e8aa6f6573e8a396a68eaa6242b0f3df3313e59dc5a28f649706859bf3"
+    },
+    "math-delta-0062.zip": {
+      "archive_sha256": "bd00f981f652321e94b3990a14b0bb4d5aeeb89cac427e3aca7abf23753bc72f",
+      "archive_metadata_sha256": "b1d0baacba9eff89f1497a1fb741c683c4588908d20063e548ec3e05ae2f04b3",
+      "asset_manifest_sha256": "c8299bb13ac29233ec11fc97d1d231876cd57325f4bc8f25c1d5a6909913d414"
+    }
+  },
+  "not_mathematical_acceptance": true
+}

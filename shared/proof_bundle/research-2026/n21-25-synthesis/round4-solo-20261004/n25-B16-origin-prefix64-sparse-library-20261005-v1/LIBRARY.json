@@ -1,0 +1,275 @@
+{
+  "verified": true,
+  "schema": "strict-sparse-outer-obstacle-library-v1",
+  "source_N": 25,
+  "B": 16,
+  "threshold": 1,
+  "radius_threshold": "239146311738101/1000000000000000",
+  "obstacle_count": 9,
+  "obstacles": [
+    {
+      "id": 0,
+      "B": 16,
+      "centers": 16,
+      "faces": [
+        896,
+        3584,
+        14336,
+        57344
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000000.json.gz",
+      "tree_sha256": "e6c7ba00b80be25c054cf7ae16c6caa237b9a9f830aeb5b486adaeaf92ebf5b3",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 36,
+        "edges": 44,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "21371195183483355742957290611227/7812487863104567473000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 1,
+      "B": 16,
+      "centers": 20,
+      "faces": [
+        896,
+        3584,
+        196640,
+        272384,
+        565248
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000001.json.gz",
+      "tree_sha256": "738fc0640fb7f9b64f77aadb20eca7382d21354eaa0f585643abe4666a80dcc3",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 41,
+        "edges": 47,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "2735789587274004854713390705825223/1000003557549608241077000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 2,
+      "B": 16,
+      "centers": 22,
+      "faces": [
+        448,
+        1792,
+        196624,
+        262240,
+        529408,
+        1069056,
+        2146304
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000002.json.gz",
+      "tree_sha256": "4f0382a9fc85326dbb8e57f3fc1d29f26ee214eb359841211c74917ffe595617",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 45,
+        "edges": 53,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "2734641423464197297382663551171363/1000006374270143428937000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 3,
+      "B": 16,
+      "centers": 21,
+      "faces": [
+        14336,
+        57344,
+        131712,
+        264704,
+        589832,
+        1048768,
+        1572896
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000003.json.gz",
+      "tree_sha256": "4b45ba1952155ec05c1a37006e3c92954aebf6943e48b22748eb40cc6ae8710a",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 44,
+        "edges": 53,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "3184049216364364700370805885731313/999999188416888463987000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 4,
+      "B": 16,
+      "centers": 16,
+      "faces": [
+        448,
+        3584,
+        14336,
+        57344
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000004.json.gz",
+      "tree_sha256": "63210f05bc963361da60ca5ec61741569000c79f723d4bd229203b6596306571",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 36,
+        "edges": 44,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "14064029078219370267192378473387203/999997630097310317097000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 5,
+      "B": 16,
+      "centers": 16,
+      "faces": [
+        224,
+        3584,
+        14336,
+        57344
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000005.json.gz",
+      "tree_sha256": "a2367b53b190175291bf9c46a9c3e6762eaeca1d0fae4fec526dbec0786cdaac",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 36,
+        "edges": 44,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "14064365797587144174675522845185737/1000000695049904723963000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 6,
+      "B": 16,
+      "centers": 16,
+      "faces": [
+        112,
+        3584,
+        14336,
+        57344
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000006.json.gz",
+      "tree_sha256": "f87a924bd99cac1668bdc1234db2fd3557385e2acaaf413c3e103c1bccf77aee",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 36,
+        "edges": 44,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "2812935167110383798990535211945819/200001795141506468081000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 7,
+      "B": 16,
+      "centers": 16,
+      "faces": [
+        56,
+        3584,
+        14336,
+        57344
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000007.json.gz",
+      "tree_sha256": "83aef466fd7793beba21d72e889dc18affc0da313c4e768bd0a240528fd4f239",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 36,
+        "edges": 44,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "14064724865394814176674372869545239/1000003888476954570661000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 8,
+      "B": 16,
+      "centers": 17,
+      "faces": [
+        56,
+        224,
+        896,
+        28672,
+        114688
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000008.json.gz",
+      "tree_sha256": "ac1225df2b6193e8827b38a1cec3be9103f601eaa207702f9496a562a7213ca5",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 38,
+        "edges": 47,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "703125391141596756819371143871371/50000218045909753729000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    }
+  ],
+  "files": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/export_family_sparse_library.py": "17afe465a34477d1705fc8554094bfbeab6f0d8a17c82d6a35249630a999ac68",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/GROUPS.json": "f3a73ce59788f9c5380669b6951f96e014db6d7a28db1a4ac75ac7503a0e0187",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/SUMMARY.json": "771dabbb79489f5ff071ae03402aca11d4121fbe4a881572bbc0fc5b842218f2",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/EXACT-REPLAY.json": "3db0b7003f710b3f6adcb7cc33274e6d5a43458402d59941427b2f3686240df7",
+    "research-2026/n21-25-synthesis/evidence/core-reduction/constants/n25.json": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "research-2026/n21-25-synthesis/round3-high/exact_graph.py": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9",
+    "research-2026/n21-25-synthesis/round3-high/replay_group_stage.py": "262dd7f0d4c3ed4d5026512f749729796fc936bdca65c3535f24f9d17fa8c4d8",
+    "research-2026/n21-25-synthesis/round3-high/stream_catalog.py": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d",
+    "research-2026/n21-25-synthesis/round2-grouped/partial_force_exact.py": "f0fd44362eaede709ec91fe1492073d51ea34757d879089fead8bfe853f614b6",
+    "research-2026/disk-cover-proof-library/external/pinned/cover20/proof_bundle/core/exact_arcs.py": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/SPARSE-OUTER-OBSTACLE-TRANSPORT.md": "0adbb5592d04513e7ebcb013f743ad29a549ff738c911eb39155b20fbf5d9e65",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000000.json.gz": "e6c7ba00b80be25c054cf7ae16c6caa237b9a9f830aeb5b486adaeaf92ebf5b3",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000001.json.gz": "738fc0640fb7f9b64f77aadb20eca7382d21354eaa0f585643abe4666a80dcc3",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000002.json.gz": "4f0382a9fc85326dbb8e57f3fc1d29f26ee214eb359841211c74917ffe595617",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000003.json.gz": "4b45ba1952155ec05c1a37006e3c92954aebf6943e48b22748eb40cc6ae8710a",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000004.json.gz": "63210f05bc963361da60ca5ec61741569000c79f723d4bd229203b6596306571",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000005.json.gz": "a2367b53b190175291bf9c46a9c3e6762eaeca1d0fae4fec526dbec0786cdaac",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000006.json.gz": "f87a924bd99cac1668bdc1234db2fd3557385e2acaaf413c3e103c1bccf77aee",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000007.json.gz": "83aef466fd7793beba21d72e889dc18affc0da313c4e768bd0a240528fd4f239",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-prefix64-sparse-20261005-v1/group-0000008.json.gz": "ac1225df2b6193e8827b38a1cec3be9103f601eaa207702f9496a562a7213ca5"
+  },
+  "pattern_table_sha256": "02876cc40cc23a428d20ac29ddba54f3f98abdd475e6a3a4735995ac89be8b48",
+  "source_sha256": "17afe465a34477d1705fc8554094bfbeab6f0d8a17c82d6a35249630a999ac68",
+  "all_library_trees_fresh_exact_replayed": true,
+  "no_root_or_local_theorem_used": true,
+  "all_B_boundary_sites_and_2B_anchor_rods_preserved": true,
+  "proper_face_subset_injections_required_for_transport": true,
+  "parents_samples_and_minimality_not_used_as_theorem_premises": true,
+  "global_optimality_proved": false,
+  "scope": "standalone strict sparse graph theorems on their own whole angle domains"
+}

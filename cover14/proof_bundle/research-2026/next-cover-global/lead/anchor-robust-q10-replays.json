@@ -1,0 +1,257 @@
+{
+  "status": "independent_fraction_bounds",
+  "source_sha256": "de62a8d46650ff61114b52723375c04c438162f965df651710f64b7c918ffd31",
+  "runs": [
+    {
+      "family": "10/4",
+      "index": 541,
+      "lower_radius_exact": "338684634455090301375260451184156952112524821/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3386846344550903,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 549,
+      "lower_radius_exact": "338336678875406819988819752386707327357080261/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3383366788754068,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 550,
+      "lower_radius_exact": "8458279167853419886323609804579560842112443/25000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3383311667141368,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 562,
+      "lower_radius_exact": "68048917885785284265765834569933922688207113/200000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.34024458942892644,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 563,
+      "lower_radius_exact": "169077330005272214923487913844800136397200413/500000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.33815466001054445,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 564,
+      "lower_radius_exact": "169167932735397068784645622730260621702736787/500000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.33833586547079414,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 573,
+      "lower_radius_exact": "6802828696750278245441470581624324158071663/20000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3401414348375139,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 575,
+      "lower_radius_exact": "170070813446969629730901781030187629135515529/500000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3401416268939393,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 609,
+      "lower_radius_exact": "344979786426073076356142572606408672964231813/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3449797864260731,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 617,
+      "lower_radius_exact": "6743488568273486954117798979721882849270829/20000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.33717442841367434,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 618,
+      "lower_radius_exact": "84281224517536924429848547018768654792967303/250000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.33712489807014767,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 621,
+      "lower_radius_exact": "173343017908202575311058183136038076754246173/500000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.34668603581640517,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 628,
+      "lower_radius_exact": "17418033921211451557491548576464989145695081/50000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.348360678424229,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 629,
+      "lower_radius_exact": "334075586991358554228632351896996061607654011/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.33407558699135853,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 630,
+      "lower_radius_exact": "66816111196834606566570388505430578374074433/200000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.334080555984173,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 641,
+      "lower_radius_exact": "43562717800438209759564811491840859098125829/125000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3485017424035057,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 644,
+      "lower_radius_exact": "348361345246527687775724590730328451730028819/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3483613452465277,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 650,
+      "lower_radius_exact": "173063901744912950497097916037608077446043989/500000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3461278034898259,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 652,
+      "lower_radius_exact": "86665231972727082974725886089725375668873213/250000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.34666092789090835,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 684,
+      "lower_radius_exact": "70177318724074558768114898575471056715612313/200000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3508865936203728,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 723,
+      "lower_radius_exact": "338135882596292349453506145723599581462284891/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.33813588259629235,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 842,
+      "lower_radius_exact": "41466680682988998881748181691971353020328829/125000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.331733445463912,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 847,
+      "lower_radius_exact": "42703053043069687717754677442790785789130949/125000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3416244243445575,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 849,
+      "lower_radius_exact": "342665099579768983538359554848305645256775099/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.342665099579769,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    },
+    {
+      "family": "10/4",
+      "index": 850,
+      "lower_radius_exact": "341624410976843838493282706621600970014372077/1000000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3416244109768438,
+      "excluded": true,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertices": 10
+    }
+  ],
+  "seconds": 3.9360735416412354
+}

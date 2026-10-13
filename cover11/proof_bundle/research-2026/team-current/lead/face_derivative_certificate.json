@@ -1,0 +1,15 @@
+{
+  "scope": "saturatedface1derivative; physicalhighbearingdomainoverapproximatedrectangularbox; proofcandidate",
+  "counts": {
+    "initial": 13344,
+    "positive": 3481,
+    "infeasible": 9872,
+    "bisected": 9,
+    "remaining": 0
+  },
+  "maxdepth": 1,
+  "min_positive_lower": 6.153554119831284e-05,
+  "source_sha256": "dbadfff6a78f1e6b52da5d65ead025814e76e968be4a58193a8bed2c60d74418",
+  "status": "INVALID",
+  "reason": "Off-face length derivative missing factor2 in source of old run. Corrected run failed/timeout; no derivative monotonicity theorem. Norm-boundary C863 uses no derivatives and is unaffected."
+}

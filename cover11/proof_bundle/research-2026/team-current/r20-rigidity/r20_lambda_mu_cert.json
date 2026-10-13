@@ -1,0 +1,17 @@
+{
+  "status": "RETRACTED wording; conditional candidates only; nothing certified; no claim added",
+  "lambda_anti_candidate": "0.00016975011750884705811",
+  "lambda_sym_candidate": "0.083333333333333333333",
+  "lambda_candidate": "0.00016975011750884705811",
+  "mu_candidate": "0.0001362469237623880935",
+  "eta_candidate": "5.48419996677e-13",
+  "rho_candidate": "3.86245264663e-24",
+  "c_candidate": "4.24375293772e-5",
+  "unchecked_inputs": [
+    "sigma17 (numeric 0.0584199083)",
+    "sym metric factor 1/3 (numeric 0.3519)",
+    "L2/L3 coefficients (no symbolic check)",
+    "B2 PD (B22 unrecorded)"
+  ],
+  "repro": "py -3 -B -X utf8 r20_lambda_mu_cert.py"
+}

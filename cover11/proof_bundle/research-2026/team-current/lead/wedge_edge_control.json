@@ -1,0 +1,5 @@
+{
+  "endpoint_residual_identity": true,
+  "quadraticminimum_case2_identity": true,
+  "argument": "case1monotoneinH;case2wholequadraticmin>0"
+}

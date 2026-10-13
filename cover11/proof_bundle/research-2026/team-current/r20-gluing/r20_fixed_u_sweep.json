@@ -1,0 +1,117 @@
+[
+ {
+  "tau": 0.0,
+  "nedges": 51,
+  "npositive": 40,
+  "unpinned_sites": [],
+  "ok": true
+ },
+ {
+  "tau": 1e-16,
+  "nedges": 39,
+  "npositive": 39,
+  "unpinned_sites": [],
+  "ok": true
+ },
+ {
+  "tau": 1e-14,
+  "nedges": 31,
+  "npositive": 31,
+  "unpinned_sites": [
+   "c1",
+   "c10"
+  ],
+  "ok": false
+ },
+ {
+  "tau": 1e-12,
+  "nedges": 21,
+  "npositive": 21,
+  "unpinned_sites": [
+   "c1",
+   "c10",
+   "c2",
+   "c3",
+   "c9"
+  ],
+  "ok": false
+ },
+ {
+  "tau": 1e-10,
+  "nedges": 21,
+  "npositive": 21,
+  "unpinned_sites": [
+   "c1",
+   "c10",
+   "c2",
+   "c3",
+   "c9"
+  ],
+  "ok": false
+ },
+ {
+  "tau": 1e-08,
+  "nedges": 21,
+  "npositive": 21,
+  "unpinned_sites": [
+   "c1",
+   "c10",
+   "c2",
+   "c3",
+   "c9"
+  ],
+  "ok": false
+ },
+ {
+  "tau": 1e-06,
+  "nedges": 21,
+  "npositive": 21,
+  "unpinned_sites": [
+   "c1",
+   "c10",
+   "c2",
+   "c3",
+   "c9"
+  ],
+  "ok": false
+ },
+ {
+  "tau": 0.0001,
+  "nedges": 21,
+  "npositive": 21,
+  "unpinned_sites": [
+   "c1",
+   "c10",
+   "c2",
+   "c3",
+   "c9"
+  ],
+  "ok": false
+ },
+ {
+  "tau": 0.001,
+  "nedges": 21,
+  "npositive": 21,
+  "unpinned_sites": [
+   "c1",
+   "c10",
+   "c2",
+   "c3",
+   "c9"
+  ],
+  "ok": false
+ },
+ {
+  "tau": 0.01,
+  "nedges": 21,
+  "npositive": 21,
+  "unpinned_sites": [
+   "c1",
+   "c10",
+   "c2",
+   "c3",
+   "c9"
+  ],
+  "ok": false
+ }
+]

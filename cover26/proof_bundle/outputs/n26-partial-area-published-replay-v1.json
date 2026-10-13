@@ -1,0 +1,83 @@
+{
+  "schema": "N26-B14-exact-area-excluded-prefixes-v1",
+  "verified": true,
+  "N": 26,
+  "B": 14,
+  "strictly_excluded_whole_transport_subtrees": 2,
+  "strict_area_bounds": [
+    {
+      "prefix": [
+        0,
+        0,
+        0
+      ],
+      "area_dual_strict_upper": "-5569172349/250000000000"
+    },
+    {
+      "prefix": [
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "area_dual_strict_upper": "-64208159911/1000000000000"
+    }
+  ],
+  "pending_cover_transport_subtrees": 4,
+  "pending_prefixes": [
+    [
+      0,
+      0,
+      1,
+      0,
+      1
+    ],
+    [
+      0,
+      0,
+      1,
+      0,
+      2
+    ],
+    [
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      1
+    ]
+  ],
+  "all_sibling_replacements_independently_reconstructed": true,
+  "all_future_degree_assignments_covered": true,
+  "original_combinatorial_queues_preserved": true,
+  "family_exhausted": false,
+  "full_catalog_complete": false,
+  "unrestricted_reduction_final_joint_acceptance": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "negative_controls_rejected": [
+    "lost-pending-sibling",
+    "duplicate-exclusion",
+    "nonunit-partial-dual-mass",
+    "negative-partial-dual",
+    "changed-partial-degree-domain",
+    "omitted-initial-subtree"
+  ],
+  "area_bundle_acceptance_sha256": "15862978e65afbd9460f027417420f2b0e11bd39ccd328b0a93c1d1459613f7c",
+  "files": {
+    "PARTIAL-CERTIFICATE.json": "75f571a1f69697cf86d6bf18a72054f70040a76cc42c831454c484b068c75145",
+    "INITIAL-FRONTIER.json": "42bd623b72ef47e2f0c58304896f8a87eea69017feb0d66ea698dec1822b2c0d",
+    "COVER-TRANSPORT-FRONTIER.json": "76144fe36b89c6d685e4b81cf19094ccd549689120dd79380503143d426d18fe",
+    "PROOF.md": "1efc4939aeb41862efa2629c2fe8d2d8b56250018c69c46a36cdedf75358aafe",
+    "verify_partial_area_closures.py": "eaf78bfc6d3a6dfbc03862dd83e9563494fc49ca92337d339ee8ee87c70da62e",
+    "verify_multislope_area.py": "70255b59f85506a1a4f34188ac43217d39f081f28d149711e2cbed477241c204",
+    "verify_degree_area.py": "a8affb8f8f9e20bbd597abde7869147bb8e50f88666590f279665f94b534fb69",
+    "audit_prefix_origin.py": "ec28797070f56bb905ec7db3ad88b164cc6758143f805ddfafc9faeeeab7e557",
+    "audit_prefix_partition.py": "b4b5910832d964e76f801260ae7ecd0965153f4da1060c88b0bb626b5b2692b0"
+  },
+  "executed_checker_sha256": "eaf78bfc6d3a6dfbc03862dd83e9563494fc49ca92337d339ee8ee87c70da62e"
+}

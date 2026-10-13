@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "schema": "changed-B-own-domain-integer-cycle-exact-replay-v1",
+  "N": 25,
+  "B": 16,
+  "source_candidate_count": 67,
+  "totals": {
+    "own-B-integer-cycle-excluded": 43,
+    "pending": 24
+  },
+  "all_positive_cycles_individually_own_B_checked": true,
+  "changed_B_source_certificates_not_used_as_acceptance": true,
+  "source_proposal_sha256": "807c69c68e24bb7e6627bfe4a476f4927d217d7f1e48a93885d94486477fd7b5",
+  "source_snapshot_sha256": "b9101708b14a1c236fdde775de687bf6cb57e6d8dc3d68c5040845bd9b83166b",
+  "source_sha256": "f4e41b55801c794efa5e62b13b9ee4891ff910969ac54c7ed00cecf7fd2f6fb6",
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/split_candidate_angles.py": "586768552e7e3fb72bd817240b81bece46c4d9fb99009982abb951adaabb5a70",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B17-to-B16-contracted-candidates-20261005-v1.json": "b9101708b14a1c236fdde775de687bf6cb57e6d8dc3d68c5040845bd9b83166b",
+    "research-2026/n21-25-synthesis/evidence/core-reduction/constants/n25.json": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/eight_rod_angles.py": "99e6edb29d46a6f2b01dee8d6f47eff82d23a65d0f9fb5494bec1487c93b2141",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/EIGHT-ROD-ANGLE-SOURCE.md": "9868d0ea87ba3fcf1672116fc5e92f2e08aa8c63d1e9ca69cbbf4da229a2f111",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-eight-rod-exact-cap-20261005-v1.json": "93fe9a03e6165bca26ccd3b565512b51cbbca32a586f360002d6e0c6d700a975",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/discover_boundary_contractions.py": "1fb27f40e68efce8225157185b8382130be159dcdb096292827df673eed1362b",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/replay_candidate_angles.py": "f4e41b55801c794efa5e62b13b9ee4891ff910969ac54c7ed00cecf7fd2f6fb6",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B17-to-B16-contracted-own-angle-stage-20261005-v1/ANGLE-PROPOSAL.json": "807c69c68e24bb7e6627bfe4a476f4927d217d7f1e48a93885d94486477fd7b5"
+  },
+  "no_optimizer_imported": true,
+  "not_a_complete_competitor_family_or_union": true,
+  "global_optimality_proved": false
+}

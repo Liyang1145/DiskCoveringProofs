@@ -1,0 +1,20 @@
+{
+  "native_pid": 15068,
+  "command": [
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\peel_outer_search_stage.exe",
+    "25",
+    "14",
+    "../round4-solo-20261004/n25-B14-outer-search-v1/N25-B14-outer-search.bin",
+    "10000000",
+    "768677",
+    "1587443",
+    "2546859",
+    "0",
+    "dfs",
+    "../round4-solo-20261004/n25-B14-strict-outer-library-v1/OBSTACLES.tsv",
+    "-",
+    "0"
+  ],
+  "input_bindings_sha256": "dde28b141b18fd3e29a86c0df205178dba2cf34a523cdafb81979c52b4804e5c",
+  "native_terminal_observed": false
+}

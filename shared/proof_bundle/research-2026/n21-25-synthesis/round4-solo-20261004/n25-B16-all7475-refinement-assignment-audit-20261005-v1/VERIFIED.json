@@ -1,0 +1,91 @@
+{
+  "verified": true,
+  "schema": "finite-B16-completed-pending-refinement-assignment-partition-v1",
+  "N": 25,
+  "B": 16,
+  "source_processed_families": 8049,
+  "source_directly_paid_families": 574,
+  "source_pending_families": 7475,
+  "assigned_pending_families": 7475,
+  "unassigned_pending_families": 0,
+  "all_pending_source_families_assigned_exactly_once": true,
+  "all_assignments_bound_to_completed_independent_original_replays": true,
+  "batches": [
+    {
+      "directory": "n25-B16-all8049-completed-pending-snapshot256-force31-20261005-v1",
+      "assigned_samples": 256,
+      "input_snapshot_sha256": "3e173c2851ef2fd3ea404a887c4d2271f5ad09b1f6b34a7a340c202376d9a903",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-completed-pending-next512-force31-20261005-v1",
+      "assigned_samples": 512,
+      "input_snapshot_sha256": "4e8244d70c9941f477bdaaec7914c6ad6b191beb9cde25442e001d51cf2c6d36",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-completed-pending-next1024-force31-20261005-v1",
+      "assigned_samples": 1024,
+      "input_snapshot_sha256": "4fe6090249df55a4ffde2e45eafb731046d8e7bd582408af907979f8f75d2228",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-completed-pending-wave4-force31-20261005-v1",
+      "assigned_samples": 1024,
+      "input_snapshot_sha256": "3bafd74e0347a50cc372d4da3b1ac26ab9b74797e1a0212c1b290b8a7f9ad907",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-completed-pending-wave5-force31-20261005-v1",
+      "assigned_samples": 1024,
+      "input_snapshot_sha256": "0da807fbc5c0b7cc1444a51e4b4cc321113e719ea8f67b902f65a8734a58030d",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-completed-pending-wave6-force31-20261005-v1",
+      "assigned_samples": 1024,
+      "input_snapshot_sha256": "2799f5820de91c166886f96fea8833df13dba7977d4f9f9af70ff522d27bfe5d",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-completed-pending-wave7-force31-20261005-v1",
+      "assigned_samples": 1024,
+      "input_snapshot_sha256": "84be134a8487fc960822dff6e93170af89026374c8e7b225a0469956a3382a2d",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-completed-pending-wave8-force31-20261005-v1",
+      "assigned_samples": 799,
+      "input_snapshot_sha256": "829879548f494ffb1997cb8565444a39610ca4df891cf8238241768c2b46e64e",
+      "not_a_batch_payment_claim": true
+    },
+    {
+      "directory": "n25-B16-all8049-final-unassigned-force31-20261005-v1",
+      "assigned_samples": 788,
+      "input_snapshot_sha256": "204ad07843a6e96fac2c032a7be958d7798b1bf742dd90d5c7621ea5bf6d2ca7",
+      "not_a_batch_payment_claim": true
+    }
+  ],
+  "assignment_is_not_proof_payment_or_batch_completion": true,
+  "final_all_positive_payments_and_whole_slab_overlap_audit_still_required": true,
+  "source_sha256": "d0408ef6b7c8855dd457bc531b41648ac85de3399551b39a0c67988409f16e34",
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-snapshot256-force31-20261005-v1/INPUT-SNAPSHOT.json": "3e173c2851ef2fd3ea404a887c4d2271f5ad09b1f6b34a7a340c202376d9a903",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-next512-force31-20261005-v1/INPUT-SNAPSHOT.json": "4e8244d70c9941f477bdaaec7914c6ad6b191beb9cde25442e001d51cf2c6d36",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-next1024-force31-20261005-v1/INPUT-SNAPSHOT.json": "4fe6090249df55a4ffde2e45eafb731046d8e7bd582408af907979f8f75d2228",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-wave4-force31-20261005-v1/INPUT-SNAPSHOT.json": "3bafd74e0347a50cc372d4da3b1ac26ab9b74797e1a0212c1b290b8a7f9ad907",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-wave5-force31-20261005-v1/INPUT-SNAPSHOT.json": "0da807fbc5c0b7cc1444a51e4b4cc321113e719ea8f67b902f65a8734a58030d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-wave6-force31-20261005-v1/INPUT-SNAPSHOT.json": "2799f5820de91c166886f96fea8833df13dba7977d4f9f9af70ff522d27bfe5d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-wave7-force31-20261005-v1/INPUT-SNAPSHOT.json": "84be134a8487fc960822dff6e93170af89026374c8e7b225a0469956a3382a2d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-completed-pending-wave8-force31-20261005-v1/INPUT-SNAPSHOT.json": "829879548f494ffb1997cb8565444a39610ca4df891cf8238241768c2b46e64e",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-all8049-final-unassigned-force31-20261005-v1/INPUT-SNAPSHOT.json": "204ad07843a6e96fac2c032a7be958d7798b1bf742dd90d5c7621ea5bf6d2ca7",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/audit_all_B16_refinement_assignments.py": "d0408ef6b7c8855dd457bc531b41648ac85de3399551b39a0c67988409f16e34",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1/FILLINGS/VERIFIED.json": "56533359ba4a3262cf0b7af9bfff60f14af6f90a66a1e63cfde1e7c8167f98dd",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1/ALL-PENDING-SNAPSHOT.json": "4dd425f18ca44190d848eb7990c9f89deef406e416431a351f990b694f9ab369",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1/FILLINGS/INPUT-BINDINGS.json": "d8c511a8b407ad7aa9f2431a2b8da72b949cc7f076c61bf9c09d02a93d22c67a",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1/FILLINGS-TERMINAL.json": "ee240a61574bfd241c6445ad98032f49901dcf9e0b152b43d18bbb2fbaf0acc3",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1/FILLINGS-OUTPUT.log": "a8e4597a64c5c5f83aa3d3b566f5bbdc8157432c5632ef31eff371a551a4b13e"
+  },
+  "not_a_complete_competitor_family_or_union": true,
+  "global_optimality_proved": false
+}

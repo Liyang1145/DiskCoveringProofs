@@ -1,0 +1,35 @@
+{
+  "schema": "N26-latest-candidate-layer-identity-regression-v1",
+  "synthetic_equal_count_and_equal_full_root_rows_stale_source_rejected": true,
+  "synthetic_invalid_layer_identity_controls_rejected": [
+    "stale-candidate-layer-with-identical-count-and-full-root-rows",
+    "missing-bound-ancestor",
+    "changed-bound-ancestor-bytes",
+    "cyclic-current-ancestry",
+    "half-of-candidate-ownership-pointers-missing",
+    "ancestor-inventory-not-retained-identically",
+    "ancestor-candidate-count-changed",
+    "unsupported-pointerless-schema",
+    "latest-pending-rows-changed",
+    "latest-source-acceptance-bytes-changed"
+  ],
+  "actual_bound_ancestry_snapshot": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "6a46131202a5d2dd732b88622b1cec0e072c7b6ef888f37e70f420b291590203",
+    "latest_candidate_current_audit_sha256": "6a46131202a5d2dd732b88622b1cec0e072c7b6ef888f37e70f420b291590203",
+    "enumeration_only_bound_ancestors_followed": [],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v7/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "7189f3ea021ddf973d4d13027650baa547d82b1c38d7f18f8e721db659de6257",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v7/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "actual_snapshot_identity_only_not_a_geometric_replay": true,
+  "new_geometric_candidate_payments": 0,
+  "tested_identity_checker_sha256": "da848f6dee991f8883ff45150edac3e2e4955c0e9f5ba78c00d646c5e5e35c2b",
+  "executed_test_sha256": "6c51a899aaad30eb608b75b311432274b920eded2b4c1a0c2f088c68a08b3820",
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,33 @@
+=== self-test (calibration of my independent implementation) ===
+  A (path, sites anchored, s0 slack): unpinned = ['s0'] -> PASS = True
+  B (anchor-free cycle): unpinned sites = ['c0', 'c1', 'c2'] -> correctly FLAGS = True
+
+=== oracle data: socp_anchor_export.json ===
+  scope=numeric; corrected edge incidence; no smoothness/stationarity conclusion
+  51 constraints = 18 endpoint + 33 face-incidence ; sum(alpha) = 1.0000000000000129
+  alpha > 0 : 40 ; alpha == 0 (exact) : 11 ; alpha < 0 : 0
+  (H1) "all edges strictly positive" as literally stated: FAILS (11 zero-alpha edges)
+  (H2) budget tightness sum alpha = 1: True (deviation 1.288e-14)
+  V = 0.3799838531198385 ; R_star = 0.3799838531198387 ; V - R_star = -2.220e-16
+
+=== independent reachability on the exported graph ===
+  nodes 22 (11 sites c0..c10 + 11 aux z0..z10) ; anchors 9 ; positive edges 40/51
+  components 1 ; components containing an anchor 1
+    comp 0 [ANCHORED]: ['U0', 'U1', 'U2', 'U3', 'U4', 'U5', 'U6', 'U7', 'U8', 'c0', 'c1', 'c10', 'c2', 'c3', 'c4', 'c5', 'c6', 'c7', 'c8', 'c9', 'z0', 'z1', 'z10', 'z2', 'z3', 'z4', 'z5', 'z6', 'z7', 'z8', 'z9']
+  UNPINNED SITES: none
+  unpinned aux/nodes (non-site): []
+  Lemma 1 / Corollary 2 combinatorial precondition (all sites anchored): True
+  zero-alpha edges incident to a site: 11 [('c0', 'z9'), ('c0', 'z0'), ('c1', 'z9'), ('c3', 'z4'), ('c5', 'z10'), ('c5', 'z5'), ('c5', 'z6'), ('c7', 'z10'), ('c7', 'z7'), ('c7', 'z8'), ('c10', 'z10')]
+
+=== robustness sweep: keep only alpha >= tau, re-run the anchoring test ===
+  positive alpha magnitudes: min 5.551e-17 (2^-54 = 5.551e-17), 19 below 1e-12, 21 >= 1e-3
+  tau = 0        : edges kept 51 ; unpinned sites none 
+  tau = 1e-16    : edges kept 39 ; unpinned sites none 
+  tau = 1e-14    : edges kept 31 ; unpinned sites ['c1', 'c10'] <-- anchoring BREAKS
+  tau = 1e-12    : edges kept 21 ; unpinned sites ['c1', 'c10', 'c2', 'c3', 'c9'] <-- anchoring BREAKS
+  tau = 1e-10    : edges kept 21 ; unpinned sites ['c1', 'c10', 'c2', 'c3', 'c9'] <-- anchoring BREAKS
+  tau = 1e-08    : edges kept 21 ; unpinned sites ['c1', 'c10', 'c2', 'c3', 'c9'] <-- anchoring BREAKS
+  tau = 1e-06    : edges kept 21 ; unpinned sites ['c1', 'c10', 'c2', 'c3', 'c9'] <-- anchoring BREAKS
+  tau = 0.0001   : edges kept 21 ; unpinned sites ['c1', 'c10', 'c2', 'c3', 'c9'] <-- anchoring BREAKS
+  tau = 0.001    : edges kept 21 ; unpinned sites ['c1', 'c10', 'c2', 'c3', 'c9'] <-- anchoring BREAKS
+  tau = 0.01     : edges kept 21 ; unpinned sites ['c1', 'c10', 'c2', 'c3', 'c9'] <-- anchoring BREAKS

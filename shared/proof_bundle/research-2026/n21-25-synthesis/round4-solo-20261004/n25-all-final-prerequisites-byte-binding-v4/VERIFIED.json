@@ -1,0 +1,104 @@
+{
+  "verified": true,
+  "schema": "N25-four-whole-source-family-same-radical-root-current-premise-byte-closure-v1",
+  "N": 25,
+  "all_required_families": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "complete_necessary_residual_weak_graphs": 721329,
+  "all_four_actual_full_payment_ledgers_independently_sequentially_scanned": true,
+  "all_parent_final_lower_chains_zero": true,
+  "family_partitions": [
+    {
+      "B": 14,
+      "complete_necessary_parents": 172092,
+      "pending": 0,
+      "actual_payment_kinds": {
+        "actual-cover-origin-unexposed-center-obstruction": 160698,
+        "strict-sparse-source-injection": 4893,
+        "fresh-branch-payment-for-prior-fixed-family": 7,
+        "exact-complete-simple-hole-family": 2194,
+        "strict-eight-rod-integer-angle-cycle": 392,
+        "fresh-standard-library-exact-weak-force": 3815,
+        "refined-exact-complete-simple-hole-family": 13,
+        "exact-complete-pinched-collar-filling-family": 80
+      },
+      "final_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B14-all-parent-lower-chain-audit-20261005-v1\\VERIFIED.json",
+      "final_sha256": "584de95ca552a79beb6b795884e73706cc1287361adc46cb5bceecec0fa4e85d",
+      "payment_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B14-all-parent-lower-chain-audit-20261005-v1\\ALL-PARENT-PAYMENTS.jsonl",
+      "payment_ledger_sha256": "f4b47207eeaf8aa76427a936abbf8abcbc7d1337c3c106f8488bf9d97a30957b",
+      "pending_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B14-all-parent-lower-chain-audit-20261005-v1\\RESIDUAL.jsonl",
+      "pending_ledger_sha256": "14c94d1155ddb6139fe9603088524e6788a177bd548e60ae1683884932738e36"
+    },
+    {
+      "B": 15,
+      "complete_necessary_parents": 139315,
+      "pending": 0,
+      "actual_payment_kinds": {
+        "strict-exact-weak-graph-exclusion": 116119,
+        "strict-complete-filling-family": 23196
+      },
+      "final_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-final15-full-parent-finer-and-direct-audit-solo-v1\\VERIFIED.json",
+      "final_sha256": "8f558125f73d8a48952a482f99e48d92bd6b86666f296571e9321335ce735416",
+      "payment_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-final15-full-parent-finer-and-direct-audit-solo-v1\\PAYMENTS.jsonl",
+      "payment_ledger_sha256": "645521468302edb4b05a9f8c61a36e75108f90cdd5c55ee16f5f5e7138e41a84",
+      "pending_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-final15-full-parent-finer-and-direct-audit-solo-v1\\PENDING.jsonl",
+      "pending_ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "B": 16,
+      "complete_necessary_parents": 120782,
+      "pending": 0,
+      "actual_payment_kinds": {
+        "strict-complete-filling-family-exact-transport": 8068,
+        "strict-exact-weak-graph-exclusion": 83158,
+        "strict-complete-filling-family": 29555,
+        "nonstrict-same-root-complete-family": 1
+      },
+      "final_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-final1\\ACCEPTED\\VERIFIED.json",
+      "final_sha256": "4d36de54a17c0b075f82c88ec5098740721da604a37437de33c1a5f30628ed15",
+      "payment_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-final1\\ACCEPTED\\PAYMENTS.jsonl",
+      "payment_ledger_sha256": "1753f42cfa67094d7b902afc182e171db87bbb81041b81e3633e428ef3d41e6f",
+      "pending_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-final1\\ACCEPTED\\PENDING.jsonl",
+      "pending_ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "B": 17,
+      "complete_necessary_parents": 289140,
+      "pending": 0,
+      "actual_payment_kinds": {
+        "strict-exact-weak-graph-exclusion": 222283,
+        "strict-complete-filling-family": 66857
+      },
+      "final_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-final1\\ACCEPTED\\VERIFIED.json",
+      "final_sha256": "ce3f1f930e538eaad1d2e82c7a43ea7f6e04526f797fbca386b434b380edfb99",
+      "payment_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-final1\\ACCEPTED\\PAYMENTS.jsonl",
+      "payment_ledger_sha256": "909cfc62f4ad6501d45966f52bcb0f1e14c24e653428a831f4dce3baa112add8",
+      "pending_ledger_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-final1\\ACCEPTED\\PENDING.jsonl",
+      "pending_ledger_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "actual_B17_original_and_final_adopter_successful_terminals_checked": true,
+  "all_actual_nonzero_strict_library_pruning_bound_to_own_complete_source_interface": true,
+  "own_exact_radical_upper_fresh_local_and_real_complete_nonstrict_core_bound": true,
+  "current_files_and_whole_archives_checked": 555483,
+  "all_current_content_bindings_checked": true,
+  "mismatches": [],
+  "all_bound_JSON_objects_inspected_for_nested_snapshot_library_and_input_bindings": 245011,
+  "current_input_ledger_sha256": "69be5a2ca453e1581792db62c5300470fef7df2055ca61c630ed50790aa6b058",
+  "four_actual_source_interface_sha256": "9bbd35bd526d5f53266215a6cbfcf96d2637176fa17416db75caa85fc7744323",
+  "same_root_upper_local_real_full_core_interface_sha256": "494486916990eb6a8ef482b3d094bd5cb4af4bee03680e52e3e74dc469090208",
+  "own_family_budget_sha256": "f14933d14ef2719918911f98fef8fb8796edb5777b4dc173fef46b2837b05c79",
+  "global_source_manuscript_sha256": "558db07252fc518aeed7d878e047bd5241b7e3d765309acc69e55469ea5dd4aa",
+  "global_source_B17_count_erratum_sha256": "7cd958e02d4bcd54998b1e183eb4b6b1cfbcbe9ee0b040aff7ec22480f016c63",
+  "actual_original_B17_root_payment_222283_and_residual66857_report_sha256": "181456255322c4fbad9d1843e5901a88fe05f5193600666b8983d54d9c726b4c",
+  "correct_original_B17_222283_plus66857_equals289140_not_manuscript_typo": true,
+  "old_mathematics_honestly_reused_not_new_all_old_tree_replays": true,
+  "written_math_not_claimed_machine_proved_by_content_checks": true,
+  "source_sha256": "e0d269f814f2be3a9a1a7c4bae34502204fc39a4f6bd5672733141024f694b19",
+  "independent_whole_current_content_audit_and_final_global_adoption_still_required": true,
+  "global_optimality_proved": false
+}

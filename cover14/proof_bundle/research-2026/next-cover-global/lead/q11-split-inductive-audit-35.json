@@ -1,0 +1,60 @@
+{
+  "status": "independent_inductive_complete_clipping_vertexsets",
+  "source_sha256": "2a241683effa2cdaf796ec79fe267e6f901c7d0accf31c5762ec47235bcf332c",
+  "runs": [
+    {
+      "node": 0,
+      "vertices": 110,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 18,
+      "crossing_vertices": 18
+    },
+    {
+      "node": 2,
+      "vertices": 108,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 8,
+      "crossing_vertices": 8
+    },
+    {
+      "node": 4,
+      "vertices": 104,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 7,
+      "crossing_vertices": 7
+    },
+    {
+      "node": 6,
+      "vertices": 98,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 6,
+      "crossing_vertices": 6
+    },
+    {
+      "node": 8,
+      "vertices": 90,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 7,
+      "vertices": 44,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 5,
+      "vertices": 41,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 3,
+      "vertices": 36,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 1,
+      "vertices": 38,
+      "exact_vertexsets_equal": true
+    }
+  ],
+  "seconds": 0.8138854503631592
+}

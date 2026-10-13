@@ -1,0 +1,26 @@
+{
+  "scope": "widthderivativepositive b<=1 explicitformula independentofAD",
+  "count": 150,
+  "live": 0,
+  "closed": {
+    "illegal": 24,
+    "positive": 52
+  },
+  "minimum": 0.005475999538554175,
+  "seconds": 0.037878990173339844,
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      0.5905000151603179,
+      1
+    ],
+    [
+      0.04644456359141745,
+      0.7795925929485212
+    ]
+  ],
+  "source_sha256": "b8b1c2d538371df3ae7def92cc9460958e7fc2723f14e02e8d369b4d730ab474"
+}

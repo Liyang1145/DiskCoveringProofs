@@ -1,0 +1,115 @@
+frozen SHA256 : 5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb
+expected SHA  : 5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb
+candidate certified radius interval : [0.37998385311983873, 0.37998385311983873]
+ring owners (cyclic order) : [7, 1, 8, 6, 4, 9, 10, 3, 5]
+hubs (no boundary arc)     : [0, 2]
+
+switch points (pair, angle deg, radius vs certified interval):
+  (7, 1)   theta=  67.69442  rad=0.3799838531198387090485  r/lo=LOW hi=ok
+  (1, 8)   theta= 112.18132  rad=0.3799838531198387042985  r/lo=LOW hi=ok
+  (8, 6)   theta= 156.07126  rad=0.3799838531198387068407  r/lo=LOW hi=ok
+  (6, 4)   theta= 188.25108  rad=0.3799838531198386758576  r/lo=LOW hi=ok
+  (4, 9)   theta= 227.30882  rad=0.3799838531198386965563  r/lo=LOW hi=ok
+  (9, 10)  theta= 269.93787  rad=0.37998385311983868241  r/lo=LOW hi=ok
+  (10, 3)  theta= 312.56692  rad=0.3799838531198386771383  r/lo=LOW hi=ok
+  (3, 5)   theta= 351.62465  rad=0.3799838531198386908735  r/lo=LOW hi=ok
+  (5, 7)   theta= 383.80448  rad=0.379983853119838690759  r/lo=LOW hi=ok
+
+abstract ring order (rotation/reflection of the boundary cycle) : [0, 1, 2, 3, 4, 5, 6, 7, 8]   [frozen graph wants 0,1,...,8]
+
+seven-factor group data (mpmath):
+  sector 1: alpha=2.77782616700429399 u=0.999957508210101818 v=0.999957508210101866
+  sector 2: alpha=2.9673540393362365 u=0.999957508210101866 v=0.999957508210101853
+  sector 3: alpha=2.77782616906864946 u=0.999957508210101853 v=0.99995750821010186
+  switch 1: b=1.05067834203122437 s=0.999957508210101866
+  switch 2: b=1.05067834250907032 s=0.999957508210101853
+  face   1: angles=['1.05067834203122', '0.95311666192272', '1.13779764963585'] rho/R=0.999957508210102
+  face   2: angles=['1.05067834250907', '1.137797649158', '0.95311666192272'] rho/R=0.999957508210102
+
+--- mpmath 50-digit reconstruction ---
+const                     = -23.4412476390749527481886216014
+sum of 29 atom values     = 26.5828402926647459866512649847
+const + sum               = 3.14159265358979323846264338328
+pi                        = 3.14159265358979323846264338328
+slack (const+sum-pi)      = 1.01565e-49
+seven-factor J(x*)        = 28.11447884468304165192883
+22-factor part            = -1.531638552018295665277569
+J - threshold T           = 0.0074334289
+J - certified flat ub (high bearing) = 0.0075300219
+J - numeric flat max (3 starts)      = 0.01024183
+
+chart data      : alpha2 = 2.967354039336236504
+                  A (face1 middle angle) = 1.1377976496358485441
+                  H = |c_hub - c_2| = 0.61954426354822940001
+=== (0) reference: candidate alpha2, candidate outer data ===
+  alpha2=2.967354 (candidate)                    J=28.114439305768  J-T=+7.39389e-03  J-FLATHB=+7.49048e-03  the witness point p*
+  alpha2=pi (same outer data)                    J=28.103476104287  J-T=-3.56931e-03  J-FLATHB=-3.47272e-03  flat sibling of p*
+
+=== (A) asymmetric switch distances (s1 != s2), alpha2 = candidate's ===
+  s1=t-0.000 s2=t-0.000                          J=28.114439305768  J-T=+7.39389e-03  J-FLATHB=+7.49048e-03  
+  s1=t-0.005 s2=t-0.000                          J=28.113069744923  J-T=+6.02433e-03  J-FLATHB=+6.12092e-03  
+  s1=t-0.000 s2=t-0.005                          J=28.113059571256  J-T=+6.01416e-03  J-FLATHB=+6.11075e-03  
+  s1=t-0.020 s2=t-0.000                          J=28.108854983382  J-T=+1.80957e-03  J-FLATHB=+1.90616e-03  
+  s1=t-0.000 s2=t-0.020                          J=28.108814390000  J-T=+1.76897e-03  J-FLATHB=+1.86557e-03  
+  s1=t-0.050 s2=t-0.020                          J=28.094503913409  J-T=-1.25415e-02  J-FLATHB=-1.24449e-02  
+  s1=t-0.100 s2=t-0.100                          J=28.055119238270  J-T=-5.19262e-02  J-FLATHB=-5.18296e-02  
+  s1=t-0.100 s2=t-0.000                          J=28.085081683434  J-T=-2.19637e-02  J-FLATHB=-2.18671e-02  
+  s1=t-0.000 s2=t-0.100                          J=28.084902301384  J-T=-2.21431e-02  J-FLATHB=-2.20465e-02  
+  s1=t-0.150 s2=t-0.050                          J=28.054762430868  J-T=-5.22830e-02  J-FLATHB=-5.21864e-02  
+
+=== (B) asymmetric neighbours / outer endpoints (alpha2 = candidate's) ===
+  alpha1+0.00 alpha3+0.00                        J=28.114439305768  J-T=+7.39389e-03  J-FLATHB=+7.49048e-03  
+  alpha1+0.10 alpha3-0.10                        J=28.113682895088  J-T=+6.63748e-03  J-FLATHB=+6.73407e-03  
+  alpha1-0.10 alpha3+0.10                        J=28.113787749377  J-T=+6.74233e-03  J-FLATHB=+6.83893e-03  
+  alpha1+0.30 alpha3+0.00                        J=28.108567822399  J-T=+1.52241e-03  J-FLATHB=+1.61900e-03  
+  alpha1+0.00 alpha3+0.30                        J=28.108731272786  J-T=+1.68586e-03  J-FLATHB=+1.78245e-03  
+  alpha1-0.30 alpha3-0.30                        J=28.105134890004  J-T=-1.91053e-03  J-FLATHB=-1.81393e-03  
+  alpha1+0.60 alpha3+0.00                        infeasible
+  du1+0.00 dv3+0.00                              J=28.114439305768  J-T=+7.39389e-03  J-FLATHB=+7.49048e-03  
+  du1+0.10 dv3+0.00                              infeasible
+  du1+0.00 dv3+0.10                              infeasible
+  du1+0.30 dv3+0.30                              infeasible
+  du1-0.10 dv3-0.10                              J=28.114070617171  J-T=+7.02520e-03  J-FLATHB=+7.12179e-03  
+  du1-0.30 dv3+0.00                              J=28.109543255419  J-T=+2.49784e-03  J-FLATHB=+2.59443e-03  
+
+=== (C) degenerate corners ===
+  t=75/76 (r=.375), alpha2=candidate             infeasible
+  t=75/76, alpha2=pi                             infeasible
+  s1=s2=t-0.3                                    infeasible
+  u1=v3=0.19                                     infeasible
+  alpha1=alpha3=pi-1e-6                          J=28.084858653105  J-T=-2.21868e-02  J-FLATHB=-2.20902e-02  
+  alpha1=alpha3=0.05                             infeasible
+  alpha2 -> floor 0.0233                         infeasible
+  alpha2 = pi-1e-8 (near flat)                   J=28.103476105013  J-T=-3.56931e-03  J-FLATHB=-3.47272e-03  
+
+=== (D) (pi-alpha2) x (s1,s2) box scan: how high can the nonflat J get? ===
+  pi-a2=0.15 ds1=0.00 ds2=0.00                   J=28.113126221531  J-T=+6.08081e-03  J-FLATHB=+6.17740e-03  
+  pi-a2=0.15 ds1=0.00 ds2=0.05                   J=28.098949778025  J-T=-8.09564e-03  J-FLATHB=-7.99904e-03  
+  pi-a2=0.15 ds1=0.05 ds2=0.00                   J=28.099047700416  J-T=-7.99772e-03  J-FLATHB=-7.90112e-03  
+  pi-a2=0.15 ds1=0.10 ds2=0.10                   J=28.054318992709  J-T=-5.27264e-02  J-FLATHB=-5.26298e-02  
+  pi-a2=0.30 ds1=0.00 ds2=0.00                   J=28.115014494873  J-T=+7.96908e-03  J-FLATHB=+8.06567e-03  
+  pi-a2=0.30 ds1=0.00 ds2=0.05                   J=28.104603780347  J-T=-2.44164e-03  J-FLATHB=-2.34504e-03  
+  pi-a2=0.30 ds1=0.05 ds2=0.00                   J=28.104697605916  J-T=-2.34781e-03  J-FLATHB=-2.25122e-03  
+  pi-a2=0.30 ds1=0.10 ds2=0.10                   J=28.054660808501  J-T=-5.23846e-02  J-FLATHB=-5.22880e-02  
+  pi-a2=0.45 ds1=0.00 ds2=0.00                   J=28.119953993912  J-T=+1.29086e-02  J-FLATHB=+1.30052e-02  
+  pi-a2=0.45 ds1=0.00 ds2=0.05                   J=28.108064595033  J-T=+1.01918e-03  J-FLATHB=+1.11577e-03  
+  pi-a2=0.45 ds1=0.05 ds2=0.00                   J=28.108142521414  J-T=+1.09711e-03  J-FLATHB=+1.19370e-03  
+  pi-a2=0.45 ds1=0.10 ds2=0.10                   J=28.057604696101  J-T=-4.94407e-02  J-FLATHB=-4.93441e-02  
+  pi-a2=0.60 ds1=0.00 ds2=0.00                   J=28.122356791423  J-T=+1.53114e-02  J-FLATHB=+1.54080e-02  
+  pi-a2=0.60 ds1=0.00 ds2=0.05                   J=28.108490810934  J-T=+1.44540e-03  J-FLATHB=+1.54199e-03  
+  pi-a2=0.60 ds1=0.05 ds2=0.00                   J=28.108558743294  J-T=+1.51333e-03  J-FLATHB=+1.60992e-03  
+  pi-a2=0.60 ds1=0.10 ds2=0.10                   J=28.058416494620  J-T=-4.86289e-02  J-FLATHB=-4.85323e-02  
+  pi-a2=0.80 ds1=0.00 ds2=0.00                   J=28.121543017380  J-T=+1.44976e-02  J-FLATHB=+1.45942e-02  
+  pi-a2=0.80 ds1=0.00 ds2=0.05                   J=28.104739410933  J-T=-2.30600e-03  J-FLATHB=-2.20941e-03  
+  pi-a2=0.80 ds1=0.05 ds2=0.00                   J=28.104793825115  J-T=-2.25159e-03  J-FLATHB=-2.15500e-03  
+  pi-a2=0.80 ds1=0.10 ds2=0.10                   J=28.049222234274  J-T=-5.78232e-02  J-FLATHB=-5.77266e-02  
+  pi-a2=1.00 ds1=0.00 ds2=0.00                   J=28.107269660404  J-T=+2.24245e-04  J-FLATHB=+3.20838e-04  
+  pi-a2=1.00 ds1=0.00 ds2=0.05                   J=28.095301555902  J-T=-1.17439e-02  J-FLATHB=-1.16473e-02  
+  pi-a2=1.00 ds1=0.05 ds2=0.00                   J=28.095332008701  J-T=-1.17134e-02  J-FLATHB=-1.16168e-02  
+  pi-a2=1.00 ds1=0.10 ds2=0.10                   J=28.043162670554  J-T=-6.38827e-02  J-FLATHB=-6.37862e-02  
+
+best nonflat J reached by (D): 28.122356791423  at pi-a2=0.60 ds1=0.00 ds2=0.00   (T = 28.107045415773, flat high-bearing ub = 28.1069488227409)
+excess over T       = +1.531138e-02
+excess over flat HB = +1.540797e-02
+
+wrote exp5_asym_degeneracy.json

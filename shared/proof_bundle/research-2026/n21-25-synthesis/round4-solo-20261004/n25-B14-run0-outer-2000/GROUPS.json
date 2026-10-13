@@ -1,0 +1,52 @@
+{
+  "N": 25,
+  "B": 14,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "faces": [
+        8195,
+        16396,
+        16408,
+        32816,
+        32864,
+        49168,
+        65728,
+        65920,
+        98368,
+        131840,
+        132608,
+        196864,
+        262150,
+        270338,
+        278532,
+        527360,
+        530432,
+        536576,
+        656384,
+        794624
+      ],
+      "centers": 20,
+      "members": 2000
+    }
+  ],
+  "group_count": 1,
+  "selected_types": 2000,
+  "catalog_types": 100000,
+  "catalog_sha256": "c52a480170be0641552584c922901f15bf3ef8c38c068eef6d05ef1065136110",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "acfeee9405e932eb9ccbfa5a900fdc86b315760ae0c86c4d605734caebea1329",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "parent_groups_sha256": null,
+  "parent_proof_sha256": null,
+  "source_sha256": "e350c23b094928698efc43b4411c032f071db941049f13123188b2731fbbfe27",
+  "canonicalizer_sha256": "6c15a9dd6df1d24ffd68e3772aa42b7e1e2103d30ad33970ba42e07b0120bf01",
+  "mapping_acceptor_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "run_reader_sha256": "bf6f37d144227befab7ca5c82562d21eedc3173ad3a9fdfaa8b10b5ab5c4edfb",
+  "rows_are_provisional_run_indices_not_final_unique_catalogue_indices": true,
+  "not_a_complete_family": true,
+  "global_optimality_proved": false,
+  "scope": "weak-graph proposal inventory from one closed native-run prefix only"
+}

@@ -1,0 +1,24 @@
+{
+  "status": "independent_inductive_complete_clipping_vertexsets",
+  "source_sha256": "b09c3b65098cca6415ea0c54b88e8a3c1183b8738ae57a6ae4804b0661f0eed3",
+  "runs": [
+    {
+      "node": 0,
+      "vertices": 54,
+      "exact_vertexsets_equal": true,
+      "crossing_edges": 18,
+      "crossing_vertices": 18
+    },
+    {
+      "node": 2,
+      "vertices": 36,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 1,
+      "vertices": 54,
+      "exact_vertexsets_equal": true
+    }
+  ],
+  "seconds": 0.2247328758239746
+}

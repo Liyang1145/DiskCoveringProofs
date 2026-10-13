@@ -1,0 +1,23 @@
+# Clipped nearest-site dual has its straight-site disk embedding
+
+## Input and scope
+Finite distinct sites S in int D, not all collinear. The clipped nearest-site Voronoi partition of D has an abstract dual cell complex K homeomorphic to a closed disk. Its boundary cycle consists of the nine ring labels in boundary-nearest-arc order; its only interior vertices are the two hub labels. Each interior Voronoi vertex is in int D. Boundary switches have exactly two winning sites, so no higher-order Voronoi vertex is clipped at a boundary switch. These are the conclusions of VORONOI-BOUNDARY-REDUCTION and DUAL-DISK-INTERFACE-AUDIT, not new assumptions about metric symmetry, flatness or hull order.
+
+A dual polygon corresponds to one full Voronoi vertex x in int D. It has exactly the sites nearest to x as vertices. These sites lie on one strictly convex empty circle. Triangulate each such polygon, retaining its sides and using its own vertices. Call the resulting abstract triangulated disk K'.
+
+## Exact straight realization
+The full Euclidean Delaunay cellulation is formed by ALL empty-circle polygons of the full nearest-site Voronoi diagram, with their straight sides and site vertices. It is a plane straight-line cell complex: different closed polygons meet only along common faces, and polygon interiors are disjoint. Sites on a finite-radius circle are in strictly convex position, so each diagonal triangulation is nondegenerate and lies entirely in that polygon. Choose for the full cellulation the same triangulations on all selected polygons; choose arbitrary diagonal triangulations on the others.
+
+K' embeds as a SUBCOMPLEX of this full planar simplicial complex, by mapping each label to its actual site. A selected dual edge is a full Delaunay edge (a Voronoi adjacency inside D is also one in the full diagram); an artificial edge is a diagonal in its selected empty-circle polygon. A pair of sites has at most one Voronoi adjacency edge because its common cell boundary is a convex subset of its bisector. Distinct true Voronoi vertices cannot generate the same noncollinear site triple, since its circumcenter is unique. Thus no duplicated simplex identification or extra edge is introduced in the mapping. All intersections of realized simplices are exactly their common faces. The resulting map |K'|→R² is globally injective, continuous, and affine on each simplex. Compactness of |K'| gives a homeomorphism to its image.
+
+Since |K'| is a disk, its realized boundary is a simple polygon P, consisting of the ring sites in boundary-arc order. By the Jordan curve theorem its image is exactly the bounded closed region enclosed by P. In particular BOTH hubs lie strictly inside P, the selected faces tile P without gaps/overlaps, and their sum of areas is area(P).
+
+There is NO need to show that ring radial directions are in their owned nearest arcs, that P is convex or star-shaped, or that all full-Delaunay circumcenters lie in D. Full-Delaunay triangles outside the selected subcomplex may exist, even when their vertices belong to S. The selected disk, not the whole convex hull, is what must be embedded. Invariance of domain/Jordan then rules out any apparent missing triangle inside P.
+
+## Circumradius and degeneracies
+For each selected polygon x∈D is equidistant from its incident sites. Because the radius-r site disks cover D, their common distance is at most r. Every refined triangle has the SAME circumcenter x and radius≤r. It is noncollinear because its three distinct vertices lie on a finite positive-radius circle. A cocircular degeneracy produces artificial diagonals but never zero-length site edges or collinear refined triangles. It is only the dual primal Voronoi length of an artificial diagonal that is zero.
+
+This is stronger than arbitrary common-point/MEC feasibility. Three disks merely meeting at a point need not have an equidistant common point; a counterexample for their circumradius is irrelevant to selected Delaunay faces.
+
+## Payoff and remaining implication
+This proves the straight-site geometry/arc-order interface for the refined disk once the earlier abstract-dual disk construction is in place. It permits actual fan and central circumradius constraints, full hub angle sums, and the straight triangle area ledger. For q0 the ring-ring boundary edges are precisely the adjacent-arc edges, so C905→C879 convexifies each fan chain. q0 degree(6,7) still has its two central constraints; C906 shows they cannot be omitted. No sharp inequality, global exclusion of q0(6,7), symmetry WLOG, or global localization follows from this embedding lemma.

@@ -1,0 +1,43 @@
+{
+  "schema": "N26-independent-adopted-latest-forest-source-receipt-contract-controls-v1",
+  "synthetic_receipt_only_positive_shape": {
+    "receipt_association_ONLY_not_complete_source_model_history_replay": true,
+    "new_geometric_payments": 0
+  },
+  "synthetic_invalid_adopted_layer_and_receipt_contract_controls_rejected": [
+    "owner-final-current-snapshot-forged",
+    "owner-final-inventory-rehash-incomplete",
+    "owner-final-inventory-count-forged",
+    "owner-final-legacy-schema-laundered",
+    "owner-final-source-semantic-equality-marker-omitted",
+    "owner-final-remaining-root-count-forged",
+    "owner-final-latest-history-count-forged",
+    "owner-final-whole-history-accounting-marker-omitted",
+    "source-old-owned-receipt-laundered-as-latest",
+    "source-unaccepted-latest-receipt",
+    "source-publication-replay-differs",
+    "source-current-semantic-replay-differs",
+    "source-frozen-main-bytes-forged",
+    "source-entire-model-marker-replaced-by-identity",
+    "source-original-LOCAL-expanded",
+    "source-radius-promoted-to-original-U",
+    "source-global-proof-level-promoted"
+  ],
+  "ACTUAL_completed_older_source_receipt_REJECTED_as_new_extended_layer": true,
+  "actual_old_current_sha256": "91e9ec1f31ab26cfd6f924cc3c4e7ab4acb14b820d1873cd08436e76d8175688",
+  "actual_old_final_sha256": "79b29698062ef68e4838340215b8b531a64f79323a5b65b270be5bf9dee828c3",
+  "actual_old_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+  "synthetic_shapes_NOT_an_actual_latest_source_geometry_or_current_acceptance": true,
+  "ENTIRE_frozen_main_original_model_latest_forest_and_history_replay_NOT_executed": true,
+  "typed_context_or_diagnostic_producer_NOT_imported": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "5fa12fa5f5c9b922213203dc0425e6ddea8f947d09be7dee6e8d230d4853f517",
+  "tested_complete_extended_source_adapter_sha256": "22a868ea49fcd628a3fdda247c3deb38ad59b635706e0209e756da1c6e8e02b2",
+  "tested_adopted_layer_identity_sha256": "191227d019dbd7c7ea4a8cec796fa53d21d5abff046cb0364b52df4d0579741f",
+  "tested_independent_final_receipt_gate_sha256": "5f88fa591f972920fa4def263e4780d453196ec32777626041f732638d0fa5c2"
+}

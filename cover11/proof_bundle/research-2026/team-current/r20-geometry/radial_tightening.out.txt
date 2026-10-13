@@ -1,0 +1,160 @@
+
+================================================================================================================
+r = 0.3799838531   (rho = 0.62001615)
+================================================================================================================
+  89 structural crossings (circle-circle + ring-circle/boundary)
+  ring 7  |c|=0.858811  t_bdy=1.0  t_fail=0.999999993844  |x*|=0.999999999735  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999938)
+        binding witness x=(0.914928,0.403617)  margins: c_5:+2.65e-10, c_3:+4.18e-01, c_2:+5.44e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_5 (margin +2.651e-10); moving ring 7 inward uncovers this point
+  ring 1  |c|=0.892522  t_bdy=1.0  t_fail=0.999999987128  |x*|=0.999999999518  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999871)
+        binding witness x=(-0.377539,0.925994)  margins: c_8:+4.82e-10, c_2:+3.74e-01, c_6:+5.09e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.820e-10); moving ring 1 inward uncovers this point
+  ring 8  |c|=0.858811  t_bdy=1.0  t_fail=0.999999993844  |x*|=0.999999999735  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999938)
+        binding witness x=(-0.914051,0.405600)  margins: c_6:+2.65e-10, c_4:+4.18e-01, c_2:+5.44e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_6 (margin +2.651e-10); moving ring 8 inward uncovers this point
+  ring 6  |c|=0.700870  t_bdy=1.0  t_fail=0.999999998361  |x*|=0.999999999641  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999984)
+        binding witness x=(-0.989649,-0.143511)  margins: c_4:+3.59e-10, c_8:+4.75e-01, c_9:+5.49e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_4 (margin +3.590e-10); moving ring 6 inward uncovers this point
+  ring 4  |c|=0.761798  t_bdy=1.0  t_fail=0.999999997673  |x*|=0.999999999735  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999977)
+        binding witness x=(-0.989649,-0.143511)  margins: c_6:+2.65e-10, c_8:+4.75e-01, c_9:+5.49e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_6 (margin +2.651e-10); moving ring 4 inward uncovers this point
+  ring 9  |c|=0.820853  t_bdy=1.0  t_fail=0.999999996007  |x*|=0.999999999641  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.999999996)
+        binding witness x=(-0.678047,-0.735019)  margins: c_4:+3.59e-10, c_6:+4.51e-01, c_0:+5.16e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_4 (margin +3.590e-10); moving ring 9 inward uncovers this point
+  ring 10 |c|=0.820853  t_bdy=1.0  t_fail=0.999999996007  |x*|=0.999999999641  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.999999996)
+        binding witness x=(0.676451,-0.736488)  margins: c_3:+3.59e-10, c_5:+4.51e-01, c_0:+5.16e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_3 (margin +3.590e-10); moving ring 10 inward uncovers this point
+  ring 3  |c|=0.761798  t_bdy=1.0  t_fail=0.999999997673  |x*|=0.999999999735  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999977)
+        binding witness x=(0.989335,-0.145657)  margins: c_5:+2.65e-10, c_7:+4.75e-01, c_10:+5.49e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_5 (margin +2.651e-10); moving ring 3 inward uncovers this point
+  ring 5  |c|=0.700870  t_bdy=1.0  t_fail=0.999999998361  |x*|=0.999999999641  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999984)
+        binding witness x=(0.989335,-0.145657)  margins: c_3:+3.59e-10, c_7:+4.75e-01, c_10:+5.49e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_3 (margin +3.590e-10); moving ring 5 inward uncovers this point
+
+================================================================================================================
+r = 0.4   (rho = 0.6)
+================================================================================================================
+  89 structural crossings (circle-circle + ring-circle/boundary)
+  ring 7  |c|=0.858811  t_bdy=0.869976698378  t_fail=0.86997669602  |x*|=0.999999999478  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.869976696)
+        binding witness x=(0.400254,0.916404)  margins: c_1:+5.22e-10, c_2:+3.58e-01, c_5:+4.73e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.224e-10); moving ring 7 inward uncovers this point
+  ring 1  |c|=0.892522  t_bdy=0.843672272394  t_fail=0.843672270053  |x*|=0.999999999514  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8436722701)
+        binding witness x=(-0.355553,0.934656)  margins: c_8:+4.86e-10, c_2:+3.51e-01, c_6:+5.05e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.858e-10); moving ring 1 inward uncovers this point
+  ring 8  |c|=0.858811  t_bdy=0.869976698141  t_fail=0.869976695783  |x*|=0.999999999478  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8699766958)
+        binding witness x=(-0.398266,0.917270)  margins: c_1:+5.22e-10, c_2:+3.58e-01, c_6:+4.73e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.224e-10); moving ring 8 inward uncovers this point
+  ring 6  |c|=0.700870  t_bdy=0.939409091326  t_fail=0.939409089834  |x*|=0.999999999514  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9394090898)
+        binding witness x=(-0.923379,0.383889)  margins: c_8:+4.86e-10, c_4:+3.80e-01, c_2:+5.30e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.858e-10); moving ring 6 inward uncovers this point
+  ring 4  |c|=0.761798  t_bdy=0.91653629251  t_fail=0.916536290725  |x*|=0.999999999557  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9165362907)
+        binding witness x=(-0.696454,-0.717601)  margins: c_9:+4.43e-10, c_6:+4.13e-01, c_0:+4.99e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.429e-10); moving ring 4 inward uncovers this point
+  ring 9  |c|=0.820853  t_bdy=0.888609087106  t_fail=0.888609085021  |x*|=0.999999999557  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.888609085)
+        binding witness x=(-0.026424,-0.999651)  margins: c_10:+4.43e-10, c_0:+4.51e-01, c_4:+5.14e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.429e-10); moving ring 9 inward uncovers this point
+  ring 10 |c|=0.820853  t_bdy=0.8886090849  t_fail=0.888609082815  |x*|=0.999999999557  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8886090828)
+        binding witness x=(0.024256,-0.999706)  margins: c_9:+4.43e-10, c_0:+4.51e-01, c_3:+5.14e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.429e-10); moving ring 10 inward uncovers this point
+  ring 3  |c|=0.761798  t_bdy=0.9165362927  t_fail=0.916536290915  |x*|=0.999999999557  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9165362909)
+        binding witness x=(0.694896,-0.719110)  margins: c_10:+4.43e-10, c_5:+4.13e-01, c_0:+4.99e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.429e-10); moving ring 3 inward uncovers this point
+  ring 5  |c|=0.700870  t_bdy=0.939409091409  t_fail=0.939409089917  |x*|=0.999999999514  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9394090899)
+        binding witness x=(0.924210,0.381885)  margins: c_7:+4.86e-10, c_3:+3.80e-01, c_2:+5.30e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_7 (margin +4.858e-10); moving ring 5 inward uncovers this point
+
+================================================================================================================
+r = 0.43   (rho = 0.57)
+================================================================================================================
+  89 structural crossings (circle-circle + ring-circle/boundary)
+  ring 7  |c|=0.858811  t_bdy=0.769713915767  t_fail=0.769713914234  |x*|=0.999999999476  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7697139142)
+        binding witness x=(0.430854,0.902422)  margins: c_1:+5.24e-10, c_2:+3.33e-01, c_5:+4.20e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.237e-10); moving ring 7 inward uncovers this point
+  ring 1  |c|=0.892522  t_bdy=0.742734174254  t_fail=0.742734172792  |x*|=0.99999999951  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7427341728)
+        binding witness x=(-0.322422,0.946596)  margins: c_8:+4.90e-10, c_2:+3.17e-01, c_6:+4.99e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.898e-10); moving ring 1 inward uncovers this point
+  ring 8  |c|=0.858811  t_bdy=0.769713915513  t_fail=0.76971391398  |x*|=0.999999999476  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.769713914)
+        binding witness x=(-0.428896,0.903354)  margins: c_1:+5.24e-10, c_2:+3.33e-01, c_6:+4.20e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.237e-10); moving ring 8 inward uncovers this point
+  ring 6  |c|=0.700870  t_bdy=0.864778885293  t_fail=0.86477888407  |x*|=0.99999999951  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8647788841)
+        binding witness x=(-0.936324,0.351137)  margins: c_8:+4.90e-10, c_4:+3.23e-01, c_2:+5.10e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.898e-10); moving ring 6 inward uncovers this point
+  ring 4  |c|=0.761798  t_bdy=0.827718893221  t_fail=0.827718891906  |x*|=0.99999999955  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8277188919)
+        binding witness x=(-0.722885,-0.690968)  margins: c_9:+4.50e-10, c_6:+3.57e-01, c_0:+4.73e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.504e-10); moving ring 4 inward uncovers this point
+  ring 9  |c|=0.820853  t_bdy=0.790304486715  t_fail=0.790304485318  |x*|=0.99999999955  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7903044853)
+        binding witness x=(-0.063908,-0.997956)  margins: c_10:+4.50e-10, c_0:+4.21e-01, c_4:+4.56e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.504e-10); moving ring 9 inward uncovers this point
+  ring 10 |c|=0.820853  t_bdy=0.79030448402  t_fail=0.790304482624  |x*|=0.99999999955  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7903044826)
+        binding witness x=(0.061744,-0.998092)  margins: c_9:+4.50e-10, c_0:+4.21e-01, c_3:+4.56e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.504e-10); moving ring 10 inward uncovers this point
+  ring 3  |c|=0.761798  t_bdy=0.82771889349  t_fail=0.827718892174  |x*|=0.99999999955  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8277188922)
+        binding witness x=(0.721385,-0.692534)  margins: c_10:+4.50e-10, c_5:+3.57e-01, c_0:+4.73e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.504e-10); moving ring 3 inward uncovers this point
+  ring 5  |c|=0.700870  t_bdy=0.864778885443  t_fail=0.86477888422  |x*|=0.99999999951  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8647788842)
+        binding witness x=(0.937083,0.349105)  margins: c_7:+4.90e-10, c_3:+3.23e-01, c_2:+5.10e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_7 (margin +4.898e-10); moving ring 5 inward uncovers this point
+
+================================================================================================================
+r = 0.5   (rho = 0.5)
+================================================================================================================
+  105 structural crossings (circle-circle + ring-circle/boundary)
+  ring 7  |c|=0.858811  t_bdy=0.621712121148  t_fail=0.621712120174  |x*|=0.999999999477  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6217121202)
+        binding witness x=(0.500257,0.865877)  margins: c_1:+5.23e-10, c_2:+2.76e-01, c_5:+2.96e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.228e-10); moving ring 7 inward uncovers this point
+  ring 1  |c|=0.892522  t_bdy=0.597984939007  t_fail=0.597984938102  |x*|=0.999999999506  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5979849381)
+        binding witness x=(-0.244119,0.969745)  margins: c_8:+4.94e-10, c_2:+2.38e-01, c_7:+4.15e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.937e-10); moving ring 1 inward uncovers this point
+  ring 8  |c|=0.858811  t_bdy=0.621712120916  t_fail=0.621712119943  |x*|=0.999999999477  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6217121199)
+        binding witness x=(-0.498378,0.866960)  margins: c_1:+5.23e-10, c_2:+2.76e-01, c_6:+2.96e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.228e-10); moving ring 8 inward uncovers this point
+  ring 6  |c|=0.700870  t_bdy=0.727848009371  t_fail=0.72784800846  |x*|=0.999999999506  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7278480085)
+        binding witness x=(-0.961850,0.273576)  margins: c_8:+4.94e-10, c_4:+1.91e-01, c_2:+4.62e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.937e-10); moving ring 6 inward uncovers this point
+  ring 4  |c|=0.761798  t_bdy=0.681827799443  t_fail=0.681827798553  |x*|=0.99999999954  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6818277986)
+        binding witness x=(-0.779709,-0.626142)  margins: c_9:+4.60e-10, c_6:+2.27e-01, c_0:+4.14e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.603e-10); moving ring 4 inward uncovers this point
+  ring 9  |c|=0.820853  t_bdy=0.641752281505  t_fail=0.641752280616  |x*|=0.99999999954  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6417522806)
+        binding witness x=(-0.149619,-0.988744)  margins: c_10:+4.60e-10, c_4:+3.23e-01, c_0:+3.53e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.603e-10); moving ring 9 inward uncovers this point
+  ring 10 |c|=0.820853  t_bdy=0.64175227888  t_fail=0.641752277991  |x*|=0.99999999954  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.641752278)
+        binding witness x=(0.147475,-0.989066)  margins: c_9:+4.60e-10, c_3:+3.23e-01, c_0:+3.53e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.603e-10); moving ring 10 inward uncovers this point
+  ring 3  |c|=0.761798  t_bdy=0.681827799667  t_fail=0.681827798777  |x*|=0.99999999954  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6818277988)
+        binding witness x=(0.778349,-0.627832)  margins: c_10:+4.60e-10, c_5:+2.27e-01, c_0:+4.14e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.603e-10); moving ring 3 inward uncovers this point
+  ring 5  |c|=0.700870  t_bdy=0.727848009588  t_fail=0.727848008677  |x*|=0.999999999506  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7278480087)
+        binding witness x=(0.962441,0.271490)  margins: c_7:+4.94e-10, c_3:+1.91e-01, c_2:+4.62e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_7 (margin +4.937e-10); moving ring 5 inward uncovers this point
+
+================================================================================================================
+r = 0.55   (rho = 0.45)
+================================================================================================================
+  119 structural crossings (circle-circle + ring-circle/boundary)
+  ring 7  |c|=0.858811  t_bdy=0.542410414541  t_fail=0.542410413733  |x*|=0.99999999948  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5424104137)
+        binding witness x=(0.548099,0.836414)  margins: c_1:+5.20e-10, c_5:+2.07e-01, c_2:+2.36e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.197e-10); moving ring 7 inward uncovers this point
+  ring 1  |c|=0.892522  t_bdy=0.521392994676  t_fail=0.521392993931  |x*|=0.999999999507  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5213929939)
+        binding witness x=(-0.187265,0.982309)  margins: c_8:+4.93e-10, c_2:+1.84e-01, c_7:+3.18e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.932e-10); moving ring 1 inward uncovers this point
+  ring 8  |c|=0.858811  t_bdy=0.542410414331  t_fail=0.542410413522  |x*|=0.99999999948  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5424104135)
+        binding witness x=(-0.546283,0.837601)  margins: c_1:+5.20e-10, c_6:+2.07e-01, c_2:+2.36e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_1 (margin +5.197e-10); moving ring 8 inward uncovers this point
+  ring 6  |c|=0.700870  t_bdy=0.646021806654  t_fail=0.646021805859  |x*|=0.999999999507  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6460218059)
+        binding witness x=(-0.976142,0.217132)  margins: c_8:+4.93e-10, c_4:+9.71e-02, c_2:+4.28e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_8 (margin +4.932e-10); moving ring 6 inward uncovers this point
+  ring 4  |c|=0.761798  t_bdy=0.600076025711  t_fail=0.60007602496  |x*|=0.999999999537  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.600076025)
+        binding witness x=(-0.816447,-0.577421)  margins: c_9:+4.63e-10, c_6:+1.34e-01, c_0:+3.72e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.628e-10); moving ring 4 inward uncovers this point
+  ring 9  |c|=0.820853  t_bdy=0.561697820741  t_fail=0.561697820004  |x*|=0.999999999537  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.56169782)
+        binding witness x=(-0.209646,-0.977777)  margins: c_10:+4.63e-10, c_4:+2.27e-01, c_0:+3.04e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.628e-10); moving ring 9 inward uncovers this point
+  ring 10 |c|=0.820853  t_bdy=0.561697818352  t_fail=0.561697817615  |x*|=0.999999999537  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5616978176)
+        binding witness x=(0.207525,-0.978230)  margins: c_9:+4.63e-10, c_3:+2.27e-01, c_0:+3.04e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_9 (margin +4.628e-10); moving ring 10 inward uncovers this point
+  ring 3  |c|=0.761798  t_bdy=0.600076025855  t_fail=0.600076025104  |x*|=0.999999999537  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6000760251)
+        binding witness x=(0.815193,-0.579190)  margins: c_10:+4.63e-10, c_5:+1.34e-01, c_0:+3.72e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_10 (margin +4.628e-10); moving ring 3 inward uncovers this point
+  ring 5  |c|=0.700870  t_bdy=0.646021806888  t_fail=0.646021806093  |x*|=0.999999999507  -> OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6460218061)
+        binding witness x=(0.976611,0.215014)  margins: c_7:+4.93e-10, c_3:+9.71e-02, c_2:+4.28e-01   (nearest: boundary/private)
+        local read: nearest local disk is c_7 (margin +4.932e-10); moving ring 5 inward uncovers this point

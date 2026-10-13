@@ -1,0 +1,13 @@
+{
+  "owned_windows_python_pid": 15356,
+  "script": "replay_family_discovery.py",
+  "source_sha256": "5b90e5dbdd6c1b508fe8167715c5770e820ca6f40cbde6e3be4003c24c77156d",
+  "arguments": [
+    "--snapshot",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1\\ALL-PENDING-SNAPSHOT.json",
+    "--receipt",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1\\STRICT\\SUMMARY.json",
+    "--output",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-origin-slab0-all11179-residual-reboot-20261005-v1\\STRICT-EXACT.json"
+  ]
+}

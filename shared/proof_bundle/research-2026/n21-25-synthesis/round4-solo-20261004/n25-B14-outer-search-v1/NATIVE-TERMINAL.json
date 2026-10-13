@@ -1,0 +1,9 @@
+{
+  "native_pid": 15068,
+  "native_terminal_observed": true,
+  "native_exit_code": 4294967295,
+  "stopped_for_disk_reserve": false,
+  "seconds": 6792.671999999991,
+  "log_sha256": "b2aa7eb4fb6c2b37503d25d947a4142cbc5be5c18a6c22cb0b54a87a9a2a4a65",
+  "global_optimality_proved": false
+}

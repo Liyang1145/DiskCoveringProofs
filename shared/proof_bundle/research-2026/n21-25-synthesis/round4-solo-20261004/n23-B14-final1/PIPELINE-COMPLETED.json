@@ -1,0 +1,27 @@
+{
+  "N": 23,
+  "B": 14,
+  "original_catalog_types": 8277632,
+  "final_residual_types": 0,
+  "actual_original_main_and_adoption_terminals_observed": true,
+  "final_adoption_sha256": "d7e5a8d6d350d936ddf6472db724d2a027404f03184f43942dbb1027a81ca19f",
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\run_n23_B14_after_original_full_main.py": "fddd6b6c932d123f27c9e869ae4a6bd4ec50d47321524a32b9029a5926a3ea64",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-complete-source-and-union-reacceptance-20261005-v1\\VERIFIED.json": "627d6d030d22f0a866c0c382dba9ce88207a8cf1313433d7b0d64dc1cf50159e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-o2-a\\VERIFIED.json": "188df5eab88d356beb8b18213d468d67255735098d86b0d3f3b91fedd1ad887a",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-full1\\SUMMARY.json": "792e1ed8ab5377f55570461bb3852e035d6027c62a4c66222104545500861aca",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-full1\\OUTCOMES.jsonl": "70d4c3239ba98db8849e8c690ae3952ae6f060ddf1f0ef3d92d0c12133c77cf6",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-selected-full-controls-v1\\VERIFIED.json": "84135080fa9d31eaf7e5a5f54a23f230827ad5b9223125334beea86464581edb",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_n23_B14_selected_full_supplements.py": "e4f1707a2ce05c45069d1800c53609ac165b9c86c41348b80b5e651c506ecd3c",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\propose_n23_B14_full_residual.py": "864da7f67107a9dd2ea7efb8919515fd5cc5d444263e8e0de31b351ff8aae0a0",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_n23_B14_full_residual.py": "48da8df65976da108305b066fbe191566e23fc6129f81213f1a92c4e9311ce8c",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\propose_n23_B14_selected_full_supplements.py": "a28bd8a8c0cb7a5ca06492330905753155d0a375cbe3d13cbc0a1f83d3235f6f",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-full1\\ACCEPTED\\VERIFIED.json": "fed51319f5bbf8b1a7cf7ada7573efdcb21da509d800840be13c0d8909935eff",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-full1\\AUDIT-TERMINAL.json": "0fcb80e6e6019de8f7fd84e03247c9485871544f350e2324e5e90b39a30ef78a",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-full4\\REPLAY-TERMINAL.json": "72ed912569739ad924a710e88ab5487d99bb5fc799c0493b8389e0425825cf79",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-full4\\REPLAYED\\VERIFIED.json": "665e340aacdf4520fcc8efd61e4058e7257a263baa020996dbac45144f5629dc"
+  },
+  "source_sha256": "fddd6b6c932d123f27c9e869ae4a6bd4ec50d47321524a32b9029a5926a3ea64",
+  "source_completeness_and_arbitrary_cover_global_assembly_not_claimed_complete": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "bounded-collar-discovery-source-derivation-v1",
+  "production_source_sha256": "12f0834444fa74dcb67e15af27f8cda2acd3ee151a895659927641af4b9ec935",
+  "derived_body_sha256": "a14f1f4d71994a6267f4f2b13140b0f5ba76535879a17c4a0ae924640388a1a9",
+  "only_entry_point_name_changed": true,
+  "recursive_search_and_guards_unchanged": true,
+  "snapshots_are_incomplete_discovery_proposals_only": true,
+  "source_sha256": "a8ffed9cd8f0721931ce9ab9dae666060e36e4e205d7ed376249c08fefcae8a9",
+  "global_optimality_proved": false
+}

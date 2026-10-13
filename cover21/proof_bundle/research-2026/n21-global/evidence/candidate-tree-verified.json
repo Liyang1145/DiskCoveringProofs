@@ -1,0 +1,13 @@
+{
+  "verified": true,
+  "scope": "single candidate topology on full necessary angle domain only",
+  "nodes": 4817,
+  "counts": {
+    "SPLIT": 2408,
+    "DUAL": 2249,
+    "LOCAL": 160
+  },
+  "tree_sha256": "1414e2868522aa45d8bb499c30f276825a412238497f73ee9ec1fca148b51b3d",
+  "local_certificate_sha256": "e5fb7dfd85285933139ae4c42f1aa560431d50b88ef95f572a1c29d28819c01c",
+  "global_optimality_proved": false
+}

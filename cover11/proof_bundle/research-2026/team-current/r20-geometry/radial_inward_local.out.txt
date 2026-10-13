@@ -1,0 +1,92 @@
+================================================================================================================
+PART 1.  Certified q0(6,7) centres at enlarged radii (genuine covers by monotonicity; arcs overlap)
+================================================================================================================
+
+  r = 0.3799838531   (rho = 1-r = 0.62001615, sqrt(1-r^2) = 0.92499312)
+    boundary arcs: COVER the circle exactly
+    consecutive arc overlaps (deg): 7-1:+0.00, 1-8:+0.00, 8-6:+0.00, 6-4:+0.00, 4-9:+0.00, 9-10:+0.00, 10-3:+0.00, 3-5:+0.00, 5-7:+0.00
+    shallow rings (s < sqrt(1-r^2), inward move loses a sliver): 9 of 9 ; ring norms 0.7009..0.8925
+      ring 7  |c|=0.858811  W=+0.1809  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 1  |c|=0.892522  W=+0.0870  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 8  |c|=0.858811  W=+0.1809  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 6  |c|=0.700870  W=+0.6841  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 4  |c|=0.761798  W=+0.4755  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 9  |c|=0.820853  W=+0.2914  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 10 |c|=0.820853  W=+0.2914  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 3  |c|=0.761798  W=+0.4755  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 5  |c|=0.700870  W=+0.6841  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+
+  r = 0.39   (rho = 1-r = 0.61, sqrt(1-r^2) = 0.92081486)
+    boundary arcs: COVER the circle exactly
+    consecutive arc overlaps (deg): 7-1:+1.32, 1-8:+1.32, 8-6:+1.78, 6-4:+1.95, 4-9:+1.58, 9-10:+1.46, 10-3:+1.58, 3-5:+1.95, 5-7:+1.78
+    shallow rings (s < sqrt(1-r^2), inward move loses a sliver): 9 of 9 ; ring norms 0.7009..0.8925
+      ring 7  |c|=0.858811  W=+0.1647  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 1  |c|=0.892522  W=+0.0737  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 8  |c|=0.858811  W=+0.1647  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 6  |c|=0.700870  W=+0.6525  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 4  |c|=0.761798  W=+0.4503  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 9  |c|=0.820853  W=+0.2719  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 10 |c|=0.820853  W=+0.2719  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 3  |c|=0.761798  W=+0.4503  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 5  |c|=0.700870  W=+0.6525  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+
+  r = 0.4   (rho = 1-r = 0.6, sqrt(1-r^2) = 0.91651514)
+    boundary arcs: COVER the circle exactly
+    consecutive arc overlaps (deg): 7-1:+2.64, 1-8:+2.64, 8-6:+3.52, 6-4:+3.85, 4-9:+3.14, 9-10:+2.90, 10-3:+3.14, 3-5:+3.85, 5-7:+3.52
+    shallow rings (s < sqrt(1-r^2), inward move loses a sliver): 9 of 9 ; ring norms 0.7009..0.8925
+      ring 7  |c|=0.858811  W=+0.1491  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 1  |c|=0.892522  W=+0.0608  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 8  |c|=0.858811  W=+0.1491  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 6  |c|=0.700870  W=+0.6221  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 4  |c|=0.761798  W=+0.4261  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 9  |c|=0.820853  W=+0.2531  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 10 |c|=0.820853  W=+0.2531  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 3  |c|=0.761798  W=+0.4261  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 5  |c|=0.700870  W=+0.6221  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+
+  r = 0.43   (rho = 1-r = 0.57, sqrt(1-r^2) = 0.90282889)
+    boundary arcs: COVER the circle exactly
+    consecutive arc overlaps (deg): 7-1:+6.59, 1-8:+6.59, 8-6:+8.54, 6-4:+9.31, 4-9:+7.74, 9-10:+7.20, 10-3:+7.74, 3-5:+9.31, 5-7:+8.54
+    shallow rings (s < sqrt(1-r^2), inward move loses a sliver): 9 of 9 ; ring norms 0.7009..0.8925
+      ring 7  |c|=0.858811  W=+0.1050  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 1  |c|=0.892522  W=+0.0241  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 8  |c|=0.858811  W=+0.1050  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 6  |c|=0.700870  W=+0.5373  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 4  |c|=0.761798  W=+0.3583  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 9  |c|=0.820853  W=+0.2002  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 10 |c|=0.820853  W=+0.2002  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 3  |c|=0.761798  W=+0.3583  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 5  |c|=0.700870  W=+0.5373  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+
+  r = 0.45   (rho = 1-r = 0.55, sqrt(1-r^2) = 0.89302855)
+    boundary arcs: COVER the circle exactly
+    consecutive arc overlaps (deg): 7-1:+9.21, 1-8:+9.21, 8-6:+11.79, 6-4:+12.81, 4-9:+10.76, 9-10:+10.04, 10-3:+10.76, 3-5:+12.81, 5-7:+11.79
+    shallow rings (s < sqrt(1-r^2), inward move loses a sliver): 9 of 9 ; ring norms 0.7009..0.8925
+      ring 7  |c|=0.858811  W=+0.0776  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 1  |c|=0.892522  W=+0.0011  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 8  |c|=0.858811  W=+0.0776  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 6  |c|=0.700870  W=+0.4856  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 4  |c|=0.761798  W=+0.3167  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 9  |c|=0.820853  W=+0.1674  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 10 |c|=0.820853  W=+0.1674  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 3  |c|=0.761798  W=+0.3167  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+      ring 5  |c|=0.700870  W=+0.4856  outward sliver COVERED by the other ten disks (no obstruction at the infinitesimal level)
+
+================================================================================================================
+PART 2.  Controls: the exact dominance criterion and its C464 endpoint
+================================================================================================================
+  criterion: B(c,r) cap D subset B(tc,r)  <=>  1 - r^2 <= t s^2   (s+r>1), checked on the
+  extreme point of B(c,r)cap D (the circle-circle crossing, x.e = (1+s^2-r^2)/(2s)):
+    r=0.40 s=0.95 (steep ring (s > sqrt(1-r^2))): t=1.000000  max|x-tc|-r over B(c,r)capD = -3.671e-01  criterion(1-r^2<=t s^2)=True
+    r=0.40 s=0.95 (steep ring (s > sqrt(1-r^2))): t=0.965374  max|x-tc|-r over B(c,r)capD = -4.000e-01  criterion(1-r^2<=t s^2)=True
+    r=0.40 s=0.95 (steep ring (s > sqrt(1-r^2))): t=0.930748  max|x-tc|-r over B(c,r)capD = -3.671e-01  criterion(1-r^2<=t s^2)=True
+    r=0.40 s=0.95 (steep ring (s > sqrt(1-r^2))): t=0.920748  max|x-tc|-r over B(c,r)capD = -3.576e-01  criterion(1-r^2<=t s^2)=False
+      -> t_crit = (1-r^2)/s^2 = 0.930748 ; at s = sqrt(1-r^2)=0.916515 one has t_crit = 1 (C464 endpoint: outer root rho_+ -> inner root rho_-)
+      C464 control: rho_+=0.950000, rho_-=(1-r^2)/rho_+=0.884211, product=0.8400000000 (=1-r^2=0.8400000000)
+    r=0.40 s=0.80 (shallow ring (s < sqrt(1-r^2))): t=1.000000  max|x-tc|-r over B(c,r)capD = -2.750e-01  criterion(1-r^2<=t s^2)=False
+    r=0.40 s=0.80 (shallow ring (s < sqrt(1-r^2))): t=0.990000  max|x-tc|-r over B(c,r)capD = -2.670e-01  criterion(1-r^2<=t s^2)=False
+    r=0.40 s=0.80 (shallow ring (s < sqrt(1-r^2))): t=1.312500  max|x-tc|-r over B(c,r)capD = -2.750e-01  criterion(1-r^2<=t s^2)=True
+    r=0.40 s=0.80 (shallow ring (s < sqrt(1-r^2))): t=1.302500  max|x-tc|-r over B(c,r)capD = -2.830e-01  criterion(1-r^2<=t s^2)=False
+      -> t_crit = (1-r^2)/s^2 = 1.312500 ; at s = sqrt(1-r^2)=0.916515 one has t_crit = 1 (C464 endpoint: outer root rho_+ -> inner root rho_-)
+      -> t_crit > 1: no inward move is a dominance at all (this is the inner-root level)
+      C464 control: rho_+=0.950000, rho_-=(1-r^2)/rho_+=0.884211, product=0.8400000000 (=1-r^2=0.8400000000)

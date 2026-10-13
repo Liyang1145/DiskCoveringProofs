@@ -1,0 +1,133 @@
+{
+  "status": "numeric_shoelace_geometry_control_not_proof",
+  "rows": [
+    {
+      "face": 0,
+      "paired_area": 0.2638354523151206,
+      "hexagon_signed_area": 0.2638354523151205,
+      "cap_energy": 0.2797420587793404,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": -3.3306690738754696e-16
+    },
+    {
+      "face": 1,
+      "paired_area": 0.28007111135569107,
+      "hexagon_signed_area": 0.2800711113556912,
+      "cap_energy": 0.2859082651494483,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 2.220446049250313e-16
+    },
+    {
+      "face": 2,
+      "paired_area": 0.2682600122272946,
+      "hexagon_signed_area": 0.2682600122272947,
+      "cap_energy": 0.2859082651494482,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 1.1102230246251565e-16
+    },
+    {
+      "face": 3,
+      "paired_area": 0.2638354523151206,
+      "hexagon_signed_area": 0.26383545231512073,
+      "cap_energy": 0.2797420587793404,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 2.220446049250313e-16
+    },
+    {
+      "face": 4,
+      "paired_area": 0.28007111135569107,
+      "hexagon_signed_area": 0.2800711113556912,
+      "cap_energy": 0.28590826514944834,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 1.1102230246251565e-16
+    },
+    {
+      "face": 5,
+      "paired_area": 0.2682600122272946,
+      "hexagon_signed_area": 0.2682600122272947,
+      "cap_energy": 0.2859082651494482,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 0.0
+    },
+    {
+      "face": 6,
+      "paired_area": 0.2638354523151205,
+      "hexagon_signed_area": 0.26383545231512073,
+      "cap_energy": 0.2797420587793404,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": -2.220446049250313e-16
+    },
+    {
+      "face": 7,
+      "paired_area": 0.280071111355691,
+      "hexagon_signed_area": 0.2800711113556912,
+      "cap_energy": 0.28590826514944834,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 2.220446049250313e-16
+    },
+    {
+      "face": 8,
+      "paired_area": 0.2682600122272946,
+      "hexagon_signed_area": 0.2682600122272947,
+      "cap_energy": 0.2859082651494482,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 0.0
+    },
+    {
+      "face": 9,
+      "paired_area": 0.26383545231512057,
+      "hexagon_signed_area": 0.2638354523151206,
+      "cap_energy": 0.2797420587793404,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 0.0
+    },
+    {
+      "face": 10,
+      "paired_area": 0.28007111135569107,
+      "hexagon_signed_area": 0.2800711113556912,
+      "cap_energy": 0.2859082651494483,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 1.1102230246251565e-16
+    },
+    {
+      "face": 11,
+      "paired_area": 0.2682600122272946,
+      "hexagon_signed_area": 0.2682600122272947,
+      "cap_energy": 0.2859082651494482,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 1.1102230246251565e-16
+    },
+    {
+      "face": 12,
+      "paired_area": 0.2540152240908957,
+      "hexagon_signed_area": 0.25401522409089583,
+      "cap_energy": 0.28590826514944834,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 0.0
+    },
+    {
+      "face": 13,
+      "paired_area": 0.2540152240908957,
+      "hexagon_signed_area": 0.25401522409089583,
+      "cap_energy": 0.28590826514944834,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 0.0
+    },
+    {
+      "face": 14,
+      "paired_area": 0.2826304332814259,
+      "hexagon_signed_area": 0.282630433281426,
+      "cap_energy": 0.2859082651494484,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 2.220446049250313e-16
+    },
+    {
+      "face": 15,
+      "paired_area": 0.282630433281426,
+      "hexagon_signed_area": 0.282630433281426,
+      "cap_energy": 0.28590826514944834,
+      "universal_cap": 0.28590826514944834,
+      "radius_energy_residual": 1.1102230246251565e-16
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "windows_native_launcher_pid": 10828,
+  "command": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu2204",
+    "--exec",
+    "/usr/bin/env",
+    "-C",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004",
+    "./peel_small_order_origin_collar-linux",
+    "24",
+    "16",
+    "n24-B16-s1/MANIFEST.json",
+    "10000000",
+    "788872",
+    "1632237",
+    "2632431",
+    "0",
+    "dfs",
+    "-",
+    "-",
+    "4381913",
+    "100000",
+    "1"
+  ],
+  "actual_exit_code": 0,
+  "native_terminal_observed": true,
+  "native_linux_identity_line": [
+    [
+      "12835",
+      "24",
+      "16"
+    ]
+  ],
+  "input_bindings_sha256": "3718895ab1d6662b2a729b484b6baffac84d175a5576c12b3f9f0efde6f42fee",
+  "native_log_sha256": "97562fb6186f559a818309c10d35238cc13494cb5b09a6d1acb5a439348ae460",
+  "manifest_sha256": "42be0bf989823a9cf9da4fca1cee83abe32338cfecba40affe83edc8ee4f718f",
+  "seconds": 2742.780999999988,
+  "source_sha256": "1899f6210264cb789b77aaf99b2bb05077057597556bdb068b2f2d78cc5ac0fc"
+}

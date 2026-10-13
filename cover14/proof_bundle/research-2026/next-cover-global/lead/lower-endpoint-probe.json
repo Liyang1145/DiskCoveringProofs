@@ -1,0 +1,114 @@
+{
+  "status": "numeric_only_not_certificate",
+  "scope": "12closestcurrentlyavailablejointsurvivors",
+  "runs": [
+    {
+      "family": "10/4",
+      "index": 141,
+      "old_bound": 3.543460208486322e-05,
+      "numeric_delta": 0.04894348370484647,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 3.543460208499383e-05
+    },
+    {
+      "family": "10/4",
+      "index": 894,
+      "old_bound": 0.00039772212462291305,
+      "numeric_delta": 0.04894348370484647,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.0003977221246227458
+    },
+    {
+      "family": "10/4",
+      "index": 624,
+      "old_bound": 0.0010449685102203146,
+      "numeric_delta": 0.04894348370484647,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.00104496851022029
+    },
+    {
+      "family": "10/4",
+      "index": 183,
+      "old_bound": 0.001045542578458373,
+      "numeric_delta": 0.04894348370484647,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.0010455425784585692
+    },
+    {
+      "family": "10/4",
+      "index": 556,
+      "old_bound": 0.0013060665713923955,
+      "numeric_delta": 0.04894348370484647,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.001306066571392428
+    },
+    {
+      "family": "10/4",
+      "index": 328,
+      "old_bound": 0.002963347464915615,
+      "numeric_delta": 0.04894348370484647,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.0029633474649157776
+    },
+    {
+      "family": "11/3",
+      "index": 136,
+      "old_bound": 0.00010639046606916315,
+      "numeric_delta": 0.04050702638550263,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.000106390466069195
+    },
+    {
+      "family": "11/3",
+      "index": 31,
+      "old_bound": 0.00034417972729271034,
+      "numeric_delta": 0.04050702638550263,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.00034417972729272606
+    },
+    {
+      "family": "11/3",
+      "index": 34,
+      "old_bound": 0.002922587555592689,
+      "numeric_delta": 0.04050702638550263,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.002922587555592715
+    },
+    {
+      "family": "11/3",
+      "index": 237,
+      "old_bound": 0.0037627791368212747,
+      "numeric_delta": 0.04050702638550263,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.003762779136821326
+    },
+    {
+      "family": "11/3",
+      "index": 218,
+      "old_bound": 0.004889608494874995,
+      "numeric_delta": 0.04050702638550263,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.004889608494875075
+    },
+    {
+      "family": "11/3",
+      "index": 264,
+      "old_bound": 0.0057425261719185276,
+      "numeric_delta": 0.04050702638550263,
+      "old_cross_active": 0,
+      "numeric_bound_delta": 0.0,
+      "numeric_new_bound_estimate": 0.005742526171918616
+    }
+  ]
+}

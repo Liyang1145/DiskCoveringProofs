@@ -1,0 +1,65 @@
+{
+  "verified": true,
+  "schema": "linked-leaf-refinement-mechanical-derivation-v1",
+  "source_sha256": "9aa94143244da85def75658458deacbda0389c63a9899db6a0a2dc2aacddcf04",
+  "files": [
+    {
+      "source": "refine_paid_hole_leaves.py",
+      "source_sha256": "ae7ea5728ac75aa9b9f7847c33109c3f52c67596923d1b107d1733fb7b4b39e2",
+      "target": "refine_linked_collar_leaves.py",
+      "target_sha256": "1ec5a6cc1b940988e62f5bcfd95c0062fc6a4b6003f520d5b434985926758874",
+      "replacements": [
+        [
+          "\"proof-paid-simple-hole-independent-replay-v1\"",
+          "\"proof-paid-linked-general-collar-independent-replay-v1\""
+        ],
+        [
+          "\"replay_paid_hole.py\"",
+          "\"replay_linked_general_collar.py\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "replay_refined_hole_leaves.py",
+      "source_sha256": "26ab8c89e1c834f211e81d5c3fbc381bf8c1f84b80e6a13014fd5c1792809fa1",
+      "target": "replay_refined_linked_leaves.py",
+      "target_sha256": "c300fc898697468e8e422a52c1a33ff6fd2640435845fa9e22d2c5b8c8f07a55",
+      "replacements": [
+        [
+          "from proof_paid_hole_kernel import replay",
+          "from linked_general_collar_kernel import replay"
+        ],
+        [
+          "\"proof-paid-simple-hole-independent-replay-v1\"",
+          "\"proof-paid-linked-general-collar-independent-replay-v1\""
+        ],
+        [
+          "\"replay_paid_hole.py\"",
+          "\"replay_linked_general_collar.py\""
+        ],
+        [
+          "\"refine_paid_hole_leaves.py\"",
+          "\"refine_linked_collar_leaves.py\""
+        ],
+        [
+          "\"proof_paid_hole_kernel.py\"",
+          "\"linked_general_collar_kernel.py\""
+        ],
+        [
+          "\"PROOF-PAID-HOLE-SOURCE.md\"",
+          "\"GENERAL-COLLAR-FILLING-SOURCE.md\""
+        ],
+        [
+          "\"same-topology-hole-force-refinement-exact-v1\"",
+          "\"same-topology-linked-collar-force-refinement-exact-v1\""
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    }
+  ],
+  "only_schema_source_identity_and_complete_filling_provider_changed": true,
+  "only_original_FULL_PENDING_leaves_can_change": true,
+  "all_other_topology_states_payments_and_child_lists_unchanged": true,
+  "global_optimality_proved": false
+}

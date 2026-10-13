@@ -1,0 +1,23 @@
+{
+  "schema": "N26-difference-product-synthetic-closed-partition-controls-v1",
+  "independent_BFS_DFS_two_closed_halves_and_shared_boundary_agreed": true,
+  "synthetic_invalid_partition_controls_rejected": [
+    "one-closed-half-omitted",
+    "two-closed-halves-identified",
+    "boolean-child-index",
+    "unreachable-hidden-node",
+    "split-boundary-outside-parent",
+    "split-boundary-at-parent-endpoint",
+    "backward-cycle",
+    "nonempty-half-called-EMPTY",
+    "unsupported-geometry-mode",
+    "split-has-unknown-proof-fields"
+  ],
+  "synthetic_NOT_an_actual_root29_partition_or_geometry_acceptance": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "tested_product_forest_module_sha256": "42cee94208c9c092df4ab0bbfc23590b3ac808ba85a0debea6e024c9b8c61a56",
+  "executed_test_sha256": "5f0d37a388ab9fec8d1b1f3fc7bbdb502312ed137a6993333a59c6604d6e551f"
+}

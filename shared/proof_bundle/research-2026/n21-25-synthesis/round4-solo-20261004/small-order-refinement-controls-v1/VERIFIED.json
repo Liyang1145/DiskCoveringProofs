@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "schema": "small-order-real-full-pending-leaf-refinement-controls-v1",
+  "actual_original_pending_family": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B16-f1\\batch-000001\\parent-0001915",
+  "own_order_real_full_family_strict_positive_separate_process_replayed": true,
+  "wrong_order_constants_source_state_and_topology_refusals": [
+    "N",
+    "B",
+    "cap8",
+    "radius_upper",
+    "constants_sha256",
+    "roots",
+    "collar_faces",
+    "source_collar_sha256",
+    "extra-topology-node",
+    "old-child-deletion",
+    "different-complete-leaf-state",
+    "missing-changed-leaf-accounting"
+  ],
+  "old_already_paid_branches_and_topology_retained_unchanged": true,
+  "not_a_complete_boundary_source_payment": true,
+  "source_sha256": "3145ccdca4937401fbfb51e71d11e5d905ad73fbbaabbdfda84b1b34ef9d418a",
+  "refinement_source_sha256": "a597b14ce5960883495893e7ed592b0e532c947814c49422a82a3dfb34929a55",
+  "positive_exact_report_sha256": "2ec42176d16cda94000923875d117906c1bfa9e0d53182e4a92f0ca959c32af4",
+  "global_optimality_proved": false
+}

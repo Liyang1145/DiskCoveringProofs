@@ -1,0 +1,128 @@
+{
+  "schema": "N26-independent-actual-newest-full134rod-descendant-arithmetic-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "38a5c2afb52df79de29915f53a61e3c7bbad9d08dd2fbe1bd9636e532121ea4a",
+  "checked_newest_forest_sha256": "390c514c230e38da309025467a3e293cd29f23fc7a8b90701af06f99f7e88e08",
+  "checked_newest_forest_controls_sha256": "afa042a501db44bed79b1b706e42e8cad633bb840a39e5df55f2363c18cd06cf",
+  "retained_ancestor_forest_sha256": "56444a10c5822c08906b7bb9161e7412acff7e7162ee5bbba134ce744c401884",
+  "actual_entire_newest_old_mode_forest_and_all_ledgers_reconstructed": true,
+  "independent_parent_walk_and_exact_actual_OPEN_descendant_containment_checked": 2,
+  "actual_NEW60ground_incidence_inverse_harmonic_Schur_identities_checked": 8,
+  "actual_newest_full134rod_closed_leaf_results_independently_reconstructed": [
+    {
+      "newest_OPEN_leaf": 1515,
+      "retained_old_ancestor": 1131,
+      "strategy": "universal-checked-kernel-fresh-newest-leaf-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-51305418031429033832920658771673861193061373573954349515801265162392932631776881862581182760569537/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 0
+    },
+    {
+      "newest_OPEN_leaf": 1515,
+      "retained_old_ancestor": 1131,
+      "strategy": "universal-checked-kernel-fresh-newest-leaf-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-40669439304474657370703992799286884702686872097171928985733994294789897155036539083624345753121/7812500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 0
+    },
+    {
+      "newest_OPEN_leaf": 1515,
+      "retained_old_ancestor": 1131,
+      "strategy": "fresh-adversarial-reference-round1-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-99170035543575366474703443069173186782286060659337522151130933854649600487929866655324731699309373/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 1
+    },
+    {
+      "newest_OPEN_leaf": 1515,
+      "retained_old_ancestor": 1131,
+      "strategy": "fresh-adversarial-reference-round1-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-52451057794347357953766642989636965715765450031234537416370209536552023704692269848773071602885243/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 1
+    },
+    {
+      "newest_OPEN_leaf": 1516,
+      "retained_old_ancestor": 1131,
+      "strategy": "universal-checked-kernel-fresh-newest-leaf-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-6847582067276638886111128615852885143598169613466056438561675982928850360474044211952078214070707/1250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 0
+    },
+    {
+      "newest_OPEN_leaf": 1516,
+      "retained_old_ancestor": 1131,
+      "strategy": "universal-checked-kernel-fresh-newest-leaf-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-55811046635109949474603758432331228697495167958655108771537038105261353813463719680444767118797043/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 0
+    },
+    {
+      "newest_OPEN_leaf": 1516,
+      "retained_old_ancestor": 1131,
+      "strategy": "fresh-adversarial-reference-round1-full134-broader-log",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-78873476744783138364797210921357980732462641038308382293207799966731516171517126716285680538594281/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 1
+    },
+    {
+      "newest_OPEN_leaf": 1516,
+      "retained_old_ancestor": 1131,
+      "strategy": "fresh-adversarial-reference-round1-full134-positive-simplex",
+      "strict_whole_closed_leaf": false,
+      "strict_radius_margin": "-81274325316918390270585364127932573555989990341139497557021637385429210959942294364114066504701339/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "actual_nonnegative_difference_dual_terms": 1
+    }
+  ],
+  "independent_sine_square_feasible_corner_midpoint_checks": 24,
+  "known_feasible_tiny_NEW134rod_positive_controls_passed": 8,
+  "actual_NEW134rod_mode_rejection_controls_passed": [
+    "full134-old46inverse-schema-laundered",
+    "full134-old92positive-mode-laundered",
+    "full134-unknown-kernel-proof-field",
+    "full134-old92weight-table-substituted",
+    "full134-nonpositive-rod-weight",
+    "full134-boolean-weight-not-an-integer",
+    "full134-old46ground-dimension-substituted",
+    "full134-false-NEW60inverse-entry",
+    "full134-negative-inverse-denominator",
+    "full134-zero-NEWweight-scale",
+    "full134-zero-Taylor-strips",
+    "full134-boolean-Taylor-strips",
+    "full134-old-constant-certificate-mode",
+    "full134-unknown-leaf-proof-field",
+    "full134-nonpositive-corrected-LDL",
+    "full134-infeasible-reference",
+    "full134-negative-difference-dual",
+    "full134-duplicate-difference-dual",
+    "full134-forged-exact-radius-margin",
+    "full134-rounding-allowance-omitted"
+  ],
+  "actual_newest_descendant_scope_rejection_controls_passed": [
+    "newest-fullface-old-forest-digest-substituted",
+    "newest-fullface-closed-node-reused-as-OPEN",
+    "newest-fullface-actual-leaf-box-changed",
+    "newest-fullface-ancestor-ownership-invented",
+    "newest-fullface-old-ancestor-box-changed",
+    "newest-fullface-whole-root-ownership-changed",
+    "newest-fullface-arithmetic-promoted-to-geometry",
+    "newest-fullface-own-executor-spoofed"
+  ],
+  "all_newest_nodes_supports_nonOPEN_proofs_and_ledgers_UNMODIFIED": true,
+  "universal_checked_positive_kernels_reused_as_DATA_NOT_old_leaf_bound_payments": true,
+  "arithmetic_only_NOT_complete_latest_model_source_history_or_geometry_acceptance": true,
+  "whole_actual_root_cover_NOT_proved": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "d5b52a75ea28c02a5dd8a526b5fd023e78769ff2a6038b3bdc3ae56a3acecab1",
+  "tested_NEW_full134rod_module_sha256": "775c227e96f2900a25dceead401f42718094af0aa4c929bfe356dc729f100323",
+  "tested_newest_probe_sha256": "8f37822d6142db2fc534e79083f5be62e13b8ed2e0dba408c545577fef92b97e"
+}

@@ -1,0 +1,34 @@
+{
+  "scope": "exactT=pi/2 commonfacearc entirebothlowfamily",
+  "count": 73,
+  "live": 0,
+  "closed": {
+    "illegal": 0,
+    "value": 37
+  },
+  "terminal": 28.105971070830176,
+  "seconds": 0.8080604076385498,
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      0.6094608076372535,
+      1.0
+    ],
+    [
+      0.0,
+      1.5707963267948968
+    ]
+  ],
+  "source_sha256": {
+    "certify_coincident_face.py": "932a290fa29537e3d019ff216eee7b62624da31d5d918ff30c3d98a3a92497c6",
+    "coincident_face_jet.py": "0e2ba59d918731866205d28269337b033958589894934731acf51d5e494f82c5",
+    "width_endpoint_jet.py": "62cc933c09c27505256fa6069298ade1d3bd59acea59801241147c168d91efb6",
+    "patch_smooth_jet.py": "0ea533809a58940014e0fd980d29c80747cb9e05a467936645817bb74b0b68d0",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358",
+    "joint_nested_frozen.json": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb"
+  },
+  "topboxes": []
+}

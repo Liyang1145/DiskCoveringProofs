@@ -1,0 +1,8 @@
+{
+  "N": 24,
+  "B": 15,
+  "actual_native_and_union_terminals_observed": true,
+  "source_acceptance_sha256": "1f7875a60b3c8ec4fd79154e973a6354e74a49662ba2f20a5a823180867fd872",
+  "source_sha256": "1899f6210264cb789b77aaf99b2bb05077057597556bdb068b2f2d78cc5ac0fc",
+  "global_optimality_proved": false
+}

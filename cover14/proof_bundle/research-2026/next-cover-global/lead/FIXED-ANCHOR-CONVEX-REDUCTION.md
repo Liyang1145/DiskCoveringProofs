@@ -1,0 +1,20 @@
+# Fixed-anchor convex reduction (Cartesian, no general position)
+
+Use DEGREE-COVER-WITHOUT-EMBEDDING.md. Fix a catalogue triangulated disk K and an ordered anchor A_e∈S1 on each boundaryedge, consecutive arcgaps in(0,pi). Unknowns:14sitepoints c_v, one point w_f perrealface, radiusr. Constraints:
+ ||c_v−w_f||<=r for every v∈f;
+ ||c_u−A_e||<=r and ||c_v−A_e||<=r for every boundaryedge e=uv.
+This is a finite SOCP, globally convex in all unknowns with FIXEDanchors. Every feasible solution withr<1 gives anactualunitdiskcover bythePLdegree theorem. Conversely actualnormalizedcoverVoronoidata supply suchwitnesses (C1172). Conditional on C1171/C1172 existential catalogue extraction and the degree-cover sufficiency, the GLOBAL infimum over catalogue types K and ordered anchor assignments A equals the original covering optimum (in the r<=U branch). Thus only ordered circle anchors (q−1 after rotation) and finite K remain as outer nonconvex variables, not site/witness coordinates. No symmetry imposed. The PL theorem's closed boundary extension permits repeated anchors with lifted angular increments in[0,pi), sum2pi. IMPORTANT: V_K(A) is the optimum of the WITNESS-certificate family; the resulting cover need not have extracted Voronoi type K or actual switch anchors A. Do NOT assert per-extracted-type equality. The equality uses infimum over all(K,A), in both directions.
+
+## Elementary dual, independent of SOCP software
+Orient every incidenceedge from a freepoint to anotherfreepoint or fixedanchor. Let p_e=x_tail−x_head. Choose vectors z_e∈R² satisfying EXACT forcebalance sum_out z−sum_in z=0 at EVERY freevertex (sites and facewitnesses). Then
+ sum_e z_e·p_e = −sum_anchor A_a·(sum_edgesendinga z_e) =: L_z(A).
+Cauchy–Schwarz gives sum z_e·p_e<=r sum_e||z_e||. Therefore
+ **r>= L_z(A)/sum_e||z_e||**
+for every feasible system, providednonzeroz. No dualitytheoremneededforthislowerbound. With SOCP Slater (takebig r), strongduality additionallyidentifiesthe supremum ofthese bounds withthefixedanchor optimum. The elementary inequality is enoughforcertification.
+
+For floatingmultiplierproposals, exactforcebalance isrepairablebyrationalcycleflows ontheincidencegraph augmentedwithafixedanchorroot (anchorforcesunconstrained individually). Normdenominatorneedsupperintervalbound; numeratorneedsdirectedlowerbound. Foranchorangles in knownintervals, eachterm−b_a·(cos t_a,sin t_a) has anelementaryintervalminimum, allowingboxlowerbounds withsamecertifiedflow. They sum independently evenwhenanchororderingimposesmoreconstraints, hence remainvalid. Globalrotation canbefixed atoneanchor; eachflowmustbeusedinthatgauge.
+
+No singleflow is expectedsharpglobally: earlierfixedstressobstruction concerns anotherenergyandfulldomain, anddoesnotimplythisboxadaptiveconvexoraclefails. Do notassertjointconvexityintheanchorangles. V(A), the SOCPvalue, isconvex intheCARTESIANanchorcoordinates, but minimizing itontheunitcircleproduct isnotconvex. Structural gain is exact elimination ofallsite/witnesscoordinates atfixedanchors, with elementaryduals anddegenerate-safecoverage.
+
+## Attainment, dual normalization, and safe exact scope
+The incidencegraph ofsites+facewitnesses isconnected andtouchesanchors becauseK isatriangulateddisk. Forr<=2, propagateedge-lengthbounds alongfinitepaths fromananchor toEVERYfreevertex (hidden sitesneedpaths,notdirectanchorincidences). Thus thefeasiblelevelset isclosed andbounded, hencecompact. r=1/allfreepoints0 isfeasible; r=2/allfreepoints0 isstrictlyfeasible. V_K(A) isattained andSlater holds. The dualnormalizedform is maximize L_z(A) subjectto exactfreevertexbalance andsum||z||<=1; scaleinvariancegives thepositive ratioform. Foranyorderedanchor dataV<1, theattainedprimalpointgivesa cover. AtV=1 theorigincoveralreadyexists. This proves r_D<=inf_(K,A)V_K(A). Conversely normalizedextraction ofanycoverinr<=U yieldsone(K,A) andfeasiblewitnesses, soinfV<=r; importantlyK,A maychange between covers or afternormalization. TogetherwiththeattainedcandidatebelowU thisgivesglobal-inf equalityonthenecessary cataloguebranch. No fixed-extractedgraph optimum equalityisclaimed.

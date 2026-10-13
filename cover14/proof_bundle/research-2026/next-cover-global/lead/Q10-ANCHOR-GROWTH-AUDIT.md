@@ -1,0 +1,15 @@
+# Lead audit of local anchor-value quadratic growth (C1352)
+
+Inspected member `q10-anchor-curvature/REPORT.md`, C1281 PL-degree sufficiency source, fixed-anchor convex reduction, C1262 local penalty proof, and endpoint derivative script. Replayed all20 signed slopes>1/5 using existing directed interval arithmetic. This is not an independent arithmetic kernel; the analytic transfer is the new evidence.
+
+1. C1281 DOES imply actual coverage from the complete Cartesian witness system, provided anchors lie in once-winding cyclic order with gaps in[0,pi), r<1. Near the exact candidate these hold strictly. No embedding, nearestness or recovered Voronoi-type assertion is needed.
+2. At fixed exact anchors, convex interpolation toward any feasible radius<=r* system yields covers in the C1262 local neighborhood. Local uniqueness is modulo rotations. The squared Frobenius norm along the straight segment is a quadratic polynomial; constancy on an interval forces the direction vector to vanish. Hence reference-anchor optimal SITES are globally unique within this convex fiber. Witness uniqueness is unnecessary.
+3. Uniform boundedness follows paths from all free vertices to anchors; |V(A)-V(B)|<=max|A-B|. Thus compactness proves qualitative localization of all minimizing site arrays near reference. This does not give an effective epsilon.
+4. Actual-center SOSC implies center quadratic growth. If growth failed, normalized displacements converge to a critical direction; KKT eliminates positive-contact first variations; weighted second variations contradict positive critical Hessian. Multiplier normalization affects only the positive constant.
+5. Both endpoint slopes are needed: for positive angular displacement use preceding owner, for negative use following. Bounds m|delta theta_j|<=h+B||delta C|| hold at fixed reference sites, using exact endpoint equality and Lipschitz site dependence. Then center quadratic growth bounds ||delta theta||² by a constant times h, and h=(V+r*)(V-r*). No derivative of the SOCP optimizer or strict complementarity used.
+
+## Correction of an overly broad caution
+C1335 is stated for arbitrary planar fixed anchors; by itself it is not a cover theorem. However once its anchors satisfy the ordered unit-circle hypotheses above, C1335's reconstruction plus C1281 DOES give an actual cover. Earlier notes saying the abstract system is simply 'weaker than actual coverage' were too broad if read under these anchor hypotheses. It is weaker than a specified nearest-Voronoi realization, not weaker than covering existence. No prior exclusion depended on the mistaken caution; those only needed the necessary direction. No global sharp optimum follows from this correction.
+
+## Unresolved quantitative implication
+C1352 proves existence of local quadratic growth for V in the full nonsymmetric local anchor family, but supplies no explicit epsilon larger than C1324. C1350 global metric domain is still much wider. Need effective quantitative transfer or exterior exclusion to the existing cell; qualitative compactness alone is not a terminating finite certificate.

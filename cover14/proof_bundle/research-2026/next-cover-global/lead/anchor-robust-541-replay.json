@@ -1,0 +1,10 @@
+{
+  "family": "10/4",
+  "index": 541,
+  "lower_radius_exact": "338684634455090301375260451184156952112524821/1000000000000000000000000000000000000000000000",
+  "lower_radius_display": 0.3386846344550903,
+  "excluded": true,
+  "incidence_rebuilt": true,
+  "exact_balance": true,
+  "vertices": 10
+}

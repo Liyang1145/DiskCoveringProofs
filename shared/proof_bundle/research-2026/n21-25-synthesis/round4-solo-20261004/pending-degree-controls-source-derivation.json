@@ -1,0 +1,48 @@
+{
+  "verified": true,
+  "schema": "pending-degree-fixed-seed-control-derivation-v1",
+  "files": [
+    {
+      "source": "peel_pending_degree_origin_collar.cpp",
+      "source_sha256": "881fe3e71a4f6634b4ffa836a48fd7456f8fa09de4dfb5cca7b8419f80bbcf2b",
+      "target": "pending_degree_probe_body.inc",
+      "target_sha256": "f4f547f6badc24a20571bb4333f09e9768984b2ff37dd775767b63e62799d833",
+      "changes": [
+        [
+          "int main(int argc,char**argv)",
+          "int frozen_pending_degree_main(int argc,char**argv)"
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    },
+    {
+      "source": "seed_cached_support_origin.cpp",
+      "source_sha256": "d2a898ad594dd6f6935d8096c841f3a17630085a063665ca054161e537eaec9d",
+      "target": "seed_pending_degree_origin.cpp",
+      "target_sha256": "9b6597f1300f2385af46e15d79d2ef0cc6fa6710c6691a8dae18eff93f608f4c",
+      "changes": [
+        [
+          "#include \"cached_origin_probe_body.inc\"",
+          "#include \"pending_degree_probe_body.inc\""
+        ],
+        [
+          " if(argc!=6)throw runtime_error(\"usage: seed-cached-origin input output flag slab strict-table\");",
+          " if(argc!=7)throw runtime_error(\"usage: seed-pending-degree input output origin slab strict-table pending-degree-flag\");"
+        ],
+        [
+          " load_sparse_obstacles(argv[5]);",
+          " load_sparse_obstacles(argv[5]);\n initialize_pending_degree_upper(argv[6]);"
+        ],
+        [
+          "write_cover_origin_summary(out);write_collar_chunk_manifest(out);",
+          "write_cover_origin_summary(out);write_pending_degree_upper_summary(out);write_collar_chunk_manifest(out);"
+        ]
+      ],
+      "exact_inverse_equals_frozen_source": true
+    }
+  ],
+  "source_sha256": "e166c10692b0f0458dcf45e8f29c5d9436fc897f5d853c54db1beb768bca0b61",
+  "same_original_fixed_seed_input_and_recursion": true,
+  "not_a_complete_boundary_family": true,
+  "global_optimality_proved": false
+}

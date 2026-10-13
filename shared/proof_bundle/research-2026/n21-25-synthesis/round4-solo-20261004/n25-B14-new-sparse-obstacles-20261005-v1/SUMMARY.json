@@ -1,0 +1,216 @@
+{
+  "N": 25,
+  "B": 14,
+  "groups_sha256": "a662693c15e11ace09cdfd7a2bf8f44481f4821000da5e3289e5b3d053eec6b1",
+  "outcomes": [
+    {
+      "group": 0,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "6995598466173025289632230358060691/1000009151642867456409000000000000000",
+      "minimum_local_margin": null,
+      "members": 2,
+      "tree_sha256": "9582c7e54e84dbe88d958fa16f8812a7108fd6f51dff1a6541b623e9c6fee623"
+    },
+    {
+      "group": 1,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 34,
+      "edges": 37,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "2856318985568549563523326727572761/200002854412264111339000000000000000",
+      "minimum_local_margin": null,
+      "members": 8,
+      "tree_sha256": "5e0733dd7ac6c4602b85da04cc4593d3ef8f20b4e49c6c4087786610b81053bf"
+    },
+    {
+      "group": 2,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "874340655220298766709184407425517/125002717292838302183000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "427a058295f7fe2ba30acf982f3a6c8c168b7423af7175234d48a619414a8569"
+    },
+    {
+      "group": 3,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "233142409844218016647015700003409/31250480002935689491000000000000000",
+      "minimum_local_margin": null,
+      "members": 4,
+      "tree_sha256": "686cc336544685ad5402f2291dab54dfab11df97f1b4b58b3555b4690214ab21"
+    },
+    {
+      "group": 4,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 41,
+      "edges": 49,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "721401721399731205446534209085487/500008833013848799213000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "f29c91b5ed3dd7e9f28b03bcf4abd003c905ca098d271d781ec8fea95c693c63"
+    },
+    {
+      "group": 5,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 45,
+      "edges": 55,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "117609974291783966949946197710653/250000273320869938647000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "d7dbfbcbd2c2ca2de7074577ce7dc9e3a7809492b3545b4018ecb6131121caeb"
+    },
+    {
+      "group": 6,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "13600022222370124419084733249269/66667273606407109631000000000000000",
+      "minimum_local_margin": null,
+      "members": 6,
+      "tree_sha256": "8695d5f64af40652d40004c847212e88a8ef97c30d886d11e884ba38edbfa55c"
+    },
+    {
+      "group": 7,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 44,
+      "edges": 55,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "73041331941038363353478767145657/125001481172168516043000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "66c1659ebf75d336e48735f857e7f897af9b759d4069d5da6f4b3525b7b76e26"
+    },
+    {
+      "group": 8,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 40,
+      "edges": 49,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "14194109264541644850081665454501/8928740351117123599000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "b2549c3dee61393d58314ccbd770f33db84fdb8d117ec883ef70251d273bbf27"
+    },
+    {
+      "group": 9,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "746165394798091925297821904547777/100001616879562685923000000000000000",
+      "minimum_local_margin": null,
+      "members": 3,
+      "tree_sha256": "f93ad43b815f17e329c9b897f49ac36d22051e15e3b0d9896d7624b418980010"
+    },
+    {
+      "group": 10,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 35,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "49722889060159501722179059477399/6666793322834334501000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "6ec911f96c405f9cf683ad5208d8de4ddc14e977b0a240853c28634e2ec27400"
+    },
+    {
+      "group": 11,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 34,
+      "edges": 40,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "315972009781767098769618930576391/40000712701256110709000000000000000",
+      "minimum_local_margin": null,
+      "members": 1,
+      "tree_sha256": "13147cbb731815eed0f3d20fcecba13e32cfa6c4aab72138f4b3ef56fc5b914d"
+    },
+    {
+      "group": 12,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 41,
+      "edges": 49,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "11171163066254643877948774580053/9259427598663209247000000000000000",
+      "minimum_local_margin": null,
+      "members": 2,
+      "tree_sha256": "7de3f414f6238e3c8492134fd05e56371ca321ba27b22dab62ef2620559f7633"
+    }
+  ],
+  "excluded_groups": 13,
+  "pending_groups": 0,
+  "catalog_members_excluded": 32,
+  "requested_groups_complete": true,
+  "source_sha256": "c6119c5c326677e7f4b64ffd15b2b4f275ecbca38105622617cf56a5b8ec0e37",
+  "source_receipt_sha256": "cd722af7f5d3c8fdd38b41727d272a91055b55ba4ec49433447c8dd338bf5b3d",
+  "source_exact_replay_sha256": "08950cd6f6a41a029847374e071e51585a01ee7aea5a0a1e5b5bd1e2274f2e92",
+  "parent_face_count": 847,
+  "reduced_face_count": 142,
+  "proposed_deletions": 847,
+  "accepted_deletions": 705,
+  "complete_family_coverage": false,
+  "global_face_minimality_not_claimed": true,
+  "global_optimality_proved": false
+}

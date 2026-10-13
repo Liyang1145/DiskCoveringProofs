@@ -1,0 +1,45 @@
+{
+  "scope": "four finite-set known-answer calibration cases only; exact derivation in R20-RESIDUAL-TWO-CENTER.md",
+  "cases": [
+    {
+      "case": "diameter",
+      "analytic": 0.25,
+      "dual": 0.25,
+      "primal_numeric": 0.25,
+      "center": [
+        6.938893821189167e-17,
+        -3.725290298461915e-09
+      ]
+    },
+    {
+      "case": "triangle",
+      "analytic": 0.25,
+      "dual": 0.24999999999999997,
+      "primal_numeric": 0.25,
+      "center": [
+        7.37257477290143e-18,
+        1.474514954580286e-17
+      ]
+    },
+    {
+      "case": "cap-single",
+      "analytic": 0.09,
+      "dual": 0.09000000000000002,
+      "primal_numeric": 0.0899999999999573,
+      "center": [
+        0.6000000000000236,
+        -7.34185371749425e-09
+      ]
+    },
+    {
+      "case": "cap-pair",
+      "analytic": 0.13,
+      "dual": 0.13000000000000006,
+      "primal_numeric": 0.12999999999999803,
+      "center": [
+        0.6000000000000006,
+        -6.658666033208821e-16
+      ]
+    }
+  ]
+}

@@ -1,0 +1,346 @@
+{
+  "verified": true,
+  "schema": "strict-sparse-outer-obstacle-library-v1",
+  "source_N": 25,
+  "B": 14,
+  "threshold": 1,
+  "radius_threshold": "239146311738101/1000000000000000",
+  "obstacle_count": 12,
+  "obstacles": [
+    {
+      "id": 0,
+      "B": 14,
+      "centers": 15,
+      "faces": [
+        14336,
+        17152,
+        19456
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000000.json.gz",
+      "tree_sha256": "295679135abd752c59bb9b17ecfa6d6e410c75a31ec8a0174c39d60bb0312ae7",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 32,
+        "edges": 37,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "14279840535388136531742011539108167/1000013114075904084533000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 1,
+      "B": 14,
+      "centers": 16,
+      "faces": [
+        14336,
+        33536,
+        51200
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000001.json.gz",
+      "tree_sha256": "519b858f2638e92832319d5aa8748badcb813173ac8c5a28b082cf18c0b53981",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 33,
+        "edges": 37,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "7140585668941263064324269525853717/500003665073572293983000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 2,
+      "B": 14,
+      "centers": 17,
+      "faces": [
+        49408,
+        77824,
+        100352
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000002.json.gz",
+      "tree_sha256": "c3e1e36ee21cda76115ac335bc657394dda42102306d70d9095d45bc944dac64",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 34,
+        "edges": 37,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "2489783424266979693098816465640067/999998544955613942633000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 3,
+      "B": 14,
+      "centers": 16,
+      "faces": [
+        14336,
+        35840,
+        49408
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000003.json.gz",
+      "tree_sha256": "32cf9f8a43d7051173d236f3fc596fe981da24c732c7883255aad5dea099f75a",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 33,
+        "edges": 37,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "14282050619459991964808452999320001/1000011093018453808099000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 4,
+      "B": 14,
+      "centers": 17,
+      "faces": [
+        14336,
+        33152,
+        83968,
+        98816
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000004.json.gz",
+      "tree_sha256": "ce35197236422bd11a5be1295f82fd98983a0ab8f064ceb7c4ef3632ad1bc6b6",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 35,
+        "edges": 40,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "2209689305194927952887794605402947/1000002443096779107753000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 5,
+      "B": 14,
+      "centers": 17,
+      "faces": [
+        49408,
+        77824,
+        99328
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000005.json.gz",
+      "tree_sha256": "90dda09f0bcc384849b20e9419b80457555ad1ff115c00e9e1def97ac8c1c109",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 34,
+        "edges": 37,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "1925776988888776446290291606982557/1000000744843335569143000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 6,
+      "B": 14,
+      "centers": 18,
+      "faces": [
+        14336,
+        81952,
+        164352,
+        196736
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000006.json.gz",
+      "tree_sha256": "bb7beb46e433da9aa5f49f968077bd8cb49786540e688450f99d149f59c5daa0",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 36,
+        "edges": 40,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "1749052410683223991102782636177407/250002223303016659293000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 7,
+      "B": 14,
+      "centers": 19,
+      "faces": [
+        14336,
+        99328,
+        131096,
+        278656,
+        393248
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000007.json.gz",
+      "tree_sha256": "e7d04cad5fcaced51482d69977b37b1b00dae2d0d918956c4eb631853cbeb06f",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 38,
+        "edges": 43,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "7461741429874714065882657425943523/1000009021896342352777000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 8,
+      "B": 14,
+      "centers": 18,
+      "faces": [
+        14336,
+        82048,
+        165888,
+        197120
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000008.json.gz",
+      "tree_sha256": "40e4578f12fb1e4a4c6dd0b34eab08b60f58ea490b0c1c58d158daa262123d23",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 36,
+        "edges": 40,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "1914572827329905168464138958509291/1000018119916332667809000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 9,
+      "B": 14,
+      "centers": 18,
+      "faces": [
+        224,
+        49168,
+        67072,
+        143360,
+        198656
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000009.json.gz",
+      "tree_sha256": "43e3ff4463493affd1d45744e550a35d5f026737ef01530038721ebee2f9e33d",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 37,
+        "edges": 43,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "1974829115334662176319031097729423/250003603968344356877000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 10,
+      "B": 14,
+      "centers": 19,
+      "faces": [
+        7168,
+        106496,
+        131120,
+        278784,
+        393280
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000010.json.gz",
+      "tree_sha256": "937d84757a03ddcdc21ed241f28fb8592ba608b5d5ab5f30165f6d7a4d53f2f2",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 38,
+        "edges": 43,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "7460271731529825345709217539251181/1000020012051078034919000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    },
+    {
+      "id": 11,
+      "B": 14,
+      "centers": 21,
+      "faces": [
+        7168,
+        106496,
+        147464,
+        393248,
+        786496,
+        1050112,
+        1573120
+      ],
+      "tree_file_relative_to_workspace": "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000011.json.gz",
+      "tree_sha256": "88b7dc2c5ab0eef642e07c14cbf1ecd2f656f4f5666e03e1800e1f19b646153f",
+      "fresh_exact_replay": {
+        "verified": true,
+        "vertices": 42,
+        "edges": 49,
+        "nodes": 1,
+        "counts": {
+          "DUAL": 1
+        },
+        "minimum_force_margin": "1610955211493457161710716492436267/499998862256380366433000000000000000",
+        "minimum_local_margin": null
+      },
+      "boundary_sites_not_in_faces_still_have_both_anchor_rods": true
+    }
+  ],
+  "files": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/export_sparse_outer_library.py": "c230c5e918d9f09552d2b70acc79683c3af6e96e6a0cf839635d60f4facf9838",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/GROUPS.json": "0d9c6d36b6018c55ffd303d6c6b0f10afa95f446bdac79b84c984b99af5a2b08",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/SUMMARY.json": "b1dd295d7abaf3b432a59b45e9c4c03a40db36dd079ccf822aae53a5c1650132",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-full-fresh-exact.json": "ffcbc252ac5d78445a2b7b5fb7268d3833498375d2659c571983a43af81fec65",
+    "research-2026/n21-25-synthesis/evidence/core-reduction/constants/n25.json": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "research-2026/n21-25-synthesis/round3-high/exact_graph.py": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9",
+    "research-2026/n21-25-synthesis/round3-high/replay_group_stage.py": "262dd7f0d4c3ed4d5026512f749729796fc936bdca65c3535f24f9d17fa8c4d8",
+    "research-2026/n21-25-synthesis/round3-high/stream_catalog.py": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d",
+    "research-2026/n21-25-synthesis/round2-grouped/partial_force_exact.py": "f0fd44362eaede709ec91fe1492073d51ea34757d879089fead8bfe853f614b6",
+    "research-2026/disk-cover-proof-library/external/pinned/cover20/proof_bundle/core/exact_arcs.py": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/SPARSE-OUTER-OBSTACLE-TRANSPORT.md": "0adbb5592d04513e7ebcb013f743ad29a549ff738c911eb39155b20fbf5d9e65",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000000.json.gz": "295679135abd752c59bb9b17ecfa6d6e410c75a31ec8a0174c39d60bb0312ae7",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000001.json.gz": "519b858f2638e92832319d5aa8748badcb813173ac8c5a28b082cf18c0b53981",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000002.json.gz": "c3e1e36ee21cda76115ac335bc657394dda42102306d70d9095d45bc944dac64",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000003.json.gz": "32cf9f8a43d7051173d236f3fc596fe981da24c732c7883255aad5dea099f75a",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000004.json.gz": "ce35197236422bd11a5be1295f82fd98983a0ab8f064ceb7c4ef3632ad1bc6b6",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000005.json.gz": "90dda09f0bcc384849b20e9419b80457555ad1ff115c00e9e1def97ac8c1c109",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000006.json.gz": "bb7beb46e433da9aa5f49f968077bd8cb49786540e688450f99d149f59c5daa0",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000007.json.gz": "e7d04cad5fcaced51482d69977b37b1b00dae2d0d918956c4eb631853cbeb06f",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000008.json.gz": "40e4578f12fb1e4a4c6dd0b34eab08b60f58ea490b0c1c58d158daa262123d23",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000009.json.gz": "43e3ff4463493affd1d45744e550a35d5f026737ef01530038721ebee2f9e33d",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000010.json.gz": "937d84757a03ddcdc21ed241f28fb8592ba608b5d5ab5f30165f6d7a4d53f2f2",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B14-sparse-obstacles-full-v1/group-0000011.json.gz": "88b7dc2c5ab0eef642e07c14cbf1ecd2f656f4f5666e03e1800e1f19b646153f"
+  },
+  "pattern_table_sha256": "44d85045816fcf15eeecb9248222e8b81e1fdcdb6888c68cdbff006d83959611",
+  "source_sha256": "c230c5e918d9f09552d2b70acc79683c3af6e96e6a0cf839635d60f4facf9838",
+  "all_library_trees_fresh_exact_replayed": true,
+  "no_root_or_local_theorem_used": true,
+  "all_B_boundary_sites_and_2B_anchor_rods_preserved": true,
+  "proper_face_subset_injections_required_for_transport": true,
+  "parents_samples_and_minimality_not_used_as_theorem_premises": true,
+  "global_optimality_proved": false,
+  "scope": "standalone strict sparse graph theorems on their own whole angle domains"
+}

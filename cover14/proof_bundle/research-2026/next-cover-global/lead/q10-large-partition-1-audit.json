@@ -1,0 +1,22 @@
+{
+  "status": "complete_exterior_exclusion",
+  "source_sha256": "a9d29856e34f993a52c3a0736ed99b2f25c12eac4275a0e731ad3af228ae60ff",
+  "domain_sha256": "bf46bd3b125107a9757e48de38b1c148c4395930ce019bd76d2e64d01c794eaa",
+  "indices": [
+    1
+  ],
+  "side": -1,
+  "threshold": "3/16",
+  "nodes": 3,
+  "excluded_leaves": [
+    {
+      "node": 2,
+      "lower_exact": "331755627971227171627648715187437310675804383/1000000000000000000000000000000000000000000000"
+    },
+    {
+      "node": 1,
+      "lower_exact": "82937535639751026864077749727947887458827757/250000000000000000000000000000000000000000000"
+    }
+  ],
+  "open_cells": []
+}

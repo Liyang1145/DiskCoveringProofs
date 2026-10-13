@@ -1,0 +1,43 @@
+{
+  "status": "content-join-verified",
+  "scope": "whole completed-domain manifest; not independent integer replay",
+  "atomic": 6723,
+  "pruned": 318,
+  "pending": 0,
+  "minimum_integer_gap": 6,
+  "scales": {
+    "26": 6720,
+    "28": 3
+  },
+  "manifest_sha256": "7f44132b8dd09c8377b7e300caebe6ca5485b8933bde86455f67062733c1c57a",
+  "files": {
+    "members\\structure\\parallel-domain\\completed-domain-base.json": "7f44132b8dd09c8377b7e300caebe6ca5485b8933bde86455f67062733c1c57a",
+    "members\\finite-reduction\\integer-domain\\out\\cache-provenance.json": "0066dae3b7c2f656132bfa569fc820fa82317b09f5790d8355c28f44eab4904f",
+    "members\\finite-reduction\\integer-domain\\out\\certified-cache.jsonl": "76a44a4e1988a6fa6ce237fb161a027cea75f78000ab478ee260732df96dd22e",
+    "members\\finite-reduction\\integer-domain\\archive\\verify-completed-domain-frozen.jsonl": "d1f2e6e9be25d03001d6a7f665854b798cfb470bb1ba6ac986a1ae49b3ee0ee7",
+    "members\\finite-reduction\\integer-domain\\archive\\verify-final-wave-base-frozen.jsonl": "79a7532baeab6d708c85ad78f832131c31bad2783e40261c15f0b5a707c01581",
+    "members\\finite-reduction\\integer-domain\\archive\\verify-merged-partial-frozen.jsonl": "2b217e5c4804a56836a8ea2586f3293cc2af3bcee811bd2cd5caeb304ad35cb7",
+    "members\\finite-reduction\\integer-domain\\archive\\verify-stage11825-run1.jsonl": "bfca08f6d40de46f7b740b66c0cca6aea1ce1aa348df12ce2e401138ad750b7e",
+    "members\\finite-reduction\\integer-domain\\archive\\verify-stage11825-run2.jsonl": "ac485fd6168d491d8210b618883f557474288dadfb2f9251d917f10be8dbd84b",
+    "members\\finite-reduction\\integer-domain\\out\\verify-completed-domain.jsonl": "d1f2e6e9be25d03001d6a7f665854b798cfb470bb1ba6ac986a1ae49b3ee0ee7",
+    "members\\finite-reduction\\integer-domain\\out\\verify-final-wave-base.jsonl": "79a7532baeab6d708c85ad78f832131c31bad2783e40261c15f0b5a707c01581",
+    "members\\finite-reduction\\integer-domain\\out\\verify-merged-partial.jsonl": "2b217e5c4804a56836a8ea2586f3293cc2af3bcee811bd2cd5caeb304ad35cb7",
+    "members\\finite-reduction\\integer-domain\\out\\verify-stage11825.jsonl": "68ed9b8e227c2f0bd62cd4b0b6db68abe970d2b28d0bb8714b6a1aaf2b8e1301",
+    "members\\finite-reduction\\integer-domain\\out\\verify-stage2200.jsonl": "3991a6e1290e74ed5cc1dc6908d53771167db02fea6811d1d550fb13d950af82",
+    "members\\finite-reduction\\integer-domain\\out\\verify-stage6700.jsonl": "de74204280b794858f3bf6267361d5910276f43451554ca93b5ffc1cbf804ece",
+    "evidence\\hubline-domain-stage2200.json": "fd7e2ac05e346bac9cce4752fe49ac317db4754baa617a94d110772391cc0ab7",
+    "evidence\\hubline-domain-stage6700.json": "c5c9271eeb683ba1fa31321c26ca31d966146a5381bf0d67408a64e6f7d1a287",
+    "evidence\\hubline-domain-stage11825.json": "26fefd6a842b9ca961498c3fd45fbfa5fd1c7ab4906ef22574bea0e0de42d6d1",
+    "members\\structure\\parallel-domain\\merged-partial-resume.json": "ba4397a3976f43558b61c3acdc51f3df4ec428f34a23222fe09fa4b2f4388f90",
+    "members\\structure\\parallel-domain\\final-wave-base.json": "71ead0af14ecfc9e105ae60ba1afa3b7f5a569b0b29627738a4b509354d4e665",
+    "members\\structure\\parallel-domain\\wave4fix-base.json": "daec632f122cc528eaf05aa49b1841e53f58caef203c49fc18cd53fc04094526",
+    "members\\upper-audit\\integer-atomic\\py\\integer_kernel.py": "0115c3f3660382cc5bcc53c1faf287ff624ca2f2c649a02035b7494759c0fc50",
+    "members\\upper-audit\\integer-atomic\\py\\integer_kernel_n.py": "a89a2cee8dcbcf4dd7585b6878a6ad48a2db6543c109473936e08096a7085d53",
+    "evidence\\atomic-unit-vectors-2048.json": "acc14b2c954c91748e38a0e78720d717de8f45ce17456d4f121dc6a4c1085481",
+    "members\\upper-audit\\integer-atomic\\evidence\\canonical-unit-vectors-8192.json": "e2fe3e7d6f0ab37587e83a9214b1abbe1127f8a83593732de1a584d88b7fb77a",
+    "members\\finite-reduction\\integer-domain\\out\\verify-completed-domain-summary.json": "244c3cce5f6e73b8a30a1d11b24dbca01453860c14008867c6d32b66605dccce",
+    "evidence\\completed-domain-prefix-partition.json": "344a674925c42e9e7c2abc412f71c97d5b1b4f8c7a25b82c4486d18665084f28",
+    "members\\finite-reduction\\integer-domain\\out\\freeze-completed-domain.json": "321238f5c318079bedda0f0be3e8c2c8db1a56e70715826bffe3ec3356944a72"
+  },
+  "legacy": "pre-field exceptions restricted to named generation/N/scale; execution call contract separately audited"
+}

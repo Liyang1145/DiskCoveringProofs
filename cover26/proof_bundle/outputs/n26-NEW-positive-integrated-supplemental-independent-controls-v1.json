@@ -1,0 +1,76 @@
+{
+  "schema": "N26-independent-actual-NEW-positive-integrated-leaf-arithmetic-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "71ecb02ee9ca413803805dcacfb142bb62b24659e115f720a57c17e26e485d76",
+  "checked_ancestor_forest_sha256": "56444a10c5822c08906b7bb9161e7412acff7e7162ee5bbba134ce744c401884",
+  "actual_constructed_NEW_integrated_trials_independently_reconstructed": [
+    {
+      "old_OPEN_leaf_index": 1131,
+      "support_index_DATA": 57,
+      "strict_actual_closed_leaf_bound": false,
+      "strict_radius_margin": "-1983984072566307724835491560484689971572281634635058485955977969370208485553445396737076579097773/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "independent_exact_normalized_strips_and_LDL_reconstructed": true
+    },
+    {
+      "old_OPEN_leaf_index": 1131,
+      "support_index_DATA": 16,
+      "strict_actual_closed_leaf_bound": false,
+      "strict_radius_margin": "-1999735365287882415451682913618797069592959095540215657223159470031636268285661453891986401573273/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "independent_exact_normalized_strips_and_LDL_reconstructed": true
+    },
+    {
+      "old_OPEN_leaf_index": 1132,
+      "support_index_DATA": 57,
+      "strict_actual_closed_leaf_bound": false,
+      "strict_radius_margin": "-2561664182861954850624216684087042288422591776478748834318358140520210754722773371344880423662621/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "independent_exact_normalized_strips_and_LDL_reconstructed": true
+    },
+    {
+      "old_OPEN_leaf_index": 1132,
+      "support_index_DATA": 16,
+      "strict_actual_closed_leaf_bound": false,
+      "strict_radius_margin": "-3056054313525773382194775381246885726400933200053906629250446803418147615735881219455756261847083/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "independent_exact_normalized_strips_and_LDL_reconstructed": true
+    }
+  ],
+  "actual_strict_old_closed_leaf_trials": 0,
+  "independent_normalized_weight_formula_and_all_closed_strips_checked": true,
+  "independent_sine_square_feasible_corner_midpoint_checks": 12,
+  "known_feasible_tiny_positive_weight_kernel_controls_passed": 4,
+  "actual_NEW_mode_rejection_controls_passed": [
+    "NEW-integrated-unknown-mode-field",
+    "NEW-integrated-forged-original-fixed-mode",
+    "NEW-integrated-original-rod-edge-omitted",
+    "NEW-integrated-nonpositive-rod-weight",
+    "NEW-integrated-false-integer-ground-inverse",
+    "NEW-integrated-alternative-weight-label-removed",
+    "NEW-integrated-original-fixed-weights-substituted",
+    "NEW-integrated-boolean-strip-count",
+    "NEW-integrated-zero-strip-count",
+    "NEW-integrated-excessive-strip-count",
+    "NEW-integrated-constant-mode-certificate-substituted",
+    "NEW-integrated-unknown-proof-field",
+    "NEW-integrated-invalid-positive-LDL",
+    "NEW-integrated-infeasible-reference",
+    "NEW-integrated-negative-difference-dual",
+    "NEW-integrated-duplicate-difference-dual",
+    "NEW-integrated-forged-radius-margin",
+    "NEW-integrated-missing-closed-strip-boundary"
+  ],
+  "same_original_rods_NEW_weights_NOT_original_fixed_kernel_relabelling": true,
+  "old_forest_and_latest_running_forest_not_changed": true,
+  "successful_old_leaf_NEEDS_fresh_actual_newest_OPEN_descendant_reconstruction_before_reuse": true,
+  "entire_root_cover_NOT_proved": true,
+  "arithmetic_only_NOT_complete_latest_model_source_history_or_geometry_acceptance": true,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "tested_NEW_integrated_module_sha256": "3857d10c465154006fbcf0029d018c7766b7b3505a4745e55d6f1f85e701cf58",
+  "executed_test_sha256": "699dc1f3c81be23c0c73f067d3e490cf317ee110ee8f95ed886665201db2425c"
+}

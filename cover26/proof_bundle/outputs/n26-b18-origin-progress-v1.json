@@ -1,0 +1,43 @@
+{
+  "schema": "N26-B18-origin-conditioned-prefix-progress-v1",
+  "verified_partition_bookkeeping": true,
+  "origin_condition_enabled": true,
+  "arbitrary_cover_reduction_accepted": false,
+  "B18_origin_catalog_exhausted": false,
+  "N26_complete_catalog": false,
+  "global_optimality_proved": false,
+  "completed_subtrees": 106,
+  "reused_empty_subtrees": 105,
+  "newly_completed_subtrees": 1,
+  "pending_subtrees": 669,
+  "limited_tasks_split": 0,
+  "forced_nodes_refined": 199,
+  "closed_rooted_graphs": 0,
+  "closed_distinct_orbits": 0,
+  "latest_checkpoint": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/b18-origin-batch-v1/checkpoint-00200.json",
+  "checkpoint_sha256": "5557ae15f78673d3e09de17c1ecba59f1bc77f42b3e362e73b6e974dc40ed996",
+  "negative_controls_rejected": [
+    "lost-pending-subtree",
+    "duplicate-reuse",
+    "nonzero-legacy-exit",
+    "changed-origin-model"
+  ],
+  "frozen_inputs": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_prefix_origin.py": "ec28797070f56bb905ec7db3ad88b164cc6758143f805ddfafc9faeeeab7e557",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/derive_prefix_origin.py": "88b0f3f0d26f30ddbf8bcab7b50ea66919166b2e4374bda07ab696af7d14e7a6",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_prefix_partition.py": "b4b5910832d964e76f801260ae7ecd0965153f4da1060c88b0bb626b5b2692b0",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/peel_synthesis_n26_cap8_prefix.cpp": "4b172c9236ba49880115dec51f6d3fe401bc495d9497e5e9d9b96e4d1edad724",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/peel_prefix_v1.linux": "209d7dd7eaaf7dee0ba4992e4b1252f8453d7ad40c6698ce91b99d0c61cd8c8d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-origin-v1/DERIVATION.json": "d7cf9df104fc8c5d2a0cf27d30aca7b699a072e433b63bb4f6fcb4601acb6df4",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-origin-v1/peel_prefix_origin.cpp": "a76a8ce6c0ee0ee0f513ae9eba086d5b6d1b6b3e39440ab0cac59ef5638620c9",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-origin-v1/peel_prefix_origin.linux": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-geometric-bridge-v1.md": "d3b1d042d0e268668538e4bf0011d9bc7fbdba8db26c406ec6622a5dd8fb6383",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-scope-budget-v1.json": "5366463e31db701eda34da47f0fb49da35001a573d1b8b18510ec8d4a0e05293",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/run_origin_prefix_batch.py": "03371ca4bb0815eb10da55ef0fe895a820cdaef17fe6cb088f42e0d04ea493e8",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-origin-screen-controls-v1.json": "2d7082b969909d1208979b94355e2a29b051e42fb1b83e10449c7bbcb814cc4f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/b18-prefix-batch-v1/checkpoint-00280.json": "d585f2c394f9f2a17a088ed5e8618c690b2deea05a583f2923637228d37cdf7b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/run_prefix_batch.py": "c9b0c25b232b5ccbad423a6676c342ddc4d5e6c7eb7f875a22bdeddbf7616fa5",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-regression-v3/VERIFIED.json": "093edbf4c897be8551d21f4831fac9382f145e9d08f4150d54769f1f5461ce31"
+  },
+  "scope": "Origin-conditioned combinatorial enumeration, with bound reuse of weaker-model empty subtrees; no global theorem."
+}

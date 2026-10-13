@@ -1,0 +1,24 @@
+{
+  "actual_exit_code": 0,
+  "pid": 9568,
+  "actual_child_terminal_observed": true,
+  "command": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu2204",
+    "--exec",
+    "/usr/bin/env",
+    "-C",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004/small-order-filling-controls-v2/FULL-REFERENCE-linux",
+    "6",
+    "3",
+    "small-order-filling-controls-v2/N6-B3-FULL.json",
+    "10000000",
+    "804156",
+    "1666328",
+    "2698800",
+    "0",
+    "noscreen"
+  ]
+}

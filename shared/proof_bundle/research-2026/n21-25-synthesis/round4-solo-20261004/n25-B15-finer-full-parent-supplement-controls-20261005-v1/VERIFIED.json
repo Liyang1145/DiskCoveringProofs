@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "schema": "complete-parent-finer-supplement-finite-controls-v1",
+  "finite_full_index_partition_positive": true,
+  "finite_conditional_source_positive": true,
+  "negative_controls_rejected": [
+    "missing-paid-row",
+    "missing-pending-row",
+    "overlap-paid-pending",
+    "duplicate-paid-row",
+    "duplicate-pending-row",
+    "unordered-paid-row",
+    "extra-ledger-row",
+    "boolean-parent-index",
+    "wrong-proof-N",
+    "wrong-proof-B",
+    "wrong-proof-centers",
+    "wrong-proof-faces",
+    "wrong-constants",
+    "wrong-kernel",
+    "wrong-replay-faces",
+    "actual-pending-family"
+  ],
+  "source_sha256": "e38323be2d8733e43bcbd442794dc43dadaaabbb48cdb8f981f5894d75dea5c5",
+  "audit_source_sha256": "194c54b0b2cd0e36cdc85b69f3b1a5a809eab044385cadc6e582c8c0681680d6",
+  "no_production_parent_lower_bound_or_family_paid_by_controls": true,
+  "global_optimality_proved": false
+}

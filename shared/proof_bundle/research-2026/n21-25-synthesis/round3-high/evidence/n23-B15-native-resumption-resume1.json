@@ -1,0 +1,17 @@
+{
+  "ProcessId": 37424,
+  "ParentProcessId": 27252,
+  "ThreadId": 40232,
+  "CreationTime": "2026-10-03T21:42:58.5473819Z",
+  "PreviousSuspendCountBeforeResume": 1,
+  "ResumeThreadCalls": 1,
+  "State": "retained-native-enumerator-resumed",
+  "ResumeRequired": false,
+  "CPUSecondsBeforeResume": 1269.859375,
+  "CommandLine": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n21-25-synthesis\\round3-high\\peel_degree.exe 23 15 evidence\\n23-B15-degree-streamed-resume1\\N23-B15-dfs.json 10000000 804156 1666328 2698800 0 dfs",
+  "n22_integrity_report_sha256": "1251052e053155abeafd0bec6d537aefbb631ec28cf6cea12bcc24d124f6c24f",
+  "n22_snapshot_sha256": "22aa3a7f8d99ccf0352ca702d74d07918b987b676063baee090392223dd99877",
+  "helper_sha256": "523db1f129bde908c21566edf70668723d93862380f52d02388d84123ff32bda",
+  "goal_paused": false,
+  "catalogue_complete": false
+}

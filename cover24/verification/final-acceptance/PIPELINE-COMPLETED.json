@@ -1,0 +1,8 @@
+{
+  "N": 24,
+  "actual_original_last_parent_binding_and_independent_final_audit_successfully_observed": true,
+  "final_global_source_acceptance_sha256": "5bb55c9858a4dc1245249b12fd45cab3c5ed132a238eb6f7e70ddd6f2d0bb777",
+  "source_sha256": "9934153ea182bcc67b55af6e2593f3ca78f10a547482a3c88f73db498bb57afe",
+  "global_source_proof_closed": true,
+  "scope": "qualified computer-assisted SOURCE proof; not formalization or third-party review"
+}

@@ -1,0 +1,37 @@
+{
+  "status": "independent_complete_basis_vertexsets",
+  "source_sha256": "24f018c6f86b2003eda8bfa1de998fb5ddb038362e6c02dceb4c329a30806dea",
+  "runs": [
+    {
+      "node": 0,
+      "vertices": 110,
+      "bases": 121,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 1,
+      "vertices": 38,
+      "bases": 301,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 2,
+      "vertices": 108,
+      "bases": 301,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 3,
+      "vertices": 36,
+      "bases": 685,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 4,
+      "vertices": 104,
+      "bases": 685,
+      "exact_vertexsets_equal": true
+    }
+  ],
+  "seconds": 0.457902193069458
+}

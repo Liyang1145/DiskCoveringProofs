@@ -1,0 +1,60 @@
+{
+  "status": "independent_fraction_replay",
+  "envelope_constants_certified": true,
+  "runs": [
+    {
+      "family": "10/3",
+      "index": 13,
+      "upper_display": -0.17109613083156183,
+      "upper_exact_rounded_outward": "-85548065415780913852886009127/500000000000000000000000000000"
+    },
+    {
+      "family": "10/3",
+      "index": 20,
+      "upper_display": -0.17223772258362097,
+      "upper_exact_rounded_outward": "-172237722583620954723736935917/1000000000000000000000000000000"
+    },
+    {
+      "family": "10/3",
+      "index": 23,
+      "upper_display": -0.12293771327216922,
+      "upper_exact_rounded_outward": "-61468856636084608058508226823/500000000000000000000000000000"
+    },
+    {
+      "family": "10/3",
+      "index": 24,
+      "upper_display": -0.12216524453557864,
+      "upper_exact_rounded_outward": "-122165244535578648390227248147/1000000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 3,
+      "upper_display": -0.14965932181060707,
+      "upper_exact_rounded_outward": "-74829660905303531065635562917/500000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 14,
+      "upper_display": -0.08575280517330743,
+      "upper_exact_rounded_outward": "-42876402586653711396690719859/500000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 18,
+      "upper_display": -0.03007597163182446,
+      "upper_exact_rounded_outward": "-30075971631824460507207758461/1000000000000000000000000000000"
+    },
+    {
+      "family": "10/4",
+      "index": 19,
+      "upper_display": -0.0786142134201944,
+      "upper_exact_rounded_outward": "-78614213420194399535152097367/1000000000000000000000000000000"
+    },
+    {
+      "family": "11/3",
+      "index": 4,
+      "upper_display": -0.00614328667510911,
+      "upper_exact_rounded_outward": "-49146293400872873963936261/8000000000000000000000000000"
+    }
+  ]
+}

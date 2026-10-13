@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "schema": "N23-B14-actual-pair-payment-source-map-controls-v1",
+  "real_original_full_source_fixture_types": 32,
+  "negative_controls_rejected": [
+    "missing-actual-binding",
+    "duplicate-actual-binding",
+    "extra-actual-binding",
+    "missing-origin-residual",
+    "duplicate-origin-residual",
+    "source-truncated",
+    "source-index-gap",
+    "wrong-residual-count",
+    "wrong-original-exposure-mask",
+    "wrong-boundary-shift",
+    "wrong-reflection-anchor",
+    "anchor-collision",
+    "center-collision",
+    "wrong-original-group-member-count",
+    "omitted-actual-two-boundary-face"
+  ],
+  "functional_tree_identifiers_not_counted_as_mathematical_proofs": true,
+  "source_sha256": "38ee8618309abfd76864d01a743e82b19c9b5872d809589711d8eba72beae2b6",
+  "audit_source_sha256": "e4c57d1700a44647446510f89285b678fd150cd1d58121e82839a48a50fd6f46",
+  "frozen_mapping_checker_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "global_optimality_proved": false
+}

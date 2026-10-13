@@ -1,0 +1,114 @@
+{
+  "schema": "N26-mixed-curvature-cover-interface-guard-controls-v1",
+  "metadata_guard_controls_passed": true,
+  "actual_arithmetic_rejection_control_paths_exercised": [
+    "constant:duplicate-whole-root-payment",
+    "constant:previously-paid-whole-root-reopened",
+    "constant:whole-root-sharp-domain-clipped",
+    "constant:first-closed-slab-omitted",
+    "constant:hidden-additional-slab",
+    "constant:shared-closed-cut-boundary-lost",
+    "constant:central-LOCAL-remainder-clipped",
+    "constant:positive-curvature-unsupported-by-exact-LDL",
+    "constant:negative-difference-dual-multiplier",
+    "constant:reference-outside-necessary-polytope",
+    "constant:LOCAL-coordinate-allowance-expanded",
+    "constant:discovery-arithmetic-result-substituted",
+    "constant:latest-accepted-non-OPEN-history-reset",
+    "integral:whole-root-ownership-changed",
+    "integral:first-closed-slab-omitted",
+    "integral:shared-slab-boundary-lost",
+    "integral:central-remainder-clipped",
+    "integral:Taylor-strip-omitted",
+    "integral:Taylor-weight-unjustifiably-increased",
+    "integral:weighted-rounding-operator-error-omitted",
+    "integral:nonpositive-Taylor-partition-count",
+    "integral:unsupported-integrated-positive-curvature",
+    "integral:infeasible-reference-outside-necessary-polytope",
+    "integral:strict-energy-margin-fabricated",
+    "integral:original-LOCAL-allowance-expanded",
+    "mixed:duplicate-root-across-modes",
+    "mixed:unknown-curvature-mode",
+    "mixed:constant-cover-relabelled-as-integral",
+    "mixed:integral-cover-relabelled-as-constant"
+  ],
+  "complete_latest_model_source_history_gate_NOT_executed": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "tested_own_acceptance_executor_sha256": "7c70722af1a533058d5f2240a0d52b94a7ba3174c951efac8e4848e2400849a8",
+  "tested_integral_backend_sha256": "b9e1af62159c82e46742976f7309d667eda78392e8e74bf59ee07ae998360f78",
+  "executed_test_sha256": "6a4ee3c3ef8b82523b2a2bf6c618f2dd706e289dd0c05036cd84643cbf98ad8d",
+  "synthetic_metadata_fixture_NOT_a_geometry_bundle": true,
+  "metadata_rejection_controls": [
+    "own-executor-relabelled-as-old-constant-checker",
+    "integrated-mode-omitted",
+    "unproved-mode-added",
+    "radius-scope-promoted-to-U",
+    "typed-resource-promoted-to-source-cache",
+    "new-cover-authorized-to-reset-old-forest",
+    "own-executed-code-hash-forged",
+    "constant-diagnosis-promoted-to-geometry",
+    "integral-diagnosis-promoted-to-geometry",
+    "integral-arithmetic-controls-omitted",
+    "guard-test-promoted-to-complete-source-replay",
+    "guard-test-executor-hash-forged"
+  ],
+  "arithmetic_source_whole_roots": 25,
+  "arithmetic_root_covers_checked": 9,
+  "arithmetic_remaining_whole_roots": 16,
+  "arithmetic_strict_slabs_checked": 85,
+  "arithmetic_original_LOCAL_boxes_checked": 9,
+  "mode_root_counts": {
+    "constant-hull": 6,
+    "integrated-Taylor": 3
+  },
+  "constant_tiny_positive_controls": [
+    {
+      "source_OPEN_index": 37,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 41,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 45,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 48,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 44,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    },
+    {
+      "source_OPEN_index": 40,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true
+    }
+  ],
+  "integrated_tiny_positive_controls": [
+    {
+      "source_OPEN_index": 33,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true,
+      "tiny_domain_integrated_curvature_freshly_checked": true
+    },
+    {
+      "source_OPEN_index": 36,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true,
+      "tiny_domain_integrated_curvature_freshly_checked": true
+    },
+    {
+      "source_OPEN_index": 32,
+      "known_feasible_tiny_candidate_not_strictly_excluded": true,
+      "tiny_domain_integrated_curvature_freshly_checked": true
+    }
+  ],
+  "pure_integral_backend_matches_preserved_independent_arithmetic_tester": true,
+  "latest_accepted_root959_partial_history_DATA_retained_identically": true,
+  "history_data_from_owned_standalone_layer_NOT_current_source_admission": true,
+  "fixed_resource_used_only_for_arithmetic_control_execution": true,
+  "fixture": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-curvature-cover-interface-guard-fixture-v1"
+}

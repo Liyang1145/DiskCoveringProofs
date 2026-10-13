@@ -1,0 +1,114 @@
+{
+  "scope": "finite numerical jointfactor diagnostic only; exact structuralcoupling valid all inward degenerate sectors",
+  "results": [
+    {
+      "source": "endpoint_frozen_dual_0_4.json",
+      "rows": [
+        {
+          "sector": 0,
+          "joint_max_numeric": -0.0494543742409181,
+          "arg": [
+            0.9999999999999157,
+            0.7451559499762471,
+            0.8672253430229762
+          ],
+          "conditional_total_numeric": 3.1334059115934685
+        },
+        {
+          "sector": 1,
+          "joint_max_numeric": 0.607281159475351,
+          "arg": [
+            0.9999999999991618,
+            0.8672226654916848,
+            0.9544907654554157
+          ],
+          "conditional_total_numeric": 3.1811091067545414
+        },
+        {
+          "sector": 2,
+          "joint_max_numeric": 0.7147847286396718,
+          "arg": [
+            0.9999999999999539,
+            0.9544835065178181,
+            0.9544866852014963
+          ],
+          "conditional_total_numeric": 3.1723056114090253
+        },
+        {
+          "sector": 3,
+          "joint_max_numeric": 0.5847574385410457,
+          "arg": [
+            0.9999999999991931,
+            0.9544849347166005,
+            0.8672266062627528
+          ],
+          "conditional_total_numeric": 3.1811209694654456
+        },
+        {
+          "sector": 4,
+          "joint_max_numeric": -0.04945437424098292,
+          "arg": [
+            0.9999999999999044,
+            0.867224951002363,
+            0.7451549948991051
+          ],
+          "conditional_total_numeric": 3.1334059115934036
+        },
+        {
+          "sector": 5,
+          "joint_max_numeric": 0.24278847462040148,
+          "arg": [
+            0.9999999999984238,
+            0.7451574707472715,
+            0.8344993498821984
+          ],
+          "conditional_total_numeric": 3.1645477791476706
+        },
+        {
+          "sector": 6,
+          "joint_max_numeric": 0.6286362634452441,
+          "arg": [
+            0.9999999999961053,
+            0.8345002524814535,
+            0.856314504092272
+          ],
+          "conditional_total_numeric": 3.1683656867847554
+        },
+        {
+          "sector": 7,
+          "joint_max_numeric": 0.6286362634430989,
+          "arg": [
+            0.999999999992626,
+            0.8563159262729598,
+            0.8345003780902555
+          ],
+          "conditional_total_numeric": 3.168365686781522
+        },
+        {
+          "sector": 8,
+          "joint_max_numeric": 0.23652470561924713,
+          "arg": [
+            0.9999999999985185,
+            0.8344983541369676,
+            0.745152229608938
+          ],
+          "conditional_total_numeric": 3.164554283095397
+        }
+      ]
+    },
+    {
+      "source": "middle_sector_dual_proposal.json",
+      "rows": [
+        {
+          "sector": 2,
+          "joint_max_numeric": -2.141533850296732,
+          "arg": [
+            0.9868421052667328,
+            1.0548943601199596,
+            1.05469114897493
+          ]
+        }
+      ]
+    }
+  ]
+}

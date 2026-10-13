@@ -1,0 +1,57 @@
+{
+ "mode": "freeze",
+ "old_plan": "research-2026/n12-global/members/structure/parallel-domain/wave4fix-plan.json",
+ "branch_dir": "research-2026/n12-global/evidence/wave4fix-domain",
+ "output_prefix": "research-2026/n12-global/members/structure/parallel-domain/completed-domain",
+ "outputs": [
+  "research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-base.json (base)",
+  "research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-plan.json (plan)",
+  "research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-manifest.json (manifest)"
+ ],
+ "old_plan_sha256": "82777c96107b4c3a833b315ed193ed3fefb0f26023df489e28b9591d072ddecf",
+ "branches_in_plan": [
+  "b00",
+  "b01",
+  "b02",
+  "b03",
+  "b04",
+  "b05",
+  "b06",
+  "b07",
+  "b08",
+  "b09"
+ ],
+ "branch_files": 10,
+ "merge_status": "certified-full-domain",
+ "counts": {
+  "processed": 14081,
+  "split": 7040,
+  "certified": 6723,
+  "infeasible": 318,
+  "pending": 0
+ },
+ "status": "ok",
+ "base": {
+  "path": "research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-base.json",
+  "sha256": "7f44132b8dd09c8377b7e300caebe6ca5485b8933bde86455f67062733c1c57a",
+  "status": "certified full domain",
+  "counts": {
+   "processed": 14081,
+   "split": 7040,
+   "certified": 6723,
+   "infeasible": 318
+  },
+  "leaves": 7041,
+  "pending": 0
+ },
+ "next_plan": {
+  "path": "research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-plan.json",
+  "sha256": "d7a2c27b767e3c7a5217aea9b04dfdb14702948276cfb3950c09a2de8590c964",
+  "branch_count": 0,
+  "roots": []
+ },
+ "domain_structurally_complete": true,
+ "placement": "placed atomically",
+ "wrote_nothing": false,
+ "note": "a full-domain claim still requires the four-conjunct premise: empty stack, complete exact partition, validated infeasible leaves, integer-replayed atomic leaves"
+}

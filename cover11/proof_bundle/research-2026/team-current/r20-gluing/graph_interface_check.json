@@ -1,0 +1,48 @@
+{
+  "role": "independent graph-interface verification (no claim registered)",
+  "counterexample": {
+    "centers": [
+      [
+        -0.9,
+        0.0
+      ],
+      [
+        0.9,
+        0.0
+      ],
+      [
+        0.0,
+        0.1
+      ]
+    ],
+    "r": 1.0,
+    "common_point": [
+      0.0,
+      0.0
+    ],
+    "common_point_covered": true,
+    "MEC": 0.9,
+    "MEC_le_r": true,
+    "circumradius": 4.1,
+    "circumradius_le_r": false,
+    "conclusion": "shared point holds (MEC<=r) while circumradius>r -> Rc<=r clause false"
+  },
+  "eight_gon": {
+    "n_triangulations": 132,
+    "n_all_consecutive": 0,
+    "matches_132": true,
+    "none_all_consecutive": true
+  },
+  "ears": {
+    "independent_set_counts_sizes_0_to_5": {
+      "0": 1,
+      "1": 9,
+      "2": 27,
+      "3": 30,
+      "4": 9,
+      "5": 0
+    },
+    "matches_1_9_27_30_9": true,
+    "none_of_size_5": true
+  }
+}

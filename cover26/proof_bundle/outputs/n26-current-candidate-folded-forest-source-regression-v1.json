@@ -1,0 +1,22 @@
+{
+  "schema": "N26-current-candidate-folded-forest-accounting-regression-v1",
+  "actual_source_snapshot_sha256": "b2c3a54d26f586da9bff31104af6f361414bbd01ac4d144cfcf367b8b570e1c6",
+  "tested_source_loader_sha256": "7246d1b0467a23d1d8a3dcb49d27d173e5368129b72fe04ee373759b70fcf0e1",
+  "published_snapshot_accounting_control_passed": true,
+  "invalid_folded_accounting_controls_rejected": [
+    "incomplete-root-claimed-paid",
+    "LOCAL-equality-region-falsely-emptied",
+    "certificate-payment-owner-changed",
+    "LOCAL-lower-bound-promoted-to-emptiness",
+    "unattempted-whole-root-lost",
+    "retained-source-row-added-without-ownership",
+    "retained-full-source-box-changed",
+    "acceptance-current-root-count-changed",
+    "same-root-forest-promoted-to-U"
+  ],
+  "new_geometric_candidate_payments": 0,
+  "source_snapshot_only_not_a_geometric_replay": true,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "executed_test_sha256": "f464b5432d71ed920fa208233c0718b5b091b4f1039ccec7422ebc1e1d7d66bd"
+}

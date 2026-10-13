@@ -1,0 +1,20 @@
+=== linearized central-face search (r = 0.38, nine certified rings fixed) ===
+hub A = (0.000296021329, 0.272977305852) ; hub B = (-0.000162042987, -0.149428411085)
+candidate readings:
+  phi_0 = +2.841e-05 ; phi_4 = +2.841e-05 (central faces; 0 = tight)
+  pin slacks A: +3.856e-05, +4.808e-05, +4.808e-05, +3.856e-05
+  pin slacks B: +3.603e-05, +2.879e-03, +4.222e-05, +2.879e-03, +3.603e-05
+  hub-ball slacks: A +3.470e-01 ; B +4.706e-01
+  grad phi_0 wrt a = (+0.3464, -0.2320) ; wrt b = (+0.4511, +0.3008)
+  grad phi_4 wrt a = (-0.3469, -0.2313) ; wrt b = (-0.4504, +0.3018)
+
+chosen direction (steepest descent of phi = central violation growth): central face 0, pattern a+b, rate = +0.678168
+  d_a = (-0.587469, +0.393548) ; d_b = (-0.588304, -0.392299) ; admissible t_max = 5.813e-05 -> step t = 5.232e-05
+RECOMPUTED at the stepped point (all nine pins + both central faces + hub balls):
+  pin slacks A: +9.710190e-06, +4.702464e-05, +8.265377e-05, +7.099335e-05
+  pin slacks B: +6.488352e-05, +2.915578e-03, +6.277893e-05, +2.867502e-03, +3.602846e-06
+  phi_0 = -7.073493e-06 ; phi_4 = +4.198078e-05
+  hub balls: A +3.470020e-01 ; B +4.705509e-01
+  => all nine pins satisfied (strict): True ; some central face violated: True
+  STRICT COUNTEREXAMPLE: the pin/vertex assignment is feasible but the central face is violated.
+  dumped linearized_central_search.json

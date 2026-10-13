@@ -1,0 +1,45 @@
+{
+  "schema": "N26-current28-five-target-filled-quadrilateral-independent-mathematical-controls-v1",
+  "verified": false,
+  "input_sha256": {
+    "outputs\\n26-conditional-force-stage-v28-sparse-v1\\FRONTIER.json": "d82aa773c5dde04d64a83144301018b29dc30a415b9df7bddf0442c637833a15",
+    "outputs\\n26-current28-six-target-filled-ear-mathematical-scan-v1.json": "35112c817ca8e26061321c8fb25d7b87808952a0ce2f20e2c52b05c24c3307e7",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\audit_five_target_filled_quadrilaterals.py": "cd9af9638a5c6156066dfde7b35f6955ac23336dc54cd688310c3b31d6de0189",
+    "work\\n26-five-target-filled-quadrilateral-proof.md": "28815ec4d4013820ae3c4e49acb5cb37d6a3bdc8b2559334260ad1c60e0eef33",
+    "work\\n26-embedded-dual-and-corner-starring-bridge-proof.md": "a6e8466bd722cd9ae0a267ee9a3060502489dd45200967cc8994ccbdbcffdd2d",
+    "work\\audit_prefix_origin.py": "ec28797070f56bb905ec7db3ad88b164cc6758143f805ddfafc9faeeeab7e557",
+    "outputs\\n26-current28-five-target-filled-quadrilateral-mathematical-scan-v1.json": "826f4f5cd8e4512b9b34473f4c709938d2917ecdcb982037653ecd0c5f61c19a",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\test_five_target_filled_quadrilaterals.py": "dc4e42761b5e9d94c4715ebaeeb0c02219e9e924a70a2bcf046387aca1c0b9a5",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26_force.py": "62ad4e612aac5842433c0962065e18904819586911a4523e6d07a8a51462d9ce",
+    "outputs\\n26-twenty-eighth-conditional-current-audit-v28-sparse-v1-strict-with-owned8-scope.json": "d306ec18c476fc4dc40d19284cb0281db82e457201a97f85e361c1b37c6a17ea",
+    "outputs\\n26-twenty-eighth-conditional-final-digest-recheck-v28-sparse-v1-strict-with-owned8.json": "e10b9530e365e29efab09a29c05f62baa9223b65abc5e5b2ebabc497bca0fe55",
+    "outputs\\n26-new-scope-v1\\CONSTANTS.json": "90fa7ff3e11c89953e832c0a97835b5c7256b0b84ffaba37155388d624bee248",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\n26_six_target_filled_ears.py": "ba2d9ba24269ca5c67f58867456ee556d86b2d9f17200ebf1b5ad656257d461e"
+  },
+  "entire_original_source_prefixes_independently_reconstructed": 11183,
+  "independent_qualifying_quadrilateral_prefixes": 3289,
+  "independent_all_original_count_and_shadow_cases_checked": 17919,
+  "independent_family_counts": {
+    "16": 1463,
+    "17": 1826
+  },
+  "additional_beyond_six_target_triangles_NOT_admitted": 446,
+  "prospective_union_frontier_NOT_current": 5191,
+  "exact_minimum_squared_target_distance": "70383559401/250000000000",
+  "exact_quadrilateral_projection_margin_above_U": "15299/500000",
+  "topology_and_strict_distance_negative_controls_rejected": [
+    "one-missing-face-not-filled",
+    "duplicate-face-not-disk",
+    "wrong-four-owner-cycle",
+    "quarter-radius-has-no-strict-projection-margin",
+    "duplicate-core-target-does-not-force-five-disks"
+  ],
+  "all_raw_complete_terminals_and_unpaid_source_rows_retained": true,
+  "new_geometry_current_AND_independent_final_STILL_required": true,
+  "actual_formal_frontier_STILL": 11183,
+  "candidate_whole_roots_STILL": 25,
+  "new_formal_geometric_payments": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

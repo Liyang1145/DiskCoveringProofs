@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "schema": "N23-origin-pair-disjoint-index-union-finite-controls-v1",
+  "positive_overlap_deducted_once": true,
+  "negative_controls_rejected": [
+    "duplicate-origin-index",
+    "out-of-order-origin-index",
+    "duplicate-pair-index",
+    "out-of-range-index",
+    "negative-index",
+    "boolean-index",
+    "missing-origin-index",
+    "extra-pair-index"
+  ],
+  "source_sha256": "dd08860c479329a3afb38bb953053d3b95bb4efb055f1c6dd4c2998a1fa9c043",
+  "merge_source_sha256": "bd2c364c3690b6a5df15e82f2c17e0c09e90c87147bc77e67665a14ac5313b49",
+  "not_a_production_catalog_scan_or_payment": true,
+  "global_optimality_proved": false
+}

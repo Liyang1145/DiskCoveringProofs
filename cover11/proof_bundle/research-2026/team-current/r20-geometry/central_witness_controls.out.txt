@@ -1,0 +1,47 @@
+====================================================================================================
+C1. moving central-disk centre p_sigma(a,c) = m +/- k n (radius-r circles through a and c)
+====================================================================================================
+  symbolic |p-a|^2 - r^2 = 0
+  (manual identity, used as the control: |m-a + k n|^2 = d^2/4 + k^2 + 2k n.(m-a) = d^2/4 + (r^2-d^2/4) = r^2)
+  exact-rational instances: the identity d^2/4 + k^2 = r^2 holds (so |p_+-a| = |p_+-c| = r)
+
+====================================================================================================
+C2. MEC criterion: MEC^2 = acute ? a2b2c2/(4 cross^2) : max(pair)/4 ; witness split
+====================================================================================================
+  P=((0, 0), (2, 0), (1, Fraction(1, 20))) : acuteness=False  MEC^2=1.0  R^2=160801/1600
+  P=((0, 0), (2, 0), (1, 1)) : acuteness=False  MEC^2=1.0  R^2=1
+  P=((0, 0), (1, 0), (Fraction(1, 2), Fraction(3, 4))) : acuteness=True  MEC^2=169/576  R^2=169/576
+  P=((0, 0), (3, 0), (Fraction(3, 2), Fraction(1, 2))) : acuteness=False  MEC^2=2.25  R^2=25/4
+  P=((0, 0), (2, 0), (4, 0)) : acuteness=False  MEC^2=4.0  R^2=collinear/inf
+  P=((0, 0), (1, 1), (2, 0)) : acuteness=False  MEC^2=1.0  R^2=1
+  P=((Fraction(1, 5), 0), (1, Fraction(2, 7)), (Fraction(3, 2), Fraction(1, 9))) : acuteness=False  MEC^2=13789/32400  R^2=13569934157/12575379600
+
+  equivalence test on a rational instance set (r chosen to separate the cases):
+  equivalence MEC>r <=> (pair>2r) or (acute and R>r): ALL MATCH
+  obtuse control P=(0,0),(2,0),(1,1/20), r=1: R^2=160801/1600 > 1 but MEC^2=1.0 <= 1 -> naive 'R>r' alone is WRONG (pair 4>4? False)
+
+====================================================================================================
+C3. orientation-freeness of the witnesses (exact rational rotation and reflection)
+====================================================================================================
+  squared sides and cross^2 (hence acuteness and the circumradius condition) are invariant
+  under the exact rational rotation (3/5,-4/5;4/5,3/5) and the reflection diag(1,-1)
+
+====================================================================================================
+C4. open hub ball + two moving disks: explicit nearest-to-lens candidates, semantics mu >= rho
+====================================================================================================
+  tangency control: 1 candidates ; min |h|^2 = 0.25 ; rho^2 = 0.25 -> mu = rho to 1e-30: True
+     semantics: mu >= rho fires (tangency counts as an emptiness witness for the OPEN ball) -> witness H5 fires
+  strict control p=(3/2,+-1/2), r=1/2: min|h|^2 = 2.25 > rho^2 = 0.25 -> H5 fires with margin
+
+====================================================================================================
+C5. affine-in-radicals structure of H6 (sign-case representation, squared-radical substitution)
+====================================================================================================
+  a2: raw support deg<=2 per radical: True ; support AFTER kc^2 substitution: [(0, 0), (0, 1)] ; in {1,ka,kb,kakb}: True
+  b2: raw support deg<=2 per radical: True ; support AFTER kc^2 substitution: [(0, 0), (1, 0)] ; in {1,ka,kb,kakb}: True
+  c2: raw support deg<=2 per radical: True ; support AFTER kc^2 substitution: [(0, 0), (0, 1), (1, 0)] ; in {1,ka,kb,kakb}: True
+  X: raw support deg<=2 per radical: True ; support AFTER kc^2 substitution: [(0, 0), (0, 1), (1, 0), (1, 1)] ; in {1,ka,kb,kakb}: True
+  X^2: raw support deg<=2 per radical: True ; support AFTER kc^2 substitution: [(0, 0), (0, 1), (1, 0), (1, 1)] ; in {1,ka,kb,kakb}: True
+  => after substituting kc^2 = r^2 - dc^2/4 every H6 clause is polynomial in `a` and LINEAR in
+     (ka, kb, ka*kb): isolating one radical and squaring adds at most two sign cases.  All checks: True
+     (Two draft corrections caught by this control: (i) NOT affine before the substitution;
+      (ii) X^2 raw support includes ka*kb^2, ka^2*kb, ka^2*kb^2 -- these reduce only via kc^2.)

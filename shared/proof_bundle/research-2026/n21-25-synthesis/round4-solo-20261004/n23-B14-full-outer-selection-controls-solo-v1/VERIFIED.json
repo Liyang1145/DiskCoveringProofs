@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "schema": "N23-B14-verified-residual-full-outer-selection-controls-v1",
+  "real_original_full_types_in_fixture": 32,
+  "only_declared_current_residual_indices_selected_positive_control": true,
+  "one_boundary_faces_preserved_and_actual_full_exposed_map_checked": true,
+  "negative_controls_rejected": [
+    "duplicate-current-pending",
+    "reversed-current-pending",
+    "missing-current-pending",
+    "wrong-declared-pending-count",
+    "truncated-original-source",
+    "original-source-index-gap",
+    "pending-outside-original-source",
+    "already-origin-excluded-type-reintroduced",
+    "original-complete-face-omitted"
+  ],
+  "source_sha256": "6628f5b904546106ace870b12f07ef0b067a29a565739994d68964d1488df4fc",
+  "group_source_sha256": "1e14a8edd1a36aa173e5d6fb08a1011de892ccc42fa4542c850ea99d7b81c1f6",
+  "frozen_mapping_checker_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "finite_selection_controls_not_lower_bound_proofs": true,
+  "global_optimality_proved": false
+}

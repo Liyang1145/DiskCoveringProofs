@@ -1,0 +1,15 @@
+r = 0.380000 ; rho = 0.620000 ; canonical inward bound sqrt(1-r^2) = 0.924986 ; |c_i| = 0.920000
+(the earlier construction used |c_i| = 0.95 > 0.924986 -> outer-root / boundary-cover case, NOT canonical)
+each ring covers a boundary arc of half-width alpha = 22.3316 deg ; spacing 40 deg ; margin = +4.6633 deg
+our ring c = (0.920000, 0) ; arc middle x_mid = (0.540000, 0)
+ring-ring vertices inside D: 9
+upper side vertices: 5 ; lower side: 5
+  upper side: max pairwise vertex distance = 1.283141 vs 2r = 0.760000 -> single hub covering all vertices: IMPOSSIBLE (vertex test rejects)
+  lower side: max pairwise vertex distance = 1.283141 vs 2r = 0.760000 -> single hub covering all vertices: IMPOSSIBLE (vertex test rejects)
+
+candidate-style hubs (|h| ~ 0.15/0.27 near the origin) vs the arc: x_mid is at |x_mid| = 0.540000, so a hub
+with |h| <= 0.30 is at distance >= 0.240000 from x_mid; since that is BELOW r = 0.380000, no impossibility follows
+from this crude bound -- the load-bearing reading of this test is the pairwise vertex rejection above.
+=> BOUNDED TEST OUTCOME: in this canonical-domain two-arc-switch configuration the vertex test already
+   REJECTS (a single side contains ring-ring vertices farther apart than 2r, so no one hub can cover them).
+   Per the lead's rule: do NOT scale this construction further; there is no test-level counterexample here.

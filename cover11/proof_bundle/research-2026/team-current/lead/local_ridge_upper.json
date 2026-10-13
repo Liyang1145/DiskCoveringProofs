@@ -1,0 +1,17 @@
+{
+  "scope": "LOCAL Q0 r.379-.38,b1 1.106-1.108,b2 1.068-1.071,delta .035-.040, allHwidthfibers; usingprovedridgeelimination",
+  "upper": 28.10439974622152,
+  "evaluations": 879,
+  "liveboxes": 0,
+  "terminal_upper": 28.10439974622152,
+  "seconds": 13.656972646713257,
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "source_sha256": {
+    "certify_local_ridge.py": "425a5875cc0f5f3ab29e48d43a8f1ca9a21a02c22e750c493e7160f6616e2969",
+    "patch_ridge_jet.py": "9954b55c38a37c733a8e124e685da972c3bea1bd32de4f9adc40807ebf7f4af0",
+    "interval_cancel_fibers.py": "5452d07a5fe3a81e0734e6975fae8a1ed4b6ac00b140710b912e89f2c3f8fe74",
+    "interval_patch_delta.py": "48bed07cdb5488b92769d7960a9b801da5da20af65c0157d5697c0dbf821f397",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358"
+  },
+  "source_capture_note": "Afterrun hashes; noneofthesefilesmodifiedduringrun"
+}

@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "N": 22,
+  "B": 13,
+  "catalog_sha256": "519fa0b4036f0bf0514bcb66125e482fe0d7e7a70f6cac4b7362524ff05c69c3",
+  "catalog_types": 1791859,
+  "stages": [
+    {
+      "groups_sha256": "5a2cdecd43a8c413ef339cccf136e58a9cdbe3731e5058f38cafdfffc80782b1",
+      "bindings_sha256": "e3dad4f14a687f79ea99448acdb9264a87d10ef736cfda1f3c0070215926d130",
+      "threshold": 2,
+      "maps_checked": 1791859,
+      "paid_types": 649496,
+      "remaining_types": 1142363,
+      "force_replay_sha256": "ec9f56fe773f32939d235fcc6e3a26a094b2bacff7e51b45f4c5aa3486640518"
+    },
+    {
+      "groups_sha256": "43a6bc5dc2e0dd5e4f5d0d33cd09e77d8a91ea8a1a9b313f97a64b203343fc96",
+      "bindings_sha256": "39e09befb18d7b35829572c8f36f6c907b7c587d24df2b4917918bbfbcc054fd",
+      "threshold": 1,
+      "maps_checked": 1142363,
+      "paid_types": 1107915,
+      "remaining_types": 34448,
+      "force_replay_sha256": "603f6c82c265ad5466e34941673c3e39b349a41575a4a5a21ffca2791207ce3c"
+    },
+    {
+      "groups_sha256": "fc96d0dce048a47498ed15ef726ad70c0b5c5c0ba4809540700c2a87dcf7c1d0",
+      "bindings_sha256": "04fbdc8bceaeba6456dc36ea10b20d476e1b615106a9c94cf1395545a82c3bb3",
+      "threshold": 0,
+      "maps_checked": 34448,
+      "paid_types": 0,
+      "remaining_types": 34448,
+      "force_replay_sha256": null
+    }
+  ],
+  "strict_exclusion_types_with_replayed_certificates": 1757411,
+  "pending_types": 34448,
+  "pending_indices_file": "n22-B13-hierarchy-audit-partial-resume1.pending.jsonl",
+  "pending_indices_sha256": "1dcec22767ce1f7569b75e39b5a3d147a398b4273a538256fdbc96b8593d6d6a",
+  "disjoint_hierarchy_partition_verified": true,
+  "coverage_partition_complete": false,
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "stream_reader_sha256": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d"
+}

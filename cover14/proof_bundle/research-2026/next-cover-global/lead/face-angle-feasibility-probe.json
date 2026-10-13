@@ -1,0 +1,78 @@
+{
+  "status": "numeric_only",
+  "scope": "12savedrelaxationproposals; rejectionnotgraphexclusion",
+  "runs": [
+    {
+      "family": "10/4",
+      "index": 785,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "10/4",
+      "index": 170,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "10/4",
+      "index": 625,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "10/4",
+      "index": 685,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "10/4",
+      "index": 146,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "10/4",
+      "index": 787,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "11/3",
+      "index": 994,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "11/3",
+      "index": 130,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "11/3",
+      "index": 617,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "11/3",
+      "index": 600,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "11/3",
+      "index": 959,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    },
+    {
+      "family": "11/3",
+      "index": 849,
+      "numeric_proposal_feasible": true,
+      "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)"
+    }
+  ]
+}

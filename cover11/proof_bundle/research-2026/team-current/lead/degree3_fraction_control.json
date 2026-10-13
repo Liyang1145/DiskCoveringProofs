@@ -1,0 +1,105 @@
+{
+  "N": 1024,
+  "method": "rational Taylor/asin positive series + independent grid",
+  "results": [
+    {
+      "q": 0,
+      "edge": [
+        0,
+        1
+      ],
+      "upper_rational": "30059/10000",
+      "upper_exact": "15029319263267456573/5000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        0,
+        2
+      ],
+      "upper_rational": "14527/5000",
+      "upper_exact": "101687786732747417481/35000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        2,
+        3
+      ],
+      "upper_rational": "3749/1250",
+      "upper_exact": "524859429473200414391/175000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        3,
+        4
+      ],
+      "upper_rational": "15339/5000",
+      "upper_exact": "1073700949776139989009/350000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        4,
+        5
+      ],
+      "upper_rational": "6101/2000",
+      "upper_exact": "266914677457907250161/87500000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        5,
+        6
+      ],
+      "upper_rational": "7637/2500",
+      "upper_exact": "10691504468200465933/3500000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        6,
+        7
+      ],
+      "upper_rational": "6101/2000",
+      "upper_exact": "266914677805826909843/87500000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        7,
+        8
+      ],
+      "upper_rational": "15339/5000",
+      "upper_exact": "134212632204264111531/43750000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "edge": [
+        8,
+        0
+      ],
+      "upper_rational": "3749/1250",
+      "upper_exact": "1049718729596855839957/350000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "N": 23,
+  "original_binding_pid": 18112,
+  "new_global_entry_frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\finalize_n23_global_source.py": "f204683487eaeef8ccab433517d815d00a90c04c0ed51e08ded440ce882295d2",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-GLOBAL-SOURCE-PROOF-v1.md": "e0bcb61a36d69eb7c98bcabd099d63f0510bb969e748b13c0dde54b0834144fb",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-whole-final-chain-v1\\VERIFIED.json": "5aa141043e7eaadc935a587c379c8390b18bd19a2b5feb7e5db41c14f2bd7cb2",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-three-full-source-interfaces-v2\\VERIFIED.json": "e0f5feba8ab993c15a8097233d8ea749754bb6edf600ef44fec76bf949465541",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\bind_n23_all_final_prerequisites.py": "dd03b664eff6426fb2b394bdb50f959a1673dd5587b69216bedf1231d9b063e2",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\verify_n23_B15_final_chain.py": "d724d8945ed1cbff1314e322836370b932b1e2e33dc75bafa356b80c741413ed",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-N24-COVER-AND-FULL-PEEL-INDUCTION-v1.md": "8aca653a57a75546a14aa9d51bd013ebf5c2c2047e02c7a350601d81c958cc58",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-SAME-ROOT-CORE-AND-GLOBAL-ASSEMBLY-INTERFACE-v1.md": "bf8419f836d66352a8d7a7ba914e4a00bb35f83730571869bc107a502ba33c4b"
+  },
+  "original_binding_not_restarted_and_no_global_acceptance_before_success": true,
+  "source_sha256": "f204683487eaeef8ccab433517d815d00a90c04c0ed51e08ded440ce882295d2",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,410 @@
+{
+ "scope": "fresh mpmath.iv kernel (dps=50) on the repaired TC root box; interval centers built from the same source-level construction as lead/check_tc_root_geometry.py; no previous JSON reading is used as a certificate",
+ "faces": [
+  {
+   "face": [
+    2,
+    9,
+    10
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.0752477797148",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    6,
+    9,
+    10
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.0752477797148",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    0,
+    1,
+    10
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.139637891068",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    1,
+    2,
+    10
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.0789703711624",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    2,
+    3,
+    9
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.121252049523",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    3,
+    4,
+    9
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.171434033564",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    4,
+    5,
+    9
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.171434033564",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    5,
+    6,
+    9
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.121252049523",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    6,
+    7,
+    10
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.0789703711624",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    7,
+    8,
+    10
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.139637891068",
+   "circumcentre_barycentrics_positive": true
+  },
+  {
+   "face": [
+    8,
+    0,
+    10
+   ],
+   "acute": true,
+   "acuteness_margin_lower": "0.178049060035",
+   "circumcentre_barycentrics_positive": true
+  }
+ ],
+ "n_faces": 11,
+ "n_acute_with_margin": 11,
+ "worst_acuteness_margin_lower": "0.0752477797147624",
+ "ties": [
+  {
+   "tie": 0,
+   "sites": [
+    0,
+    1
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.785216925834",
+   "abs_lower_bound_site_k1": "0.670173823147",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.785216925834",
+    "0.785217239102"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.670174078192",
+    "-0.670173823147"
+   ]
+  },
+  {
+   "tie": 1,
+   "sites": [
+    1,
+    2
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.670173830882",
+   "abs_lower_bound_site_k1": "0.511187305942",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.670173830882",
+    "0.670174070458"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.511187497499",
+    "-0.511187305942"
+   ]
+  },
+  {
+   "tie": 2,
+   "sites": [
+    2,
+    3
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.511187308965",
+   "abs_lower_bound_site_k1": "0.844644520423",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.511187308965",
+    "0.511187494475"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.844644825429",
+    "-0.844644520423"
+   ]
+  },
+  {
+   "tie": 3,
+   "sites": [
+    3,
+    4
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.844644531885",
+   "abs_lower_bound_site_k1": "0.889136680253",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.844644531885",
+    "0.844644813967"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.889137025016",
+    "-0.889136680253"
+   ]
+  },
+  {
+   "tie": 4,
+   "sites": [
+    4,
+    5
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.889136690901",
+   "abs_lower_bound_site_k1": "0.844644542851",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.889136690901",
+    "0.889137014368"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.844644803001",
+    "-0.844644542851"
+   ]
+  },
+  {
+   "tie": 5,
+   "sites": [
+    5,
+    6
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.844644531411",
+   "abs_lower_bound_site_k1": "0.511187318584",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.844644531411",
+    "0.844644814441"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.511187484856",
+    "-0.511187318584"
+   ]
+  },
+  {
+   "tie": 6,
+   "sites": [
+    6,
+    7
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.511187314904",
+   "abs_lower_bound_site_k1": "0.670173840315",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.511187314904",
+    "0.511187488537"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.670174061025",
+    "-0.670173840315"
+   ]
+  },
+  {
+   "tie": 7,
+   "sites": [
+    7,
+    8
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.670173832309",
+   "abs_lower_bound_site_k1": "0.785216935806",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.670173832309",
+    "0.67017406903"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.785217229131",
+    "-0.785216935806"
+   ]
+  },
+  {
+   "tie": 8,
+   "sites": [
+    8,
+    0
+   ],
+   "sign_decidable_two_sided": [
+    true,
+    true
+   ],
+   "sites_neg": [
+    false,
+    true
+   ],
+   "sites_pos": [
+    true,
+    false
+   ],
+   "opposite_signs": true,
+   "abs_lower_bound_site_k": "0.785216931201",
+   "abs_lower_bound_site_k1": "0.785216931201",
+   "ge_threshold_0.51_both_sides": true,
+   "criterion_ok": true,
+   "slope_interval_site_k_diagnostic": [
+    "0.785216931201",
+    "0.785217233735"
+   ],
+   "slope_interval_site_k1_diagnostic": [
+    "-0.785217233735",
+    "-0.785216931201"
+   ]
+  }
+ ],
+ "n_ties_opposite_and_away_from_zero": 9,
+ "float_pilot_disclosure": "mpmath.iv throughout; float() only for printing orientation"
+}

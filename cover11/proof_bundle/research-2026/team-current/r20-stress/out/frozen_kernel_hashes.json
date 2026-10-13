@@ -1,0 +1,18 @@
+{
+ "central_fiber_biconvexity_pilot.py": {
+  "sha256": "7c9951adadcb47dad7d2ed6b097a42f07333bd187760048bcfa15d93652d84df",
+  "bytes": 14111
+ },
+ "central_missed_point_arc_audit.py": {
+  "sha256": "64490b1170c38336fc4c95b85ed5e783b9718dc486fd92ad2a9cba759463fa8b",
+  "bytes": 9106
+ },
+ "out/central_fiber_biconvexity_pilot.json": {
+  "sha256": "b4c7b5954be0aa006dac35422fb1a45056ab2a0d9b9717886702c567d917351f",
+  "bytes": 2123
+ },
+ "out/central_missed_point_arc_audit.json": {
+  "sha256": "1c4afee42824e911a0bde63ca00eb383efae8a70b9d456e618bb12611eb345bd",
+  "bytes": 5828
+ }
+}

@@ -1,0 +1,261 @@
+{
+ "note": "proposals only (numeric); chart h1=(x-s,y),h2=(x+s,y); t*=minimal feasible ratio for cap<=t*req; criterion needs t*<=0.1",
+ "joint": [
+  {
+   "s": 0.05,
+   "n_pts": 8,
+   "t_star": 0.09973632812500001,
+   "criterion_ok": true
+  },
+  {
+   "s": 0.1,
+   "n_pts": 8,
+   "t_star": 0.104619140625,
+   "criterion_ok": false
+  },
+  {
+   "s": 0.2,
+   "n_pts": 8,
+   "t_star": 0.1092822265625,
+   "criterion_ok": false
+  },
+  {
+   "s": 0.35,
+   "n_pts": 6,
+   "t_star": 0.0987109375,
+   "criterion_ok": true
+  },
+  {
+   "s": 0.55,
+   "n_pts": 3,
+   "t_star": 0.0964892578125,
+   "criterion_ok": true
+  }
+ ],
+ "per_point": [
+  {
+   "s": 0.05,
+   "pts": [
+    {
+     "x": 0.0,
+     "y": 0.0,
+     "t_star": 0.08694,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.04165,
+     "t_star": 0.08519,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.08331,
+     "t_star": 0.08387,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.06665,
+     "y": 0.0,
+     "t_star": 0.08394,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.13331,
+     "y": 0.0,
+     "t_star": 0.06487,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.06665,
+     "y": 0.04165,
+     "t_star": 0.08174,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.13331,
+     "y": 0.04165,
+     "t_star": 0.06819,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.03333,
+     "y": 0.08331,
+     "t_star": 0.08257,
+     "criterion_ok": true
+    }
+   ]
+  },
+  {
+   "s": 0.1,
+   "pts": [
+    {
+     "x": 0.0,
+     "y": 0.0,
+     "t_star": 0.09236,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.04165,
+     "t_star": 0.09117,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.08331,
+     "t_star": 0.09068,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.09165,
+     "y": 0.0,
+     "t_star": 0.08853,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.18331,
+     "y": 0.0,
+     "t_star": 0.0658,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.09165,
+     "y": 0.04165,
+     "t_star": 0.08653,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.18331,
+     "y": 0.04165,
+     "t_star": 0.07034,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.04583,
+     "y": 0.08331,
+     "t_star": 0.08902,
+     "criterion_ok": true
+    }
+   ]
+  },
+  {
+   "s": 0.2,
+   "pts": [
+    {
+     "x": 0.0,
+     "y": 0.0,
+     "t_star": 0.09615,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.04165,
+     "t_star": 0.09734,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.08331,
+     "t_star": 0.0982,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.14165,
+     "y": 0.0,
+     "t_star": 0.09273,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.28331,
+     "y": 0.0,
+     "t_star": 0.06724,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.14165,
+     "y": 0.04165,
+     "t_star": 0.09114,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.28331,
+     "y": 0.04165,
+     "t_star": 0.0751,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.07083,
+     "y": 0.08331,
+     "t_star": 0.09651,
+     "criterion_ok": true
+    }
+   ]
+  },
+  {
+   "s": 0.35,
+   "pts": [
+    {
+     "x": 0.0,
+     "y": 0.0,
+     "t_star": 0.08467,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.04165,
+     "t_star": 0.08516,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.08331,
+     "t_star": 0.09053,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.21665,
+     "y": 0.0,
+     "t_star": 0.07808,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.21665,
+     "y": 0.04165,
+     "t_star": 0.08343,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.10833,
+     "y": 0.08331,
+     "t_star": 0.08985,
+     "criterion_ok": true
+    }
+   ]
+  },
+  {
+   "s": 0.55,
+   "pts": [
+    {
+     "x": 0.0,
+     "y": 0.0,
+     "t_star": 0.09097,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.04165,
+     "t_star": 0.0917,
+     "criterion_ok": true
+    },
+    {
+     "x": 0.0,
+     "y": 0.08331,
+     "t_star": 0.09339,
+     "criterion_ok": true
+    }
+   ]
+  }
+ ],
+ "INVALID": "DOMAIN FILTERING ERROR (Lead 2026-09-26): chart legality requires (x-s)^2+(a+y)^2 <= U^2 (core) in addition to (x+s)^2+y^2 <= (1-U)^2.  Sampled points (0,e0) with s>0 and s>U are ILLEGAL.  All structural conclusions in this file (worst location, single-weight-per-s coverage, whole-core easier) are therefore WITHDRAWN; retain only as raw numeric readings."
+}

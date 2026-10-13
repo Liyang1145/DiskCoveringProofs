@@ -1,0 +1,20 @@
+{
+  "exact_partition": true,
+  "proof": "complete binary prefix code reconstructed leaf-to-root",
+  "counts": {
+    "atomic": 5603,
+    "infeasible": 306,
+    "pending": 8
+  },
+  "internal": 5916,
+  "max_depth": 45,
+  "global_exclusion": false,
+  "note": "Partition only; predicates and atomic replay are separate obligations.",
+  "root_matches_k10_chart": true,
+  "source": "research-2026\\n12-global\\evidence\\hubline-domain-stage11825.json",
+  "source_sha256": "26fefd6a842b9ca961498c3fd45fbfa5fd1c7ab4906ef22574bea0e0de42d6d1",
+  "controls": {
+    "positive": 2,
+    "negative_rejected": 4
+  }
+}

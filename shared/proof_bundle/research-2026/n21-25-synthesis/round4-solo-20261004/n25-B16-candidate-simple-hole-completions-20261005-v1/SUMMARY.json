@@ -1,0 +1,14 @@
+{
+  "complete_this_collar_completion_search": true,
+  "N": 25,
+  "B": 16,
+  "calls": 12320,
+  "full_graph_count": 91,
+  "seconds": 6.25,
+  "input_collar_sha256": "cc4e391eac96967bfcceef12379185f73d9e83893e00396ec8d35c99f2ded8fd",
+  "groups_sha256": "2c009d1b46691c0af259ed6705bef60f8132297148d009e640c3ca9bc1a6320c",
+  "maps_sha256": "2b932f46cbe9906a2554f95a198f54b7b871e407490db268a2fed09e2f8fd941",
+  "source_sha256": "7e6a69e45de68e3f17324e70c1b120821c780de231dc4670f4ce20bd3b7d1f29",
+  "source_induction_and_independent_controls_still_required": true,
+  "global_optimality_proved": false
+}

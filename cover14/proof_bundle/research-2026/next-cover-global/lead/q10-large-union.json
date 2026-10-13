@@ -1,0 +1,149 @@
+{
+  "status": "complete_large_deficit_exterior_union",
+  "single_audit_sha256": "36c5ae2acf7ad658a7d042090c1f0e1f0849f411fb95e0ae07639f9bc33bb505",
+  "trees": [
+    {
+      "index": 1,
+      "audit_sha256": "9476cd8c92a7c4aa7c1fc963e66f7fd8368eab0bf86b807af79d3f7a83a2f4ed",
+      "nodes": 3,
+      "leaves": 2,
+      "minimum_lower": "82937535639751026864077749727947887458827757/250000000000000000000000000000000000000000000"
+    },
+    {
+      "index": 2,
+      "audit_sha256": "f62f645774819d4a2eff70dff9c7ec5bc9170a2f845772fb21a9e8da2c30a325",
+      "nodes": 3,
+      "leaves": 2,
+      "minimum_lower": "165898089884352707903723509813600188173003303/500000000000000000000000000000000000000000000"
+    },
+    {
+      "index": 3,
+      "audit_sha256": "9b74a8fbce3ade5cb58da7cfe562a21fe669e29a1423032d33ebbb48fb83fe63",
+      "nodes": 3,
+      "leaves": 2,
+      "minimum_lower": "82965140502847557802429277387625485953015743/250000000000000000000000000000000000000000000"
+    }
+  ],
+  "cuts": [
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        0,
+        1
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        1
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        1
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        3
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        3
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        3,
+        4
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        3,
+        4
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        5,
+        6
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        5,
+        6
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        6
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        6
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        8
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        8
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        8,
+        9
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/16"
+    },
+    {
+      "indices": [
+        8,
+        9
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    }
+  ]
+}

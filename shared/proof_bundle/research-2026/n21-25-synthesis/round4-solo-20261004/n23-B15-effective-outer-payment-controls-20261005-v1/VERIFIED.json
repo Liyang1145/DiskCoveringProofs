@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "schema": "N23-effective-outer-full-source-payment-finite-controls-v1",
+  "all_original_indices_scanned_unpaid_maps_checked_and_no_old_paid_recount": true,
+  "pure_internal_face_omitted_from_exposed_image": true,
+  "negative_controls_rejected": [
+    "missing-original-binding",
+    "duplicate-original-binding",
+    "extra-original-binding",
+    "wrong-selected-source-index",
+    "unpaid-source-not-outer-selected",
+    "declared-unpaid-count-wrong",
+    "source-count-truncated",
+    "source-index-gap",
+    "center-map-collision",
+    "wrong-anchor-map",
+    "wrong-reflection-anchor-shift",
+    "wrong-root-shift",
+    "omitted-original-outer-face",
+    "wrong-group-members"
+  ],
+  "source_sha256": "3e3b5c3fb0b3e1c984a73e795c144e18ee8e09ca9b1606a8fbfe430c13ae1d0f",
+  "audit_source_sha256": "851f12c219c751c232893f8ee08cabb49ccef9c689b7594075ebcecc9f706fd2",
+  "frozen_mapping_checker_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "functional_fixtures_not_planar_types_or_mathematical_payment": true,
+  "global_optimality_proved": false
+}

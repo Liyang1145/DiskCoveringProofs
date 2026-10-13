@@ -1,0 +1,32 @@
+{
+  "scope": "explicit4Douterbox and allactualHfibers therein; notglobal",
+  "outer_strings": [
+    [
+      ".379",
+      ".38"
+    ],
+    [
+      "1.105",
+      "1.108"
+    ],
+    [
+      "1.068",
+      "1.071"
+    ],
+    [
+      ".035",
+      ".040"
+    ]
+  ],
+  "H_projection": [
+    0.3034806266617412,
+    0.6271676523896763
+  ],
+  "derivative_lower": 0.324122527140786,
+  "derivative_upper": 0.5977307404791475,
+  "subintervals": 64,
+  "hubupper_lower": 1.5425278991148879,
+  "faceupper_upper": 0.6275965947602622,
+  "conclusion": "FH strictlyincreasing; maximum atmin(2r sin(2b1-delta),2r sin(2b2+delta))",
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb"
+}

@@ -1,0 +1,166 @@
+{
+  "scope": "brief independent audit of the lead minimax/second-variation interface; exact-rational re-derivation of the recorded Gram determinant/Sylvester/det-trace claims + box COMPATIBILITY check (branch intervals vs R) and certification of the positive conversion factors on the same box; NOTE: interval intersection does not prove branch=R, that is analytic",
+  "part_A_exact_recheck": {
+    "det_recomputed_from_G": [
+      "257191583095126467524722585137569401301825702413475555557508316379822210351395570403992046100140831193/559936185544451052639360570142111069530411374308662383724997275240947967795040236345219373317901778944",
+      "34494118563965197183270182730268185238633077456410190481130183036908917435754890652260308686765790687/69992023193056381579920071267763883691301421788582797965624659405118495974380029543152421664737722368"
+    ],
+    "naive_det_enclosure_inside_recorded": true,
+    "recorded_minus_naive_lo": "-200791925328998140605255704404656534083327374701017/559936185544451052639360570142111069530411374308662383724997275240947967795040236345219373317901778944",
+    "recorded_minus_naive_hi": "50611412191200326805926894574186493979553908681249/69992023193056381579920071267763883691301421788582797965624659405118495974380029543152421664737722368",
+    "det_interval_positive": true,
+    "G00_positive": true,
+    "G11_positive": true,
+    "sylvester_PD": true,
+    "trace_positive": true,
+    "det_over_trace_min": "257191583095126467524722585137569401301825702413475555557508316379822210351395570403992046100140831193/882684152680388249584653075531019808924690889314680811613728372071932962685223903742610816367616589824",
+    "det_over_trace_gt_quarter": true,
+    "recorded_lambda_min_lower": "687412587029398539572402238690091673569715339151471/2359207053441773258382913236501841576222692694796656",
+    "lambda_min_lower_is_below_det_over_trace": true,
+    "gram_display_conservative": true,
+    "det_display_conservative": true,
+    "basis_is_7x2": true,
+    "basis_free_rows_identity": true,
+    "gram_symmetric_bit_exact": false,
+    "gram_offdiag_max_endpoint_diff": "9/374144419156711147060143317175368453031918731001856",
+    "lead_pass_flag": true,
+    "all_18_branch_intervals_compatible_with_R": true,
+    "caliber_branch_row": "compatibility only; \"branch = R at the exact root\" is analytic (root F=0 + chart + positive conversion), NOT inferred from intersection",
+    "conversion_Fout_positive": true,
+    "conversion_y_nonzero": true,
+    "weights_18_strictly_positive": true,
+    "max_branch_R_gap": "0.0"
+  },
+  "part_B_branch_table": [
+    [
+      "face fan(1,1)",
+      "0.37998380378902337329",
+      "0.37998390245066069174",
+      true,
+      "0.0"
+    ],
+    [
+      "face fan(6,1)",
+      "0.37998380533706537638",
+      "0.37998390090261893627",
+      true,
+      "0.0"
+    ],
+    [
+      "face fan(2,0)",
+      "0.37998379989024042368",
+      "0.37998390634944558781",
+      true,
+      "0.0"
+    ],
+    [
+      "face fan(5,0)",
+      "0.37998379311228486076",
+      "0.37998391312740279314",
+      true,
+      "0.0"
+    ],
+    [
+      "face fan(3,0)",
+      "0.37998366119840943305",
+      "0.37998404504144466899",
+      true,
+      "0.0"
+    ],
+    [
+      "face fan(4,0)",
+      "0.37998367743435931209",
+      "0.37998402880547313207",
+      true,
+      "0.0"
+    ],
+    [
+      "face fan(8,1)",
+      "0.37998378489960074283",
+      "0.37998392134008985544",
+      true,
+      "0.0"
+    ],
+    [
+      "face central(6,0)",
+      "0.37998384093959932912",
+      "0.37998386530007847394",
+      true,
+      "0.0"
+    ],
+    [
+      "face central(2,0)",
+      "0.37998384093959932912",
+      "0.37998386530007847394",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap0",
+      "0.379983825808238625",
+      "0.37998388043143934771",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap1",
+      "0.37998383086631396903",
+      "0.37998387537336384038",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap2",
+      "0.37998383263995216771",
+      "0.37998387359972509278",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap3",
+      "0.37998382625489354581",
+      "0.37998387998478363084",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap4",
+      "0.37998383683967640855",
+      "0.37998386940000341629",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap5",
+      "0.37998382636705435567",
+      "0.37998387987262283803",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap6",
+      "0.37998383630638807335",
+      "0.37998386993328960827",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap7",
+      "0.37998383275128162515",
+      "0.379983873488396404",
+      true,
+      "0.0"
+    ],
+    [
+      "tie gap8",
+      "0.37998382286950068167",
+      "0.37998388337017690584",
+      true,
+      "0.0"
+    ]
+  ],
+  "R_interval": [
+    "0.3799838521198386770704189",
+    "0.379983854119838677070419"
+  ]
+}

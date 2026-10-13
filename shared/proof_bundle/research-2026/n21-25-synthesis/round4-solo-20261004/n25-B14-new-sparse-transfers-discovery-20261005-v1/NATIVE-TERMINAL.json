@@ -1,0 +1,22 @@
+{
+  "actual_exit_code": 0,
+  "command": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu2204",
+    "--exec",
+    "/usr/bin/env",
+    "-C",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004",
+    "./sparse_outer_match-linux",
+    "match",
+    "25",
+    "14",
+    "n25-B14-new-sparse-library-20261005-v1/OBSTACLES.tsv",
+    "n25-B14-new-sparse-transfers-discovery-20261005-v1/REQUESTS.tsv",
+    "n25-B14-new-sparse-transfers-discovery-20261005-v1/NATIVE-MAPS.json"
+  ],
+  "stdout": "",
+  "stderr": "",
+  "maps_are_only_proposals": true
+}

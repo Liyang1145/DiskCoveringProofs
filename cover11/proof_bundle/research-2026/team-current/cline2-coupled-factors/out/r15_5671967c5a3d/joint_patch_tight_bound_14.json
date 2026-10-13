@@ -1,0 +1,11 @@
+{
+  "factor_index": 14,
+  "factor": "switch3",
+  "upper": 1.9951263031208914e-05,
+  "lower_probe": 4.188476284583149e-09,
+  "evaluations": 1411,
+  "seconds": 0.3006148338317871,
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "tolerance": 2e-05,
+  "budget_ended": false
+}

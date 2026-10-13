@@ -1,0 +1,7 @@
+{
+  "native_terminal_observed": true,
+  "actual_exit_code": 1,
+  "stdout": "",
+  "stderr": "STREAMED COLLAR NATIVE PID=3620 N=21 B=14\nSORTED COLLAR SLAB index=0 rows=7 cumulative_rows_not_unique_types=7\nSORTED COLLAR SLAB index=1 rows=7 cumulative_rows_not_unique_types=14\nSORTED COLLAR SLAB index=2 rows=7 cumulative_rows_not_unique_types=21\nSORTED COLLAR SLAB index=3 rows=7 cumulative_rows_not_unique_types=28\nSORTED COLLAR SLAB index=4 rows=5 cumulative_rows_not_unique_types=33\nCOLLAR SEARCH COMPLETE B=14 calls=574112 current_slab_rows=0 proof_prunes=0 sparse_prunes=0\n",
+  "manifest_sha256": "01bf7721f3d2f905443b42057f25be9d1d4584002a5b7f5acb4eefa495f7c9e5"
+}

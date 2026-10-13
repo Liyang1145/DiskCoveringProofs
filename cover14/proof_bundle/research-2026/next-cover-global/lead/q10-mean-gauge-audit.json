@@ -1,0 +1,32 @@
+{
+  "status": "direct_affine_dyadic_replay_two_controls",
+  "scope": "kernelcontrols only; treecoverage unchanged",
+  "runs": [
+    {
+      "source": "q10-mean-gauge-control.json",
+      "sha256": "6a63b6a4dd67f537af2f714d2192a54903e9b862a6656ce6fcd31a2de38d1dd2",
+      "fraction": {
+        "gauge": "mean_prefix",
+        "lower_exact": "82931073032213465581038865753430164573390247/250000000000000000000000000000000000000000000",
+        "lower_display": 0.33172429212885385,
+        "excluded": false,
+        "vertices": 832,
+        "all_positive": true
+      },
+      "dyadic_lower_exact": "293053045931776373533853070902036660961529830369407114972021449935564721/883423532389192164791648750371459257913741948437809479060803100646309888"
+    },
+    {
+      "source": "q10-mean-gauge-near-threshold.json",
+      "sha256": "b0c63a1593cfe59637d5704ccff2a23141af8ed36e98df92c37ad00d08b2026b",
+      "fraction": {
+        "gauge": "mean_prefix",
+        "lower_exact": "331732361084540869632211630469953999340532169/1000000000000000000000000000000000000000000000",
+        "lower_display": 0.33173236108454085,
+        "excluded": true,
+        "vertices": 544,
+        "all_positive": true
+      },
+      "dyadic_lower_exact": "146530087118556040695388648335099195493099341648781946928253492458942283/441711766194596082395824375185729628956870974218904739530401550323154944"
+    }
+  ]
+}

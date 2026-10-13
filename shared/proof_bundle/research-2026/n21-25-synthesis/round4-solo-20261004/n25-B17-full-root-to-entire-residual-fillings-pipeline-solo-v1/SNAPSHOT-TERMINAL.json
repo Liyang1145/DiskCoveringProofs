@@ -1,0 +1,23 @@
+{
+  "child_pid": 4512,
+  "actual_exit_code": 0,
+  "independent_process_terminal_observed": true,
+  "command": [
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe",
+    "-u",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\snapshot_complete_origin_pending.py",
+    "--manifest",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\N25-B17-complete-origin-sorted-chunks.json",
+    "--terminal",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\NATIVE-TERMINAL.json",
+    "--union",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\UNION\\VERIFIED.json",
+    "--partition",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-complete-origin-bounded-proof-inputs-solo-v1\\VERIFIED.json",
+    "--payments",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-complete-origin-root-force-and-audit-solo-v1\\COMPLETE-PAYMENT-AUDIT",
+    "--output",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-full-root-to-entire-residual-fillings-pipeline-solo-v1\\ALL-PENDING-SNAPSHOT.json"
+  ],
+  "source_sha256": "3d7f9de4d2c431a1e56092d4486567d686554ed738b4964d8ca6bdea88bb211e"
+}

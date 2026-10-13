@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "schema": "complete-origin-library-parent-merge-controls-v1",
+  "negative_controls_rejected": [
+    "missing-paid-row",
+    "missing-pending-row",
+    "duplicate-paid-row",
+    "duplicate-pending-row",
+    "overlap-paid-pending-row",
+    "out-of-order-paid-row",
+    "out-of-range-tail",
+    "bool-instead-of-integer-index",
+    "wrong-parent-index",
+    "bool-parent-index",
+    "wrong-source-center-count",
+    "changed-source-face",
+    "wrong-original-batch",
+    "wrong-original-local-group",
+    "pending-claimed-as-geometric-exclusion"
+  ],
+  "source_sha256": "ca2750f006a4cb3387d28a9a354583d009385ff872f0445c880d43c670591fbd",
+  "audit_source_sha256": "870a9164cf705e2fae693e3392ecdf2be339b0f9127112fb40d406c77e04a6f2",
+  "conditional_exact_outer_transport_controls_required_separately": true,
+  "functional_partition_fixtures_not_planar_types_or_payments": true,
+  "global_optimality_proved": false
+}

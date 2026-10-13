@@ -1,0 +1,17 @@
+{
+  "parent_complete_catalog_sha256": "a52729cbd01664e744eac859af86e425b389d50f51316a4276161f497c7b85e2",
+  "parent_summary_sha256": "e11695680d703b3ea605622afbb5281429b059badeb361e120cac83b4c8aecdf",
+  "exact_prefix_sha256": "0be8a35d9e846afede0f68dd0002fb2f3d51e9423f2d0228baa8e95f3184e5f5",
+  "pending_prefix_sha256": "18bdd66f4e724c64faaf671013524d6022275d659a4657820099331787336089",
+  "selected_parent_groups": [
+    2,
+    3,
+    7,
+    17,
+    21
+  ],
+  "node_limit_per_completion_family": 1000000,
+  "source_sha256": "d6e6e37879112bf19e4f9f95a2a628b248f959099915dd3187a9152fac86d27f",
+  "not_an_entire_boundary_family": true,
+  "global_optimality_proved": false
+}

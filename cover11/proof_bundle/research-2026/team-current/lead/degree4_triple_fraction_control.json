@@ -1,0 +1,42 @@
+{
+  "N": 8192,
+  "method": "rational Taylor/asin positive series + independent grid",
+  "results": [
+    {
+      "q": 1,
+      "start": 0,
+      "span": 2,
+      "upper_rational": "15541/5000",
+      "upper_exact": "1087835297851041613479/350000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "start": 1,
+      "span": 2,
+      "upper_rational": "15617/5000",
+      "upper_exact": "2186326003773160512409/700000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "start": 2,
+      "span": 2,
+      "upper_rational": "31303/10000",
+      "upper_exact": "1095582859656975112449/350000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    },
+    {
+      "q": 1,
+      "start": 3,
+      "span": 2,
+      "upper_rational": "781/250",
+      "upper_exact": "437351165653016670919/140000000000000000000",
+      "below_pi_lower": "314159/100000",
+      "passed": true
+    }
+  ]
+}

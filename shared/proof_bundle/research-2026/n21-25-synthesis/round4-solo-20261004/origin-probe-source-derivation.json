@@ -1,0 +1,9 @@
+{
+  "only_main_name_changed": true,
+  "original_source_sha256": "2fa670b7e10a6fdd869862f821406a5457300983fb8b9cb3f4c886688bd8bd93",
+  "derived_source_sha256": "dc4d4d1b2a0d857ba87c32541fc90d0614b96efa7d716fd2255fc2b70ac30d92",
+  "source_sha256": "42f3eb444190961b87488e2255eca35635f9ae600fc3b75be94b87e391ea662b",
+  "before": "int main(int argc,char**argv){try{",
+  "after": "int frozen_origin_collar_main(int argc,char**argv){try{",
+  "global_optimality_proved": false
+}

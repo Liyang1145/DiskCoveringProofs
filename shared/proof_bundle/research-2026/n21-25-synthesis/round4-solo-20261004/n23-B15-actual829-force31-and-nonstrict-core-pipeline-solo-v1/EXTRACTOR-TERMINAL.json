@@ -1,0 +1,7 @@
+{
+  "original_pid": 5668,
+  "actual_exit_code": 0,
+  "same_original_process_handle_terminal_observed": true,
+  "process_binding_sha256": "e04e25645c8d9f1ec352f56b9781ae5ee7b9bb664b854d36d09f700278583ed2",
+  "source_sha256": "0382dd0b5ced85700baf60ecef1b7675e8464cbaccecd89185a6e6e529f8d074"
+}

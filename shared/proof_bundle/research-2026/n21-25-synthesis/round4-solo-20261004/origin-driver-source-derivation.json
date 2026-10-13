@@ -1,0 +1,73 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_source_sha256": "862781f4f25ece07f6b6db1582901ff76abf75d5995bb735334df217d8d88659",
+  "derived_source_sha256": "c1daabf67160adfdc4ac0509dd2a03ef44a585b5e4304aa1f3aaaee826619710",
+  "source_sha256": "53cb2188a07d466745b4e746faf655fe527e062eab0d5942dd75d3e5ff3f8c5a",
+  "changes": [
+    [
+      "from merge_collar_chunks import merge",
+      "from merge_origin_collar_chunks import merge\nfrom origin_production_gate import origin_gate"
+    ],
+    [
+      "    ap.add_argument(\"--storage-controls\", type=Path, required=True)",
+      "    ap.add_argument(\"--origin-controls\", type=Path, required=True)\n    ap.add_argument(\"--failed-search\", type=Path, required=True)\n    ap.add_argument(\"--storage-controls\", type=Path, required=True)"
+    ],
+    [
+      "    assert B == 15, \"only the failed B15 run is replaced by streamed storage\"",
+      "    assert B in (16, 17), \"only the terminal-failed B16/B17 runs are replaced\"\n    files.update(origin_gate(args.origin_controls.resolve(), args.failed_search.resolve(), B))"
+    ],
+    [
+      "f\"N25-B{B}-complete-sorted-chunks.json\"",
+      "f\"N25-B{B}-complete-origin-sorted-chunks.json\""
+    ],
+    [
+      "\"./peel_streamed_collar-linux\", \"25\", str(B), relative(target)",
+      "\"./peel_origin_streamed_collar-linux\", \"25\", str(B), relative(target)"
+    ],
+    [
+      "\"0\", \"dfs\", \"-\", relative(table), str(CAP8), \"100000\",",
+      "\"0\", \"dfs\", \"-\", relative(table), str(CAP8), \"100000\", \"1\","
+    ],
+    [
+      "rf\"STREAMED COLLAR NATIVE PID=(\\d+) N=25 B={B}\"",
+      "rf\"COVER ORIGIN NATIVE PID=(\\d+) N=25 B={B}\""
+    ],
+    [
+      "\"binary_linux_path\": linux_path(ROOT / \"peel_streamed_collar-linux\"),",
+      "\"binary_linux_path\": linux_path(ROOT / \"peel_origin_streamed_collar-linux\"),"
+    ],
+    [
+      "\"native_binary_sha256\": sha(ROOT / \"peel_streamed_collar-linux\"),",
+      "\"native_binary_sha256\": sha(ROOT / \"peel_origin_streamed_collar-linux\"),"
+    ],
+    [
+      "    assert header[\"schema\"] == \"complete-outer-collar-sorted-chunks-v1\"",
+      "    assert header[\"schema\"] == \"complete-cover-origin-collar-sorted-chunks-v1\"\n    assert header[\"origin_cover_screen\"] and header[\"origin_cover_only_N25\"]\n    assert header[\"origin_cover_scope\"] == \"actual arbitrary disk covers only; not weak graph geometry\"\n    assert not header.get(\"seeded_fixed_collar_restriction\", False)"
+    ],
+    [
+      "        \"full_triangulations_not_enumerated\": True,\n",
+      "        \"full_triangulations_not_enumerated\": True,\n        \"actual_arbitrary_cover_origin_condition_used\": True,\n        \"not_a_complete_unqualified_geometric_weak_graph_catalog\": True,\n"
+    ],
+    [
+      "    unchanged(files)\n    output.mkdir()",
+      "    for path in (\n        ROOT / \"peel_origin_streamed_collar.cpp\", ROOT / \"peel_origin_streamed_collar-linux\",\n        ROOT / \"cover_origin_obstruction.inc\", ROOT / \"merge_origin_collar_chunks.py\",\n        ROOT / \"derive_origin_streamed_collar.py\", ROOT / \"derive_origin_chunk_merge.py\",\n        ROOT / \"origin-streamed-collar-source-derivation.json\", ROOT / \"origin-chunk-merge-source-derivation.json\",\n        ROOT / \"origin_production_gate.py\", ROOT / \"test_origin_collar.py\",\n        ROOT / \"derive_origin_driver.py\", ROOT / \"origin-driver-source-derivation.json\",\n        ROOT / \"UNEXPOSED-ORIGIN-CENTER-SOURCE.md\", args.origin_controls,\n    ):\n        bind(files, path)\n    unchanged(files)\n    output.mkdir()"
+    ]
+  ],
+  "occurrence_counts": [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    2,
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "original_library_angle_injection_partition_storage_gates_preserved": true,
+  "new_origin_controls_and_confirmed_failure_absence_gate_added": true,
+  "global_optimality_proved": false
+}

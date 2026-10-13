@@ -1,0 +1,118 @@
+{
+  "N": 25,
+  "B": 15,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        102400
+      ],
+      "members": 67
+    },
+    {
+      "id": 1,
+      "centers": 18,
+      "faces": [
+        22528,
+        164096,
+        198656
+      ],
+      "members": 9
+    },
+    {
+      "id": 2,
+      "centers": 18,
+      "faces": [
+        416,
+        99328,
+        155648,
+        200704
+      ],
+      "members": 2
+    },
+    {
+      "id": 3,
+      "centers": 18,
+      "faces": [
+        208,
+        99328,
+        155648,
+        200704
+      ],
+      "members": 4
+    },
+    {
+      "id": 4,
+      "centers": 18,
+      "faces": [
+        26624,
+        98320,
+        131456,
+        196672
+      ],
+      "members": 6
+    },
+    {
+      "id": 5,
+      "centers": 17,
+      "faces": [
+        3328,
+        90112,
+        100352
+      ],
+      "members": 36
+    },
+    {
+      "id": 6,
+      "centers": 18,
+      "faces": [
+        104,
+        99328,
+        155648,
+        200704
+      ],
+      "members": 2
+    },
+    {
+      "id": 7,
+      "centers": 18,
+      "faces": [
+        416,
+        68608,
+        180224,
+        200704
+      ],
+      "members": 1
+    },
+    {
+      "id": 8,
+      "centers": 18,
+      "faces": [
+        208,
+        68608,
+        180224,
+        200704
+      ],
+      "members": 1
+    }
+  ],
+  "group_count": 9,
+  "selected_types": 128,
+  "catalog_types": 128,
+  "catalog_sha256": "1fde939a033b23dbbb91ae0532f814bb6fd3e2cf682a0149a09289db9c8d1761",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "b85eebffc5c2a1064fa66874e1c663929ffe6176ecdfccff5f514bb7bf67ea7b",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "parent_groups_sha256": null,
+  "parent_proof_sha256": null,
+  "not_a_complete_family": true,
+  "members_are_discovery_graphs_not_actual_cover_types": true,
+  "all_boundary_sites_preserved_by_implicit_anchor_rods": true,
+  "source_sha256": "d771301e9bef4dc24d9cb6a8cfaee9b0c1d51cb8ca76b513de1e7887ff08abdd",
+  "global_optimality_proved": false
+}

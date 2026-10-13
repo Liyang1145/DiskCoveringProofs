@@ -1,0 +1,20 @@
+{
+  "exact_partition": true,
+  "proof": "complete binary prefix code reconstructed leaf-to-root",
+  "counts": {
+    "atomic": 6723,
+    "infeasible": 318,
+    "pending": 0
+  },
+  "internal": 7040,
+  "max_depth": 45,
+  "global_exclusion": false,
+  "note": "Partition only; predicates and atomic replay are separate obligations.",
+  "root_matches_k10_chart": true,
+  "source": "research-2026\\n12-global\\members\\structure\\parallel-domain\\completed-domain-base.json",
+  "source_sha256": "7f44132b8dd09c8377b7e300caebe6ca5485b8933bde86455f67062733c1c57a",
+  "controls": {
+    "positive": 2,
+    "negative_rejected": 4
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "actual_exit_code": 3221225781,
+  "pid": 17924,
+  "actual_child_terminal_observed": true,
+  "command": [
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\peel_degree.exe",
+    "5",
+    "3",
+    "small-order-filling-controls-v1/N5-B3-FULL.json",
+    "10000000",
+    "804156",
+    "1666328",
+    "2698800",
+    "0",
+    "noscreen"
+  ]
+}

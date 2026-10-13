@@ -1,0 +1,47 @@
+{
+  "verified": true,
+  "N": 22,
+  "B": 14,
+  "catalog_sha256": "122a942ba7d611f61b3a4c79317c4f800c5df1f996e5d07ac42950a1b8585af1",
+  "catalog_types": 3080858,
+  "stages": [
+    {
+      "groups_sha256": "6befecf1f83911ae6e1923a4690c91c0506f85f912de728b3331b2d91292de8d",
+      "bindings_sha256": "d3f3b11f5c210a9ab36eb77136b9da206ad88f3865010d0945962b5f601ee46d",
+      "threshold": 2,
+      "maps_checked": 3080858,
+      "paid_types": 1177032,
+      "remaining_types": 1903826,
+      "force_replay_sha256": "69f4fe1f1a3b4c0a74b78bb5530700550c7c60bb91a9ebdb941114e3d0ba3f0c"
+    },
+    {
+      "groups_sha256": "15ad84d3f66099eb2dc4cdae80a9813179d69da7d1a8e58c4ec9dc0da29e3fd7",
+      "bindings_sha256": "afa09bd76f4a1d0d5b6ede2112add5bc96f4b30c81e095cacd4392cf12388add",
+      "threshold": 1,
+      "maps_checked": 1903826,
+      "paid_types": 1519056,
+      "remaining_types": 384770,
+      "force_replay_sha256": "68c3279cb8f504ba1ab0ed7baf3f1b6f2d58fe5b1c57196049cc676522156aeb"
+    },
+    {
+      "groups_sha256": "de201e11f791c8615f6db3c76a04dce1e4aeb480c06415fd1902307f1a2ef05e",
+      "bindings_sha256": "eea0845a018196af4e7e40ef4c4055426be8c8d1c2a1259078086853a60c8e1e",
+      "threshold": 0,
+      "maps_checked": 384770,
+      "paid_types": 384769,
+      "remaining_types": 1,
+      "force_replay_sha256": null
+    }
+  ],
+  "strict_exclusion_types_with_replayed_certificates": 3080857,
+  "pending_types": 1,
+  "pending_indices_file": "n22-B14-hierarchy-audit-final-resume1.pending.jsonl",
+  "pending_indices_sha256": "6c77ab393eb13c409d1506f10f245ed737cd2ad5ad58e84cdbde16b9fdfdaee4",
+  "disjoint_hierarchy_partition_verified": true,
+  "coverage_partition_complete": false,
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "2efc7d26799e533a9ad68511391d3ac80cbe37debe01fb2395d928e94ecdc244",
+  "stream_reader_sha256": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d"
+}

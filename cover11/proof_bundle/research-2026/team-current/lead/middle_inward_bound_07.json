@@ -1,0 +1,11 @@
+{
+  "factor_index": 7,
+  "factor": "face7",
+  "upper": 0.139084846061122,
+  "lower_probe": 0.1390800264983571,
+  "evaluations": 1159,
+  "seconds": 1.2016167640686035,
+  "coefficient_sha256": "17a0225e7fc329b54c78e5dab04b7f1dff30c61c721f81659d6c92aee4ad139d",
+  "tolerance": 5e-06,
+  "budget_ended": false
+}

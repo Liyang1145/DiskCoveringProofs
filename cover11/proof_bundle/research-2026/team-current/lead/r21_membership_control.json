@@ -1,0 +1,24 @@
+{
+  "scope": "exact symbolic degenerate controls for analytic criterion",
+  "cases": [
+    {
+      "case": "one",
+      "residuals": [
+        "e**2 + 2*e*r"
+      ]
+    },
+    {
+      "case": "opposite",
+      "residuals": [
+        "e**2",
+        "e**2"
+      ]
+    },
+    {
+      "case": "three equilateral normals",
+      "sum": "exact zero",
+      "rank2_minor": "sqrt(3)*r**2/2",
+      "membership": false
+    }
+  ]
+}

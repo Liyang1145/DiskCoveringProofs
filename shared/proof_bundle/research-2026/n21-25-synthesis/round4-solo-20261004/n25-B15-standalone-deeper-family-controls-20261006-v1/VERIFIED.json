@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "schema": "standalone-deeper-finer-family-controls-v1",
+  "actual_complete_family_tree_freshly_replayed": true,
+  "actual_lower_limit_unpaid_tree_freshly_replayed_and_not_paid": true,
+  "negative_controls_rejected": [
+    "duplicate-parent-payment",
+    "bool-not-parent-integer",
+    "actual-511-unfinished-family",
+    "mixed-proof-and-unfinished-replay",
+    "wrong-original-family",
+    "out-of-workspace-proof"
+  ],
+  "proof_sha256": "19b2e53a16ebab5593eae572707be0d5c3a3b7e6707a5ae24543473442a062a7",
+  "exact_sha256": "d7b6d6b4aa071aeab4d4348b4fbb6e2eba6f6cc405c7f00253a1b09421fc4485",
+  "unfinished_proof_sha256": "ad6af5b608656e892768e5d21f90339a4bc24d81ec128eac1088b5e39363497d",
+  "source_sha256": "b9fe5ff50ea92d07a5e0f016105ef9dcad15e557c64823d793e8e60c29ea2340",
+  "audit_source_sha256": "2f80397018956006d24cf1b151d1207f37c9bc4b5f83b36c38d74a5eb7deee36",
+  "all_parent_partition_and_old_positive_tree_replays_still_required": true,
+  "global_optimality_proved": false
+}

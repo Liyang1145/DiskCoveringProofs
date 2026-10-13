@@ -1,0 +1,25 @@
+{
+  "verified": true,
+  "schema": "N23-residual-new-tree-identity-controls-v1",
+  "one_actual_strict_tree_freshly_mathematically_replayed": true,
+  "negative_controls_rejected": [
+    "wrong-N",
+    "wrong-B",
+    "wrong-center-count",
+    "changed-face-identity",
+    "wrong-original-group-bytes",
+    "wrong-constants-bytes",
+    "wrong-radius-threshold",
+    "wrong-receipt-node-count",
+    "wrong-receipt-node-kinds",
+    "wrong-original-member-count",
+    "actual-unpaid-frontier-not-a-positive-proof",
+    "actual-unreachable-extra-node"
+  ],
+  "positive_tree_sha256": "c26379581a6ff966cdcf308499553c90b515c3eccd1469c1690900cf6cc9ddc5",
+  "constants_sha256": "0b08dd350e33852d46207fb709b88ad5535cb2a003a51cf429b7cddb200c8ed1",
+  "source_sha256": "9c217e1a988bf1092b3d85fc2e65d2146fd46fe725c278bcee8a6f965d2a62be",
+  "audit_source_sha256": "9fe6866c6884a6bcbd92e5285a75f4051a46d5d2ae29cfd7073c279b1fc009a8",
+  "all_source_type_maps_and_disjoint_payment_merge_still_required": true,
+  "global_optimality_proved": false
+}

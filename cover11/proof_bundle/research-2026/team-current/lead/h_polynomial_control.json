@@ -1,0 +1,6 @@
+{
+  "radicaleliminationidentity": true,
+  "degree_bound": 20,
+  "p_degree": 5,
+  "scope": "necessaryfixedparameterstationarypolynomial,notrootsorcontinuummax"
+}

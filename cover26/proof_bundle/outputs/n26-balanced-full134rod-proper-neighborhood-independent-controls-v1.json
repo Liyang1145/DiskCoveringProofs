@@ -1,0 +1,71 @@
+{
+  "schema": "N26-independent-actual-balanced-full134rod-neighborhood-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "5e0a19197f803d33a1487f16b8c889f8d135818b3d7c9346e7b81081d46af0ae",
+  "actual_proper_closed_neighborhood_results_independently_reconstructed": [
+    {
+      "checked_v7_leaf": 1515,
+      "proper_half_width": "1/1000",
+      "strict_actual_closed_neighborhood": true,
+      "strict_radius_margin": "6346440541144361408962994712432284305973861080349188626598705840150115738888643920090118512400513/1250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_leaf": 1515,
+      "proper_half_width": "1/100000",
+      "strict_actual_closed_neighborhood": true,
+      "strict_radius_margin": "951889350394026014221551666367887219474883631050005248229936460007163028062380172956428867358861/156250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_leaf": 1515,
+      "proper_half_width": "1/10000000",
+      "strict_actual_closed_neighborhood": true,
+      "strict_radius_margin": "61023453149889249423006501047094261024004171439921185206342975498203988777614810542861139038270399/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_leaf": 1516,
+      "proper_half_width": "1/1000",
+      "strict_actual_closed_neighborhood": true,
+      "strict_radius_margin": "46274948691851210156072772261303905386322043265398920457554073364051929489850690171533191505779523/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_leaf": 1516,
+      "proper_half_width": "1/100000",
+      "strict_actual_closed_neighborhood": true,
+      "strict_radius_margin": "57403382504323086930095794868442094336652629286865187572145031709911032334415165650952821551804151/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "checked_v7_leaf": 1516,
+      "proper_half_width": "1/10000000",
+      "strict_actual_closed_neighborhood": true,
+      "strict_radius_margin": "7189473696711259994042118713884956145580136262745874725448631137316657739343442178979901487681021/1250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "actual_reference_containment_and_necessary_domain_reconstruction_checked": 6,
+  "independent_sine_square_and_correlated_square_completion_controls": 18,
+  "actual_closed_subset_and_no_payment_rejection_controls_passed": [
+    "neighborhood-unknown-width",
+    "neighborhood-source-lower-bound-changed",
+    "neighborhood-source-upper-bound-changed",
+    "neighborhood-closed-coordinate-omitted",
+    "neighborhood-subset-laundered-as-whole-old-leaf",
+    "neighborhood-prospective-proof-paid-as-geometry",
+    "neighborhood-subset-paid-as-whole-root",
+    "neighborhood-latest-v8-intersection-obligation-omitted"
+  ],
+  "proper_neighborhoods_NOT_whole_old_leaf_or_current_root_payments": true,
+  "old_proofs_supports_and_NEWEST_running_histories_UNMODIFIED": true,
+  "successful_v7_neighborhood_NEEDS_fresh_actual_v8_OPEN_intersections_and_remaining_cover": true,
+  "arithmetic_only_NOT_complete_latest_model_source_history_or_geometry_acceptance": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "9028a3c8d2360163d1703bb3909c2129feb7ed7167e199c369a4924edb2f95bd",
+  "tested_neighborhood_probe_sha256": "8712de2cccc7902c1e145b3ba1a0f9790c3ce41ab5d6af033a36c06182731afa"
+}

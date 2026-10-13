@@ -1,0 +1,20 @@
+{
+  "status": "sourcebound_node1_excluded_under_C1331_fancuts",
+  "vertices": 96,
+  "nonsingular_bases": 239,
+  "replay": {
+    "family": "10/4",
+    "index": 879,
+    "lower_radius_exact": "332939264070294331029162708379735550115175381/1000000000000000000000000000000000000000000000",
+    "lower_radius_display": 0.33293926407029434,
+    "excluded": true,
+    "vertices": 96,
+    "incidence_rebuilt": true,
+    "exact_balance": true,
+    "vertex_coverage": "pending_separate_independent_audit",
+    "all_endpoint_signs_positive": true
+  },
+  "source_sha256": "e010ee621af4a9f14c7708c0cde0629d85e8c526469108f33bf253f27d658aa0",
+  "snapshot_sha256": "1f6c142eebbfe1e746efd6bce5e7712c79ea067da67d3eae04bc3cf3b34b9efc",
+  "scope": "node1 entirefeasible879 domain using necessaryC1331 cuts; notwholeq10"
+}

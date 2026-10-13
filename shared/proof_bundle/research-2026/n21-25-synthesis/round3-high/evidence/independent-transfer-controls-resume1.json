@@ -1,0 +1,20 @@
+{
+  "verified": true,
+  "positive_controls": 2,
+  "negative_controls_rejected": [
+    "reflection_missing_anchor_offset",
+    "noninjective_internal_centres",
+    "wrong_boundary_orientation",
+    "wrong_boundary_shift",
+    "boolean_centre_label",
+    "missing_retained_face",
+    "duplicate_face",
+    "out_of_range_face",
+    "incorrect_group_centre_count",
+    "image_face_absent_from_full_type",
+    "full_layer_incomplete"
+  ],
+  "auditor_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "source_sha256": "c76ae27448768d1b3993fc03448d13cc35847ae6cbeb796f5193984d8ebdf5b1",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,8 @@
+{
+  "N": 23,
+  "actual_original_binding_and_independent_final_audit_successfully_observed": true,
+  "final_global_source_acceptance_sha256": "6da6c5e1c80ade821bb033ce3b3b547c9ff5fb4a71cac16a531442a867e5da12",
+  "source_sha256": "f204683487eaeef8ccab433517d815d00a90c04c0ed51e08ded440ce882295d2",
+  "global_source_proof_closed": true,
+  "scope": "qualified computer-assisted SOURCE proof; not formalization or third-party review"
+}

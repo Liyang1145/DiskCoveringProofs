@@ -1,0 +1,7 @@
+{
+  "epsilon": "1/100000000",
+  "radius_loss_bound": "3003/10000000",
+  "normalized_lower": "493/500",
+  "exact_margin": "197/10000000",
+  "scope": "rational inequalities only; geometric crossproduct and norm derivation in ENDPOINT-ANGLE-GAP.md; h>1/50 from prior directed chord control"
+}

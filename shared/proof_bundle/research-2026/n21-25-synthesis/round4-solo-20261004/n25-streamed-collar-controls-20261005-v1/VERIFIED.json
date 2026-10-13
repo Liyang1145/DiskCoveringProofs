@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "schema": "streamed-collar-storage-controls-v1",
+  "source_sha256": "2e74d96bc5443836cd895891b19c260d8f8a41116f4f558c07e7be6ae7af1d9a",
+  "native_source_sha256": "709fc136c48b42d000338af8cb2185083d22a62a59280b40c2ef6f4f9f99d9a7",
+  "native_binary_sha256": "ca3ebfbaa3a4888ee793f3d8ff0ce94c33c9e260f3af39c719a9b8d193331d7f",
+  "storage_include_sha256": "4bbf2577a2b0e33f6bdd4530af017130eac4cac258d1e0e5636939e0efe4af29",
+  "merge_source_sha256": "b595d1e4b175fdaa49b35194a0bf7a197100e7e7830d43bfe7ef4ed4d92ea1d8",
+  "derivation_sha256": "0096d06f395702818c8c446a9461187407eb838ff1ebd805c3b16e3e16e46473",
+  "all_complete_union_sets_equal_to_in_memory_references": true,
+  "cases": [
+    {
+      "N": 20,
+      "B": 14,
+      "mode": "dfs",
+      "slab_limit": 1,
+      "sparse_guard_enabled": false,
+      "unique_graphs": 0,
+      "complete_set_equals_in_memory_reference": true,
+      "cross_slab_duplicates_removed": 0,
+      "manifest_sha256": "f8295a9467586450533f90d61e325a0fbc3850251420607f38eae597d3b1eab8",
+      "union_replay_sha256": "fcd9107555d1e5449e8bf2614d7f09116db4bce44af90625560d12e2840a2e79"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "dfs",
+      "slab_limit": 7,
+      "sparse_guard_enabled": false,
+      "unique_graphs": 18,
+      "complete_set_equals_in_memory_reference": true,
+      "cross_slab_duplicates_removed": 15,
+      "manifest_sha256": "01bf7721f3d2f905443b42057f25be9d1d4584002a5b7f5acb4eefa495f7c9e5",
+      "union_replay_sha256": "3dcfa1f2e173aa3fa70804ec8d8e4b9b4dabb3281cacedbf101b34efb1a21b84"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "audit",
+      "slab_limit": 2,
+      "sparse_guard_enabled": false,
+      "unique_graphs": 18,
+      "complete_set_equals_in_memory_reference": true,
+      "cross_slab_duplicates_removed": 53,
+      "manifest_sha256": "d0810a70caa2b1272aedce159961cc687f220dd6ea9c8712bdc96ee76fe174df",
+      "union_replay_sha256": "25a3d6af2fa09f13f6e85e0eb4e99bcb1bc9ee90ca2a7cae8b5c9a96b19d2cdf"
+    },
+    {
+      "N": 21,
+      "B": 14,
+      "mode": "dfs",
+      "slab_limit": 1,
+      "sparse_guard_enabled": true,
+      "unique_graphs": 1,
+      "complete_set_equals_in_memory_reference": true,
+      "cross_slab_duplicates_removed": 0,
+      "manifest_sha256": "729f7441db40e0f7d30d838e2a5cf2fe3457843a04b252df8acc7f04d9808219",
+      "union_replay_sha256": "c6fbcaf84f9ded051c74a7ad0fb1e6a67405c491725532be0f6848c778f49dc9"
+    }
+  ],
+  "negative_controls_rejected": [
+    "node-limit-no-complete-manifest",
+    "nonzero-exit-rejected",
+    "missing-slab",
+    "wrong-row-count",
+    "prefix-manifest"
+  ],
+  "full_n25_search_not_run_by_this_control": true,
+  "global_optimality_proved": false
+}

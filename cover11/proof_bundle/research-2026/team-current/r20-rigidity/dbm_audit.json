@@ -1,0 +1,10 @@
+{
+  "root_dbm_closed": true,
+  "domain_rows": 90,
+  "sample_y_all_rows_satisfied": true,
+  "residual_dual_direction_holds": true,
+  "edge_permutation_involution": true,
+  "anchor_site_edge_consistency": true,
+  "scope": "small exact-Fraction controls for the DBM polytope audit; no LP re-run",
+  "repro": "py -3 -B -X utf8 dbm_audit.py"
+}

@@ -1,0 +1,40 @@
+{
+  "sqrt_exact_squared_inequalities": true,
+  "positive_center_origin_r1.5": {
+    "nproc": 1,
+    "nprune_out": 0,
+    "nprune_ub": 1,
+    "ntight": 1,
+    "maxdepth": 0,
+    "cpu": 2.4318695068359375e-05,
+    "ok": true
+  },
+  "negative_center_origin_r0.9": {
+    "returned": false,
+    "reason": {
+      "reason": "maxdepth",
+      "nproc": 23,
+      "nfail": 1,
+      "cpu": 0.0002605915069580078
+    },
+    "independent_point": "(1,0), exact distance=1"
+  },
+  "D2_one_nonzero_center_radius1.25": {
+    "lo": "5629499534213123/4503599627370500",
+    "hi": "5629499534213121/4503599627370496",
+    "lo_arg": "far0",
+    "hi_arg": "far0",
+    "n_cand": "1",
+    "kept": "1",
+    "dropped": "0",
+    "cpu": "6.127357482910156e-05"
+  },
+  "all24_literal_identity": true,
+  "sha256": {
+    "research-2026\\session2\\n1314\\cfg\\cert_n12_othern.json": "922cd6216eec0210fdb26e4f080291130148e21f3651d9d63361caabd25fc72e",
+    "research-2026\\session2\\n1314\\py\\certify_cfg.py": "be90aab3ac6a2f1f5a2afe131be1bd9b41c23c5bd81601ecd35fd47119073058",
+    "research-2026\\session2\\n1314\\py\\cert_bb.py": "55d465cc2c279cefa1d2f8c2f459c06b9930b3b2ec283e0dc85f39e3b492155a",
+    "research-2026\\session2\\n1314\\py\\cert_cand.py": "fda934bd272d4875882547eb1ece6ce156ce87acb30a847646fc3f0e0aea731b",
+    "research-2026\\session2\\n1314\\py\\certlib.py": "d51b5b8770bea5f35769f8c0d120dd1e42e0b6d6f2f5f02641ee122ba2208420"
+  }
+}

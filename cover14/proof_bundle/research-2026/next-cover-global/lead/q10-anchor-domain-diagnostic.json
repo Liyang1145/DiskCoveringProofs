@@ -1,0 +1,791 @@
+{
+  "status": "numeric_only_mapping_and_cell_diagnostic",
+  "references": [
+    {
+      "map": {
+        "9": 3,
+        "3": 2,
+        "7": 1,
+        "5": 0,
+        "1": 9,
+        "8": 8,
+        "0": 7,
+        "4": 6,
+        "6": 5,
+        "2": 4,
+        "10": 11,
+        "11": 13,
+        "12": 12,
+        "13": 10
+      },
+      "anchor_order": [
+        2,
+        1,
+        0,
+        9,
+        8,
+        7,
+        6,
+        5,
+        4,
+        3
+      ],
+      "angles": [
+        0.0,
+        0.667162234940348,
+        1.2326573426512724,
+        1.9089353109385208,
+        2.4744304186494452,
+        3.141592653589793,
+        3.8087548885301414,
+        4.3742499962410655,
+        5.050527964528314,
+        5.616023072239238
+      ]
+    },
+    {
+      "map": {
+        "9": 3,
+        "3": 4,
+        "7": 5,
+        "5": 6,
+        "1": 7,
+        "8": 8,
+        "0": 9,
+        "4": 0,
+        "6": 1,
+        "2": 2,
+        "10": 11,
+        "11": 13,
+        "12": 10,
+        "13": 12
+      },
+      "anchor_order": [
+        7,
+        8,
+        9,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "angles": [
+        0.0,
+        0.667162234940348,
+        1.2326573426512724,
+        1.9089353109385208,
+        2.4744304186494452,
+        3.141592653589793,
+        3.8087548885301414,
+        4.3742499962410655,
+        5.050527964528314,
+        5.616023072239238
+      ]
+    },
+    {
+      "map": {
+        "9": 8,
+        "3": 7,
+        "7": 6,
+        "5": 5,
+        "1": 4,
+        "8": 3,
+        "0": 2,
+        "4": 1,
+        "6": 0,
+        "2": 9,
+        "10": 13,
+        "11": 11,
+        "12": 10,
+        "13": 12
+      },
+      "anchor_order": [
+        7,
+        6,
+        5,
+        4,
+        3,
+        2,
+        1,
+        0,
+        9,
+        8
+      ],
+      "angles": [
+        0.0,
+        0.6671622349403483,
+        1.2326573426512724,
+        1.9089353109385208,
+        2.474430418649445,
+        3.141592653589793,
+        3.808754888530141,
+        4.3742499962410655,
+        5.050527964528314,
+        5.616023072239238
+      ]
+    },
+    {
+      "map": {
+        "9": 8,
+        "3": 9,
+        "7": 0,
+        "5": 1,
+        "1": 2,
+        "8": 3,
+        "0": 4,
+        "4": 5,
+        "6": 6,
+        "2": 7,
+        "10": 13,
+        "11": 11,
+        "12": 12,
+        "13": 10
+      },
+      "anchor_order": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        0,
+        1
+      ],
+      "angles": [
+        0.0,
+        0.6671622349403483,
+        1.2326573426512724,
+        1.9089353109385208,
+        2.474430418649445,
+        3.141592653589793,
+        3.808754888530141,
+        4.3742499962410655,
+        5.050527964528314,
+        5.616023072239238
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "node": 0,
+      "max_angle_width": 0.47959437569289776,
+      "center_candidate_distance": 0.038843704222390585,
+      "wholecell_candidate_distance": 0.4704786423459977,
+      "radius": 0.3405806833381183,
+      "robust": 0.32530972125735236
+    },
+    {
+      "node": 2,
+      "max_angle_width": 0.47959437569289776,
+      "center_candidate_distance": 0.059949296961613774,
+      "wholecell_candidate_distance": 0.4704786423459977,
+      "radius": 0.3409183391768501,
+      "robust": 0.32684640812342397
+    },
+    {
+      "node": 4,
+      "max_angle_width": 0.47959437569289776,
+      "center_candidate_distance": 0.03884370422239236,
+      "wholecell_candidate_distance": 0.4704786423459977,
+      "radius": 0.3405806833381183,
+      "robust": 0.32908303854264004
+    },
+    {
+      "node": 6,
+      "max_angle_width": 0.47959437569289776,
+      "center_candidate_distance": 0.07081666260191577,
+      "wholecell_candidate_distance": 0.4704786423459977,
+      "radius": 0.34066261855047575,
+      "robust": 0.3293251199235976
+    },
+    {
+      "node": 8,
+      "max_angle_width": 0.47959437569289776,
+      "center_candidate_distance": 0.09365449001586335,
+      "wholecell_candidate_distance": 0.4704786423459977,
+      "radius": 0.3404820926027424,
+      "robust": 0.32956684140030745
+    },
+    {
+      "node": 9,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.09365449001586335,
+      "wholecell_candidate_distance": 0.24891292119334896,
+      "radius": 0.33995259614350887,
+      "robust": 0.3303792448114708
+    },
+    {
+      "node": 12,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.08680314179167858,
+      "wholecell_candidate_distance": 0.24891292119334896,
+      "radius": 0.3397943423854839,
+      "robust": 0.33093005050195684
+    },
+    {
+      "node": 13,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.06282342300703458,
+      "wholecell_candidate_distance": 0.2306814544995488,
+      "radius": 0.34078224269235774,
+      "robust": 0.33114005025368126
+    },
+    {
+      "node": 14,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.10328919845612283,
+      "wholecell_candidate_distance": 0.24891292119334896,
+      "radius": 0.3399969478534889,
+      "robust": 0.33093626133829773
+    },
+    {
+      "node": 15,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.0808082120955178,
+      "wholecell_candidate_distance": 0.2306814544995488,
+      "radius": 0.33927489881550477,
+      "robust": 0.3310747244509622
+    },
+    {
+      "node": 17,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.0808082120955178,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.34099099238044156,
+      "robust": 0.3316554171370409
+    },
+    {
+      "node": 18,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.08080821209551692,
+      "wholecell_candidate_distance": 0.2306814544995488,
+      "radius": 0.3392748988155044,
+      "robust": 0.331513051189571
+    },
+    {
+      "node": 19,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209551647,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.34096965990537353,
+      "robust": 0.3316545890169007
+    },
+    {
+      "node": 20,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.08080821209551647,
+      "wholecell_candidate_distance": 0.2306814544995488,
+      "radius": 0.3387819335952869,
+      "robust": 0.33151323103629715
+    },
+    {
+      "node": 21,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209551736,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.33825168651443493,
+      "robust": 0.33153381027645584
+    },
+    {
+      "node": 24,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209551026,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.33825168651443366,
+      "robust": 0.3315425275898115
+    },
+    {
+      "node": 25,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209550937,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.3377201645965442,
+      "robust": 0.331587230417571
+    },
+    {
+      "node": 27,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.07993239594881185,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.336644933571629,
+      "robust": 0.33163900517261047
+    },
+    {
+      "node": 29,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.05083356361470681,
+      "wholecell_candidate_distance": 0.11078286057632436,
+      "radius": 0.3355572051706103,
+      "robust": 0.3316669208345217
+    },
+    {
+      "node": 31,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03996619797441081,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3346987211396912,
+      "robust": 0.33167511960087187
+    },
+    {
+      "node": 34,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.039966197974409035,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3340341810352954,
+      "robust": 0.331681641835785
+    },
+    {
+      "node": 35,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03996619797440548,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3335540421058755,
+      "robust": 0.33169272631598207
+    },
+    {
+      "node": 37,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.039966197974408146,
+      "wholecell_candidate_distance": 0.05994929696161222,
+      "radius": 0.33338251910404365,
+      "robust": 0.331706454857786
+    },
+    {
+      "node": 39,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.02085891513390603,
+      "wholecell_candidate_distance": 0.05083356361471214,
+      "radius": 0.3329275657489324,
+      "robust": 0.3317139449461755
+    },
+    {
+      "node": 41,
+      "max_angle_width": 0.02997464848080611,
+      "center_candidate_distance": 0.01998309898721118,
+      "wholecell_candidate_distance": 0.03909038182770619,
+      "radius": 0.33265658939576814,
+      "robust": 0.33171811840425114
+    },
+    {
+      "node": 44,
+      "max_angle_width": 0.02997464848080611,
+      "center_candidate_distance": 0.01998309898721029,
+      "wholecell_candidate_distance": 0.03909038182770619,
+      "radius": 0.332557605679672,
+      "robust": 0.33172011154719366
+    },
+    {
+      "node": 45,
+      "max_angle_width": 0.02997464848080611,
+      "center_candidate_distance": 0.019983098987206738,
+      "wholecell_candidate_distance": 0.03909038182770619,
+      "radius": 0.33237964394167524,
+      "robust": 0.3317240906449513
+    },
+    {
+      "node": 48,
+      "max_angle_width": 0.02997464848080611,
+      "center_candidate_distance": 0.01998309898721118,
+      "wholecell_candidate_distance": 0.03909038182770619,
+      "radius": 0.3323796439416765,
+      "robust": 0.3317274957499353
+    },
+    {
+      "node": 49,
+      "max_angle_width": 0.02997464848080611,
+      "center_candidate_distance": 0.019983098987212955,
+      "wholecell_candidate_distance": 0.02997464848080611,
+      "radius": 0.3324374594213409,
+      "robust": 0.3317281810645528
+    },
+    {
+      "node": 51,
+      "max_angle_width": 0.02997464848080611,
+      "center_candidate_distance": 0.014111508093707315,
+      "wholecell_candidate_distance": 0.024103057587303134,
+      "radius": 0.33224174985636495,
+      "robust": 0.3317315545571884
+    },
+    {
+      "node": 56,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209550937,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.3409696599053716,
+      "robust": 0.33166317143177343
+    },
+    {
+      "node": 57,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209551026,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.33988356959767824,
+      "robust": 0.3316772844928594
+    },
+    {
+      "node": 59,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.05994929696160778,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.33894534334089815,
+      "robust": 0.33170043795939996
+    },
+    {
+      "node": 61,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.03996619797440637,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.3381826414916146,
+      "robust": 0.3317003388285427
+    },
+    {
+      "node": 64,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.03996619797440215,
+      "wholecell_candidate_distance": 0.11078286057632436,
+      "radius": 0.33766728843908866,
+      "robust": 0.3317004374180907
+    },
+    {
+      "node": 65,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03996619797440304,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.33692660096293825,
+      "robust": 0.33170943629569627
+    },
+    {
+      "node": 68,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03996619797440282,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3362055138867799,
+      "robust": 0.3317134619087164
+    },
+    {
+      "node": 69,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03584623937431086,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.33539525427498124,
+      "robust": 0.3317179169574278
+    },
+    {
+      "node": 71,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.029974648480804333,
+      "wholecell_candidate_distance": 0.05994929696161222,
+      "radius": 0.3351567045809189,
+      "robust": 0.3317282041519769
+    },
+    {
+      "node": 73,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.029974648480790123,
+      "wholecell_candidate_distance": 0.05994929696161222,
+      "radius": 0.3347255307222375,
+      "robust": 0.33172831602440533
+    },
+    {
+      "node": 76,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.020858915133909584,
+      "wholecell_candidate_distance": 0.05083356361471214,
+      "radius": 0.33387325039140514,
+      "robust": 0.3317283177721793
+    },
+    {
+      "node": 80,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209551647,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.34099099238044117,
+      "robust": 0.3316635329639144
+    },
+    {
+      "node": 81,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.08080821209551647,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.33935509198650776,
+      "robust": 0.33167744758446743
+    },
+    {
+      "node": 83,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.05994929696161222,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.33862578939590404,
+      "robust": 0.33169871662865247
+    },
+    {
+      "node": 86,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.05994929696160689,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.3386257893959038,
+      "robust": 0.33170061675444706
+    },
+    {
+      "node": 88,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.039966197974403705,
+      "wholecell_candidate_distance": 0.11078286057632436,
+      "radius": 0.33737690703369294,
+      "robust": 0.331700465318282
+    },
+    {
+      "node": 89,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.039966197974404594,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3367804694060813,
+      "robust": 0.33170888559089234
+    },
+    {
+      "node": 92,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03996619797440415,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3360196348324482,
+      "robust": 0.3317129681228806
+    },
+    {
+      "node": 93,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.0399661979743966,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3349248495338573,
+      "robust": 0.3317180817831773
+    },
+    {
+      "node": 95,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.039966197974399265,
+      "wholecell_candidate_distance": 0.05994929696161222,
+      "radius": 0.33468520462228113,
+      "robust": 0.3317285555964181
+    },
+    {
+      "node": 98,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.0374683106009881,
+      "wholecell_candidate_distance": 0.05994929696161222,
+      "radius": 0.33458053400800264,
+      "robust": 0.33172827496652557
+    },
+    {
+      "node": 100,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.02085891513390603,
+      "wholecell_candidate_distance": 0.05083356361471214,
+      "radius": 0.33351089575953774,
+      "robust": 0.33172841280511256
+    },
+    {
+      "node": 104,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.06282342300703236,
+      "wholecell_candidate_distance": 0.2306814544995488,
+      "radius": 0.34078224269235885,
+      "robust": 0.33163722895611597
+    },
+    {
+      "node": 105,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.06282342300703148,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.341944356867686,
+      "robust": 0.3316813762207209
+    },
+    {
+      "node": 106,
+      "max_angle_width": 0.23979718784644888,
+      "center_candidate_distance": 0.07993239594881718,
+      "wholecell_candidate_distance": 0.2306814544995488,
+      "radius": 0.34098769480636204,
+      "robust": 0.33163724124074645
+    },
+    {
+      "node": 107,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.0799323959488154,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.3405959527779226,
+      "robust": 0.3316557120215295
+    },
+    {
+      "node": 110,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.0799323959488154,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.3404382242368205,
+      "robust": 0.3316633435856102
+    },
+    {
+      "node": 111,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.07993239594881629,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.3399780527766089,
+      "robust": 0.33166353848110336
+    },
+    {
+      "node": 114,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.07993239594881008,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.3402926659945495,
+      "robust": 0.3316635048328329
+    },
+    {
+      "node": 115,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.07993239594881008,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.3391915267193049,
+      "robust": 0.33168745838461255
+    },
+    {
+      "node": 117,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.0508335636147077,
+      "wholecell_candidate_distance": 0.11078286057632436,
+      "radius": 0.3374625239693306,
+      "robust": 0.33170169798928717
+    },
+    {
+      "node": 119,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03996619797441259,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.336750812370515,
+      "robust": 0.33171001805242883
+    },
+    {
+      "node": 122,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.0399661979744117,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.33627997730885956,
+      "robust": 0.331714424708399
+    },
+    {
+      "node": 123,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03996619797440726,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3358280916021083,
+      "robust": 0.3317136423168527
+    },
+    {
+      "node": 126,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.039966197974408146,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.33476354688284493,
+      "robust": 0.3317145406937995
+    },
+    {
+      "node": 127,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.039966197974408146,
+      "wholecell_candidate_distance": 0.05994929696161222,
+      "radius": 0.3343410402834992,
+      "robust": 0.3317251050158082
+    },
+    {
+      "node": 129,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.020858915133909584,
+      "wholecell_candidate_distance": 0.05083356361471214,
+      "radius": 0.3337458881379349,
+      "robust": 0.33172933015427425
+    },
+    {
+      "node": 134,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.06282342300702837,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.34177951002253215,
+      "robust": 0.3316893546063553
+    },
+    {
+      "node": 135,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.06282342300702837,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.3410597312994707,
+      "robust": 0.33168957390068776
+    },
+    {
+      "node": 138,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.059949296961604226,
+      "wholecell_candidate_distance": 0.12901432727012452,
+      "radius": 0.34125619292001186,
+      "robust": 0.33168946168418867
+    },
+    {
+      "node": 139,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.059949296961604226,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.34031389805729734,
+      "robust": 0.3317113922560904
+    },
+    {
+      "node": 141,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.03996619797440637,
+      "wholecell_candidate_distance": 0.11989859392322444,
+      "radius": 0.33924503914209575,
+      "robust": 0.3317112307705589
+    },
+    {
+      "node": 144,
+      "max_angle_width": 0.11989859392322444,
+      "center_candidate_distance": 0.035846239374314415,
+      "wholecell_candidate_distance": 0.11078286057632436,
+      "radius": 0.33886058290704557,
+      "robust": 0.3317110908622885
+    },
+    {
+      "node": 145,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03584623937431264,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3382354697435486,
+      "robust": 0.331718961628996
+    },
+    {
+      "node": 148,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03584623937431308,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.33768710143145714,
+      "robust": 0.331723578545186
+    },
+    {
+      "node": 149,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03584623937431308,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.33708106433130547,
+      "robust": 0.33172287835108644
+    },
+    {
+      "node": 152,
+      "max_angle_width": 0.05994929696161222,
+      "center_candidate_distance": 0.03584623937431308,
+      "wholecell_candidate_distance": 0.0690650303085123,
+      "radius": 0.3362401661210615,
+      "robust": 0.33172320756606266
+    }
+  ]
+}

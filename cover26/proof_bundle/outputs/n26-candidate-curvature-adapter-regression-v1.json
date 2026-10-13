@@ -1,0 +1,24 @@
+{
+  "schema": "N26-original-candidate-curvature-adapter-regression-evidence-v1",
+  "original_92_rod_two_coordinate_energy_identity": {
+    "independent_rational_two_coordinate_energy_identity": true,
+    "grounded_residual_energy_nonnegative": true
+  },
+  "invalid_kernel_controls_rejected": [
+    "full-type-kernel-relabelled-as-candidate",
+    "changed-candidate-anchor-count",
+    "changed-original-ground-inverse",
+    "nonpositive-original-rod-weight",
+    "negative-original-weight-scale",
+    "extra-full-type-or-future-rod-added",
+    "candidate-radius-scope-promoted-to-U"
+  ],
+  "current_candidate_boxes_removed_by_this_test": 0,
+  "actual_source_angle_partition_and_whole_box_acceptance_still_required": true,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "reference_sha256": "82a87672fe40e532ef46125f1503ccb3209d4347b0d936cea9be0f7ad8942b2e",
+  "kernel_sha256": "e4f94debadb81447b81e7af573f8c351b11aed454ac529e5e26109653bf46024",
+  "tested_adapter_sha256": "6a4f28e2a17563c040ca55d129a52cdb860f1fd6d48e666f22bb3a433d97d383",
+  "executed_test_sha256": "55c766a10cad7cc61531b6237e324bbd5af310ed6581aee9746d727dd6813fdb"
+}

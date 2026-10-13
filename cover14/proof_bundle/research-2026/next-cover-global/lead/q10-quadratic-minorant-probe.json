@@ -1,0 +1,77 @@
+{
+  "status": "numeric_only_proposed_box_bound",
+  "tests": [
+    {
+      "alpha": 0.0625,
+      "eps": 0.001,
+      "min_radial_ratio": 0.9763690544675558,
+      "min_eigen": -0.007366491235453643
+    },
+    {
+      "alpha": 0.0625,
+      "eps": 0.003,
+      "min_radial_ratio": 0.9291071634026674,
+      "min_eigen": -0.008957339030489706
+    },
+    {
+      "alpha": 0.0625,
+      "eps": 0.005,
+      "min_radial_ratio": 0.8818452723377791,
+      "min_eigen": -0.010551726040506259
+    },
+    {
+      "alpha": 0.125,
+      "eps": 0.001,
+      "min_radial_ratio": 0.9527381089351117,
+      "min_eigen": 0.013382537081658716
+    },
+    {
+      "alpha": 0.125,
+      "eps": 0.003,
+      "min_radial_ratio": 0.8582143268053349,
+      "min_eigen": 0.010146650821951885
+    },
+    {
+      "alpha": 0.125,
+      "eps": 0.005,
+      "min_radial_ratio": 0.7636905446755583,
+      "min_eigen": 0.006893944858355705
+    },
+    {
+      "alpha": 0.25,
+      "eps": 0.001,
+      "min_radial_ratio": 0.9054762178702233,
+      "min_eigen": 0.04983582227918169
+    },
+    {
+      "alpha": 0.25,
+      "eps": 0.003,
+      "min_radial_ratio": 0.71642865361067,
+      "min_eigen": 0.042802476065172505
+    },
+    {
+      "alpha": 0.25,
+      "eps": 0.005,
+      "min_radial_ratio": 0.5273810893511165,
+      "min_eigen": 0.03549721740487606
+    },
+    {
+      "alpha": 0.5,
+      "eps": 0.001,
+      "min_radial_ratio": 0.8109524357404465,
+      "min_eigen": 0.10254817297888198
+    },
+    {
+      "alpha": 0.5,
+      "eps": 0.003,
+      "min_radial_ratio": 0.4328573072213399,
+      "min_eigen": 0.08167069389299558
+    },
+    {
+      "alpha": 0.5,
+      "eps": 0.005,
+      "min_radial_ratio": 0.0547621787022331,
+      "min_eigen": -4.365617270099436
+    }
+  ]
+}

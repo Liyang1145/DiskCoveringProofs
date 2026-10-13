@@ -1,0 +1,1 @@
+{'tested': 14821, 'violations_xy_bound': 0, 'violations_tau_identity': 0, 'violations_tau_sinbeta': {'count': 0, 'worst_rhs_minus_lhs': '-3.514996243996486626523803635683857718218e-19'}, 'violations_final': {'count': 0, 'worst_rhs_minus_D': '-0.0000006805605471508120989806794753735833127825'}, 'note': 'consistency check only; the chain is proved analytically in the audit note'}

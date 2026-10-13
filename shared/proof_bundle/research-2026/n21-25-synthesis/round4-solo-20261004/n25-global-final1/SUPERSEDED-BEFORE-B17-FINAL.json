@@ -1,0 +1,15 @@
+{
+  "superseded_waiting_entry_not_global_acceptance": true,
+  "N": 25,
+  "observed_original_waiting_process_pid": 13816,
+  "actual_stopped_process_terminal_observed": true,
+  "actual_exit_code": -1,
+  "own_wait_helper_pid_also_stopped": 19656,
+  "original_B17_math_pid4004_and_final_parent_pid8644_untouched": true,
+  "reason": "Preflight found manuscript/new unaccepted final-gate B17 strict-count typo: correct original222283 plus66857 equals289140. Original math proofs and all accepted sources unchanged.",
+  "pre_correction_binder_backup_sha256": "6174f8271ad073636eae9dfda0fb50c63823369784d4dd3dbe2e9579968a3654",
+  "pre_correction_global_entry_backup_sha256": "3e62b36931d62a00c6591ed506d42e87d89aaceecb7d9b836a7ac60008a8d5a8",
+  "new_unique_successor_output": "n25-global-final2",
+  "old_outputs_preserved_no_proof_files_deleted": true,
+  "global_optimality_proved": false
+}

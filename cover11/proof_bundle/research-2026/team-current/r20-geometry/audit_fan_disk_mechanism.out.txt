@@ -1,0 +1,54 @@
+certified radius r* = 0.37998385311983873   (R0 = 0.38, t = r*/R0 = 0.99995750821010192105)
+ring owners in boundary order: [7, 1, 8, 6, 4, 9, 10, 3, 5]
+hubs: [0, 2]  norms: ['0.149428498946', '0.272977466357']
+
+=== (A) pair analysis of the certified cover's nine adjacent ring pairs ===
+   pair      d         k         t_+        t_-        t_+-k      t_-+k     |pin|   |pout|  Ucov
+    7- 1   0.65947   0.18885   0.188845  -1.809150  -4.22e-17  -1.62e+00  0.6229  1.0000  -2.1e-17
+    1- 8   0.65947   0.18885   0.188845  -1.809150  -5.17e-17  -1.62e+00  0.6229  1.0000  -2.6e-17
+    8- 6   0.52971   0.27247   0.272468  -1.672715  -3.23e-17  -1.40e+00  0.4868  1.0000  -2.3e-17
+    6- 4   0.45110   0.30580   0.305801  -1.684419  -6.73e-17  -1.38e+00  0.3960  1.0000  -5.4e-17
+    4- 9   0.55500   0.25958   0.259582  -1.733316  -4.90e-17  -1.47e+00  0.4847  1.0000  -3.3e-17
+    9-10   0.59674   0.23529   0.235294  -1.764706  -7.69e-17  -1.53e+00  0.5294  1.0000  -4.8e-17
+   10- 3   0.55500   0.25958   0.259582  -1.733316  -7.74e-17  -1.47e+00  0.4847  1.0000  -5.3e-17
+    3- 5   0.45110   0.30580   0.305801  -1.684419  -4.86e-17  -1.38e+00  0.3960  1.0000  -3.9e-17
+    5- 7   0.52971   0.27247   0.272468  -1.672715  -5.47e-17  -1.40e+00  0.4868  1.0000  -3.9e-17
+   => t_+-k >= 0 (equality: tight/tangent arcs), t_-+k < 0, |p_in| < 1 (inner), |p_out| >= 1.
+
+=== (B) hub half: strict hubs, inward side, disk containment, circumradius ===
+   pair  7- 1 hub  2 (|h|=0.27297747) : |h-p_in|-r = -2.965e-16  |h-p_out|-r = +3.745e-01  rho-r = -9.958e-17  inward=True
+   pair  1- 8 hub  2 (|h|=0.27297747) : |h-p_in|-r = -2.037e-16  |h-p_out|-r = +3.745e-01  rho-r = -6.840e-17  inward=True
+   pair  8- 6 hub  2 (|h|=0.27297747) : |h-p_in|-r = -9.661e-17  |h-p_out|-r = +5.439e-01  rho-r = -4.045e-17  inward=True
+   pair  6- 4 hub  0 (|h|=0.1494285) : |h-p_in|-r = -1.215e-16  |h-p_out|-r = +6.095e-01  rho-r = -5.444e-17  inward=True
+   pair  4- 9 hub  0 (|h|=0.1494285) : |h-p_in|-r = -2.839e-03  |h-p_out|-r = +5.158e-01  rho-r = -1.153e-03  inward=True
+   pair  9-10 hub  0 (|h|=0.1494285) : |h-p_in|-r = -5.723e-17  |h-p_out|-r = +4.706e-01  rho-r = -2.189e-17  inward=True
+   pair 10- 3 hub  0 (|h|=0.1494285) : |h-p_in|-r = -2.839e-03  |h-p_out|-r = +5.158e-01  rho-r = -1.153e-03  inward=True
+   pair  3- 5 hub  0 (|h|=0.1494285) : |h-p_in|-r = -7.115e-17  |h-p_out|-r = +6.095e-01  rho-r = -3.188e-17  inward=True
+   pair  5- 7 hub  2 (|h|=0.27297747) : |h-p_in|-r = -1.276e-16  |h-p_out|-r = +5.439e-01  rho-r = -5.341e-17  inward=True
+   => every face is circumradius-saturated (rho = r*), the hub sits exactly ON every
+      inward disk boundary |h-p_in| = r*, and |h-p_out| > r* strictly (2 deviations).
+
+=== (C) constructed arc families: partial overlap and exact tangent (zero overlap) ===
+   (C1) partial overlap : r=0.5000 |c|=0.7000
+     pair   d        k        t_U      t_U-k     t_-+k     |p_in|  |p_out|  |U|-cover
+      0    0.5358   0.4222   0.35328  -6.9e-02  -1.2e+00  0.2245  1.0689  -5.66e-02
+      1    0.5358   0.4222   0.35328  -6.9e-02  -1.2e+00  0.2245  1.0689  -5.66e-02
+      2    0.5358   0.4222   0.35328  -6.9e-02  -1.2e+00  0.2245  1.0689  -5.66e-02
+   (C2) exact arc tangency (U on both circles) : r=0.5000 |c|=0.6021
+     pair   d        k        t_U      t_U-k     t_-+k     |p_in|  |p_out|  |U|-cover
+      0    0.4608   0.4437   0.44375  +1.1e-41  -1.1e+00  0.1125  1.0000  +0.00e+00
+      1    0.4608   0.4437   0.44375  +1.1e-41  -1.1e+00  0.1125  1.0000  +0.00e+00
+      2    0.4608   0.4437   0.44375  +5.7e-42  -1.1e+00  0.1125  1.0000  +1.15e-41
+
+=== (D) degeneracy probes ===
+   (D1) d=2r: t_+ <= k = 0 vs t_+ > 0 (m in int D) -> impossible;
+        equivalently B(c_i,r) cap B(c_j,r) = {m} with m in int D cannot contain U in dD.
+   (D2) collinear h, offset= 0.0000 : |h-p_in|-r = -1.911e-01  (circumradius undefined)
+   (D2) collinear h, offset= 0.1649 : |h-p_in|-r = -1.293e-01  (circumradius undefined)
+   (D2) collinear h, offset= 0.3297 : |h-p_in|-r = +0.000e+00  (circumradius undefined)
+   (D2) collinear h, offset= 0.5935 : |h-p_in|-r = +2.429e-01  (circumradius undefined)
+   (D2) collinear h, offset= 1.3189 : |h-p_in|-r = +9.524e-01  (circumradius undefined)
+   (D3) boundary hub h=(1-r)p_out/|p_out| on a tight pair (1, 8): |h-p_out|-r = +5.166e-17,
+        |h-p_in|-r = -3.629e-01  (if <= 0 the disk condition admits an outward-side point)
+
+wrote audit_fan_disk_mechanism.json

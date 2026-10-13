@@ -1,0 +1,13 @@
+{
+  "storage_helper_only_stopped": true,
+  "observed_original_pid": 19728,
+  "actual_process_terminal_observed": true,
+  "actual_exit_code": -1,
+  "known_native_storage_child3232_terminal_afterward": true,
+  "original_math_and_final_audit_jobs_untouched": true,
+  "reason": "Original worker frozen list did not contain all local proof evidence. V1 did not establish complete local byte comparison and no VERIFIED-STORAGE report was published.",
+  "v2_successor": "n25-B17-closed-evidence-storage-v2",
+  "separate_pilot_all1809_files_pre_post_hashes_identical": true,
+  "proof_logical_files_not_deleted_or_moved": true,
+  "not_a_mathematical_acceptance": true
+}

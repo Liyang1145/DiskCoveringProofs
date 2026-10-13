@@ -1,0 +1,6 @@
+{
+  "actual_all_original_workers_and_independent_parent_audit_terminals_observed": true,
+  "report_sha256": "436c851bd4f4afc2324e6db483b7337b2506e5f4940c29646a8b6c41f0a008ba",
+  "source_sha256": "64024103ee1332335989ecd5b0907e31f85355cfb7b94d87bcfe6e304bf9e6cc",
+  "global_optimality_proved": false
+}

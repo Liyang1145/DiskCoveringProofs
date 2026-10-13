@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "N": 25,
+  "B": 14,
+  "selected_parent_groups": [
+    552,
+    555,
+    581,
+    583,
+    586,
+    589,
+    68192
+  ],
+  "all_selected_complete_simple_hole_families_strictly_paid": true,
+  "results": [
+    {
+      "parent_group": 552,
+      "fully_paid": true,
+      "exact_sha256": "a4d8b3862145d0f0b5178ff9c30ed4afecfbd9c541a65fa77ac4a50d51c7cc30",
+      "proposal_sha256": "018f9061d85e6cab1fd6fad6fa912cc2ec99583ea043c327ff693c99ceb53c18",
+      "branch_nodes": 143
+    },
+    {
+      "parent_group": 555,
+      "fully_paid": true,
+      "exact_sha256": "208da06631e6666a4689d120661afd30cdb0b765295d19a868d555d1680b98ed",
+      "proposal_sha256": "e64531be9b6e9b9166304d3629ca7ddf4b98016c6ba595591c84b4bbccb007ec",
+      "branch_nodes": 165
+    },
+    {
+      "parent_group": 581,
+      "fully_paid": true,
+      "exact_sha256": "906e7c4c0d50f75b639182c1653d083cfbc992d522f9a59fb76288c1de274b88",
+      "proposal_sha256": "8fca08c934199b35e76b7f08dd636b9d277962cb4531b3e98be8920ff5b96b55",
+      "branch_nodes": 143
+    },
+    {
+      "parent_group": 583,
+      "fully_paid": true,
+      "exact_sha256": "c9bcf510ce74972cacb6d6e29a4c218a2e2115b7c1f551d2e74f3016f14f9e77",
+      "proposal_sha256": "db65e41d7e10398846ab31a9fa15c48ddcbe1fd36637e33d7f31cd4df846d3a4",
+      "branch_nodes": 155
+    },
+    {
+      "parent_group": 586,
+      "fully_paid": true,
+      "exact_sha256": "cf57a6bdb47df61cdfc6a6f376ed439ba8339585304d90ac97c8fcd8737a0bde",
+      "proposal_sha256": "90078cbb6c988fbf8b80e0eecaf40cdac78e857abe46d42afc2bff1c01e326af",
+      "branch_nodes": 181
+    },
+    {
+      "parent_group": 589,
+      "fully_paid": true,
+      "exact_sha256": "5f8897244f80dc72e74e1219dd3ac169dddeccc33c50d856958716ff0c36661b",
+      "proposal_sha256": "c457ce0d5f0fba4b41e14a4e22d445a9d2e1518a953f8c49555fea41ef609e15",
+      "branch_nodes": 77
+    },
+    {
+      "parent_group": 68192,
+      "fully_paid": true,
+      "exact_sha256": "dafe8dda573c92174fd7565c5273e6f3b25cdf5fd31db70f73863db5913e7620",
+      "proposal_sha256": "8ab80c40ae7b0d62bbcc53f250608d7ea82781b0c5f4a9757200dcaec084401a",
+      "branch_nodes": 1
+    }
+  ],
+  "parent_catalog_sha256": "a52729cbd01664e744eac859af86e425b389d50f51316a4276161f497c7b85e2",
+  "source_sha256": "4dc2f7502de6c2d686d0da3a3f749fdc9879547ed671506eb7b1a7e56bf2041a",
+  "not_new_types_or_additive_payment_count": true,
+  "global_optimality_proved": false
+}

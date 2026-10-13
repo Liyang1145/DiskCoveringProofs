@@ -1,0 +1,45 @@
+{
+  "verified": true,
+  "real_source_record_and_row_refusals_passed": true,
+  "negative_controls_rejected": [
+    "source-verified",
+    "source-schema",
+    "source-N",
+    "source-complete_recorded_necessary_outer_family",
+    "source-actual_native_successful_terminal_and_exact_source_inputs_rechecked",
+    "source-all_declared_sorted_slabs_and_full_union_independently_verified",
+    "source-weak_graph_rows_not_full_type_lower_bound_payments",
+    "source-source_sha256",
+    "source-catalog_sha256",
+    "source-union_report_sha256",
+    "source-global_optimality_proved",
+    "source-unique_necessary_weak_graphs",
+    "row-id-12",
+    "row-members-13",
+    "row-centers-14",
+    "row-faces-15",
+    "row-faces-16",
+    "row-faces-17",
+    "row-faces-18",
+    "row-faces-19",
+    "wrong-own-order-radius"
+  ],
+  "real_own_order_positive_tree_replayed": true,
+  "positive_parent_index": 0,
+  "positive_exact_result": {
+    "verified": true,
+    "vertices": 63,
+    "edges": 104,
+    "nodes": 1,
+    "counts": {
+      "DUAL": 1
+    },
+    "minimum_force_margin": "2455241946335730999748556848915551/125000863593140038294750000000000000",
+    "minimum_local_margin": null
+  },
+  "source_acceptance_sha256": "f9510e908819e481184c0d45b6014e044a878ecafed29f9b8415e5b66f5da1af",
+  "source_sha256": "304680edb95b810a6fb18cc1cf755bc828040d2d97af5522d3e160acd6924b4a",
+  "control_source_sha256": "16f95b09a622823aebebd62e4c9ff49778db3690d02a24b3a04b7bb90792c06f",
+  "controls_not_whole_family_lower_payments": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,38 @@
+{
+  "verified": true,
+  "N": 22,
+  "B": 15,
+  "catalog_sha256": "1d4616f73cf759dc59643d48e27312b6c851827cbabf26e0232198217a5be6b2",
+  "catalog_types": 2047149,
+  "stages": [
+    {
+      "groups_sha256": "05ef43c791bff2f4302b514df6aa8c0a72463d613714a04918f050392ce2d2e0",
+      "bindings_sha256": "2db1315945ca068fcfe44a983850d892a1d0de118d9b11b266cf19c27a087ad8",
+      "threshold": 2,
+      "maps_checked": 2047149,
+      "paid_types": 673348,
+      "remaining_types": 1373801,
+      "force_replay_sha256": "c9504ec36f891dff13f299396b43b57588101ec58aa532bad2c09a49ccb29cd8"
+    },
+    {
+      "groups_sha256": "6fd4638bac41c946efc8e841a6789283e64c90a8f20aed6511359939ee01283d",
+      "bindings_sha256": "40229f7ee6baa08ea4e39eb38f6d6b278201f528a84683ff52737e52a5665b23",
+      "threshold": 1,
+      "maps_checked": 1373801,
+      "paid_types": 0,
+      "remaining_types": 1373801,
+      "force_replay_sha256": null
+    }
+  ],
+  "strict_exclusion_types_with_replayed_certificates": 673348,
+  "pending_types": 1373801,
+  "pending_indices_file": "n22-B15-hierarchy-audit-partial-resume1.pending.jsonl",
+  "pending_indices_sha256": "d1380e23807cc56195a90457e0d2bc88d72feb4eb35a872ae082705c5f1f2e39",
+  "disjoint_hierarchy_partition_verified": true,
+  "coverage_partition_complete": false,
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "stream_reader_sha256": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d"
+}

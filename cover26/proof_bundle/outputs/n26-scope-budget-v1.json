@@ -1,0 +1,65 @@
+{
+  "schema": "N26-written-boundary-count-arithmetic-gate-v1",
+  "arithmetic_checks_verified": true,
+  "radius_upper": "239146311738101/1000000000000000",
+  "root_squared_comparison_gap": "5939754790330659059743779049695440258054488391/4000000000000000000000000000000000000000000000000000000000000",
+  "quarter_radius_gap": "10853688261899/1000000000000000",
+  "direct_boundary_sine_margin": "169352549456767148753726260211895203173022737080395916021/1000000000000000000000000000000000000000000000000000000000000",
+  "core_ratio_upper": "239146311738101/521707376523798",
+  "strict_half_core_margin": "10853688261899/260853688261899",
+  "rod_caps": [
+    768677,
+    1587443,
+    2546859,
+    4058615
+  ],
+  "positive_exact_sine_margins": [
+    "17299857538530214890027758220987021642046240938772951/40000000000000000000000000000000000000000000000000000000000",
+    "9266021989739973169754538694927983081550440978472553/25000000000000000000000000000000000000000000000000000000000",
+    "152101250816356822524873311698308975872366382448384071/500000000000000000000000000000000000000000000000000000000000",
+    "81131394029019398812177654368425069207380761475729107/1000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "physical_boundary_internal_count_pairs": [
+    [
+      14,
+      12
+    ],
+    [
+      15,
+      11
+    ],
+    [
+      16,
+      10
+    ],
+    [
+      17,
+      9
+    ],
+    [
+      18,
+      8
+    ]
+  ],
+  "written_count_argument_bound": true,
+  "arbitrary_cover_to_simple_disk_enumerator_proved": false,
+  "N26_complete_catalog": false,
+  "global_optimality_proved": false,
+  "negative_controls_rejected": [
+    "wrong-order",
+    "quarter-threshold-not-strict",
+    "upper-below-exact-root",
+    "cap8-too-small",
+    "missing-count-pair",
+    "wrong-core-ratio",
+    "unverified-input"
+  ],
+  "files": {
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\verify_n26_scope_budget.py": "4151805145b3d141c5a74c33c105333cf87f609f16b322b72132384a528509e6",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\work\\audit_prefix_partition.py": "b4b5910832d964e76f801260ae7ecd0965153f4da1060c88b0bb626b5b2692b0",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\disk-cover-proof-library\\external\\pinned\\cover20\\proof_bundle\\core\\exact_arcs.py": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-boundary-constants-v2\\CONSTANTS.json": "9ef64a74a6ee55064709d91cf758c512453ca5fd7e70c3cc014c17a1f45a8bae",
+    "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-boundary-family-derivation-v1.md": "f74c33ab4d2360750154a7481ecdca7fb3925ce8a6b35a4fc5ae7c279d932f8c"
+  },
+  "scope": "Rational and trigonometric margins for a written counting argument; not formalization or enumeration-transport verification."
+}

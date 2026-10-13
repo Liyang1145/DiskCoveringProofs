@@ -1,0 +1,51 @@
+{
+ "KERNEL_CORRECTION": "KERNEL CORRECTION (Lead 2026-09-26): every certify status here comes from hubline_atoms_fast.FastAtoms (float-distance atomic kernel with proved absolute roundoff guard), NOT from the exact-integer hubline_atoms.Atoms (IntAtoms). Rows differ only by N / proposal density inside that same kernel; no two-kernel comparison is claimed. An independent N=8192 integer-kernel re-check of the saved wide box is assigned to upper-audit.",
+ "rows": [
+  {
+   "status": "unresolved",
+   "box": [
+    0.10426557064056396,
+    0.10426568984985352,
+    -0.6559280157089233,
+    -0.6559278964996338
+   ],
+   "cap": 130163654006,
+   "total": 1301585587523,
+   "boxes": 5945,
+   "tag": "default o4 24x120 + N8192",
+   "N": 8192,
+   "numeric_max": 0.09558052503868349,
+   "seconds": 2.166537284851074
+  },
+  {
+   "status": "unresolved",
+   "box": [
+    0.10340440273284912,
+    0.10340452194213867,
+    -0.6560134887695312,
+    -0.6560133695602417
+   ],
+   "cap": 260314293173,
+   "total": 2603059481069,
+   "boxes": 6692,
+   "tag": "default o4 24x120 + N16384",
+   "N": 16384,
+   "numeric_max": 0.09558052503868349,
+   "seconds": 4.283996820449829
+  },
+  {
+   "status": "certified",
+   "boxes": 16637,
+   "leaves": 8197,
+   "outside": 122,
+   "max_integer_capture": 260328445693,
+   "total_integer_demand": 2603286520364,
+   "gap_integer": 2063434,
+   "atoms": 37770,
+   "tag": "dense o6 96x720 + N16384",
+   "N": 16384,
+   "numeric_max": 0.09564412276640476,
+   "seconds": 6.925877809524536
+  }
+ ]
+}

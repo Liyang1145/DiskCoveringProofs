@@ -1,0 +1,35 @@
+{
+  "status": "numeric_only_not_continuum",
+  "tests": [
+    {
+      "eps": 0,
+      "min_eigen_sample": 0.00538738174643521,
+      "max_eigen_sample": 0.00538738174643521
+    },
+    {
+      "eps": 1e-05,
+      "min_eigen_sample": 0.0053856093869359386,
+      "max_eigen_sample": 0.0053887307093436415
+    },
+    {
+      "eps": 0.0001,
+      "min_eigen_sample": 0.005373339669529612,
+      "max_eigen_sample": 0.005394732500888803
+    },
+    {
+      "eps": 0.001,
+      "min_eigen_sample": 0.005250005717282078,
+      "max_eigen_sample": 0.005455068969782231
+    },
+    {
+      "eps": 0.003,
+      "min_eigen_sample": -10.590192447407489,
+      "max_eigen_sample": 0.005395646036853274
+    },
+    {
+      "eps": 0.01,
+      "min_eigen_sample": -6519.623296525585,
+      "max_eigen_sample": 0.0032326165902142392
+    }
+  ]
+}

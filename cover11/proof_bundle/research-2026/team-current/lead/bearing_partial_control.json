@@ -1,0 +1,9 @@
+{
+  "eta_b_identity": true,
+  "q_b_identity": true,
+  "ridge_rational_convex_bounds": [
+    "-13559/250000",
+    "-619/5000"
+  ],
+  "scope": "exactidentitiesandglobalridgefeasibilityarithmetic"
+}

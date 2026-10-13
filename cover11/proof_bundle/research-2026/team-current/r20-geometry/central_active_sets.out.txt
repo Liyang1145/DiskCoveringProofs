@@ -1,0 +1,18 @@
+certified q0(6,7): hubs (lead 9)=0.000296021329,0.272977305852  (lead 10)=-0.000162042987,-0.149428411085
+r = 0.379983853119839 ; rho = 1-r = 0.620016146880161
+chord d = |hA-hB| = 0.422405965303498 ; 2r = 0.75996770624 ; d <= 2r ? True
+alpha_d = asin(d/2r) = 0.589350176369399 rad (33.7673 deg)
+  site c_a (lead 0, cert 5): angle(hA,c,hB) = 0.589350176369399 rad (33.7673 deg) ; in [alpha,pi-alpha] ? True ; Rc^2-r^2 sign: <=0
+      |c-p_+|/|c-p_-| (crescent side/strictness): side = +n
+  site c_b (lead 4, cert 6): angle(hA,c,hB) = 0.589350176369399 rad (33.7673 deg) ; in [alpha,pi-alpha] ? True ; Rc^2-r^2 sign: <=0
+      |c-p_+|/|c-p_-| (crescent side/strictness): side = -n
+
+fan-side active sets (Theorem A candidates):
+  hub A: max_j |hA - p_j| - r = -2.341e-16 (<=0 => inside all fan disks; =0 => active)
+  hub B: max_j |hB - p_j| - r = -2.839e-03
+  |hA| = 0.272977466357 < rho ? True ; |hB| = 0.149428498946 < rho ? True (strict hubs)
+
+Theorem D stratification (active sets) on the object:
+  central equalities: R_{c_a}=r ? True ; R_{c_b}=r ? True  (angle-level: the interval is tight iff th in {alpha,pi-alpha})
+  chord stratum d=2r: False (d/2r = 0.555820940594)
+  fan-disk active: hub A YES (slack -2.34e-16) ; hub B no (slack -2.84e-03)

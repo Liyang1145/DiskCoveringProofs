@@ -1,0 +1,21 @@
+{
+  "N": 25,
+  "B": 15,
+  "threshold": 1,
+  "groups": [],
+  "group_count": 0,
+  "selected_types": 0,
+  "catalog_types": 0,
+  "catalog_sha256": "3816bf4a2d0e3e2d37f918b3d7d3f39ab9cd0d84dfd6c03671a040b66ef0f0b3",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "parent_groups_sha256": null,
+  "parent_proof_sha256": null,
+  "not_a_complete_family": true,
+  "members_are_standalone_graphs_not_target_cover_types": true,
+  "source_library_sha256": "8b1975b4273721d6760b3569636e75419a0fb7a4616bb46de484a001b6fb0b6c",
+  "source_sha256": "18e2e2d942da3941e6f44453405fffdb3a510b1762dc41df64a9f820ea1c4e6a",
+  "global_optimality_proved": false
+}

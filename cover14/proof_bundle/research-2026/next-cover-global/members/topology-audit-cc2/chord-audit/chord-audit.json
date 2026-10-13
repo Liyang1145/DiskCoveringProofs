@@ -1,0 +1,85 @@
+{
+ "T1_constants": [
+  {
+   "rho": 0.33173203427623416,
+   "B": 1.4508782634386874,
+   "L": 0.6762779682872484,
+   "threeL": 2.028833904861745,
+   "twoL": 1.3525559365744968,
+   "threeL_gt_B": true,
+   "twoB5L": 6.283146368313616,
+   "twoB5L_lt_2pi": true,
+   "Bplus7L": 6.184824041449426,
+   "Bplus7L_lt_2pi": true,
+   "twoAsin2Plus14AsinU": 7.635702304888113,
+   "q10_bound_lt_2pi": false
+  },
+  {
+   "rho": 0.33173303427623413,
+   "B": 1.450883609550945,
+   "L": 0.6762800883383618,
+   "threeL": 2.0288402650150856,
+   "twoL": 1.3525601766767237,
+   "threeL_gt_B": true,
+   "twoB5L": 6.2831676607936995,
+   "twoB5L_lt_2pi": true,
+   "Bplus7L": 6.184844227919478,
+   "Bplus7L_lt_2pi": true,
+   "twoAsin2Plus14AsinU": 7.635727837470423,
+   "q10_bound_lt_2pi": false
+  },
+  {
+   "rho": 0.3333333323333333,
+   "B": 1.4594553070873693,
+   "L": 0.6796738167869234,
+   "threeL": 2.03902145036077,
+   "twoL": 1.3593476335738468,
+   "threeL_gt_B": true,
+   "twoB5L": 6.317279698109356,
+   "twoB5L_lt_2pi": false,
+   "Bplus7L": 6.217172024595833,
+   "Bplus7L_lt_2pi": true,
+   "twoAsin2Plus14AsinU": 7.676627331683202,
+   "q10_bound_lt_2pi": false
+  }
+ ],
+ "T2_clustered": [],
+ "T3": {
+  "triangles_in_distance2_graph": 0,
+  "max_set_with_no_distance2_pair": 5
+ },
+ "T4": {
+  "kept": 1042,
+  "removed": 4235,
+  "structural_violations": 0,
+  "hist": {
+   "0": [
+    85,
+    0
+   ],
+   "1": [
+    557,
+    0
+   ],
+   "2": [
+    400,
+    1200
+   ],
+   "3": [
+    0,
+    1937
+   ],
+   "4": [
+    0,
+    963
+   ],
+   "5": [
+    0,
+    135
+   ]
+  },
+  "lead_kept": 1042,
+  "kept_sets_equal": true,
+  "newly_removed_beyond_double_ear": 231
+ }
+}

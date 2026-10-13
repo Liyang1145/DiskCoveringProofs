@@ -1,0 +1,6 @@
+{
+  "h2_factored_numerator_identity": true,
+  "opposite_face_cap_difference_identity": true,
+  "saturated_source_vector_identity": true,
+  "branch_condition": "legal A in(0,pi); sourcevectorpositivefactor2rsinA so phi=A,e=rsinA/R0"
+}

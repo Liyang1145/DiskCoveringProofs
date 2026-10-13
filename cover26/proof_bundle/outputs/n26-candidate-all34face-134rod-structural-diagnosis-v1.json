@@ -1,0 +1,889 @@
+{
+  "schema": "N26-unaccepted-actual-candidate-all34face-rod-extension-structural-diagnosis-v1",
+  "verified": false,
+  "actual_current_audit_sha256": "f211ad82c936ee0e4c0d50f663dd181b6fec55ebb625490e702004d3c2aec39b",
+  "actual_latest_candidate_layer_identity_only": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "f211ad82c936ee0e4c0d50f663dd181b6fec55ebb625490e702004d3c2aec39b",
+    "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-first-conditional-current-audit-v21-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "351270611f0273abd38730c99bc268a9338116627164327c8358dd37a1e4fe49"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twentieth-conditional-current-audit-v20-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f722f716e125c1ca8896b9bea83f49b43b0a9d296c3149dc582a5c6c0d2adf37"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v8-strict-parent-v1.json",
+        "sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "actual_structural_result": {
+    "actual_complete_source_face_count": 34,
+    "source_active_face_count": 30,
+    "source_slack_face_count": 4,
+    "source_floating_slack_values_are_DATA_NOT_geometric_inequality_proofs": true,
+    "old_positive_support_face_count": 20,
+    "old_positive_support_face_witnesses": [
+      {
+        "old_witness_vertex": 42,
+        "actual_complete_face": [
+          1,
+          2,
+          18
+        ]
+      },
+      {
+        "old_witness_vertex": 43,
+        "actual_complete_face": [
+          6,
+          7,
+          20
+        ]
+      },
+      {
+        "old_witness_vertex": 44,
+        "actual_complete_face": [
+          9,
+          10,
+          22
+        ]
+      },
+      {
+        "old_witness_vertex": 45,
+        "actual_complete_face": [
+          14,
+          15,
+          24
+        ]
+      },
+      {
+        "old_witness_vertex": 46,
+        "actual_complete_face": [
+          1,
+          17,
+          18
+        ]
+      },
+      {
+        "old_witness_vertex": 47,
+        "actual_complete_face": [
+          7,
+          20,
+          21
+        ]
+      },
+      {
+        "old_witness_vertex": 48,
+        "actual_complete_face": [
+          9,
+          21,
+          22
+        ]
+      },
+      {
+        "old_witness_vertex": 49,
+        "actual_complete_face": [
+          15,
+          17,
+          24
+        ]
+      },
+      {
+        "old_witness_vertex": 50,
+        "actual_complete_face": [
+          3,
+          4,
+          19
+        ]
+      },
+      {
+        "old_witness_vertex": 51,
+        "actual_complete_face": [
+          4,
+          5,
+          19
+        ]
+      },
+      {
+        "old_witness_vertex": 52,
+        "actual_complete_face": [
+          11,
+          12,
+          23
+        ]
+      },
+      {
+        "old_witness_vertex": 53,
+        "actual_complete_face": [
+          12,
+          13,
+          23
+        ]
+      },
+      {
+        "old_witness_vertex": 54,
+        "actual_complete_face": [
+          3,
+          18,
+          19
+        ]
+      },
+      {
+        "old_witness_vertex": 55,
+        "actual_complete_face": [
+          5,
+          19,
+          20
+        ]
+      },
+      {
+        "old_witness_vertex": 56,
+        "actual_complete_face": [
+          11,
+          22,
+          23
+        ]
+      },
+      {
+        "old_witness_vertex": 57,
+        "actual_complete_face": [
+          13,
+          23,
+          24
+        ]
+      },
+      {
+        "old_witness_vertex": 58,
+        "actual_complete_face": [
+          16,
+          18,
+          19
+        ]
+      },
+      {
+        "old_witness_vertex": 59,
+        "actual_complete_face": [
+          16,
+          23,
+          24
+        ]
+      },
+      {
+        "old_witness_vertex": 60,
+        "actual_complete_face": [
+          19,
+          20,
+          25
+        ]
+      },
+      {
+        "old_witness_vertex": 61,
+        "actual_complete_face": [
+          22,
+          23,
+          25
+        ]
+      }
+    ],
+    "additional_actual_complete_face_count": 14,
+    "additional_face_witnesses": [
+      {
+        "new_witness_vertex": 62,
+        "actual_complete_face": [
+          0,
+          1,
+          17
+        ]
+      },
+      {
+        "new_witness_vertex": 63,
+        "actual_complete_face": [
+          0,
+          15,
+          17
+        ]
+      },
+      {
+        "new_witness_vertex": 64,
+        "actual_complete_face": [
+          2,
+          3,
+          18
+        ]
+      },
+      {
+        "new_witness_vertex": 65,
+        "actual_complete_face": [
+          5,
+          6,
+          20
+        ]
+      },
+      {
+        "new_witness_vertex": 66,
+        "actual_complete_face": [
+          7,
+          8,
+          21
+        ]
+      },
+      {
+        "new_witness_vertex": 67,
+        "actual_complete_face": [
+          8,
+          9,
+          21
+        ]
+      },
+      {
+        "new_witness_vertex": 68,
+        "actual_complete_face": [
+          10,
+          11,
+          22
+        ]
+      },
+      {
+        "new_witness_vertex": 69,
+        "actual_complete_face": [
+          13,
+          14,
+          24
+        ]
+      },
+      {
+        "new_witness_vertex": 70,
+        "actual_complete_face": [
+          16,
+          17,
+          18
+        ]
+      },
+      {
+        "new_witness_vertex": 71,
+        "actual_complete_face": [
+          16,
+          17,
+          24
+        ]
+      },
+      {
+        "new_witness_vertex": 72,
+        "actual_complete_face": [
+          16,
+          19,
+          25
+        ]
+      },
+      {
+        "new_witness_vertex": 73,
+        "actual_complete_face": [
+          16,
+          23,
+          25
+        ]
+      },
+      {
+        "new_witness_vertex": 74,
+        "actual_complete_face": [
+          20,
+          21,
+          25
+        ]
+      },
+      {
+        "new_witness_vertex": 75,
+        "actual_complete_face": [
+          21,
+          22,
+          25
+        ]
+      }
+    ],
+    "all_original92rods_retained_as_identical_prefix": true,
+    "potential_NEW_allface_rod_edges_DATA": [
+      [
+        42,
+        17
+      ],
+      [
+        42,
+        18
+      ],
+      [
+        42,
+        34
+      ],
+      [
+        43,
+        22
+      ],
+      [
+        43,
+        23
+      ],
+      [
+        43,
+        36
+      ],
+      [
+        44,
+        25
+      ],
+      [
+        44,
+        26
+      ],
+      [
+        44,
+        38
+      ],
+      [
+        45,
+        30
+      ],
+      [
+        45,
+        31
+      ],
+      [
+        45,
+        40
+      ],
+      [
+        46,
+        17
+      ],
+      [
+        46,
+        33
+      ],
+      [
+        46,
+        34
+      ],
+      [
+        47,
+        23
+      ],
+      [
+        47,
+        36
+      ],
+      [
+        47,
+        37
+      ],
+      [
+        48,
+        25
+      ],
+      [
+        48,
+        37
+      ],
+      [
+        48,
+        38
+      ],
+      [
+        49,
+        31
+      ],
+      [
+        49,
+        33
+      ],
+      [
+        49,
+        40
+      ],
+      [
+        50,
+        19
+      ],
+      [
+        50,
+        20
+      ],
+      [
+        50,
+        35
+      ],
+      [
+        51,
+        20
+      ],
+      [
+        51,
+        21
+      ],
+      [
+        51,
+        35
+      ],
+      [
+        52,
+        27
+      ],
+      [
+        52,
+        28
+      ],
+      [
+        52,
+        39
+      ],
+      [
+        53,
+        28
+      ],
+      [
+        53,
+        29
+      ],
+      [
+        53,
+        39
+      ],
+      [
+        54,
+        19
+      ],
+      [
+        54,
+        34
+      ],
+      [
+        54,
+        35
+      ],
+      [
+        55,
+        21
+      ],
+      [
+        55,
+        35
+      ],
+      [
+        55,
+        36
+      ],
+      [
+        56,
+        27
+      ],
+      [
+        56,
+        38
+      ],
+      [
+        56,
+        39
+      ],
+      [
+        57,
+        29
+      ],
+      [
+        57,
+        39
+      ],
+      [
+        57,
+        40
+      ],
+      [
+        58,
+        32
+      ],
+      [
+        58,
+        34
+      ],
+      [
+        58,
+        35
+      ],
+      [
+        59,
+        32
+      ],
+      [
+        59,
+        39
+      ],
+      [
+        59,
+        40
+      ],
+      [
+        60,
+        35
+      ],
+      [
+        60,
+        36
+      ],
+      [
+        60,
+        41
+      ],
+      [
+        61,
+        38
+      ],
+      [
+        61,
+        39
+      ],
+      [
+        61,
+        41
+      ],
+      [
+        0,
+        16
+      ],
+      [
+        0,
+        17
+      ],
+      [
+        7,
+        23
+      ],
+      [
+        7,
+        24
+      ],
+      [
+        8,
+        24
+      ],
+      [
+        8,
+        25
+      ],
+      [
+        15,
+        31
+      ],
+      [
+        15,
+        16
+      ],
+      [
+        1,
+        17
+      ],
+      [
+        1,
+        18
+      ],
+      [
+        6,
+        22
+      ],
+      [
+        6,
+        23
+      ],
+      [
+        9,
+        25
+      ],
+      [
+        9,
+        26
+      ],
+      [
+        14,
+        30
+      ],
+      [
+        14,
+        31
+      ],
+      [
+        2,
+        18
+      ],
+      [
+        2,
+        19
+      ],
+      [
+        5,
+        21
+      ],
+      [
+        5,
+        22
+      ],
+      [
+        10,
+        26
+      ],
+      [
+        10,
+        27
+      ],
+      [
+        13,
+        29
+      ],
+      [
+        13,
+        30
+      ],
+      [
+        3,
+        19
+      ],
+      [
+        3,
+        20
+      ],
+      [
+        4,
+        20
+      ],
+      [
+        4,
+        21
+      ],
+      [
+        11,
+        27
+      ],
+      [
+        11,
+        28
+      ],
+      [
+        12,
+        28
+      ],
+      [
+        12,
+        29
+      ],
+      [
+        62,
+        16
+      ],
+      [
+        62,
+        17
+      ],
+      [
+        62,
+        33
+      ],
+      [
+        63,
+        16
+      ],
+      [
+        63,
+        31
+      ],
+      [
+        63,
+        33
+      ],
+      [
+        64,
+        18
+      ],
+      [
+        64,
+        19
+      ],
+      [
+        64,
+        34
+      ],
+      [
+        65,
+        21
+      ],
+      [
+        65,
+        22
+      ],
+      [
+        65,
+        36
+      ],
+      [
+        66,
+        23
+      ],
+      [
+        66,
+        24
+      ],
+      [
+        66,
+        37
+      ],
+      [
+        67,
+        24
+      ],
+      [
+        67,
+        25
+      ],
+      [
+        67,
+        37
+      ],
+      [
+        68,
+        26
+      ],
+      [
+        68,
+        27
+      ],
+      [
+        68,
+        38
+      ],
+      [
+        69,
+        29
+      ],
+      [
+        69,
+        30
+      ],
+      [
+        69,
+        40
+      ],
+      [
+        70,
+        32
+      ],
+      [
+        70,
+        33
+      ],
+      [
+        70,
+        34
+      ],
+      [
+        71,
+        32
+      ],
+      [
+        71,
+        33
+      ],
+      [
+        71,
+        40
+      ],
+      [
+        72,
+        32
+      ],
+      [
+        72,
+        35
+      ],
+      [
+        72,
+        41
+      ],
+      [
+        73,
+        32
+      ],
+      [
+        73,
+        39
+      ],
+      [
+        73,
+        41
+      ],
+      [
+        74,
+        36
+      ],
+      [
+        74,
+        37
+      ],
+      [
+        74,
+        41
+      ],
+      [
+        75,
+        37
+      ],
+      [
+        75,
+        38
+      ],
+      [
+        75,
+        41
+      ]
+    ],
+    "potential_NEW_vertices": 76,
+    "potential_NEW_anchors": 16,
+    "potential_NEW_unrestricted_disk_centers": 26,
+    "potential_NEW_face_witnesses": 34,
+    "potential_NEW_free_vertices": 60,
+    "potential_NEW_positive_grounded_rod_count": 134,
+    "every_NEW_face_is_already_present_in_the_actual_complete_terminal": true,
+    "all_NEW_free_vertices_have_actual_paths_to_original_anchors": true,
+    "actual_complete_native_to_exact_face_bijection_and_boundary_order_checked": true,
+    "old_92rod_62vertex_46free_kernel_NOT_relabelled_or_replaced": true,
+    "NEW_exact60by60inverse_harmonic_Schur_and_strict_bounds_NOT_computed": true
+  },
+  "actual_structural_rejection_controls_passed": [
+    "allface-one-complete-face-omitted",
+    "allface-complete-face-duplicated",
+    "allface-original-positive-rod-omitted",
+    "allface-native-center-bijection-broken",
+    "allface-source-nonterminal-promoted-to-complete",
+    "allface-active-slack-classification-overlapped",
+    "allface-original-boundary-rod-relabelled"
+  ],
+  "fixed_resource_DATA_NOT_latest_source_ownership_cache": true,
+  "actual_old_forest_nodes_supports_and_paid_leaves_NOT_modified": true,
+  "new_kernel_weights_inverse_energy_certificates_and_geometry_interface_still_required": true,
+  "global_necessity_transport_and_complete_latest_model_source_history_admission_NOT_performed": true,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_diagnostic_sha256": "cac041693ead051fc549236cf4df1f6aec607b1ec55b7d931b8d510714261526"
+}

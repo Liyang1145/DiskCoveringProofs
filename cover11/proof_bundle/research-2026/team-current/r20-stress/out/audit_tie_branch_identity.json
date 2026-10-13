@@ -1,0 +1,203 @@
+{
+  "scope": "bearing check A: certify on the box that the frozen TIEPICK tie branch is the C892 boundary tie (chart-angle unit vector), that the other intersection is separated, that non-incident sites are >0.01 farther, and that the TIEPICK criterion fails with margin at the other branch; plus check-B control on the zero-crossing test.  Interval arithmetic on the lead box; conditional on the lead Krawczyk box only.",
+  "snapshot_of_audited_code": {
+    "bytes": 29371,
+    "sha256": "6be637d3d37dea280a26621861afaf31f066605a832fdc60c459ca0dab2a6a76"
+  },
+  "box_radius_hex": "0x1.12e0be826d695p-30",
+  "per_gap": [
+    {
+      "gap": 0,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-3.42983e-14",
+        "3.42983e-14"
+      ],
+      "dist2_other_to_chart": [
+        "3.97164",
+        "3.97164"
+      ],
+      "sep_two_intersections": "3.97164",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.545787",
+      "other_branch_margin": "1.56284",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 1,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-1.58555e-14",
+        "1.58555e-14"
+      ],
+      "dist2_other_to_chart": [
+        "3.96097",
+        "3.96097"
+      ],
+      "sep_two_intersections": "3.96097",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.586604",
+      "other_branch_margin": "1.36135",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 2,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-2.88378e-14",
+        "2.88378e-14"
+      ],
+      "dist2_other_to_chart": [
+        "3.78374",
+        "3.78374"
+      ],
+      "sep_two_intersections": "3.78374",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.491837",
+      "other_branch_margin": "1.38647",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 3,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-1.74952e-13",
+        "1.74952e-13"
+      ],
+      "dist2_other_to_chart": [
+        "3.99198",
+        "3.99199"
+      ],
+      "sep_two_intersections": "3.99198",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.424801",
+      "other_branch_margin": "1.63581",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 4,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-1.73288e-13",
+        "1.73288e-13"
+      ],
+      "dist2_other_to_chart": [
+        "3.99198",
+        "3.99199"
+      ],
+      "sep_two_intersections": "3.99198",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.424801",
+      "other_branch_margin": "1.63581",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 5,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-2.82102e-14",
+        "2.82102e-14"
+      ],
+      "dist2_other_to_chart": [
+        "3.78374",
+        "3.78374"
+      ],
+      "sep_two_intersections": "3.78374",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.491837",
+      "other_branch_margin": "1.38647",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 6,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-1.54742e-14",
+        "1.54742e-14"
+      ],
+      "dist2_other_to_chart": [
+        "3.96097",
+        "3.96097"
+      ],
+      "sep_two_intersections": "3.96097",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.586604",
+      "other_branch_margin": "1.36135",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 7,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-3.35621e-14",
+        "3.35621e-14"
+      ],
+      "dist2_other_to_chart": [
+        "3.97164",
+        "3.97164"
+      ],
+      "sep_two_intersections": "3.97164",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.545787",
+      "other_branch_margin": "1.56284",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    },
+    {
+      "gap": 8,
+      "sgn_effective": -1,
+      "dist2_chosen_to_chart": [
+        "-1.76293e-14",
+        "1.76293e-14"
+      ],
+      "dist2_other_to_chart": [
+        "4.0",
+        "4.0"
+      ],
+      "sep_two_intersections": "4.0",
+      "incident_contains_zero": true,
+      "min_nonincident_margin": "0.579084",
+      "other_branch_margin": "1.68227",
+      "A1": true,
+      "A2": true,
+      "A3": true,
+      "A4": true
+    }
+  ],
+  "A1_all": true,
+  "A2_all": true,
+  "A3_all": true,
+  "A4_all": true,
+  "min_nonincident_margin": "0.4248014071",
+  "min_other_branch_margin": "1.361351904",
+  "check_B_control": {
+    "interval": "[-1.0, 2.0]",
+    "min_abs_endpoint": "1.0",
+    "contains_zero": true,
+    "wrong_test_min_abs_gt_0": true,
+    "exact_test_lo_gt_0_or_hi_lt_0": false
+  }
+}

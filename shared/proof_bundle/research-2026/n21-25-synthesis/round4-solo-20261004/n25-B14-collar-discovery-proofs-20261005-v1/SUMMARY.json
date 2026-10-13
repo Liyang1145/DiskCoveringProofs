@@ -1,0 +1,13 @@
+{
+  "schema": "individually-paid-discovery-graphs-v1",
+  "N": 25,
+  "B": 14,
+  "snapshot_sha256": "ec102dc2a47aef4df638e06c1b1011d4c43580d39bae1ac9f39c670aa3c1233e",
+  "constants_sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+  "outcomes": [],
+  "totals": {},
+  "source_sha256": "cbc46d1717f109a359c40ef776fc32ad862118aede0683e6086a735c392960c7",
+  "source_make_sha256": "d5694f13f571cd70be4f90358fd5d3481347e7459e459e37e0531cf9d485e581",
+  "complete_family_coverage": false,
+  "global_optimality_proved": false
+}

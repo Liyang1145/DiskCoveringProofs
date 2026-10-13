@@ -1,0 +1,73 @@
+{
+  "schema": "N26-independent-qualified-N25-source-import-final-v1",
+  "verified": true,
+  "import_own_acceptance_sha256": "418bc6fed59559180f0badd216fbc2ea52123a99db9aaa93d94799a95fc9ce53",
+  "imported_input_ledger_sha256": "19963027cf1cbfb6664f56053d102998a6c97f596dde8319dc84dd878e964caf",
+  "all_actual_imported_dependency_content_independently_rehashed": true,
+  "actual_original_N25_prerequisite_count": 555483,
+  "actual_full_imported_dependency_count": 555503,
+  "all_four_actual_N25_parent_payment_ledgers_freshly_checked": [
+    {
+      "B": 14,
+      "whole_parent_rows_freshly_checked": 172092,
+      "actual_payment_kinds": {
+        "actual-cover-origin-unexposed-center-obstruction": 160698,
+        "strict-sparse-source-injection": 4893,
+        "fresh-branch-payment-for-prior-fixed-family": 7,
+        "exact-complete-simple-hole-family": 2194,
+        "strict-eight-rod-integer-angle-cycle": 392,
+        "fresh-standard-library-exact-weak-force": 3815,
+        "refined-exact-complete-simple-hole-family": 13,
+        "exact-complete-pinched-collar-filling-family": 80
+      },
+      "pending": 0
+    },
+    {
+      "B": 15,
+      "whole_parent_rows_freshly_checked": 139315,
+      "actual_payment_kinds": {
+        "strict-exact-weak-graph-exclusion": 116119,
+        "strict-complete-filling-family": 23196
+      },
+      "pending": 0
+    },
+    {
+      "B": 16,
+      "whole_parent_rows_freshly_checked": 120782,
+      "actual_payment_kinds": {
+        "strict-complete-filling-family-exact-transport": 8068,
+        "strict-exact-weak-graph-exclusion": 83158,
+        "strict-complete-filling-family": 29555,
+        "nonstrict-same-root-complete-family": 1
+      },
+      "pending": 0
+    },
+    {
+      "B": 17,
+      "whole_parent_rows_freshly_checked": 289140,
+      "actual_payment_kinds": {
+        "strict-exact-weak-graph-exclusion": 222283,
+        "strict-complete-filling-family": 66857
+      },
+      "pending": 0
+    }
+  ],
+  "exact_original_cardinality_implication_under_imported_prior_theorem": {
+    "exact_N26_radius_screen": "234701/1000000",
+    "exact_positive_threshold_above_sqrt2": "2834746321797/2000000000000",
+    "exact_threshold_square_margin_above_two": "35786708941620677309209/4000000000000000000000000",
+    "imported_n25_lower_bound_STRICTLY_above_N26_screen": true,
+    "every_at_most26_cover_in_scope_has_EXACTLY26_original_distinct_necessary_disks": true,
+    "no_corner_shadow_padding_needed_after_slack_generic_perturbation_below_screen": true,
+    "import_scope": "qualified completed computer-assisted SOURCE theorem; not Lean/Coq or peer review"
+  },
+  "imported_theorem_scope_is_qualified_prior_SOURCE_NOT_a_new_old_tree_replay": true,
+  "original_missing_binding_creator_terminal_qualification_preserved": true,
+  "not_N26_global_or_graph_current_acceptance": true,
+  "N26_joint_source_geometry_current_AND_final_still_required": true,
+  "new_formal_geometric_payments": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_checker_sha256": "318f7e9f83c18b31ad163e9e3b8a2aeece0c0cace259b1271d5478a307e20e8c"
+}

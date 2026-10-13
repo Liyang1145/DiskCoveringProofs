@@ -1,0 +1,5 @@
+{
+  "rational_boxes": 3000,
+  "analytic_comparator": "Fraction endpoints plus valid stationary vertex",
+  "passed": true
+}

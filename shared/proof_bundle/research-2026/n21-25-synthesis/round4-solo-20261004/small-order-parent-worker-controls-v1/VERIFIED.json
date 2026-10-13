@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "schema": "small-order-actual-parent-worker-controls-v1",
+  "actual_parent_rows": [
+    {
+      "parent_index": 203,
+      "whole_family_strictly_closed": true,
+      "fresh_exact_report_sha256": "a42f2d26e8a09db50376512bda301e0323c8d26a00580469504785703c1ecd8a"
+    },
+    {
+      "parent_index": 294,
+      "whole_family_strictly_closed": true,
+      "fresh_exact_report_sha256": "39714d6d2debe9d7a12c08607c46bc47b85f39a4888bb653d64b41c4d85dc31f"
+    }
+  ],
+  "separate_worker_and_family_replay_terminals_observed": true,
+  "wrong_order_source_and_constant_controls_rejected": [
+    "schema",
+    "N",
+    "constants_sha256",
+    "source_sha256"
+  ],
+  "not_a_complete_parent_partition_or_adoption": true,
+  "source_sha256": "1b1932523b1a8f8ed571c64acdcf787efb87254f1c9e81d9d4673f057da36d6a",
+  "worker_source_sha256": "64024103ee1332335989ecd5b0907e31f85355cfb7b94d87bcfe6e304bf9e6cc",
+  "family_controls_sha256": "a17085a23f70ac165fb4a6285e092a80cb13077e91215537a4aeacafd22f6ea8",
+  "worker_report_sha256": "a6143297220a086d1319e03e2996d5b7e708ac61306240bb8c578f747fe6957c",
+  "global_optimality_proved": false
+}

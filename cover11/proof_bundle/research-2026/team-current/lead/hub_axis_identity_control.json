@@ -1,0 +1,6 @@
+{
+  "mixed_derivatives_agree": true,
+  "curvature_identity": true,
+  "pole_cleared_equations": true,
+  "scope": "algebraic identities, not stationary exclusion"
+}

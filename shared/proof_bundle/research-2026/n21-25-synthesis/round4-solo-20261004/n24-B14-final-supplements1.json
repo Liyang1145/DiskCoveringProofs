@@ -1,0 +1,23 @@
+{
+  "N": 24,
+  "B": 14,
+  "base_report_sha256": "8026cc245cd14063cf6a9d1a8cd8fbff9298b21c0185b763228a14a0798feb74",
+  "additions": [
+    {
+      "parent_index": 8079,
+      "family": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B14-f1\\batch-000068\\parent-0008079",
+      "proof_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B14-deep1\\p8079-PROOF.json",
+      "exact_path": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B14-deep1\\p8079-EXACT.json",
+      "proof_sha256": "d5861bc65005aee1b648131c4578993944d364c346555d8f0207db493e474e65",
+      "exact_sha256": "d2b852a2cc33aa87d144a4d8445c967e968d9588b567e7c705889f74b0714a8b"
+    }
+  ],
+  "supplement_origin_records_sha256": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B14-deep1\\SUMMARY.json": "0099aa31595699d60c3d6d12c0893242ae2c5bc5d563baa408039508df34c928",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B14-deep1\\p8079-PROPOSE-TERMINAL.json": "2eb5e1af5b80c23a28ffcf5bf804d610a0362f30a1825a5bc379d1448c7c5759",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-B14-deep1\\p8079-REPLAY-TERMINAL.json": "e3e706123569cf0ed72d549b9e7d1c27a9e1f91c63c2cf07916c58943c7a1d90"
+  },
+  "source_sha256": "c910d8d4f046702fe3bd377e5f50ac9ccb1b0028d5b288ad96e1fcab4c6f195f",
+  "formal_parent_residual_identity_and_fresh_math_still_required": true,
+  "global_optimality_proved": false
+}

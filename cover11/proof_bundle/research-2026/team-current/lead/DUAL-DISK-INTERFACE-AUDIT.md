@@ -1,0 +1,23 @@
+# Independent check of the disk-dual and two-fan interface (C801)
+
+Input: eleven distinct sites whose clipped nearest-site cells partition unit D; nine ring cells have exactly one nondegenerate boundary arc each, in cyclic order, with nine pairwise distinct switches involving exactly the two adjacent sites; two full hub cells are compact inside D. This input follows in the inward-root representative from VORONOI-BOUNDARY-REDUCTION.md. For arbitrary unshifted ring centers the same boundary-private-arc argument ensures nonempty interiors; no outside center is used as a geometric dual vertex below.
+
+## A concrete embedded dual, not a generic assertion about all cellulations
+
+Choose an interior point of each clipped cell (for hubs it may be the site). Choose an interior point of each positive-length shared Voronoi edge. In each convex cell join its chosen interior point to these edge points by disjoint radial segments, continuing across an edge by the segment in the other cell. Each concatenation is one embedded dual edge. Interiors of distinct dual edges are disjoint: within one cell radial spokes are distinct, and different cells have disjoint interiors. No two cells have two disjoint shared edges, since their intersection is convex and lies on their single bisector. Thus the dual graph is simple.
+
+Every interior primal vertex has at least three incident cells, in a cyclic order without repeats (each convex cell has only one local angular sector). The spokes around it bound one simple dual polygonal face. The nine edges incident to boundary switches yield the simple outer dual cycle of the nine distinct ring vertices. Each ring cell owns just one boundary interval; joining its two bounding-switch spokes leaves a single boundary sector, not multiple sectors. The union of these nine sectors forms the collar between the outer dual cycle and boundary(D). Removing that collar leaves precisely the embedded dual disk, with its interior faces corresponding to interior primal vertices. This explicitly uses connected boundary ownership; it is not claiming that the dual of an arbitrary disk cellulation is automatically a regular disk.
+
+An edge cannot connect two boundary switches without an interior endpoint: both switches would have to involve the same two cells, whereas each neighboring pair appears at only one of the nine distinct switches. Thus boundary dual edges do have the asserted one interior face. Interior faces have distinct vertices, so triangulating them introduces no repeated-vertex degeneracy. A chosen triangulation inside each face leaves the outer boundary fixed and keeps the actual hub-hub edge.
+
+## Locality under triangulation
+
+Each original interior primal vertex x lies in D and is nearest to every incident site, so the covering assumption gives distance<=r for each. Consequently every diagonal between two ring sites of a refined face has a true disk intersection at x. The ring locality theorem therefore holds for both original and artificial edges. All artificial triangles similarly have genuine common points even though some primal edges have zero length. They are not a perturbation of the centers, and their counts never certify positive metric lengths.
+
+## Ear counting and the link proof
+
+Given adjacent hubs, a skip-one ring chord cannot put hubs on its short side: otherwise the long-side ring-only 8-gon has six triangles, each containing two original cycle edges, but has only seven such edges each available once. Therefore the short side is an empty ear. The skipped vertices are independent; after deleting ears all ring-ring edges are on the new boundary.
+
+The link of either interior hub is a simple cycle. Removing the other hub from that cycle gives a simple ring path with distinct endpoints u,v (the two faces incident to their common edge). Each edge of this path is a ring-ring edge and hence a core boundary edge. The path is therefore one of the two boundary u-v paths. For the other hub it must be the other path: every core boundary edge has exactly one incident face. These are exactly the two fans plus the two hub-hub triangles. This avoids the incorrect assertion that the interior hub-hub edge by itself splits the disk.
+
+Thus C801's core classification and counts are sound. Its dependency C797 was superseded by corrected C802 (analytic implication now independently reviewed). The stored q<=4 is a combinatorial bound, subsequently strengthened geometrically in TWO-TRIPLE-CAPACITY.md and FIVE-RING-STAR-EXCLUSION.md; no q-invariance under refinement is needed or claimed. Scope remains the 9+2 branch with the established circle-arc and locality hypotheses. Neither finite topology nor q<=1 implies a sharp lower bound on r without further metric analysis.

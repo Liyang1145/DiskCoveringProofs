@@ -1,0 +1,17 @@
+{
+  "child_pid": 11652,
+  "actual_exit_code": 0,
+  "independent_process_terminal_observed": true,
+  "command": [
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe",
+    "-u",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\refine_linked_collar_leaves.py",
+    "--family",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-all29556-library-parent-gapped-fillings-solo-v1\\batch-000448\\parent-0119433",
+    "--output",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-deep5\\p119433-PROOF.json",
+    "--force-limit",
+    "511"
+  ],
+  "source_sha256": "aa5063c5bf456d56bb4f1b46aa553b5692948069dcf1d37778587da10f8e261a"
+}

@@ -1,0 +1,9 @@
+{
+  "verified": true,
+  "known_exact_N25_attaining_full_type_explicitly_in_unpaid_leaves": true,
+  "pending_full_isomorphism_types": 4,
+  "refined_proposal_sha256": "a3599c84b929356b7aba9983c08dd7a62ae0e6f0e2305953eff435ff8b802724",
+  "exact_report_sha256": "119bdf5266a1aa99cca868f7096fd55f662fa2fc70e1c27443951c4a9be0c732",
+  "exact_geometry_sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,57 @@
+{
+  "status": "sourcebound_rational_clip_leaf_exclusions_and_finite_transport",
+  "source_sha256": "34eea1d7bd3e1c4312c6b57b3b739f0dbe676b227f38795426c8a261420edf57",
+  "base_sha256": "bf46bd3b125107a9757e48de38b1c148c4395930ce019bd76d2e64d01c794eaa",
+  "runs": [
+    {
+      "indices": [
+        1
+      ],
+      "side": 1,
+      "threshold": "5/16",
+      "vertices": 384,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "331821122333544218557530395718658919607847169/1000000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.3318211223335442,
+        "excluded": true,
+        "vertices": 384,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    }
+  ],
+  "cuts": [
+    {
+      "indices": [
+        1
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        3
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        6
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    },
+    {
+      "indices": [
+        8
+      ],
+      "sense": "less",
+      "fraction_of_total": "5/16"
+    }
+  ]
+}

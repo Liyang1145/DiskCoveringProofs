@@ -1,0 +1,7 @@
+{
+  "exact_identity_remainder": "k\u00b2+h\u00b2\u22121",
+  "numeric_identity_error": 3.469446951953614e-16,
+  "actual_covered_controls": 63,
+  "max_necessary_inequality_violation": 0.0,
+  "scope": "exact algebra and3000geometric calibrationpoints; proof in INWARD-SECTOR-COUPLING.md"
+}

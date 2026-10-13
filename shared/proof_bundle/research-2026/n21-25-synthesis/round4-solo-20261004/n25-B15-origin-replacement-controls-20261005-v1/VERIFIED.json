@@ -1,0 +1,112 @@
+{
+  "verified": true,
+  "schema": "B15-origin-replacement-controls-v1",
+  "source_sha256": "a0dae05fc0d891992289d08b94466af1188e7201ef95de8b5bc60f87d60c2ef4",
+  "origin_controls_sha256": "f343daf9f2fab46ef67785f1655ce7c04d022bcfd16902b10c6c00db156ecebc",
+  "all_complete_B15_small_sets_equal": true,
+  "cases": [
+    {
+      "N": 21,
+      "B": 15,
+      "mode": "dfs",
+      "complete_set_equal": true,
+      "weak_graphs": 5,
+      "manifest_sha256": "52748add71bc16981fd3197d39439118e91fc917c52f46e8351f8b2e1d6759f2",
+      "union_sha256": "d8676bc4897df196126db6cf791d4e0f19ed600764e8dc2c6d2a2a87eb380f0f"
+    },
+    {
+      "N": 21,
+      "B": 15,
+      "mode": "audit",
+      "complete_set_equal": true,
+      "weak_graphs": 5,
+      "manifest_sha256": "ff7410568ab8885db3f9e3717407e1a09b96e5f48cabce556669acd8f6685a9b",
+      "union_sha256": "f0d373fe1768426d6b95047a1d69cc735be54aaa83f6df7bfbbba411d6cc678e"
+    },
+    {
+      "N": 22,
+      "B": 15,
+      "mode": "dfs",
+      "complete_set_equal": true,
+      "weak_graphs": 401,
+      "manifest_sha256": "112ec59134b133a093f1a72b8707e70a9972cc57b6ef4bb4960cb9f8af9399ff",
+      "union_sha256": "c6960bc543d7612c32f9aa8e136fd2827cedae61e20edd10b185c57ed177b03b"
+    },
+    {
+      "N": 22,
+      "B": 15,
+      "mode": "audit",
+      "complete_set_equal": true,
+      "weak_graphs": 401,
+      "manifest_sha256": "1cf986f2c6c3631b9bbfe6f11758283f1fd67d6107891a88dad142ac6e150813",
+      "union_sha256": "f0294c6f6c0732e9117a4a2c647a7b6d3df20265e07ae971601134fb83bd7aed"
+    }
+  ],
+  "all_N25_seed_results_paid_or_retained": true,
+  "seed_cases": [
+    {
+      "centers": 24,
+      "flag": "0",
+      "complete_restricted_result_paid_or_retained": true,
+      "not_a_complete_boundary_family": true,
+      "manifest_sha256": "5119b0a988ce10c512272560d643589965de427da28193011a68b2210cd36c9d",
+      "union_sha256": "4fba9a7f668feb30ff592c7b80eb1b743db692a0a0f07f966f50cf2bc965e7f4"
+    },
+    {
+      "centers": 24,
+      "flag": "1",
+      "complete_restricted_result_paid_or_retained": true,
+      "not_a_complete_boundary_family": true,
+      "manifest_sha256": "facdd25dcb0d699b3bff9d691799e4a70ebfd0c66b919b8f74926821b3d02b74",
+      "union_sha256": "f4ec19be9ca1f44bb659cc9e220681f65045118813038e6c0158ce6fdeba0598"
+    },
+    {
+      "centers": 25,
+      "flag": "0",
+      "complete_restricted_result_paid_or_retained": true,
+      "not_a_complete_boundary_family": true,
+      "manifest_sha256": "cb1c0f5d27a75bce3243f0bddf3a1354ee2fdb76dfa5041e40273d6dcf0cc310",
+      "union_sha256": "7d3d0acd8cae07d567253b24b9ee494b5cc98deeb276f71c818589958bad7fe6"
+    },
+    {
+      "centers": 25,
+      "flag": "1",
+      "complete_restricted_result_paid_or_retained": true,
+      "not_a_complete_boundary_family": true,
+      "manifest_sha256": "81aec299944c58fd00d8da100f254e75dab52f6d67e360481e4ee0bf4cf70ffc",
+      "union_sha256": "eccac9fc2ae81697c9efacfbc8b75bb0894f8fb0bc314b33f41ff97c0f1a7abe"
+    }
+  ],
+  "old_closed_slab_center_count_controls": [
+    {
+      "slab": 0,
+      "center_counts": {
+        "25": 92842,
+        "24": 6776,
+        "23": 371,
+        "22": 11
+      }
+    }
+  ],
+  "old_live_search_not_modified_or_stopped_by_controls": true,
+  "sampled_slabs_not_a_complete_search": true,
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B15-eight-sparse-guard-controls-20261005-v1/N21-B15-eight-sparse-dfs.json": "29c5a49228cc75af5364b00197593a68a646ba72af1ed020af6e6067c917f3d5",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B15-eight-sparse-guard-controls-20261005-v1/N21-B15-eight-sparse-audit.json": "483761ba4d822e5f40d867aa26ee93ead18653da1afb93932b0457ed927aea7e",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B15-eight-sparse-guard-controls-20261005-v1/N22-B15-eight-sparse-dfs.json": "aba65c9f313608c3b5eac006bc982f6f0e5f4cc0aa05aae955fcc4e114e5fd2f",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B15-eight-sparse-guard-controls-20261005-v1/N22-B15-eight-sparse-audit.json": "4a45cacf7c844a428157588671d868e548f6f182a6c719957d26072f3e4060e1",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B15-streamed-eight-sparse-search-20261005-v1/N25-B15-complete-sorted-chunks.json.chunk-0.jsonl": "9578cc18c15bccce70c699e106876dc875761fb1945972170afc7c778d5345c3",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/test_b15_origin_replacement.py": "a0dae05fc0d891992289d08b94466af1188e7201ef95de8b5bc60f87d60c2ef4",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-origin-collar-controls-20261005-v1/VERIFIED.json": "f343daf9f2fab46ef67785f1655ce7c04d022bcfd16902b10c6c00db156ecebc",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B15-eight-sparse-guard-controls-20261005-v1/VERIFIED.json": "9d457cad78f5043b665c2035c330711610b764b76e076afcb2feb7c1030cf298",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B15-new-sparse-library-20261005-v1/OBSTACLES.tsv": "e4d3a67ce668288d0a18950cea262c9da3e566ff97fe3a414050820a5591b9de",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/peel_origin_streamed_collar.cpp": "2fa670b7e10a6fdd869862f821406a5457300983fb8b9cb3f4c886688bd8bd93",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/peel_origin_streamed_collar-linux": "027383aaeaaf982cc388e6d2b653de02b34f9e9d0709897d79d10211ed1115d3",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/cover_origin_obstruction.inc": "1fb4da49aa5040d4387a013ea002a5990b42cfe9a1fbf4147dfd84adacc02b19",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/merge_origin_collar_chunks.py": "6766df236187d9727de97a42ff8ff74e5baebd94c63181c91b69a65caac4ac95",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/seed_cover_origin.cpp": "92e78a39cd785c28dfe7300d375eaf5c9a800cf25ec74fa734ae2c732f115344",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/seed_cover_origin-linux": "e8f01926d6d000a4105b5bf66bc54cfe82fd19ea2464f546c9c4b89dec72d097",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/UNEXPOSED-ORIGIN-CENTER-SOURCE.md": "ac47089881d2e51f299cc5c27c4c61720b17c2af18692e5ef4df6feb3de11949"
+  },
+  "global_optimality_proved": false
+}

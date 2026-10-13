@@ -1,0 +1,27 @@
+C:\Users\Ԭ����\Desktop\ai4math2\research-2026\team-current\r20-geometry\review_r21_vertices.py:6: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+  that belong to K},  S = K \cap {n.x <= t}.
+== (A) equilateral isolated-equality trap ==
+   three centres at |c|=1/2, 120 deg apart, r=1/2;  distances to origin: ['0.5', '0.5', '0.5']
+   all distances >= r (naive K_N test)      : True
+   exact closure criterion accepts x0       : False
+   punctured ball around x0 ring-covered    : True
+   x0 is a pairwise circle intersection     : True
+   => x0 satisfies the naive >= test and IS a pairwise circle intersection, but is
+      NOT in K = closure(strictly-uncovered); the naive vertex rule adds it to V.
+
+== (B) finite-vertex calibration on an admissible ring family ==
+   8 disks, r=0.500, |c|=0.700, angular pitch=0.7854 rad (=45.000 deg);  s=sqrt(1-r^2)=0.8660
+   analytic boundary half-width per disk: 27.6604 deg (pitch/2 = 22.5000 deg) -> covered: True
+   sampled max over boundary of nearest-ring distance = 0.443360637049  (r=0.500) -> covered: True
+   tangent line candidate: x = 1.200000000, tangent to C_0 at 1.200000000 (|x|=1.200000)
+   tangency point in K by the closure criterion : True
+
+   split line / hub comparisons  (max over V  vs  dense max over S):
+     x<=1.200 (tangent) |V|= 8  maxV=0.0504134980  maxS=0.0504134665  diff=-3.15e-08
+     x>=1.200 (tangent) |V|= 8  maxV=0.8308269960  maxS=0.8308268415  diff=-1.54e-07
+     y<=0.1           |V|= 8  maxV=0.2477582716  maxS=0.2477582165  diff=-5.51e-08
+     y<=0.45          |V|= 8  maxV=0.0504134980  maxS=0.0504134665  diff=-3.15e-08
+     diag<=0.2        |V|= 6  maxV=0.2920611699  maxS=0.2920610915  diff=-7.84e-08
+     x<=-0.05         |V|= 6  maxV=0.4035488125  maxS=0.4035487165  diff=-9.60e-08
+
+wrote review_r21_vertices.json

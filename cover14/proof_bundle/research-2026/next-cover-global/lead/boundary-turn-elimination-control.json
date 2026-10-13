@@ -1,0 +1,21 @@
+{
+  "status": "exact_linear_algebra_and_numeric_polygon_controls",
+  "runs": [
+    {
+      "q": 10,
+      "exact_adjacent_sum_rank": 9,
+      "turn_inverse_residual": 1.1102230246251565e-16,
+      "closed_edge_sum_residual": 0.0,
+      "omitted_length_reconstruction_error": 1.1102230246251565e-16,
+      "nonparallel_determinant": 0.9074162312416759
+    },
+    {
+      "q": 11,
+      "exact_adjacent_sum_rank": 11,
+      "turn_inverse_residual": 7.771561172376096e-16,
+      "closed_edge_sum_residual": 1.1102230246251565e-16,
+      "omitted_length_reconstruction_error": 2.220446049250313e-16,
+      "nonparallel_determinant": 0.9643133701767259
+    }
+  ]
+}

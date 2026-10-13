@@ -1,0 +1,88 @@
+{
+  "verified": true,
+  "schema": "N23-written-cover-induction-bound-to-three-actual-complete-full-sources-v1",
+  "N": 23,
+  "families": [
+    [
+      13,
+      10
+    ],
+    [
+      14,
+      9
+    ],
+    [
+      15,
+      8
+    ]
+  ],
+  "original_catalog_type_counts": [
+    1530509,
+    8277632,
+    16790546
+  ],
+  "mechanical_full_recursive_degree_and_canonical_source_equalities": [
+    {
+      "source": "peel_paid_stream_kernel.inc",
+      "source_sha256": "055f2ad57dc500ceef594e3405e2507fead6b912c890111abd5ccc60c598ce26",
+      "possible_canonical_minimum_degree_and_entire_peeling_body_literally_equal": true,
+      "same_full_initial_region_and_exact_face_budget": true
+    },
+    {
+      "source": "peel_search_stage_kernel.inc",
+      "source_sha256": "6ccc9d9bc09d0689dc23cea14d3148515aed8d4699dfeafd92ab604b5b5b9386",
+      "possible_canonical_minimum_degree_and_entire_peeling_body_literally_equal": true,
+      "same_full_initial_region_and_exact_face_budget": true
+    }
+  ],
+  "b13_original_summary_byte_binding": {
+    "key": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/SUMMARY.json",
+    "sha256": "296dac7d916d3b1eb0cfe5eeb00fe8fd5081a03760384438e2579af7837fee93",
+    "current_file": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\evidence\\n23-B13-paid-streamed-resume1\\SUMMARY.json"
+  },
+  "b13_and_b14_actual_zero_paid_prunes_no_hidden_library_skips": true,
+  "b15_actual_original_cpp_binary_degree_controls_and_complete_stream_driver_bound": true,
+  "written_cover_transport_and_full_induction_are_reviewed_math_premises_not_hash_proofs": true,
+  "original_B15_actual_historical_driver_publishes_only_after_success_and_complete_row_scan": true,
+  "not_a_new_native_enumeration_or_Lean_machine_check": true,
+  "negative_original_source_controls_rejected": [
+    "N",
+    "B",
+    "complete",
+    "mode",
+    "orbits",
+    "calls",
+    "source_sha256",
+    "binary_sha256",
+    "stream_validation_source_sha256",
+    "constants_sha256"
+  ],
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-original-archive-dataset-20261005-v1\\VERIFIED.json": "2389953291b84dd5cca140528671cacb32e59717865f5450d032fca02e0fa024",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-original-archive-dataset-20261005-v1\\CATALOG\\N23-B15-dfs.json": "d1489120333b36e31e792bb6b277cd11c2a12fe20f6a51100999ab80f0f71344",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B15-original-archive-dataset-20261005-v1\\CATALOG\\SUMMARY.json": "fd257b031071dc6a758f8e3218cd7bb705848483b303b043f5c3bfe3a6a7b18d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\evidence\\core-reduction\\constants\\n23.json": "0b08dd350e33852d46207fb709b88ad5535cb2a003a51cf429b7cddb200c8ed1",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-cover-origin-necessity-controls-20261005-v1\\VERIFIED.json": "e37e74163fcf614b5cbf1d608d6378e213d8650b388325ee2900e4d551440a46",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\stream_catalog.py": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\peel_degree.cpp": "5d88bffdc65eb8e19c92ef3eb8732c0ad9ef5868ea18a186074ff759ed8bb6ca",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-N24-UNEXPOSED-ORIGIN-SOURCE.md": "d800a4372b39a4454428abb03fc4455441b093f1ac90f221909ef8698c3846db",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N25-COLLAR-COVER-INTERFACE.md": "80d3d9c7c5e09bee6268ef064dd818c7775c7a96146a94ad38e574fb264a9a74",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\verify_n23_full_source_interfaces.py": "edf5b0892ebe842f1354336990d524eacd0acbccc22e7372cdbe250b0e4654de",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-N24-COVER-AND-FULL-PEEL-INDUCTION-v1.md": "8aca653a57a75546a14aa9d51bd013ebf5c2c2047e02c7a350601d81c958cc58",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-SAME-ROOT-CORE-AND-GLOBAL-ASSEMBLY-INTERFACE-v1.md": "bf8419f836d66352a8d7a7ba914e4a00bb35f83730571869bc107a502ba33c4b",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B14-complete-source-and-union-reacceptance-20261005-v1\\VERIFIED.json": "627d6d030d22f0a866c0c382dba9ce88207a8cf1313433d7b0d64dc1cf50159e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B13-current-all-byte-integrity-v1\\VERIFIED.json": "e9ae19fc29b80c22e7948383a55a617c515a3e041e4d6885857e63c63c24bc22",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B13-final-archive-metadata-v1\\VERIFIED.json": "bf2dd725e7a322982ca69249d8bc07553064542946b71aca1385766a00e7fcaf",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-B13-final-archive-metadata-v1\\N23-B13-CATALOGUE-SNAPSHOT-cross-volume-resume1.json": "64578536865f5078df43decda920f9043468f4fc35f1457bdf8cd0af6a8f6f79",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-n24-own-family-budget-v1\\VERIFIED.json": "b8bb2db12f18a5b8e5b16c01d20b7eefa98a955d5bc5b54defd02813abd7d3eb",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-nonstrict-core-fresh-root-upper-local-angle-audit-solo-v1\\VERIFIED.json": "f347fc23fbb58a6102de0bd68534c17b5c2dcb2b8ec5bf9a49d5defabfc94324",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\peel_degree.exe": "765abf10d2276628e5c6d88ed5061bbe71f8f9fadb5135d30a1f4b507546a90e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\peel_paid_stream_kernel.inc": "055f2ad57dc500ceef594e3405e2507fead6b912c890111abd5ccc60c598ce26",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\peel_search_stage_kernel.inc": "6ccc9d9bc09d0689dc23cea14d3148515aed8d4699dfeafd92ab604b5b5b9386",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\enumerate_family_streamed.py": "7f19a37c8193cf11cb0ca095326ce953b60c553d86913dd04f46455a8a9d9127",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\evidence\\degree-pruning-regressions-resume1\\VERIFIED.json": "e5a35cd58fb289dbb7cedc36dffcee300cf70819a5c213dd3e01fe72b4bb77c4"
+  },
+  "source_sha256": "edf5b0892ebe842f1354336990d524eacd0acbccc22e7372cdbe250b0e4654de",
+  "all_three_lower_chains_and_same_root_global_integrity_adoption_still_required": true,
+  "global_optimality_proved": false
+}

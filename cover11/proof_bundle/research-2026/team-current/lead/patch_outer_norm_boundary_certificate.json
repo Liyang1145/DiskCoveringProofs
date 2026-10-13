@@ -1,0 +1,36 @@
+{
+  "scope": "hubnormboundaryHIGHBEARINGONLY; bothrootsretained; notfullpatch",
+  "upper": 28.103151732510888,
+  "evaluations": 51,
+  "liveboxes": 0,
+  "terminal_upper": 28.103151732510888,
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "seconds": 30.07545042037964,
+  "budget_ended": false,
+  "domain": [
+    [
+      0.37499999999999994,
+      0.38
+    ],
+    [
+      1.0,
+      1.1863995522992576
+    ],
+    [
+      1.0,
+      1.1863995522992576
+    ]
+  ],
+  "source_sha256": {
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358",
+    "interval_patch_delta.py": "48bed07cdb5488b92769d7960a9b801da5da20af65c0157d5697c0dbf821f397",
+    "interval_cancel_fibers.py": "5452d07a5fe3a81e0734e6975fae8a1ed4b6ac00b140710b912e89f2c3f8fe74",
+    "interval_collapsed_fibers.py": "3e4be2d15fea51154ba8bc1314c0df14487bb2d3104b7368251463aee2a36711",
+    "interval_cartesian_cancel.py": "3e25905bde400b1a5969667e6f63c7872dccb32567e197d3164b71cd2a7e9851",
+    "interval_hub_boundary.py": "16caeaed1d894ae6079554cc41cb8d88fe3f7ce362a54a64a7bf050e79a6c4d4",
+    "interval_hub_saturated.py": "64d304b6507b794245b189d19a8d44f269c824f58193be81249557f91ec410f3",
+    "interval_hub_norm_only.py": "bffc5c2c11cc367622d78e2833b2684cf166bfc70785c92f8e3f36afc2f559ea",
+    "certify_patch_norm_boundary.py": "4036fa92b8808dd0c0973f3c7abfaf0bd47506ae171ba0f9cb199300ac6d9868"
+  },
+  "topboxes": []
+}

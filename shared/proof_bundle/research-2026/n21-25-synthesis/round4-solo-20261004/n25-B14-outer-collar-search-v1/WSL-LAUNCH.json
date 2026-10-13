@@ -1,0 +1,24 @@
+{
+  "owned_windows_wsl_proxy_pid": 14192,
+  "command": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu2204",
+    "--exec",
+    "/usr/bin/env",
+    "-C",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004",
+    "./peel_outer_collar-linux",
+    "25",
+    "14",
+    "n25-B14-outer-collar-search-v1/N25-B14-necessary-collars.json",
+    "10000000",
+    "768677",
+    "1587443",
+    "2546859",
+    "0",
+    "dfs",
+    "n25-B14-strict-outer-library-v1/OBSTACLES.tsv"
+  ],
+  "input_bindings_sha256": "61bbe68827483f27cbaf620500980285612388dc11af455b5df7f618bfcd1cc6"
+}

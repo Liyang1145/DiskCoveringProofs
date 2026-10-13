@@ -1,0 +1,24 @@
+{
+  "schema": "N26-independent-full134rod-intersection-input-binding-guards-v1",
+  "verified": false,
+  "actual_bundle_VERIFIED_files_bound_not_directory_paths": true,
+  "fixture_argument_mapping_test_does_NOT_claim_all_production_inputs_checked": true,
+  "actual_file_sha256": {
+    "outputs\\n26-original-candidate-arithmetic-context-v1\\VERIFIED.json": "935d336bd4b2cbac1ff819be3b846ca7512ed1c94b8b9122b30833a246694e8a",
+    "outputs\\n26-full134rod-closed-intersection-operator-OLD-fixture-controls-v1.json": "78fcf634e17480afc69210294eaa90f08e8fd8451ecf9f555803b6a4e935822d",
+    "outputs\\n26-current-candidate-owned-forest-v8\\VERIFIED.json": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2"
+  },
+  "actual_OLD_v7_fixture_sha256": "390c514c230e38da309025467a3e293cd29f23fc7a8b90701af06f99f7e88e08",
+  "actual_input_guards_rejected": [
+    "actual-OLD-v7-fixture-refused-as-latest-v8-successor",
+    "resource-bundle-file-not-directory-argument-rejected",
+    "source-bundle-file-not-directory-argument-rejected"
+  ],
+  "actual_latest_v8_successor_or_controls_NOT_executed_here": true,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "executed_test_sha256": "2fb772359b9fdfcf68f06adcb5e1554ecb522bf474c91294405fd5000de7eecb",
+  "tested_unexecuted_successor_producer_sha256": "a19b379398c55ef258ecd2dfb05233579ee6d95c080411286ba8d9d5f8233081"
+}

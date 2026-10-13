@@ -1,0 +1,97 @@
+{
+  "status": "independent_complete_basis_vertexsets",
+  "source_sha256": "7b8b4923e1087f30a6cd7d9978c14a1450075e7b6451f86949f213178b43405c",
+  "runs": [
+    {
+      "node": 0,
+      "vertices": 54,
+      "bases": 361,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 1,
+      "vertices": 54,
+      "bases": 685,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 2,
+      "vertices": 36,
+      "bases": 685,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 3,
+      "vertices": 36,
+      "bases": 1514,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 4,
+      "vertices": 36,
+      "bases": 1514,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 5,
+      "vertices": 36,
+      "bases": 3347,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 6,
+      "vertices": 36,
+      "bases": 3347,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 7,
+      "vertices": 36,
+      "bases": 7225,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 8,
+      "vertices": 36,
+      "bases": 7225,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 9,
+      "vertices": 36,
+      "bases": 15124,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 10,
+      "vertices": 36,
+      "bases": 15124,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 11,
+      "vertices": 36,
+      "bases": 30405,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 12,
+      "vertices": 36,
+      "bases": 30405,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 13,
+      "vertices": 36,
+      "bases": 57621,
+      "exact_vertexsets_equal": true
+    },
+    {
+      "node": 14,
+      "vertices": 36,
+      "bases": 57621,
+      "exact_vertexsets_equal": true
+    }
+  ],
+  "seconds": 114.54135775566101
+}

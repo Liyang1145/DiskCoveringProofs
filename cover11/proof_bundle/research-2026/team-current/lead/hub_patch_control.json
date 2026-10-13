@@ -1,0 +1,6 @@
+{
+  "quadratic_factorization_exact": true,
+  "coordinate_patches": 6641,
+  "max_error": 1.012712136372329e-11,
+  "scope": "analyticrootproof + offcandidatecoordinatecontrol; notglobalcertificate"
+}

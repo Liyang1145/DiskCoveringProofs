@@ -1,0 +1,25 @@
+{
+  "owned_wsl_proxy_pid": 5036,
+  "command": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu2204",
+    "--exec",
+    "/usr/bin/env",
+    "-C",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004",
+    "./peel_sparse_outer_collar-linux",
+    "25",
+    "16",
+    "n25-B16-sparse-collar-search-20261005-v1/N25-B14-necessary-sparse-collars.json",
+    "10000000",
+    "768677",
+    "1587443",
+    "2546859",
+    "0",
+    "dfs",
+    "-",
+    "n25-B16-new-sparse-library-20261005-v1/OBSTACLES.tsv"
+  ],
+  "input_bindings_sha256": "0851bc9ed86928ff8fbffc615bc95c1c9346c572c70e59ebf3b295cb3c8b24e8"
+}

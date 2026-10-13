@@ -1,0 +1,6 @@
+{
+  "actual_exit_code": 0,
+  "stdout": "Paid hole proposal tree produced: {'SPLIT': 1, 'FRONTIER': 15} independent replay required\r\n",
+  "stderr": "",
+  "source_sha256": "3d8213aef5a012849ba7fe32c3f045ab7f51c027b5da06d87a9565d6a4333a15"
+}

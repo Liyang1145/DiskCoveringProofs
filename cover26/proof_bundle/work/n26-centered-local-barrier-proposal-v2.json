@@ -1,0 +1,5895 @@
+{
+  "schema": "N26-full-coordinate-polynomial-barrier-coercivity-proposal-v1",
+  "verified": false,
+  "stress_acceptance_sha256": "cf4be3c59c99cda2e1afc0eab36384d7308028b73ff05c19e2620d68160fa679",
+  "contacts": [
+    {
+      "kind": "face",
+      "vertices": [
+        1,
+        2,
+        18
+      ],
+      "orbit": 1
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        6,
+        7,
+        20
+      ],
+      "orbit": 1
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        9,
+        10,
+        22
+      ],
+      "orbit": 1
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        14,
+        15,
+        24
+      ],
+      "orbit": 1
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        1,
+        17,
+        18
+      ],
+      "orbit": 2
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        7,
+        20,
+        21
+      ],
+      "orbit": 2
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        9,
+        21,
+        22
+      ],
+      "orbit": 2
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        15,
+        17,
+        24
+      ],
+      "orbit": 2
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        3,
+        4,
+        19
+      ],
+      "orbit": 3
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        4,
+        5,
+        19
+      ],
+      "orbit": 3
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        11,
+        12,
+        23
+      ],
+      "orbit": 3
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        12,
+        13,
+        23
+      ],
+      "orbit": 3
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        3,
+        18,
+        19
+      ],
+      "orbit": 4
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        5,
+        19,
+        20
+      ],
+      "orbit": 4
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        11,
+        22,
+        23
+      ],
+      "orbit": 4
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        13,
+        23,
+        24
+      ],
+      "orbit": 4
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        16,
+        18,
+        19
+      ],
+      "orbit": 6
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        16,
+        23,
+        24
+      ],
+      "orbit": 6
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        19,
+        20,
+        25
+      ],
+      "orbit": 6
+    },
+    {
+      "kind": "face",
+      "vertices": [
+        22,
+        23,
+        25
+      ],
+      "orbit": 6
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        0,
+        1
+      ],
+      "orbit": 8
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        7,
+        8
+      ],
+      "orbit": 8
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        8,
+        9
+      ],
+      "orbit": 8
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        15,
+        0
+      ],
+      "orbit": 8
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        1,
+        2
+      ],
+      "orbit": 9
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        6,
+        7
+      ],
+      "orbit": 9
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        9,
+        10
+      ],
+      "orbit": 9
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        14,
+        15
+      ],
+      "orbit": 9
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        2,
+        3
+      ],
+      "orbit": 10
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        5,
+        6
+      ],
+      "orbit": 10
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        10,
+        11
+      ],
+      "orbit": 10
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        13,
+        14
+      ],
+      "orbit": 10
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        3,
+        4
+      ],
+      "orbit": 11
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        4,
+        5
+      ],
+      "orbit": 11
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        11,
+        12
+      ],
+      "orbit": 11
+    },
+    {
+      "kind": "boundary",
+      "vertices": [
+        12,
+        13
+      ],
+      "orbit": 11
+    }
+  ],
+  "generic_raw_contact_polynomials": {
+    "2": [
+      {
+        "powers": [
+          4,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          4,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          1,
+          0,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          2,
+          0,
+          1
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          2
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          1,
+          0,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          3,
+          0,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          2,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          0,
+          2
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          2,
+          0,
+          1
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          0,
+          2
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          0,
+          1
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          1,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          3,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          1,
+          2
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          2
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          1
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          2
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "1"
+      }
+    ],
+    "3": [
+      {
+        "powers": [
+          4,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          4,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          4,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          4,
+          0,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          4,
+          0,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          1,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          1,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          1,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          0,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "6"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          1,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          3,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          3,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          2,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          1,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          1,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          1,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          1,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          0,
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          0,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          3,
+          0,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          2,
+          1,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          2,
+          0,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          2,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          1,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          0,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          0,
+          3,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          0,
+          2,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          0,
+          1,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          0,
+          1,
+          1,
+          0,
+          1
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          1,
+          0,
+          0,
+          1,
+          1,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          4,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          3,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          3,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          2,
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          2,
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          2,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          0,
+          4,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          0,
+          3,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          0,
+          2,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          0,
+          2,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          0,
+          2,
+          1,
+          0,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          1,
+          0,
+          0,
+          1,
+          1,
+          1,
+          1
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          4,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          2,
+          0,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          1,
+          0,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          3,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          2,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          1,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          1,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          0,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          3,
+          0,
+          0,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          4,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          3,
+          0,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          2,
+          2,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          2,
+          1,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          1,
+          2,
+          1,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          1,
+          1,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          1,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          1,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          1,
+          0,
+          1,
+          0,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          4,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          3,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "6"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          2,
+          0,
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          4,
+          0,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          3,
+          0,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          2,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          1,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          1,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          0,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          0,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          2,
+          0,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          1,
+          2,
+          1,
+          1,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          1,
+          1,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "-4"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          1,
+          1,
+          1,
+          0,
+          1
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          1,
+          0,
+          1,
+          1,
+          1
+        ],
+        "coefficient": "8"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          4,
+          0,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          3,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          3,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          2,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          2,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          1,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          1,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          4,
+          0,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          4,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          3,
+          0,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          3,
+          0,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          2,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          1,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          1,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          2,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          1,
+          2,
+          3,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          1,
+          2,
+          1,
+          2,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "coefficient": "-8"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          4,
+          2,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          4,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          3,
+          2,
+          1,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          3,
+          0,
+          3,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          4,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          2,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          1
+        ],
+        "coefficient": "4"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          4,
+          0
+        ],
+        "coefficient": "-1"
+      }
+    ]
+  },
+  "gauge_deleted_coordinate": 1,
+  "gauge_dimension": 51,
+  "gradient_balance_float_residual": 2.47198095326695e-17,
+  "curvature_proposals": [
+    {
+      "alpha": "1/10",
+      "minimum_eigenvalue_proposal": 0.003213874314378437,
+      "maximum_eigenvalue_proposal": 0.678069844627454
+    },
+    {
+      "alpha": "1",
+      "minimum_eigenvalue_proposal": 0.004133399847529438,
+      "maximum_eigenvalue_proposal": 0.9758586237817405
+    },
+    {
+      "alpha": "10",
+      "minimum_eigenvalue_proposal": 0.004812557670646668,
+      "maximum_eigenvalue_proposal": 4.954328344389595
+    },
+    {
+      "alpha": "100",
+      "minimum_eigenvalue_proposal": 0.004959776723055351,
+      "maximum_eigenvalue_proposal": 46.053167177722976
+    },
+    {
+      "alpha": "1000",
+      "minimum_eigenvalue_proposal": 0.004976924376911471,
+      "maximum_eigenvalue_proposal": 457.12776513740585
+    }
+  ],
+  "chosen": {
+    "alpha": "1/10",
+    "preconditioner_denominator": "100000000000000",
+    "preconditioner_numerators": [
+      [
+        "518984873298702",
+        "76651505401929",
+        "-33197592920304",
+        "20634226665854",
+        "-23672519579803",
+        "18444694969485",
+        "-4104608546786",
+        "11692982914073",
+        "-1119810747054",
+        "6296173926491",
+        "4812200464934",
+        "4258061142800",
+        "2706475056642",
+        "981371956466",
+        "3189542838653",
+        "449254876937",
+        "2254445710553",
+        "-694917398519",
+        "1257725362886",
+        "-596504650595",
+        "788007002592",
+        "-626978276589",
+        "149347368854",
+        "-414977415359",
+        "40834173939",
+        "-226562492302",
+        "-173926598600",
+        "-154465511854",
+        "-98364077513",
+        "80639501978912",
+        "51077817357624",
+        "0",
+        "0",
+        "15936694941349",
+        "0",
+        "48155380626884",
+        "-17585483601803",
+        "35181434781662",
+        "-12020912274911",
+        "30124917350795",
+        "6851317439610",
+        "8477774486716",
+        "18581247954407",
+        "-3668129264683",
+        "8789895376226",
+        "2997327254389",
+        "-312944864123",
+        "74092397525517",
+        "12584687556076",
+        "34018233553631",
+        "0"
+      ],
+      [
+        "0",
+        "230274736946580",
+        "14951138827470",
+        "25753833453718",
+        "-23805871826388",
+        "21395914985237",
+        "-4185643543494",
+        "13373194349230",
+        "-1218999636981",
+        "7199739529873",
+        "5510713850583",
+        "4869879070443",
+        "3096496678216",
+        "1122528303236",
+        "3648398913723",
+        "513881876277",
+        "2578766815445",
+        "-794887486313",
+        "1438660022301",
+        "-682317029059",
+        "901368650895",
+        "-717174548297",
+        "170832284516",
+        "-474675521253",
+        "46708524486",
+        "-259155474850",
+        "-198947450628",
+        "-176686717497",
+        "-112514604503",
+        "5457720838665",
+        "3355544709610",
+        "0",
+        "0",
+        "34615253628567",
+        "81416147729506",
+        "136558130075113",
+        "-7816626112733",
+        "83052276454100",
+        "-28906277099389",
+        "67124586701382",
+        "9668796198308",
+        "18576361570744",
+        "39481525209047",
+        "-11313180801320",
+        "26422029237419",
+        "-5762254703440",
+        "17937684838670",
+        "47824284320660",
+        "18906607987678",
+        "47298030681197",
+        "34599371145828"
+      ],
+      [
+        "0",
+        "0",
+        "236997984987042",
+        "-74881744387019",
+        "97769950168180",
+        "-70294355269063",
+        "16832776930321",
+        "-44957098332001",
+        "4432990746898",
+        "-24209875717115",
+        "-18487388474829",
+        "-16371445921940",
+        "-10403527047658",
+        "-3772884548978",
+        "-12262020193326",
+        "-1727143667041",
+        "-8667110721340",
+        "2671576628498",
+        "-4835265679176",
+        "2293233856058",
+        "-3029455587847",
+        "2410388272407",
+        "-574158883656",
+        "1595361008464",
+        "-156985046828",
+        "871008765352",
+        "668652566293",
+        "593835340537",
+        "378156034735",
+        "-3937002763868",
+        "-2136006583755",
+        "0",
+        "0",
+        "22064454592014",
+        "103335854027584",
+        "12421176467997",
+        "60703121299861",
+        "-27788854358865",
+        "2347126120548",
+        "-35315951615799",
+        "-21076581760562",
+        "-11419289424845",
+        "-35332451171447",
+        "11960108694231",
+        "-26410726600380",
+        "32767805139769",
+        "6666317162108",
+        "40943803865574",
+        "91734310133826",
+        "-7853691101292",
+        "-9233350014204"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "355117642796890",
+        "94256674395427",
+        "175404329861033",
+        "11281905572636",
+        "94529945722068",
+        "-3658707853763",
+        "50799255943923",
+        "39517738063930",
+        "34420089865569",
+        "21977697925353",
+        "7945891755469",
+        "25832332790595",
+        "3638197719021",
+        "18258091614556",
+        "-5627960627480",
+        "10185966065496",
+        "-4830927101353",
+        "6381851286492",
+        "-5077724379605",
+        "1209523142171",
+        "-3360787771636",
+        "330704719077",
+        "-1834867213015",
+        "-1408583610642",
+        "-1250973629318",
+        "-796623567188",
+        "2690043160871",
+        "943759641090",
+        "0",
+        "0",
+        "-2904028538966",
+        "-30455315780025",
+        "79640645614606",
+        "9367859869799",
+        "135346117113548",
+        "22272437705218",
+        "129837109055689",
+        "46867736570417",
+        "39195073096243",
+        "94179396195588",
+        "-27818537948087",
+        "65015872020729",
+        "-38553076270799",
+        "22584464987539",
+        "-10578613325329",
+        "-62695629073513",
+        "71256203498409",
+        "107212973922742"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "347567058265800",
+        "-98403298856429",
+        "56758428457060",
+        "-73930209177280",
+        "10817396278022",
+        "-39878317173909",
+        "-30000066774294",
+        "-26924489427180",
+        "-17044335317846",
+        "-6196413416108",
+        "-20133674437676",
+        "-2836119063625",
+        "-14231536612711",
+        "4386753031888",
+        "-7939572441475",
+        "3765519612130",
+        "-4974405658004",
+        "3957888832088",
+        "-942776382452",
+        "2619603499489",
+        "-257771490635",
+        "1430207707121",
+        "1097936199076",
+        "975085343033",
+        "620937121167",
+        "-3207916895804",
+        "-1440724528722",
+        "0",
+        "0",
+        "6453284406973",
+        "45609334435625",
+        "40941684278323",
+        "145590181098369",
+        "-14769814231075",
+        "22079713319394",
+        "-32895432840706",
+        "-29678985589534",
+        "-11425782897558",
+        "-45147063164677",
+        "15916205350941",
+        "-33704977773663",
+        "54141618041461",
+        "24993118718664",
+        "38997974826904",
+        "97425808736731",
+        "-1059051550948",
+        "13945530546993"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "250287113062948",
+        "-28581128739166",
+        "149686520470646",
+        "-11428024936138",
+        "80545338710885",
+        "61933965240934",
+        "54507253706532",
+        "34699293364257",
+        "12569483573521",
+        "40855941723237",
+        "5754470663650",
+        "28877519984240",
+        "-8901312916903",
+        "16110395602518",
+        "-7640720321501",
+        "10093703191685",
+        "-8031061581926",
+        "1913013479452",
+        "-5315509794836",
+        "523051235938",
+        "-2902073949983",
+        "-2227852659922",
+        "-1978572594160",
+        "-1259960658477",
+        "1826824476068",
+        "-47965364355",
+        "0",
+        "0",
+        "-3231013853986",
+        "-27088819943631",
+        "35834636956338",
+        "-74384234940719",
+        "138501429169018",
+        "15767008926252",
+        "147312765225543",
+        "67514519781797",
+        "45751019866875",
+        "122082745277021",
+        "-37463757923943",
+        "85410738338320",
+        "-71928939835271",
+        "5561927831724",
+        "-32077585786671",
+        "-105659252593865",
+        "70680560554700",
+        "103732003744681"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "221116179174708",
+        "-73245877492425",
+        "30719881908323",
+        "-39884076425572",
+        "-27444388941395",
+        "-26688192099436",
+        "-16524435774136",
+        "-6093980535864",
+        "-19772978585033",
+        "-2786607080582",
+        "-13979636378972",
+        "4308997867682",
+        "-7798970689231",
+        "3698826012134",
+        "-4886303252323",
+        "3887788934783",
+        "-926078699301",
+        "2573206640478",
+        "-253206020997",
+        "1404876719429",
+        "1078490203278",
+        "957815211459",
+        "609939451760",
+        "-491681261903",
+        "272401820346",
+        "0",
+        "0",
+        "1170852425935",
+        "9111262976130",
+        "-76074322009263",
+        "140060168394379",
+        "24982395177084",
+        "99782110210381",
+        "2492306901879",
+        "-16426819721438",
+        "-175192537504",
+        "-28596823543139",
+        "13211587225017",
+        "-24083064466854",
+        "39262886662004",
+        "15818227122630",
+        "13806980382471",
+        "72911134497122",
+        "20778083026631",
+        "76559698544295"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "308446980903009",
+        "-13588040105262",
+        "165786619401651",
+        "128756719283231",
+        "112312278604604",
+        "71682375540879",
+        "25923371142396",
+        "84275366513531",
+        "11869357801622",
+        "59565424054545",
+        "-18360719444506",
+        "33230815989138",
+        "-15760472800645",
+        "20820226124245",
+        "-16565627185991",
+        "3945962413226",
+        "-10964273195719",
+        "1078894931946",
+        "-5986092180915",
+        "-4595379587975",
+        "-4081190948219",
+        "-2598914010098",
+        "930070099294",
+        "-1899940969877",
+        "0",
+        "0",
+        "-2664058007310",
+        "-22979477116501",
+        "53786423356500",
+        "-105028744355260",
+        "100264873541265",
+        "-56880574521003",
+        "152228364320304",
+        "108783152708378",
+        "50456431419562",
+        "172574801181712",
+        "-57125741197312",
+        "123697021980560",
+        "-113286368180205",
+        "-987933215884",
+        "-53261761545424",
+        "-149179117949303",
+        "50674261051580",
+        "65808571397141"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "297125988571346",
+        "-5568766180237",
+        "33837979103583",
+        "-192037237731",
+        "5379199302906",
+        "669575788058",
+        "2589550898537",
+        "345505988139",
+        "1784998216971",
+        "-551830128478",
+        "996867733280",
+        "-472936492391",
+        "624730275219",
+        "-497084331000",
+        "118402819611",
+        "-329003431691",
+        "32373871009",
+        "-179623833862",
+        "-137892963722",
+        "-122463732772",
+        "-77985260580",
+        "-79470459127",
+        "-125151598977",
+        "0",
+        "0",
+        "101007582750",
+        "656494765798",
+        "-10505852199767",
+        "19129419648786",
+        "-6449075809636",
+        "157763358668372",
+        "18062783688565",
+        "40083226521295",
+        "10067360192270",
+        "18118534774260",
+        "-1111872923391",
+        "8293616640490",
+        "20838086792725",
+        "28548906572955",
+        "-21667571077116",
+        "44164747961919",
+        "17366754365665",
+        "138667587902557"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "239757285615223",
+        "62115195004619",
+        "150781352801825",
+        "78345449074176",
+        "32481300944589",
+        "104252559621531",
+        "14745402027800",
+        "73832452916827",
+        "-22753205470804",
+        "41186836423024",
+        "-19533311837755",
+        "25804423901405",
+        "-20531251443282",
+        "4890592901345",
+        "-13589000469144",
+        "1337171833483",
+        "-7419097305648",
+        "-5695463140017",
+        "-5058183496090",
+        "-3221065622010",
+        "-217871353794",
+        "-3224512575923",
+        "0",
+        "0",
+        "-1293027712654",
+        "-12330731664823",
+        "27450848994875",
+        "-53700931276173",
+        "138087406201224",
+        "-118040051605145",
+        "158371464668010",
+        "71577554462072",
+        "46846923397085",
+        "171187632370297",
+        "-61353677040696",
+        "126861388080276",
+        "-127525282445606",
+        "-11669427502852",
+        "-40835524894984",
+        "-159472636651247",
+        "55955031775926",
+        "20871384654494"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "234465235234281",
+        "21998041073544",
+        "47841803543880",
+        "9463543334720",
+        "33301581377044",
+        "4572197850208",
+        "23259182451065",
+        "-7179433714620",
+        "12982396038979",
+        "-6158114363763",
+        "8134885776844",
+        "-6472633481861",
+        "1541771098235",
+        "-4284027209040",
+        "421550024227",
+        "-2338922134740",
+        "-1795534800803",
+        "-1594627635289",
+        "-1015463459423",
+        "80122644958",
+        "-922119734155",
+        "0",
+        "0",
+        "-623629156715",
+        "-5633555801536",
+        "12103550687222",
+        "-23777790827108",
+        "-64424002205123",
+        "63937102879293",
+        "47761204990652",
+        "143196179016357",
+        "29149491426732",
+        "102085492458736",
+        "-26068522345200",
+        "65282543814618",
+        "-34357902846613",
+        "21659104688741",
+        "-51880686747642",
+        "-21849725875237",
+        "-2439790073004",
+        "106971787887516"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "393842685937357",
+        "-83556577252236",
+        "47445684060639",
+        "129113748589440",
+        "19353631121917",
+        "94013663384202",
+        "-28880943778370",
+        "52385800606006",
+        "-24836077406276",
+        "32811787561799",
+        "-26105670590376",
+        "6218635290048",
+        "-17278605370140",
+        "1700254382243",
+        "-9433487082166",
+        "-7241859108914",
+        "-6431551536529",
+        "-4095629892643",
+        "-839898967781",
+        "-4457199539055",
+        "0",
+        "0",
+        "-819826570533",
+        "-9048674297414",
+        "19064142832066",
+        "-37350738247145",
+        "112501417621670",
+        "-97383265792120",
+        "194524565006478",
+        "3677252932274",
+        "48929926643690",
+        "158477328000863",
+        "-61836290239278",
+        "122605365852136",
+        "-125308379410167",
+        "-10263078175927",
+        "-42929352726302",
+        "-149566751363753",
+        "80689577727929",
+        "-24711357048298"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "336094328168165",
+        "43611098932766",
+        "166994394170470",
+        "22346205261220",
+        "115264511160947",
+        "-35628263903996",
+        "64368134983713",
+        "-30537172597664",
+        "40338521642628",
+        "-32096426738832",
+        "7645208998560",
+        "-21243551636915",
+        "2090362499824",
+        "-11598201814851",
+        "-8903664715181",
+        "-7907408800894",
+        "-5035460857605",
+        "-1283337050102",
+        "-5639091932560",
+        "0",
+        "0",
+        "-639933046455",
+        "-8169019972890",
+        "16043891084156",
+        "-31533328282574",
+        "52860225880334",
+        "-43287685551754",
+        "21287913764686",
+        "131773304789879",
+        "14437587804841",
+        "180236504960230",
+        "-70991734828887",
+        "137056024344882",
+        "-120393630397864",
+        "8644331905643",
+        "-80728924401194",
+        "-113431143701557",
+        "-29462059625309",
+        "117632635361555"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "232174203880450",
+        "8439062105378",
+        "35914733031528",
+        "87838548963220",
+        "-24157457433149",
+        "47125109839983",
+        "-22080364195891",
+        "29237914161977",
+        "-23231961365871",
+        "5540347670640",
+        "-15378718580665",
+        "1513968017385",
+        "-8396231606440",
+        "-6445497613630",
+        "-5724364432778",
+        "-3645278827081",
+        "-1161848614298",
+        "-4230005603845",
+        "0",
+        "0",
+        "-122495733964",
+        "-3172045255818",
+        "5125964057335",
+        "-10147862191834",
+        "22819954166283",
+        "-19364830743838",
+        "201228303754454",
+        "65494658243080",
+        "97841998230236",
+        "48493869906995",
+        "-21855423891896",
+        "46015899762703",
+        "-54125602863502",
+        "-6561296137376",
+        "-20529286056586",
+        "-70227947921344",
+        "84833163794952",
+        "-23242004945164"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "281718854983813",
+        "26569443838462",
+        "168213074662636",
+        "-52952323367634",
+        "94553231792624",
+        "-44945865654005",
+        "59349328102568",
+        "-47233112385013",
+        "11248577416697",
+        "-31261294664661",
+        "3075881699822",
+        "-17067518435545",
+        "-13102358424392",
+        "-11636276053091",
+        "-7410018511857",
+        "-2263769288209",
+        "-8536427055701",
+        "0",
+        "0",
+        "-392516414228",
+        "-7602337134900",
+        "13179006550194",
+        "-26015757245222",
+        "57597739058112",
+        "-48750969758144",
+        "67108524088581",
+        "47815078245572",
+        "376994166164",
+        "242968725143544",
+        "-101515007484506",
+        "188964378636494",
+        "-168114890538924",
+        "12229243381113",
+        "-110429023535274",
+        "-150775041550197",
+        "-6821143911779",
+        "84940574477928"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "527165646972014",
+        "56333667952594",
+        "64414115365261",
+        "-21224964813186",
+        "17626797517802",
+        "-21356234596000",
+        "17866553490648",
+        "-4075032355962",
+        "11763491746365",
+        "-1138274520886",
+        "6422052653816",
+        "4932529943304",
+        "4378659532824",
+        "2788699696269",
+        "1094745337198",
+        "3366494893023",
+        "0",
+        "0",
+        "-207999175314",
+        "0",
+        "1895431458748",
+        "-3592323898842",
+        "8972602141725",
+        "-7563518035928",
+        "56721348274418",
+        "19850868880653",
+        "34171233779064",
+        "33911837710060",
+        "37392627070056",
+        "-7657202097171",
+        "29582432943777",
+        "-6940759831290",
+        "33581793145290",
+        "1912019208610",
+        "54279369164035",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "349670028488829",
+        "-118828034836247",
+        "202187320482532",
+        "-96912972890851",
+        "127765407149625",
+        "-101774727636833",
+        "24218505886169",
+        "-67353176213827",
+        "6625015105242",
+        "-36772319172818",
+        "-28229562759628",
+        "-25070621301265",
+        "-15965091182354",
+        "-5454759479689",
+        "-18758358272921",
+        "0",
+        "0",
+        "0",
+        "-9577729012949",
+        "12100578290386",
+        "-24241284009850",
+        "51835464666440",
+        "-43993796487750",
+        "145628271687517",
+        "65599669737696",
+        "46639671452325",
+        "231561862514474",
+        "-142660961494375",
+        "225438951163996",
+        "-232879995367613",
+        "9379614822158",
+        "-164318215783947",
+        "-200663485789723",
+        "0",
+        "66125736664244"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "243292369426844",
+        "-25889567150638",
+        "45137632216605",
+        "-51242728222547",
+        "44571852016546",
+        "-9831245752463",
+        "29232021978732",
+        "-2792732369645",
+        "15957947610856",
+        "12261286409603",
+        "10880833839487",
+        "6930496874134",
+        "2451222917638",
+        "8195095057134",
+        "0",
+        "0",
+        "-122495733964",
+        "3172045255818",
+        "-2891641708223",
+        "5913432858116",
+        "-11933788228511",
+        "10162667296262",
+        "-31207185520894",
+        "-14429217462085",
+        "26049707660015",
+        "50007464601149",
+        "149626586054043",
+        "-65600029735579",
+        "141029888921303",
+        "-22198630658711",
+        "109394461349597",
+        "70441311966632",
+        "84833163794952",
+        "23242004945164"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "270208617044196",
+        "-106729189454941",
+        "146461071737933",
+        "-114053969171254",
+        "27680222112509",
+        "-75663960927155",
+        "7499993988008",
+        "-41310842556056",
+        "-31706334075887",
+        "-28164178109533",
+        "-17934017598044",
+        "-6395713279947",
+        "-21242560106649",
+        "0",
+        "0",
+        "392516414228",
+        "-7602337134900",
+        "6028950438198",
+        "-12464215774202",
+        "24389998726366",
+        "-20811161762343",
+        "66323466999210",
+        "30104499497094",
+        "44260820543036",
+        "235992344593872",
+        "-69613445581646",
+        "196030893762098",
+        "-172178972467073",
+        "-4114425022840",
+        "-135270047666029",
+        "-162204502208672",
+        "6821143911779",
+        "84940574477929"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "364412873028542",
+        "74100435762269",
+        "192799348062016",
+        "6131551744563",
+        "109808519457743",
+        "-5259010624076",
+        "59840988227245",
+        "46650749936559",
+        "40867404978843",
+        "26127216689241",
+        "9463671294404",
+        "30983783937441",
+        "0",
+        "0",
+        "-819826570533",
+        "9048674297414",
+        "-3965908788080",
+        "8751382128351",
+        "-13995810213855",
+        "12110502791690",
+        "-36866095087741",
+        "-16690907565275",
+        "-14833712094210",
+        "-96932185474104",
+        "115444325585774",
+        "-74172557763665",
+        "222808591263136",
+        "46957901034374",
+        "192149018820386",
+        "169853525586286",
+        "80689577727929",
+        "24711357048298"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "362458382717713",
+        "-124122365204896",
+        "63532384017031",
+        "-93766550726854",
+        "12845563565615",
+        "-51265172795211",
+        "-38890308615696",
+        "-34906432309150",
+        "-22161481162166",
+        "-8023767304991",
+        "-26361813507299",
+        "0",
+        "0",
+        "639933046455",
+        "-8169019972890",
+        "4489359869797",
+        "-9623728042572",
+        "16892931794286",
+        "-14518500079989",
+        "45115352400806",
+        "20467070004274",
+        "21183856996434",
+        "129442980818941",
+        "-13364068179692",
+        "226683399552608",
+        "-117978308185033",
+        "7194832613536",
+        "-103451634475214",
+        "-133055645399957",
+        "29462059625308",
+        "117632635361556"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "256598747173210",
+        "-31587238870685",
+        "159736023067137",
+        "-12571438655702",
+        "87147362930759",
+        "67305051182615",
+        "59454424218290",
+        "37919035650390",
+        "13825571054136",
+        "45074013816611",
+        "0",
+        "0",
+        "-1293027712654",
+        "12330731664823",
+        "-3800544222586",
+        "8886022605794",
+        "-11562240154261",
+        "10179305899209",
+        "-29545661462198",
+        "-13270371605203",
+        "-12811533606645",
+        "-80151523352777",
+        "65844451317633",
+        "-137562055168980",
+        "219595308345035",
+        "53144854131554",
+        "204102934602462",
+        "194340418514184",
+        "55955031775926",
+        "-20871384654494"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "221420143845076",
+        "-75708576300154",
+        "31040454988967",
+        "-41803895791511",
+        "-29062307893121",
+        "-28207158977628",
+        "-17525413740978",
+        "-6511200593495",
+        "-21159369897132",
+        "0",
+        "0",
+        "623629156715",
+        "-5633555801536",
+        "1425811839744",
+        "-3472072307687",
+        "3830564196237",
+        "-3428218516043",
+        "9494010114562",
+        "4230272869839",
+        "4249003380810",
+        "25977886229279",
+        "-81312839506168",
+        "179044446195688",
+        "-16212317475922",
+        "106430469369744",
+        "-19556498387481",
+        "-35844077703712",
+        "2439790073004",
+        "106971787887516"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "311702701706364",
+        "-14226533884679",
+        "169850785402992",
+        "132502306614645",
+        "116005518177590",
+        "74177271433569",
+        "27094988792328",
+        "88102439235175",
+        "0",
+        "0",
+        "-2664058007310",
+        "22979477116501",
+        "-4769922491337",
+        "12176251815887",
+        "-10716071898511",
+        "9849499208887",
+        "-25148834535241",
+        "-11047448755946",
+        "-10770854685361",
+        "-66026244141263",
+        "75760828922626",
+        "-161656977514506",
+        "169102554053970",
+        "-27119328690232",
+        "192915443003788",
+        "216806137407989",
+        "50674261051581",
+        "-65808571397141"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "297155856042837",
+        "-5917530903822",
+        "33618376066287",
+        "-332984412236",
+        "5292368911430",
+        "648756145717",
+        "2515213338290",
+        "0",
+        "0",
+        "-101007582750",
+        "656494765798",
+        "-39738264134",
+        "154474687198",
+        "173685080912",
+        "-124550392454",
+        "616257024443",
+        "295834928807",
+        "305635802638",
+        "1937084427659",
+        "-10658730834810",
+        "23644974896675",
+        "-12671998280761",
+        "158675741391596",
+        "20603381918799",
+        "71196104949791",
+        "-17366754365665",
+        "138667587902557"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "240498548165849",
+        "63364107961052",
+        "152205043174973",
+        "79433765654251",
+        "33249559918860",
+        "106637749552291",
+        "0",
+        "0",
+        "-3231013853986",
+        "27088819943630",
+        "-4374792599948",
+        "12022024506281",
+        "-6877858871074",
+        "6771360943057",
+        "-13780776759735",
+        "-5769341476545",
+        "-5677244021854",
+        "-33411169671034",
+        "37198505171823",
+        "-79361195801657",
+        "176658219088601",
+        "-77492601025586",
+        "170067638382893",
+        "141966058325311",
+        "70680560554700",
+        "-103732003744681"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "234890091018777",
+        "22783317040386",
+        "48389360112398",
+        "9771196638894",
+        "34300084272047",
+        "0",
+        "0",
+        "-1170852425935",
+        "9111262976130",
+        "-1647971046878",
+        "4302675107180",
+        "-2938963941646",
+        "2790627863764",
+        "-6299246292503",
+        "-2694179141604",
+        "-2639555269283",
+        "-15833037140171",
+        "17146552882302",
+        "-36504874527145",
+        "-59749729955542",
+        "50168340626253",
+        "58163461165987",
+        "183556161279210",
+        "-20778083026631",
+        "76559698544295"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "394403629437818",
+        "-82890805723755",
+        "48212606645210",
+        "131253169191213",
+        "0",
+        "0",
+        "-2904028538966",
+        "30455315780025",
+        "-4101729863764",
+        "12564718459374",
+        "-5497098385672",
+        "5838801913356",
+        "-9823083173910",
+        "-3952161585914",
+        "-3909575752698",
+        "-22155807584198",
+        "24082474495438",
+        "-51385423203362",
+        "133942264196882",
+        "-61084221278302",
+        "196398740815724",
+        "37726482282197",
+        "71256203498410",
+        "-107212973922743"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "336287978412206",
+        "44254239365858",
+        "169008700756422",
+        "0",
+        "0",
+        "-6453284406973",
+        "45609334435625",
+        "-6806322768081",
+        "18486966717976",
+        "-7111401266274",
+        "7511859609312",
+        "-10273317362545",
+        "-3730482745998",
+        "-3795101759169",
+        "-19477056011485",
+        "19467838793481",
+        "-41531128591138",
+        "61747038695282",
+        "-19430958623994",
+        "-11328718581147",
+        "190361111789471",
+        "1059051550948",
+        "13945530546993"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "234892562497827",
+        "12001188927654",
+        "0",
+        "0",
+        "34615253628567",
+        "-81416147729506",
+        "23063317945855",
+        "-35970193020845",
+        "16614093938936",
+        "-13492615748252",
+        "14195815774075",
+        "2996703343593",
+        "3878739189112",
+        "9007489580381",
+        "-1332364716229",
+        "3065114624700",
+        "1074281630128",
+        "-6909474527298",
+        "184228563173999",
+        "13434357624673",
+        "47298030681197",
+        "-34599371145828"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "283234874983624",
+        "0",
+        "0",
+        "-22064454592014",
+        "103335854027584",
+        "-18482368234777",
+        "42015057808373",
+        "-15338045488831",
+        "15337365278552",
+        "-16344557403478",
+        "-4715505702817",
+        "-5191435447281",
+        "-20179732631287",
+        "15319984480769",
+        "-32777240877604",
+        "61064069959668",
+        "-18066948919353",
+        "21381529381988",
+        "103029423618894",
+        "7853691101292",
+        "-9233350014204"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "362753364637329",
+        "0",
+        "0",
+        "0",
+        "100062690143803",
+        "70286868072637",
+        "77121568311984",
+        "-41877192192071",
+        "55295091459712",
+        "-1462383872779",
+        "14320549565268",
+        "25935741550064",
+        "-7625497391595",
+        "18027138171668",
+        "27564891319393",
+        "55025051616820",
+        "179030289495583",
+        "-50791917765883",
+        "72819585350491",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "199502885299357",
+        "0",
+        "0",
+        "75771067555509",
+        "52341922888079",
+        "-22730113035556",
+        "87541169004151",
+        "-11564553577175",
+        "10321096973387",
+        "-1520883256008",
+        "-5864600196326",
+        "3511538858591",
+        "-5873794081821",
+        "106652259777870",
+        "117457791034372",
+        "-35747074628095",
+        "155219817055659",
+        "0",
+        "155640737052793"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "458103167819004",
+        "0",
+        "105594046916356",
+        "-43845319389902",
+        "59161509303058",
+        "-34940361154922",
+        "46643415835669",
+        "4387598650864",
+        "12640922323496",
+        "27939196747017",
+        "-9317837925620",
+        "21087244610760",
+        "-14317752977287",
+        "9345888731360",
+        "145538246116971",
+        "33262939906929",
+        "53093455881737",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "274597168694199",
+        "-40893545195921",
+        "106912921500725",
+        "-34478275122132",
+        "35075630809508",
+        "-32575278589095",
+        "-8883133765055",
+        "-9400330548753",
+        "-27997554457277",
+        "11576361025867",
+        "-24925192501734",
+        "38974566830303",
+        "5566256426221",
+        "66650486271548",
+        "185486492802908",
+        "0",
+        "28170290323262"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "255922007556781",
+        "13692305388645",
+        "141311302154807",
+        "-51606742800812",
+        "109733856390614",
+        "9909268100189",
+        "29847057680577",
+        "60306956419476",
+        "-18084665270240",
+        "42429524651345",
+        "-5592614465682",
+        "39961066300126",
+        "33643705626470",
+        "-32887915553009",
+        "69679458380170",
+        "53587403861934"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "301427834194415",
+        "-13010288981724",
+        "80172031096923",
+        "-17043638184650",
+        "-6871505313663",
+        "-4665834075054",
+        "-24609334923178",
+        "10678454002010",
+        "-20840935780020",
+        "64565036864600",
+        "48150467253398",
+        "25969740642423",
+        "121182836014646",
+        "8823979277561",
+        "83111868038621"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "226335590656993",
+        "-45612612379039",
+        "170490758394832",
+        "10382814855661",
+        "46136291185186",
+        "84004358724736",
+        "-23510558634224",
+        "57477724383117",
+        "-59004936933854",
+        "-9615044625220",
+        "15069185805672",
+        "-91384639425723",
+        "100854307191835",
+        "55975526835992"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "227734919861641",
+        "16903569421649",
+        "33414762397372",
+        "9200907728926",
+        "10045705970561",
+        "1956140753093",
+        "2267491855082",
+        "35193142021892",
+        "38921867824613",
+        "-26595541157857",
+        "62444611866583",
+        "24980037135591",
+        "188619748156767"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "288781339130231",
+        "18740711266249",
+        "79820616118160",
+        "112832567358398",
+        "-23828396705618",
+        "70632370451662",
+        "-54035528289951",
+        "3139213118301",
+        "-14570969280229",
+        "-69619907186804",
+        "140940715671133",
+        "-47789122282027"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "273952960008202",
+        "32873921628385",
+        "138656851789112",
+        "-30735713572989",
+        "83700364764347",
+        "-50360914727021",
+        "16232727696505",
+        "-44929645423535",
+        "-41796159795086",
+        "-40681663041817",
+        "184762666844246"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "477522400763942",
+        "68739389270618",
+        "84066306489618",
+        "-26687116353825",
+        "53114321914684",
+        "-24647354652475",
+        "48848129545375",
+        "-2229952136577",
+        "101813159166945",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "331519172394854",
+        "-74371680377874",
+        "195950634636031",
+        "-121293589241866",
+        "30171308964205",
+        "-88739779530922",
+        "-95933164395952",
+        "0",
+        "123067775178068"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "239348262573720",
+        "-42755070824733",
+        "180818474396942",
+        "-44788328347524",
+        "136169723333585",
+        "63521346621209",
+        "140940715671133",
+        "47789122282027"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "313689887615515",
+        "-60269841624543",
+        "58109585714817",
+        "-47787184770573",
+        "-46671763725658",
+        "40681663041817",
+        "184762666844246"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "252534688441603",
+        "12460669511874",
+        "192704966278798",
+        "81320105356113",
+        "100854307191835",
+        "-55975526835992"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "231289579839920",
+        "25047451928398",
+        "81840628403258",
+        "-24980037135591",
+        "188619748156766"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "332291448671208",
+        "23120829775860",
+        "69679458380170",
+        "-53587403861934"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "347585739950946",
+        "-8823979277561",
+        "83111868038621"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "449762951271379",
+        "0"
+      ],
+      [
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "357820802291172"
+      ]
+    ]
+  },
+  "suggested_neighbourhood_halfwidth": "7/100000",
+  "local_optimality_proved": false,
+  "global_optimality_proved": false,
+  "discovery_source_acceptance_sha256": "d94d5797b19c84c0cb4a8484083992a06cada269c83b7fdbe1cbd4ff4b244920",
+  "discovery_source_neighbourhood_halfwidth": "1/2000000"
+}

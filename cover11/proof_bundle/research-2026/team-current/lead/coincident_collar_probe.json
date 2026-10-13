@@ -1,0 +1,38 @@
+{
+  "scope": "bothlow entirefacearcs |T-pi/2|<=.005",
+  "count": 2880,
+  "live": 0,
+  "closed": {
+    "illegal": 633,
+    "value": 808
+  },
+  "terminal": 28.106704253080107,
+  "seconds": 23.32521414756775,
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      0.6094608076372535,
+      1.0
+    ],
+    [
+      1.5657963267948962,
+      1.5757963267948967
+    ],
+    [
+      0.0,
+      1.5757963267948967
+    ]
+  ],
+  "source_sha256": {
+    "probe_coincident_collar.py": "0d9491b74d9bc3014991d0070602129e600f8a4c1b7275606f69591db1ba4fbf",
+    "face_totalangle_jet.py": "dd9648540200aa42409ebdf7e4e846d28267838735c9e7aba05c2cf067a92b53",
+    "width_endpoint_jet.py": "62cc933c09c27505256fa6069298ade1d3bd59acea59801241147c168d91efb6",
+    "patch_smooth_jet.py": "0ea533809a58940014e0fd980d29c80747cb9e05a467936645817bb74b0b68d0",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358",
+    "joint_nested_frozen.json": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb"
+  },
+  "topboxes": []
+}

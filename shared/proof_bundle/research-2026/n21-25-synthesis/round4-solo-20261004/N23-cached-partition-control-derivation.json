@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "schema": "isolated-N23-cached-partition-control-derivation-v1",
+  "file": {
+    "source": "test_cached_support_origin_partition.py",
+    "source_sha256": "11325d0baa2b16597d99c8207b96447ae654e44cccc72745836bebab4367e1bf",
+    "target": "test_N23_cached_origin_partition.py",
+    "target_sha256": "b7a685f5d7da308c4b9b9d896d70abd422fc24012063e3a6bc612bea4a3dce78",
+    "changes": [
+      [
+        "    for N in (22, 23):",
+        "    for N in (23,):"
+      ],
+      [
+        "cached-support-origin-complete-partition-controls-v1",
+        "cached-support-origin-N23-partition-controls-v1"
+      ],
+      [
+        "all_four_complete_small_family_partitions_paid",
+        "all_two_complete_N23_partitions_paid"
+      ]
+    ],
+    "exact_inverse_equals_frozen_source": true
+  },
+  "all_actual_terminal_union_and_removed_graph_checks_unchanged": true,
+  "already_completed_N22_cases_not_restarted": true,
+  "source_sha256": "52fb375b9f85e4853baa00378beac758d9487f344850c80e7676f5b8a7e89718",
+  "global_optimality_proved": false
+}

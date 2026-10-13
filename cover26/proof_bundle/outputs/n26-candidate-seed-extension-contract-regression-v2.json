@@ -1,0 +1,34 @@
+{
+  "schema": "N26-accepted-candidate-seed-extension-contract-regression-v1",
+  "actual_source_acceptance_sha256": "26ce8b89bcf0dff276e494511ae10d3f1bfedd3caab41574c8dfb3bf6738d15a",
+  "actual_seed_proposal_sha256": "e53d3438e7c5d302f34c3bc3d936a11fb4d7f138999a2b125c374584de9a9fe0",
+  "tested_seed_contract_sha256": "9042acdbf026add21e912308a26eb2790b6bb896a94c41394a2e3cacf53595df",
+  "source_OPEN_index": 957,
+  "unchanged_accepted_seed_control_passed": true,
+  "OPEN_only_structural_extension_control_passed": true,
+  "allowed_OPEN_extension_contract": {
+    "source_OPEN_index": 957,
+    "accepted_seed_nodes": 137,
+    "accepted_seed_OPEN_leaves": 2,
+    "accepted_seed_non_OPEN_nodes_retained_identically": 135,
+    "accepted_seed_ENERGY_leaves_retained_identically": 67,
+    "new_nodes": 2,
+    "old_paid_leaves_and_closed_splits_retained_identically": true,
+    "source_full_closed_root_retained_identically": true
+  },
+  "invalid_seed_extension_controls_rejected": [
+    "previously-paid-current-root-substituted",
+    "boolean-instead-of-original-root-index",
+    "full-current-root-bound-changed",
+    "accepted-node-truncated",
+    "accepted-closed-sibling-ownership-rewired",
+    "accepted-shared-midpoint-changed",
+    "accepted-paid-leaf-reopened",
+    "accepted-energy-certificate-changed"
+  ],
+  "source_snapshot_and_structure_only_not_a_geometric_replay": true,
+  "new_geometric_candidate_payments": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "executed_test_sha256": "de0f398fbd7c9fcc8b5cf53f786d1365c4fc8f73583c52adf362a3d37aa16a2c"
+}

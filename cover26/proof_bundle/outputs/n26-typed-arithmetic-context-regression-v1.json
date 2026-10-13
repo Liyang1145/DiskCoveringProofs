@@ -1,0 +1,22 @@
+{
+  "schema": "N26-data-only-typed-arithmetic-context-regression-v1",
+  "exact_scalar_types_container_order_and_negative_zero_preserved": true,
+  "invalid_typed_context_controls_rejected": [
+    "boolean-relabelled-as-integer",
+    "noncanonical-leading-zero",
+    "nonpositive-denominator",
+    "unreduced-rational",
+    "duplicate-dictionary-key",
+    "unknown-executable-tag",
+    "hidden-extra-tag-field",
+    "nonfinite-floating-metadata",
+    "noncanonical-floating-metadata",
+    "tuple-payload-not-a-wire-list"
+  ],
+  "original_candidate_context_or_geometry_not_verified_by_this_test": true,
+  "new_geometric_candidate_payments": 0,
+  "tested_codec_sha256": "a2e40ae3df956b6fd15d35fd8fd9467169748f2a19226d27b14c4ca46d646ea8",
+  "executed_test_sha256": "c866dae17429b27973d19c2f2beaef09629cdd491fadf72fa0b50b12ede439e8",
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,25 @@
+{
+  "status": "interval_enclosure_numeric_reference_control",
+  "rows": [
+    {
+      "face": 0,
+      "X_rational": "1",
+      "exact_formula_float": 1.0
+    },
+    {
+      "face": 2,
+      "X_rational": "1",
+      "exact_formula_float": 1.0
+    },
+    {
+      "face": 14,
+      "X_rational": "991/1024",
+      "exact_formula_float": 0.9671084533796737
+    },
+    {
+      "face": 15,
+      "X_rational": "991/1024",
+      "exact_formula_float": 0.9671084533796737
+    }
+  ]
+}

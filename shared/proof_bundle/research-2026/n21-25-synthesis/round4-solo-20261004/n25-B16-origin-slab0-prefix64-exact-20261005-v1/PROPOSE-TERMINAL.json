@@ -1,0 +1,6 @@
+{
+  "actual_exit_code": 0,
+  "source_sha256": "fb922aae58c58517d28d44a900865b2015352344e41775de7b6dfd69573daac9",
+  "stdout": "Group stage finished 25 16 Counter({'excluded': 64})\r\n",
+  "stderr": ""
+}

@@ -1,0 +1,12 @@
+{
+  "scheduler_completed": true,
+  "N": 25,
+  "B": 15,
+  "full_parent_acceptor_report_sha256": "04f05fc68b60eadffaa43932d4756da5881adc9145481c69dd8917373fbe2d84",
+  "strictly_excluded": 116119,
+  "pending_weak_graphs": 23196,
+  "all_residual_weak_lower_bounds_paid": false,
+  "completed_batches_sha256": "363e2419530ad2de950c10473aceb90d14700a3720656356fdb5edf1df1e4032",
+  "source_sha256": "f63e7f146f4f8302501d19260912b6b2b565a9e3213eda77f01898e28eab5655",
+  "global_optimality_proved": false
+}

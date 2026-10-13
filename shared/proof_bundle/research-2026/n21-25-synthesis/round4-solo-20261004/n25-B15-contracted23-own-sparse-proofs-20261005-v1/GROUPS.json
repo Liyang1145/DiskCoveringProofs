@@ -1,0 +1,230 @@
+{
+  "N": 25,
+  "B": 15,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "centers": 17,
+      "faces": [
+        26624,
+        68608,
+        98560
+      ],
+      "members": 2
+    },
+    {
+      "id": 1,
+      "centers": 17,
+      "faces": [
+        704,
+        35840,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 2,
+      "centers": 17,
+      "faces": [
+        3328,
+        71680,
+        114688
+      ],
+      "members": 2
+    },
+    {
+      "id": 3,
+      "centers": 17,
+      "faces": [
+        1664,
+        35840,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 4,
+      "centers": 16,
+      "faces": [
+        3328,
+        38912,
+        57344
+      ],
+      "members": 2
+    },
+    {
+      "id": 5,
+      "centers": 16,
+      "faces": [
+        2816,
+        38912,
+        57344
+      ],
+      "members": 1
+    },
+    {
+      "id": 6,
+      "centers": 17,
+      "faces": [
+        2816,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 7,
+      "centers": 17,
+      "faces": [
+        3328,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 8,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        68608,
+        98560
+      ],
+      "members": 1
+    },
+    {
+      "id": 9,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        71680,
+        98816
+      ],
+      "members": 1
+    },
+    {
+      "id": 10,
+      "centers": 17,
+      "faces": [
+        28672,
+        33088,
+        66304,
+        68608
+      ],
+      "members": 1
+    },
+    {
+      "id": 11,
+      "centers": 17,
+      "faces": [
+        28672,
+        33408,
+        67072,
+        71680
+      ],
+      "members": 1
+    },
+    {
+      "id": 12,
+      "centers": 16,
+      "faces": [
+        28672,
+        33536,
+        38912
+      ],
+      "members": 1
+    },
+    {
+      "id": 13,
+      "centers": 17,
+      "faces": [
+        28672,
+        71680,
+        98560
+      ],
+      "members": 1
+    },
+    {
+      "id": 14,
+      "centers": 18,
+      "faces": [
+        32864,
+        67072,
+        98432,
+        136192,
+        155648
+      ],
+      "members": 1
+    },
+    {
+      "id": 15,
+      "centers": 17,
+      "faces": [
+        33536,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 16,
+      "centers": 17,
+      "faces": [
+        34048,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 17,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 18,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 19,
+      "centers": 18,
+      "faces": [
+        35072,
+        137216,
+        212992
+      ],
+      "members": 1
+    }
+  ],
+  "group_count": 20,
+  "selected_types": 23,
+  "catalog_types": 23,
+  "catalog_sha256": "1ff3ceefe8a9e03e9b81bba91d7109dce504b041ee94c5fa953ea5b808a3e379",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "3f59a767ae2890dbcc9d6db19ad43c096ca118c3220558370ef216a643d10a3e",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "parent_groups_sha256": null,
+  "parent_proof_sha256": null,
+  "not_a_complete_family": true,
+  "members_are_discovery_graphs_not_actual_cover_types": true,
+  "all_boundary_sites_preserved_by_implicit_anchor_rods": true,
+  "source_sha256": "d771301e9bef4dc24d9cb6a8cfaee9b0c1d51cb8ca76b513de1e7887ff08abdd",
+  "global_optimality_proved": false
+}

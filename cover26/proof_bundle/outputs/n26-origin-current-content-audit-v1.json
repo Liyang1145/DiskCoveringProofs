@@ -1,0 +1,33 @@
+{
+  "schema": "N26-origin-current-content-and-launch-audit-v1",
+  "current_content_reconstruction_passed": true,
+  "bound_executable_identity_checks_passed": true,
+  "completed_subtrees": 115,
+  "pending_subtrees": 660,
+  "reused_empty_subtrees": 105,
+  "newly_completed_subtrees": 10,
+  "closed_rooted_graphs": 0,
+  "closed_distinct_orbits": 0,
+  "limited_tasks_split": 0,
+  "forced_nodes_refined": 310,
+  "origin_native_launches": 321,
+  "legacy_empty_launches": 105,
+  "arbitrary_cover_reduction_accepted": false,
+  "N26_complete_catalog": false,
+  "global_optimality_proved": false,
+  "negative_controls_rejected": [
+    "substituted-legacy-binary",
+    "substituted-loader"
+  ],
+  "files": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_origin_launches.py": "603c90a8c19224ddebc1dfe07df61c060f725e420b085a1201ca4dcf98151f7e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-b18-origin-progress-v2.json": "5d1bf1560f34a6c32ba6dccd43edb728765909c0238cab26bbc67463a3f4c6ff",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/b18-origin-batch-v1/checkpoint-00320.json": "c5479763cbae1e37647a864a1aa4752e60a11683ee88f5a24abba2ab262fecc2",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/run_origin_prefix_batch.py": "03371ca4bb0815eb10da55ef0fe895a820cdaef17fe6cb088f42e0d04ea493e8",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/peel_prefix_v1.linux": "209d7dd7eaaf7dee0ba4992e4b1252f8453d7ad40c6698ce91b99d0c61cd8c8d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/prefix-origin-v1/peel_prefix_origin.linux": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-geometric-bridge-v1.md": "d3b1d042d0e268668538e4bf0011d9bc7fbdba8db26c406ec6622a5dd8fb6383",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-origin-screen-controls-v1.json": "2d7082b969909d1208979b94355e2a29b051e42fb1b83e10449c7bbcb814cc4f"
+  },
+  "scope": "Reconstructs current saved work and checks actual executable names and bytes; does not certify the continuous manuscript."
+}

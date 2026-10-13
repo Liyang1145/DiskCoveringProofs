@@ -1,0 +1,118 @@
+{
+ "role": "explicit-inverse (Neumann) rank certificates replacing the withdrawn numerical-singular-value rank reasoning",
+ "analytic": {
+  "jacobian_shape": "5x7",
+  "columns_kept": [
+   0,
+   1,
+   2,
+   3,
+   6
+  ],
+  "columns_dropped": [
+   5,
+   4
+  ],
+  "W": [
+   [
+    "-0.19026745853652333",
+    "-0.042825793652019932",
+    "-0.011107326431836911",
+    "0.19291063847543316",
+    "-0.044143881711930746"
+   ],
+   [
+    "0.88371222708421471",
+    "0.00096182482299596252",
+    "0.00024945952820085962",
+    "-0.071993967884006388",
+    "-0.87844758102360188"
+   ],
+   [
+    "-0.51836382320147956",
+    "-0.13560308554501579",
+    "-0.035170106794780998",
+    "-0.090387627824832562",
+    "1.1800865633992152"
+   ],
+   [
+    "-0.086307819936401173",
+    "0.28228869398002154",
+    "-0.014041817387852165",
+    "-0.015049582470094395",
+    "-0.32173928179453343"
+   ],
+   [
+    "-0.11383442995428331",
+    "-0.025622089269572351",
+    "-0.0066453621781130141",
+    "-0.019849425495807566",
+    "-0.026410683410070978"
+   ]
+  ],
+  "q_box": "1.087921746e-5",
+  "q_box_float": 1.087921746003747e-05,
+  "q_lt_1": true,
+  "q_point": 1.2453879418530306e-15,
+  "conclusion": "rank 5 on the box => res5=0 is locally a smooth 2-manifold"
+ },
+ "algebraic": {
+  "jacobian_shape": "35x37",
+  "columns_dropped": [
+   35,
+   34
+  ],
+  "attempts": {
+   "full 1e-9 box": {
+    "q": "5.712208556e-6",
+    "q_float": 5.7122085556581725e-06,
+    "lt1": true,
+    "radius": 1e-09
+   }
+  },
+  "q_point": 1.4502906046652535e-14,
+  "conclusion": "the first level with q_B < 1 gives rank 35 there => the algebraic zero set is locally a smooth 2-manifold"
+ },
+ "germ": "both zero sets are smooth 2-manifolds on their certified sets and the mutually inverse smooth maps F/B of POLY-BRANCH-EQUIV act between them on branch (B); hence the germs correspond. SVD/sigma values are diagnostic only.",
+ "diagnostic_only": {
+  "analytic_sigma": [
+   34.0257474,
+   11.41003762,
+   3.95455471,
+   1.96527541,
+   0.66616207
+  ],
+  "algebraic_sigma_min": 0.08559461305279706
+ },
+ "scope": "local germ statement at the certified TC root only; no global component count, no covering radius, no optimality",
+ "source_hashes": {
+  "r20_tc_germ.py": "9d1b22b4a778bedae5ecfed6556c9b9193dd9abb8018dee22227964ae980a441",
+  "r20_tc_iv3.py": "e13fe3d4d8cfa07e8d754893a97a9bc029ac1112a06f13e51bd5c104c96c8a33",
+  "r20_tc_poly.py": "1208821b094b0cc3dfd4b339043d979cff50ce389212105472bd9ce3086004a3",
+  "lead/repaired_tc_krawczyk.json": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5"
+ },
+ "log": [
+  "=== R20-TC-GERM: explicit-inverse rank certificates (no SVD rank reasoning) ===",
+  "box: lead repaired_tc_krawczyk.json, radius = 1.0e-9 (not enlarged)",
+  "",
+  "ANALYTIC 5x7: column pivoting keeps [0, 1, 2, 3, 6] (dropped [5, 4])",
+  "  explicit W (5x5 float64 point inverse of the kept subblock; exact dyadic matrix):",
+  "    -0.19026745853652333 -0.042825793652019932 -0.011107326431836911 0.19291063847543316 -0.044143881711930746",
+  "    0.88371222708421471 0.00096182482299596252 0.00024945952820085962 -0.071993967884006388 -0.87844758102360188",
+  "    -0.51836382320147956 -0.13560308554501579 -0.035170106794780998 -0.090387627824832562 1.1800865633992152",
+  "    -0.086307819936401173 0.28228869398002154 -0.014041817387852165 -0.015049582470094395 -0.32173928179453343",
+  "    -0.11383442995428331 -0.025622089269572351 -0.0066453621781130141 -0.019849425495807566 -0.026410683410070978",
+  "  q_A (box, 5x5, EXACT rational) = 1.087921746e-5 = 0.000010879217  < 1 : True",
+  "  q_A (point, centre)            = 1.245e-15",
+  "  => the 5x7 Jacobian has rank 5 on the whole box (constant rank), so {res5 = 0} is",
+  "     locally a smooth 2-manifold; NO singular-value rank reasoning used.",
+  "",
+  "ALGEBRAIC 35x37: 1295 symbolic entries (polynomial, integer coefficients)",
+  "  column pivoting keeps 35 of 37 columns; dropped = [35, 34]",
+  "  explicit W (35x35 float64 point inverse; recorded in the json, not printed here)",
+  "  [full 1e-9 box             ] q_B = 5.7122086e-6 = 0.0000057122   < 1 : True",
+  "  q_B (point, centre image) = 1.450e-14",
+  "",
+  "DIAGNOSTIC ONLY (non-bearing): analytic sigma = [34.025747, 11.410038, 3.954555, 1.965275, 0.666162] ; algebraic sigma_min = 0.0855946"
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "N": 25,
+  "B": 15,
+  "groups_sha256": "4efc7e333064b3aabdc70bcd1fc5de0760dabfb9e0781b86b6ed2282f77c6fe6",
+  "outcomes": [],
+  "excluded_groups": 0,
+  "pending_groups": 0,
+  "catalog_members_excluded": 0,
+  "requested_groups_complete": true,
+  "source_obstacles_attempted": 7153,
+  "source_obstacles_not_directly_retargeted": 7153,
+  "source_library_sha256": "8b1975b4273721d6760b3569636e75419a0fb7a4616bb46de484a001b6fb0b6c",
+  "attempts_sha256": "3816bf4a2d0e3e2d37f918b3d7d3f39ab9cd0d84dfd6c03671a040b66ef0f0b3",
+  "target_constants_sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+  "source_constants_sha256": "6cab4ef09a21e2149d1530adf83b228c8083de8cad92146b6a1726bc6d37826b",
+  "source_sha256": "18e2e2d942da3941e6f44453405fffdb3a510b1762dc41df64a9f820ea1c4e6a",
+  "no_optimizer_imported": true,
+  "whole_catalog_exclusion_proved": false,
+  "global_optimality_proved": false
+}

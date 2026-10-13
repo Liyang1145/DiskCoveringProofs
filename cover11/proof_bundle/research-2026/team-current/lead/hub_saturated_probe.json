@@ -1,0 +1,156 @@
+{
+  "scope": "fixedouteranalyticboundaryenclosure, calibrationnotglobal",
+  "rows": [
+    {
+      "outer": [
+        ".38",
+        "1.107",
+        "1.0695"
+      ],
+      "bound": {
+        "upper": 28.105580397851327,
+        "widths": [
+          {
+            "upper": 0.16141256232403256,
+            "search_floor": 0.1605354766438032,
+            "evaluations": 257,
+            "budget_ended": true
+          },
+          {
+            "upper": 0.15912692371510886,
+            "search_floor": 0.15874941161452188,
+            "evaluations": 257,
+            "budget_ended": true
+          }
+        ],
+        "branches": [
+          {
+            "upper": -0.5037335426357352,
+            "search_floor": -0.503740696788804,
+            "evaluations": 87,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5037336063269969,
+            "search_floor": -0.50374120782094,
+            "evaluations": 75,
+            "budget_ended": false
+          },
+          {
+            "upper": -Infinity,
+            "search_floor": -Infinity,
+            "evaluations": 7,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5903437205506639,
+            "search_floor": -0.5903514982929121,
+            "evaluations": 147,
+            "budget_ended": false
+          }
+        ]
+      }
+    },
+    {
+      "outer": [
+        ".38",
+        "1",
+        "1"
+      ],
+      "bound": {
+        "upper": 28.089249339781354,
+        "widths": [
+          {
+            "upper": 0.14473873708745458,
+            "search_floor": 0.1447287941456394,
+            "evaluations": 225,
+            "budget_ended": false
+          },
+          {
+            "upper": 0.14720198232098802,
+            "search_floor": 0.14719220609469072,
+            "evaluations": 219,
+            "budget_ended": false
+          }
+        ],
+        "branches": [
+          {
+            "upper": -0.4914658340750091,
+            "search_floor": -0.49147569557940873,
+            "evaluations": 247,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.4914659182163051,
+            "search_floor": -0.49147569557940873,
+            "evaluations": 233,
+            "budget_ended": false
+          },
+          {
+            "upper": -Infinity,
+            "search_floor": -Infinity,
+            "evaluations": 7,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5282358365068662,
+            "search_floor": -0.5282453639514229,
+            "evaluations": 143,
+            "budget_ended": false
+          }
+        ]
+      }
+    },
+    {
+      "outer": [
+        ".375",
+        "1.18",
+        "1.18"
+      ],
+      "bound": {
+        "upper": 28.085978180826018,
+        "widths": [
+          {
+            "upper": 0.171755344469226,
+            "search_floor": 0.1704695825581503,
+            "evaluations": 257,
+            "budget_ended": true
+          },
+          {
+            "upper": 0.1739701261866169,
+            "search_floor": 0.1727149535347557,
+            "evaluations": 257,
+            "budget_ended": true
+          }
+        ],
+        "branches": [
+          {
+            "upper": -0.5427231159138581,
+            "search_floor": -0.5427314437698603,
+            "evaluations": 65,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.5427231026203134,
+            "search_floor": -0.5427314437698603,
+            "evaluations": 65,
+            "budget_ended": false
+          },
+          {
+            "upper": -Infinity,
+            "search_floor": -Infinity,
+            "evaluations": 7,
+            "budget_ended": false
+          },
+          {
+            "upper": -0.6366929454284708,
+            "search_floor": -0.6367016193291102,
+            "evaluations": 163,
+            "budget_ended": false
+          }
+        ]
+      }
+    }
+  ],
+  "seconds": 3.6968321800231934
+}

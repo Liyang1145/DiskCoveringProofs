@@ -1,0 +1,176 @@
+{
+  "scope": "21 actual coordinate examples; topology exact integer incidence, geometry numeric calibration only",
+  "V": 20,
+  "E": 48,
+  "F": 29,
+  "examples": [
+    {
+      "trial": 0,
+      "max_face_and_endpoint_radius": 0.3799838531198388,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 2.220446049250313e-15,
+      "area_error": 4.440892098500626e-16,
+      "chord_error": 2.220446049250313e-16
+    },
+    {
+      "trial": 1,
+      "max_face_and_endpoint_radius": 0.3799839072399866,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 2.220446049250313e-15,
+      "area_error": 4.440892098500626e-16,
+      "chord_error": 5.551115123125783e-16
+    },
+    {
+      "trial": 2,
+      "max_face_and_endpoint_radius": 0.37998391176388896,
+      "interior_angle_error": 0.0,
+      "boundary_angle_error": 1.3322676295501878e-15,
+      "area_error": 0.0,
+      "chord_error": 3.3306690738754696e-16
+    },
+    {
+      "trial": 3,
+      "max_face_and_endpoint_radius": 0.3799839296728373,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 8.881784197001252e-16,
+      "area_error": 4.440892098500626e-16,
+      "chord_error": 2.220446049250313e-16
+    },
+    {
+      "trial": 4,
+      "max_face_and_endpoint_radius": 0.37998392436246947,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 8.881784197001252e-16,
+      "area_error": 0.0,
+      "chord_error": 2.220446049250313e-16
+    },
+    {
+      "trial": 5,
+      "max_face_and_endpoint_radius": 0.37998391606322524,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 2.220446049250313e-15,
+      "area_error": 1.3322676295501878e-15,
+      "chord_error": 3.3306690738754696e-16
+    },
+    {
+      "trial": 6,
+      "max_face_and_endpoint_radius": 0.37998394135283264,
+      "interior_angle_error": 1.7763568394002505e-15,
+      "boundary_angle_error": 1.3322676295501878e-15,
+      "area_error": 8.881784197001252e-16,
+      "chord_error": 1.1102230246251565e-16
+    },
+    {
+      "trial": 7,
+      "max_face_and_endpoint_radius": 0.3799839182156418,
+      "interior_angle_error": 1.7763568394002505e-15,
+      "boundary_angle_error": 1.7763568394002505e-15,
+      "area_error": 4.440892098500626e-16,
+      "chord_error": 4.440892098500626e-16
+    },
+    {
+      "trial": 8,
+      "max_face_and_endpoint_radius": 0.37998392032455797,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 1.7763568394002505e-15,
+      "area_error": 0.0,
+      "chord_error": 3.3306690738754696e-16
+    },
+    {
+      "trial": 9,
+      "max_face_and_endpoint_radius": 0.3799839083122097,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 3.552713678800501e-15,
+      "area_error": 8.881784197001252e-16,
+      "chord_error": 2.220446049250313e-16
+    },
+    {
+      "trial": 10,
+      "max_face_and_endpoint_radius": 0.37998391674687,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 2.6645352591003757e-15,
+      "area_error": 4.440892098500626e-16,
+      "chord_error": 4.440892098500626e-16
+    },
+    {
+      "trial": 11,
+      "max_face_and_endpoint_radius": 0.37998392375181145,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 8.881784197001252e-16,
+      "area_error": 0.0,
+      "chord_error": 3.3306690738754696e-16
+    },
+    {
+      "trial": 12,
+      "max_face_and_endpoint_radius": 0.3799839138035038,
+      "interior_angle_error": 1.7763568394002505e-15,
+      "boundary_angle_error": 1.7763568394002505e-15,
+      "area_error": 8.881784197001252e-16,
+      "chord_error": 2.220446049250313e-16
+    },
+    {
+      "trial": 13,
+      "max_face_and_endpoint_radius": 0.3799839162108741,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 2.220446049250313e-15,
+      "area_error": 1.3322676295501878e-15,
+      "chord_error": 6.661338147750939e-16
+    },
+    {
+      "trial": 14,
+      "max_face_and_endpoint_radius": 0.3799839087190674,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 3.1086244689504383e-15,
+      "area_error": 4.440892098500626e-16,
+      "chord_error": 8.881784197001252e-16
+    },
+    {
+      "trial": 15,
+      "max_face_and_endpoint_radius": 0.37998392345564785,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 1.7763568394002505e-15,
+      "area_error": 1.3322676295501878e-15,
+      "chord_error": 3.3306690738754696e-16
+    },
+    {
+      "trial": 16,
+      "max_face_and_endpoint_radius": 0.3799839388496493,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 1.3322676295501878e-15,
+      "area_error": 8.881784197001252e-16,
+      "chord_error": 5.551115123125783e-16
+    },
+    {
+      "trial": 17,
+      "max_face_and_endpoint_radius": 0.3799838959229948,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 1.3322676295501878e-15,
+      "area_error": 0.0,
+      "chord_error": 3.3306690738754696e-16
+    },
+    {
+      "trial": 18,
+      "max_face_and_endpoint_radius": 0.379983912156158,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 1.3322676295501878e-15,
+      "area_error": 8.881784197001252e-16,
+      "chord_error": 6.661338147750939e-16
+    },
+    {
+      "trial": 19,
+      "max_face_and_endpoint_radius": 0.37998390416314465,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 1.3322676295501878e-15,
+      "area_error": 8.881784197001252e-16,
+      "chord_error": 2.220446049250313e-16
+    },
+    {
+      "trial": 20,
+      "max_face_and_endpoint_radius": 0.37998392980940077,
+      "interior_angle_error": 8.881784197001252e-16,
+      "boundary_angle_error": 1.3322676295501878e-15,
+      "area_error": 0.0,
+      "chord_error": 3.3306690738754696e-16
+    }
+  ]
+}

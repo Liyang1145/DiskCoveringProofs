@@ -1,0 +1,191 @@
+{
+  "verified": true,
+  "N": 25,
+  "B": 14,
+  "selected_prefix_pending_families": 20,
+  "strictly_paid_completion_families": 19,
+  "remaining_selected_unpaid_families": 1,
+  "results": [
+    {
+      "parent_group": 548,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 1430,
+      "closure_file": "parent-0000548/CLOSURE.json",
+      "closure_sha256": "25bf5c329ca58def149ee44040a8182f7fcd453446273083d910e3ddd9b93d7e",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 549,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 4862,
+      "closure_file": "parent-0000549/CLOSURE.json",
+      "closure_sha256": "9c537563db8f5d6e058906322bc4de1ccb3a1f16f10c3d8eb49030a43f21e1a4",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 550,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 1430,
+      "closure_file": "parent-0000550/CLOSURE.json",
+      "closure_sha256": "878c5e697ca204f355ea7c80eab8e679fc0e77324134b1cdbff795f5a98963ca",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 552,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 9773,
+      "closure_file": "parent-0000552/CLOSURE.json",
+      "closure_sha256": "b34d20c5fa0d35bc36093e7ab16cba7e47a526c6d1a50713d20c0a2d3a619f34",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 555,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 19448,
+      "closure_file": "parent-0000555/CLOSURE.json",
+      "closure_sha256": "6e02365ffa845d0675493d39682f55878e5ba90b47c87e4a31e2dba688f1abff",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 568,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000568/CLOSURE.json",
+      "closure_sha256": "eb633127004d5566d722da553ded8952c7fa0c8d88725aab9b4a0a66b5efbeee",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 571,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 1430,
+      "closure_file": "parent-0000571/CLOSURE.json",
+      "closure_sha256": "efb4c606deb478a6adca9c81f7cc9d41e3554f1220a1f773a455b21debe08fce",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 573,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000573/CLOSURE.json",
+      "closure_sha256": "8a2bc1fa2a5120672af5d36267c49ea9a15978246a700793d12e7cb62078b7b6",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 576,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 1430,
+      "closure_file": "parent-0000576/CLOSURE.json",
+      "closure_sha256": "eb2d1e0ab2628f65cf6f93238862d8f2f286a217254f3b6d7b1925a3771d2efc",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 577,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 1430,
+      "closure_file": "parent-0000577/CLOSURE.json",
+      "closure_sha256": "1e5b22972017f82ddcab8d7ccf8b9f9794bd13546c14467ed94bbfc5762f29cc",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 578,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 4862,
+      "closure_file": "parent-0000578/CLOSURE.json",
+      "closure_sha256": "acc4e53e8cba4425e2d65c06302ddc6d772131695ba3b23b04666c8ad704dcc8",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 579,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 1430,
+      "closure_file": "parent-0000579/CLOSURE.json",
+      "closure_sha256": "b8776fc5cdeadad37ae48feb560864c1c5903838819388186d4f207ded8d4053",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 581,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 19448,
+      "closure_file": "parent-0000581/CLOSURE.json",
+      "closure_sha256": "f36a5f55af5ab8571c95c677989e3b9191b51fb0179ffae90e69ebebc76f64f2",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 583,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 19448,
+      "closure_file": "parent-0000583/CLOSURE.json",
+      "closure_sha256": "21eb6e78535c08fe998b93319bc775a2812163aa153acb729eea579328cebf4b",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 586,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 19448,
+      "closure_file": "parent-0000586/CLOSURE.json",
+      "closure_sha256": "79aae6953f0ab73bf10459f5eb467e2fb8e66cd6a79c8c6a7a1e19fa90bdffe1",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 588,
+      "status": "unpaid",
+      "not_a_geometric_weak_exclusion": true,
+      "reason": "pinched/nonmanifold collar unhandled; no exclusion"
+    },
+    {
+      "parent_group": 589,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 5005,
+      "closure_file": "parent-0000589/CLOSURE.json",
+      "closure_sha256": "39535b68d7ce3a6f8034846cde4c50bc00ff2a4319c56fb9f41fc730a63f2392",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 590,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000590/CLOSURE.json",
+      "closure_sha256": "0ccecaeeb3973f246c6ff1f7d762910a74cc89be7f2e1f1a68852da46ec66272",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 888,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000888/CLOSURE.json",
+      "closure_sha256": "d037f182332fe2401e0a7a018d533c35db56c51d7c9e5a6562011da53d621a9a",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 976,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000976/CLOSURE.json",
+      "closure_sha256": "0de1e7312cc845bfae8312dbaa7050dfec495487fe7887d3fcda7c09bdcb05a9",
+      "pending_completions": 0
+    }
+  ],
+  "source_sha256": "28f98c05c533f745cf05da78ac6a9af3c3d95a8141467f99c3a407f93166d932",
+  "parent_catalog_sha256": "a52729cbd01664e744eac859af86e425b389d50f51316a4276161f497c7b85e2",
+  "all_other_parent_groups_not_paid_here": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,29 @@
+{
+  "verified": true,
+  "N": 23,
+  "B": 15,
+  "catalog_sha256": "d1489120333b36e31e792bb6b277cd11c2a12fe20f6a51100999ab80f0f71344",
+  "catalog_types": 16790546,
+  "stages": [
+    {
+      "groups_sha256": "9f9a98ced472a791b257d223bd54b1f02a372630ab4c928dcd5ded0f7e60cb6d",
+      "bindings_sha256": "5f151f4ec585385c22fc9e57a3ad9c2de7c8bc8fdb874587a699695d4048f55c",
+      "threshold": 2,
+      "maps_checked": 16790546,
+      "paid_types": 3187297,
+      "remaining_types": 13603249,
+      "force_replay_sha256": "68a176431ce4f532f4842a458e969154edd354151368156ca7db271f2fed8e65"
+    }
+  ],
+  "strict_exclusion_types_with_replayed_certificates": 3187297,
+  "pending_types": 13603249,
+  "pending_indices_file": "VERIFIED.pending.jsonl",
+  "pending_indices_sha256": "93a41d8722ed39a4b5a670d8a568c70d17eeadd74322a29aa0946f31acc944c5",
+  "disjoint_hierarchy_partition_verified": true,
+  "coverage_partition_complete": false,
+  "catalog_completeness_proved_here": false,
+  "actual_cover_reduction_proved_here": false,
+  "global_optimality_proved": false,
+  "source_sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+  "stream_reader_sha256": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d"
+}

@@ -1,0 +1,266 @@
+{
+  "audit_readings": {
+    "min_over_k (1 - R^2 - rho_k^2)": {
+      "lo": "0.0590170549841094827385796",
+      "hi": "0.0590174110166928869837593",
+      "positive": true,
+      "conservative_threshold": "0.059"
+    },
+    "max_over_k (pi/2 - a_k)": {
+      "lo": "1.18257492115764433321836",
+      "hi": "1.18257493715764433321836",
+      "positive": true,
+      "conservative_threshold": "1.182"
+    },
+    "min_over_k a_k": {
+      "lo": "0.280821920446385680543045",
+      "hi": "0.280821922446385680543045",
+      "positive": true,
+      "conservative_threshold": "0.28"
+    },
+    "min_over_k a_rho(rho_k,R)": {
+      "lo": "0.0978575460999934754478403",
+      "hi": "0.0978584362556105358259157",
+      "positive": true,
+      "conservative_threshold": "0.097"
+    },
+    "min_over_k a_R(rho_k,R)": {
+      "lo": "1.12468465772248220867614",
+      "hi": "1.12468785909612991912232",
+      "positive": true,
+      "conservative_threshold": "1.124"
+    },
+    "min_over_k (R^2 - sin^2 a_k)": {
+      "lo": "0.00109309415041614906431381",
+      "hi": "0.00109310688228932148289977",
+      "positive": true,
+      "conservative_threshold": "0.001"
+    },
+    "radial 5x5 pivot 2*prod(d_0..d_4)": {
+      "lo": "0.014771376696893528454589",
+      "hi": "0.0147715336286308270555087",
+      "positive": true,
+      "conservative_threshold": "0.014"
+    },
+    "independent pivot 2*sum(beta_0..3)+beta_4": {
+      "lo": "12.9363685623306500327246",
+      "hi": "12.9363744547387322250682",
+      "positive": true,
+      "conservative_threshold": "12.936"
+    },
+    "dv_0/dg_0 (gap->radius)": {
+      "lo": "0.361574216046490940883688",
+      "hi": "0.361574439276047241915031",
+      "positive": true,
+      "conservative_threshold": "0.361"
+    },
+    "mu_0 = a_R+a_R(next)": {
+      "lo": "2.76568279389737062138936",
+      "hi": "2.76568336513411526499471",
+      "positive": true,
+      "conservative_threshold": "2.765"
+    },
+    "dv_1/dg_1 (gap->radius)": {
+      "lo": "0.289991191852536675466301",
+      "hi": "0.289991350915322985603071",
+      "positive": true,
+      "conservative_threshold": "0.289"
+    },
+    "mu_1 = a_R+a_R(next)": {
+      "lo": "3.44837933117219171520017",
+      "hi": "3.44837997629059164890501",
+      "positive": true,
+      "conservative_threshold": "3.448"
+    },
+    "dv_2/dg_2 (gap->radius)": {
+      "lo": "0.318455028923331332562943",
+      "hi": "0.318455284387458818961373",
+      "positive": true,
+      "conservative_threshold": "0.318"
+    },
+    "mu_2 = a_R+a_R(next)": {
+      "lo": "3.14015915840671329063485",
+      "hi": "3.1401599326871858879782",
+      "positive": true,
+      "conservative_threshold": "3.14"
+    },
+    "dv_3/dg_3 (gap->radius)": {
+      "lo": "0.433158903034502821376804",
+      "hi": "0.433160982152114617457763",
+      "positive": true,
+      "conservative_threshold": "0.433"
+    },
+    "mu_3 = a_R+a_R(next)": {
+      "lo": "2.30861425857968813643985",
+      "hi": "2.30861786134456029134881",
+      "positive": true,
+      "conservative_threshold": "2.308"
+    },
+    "dv_8/dg_8 (gap->radius)": {
+      "lo": "0.392608405032192119075563",
+      "hi": "0.392608677436108438321116",
+      "positive": true,
+      "conservative_threshold": "0.392"
+    },
+    "mu_8 = a_R+a_R(next)": {
+      "lo": "2.54706604054937253812067",
+      "hi": "2.54706663856455826368282",
+      "positive": true,
+      "conservative_threshold": "2.547"
+    },
+    "L7 far point distance - R (min over pairs)": {
+      "lo": "1.3135701188444129755413",
+      "hi": "1.3135701188444129755413",
+      "positive": true,
+      "conservative_threshold": "1.313"
+    },
+    "central F_out = |C6-W_-|^2 - R^2": {
+      "lo": "0.877422509670435681701171",
+      "hi": "0.877422535225471656968115",
+      "positive": true,
+      "conservative_threshold": "0.877"
+    },
+    "central c_y = y-coordinate of C_6": {
+      "lo": "0.694424117763062374038245",
+      "hi": "0.694424125325066037403113",
+      "positive": true,
+      "conservative_threshold": "0.694"
+    },
+    "central (c_y + h)^2 - R^2 (analytic lower bd)": {
+      "lo": "0.876329409750030771670611",
+      "hi": "0.876329434113170779966638",
+      "positive": true,
+      "conservative_threshold": "0.876"
+    },
+    "central s + h": {
+      "lo": "0.631762696577566167042522",
+      "hi": "0.631762712788959501310182",
+      "positive": true,
+      "conservative_threshold": "0.631"
+    },
+    "central branch factor (s+h)/(2 c_y)": {
+      "lo": "0.454882451183441024072781",
+      "hi": "0.454882467809475653421203",
+      "positive": true,
+      "conservative_threshold": "0.454"
+    },
+    "central reciprocity 2 c_y (s+h) - F_out": {
+      "lo": "-2.88124923556943976168919e-8",
+      "hi": "2.88124925442650444206777e-8",
+      "positive": false,
+      "conservative_threshold": null
+    },
+    "fan F_out at k=0 (nearest hub)": {
+      "lo": "0.658055936013658520616044",
+      "hi": "0.65805599718301565024487",
+      "positive": true,
+      "conservative_threshold": "0.658"
+    },
+    "fan F_out at k=1 (nearest hub)": {
+      "lo": "1.00906552334516760123957",
+      "hi": "1.00906555768476353256784",
+      "positive": true,
+      "conservative_threshold": "1.009"
+    },
+    "fan F_out at k=2 (nearest hub)": {
+      "lo": "0.9988612620010740493094",
+      "hi": "0.998861307817413466845418",
+      "positive": true,
+      "conservative_threshold": "0.998"
+    },
+    "fan F_out at k=3 (nearest hub)": {
+      "lo": "0.424801912943929442969897",
+      "hi": "0.424801940970788750582236",
+      "positive": true,
+      "conservative_threshold": "0.424"
+    },
+    "fan F_out at k=8 (nearest hub)": {
+      "lo": "0.579084147344740419802107",
+      "hi": "0.57908415226696231031994",
+      "positive": true,
+      "conservative_threshold": "0.579"
+    },
+    "det block = prod_k sin a_k rho_k / q_k": {
+      "lo": "13.2496036713175850125654",
+      "hi": "13.2496112265816662139497",
+      "positive": true,
+      "conservative_threshold": "13.249"
+    }
+  },
+  "L1_identity_enclosure": [
+    "-1.0331705e-8",
+    "3.6724456e-7"
+  ],
+  "L3_radial_minor_matrix": "rows (g_0,g_1,g_2,g_3,g_8) vs orbit radii (rho_0,rho_1,rho_2,rho_3,rho_4): [[d0,d1,0,0,0],[0,d1,d2,0,0],[0,0,d2,d3,0],[0,0,0,d3,d4],[2d0,0,0,0,0]]",
+  "L2_odd_cycle": "det(I+S)=2 for n=9; kernel of I+S is {0} because v_{i+1}=-v_i => v_0=-v_0",
+  "L5_reciprocity": {
+    "0": "4.1196346e-7",
+    "1": "3.6779386e-7",
+    "2": "5.24386e-7",
+    "3": "3.1802339e-6",
+    "8": "4.6430847e-7"
+  },
+  "L7_pairs": {
+    "0": {
+      "tie_deviation_hi": "1.43317e-7",
+      "far_point_distance_minus_R_lo": "1.3754046"
+    },
+    "1": {
+      "tie_deviation_hi": "1.2852e-7",
+      "far_point_distance_minus_R_lo": "1.3194688"
+    },
+    "2": {
+      "tie_deviation_hi": "1.61552e-7",
+      "far_point_distance_minus_R_lo": "1.3135702"
+    },
+    "3": {
+      "tie_deviation_hi": "3.81137e-7",
+      "far_point_distance_minus_R_lo": "1.458969"
+    },
+    "4": {
+      "tie_deviation_hi": "3.87803e-7",
+      "far_point_distance_minus_R_lo": "1.458969"
+    },
+    "5": {
+      "tie_deviation_hi": "1.71383e-7",
+      "far_point_distance_minus_R_lo": "1.3135701"
+    },
+    "6": {
+      "tie_deviation_hi": "1.23807e-7",
+      "far_point_distance_minus_R_lo": "1.3194689"
+    },
+    "7": {
+      "tie_deviation_hi": "1.3228e-7",
+      "far_point_distance_minus_R_lo": "1.3754046"
+    },
+    "8": {
+      "tie_deviation_hi": "1.3803e-7",
+      "far_point_distance_minus_R_lo": "1.4097681"
+    }
+  },
+  "L7_far_point_min_margin": "1.313570119",
+  "central_F_in_enclosure": [
+    "-5.63537862315e-9",
+    "5.63537889168e-9"
+  ],
+  "central_identity_abs_gap": "7.1835406e-62",
+  "fan_identity_abs_gap": "3.8893845e-61",
+  "fan_Fout_min_on_samples": "0.57908415",
+  "hub_norm_max": "0.272977467346",
+  "fan_Fout_triangle_inequality_margin": 0.7270225316536366,
+  "verdict": {
+    "L1_redial_inequalities": "all strictly positive on the corrected root box (readings above)",
+    "L2_odd_cycle_invertible": true,
+    "L3_reflection_reduction": "correct but the reason is the orbit-coordinate computation; explicit 5x5 pivot 2*d0*d1*d2*d3*d4 > 0",
+    "L4_chart": "inverse map (a_0..a_3,hubs,R) -> rho inward root + theta recursion is smooth; rank 7 immersion separately; consistent with the box readings",
+    "L5_conversion": "reciprocal agreement of the two independent routes (max deviation from 1 recorded in L5_reciprocity)",
+    "L6_interior_conversion": "exact identity + F_out > 0 (central: interval + analytic lower bound; fan: triangle inequality)",
+    "L7_far_point": "strictly uncovered by the pair on the box",
+    "not_established": [
+      "existence/uniqueness of the root (read-only Krawczyk certificate)",
+      "multiplier signs (stress/lead)",
+      "local minimality",
+      "global n=11 bound"
+    ]
+  }
+}

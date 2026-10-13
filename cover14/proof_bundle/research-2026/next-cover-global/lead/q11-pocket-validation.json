@@ -1,0 +1,18 @@
+{
+  "checked": 5277,
+  "by_chord_count": {
+    "0": 85,
+    "1": 557,
+    "2": 1600,
+    "3": 1937,
+    "4": 963,
+    "5": 135
+  },
+  "by_central_hub_count": {
+    "1": 125,
+    "2": 718,
+    "3": 4434
+  },
+  "all_disk_links_edges_euler_valid": true,
+  "scope": "conditional q11 combinatorial family; no metric exclusions"
+}

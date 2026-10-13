@@ -1,0 +1,51 @@
+{
+  "N": 25,
+  "B": 16,
+  "groups_sha256": "b5acab14531586deb8a1df929d788ee62f27071817b50eaaa9dec773a7f6a164",
+  "outcomes": [
+    {
+      "group": 0,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "713954630950684775219016201232551/50000535210799550549000000000000000",
+      "minimum_local_margin": null,
+      "members": 62,
+      "tree_sha256": "42e887c13fc69d722b0d18581d0ec40602c2c8435ac8375f579bff457581890f"
+    },
+    {
+      "group": 1,
+      "status": "excluded",
+      "verified": true,
+      "vertices": 36,
+      "edges": 41,
+      "nodes": 1,
+      "counts": {
+        "DUAL": 1
+      },
+      "minimum_force_margin": "1098493130028865449625665907381317/76923375934476326383000000000000000",
+      "minimum_local_margin": null,
+      "members": 2,
+      "tree_sha256": "d1306cb66ae567df05f857fc27624d36f386b1e77425afca84af1cdb40f5972c"
+    }
+  ],
+  "excluded_groups": 2,
+  "pending_groups": 0,
+  "catalog_members_excluded": 64,
+  "requested_groups_complete": true,
+  "source_sha256": "d771301e9bef4dc24d9cb6a8cfaee9b0c1d51cb8ca76b513de1e7887ff08abdd",
+  "source_receipt_sha256": "cc0f83d87e12942f6daf1308ad9c876e62ec77ee12d8c7e7ec2c56fb59b7daf7",
+  "source_exact_replay_sha256": "db8a1e88d63b152c18ff0aa9a7bcfc0578d877ba4cdc95132923aafd694d5934",
+  "parent_face_count": 1764,
+  "reduced_face_count": 192,
+  "proposed_deletions": 1764,
+  "accepted_deletions": 1572,
+  "complete_family_coverage": false,
+  "global_face_minimality_not_claimed": true,
+  "global_optimality_proved": false
+}

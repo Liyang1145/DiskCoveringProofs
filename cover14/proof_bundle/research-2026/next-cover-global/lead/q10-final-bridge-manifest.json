@@ -1,0 +1,166 @@
+{
+  "status": "source_snapshot_not_proof",
+  "claim": "C1370",
+  "files": [
+    {
+      "path": "lead/Q10-QUADRATIC-GLOBAL-BRIDGE.md",
+      "sha256": "b5c6e6fce197c468f15d741e523b8d8c282e855332b90ebea40d1d4d68f825d8"
+    },
+    {
+      "path": "lead/q10_quadratic_minorant_certificate.py",
+      "sha256": "d93fa045027d436a1f65244a01a84e8560bd4d10a760a9728ebe71989f4d96eb"
+    },
+    {
+      "path": "lead/q10_quadratic_minorant_fraction_audit.py",
+      "sha256": "c1632b880fff252b78ec63d633de7e251baf9f65baf0fb2cf072d85544595445"
+    },
+    {
+      "path": "lead/q10_quadratic_global_bridge.py",
+      "sha256": "368fa4e7b219d05864e76d24180c17b107b4f83872f9ee1dbaecc0b76f17cb01"
+    },
+    {
+      "path": "lead/q10_current_angle_width.py",
+      "sha256": "a5accaf2fc39390539b13d470f91964ec30ec158153e45ed6740aecfbfc32f5c"
+    },
+    {
+      "path": "lead/q10_angle_width_fraction_audit.py",
+      "sha256": "b490d4d677c5bbba1ad3bc65f307acd698595ea615e9e4a71bd0d15b99d70ca0"
+    },
+    {
+      "path": "lead/q10_adaptive_flow_fraction_audit.py",
+      "sha256": "b86882cf70b83dd3349a91cc4754b20d8e2045528e2218a6feb76e1bda536c30"
+    },
+    {
+      "path": "lead/q10_adaptive_local_bridge.py",
+      "sha256": "57f0afa8b25316357ddcc558334d95f121ebd18921cf345e33b21afc01d241a6"
+    },
+    {
+      "path": "lead/q10-quadratic-minorant-certificate.json",
+      "sha256": "06461ac1550ac6fed0993cfdc9324851a71f8cb04f0ba7771767416af1a79a87"
+    },
+    {
+      "path": "lead/q10-quadratic-minorant-fraction-audit.json",
+      "sha256": "12703159a105140ee3c7ed82e527f589b5e167d9cf8013b0345f30a5d5f029b5"
+    },
+    {
+      "path": "lead/q10-quadratic-global-bridge.json",
+      "sha256": "3e8db19f6bc857083c300b75255815fb21b6132e54aad0b6ea90148acf24f726"
+    },
+    {
+      "path": "lead/q10-current-angle-width.json",
+      "sha256": "80ffc261231c6c4dc64d47c9532682fa6b8bcce4626fd77f0edc372e5df0b446"
+    },
+    {
+      "path": "lead/q10-angle-width-fraction-audit.json",
+      "sha256": "ca0bd777e117cc35e82af6e23310d12aa0dcd7dc01a052ab7f773a958d19f1a6"
+    },
+    {
+      "path": "lead/q10-adaptive-flow-interval.json",
+      "sha256": "4f627c2ef3d82f22db04ae3c2132c64445ff9d67dd15ad82a1766b7f20e2770e"
+    },
+    {
+      "path": "lead/q10-adaptive-flow-fraction-audit.json",
+      "sha256": "3167a3ee283ca15b2e15002de5181543bd01b009f8e3d4c0e7c47057909b37a8"
+    },
+    {
+      "path": "lead/q10-adaptive-flow-jet.json",
+      "sha256": "75c608b43e55dd0559dc4ba396e97219174de844eca4e20b5104193074e3ad27"
+    },
+    {
+      "path": "lead/q10-adaptive-local-bridge.json",
+      "sha256": "f3244eafd2dcb54a801a57151a70d9e0e16e46317693b3f373b626ef0b4aece5"
+    },
+    {
+      "path": "lead/q10-c1366-domain.json",
+      "sha256": "03e6fb869912a7bb9dc23861bb75d32c8f5e8f9f25c57436b627d85bc4252887"
+    },
+    {
+      "path": "lead/root-integer-certificate.json",
+      "sha256": "15b1fda5d835114bbde38fd3d52df69043b7b084c60134c65fb91f8a93cb5fe9"
+    },
+    {
+      "path": "lead/k10-catalogue-corrected.json",
+      "sha256": "c7de025f7b089ad3f160c495f4d557d45eac868175c06a0b7faec51fa9911895"
+    },
+    {
+      "path": "lead/fixed-anchor-convex-probe.json",
+      "sha256": "4b59ed2783a293715dc21f452a82aa4c0e132f4765765e65d2783e78214e3abf"
+    },
+    {
+      "path": "lead/root_integer_certificate.py",
+      "sha256": "980a1d8fe8d4332df41c5fddecaf33f93ff0f19610349936206e788f4c2cf9a6"
+    },
+    {
+      "path": "lead/shared_radius_corner_fraction_kernel.py",
+      "sha256": "c114810933f2cfff081428f01f1dd2540cd9ac374550b935f9db0a9553664be0"
+    },
+    {
+      "path": "lead/area_safe_fraction_replay.py",
+      "sha256": "4be16fbe169a1d5dcb10172abf074a49d45acac76f24851f2f0fff234da6d232"
+    },
+    {
+      "path": "lead/q11_chord_flow_fraction_replay.py",
+      "sha256": "333931cf6b874e485fee1fbc948f99a79d53783a935d541ecafbfed3583e5d17"
+    },
+    {
+      "path": "members/stress-cc2/adaptive-flow-audit/REPORT.md",
+      "sha256": "ba2d78672c26e0d710545dba9099124f0e0e997647c875e96f996ffebdff4b8f"
+    },
+    {
+      "path": "lead/q10_halfspace_angle_dual.py",
+      "sha256": "096609cf0f48d5421525966d154076434defca02199bc7a7f8f92114a7beb11d"
+    },
+    {
+      "path": "lead/q10-halfspace-angle-dual.json",
+      "sha256": "d135723b235b84c14f4428c6a35513e7e615f88c5ba2de47d09df58fff15e079"
+    },
+    {
+      "path": "lead/q10_halfspace_angle_dual_replay.py",
+      "sha256": "a26f3e319236070b71524b53ba73f4de5690a352e95218438aef93920518c654"
+    },
+    {
+      "path": "lead/q10-halfspace-angle-dual-replay.json",
+      "sha256": "c6aea4fcf80b5db7bf7ac1c9d77d21223012ee8a0065a4cf673756b180457bc0"
+    },
+    {
+      "path": "members/root-cc2/final-local-interface/REPORT.md",
+      "sha256": "f180ad3c2d4075a38356db64005944158fbc2b59d2d4f9fc50a1cdbf85e337f7"
+    },
+    {
+      "path": "members/root-cc2/final-local-interface/evidence/interface02.txt",
+      "sha256": "3051cfd2afd7c4b5091dfff6ab2f4ede366803d31799eaed6438011aa511f4ca"
+    },
+    {
+      "path": "lead/FINAL-THEOREM-CHAIN.md",
+      "sha256": "83db833af24fb55675d0897a9641091fe8f5f146063a8b0c9568680d57ec1d00"
+    },
+    {
+      "path": "lead/Q10-RATIONAL-METRIC-REDUCTION.md",
+      "sha256": "15ed26a9e4718a0e8f70ec77d994538e9243a6688da18aaf084f79f5d3c3799d"
+    },
+    {
+      "path": "lead/q10_cut_transport_provenance.py",
+      "sha256": "cfdc42a6710c0fb6b487429b4143d613e6588eb8574145b80a07b492459ebf8b"
+    },
+    {
+      "path": "lead/q10-cut-transport-provenance.json",
+      "sha256": "94cb19972e3ac97443a9c7996a5abba320615396978f3d104df2b2af799d78b7"
+    },
+    {
+      "path": "lead/q10_domain_row_provenance.py",
+      "sha256": "b3992987e15c659ab8456fdc9f797dea73dc2950ffc599f32d666833110b56c7"
+    },
+    {
+      "path": "lead/q10-domain-row-provenance.json",
+      "sha256": "bef3039fdadd2b128e193eb3816d97cf37701efa734ea84182f16a590ffc33b8"
+    },
+    {
+      "path": "members/stress-cc2/halfspace-dual-audit/REPORT.md",
+      "sha256": "1119ac14c1b94d5e97caae290f9883341235bda060e7f5aae71abd53a3ebe43b"
+    },
+    {
+      "path": "members/topology-audit-cc2/final-interface/REPORT.md",
+      "sha256": "fbe78960deb7f89540a4bc59d5aa08a927e6fbceef1bd62b1e1adcae18953b2e"
+    }
+  ]
+}

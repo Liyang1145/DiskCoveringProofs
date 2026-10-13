@@ -1,0 +1,308 @@
+{
+  "scope": "fixed-finite-witness non-sharpness: certify the hypotheses of the rotation theorem for the C891/C892 candidate (E finite, 0 not in E) and give an explicit certified theta for the candidate critical-point witness set with max_W d <= T_cert - delta < T_cert; interval arithmetic on the lead box",
+  "theorem": "for every finite Q there is theta with max_Q d_X(R_theta .) < R (finitely many forbidden angles, at most one per (q,e) pair, q,e != 0, 0 not in E)",
+  "P1_active_slack": {
+    "n_active": 18,
+    "n_slack": 2,
+    "slack_upper_le_R_minus_1e3": true,
+    "slack_r": [
+      "0.3788312517",
+      "0.378831244417"
+    ]
+  },
+  "P2_finiteness": {
+    "max_vertex_minus_R_upper": "2.9059708e-7",
+    "all_vertices_le_R": false,
+    "interior_level_witnesses": 9,
+    "boundary_ties": 9
+  },
+  "P3_origin": {
+    "d_X_0_upper": "0.149428499927",
+    "zero_not_in_E": true
+  },
+  "theta": "3.14159265358979323846264338328",
+  "F_mid": "0.327817411283908370518237",
+  "certified_max": "0.327817464717023354941467250006",
+  "T_cert": "0.3799838531198386897222616061360932143087",
+  "delta_below_Tcert": "0.0521663884028",
+  "q0_route_cannot_reach_Tcert": true,
+  "aux_acuteness": {
+    "interior_acute": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "tie_opposite": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ]
+  },
+  "witnesses": [
+    {
+      "kind": "face",
+      "idx": [
+        1,
+        2,
+        10
+      ],
+      "r": [
+        "0.37998378097017628",
+        "0.379983925269510981"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        2,
+        3,
+        9
+      ],
+      "r": [
+        "0.379983780667452686",
+        "0.379983925572235048"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        3,
+        4,
+        9
+      ],
+      "r": [
+        "0.379983632657247371",
+        "0.379984073582636777"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        4,
+        5,
+        9
+      ],
+      "r": [
+        "0.379983563522986614",
+        "0.379984142716919344"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        5,
+        6,
+        9
+      ],
+      "r": [
+        "0.379983758516095551",
+        "0.379983947723599812"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        6,
+        7,
+        10
+      ],
+      "r": [
+        "0.37998378561689218",
+        "0.37998392062279371"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        8,
+        0,
+        10
+      ],
+      "r": [
+        "0.379983748886486919",
+        "0.379983957353210133"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        2,
+        9,
+        10
+      ],
+      "r": [
+        "0.379983809788626286",
+        "0.379983896451057578"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        6,
+        9,
+        10
+      ],
+      "r": [
+        "0.379983809788626286",
+        "0.379983896451057578"
+      ],
+      "active": true
+    },
+    {
+      "kind": "face",
+      "idx": [
+        0,
+        1,
+        10
+      ],
+      "r": [
+        "0.378831090698536753",
+        "0.37883125169992898"
+      ],
+      "active": false
+    },
+    {
+      "kind": "face",
+      "idx": [
+        7,
+        8,
+        10
+      ],
+      "r": [
+        "0.378831097981228185",
+        "0.378831244417232603"
+      ],
+      "active": false
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        0,
+        1
+      ],
+      "r": [
+        "0.379983710178341458",
+        "0.379983996061367795"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        1,
+        2
+      ],
+      "r": [
+        "0.379983724882681883",
+        "0.379983981356991337"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        2,
+        3
+      ],
+      "r": [
+        "0.379983688961176637",
+        "0.379984017278514702"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        3,
+        4
+      ],
+      "r": [
+        "0.379983472628722115",
+        "0.379984233611117501"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        4,
+        5
+      ],
+      "r": [
+        "0.37998346613839137",
+        "0.379984240101392396"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        5,
+        6
+      ],
+      "r": [
+        "0.37998367811869299",
+        "0.379984028120973188"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        6,
+        7
+      ],
+      "r": [
+        "0.379983729639461489",
+        "0.379983976600225064"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        7,
+        8
+      ],
+      "r": [
+        "0.379983721297407889",
+        "0.379983984942329448"
+      ],
+      "active": true
+    },
+    {
+      "kind": "tie",
+      "idx": [
+        8,
+        0
+      ],
+      "r": [
+        "0.379983716089604957",
+        "0.379983990150079507"
+      ],
+      "active": true
+    }
+  ]
+}

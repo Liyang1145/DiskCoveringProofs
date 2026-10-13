@@ -1,0 +1,114 @@
+{
+  "status": "independent_rational_clipping_and_fractionbounds",
+  "source_sha256": "b19b15c440347b5df4b1b46ded8c5a206d91294333e800c28e1e20c18a5c1a87",
+  "runs": [
+    {
+      "prefix": 1,
+      "side": 1,
+      "threshold": "1/4",
+      "vertices": 130,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "332539383186180264705979336429616577504873581/1000000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.33253938318618026,
+        "excluded": true,
+        "vertices": 130,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "prefix": 2,
+      "side": 1,
+      "threshold": "3/8",
+      "vertices": 152,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "66253878074691667547813175513811998752761681/200000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.3312693903734583,
+        "excluded": false,
+        "vertices": 152,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "prefix": 2,
+      "side": -1,
+      "threshold": "1/8",
+      "vertices": 324,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "41459849976782437279272083653992406566773021/125000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.3316787998142595,
+        "excluded": false,
+        "vertices": 324,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "prefix": 3,
+      "side": 1,
+      "threshold": "3/8",
+      "vertices": 244,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "82812516559000275494415327968493419414425373/250000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.3312500662360011,
+        "excluded": false,
+        "vertices": 244,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "prefix": 3,
+      "side": -1,
+      "threshold": "1/8",
+      "vertices": 184,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "2073027317262904006052604487156878599125887/6250000000000000000000000000000000000000000",
+        "lower_radius_display": 0.33168437076206464,
+        "excluded": false,
+        "vertices": 184,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "prefix": 4,
+      "side": -1,
+      "threshold": "1/4",
+      "vertices": 156,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "332693188228788331538365840745313053799771023/1000000000000000000000000000000000000000000000",
+        "lower_radius_display": 0.33269318822878835,
+        "excluded": true,
+        "vertices": 156,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    }
+  ]
+}

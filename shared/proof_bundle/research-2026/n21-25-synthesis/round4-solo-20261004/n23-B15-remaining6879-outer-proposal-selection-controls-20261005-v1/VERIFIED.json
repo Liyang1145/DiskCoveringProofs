@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "schema": "N23-remaining-outer-proposal-selection-controls-v1",
+  "known_attaining_group_retained": true,
+  "negative_controls_rejected": [
+    "wrong-core-N",
+    "wrong-core-B",
+    "wrong-original-group-id",
+    "wrong-original-outcome-id",
+    "unrecognized-outcome-status",
+    "known-attainer-incorrectly-previously-paid",
+    "declared-centers-smaller-than-actual",
+    "duplicate-attaining-group",
+    "two-center-face-not-triangle",
+    "pure-internal-face-incorrectly-exposed",
+    "unseen-declared-center"
+  ],
+  "core_sha256": "cb6d87d69e9c4673e47c1e960ca013c5bb5e8e20f72bb2470653e8e11b8dcb10",
+  "source_sha256": "23ca3d800721cd7ef072385354b56a35c085ab282106fa02f92a0b3ee7af6b7f",
+  "proposal_source_sha256": "7de5d4642e934019cb1d4bd6af79e2441d3eb226835dfdfc9fd3cc281fe23383",
+  "functional_selection_fixtures_not_source_type_payments": true,
+  "global_optimality_proved": false
+}

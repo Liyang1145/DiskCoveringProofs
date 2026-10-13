@@ -1,0 +1,125 @@
+{
+  "schema": "N26-numerical-continuation-checkpoint-v1",
+  "date": "2026-10-09",
+  "N": 26,
+  "verified": false,
+  "continuous_cover_proved": false,
+  "global_optimality_proved": false,
+  "baseline": {
+    "source": "n=25 duplicated-center construction",
+    "radius_expression": "1/(sqrt(6)+sqrt(3))",
+    "radius_decimal": 0.239146311738100248
+  },
+  "runs": [
+    {
+      "name": "symmetric_7_parameter_probe",
+      "coarse_sampled_radius": 0.23497253650320823,
+      "fine_sampled_radius": 0.2359024147912596,
+      "dense_audit": {
+        "boundary_samples": 100000,
+        "radial_layers": 400,
+        "angular_samples_per_layer": 1800,
+        "sampled_max_distance": 0.2398727496940246,
+        "boundary_sampled_max_distance": 0.23706975852820572,
+        "worst_point": [
+          0.08927306342355795,
+          -0.6690704896697907
+        ]
+      },
+      "parameters": [
+        0.8927871003388107,
+        0.8184387775525681,
+        0.457057216599693,
+        0.08361899341304145,
+        0.0002487816747757093,
+        -0.047996554429915426,
+        -0.05433333343980323
+      ],
+      "status": "exploratory_only"
+    },
+    {
+      "name": "symmetric_local_refinement",
+      "fine_sampled_radius": 0.23664567611097975,
+      "dense_audit": {
+        "sampled_max_distance": 0.24022944128330212,
+        "boundary_sampled_max_distance": 0.23608276362143438,
+        "worst_point": [
+          -0.22387884610578596,
+          -0.5431707947472341
+        ]
+      },
+      "status": "exploratory_only"
+    },
+    {
+      "name": "two_free_extra_centers",
+      "fine_sampled_radius": 0.2385278398126758,
+      "dense_audit": {
+        "sampled_max_distance": 0.24068030327084064,
+        "boundary_sampled_max_distance": 0.23679000062736694,
+        "worst_point": [
+          0.0963494006387091,
+          0.23609699912654866
+        ]
+      },
+      "status": "exploratory_only"
+    },
+    {
+      "name": "origin_plus_one_extra",
+      "fine_sampled_radius": 0.30016386818503893,
+      "status": "rejected_as_poor_candidate"
+    },
+    {
+      "name": "origin_three_ring_family_scan",
+      "sample_count": 45600,
+      "families": [
+        {
+          "ring_counts": [7, 9, 9],
+          "sampled_radius": 0.25
+        },
+        {
+          "ring_counts": [8, 8, 9],
+          "sampled_radius": 0.24231381336332541
+        },
+        {
+          "ring_counts": [6, 9, 10],
+          "sampled_radius": 0.30777179991573805
+        },
+        {
+          "ring_counts": [7, 8, 10],
+          "sampled_radius": 0.3077717999157344
+        },
+        {
+          "ring_counts": [8, 9, 8],
+          "sampled_radius": 0.2422657968783745
+        }
+      ],
+      "best_sampled_radius": 0.2422657968783745,
+      "status": "exploratory_only"
+    },
+    {
+      "name": "no_origin_three_ring_family_scan",
+      "sample_count": 45600,
+      "families": [
+        {
+          "ring_counts": [8, 9, 9],
+          "sampled_radius": 0.2727672704829968
+        },
+        {
+          "ring_counts": [7, 9, 10],
+          "sampled_radius": 0.3077717999158306
+        },
+        {
+          "ring_counts": [8, 8, 10],
+          "sampled_radius": 0.27291953769042876
+        }
+      ],
+      "best_sampled_radius": 0.2727672704829968,
+      "status": "exploratory_only"
+    }
+  ],
+  "interpretation": {
+    "coarse_minimum_is_sampling_artifact": true,
+    "new_candidate_below_baseline": false,
+    "next_required_step": "strict n=26 construction and boundary-family reduction"
+  }
+}

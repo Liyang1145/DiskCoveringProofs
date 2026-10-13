@@ -1,0 +1,106 @@
+{
+  "checked_stored_complexes": 1535,
+  "exact_literal_nearest_triples": [
+    [
+      0,
+      4,
+      12
+    ],
+    [
+      0,
+      8,
+      11
+    ],
+    [
+      0,
+      11,
+      12
+    ],
+    [
+      1,
+      5,
+      13
+    ],
+    [
+      1,
+      8,
+      11
+    ],
+    [
+      1,
+      11,
+      13
+    ],
+    [
+      2,
+      6,
+      12
+    ],
+    [
+      2,
+      9,
+      10
+    ],
+    [
+      2,
+      10,
+      12
+    ],
+    [
+      3,
+      7,
+      13
+    ],
+    [
+      3,
+      9,
+      10
+    ],
+    [
+      3,
+      10,
+      13
+    ],
+    [
+      4,
+      6,
+      12
+    ],
+    [
+      5,
+      7,
+      13
+    ],
+    [
+      10,
+      11,
+      12
+    ],
+    [
+      10,
+      11,
+      13
+    ]
+  ],
+  "ring_order": [
+    0,
+    4,
+    6,
+    2,
+    9,
+    3,
+    7,
+    5,
+    1,
+    8
+  ],
+  "candidate_matches": [
+    {
+      "group": "10/4",
+      "index": 1394,
+      "skeleton": "diamond"
+    }
+  ],
+  "candidate_face_count": 16,
+  "scope": "stored complex validity and candidate membership, not standalone completeness proof"
+}

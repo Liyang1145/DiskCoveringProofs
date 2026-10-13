@@ -1,0 +1,26 @@
+=== K1: simplex vertex (single edge, one free endpoint) ===
+  min_X |U-X|^2 attained at X = U ; value = 0  (free endpoint coincides with the anchor)
+
+=== K2: two-edge path U - X - W with weights (a, 1-a) ===
+  stationary X = [Ux*a - Wx*a + Wx, Uy*a - Wy*a + Wy]
+  (expected: the weighted average a*U + (1-a)*W)
+  E_a(U) = -a*(a - 1)*(Ux**2 - 2*Ux*Wx + Uy**2 - 2*Uy*Wy + Wx**2 + Wy**2)
+  (expected: a*(1-a)*|U-W|^2)
+
+=== K3: max over a in [0,1] of E_a ===
+  critical point a* = [1/2]
+  value at a*=1/2: s/4 ; at the vertices a=0,1: 0
+  => the maximum over the simplex is INTERIOR (a = 1/2): value |U-W|^2/4 > 0, whereas every
+     simplex vertex gives 0.  The finite-vertices route is therefore WRONG and is retracted.
+
+=== K4: concave functions need not maximise at vertices ===
+  f(x) = -(x-1/2)^2 on [0,1]: f'' = -2 <= 0 (concave) ; max at x = 1/2 (interior) with f = 0 ;
+  endpoints f(0) = f(1) = -1/4
+
+=== K5: E_a concave in a ===
+  d^2/da^2 [a(1-a)|U-W|^2] = -2*s (<= 0 for |U-W|^2 >= 0)
+
+Lagrangian route (lead, to be written as the proof):
+  L = t + sum_e alpha_e (|edge_e|^2 - t); inf_t forces sum_e alpha_e = 1;
+  inf over the free nodes gives E_alpha(U) = min_X sum_e alpha_e |edge_e|^2 (concave, nonlinear in alpha);
+  Slater => V(U)^2 = max_{alpha in simplex} E_alpha(U), a concave maximisation with interior optima.

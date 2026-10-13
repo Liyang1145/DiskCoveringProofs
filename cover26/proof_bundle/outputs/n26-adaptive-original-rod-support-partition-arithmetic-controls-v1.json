@@ -1,0 +1,63 @@
+{
+  "schema": "N26-adaptive-original-rod-support-partition-arithmetic-controls-v1",
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "actual_strict_proper_neighborhood_reconstructed_NOT_entire_source_root": true,
+  "actual_strict_proper_neighborhood_result": {
+    "nodes": 1,
+    "counts": {
+      "SPLIT": 0,
+      "ORIGINAL-ENERGY": 0,
+      "PRODUCT-ENERGY": 0,
+      "ALTERNATIVE-ENERGY": 1,
+      "LOCAL": 0,
+      "EMPTY": 0,
+      "OPEN": 0
+    },
+    "entire_actual_source_closed_root_partition_checked": true,
+    "independent_BFS_DFS_closed_domains_and_shared_boundaries_agreed": true,
+    "all_new_positive_support_exact_inverses_and_original_rod_edges_checked": true,
+    "alternative_supports_checked": 1,
+    "alternative_supports_used_by_strict_closed_leaves": [
+      0
+    ],
+    "arithmetic_entire_root_lower_bound_cover_completed": true,
+    "arithmetic_entire_root_strictly_empty": true,
+    "retained_OPEN_leaves": 0,
+    "minimum_strict_energy_margin": "3598102005063918168638269641537832568538693568794242050367746577742695204899310005561398690334669645509929290888226338730037841784403874207292500259859888767328311153360673486026283214701212021949074391447070496198983197589047616443413606107796735844630646251905921989690192962593231059040581119812304583181822093139472574847402746933758085339295779978431958691502326229268438229860536441390452846758659679881527841919217396407250113672028197791771863607216734227201994796277708645912948396200635691095578753824340026119885807657250347867715407722895005867035668816291062534156252833854377693974792350403862076264272561247978535424148479558767459777485660720911000910171713951652730272641911183029678247286063247505915621227344189450276415334843513494372138069468666676934109051031974123247224805763380250113851976813952247786080052288074880700527419308715664665243795514468091628671/77544716753982424298830440724890556797144461709636202992540690694000464729402550138849223439914399949458617621502555375142766134093726108043383691815752928660119085839303795145767300451954084688038446642528324202204676130545147093642056950470635620657967788435428820038574019647696178622191831080031550079328121392818947428898316911074459297021663259606273994461730960710027003442747251352287900175205638392106140994773305363260132806108289507642898551509475115707357382802987847461427967306576409513868980876085582833402165099897672677728468382009776981688640939172794377363218652364975323976248975376937521874072338247869601419519135430653322779725916609131162498864861124108463260329168318011457418919996557319226267563401789440000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "minimum_original_LOCAL_entry_margin": null,
+    "original_52_coordinate_LOCAL_allowance_unchanged": "7/800000",
+    "LOCAL_equality_regions_not_declared_empty": true,
+    "original_fixed_kernel_and_NEW_positive_supports_distinctly_labelled": true,
+    "verified": false,
+    "new_geometric_payments": 0,
+    "complete_latest_source_model_history_geometry_admission_still_required": true
+  },
+  "synthetic_full_source_partition_shared_closed_halves_reconstructed": true,
+  "synthetic_and_actual_invalid_arithmetic_controls_rejected": [
+    "adaptive-lost-shared-closed-half",
+    "adaptive-two-closed-halves-identified",
+    "adaptive-unreachable-hidden-node",
+    "adaptive-boolean-child-index",
+    "adaptive-unknown-mode",
+    "adaptive-nonempty-region-called-EMPTY",
+    "adaptive-split-has-unknown-proof-field",
+    "adaptive-negative-original-rod-weight",
+    "adaptive-original-rod-edge-changed",
+    "adaptive-new-support-relabelled-as-original-fixed",
+    "adaptive-original-fixed-weights-substituted-for-new-support",
+    "adaptive-support-hides-an-unknown-proof-field",
+    "adaptive-boolean-positive-support-index",
+    "adaptive-out-of-range-positive-support-index",
+    "adaptive-strong-new-support-replaced-by-inconclusive-original-fixed"
+  ],
+  "new_support_feasible_tiny_candidate_NOT_excluded": true,
+  "complete_latest_source_model_history_geometry_gate_NOT_executed": true,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "diagnosis_sha256": "af2eb313049438623a7ad5e6f614043050861832c0a0d3026496c65e0c19ff33",
+  "alternative_controls_sha256": "6c1286b9436d43a6aacda74eb4be76fe243769a5901e2de7a3be27a528a01281",
+  "tested_forest_module_sha256": "4890c842f6ca4d03af03b00c96df9182c7ae420d634c4a9ba93eb61f223ac98b",
+  "executed_test_sha256": "b64be77e15f1226716e679769bd3fb07a972c08bfa0e4c35c51513bcec2de532"
+}

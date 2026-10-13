@@ -1,0 +1,32 @@
+{
+  "schema": "N26-byte-exact-historical-native-recovery-candidate-v1",
+  "event_index": 2312,
+  "actual_new_path_command": [
+    "wsl.exe",
+    "--",
+    "/lib64/ld-linux-x86-64.so.2",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-force-stage-v12/peel_prefix_origin.linux",
+    "26",
+    "14",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-native-v12-02312-regenerated-20261011.json",
+    "10000000",
+    "754112",
+    "1555305",
+    "2486507",
+    "3880649",
+    "0",
+    "dfs",
+    "frontier",
+    "0,1,0,0,1,0,1,0,0,1,0,0,0,0,1,0,1,1,0,2,4,1,1,0,2,2,1,0,0",
+    "1",
+    "1"
+  ],
+  "actual_stdout": "",
+  "actual_stderr": "COMPLETE frontier B=14 calls=2 orbits=0 frontier=1\n",
+  "result_sha256": "116de16073938ad3ee927cd0fe54f8ffe6f28ac16926bb695f1d9461528d9fb6",
+  "historical_launch_recovery_candidate_sha256": "fab64a7e16d4d6adcfb86ec8d790a40530c376884e8da983488b05fc4d346482",
+  "both_candidates_match_original_bound_bytes": true,
+  "historical_targets_not_modified_by_this_script": true,
+  "new_geometric_payments": 0,
+  "executed_recovery_script_sha256": "919e2045d775a3ae8b9a6cff6ecadce3d2aba6d27802e88f554a52849ef7fef6"
+}

@@ -1,0 +1,11 @@
+# Boundary cycle coupling: replace18 copy constraints by exact shared9radius variables
+
+Current global remainder C824: q0(6,7) only at r<=.38. New method obligation: remove independent sector/switch radius maxima by integrating all boundary factors in one cyclic graphical model. This is NOT assuming all switch radii equal.
+
+Set y_i=|P_i−c_i|/R=|P_i−c_(i+1)|/R in[0,1]. Sector i gets(u,v)=(y_(i−1),y_i). Then sum switch/sector first+second(and any higher) radius-copy multiplier terms cancels identically. Existing face factors unchanged. At fixed remaining dual z, boundary maximization is
+ max_{y0..y8 in[0,1]} Σ_i [S_i(y_(i−1),y_i)+B_i(y_i)],
+where S_i(u,v)=max_alpha sector factor (including local closure terms, width qmin and optional actual norm filter), B_i(y)=max_b switch factor WITHOUT radius-copy multipliers. Each local angular max one dimensional. Exact continuous9variable cycle; sampled grid can be optimized exactly by max-plus dynamic programming conditional on y8. This preserves correlation of adjacent endpoints across all9sectors and switches, unlike independent factors or finite moment matching.
+
+LP separation:11 independent face maximizers+one global boundary maximizer produce12cuts; chosen boundary grid tuple yields sum of linear rows and area objective, so standard cutting-plane coefficient proposer works. Radius-copy coefficient columns explicitly0 and fixed0 (no false free direction). Still discrete sampled relaxation NOT upper certificate on continuum. If useful, interval partition [0,1] into bins: each directed ring-bin pair gets rigorous sup over alpha and two radius intervals, each switch-bin gets sup over b,y interval; cycle DP over bins provides genuine continuous upper because all choices covered, though intra-bin coupling relaxed. Refining bins yields controlled and structurally meaningful gap reduction; no enormous9D product B&B needed.
+
+Bounded experiment: R=.38,k4,31radius nodes145angles, <=200LP iterations. Compare against independent moment3.16886. Decision: if sampled joint bound near/belowpi, implement interval bin DP; if not, inspect active cycle radius profiles/face gaps rather than scale blindly. No claim of sharpness from sampled bound.

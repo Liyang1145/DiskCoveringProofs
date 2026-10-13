@@ -1,0 +1,137 @@
+{
+  "status": "sourcebound_rational_clip_leaf_exclusions_and_finite_transport",
+  "source_sha256": "641952c716ade1dfd5d483a46f0ab02159fa61e8216ed2087196f8eace3d5528",
+  "base_sha256": "57ee22c7f89412c6286a6e388456d9fa48c9b45e8391dbd169022a7814739c29",
+  "runs": [
+    {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "side": -1,
+      "threshold": "3/8",
+      "vertices": 292,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "4146795678177877532798079789521013317891229/12500000000000000000000000000000000000000000",
+        "lower_radius_display": 0.3317436542542302,
+        "excluded": true,
+        "vertices": 292,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "indices": [
+        0
+      ],
+      "side": 1,
+      "threshold": "1/8",
+      "vertices": 595,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "20746178096335126378723391959054621861291749/62500000000000000000000000000000000000000000",
+        "lower_radius_display": 0.33193884954136205,
+        "excluded": true,
+        "vertices": 595,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    },
+    {
+      "indices": [
+        2
+      ],
+      "side": 1,
+      "threshold": "1/16",
+      "vertices": 978,
+      "replay": {
+        "family": "10/4",
+        "index": 879,
+        "lower_radius_exact": "4147725921065487151039665092626195075901447/12500000000000000000000000000000000000000000",
+        "lower_radius_display": 0.33181807368523897,
+        "excluded": true,
+        "vertices": 978,
+        "incidence_rebuilt": true,
+        "exact_balance": true,
+        "vertex_coverage": "pending_separate_independent_audit",
+        "all_endpoint_signs_positive": true
+      }
+    }
+  ],
+  "cuts": [
+    {
+      "indices": [
+        0
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/8"
+    },
+    {
+      "indices": [
+        2
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/16"
+    },
+    {
+      "indices": [
+        4
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        5
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/8"
+    },
+    {
+      "indices": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "sense": "greater",
+      "fraction_of_total": "3/8"
+    },
+    {
+      "indices": [
+        7
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/16"
+    },
+    {
+      "indices": [
+        9
+      ],
+      "sense": "less",
+      "fraction_of_total": "1/8"
+    }
+  ]
+}

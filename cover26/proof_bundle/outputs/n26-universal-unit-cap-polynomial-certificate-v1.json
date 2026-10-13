@@ -1,0 +1,802 @@
+{
+  "schema": "N26-universal-projection-and-closed-unit-cap-polynomial-certificate-v1",
+  "variables": [
+    "a",
+    "b",
+    "t",
+    "s",
+    "x",
+    "y",
+    "r2",
+    "d",
+    "u",
+    "z",
+    "v",
+    "h"
+  ],
+  "explicit_ordered_real_hypotheses": [
+    "0<=r2<1",
+    "t>0",
+    "s>=0",
+    "t^2+s^2=1",
+    "r2-((t-a)^2+(s-b)^2)>=0",
+    "r2-((t-a)^2+(-s-b)^2)>=0",
+    "1-x^2-y^2>=0",
+    "x-t>=0",
+    "d>0",
+    "2*t-2*a-d=0",
+    "projection-only:u>=1",
+    "projection-only:z<=1",
+    "footprint-only:v>0",
+    "footprint-only:2*v*h=1+v^2-r2"
+  ],
+  "explicit_sign_derivations_and_exhaustive_cases": [
+    "positive-a:2*t*a=(1-r2)+a^2+b^2+(endpoint-plus-slack+endpoint-minus-slack)/2",
+    "y-range:s^2-y^2=disk-slack+(x-t)*(x+t)",
+    "y-range:s>=0-and-s^2-y^2>=0-imply-s+y>=0-and-s-y>=0",
+    "b>=0:cap-gap=endpoint-minus-slack+disk-slack+2*a*(x-t)+2*b*(s+y)",
+    "b<=0:cap-gap=endpoint-plus-slack+disk-slack+2*a*(x-t)-2*b*(s-y)",
+    "all-real-b:the-two-sign-cases-exhaust-all-values",
+    "projection-gap=(u-1)^2+2*(u-1)*(1-z)>=0",
+    "footprint:h>0-and-4*v^2*(h^2-(1-r2))=(v^2-(1-r2))^2>=0"
+  ],
+  "zero_constraints": {
+    "circle": [
+      {
+        "powers": [
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      }
+    ],
+    "bisector": [
+      {
+        "powers": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      }
+    ],
+    "footprint": [
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "coefficient": "-1"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          1
+        ],
+        "coefficient": "2"
+      },
+      {
+        "powers": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "coefficient": "-1"
+      }
+    ]
+  },
+  "identities": {
+    "positive-a": {
+      "residual": [
+        {
+          "powers": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        }
+      ],
+      "zero_constraint": "circle",
+      "constraint_multiplier": [
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        }
+      ]
+    },
+    "closed-cap-y-bound": {
+      "residual": [
+        {
+          "powers": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        }
+      ],
+      "zero_constraint": "circle",
+      "constraint_multiplier": [
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        }
+      ]
+    },
+    "cap-gap-b-nonnegative": {
+      "residual": [
+        {
+          "powers": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        }
+      ],
+      "zero_constraint": "circle",
+      "constraint_multiplier": [
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        }
+      ]
+    },
+    "cap-gap-b-nonpositive": {
+      "residual": [
+        {
+          "powers": [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        }
+      ],
+      "zero_constraint": "circle",
+      "constraint_multiplier": [
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        }
+      ]
+    },
+    "squared-distance-bisector": {
+      "residual": [
+        {
+          "powers": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-2"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "2"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        }
+      ],
+      "zero_constraint": "bisector",
+      "constraint_multiplier": [
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        }
+      ]
+    },
+    "projection-norm-gap": {
+      "residual": [],
+      "zero_constraint": null,
+      "constraint_multiplier": []
+    },
+    "projection-nonnegative-decomposition": {
+      "residual": [],
+      "zero_constraint": null,
+      "constraint_multiplier": []
+    },
+    "circle-footprint-half-angle-bound": {
+      "residual": [
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "coefficient": "2"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "2"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            4,
+            0
+          ],
+          "coefficient": "-1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            2
+          ],
+          "coefficient": "4"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "coefficient": "-2"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        }
+      ],
+      "zero_constraint": "footprint",
+      "constraint_multiplier": [
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "-1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          "coefficient": "1"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            1
+          ],
+          "coefficient": "2"
+        },
+        {
+          "powers": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "coefficient": "1"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+ "T1": {
+  "T1a_projection": {
+   "trials": 26601,
+   "violations": 1117,
+   "worst_margin": 0.1438315715480068
+  },
+  "T1b_roots": {
+   "root_containment_violations": 34662,
+   "samples": 36536
+  }
+ },
+ "T3_symmetric": [
+  {
+   "k": 10,
+   "a": 0.9,
+   "r_boundary_cover": 0.31320643459022945,
+   "owners": 10,
+   "max_owner_len": 0.6283185307179586,
+   "halfwidth_bound": 0.6371349494559612,
+   "all_active": true,
+   "cover_D_radius": 0.3132064345902293
+  },
+  {
+   "k": 10,
+   "a": 0.94,
+   "r_boundary_cover": 0.309214730187796,
+   "owners": 10,
+   "max_owner_len": 0.6284756103506381,
+   "halfwidth_bound": 0.6287343682424806,
+   "all_active": true,
+   "cover_D_radius": 0.3092147301877957
+  },
+  {
+   "k": 11,
+   "a": 0.8,
+   "r_boundary_cover": 0.3237456443209764,
+   "owners": 11,
+   "max_owner_len": 0.571298624055304,
+   "halfwidth_bound": 0.6593713430002205,
+   "all_active": true,
+   "cover_D_radius": 0.3237456443209763
+  },
+  {
+   "k": 11,
+   "a": 0.9,
+   "r_boundary_cover": 0.28794556342111755,
+   "owners": 11,
+   "max_owner_len": 0.571298624055304,
+   "halfwidth_bound": 0.5841616938686633,
+   "all_active": true,
+   "cover_D_radius": 0.28794556342111716
+  },
+  {
+   "k": 11,
+   "a": 0.94,
+   "r_boundary_cover": 0.28240610759108076,
+   "owners": 11,
+   "max_owner_len": 0.571298624055304,
+   "halfwidth_bound": 0.5726027813687037,
+   "all_active": true,
+   "cover_D_radius": 0.28240610759108026
+  }
+ ],
+ "T2_singleton_outside": []
+}

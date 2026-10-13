@@ -1,0 +1,59 @@
+{
+  "verified": true,
+  "N": 25,
+  "B": 14,
+  "selected_prefix_pending_families": 5,
+  "strictly_paid_completion_families": 5,
+  "remaining_selected_unpaid_families": 0,
+  "results": [
+    {
+      "parent_group": 2,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 217,
+      "closure_file": "parent-0000002/CLOSURE.json",
+      "closure_sha256": "0be56537b00ac19e5505c5b3c0c11be6f2fe4bef5ce24171715e8d4723ca9874",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 3,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000003/CLOSURE.json",
+      "closure_sha256": "46e1c68654894f5ac72bf8d6513d7b4a1fc01ff79f2771da822a31a5b9524f28",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 7,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000007/CLOSURE.json",
+      "closure_sha256": "ff4fa38700139ef0968095eda20c8ad0ace25348c44a57147ad34a3919819f5c",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 17,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000017/CLOSURE.json",
+      "closure_sha256": "6e580cc275e02c3e44769f352bcbcacd5559bef7586ce22af2f7711a2a8c5acc",
+      "pending_completions": 0
+    },
+    {
+      "parent_group": 21,
+      "status": "full-simple-disk-completion-family-strictly-paid",
+      "not_a_geometric_weak_exclusion": true,
+      "full_completion_types": 429,
+      "closure_file": "parent-0000021/CLOSURE.json",
+      "closure_sha256": "ac60125f1a7981f9ebfdb52aad5c4d8a301321fcc8105b50481b1eced88d3025",
+      "pending_completions": 0
+    }
+  ],
+  "source_sha256": "d6e6e37879112bf19e4f9f95a2a628b248f959099915dd3187a9152fac86d27f",
+  "parent_catalog_sha256": "a52729cbd01664e744eac859af86e425b389d50f51316a4276161f497c7b85e2",
+  "all_other_parent_groups_not_paid_here": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,73 @@
+{
+  "verified_mechanical_derivation": true,
+  "files": [
+    {
+      "original": "general_paid_collar_kernel.py",
+      "derived": "linked_general_collar_kernel.py",
+      "original_sha256": "a6f199ae438d3611ed2c76d4a413b4e7046da61f05d92daef45697ee019c02f6",
+      "derived_sha256": "21cc9f477bd17396c321e6747f5d240f1f335ab36720e240aaaff4d874226d8e",
+      "changes": [
+        {
+          "before": "from general_collar_filling import start_states, children",
+          "after": "from general_collar_filling_linked import start_states, children",
+          "occurrences": 1
+        },
+        {
+          "before": "proof-paid-general-collar-branch-tree-v1",
+          "after": "proof-paid-linked-general-collar-branch-tree-v1",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "original": "prove_general_collar.py",
+      "derived": "prove_linked_general_collar.py",
+      "original_sha256": "dc744d07234ba83adf51c33b9ebada20984dae79a00840d910d3960b3270b782",
+      "derived_sha256": "ec1f5cd7c7c6411f73946bc0e1959ebf68346aa5d0dd3d7931d1664dfb5ff568",
+      "changes": [
+        {
+          "before": "general_paid_collar_kernel",
+          "after": "linked_general_collar_kernel",
+          "occurrences": 2
+        },
+        {
+          "before": "proof-paid-general-collar-branch-tree-v1",
+          "after": "proof-paid-linked-general-collar-branch-tree-v1",
+          "occurrences": 1
+        }
+      ]
+    },
+    {
+      "original": "replay_general_collar.py",
+      "derived": "replay_linked_general_collar.py",
+      "original_sha256": "caea47dd09b3c8a2ddd9d501f5013cea8d2f371adf29c67613459f94b6661bb4",
+      "derived_sha256": "6a76992eaa6152e3d1b66fc443793297251203b7418fc28d5aa2b8f83fa06fdf",
+      "changes": [
+        {
+          "before": "general_paid_collar_kernel",
+          "after": "linked_general_collar_kernel",
+          "occurrences": 3
+        },
+        {
+          "before": "prove_general_collar.py",
+          "after": "prove_linked_general_collar.py",
+          "occurrences": 2
+        },
+        {
+          "before": "proof-paid-general-collar-independent-replay-v1",
+          "after": "proof-paid-linked-general-collar-independent-replay-v1",
+          "occurrences": 1
+        },
+        {
+          "before": "ROOT / \"general_collar_filling.py\",",
+          "after": "ROOT / \"general_collar_filling.py\", ROOT / \"general_collar_filling_linked.py\",\n        ROOT / \"linked-general-paid-collar-source-derivation.json\",",
+          "occurrences": 1
+        }
+      ]
+    }
+  ],
+  "source_sha256": "78a9f3d5a68c4cfceb72d0892f234313f04a60f7643d48c9cdd9b68ac680f897",
+  "link_provider_sha256": "2493c7413814d1d9a521473b52c1f41d6e39c3efc2e86ae366ab0b978b730c6c",
+  "exact_force_construction_and_acceptance_unchanged": true,
+  "global_optimality_proved": false
+}

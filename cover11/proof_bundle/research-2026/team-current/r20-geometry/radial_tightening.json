@@ -1,0 +1,465 @@
+{
+ "note": "radial tightening test; no grid, no claim",
+ "results": {
+  "0.37998385312": {
+   "7": {
+    "t_bdy": "0.99999999999999804296998187795342167308735133966087",
+    "t_fail": "0.99999999384375872870498423020939955744650349025452",
+    "witness": [
+     0.9149281450282587,
+     0.4036167599406612
+    ],
+    "witness_norm": 0.9999999997349239,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999938)"
+   },
+   "1": {
+    "t_bdy": "1.0000000000000440214811205953412485039273646150846",
+    "t_fail": "0.99999998712786261201665024767047546889232210602698",
+    "witness": [
+     -0.37753882607873923,
+     0.9259937547516517
+    ],
+    "witness_norm": 0.9999999995179872,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999871)"
+   },
+   "8": {
+    "t_bdy": "1.0000000000000205965721526492207005876249548216453",
+    "t_fail": "0.99999999384375869387382388117042585058978406407146",
+    "witness": [
+     -0.914050615361589,
+     0.40560013810025763
+    ],
+    "witness_norm": 0.9999999997349238,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999938)"
+   },
+   "6": {
+    "t_bdy": "1.0000000000000011851968399665065800986887616388399",
+    "t_fail": "0.99999999836141936236145127101106020054928315656017",
+    "witness": [
+     -0.9896486778686696,
+     -0.14351130155756733
+    ],
+    "witness_norm": 0.9999999996409764,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999984)"
+   },
+   "4": {
+    "t_bdy": "0.99999999999999068758117140169324283835138660302296",
+    "t_fail": "0.99999999767285011788523981739637763964852925641525",
+    "witness": [
+     -0.9896486776893239,
+     -0.1435113034489636
+    ],
+    "witness_norm": 0.9999999997349239,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999977)"
+   },
+   "9": {
+    "t_bdy": "0.99999999999999206863043801454166764708855077524903",
+    "t_fail": "0.99999999600738465419140190546300311118858206945282",
+    "witness": [
+     -0.6780465332441472,
+     -0.735018978011824
+    ],
+    "witness_norm": 0.9999999996409764,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.999999996)"
+   },
+   "10": {
+    "t_bdy": "0.9999999999999845179049478906783977433903102633288",
+    "t_fail": "0.99999999600738451526827033574349962152886063459575",
+    "witness": [
+     0.6764508048054036,
+     -0.7364878192883264
+    ],
+    "witness_norm": 0.9999999996409764,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.999999996)"
+   },
+   "3": {
+    "t_bdy": "0.99999999999999594594144745577464020943660465429087",
+    "t_fail": "0.99999999767285011793683702903116780118059526265605",
+    "witness": [
+     0.9893350980105314,
+     -0.14565734898843888
+    ],
+    "witness_norm": 0.9999999997349239,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999977)"
+   },
+   "5": {
+    "t_bdy": "1.0000000000000026280975803881043801826000585984762",
+    "t_fail": "0.99999999836141936564263457620545549497735378833123",
+    "witness": [
+     0.9893350981939789,
+     -0.14565734709743602
+    ],
+    "witness_norm": 0.9999999996409764,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9999999984)"
+   }
+  },
+  "0.4": {
+   "7": {
+    "t_bdy": "0.869976698378389820420397923468865851580456351486",
+    "t_fail": "0.86997669602002516600036016348922121465567606966839",
+    "witness": [
+     0.4002542372794758,
+     0.9164041381918145
+    ],
+    "witness_norm": 0.9999999994776286,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.869976696)"
+   },
+   "1": {
+    "t_bdy": "0.8436722723935652777971695381129499198904064982465",
+    "t_fail": "0.84367227005279639688634651883173323959635226554478",
+    "witness": [
+     -0.35555319966902077,
+     0.934656044346572
+    ],
+    "witness_norm": 0.9999999995142298,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8436722701)"
+   },
+   "8": {
+    "t_bdy": "0.86997669814107823295490286933259926672984090637143",
+    "t_fail": "0.86997669578270671852113675973759117183078370017364",
+    "witness": [
+     -0.3982657671519501,
+     0.9172700680116657
+    ],
+    "witness_norm": 0.9999999994776286,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8699766958)"
+   },
+   "6": {
+    "t_bdy": "0.93940909132640634003908455213175415262559991299872",
+    "t_fail": "0.93940908983425255023638425844537832944572022327062",
+    "witness": [
+     -0.9233792980368773,
+     0.3838888784340898
+    ],
+    "witness_norm": 0.9999999995142298,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9394090898)"
+   },
+   "4": {
+    "t_bdy": "0.91653629250986067676534992416476150526658626809107",
+    "t_fail": "0.91653629072534027864769265505463819310132867147523",
+    "witness": [
+     -0.6964539406219797,
+     -0.7176014964493843
+    ],
+    "witness_norm": 0.9999999995571399,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9165362907)"
+   },
+   "9": {
+    "t_bdy": "0.88860908710552360298691916089389932195248054202851",
+    "t_fail": "0.8886090850207126013513142358400656583118049800747",
+    "witness": [
+     -0.026423711189515614,
+     -0.9996508323415996
+    ],
+    "witness_norm": 0.9999999995571399,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.888609085)"
+   },
+   "10": {
+    "t_bdy": "0.88860908490020462511112038469645011586605560434876",
+    "t_fail": "0.8886090828153867676068894932458072695397690963843",
+    "witness": [
+     0.02425557047944786,
+     -0.9997057899277149
+    ],
+    "witness_norm": 0.9999999995571399,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8886090828)"
+   },
+   "3": {
+    "t_bdy": "0.91653629269987741250986982237736681995678367350896",
+    "t_fail": "0.91653629091536179398943282117962465493780358464196",
+    "witness": [
+     0.6948959443738437,
+     -0.7191103014190965
+    ],
+    "witness_norm": 0.9999999995571399,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9165362909)"
+   },
+   "5": {
+    "t_bdy": "0.93940909140927946082734135991166280076048267432693",
+    "t_fail": "0.939409089917128404614959246862933852635699772794",
+    "witness": [
+     0.9242097176463511,
+     0.3818853189591237
+    ],
+    "witness_norm": 0.9999999995142298,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.9394090899)"
+   }
+  },
+  "0.43": {
+   "7": {
+    "t_bdy": "0.76971391576745771994419382397297543910750919903735",
+    "t_fail": "0.7697139142340151506389070297873119859163102354969",
+    "witness": [
+     0.43085387519951157,
+     0.9024217069520228
+    ],
+    "witness_norm": 0.9999999994763195,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7697139142)"
+   },
+   "1": {
+    "t_bdy": "0.7427341742535713866813899868840851780337995964492",
+    "t_fail": "0.74273417279243893167357019767390455414784871886541",
+    "witness": [
+     -0.32242187502795966,
+     0.9465960772810278
+    ],
+    "witness_norm": 0.9999999995101874,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7427341728)"
+   },
+   "8": {
+    "t_bdy": "0.76971391551344993055002891189833442580221208116592",
+    "t_fail": "0.76971391398000376749195954944928325683650841250102",
+    "witness": [
+     -0.4288956586809295,
+     0.9033540352028603
+    ],
+    "witness_norm": 0.9999999994763195,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.769713914)"
+   },
+   "6": {
+    "t_bdy": "0.86477888529259458508023267856420579549342972194826",
+    "t_fail": "0.8647788840698058057064229335186727340233035385993",
+    "witness": [
+     -0.9363240716555132,
+     0.3511370556617686
+    ],
+    "witness_norm": 0.9999999995101874,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8647788841)"
+   },
+   "4": {
+    "t_bdy": "0.82771889322126225372879078070124070492665881142443",
+    "t_fail": "0.82771889190570462841994509764538651807600555065488",
+    "witness": [
+     -0.7228854995955686,
+     -0.6909678383063066
+    ],
+    "witness_norm": 0.9999999995496125,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8277188919)"
+   },
+   "9": {
+    "t_bdy": "0.79030448671474040793728525744564179780378688400198",
+    "t_fail": "0.79030448531846704439388188144483560785587565316082",
+    "witness": [
+     -0.06390845187286784,
+     -0.9979557649908328
+    ],
+    "witness_norm": 0.9999999995496125,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7903044853)"
+   },
+   "10": {
+    "t_bdy": "0.79030448401981726946904775611942448127677806841896",
+    "t_fail": "0.79030448262354000500585807416128628223230595177905",
+    "witness": [
+     0.06174389956947854,
+     -0.9980920247979037
+    ],
+    "witness_norm": 0.9999999995496125,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7903044826)"
+   },
+   "3": {
+    "t_bdy": "0.82771889348977415840469684026840887339793253258725",
+    "t_fail": "0.82771889217421950409792344187457604585254349676361",
+    "witness": [
+     0.721385204985189,
+     -0.6925340317469617
+    ],
+    "witness_norm": 0.9999999995496125,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8277188922)"
+   },
+   "5": {
+    "t_bdy": "0.86477888544296921142960126242018880826864197017474",
+    "t_fail": "0.86477888422017958008885507532910795520317385148771",
+    "witness": [
+     0.9370834275532168,
+     0.34910549813128106
+    ],
+    "witness_norm": 0.9999999995101874,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.8647788842)"
+   }
+  },
+  "0.5": {
+   "7": {
+    "t_bdy": "0.62171212114813251255013217868216659525560753086342",
+    "t_fail": "0.6217121201742578504590501242461818121792733202289",
+    "witness": [
+     0.5002574338188394,
+     0.8658767226709772
+    ],
+    "witness_norm": 0.9999999994772214,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6217121202)"
+   },
+   "1": {
+    "t_bdy": "0.59798493900745277503129565670553548619507669885573",
+    "t_fail": "0.59798493810226479059796878912055843978907190067533",
+    "witness": [
+     -0.24411873871829132,
+     0.9697453482327785
+    ],
+    "witness_norm": 0.9999999995062611,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5979849381)"
+   },
+   "8": {
+    "t_bdy": "0.62171212091643505157337202690925333114369602605207",
+    "t_fail": "0.6217121199425589294571204538108856783199795540265",
+    "witness": [
+     -0.49837831408506017,
+     0.8669596616937698
+    ],
+    "witness_norm": 0.9999999994772214,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6217121199)"
+   },
+   "6": {
+    "t_bdy": "0.72784800937063167533465641406452436088797599380072",
+    "t_fail": "0.72784800846001882423654965045380370084192312873388",
+    "witness": [
+     -0.9618503215782943,
+     0.2735762378063089
+    ],
+    "witness_norm": 0.9999999995062611,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7278480085)"
+   },
+   "4": {
+    "t_bdy": "0.68182779944290457825090174226728927135724924516661",
+    "t_fail": "0.68182779855270466080195643659692193675646957682207",
+    "witness": [
+     -0.7797087806236209,
+     -0.626142329265299
+    ],
+    "witness_norm": 0.999999999539674,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6818277986)"
+   },
+   "9": {
+    "t_bdy": "0.64175228150472156904355067846906659108010987115633",
+    "t_fail": "0.6417522806158645761395147004247335223989738909608",
+    "witness": [
+     -0.14961941368552922,
+     -0.9887436624968812
+    ],
+    "witness_norm": 0.999999999539674,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6417522806)"
+   },
+   "10": {
+    "t_bdy": "0.6417522788800742193257557196590908005194711286112",
+    "t_fail": "0.641752277991217976347666170860247573404628565622",
+    "witness": [
+     0.14747463980302314,
+     -0.9890658368856527
+    ],
+    "witness_norm": 0.999999999539674,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.641752278)"
+   },
+   "3": {
+    "t_bdy": "0.68182779966670425843802543680037956628723165699282",
+    "t_fail": "0.68182779877650351519887113006824198383719177757418",
+    "witness": [
+     0.7783489478289325,
+     -0.6278319157966897
+    ],
+    "witness_norm": 0.999999999539674,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6818277988)"
+   },
+   "5": {
+    "t_bdy": "0.72784800958759644414115327052421382694179705163513",
+    "t_fail": "0.72784800867698342246778939683028518094580854243577",
+    "witness": [
+     0.9624414008949819,
+     0.27148950045227704
+    ],
+    "witness_norm": 0.9999999995062611,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.7278480087)"
+   }
+  },
+  "0.55": {
+   "7": {
+    "t_bdy": "0.54241041454109580941135871699812064574151485824839",
+    "t_fail": "0.54241041373266913590816661422865105587721979727554",
+    "witness": [
+     0.5480985245962346,
+     0.8364137769645579
+    ],
+    "witness_norm": 0.9999999994803432,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5424104137)"
+   },
+   "1": {
+    "t_bdy": "0.52139299467643224900859758244161806677273496171908",
+    "t_fail": "0.52139299393053978525035251349781200393610773797945",
+    "witness": [
+     -0.18726476677306153,
+     0.9823094757453527
+    ],
+    "witness_norm": 0.9999999995068394,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5213929939)"
+   },
+   "8": {
+    "t_bdy": "0.54241041433088981372264796291811349309730405013509",
+    "t_fail": "0.54241041352246229925165610340868212964316810135863",
+    "witness": [
+     -0.5462831925921177,
+     0.8376005446822785
+    ],
+    "witness_norm": 0.9999999994803432,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5424104135)"
+   },
+   "6": {
+    "t_bdy": "0.64602180665402640225620298557955649628918197889967",
+    "t_fail": "0.64602180585935669709788197673733825558074772318615",
+    "witness": [
+     -0.9761422883867683,
+     0.2171318305470713
+    ],
+    "witness_norm": 0.9999999995068394,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6460218059)"
+   },
+   "4": {
+    "t_bdy": "0.60007602571125367257041070314392762005547122514731",
+    "t_fail": "0.60007602495979171301031942756000626280821305597891",
+    "witness": [
+     -0.8164468024747475,
+     -0.5774206593143915
+    ],
+    "witness_norm": 0.999999999537153,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.600076025)"
+   },
+   "9": {
+    "t_bdy": "0.56169782074082179848894877210108829662946996894159",
+    "t_fail": "0.56169782000386901207799680976717252340977090593321",
+    "witness": [
+     -0.20964625929038652,
+     -0.9777772982841513
+    ],
+    "witness_norm": 0.999999999537153,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.56169782)"
+   },
+   "10": {
+    "t_bdy": "0.56169781835229813673689231145268503961315985537118",
+    "t_fail": "0.56169781761534663127571775725766731184954199462696",
+    "witness": [
+     0.2075251287460071,
+     -0.9782296867368416
+    ],
+    "witness_norm": 0.999999999537153,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.5616978176)"
+   },
+   "3": {
+    "t_bdy": "0.60007602585549882356282568855988760531512373508699",
+    "t_fail": "0.60007602510403568797899598741406392490477674220483",
+    "witness": [
+     0.8151925523391179,
+     -0.5791900393524914
+    ],
+    "witness_norm": 0.999999999537153,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6000760251)"
+   },
+   "5": {
+    "t_bdy": "0.64602180688803702794917054906131208756761223683701",
+    "t_fail": "0.64602180609336763957325023568206969798663320006129",
+    "witness": [
+     0.9766109155310833,
+     0.21501422901570544
+    ],
+    "witness_norm": 0.9999999995068394,
+    "verdict": "OK: binding event is a BOUNDARY point -> the inward move runs exactly to a tight tie (t_fail = t_bdy = 0.6460218061)"
+   }
+  }
+ }
+}

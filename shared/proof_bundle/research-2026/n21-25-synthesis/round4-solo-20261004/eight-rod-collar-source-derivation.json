@@ -1,0 +1,40 @@
+{
+  "verified_mechanical_derivation": true,
+  "original_source_sha256": "12f0834444fa74dcb67e15af27f8cda2acd3ee151a895659927641af4b9ec935",
+  "derived_source_sha256": "31df43f9ad8d4d6aa04538c787aee096e992bc1d3116793e0cd2c6eae22a6d26",
+  "extra_angle_gate_sha256": "f3967185aa9ae2a81d0688971e697f7b0c2138da3c3ddc8d55e8bbb6e8198ab2",
+  "changes": [
+    [
+      "#define visit frozen_degree_visit\n",
+      "#define visit frozen_degree_visit\n#define possible frozen_three_cap_possible\n"
+    ],
+    [
+      "#undef main\n#include \"../round3-high/paid_outer_matcher.inc\"",
+      "#undef main\n#undef possible\n#include \"eight_rod_possible.inc\"\n#include \"../round3-high/paid_outer_matcher.inc\""
+    ],
+    [
+      "if(argc!=12)throw runtime_error(\"usage: sparse-collar N B output scale cap2 cap4 cap6 node-limit mode exact-table-or-minus sparse-table-or-minus\");",
+      "if(argc!=13)throw runtime_error(\"usage: eight-rod-collar N B output scale cap2 cap4 cap6 node-limit mode exact-table-or-minus sparse-table-or-minus cap8\");"
+    ],
+    [
+      "string mode=argv[9];audit_order=",
+      "cap8=stoll(argv[12]);string mode=argv[9];audit_order="
+    ],
+    [
+      "if(n>MAXN||b<3||n<b||scale<=0||scale>100000000||caps[0]<=0||caps[2]>=scale/2)",
+      "if(n>MAXN||b<3||n<b||scale<=0||scale>100000000||caps[0]<=0||caps[2]>=cap8||cap8>=scale/2)"
+    ],
+    [
+      "COLLAR NATIVE PID=",
+      "EIGHT ROD NATIVE PID="
+    ],
+    [
+      "<<\",\\\"weak_graph_count\\\":\"<<collars.size();",
+      "<<\",\\\"cap8\\\":\"<<cap8<<\",\\\"eight_rod_screen\\\":\"<<(screen?\"true\":\"false\")\n    <<\",\\\"weak_graph_count\\\":\"<<collars.size();"
+    ]
+  ],
+  "recursive_body_and_omission_unchanged": true,
+  "sparse_guard_and_canonicalization_unchanged": true,
+  "source_sha256": "bd3ccad4c6bc6e72180aa9321f984ac2b8f3cc61b02697ce0add3864e2c6ecf6",
+  "global_optimality_proved": false
+}

@@ -1,0 +1,32 @@
+{
+ "tests": [
+  [
+   "CONE only           ",
+   0
+  ],
+  [
+   "KKT only            ",
+   0
+  ],
+  [
+   "CONE+KKT            ",
+   0
+  ],
+  [
+   "VAL only            ",
+   2
+  ],
+  [
+   "CONE+VAL            ",
+   2
+  ],
+  [
+   "KKT+VAL             ",
+   2
+  ],
+  [
+   "CONE+KKT+VAL        ",
+   2
+  ]
+ ]
+}

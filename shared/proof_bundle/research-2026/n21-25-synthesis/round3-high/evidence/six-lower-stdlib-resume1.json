@@ -1,0 +1,59 @@
+{
+  "verified": true,
+  "radius": "2771/5000",
+  "gap_cap": 1869759,
+  "gap_scale": 10000000,
+  "independently_enumerated_fixed_boundary_types": 14,
+  "topology_orbits": 3,
+  "trees": [
+    {
+      "verified": true,
+      "nodes": 25,
+      "counts": {
+        "SPLIT": 12,
+        "DUAL": 13
+      },
+      "minimum_margin": "490725903905540370041/5000028112735887120470000",
+      "vertices": 16,
+      "edges": 24,
+      "index": 0,
+      "stabilizer": 2,
+      "tree_sha256": "b9c84d7d602c4b4150a029ea983c6c46f9bf1fe156204b8c03ab0a682247190e"
+    },
+    {
+      "verified": true,
+      "nodes": 19,
+      "counts": {
+        "SPLIT": 9,
+        "DUAL": 10
+      },
+      "minimum_margin": "198897709324684081113/2500006737122112657797500",
+      "vertices": 16,
+      "edges": 24,
+      "index": 1,
+      "stabilizer": 2,
+      "tree_sha256": "2ac33ec20e0fe0104069910e1778d141f944a46fa6af9119329e5ae1a8e2b396"
+    },
+    {
+      "verified": true,
+      "nodes": 15,
+      "counts": {
+        "SPLIT": 7,
+        "DUAL": 8
+      },
+      "minimum_margin": "474491357210756295719/2500012784763895653167500",
+      "vertices": 16,
+      "edges": 24,
+      "index": 2,
+      "stabilizer": 6,
+      "tree_sha256": "6194af2811109c66bee1f093a8772a53290aff8d67b3a6b2e8ec04cac4f3531f"
+    }
+  ],
+  "six_census_sha256": "846543b2020e74d253aa420abf2005c1552a10a7b03ea500203960b64c0406fd",
+  "no_optimizer_imported": true,
+  "actual_cover_reduction_is_separate_written_lemma": true,
+  "force_kernel_sha256": "f0fd44362eaede709ec91fe1492073d51ea34757d879089fead8bfe853f614b6",
+  "trig_source_sha256": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+  "source_sha256": "89eae06a91eff81adec238493f4f3b892256f6d218bbbe6cc4e64f975e8de1b0",
+  "global_optimality_proved": false
+}

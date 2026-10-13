@@ -1,0 +1,34 @@
+{
+  "verified": true,
+  "N": 25,
+  "B": 16,
+  "parameter_sign": -1,
+  "nodes": 300003,
+  "counts": {
+    "SPLIT": 150001,
+    "PENDING": 33,
+    "DUAL": 147850,
+    "LOCAL": 2119
+  },
+  "pending_boxes": 33,
+  "minimum_force_margin": "1826322789534688515556171/1562500129676660948929000000000000000",
+  "minimum_local_margin": "46879970752489470241619999041204474704532681296465827245525142743046299952834159926554982202469092986683847094586515874098513227034623/300000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+  "paid_unpaid_partition_complete": true,
+  "entire_angle_domain_proved": false,
+  "input_sha256": {
+    "constants": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "local": "60fefdc7b649858ad42fc734c4c6fda2eee89cef055dc755d9fd201d200db254",
+    "geometry": "661882bdba448c8abfdb9f58830ec4538f5ae4c41c5aceae8b376f34d6f1d230",
+    "fibre": "12454bdb24be3dba57213044f6bc8a81f4789290e034cbc4064c60a65a51ce48",
+    "character": "4937b99976d3e57b9082deb9a56e5d50793088ace7fa8a9b1bb6f628f63455a3",
+    "exact_checker": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9",
+    "force_kernel": "f0fd44362eaede709ec91fe1492073d51ea34757d879089fead8bfe853f614b6",
+    "trig_source": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "anchor_checker": "ea723b6c7e70d672a53e8c70c050ac781e1a38abb09d8eefda55b0aa5758768e"
+  },
+  "global_optimality_proved": false,
+  "scope": "specified endpoint core paid/unpaid continuous-domain partition only",
+  "tree_sha256": "eaf8802882e8b5750d1b5599eb623e53bc821a7dc2294e9337ee0bb5329f2f0f",
+  "source_sha256": "09accec333ead388a391b85441fdd345b289eae194c58943bc5aeb5d6ae1ba6b",
+  "no_optimizer_imported": true
+}

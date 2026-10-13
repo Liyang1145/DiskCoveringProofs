@@ -1,0 +1,22 @@
+{
+  "status": "complete_sourcebound_polytope_partition_exclusion",
+  "index": 176,
+  "nodes": 3,
+  "leaves": 2,
+  "minimum_lower_exact": "171412930956466646454913657701697156441621127/500000000000000000000000000000000000000000000",
+  "minimum_lower_display": 0.3428258619129333,
+  "sources": {
+    "q11-polytope-partition-176.json": "f7653219fa9c862fce4ac24a445048cdf7beed7b7183a0b0edb09413f3a1f825",
+    "q11-split-inductive-audit-176.json": "a2fab9c880d61c76fe547a82d906eb1f33d6af8cde35e92d560da02214973309"
+  },
+  "leafbounds": [
+    {
+      "node": 2,
+      "lower_radius_exact": "171412930956466646454913657701697156441621127/500000000000000000000000000000000000000000000"
+    },
+    {
+      "node": 1,
+      "lower_radius_exact": "178941632369716669675787031695405559139561413/500000000000000000000000000000000000000000000"
+    }
+  ]
+}

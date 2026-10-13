@@ -1,0 +1,11 @@
+{
+  "status": "independent_fraction_global_concave_flow_bound",
+  "family": "10/4",
+  "index": 843,
+  "lower_radius_exact": "332017471340956869647701100751650392283126421/1000000000000000000000000000000000000000000000",
+  "lower_radius_display": 0.3320174713409569,
+  "source_sha256": "0a2bd6d8a40720fecd473e901bd5b5e38f72a48c0a684a5f7bbf24a77a317b7d",
+  "endpoint_signs_all_positive": true,
+  "incidence_rebuilt": true,
+  "balance_exact": true
+}

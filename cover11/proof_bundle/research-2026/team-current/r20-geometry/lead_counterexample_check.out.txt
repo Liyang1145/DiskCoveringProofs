@@ -1,0 +1,47 @@
+r = 3/8, A = asin(r) = 0.38439677449563908304, q = cos A = sqrt(55)/8 = 0.92702481088695786859
+  check q^2 = 1-r^2: -1.1479e-41
+  c+ = ['0.666299082825000968', '0.64453125']   (lead's form 23 sqrt55/256 = 0.666299082825000968, 165/256 = 0.64453125)
+  hub strict: |H| = 0.5 < 1-r = 0.625
+  arc half-width of a radius-q ring: 0.38439677449563908304 = A ? True
+  arcs: c- -> [-3A,-A], c0 -> [-A,A], c+ -> [A,3A]  (tiling, head-to-tail)
+  U+ = (cos A, sin A) = (q,r) = 0.927024810886957869,0.375 ; |U+| = 1.0 ; |U+ - U-| = 0.75 = 2r ? True
+  U+ in B(c+,r): |U+-c+| - r = 0.0 ; U+ in B(c0,r): 0.0
+  fan circumradius^2 (both fans): 0.12889481226909062748   (lead closed form 0.12889481226909062748, diff -2.8699e-42)
+  r^2 = 0.140625 ; slack r^2 - Rc^2 = 0.0117301877309 ; rational bracketing sqrt(55) > 641/92 ? True (55*92^2=465520 > 641^2=410881)
+  midpoint of U+U- = (0.927024810886957869, 0.0) = c0 ? True
+  => with |U+-U-| = 2r the lens of the two radius-r disks is the SINGLETON {midpoint}: the internal
+     centre is forced by gap coverage alone (no inward-root hypothesis needed).
+
+interface with the radial-inward criteria:
+  eps = 0 : middle ring seam at phi = A -> t_bdy = 1.0 (=> NO inward radial move; consistent with the forced centre)
+  eps=0.01     t=q-eps=0.917024810887 beta(t)=0.384251350617 > g=0.374396774496 (True) ; c0 covers the gap (|c0-x_g|-r=-9.03e-03)
+             seam t_bdy = 0.924490278152 < 1  (boundary tie CAN be saturated by the radial move)
+             fan Rc^2 at c0: 0.123246222075, 0.123246222075  vs r^2 = 0.140625000000  (slack +1.74e-02, +1.74e-02)
+             lens bound |c-(cos g,0)|^2 <= r^2-sin^2g = 0.006880349974 (radius 0.082948) ; max Rc^2 over the lens is within O(rad) of the c0-value -> both fans slack for EVERY bridging centre
+  eps=0.001    t=q-eps=0.926024810887 beta(t)=0.384395334647 > g=0.383396774496 (True) ; c0 covers the gap (|c0-x_g|-r=-9.25e-04)
+             seam t_bdy = 0.973024730725 < 1  (boundary tie CAN be saturated by the radial move)
+             fan Rc^2 at c0: 0.128325405891, 0.128325405891  vs r^2 = 0.140625000000  (slack +1.23e-02, +1.23e-02)
+             lens bound |c-(cos g,0)|^2 <= r^2-sin^2g = 0.000694549395 (radius 0.026354) ; max Rc^2 over the lens is within O(rad) of the c0-value -> both fans slack for EVERY bridging centre
+  eps=0.0001   t=q-eps=0.926924810887 beta(t)=0.384396760111 > g=0.384296774496 (True) ; c0 covers the gap (|c0-x_g|-r=-9.27e-05)
+             seam t_bdy = 0.991153165440 < 1  (boundary tie CAN be saturated by the radial move)
+             fan Rc^2 at c0: 0.128837826348, 0.128837826348  vs r^2 = 0.140625000000  (slack +1.18e-02, +1.18e-02)
+             lens bound |c-(cos g,0)|^2 <= r^2-sin^2g = 0.000069519673 (radius 0.008338) ; max Rc^2 over the lens is within O(rad) of the c0-value -> both fans slack for EVERY bridging centre
+
+================================================================================================================
+PART 2.  Joint move of the hub inside the lead's own counterexample (fixed-endpoint move is blocked)
+================================================================================================================
+  [exact eps=0] pins p1=['0.6662990828', '0.26953125'] p2=['0.6662990828', '-0.26953125']
+      fixed hub H: max_j|H-p_j| - r = -5.829e-02  (both fans slack, as the lead reports)
+      JOINT MOVE h -> argmin_S|h| = (0.405573354763, 0.0)  |h*| = 0.405573354763  vs rho = 5/8 = 0.625  -> strict hub yes
+      active at h*: |h*-p1|-r = +0.000e+00, |h*-p2|-r = +0.000e+00  -> BOTH fans saturated
+      (C879: the fan circumradius constraint for the pair is exactly |h-p_in|<=r, so h* keeps all triangle radii <= r with equality on the active pair(s).)
+  [family eps=1e-2] pins p1=['0.6434773412', '0.2565088338'] p2=['0.6434773412', '-0.2565088338']
+      fixed hub H: max_j|H-p_j| - r = -8.109e-02  (both fans slack, as the lead reports)
+      JOINT MOVE h -> argmin_S|h| = (0.369929871425, 0.0)  |h*| = 0.369929871425  vs rho = 5/8 = 0.625  -> strict hub yes
+      active at h*: |h*-p1|-r = +0.000e+00, |h*-p2|-r = +0.000e+00  -> BOTH fans saturated
+      (C879: the fan circumradius constraint for the pair is exactly |h-p_in|<=r, so h* keeps all triangle radii <= r with equality on the active pair(s).)
+  [family eps=1e-3] pins p1=['0.6639056076', '0.2681762914'] p2=['0.6639056076', '-0.2681762914']
+      fixed hub H: max_j|H-p_j| - r = -6.070e-02  (both fans slack, as the lead reports)
+      JOINT MOVE h -> argmin_S|h| = (0.401786404237, 0.0)  |h*| = 0.401786404237  vs rho = 5/8 = 0.625  -> strict hub yes
+      active at h*: |h*-p1|-r = +0.000e+00, |h*-p2|-r = +0.000e+00  -> BOTH fans saturated
+      (C879: the fan circumradius constraint for the pair is exactly |h-p_in|<=r, so h* keeps all triangle radii <= r with equality on the active pair(s).)

@@ -1,0 +1,24 @@
+{
+  "status": "completed",
+  "input_hashes": {
+    "face_deficit_certificate.py": "b149e1161939951c04730d92e3841480ea6fa121e4621aff552cc668b89598b5",
+    "face_deficit_probe.py": "57a84cd6d0f28fa022fbd606ae9e3d73f2efacc73ca9c5638c83b316f7613604",
+    "joint_innernorm_probe.py": "3c251e2f602de1d6a0050a18a603a7ace1c841e4b5e6b49a8fd14f3ae2202160",
+    "RADIUS-DEFICIT-LEMMA.md": "8adf1fdc04d3302010963ab6074ce10fed98973edf179f6cf958c6a28e25c65e",
+    "FACE-ANGLE-INTERFACE-DRAFT.md": "350c5edd9aecf4a595fd9c983a8340daca05f4b8c09c0ef33a9e3803adf31c0a",
+    "joint-innernorm-catalogue.jsonl": "9b34e543eb1a35b052cf8428844efbdb972cc7186848d41c92db37c46bc38164",
+    "joint-innernorm-retained.json": "21beaf87153bfacf25ed2e360f237ef0377d339330fd40cd3ead77c05dde7c2f"
+  },
+  "total": 729,
+  "seconds": 11.290732622146606,
+  "counts": {
+    "10/4": {
+      "inconclusive": 242,
+      "excluded": 13
+    },
+    "11/3": {
+      "inconclusive": 469,
+      "excluded": 5
+    }
+  }
+}

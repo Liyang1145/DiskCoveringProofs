@@ -1,0 +1,17 @@
+{
+  "margins": {
+    "det_min": 0.3078402301867086,
+    "d_min": 0.45110431794759265,
+    "rad_min": 0.9459345336583492
+  },
+  "mu": 0.00143254,
+  "lambda_placeholder": 0.082,
+  "L2": 800972.2013912007,
+  "L3": 1357523434.7470021,
+  "M": 800972.2013912007,
+  "eta": 6.3984742430491825e-09,
+  "rho": 1.1443680912043163e-17,
+  "c": 0.0205,
+  "status": "candidates; numerator coefficients need the finite symbolic check; lambda needs the certified quotient value (C893+C901); mu needs the interval LP value",
+  "repro": "py -3 -B -X utf8 r20_operator_bounds.py"
+}

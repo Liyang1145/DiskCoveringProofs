@@ -1,0 +1,575 @@
+{
+  "label": "NUMERIC ONLY; clipped roundoff, pinv, LP not certificates",
+  "calibrations": [
+    {
+      "name": "candidate",
+      "energy": 0.1443877286317991,
+      "r2": 0.14438772863179952,
+      "gap": -4.163336342344337e-16
+    },
+    {
+      "name": "uniform",
+      "energy": 0.15496789636239072,
+      "r2": 0.1549678963623909,
+      "gap": -1.6653345369377348e-16
+    },
+    {
+      "name": "vertex0",
+      "energy": 0.17041117636702258,
+      "r2": 0.17041117636702083,
+      "gap": 1.7486012637846216e-15
+    }
+  ],
+  "rows": [
+    {
+      "node": 0,
+      "energy_game": 0.13228475584770036,
+      "sqrt_nonnegative": 0.36370971371094885,
+      "old_force_radius": 0.3605472138441605,
+      "weights": [
+        [
+          "C911",
+          0.16975037159366158
+        ],
+        [
+          "candidate",
+          0.5958560332839573
+        ],
+        [
+          "adaptive19",
+          0.02833291793332719
+        ],
+        [
+          "adaptive24",
+          0.20606067718905394
+        ]
+      ]
+    },
+    {
+      "node": 1,
+      "energy_game": 0.13035109783788362,
+      "sqrt_nonnegative": 0.3610416843494441,
+      "old_force_radius": 0.3649884465134983,
+      "weights": [
+        [
+          "adaptive7",
+          0.2936223144931999
+        ],
+        [
+          "adaptive22",
+          0.17109547532711472
+        ],
+        [
+          "adaptive23",
+          0.008744478913246062
+        ],
+        [
+          "adaptive24",
+          0.5265377312664392
+        ]
+      ]
+    },
+    {
+      "node": 2,
+      "energy_game": 0.13128777290705956,
+      "sqrt_nonnegative": 0.36233654646896934,
+      "old_force_radius": 0.3629869927159157,
+      "weights": [
+        [
+          "adaptive2",
+          0.5896360132749174
+        ],
+        [
+          "adaptive12",
+          0.3340007413696964
+        ],
+        [
+          "adaptive27",
+          0.07636324535538619
+        ]
+      ]
+    },
+    {
+      "node": 3,
+      "energy_game": 0.12983745423955378,
+      "sqrt_nonnegative": 0.3603296466286861,
+      "old_force_radius": 0.3631905536584028,
+      "weights": [
+        [
+          "candidate",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 4,
+      "energy_game": 0.13056764588440672,
+      "sqrt_nonnegative": 0.3613414533158446,
+      "old_force_radius": 0.36927141485574233,
+      "weights": [
+        [
+          "candidate",
+          0.04899969488765744
+        ],
+        [
+          "adaptive16",
+          0.2672935118068546
+        ],
+        [
+          "adaptive19",
+          0.18376027794722422
+        ],
+        [
+          "adaptive29",
+          0.4999465153582637
+        ]
+      ]
+    },
+    {
+      "node": 5,
+      "energy_game": 0.13442672693557634,
+      "sqrt_nonnegative": 0.36664250563127065,
+      "old_force_radius": 0.36622473846655546,
+      "weights": [
+        [
+          "adaptive22",
+          0.10620663192543431
+        ],
+        [
+          "adaptive23",
+          0.04747137326793898
+        ],
+        [
+          "adaptive24",
+          0.8463219948066267
+        ]
+      ]
+    },
+    {
+      "node": 6,
+      "energy_game": 0.13390427962112042,
+      "sqrt_nonnegative": 0.3659293369232924,
+      "old_force_radius": 0.36757867979193587,
+      "weights": [
+        [
+          "adaptive10",
+          0.10609050388288381
+        ],
+        [
+          "adaptive15",
+          0.3235282396248509
+        ],
+        [
+          "adaptive25",
+          0.06235548563791579
+        ],
+        [
+          "adaptive29",
+          0.5080257708543495
+        ]
+      ]
+    },
+    {
+      "node": 7,
+      "energy_game": 0.13422279899883188,
+      "sqrt_nonnegative": 0.36636429820444005,
+      "old_force_radius": 0.37123226693208683,
+      "weights": [
+        [
+          "adaptive27",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 8,
+      "energy_game": 0.13495732371058727,
+      "sqrt_nonnegative": 0.3673653817530815,
+      "old_force_radius": 0.3686682013144487,
+      "weights": [
+        [
+          "adaptive22",
+          0.41140134554789365
+        ],
+        [
+          "adaptive28",
+          0.5885986544521064
+        ]
+      ]
+    },
+    {
+      "node": 9,
+      "energy_game": 0.13324796828061994,
+      "sqrt_nonnegative": 0.36503146204213677,
+      "old_force_radius": 0.37237375760855806,
+      "weights": [
+        [
+          "uniform",
+          0.12801080565701192
+        ],
+        [
+          "adaptive24",
+          0.7254533950173941
+        ],
+        [
+          "adaptive29",
+          0.1465357993255939
+        ]
+      ]
+    },
+    {
+      "node": 10,
+      "energy_game": 0.13427231681758015,
+      "sqrt_nonnegative": 0.36643187200021254,
+      "old_force_radius": 0.371472936461915,
+      "weights": [
+        [
+          "adaptive27",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 11,
+      "energy_game": 0.1328776215416204,
+      "sqrt_nonnegative": 0.36452382849632803,
+      "old_force_radius": 0.3649794892802672,
+      "weights": [
+        [
+          "candidate",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 12,
+      "energy_game": 0.1346055836271033,
+      "sqrt_nonnegative": 0.36688633611392957,
+      "old_force_radius": 0.37205342422688936,
+      "weights": [
+        [
+          "adaptive12",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 13,
+      "energy_game": 0.13203789480317638,
+      "sqrt_nonnegative": 0.36337018975581414,
+      "old_force_radius": 0.36955803612515653,
+      "weights": [
+        [
+          "candidate",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 14,
+      "energy_game": 0.1328776215416204,
+      "sqrt_nonnegative": 0.36452382849632803,
+      "old_force_radius": 0.3658634914654001,
+      "weights": [
+        [
+          "candidate",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 15,
+      "energy_game": 0.13193440664414197,
+      "sqrt_nonnegative": 0.3632277613896575,
+      "old_force_radius": 0.37016478494945115,
+      "weights": [
+        [
+          "candidate",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 16,
+      "energy_game": 0.13501163202628966,
+      "sqrt_nonnegative": 0.3674392902593429,
+      "old_force_radius": 0.37159981368009665,
+      "weights": [
+        [
+          "adaptive16",
+          0.9435105391110225
+        ],
+        [
+          "adaptive20",
+          0.05648946088897755
+        ]
+      ]
+    },
+    {
+      "node": 17,
+      "energy_game": 0.1334815613348591,
+      "sqrt_nonnegative": 0.3653512848408489,
+      "old_force_radius": 0.3727319502434369,
+      "weights": [
+        [
+          "adaptive16",
+          0.2548960510242962
+        ],
+        [
+          "adaptive24",
+          0.5991924816757166
+        ],
+        [
+          "adaptive29",
+          0.14591146729998727
+        ]
+      ]
+    },
+    {
+      "node": 18,
+      "energy_game": 0.13599305187321967,
+      "sqrt_nonnegative": 0.3687723577943711,
+      "old_force_radius": 0.3727902662336113,
+      "weights": [
+        [
+          "adaptive12",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 19,
+      "energy_game": 0.1323937551678853,
+      "sqrt_nonnegative": 0.3638595266966158,
+      "old_force_radius": 0.37160105847226044,
+      "weights": [
+        [
+          "candidate",
+          1.0
+        ]
+      ]
+    },
+    {
+      "node": 20,
+      "energy_game": 0.1383417287051333,
+      "sqrt_nonnegative": 0.3719431794039693,
+      "old_force_radius": 0.3735313301028085,
+      "weights": [
+        [
+          "corner4",
+          0.006022830038308946
+        ],
+        [
+          "adaptive20",
+          0.993977169961691
+        ]
+      ]
+    },
+    {
+      "node": 21,
+      "energy_game": 0.13625593403344197,
+      "sqrt_nonnegative": 0.3691286144874737,
+      "old_force_radius": 0.36990991234383896,
+      "weights": [
+        [
+          "adaptive15",
+          0.24444538524163364
+        ],
+        [
+          "adaptive22",
+          0.10929099333855122
+        ],
+        [
+          "adaptive23",
+          0.11056392578759261
+        ],
+        [
+          "adaptive24",
+          0.5356996956322226
+        ]
+      ]
+    },
+    {
+      "node": 22,
+      "energy_game": 0.13830366040876235,
+      "sqrt_nonnegative": 0.37189200100131536,
+      "old_force_radius": 0.37130455079732916,
+      "weights": [
+        [
+          "adaptive0",
+          0.3964893585048487
+        ],
+        [
+          "adaptive22",
+          0.6035106414951513
+        ]
+      ]
+    },
+    {
+      "node": 23,
+      "energy_game": 0.13501877507224289,
+      "sqrt_nonnegative": 0.367449010166367,
+      "old_force_radius": 0.37095542709554813,
+      "weights": [
+        [
+          "adaptive22",
+          0.4252222676667147
+        ],
+        [
+          "adaptive23",
+          0.11159282713849512
+        ],
+        [
+          "adaptive24",
+          0.4631849051947901
+        ]
+      ]
+    },
+    {
+      "node": 24,
+      "energy_game": 0.13755291715996226,
+      "sqrt_nonnegative": 0.3708812709749068,
+      "old_force_radius": 0.37476968957401663,
+      "weights": [
+        [
+          "corner4",
+          0.07543763168672518
+        ],
+        [
+          "adaptive15",
+          0.024157335769225848
+        ],
+        [
+          "adaptive24",
+          0.900405032544049
+        ]
+      ]
+    },
+    {
+      "node": 25,
+      "energy_game": 0.1352523293096211,
+      "sqrt_nonnegative": 0.3677666778130138,
+      "old_force_radius": 0.37063990724720414,
+      "weights": [
+        [
+          "adaptive15",
+          0.2421537406198548
+        ],
+        [
+          "adaptive25",
+          0.1415844624083662
+        ],
+        [
+          "adaptive29",
+          0.616261796971779
+        ]
+      ]
+    },
+    {
+      "node": 26,
+      "energy_game": 0.14349505153385042,
+      "sqrt_nonnegative": 0.3788074069152429,
+      "old_force_radius": 0.37109274316111707,
+      "weights": [
+        [
+          "corner4",
+          0.12261790993916756
+        ],
+        [
+          "adaptive1",
+          0.1474939448437486
+        ],
+        [
+          "adaptive21",
+          0.7298881452170839
+        ]
+      ]
+    },
+    {
+      "node": 27,
+      "energy_game": 0.13530377937692017,
+      "sqrt_nonnegative": 0.3678366204946432,
+      "old_force_radius": 0.37247035681216545,
+      "weights": [
+        [
+          "adaptive15",
+          0.22474409851842325
+        ],
+        [
+          "adaptive27",
+          0.23729627679535664
+        ],
+        [
+          "adaptive29",
+          0.5379596246862202
+        ]
+      ]
+    },
+    {
+      "node": 28,
+      "energy_game": 0.13445992698843962,
+      "sqrt_nonnegative": 0.36668777861886753,
+      "old_force_radius": 0.37104617852997174,
+      "weights": [
+        [
+          "adaptive15",
+          0.24641304454563673
+        ],
+        [
+          "adaptive23",
+          0.16712914398852008
+        ],
+        [
+          "adaptive29",
+          0.5864578114658432
+        ]
+      ]
+    },
+    {
+      "node": 29,
+      "energy_game": 0.13706341089447754,
+      "sqrt_nonnegative": 0.37022075967519374,
+      "old_force_radius": 0.3742639477842382,
+      "weights": [
+        [
+          "adaptive15",
+          0.2004589170434815
+        ],
+        [
+          "adaptive16",
+          0.08558956201692494
+        ],
+        [
+          "adaptive23",
+          0.08984201664056407
+        ],
+        [
+          "adaptive29",
+          0.6241095042990294
+        ]
+      ]
+    },
+    {
+      "node": 30,
+      "energy_game": 0.1347337371989606,
+      "sqrt_nonnegative": 0.3670609448020323,
+      "old_force_radius": 0.3726484325088857,
+      "weights": [
+        [
+          "adaptive22",
+          0.4438304362763208
+        ],
+        [
+          "adaptive24",
+          0.23225914232839479
+        ],
+        [
+          "adaptive27",
+          0.3239104213952844
+        ]
+      ]
+    }
+  ],
+  "best_sqrt": 0.3788074069152429,
+  "threshold2": 0.1444
+}

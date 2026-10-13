@@ -1,0 +1,8 @@
+{
+  "exact_trig_identity": true,
+  "offcandidate_equivalence_tests": 20000,
+  "feasible_count": 9212,
+  "max_inverse_error": 3.3306690738754696e-16,
+  "singular_alpha_pi_d0": "s in [75/76,1] analytically",
+  "scope": "analytic proof in SECTOR-SCALE-FIBER.md; randompoints calibration only"
+}

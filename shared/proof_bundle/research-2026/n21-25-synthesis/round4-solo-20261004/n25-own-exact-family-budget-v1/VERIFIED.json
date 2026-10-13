@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "schema": "own-N25-exact-root-and-half-core-boundary-family-budget-v1",
+  "N": 25,
+  "radius_upper": "239146311738101/1000000000000000",
+  "exact_root_squared_comparison_gap": "5939754790330659059743779049695440258054488391/4000000000000000000000000000000000000000000000000000000000000",
+  "quarter_radius_gap": "10853688261899/1000000000000000",
+  "normalized_core_radius_upper": "239146311738101/521707376523798",
+  "strict_half_core_gap": "10853688261899/260853688261899",
+  "direct_13_boundary_capacity_sine_gap": "169352549456767148753726260211895203173022737080395916021/1000000000000000000000000000000000000000000000000000000000000",
+  "strict_integer_circle_budget_gap_D_minus13A": 7199,
+  "own_two_four_six_eight_rod_caps": [
+    768677,
+    1587443,
+    2546859,
+    4058615
+  ],
+  "own_positive_exact_sine_gaps": [
+    "17299857538530214890027758220987021642046240938772951/40000000000000000000000000000000000000000000000000000000000",
+    "9266021989739973169754538694927983081550440978472553/25000000000000000000000000000000000000000000000000000000000",
+    "152101250816356822524873311698308975872366382448384071/500000000000000000000000000000000000000000000000000000000000",
+    "81131394029019398812177654368425069207380761475729107/1000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "necessary_boundary_internal_families": [
+    [
+      14,
+      11
+    ],
+    [
+      15,
+      10
+    ],
+    [
+      16,
+      9
+    ],
+    [
+      17,
+      8
+    ]
+  ],
+  "negative_scope_and_threshold_controls_rejected": [
+    "N-0",
+    "verified-1",
+    "radius_upper-2",
+    "radius_upper-3",
+    "radius_upper-4",
+    "angle_scale-5",
+    "angle_caps-6",
+    "angle_caps-7",
+    "minimum_boundary_cells-8",
+    "minimum_interior_cells-9",
+    "maximum_boundary_cells-10",
+    "families-11",
+    "ratio_core-12",
+    "no-same-root-whole-disk-upper"
+  ],
+  "half_core_uses_self_contained_arbitrary_seven_disk_lower_not_candidate_optimality": true,
+  "written_cover_and_simple_graph_transport_requires_bound_induction": true,
+  "no_N23_N24_force_core_or_radius_threshold_transplanted": true,
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\verify_n25_own_family_budget.py": "6cff99f4c559400d7484dd0880512a0f7868ec29e5e53d050f51c237c1085eab",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\evidence\\core-reduction\\constants\\n25.json": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-exact-upper-fresh\\VERIFIED.json": "31be4173ab599ee18cbcd0a29cd646b6679dc1f9f26357a0eac6bbd656862340",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\disk-cover-proof-library\\external\\pinned\\cover20\\proof_bundle\\core\\exact_arcs.py": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\NECESSARY-OUTER-COLLAR-ARBITRARY-COVER-INDUCTION-v1.md": "e844a9a9869bf542c43fc29495c5e4fbf7c5cbe6f199c1a99364871fbb783ba5"
+  },
+  "source_sha256": "6cff99f4c559400d7484dd0880512a0f7868ec29e5e53d050f51c237c1085eab",
+  "global_optimality_proved": false
+}

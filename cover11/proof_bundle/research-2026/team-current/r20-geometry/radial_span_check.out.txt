@@ -1,0 +1,48 @@
+==============================================================================================================
+PART 1.  Inward-radial domain (lead's correction): ring is inside iff |c| <= sqrt(1-r^2)
+==============================================================================================================
+  r = 0.3799838531     sqrt(1-r^2) = 0.924993120   rings outside the inward domain: none
+  r = 0.4              sqrt(1-r^2) = 0.916515139   rings outside the inward domain: none
+  r = 0.43             sqrt(1-r^2) = 0.902828887   rings outside the inward domain: none
+  r = 0.45             sqrt(1-r^2) = 0.893028555   rings outside the inward domain: none
+  r = 0.5              sqrt(1-r^2) = 0.866025404   rings outside the inward domain: [(1, 0.8925217299053273)]
+  r = 0.55             sqrt(1-r^2) = 0.835164654   rings outside the inward domain: [(7, 0.8588109376631664), (1, 0.8925217299053273), (8, 0.8588109380203237)]
+  => the radial test rows r* , 0.39, 0.40, 0.43, 0.45 are inside the lead's domain for all
+     nine rings; r = 0.50 and 0.55 leave the domain for some rings (generic-cover reading only).
+
+==============================================================================================================
+PART 2.  Criterion C: angular span of cl Q_i vs the private boundary arc span (vertices)
+==============================================================================================================
+
+  r = 0.3799838531 (rho = 0.62001615, inward domain s <= 0.92499312)
+    ring 7  |c|=0.858811 IN  phi_max=0.38301 rad (21.945 deg)  max|phi| at vertices=0.41016 rad  -> CHECK (vertex outside the span)
+    ring 1  |c|=0.892522 IN  phi_max=0.38822 rad (22.243 deg)  max|phi| at vertices=0.38822 rad  -> Criterion C vertex part PASSES
+    ring 8  |c|=0.858811 IN  phi_max=0.38301 rad (21.945 deg)  max|phi| at vertices=0.41016 rad  -> CHECK (vertex outside the span)
+    ring 6  |c|=0.700870 IN  phi_max=0.28082 rad (16.090 deg)  max|phi| at vertices=0.54415 rad  -> CHECK (vertex outside the span)
+    ring 4  |c|=0.761798 IN  phi_max=0.34084 rad (19.529 deg)  max|phi| at vertices=0.42521 rad  -> CHECK (vertex outside the span)
+    ring 9  |c|=0.820853 IN  phi_max=0.37201 rad (21.315 deg)  max|phi| at vertices=0.37201 rad  -> CHECK (vertex outside the span)
+    ring 10 |c|=0.820853 IN  phi_max=0.37201 rad (21.315 deg)  max|phi| at vertices=0.37201 rad  -> Criterion C vertex part PASSES
+    ring 3  |c|=0.761798 IN  phi_max=0.34084 rad (19.529 deg)  max|phi| at vertices=0.42521 rad  -> CHECK (vertex outside the span)
+    ring 5  |c|=0.700870 IN  phi_max=0.28082 rad (16.090 deg)  max|phi| at vertices=0.54415 rad  -> CHECK (vertex outside the span)
+
+  r = 0.4 (rho = 0.6, inward domain s <= 0.91651514)
+    ring 7  |c|=0.858811 IN  phi_max=0.36052 rad (20.656 deg)  max|phi| at vertices=0.36155 rad  -> CHECK (vertex outside the span)
+    ring 1  |c|=0.892522 IN  phi_max=0.36459 rad (20.889 deg)  max|phi| at vertices=0.36459 rad  -> Criterion C vertex part PASSES
+    ring 8  |c|=0.858811 IN  phi_max=0.36052 rad (20.656 deg)  max|phi| at vertices=0.36155 rad  -> CHECK (vertex outside the span)
+    ring 6  |c|=0.700870 IN  phi_max=0.25719 rad (14.736 deg)  max|phi| at vertices=0.45567 rad  -> CHECK (vertex outside the span)
+    ring 4  |c|=0.761798 IN  phi_max=0.31550 rad (18.077 deg)  max|phi| at vertices=0.34284 rad  -> CHECK (vertex outside the span)
+    ring 9  |c|=0.820853 IN  phi_max=0.34667 rad (19.863 deg)  max|phi| at vertices=0.34667 rad  -> Criterion C vertex part PASSES
+    ring 10 |c|=0.820853 IN  phi_max=0.34667 rad (19.863 deg)  max|phi| at vertices=0.34667 rad  -> Criterion C vertex part PASSES
+    ring 3  |c|=0.761798 IN  phi_max=0.31550 rad (18.077 deg)  max|phi| at vertices=0.34284 rad  -> CHECK (vertex outside the span)
+    ring 5  |c|=0.700870 IN  phi_max=0.25719 rad (14.736 deg)  max|phi| at vertices=0.45567 rad  -> CHECK (vertex outside the span)
+
+  r = 0.43 (rho = 0.57, inward domain s <= 0.90282889)
+    ring 7  |c|=0.858811 IN  phi_max=0.32688 rad (18.729 deg)  max|phi| at vertices=0.32688 rad  -> Criterion C vertex part PASSES
+    ring 1  |c|=0.892522 IN  phi_max=0.32937 rad (18.872 deg)  max|phi| at vertices=0.32937 rad  -> Criterion C vertex part PASSES
+    ring 8  |c|=0.858811 IN  phi_max=0.32688 rad (18.729 deg)  max|phi| at vertices=0.32688 rad  -> Criterion C vertex part PASSES
+    ring 6  |c|=0.700870 IN  phi_max=0.22197 rad (12.718 deg)  max|phi| at vertices=0.34301 rad  -> CHECK (vertex outside the span)
+    ring 4  |c|=0.761798 IN  phi_max=0.27798 rad (15.927 deg)  max|phi| at vertices=0.27798 rad  -> Criterion C vertex part PASSES
+    ring 9  |c|=0.820853 IN  phi_max=0.30914 rad (17.712 deg)  max|phi| at vertices=0.30914 rad  -> Criterion C vertex part PASSES
+    ring 10 |c|=0.820853 IN  phi_max=0.30914 rad (17.712 deg)  max|phi| at vertices=0.30914 rad  -> Criterion C vertex part PASSES
+    ring 3  |c|=0.761798 IN  phi_max=0.27798 rad (15.927 deg)  max|phi| at vertices=0.27798 rad  -> Criterion C vertex part PASSES
+    ring 5  |c|=0.700870 IN  phi_max=0.22197 rad (12.718 deg)  max|phi| at vertices=0.34301 rad  -> CHECK (vertex outside the span)

@@ -1,0 +1,41 @@
+{
+  "status": "numeric_algebra_interface_control",
+  "runs": [
+    {
+      "start": -1,
+      "max_polynomial_scaled": 1.7249079845577332e-15,
+      "max_angle_residual": 1.7763568394002505e-15,
+      "max_formula_agreement": 3.21278346277317e-16
+    },
+    {
+      "start": 0,
+      "max_polynomial_scaled": 1.5927388400867044e-15,
+      "max_angle_residual": 1.3322676295501878e-15,
+      "max_formula_agreement": 4.945576353944888e-16
+    },
+    {
+      "start": 1,
+      "max_polynomial_scaled": 2.6597171140681497e-05,
+      "max_angle_residual": 2.6597171141506948e-05,
+      "max_formula_agreement": 7.152957127045058e-16
+    },
+    {
+      "start": 2,
+      "max_polynomial_scaled": 2.044916741804208e-05,
+      "max_angle_residual": 2.0449167418501446e-05,
+      "max_formula_agreement": 1.1227590334773932e-15
+    },
+    {
+      "start": 3,
+      "max_polynomial_scaled": 2.4370481390649472e-05,
+      "max_angle_residual": 2.437048139114495e-05,
+      "max_formula_agreement": 7.945678505838057e-16
+    },
+    {
+      "start": 4,
+      "max_polynomial_scaled": 1.2526436828127017e-05,
+      "max_angle_residual": 1.252643682825294e-05,
+      "max_formula_agreement": 7.19180380488293e-16
+    }
+  ]
+}

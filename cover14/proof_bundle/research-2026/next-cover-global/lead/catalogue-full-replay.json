@@ -1,0 +1,27 @@
+{
+  "3": {
+    "skeleton_counts": {
+      "P3": 1650,
+      "K3": 1260
+    },
+    "phase1": 291,
+    "stored_distinct_keys": 93,
+    "runtime": 0.6483559608459473,
+    "set_equal": true,
+    "budget_seconds": 10000
+  },
+  "4": {
+    "skeleton_counts": {
+      "P4": 12870,
+      "K13": 15840,
+      "K3P": 13200,
+      "diamond": 5640,
+      "K4": 5040
+    },
+    "phase1": 5259,
+    "stored_distinct_keys": 1442,
+    "runtime": 27.214906692504883,
+    "set_equal": true,
+    "budget_seconds": 10000
+  }
+}

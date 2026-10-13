@@ -1,0 +1,439 @@
+{
+  "status": "exact_independent_vertexsets_all43_patterns",
+  "sources": {
+    "members\\dirichlet-cut-audit-cc2\\q11-polytope-independent.json": "8ba4b9a6fb5c2f500ce4c9b82adbf8a768dee7983e437714fd2219daf46deb60",
+    "lead\\q11-twochord-flow-certificates.json": "f511b9b1f4a26898efced371fad8353eead046ab6474a24f83e6eeffcc22cf6a"
+  },
+  "runs": [
+    {
+      "index": 755,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 783,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 794,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 795,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 802,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 804,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 806,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 807,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 814,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 815,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 816,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 846,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 852,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 855,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 859,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 861,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 862,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 863,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 864,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 868,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 869,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 870,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 871,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 872,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 877,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 878,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 879,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 890,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 899,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 903,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 949,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 952,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 953,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 961,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 964,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 972,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 974,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 975,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 977,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 985,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 988,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 1032,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    },
+    {
+      "index": 1033,
+      "middles_owner": [
+        1,
+        10
+      ],
+      "owner_rotation": 9,
+      "gap_shift_minus_one": true,
+      "exact_vertex_sets_equal": true
+    }
+  ]
+}

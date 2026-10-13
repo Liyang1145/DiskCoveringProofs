@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "input_hashes": {
+    "joint_innernorm_probe.py": "3c251e2f602de1d6a0050a18a603a7ace1c841e4b5e6b49a8fd14f3ae2202160",
+    "innernorm_combined_probe.py": "20e81f2b2d205f66fbf395083e4d877004d14d6ed78549a7a7ea6a84f54cd50e",
+    "innernorm_line_certificate.py": "f4f13fcf9c76e9b0f4a88ff4ea4597c3e62a0c2969e84de72d248768f6913473",
+    "area_chord_probe.py": "208846efd69e88dc9136a96d2cef381627445bbd54896250260ab65755bfdc34",
+    "JOINT-EXACT-CAP-CONCAVITY.md": "1644434b796bfd7c2a790be20604288f60cbc1799695e5c7ec9aa2f4ce3cf6c2",
+    "BOUNDARY-AREA-PERIMETER-JOINT.md": "9c09a98a4ad2c25cccb196a870666e657ae595533f6ede797781827d91fe76c3",
+    "area_safe_certificate.py": "14d3ee13642cc8f12502e6843274555b24c2b2a59effb4659a793458c84576e6",
+    "root_integer_certificate.py": "980a1d8fe8d4332df41c5fddecaf33f93ff0f19610349936206e788f4c2cf9a6",
+    "innernorm-retained.json": "7898e1d789fd78c11494ae0b31b76a1c330657cbd771e2cbd662ebcceda0af09",
+    "k10-catalogue-corrected.json": "c7de025f7b089ad3f160c495f4d557d45eac868175c06a0b7faec51fa9911895",
+    "q11-pocket-catalogue.json": "5a01b2280b096bf64e0d5af7bf9adaac5a990281fd26a3a01974a397faafd30b",
+    "JOINT-INNERNORM-SUPPORT.md": "aeeb94348a64eb1783e11c8d1af635ec64caa80ffde91c3e8d967c5349ad2a82"
+  },
+  "total": 966,
+  "counts": {
+    "10/4": {
+      "excluded": 86,
+      "inconclusive": 255
+    },
+    "11/3": {
+      "excluded": 151,
+      "inconclusive": 474
+    }
+  },
+  "seconds": 366.2114417552948
+}

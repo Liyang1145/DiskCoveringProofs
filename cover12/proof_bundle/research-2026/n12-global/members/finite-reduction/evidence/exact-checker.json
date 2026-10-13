@@ -1,0 +1,263 @@
+{
+ "summary": {
+  "status": "ok",
+  "n_rows": 13,
+  "n_domain_selftest_pass": 8,
+  "n_known_controls": 11,
+  "n_calibration_mismatch": 0,
+  "n_instances": 2,
+  "errors": [],
+  "U": "22568935234031792038557518369/62500000000000000000000000000",
+  "U_float": 0.3611029637445087,
+  "note": "C182 rows are instance evaluations, NOT independent controls; the known-answer controls are the calib-* rows only. Out-of-domain input raises AssertionError (never a silent skip); any error or control mismatch exits non-zero."
+ },
+ "rows": [
+  {
+   "kind": "known-control",
+   "name": "calib-origin-r1",
+   "r": "1",
+   "rho": "1",
+   "ok": true,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": true
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-origin-r0.9999",
+   "r": "9999/10000",
+   "rho": "99980001/100000000",
+   "ok": false,
+   "parts": {
+    "A": false,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": false
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-origin+half-r1",
+   "r": "1",
+   "rho": "1",
+   "ok": true,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": true
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-origin+half-r0.9999",
+   "r": "9999/10000",
+   "rho": "99980001/100000000",
+   "ok": false,
+   "parts": {
+    "A": true,
+    "B": false,
+    "C": false,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [
+     1
+    ],
+    "C_fail": [
+     [
+      0,
+      1,
+      1
+     ],
+     [
+      0,
+      1,
+      -1
+     ]
+    ],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": false
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-pair-rho5/4",
+   "r": "sqrt(rho)",
+   "rho": "5/4",
+   "ok": true,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "expect": true
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-pair-rho31/25",
+   "r": "sqrt(rho)",
+   "rho": "31/25",
+   "ok": false,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": false,
+    "D": true
+   },
+   "expect": false
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-all-zero-12-r1",
+   "r": "1",
+   "rho": "1",
+   "ok": true,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": true
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-all-zero-12-r0.9",
+   "r": "9/10",
+   "rho": "81/100",
+   "ok": false,
+   "parts": {
+    "A": false,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": false
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-single-0.6-0.8-r2",
+   "r": "2",
+   "rho": "4",
+   "ok": true,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": true
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-single-0.6-0.8-r1.99",
+   "r": "199/100",
+   "rho": "39601/10000",
+   "ok": false,
+   "parts": {
+    "A": true,
+    "B": false,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [
+     0
+    ],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": false
+  },
+  {
+   "kind": "known-control",
+   "name": "calib-single-0.6-0.8-r2.01",
+   "r": "201/100",
+   "rho": "40401/10000",
+   "ok": true,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "diag": {
+    "B_fail": [],
+    "C_fail": [],
+    "D_fail": [],
+    "n_kept_circumcentres": 0
+   },
+   "expect": true
+  },
+  {
+   "kind": "instance",
+   "name": "c182-at-U",
+   "r": "22568935234031792038557518369/62500000000000000000000000000",
+   "rho": "509356837597921659674323936441168269426656718775772420161/3906250000000000000000000000000000000000000000000000000000",
+   "ok": true,
+   "parts": {
+    "A": true,
+    "B": true,
+    "C": true,
+    "D": true
+   },
+   "expect": null
+  },
+  {
+   "kind": "instance",
+   "name": "c182-bisection",
+   "lo": "81313158648107549/225179981368524800",
+   "hi": "162626317296215099/450359962737049600",
+   "width": 2.220446049250313e-18,
+   "U_inside": true,
+   "lo_ok": false,
+   "hi_ok": true
+  }
+ ]
+}

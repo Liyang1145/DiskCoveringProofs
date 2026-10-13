@@ -1,0 +1,85 @@
+{
+  "mode": "point",
+  "box_radius_hex": "0x1.12e0be826d695p-30",
+  "weight_source": "r20-stress/weights_interface.py::physical_weights()  (hashes below)",
+  "source_hashes": {
+    "research-2026\\team-current\\r20-stress\\weights_interface.py": "57890a8e5f509e6f41ced0281cc69a3813118ed19bb8bd13300675eb6939b879",
+    "research-2026\\team-current\\r20-stress\\out\\phase7_interval_cyclic_nu.json": "690624eed5b1b928ced533532af03d9abb9189ad73041a886c18a1762e292ac4",
+    "research-2026\\team-current\\r20-stress\\PHASE7B-RIGIDITY-INTERFACE.md": "26861f64d0d12c7c8d9678b7e5ee484fce5b859766c45715fad7ec1ccd63a73f",
+    "research-2026\\team-current\\r20-stress\\PHASE7-INTERVAL-CYCLIC-NU.md": "fea2145311bec5db52a3c6596008f9645121c7aeeac50e12f223a21539e03b47",
+    "research-2026\\team-current\\lead\\repaired_tc_krawczyk.json": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5",
+    "research-2026\\team-current\\lead\\TC-BOUNDARY-CHART-RANK.md": "024f9c95fb9ccfb34a3f42aa47773b44bc9010fa549bc776f22729c4ef63146e",
+    "research-2026\\team-current\\lead\\TC-TO-PHYSICAL-KKT-LIFT.md": "25449e1870b55159698cc81cdb110ce499adb00ff8fe443840517f94e1436802"
+  },
+  "weight_sum_interval": [
+    "0.999993626777910359456332",
+    "1.00000637322507615217372"
+  ],
+  "weight_sum_contains_one": true,
+  "all_weights_strictly_positive": true,
+  "numeric_lambda_inside_weights": true,
+  "minor_cols": [
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    10
+  ],
+  "minor_det": [
+    "-0.000399819571524606108409185",
+    "-0.000399819571524606108409185"
+  ],
+  "minor_nonzero": true,
+  "pivots": {
+    "bad": [],
+    "min_abs_pivot": "0.259150705428",
+    "det_finite": true
+  },
+  "kernel_free_cols": [
+    0,
+    1,
+    6
+  ],
+  "kernel_residual_bound": "7.3889361e-57",
+  "tie_interface": {
+    "A1_max_abs_p_minus_Bk": 8.790009079978863e-60,
+    "A3_min_othersite_sq_margin": "0.424801926957",
+    "A2_min_intersection_separation_sq": "3.78373826154",
+    "A4_other_branch_failure_margin": "2.77382778538",
+    "note": "A3/A4 are squared-distance margins; independent stress audit audit_tie_branch_identity.json (A2 >= 3.78374) agrees"
+  },
+  "rotation_kernel_coeffs": [
+    "[0.29836981253180886527554867975463849997273657894441752352901290613, 0.29836981253180886527554867975463849997273657894441752352901329507]",
+    "[-0.76470617602339757347418368805613156856966553815436872037772781137, -0.76470617602339757347418368805613156856966553815436872037772726685]",
+    "[0.59860856618621208600307645006838585569495175218283741671142093444, 0.59860856618621208600307645006838585569495175218283741671142155674]"
+  ],
+  "rotation_index_jstar": 1,
+  "rotation_jstar_margin": "0.76470617602339757347",
+  "certificate": {
+    "name": "explicit rotation-free complement + Sylvester on interval endpoints",
+    "complement_basis": [
+      0,
+      2
+    ],
+    "B11_interval": [
+      "0.45045881843822919754",
+      "0.4504670025680596007"
+    ],
+    "det_interval": [
+      "0.21819979756019041871",
+      "0.21819979756019041871"
+    ],
+    "det_positive": true,
+    "B11_positive": true,
+    "anti_quotient_PD": true
+  },
+  "diagnostics": {
+    "eigen_bound_blo": "0.56860404550500830372",
+    "trace_G2_upper": "73.494417937984739046",
+    "note": "eigenvalue/Gram arithmetic with rounded mp endpoints: diagnostic only"
+  },
+  "repro": "py -3 -B -X utf8 r20_anti_block_interval.py   (R20_POINT=1 for the point control)"
+}

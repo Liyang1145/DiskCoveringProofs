@@ -1,0 +1,14 @@
+elementary bounds for L = 2 asin(0.38):
+  asin(0.38) < pi/8 (since sin(pi/8) = 0.382683432365 > 0.38)  -> L < pi/4 = 0.785398163397
+  L >= 2*0.38 = 0.76 ; L <= 2*0.3898 = 0.7796
+  => 2L < pi/2 (2-step spans short, cos > 0 rigorously); 4L < pi (cos decreasing on all k<=4 ranges)
+cosine bounds on span ranges:
+  cos(L)   >= cos(pi/4) = 0.707106781187 ; (60-dps value cos(0.7796) = 0.711194792899)
+  cos(2L)  in (0, cos(1.52)] ; 60-dps cos(1.5592) = 0.0115960668944  (sign rigorously + via 2L < pi/2)
+  cos(3L)  <= cos(2.28) = -0.651229660528 < 0 ; 60-dps cos(2.3388) = -0.694700668113   (3L >= 3*0.76 = 2.28 > pi/2)
+  cos(4L)  <= cos(3.04) = -0.994843903359 < 0 ; 60-dps cos(3.1184) = -0.999731062465   (4L >= 3.04)
+
+diagnostics: cos(3L) <= cos(5*pi/7) = -0.623489801859  (elementary, since 2.28 > 5pi/7 = 2.24399475256)
+criterion summary: M_L = 2 sum c_ij cos(k_ij L) v v^T  with cos(L)>0.707, cos(2L) in (0,0.011),
+  cos(3L) <= -0.62, cos(4L) <= -0.99  -> M_L >= 0 requires nearest-neighbour dominance of the weights.
+  No general convexity of E is claimed (a single 3-step edge with c>0 makes H_E indefinite).

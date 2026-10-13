@@ -1,0 +1,6 @@
+{
+ "domain":"q10-c1354-domain.json",
+ "stem":"q10-metric-round5",
+ "budget_per_case":7,
+ "cases":[[[0],"3/128",1],[[0],"1/64",-1],[[2],"1/256",1]]
+}

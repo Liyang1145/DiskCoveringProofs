@@ -1,0 +1,22 @@
+{
+  "status": "proved-interval constants, analytic lemma required",
+  "scope": "raw theta8-pinned Euclidean ball at exact C891 root; scalar carrying-energy lower bound to full51oracle; not global",
+  "constants": {
+    "tau": "1/10",
+    "mu": "1/500",
+    "b": "12",
+    "m": "119/1000",
+    "d": "80/1000",
+    "rho": "431/1000000",
+    "growth": "1/2000"
+  },
+  "diagnostics": {
+    "b_upper": "11.37656132445397481683599137756996643215453019377758914745490315532212",
+    "m_upper": "0.1188230628871850364983365940531813367937205415865608176529040847607458",
+    "d_upper": "0.07986864798203099681633774071515280889634264117812107431340679037256658",
+    "positive_hessian_margin": "0.8022793094301452567868900842927269688732306133180481016448336180922501",
+    "radial_min_lower": "0.009160995568090223288051386373634708751827202651695759437486828405792559",
+    "remainder_coefficient_upper": "1.159000000000000000000000000000000000000000000000002394797180242607299"
+  },
+  "premises": "C891,C909 exact root/equal carrying lengths/radial stationarity; interval kernel k for N,G,H; ADAPTIVE-STRESS-FINITE-REMAINDER.md"
+}

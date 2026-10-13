@@ -1,0 +1,9 @@
+# Next metric interface after C812/C813
+
+Global target remains unrestricted n11 optimality. Current topology surviving pairs: q0 (4,9),(5,8),(6,7); q1 (5,7),(6,6). Standalone edge-angle area dual loses the coupling of shared Voronoi vertices. Numeric balanced q1 bounds ~3.22–3.27>pi are merely diagnostics.
+
+Potential stronger representation: for each true interior primal vertex v and incident site i, the distances |v-c_i| coincide (=rho_v<=r). Each dual triangle or cocircular refined face therefore has one common radius rho_v. Along a dual edge ij with bisector endpoints v,w, site separation d_ij is shared, so the endpoint half-angle offsets satisfy cos(beta_{ij,v})=d_ij/(2rho_v) and similarly for w, with appropriate signs if the bisector projection lies outside the segment. The edge angle at either site is the signed sum/difference of these offsets. A relaxation that maximizes every edge term independently ignores these identities. Directly summing vertex angle equations before adding radial variables may eliminate compatibility defects without a full 17-dimensional box search.
+
+Caution: circumcenters may lie outside Delaunay triangles; beta signs and negative cotangent pieces must be retained. A naive sum of three positive acos terms=pi is not valid for obtuse triangles without branch handling. Artificial zero-length edges have v=w and must remain consistent. Boundary endpoints have two-site equal distances <=r but lie on |x|=1 rather than an interior three-site circle.
+
+Alternate q1 representation: six outside rings satisfy sum_j(asin(r)-t_j)<=asin(2r)+6asin(r)-pi. At .38 this budget is about .0604, hence most outside centers are close to maximal-arc radius. Combine this aggregate radial information with actual hub-edge distance constraints. Avoid applying it to owned arc halves: actual arcs and owned arcs differ when overlaps occur.

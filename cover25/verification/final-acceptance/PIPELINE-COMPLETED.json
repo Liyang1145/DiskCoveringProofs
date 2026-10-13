@@ -1,0 +1,11 @@
+{
+  "N": 25,
+  "original_B17_final_terminal_observed": true,
+  "binding_creator_terminal_observed": false,
+  "binding_report_independently_verified_by_full_current_content_audit": true,
+  "independent_global_audit_terminal_observed": true,
+  "final_global_source_acceptance_sha256": "30389bfa3132d08954281e743db670fbb3874785e0d90c9876d4f5ddeec31dd1",
+  "source_sha256": "6b25b93c2f846d68aff267cfe393bdee73df2e9a53c043696299466db4e448d9",
+  "global_source_proof_closed": true,
+  "scope": "qualified computer-assisted SOURCE proof; not formalization or third-party review"
+}

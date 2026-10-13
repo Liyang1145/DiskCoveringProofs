@@ -1,0 +1,8 @@
+{
+  "scope": "exact cotidentity and strongerbound algebra;1000numeric calibrationpoints not continuumproof",
+  "symbolic_residuals": [
+    "1-k\u00b2-h\u00b2",
+    "k\u00b2+h\u00b2-1"
+  ],
+  "min_numeric_margin": 0.00041722129198523694
+}

@@ -1,0 +1,39 @@
+{
+  "scope": "bothlow normcircle |T-pi/2|<=.005, FULLcentralcircle",
+  "count": 847,
+  "live": 0,
+  "closed": {
+    "illegal": 47,
+    "value": 377
+  },
+  "terminal": 28.10683268798853,
+  "seconds": 14.651021718978882,
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      0.6094608076372535,
+      1.0
+    ],
+    [
+      1.5657963267948962,
+      1.5757963267948967
+    ],
+    [
+      -3.1415926535897936,
+      3.1415926535897936
+    ]
+  ],
+  "source_sha256": {
+    "certify_norm_collar.py": "266834a612610fccb185145799edcc618e9d13776722cac3681d812b9eecba76",
+    "norm_totalangle_jet.py": "749615a3172aae204922255a6cc5bd6805744492df9a26215d35081e5333f700",
+    "legal_cartesian_value.py": "235777c64cb83ffd6baff6e787b4d9dc44f95f6ed72b5ed5ec3f1b48b7ead72c",
+    "width_endpoint_jet.py": "62cc933c09c27505256fa6069298ade1d3bd59acea59801241147c168d91efb6",
+    "patch_smooth_jet.py": "0ea533809a58940014e0fd980d29c80747cb9e05a467936645817bb74b0b68d0",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358",
+    "joint_nested_frozen.json": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb"
+  },
+  "topboxes": []
+}

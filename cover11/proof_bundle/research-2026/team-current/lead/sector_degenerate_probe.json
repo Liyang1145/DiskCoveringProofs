@@ -1,0 +1,137 @@
+{
+  "scope": "finite numerical maximization, NOT uppercertificate; tests fixedexistingdual sufficiency fordegeneratesector exclusion",
+  "R": 0.38,
+  "full_dual_numeric": 3.1828738939298313,
+  "factors": [
+    0.5085183992863006,
+    0.6339311974244679,
+    0.6339328792807496,
+    0.5069676326557264,
+    0.1731194718995209,
+    0.5389865850452378,
+    0.4897111391772868,
+    0.5243414269650443,
+    0.17312422719344162,
+    0.4879694979885614,
+    0.4966054411578461,
+    4.1687159716141675e-06,
+    0.027372540227683803,
+    0.011112588807180915,
+    4.168715971586412e-06,
+    1.0413536635639487e-06,
+    2.8068417142895763e-06,
+    0.05327002503982706,
+    2.806841714497743e-06,
+    1.041353663480682e-06,
+    8.398025809441129e-06,
+    0.5816692377069858,
+    0.686867882125613,
+    0.5753936054822785,
+    8.398025809444598e-06,
+    0.2611107412071844,
+    0.5898716387087786,
+    0.5898716387098666,
+    0.2548404682583036
+  ],
+  "sectors": [
+    {
+      "sector": 0,
+      "unrestricted_max_numeric": 8.398025809441129e-06,
+      "alpha_pi_max_numeric": -0.04413331726095961,
+      "loss_numeric": 0.04414171528676905,
+      "degenerate_endpoint_radii": [
+        0.6188384345514949,
+        2.948752353404416e-13
+      ],
+      "conditional_full_dual_numeric": 3.138732178643062
+    },
+    {
+      "sector": 1,
+      "unrestricted_max_numeric": 0.5816692377069858,
+      "alpha_pi_max_numeric": 0.5799044512470489,
+      "loss_numeric": 0.001764786459936829,
+      "degenerate_endpoint_radii": [
+        0.9999999999985204,
+        0.9999999999946394
+      ],
+      "conditional_full_dual_numeric": 3.1811091074698945
+    },
+    {
+      "sector": 2,
+      "unrestricted_max_numeric": 0.686867882125613,
+      "alpha_pi_max_numeric": 0.6868479650945463,
+      "loss_numeric": 1.9917031066740698e-05,
+      "degenerate_endpoint_radii": [
+        0.6254401629277605,
+        0.6661304315863165
+      ],
+      "conditional_full_dual_numeric": 3.1828539768987647
+    },
+    {
+      "sector": 3,
+      "unrestricted_max_numeric": 0.5753936054822785,
+      "alpha_pi_max_numeric": 0.573640682159435,
+      "loss_numeric": 0.0017529233228434915,
+      "degenerate_endpoint_radii": [
+        0.9999999999983854,
+        0.9999999999790173
+      ],
+      "conditional_full_dual_numeric": 3.1811209706069876
+    },
+    {
+      "sector": 4,
+      "unrestricted_max_numeric": 8.398025809444598e-06,
+      "alpha_pi_max_numeric": -0.0494595844476491,
+      "loss_numeric": 0.049467982473458544,
+      "degenerate_endpoint_radii": [
+        0.9999999999922968,
+        0.9999999999952699
+      ],
+      "conditional_full_dual_numeric": 3.133405911456373
+    },
+    {
+      "sector": 5,
+      "unrestricted_max_numeric": 0.2611107412071844,
+      "alpha_pi_max_numeric": 0.24278462648871113,
+      "loss_numeric": 0.018326114718473285,
+      "degenerate_endpoint_radii": [
+        0.9999999999877031,
+        0.9999999999992429
+      ],
+      "conditional_full_dual_numeric": 3.164547779211358
+    },
+    {
+      "sector": 6,
+      "unrestricted_max_numeric": 0.5898716387087786,
+      "alpha_pi_max_numeric": 0.5828416001355741,
+      "loss_numeric": 0.0070300385732045,
+      "degenerate_endpoint_radii": [
+        0.7198207717288251,
+        0.8610486481077566
+      ],
+      "conditional_full_dual_numeric": 3.175843855356627
+    },
+    {
+      "sector": 7,
+      "unrestricted_max_numeric": 0.5898716387098666,
+      "alpha_pi_max_numeric": 0.582841600134917,
+      "loss_numeric": 0.007030038574949549,
+      "degenerate_endpoint_radii": [
+        0.8610490211831741,
+        0.7198220848998815
+      ],
+      "conditional_full_dual_numeric": 3.1758438553548816
+    },
+    {
+      "sector": 8,
+      "unrestricted_max_numeric": 0.2548404682583036,
+      "alpha_pi_max_numeric": 0.23652085740163364,
+      "loss_numeric": 0.018319610856669943,
+      "degenerate_endpoint_radii": [
+        0.9999999999995728,
+        0.9999999999997506
+      ],
+      "conditional_full_dual_numeric": 3.1645542830731612
+    }
+  ]
+}

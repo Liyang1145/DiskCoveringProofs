@@ -1,0 +1,26 @@
+{
+  "schema": "N26-independent-qualified-prior-native-byte-closure-final-v1",
+  "verified": true,
+  "actual_import_acceptance_sha256": "cb360ef0f13bb77d98e0e98129762f5cb6a85d9795d84d33c712b94054902e68",
+  "all_admitted_input_content_independently_rehashed": true,
+  "actual_admitted_input_count": 28925,
+  "actual_missing_native_result_launch_paths_independently_closed": 28800,
+  "actual_original_selected_native_events_independently_scope_checked": 14400,
+  "independent_original_receipt_set_and_each_actual_result_launch_coverage_checked": true,
+  "old_force_area_mathematics_QUALIFIED_reused_NOT_new_leaf_or_global_replay": true,
+  "original_source_partition_reconstruction_is_own_evidence_NOT_claimed_repeated_here": true,
+  "independent_false_global_or_import_scope_controls_rejected": [
+    "global_lower_bound_proved",
+    "global_optimality_proved",
+    "new_formal_geometric_payments",
+    "old_force_area_math_QUALIFIED_reused_NOT_new_entire_geometry_or_force_tree_replay",
+    "all_actual_missing_prior_native_bytes_freshly_content_rehashed"
+  ],
+  "new_formal_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "future_actual_latest_current_AND_unrestricted_joint_admission_STILL_required": true,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_independent_final_sha256": "4c3e63bacdfd99e94536df926fc1b51cce2b2607adf36531716a28e75715a91b"
+}

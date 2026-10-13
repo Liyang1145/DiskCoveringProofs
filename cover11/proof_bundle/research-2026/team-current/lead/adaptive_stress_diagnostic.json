@@ -1,0 +1,77 @@
+{
+  "scope": "numeric pointwise only",
+  "rows": [
+    {
+      "tau": 0,
+      "min_eigenvalue": -0.009283644858058302,
+      "relative_weight_lipschitz": 0.0,
+      "mu_over_b": 0
+    },
+    {
+      "tau": 0.1,
+      "min_eigenvalue": 0.002275399936280842,
+      "relative_weight_lipschitz": 11.372054435248403,
+      "mu_over_b": 0.00020008697190439887
+    },
+    {
+      "tau": 0.25,
+      "min_eigenvalue": 0.0025443261627032944,
+      "relative_weight_lipschitz": 28.430136088121007,
+      "mu_over_b": 8.949398465125156e-05
+    },
+    {
+      "tau": 0.5,
+      "min_eigenvalue": 0.002752132406895551,
+      "relative_weight_lipschitz": 56.86027217624201,
+      "mu_over_b": 4.840167487002423e-05
+    },
+    {
+      "tau": 1,
+      "min_eigenvalue": 0.002919111504729922,
+      "relative_weight_lipschitz": 113.72054435248403,
+      "mu_over_b": 2.566916577256218e-05
+    },
+    {
+      "tau": 2,
+      "min_eigenvalue": 0.0030308037125474224,
+      "relative_weight_lipschitz": 227.44108870496805,
+      "mu_over_b": 1.3325664811950137e-05
+    },
+    {
+      "tau": 4,
+      "min_eigenvalue": 0.003096608969179396,
+      "relative_weight_lipschitz": 454.8821774099361,
+      "mu_over_b": 6.8074968045818975e-06
+    },
+    {
+      "tau": 8,
+      "min_eigenvalue": 0.0031325254630440048,
+      "relative_weight_lipschitz": 909.7643548198722,
+      "mu_over_b": 3.443227299957499e-06
+    },
+    {
+      "tau": 16,
+      "min_eigenvalue": 0.003151317192320425,
+      "relative_weight_lipschitz": 1819.5287096397444,
+      "mu_over_b": 1.7319414503464287e-06
+    },
+    {
+      "tau": 32,
+      "min_eigenvalue": 0.003160932536957009,
+      "relative_weight_lipschitz": 3639.057419279489,
+      "mu_over_b": 8.686129875859048e-07
+    },
+    {
+      "tau": 64,
+      "min_eigenvalue": 0.003165796544777163,
+      "relative_weight_lipschitz": 7278.114838558978,
+      "mu_over_b": 4.3497479979361955e-07
+    },
+    {
+      "tau": 128,
+      "min_eigenvalue": 0.003168242820779613,
+      "relative_weight_lipschitz": 14556.229677117955,
+      "mu_over_b": 2.1765545687699715e-07
+    }
+  ]
+}

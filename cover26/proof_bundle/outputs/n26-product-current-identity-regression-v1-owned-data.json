@@ -1,0 +1,48 @@
+{
+  "schema": "N26-product-latest-candidate-identity-regression-v1",
+  "synthetic_product_new_schema_identity_passed": true,
+  "synthetic_invalid_identity_controls_rejected": [
+    "product-current-semantic-admission-marker-omitted",
+    "product-acceptance-relabelled-as-mixed",
+    "product-executor-renamed-to-old-owned-checker",
+    "product-own-code-bytes-changed",
+    "product-own-checker-not-bound-in-current",
+    "product-mode-relabelled-as-integrated-Taylor",
+    "one-product-actual-control-omitted",
+    "product-current-root-count-changed",
+    "product-partial-ownership-pointers",
+    "product-bound-parent-bytes-changed",
+    "product-bound-parent-missing",
+    "product-newest-partial-history-preservation-omitted",
+    "product-full-model-source-gate-omitted",
+    "product-boolean-whole-root-index",
+    "product-duplicate-remaining-root-index",
+    "product-older-equal-count-source-substituted"
+  ],
+  "actual_prior_schema_delegation_identity_snapshot": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "f722f716e125c1ca8896b9bea83f49b43b0a9d296c3149dc582a5c6c0d2adf37",
+    "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v8-strict-parent-v1.json",
+        "sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "actual_snapshot_is_identity_only_NOT_geometry_or_final_current_adoption": true,
+  "synthetic_15_remaining_roots_NOT_formal_current": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "tested_identity_module_sha256": "26c459be778ebeb117c0efdad22037f3cc5c4d1c91e1ea992d67c173b96210ae",
+  "executed_test_sha256": "c30e181e56bf21ac9b3b1ed664fb5b495e6570a8771bb885c4a82af7eb2008f3"
+}

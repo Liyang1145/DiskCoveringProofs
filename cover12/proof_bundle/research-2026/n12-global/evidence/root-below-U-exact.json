@@ -1,0 +1,13 @@
+{
+  "scope": "exact comparison of rational root box endpoints; root existence/membership supplied separately",
+  "source": "research-2026\\n12-global\\evidence\\root-t-certificate.json",
+  "source_sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+  "U": "22568935234031792038557518369/62500000000000000000000000000",
+  "r_box": [
+    "18055148187225432205654385100803259/50000000000000000000000000000000000",
+    "18055148187225432205654385100903259/50000000000000000000000000000000000"
+  ],
+  "U_minus_r_box_upper": "1425191629594296741/50000000000000000000000000000000000",
+  "positive": true,
+  "inference": "r_star <= r_box_upper < U; no irrationality assertion"
+}

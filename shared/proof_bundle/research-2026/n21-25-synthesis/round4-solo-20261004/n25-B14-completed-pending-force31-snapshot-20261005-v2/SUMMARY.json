@@ -1,0 +1,42 @@
+{
+  "verified": true,
+  "selected_completed_pending_families": 5,
+  "strictly_paid_after_refinement": 5,
+  "still_unpaid": 0,
+  "results": [
+    {
+      "parent_group": 134049,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "628da7810e5b881d149a1ba32435a46e8387e46169ff6c5765b407830385b40b",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 134728,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "476573622de7e5e6c7954fb1f6aff3009fe5e620b4f5789d469830a0fad4ccfe",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 135083,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "0a29593b49742507c98b170735bdcc17b5d5afc7fb722e12251433cb68d97501",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 135263,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "7b4268c77969ea4c69b5f6fcdf02c090defa6e0bcfe4449da5ff197a76b4cef9",
+      "remaining_complete_leaves": 0
+    },
+    {
+      "parent_group": 138416,
+      "status": "strictly-paid-refined-simple-hole-family",
+      "exact_sha256": "e59127990350c7a1fa85c6e54fada38bbb2a683d032c9ad5534b6bcce4ff3a34",
+      "remaining_complete_leaves": 0
+    }
+  ],
+  "source_sha256": "f04340f5d4d5e5b83a73e11bc84b629cb33256df035da403f912b87b225d5818",
+  "snapshot_sha256": "520a69899c43da90a8438d8333490645db759fbc9371069a657ed7ad355c7b50",
+  "all_other_parent_rows_not_paid_here": true,
+  "global_optimality_proved": false
+}

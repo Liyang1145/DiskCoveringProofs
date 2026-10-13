@@ -1,0 +1,56 @@
+{
+  "scope": "numeric controls for finite predicate; not certified n11 bound",
+  "cases": [
+    {
+      "case": "nested",
+      "max_candidate_min_slack": 0.5,
+      "feasible": true
+    },
+    {
+      "case": "external-tangent",
+      "max_candidate_min_slack": 0.0,
+      "feasible": true
+    },
+    {
+      "case": "empty",
+      "max_candidate_min_slack": -2.0,
+      "feasible": false
+    },
+    {
+      "case": "lens",
+      "max_candidate_min_slack": 1.1102230246251565e-16,
+      "feasible": true
+    },
+    {
+      "case": "three-pairwise-only",
+      "max_candidate_min_slack": -0.33319836727051344,
+      "feasible": false
+    },
+    {
+      "case": "candidate-side--1",
+      "min_slack": 5.551115123125783e-17,
+      "hub": [
+        -0.00012579134497447964,
+        -0.14942752470073498
+      ],
+      "witness_type": [
+        "pair",
+        4,
+        3
+      ]
+    },
+    {
+      "case": "candidate-side-1",
+      "min_slack": 5.551115123125783e-17,
+      "hub": [
+        0.00026020672933319,
+        0.27294378207985504
+      ],
+      "witness_type": [
+        "pair",
+        4,
+        3
+      ]
+    }
+  ]
+}

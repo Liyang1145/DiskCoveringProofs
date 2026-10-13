@@ -1,0 +1,254 @@
+[
+  {
+    "trial": 0,
+    "source": "saved upper candidate",
+    "radius": 0.3799838531198388,
+    "two_cycle_residuals": [
+      -3.209238430557093e-17,
+      -4.440892098500627e-16
+    ],
+    "radius_ratio_error": 8.881784197001252e-16,
+    "area_error": 1.3322676295501878e-15,
+    "width_sum_error": 1.7763568394002505e-15
+  },
+  {
+    "trial": 1,
+    "source": "perturbed diagram",
+    "radius": 0.4529009229442036,
+    "two_cycle_residuals": [
+      8.326672684688674e-17,
+      4.163336342344337e-16
+    ],
+    "radius_ratio_error": 4.440892098500626e-16,
+    "area_error": 8.881784197001252e-16,
+    "width_sum_error": 1.7763568394002505e-15
+  },
+  {
+    "trial": 2,
+    "source": "perturbed diagram",
+    "radius": 0.432418430620966,
+    "two_cycle_residuals": [
+      -3.7470027081099033e-16,
+      6.175615574477433e-16
+    ],
+    "radius_ratio_error": 4.440892098500626e-16,
+    "area_error": 1.7763568394002505e-15,
+    "width_sum_error": 8.881784197001252e-16
+  },
+  {
+    "trial": 3,
+    "source": "perturbed diagram",
+    "radius": 0.4438896171133491,
+    "two_cycle_residuals": [
+      -6.38378239159465e-16,
+      9.853229343548264e-16
+    ],
+    "radius_ratio_error": 1.1102230246251565e-15,
+    "area_error": 3.1086244689504383e-15,
+    "width_sum_error": 3.552713678800501e-15
+  },
+  {
+    "trial": 4,
+    "source": "perturbed diagram",
+    "radius": 0.43256514226247533,
+    "two_cycle_residuals": [
+      7.632783294297951e-17,
+      -2.7755575615628914e-17
+    ],
+    "radius_ratio_error": 2.220446049250313e-16,
+    "area_error": 1.3322676295501878e-15,
+    "width_sum_error": 8.881784197001252e-16
+  },
+  {
+    "trial": 5,
+    "source": "perturbed diagram",
+    "radius": 0.4436657293361533,
+    "two_cycle_residuals": [
+      -9.43689570931383e-16,
+      1.0408340855860843e-15
+    ],
+    "radius_ratio_error": 1.1102230246251565e-15,
+    "area_error": 3.9968028886505635e-15,
+    "width_sum_error": 4.440892098500626e-15
+  },
+  {
+    "trial": 6,
+    "source": "perturbed diagram",
+    "radius": 0.44405988626710213,
+    "two_cycle_residuals": [
+      1.942890293094024e-16,
+      1.5265566588595902e-16
+    ],
+    "radius_ratio_error": 4.440892098500626e-16,
+    "area_error": 0.0,
+    "width_sum_error": 8.881784197001252e-16
+  },
+  {
+    "trial": 7,
+    "source": "perturbed diagram",
+    "radius": 0.4301073684664104,
+    "two_cycle_residuals": [
+      -4.718447854656915e-16,
+      5.828670879282072e-16
+    ],
+    "radius_ratio_error": 7.771561172376096e-16,
+    "area_error": 3.552713678800501e-15,
+    "width_sum_error": 2.6645352591003757e-15
+  },
+  {
+    "trial": 8,
+    "source": "perturbed diagram",
+    "radius": 0.4320252995121586,
+    "two_cycle_residuals": [
+      4.996003610813204e-16,
+      -1.6653345369377348e-16
+    ],
+    "radius_ratio_error": 4.440892098500626e-16,
+    "area_error": 4.440892098500626e-16,
+    "width_sum_error": 8.881784197001252e-16
+  },
+  {
+    "trial": 9,
+    "source": "perturbed diagram",
+    "radius": 0.43913429156488754,
+    "two_cycle_residuals": [
+      -5.551115123125783e-17,
+      1.1102230246251565e-16
+    ],
+    "radius_ratio_error": 3.3306690738754696e-16,
+    "area_error": 1.3322676295501878e-15,
+    "width_sum_error": 1.7763568394002505e-15
+  },
+  {
+    "trial": 10,
+    "source": "perturbed diagram",
+    "radius": 0.441738936738609,
+    "two_cycle_residuals": [
+      5.273559366969494e-16,
+      3.0531133177191805e-16
+    ],
+    "radius_ratio_error": 5.551115123125783e-16,
+    "area_error": 4.440892098500626e-16,
+    "width_sum_error": 8.881784197001252e-16
+  },
+  {
+    "trial": 11,
+    "source": "perturbed diagram",
+    "radius": 0.43613600929945345,
+    "two_cycle_residuals": [
+      1.3600232051658168e-15,
+      6.661338147750939e-16
+    ],
+    "radius_ratio_error": 1.1102230246251565e-15,
+    "area_error": 1.7763568394002505e-15,
+    "width_sum_error": 1.7763568394002505e-15
+  },
+  {
+    "trial": 12,
+    "source": "perturbed diagram",
+    "radius": 0.44448709705740597,
+    "two_cycle_residuals": [
+      -4.991666802123262e-16,
+      6.938893903907228e-16
+    ],
+    "radius_ratio_error": 1.1102230246251565e-15,
+    "area_error": 3.552713678800501e-15,
+    "width_sum_error": 3.552713678800501e-15
+  },
+  {
+    "trial": 13,
+    "source": "perturbed diagram",
+    "radius": 0.43497652081911764,
+    "two_cycle_residuals": [
+      3.0878077872387166e-16,
+      3.608224830031759e-16
+    ],
+    "radius_ratio_error": 3.3306690738754696e-16,
+    "area_error": 8.881784197001252e-16,
+    "width_sum_error": 8.881784197001252e-16
+  },
+  {
+    "trial": 14,
+    "source": "perturbed diagram",
+    "radius": 0.44297402182647116,
+    "two_cycle_residuals": [
+      4.0245584642661925e-16,
+      -3.608224830031759e-16
+    ],
+    "radius_ratio_error": 7.771561172376096e-16,
+    "area_error": 8.881784197001252e-16,
+    "width_sum_error": 8.881784197001252e-16
+  },
+  {
+    "trial": 15,
+    "source": "perturbed diagram",
+    "radius": 0.4218061233942599,
+    "two_cycle_residuals": [
+      4.718447854656915e-16,
+      4.3021142204224816e-16
+    ],
+    "radius_ratio_error": 8.881784197001252e-16,
+    "area_error": 3.552713678800501e-15,
+    "width_sum_error": 2.6645352591003757e-15
+  },
+  {
+    "trial": 16,
+    "source": "perturbed diagram",
+    "radius": 0.4386518935162029,
+    "two_cycle_residuals": [
+      1.3877787807814457e-16,
+      5.273559366969494e-16
+    ],
+    "radius_ratio_error": 4.440892098500626e-16,
+    "area_error": 0.0,
+    "width_sum_error": 0.0
+  },
+  {
+    "trial": 17,
+    "source": "perturbed diagram",
+    "radius": 0.44048379694588746,
+    "two_cycle_residuals": [
+      8.881784197001252e-16,
+      -1.1657341758564144e-15
+    ],
+    "radius_ratio_error": 1.2212453270876722e-15,
+    "area_error": 3.9968028886505635e-15,
+    "width_sum_error": 4.440892098500626e-15
+  },
+  {
+    "trial": 18,
+    "source": "perturbed diagram",
+    "radius": 0.43906190919191407,
+    "two_cycle_residuals": [
+      9.992007221626409e-16,
+      1.304512053934559e-15
+    ],
+    "radius_ratio_error": 9.992007221626409e-16,
+    "area_error": 3.552713678800501e-15,
+    "width_sum_error": 3.552713678800501e-15
+  },
+  {
+    "trial": 19,
+    "source": "perturbed diagram",
+    "radius": 0.43954426618582604,
+    "two_cycle_residuals": [
+      -6.661338147750939e-16,
+      8.881784197001252e-16
+    ],
+    "radius_ratio_error": 1.2212453270876722e-15,
+    "area_error": 3.9968028886505635e-15,
+    "width_sum_error": 4.440892098500626e-15
+  },
+  {
+    "trial": 20,
+    "source": "perturbed diagram",
+    "radius": 0.4434135356860857,
+    "two_cycle_residuals": [
+      3.3306690738754696e-16,
+      -5.273559366969494e-16
+    ],
+    "radius_ratio_error": 4.440892098500626e-16,
+    "area_error": 0.0,
+    "width_sum_error": 0.0
+  }
+]

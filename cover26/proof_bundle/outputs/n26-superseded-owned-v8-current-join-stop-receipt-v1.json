@@ -1,0 +1,23 @@
+{
+  "schema": "N26-superseded-insufficient-parent-current-join-stop-receipt-v1",
+  "observed_at": "2026-10-11 13:58:40 +08:00",
+  "exec_session": 4206,
+  "process_id": 10656,
+  "confirmed_process_creation_time": "2026-10-11T13:26:41.3484440+08:00",
+  "confirmed_executable": "python.exe",
+  "confirmed_current_auditor": "work/audit_owned_candidate_forests_current.py",
+  "insufficient_parent": "outputs/n26-nineteenth-conditional-current-audit-v19-native-v4-with-scope.json",
+  "intended_output": "outputs/n26-current-candidate-owned-current-audit-v8.json",
+  "reason": "The parent used a compatibility report without own-executor provenance and all nine actual conditional controls; the resulting current join would not be adopted.",
+  "process_identity_and_full_task_arguments_checked_before_stop": true,
+  "stopped_only_this_superseded_audit": true,
+  "terminal_exit_code_observed": 1,
+  "intended_current_report_absent_after_stop": true,
+  "existing_inputs_and_outputs_deleted": false,
+  "candidate_v8_standalone_acceptance_modified": false,
+  "candidate_v8_actual_published_replay_modified": false,
+  "new_stage19_sparse_v2_jobs_stopped": false,
+  "WSL_or_services_restarted": false,
+  "new_geometric_payments": 0,
+  "global_optimality_proved": false
+}

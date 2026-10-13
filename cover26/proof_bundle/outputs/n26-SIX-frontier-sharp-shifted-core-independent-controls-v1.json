@@ -1,0 +1,123 @@
+{
+  "schema": "N26-SIX-frontier-sharp-shifted-core-independent-mathematical-controls-v1",
+  "verified": false,
+  "input_sha256": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/FRONTIER.json": "a155c24f712300eed32007fd6335247ba6dfac2bd3bb645c5d4eb6e3d82a534f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-supplemental-current-v1.json": "c85e130c935e68e2275e53fa457c9c4d95d8be5416b128f4307a76061057911b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-supplemental-independent-final-v1.json": "7c2d29f19f310de58d03a2043fae3dde8bcaeb69635843086118a91ab9b6db4e",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-midarc-filled-patches-mathematical-scan-v1.json": "7c9647efc4abb6bae9b9fc14ca27b7a06dea537cd2d117a9d231488eb8d38fe8",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_shifted_core_filled_patches.py": "210f845a0a9b249b023d90d8db02f9636c0c8334d0fb44c2e96772305becd1ac",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_shifted_core_filled_patches.py": "577771b9b45e1f6480c4c1c2ef671b4e9bef02d5e48c2953e8aa520c96d4b8cd",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_midarc_filled_patches.py": "9443b63e231a4ce2590ce8ebfd2a201eec6f99b2633021ad2140140cdbde425c",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_prefix_origin.py": "ec28797070f56bb905ec7db3ad88b164cc6758143f805ddfafc9faeeeab7e557",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_prefix_partition.py": "b4b5910832d964e76f801260ae7ecd0965153f4da1060c88b0bb626b5b2692b0",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-shifted-core-eight-seven-six-filled-patch-proof.md": "7f1510499f99f9228d0e576a617f8111368766c72183bce48f18d33673d660c9",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-midarc-seven-and-six-target-filled-patch-proof.md": "af0c409b6b219a52b59acb14d39c2fd67c263bff3d4e50583d7f3d9358eb1e08",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-embedded-dual-and-corner-starring-bridge-proof.md": "a6e8466bd722cd9ae0a267ee9a3060502489dd45200967cc8994ccbdbcffdd2d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-SIX-frontier-shifted-core-mathematical-scan-v1.json": "02df948c479d89e757d1630064a07ce4b8bfaf5bc0cc1b62d6b60875f99f4517",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/audit_sharp_shifted_core_filled_patches.py": "e70a72483417b044c35acf9081944fe62726c694c93effba66877ed14fcfe938",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_sharp_shifted_core_filled_patches.py": "75299f7cc44b639ce0e39d539e4c977aafb280865f4ef66e122c7ad953d44830",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-sharp-shifted-core-filled-patch-proof.md": "4ef926b1b61250edab1f37ee417927cbb9799945e43ac8e3780e477310290103",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-SIX-frontier-sharp-shifted-core-mathematical-scan-v1.json": "39a7cb52aa9edae7f6cfc2ccfbc22e19a020c6af8a0c3ae323078423957a7e05",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/test_sharp_shifted_core_filled_patches.py": "6a813b9d86892fab85461386130b91a9f92e0c0fcedb78376bf2ca74475efaa3",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_force.py": "62ad4e612aac5842433c0962065e18904819586911a4523e6d07a8a51462d9ce",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-new-scope-v1/CONSTANTS.json": "90fa7ff3e11c89953e832c0a97835b5c7256b0b84ffaba37155388d624bee248",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_six_target_filled_ears.py": "ba2d9ba24269ca5c67f58867456ee556d86b2d9f17200ebf1b5ad656257d461e"
+  },
+  "entire_actual_SIX_source_prefixes_independently_reconstructed": 5637,
+  "independent_qualifying_whole_prefixes": 755,
+  "independent_family_counts": {
+    "15": 60,
+    "16": 579,
+    "17": 116
+  },
+  "independent_selected_outer_cycle_length_counts": {
+    "3": 257,
+    "4": 498
+  },
+  "all_original_physical_count_AND_shadow_complement_cases_checked": 10505,
+  "universal_cosine_recurrence_polynomial_identities_independently_expanded": 6,
+  "universal_circle_footprint_square_identity_independently_expanded": true,
+  "independent_exact_continuous_disk_and_shifted_target_margins": {
+    "3": {
+      "outside_disks_required": 8,
+      "exact_disk_margins": [
+        "2799/500000",
+        "15299/500000",
+        "7799/500000"
+      ]
+    },
+    "4": {
+      "outside_disks_required": 8,
+      "exact_disk_margins": [
+        "299/500000",
+        "299/500000",
+        "299/500000"
+      ]
+    },
+    "5": {
+      "outside_disks_required": 6,
+      "exact_pair_margin": "4865690599/250000000000",
+      "exact_core_squared_margin": "5358559401/250000000000",
+      "exact_horizontal_margin": "27799/500000"
+    },
+    "6": {
+      "outside_disks_required": 5,
+      "exact_pair_margin": "6765440599/250000000000",
+      "exact_core_squared_margin": "7883559401/250000000000",
+      "exact_horizontal_margin": "55299/500000"
+    },
+    "7": {
+      "outside_disks_required": 4,
+      "exact_pair_margin": "140440599/250000000000",
+      "exact_core_squared_margin": "171059401/250000000000",
+      "exact_horizontal_margin": "2799/500000"
+    },
+    "8": {
+      "outside_disks_required": 3,
+      "exact_pair_margin": "41690599/250000000000",
+      "exact_core_squared_margin": "152309401/250000000000",
+      "exact_horizontal_margin": "299/500000"
+    }
+  },
+  "actual_invalid_geometry_and_topology_controls_rejected": [
+    "3:nonstrict-quarter",
+    "3:radius-equals-two-U",
+    "3:target-disk-outside-core",
+    "3:patch-accessible-target-disk",
+    "3:finite-points-substituted-for-circle",
+    "4:nonstrict-quarter",
+    "4:radius-equals-two-U",
+    "4:target-disk-outside-core",
+    "4:patch-accessible-target-disk",
+    "4:finite-points-substituted-for-circle",
+    "5:nonstrict-quarter",
+    "5:duplicate-point",
+    "5:point-outside-core",
+    "5:inaccessible-condition-lost",
+    "6:nonstrict-quarter",
+    "6:duplicate-point",
+    "6:point-outside-core",
+    "6:inaccessible-condition-lost",
+    "7:nonstrict-quarter",
+    "7:duplicate-point",
+    "7:point-outside-core",
+    "7:inaccessible-condition-lost",
+    "8:nonstrict-quarter",
+    "8:duplicate-point",
+    "8:point-outside-core",
+    "8:inaccessible-condition-lost",
+    "topology:missing-face",
+    "topology:duplicate-face",
+    "topology:wrong-outer-cycle"
+  ],
+  "all_raw_complete_terminals_retained": true,
+  "additional_beyond_queued_old_midarc_NOT_admitted": 75,
+  "prospective_frontier_NOT_current": 4882,
+  "NEW_geometry_own_publication_current_AND_final_STILL_required": true,
+  "candidate_whole_roots_removed": 0,
+  "new_formal_geometric_payments": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

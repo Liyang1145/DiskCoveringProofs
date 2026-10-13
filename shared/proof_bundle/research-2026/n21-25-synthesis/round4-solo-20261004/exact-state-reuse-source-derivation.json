@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "schema": "isolated-exact-completed-state-reuse-derivation-v1",
+  "file": {
+    "source": "peel_cached_support_origin_collar.cpp",
+    "source_sha256": "480bd5aa13b83dae07d11b8bb9c30ba4b369f819222416af15ee59eacf187c42",
+    "target": "peel_exact_state_origin_collar.cpp",
+    "target_sha256": "6b2446e37e08a75f506e4169eea9d806a779e6444832d61e934d246c9bc5613f",
+    "changes": [
+      [
+        "#include \"sparse_support_cached_matcher.inc\"",
+        "#include \"sparse_support_cached_matcher.inc\"\n#include \"exact_collar_state_reuse.inc\""
+      ],
+      [
+        " if(calls%1000000==0)cerr<<\"COLLAR PROGRESS B=\"",
+        " auto completed_state_key=exact_collar_state_key(s,pending,omitted_faces);\n if(exact_collar_state_already_completed(completed_state_key))return;\n CompletedCollarStateVisit completed_state_guard(move(completed_state_key));\n if(calls%1000000==0)cerr<<\"COLLAR PROGRESS B=\""
+      ],
+      [
+        " if(argc!=15)throw runtime_error(\"usage: origin-streamed-collar N B output scale cap2 cap4 cap6 node-limit mode exact-table-or-minus sparse-table-or-minus cap8 slab-limit origin-cover-screen-0-or-1\");",
+        " if(argc!=16)throw runtime_error(\"usage: exact-state-origin N B output scale cap2 cap4 cap6 node-limit mode exact-table-or-minus sparse-table-or-minus cap8 slab-limit origin-cover-screen-0-or-1 exact-state-reuse-0-or-1\");"
+      ],
+      [
+        " initialize_cover_origin(argv[14]);",
+        " initialize_cover_origin(argv[14]);\n initialize_exact_state_reuse(argv[15]);"
+      ],
+      [
+        " write_cover_origin_summary(out);",
+        " write_cover_origin_summary(out);\n write_exact_state_reuse_summary(out);"
+      ]
+    ],
+    "exact_inverse_equals_frozen_source": true
+  },
+  "source_sha256": "e0c2d9576996f4e5484bff24e865ae8f0d2811efd950f98b6b03ab54b12b6442",
+  "state_reuse_provider_sha256": "2041793c956d6e7985ad0d53b23edbd8c9b265426b8f4b21f55cb7c20ae2e572",
+  "source_induction_sha256": "7dbc70b5cc9e7b1dcf250f1a9759b38e0f7d095874baac263fdafcf8ee0dfa27",
+  "all_original_recursion_angles_origin_injection_storage_and_canonical_code_unchanged": true,
+  "only_fully_equal_already_completed_states_can_be_reused": true,
+  "no_running_native_or_input_modified": true,
+  "global_optimality_proved": false
+}

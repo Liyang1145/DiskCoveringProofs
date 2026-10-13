@@ -1,0 +1,471 @@
+{
+ "note": "Theorem A / Theorem B instantiation + controls; no grid, no claim",
+ "r_interval": [
+  "0.37998385311983870904851817957342985381159790280156",
+  "0.37998385311983870904851817957342985381159790280156"
+ ],
+ "certified": {
+  "certified lo, hub abs 2 (fan m=4)": {
+   "tag": "certified lo, hub abs 2 (fan m=4)",
+   "m": 4,
+   "r": "0.37998385311983870904851817957342985381159790280156",
+   "rho": "0.62001614688016129095148182042657014618840209719844",
+   "min_norm": 0.27297746635709774,
+   "kind": "circle-circle#0-2",
+   "ncand": 3,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 0.377082630425415,
+   "pair_slack": 0.3470386805230636,
+   "triple_slack": 0.0014410839181335114,
+   "pair_argmin": [
+    0,
+    2
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    3
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   },
+   "hub_norm": 0.2729774663570979,
+   "hub_disk_margin": 4.657386893646974e-17,
+   "pins_active_at_hub": 4,
+   "angular_gaps_deg": [
+    49.617993471922276,
+    70.78087577646164,
+    49.61799352667935,
+    189.98313722493674
+   ],
+   "closed_intersection_singleton": false,
+   "slater_point_found": true
+  },
+  "certified lo, hub abs 0 (fan m=5)": {
+   "tag": "certified lo, hub abs 0 (fan m=5)",
+   "m": 5,
+   "r": "0.37998385311983870904851817957342985381159790280156",
+   "rho": "0.62001614688016129095148182042657014618840209719844",
+   "min_norm": 0.1494284989464,
+   "kind": "circle-circle#0-2",
+   "ncand": 3,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 0.4705876479337613,
+   "pair_slack": 0.4705876479337613,
+   "triple_slack": 4.5798121370744935e-17,
+   "pair_argmin": [
+    0,
+    2
+   ],
+   "tri_argmin": [
+    0,
+    2,
+    4
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   },
+   "hub_norm": 0.1494284989464,
+   "hub_disk_margin": 2.442778729430331e-18,
+   "pins_active_at_hub": 3,
+   "angular_gaps_deg": [
+    94.99156832752617,
+    170.01686277506326,
+    94.99156889741057
+   ],
+   "closed_intersection_singleton": true,
+   "slater_point_found": false
+  },
+  "certified hi, hub abs 2 (fan m=4)": {
+   "tag": "certified hi, hub abs 2 (fan m=4)",
+   "m": 4,
+   "r": "0.37998385311983870904851817957342985381159790280156",
+   "rho": "0.62001614688016129095148182042657014618840209719844",
+   "min_norm": 0.27297746635709774,
+   "kind": "circle-circle#0-2",
+   "ncand": 3,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 0.377082630425415,
+   "pair_slack": 0.3470386805230636,
+   "triple_slack": 0.0014410839181335114,
+   "pair_argmin": [
+    0,
+    2
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    3
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   },
+   "hub_norm": 0.2729774663570979,
+   "hub_disk_margin": 4.657386893646974e-17,
+   "pins_active_at_hub": 4,
+   "angular_gaps_deg": [
+    49.617993471922276,
+    70.78087577646164,
+    49.61799352667935,
+    189.98313722493674
+   ],
+   "closed_intersection_singleton": false,
+   "slater_point_found": true
+  },
+  "certified hi, hub abs 0 (fan m=5)": {
+   "tag": "certified hi, hub abs 0 (fan m=5)",
+   "m": 5,
+   "r": "0.37998385311983870904851817957342985381159790280156",
+   "rho": "0.62001614688016129095148182042657014618840209719844",
+   "min_norm": 0.1494284989464,
+   "kind": "circle-circle#0-2",
+   "ncand": 3,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 0.4705876479337613,
+   "pair_slack": 0.4705876479337613,
+   "triple_slack": 4.5798121370744935e-17,
+   "pair_argmin": [
+    0,
+    2
+   ],
+   "tri_argmin": [
+    0,
+    2,
+    4
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   },
+   "hub_norm": 0.1494284989464,
+   "hub_disk_margin": 2.442778729430331e-18,
+   "pins_active_at_hub": 3,
+   "angular_gaps_deg": [
+    94.99156832752617,
+    170.01686277506326,
+    94.99156889741057
+   ],
+   "closed_intersection_singleton": true,
+   "slater_point_found": false
+  }
+ },
+ "controls": [
+  {
+   "tag": "B1 pair-disjoint (2-set witness W2)",
+   "m": 2,
+   "r": "0.5",
+   "rho": "1.0",
+   "min_norm": null,
+   "kind": "empty (no candidate)",
+   "ncand": 0,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": 0.3,
+   "pair_slack": -Infinity,
+   "triple_slack": Infinity,
+   "pair_argmin": [
+    0,
+    1
+   ],
+   "tri_argmin": null,
+   "fires": {
+    "W1": false,
+    "W_pair": true,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B2 ball-disk tangency (W1 equality)",
+   "m": 1,
+   "r": "0.5",
+   "rho": "1.0",
+   "min_norm": 1.0,
+   "kind": "projection#0",
+   "ncand": 1,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": 0.0,
+   "pair_slack": Infinity,
+   "triple_slack": Infinity,
+   "pair_argmin": null,
+   "tri_argmin": null,
+   "fires": {
+    "W1": true,
+    "W_pair": false,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B2' ball-disk strict (W1 strict)",
+   "m": 1,
+   "r": "0.5",
+   "rho": "1.0",
+   "min_norm": 1.1,
+   "kind": "projection#0",
+   "ncand": 1,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": -0.1,
+   "pair_slack": Infinity,
+   "triple_slack": Infinity,
+   "pair_argmin": null,
+   "tri_argmin": null,
+   "fires": {
+    "W1": true,
+    "W_pair": false,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B3 tangent lens touching |h|=rho (closed singleton, CQ fails)",
+   "m": 2,
+   "r": "0.5",
+   "rho": "0.5",
+   "min_norm": 0.5,
+   "kind": "circle-circle#0-1",
+   "ncand": 1,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": 0.2928932188134525,
+   "pair_slack": 0.0,
+   "triple_slack": Infinity,
+   "pair_argmin": [
+    0,
+    1
+   ],
+   "tri_argmin": null,
+   "fires": {
+    "W1": false,
+    "W_pair": true,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B3' lens strictly outside the open ball (pair witness strict)",
+   "m": 2,
+   "r": "0.5",
+   "rho": "0.5",
+   "min_norm": 1.2,
+   "kind": "circle-circle#0-1",
+   "ncand": 1,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": -0.3,
+   "pair_slack": -0.7,
+   "triple_slack": Infinity,
+   "pair_argmin": [
+    0,
+    1
+   ],
+   "tri_argmin": null,
+   "fires": {
+    "W1": true,
+    "W_pair": true,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B3'' lens strictly inside (strict hub exists, no witness)",
+   "m": 2,
+   "r": "0.5",
+   "rho": "0.5",
+   "min_norm": 0.3,
+   "kind": "circle-circle#0-1",
+   "ncand": 1,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 0.41690481051546996,
+   "pair_slack": 0.2,
+   "triple_slack": Infinity,
+   "pair_argmin": [
+    0,
+    1
+   ],
+   "tri_argmin": null,
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B4 3 disks, S = {q} singleton, |q|=0.3 (CQ fails)",
+   "m": 3,
+   "r": "0.5",
+   "rho": "0.5",
+   "min_norm": 0.3,
+   "kind": "circle-circle#1-2",
+   "ncand": 4,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 0.2,
+   "pair_slack": 0.2,
+   "triple_slack": 0.0,
+   "pair_argmin": [
+    0,
+    1
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    2
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B4 3 disks, S = {q} singleton, |q|=0.6 (CQ fails)",
+   "m": 3,
+   "r": "0.5",
+   "rho": "0.5",
+   "min_norm": 0.6,
+   "kind": "circle-circle#1-2",
+   "ncand": 4,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": -0.1,
+   "pair_slack": -0.1,
+   "triple_slack": 0.0,
+   "pair_argmin": [
+    0,
+    1
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    2
+   ],
+   "fires": {
+    "W1": true,
+    "W_pair": true,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B5 triple empty, pairwise nonempty (3-set witness W4)",
+   "m": 3,
+   "r": "1.0",
+   "rho": "1.0",
+   "min_norm": null,
+   "kind": "empty (no candidate)",
+   "ncand": 0,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": 0.903034488539711,
+   "pair_slack": 0.7637671441897754,
+   "triple_slack": -0.09696551146028895,
+   "pair_argmin": [
+    0,
+    2
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    2
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": true
+   }
+  },
+  {
+   "tag": "B6 obtuse MEC branch, triple nonempty (projection witness)",
+   "m": 3,
+   "r": "1.4",
+   "rho": "1.3",
+   "min_norm": 1.1004999500099975,
+   "kind": "projection#2",
+   "ncand": 3,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 0.1995000499900025,
+   "pair_slack": 0.1995000499900025,
+   "triple_slack": 0.14975002499500126,
+   "pair_argmin": [
+    0,
+    2
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    2
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B7 acute MEC branch, 0 in S (origin witness)",
+   "m": 3,
+   "r": "1.2",
+   "rho": "1.0",
+   "min_norm": 0.0,
+   "kind": "origin",
+   "ncand": 7,
+   "exists": true,
+   "no_hub": false,
+   "w1_slack": 1.103034488539711,
+   "pair_slack": 1.0,
+   "triple_slack": 0.10303448853971105,
+   "pair_argmin": [
+    0,
+    1
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    2
+   ],
+   "fires": {
+    "W1": false,
+    "W_pair": false,
+    "W4": false
+   }
+  },
+  {
+   "tag": "B8 collinear triple (diameter MEC)",
+   "m": 3,
+   "r": "1.0",
+   "rho": "1.0",
+   "min_norm": null,
+   "kind": "empty (no candidate)",
+   "ncand": 0,
+   "exists": false,
+   "no_hub": true,
+   "w1_slack": -1.0,
+   "pair_slack": -Infinity,
+   "triple_slack": -0.5,
+   "pair_argmin": [
+    0,
+    2
+   ],
+   "tri_argmin": [
+    0,
+    1,
+    2
+   ],
+   "fires": {
+    "W1": true,
+    "W_pair": true,
+    "W4": true
+   }
+  }
+ ]
+}

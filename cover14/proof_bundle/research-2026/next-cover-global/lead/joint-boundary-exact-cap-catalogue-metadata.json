@@ -1,0 +1,23 @@
+{
+  "status": "completed",
+  "input_hashes": {
+    "joint_boundary_exact_cap.py": "2c00be7caf8f15803b310d0cb2cad08ea1280f58cc02a602abda561303cfcf50",
+    "JOINT-EXACT-CAP-CONCAVITY.md": "1644434b796bfd7c2a790be20604288f60cbc1799695e5c7ec9aa2f4ce3cf6c2",
+    "BOUNDARY-AREA-PERIMETER-JOINT.md": "9c09a98a4ad2c25cccb196a870666e657ae595533f6ede797781827d91fe76c3",
+    "root_integer_certificate.py": "980a1d8fe8d4332df41c5fddecaf33f93ff0f19610349936206e788f4c2cf9a6",
+    "area_safe_certificate.py": "14d3ee13642cc8f12502e6843274555b24c2b2a59effb4659a793458c84576e6"
+  },
+  "total": 966,
+  "counts": {
+    "10/4": {
+      "excluded": 84,
+      "inconclusive": 257
+    },
+    "11/3": {
+      "excluded": 137,
+      "inconclusive": 488
+    }
+  },
+  "seconds": 2412.662133693695,
+  "source_planes_sha256": "cdf01c0a897f331f5c42c351515b0e0998763edbf6e9a0120590e699db3b8a58"
+}

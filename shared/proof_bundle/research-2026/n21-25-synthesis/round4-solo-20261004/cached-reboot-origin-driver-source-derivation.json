@@ -1,0 +1,40 @@
+{
+  "verified": true,
+  "schema": "cached-reboot-origin-driver-isolated-derivation-v1",
+  "original_source_sha256": "649d41caeef8d2e9add28594025d33d9b78c3e0162f9c9ce4a1dbdd68ba107a4",
+  "derived_source_sha256": "69fd3558a570dd7a645dd88c617763d9004284b140e9fd68b06a8bdac0ef614f",
+  "changes": [
+    [
+      "    assert maps[\"verified\"] and maps[\"schema\"] == \"fresh-sparse-library-explicit-map-controls-v1\"\n    assert maps[\"B\"] == B and maps[\"library_sha256\"] == sha(args.library)\n    assert maps[\"source_sha256\"] == sha(ROOT / \"verify_sparse_maps_fast.py\")\n    assert maps[\"matcher_include_sha256\"] == sha(ROOT / \"sparse_outer_matcher.inc\")\n    assert maps[\"matcher_binary_sha256\"] == sha(ROOT / \"sparse_outer_match-linux\")\n    assert maps[\"all_source_trees_fresh_exact_replayed\"] and maps[\"explicitly_checked_native_maps\"] > 0\n    assert maps[\"independent_python_existence_controls\"] > 0\n    assert set(maps[\"negative_controls_rejected\"]) == {\"wrong-anchor-offset\", \"center-collision\", \"missing-image-face\"}\n    if B == 16:\n        assert maps[\"known_B16_attaining_graph_not_matched\"]\n",
+      "    from cached_origin_production_gate import production_gate\n    files.update(production_gate(args.library.resolve(), args.maps.resolve(),\n                                 args.guard_controls.resolve(), B))\n"
+    ],
+    [
+      "    assert guard[\"verified\"] and guard[\"schema\"] == \"eight-rod-sparse-complete-partition-controls-v1\"\n    assert guard[\"B\"] == B and guard[\"library_sha256\"] == sha(args.library)\n    assert guard[\"source_sha256\"] == sha(ROOT / \"test_eight_sparse_guard.py\")\n    assert guard[\"maps_controls_sha256\"] == sha(args.maps)\n    assert guard[\"eight_controls_sha256\"] == sha(args.eight_controls)\n    assert guard[\"native_source_sha256\"] == sha(ROOT / \"peel_eight_rod_collar.cpp\")\n    assert guard[\"native_binary_sha256\"] == sha(ROOT / \"peel_eight_rod_collar-linux\")\n    assert guard[\"sparse_guard_sha256\"] == sha(ROOT / \"sparse_outer_matcher.inc\")\n    assert guard[\"all_baseline_minus_residual_graphs_individually_paid\"]\n    assert len(guard[\"cases\"]) == 4\n    assert all(row[\"all_removed_weak_graphs_explicitly_paid\"] for row in guard[\"cases\"])\n    assert set(guard[\"negative_controls_rejected\"]) == {\"node-limit\", \"bad-N\", \"bad-B\"}\n",
+      "    assert B == 16, \"only the reboot-interrupted B16 search uses this new version\"\n"
+    ],
+    [
+      "\"./peel_origin_streamed_collar-linux\", \"25\", str(B), relative(target)",
+      "\"./peel_cached_support_origin_collar-linux\", \"25\", str(B), relative(target)"
+    ],
+    [
+      "linux_path(ROOT / \"peel_origin_streamed_collar-linux\")",
+      "linux_path(ROOT / \"peel_cached_support_origin_collar-linux\")"
+    ],
+    [
+      "\"native_binary_sha256\": sha(ROOT / \"peel_origin_streamed_collar-linux\")",
+      "\"native_binary_sha256\": sha(ROOT / \"peel_cached_support_origin_collar-linux\")"
+    ]
+  ],
+  "occurrence_counts": [
+    1,
+    1,
+    1,
+    1,
+    1
+  ],
+  "exact_inverse_equals_original": true,
+  "all_original_exact_library_angle_storage_origin_lifecycle_and_final_union_checks_retained": true,
+  "old_matching_controls_replaced_by_stronger_cached_matching_controls_not_bypassed": true,
+  "source_sha256": "4eeb06b14bc80977f2144de44d9bb48d8a0329da41abff8bcb7ce4c3a3b87ee7",
+  "global_optimality_proved": false
+}

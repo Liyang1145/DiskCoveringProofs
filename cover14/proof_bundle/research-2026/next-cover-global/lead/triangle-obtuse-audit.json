@@ -1,0 +1,210 @@
+[
+  {
+    "triple": [
+      0,
+      4,
+      12
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      0,
+      8,
+      11
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      0,
+      11,
+      12
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      1,
+      5,
+      13
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      1,
+      8,
+      11
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      1,
+      11,
+      13
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      2,
+      6,
+      12
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      2,
+      9,
+      10
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      2,
+      10,
+      12
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      3,
+      7,
+      13
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      3,
+      9,
+      10
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      3,
+      10,
+      13
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      4,
+      6,
+      12
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      5,
+      7,
+      13
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      10,
+      11,
+      12
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  },
+  {
+    "triple": [
+      10,
+      11,
+      13
+    ],
+    "angle_dot_signs": [
+      1,
+      1,
+      1
+    ],
+    "obtuse": false
+  }
+]

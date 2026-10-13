@@ -1,0 +1,225 @@
+{
+ "r": "19/50",
+ "witness_p": [
+  "257455287618977498388871611632228596889/814917795710482079541275000000000000000",
+  "200247950757832605654046290292032042423/3259671182841928318165100000000000000000"
+ ],
+ "A_all_eleven_outside": true,
+ "A_min_margin_over_eleven": "6469548614306402579287424946618188833094320673118615777995529757487872813/2125091244050019215354770093844942770926171602000000000000000000000000000000000",
+ "A_p_norm2_lt_1": true,
+ "A_multiset_matches_their_list": true,
+ "A_their_list_order_differs": true,
+ "A_matches_their_Rc2_minus_r2": true,
+ "B1_equidistant": true,
+ "B1_Rc2_minus_r2": "6469548614306402579287424946618188833094320673118615777995529757487872813/2125091244050019215354770093844942770926171602000000000000000000000000000000000",
+ "B1_triangle_acute": true,
+ "B1_Rc": 0.3800040057193418,
+ "B1_hole_depth": 4.005719341781955e-06,
+ "B2_hub_strict_exact": {
+  "hubB(raw0)": true,
+  "hubA(raw2)": true
+ },
+ "B2_arcs_rings_only": [
+  {
+   "idx": 1,
+   "tag": "ring1",
+   "halfwidth_deg": 22.244488,
+   "rho": 0.8925217299,
+   "theta": 1.5697119088
+  },
+  {
+   "idx": 3,
+   "tag": "ring3",
+   "halfwidth_deg": 19.53025,
+   "rho": 0.7617982718,
+   "theta": -0.4870204393
+  },
+  {
+   "idx": 4,
+   "tag": "ring4",
+   "halfwidth_deg": 19.53025,
+   "rho": 0.7617982718,
+   "theta": -2.6567410494
+  },
+  {
+   "idx": 5,
+   "tag": "ring5=central",
+   "halfwidth_deg": 16.091721,
+   "rho": 0.7008700539,
+   "theta": 0.134644547
+  },
+  {
+   "idx": 6,
+   "tag": "ring6",
+   "halfwidth_deg": 16.091721,
+   "rho": 0.7008700542,
+   "theta": 3.0047792711
+  },
+  {
+   "idx": 7,
+   "tag": "ring7",
+   "halfwidth_deg": 21.946068,
+   "rho": 0.8588109377,
+   "theta": 0.7984784897
+  },
+  {
+   "idx": 8,
+   "tag": "ring8",
+   "halfwidth_deg": 21.946068,
+   "rho": 0.858810938,
+   "theta": 2.340945328
+  },
+  {
+   "idx": 9,
+   "tag": "ring9",
+   "halfwidth_deg": 21.315702,
+   "rho": 0.820853262,
+   "theta": -1.943889365
+  },
+  {
+   "idx": 10,
+   "tag": "ring10",
+   "halfwidth_deg": 21.315702,
+   "rho": 0.8208532656,
+   "theta": -1.199872125
+  }
+ ],
+ "B2_n_boundary_arcs": 9,
+ "B2_total_ring_arc_length_over_2pi": 1.00006648824727,
+ "B2_boundary_worst_gap_rad": -3.7276882167924796e-05,
+ "B2_boundary_covered": true,
+ "B3_pins_exact": [
+  {
+   "pair": [
+    5,
+    7
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "297004309802837057417675027395907/1122382760788651770329299890416372",
+   "sign_slack2_hubA": -1,
+   "sign_slack2_hubB": 1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    7,
+    1
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "1426993266756149563131409215727663/17396026932975401747474363137089348",
+   "sign_slack2_hubA": -1,
+   "sign_slack2_hubB": 1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    1,
+    8
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "8918707902348460965966622872731/108725168390606156136133508509076",
+   "sign_slack2_hubA": -1,
+   "sign_slack2_hubB": 1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    8,
+    6
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "594008618413882369385592889394059/2244765526344470522457628442423764",
+   "sign_slack2_hubA": -1,
+   "sign_slack2_hubB": 1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    6,
+    4
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "935262192050268375182422089832239/2034951231798926499270311640671044",
+   "sign_slack2_hubA": 1,
+   "sign_slack2_hubB": -1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    4,
+    9
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "1347896965772851529239977019417623/6160412136908593883040091922329508",
+   "sign_slack2_hubA": 1,
+   "sign_slack2_hubB": -1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    9,
+    10
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "88600727944253228541255005376039/569757088222987085834979978495844",
+   "sign_slack2_hubA": 1,
+   "sign_slack2_hubB": -1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    10,
+    3
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "84243559477126406033765356125159/385025762091494375864938575499364",
+   "sign_slack2_hubA": 1,
+   "sign_slack2_hubB": -1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  },
+  {
+   "pair": [
+    3,
+    5
+   ],
+   "k_positive": true,
+   "near_sign": 1,
+   "K": "5985678033427434209293863987899/13023687866290263162824544048404",
+   "sign_slack2_hubA": 1,
+   "sign_slack2_hubB": -1,
+   "pin_covered": true,
+   "best_hub_slack2_sign": -1,
+   "both_hubs_cover_it": false
+  }
+ ],
+ "B3_n_pins_not_covered": 0,
+ "B3_aggregate_max_over_pins_min_over_hubs_slack2_sign": -1,
+ "B3_aggregate_lt_0_proves_ALL_nine": true,
+ "B3_their_pins_strict_field": true,
+ "B3_note_on_their_field": "per lead: their earlier false reading came from a sign helper using a negative beta^2*Q (code bug), NOT a convention difference; their current json field and my exact computation agree",
+ "verdict": "same witness independently reproduced (exact): p uncovered, maximin hole centre, boundary fully covered by the 9 ring arcs (hubs strict interior, no arcs); nine pins all covered under the CORRECT aggregate max_over_pins(min_over_hubs) < 0"
+}

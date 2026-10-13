@@ -1,0 +1,21 @@
+# Closure certificate kernel analytic audit (lead Round6)
+
+Object: `certify_q0_closure.py` with R=19/50,k3 and `certify_q0_lower375.py` with R=3/8,k4. Decimal coefficients rounded to9places interpreted as exact rationals via directed interval parsing. Sampling controls are calibration only. Independent teammate audit still pending at writing.
+
+## New geometry input
+C820 local halfplane proof establishes actual CL equations. Normalized variables u=actual left distance/R, v=actual right distance/R lie[0,1] for all actualr<=R. This is not scaling the unit target circle; the identity w=2asin(R sqrt(q)/2) remains exact. Necessary width lower bound gives q>=qmin=4sin²(pi−8asinR)/R²>0. Entire box can be discarded ONLY if interval upper q<interval lower qmin (line83). No partial-domain contraction inserted into gradients. This preserves every genuine point.
+
+## Sector derivatives and safe singular treatment
+q=(u−v)²+4uv sin²(a/2) is exact and positive on genuine domain. It is in[0,4] on a in[0,pi],u,v in[0,1]. w=2asin(R sqrt(q)/2), base area F=R²uv sin(a)/2+(w−sin w)/2+Cw−mu*a−du²−ev²−dl*u−el*v.
+C>=0 asserted line9, so h(w)=(C+1/2)w−sin(w)/2 increasing. Endpoint enclosure line86 safe. Norm distance sqrt(q)=|u−v exp(ia)| has absolute partials in u,v bounded1 and in a bounded min(u,v)<=1 (triangle inequality / angular speed). Therefore |w_a|,|w_u|,|w_v|<=R/sqrt(1−R²). Derivative interval clipping in91 is justified, including Lipschitz mean-value treatment at q=0 in92. q=0 occurs u=v=0 or a=0,u=v; distance remains Lipschitz, enough for line97 integrated gradient bound.
+
+For q>0 and0<a<pi, beta=atan2(v sin a,u−v cos a) in[0,pi] has derivatives (uv cos a−v²)/q, −v sin a/q, u sin a/q. Direct angle enclosure uses nonnegative y and general x; any true singular q=0-containing box uses[0,pi]. At boundary a=0 orpi, zero-argument beta convention is not invoked as a scalar assertion. New mean value enclosure used only if q.a>0 and a strictly inside[0,pi] (line100 excludes upper boundary); a.a=0 with q.a>0 is smooth one-sided, including u=0 orv=0 axes, except u=v which q.a>0 forbids. Coefficients h arbitrary signs handled by full interval arithmetic, NOT monotonic endpoint assumption for beta. Extra exact term is (hL−hR)beta−hR*a+hR*pi+(hL+hR)w/2.
+
+## Face radial support kernel reused
+Q(A,B)=max_{0<=y<=1}(Ay²+By) monotone in each coefficient. scalar_quad cases compute max endpoints and possible concave vertex. The smallest and largest argmax can be chosen monotone in(A,B) since (A2−A1)y²+(B2−B1)y is nondecreasing in y; thus lowarg/hiarg enclose every intermediate maximizer. Envelope gradient enclosure valid for Lipschitz Q, including switches between optimizers (a.e. derivative / integrated bound). Boundary-crossing triangle boxes use direct enclosure only. The continuous face objective exactly uses c=pi−a−b; clipping c at0 on crossing boxes encloses legal points without requiring illegal triangle points. Existing Fraction support and formal coefficient controls are relevant; neither samples nor reviewer identity certifies this argument.
+
+## Branch and bound accounting
+All boxes initially cover entire relaxed factor domain, outer float endpoints outward. Each split covers parent including shared boundary. `lower` affects termination/pruning only; discarded UBs stored in discarded_upper; final factor upper is max(discarded_upper, live queue max). Thus even if a sampled point outside admissible qmin domain were accidentally used as a lower, stored upper bookkeeping prevents loss of any terminal bound (in actual code infeasible point rejected). All current final outputs have finite upper for every factor. Float priorities cast from iv upper with nextafter toward+inf and added back exactly as represented dyadic upper endpoints. No trust in local optimizer required.
+
+## Controls
+`check_q0_closure_symbolic.py`: exact Fraction coefficient cancellation; `check_q0_closure_scalar.py`: separately assembled scalar dual at saved coordinate candidate, errors<9e-16 for both normalizations. `check_closure_boxes.py`:65digit independent scalar formula evaluated on4350boxes,13439legal points, no violation. These catch interface/coding discrepancies; universal justification is analytic enclosures and full-domain terminal upper coverage.

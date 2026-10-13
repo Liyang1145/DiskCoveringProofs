@@ -1,0 +1,3 @@
+# Delivery verification and restoration use only Python's standard library.
+# Original mathematical executors may separately require numpy/scipy/mpmath/sympy,
+# a C++ compiler, and their original frozen inputs. See each source proof.

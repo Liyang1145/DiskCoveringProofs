@@ -1,0 +1,19 @@
+{
+  "scheduler_completed": true,
+  "schema": "library-parent-gapped-original-snapshot-filling-jobs-v1",
+  "N": 25,
+  "B": 16,
+  "selected_graphs": 29556,
+  "counts": {
+    "strict-complete-filling-family": 29322,
+    "pending": 234
+  },
+  "job_count": 455,
+  "worklist_sha256": "b2295fdfc3cd5cd9f52c10cfcf20850b99b2103ad609439870849c22eb8497fe",
+  "completed_batches_sha256": "cc4c567b9cad451cd149e3dbf6da6a69bdeafe98f51a13a26dcafb8d148240d0",
+  "source_sha256": "b6e41be15503fd051c034e6d73ced10dd07aa516eec9351ea9f12dd85c332930",
+  "all_original_worker_sources_and_true_snapshot_schema_preserved": true,
+  "all_old_library_paid_rows_skipped_not_reproved": true,
+  "independent_full_parent_merge_still_required": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,27 @@
+{
+  "verified": true,
+  "schema": "complete-origin-filling-parent-source-binding-controls-v1",
+  "finite_real_B15_union_graph_source_positive": true,
+  "all_original_outer_faces_must_match_not_just_a_subgraph": true,
+  "negative_controls_rejected": [
+    "wrong-collar-N",
+    "wrong-collar-B",
+    "wrong-collar-centers",
+    "omitted-outer-face",
+    "wrong-parent-index",
+    "wrong-snapshot-sha",
+    "wrong-proof-N",
+    "wrong-proof-B",
+    "wrong-proof-centers",
+    "wrong-proof-face"
+  ],
+  "source_sha256": "f5adcfe15f1b0bd251ff75e663fb37a38b44d441240298ee1d90930fd3937571",
+  "snapshot_source_sha256": "6b043897c4fe83fd02a48f80e92973016f9c6271f267fa1b15bd7df7b45c6150",
+  "worker_source_sha256": "b124007c23d56d9a7f1b42d43dcf92c1958c282d61608ff549d6dde03f4cdd20",
+  "merge_source_sha256": "a0ee641bea378f68cc2b8f40eb0d8e5dfd745d67a28363a84df6e5c5fad6ffb9",
+  "source_catalog_sha256": "b148754bb28bde84dbd8ae1cec6882ca60d4d840f3c01d64199662fbd1f3099a",
+  "no_new_force_or_topological_completeness_theorem_in_this_adapter": true,
+  "frozen_kernel_and_attaining_controls_separately_required": true,
+  "not_a_full_parent_scan_or_mathematical_payment": true,
+  "global_optimality_proved": false
+}

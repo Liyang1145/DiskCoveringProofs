@@ -1,0 +1,14 @@
+{
+  "ProcessId": 37424,
+  "ThreadId": 40232,
+  "CreationTime": "2026-10-03T21:42:58.5473819Z",
+  "PreviousSuspendCount": 0,
+  "State": "own-native-enumerator-suspended",
+  "ResumeRequired": true,
+  "reason": "Temporarily yield resources to n22 final proof audits; process state retained.",
+  "native_image": "peel_degree.exe",
+  "output_directory": "evidence/n23-B15-degree-streamed-resume1",
+  "native_process_was_checked_single_threaded": true,
+  "goal_paused": false,
+  "catalogue_complete": false
+}

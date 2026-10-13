@@ -1,0 +1,79 @@
+{
+  "schema": "N26-independent-distinct-formal-candidate-owner-source-association-controls-v1",
+  "verified": false,
+  "actual_formal_and_candidate_owner_identity_snapshot": {
+    "schema": "N26-distinct-formal-and-candidate-owner-complete-source-replay-v1",
+    "actual_formal_current_sha256": "10c31954c30a42227040cdc507c0390c7312d75f16c02362ba13ddbe8aacb49f",
+    "actual_candidate_owner_current_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "actual_formal_final_sha256": "636f4bf4bb4ded02f51e0bf21adc7aea14df5a7899fb9b99df1be60d54e4e6db",
+    "actual_candidate_owner_final_sha256": "51da4980d1ecc333c092309827dffe5b36b19032a14b54cbff46108d70c5801a",
+    "formal_and_candidate_owner_pairs_are_separately_named": true,
+    "actual_source_schema": "N26-accepted-current-owned-candidate-energy-LOCAL-forests-v1",
+    "actual_latest_candidate_identity": {
+      "schema": "N26-bound-latest-candidate-layer-identity-v1",
+      "actual_current_parent_sha256": "10c31954c30a42227040cdc507c0390c7312d75f16c02362ba13ddbe8aacb49f",
+      "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+      "enumeration_only_bound_ancestors_followed": [
+        {
+          "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fourth-conditional-current-audit-v24-sparse-v1-strict-with-owned8-scope.json",
+          "sha256": "4ad5cda43ef2b9606ed8a054844e0fa43485429bd2fdee2f39b925691ef078bd"
+        },
+        {
+          "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-third-conditional-current-audit-v23-sparse-v1-strict-with-owned8-scope.json",
+          "sha256": "cdd3af2afa13028d63d9378480b31ef479972d956af4b9a85704788b88fa0b61"
+        },
+        {
+          "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-second-conditional-current-audit-v22-sparse-v1-strict-with-owned8-scope.json",
+          "sha256": "f211ad82c936ee0e4c0d50f663dd181b6fec55ebb625490e702004d3c2aec39b"
+        },
+        {
+          "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-first-conditional-current-audit-v21-sparse-v1-strict-with-owned8-scope.json",
+          "sha256": "351270611f0273abd38730c99bc268a9338116627164327c8358dd37a1e4fe49"
+        },
+        {
+          "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twentieth-conditional-current-audit-v20-sparse-v1-strict-with-owned8-scope.json",
+          "sha256": "f722f716e125c1ca8896b9bea83f49b43b0a9d296c3149dc582a5c6c0d2adf37"
+        },
+        {
+          "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v8-strict-parent-v1.json",
+          "sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138"
+        }
+      ],
+      "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+      "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+      "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+      "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+      "actual_remaining_candidate_whole_roots": 25,
+      "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+      "new_geometric_candidate_payments": 0
+    },
+    "preflight_is_identity_only_NOT_complete_source_model_history_replay": true,
+    "new_geometric_payments": 0
+  },
+  "actual_invalid_formal_owner_pair_source_scope_and_binding_controls_rejected": [
+    "formal-enumeration-pair-substituted-for-candidate-owner",
+    "candidate-owner-final-substituted-for-formal-final",
+    "formal-final-current-hash-forged",
+    "formal-final-inventory-count-shortened",
+    "formal-final-unresolved-root-count-changed",
+    "formal-final-incomplete-rehash-promoted",
+    "candidate-owner-final-current-hash-forged",
+    "formal-radius-scope-promoted-to-U",
+    "formal-LOCAL-coordinate-allowance-enlarged",
+    "candidate-owner-final-ancestor-unbound",
+    "actual-source-publication-unbound",
+    "wrong-equal-count-candidate-owner-identity",
+    "arithmetic-context-promoted-to-candidate-source-schema",
+    "unaccepted-candidate-source-promoted",
+    "source-radius-endpoint-replaced-by-U"
+  ],
+  "ENTIRE_actual_source_model_history_geometry_gate_NOT_executed": true,
+  "identity_controls_are_NOT_a_complete_source_replay_or_geometry_payment": true,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "9f7fa6247de83860179669f696a8fa791ae9d00ebd71e9d997573233c922b48d",
+  "tested_complete_source_adapter_sha256": "20eae5ffbe8ffcd120b9f567d926da132bff65718f46f97186233f71958fb038"
+}

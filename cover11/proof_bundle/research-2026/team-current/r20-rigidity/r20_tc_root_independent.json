@@ -1,0 +1,41 @@
+{
+  "min_arc_halfwidth": 0.28082192044638565,
+  "min_R2_minus_sin2": 0.0010930941504161491,
+  "rho_range": [
+    0.7008700512603823,
+    0.8925218292143469
+  ],
+  "R2_minus_d2": 0.09978102757480418,
+  "hub_norm_margin": 0.3099033234732546,
+  "min_theta_increment": 0.6216649844898343,
+  "reflection_err_C": 1.9860169008216932e-07,
+  "U_reflection_err": 2.3188736457290147e-07,
+  "pin_distance_identity_err": 1.4421904305043864e-07,
+  "U_inside_margin": 0.6119738054327466,
+  "V": 11,
+  "E": 21,
+  "F": 11,
+  "euler_VmEmF": 1,
+  "hull_edges_once": true,
+  "interior_edges_twice": true,
+  "all_sites_used": true,
+  "sum_face_degrees": 33,
+  "sum_site_degrees": 33,
+  "hull_orientation_margin": 0.05401980926959493,
+  "hull_orientation_margin_exact": "0.054019809269594931343",
+  "min_empty_margin": 0.15049543508079835,
+  "min_inside_D_margin": 0.611973532251601,
+  "min_triangle_area_margin": 0.14666444419196584,
+  "min_empty_margin_exact": "0.1504954350807983567",
+  "min_inside_D_margin_exact": "0.61197353225160098382",
+  "min_empty_margin_conservative_threshold": "0.15",
+  "min_inside_D_margin_conservative_threshold": "0.61",
+  "n_active": 9,
+  "n_slack": 2,
+  "slack_max_circumradius2_minus_R2": -0.0008746083117539394,
+  "tie_identity_err": 2.37492487770146e-08,
+  "sum_arc_halfwidths_minus_pi": [
+    -1.6e-08,
+    1.6e-08
+  ]
+}

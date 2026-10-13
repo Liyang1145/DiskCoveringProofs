@@ -1,0 +1,15 @@
+{
+  "owned_windows_python_pid": 20992,
+  "script": "probe_family_discovery.py",
+  "source_sha256": "24b56af5db29f983be0e373a62d08b30d7a9961eeb8e86b428229e50338c90db",
+  "arguments": [
+    "--snapshot",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-origin-slab0-all11179-residual-20261005-v1\\ALL-PENDING-SNAPSHOT.json",
+    "--output",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-origin-slab0-all11179-residual-20261005-v1\\STRICT",
+    "--count",
+    "11179",
+    "--limit",
+    "1"
+  ]
+}

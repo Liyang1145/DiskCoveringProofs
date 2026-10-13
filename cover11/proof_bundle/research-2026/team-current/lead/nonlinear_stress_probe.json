@@ -1,0 +1,150 @@
+{
+  "scope": "finite mixed-Hessian and sampling only; not remainder/neighborhood/global certificate",
+  "common_kernel_dimension_numeric": 4,
+  "kernel_eigenvalues": [
+    0.04131137440654216,
+    0.04989385686639549,
+    0.056835415390650096,
+    0.059033624970004084
+  ],
+  "parameter_scan": [
+    {
+      "temp": 1,
+      "rho": 1,
+      "min_eigenvalue": -0.20599584958581138
+    },
+    {
+      "temp": 1,
+      "rho": 10,
+      "min_eigenvalue": -0.15159539551159631
+    },
+    {
+      "temp": 1,
+      "rho": 100,
+      "min_eigenvalue": -0.14781093644101387
+    },
+    {
+      "temp": 1,
+      "rho": 1000,
+      "min_eigenvalue": -0.14744787164415515
+    },
+    {
+      "temp": 0.3,
+      "rho": 1,
+      "min_eigenvalue": 0.015438364866244
+    },
+    {
+      "temp": 0.3,
+      "rho": 10,
+      "min_eigenvalue": 0.016796365310663156
+    },
+    {
+      "temp": 0.3,
+      "rho": 100,
+      "min_eigenvalue": 0.01682872068714051
+    },
+    {
+      "temp": 0.3,
+      "rho": 1000,
+      "min_eigenvalue": 0.016831566163815887
+    },
+    {
+      "temp": 0.1,
+      "rho": 1,
+      "min_eigenvalue": 0.021370976140804895
+    },
+    {
+      "temp": 0.1,
+      "rho": 10,
+      "min_eigenvalue": 0.02214314669908999
+    },
+    {
+      "temp": 0.1,
+      "rho": 100,
+      "min_eigenvalue": 0.022203386384252802
+    },
+    {
+      "temp": 0.1,
+      "rho": 1000,
+      "min_eigenvalue": 0.02220927114191335
+    },
+    {
+      "temp": 0.03,
+      "rho": 1,
+      "min_eigenvalue": 0.032192610839461164
+    },
+    {
+      "temp": 0.03,
+      "rho": 10,
+      "min_eigenvalue": 0.033776533048963414
+    },
+    {
+      "temp": 0.03,
+      "rho": 100,
+      "min_eigenvalue": 0.033903626616870755
+    },
+    {
+      "temp": 0.03,
+      "rho": 1000,
+      "min_eigenvalue": 0.03391605561094993
+    },
+    {
+      "temp": 0.01,
+      "rho": 1,
+      "min_eigenvalue": 0.03950913013606235
+    },
+    {
+      "temp": 0.01,
+      "rho": 10,
+      "min_eigenvalue": 0.04041944440012069
+    },
+    {
+      "temp": 0.01,
+      "rho": 100,
+      "min_eigenvalue": 0.0404888037043873
+    },
+    {
+      "temp": 0.01,
+      "rho": 1000,
+      "min_eigenvalue": 0.04049561807118159
+    }
+  ],
+  "chosen": {
+    "temp": 0.1,
+    "rho": 1,
+    "min_eigenvalue": 0.021370976140804895
+  },
+  "samples": [
+    {
+      "radius": 0.001,
+      "valid": 200,
+      "tries": 200,
+      "minimum_change": 1.996786234914616e-06
+    },
+    {
+      "radius": 0.01,
+      "valid": 200,
+      "tries": 200,
+      "minimum_change": 0.00012343777047263416
+    },
+    {
+      "radius": 0.05,
+      "valid": 200,
+      "tries": 200,
+      "minimum_change": 0.00636179294582373
+    },
+    {
+      "radius": 0.2,
+      "valid": 200,
+      "tries": 245,
+      "minimum_change": 0.05949513525624939
+    },
+    {
+      "radius": 0.5,
+      "valid": 200,
+      "tries": 1398,
+      "minimum_change": 0.3873688002492779
+    }
+  ],
+  "stationarity_error": 3.0555658003805775e-10
+}

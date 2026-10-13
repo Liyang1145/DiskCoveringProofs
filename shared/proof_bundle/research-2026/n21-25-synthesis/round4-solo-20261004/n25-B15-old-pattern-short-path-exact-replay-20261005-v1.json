@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "certificate_sha256": "d5e98e960abbcd8eac8f52a613a3accae98be1bdeda88d528c5d3ba706dc613c",
+  "constants_sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+  "totals": {
+    "excluded": 7153
+  },
+  "all_cycles_individually_checked": true,
+  "no_optimizer_imported": true,
+  "source_sha256": "14e928b01e1d780bdc0c454f1eee2177d009e9b5ca6276da0ae8573f4f96bc88",
+  "global_optimality_proved": false
+}

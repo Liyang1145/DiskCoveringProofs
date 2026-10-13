@@ -1,0 +1,25 @@
+{
+  "N": 25,
+  "actual_original_B17_final_pid": 8644,
+  "new_global_entry_frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\finalize_n25_global_source.py": "a4e4f4e447d591e3767675c4bd91025a9d14423de5a2d078d01349798ec37087",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\bind_n25_all_final_prerequisites.py": "e0d269f814f2be3a9a1a7c4bae34502204fc39a4f6bd5672733141024f694b19",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N25-GLOBAL-SOURCE-PROOF-v1.md": "558db07252fc518aeed7d878e047bd5241b7e3d765309acc69e55469ea5dd4aa",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N25-GLOBAL-SOURCE-PROOF-ERRATUM-B17-v1.md": "7cd958e02d4bcd54998b1e183eb4b6b1cfbcbe9ee0b040aff7ec22480f016c63",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-complete-origin-root-force-and-audit-solo-v1\\COMPLETE-PAYMENT-AUDIT\\VERIFIED.json": "181456255322c4fbad9d1843e5901a88fe05f5193600666b8983d54d9c726b4c",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-four-actual-complete-source-interfaces-v1\\VERIFIED.json": "9bbd35bd526d5f53266215a6cbfcf96d2637176fa17416db75caa85fc7744323",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-own-exact-upper-endpoint-full-core-interface-v1\\VERIFIED.json": "494486916990eb6a8ef482b3d094bd5cb4af4bee03680e52e3e74dc469090208",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-own-exact-family-budget-v1\\VERIFIED.json": "f14933d14ef2719918911f98fef8fb8796edb5777b4dc173fef46b2837b05c79",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B14-all-parent-lower-chain-audit-20261005-v1\\VERIFIED.json": "584de95ca552a79beb6b795884e73706cc1287361adc46cb5bceecec0fa4e85d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-final15-full-parent-finer-and-direct-audit-solo-v1\\VERIFIED.json": "8f558125f73d8a48952a482f99e48d92bd6b86666f296571e9321335ce735416",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B16-final1\\ACCEPTED\\VERIFIED.json": "4d36de54a17c0b075f82c88ec5098740721da604a37437de33c1a5f30628ed15",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\run_n25_B17_final_after_original.py": "eb2b52245cd028fbab287166dc340650d26676dead6131e787f9c4fc96e6be6d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\invoke_n25_B17_supplement_manifest.py": "22fef605e8a712b606fb2cd8c5981c3111eadf2c5357e47bfcb2c7de58dd4b18",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_n25_parent_direct_supplements.py": "ffa515b6abb82ec15f7fefbed500915ab3ae813360531d9cdfa37c62c507eee0",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\NECESSARY-OUTER-COLLAR-ARBITRARY-COVER-INDUCTION-v1.md": "e844a9a9869bf542c43fc29495c5e4fbf7c5cbe6f199c1a99364871fbb783ba5",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-N24-COVER-AND-FULL-PEEL-INDUCTION-v1.md": "8aca653a57a75546a14aa9d51bd013ebf5c2c2047e02c7a350601d81c958cc58"
+  },
+  "no_restart_and_no_source_binding_or_global_adoption_before_actual_complete_B17_zero": true,
+  "source_sha256": "a4e4f4e447d591e3767675c4bd91025a9d14423de5a2d078d01349798ec37087",
+  "global_optimality_proved": false
+}

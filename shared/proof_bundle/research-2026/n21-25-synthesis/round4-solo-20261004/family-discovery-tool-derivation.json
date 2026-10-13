@@ -1,0 +1,53 @@
+{
+  "schema": "generic-n25-discovery-tool-derivation-v1",
+  "records": [
+    {
+      "original": "catalog_collar_discovery.py",
+      "derived": "catalog_family_discovery.py",
+      "original_sha256": "c3246adb9757a4eaeeba26778635615fff69a81cb2784c4a8ae16aea78e57904",
+      "derived_sha256": "712c9b351db8c2d8f9eba2731543717f7a66cd33167164117ca157c00c84b756",
+      "boundary_literal_replaced_by_snapshot_B": true,
+      "boundary_family_range_explicitly_checked": true,
+      "only_boundary_parameter_and_corresponding_source_names_changed": true
+    },
+    {
+      "original": "probe_collar_discovery.py",
+      "derived": "probe_family_discovery.py",
+      "original_sha256": "cbc46d1717f109a359c40ef776fc32ad862118aede0683e6086a735c392960c7",
+      "derived_sha256": "24b56af5db29f983be0e373a62d08b30d7a9961eeb8e86b428229e50338c90db",
+      "boundary_literal_replaced_by_snapshot_B": true,
+      "boundary_family_range_explicitly_checked": true,
+      "only_boundary_parameter_and_corresponding_source_names_changed": true
+    },
+    {
+      "original": "replay_collar_discovery.py",
+      "derived": "replay_family_discovery.py",
+      "original_sha256": "0db92888f950b82834ad597f40be6923484d59ce98c5b06bb13d7c6ac18af640",
+      "derived_sha256": "5b90e5dbdd6c1b508fe8167715c5770e820ca6f40cbde6e3be4003c24c77156d",
+      "boundary_literal_replaced_by_snapshot_B": true,
+      "boundary_family_range_explicitly_checked": true,
+      "only_boundary_parameter_and_corresponding_source_names_changed": true
+    },
+    {
+      "original": "sparsify_discovery_graphs.py",
+      "derived": "sparsify_family_discovery.py",
+      "original_sha256": "c6119c5c326677e7f4b64ffd15b2b4f275ecbca38105622617cf56a5b8ec0e37",
+      "derived_sha256": "d771301e9bef4dc24d9cb6a8cfaee9b0c1d51cb8ca76b513de1e7887ff08abdd",
+      "boundary_literal_replaced_by_snapshot_B": true,
+      "boundary_family_range_explicitly_checked": true,
+      "only_boundary_parameter_and_corresponding_source_names_changed": true
+    },
+    {
+      "original": "export_sparse_outer_library.py",
+      "derived": "export_family_sparse_library.py",
+      "original_sha256": "c230c5e918d9f09552d2b70acc79683c3af6e96e6a0cf839635d60f4facf9838",
+      "derived_sha256": "17afe465a34477d1705fc8554094bfbeab6f0d8a17c82d6a35249630a999ac68",
+      "boundary_literal_replaced_by_snapshot_B": true,
+      "boundary_family_range_explicitly_checked": true,
+      "only_boundary_parameter_and_corresponding_source_names_changed": true
+    }
+  ],
+  "source_sha256": "5283491c65f91d2ebea4db2b74f270f40c03a777c4b69590a9c9d618dde606f7",
+  "does_not_certify_a_complete_family": true,
+  "global_optimality_proved": false
+}

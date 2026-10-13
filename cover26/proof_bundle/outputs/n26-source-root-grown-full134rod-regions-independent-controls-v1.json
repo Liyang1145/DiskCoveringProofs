@@ -1,0 +1,107 @@
+{
+  "schema": "N26-independent-source-root-clipped-grown-full134rod-region-controls-v1",
+  "verified": false,
+  "diagnosis_sha256": "f029a11bfa7378a671097ff205594b70dbd90fa910033abc3fec2080226ee37d",
+  "actual_source_root_closed_regions_independently_reconstructed": [
+    {
+      "stress_point_origin": 1515,
+      "requested_root_closed_half_width": "1/1000",
+      "strict_closed_region": true,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "4803627547690260968120700017369500323545492775950704659970339746895569251256654783280600919205009/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1515,
+      "requested_root_closed_half_width": "1/500",
+      "strict_closed_region": true,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "17655521048972006460405993378670207263498435871437007324622831471523579688958360956152774286460107/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1515,
+      "requested_root_closed_half_width": "1/200",
+      "strict_closed_region": false,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "-5582006609925981955745699308478772253083317417647850885296705795682503754670510565657219683431571/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1515,
+      "requested_root_closed_half_width": "1/100",
+      "strict_closed_region": false,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "-16906418632755779085629106070324380545638867165035672378124576162797513250983705884965913684594617/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1515,
+      "requested_root_closed_half_width": "1/50",
+      "strict_closed_region": false,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "-89637661979462068057197835425652087895252155098517217137471790135959194997776299000540607732992671/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1516,
+      "requested_root_closed_half_width": "1/1000",
+      "strict_closed_region": true,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "44015169489583071913380140383685998266357983644085146303930094554781500468540646408279425497998831/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1516,
+      "requested_root_closed_half_width": "1/500",
+      "strict_closed_region": true,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "619342164313410248990618468222369217539774504513211587700679467144614992964926718230637297503213/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1516,
+      "requested_root_closed_half_width": "1/200",
+      "strict_closed_region": false,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "-1209371692355705865027917861733164020436788614164328294747744804891698197403364127481074883198663/2000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1516,
+      "requested_root_closed_half_width": "1/100",
+      "strict_closed_region": false,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "-75879738933348997799287720386123029153550406084773014462709410519881179642164745714117400909519201/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "stress_point_origin": 1516,
+      "requested_root_closed_half_width": "1/50",
+      "strict_closed_region": false,
+      "whole_actual_source_root": false,
+      "strict_radius_margin": "-5448696360337606018149816159262460743269985881278895995532127638394722207613268522042591483920709/400000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+    }
+  ],
+  "actual_distinct_full134rod_stress_kernels_reconstructed": 2,
+  "independent_normalized_Taylor_square_secant_sine_checks": 30,
+  "actual_root_subset_source_history_and_zero_payment_guards_rejected": [
+    "grown-region-unrequested-width",
+    "grown-region-root-lower-escaped",
+    "grown-region-root-upper-escaped",
+    "grown-region-closed-coordinate-omitted",
+    "grown-region-proper-root-subset-laundered-as-whole",
+    "grown-region-old-leaf-clipping-laundered",
+    "grown-regions-paid-as-current-geometry",
+    "grown-regions-paid-as-whole-root-removal",
+    "grown-regions-latest-intersection-remainders-omitted",
+    "grown-regions-source-binding-laundered"
+  ],
+  "nested_regions_NOT_disjoint_paid_leaves_or_a_latest_forest_cover": true,
+  "fresh_latest_OPEN_intersections_and_all_remainders_still_required": true,
+  "arithmetic_only_NOT_entire_latest_model_source_history_geometry_acceptance": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "28a813d4a1d140852baf6352afe5098f4c78f2b020edd691ec74408afcb648e8",
+  "tested_probe_sha256": "13ece5e36e5297bb4996b88a854441be9fdf905e166756f1375f0ed32964fbbf",
+  "tested_independent_correlated_energy_sha256": "a509d77cfc34afc8b7bbb38c08efd1f1020482463dfc3713254d36190b8c5d74"
+}

@@ -1,0 +1,94 @@
+{
+  "N": 25,
+  "B": 14,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "centers": 15,
+      "faces": [
+        14336,
+        17152,
+        19456
+      ],
+      "members": 76
+    },
+    {
+      "id": 1,
+      "centers": 16,
+      "faces": [
+        14336,
+        33536,
+        51200
+      ],
+      "members": 13
+    },
+    {
+      "id": 2,
+      "centers": 17,
+      "faces": [
+        49408,
+        77824,
+        100352
+      ],
+      "members": 3
+    },
+    {
+      "id": 3,
+      "centers": 16,
+      "faces": [
+        14336,
+        35840,
+        49408
+      ],
+      "members": 1
+    },
+    {
+      "id": 4,
+      "centers": 17,
+      "faces": [
+        14336,
+        33152,
+        83968,
+        98816
+      ],
+      "members": 1
+    },
+    {
+      "id": 5,
+      "centers": 17,
+      "faces": [
+        49408,
+        77824,
+        99328
+      ],
+      "members": 5
+    },
+    {
+      "id": 6,
+      "centers": 18,
+      "faces": [
+        14336,
+        81952,
+        164352,
+        196736
+      ],
+      "members": 1
+    }
+  ],
+  "group_count": 7,
+  "selected_types": 100,
+  "catalog_types": 100,
+  "catalog_sha256": "2f19445f1e5439ffbff93b72351fcf1f181cff7accbc8715b8743e23bd079afc",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "b4eca087540548bdc669f5dc136f2f1dc6a8250fe1326ff5dd3da44e94d8aded",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "parent_groups_sha256": null,
+  "parent_proof_sha256": null,
+  "source_sha256": "fab073ec73783ae97d655e6bad6034181a5fe9931ae11b2e166001a813e03be6",
+  "members_are_parent_graphs_not_actual_cover_types": true,
+  "boundary_vertices_may_be_unused_in_faces_but_keep_anchor_rods": true,
+  "not_a_complete_family": true,
+  "global_optimality_proved": false
+}

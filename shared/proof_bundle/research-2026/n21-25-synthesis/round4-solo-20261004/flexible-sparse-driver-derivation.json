@@ -1,0 +1,54 @@
+{
+  "verified_mechanical_derivation": true,
+  "records": [
+    {
+      "original": "test_sparse_collar.py",
+      "derived": "test_sparse_collar_flexible.py",
+      "original_sha256": "7334d3e0d0990728a749554fcb7919abdbaae474a184b72401c80ca5249e8a4d",
+      "derived_sha256": "7e55d535a11cc9f4f0cf1c591f360546c4f60b8a0e068976c0174501e776cd9a",
+      "changes": [
+        [
+          "    args = ap.parse_args()",
+          "    ap.add_argument(\"--maps\", type=Path, required=True)\n    args = ap.parse_args()"
+        ],
+        [
+          "ROOT / \"n25-B14-sparse-match-controls-v1/VERIFIED.json\"",
+          "args.maps.resolve()"
+        ]
+      ],
+      "occurrence_counts": [
+        1,
+        2
+      ]
+    },
+    {
+      "original": "run_sparse_collar.py",
+      "derived": "run_sparse_collar_flexible.py",
+      "original_sha256": "e59afbe4d12ab4ed64bf4839c4dc3ba9ac6bc46e4becdba3002d73713474544a",
+      "derived_sha256": "3753352a075fd107199d34777aaba1ca3aaeb45752b10a78778294dc0763725b",
+      "changes": [
+        [
+          "    args = ap.parse_args()",
+          "    ap.add_argument(\"--maps\", type=Path, required=True)\n    args = ap.parse_args()"
+        ],
+        [
+          "ROOT / \"n25-B14-sparse-match-controls-v1/VERIFIED.json\"",
+          "args.maps.resolve()"
+        ],
+        [
+          "\"test_sparse_collar.py\"",
+          "\"test_sparse_collar_flexible.py\""
+        ]
+      ],
+      "occurrence_counts": [
+        1,
+        1,
+        2
+      ]
+    }
+  ],
+  "source_sha256": "691fbc24be611f6d0fd737301e8509dd92f62188011c76fc301b92cb4ed6387d",
+  "original_driver_and_native_files_not_modified": true,
+  "mathematical_acceptance_logic_not_changed": true,
+  "global_optimality_proved": false
+}

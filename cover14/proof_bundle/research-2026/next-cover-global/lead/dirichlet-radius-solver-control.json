@@ -1,0 +1,16 @@
+{
+  "status": "numeric_fixed_candidate_elimination_calibration",
+  "eliminated_positive_face_radii": 16,
+  "remaining_parameters": 39,
+  "candidate_radius_error": 6.661338147750939e-16,
+  "equation_residual": 5.551115123125783e-16,
+  "implicit_derivative_directional_errors": [
+    2.3240213226083384e-10,
+    2.128915377319629e-10,
+    2.373383260756423e-10,
+    1.5687284804499768e-10,
+    3.077221810698916e-10
+  ],
+  "min_anchor_log_derivative": 0.016746464773990045,
+  "anchor_scale_derivative_sum_error": 7.771561172376096e-16
+}

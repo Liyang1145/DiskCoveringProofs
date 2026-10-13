@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "positive_controls": 1,
+  "negative_controls_rejected": [
+    "missing-unpaid-box",
+    "duplicate-unpaid-box",
+    "wrong-unpaid-domain",
+    "false-completion-claim",
+    "duplicate-child",
+    "unreachable-extra-node",
+    "changed-input-source",
+    "zero-force-certificate"
+  ],
+  "tree_sha256": "d315dc0601730d652845abce405c2f3f1243eefa3f6c35883ccf6a6a543dbb1a",
+  "immutable_inputs_modified": false,
+  "replay_source_sha256": "09accec333ead388a391b85441fdd345b289eae194c58943bc5aeb5d6ae1ba6b",
+  "source_sha256": "b597b6477162be00bc8e86f99b0e33f2c9fc000f07c588c192d23397dba36ab6",
+  "scope": "partial-tree accounting controls, not whole-angle or global proof"
+}

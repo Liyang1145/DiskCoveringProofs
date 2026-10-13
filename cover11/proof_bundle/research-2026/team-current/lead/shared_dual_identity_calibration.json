@@ -1,0 +1,38 @@
+[
+  {
+    "start": 0,
+    "span": 3,
+    "identity_error": 3.610445276081009e-13,
+    "area_error": 1.865174681370263e-14
+  },
+  {
+    "start": 0,
+    "span": 4,
+    "identity_error": 3.108624468950438e-14,
+    "area_error": 6.390443729742401e-13
+  },
+  {
+    "start": 1,
+    "span": 3,
+    "identity_error": 1.3500311979441904e-13,
+    "area_error": 6.661338147750939e-13
+  },
+  {
+    "start": 2,
+    "span": 3,
+    "identity_error": 1.1532996779806126e-12,
+    "area_error": 3.455014052633487e-13
+  },
+  {
+    "start": 2,
+    "span": 4,
+    "identity_error": 1.7497114868092467e-13,
+    "area_error": 8.926193117986259e-14
+  },
+  {
+    "start": 3,
+    "span": 3,
+    "identity_error": 8.215650382226158e-13,
+    "area_error": 3.610445276081009e-13
+  }
+]

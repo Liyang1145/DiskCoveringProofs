@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "schema": "N25-whole-parent-mixed-payment-controls-v1",
+  "real_actual_attaining_parent_checked": 115569,
+  "strict_nonstrict_oldpaid_and_remaining_routes_disjoint": true,
+  "negative_controls_rejected": [
+    "strict-target-already-paid",
+    "nonstrict-target-already-paid",
+    "strict-and-nonstrict-parent-overlap",
+    "boolean-parent-index",
+    "wrong-transport-parent",
+    "wrong-original-snapshot",
+    "same-count-omitted-source-face",
+    "no-literal-whole-face-proof",
+    "no-real-original-parent-proof",
+    "unexhausted-completion-search",
+    "nonstrict-recast-strict",
+    "nonstrict-core-missing",
+    "nonstrict-still-pending",
+    "wrong-same-root-value"
+  ],
+  "audit_source_sha256": "ffebe8d6af2e347fe733a072d7696812e98908bc03e0087d0d0d970cc7e7af86",
+  "strict_checker_sha256": "ffa515b6abb82ec15f7fefbed500915ab3ae813360531d9cdfa37c62c507eee0",
+  "nonstrict_checker_sha256": "467b02f0ae57f181cc364f3c23c71b977b486688dd94401a19508b59a695cf12",
+  "source_sha256": "0d657c4b10ca2476ef903886a25b1e5c0270a3bb14bea4c7421de087927e7434",
+  "functional_controls_not_full_parent_math_payment": true,
+  "global_optimality_proved": false
+}

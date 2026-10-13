@@ -1,0 +1,303 @@
+{
+  "N": 25,
+  "B": 15,
+  "threshold": 1,
+  "groups": [
+    {
+      "id": 0,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 1,
+      "centers": 18,
+      "faces": [
+        22528,
+        164096,
+        198656
+      ],
+      "members": 1
+    },
+    {
+      "id": 2,
+      "centers": 18,
+      "faces": [
+        416,
+        99328,
+        155648,
+        200704
+      ],
+      "members": 1
+    },
+    {
+      "id": 3,
+      "centers": 18,
+      "faces": [
+        208,
+        99328,
+        155648,
+        200704
+      ],
+      "members": 1
+    },
+    {
+      "id": 4,
+      "centers": 18,
+      "faces": [
+        26624,
+        98320,
+        131456,
+        196672
+      ],
+      "members": 1
+    },
+    {
+      "id": 5,
+      "centers": 17,
+      "faces": [
+        3328,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 6,
+      "centers": 18,
+      "faces": [
+        104,
+        99328,
+        155648,
+        200704
+      ],
+      "members": 1
+    },
+    {
+      "id": 7,
+      "centers": 18,
+      "faces": [
+        416,
+        68608,
+        180224,
+        200704
+      ],
+      "members": 1
+    },
+    {
+      "id": 8,
+      "centers": 18,
+      "faces": [
+        208,
+        68608,
+        180224,
+        200704
+      ],
+      "members": 1
+    },
+    {
+      "id": 9,
+      "centers": 17,
+      "faces": [
+        26624,
+        68608,
+        98560
+      ],
+      "members": 1
+    },
+    {
+      "id": 10,
+      "centers": 17,
+      "faces": [
+        704,
+        35840,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 11,
+      "centers": 17,
+      "faces": [
+        3328,
+        71680,
+        114688
+      ],
+      "members": 1
+    },
+    {
+      "id": 12,
+      "centers": 17,
+      "faces": [
+        1664,
+        35840,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 13,
+      "centers": 16,
+      "faces": [
+        3328,
+        38912,
+        57344
+      ],
+      "members": 1
+    },
+    {
+      "id": 14,
+      "centers": 16,
+      "faces": [
+        2816,
+        38912,
+        57344
+      ],
+      "members": 1
+    },
+    {
+      "id": 15,
+      "centers": 17,
+      "faces": [
+        2816,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 16,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        68608,
+        98560
+      ],
+      "members": 1
+    },
+    {
+      "id": 17,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        71680,
+        98816
+      ],
+      "members": 1
+    },
+    {
+      "id": 18,
+      "centers": 17,
+      "faces": [
+        28672,
+        33088,
+        66304,
+        68608
+      ],
+      "members": 1
+    },
+    {
+      "id": 19,
+      "centers": 17,
+      "faces": [
+        28672,
+        33408,
+        67072,
+        71680
+      ],
+      "members": 1
+    },
+    {
+      "id": 20,
+      "centers": 16,
+      "faces": [
+        28672,
+        33536,
+        38912
+      ],
+      "members": 1
+    },
+    {
+      "id": 21,
+      "centers": 17,
+      "faces": [
+        28672,
+        71680,
+        98560
+      ],
+      "members": 1
+    },
+    {
+      "id": 22,
+      "centers": 18,
+      "faces": [
+        32864,
+        67072,
+        98432,
+        136192,
+        155648
+      ],
+      "members": 1
+    },
+    {
+      "id": 23,
+      "centers": 17,
+      "faces": [
+        33536,
+        90112,
+        102400
+      ],
+      "members": 1
+    },
+    {
+      "id": 24,
+      "centers": 17,
+      "faces": [
+        34048,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 25,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        100352
+      ],
+      "members": 1
+    },
+    {
+      "id": 26,
+      "centers": 18,
+      "faces": [
+        35072,
+        137216,
+        212992
+      ],
+      "members": 1
+    }
+  ],
+  "group_count": 27,
+  "selected_types": 27,
+  "catalog_types": 27,
+  "catalog_sha256": "91eb40d11996a4676a522ebe5f5da1cdccdfa01a141777437a5e8137a442a896",
+  "bindings_file": "bindings.jsonl",
+  "bindings_sha256": "037ae877347b67f25255afc9371011dcaf3734b613cad7f5be22fbd1feec1728",
+  "verified_embeddings_during_generation": true,
+  "full_selected_catalog_scanned": false,
+  "members_are_standalone_graphs_not_cover_types": true,
+  "not_a_complete_family": true,
+  "source_sha256": "fbd88dffba8e5c08e2a665972d3a4e7b5855d93c9c2a6b12b4117dee032ab7b3",
+  "global_optimality_proved": false
+}

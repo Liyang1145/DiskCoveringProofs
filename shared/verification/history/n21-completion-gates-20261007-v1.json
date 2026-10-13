@@ -1,0 +1,22 @@
+{
+  "schema": "unmodified-completion-gates-on-read-only-archive-workspace-v1",
+  "N": 21,
+  "completion_gates_passed": true,
+  "gate_scope": "full N21 freezer",
+  "all_original_frozen_input_bytes_independently_verified": true,
+  "byte_audit_sha256": "b896f5dbc9f9f342bf8c9088347c3d8d1d3904551b1a4a835d80bdec0d4ad803",
+  "original_snapshot_sha256": "79d4339fdc42075febdccbd7322a9138f8c37668061a8604015e058b733d9881",
+  "frozen_file_count": 86144,
+  "original_acceptor_source_sha256": "39ab58846b3e71e63be273819d1d9df68b14680d2ec72c5652f45f6107c5b962",
+  "adapter_sha256": "1e0865d6107d035b6fb08bbe58428cb98ccd5a8fe9f5648027832811c63af1e8",
+  "adapter_missing_input_and_write_rejection_controls_passed": true,
+  "archive_input_reads": 258447,
+  "unique_inputs_opened_by_gates": 86144,
+  "no_existing_source_or_math_input_modified": true,
+  "mathematical_leaf_certificates_not_freshly_replayed_by_this_gate": true,
+  "failure": null,
+  "seconds": 129.09399999999732,
+  "reproduced_snapshot_path": "C:\\热爱单机但萌新\\_incoming-local-math-20261004\\proof-replay-20261007-v1\\n21-workspace\\research-2026\\n21-25-synthesis\\round2-grouped\\evidence\\N21-COMPLETION-GATES-ARCHIVE-REPLAY.json",
+  "reproduced_snapshot_sha256": "79d4339fdc42075febdccbd7322a9138f8c37668061a8604015e058b733d9881",
+  "reproduced_snapshot_byte_identical_to_original": true
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "script": "certify_q0_closure.py",
+    "boxes": 2175,
+    "scalar_points": 6925,
+    "enclosure_violations": 0
+  },
+  {
+    "script": "certify_q0_lower375.py",
+    "boxes": 2175,
+    "scalar_points": 6514,
+    "enclosure_violations": 0
+  }
+]

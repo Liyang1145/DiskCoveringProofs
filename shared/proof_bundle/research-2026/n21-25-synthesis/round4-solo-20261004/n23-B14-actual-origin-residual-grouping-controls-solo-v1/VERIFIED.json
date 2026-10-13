@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "schema": "N23-B14-original-origin-residual-group-selection-controls-v1",
+  "real_original_full_types_in_finite_fixture": 32,
+  "actual_finite_residual_members": 18,
+  "negative_controls_rejected": [
+    "missing-real-residual",
+    "duplicate-real-residual",
+    "reversed-selection",
+    "wrong-count",
+    "truncated-original-source",
+    "source-index-gap",
+    "wrong-parent-header",
+    "wrong-actual-exposed-label-mask",
+    "reintroducing-already-origin-excluded-type",
+    "omitted-original-full-face"
+  ],
+  "catalog_sha256": "8fbe6bab7a352046722d423356ef8d44fadc1322c05840edb6b2fa93d8fcb24c",
+  "source_sha256": "de5d3c06a963dfed673980a01c1e587979289ce2b104a3b47afe2d2d1c729f30",
+  "group_source_sha256": "95a11a2cfc5862346eaaac944405e35b14ab9835f60a514ce0fcea8de5c514e6",
+  "finite_selection_controls_not_new_lower_bounds": true,
+  "global_optimality_proved": false
+}

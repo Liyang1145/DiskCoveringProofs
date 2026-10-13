@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "intervals": 36,
+  "exact_scope": "e=[0,7/50] without gaps; both radial roots; t and cosphi full domains",
+  "kernel_A_boxes": 198152,
+  "kernel_B_boxes": 198152,
+  "kernel_A_seconds": 91.09488487243652,
+  "kernel_B_seconds": 287.5488951206207,
+  "weights_and_endpoints_equal": true,
+  "files": {
+    "directional_low_cover.json": "6841ed8a1d4e654ff45f417de63282cf824a38cf27412f870c0bc43cbccd7cb0",
+    "directional_e_cover.json": "6d0691617235eef9300e7a4732624768660f999adf436d9b088ed5a1f3776d59",
+    "directional_fixed_low.json": "6bf251da276a4792a5888314a2a71ba5e104f8b9102f4aed76119e3c6832311e",
+    "directional_fixed_all.json": "04a76a473cab61f98ed35333501ac1154f501d00dc49fcf719a544b0a3c2a829",
+    "certify_directional_dual.py": "1e7017d6bdbcc2b1a33b2d1c697525c251c2f468a63a2a539eaeb1ef5f2fc24f",
+    "certify_directional_dual_t.py": "4d2d51642f6ce72849a92a4f7f68a7f4cdabbfb7cdaa841edca7b81bb0ca063d",
+    "verify_directional_fixed.py": "c6353329c67d0bda29f0dfb14a6f2f32ccff5887a3f4e985757966a3eac2e739",
+    "verify_directional_fixed_low.py": "4f8bde6bb31d86f2f873c05b6a9bc5ce8776b75aaa30d47fbf44a6a1552425e5",
+    "directional_instrument_control.json": "761b6913ca3aeee7d2fcc5fc10dd8b01a99628c6cd72024c071185050709ecd5",
+    "M10-038-EXCLUSION.md": "f84192007856657b79e8b03394f775caa0c758f2007380072f5437b7e06f9487"
+  }
+}

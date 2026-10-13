@@ -1,0 +1,80 @@
+{
+  "kind": "user-requested-live-process-suspension-receipt",
+  "goal_status": "paused",
+  "suspension_started": "2026-10-04T13:07:43.8726613+08:00",
+  "suspension_finished": "2026-10-04T13:07:45.7247753+08:00",
+  "second_verification": "2026-10-04T13:08:05.0186739+08:00",
+  "method": "NtSuspendProcess",
+  "identity_checks": [
+    "Open process handle with PROCESS_SUSPEND_RESUME and PROCESS_QUERY_INFORMATION",
+    "GetProcessTimes creation FILETIME equals recorded exact start time",
+    "Fresh Win32_Process command line contains exact task output path",
+    "No preexisting suspended thread before this suspension call"
+  ],
+  "verification": {
+    "successful_calls": 13,
+    "all_target_threads_wait_suspended": true,
+    "cpu_unchanged_on_second_check": true,
+    "terminated_processes": 0,
+    "restarted_processes": 0,
+    "proof_files_modified": 0
+  },
+  "output_base": "E:\\ai4math2-proof-output-20261004-9f39504ba9794c6b8344fefcfc9edb82",
+  "tasks": [
+    {
+      "name": "n23-B14-paid-search-stage-resume1",
+      "session": 51713,
+      "process_ids": [43456, 22876],
+      "phase": "bounded merge; original native search already exited",
+      "exited_native_pid_not_suspended": 42116
+    },
+    {
+      "name": "n23-B15-rest-outer-root-force-resume1",
+      "session": 72989,
+      "process_ids": [41580, 31628],
+      "phase": "certificate production"
+    },
+    {
+      "name": "n24-B13-outer-search-prefix-replay-resume1",
+      "session": 78009,
+      "process_ids": [21444, 49304, 47716],
+      "phase": "native search"
+    },
+    {
+      "name": "n25-B14-pair-search-prefix-replay-resume1",
+      "session": 18934,
+      "process_ids": [37348, 22608, 19732],
+      "phase": "native search"
+    },
+    {
+      "name": "n25-B15-paid-search-stage-resume1",
+      "session": 1326,
+      "process_ids": [49792, 32848, 33860],
+      "phase": "native search"
+    }
+  ],
+  "processes": [
+    {"pid": 43456, "parent_pid": 37548, "name": "pwsh.exe", "start": "2026-10-04T10:44:10.7858649+08:00", "nt_status": 0, "cpu_seconds": 0.171875, "resume_calls_required": 1},
+    {"pid": 21444, "parent_pid": 37548, "name": "pwsh.exe", "start": "2026-10-04T10:44:31.8190806+08:00", "nt_status": 0, "cpu_seconds": 0.046875, "resume_calls_required": 1},
+    {"pid": 37348, "parent_pid": 37548, "name": "pwsh.exe", "start": "2026-10-04T10:44:52.4194902+08:00", "nt_status": 0, "cpu_seconds": 0.125, "resume_calls_required": 1},
+    {"pid": 41580, "parent_pid": 37548, "name": "pwsh.exe", "start": "2026-10-04T12:08:35.5118679+08:00", "nt_status": 0, "cpu_seconds": 0.0625, "resume_calls_required": 1},
+    {"pid": 49792, "parent_pid": 37548, "name": "pwsh.exe", "start": "2026-10-04T12:12:47.2269632+08:00", "nt_status": 0, "cpu_seconds": 0.125, "resume_calls_required": 1},
+    {"pid": 22876, "parent_pid": 43456, "name": "python.exe", "start": "2026-10-04T10:44:11.1591637+08:00", "nt_status": 0, "cpu_seconds": 694.953125, "resume_calls_required": 1},
+    {"pid": 49304, "parent_pid": 21444, "name": "python.exe", "start": "2026-10-04T10:44:32.1987887+08:00", "nt_status": 0, "cpu_seconds": 0.09375, "resume_calls_required": 1},
+    {"pid": 22608, "parent_pid": 37348, "name": "python.exe", "start": "2026-10-04T10:44:52.9314797+08:00", "nt_status": 0, "cpu_seconds": 2.703125, "resume_calls_required": 1},
+    {"pid": 31628, "parent_pid": 41580, "name": "python.exe", "start": "2026-10-04T12:08:35.8724109+08:00", "nt_status": 0, "cpu_seconds": 1088.59375, "resume_calls_required": 1},
+    {"pid": 32848, "parent_pid": 49792, "name": "python.exe", "start": "2026-10-04T12:12:47.6663948+08:00", "nt_status": 0, "cpu_seconds": 0.203125, "resume_calls_required": 1},
+    {"pid": 47716, "parent_pid": 49304, "name": "peel_outer_search_stage.exe", "start": "2026-10-04T10:44:59.5786884+08:00", "nt_status": 0, "cpu_seconds": 2936.90625, "resume_calls_required": 1},
+    {"pid": 19732, "parent_pid": 22608, "name": "peel_search_stage.exe", "start": "2026-10-04T10:45:42.4722745+08:00", "nt_status": 0, "cpu_seconds": 2919.5625, "resume_calls_required": 1},
+    {"pid": 33860, "parent_pid": 32848, "name": "peel_search_stage.exe", "start": "2026-10-04T12:12:59.2250191+08:00", "nt_status": 0, "cpu_seconds": 1098.125, "resume_calls_required": 1}
+  ],
+  "resume_policy": [
+    "Do not resume until the user explicitly requests continuation.",
+    "Revalidate exact creation time and command/output path using a live process handle; PID alone is not sufficient.",
+    "Each listed live process received exactly one successful NtSuspendProcess call; apply at most one corresponding NtResumeProcess call.",
+    "Prefer native workers first, then Python launchers, then PowerShell wrappers.",
+    "If a process has exited, do not apply this receipt to a reused PID or automatically restart its workload.",
+    "Suspension retains live memory, not an on-disk checkpoint that survives reboot.",
+    "No unrelated process, console host, parent Codex service, other computer, or n11 job was suspended."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "linux_native_pid": 2049,
+  "owned_wsl_proxy_pid": 5036,
+  "actual_N": 25,
+  "actual_B": 16,
+  "binary_linux_path": "/mnt/c/热爱单机但萌新/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004/peel_sparse_outer_collar-linux",
+  "native_binary_sha256": "a3045ddf4ea89bb5812d050f0f66d041c4f6705065ee6a0728205ee429660252",
+  "binary_hash_note": "Use actual Get-FileHash before any signal; this auxiliary identity is not mathematical proof.",
+  "command_output_relative": "n25-B16-sparse-collar-search-20261005-v1/N25-B14-necessary-sparse-collars.json",
+  "real_ps_and_native_start_line_verified": true,
+  "legacy_driver_regex_and_filename_still_say_B14": true,
+  "do_not_edit_the_running_bound_driver": true,
+  "check_proc_identity_before_any_signal": true
+}

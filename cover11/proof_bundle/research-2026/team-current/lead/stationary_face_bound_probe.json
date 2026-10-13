@@ -1,0 +1,32 @@
+{
+  "scope": "CONDITIONAL stationaryvalueonly; budgetdiagnostic",
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      1.0,
+      1.1863995522992576
+    ],
+    [
+      1.0,
+      1.1863995522992576
+    ],
+    [
+      -1.1863995522992576,
+      1.1863995522992576
+    ]
+  ],
+  "count": 3480,
+  "live": 0,
+  "closed": {
+    "illegal": 37,
+    "nonstationary": 1202,
+    "positivecurvature": 0,
+    "value": 502
+  },
+  "terminal": 28.10694882274086,
+  "seconds": 73.06255531311035,
+  "topboxes": []
+}

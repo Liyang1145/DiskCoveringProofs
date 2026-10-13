@@ -1,0 +1,26 @@
+{
+  "schema": "N26-synthetic-mixed-curvature-final-accounting-regression-v1",
+  "synthetic_exact_source_row_and_latest_history_partition_passed": true,
+  "invalid_accounting_controls_rejected": [
+    "duplicate-discharged-root-index",
+    "boolean-discharged-root-index",
+    "missing-whole-root-payment",
+    "uncovered-source-root-omitted",
+    "covered-root-reintroduced-as-remaining",
+    "LOCAL-equality-region-declared-strictly-empty",
+    "root-payment-lower-bound-flag-missing",
+    "remaining-root959-history-omitted",
+    "remaining-root959-history-reset-to-OPEN",
+    "current-root-count-changed",
+    "accepted-source-root-count-changed",
+    "accepted-history-count-changed"
+  ],
+  "actual_newest_root959_history_DATA_retained_identically": true,
+  "synthetic_remaining_count_16_NOT_a_current_geometry_result": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "tested_final_rehash_executor_sha256": "5d44280b1a5dcedd02fed7ba44403e0e0c7316769f382737658c2311e7aee8c8",
+  "executed_test_sha256": "a72db5465d257b13b7e21877bfb1b537e6729e5c85f734599107f889c75eeb85"
+}

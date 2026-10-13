@@ -1,0 +1,26 @@
+{
+  "verified": true,
+  "schema": "restored-B14-union-adapter-finite-controls-v1",
+  "small_overlapping_fixed_record_union_positive": true,
+  "all_779_input_indices_partition_once_in_25_at_most32_batches": true,
+  "negative_controls_rejected": [
+    "missing-union-row",
+    "extra-union-row",
+    "duplicate-union-row",
+    "wrong-union-stabilizer",
+    "extra-binary-tail",
+    "non-triangle-mask",
+    "conflicting-duplicate-input-stabilizer",
+    "boolean-run-count",
+    "negative-run-count",
+    "invalid-fan-in",
+    "unbounded-fan-in"
+  ],
+  "source_sha256": "49003538d5deff76c1b4ff12c0478f8c3dbb8e333ab395f15fc001146c082abe",
+  "adapter_source_sha256": "2b6e0453d0d9e06acc5ca01357f16adf73a2b053620d8f40d52c9a59a60645cd",
+  "frozen_merge_source_sha256": "807f41a1feccc6317fa52e936289289481585f614549c580abe1e79195094579",
+  "frozen_reader_source_sha256": "bf6f37d144227befab7ca5c82562d21eedc3173ad3a9fdfaa8b10b5ab5c4edfb",
+  "functional_binary_fixtures_not_geometric_types_or_native_search_evidence": true,
+  "not_a_production_union_or_lower_bound_payment": true,
+  "global_optimality_proved": false
+}

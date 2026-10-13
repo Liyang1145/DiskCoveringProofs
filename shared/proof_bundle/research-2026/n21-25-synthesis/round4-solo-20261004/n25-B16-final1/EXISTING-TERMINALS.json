@@ -1,0 +1,19 @@
+{
+  "actual_observed_original_cached_handle_terminals": [
+    {
+      "OriginalPid": 18996,
+      "OriginalCreationFileTimeIdentity": "134357256441133561",
+      "OriginalCommandLine": "\"C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe\" -u audit_library_parent_fillings.py --snapshot n25-B16-all37624-complete-parent-pending-snapshot-20261005-v1.json --base n25-B16-complete-parent-exact8068-library-transport-pathfixed-solo-v2 --stage n25-B16-all29556-library-parent-gapped-fillings-solo-v1 --controls n25-linked-general-collar-controls-20261005-v1/VERIFIED.json --job-controls n25-B16-original-gapped-job-controls-solo-v1/VERIFIED.json --audit-controls n25-B16-gapped-full-parent-audit-controls-solo-v1/VERIFIED.json --output n25-B16-f1-a",
+      "ActualExitCode": 0,
+      "OriginalCachedProcessHandleTerminalObserved": true
+    },
+    {
+      "OriginalPid": 4352,
+      "OriginalCreationFileTimeIdentity": "134357256838578589",
+      "OriginalCommandLine": "\"C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe\" -u refine_completed_parent_pending.py --stage n25-B16-all29556-library-parent-gapped-fillings-solo-v1 --output n25-B16-deep5 --force-limit 511 --skip-parent 47808 86819 86822 86828 86837 86927 87535 87536 87538 87541 115569 87681 87773 87866 87168 87255 87258 87261 87310 88910 88273 88326 88327 88329 88333 88366 87974 88046 88053 88201 88202 89236 89433 89578 89710 89978 91124 91125 91127 91248 91343 91434 90657 90877 90880 90883 91620 91621 91623 91758 91879 92985 93244 93255 95507 95519 94648 94910 94913 95125 95126 95127 95221 95393 95472",
+      "ActualExitCode": 0,
+      "OriginalCachedProcessHandleTerminalObserved": true
+    }
+  ],
+  "source_sha256": "3beddb04b36570d8e07c8479c27ca4646e8c46e11bc25467cbd4b1904731c948"
+}

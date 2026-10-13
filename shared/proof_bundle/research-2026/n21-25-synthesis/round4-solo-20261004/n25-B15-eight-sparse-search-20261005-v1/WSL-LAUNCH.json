@@ -1,0 +1,25 @@
+{
+  "owned_wsl_proxy_pid": 21344,
+  "command": [
+    "C:\\Windows\\System32\\wsl.exe",
+    "--distribution",
+    "Ubuntu2204",
+    "--exec",
+    "/usr/bin/env",
+    "-C",
+    "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004",
+    "./peel_eight_rod_collar-linux",
+    "25",
+    "15",
+    "n25-B15-eight-sparse-search-20261005-v1/N25-B15-necessary-eight-rod-collars.json",
+    "10000000",
+    "768677",
+    "1587443",
+    "2546859",
+    "0",
+    "dfs",
+    "-",
+    "n25-B15-new-sparse-library-20261005-v1/OBSTACLES.tsv",
+    "4058615"
+  ]
+}

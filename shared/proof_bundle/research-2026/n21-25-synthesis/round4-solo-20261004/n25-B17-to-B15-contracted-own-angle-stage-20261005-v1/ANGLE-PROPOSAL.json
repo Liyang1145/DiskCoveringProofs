@@ -1,0 +1,6349 @@
+{
+  "schema": "changed-B-candidate-own-angle-proposals-v1",
+  "N": 25,
+  "B": 15,
+  "source_snapshot_sha256": "e26a078d6143485fc795c92bc7fefbefb810477f6fc947a1017dea241b91711a",
+  "source_candidates": 135,
+  "constants_sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+  "outcomes": [
+    {
+      "source_candidate": 0,
+      "centers": 17,
+      "faces": [
+        152,
+        33536,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 8,
+          "v": 2,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 2,
+          "j": 8,
+          "path": [
+            3,
+            7,
+            8
+          ],
+          "direction": -1
+        },
+        {
+          "u": 2,
+          "v": 8,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 2,
+          "j": 8,
+          "path": [
+            3,
+            7,
+            8
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 1,
+      "centers": 17,
+      "faces": [
+        304,
+        33536,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 9,
+          "v": 3,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": -1
+        },
+        {
+          "u": 3,
+          "v": 9,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 2,
+      "centers": 17,
+      "faces": [
+        304,
+        34304,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 9,
+          "v": 3,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": -1
+        },
+        {
+          "u": 3,
+          "v": 9,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 3,
+      "centers": 17,
+      "faces": [
+        304,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 9,
+          "v": 3,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": -1
+        },
+        {
+          "u": 3,
+          "v": 9,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 4,
+      "centers": 17,
+      "faces": [
+        352,
+        34304,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 8,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 4,
+          "j": 8,
+          "path": [
+            5,
+            8
+          ],
+          "direction": 1
+        },
+        {
+          "u": 8,
+          "v": 14,
+          "weight": 4058615,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            15,
+            16,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 7,
+        "negative_integer_sum": -510557,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 5,
+      "centers": 17,
+      "faces": [
+        352,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 8,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 4,
+          "j": 8,
+          "path": [
+            5,
+            8
+          ],
+          "direction": 1
+        },
+        {
+          "u": 8,
+          "v": 14,
+          "weight": 4058615,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            15,
+            16,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 7,
+        "negative_integer_sum": -510557,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 6,
+      "centers": 17,
+      "faces": [
+        400,
+        33536,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 9,
+          "v": 3,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": -1
+        },
+        {
+          "u": 3,
+          "v": 9,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            8,
+            9
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 7,
+      "centers": 17,
+      "faces": [
+        416,
+        33536,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 7,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 4,
+          "j": 7,
+          "path": [
+            5,
+            7
+          ],
+          "direction": 1
+        },
+        {
+          "u": 7,
+          "v": 14,
+          "weight": 4058615,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            15,
+            16,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 7,
+        "negative_integer_sum": -510557,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 8,
+      "centers": 17,
+      "faces": [
+        608,
+        34304,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 9,
+      "centers": 17,
+      "faces": [
+        608,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 10,
+      "centers": 17,
+      "faces": [
+        608,
+        35840,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 11,
+      "centers": 17,
+      "faces": [
+        608,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 12,
+      "centers": 17,
+      "faces": [
+        608,
+        57344,
+        68608,
+        77824
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 13,
+      "centers": 17,
+      "faces": [
+        608,
+        57344,
+        68608,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 14,
+      "centers": 17,
+      "faces": [
+        704,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 15,
+      "centers": 17,
+      "faces": [
+        704,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 16,
+      "centers": 17,
+      "faces": [
+        704,
+        57344,
+        68608,
+        77824
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 4
+        },
+        {
+          "u": 5,
+          "v": 9,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 5,
+          "j": 9,
+          "path": [
+            6,
+            9
+          ],
+          "direction": 1
+        },
+        {
+          "u": 9,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 9,
+          "j": 13,
+          "path": [
+            10,
+            16,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 14,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 13
+        },
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 9,
+        "negative_integer_sum": -484959,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 17,
+      "centers": 17,
+      "faces": [
+        704,
+        57344,
+        68608,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 4
+        },
+        {
+          "u": 5,
+          "v": 9,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 5,
+          "j": 9,
+          "path": [
+            6,
+            9
+          ],
+          "direction": 1
+        },
+        {
+          "u": 9,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 9,
+          "j": 13,
+          "path": [
+            10,
+            16,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 14,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 13
+        },
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 9,
+        "negative_integer_sum": -484959,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 18,
+      "centers": 17,
+      "faces": [
+        800,
+        34304,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 19,
+      "centers": 17,
+      "faces": [
+        800,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 20,
+      "centers": 17,
+      "faces": [
+        800,
+        53248,
+        67072,
+        71680
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            9,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 21,
+      "centers": 17,
+      "faces": [
+        832,
+        34304,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 4
+        },
+        {
+          "u": 5,
+          "v": 9,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 5,
+          "j": 9,
+          "path": [
+            6,
+            9
+          ],
+          "direction": 1
+        },
+        {
+          "u": 9,
+          "v": 10,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 9
+        },
+        {
+          "u": 10,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 10,
+          "j": 14,
+          "path": [
+            11,
+            16,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 9,
+        "negative_integer_sum": -484959,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 22,
+      "centers": 17,
+      "faces": [
+        832,
+        34304,
+        90112,
+        102400
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 23,
+      "centers": 17,
+      "faces": [
+        832,
+        53248,
+        67072,
+        71680
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 4
+        },
+        {
+          "u": 5,
+          "v": 9,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 5,
+          "j": 9,
+          "path": [
+            6,
+            9
+          ],
+          "direction": 1
+        },
+        {
+          "u": 9,
+          "v": 10,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 9
+        },
+        {
+          "u": 10,
+          "v": 11,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 10
+        },
+        {
+          "u": 11,
+          "v": 0,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 0,
+          "j": 11,
+          "path": [
+            0,
+            14,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 9,
+        "negative_integer_sum": -484959,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 24,
+      "centers": 17,
+      "faces": [
+        1216,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 25,
+      "centers": 17,
+      "faces": [
+        1216,
+        38912,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 26,
+      "centers": 17,
+      "faces": [
+        1216,
+        57344,
+        68608,
+        77824
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 27,
+      "centers": 17,
+      "faces": [
+        1216,
+        57344,
+        68608,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 28,
+      "centers": 17,
+      "faces": [
+        1216,
+        57344,
+        71680,
+        77824
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 29,
+      "centers": 17,
+      "faces": [
+        1216,
+        57344,
+        71680,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 30,
+      "centers": 17,
+      "faces": [
+        1568,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 4,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 11,
+          "path": [
+            5,
+            10,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 11,
+          "path": [
+            5,
+            10,
+            11
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 31,
+      "centers": 16,
+      "faces": [
+        1600,
+        35840,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 32,
+      "centers": 17,
+      "faces": [
+        1600,
+        35840,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 33,
+      "centers": 17,
+      "faces": [
+        1600,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 34,
+      "centers": 17,
+      "faces": [
+        1600,
+        53248,
+        68608,
+        71680
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 35,
+      "centers": 17,
+      "faces": [
+        1600,
+        57344,
+        68608,
+        77824
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 36,
+      "centers": 17,
+      "faces": [
+        1600,
+        57344,
+        68608,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 37,
+      "centers": 17,
+      "faces": [
+        1600,
+        68608,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 38,
+      "centers": 16,
+      "faces": [
+        1664,
+        35840,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 9,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 6,
+          "j": 9,
+          "path": [
+            7,
+            9
+          ],
+          "direction": 1
+        },
+        {
+          "u": 9,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            15,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 6,
+          "weight": -5941385,
+          "kind": "short-path",
+          "i": 6,
+          "j": 14,
+          "path": [
+            7,
+            10,
+            15,
+            14
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 3,
+        "negative_integer_sum": -1807083,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 39,
+      "centers": 17,
+      "faces": [
+        1664,
+        35840,
+        90112,
+        102400
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 40,
+      "centers": 17,
+      "faces": [
+        1664,
+        53248,
+        68608,
+        71680
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 4
+        },
+        {
+          "u": 5,
+          "v": 6,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 5
+        },
+        {
+          "u": 6,
+          "v": 10,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 6,
+          "j": 10,
+          "path": [
+            7,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 10,
+          "j": 14,
+          "path": [
+            11,
+            12,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 9,
+        "negative_integer_sum": -484959,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 41,
+      "centers": 17,
+      "faces": [
+        1664,
+        57344,
+        68608,
+        77824
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 42,
+      "centers": 16,
+      "faces": [
+        2240,
+        38912,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 43,
+      "centers": 17,
+      "faces": [
+        2240,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 44,
+      "centers": 16,
+      "faces": [
+        2432,
+        38912,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 45,
+      "centers": 17,
+      "faces": [
+        2432,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 46,
+      "centers": 16,
+      "faces": [
+        2816,
+        38912,
+        57344
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 47,
+      "centers": 17,
+      "faces": [
+        2816,
+        90112,
+        100352
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 48,
+      "centers": 16,
+      "faces": [
+        3136,
+        38912,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 49,
+      "centers": 17,
+      "faces": [
+        3136,
+        38912,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 50,
+      "centers": 17,
+      "faces": [
+        3136,
+        57344,
+        71680,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 51,
+      "centers": 17,
+      "faces": [
+        3136,
+        71680,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 52,
+      "centers": 17,
+      "faces": [
+        3136,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 53,
+      "centers": 16,
+      "faces": [
+        3200,
+        38912,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 54,
+      "centers": 17,
+      "faces": [
+        3200,
+        38912,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 55,
+      "centers": 17,
+      "faces": [
+        3200,
+        57344,
+        71680,
+        77824
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 56,
+      "centers": 17,
+      "faces": [
+        3200,
+        57344,
+        71680,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 57,
+      "centers": 17,
+      "faces": [
+        3200,
+        71680,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 58,
+      "centers": 17,
+      "faces": [
+        3200,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 59,
+      "centers": 16,
+      "faces": [
+        3328,
+        38912,
+        57344
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 60,
+      "centers": 17,
+      "faces": [
+        3328,
+        71680,
+        114688
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 61,
+      "centers": 17,
+      "faces": [
+        3328,
+        90112,
+        100352
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 62,
+      "centers": 16,
+      "faces": [
+        4480,
+        45056,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 63,
+      "centers": 17,
+      "faces": [
+        4480,
+        77824,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 64,
+      "centers": 17,
+      "faces": [
+        4480,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 65,
+      "centers": 16,
+      "faces": [
+        4864,
+        45056,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 66,
+      "centers": 17,
+      "faces": [
+        4864,
+        77824,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 67,
+      "centers": 17,
+      "faces": [
+        4864,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 68,
+      "centers": 16,
+      "faces": [
+        6272,
+        45056,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 69,
+      "centers": 17,
+      "faces": [
+        6272,
+        45056,
+        90112,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 70,
+      "centers": 17,
+      "faces": [
+        6272,
+        77824,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 71,
+      "centers": 17,
+      "faces": [
+        6272,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 72,
+      "centers": 16,
+      "faces": [
+        6400,
+        45056,
+        57344
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 73,
+      "centers": 17,
+      "faces": [
+        6400,
+        77824,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 74,
+      "centers": 17,
+      "faces": [
+        6400,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 75,
+      "centers": 17,
+      "faces": [
+        8960,
+        90112,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 7,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 76,
+      "centers": 17,
+      "faces": [
+        8960,
+        90112,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 7,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 77,
+      "centers": 17,
+      "faces": [
+        12544,
+        90112,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 7,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 78,
+      "centers": 17,
+      "faces": [
+        12544,
+        90112,
+        114688
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 7,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 79,
+      "centers": 17,
+      "faces": [
+        22528,
+        68608,
+        98432
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 10,
+          "path": [
+            7,
+            16,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 10,
+          "j": 14,
+          "path": [
+            11,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 6,
+          "weight": -5941385,
+          "kind": "short-path",
+          "i": 6,
+          "j": 14,
+          "path": [
+            7,
+            16,
+            11,
+            14
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 3,
+        "negative_integer_sum": -1807083,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 80,
+      "centers": 17,
+      "faces": [
+        25088,
+        66304,
+        98368
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 8,
+          "weight": -8412557,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 8,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -6825114,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 81,
+      "centers": 17,
+      "faces": [
+        25600,
+        32848,
+        65728,
+        66304
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 9,
+          "weight": -8412557,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 9,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -6825114,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 82,
+      "centers": 17,
+      "faces": [
+        25600,
+        32928,
+        65920,
+        66304
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 9,
+          "weight": -8412557,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 9,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -6825114,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 83,
+      "centers": 17,
+      "faces": [
+        25600,
+        32928,
+        65920,
+        67072
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 9,
+          "weight": -8412557,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 9,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -6825114,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 84,
+      "centers": 17,
+      "faces": [
+        25600,
+        33088,
+        66304,
+        67072
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 9,
+          "weight": -8412557,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 9,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -6825114,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 85,
+      "centers": 17,
+      "faces": [
+        25600,
+        67072,
+        98368
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 9,
+          "weight": -8412557,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 9,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -6825114,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 86,
+      "centers": 17,
+      "faces": [
+        25600,
+        67072,
+        98432
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 9,
+          "weight": -8412557,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 9,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 9,
+          "j": 14,
+          "path": [
+            10,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -6825114,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 87,
+      "centers": 17,
+      "faces": [
+        26624,
+        32816,
+        67072,
+        98432
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 10,
+          "weight": 4058615,
+          "kind": "short-path",
+          "i": 3,
+          "j": 10,
+          "path": [
+            4,
+            15,
+            16,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 1,
+          "weight": -5941385,
+          "kind": "short-path",
+          "i": 1,
+          "j": 10,
+          "path": [
+            1,
+            0,
+            14,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 4,
+        "negative_integer_sum": -345416,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 88,
+      "centers": 17,
+      "faces": [
+        26624,
+        32864,
+        68608,
+        98560
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 4058615,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            15,
+            16,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 10,
+          "j": 14,
+          "path": [
+            11,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 7,
+        "negative_integer_sum": -510557,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 89,
+      "centers": 17,
+      "faces": [
+        26624,
+        32928,
+        65920,
+        67072
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 4,
+          "v": 7,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 4,
+          "j": 7,
+          "path": [
+            5,
+            7
+          ],
+          "direction": 1
+        },
+        {
+          "u": 7,
+          "v": 8,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 7
+        },
+        {
+          "u": 8,
+          "v": 9,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 8
+        },
+        {
+          "u": 9,
+          "v": 10,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 9
+        },
+        {
+          "u": 10,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 10,
+          "j": 14,
+          "path": [
+            11,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 10,
+        "negative_integer_sum": -675698,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 90,
+      "centers": 17,
+      "faces": [
+        26624,
+        33088,
+        66304,
+        67072
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 4
+        },
+        {
+          "u": 5,
+          "v": 8,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 5,
+          "j": 8,
+          "path": [
+            6,
+            8
+          ],
+          "direction": 1
+        },
+        {
+          "u": 8,
+          "v": 9,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 8
+        },
+        {
+          "u": 9,
+          "v": 10,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 9
+        },
+        {
+          "u": 10,
+          "v": 0,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 0,
+          "j": 10,
+          "path": [
+            0,
+            14,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 9,
+        "negative_integer_sum": -484959,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 91,
+      "centers": 17,
+      "faces": [
+        26624,
+        33088,
+        66304,
+        68608
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 5,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 4
+        },
+        {
+          "u": 5,
+          "v": 8,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 5,
+          "j": 8,
+          "path": [
+            6,
+            8
+          ],
+          "direction": 1
+        },
+        {
+          "u": 8,
+          "v": 9,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 8
+        },
+        {
+          "u": 9,
+          "v": 10,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 9
+        },
+        {
+          "u": 10,
+          "v": 0,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 0,
+          "j": 10,
+          "path": [
+            0,
+            14,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 9,
+        "negative_integer_sum": -484959,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 92,
+      "centers": 17,
+      "faces": [
+        26624,
+        68608,
+        98432
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 10,
+          "path": [
+            7,
+            16,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 10,
+          "j": 14,
+          "path": [
+            11,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 6,
+          "weight": -5941385,
+          "kind": "short-path",
+          "i": 6,
+          "j": 14,
+          "path": [
+            7,
+            16,
+            11,
+            14
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 3,
+        "negative_integer_sum": -1807083,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 93,
+      "centers": 17,
+      "faces": [
+        26624,
+        68608,
+        98560
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 94,
+      "centers": 17,
+      "faces": [
+        28672,
+        32864,
+        68608,
+        98560
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 0,
+          "weight": -9231323,
+          "kind": "consecutive-upper",
+          "index": 14
+        },
+        {
+          "u": 0,
+          "v": 1,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 0
+        },
+        {
+          "u": 1,
+          "v": 2,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 1
+        },
+        {
+          "u": 2,
+          "v": 3,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 2
+        },
+        {
+          "u": 3,
+          "v": 4,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 3
+        },
+        {
+          "u": 4,
+          "v": 11,
+          "weight": 4058615,
+          "kind": "short-path",
+          "i": 4,
+          "j": 11,
+          "path": [
+            5,
+            15,
+            16,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 14,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 11,
+          "j": 14,
+          "path": [
+            12,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 7,
+        "negative_integer_sum": -510557,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 95,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        68608,
+        98560
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 96,
+      "centers": 17,
+      "faces": [
+        28672,
+        32960,
+        71680,
+        98816
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 97,
+      "centers": 17,
+      "faces": [
+        28672,
+        33088,
+        66304,
+        68608
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 98,
+      "centers": 17,
+      "faces": [
+        28672,
+        33408,
+        67072,
+        71680
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 99,
+      "centers": 16,
+      "faces": [
+        28672,
+        33536,
+        38912
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 100,
+      "centers": 17,
+      "faces": [
+        28672,
+        71680,
+        98560
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 101,
+      "centers": 18,
+      "faces": [
+        32816,
+        33344,
+        67072,
+        155648,
+        200704
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 9,
+          "v": 3,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            15,
+            9
+          ],
+          "direction": -1
+        },
+        {
+          "u": 3,
+          "v": 9,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 3,
+          "j": 9,
+          "path": [
+            4,
+            15,
+            9
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 102,
+      "centers": 18,
+      "faces": [
+        32816,
+        33856,
+        68608,
+        155648,
+        200704
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        },
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 103,
+      "centers": 18,
+      "faces": [
+        32864,
+        33856,
+        90112,
+        134144,
+        204800
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 104,
+      "centers": 18,
+      "faces": [
+        32864,
+        33920,
+        68608,
+        155648,
+        200704
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            15,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            15,
+            10
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 105,
+      "centers": 18,
+      "faces": [
+        32864,
+        67072,
+        98432,
+        136192,
+        155648
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 106,
+      "centers": 17,
+      "faces": [
+        32864,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 11,
+          "path": [
+            5,
+            15,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 11,
+          "path": [
+            5,
+            15,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 107,
+      "centers": 17,
+      "faces": [
+        32960,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            15,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            15,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 108,
+      "centers": 17,
+      "faces": [
+        32960,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            15,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            15,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 109,
+      "centers": 17,
+      "faces": [
+        33152,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 7,
+          "weight": 768677,
+          "kind": "consecutive-upper",
+          "index": 6
+        },
+        {
+          "u": 7,
+          "v": 14,
+          "weight": 4058615,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            7,
+            15,
+            16,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 6,
+          "weight": -5941385,
+          "kind": "short-path",
+          "i": 6,
+          "j": 14,
+          "path": [
+            7,
+            15,
+            16,
+            14
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 3,
+        "negative_integer_sum": -1114093,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 110,
+      "centers": 17,
+      "faces": [
+        33152,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            15,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            15,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 111,
+      "centers": 17,
+      "faces": [
+        33536,
+        90112,
+        102400
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 112,
+      "centers": 17,
+      "faces": [
+        33856,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 113,
+      "centers": 17,
+      "faces": [
+        33920,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 10,
+          "weight": 1587443,
+          "kind": "short-path",
+          "i": 6,
+          "j": 10,
+          "path": [
+            7,
+            10
+          ],
+          "direction": 1
+        },
+        {
+          "u": 10,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 10,
+          "j": 14,
+          "path": [
+            11,
+            16,
+            14
+          ],
+          "direction": 1
+        },
+        {
+          "u": 14,
+          "v": 6,
+          "weight": -5941385,
+          "kind": "short-path",
+          "i": 6,
+          "j": 14,
+          "path": [
+            7,
+            15,
+            16,
+            14
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 3,
+        "negative_integer_sum": -1807083,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 114,
+      "centers": 17,
+      "faces": [
+        34048,
+        90112,
+        100352
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 115,
+      "centers": 18,
+      "faces": [
+        34304,
+        65584,
+        81928,
+        155648,
+        165888
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 14,
+          "path": [
+            5,
+            16,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 14,
+          "path": [
+            5,
+            16,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 116,
+      "centers": 17,
+      "faces": [
+        34880,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 5,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 12,
+          "path": [
+            6,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 117,
+      "centers": 17,
+      "faces": [
+        34944,
+        90112,
+        100352
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        },
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 118,
+      "centers": 17,
+      "faces": [
+        34944,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 119,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        100352
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 120,
+      "centers": 17,
+      "faces": [
+        35072,
+        90112,
+        102400
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 121,
+      "centers": 17,
+      "faces": [
+        36992,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 122,
+      "centers": 17,
+      "faces": [
+        37120,
+        90112,
+        102400
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 123,
+      "centers": 18,
+      "faces": [
+        38912,
+        65632,
+        67712,
+        155648,
+        167936
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 124,
+      "centers": 17,
+      "faces": [
+        41216,
+        90112,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 7,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 14,
+          "path": [
+            8,
+            13,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 125,
+      "centers": 18,
+      "faces": [
+        41472,
+        57344,
+        65584,
+        131840,
+        196672
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 8,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            13,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 8,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            13,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 126,
+      "centers": 18,
+      "faces": [
+        41472,
+        57344,
+        65632,
+        131840,
+        196736
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 14,
+          "v": 8,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            13,
+            14
+          ],
+          "direction": -1
+        },
+        {
+          "u": 8,
+          "v": 14,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 8,
+          "j": 14,
+          "path": [
+            9,
+            13,
+            14
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 127,
+      "centers": 18,
+      "faces": [
+        41984,
+        57344,
+        65632,
+        132608,
+        196736
+      ],
+      "status": "pending"
+    },
+    {
+      "source_candidate": 128,
+      "centers": 18,
+      "faces": [
+        57344,
+        65584,
+        66624,
+        134144,
+        172032
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 11,
+          "v": 5,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": -1
+        },
+        {
+          "u": 5,
+          "v": 11,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 5,
+          "j": 11,
+          "path": [
+            6,
+            10,
+            11
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 129,
+      "centers": 18,
+      "faces": [
+        57344,
+        65632,
+        66688,
+        134144,
+        172032
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 10,
+          "v": 4,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            16,
+            10
+          ],
+          "direction": -1
+        },
+        {
+          "u": 4,
+          "v": 10,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 4,
+          "j": 10,
+          "path": [
+            5,
+            16,
+            10
+          ],
+          "direction": 1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 130,
+      "centers": 18,
+      "faces": [
+        57344,
+        65632,
+        67712,
+        137216,
+        172032
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 12,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": 1
+        },
+        {
+          "u": 12,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 12,
+          "path": [
+            7,
+            11,
+            12
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 131,
+      "centers": 17,
+      "faces": [
+        57344,
+        65920,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            16,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            16,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 132,
+      "centers": 17,
+      "faces": [
+        57344,
+        66304,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            16,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            16,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 133,
+      "centers": 17,
+      "faces": [
+        57344,
+        69760,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 6,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 6,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 6,
+          "j": 13,
+          "path": [
+            7,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    },
+    {
+      "source_candidate": 134,
+      "centers": 17,
+      "faces": [
+        57344,
+        69888,
+        106496
+      ],
+      "status": "own-B-integer-cycle-excluded",
+      "cycle": [
+        {
+          "u": 7,
+          "v": 13,
+          "weight": 2546859,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": 1
+        },
+        {
+          "u": 13,
+          "v": 7,
+          "weight": -7453141,
+          "kind": "short-path",
+          "i": 7,
+          "j": 13,
+          "path": [
+            8,
+            12,
+            13
+          ],
+          "direction": -1
+        }
+      ],
+      "exact_cycle_check": {
+        "verified": true,
+        "cycle_length": 2,
+        "negative_integer_sum": -4906282,
+        "angle_scale": 10000000,
+        "cap8": 4058615,
+        "scope": "standalone full-angle graph contradiction"
+      }
+    }
+  ],
+  "totals": {
+    "own-B-integer-cycle-excluded": 112,
+    "pending": 23
+  },
+  "source_sha256": "586768552e7e3fb72bd817240b81bece46c4d9fb99009982abb951adaabb5a70",
+  "files_relative_to_workspace": {
+    "research-2026/n21-25-synthesis/round4-solo-20261004/split_candidate_angles.py": "586768552e7e3fb72bd817240b81bece46c4d9fb99009982abb951adaabb5a70",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-B17-to-B15-contracted-candidates-20261005-v1.json": "e26a078d6143485fc795c92bc7fefbefb810477f6fc947a1017dea241b91711a",
+    "research-2026/n21-25-synthesis/evidence/core-reduction/constants/n25.json": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/eight_rod_angles.py": "99e6edb29d46a6f2b01dee8d6f47eff82d23a65d0f9fb5494bec1487c93b2141",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/EIGHT-ROD-ANGLE-SOURCE.md": "9868d0ea87ba3fcf1672116fc5e92f2e08aa8c63d1e9ca69cbbf4da229a2f111",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/n25-eight-rod-exact-cap-20261005-v1.json": "93fe9a03e6165bca26ccd3b565512b51cbbca32a586f360002d6e0c6d700a975",
+    "research-2026/n21-25-synthesis/round4-solo-20261004/discover_boundary_contractions.py": "1fb27f40e68efce8225157185b8382130be159dcdb096292827df673eed1362b"
+  },
+  "not_a_complete_competitor_family_or_union": true,
+  "global_optimality_proved": false
+}

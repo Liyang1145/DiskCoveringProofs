@@ -1,0 +1,16 @@
+{
+  "verified": true,
+  "certificate_sha256": "d5e98e960abbcd8eac8f52a613a3accae98be1bdeda88d528c5d3ba706dc613c",
+  "source_sha256": "4f580119b04f255a12ae21abaef7934b4f65afe18c2dde96cddc761d82733ee0",
+  "angle_checker_sha256": "14e928b01e1d780bdc0c454f1eee2177d009e9b5ca6276da0ae8573f4f96bc88",
+  "negative_controls_rejected": [
+    "wrong-integer-bound",
+    "broken-cycle-incidence",
+    "out-of-range-path",
+    "wrong-short-arc-direction",
+    "too-long-unpaid-path",
+    "missing-all-face-witnesses",
+    "empty-cycle"
+  ],
+  "global_optimality_proved": false
+}

@@ -1,0 +1,8 @@
+{
+  "original_pid": 5668,
+  "creation_filetime_identity_only": "134357004899464094",
+  "process_image": "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe",
+  "command_line": "\"C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe\" -u extract_n23_actual_residual_types.py --dataset n23-B15-original-archive-dataset-20261005-v1 --parent n23-B15-residual-new7-force5001-full-source-audit-solo-v1 --pair-maps n23-B15-all16790546-pair-maps-fresh-audit-20261005-v1/VERIFIED.json --outer n23-B15-relevant22857-original-outer-tree-recovery-20261005-v1 --controls n23-B15-actual-residual-extraction-controls-solo-v1/VERIFIED.json --output n23-B15-actual829-full-residual-types-solo-v1",
+  "extractor_source_sha256": "e101010d7c35f0ca91745f1f6423e94a1f922afeb593aae180a077fc1964f2df",
+  "not_a_terminal_or_mathematical_success_yet": true
+}

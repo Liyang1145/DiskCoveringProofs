@@ -1,0 +1,233 @@
+{
+ "scripts": {
+  "q10_integrate_metric_cuts.py": {
+   "sha256": "f6d0d34b08d2549f4ec6e2222de330b14d02f33930a802652aa29aa1c6dfe815",
+   "bytes": 1149
+  },
+  "q10_metric_mean_round_audit.py": {
+   "sha256": "10ddf8a445ea4e71cccc305d0b0cddcc051e61921253d4383ca9980ab192795a",
+   "bytes": 2761
+  },
+  "q10_rational_polytope_audit.py": {
+   "sha256": "31aed34a9641538ac18cfbc4a549f313c4fe26d180eaa652bcc52ebfabb37efe",
+   "bytes": 2947
+  },
+  "q10_current_angle_width.py": {
+   "sha256": "a5accaf2fc39390539b13d470f91964ec30ec158153e45ed6740aecfbfc32f5c",
+   "bytes": 1684
+  },
+  "q10_quadratic_global_bridge.py": {
+   "sha256": "487441fd646e6b09e1e6e69f99e36f9b21235e13000e2605a9a800a419734a0a",
+   "bytes": 2551
+  },
+  "q10_quadratic_minorant_certificate.py": {
+   "sha256": "d93fa045027d436a1f65244a01a84e8560bd4d10a760a9728ebe71989f4d96eb",
+   "bytes": 3760
+  }
+ },
+ "artifacts": {
+  "q10-c1366-domain.json": {
+   "sha256": "03e6fb869912a7bb9dc23861bb75d32c8f5e8f9f25c57436b627d85bc4252887",
+   "bytes": 768865
+  },
+  "q10-c1350-domain.json": {
+   "sha256": "45a272b2bf8a0b1d8f5067b72af4961d891bd18eb7b82bbcb8d94ca009b1dcc4",
+   "bytes": 1183166
+  },
+  "q10-c1348-domain.json": {
+   "sha256": "2898fed9e64c2fbf6152a4957d7825171cdabce572d86f7b685c71a0f13130b8",
+   "bytes": 496273
+  },
+  "q10-c1334-domain.json": {
+   "sha256": "57ee22c7f89412c6286a6e388456d9fa48c9b45e8391dbd169022a7814739c29",
+   "bytes": 631753
+  },
+  "q10-metric-round2-audit.json": {
+   "sha256": "42d46b056be135f3e288dff96548227c36899dc2af2b87360d0a909700d3a46a",
+   "bytes": 5362
+  },
+  "q10-large-union.json": {
+   "sha256": "ac93b497c639d5583c9d644e7a7b4ccd9dd15057e5c5a88499a02989074440ec",
+   "bytes": 2992
+  },
+  "q10-exterior-union.json": {
+   "sha256": "eb6cd63acf8960a9d73cd45119bc3d099a461eaf5c9ef1012a57047779e3ad08",
+   "bytes": 1966
+  },
+  "q10-c1334-slab-audit.json": {
+   "sha256": "14938c4bc3a701d41a897bc76edb1dc48e63907f133dbf8d6ae98088efb982f7",
+   "bytes": 3194
+  },
+  "q10-tight-slab-audit.json": {
+   "sha256": "cb6d932bd13ce89e28adcb295d7ffd8304c4336cf41f35ef610bb59129167e92",
+   "bytes": 2278
+  },
+  "q10-metric-slab-audit.json": {
+   "sha256": "b59d3891a1b050eb1de84907da3142364400c3b7efd813586eba8882cd33065f",
+   "bytes": 3737
+  },
+  "q10-fan-leaf-audit.json": {
+   "sha256": "3e347de6a926ed3214a96cf6ca880a671a4aeab985ef01501e69c6fe1aa15e0b",
+   "bytes": 820
+  },
+  "q10-fan-transport.json": {
+   "sha256": "d0c070d42c7a6c2ee396e2dc40470f43efb94fd7d8dd1a819b36315aaaed054d",
+   "bytes": 2799
+  },
+  "q10-slab-transport.json": {
+   "sha256": "9bd72309142ce6e567f7e5c84b8ef530f64b114f8afbc604b6c8684c3fbaf35f",
+   "bytes": 1244
+  }
+ },
+ "missing": [
+  "q10-reduced-domain.json"
+ ],
+ "declared_hashes": {
+  "q10-c1366-domain.json": [
+   [
+    "/source_sha256",
+    "5136bd7a5f763f2dfcb21e93e10b114f188119582b1737f064d86299d1a41644"
+   ],
+   [
+    "/audit_sha256",
+    "e6783f57183507f017808ab430b5c705d172b58b7237d85ceda1ca0602230d28"
+   ]
+  ],
+  "q10-c1350-domain.json": [
+   [
+    "/source_sha256",
+    "2898fed9e64c2fbf6152a4957d7825171cdabce572d86f7b685c71a0f13130b8"
+   ],
+   [
+    "/audit_sha256",
+    "42d46b056be135f3e288dff96548227c36899dc2af2b87360d0a909700d3a46a"
+   ]
+  ],
+  "q10-c1348-domain.json": [
+   [
+    "/source_sha256",
+    "bf46bd3b125107a9757e48de38b1c148c4395930ce019bd76d2e64d01c794eaa"
+   ],
+   [
+    "/audit_sha256",
+    "ac93b497c639d5583c9d644e7a7b4ccd9dd15057e5c5a88499a02989074440ec"
+   ]
+  ],
+  "q10-c1334-domain.json": [
+   [
+    "/source_sha256",
+    "fc3012c171ae7a87a442ab25e3b41b424bbe99cccb53818910f46e42f018d1ee"
+   ],
+   [
+    "/audit_sha256",
+    "cb6d932bd13ce89e28adcb295d7ffd8304c4336cf41f35ef610bb59129167e92"
+   ]
+  ],
+  "q10-metric-round2-audit.json": [
+   [
+    "/domain_sha256",
+    "2898fed9e64c2fbf6152a4957d7825171cdabce572d86f7b685c71a0f13130b8"
+   ],
+   [
+    "/results[0]/source_sha256",
+    "7a07d0c7d11dae9da474e7c861ba407660f6351bbf43fdd1637ce25906ff970a"
+   ],
+   [
+    "/results[1]/source_sha256",
+    "f5ad6a16b2e51d741fe0fc1b30f73642977bf43108979656599b4aec1c2f7463"
+   ],
+   [
+    "/results[2]/source_sha256",
+    "f4c55687159c7e42e86e17054faea42b1dff4cbb401c8bf7a63fd7e5037cb314"
+   ],
+   [
+    "/results[3]/source_sha256",
+    "51ca65299ee5db57f97f3c15f0924d83df01dbf42e81090f63f87e4bb23f3e97"
+   ],
+   [
+    "/results[4]/source_sha256",
+    "3727a1e8c43180a0d1b54ff6964740b7b8c5b049bda06000b171f3392bb22ecf"
+   ]
+  ],
+  "q10-large-union.json": [
+   [
+    "/single_audit_sha256",
+    "36c5ae2acf7ad658a7d042090c1f0e1f0849f411fb95e0ae07639f9bc33bb505"
+   ],
+   [
+    "/trees[0]/audit_sha256",
+    "9476cd8c92a7c4aa7c1fc963e66f7fd8368eab0bf86b807af79d3f7a83a2f4ed"
+   ],
+   [
+    "/trees[1]/audit_sha256",
+    "f62f645774819d4a2eff70dff9c7ec5bc9170a2f845772fb21a9e8da2c30a325"
+   ],
+   [
+    "/trees[2]/audit_sha256",
+    "9b74a8fbce3ade5cb58da7cfe562a21fe669e29a1423032d33ebbb48fb83fe63"
+   ]
+  ],
+  "q10-exterior-union.json": [
+   [
+    "/trees[0]/audit_sha256",
+    "772750fab9badb1c309bbdc7dda12af6853fe3b6dccac139c17ab2c7e868b6a9"
+   ],
+   [
+    "/trees[1]/audit_sha256",
+    "a36e85cd8a20cb83d9ba35732b9097dd033eb39f80cc6c2a55d2df51830c8187"
+   ],
+   [
+    "/trees[2]/audit_sha256",
+    "e0db2be0ea866eacc2159b9dbc44099d011777d7ce422e43895d262d26cc4ee7"
+   ]
+  ],
+  "q10-c1334-slab-audit.json": [
+   [
+    "/source_sha256",
+    "641952c716ade1dfd5d483a46f0ab02159fa61e8216ed2087196f8eace3d5528"
+   ],
+   [
+    "/base_sha256",
+    "57ee22c7f89412c6286a6e388456d9fa48c9b45e8391dbd169022a7814739c29"
+   ]
+  ],
+  "q10-tight-slab-audit.json": [
+   [
+    "/source_sha256",
+    "272906eb6d1e32e2655a88bf90d26679edbb9869b060eb6b048b9fd0737d0a1a"
+   ],
+   [
+    "/base_sha256",
+    "fc3012c171ae7a87a442ab25e3b41b424bbe99cccb53818910f46e42f018d1ee"
+   ]
+  ],
+  "q10-metric-slab-audit.json": [
+   [
+    "/source_sha256",
+    "b19b15c440347b5df4b1b46ded8c5a206d91294333e800c28e1e20c18a5c1a87"
+   ]
+  ],
+  "q10-fan-leaf-audit.json": [
+   [
+    "/source_sha256",
+    "e010ee621af4a9f14c7708c0cde0629d85e8c526469108f33bf253f27d658aa0"
+   ],
+   [
+    "/snapshot_sha256",
+    "1f6c142eebbfe1e746efd6bce5e7712c79ea067da67d3eae04bc3cf3b34b9efc"
+   ]
+  ],
+  "q10-fan-transport.json": [
+   [
+    "/source_sha256",
+    "3e347de6a926ed3214a96cf6ca880a671a4aeab985ef01501e69c6fe1aa15e0b"
+   ]
+  ],
+  "q10-slab-transport.json": [
+   [
+    "/audit_sha256",
+    "b59d3891a1b050eb1de84907da3142364400c3b7efd813586eba8882cd33065f"
+   ]
+  ]
+ }
+}

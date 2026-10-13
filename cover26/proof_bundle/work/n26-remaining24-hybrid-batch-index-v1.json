@@ -1,0 +1,328 @@
+{
+  "schema": "N26-unaccepted-actual-remaining-OPEN-hybrid-batch-index-v1",
+  "verified": false,
+  "radius_scope": "at-most-same-root-Rstar-not-original-U",
+  "current_source_acceptance_sha256": "c79b90b09985f5e9c7ba3e70d297207f174d71619ea5014279b76a5c47c36422",
+  "older_discovery_acceptance_sha256": "e90867b6fd20d3fecbcc8dc7f1d7f6b7104738f5791cb0470f5cb5cfdab6dd31",
+  "registry_acceptance_sha256": "8db929cbf8df18c69ec7a96826235129e146814dca8363bd2de49de98e75046a",
+  "records": [
+    {
+      "group_index": 16,
+      "source_OPEN_index": 1,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g16-p1-hybrid-proposal-v1.json",
+      "proposal_sha256": "48bbfee0656eb99309e92c270e63a648d2007554e22acd7344e133f2f31d8d70",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g16-p1-hybrid-kernels-v1.json",
+      "kernels_sha256": "89b93c2ffbaf2e1a852b955650f4c30a7af2be7369f7f126fe25e460d83bd4cb",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 16,
+      "source_OPEN_index": 3,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g16-p3-hybrid-proposal-v1.json",
+      "proposal_sha256": "fa44ea571988d82d57f7733a596608188711467892c2769938ca7c2d54b055da",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g16-p3-hybrid-kernels-v1.json",
+      "kernels_sha256": "c705106504867721f6497c7a3c9be1337e55080daf4548c11bd47e2e1c9a0032",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 17,
+      "source_OPEN_index": 1,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g17-p1-hybrid-proposal-v1.json",
+      "proposal_sha256": "ef62ce99e05f7f2769058fca3470d8fee19e22a7d38a45453e52b31bffc0754b",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g17-p1-hybrid-kernels-v1.json",
+      "kernels_sha256": "1a7794b34c9b510347f18ba3bf5c791f6b6208ca6471132938522e32ff9cd7a7",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 17,
+      "source_OPEN_index": 3,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g17-p3-hybrid-proposal-v1.json",
+      "proposal_sha256": "7242db5ace598435b229b6b495ff53902bd7e271f2b14fe58e92c9b1cbfadd82",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g17-p3-hybrid-kernels-v1.json",
+      "kernels_sha256": "440bdb915b522ad49d39f841cda374e86dca56297be45833c0e86e87587ca684",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 17,
+      "source_OPEN_index": 309,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g17-p309-hybrid-proposal-v1.json",
+      "proposal_sha256": "77d42af441bfc40bc71e4c8ab0b313413cc23fd4acfd54e067061c5da0602a29",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g17-p309-hybrid-kernels-v1.json",
+      "kernels_sha256": "4e4d51dbffa3da1524771fff7183ddb603963fd56065757f4a926818fb3ac586",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 18,
+      "source_OPEN_index": 1,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g18-p1-hybrid-proposal-v1.json",
+      "proposal_sha256": "f7d71c577f4af6de23f048576ec23686b1288e54c7e883193013b279cb03c1de",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g18-p1-hybrid-kernels-v1.json",
+      "kernels_sha256": "08c1334852be175018da8f300061f54983f447449052c6ca7940e6e6be1feb10",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 18,
+      "source_OPEN_index": 3,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g18-p3-hybrid-proposal-v1.json",
+      "proposal_sha256": "11edd1b0e99de1a762b63232ad525106e523d8f5717d373d26f6c0894abe5df6",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g18-p3-hybrid-kernels-v1.json",
+      "kernels_sha256": "1a3b2d1afa67db04c51398ee5b751a7fde2a27da96f3f107936903cfc0bf4a79",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 19,
+      "source_OPEN_index": 1,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g19-p1-hybrid-proposal-v1.json",
+      "proposal_sha256": "b6f1a0fdad11b42d7dc220475abf096ae1776c8bc819b75d6f73b528b4cae423",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g19-p1-hybrid-kernels-v1.json",
+      "kernels_sha256": "dae66734da0178de7a4fb561d21877c48619f7085db3d72e86e84d1eab5fbc88",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 19,
+      "source_OPEN_index": 165,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g19-p165-hybrid-proposal-v1.json",
+      "proposal_sha256": "33235fe0db31958387392581d92b77e6722f8331c84b258cdaed39facd991ea2",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g19-p165-hybrid-kernels-v1.json",
+      "kernels_sha256": "747b3bc333155db666452fe36da94a1188db01f38c2e90fdc9fdb841628dbc2f",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 20,
+      "source_OPEN_index": 1,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g20-p1-hybrid-proposal-v1.json",
+      "proposal_sha256": "e278f2d70eb808715a117987866aec6ae9fabb7a80700210bf1aed5e7b6d90ef",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g20-p1-hybrid-kernels-v1.json",
+      "kernels_sha256": "795f73e9fbab98a5ddac8307cdd83688d2a228c79c1e3c8768cac18921e22818",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 20,
+      "source_OPEN_index": 153,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g20-p153-hybrid-proposal-v1.json",
+      "proposal_sha256": "9b1bc22f5efde78fddd4fe485ac6b760697e31fa179b4876598cd186fef636ba",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g20-p153-hybrid-kernels-v1.json",
+      "kernels_sha256": "704a4f84d4adeb527b42fda8ab18626fb4df24bacb9052a7f2b842222493d04a",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 21,
+      "source_OPEN_index": 59,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g21-p59-hybrid-proposal-v1.json",
+      "proposal_sha256": "43543d1109b7d25f0df1419508cb667b51d40b79f4ac342ceda48f00f465d274",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g21-p59-hybrid-kernels-v1.json",
+      "kernels_sha256": "e226750e8524f00514d2f7cce620039b9941359a6394c0874d8584437cdaae23",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 21,
+      "source_OPEN_index": 249,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g21-p249-hybrid-proposal-v1.json",
+      "proposal_sha256": "f1957f0049384a69ba3d83d8827dbcb9f25da6a310cda9292cc1879e6677d564",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g21-p249-hybrid-kernels-v1.json",
+      "kernels_sha256": "689e187eb68b18ab6fac1b1c6d4c94825a60afeb99e90a82fe9b22b8dcf5e7b5",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 25,
+      "source_OPEN_index": 83,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g25-p83-hybrid-proposal-v1.json",
+      "proposal_sha256": "de3bab720fd956288e2757395b0f26c6d732b614b13bdc01dd5e0319d60764a1",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g25-p83-hybrid-kernels-v1.json",
+      "kernels_sha256": "13defb88a09cec88e15fbb5450cfd100c28969463423ee83f6349f8801c01225",
+      "discovery_nodes": 3,
+      "discovery_counts": {
+        "SPLIT": 1,
+        "QUADRATIC_ENERGY": 2
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 25,
+      "source_OPEN_index": 87,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g25-p87-hybrid-proposal-v1.json",
+      "proposal_sha256": "4d91ddba1856b8ba98bfe6bc2f71bd9b3526aee7096c6b3306b84c9659bdf316",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g25-p87-hybrid-kernels-v1.json",
+      "kernels_sha256": "202a9a4b72beca9cb047e235c25bfa938b200f26b077fc59a6c09d1d88c3dd58",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 26,
+      "source_OPEN_index": 99,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-type26-residual99-hybrid-proposal-v1.json",
+      "proposal_sha256": "7dfe6bab42adda9ee9d1da3f506b5f42c717619667a1a23ea2e7f107a9e0be91",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-type26-residual99-hybrid-kernels-v1.json",
+      "kernels_sha256": "e4ca6a4a04fd0ccc6d437fb21c3ca3b7465f111bc618b065cff14451cc3cb270",
+      "discovery_nodes": 3,
+      "discovery_counts": {
+        "SPLIT": 1,
+        "QUADRATIC_ENERGY": 2
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 27,
+      "source_OPEN_index": 1,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g27-p1-hybrid-proposal-v1.json",
+      "proposal_sha256": "4ae4d5ed2a6eabddbb838610c92285130e12c7003be95d88fa156a1759ce5d4c",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g27-p1-hybrid-kernels-v1.json",
+      "kernels_sha256": "d3f82f92b084c39c39607b1b4727abbd55a5178d1bd7000e513cf030000d7073",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 27,
+      "source_OPEN_index": 171,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g27-p171-hybrid-proposal-v1.json",
+      "proposal_sha256": "c42117e954531a709bd0026a510d6d3424ee9913a14e50b8ec0052c8be38891b",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g27-p171-hybrid-kernels-v1.json",
+      "kernels_sha256": "89a501fbc86f1a352fdf89188ab85e733d488c100887796bae33065d42094018",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 30,
+      "source_OPEN_index": 99,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g30-p99-hybrid-proposal-v1.json",
+      "proposal_sha256": "3b4778bbe2cdc645971e565634b2fc06a946aa8592106e03286c36b2940dba73",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g30-p99-hybrid-kernels-v1.json",
+      "kernels_sha256": "5d56c6c2ff98dfd7580f8a04b021398b1a041ebe29d2a9fb4b7a90b5a5ce43fb",
+      "discovery_nodes": 3,
+      "discovery_counts": {
+        "SPLIT": 1,
+        "QUADRATIC_ENERGY": 2
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 30,
+      "source_OPEN_index": 103,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g30-p103-hybrid-proposal-v1.json",
+      "proposal_sha256": "15fc70585a78a28f735736eab930c766099094ef2f9eea6f9680f2ba7a35e4a5",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g30-p103-hybrid-kernels-v1.json",
+      "kernels_sha256": "c7d8aeb020dcba15159ddb560f4ece5dea725c8979584f597564d2815eca11e6",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 33,
+      "source_OPEN_index": 1,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p1-hybrid-proposal-v1.json",
+      "proposal_sha256": "9d5f4afe7932fb5caf29131f99ed9f9267e4fb13b2668d81d491f7eafe6148c8",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p1-hybrid-kernels-v1.json",
+      "kernels_sha256": "8984b6b5f7744a41da5585c329fa81dca9ed57ab6730620d9d1d2d3e7ec8f07d",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 33,
+      "source_OPEN_index": 13,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p13-hybrid-proposal-v1.json",
+      "proposal_sha256": "a785293c4d9653a6c631f392ee59fe4cf525a08200c2645420043b0c4cbda4f9",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p13-hybrid-kernels-v1.json",
+      "kernels_sha256": "64b8e284bc585801fbcfcc7514146e8ddf66ca016286e5ebe743588f20964411",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 33,
+      "source_OPEN_index": 15,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p15-hybrid-proposal-v1.json",
+      "proposal_sha256": "f45382f971e01b53822d6294284aa77cf67dcf12c9eaaab355b5a28d972a551d",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p15-hybrid-kernels-v1.json",
+      "kernels_sha256": "fa8b148303edd52d43dc5e0f1ee1d7002503aba89aa442d31f72b76c55f33dbb",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    },
+    {
+      "group_index": 33,
+      "source_OPEN_index": 169,
+      "proposal": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p169-hybrid-proposal-v1.json",
+      "proposal_sha256": "78c40cef5f21227ea453e78f48c4a6ff269cf1eee72e01a06938b5c596043743",
+      "kernels": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-other-residual-g33-p169-hybrid-kernels-v1.json",
+      "kernels_sha256": "f0c820bf17bfacf1caa7bfdc6446d6fdcfd847fd62e9a92c4acd0c3980ab2474",
+      "discovery_nodes": 1,
+      "discovery_counts": {
+        "QUADRATIC_ENERGY": 1
+      },
+      "discovery_proposed_closed": true
+    }
+  ],
+  "global_optimality_proved": false,
+  "all_sibling_proofs_unchanged_and_unvisited_closed_halves_retained": true,
+  "independent_new_kernels_full_hybrid_coverage_and_current_lineage_acceptance_still_required": true
+}

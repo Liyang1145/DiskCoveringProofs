@@ -1,0 +1,83 @@
+{
+  "schema": "N26-independent-integrated-hull-LOCAL-arithmetic-controls-v1",
+  "all_arithmetic_cover_reconstructions_passed": true,
+  "results": [
+    {
+      "source_OPEN_index": 33,
+      "strict_integrated_slabs_checked": 12,
+      "minimum_strict_radius_margin": "586133843095646982638021228638582597310153729238315340423192617423685708769487388773/5000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "original_LOCAL_entry_margin": "17297530587602160605556920491442119240215432554278430525712297590087638122944588624940323870731897021717279001751780193813567373496098805393364063527161101272631522584447078823364751054404949316396576656790525547533891512042310169773093980014552348358419/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "two_exact_closed_partitions_and_uniform_integral_root_gate_checked": true
+    },
+    {
+      "source_OPEN_index": 36,
+      "strict_integrated_slabs_checked": 12,
+      "minimum_strict_radius_margin": "60664576895046213573499097507691206644988744701856572315032032640941693946708361771/2500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "original_LOCAL_entry_margin": "17297530587602160605556920491442119240237863514876644625781262464173885012551214870076670547580573035317350858846388489026305026493466055393364063527161101272631522584447078823364751054404949316396576656790525547533891512042310169773093980014552348358419/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "two_exact_closed_partitions_and_uniform_integral_root_gate_checked": true
+    },
+    {
+      "source_OPEN_index": 32,
+      "strict_integrated_slabs_checked": 13,
+      "minimum_strict_radius_margin": "22683044073179739309787480629838014355674719828782044133912317707492762401748028353/10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "original_LOCAL_entry_margin": "17297520807566614478470150981437120499224736508311770140574846204064681391211838774577418598023374888999383422061970802279025642315214055393364063527161101272631522584447078823364751054404949316396576656790525547533891512042310169773093980014552348358419/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "two_exact_closed_partitions_and_uniform_integral_root_gate_checked": true
+    }
+  ],
+  "strict_integrated_slabs_checked": 37,
+  "original_LOCAL_central_boxes_checked": 3,
+  "rejection_controls_passed": [
+    "whole-root-ownership-changed",
+    "first-closed-slab-omitted",
+    "shared-slab-boundary-lost",
+    "central-remainder-clipped",
+    "Taylor-strip-omitted",
+    "Taylor-weight-unjustifiably-increased",
+    "weighted-rounding-operator-error-omitted",
+    "nonpositive-Taylor-partition-count",
+    "unsupported-integrated-positive-curvature",
+    "infeasible-reference-outside-necessary-polytope",
+    "strict-energy-margin-fabricated",
+    "original-LOCAL-allowance-expanded"
+  ],
+  "actual_current_audit_sha256": "83eba3ab63841a5f48f5ffc75df1fee4d7dccd921c042c33a4b4a48d2fec0ecc",
+  "actual_latest_candidate_layer_identity_only": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "83eba3ab63841a5f48f5ffc75df1fee4d7dccd921c042c33a4b4a48d2fec0ecc",
+    "latest_candidate_current_audit_sha256": "6a46131202a5d2dd732b88622b1cec0e072c7b6ef888f37e70f420b291590203",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-eighteenth-conditional-current-audit-v18-sparse-v1-with-scope.json",
+        "sha256": "8cec3ea3e55a3532e3b3cbc6f572f377164c8af648bd1748039ed655610d7d06"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v7.json",
+        "sha256": "6a46131202a5d2dd732b88622b1cec0e072c7b6ef888f37e70f420b291590203"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v7/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "7189f3ea021ddf973d4d13027650baa547d82b1c38d7f18f8e721db659de6257",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v7/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "diagnosis_sha256": "be9fe30242594014146c18f92111061ef065a7b6e4c59dc29e9f516717401820",
+  "resource_acceptance_sha256": "935d336bd4b2cbac1ff819be3b846ca7512ed1c94b8b9122b30833a246694e8a",
+  "arithmetic_only_NOT_geometry_or_complete_source_history_replay": true,
+  "verified": false,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_optimality_proved": false,
+  "existing_constant_hull_supplemental_verifier_does_NOT_accept_this_mode": true,
+  "executed_test_sha256": "a58b8724e601c920af9a1477121936a4e0d081c6a8167ee0c8f101b0320ff994",
+  "modules": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_integrated_hull_curvature.py": "e5eb5e04d80eeae2d4aae7fad7646ae8913f55c72884b45ca77696e9fb12f89c",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_signed_hull_energy_minorant.py": "d8455a67918768c9e6c82262476ae58e5fd54e2b3b22013dc021f27ecebed748",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_signed_hull_local_cover.py": "fc241f16491ba1ea599cc957907908fc7dc8bcc3d8bd42e75ddaffd288a69fad",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_typed_arithmetic_context.py": "a2e40ae3df956b6fd15d35fd8fd9467169748f2a19226d27b14c4ca46d646ea8",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_current_candidate_layer_identity.py": "da848f6dee991f8883ff45150edac3e2e4955c0e9f5ba78c00d646c5e5e35c2b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/probe_candidate_integrated_hull_local_cover.py": "6e56194418ea4cc2f09ce370b0cf11e68aead9997bb1076c67921c280951c869"
+  }
+}

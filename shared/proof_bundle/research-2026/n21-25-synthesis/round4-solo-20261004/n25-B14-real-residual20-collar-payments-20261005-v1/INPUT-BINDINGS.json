@@ -1,0 +1,38 @@
+{
+  "parent_complete_catalog_sha256": "a52729cbd01664e744eac859af86e425b389d50f51316a4276161f497c7b85e2",
+  "parent_summary_sha256": "e11695680d703b3ea605622afbb5281429b059badeb361e120cac83b4c8aecdf",
+  "exact_prefix_sha256": "a833ff0b6526e18baed9d7777b32550b55c545b443b06c0a4f21a80a2bb0b0f4",
+  "pending_prefix_sha256": "1ac382823c632d5f06207e64b98b31ea1d968d2600b1498a6df07120eaf2ef15",
+  "selected_parent_groups": [
+    548,
+    549,
+    550,
+    552,
+    555,
+    568,
+    571,
+    573,
+    576,
+    577,
+    578,
+    579,
+    581,
+    583,
+    586,
+    588,
+    589,
+    590,
+    888,
+    976
+  ],
+  "real_residual_report_sha256": "8fe23d28b46061dafb04593996aefff165d9a541d05416260141c4ef856dd78d",
+  "real_residual_sha256": "df85996dd00f9a873ddc075c9709af5ff6abd7e1ee9815ba43e030216acc3186",
+  "excluded_running_selection_sha256": [
+    "ae2fa626a4bd2314f92e2b340eebb16f5ef66ae3fe427408a41ad3c30063dd6f"
+  ],
+  "selected_only_actual_unpaid_parents": true,
+  "node_limit_per_completion_family": 1000000,
+  "source_sha256": "28f98c05c533f745cf05da78ac6a9af3c3d95a8141467f99c3a407f93166d932",
+  "not_an_entire_boundary_family": true,
+  "global_optimality_proved": false
+}

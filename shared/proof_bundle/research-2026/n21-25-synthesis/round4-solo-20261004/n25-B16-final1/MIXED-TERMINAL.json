@@ -1,0 +1,7 @@
+{
+  "actual_exit_code": 0,
+  "child_pid": 16504,
+  "independent_process_terminal_observed": true,
+  "audit_source_sha256": "ffebe8d6af2e347fe733a072d7696812e98908bc03e0087d0d0d970cc7e7af86",
+  "argument_manifest_sha256": "9ebada64d830fbdcff7877c8cf285399c216e28b82e47f1ebe1af354643e9675"
+}

@@ -1,0 +1,254 @@
+{
+  "schema": "N26-midarc-SIX-filtered-source-independent-accounting-controls-v1",
+  "verified": false,
+  "new_formal_geometric_payments": 0,
+  "actual_SIX_geometry_DATA_not_claimed_a_completed_current_parent": true,
+  "synthetic_parent_final_headers_NOT_geometry_or_current_acceptance": true,
+  "entire_actual5637_ORIGINAL_prefixes_freshly_reconstructed": true,
+  "actual_independent_NEW680_source_partition": {
+    "entire_actual_SIX_filtered_source_prefixes_independently_scanned": 5637,
+    "strict_NEW_midarc_whole_prefixes": 680,
+    "retained_unpaid_source_prefixes": 4957,
+    "original_physical_count_and_all_shadow_cases": 9172,
+    "independent_family_conservation": [
+      {
+        "B": 14,
+        "actual_SIX_filtered_source_subtrees": 296,
+        "strict_NEW_midarc_whole_subtrees": 0,
+        "retained_subtrees": 296,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 15,
+        "actual_SIX_filtered_source_subtrees": 694,
+        "strict_NEW_midarc_whole_subtrees": 47,
+        "retained_subtrees": 647,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 16,
+        "actual_SIX_filtered_source_subtrees": 2703,
+        "strict_NEW_midarc_whole_subtrees": 539,
+        "retained_subtrees": 2164,
+        "all_raw_terminals_retained": 2
+      },
+      {
+        "B": 17,
+        "actual_SIX_filtered_source_subtrees": 1944,
+        "strict_NEW_midarc_whole_subtrees": 94,
+        "retained_subtrees": 1850,
+        "all_raw_terminals_retained": 0
+      }
+    ],
+    "independent_exact_midarc_core_target_identities": {
+      "3": {
+        "consecutive_original_owners": 3,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 7,
+        "target_coordinate_description": "sqrt3*x_coefficient,y",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "265299/500000"
+          ],
+          [
+            "265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "0",
+            "-265299/500000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "24/25",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "1857093/4000000",
+        "exact_patch_to_target_horizontal_margin_above_U": "105299/4000000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      },
+      "4": {
+        "consecutive_original_owners": 4,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 6,
+        "target_coordinate_description": "x,sqrt3*y_coefficient",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "-265299/500000",
+            "0"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "4/5",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "265299/1000000",
+        "exact_patch_to_target_horizontal_margin_above_U": "65299/1000000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      },
+      "5": {
+        "consecutive_original_owners": 5,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 5,
+        "target_coordinate_description": "sqrt3*x_coefficient,y",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "265299/500000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "0",
+            "-265299/500000"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "7/10",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "0",
+        "exact_patch_to_target_horizontal_margin_above_U": "115299/500000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      },
+      "6": {
+        "consecutive_original_owners": 6,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 5,
+        "target_coordinate_description": "sqrt3*x_coefficient,y",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "265299/500000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "0",
+            "-265299/500000"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "1/2",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "0",
+        "exact_patch_to_target_horizontal_margin_above_U": "15299/500000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      }
+    },
+    "all_unpaid_siblings_and_raw_terminals_retained_identically": true,
+    "old5546_SIX_payments_NOT_repaid": true,
+    "candidate_whole_roots_removed": 0
+  },
+  "only_remaining680_paid_NOT_old5546_repaid": true,
+  "actual_full11183_midarc_classification_matched_by_prefix_identity": true,
+  "invalid_controls_rejected": [
+    "duplicate-whole-source-prefix-payment",
+    "boolean-source-index",
+    "qualifying-whole-prefix-payment-omitted",
+    "original-physical-count-case-omitted",
+    "future-outside-original-slots-discarded",
+    "first-anchor-frame-substituted-for-midarc",
+    "unpaid-sibling-prefix-omitted",
+    "paid-prefix-reintroduced-in-filtered-frontier",
+    "old11183-source-family-count-restored",
+    "original-U-unconditional-scope-substitution",
+    "actual-original-source-state-altered",
+    "continuous-midarc-proof-unbound",
+    "embedded-shadow-original-owner-hypothesis-missing",
+    "unfinished-independent-mixed-final",
+    "older25root-owner-restored",
+    "old11183-parent-frontier-restored",
+    "full-mixed-main-not-completed",
+    "latest-root959-history-discarded",
+    "original-LOCAL-allowance-erased",
+    "historical-proof-receipt-missing",
+    "unproved-n26-global-optimality"
+  ],
+  "input_sha256": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/VERIFIED.json": "93c8b91a47f2952ce926fc07a9fcae70dda714ff8d8deb80a5789fab116f559b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-published-replay-v1.json": "93c8b91a47f2952ce926fc07a9fcae70dda714ff8d8deb80a5789fab116f559b",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/FRONTIER.json": "a155c24f712300eed32007fd6335247ba6dfac2bd3bb645c5d4eb6e3d82a534f",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/FAMILY-CONSTANTS.json": "90fa7ff3e11c89953e832c0a97835b5c7256b0b84ffaba37155388d624bee248",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-midarc-filled-patches-mathematical-scan-v1.json": "7c9647efc4abb6bae9b9fc14ca27b7a06dea537cd2d117a9d231488eb8d38fe8",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-midarc-filled-patches-independent-controls-v1.json": "46b85b6e1771e4bed625610cdce95bd0a4d419076321812968d886c196af9da8",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/UNIT-CAP-PROOF.md": "4624d2a06f96dbeb0ccf55b905e4cf85176cc93b65a9763f553a3df8bc714c40",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/GENERIC-SLACK-PROOF.md": "edaf23d0f00b65c263875e87dd1d4185005b814f43a7dc3f5e666e29d9facfe2",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/EMBEDDED-CORNER-SHADOW-BRIDGE-PROOF.md": "a6e8466bd722cd9ae0a267ee9a3060502489dd45200967cc8994ccbdbcffdd2d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/CLOSED-EAR-PROOF.md": "5e2251626d74fadf2b18afb049df33d02d4309b56761427487a7ac8cab26fb0a",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26-midarc-seven-and-six-target-filled-patch-proof.md": "af0c409b6b219a52b59acb14d39c2fd67c263bff3d4e50583d7f3d9358eb1e08",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/UNIT-CAP-CERTIFICATE.json": "75b87ff228e6af2c1c7e299648a4288b412eabb795ef08ce19233618d1a6c72d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/GENERIC-CERTIFICATE.json": "2a12c890aa27a3c698501b9d87be062d820e392fd737da0a49933b083398c42d",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/EMBEDDED-CORNER-CERTIFICATE.json": "51f7e3a4a3b818eaf622bc2bd7abd0b1f2f223d3899ff833413327a263c349f9",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/test_midarc_SIX_filtered_source_accounting.py": "12eca64db0861b2bc412456b526495a8e18185aa049b0525bc873f7249500e22",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_midarc_cover_transfer.py": "f344709bf563209c981d569644662c97610bac2f6a61717b358e12cef1232bc6",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_midarc_source_accounting.py": "ceb35e425deb35dddc787028b54220d3bc180fd4b535f95b2a5c535005a4e92c",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/work/n26_midarc_filled_patches.py": "9443b63e231a4ce2590ce8ebfd2a201eec6f99b2633021ad2140140cdbde425c",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-conditional-force-stage-v28-sparse-v1/FRONTIER.json": "d82aa773c5dde04d64a83144301018b29dc30a415b9df7bddf0442c637833a15",
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-source-geometry-v1/LOWER-LEDGER.json": "a3c7fb531523b63088f594964bb8aaa27256861f0911e379e8232e2fdc761721"
+  },
+  "actual_SIX_filtered_frontier_sha256": "a155c24f712300eed32007fd6335247ba6dfac2bd3bb645c5d4eb6e3d82a534f",
+  "actual_midarc_full_source_mathematical_controls_sha256": "46b85b6e1771e4bed625610cdce95bd0a4d419076321812968d886c196af9da8",
+  "tested_transfer_sha256": "f344709bf563209c981d569644662c97610bac2f6a61717b358e12cef1232bc6",
+  "tested_accounting_sha256": "ceb35e425deb35dddc787028b54220d3bc180fd4b535f95b2a5c535005a4e92c",
+  "executed_test_sha256": "12eca64db0861b2bc412456b526495a8e18185aa049b0525bc873f7249500e22",
+  "new_geometry_own_publication_current_AND_final_STILL_required": true,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

@@ -1,0 +1,20 @@
+{
+  "exact_partition": true,
+  "proof": "complete binary prefix code reconstructed leaf-to-root",
+  "counts": {
+    "atomic": 6309,
+    "infeasible": 318,
+    "pending": 10
+  },
+  "internal": 6636,
+  "max_depth": 45,
+  "global_exclusion": false,
+  "note": "Partition only; predicates and atomic replay are separate obligations.",
+  "root_matches_k10_chart": true,
+  "source": "research-2026\\n12-global\\members\\structure\\parallel-domain\\merged-partial-resume.json",
+  "source_sha256": "ba4397a3976f43558b61c3acdc51f3df4ec428f34a23222fe09fa4b2f4388f90",
+  "controls": {
+    "positive": 2,
+    "negative_rejected": 4
+  }
+}

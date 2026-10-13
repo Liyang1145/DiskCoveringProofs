@@ -1,0 +1,7 @@
+{
+  "OriginalPid": 5248,
+  "OriginalCreationFileTimeIdentity": "134357261216398705",
+  "OriginalCommandLine": "\"C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\dependencies\\python\\python.exe\" -u propose_n23_B14_full_residual.py --source n23-B14-complete-source-and-union-reacceptance-20261005-v1/VERIFIED.json --parent n23-B14-o2-a --controls n23-B14-full-type-controls-v1/VERIFIED.json --output n23-B14-full1 --limit 31",
+  "ActualExitCode": 0,
+  "OriginalCachedProcessHandleTerminalObserved": true
+}

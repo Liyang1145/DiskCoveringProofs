@@ -1,0 +1,59 @@
+{
+  "selected_completed_pending_families": [
+    {
+      "parent_group": 72262,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0072262",
+      "status_sha256": "e739021fb086710503a6ccd51550d9539d78748d031327e7766c2ae16aed82ca",
+      "exact_sha256": "f03b423d8310297239bcd2fa0793bce5bd1b69b0390da4cea29b856afa79393c",
+      "proposal_sha256": "46fc946e72a60684ff1d3cffafecd7825b7920650d105f2a6dc79e0cadab599c"
+    },
+    {
+      "parent_group": 84339,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0084339",
+      "status_sha256": "b43f93ef6c346555d9d015a4a6b8e66dba150953e05136496fe33efd41c1a250",
+      "exact_sha256": "108c0272792e17355e59398c3d4b9e7e3b38a5cfe0e69bf5cfb3fb1b1149b99a",
+      "proposal_sha256": "c1794638e818eab0edf3e118c5eaa7f98585efa531093f884a71616b4b7c87b9"
+    },
+    {
+      "parent_group": 85213,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0085213",
+      "status_sha256": "99908aedc9c5e0eea1705d6a402426f5cf427aae888ca0a4c14874ba05136169",
+      "exact_sha256": "58543a4d5890703153f621624239e62e3255a84cec87ea36eecd6366d792a095",
+      "proposal_sha256": "20e1ff336759f0f6f2b89a535be5986713de05b332b3b79c414f22321d2ab7ba"
+    },
+    {
+      "parent_group": 85337,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0085337",
+      "status_sha256": "bb0e5efaf630284d585c8d81f6772504c3d137a25474643dfadb458ac83c89d2",
+      "exact_sha256": "a8101a2596746ed7ee22fbaae50e44e39f7a9b878be0a42ed7b57a85a6f5fcaa",
+      "proposal_sha256": "ef2c3f09ca8ad1b2fed0437a68f7c3ef07d6e7db8ebf6e620ddd90e988acdfa6"
+    },
+    {
+      "parent_group": 86210,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0086210",
+      "status_sha256": "78359cb3468bab32dd55e2d904cf5d79f7d3cc1f8a13a8d0df25b3c26a66f230",
+      "exact_sha256": "fc204d05e6f6967d2f657d8929514ed4bea0ceec79c596e89d3f34e5ebb3ec4c",
+      "proposal_sha256": "60ca351c231741f4f8801168e3a157fa32408b78a3a8e1de1824ea9b5b211b19"
+    },
+    {
+      "parent_group": 101864,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0101864",
+      "status_sha256": "6be2d39d06394de296ab054737a0bfb6990b241d7d1c5d24dd106e2a96beb4ee",
+      "exact_sha256": "a1f54c71a6df3b09cfdaf286f79a4dc86b035c59c207da624d33598eaa4299c2",
+      "proposal_sha256": "6d4521f7def8b6bc965c7f98ac79e578a6819522a30cdd2dc2ff6aab56c48b5f"
+    },
+    {
+      "parent_group": 114369,
+      "directory": "n25-B14-paid-hole-residual-search-20261005-v1/parent-0114369",
+      "status_sha256": "c2144d5e2be9c3a081047c2b34d85742d618d6ab485b0fe1c9eccd20502f74fc",
+      "exact_sha256": "460ddc9cdd62a1a60464e9a32d6ab937b6bb484abc9caa4893be023af1cdb717",
+      "proposal_sha256": "f704f83823838ce250a5580b85cb3bc4c9e9c0d5b1281e407d0988dca878b684"
+    }
+  ],
+  "not_a_live_stage_restart": true,
+  "not_the_complete_parent_residual_pass": true,
+  "force_limit": 31,
+  "source_sha256": "f04340f5d4d5e5b83a73e11bc84b629cb33256df035da403f912b87b225d5818",
+  "known_attaining_control_sha256": "47b008db4d9986e59b6490cb8784e46d85d5c86b1fbd412abc05a8165f8f0a43",
+  "global_optimality_proved": false
+}

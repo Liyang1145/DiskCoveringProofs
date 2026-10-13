@@ -1,0 +1,48 @@
+{
+  "verified": true,
+  "schema": "complete-collar-bounded-payment-controls-v1",
+  "all_18_parent_graphs_partitioned_once_and_audited": true,
+  "four_real_proposal_and_stdlib_replay_batches_completed": true,
+  "strictly_excluded": 0,
+  "pending_weak_graphs": 18,
+  "pending_not_misreported_as_exclusions": true,
+  "empty_complete_union_partition_checked": true,
+  "negative_controls_rejected": [
+    "tree-radius-threshold",
+    "nonzero-native-exit",
+    "missing-first-batch",
+    "duplicate-batch",
+    "self-consistent-wrong-anchor-binding"
+  ],
+  "partition_sha256": "99f4b638f647fd332967e2e8b631a930532e66bf4fce7dbbc620f7f488d160ff",
+  "complete_payment_audit_sha256": "e711d1536e0c5aa5baeff8f3a78690db22fa72146286a86a54711e184d3e94ae",
+  "source_sha256": "f6b5db3736da67912e64eb0f8fa685ca9f0d9017038eb709ba9488d3f519c428",
+  "partition_source_sha256": "cd436eefbb90a70d780059041151c7f63305431ba196bcf37cbc81fe935464c2",
+  "audit_source_sha256": "4bf98651e84e0ea229cd5bd7397f65a7b1a3424ce5ef5b3898e87db6983e0a64",
+  "frozen_proposer_sha256": "d5694f13f571cd70be4f90358fd5d3481347e7459e459e37e0531cf9d485e581",
+  "derived_proposer_sha256": "fb922aae58c58517d28d44a900865b2015352344e41775de7b6dfd69573daac9",
+  "proposer_derivation_sha256": "d27de4c9016dc5123119a6fd41fb56046a15ca8193cec6aa5421ef091d730902",
+  "frozen_replayer_sha256": "262dd7f0d4c3ed4d5026512f749729796fc936bdca65c3535f24f9d17fa8c4d8",
+  "no_production_catalog_paid_by_this_control": true,
+  "global_optimality_proved": false,
+  "separate_finite_n25_exact_controls": [
+    {
+      "B": 14,
+      "finite_groups": 3,
+      "strict": 3,
+      "pending": 0,
+      "receipt_sha256": "3b60ca1913aa7b254496e75632ca88425d7ba0145c74abad693957e3b051156c",
+      "exact_replay_sha256": "331b50fd79c7b5324d04f61a92ad5aca4a7c9310c686d7341254843c243358b6"
+    },
+    {
+      "B": 16,
+      "finite_groups": 1,
+      "strict": 0,
+      "pending": 1,
+      "receipt_sha256": "c971b49b023665c5b1443f2e4d3c9b4c06f2a469408bec2d693dc86dbbd8d005",
+      "exact_replay_sha256": "5316738e7627c95bec425af6d56e23e5e966c4b1560fdbc71b0c4bdaba92ddc1"
+    }
+  ],
+  "all_three_finite_n25_strict_controls_fresh_replayed": true,
+  "known_n25_attaining_control_not_strictly_excluded": true
+}

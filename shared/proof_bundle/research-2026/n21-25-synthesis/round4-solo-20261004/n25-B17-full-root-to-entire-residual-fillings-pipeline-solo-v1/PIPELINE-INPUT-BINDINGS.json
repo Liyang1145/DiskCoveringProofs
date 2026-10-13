@@ -1,0 +1,25 @@
+{
+  "N": 25,
+  "B": 17,
+  "original_root_pid": 15524,
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\run_n25_B17_after_root_pipeline.py": "3d7f9de4d2c431a1e56092d4486567d686554ed738b4964d8ca6bdea88bb211e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\N25-B17-complete-origin-sorted-chunks.json": "2d525c26c8a01f7342bc2779c39514a752598851fe7d13891f297f1d84e77188",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\NATIVE-TERMINAL.json": "8d627cdf549ccc9c90842c950865b5397329fba1f7d3e120ce55910960f45eee",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\UNION\\VERIFIED.json": "856ff7928da209f462363669961df03b974cb31a549e8976c285c0519dedcb24",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-complete-origin-bounded-proof-inputs-solo-v1\\VERIFIED.json": "fb5ac7c987c0383ee5b1f1a399d5abccf1f5cf4161baff712a84fe7d2238da16",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-linked-general-collar-controls-20261005-v1\\VERIFIED.json": "d8577b73581d2a283ceeb3d290c5d56b5aeec2f5dd54a498cae2142407cb2999",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\run_complete_origin_batches.py": "f63e7f146f4f8302501d19260912b6b2b565a9e3213eda77f01898e28eab5655",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\snapshot_complete_origin_pending.py": "6b043897c4fe83fd02a48f80e92973016f9c6271f267fa1b15bd7df7b45c6150",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\pay_complete_origin_pending.py": "b124007c23d56d9a7f1b42d43dcf92c1958c282d61608ff549d6dde03f4cdd20",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_complete_origin_fillings.py": "a0ee641bea378f68cc2b8f40eb0d8e5dfd745d67a28363a84df6e5c5fad6ffb9",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_origin_collar_batches.py": "4f03b0ae31a539e6edfebcbeaefa371bbe033e125d1d24bb3820cf8322da1f59",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\prove_linked_general_collar.py": "ec1f5cd7c7c6411f73946bc0e1959ebf68346aa5d0dd3d7931d1664dfb5ff568",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\replay_linked_general_collar.py": "6a76992eaa6152e3d1b66fc443793297251203b7418fc28d5aa2b8f83fa06fdf",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\linked_general_collar_kernel.py": "21cc9f477bd17396c321e6747f5d240f1f335ab36720e240aaaff4d874226d8e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\refine_linked_collar_leaves.py": "1ec5a6cc1b940988e62f5bcfd95c0062fc6a4b6003f520d5b434985926758874"
+  },
+  "root_process_not_restarted": true,
+  "source_sha256": "3d7f9de4d2c431a1e56092d4486567d686554ed738b4964d8ca6bdea88bb211e",
+  "global_optimality_proved": false
+}

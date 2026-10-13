@@ -1,0 +1,39 @@
+{
+  "verified": true,
+  "N": 21,
+  "radius_upper": "52569014480717/200000000000000",
+  "core_radius_at_upper": "47430985519283/100000000000000",
+  "upper_core_radius_ratio": "52569014480717/94861971038566",
+  "strict_margin_sin_pi_over_five": "99670409348368610543517408625604696506584268797515227000302926868913811/2964436594955187500000000000000000000000000000000000000000000000000000000",
+  "minimum_interior_cells": 6,
+  "minimum_boundary_cells": 12,
+  "maximum_boundary_cells": 15,
+  "remaining_families": [
+    [
+      12,
+      9
+    ],
+    [
+      13,
+      8
+    ],
+    [
+      14,
+      7
+    ],
+    [
+      15,
+      6
+    ]
+  ],
+  "excluded_boundary_counts": [
+    16,
+    17,
+    18,
+    19,
+    20
+  ],
+  "scope": "necessary reduction of arbitrary covers, not exclusion of every auxiliary graph realization",
+  "global_optimality_proved": false,
+  "constants_sha256": "3403f827648cfa79e2eaf0ae936b7a1cf3f7c32d648be93ff5e82dc407db24b4"
+}

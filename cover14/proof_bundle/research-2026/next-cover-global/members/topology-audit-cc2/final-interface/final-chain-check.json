@@ -1,0 +1,175 @@
+{
+ "A": {
+  "n_certificates": 20,
+  "n_positive_multipliers": 0,
+  "rows_used": [
+   2,
+   7,
+   104,
+   105,
+   107,
+   109,
+   110,
+   111,
+   113,
+   115,
+   116,
+   117,
+   118,
+   119,
+   120,
+   121,
+   122,
+   123,
+   124,
+   125,
+   126,
+   127
+  ],
+  "n_rows_used": 22,
+  "n_rows_total": 128,
+  "maxabs_delta": "54334118000256937627170388946814721898872443262184033361831219/12800000000000000000000000000000000000000000000000000000000000000",
+  "maxabs_float": 0.004244852968770073,
+  "one_over_200": 0.005,
+  "inside_box": true,
+  "domain_hash_ok": true
+ },
+ "B": [
+  {
+   "seed": 1,
+   "n_extra": 6,
+   "base_rows": 16,
+   "base_vertices": 108,
+   "on_set_equal": true,
+   "off_set_equal": false,
+   "n_on": 56,
+   "n_bf_on": 56,
+   "n_off": 133,
+   "n_bf_off": 46
+  },
+  {
+   "seed": 1,
+   "n_extra": 8,
+   "status": "empty"
+  },
+  {
+   "seed": 2,
+   "n_extra": 6,
+   "status": "empty"
+  },
+  {
+   "seed": 2,
+   "n_extra": 8,
+   "status": "empty"
+  }
+ ],
+ "C": {
+  "round8_status": "sourcebound_configured_exterior_audit",
+  "audit_base_equals_c1366_source": true,
+  "c1365_is_base": true,
+  "n_cases": 4,
+  "n_cases_closed": 2,
+  "open_cases": [
+   [
+    [
+     0
+    ],
+    "9/512",
+    -1
+   ],
+   [
+    [
+     0,
+     1
+    ],
+    "63/256",
+    -1
+   ]
+  ],
+  "excluded_leaves_per_case": [
+   1,
+   2,
+   3,
+   2
+  ],
+  "n_case_files": 6,
+  "case_files_source_matches_base": 4,
+  "case_files_bad": [
+   "q10-metric-round8-audit.json",
+   "q10-metric-round8-config.json"
+  ],
+  "cuts_equal": true,
+  "audit_cuts": [
+   [
+    [
+     0
+    ],
+    "less",
+    "11/512"
+   ],
+   [
+    [
+     0,
+     1
+    ],
+    "less",
+    "65/256"
+   ],
+   [
+    [
+     3,
+     4
+    ],
+    "less",
+    "65/256"
+   ],
+   [
+    [
+     4
+    ],
+    "less",
+    "11/512"
+   ],
+   [
+    [
+     5
+    ],
+    "less",
+    "11/512"
+   ],
+   [
+    [
+     5,
+     6
+    ],
+    "less",
+    "65/256"
+   ],
+   [
+    [
+     8,
+     9
+    ],
+    "less",
+    "65/256"
+   ],
+   [
+    [
+     9
+    ],
+    "less",
+    "11/512"
+   ]
+  ],
+  "transport_status": "finite_graphautomorphism_transport_checked",
+  "transport_n_runs": 4,
+  "transport_source_is_c1365": false,
+  "transport_run_keys": [
+   "deficit_permutation",
+   "site_permutation",
+   "strict_upper_half_total_cut_indices"
+  ],
+  "transport_site_perm_bijection": true,
+  "transport_deficit_perm_bijection": true
+ }
+}

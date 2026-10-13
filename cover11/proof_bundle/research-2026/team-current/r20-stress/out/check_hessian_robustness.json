@@ -1,0 +1,39 @@
+{
+  "scope": "robustness control for reduced Hessian + deepest line point; numeric",
+  "hessian": [
+    {
+      "h_grad": 1e-05,
+      "h_hess": 0.0001,
+      "min_eig": -4.8196809369900055,
+      "max_eig": 3.436165489117901,
+      "n_neg": 10
+    },
+    {
+      "h_grad": 1e-05,
+      "h_hess": 0.0005,
+      "min_eig": -4.819693911471497,
+      "max_eig": 3.43616065769965,
+      "n_neg": 10
+    },
+    {
+      "h_grad": 0.0001,
+      "h_hess": 0.0001,
+      "min_eig": -4.819682716794469,
+      "max_eig": 3.436165341368,
+      "n_neg": 10
+    },
+    {
+      "h_grad": 0.0001,
+      "h_hess": 0.0005,
+      "min_eig": -4.819694550988357,
+      "max_eig": 3.436160611557246,
+      "n_neg": 10
+    }
+  ],
+  "deepest_line": {
+    "R": 0.39758452447756515,
+    "max21_res": 7.549516567451064e-15,
+    "margin": 0.17111935090717845,
+    "phi_minus_logTcert": -0.0001356907964575882
+  }
+}

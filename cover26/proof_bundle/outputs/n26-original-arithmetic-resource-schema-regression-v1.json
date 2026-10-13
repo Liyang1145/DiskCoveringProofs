@@ -1,0 +1,26 @@
+{
+  "schema": "N26-original-arithmetic-resource-schema-regression-v1",
+  "synthetic_exact_projection_roundtrip_passed": true,
+  "invalid_resource_model_controls_rejected": [
+    "unknown-executable-context-tag",
+    "duplicate-resource-dictionary-key",
+    "hidden-extra-resource-field",
+    "different-boundary-anchor-family",
+    "different-original-vertex-frame",
+    "kernel-boolean-promoted-to-integer",
+    "original-kernel-identity-flag-removed",
+    "different-exact-radius",
+    "original-LOCAL-allowance-enlarged",
+    "one-original-rod-omitted",
+    "original-data-tuple-relabelled-as-list",
+    "resource-dictionary-order-changed",
+    "original-tiny-positive-control-field-omitted"
+  ],
+  "synthetic_only_not_an_actual_legacy_geometry_replay": true,
+  "new_geometric_candidate_payments": 0,
+  "current_candidate_roots_removed": 0,
+  "tested_resource_verifier_sha256": "ee213e11f003718c533fac6287bb1afb8dce3d2b4cbb21cfd4392a997ce65b1b",
+  "executed_test_sha256": "01ebae9dbf8297e33fc58a2d064f740ace1a7bcbb23e8b6cc66c5b4520a04980",
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false
+}

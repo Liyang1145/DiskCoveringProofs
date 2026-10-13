@@ -1,0 +1,27 @@
+{
+  "schema": "one-shot-complete-origin-batch-jobs-v1",
+  "N": 25,
+  "B": 17,
+  "weak_graph_count": 289140,
+  "batch_count": 565,
+  "workers": 4,
+  "proposal_limit": 1,
+  "numeric_weak_routing_is_not_a_cover_or_payment": true,
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\run_complete_origin_batches.py": "f63e7f146f4f8302501d19260912b6b2b565a9e3213eda77f01898e28eab5655",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\probe_collar_batches.py": "fb922aae58c58517d28d44a900865b2015352344e41775de7b6dfd69573daac9",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\replay_group_stage.py": "262dd7f0d4c3ed4d5026512f749729796fc936bdca65c3535f24f9d17fa8c4d8",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round3-high\\exact_graph.py": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\audit_origin_collar_batches.py": "4f03b0ae31a539e6edfebcbeaefa371bbe033e125d1d24bb3820cf8322da1f59",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\batch_origin_collar.py": "5a4298db6ef57124e731d8fd46e45526f5bf8e98871d55cc1cc889408d90d16e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\evidence\\core-reduction\\constants\\n25.json": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-complete-origin-bounded-proof-inputs-solo-v1\\VERIFIED.json": "fb5ac7c987c0383ee5b1f1a399d5abccf1f5cf4161baff712a84fe7d2238da16",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-complete-origin-bounded-proof-inputs-solo-v1\\BATCHES.jsonl": "61cc630e45d76f355d433569d783d64b6859a55cac7f7061c35d795a8b1dc8a8",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\N25-B17-complete-origin-sorted-chunks.json": "2d525c26c8a01f7342bc2779c39514a752598851fe7d13891f297f1d84e77188",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\NATIVE-TERMINAL.json": "8d627cdf549ccc9c90842c950865b5397329fba1f7d3e120ce55910960f45eee",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B17-origin-streamed-search-reboot-20261005-v1\\UNION\\VERIFIED.json": "856ff7928da209f462363669961df03b974cb31a549e8976c285c0519dedcb24"
+  },
+  "catalog_sha256": "2875b78fef94430b0222f7100769609f9037fba182662243019fe13a430bea84",
+  "parent_bindings_sha256": "49489f7c7c19f4ecfca43b748a56742d749afa917f0b35fddd379c7945318587",
+  "global_optimality_proved": false
+}

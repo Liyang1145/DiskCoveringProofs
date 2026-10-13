@@ -1,0 +1,76 @@
+{
+  "verified": true,
+  "schema": "finished-complete-origin-pending-leaf-refinement-results-v1",
+  "N": 25,
+  "B": 15,
+  "selected_families": 3,
+  "outcomes": [
+    {
+      "parent_index": 84667,
+      "status": "strict-complete-filling-family",
+      "pending_complete_leaves": 0,
+      "unsearched_frontier_nodes": 0,
+      "proof_sha256": "1f1ee679ce2ae562f7f1eafe1a2229dc9ed9ba582e307c3501f59e81c5b13581",
+      "exact_sha256": "12d79f58ba3742c464d1d331ca31cfabfba2cabcfc814116a744af25688256f3"
+    },
+    {
+      "parent_index": 89766,
+      "status": "strict-complete-filling-family",
+      "pending_complete_leaves": 0,
+      "unsearched_frontier_nodes": 0,
+      "proof_sha256": "cba6ef06672cc8ba3957c18f1a4d7b70325a0f7dd64ae792c7105803221d92a1",
+      "exact_sha256": "e1b7d9e7537fa1ff04a08df3be24e6b81db7f5d79fda320532902db7e9193269"
+    },
+    {
+      "parent_index": 93731,
+      "status": "strict-complete-filling-family",
+      "pending_complete_leaves": 0,
+      "unsearched_frontier_nodes": 0,
+      "proof_sha256": "764144b22a071597a2e1a6c7007f56eed4ebe0eadbaec87daddd298a8e707a55",
+      "exact_sha256": "0bd2f33ec55a5f71a4cc832fda4d750b39567e9fc33f70fe6a27a4813b676747"
+    }
+  ],
+  "strict_families": 3,
+  "pending_families": 0,
+  "source_complete_parent_snapshot_sha256": "d0460b8ce550e60c3712b7a95e0b14ddd846e00f17b6c5b63827fe5e62d5c110",
+  "input_snapshot_sha256": "15091fbe1fb34f01a875b91083c8a52fe301b6e22ab01295c2aa544bcbc1fe61",
+  "frozen_files": {
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-finished-pending-finer127-snapshot-20261005-v1\\VERIFIED.json": "ed3dfa6f2f34669709b28d18edd7187f0ba1849cae7f5e41a47499e41a431e51",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000063\\SUMMARY.json": "38f868c4153d38d8ff1aed453381ed356f28230c0306a0ff7c5a992c3f90128d",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000063\\parent-0084667\\INPUT-COLLAR.json": "a980395222ca02862d06377891c9e9d8bfcd4775d39146ee5dd9b239feff1b29",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000063\\parent-0084667\\STATUS.json": "df20ec5a9e3073981cdbe03f352d322bad1054626b2ea5cbdc7e7c6024c64287",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000063\\parent-0084667\\PROPOSAL.json": "3f2493de0313b2350091708939de848fb6d4037ac680016c1ea27661a1a798d0",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000063\\parent-0084667\\EXACT.json": "a9bf0783354f8f4715d9a613a3da92d68ca208db95a724a0bc820c59dce10c03",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000063\\parent-0084667\\REFINEMENT\\EXACT.json": "3a8d67cb3f418bae965cb36524aba2a6dc66b3e0d0f76ed0927875bddc684f58",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000063\\parent-0084667\\REFINEMENT\\REFINED.json": "0ddd59d71b8f321a699f79ddc787a9c94ea7d688d4a25a556cdd8b3095bb971c",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000072\\SUMMARY.json": "6648ec72a87be5b37245904b4decd2a2b22e1f4450732ca302f8500ad88ddc14",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000072\\parent-0089766\\INPUT-COLLAR.json": "cf4a7252f448732e12eddbeedf8822939386d0319f88543a15d3697f8b122c85",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000072\\parent-0089766\\STATUS.json": "0a759d007c7e92e4aa975746eb49ca5ce75303c7187735e5c65ee106007c3ed1",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000072\\parent-0089766\\PROPOSAL.json": "3da7d621072e2a0d4c31e8b25989ba5f2cbc20aa1a787a20737bfbeae093e863",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000072\\parent-0089766\\EXACT.json": "549448e3a1deb775527e72d665c8fb7cac64881b9128c763dfaa25522fec7ce6",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000072\\parent-0089766\\REFINEMENT\\EXACT.json": "813fb6210c4ea7562cbc3c35f86dd7d1488dd1a15f1ff5c0c7ba679945d8e816",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000072\\parent-0089766\\REFINEMENT\\REFINED.json": "efa3fbd77f961948fe45e04b7ccc5659b030d8647fd2925ec03c423c406dd43e",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000079\\SUMMARY.json": "87582c24a246a2e40859e30ea7ee31aa018a72d5bf4479c6d6d5bb81b1a16e15",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000079\\parent-0093731\\INPUT-COLLAR.json": "4d6298357ed4997845bf424feb0f40f22ef844068dd257222db5cbc5bda56b73",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000079\\parent-0093731\\STATUS.json": "7cd62b5cdf02bd41b6169b9c3f46deab1f424d74c8f55bb4b6ed465783ccd2c8",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000079\\parent-0093731\\PROPOSAL.json": "2d477473e8b47a05e4b9f1c15432eb00dacae86d5db413abd742ca8e51bf7909",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000079\\parent-0093731\\EXACT.json": "cfa082e951d830515ee5cf15d349e06fed60de00d33a9af0ee6ae68486b48e5b",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000079\\parent-0093731\\REFINEMENT\\EXACT.json": "fc94bc3eaacc40b1666a9921507fc84703a8894b13e11492cdeffcd6d9c57472",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\batch-000079\\parent-0093731\\REFINEMENT\\REFINED.json": "3fd4c3f02add7859f7908f164289cc6e836c5edb35a60145141cfc0f434859be",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\refine_finished_complete_origin_pending_next.py": "fb1b3b060f4b5c117bdfc173981189b6595c334b6d2fec071e3012c335feb0e5",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-parent-pending-snapshot-20261005-v1.json": "d0460b8ce550e60c3712b7a95e0b14ddd846e00f17b6c5b63827fe5e62d5c110",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-B15-all23196-complete-fillings-and-fresh-merge-20261005-v1\\INPUT-BINDINGS.json": "fe1418be5aa6e2b7148614ba1ff6bc4de020f7bceaaed64555713eb766a2023f",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-linked-leaf-refinement-controls-20261005-v1\\VERIFIED.json": "3a0a24473b030d6c897d18b1db2fc5e2ef57b31aec06d16b9a795e738645ca0c",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\refine_linked_collar_leaves.py": "1ec5a6cc1b940988e62f5bcfd95c0062fc6a4b6003f520d5b434985926758874",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\replay_refined_linked_leaves.py": "c300fc898697468e8e422a52c1a33ff6fd2640435845fa9e22d2c5b8c8f07a55",
+    "C:\\\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0\\_incoming-local-math-20261004\\recovered-20261004\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\linked_general_collar_kernel.py": "21cc9f477bd17396c321e6747f5d240f1f335ab36720e240aaaff4d874226d8e"
+  },
+  "only_original_FULL_PENDING_leaves_changed": true,
+  "all_old_positive_nodes_and_topological_child_lists_unchanged": true,
+  "excluded_prior_parent_indices": [
+    68567
+  ],
+  "not_yet_full_parent_payment_merge": true,
+  "source_sha256": "fb1b3b060f4b5c117bdfc173981189b6595c334b6d2fec071e3012c335feb0e5",
+  "global_optimality_proved": false
+}

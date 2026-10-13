@@ -1,0 +1,63 @@
+{
+  "schema": "N26-independent-grown-full134rod-intersection-OLD-forest-fixture-controls-v1",
+  "verified": false,
+  "actual_OLD_v7_forest_sha256": "390c514c230e38da309025467a3e293cd29f23fc7a8b90701af06f99f7e88e08",
+  "actual_grown_diagnosis_sha256": "f029a11bfa7378a671097ff205594b70dbd90fa910033abc3fec2080226ee37d",
+  "actual_grown_controls_sha256": "e4a071c98d6b31877867509d102f8e9f8a0c21a6a97359c61fd86d67c5df60b0",
+  "actual_grown_selection_controls_sha256": "a536eb4b448a1b2507f691c3aac8f6353838f06b851c9e5262ee69af25efe949",
+  "old_nodes_support_prefixes_and_strict_ledgers_retained": [
+    1865,
+    186,
+    414
+  ],
+  "actual_grown_region_OLD_fixture_strict_targets_independently_checked": 64,
+  "actual_grown_region_OLD_fixture_closed_splits": 538,
+  "remaining_OPEN_OLD_fixture_regions": 993,
+  "region_scans": [
+    {
+      "region_index": 0,
+      "actual_OPEN_regions_examined": 519,
+      "disjoint": 469,
+      "non_strict_retained_OPEN": 0,
+      "unsupported_boundary_only_retained_OPEN": 0,
+      "strict_whole_OPEN_leaves": 0,
+      "strict_isolated_subboxes": 50,
+      "target_limit_reached_with_all_remainders_retained": false
+    },
+    {
+      "region_index": 1,
+      "actual_OPEN_regions_examined": 625,
+      "disjoint": 561,
+      "non_strict_retained_OPEN": 0,
+      "unsupported_boundary_only_retained_OPEN": 50,
+      "strict_whole_OPEN_leaves": 0,
+      "strict_isolated_subboxes": 14,
+      "target_limit_reached_with_all_remainders_retained": true
+    }
+  ],
+  "both_closed_halves_shared_boundaries_and_all_remainders_reconstructed": true,
+  "independent_sine_square_secant_and_square_completion_checks": 192,
+  "actual_grown_operator_OLD_fixture_guards_rejected": [
+    "grown-OLD-fixture-unreachable-remainder",
+    "grown-OLD-fixture-lost-closed-root-half",
+    "grown-OLD-fixture-closed-root-halves-identified",
+    "grown-OLD-fixture-entire-target-escaped",
+    "grown-OLD-fixture-source-nonOPEN-laundered",
+    "grown-OLD-fixture-target-omitted",
+    "grown-OLD-fixture-target-repeated",
+    "grown-OLD-fixture-previous-nonOPEN-reset",
+    "grown-OLD-fixture-used-as-latest-v8"
+  ],
+  "fixture_is_NOT_latest_v8_successor_or_current_source_history_geometry_acceptance": true,
+  "all_original_and_NEWEST_running_histories_UNMODIFIED": true,
+  "no_newest_successor_tree_or_geometry_payment_serialized_here": true,
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "abab774c3c10f63b3d9499de94491f28d49cc54524511b33f1f86338ea56b9b0",
+  "tested_distinct_grown_interface_sha256": "eba1e8b2d362fde315c1baf9ee1eb56fb4240bb8940d6cb9d2b80cac302df987",
+  "tested_own_independent_arithmetic_checker_sha256": "ece32743cf1cd8e33f7ba564ee6ab5949aaac917136a30a0ce0e6b717d6c24b5",
+  "tested_pure_operator_sha256": "45390a001a51bf6098ffaf3acddaadcbfd583e245c5eaf02a18bbf60a43c9a98"
+}

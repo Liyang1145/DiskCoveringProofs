@@ -1,0 +1,7 @@
+{
+  "status": "numeric_root_control_interval_candidate_nonexclusion",
+  "tested_points": 3193,
+  "tightened_boxes": 664,
+  "minimum_numeric_slack": 0.0,
+  "candidate_interval_upper": 0.18428210942523898
+}

@@ -1,0 +1,1 @@
+Latest member numeric discrepancy again uses wrong closure indices: ring1 (i=1) hl=z112,hr=z113; report usedz113,z114 which belongs to ring2. Correct direct control1.4459409612312664. No original certificate issue established. Do not use member extra scripts as independent checks without exactmaprepair.

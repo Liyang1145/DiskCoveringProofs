@@ -1,0 +1,65 @@
+{
+  "verified_mechanical_derivation": true,
+  "files": [
+    {
+      "original": "batch_streamed_collar.py",
+      "derived": "batch_origin_collar.py",
+      "original_sha256": "cd436eefbb90a70d780059041151c7f63305431ba196bcf37cbc81fe935464c2",
+      "derived_sha256": "5a4298db6ef57124e731d8fd46e45526f5bf8e98871d55cc1cc889408d90d16e",
+      "changes": [
+        [
+          "    assert manifest[\"schema\"] == \"complete-outer-collar-sorted-chunks-v1\"",
+          "    assert manifest[\"schema\"] == \"complete-cover-origin-collar-sorted-chunks-v1\"\n    assert manifest[\"N\"] == 25 and manifest[\"B\"] in (14, 15, 16, 17)\n    assert manifest[\"origin_cover_screen\"] and manifest[\"origin_cover_only_N25\"]\n    assert manifest[\"origin_cover_scope\"] == \"actual arbitrary disk covers only; not weak graph geometry\"\n    assert not manifest.get(\"seeded_fixed_collar_restriction\", False), \"restricted seed is not the complete family\"\n    assert manifest[\"origin_radius_upper_numerator\"] == 239146311738101\n    assert manifest[\"origin_radius_upper_denominator\"] == 10**15"
+        ],
+        [
+          "sha(ROOT / \"merge_collar_chunks.py\")",
+          "sha(ROOT / \"merge_origin_collar_chunks.py\")"
+        ],
+        [
+          "            assert type(centers) is int and B <= centers <= N",
+          "            assert type(centers) is int and B <= centers < N"
+        ],
+        [
+          "        \"lower_bounds_not_paid_by_partition\": True, \"global_optimality_proved\": False,",
+          "        \"parent_requires_actual_cover_origin_condition\": True,\n        \"not_an_unqualified_geometric_weak_graph_family\": True,\n        \"lower_bounds_not_paid_by_partition\": True, \"global_optimality_proved\": False,"
+        ]
+      ],
+      "occurrence_counts": [
+        1,
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "original": "audit_collar_batch_payments.py",
+      "derived": "audit_origin_collar_batches.py",
+      "original_sha256": "4bf98651e84e0ea229cd5bd7397f65a7b1a3424ce5ef5b3898e87db6983e0a64",
+      "derived_sha256": "4f03b0ae31a539e6edfebcbeaefa371bbe033e125d1d24bb3820cf8322da1f59",
+      "changes": [
+        [
+          "from batch_streamed_collar import parent_gate, catalog_rows, identity",
+          "from batch_origin_collar import parent_gate, catalog_rows, identity"
+        ],
+        [
+          "sha(ROOT / \"batch_streamed_collar.py\")",
+          "sha(ROOT / \"batch_origin_collar.py\")"
+        ],
+        [
+          "        \"source_cover_transport_and_other_families_still_required\": True,",
+          "        \"parent_requires_actual_cover_origin_condition\": True,\n        \"not_an_unqualified_geometric_weak_graph_family\": True,\n        \"source_cover_transport_and_other_families_still_required\": True,"
+        ]
+      ],
+      "occurrence_counts": [
+        1,
+        1,
+        1
+      ]
+    }
+  ],
+  "all_original_zero_exit_union_slab_partition_and_exact_replay_checks_preserved": true,
+  "new_parent_constraints_stricter_not_weaker": true,
+  "actual_complete_origin_production_parent_validation_still_required": true,
+  "source_sha256": "707f056d3734e346cfeb31c7665917ef6b1b26e4f7f59003eab88d8f8d7dd48c",
+  "global_optimality_proved": false
+}

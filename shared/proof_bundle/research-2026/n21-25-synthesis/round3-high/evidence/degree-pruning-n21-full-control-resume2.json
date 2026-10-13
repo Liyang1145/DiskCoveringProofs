@@ -1,0 +1,11 @@
+{
+  "verified": true,
+  "complete_whole_set_match": true,
+  "N": 21,
+  "B": 14,
+  "orbits": 745290,
+  "left_sha256": "9f45eb8311760b2f6aea0d5a431bbb6d36d88ff53ac55dbd06967bfc857cd3f3",
+  "right_sha256": "a99574f7b1d649c26ff28a26336b32c47ed093caeffa9bdf945ef84bf5d508a5",
+  "source_sha256": "9ecedd7b38ac6261cf0baea8f75bbcbac36f633f0193661e77ef491de64e4f8f",
+  "global_optimality_proved": false
+}

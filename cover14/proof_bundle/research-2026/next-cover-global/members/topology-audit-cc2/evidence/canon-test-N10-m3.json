@@ -1,0 +1,58 @@
+{
+ "invariance": {
+  "canon_true_violations": 0,
+  "canon_lead_violations": 9,
+  "canon_true_values_lead_violations": 0,
+  "samples": 12,
+  "examples": [
+   {
+    "index": 0,
+    "bad_true": 0,
+    "bad_lead": 30
+   },
+   {
+    "index": 29,
+    "bad_true": 0,
+    "bad_lead": 30
+   },
+   {
+    "index": 58,
+    "bad_true": 0,
+    "bad_lead": 30
+   },
+   {
+    "index": 87,
+    "bad_true": 0,
+    "bad_lead": 30
+   },
+   {
+    "index": 145,
+    "bad_true": 0,
+    "bad_lead": 90
+   },
+   {
+    "index": 203,
+    "bad_true": 0,
+    "bad_lead": 30
+   },
+   {
+    "index": 232,
+    "bad_true": 0,
+    "bad_lead": 30
+   },
+   {
+    "index": 290,
+    "bad_true": 0,
+    "bad_lead": 30
+   },
+   {
+    "index": 319,
+    "bad_true": 0,
+    "bad_lead": 30
+   }
+  ]
+ },
+ "n_phase1": 348,
+ "canon_true": 68,
+ "canon_lead": 95
+}

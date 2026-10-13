@@ -1,0 +1,7 @@
+{
+  "linux_native_pid": 12332,
+  "binary_linux_path": "/mnt/c/\u70ed\u7231\u5355\u673a\u4f46\u840c\u65b0/_incoming-local-math-20261004/recovered-20261004/workspace/research-2026/n21-25-synthesis/round4-solo-20261004/peel_origin_streamed_collar-linux",
+  "native_binary_sha256": "027383aaeaaf982cc388e6d2b653de02b34f9e9d0709897d79d10211ed1115d3",
+  "owned_wsl_proxy_pid": 22384,
+  "check_proc_identity_before_any_signal": true
+}

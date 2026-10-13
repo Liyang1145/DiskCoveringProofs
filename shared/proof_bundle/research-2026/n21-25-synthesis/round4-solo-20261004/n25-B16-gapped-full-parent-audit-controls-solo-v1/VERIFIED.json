@@ -1,0 +1,23 @@
+{
+  "verified": true,
+  "schema": "library-parent-filling-job-audit-controls-v1",
+  "finite_exact_selected_range_partition_positive": true,
+  "negative_controls_rejected": [
+    "missing-final-job",
+    "duplicate-job",
+    "unordered-jobs",
+    "paid-gap-included",
+    "wrong-selected-offset",
+    "zero-worker-range",
+    "oversized-worker-range",
+    "boolean-first-position",
+    "boolean-job-ordinal",
+    "boolean-selected-offset",
+    "boolean-selected-position"
+  ],
+  "source_sha256": "348c3240fe5f00fd0a17667eab12f359536b20e709eb7295aed64e8601a16a86",
+  "audit_source_sha256": "c42173b879956ba3e20e1580a9e8d4fe8d4f2d2c7ea54ee717f8086e16cdde6f",
+  "complete_source_and_exact_filling_tree_replays_required_separately": true,
+  "no_mathematical_family_payment_by_functional_controls": true,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,1080 @@
+{
+  "all_archive_central_directories_scanned": 134,
+  "matching_non_tree_names": [
+    {
+      "archive": "math-delta-0001.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/N23-B13-CATALOGUE-CLOSURE.md",
+      "bytes": 6796,
+      "zip_crc32": 911253042
+    },
+    {
+      "archive": "math-delta-0002.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-all-outer-root-replay-resume1.json",
+      "bytes": 828,
+      "zip_crc32": 1032742447
+    },
+    {
+      "archive": "math-delta-0002.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-full-unpaid-afterdiskfull-resume1.json",
+      "bytes": 11435654,
+      "zip_crc32": 4267571511
+    },
+    {
+      "archive": "math-delta-0002.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-outer-hierarchy-audit-partial-resume1.json",
+      "bytes": 1287,
+      "zip_crc32": 2451692216
+    },
+    {
+      "archive": "math-delta-0002.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-outer-hierarchy-audit-partial-resume1.pending.jsonl",
+      "bytes": 12040624,
+      "zip_crc32": 124071122
+    },
+    {
+      "archive": "math-delta-0002.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-outer-prototype-replay-resume1.json",
+      "bytes": 825,
+      "zip_crc32": 3332953741
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-rest-full-root-force-resume1/outcomes.jsonl",
+      "bytes": 111758596,
+      "zip_crc32": 2269391706
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-rest-full-root-force-resume1/RECOVERED-PREFIX-LEDGER-resume1.json",
+      "bytes": 136512540,
+      "zip_crc32": 1857394652
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-rest-full-groups-resume1/bindings.jsonl",
+      "bytes": 117916619,
+      "zip_crc32": 529375704
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-rest-full-groups-resume1/GROUPS.json",
+      "bytes": 175945722,
+      "zip_crc32": 3308744765
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/INPUT-BINDINGS.json",
+      "bytes": 3060763,
+      "zip_crc32": 2239976931
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-full-lossless-view.json",
+      "bytes": 375574989,
+      "zip_crc32": 583651477
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-full-lossless-view.view-audit.json",
+      "bytes": 666,
+      "zip_crc32": 3322342321
+    },
+    {
+      "archive": "math-delta-0029.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin",
+      "bytes": 195905603,
+      "zip_crc32": 1375868923
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/SUMMARY.json",
+      "bytes": 1544757,
+      "zip_crc32": 3817666523
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-0.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3646948741
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-1.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3720511992
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-10.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1447045431
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-100.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2084465037
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-101.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4014797513
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-102.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2861103906
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-103.bin",
+      "bytes": 12800028,
+      "zip_crc32": 919590195
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-104.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3816200896
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-105.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2185091799
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-106.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3002248950
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-107.bin",
+      "bytes": 12800028,
+      "zip_crc32": 700276035
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-108.bin",
+      "bytes": 12800028,
+      "zip_crc32": 40717836
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-109.bin",
+      "bytes": 12800028,
+      "zip_crc32": 596339124
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-11.bin",
+      "bytes": 12800028,
+      "zip_crc32": 619965039
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-110.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1071112716
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-111.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3082744912
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-112.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1798358103
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-113.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2634674035
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-114.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3502015779
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-115.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3481543133
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-116.bin",
+      "bytes": 12800028,
+      "zip_crc32": 48070495
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-117.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2613930072
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-118.bin",
+      "bytes": 12800028,
+      "zip_crc32": 742364343
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-119.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2516844660
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-12.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1387661517
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-120.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1613594776
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-121.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1859454143
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-122.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4056981205
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-123.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3191832038
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-124.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2675264668
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-125.bin",
+      "bytes": 12800028,
+      "zip_crc32": 743045684
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-126.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3375344557
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-127.bin",
+      "bytes": 12800028,
+      "zip_crc32": 685135129
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-128.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1780895398
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-129.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1777168954
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-13.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1207357131
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-130.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3316627726
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-131.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1287647453
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-132.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3120624520
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-133.bin",
+      "bytes": 4614044,
+      "zip_crc32": 1755190527
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-14.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2169970472
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-15.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2512688083
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-16.bin",
+      "bytes": 12800028,
+      "zip_crc32": 533192557
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-17.bin",
+      "bytes": 12800028,
+      "zip_crc32": 566902448
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-18.bin",
+      "bytes": 12800028,
+      "zip_crc32": 351524271
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-19.bin",
+      "bytes": 12800028,
+      "zip_crc32": 600496061
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-2.bin",
+      "bytes": 12800028,
+      "zip_crc32": 337770620
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-20.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2466018855
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-21.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1052104903
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-22.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1287482828
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-23.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1929598379
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-24.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3391921189
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-25.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3085245382
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-26.bin",
+      "bytes": 12800028,
+      "zip_crc32": 462608595
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-27.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1238121515
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-28.bin",
+      "bytes": 12800028,
+      "zip_crc32": 869365605
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-29.bin",
+      "bytes": 12800028,
+      "zip_crc32": 11988404
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-3.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1100892545
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-30.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1563055440
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-31.bin",
+      "bytes": 12800028,
+      "zip_crc32": 486333853
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-32.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2772176638
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-33.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3328244355
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-34.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4003107819
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-35.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3078591995
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-36.bin",
+      "bytes": 12800028,
+      "zip_crc32": 56795851
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-37.bin",
+      "bytes": 12800028,
+      "zip_crc32": 610871362
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-38.bin",
+      "bytes": 12800028,
+      "zip_crc32": 6343287
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-39.bin",
+      "bytes": 12800028,
+      "zip_crc32": 279994094
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-4.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4073904161
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-40.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2251953348
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-41.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1413572822
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-42.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1063801631
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-43.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1727425915
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-44.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2280967244
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-45.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4263495634
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-46.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3665375437
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-47.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4121058542
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-48.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1115064563
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-49.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3869087113
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-5.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1923861182
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-50.bin",
+      "bytes": 12800028,
+      "zip_crc32": 674631714
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-51.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2553178259
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-52.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1245432100
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-53.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3738371036
+    },
+    {
+      "archive": "math-delta-0030.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-54.bin",
+      "bytes": 12800028,
+      "zip_crc32": 478063791
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-55.bin",
+      "bytes": 12800028,
+      "zip_crc32": 224133889
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-56.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4094379627
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-57.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2899557426
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-58.bin",
+      "bytes": 12800028,
+      "zip_crc32": 441411344
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-59.bin",
+      "bytes": 12800028,
+      "zip_crc32": 222785317
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-6.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1737065697
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-60.bin",
+      "bytes": 12800028,
+      "zip_crc32": 14086353
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-61.bin",
+      "bytes": 12800028,
+      "zip_crc32": 222954446
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-62.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3771773294
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-63.bin",
+      "bytes": 12800028,
+      "zip_crc32": 135229660
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-64.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2107633276
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-65.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4135425336
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-66.bin",
+      "bytes": 12800028,
+      "zip_crc32": 804355808
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-67.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1994696345
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-68.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1990642757
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-69.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3536340456
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-7.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1093236910
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-70.bin",
+      "bytes": 12800028,
+      "zip_crc32": 252903826
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-71.bin",
+      "bytes": 12800028,
+      "zip_crc32": 860775138
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-72.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3955266804
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-73.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4193889614
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-74.bin",
+      "bytes": 12800028,
+      "zip_crc32": 624031418
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-75.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1781441994
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-76.bin",
+      "bytes": 12800028,
+      "zip_crc32": 89981216
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-77.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2063888925
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-78.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3201992602
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-79.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1999686667
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-8.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2847974755
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-80.bin",
+      "bytes": 12800028,
+      "zip_crc32": 100475389
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-81.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1074964188
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-82.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4273451202
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-83.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1467650634
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-84.bin",
+      "bytes": 12800028,
+      "zip_crc32": 926456734
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-85.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1910335576
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-86.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2150406685
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-87.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1317575539
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-88.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1301452634
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-89.bin",
+      "bytes": 12800028,
+      "zip_crc32": 392393339
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-9.bin",
+      "bytes": 12800028,
+      "zip_crc32": 120210933
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-90.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3243248351
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-91.bin",
+      "bytes": 12800028,
+      "zip_crc32": 4181960144
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-92.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1216654534
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-93.bin",
+      "bytes": 12800028,
+      "zip_crc32": 635164208
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-94.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1768575093
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-95.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2970208023
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-96.bin",
+      "bytes": 12800028,
+      "zip_crc32": 138906770
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-97.bin",
+      "bytes": 12800028,
+      "zip_crc32": 3462063323
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-98.bin",
+      "bytes": 12800028,
+      "zip_crc32": 1702827914
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-streamed-resume1/N23-B13-paid-residual.bin.runs/run-99.bin",
+      "bytes": 12800028,
+      "zip_crc32": 2203194700
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-pair-prototypes-resume1/bindings.jsonl",
+      "bytes": 16537753,
+      "zip_crc32": 2295056917
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-pair-prototypes-resume1/GROUPS.json",
+      "bytes": 1767,
+      "zip_crc32": 20781477
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-pair-prototype-force-resume1/outcomes.jsonl",
+      "bytes": 138,
+      "zip_crc32": 2789709222
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-pair-prototype-force-resume1/SUMMARY.json",
+      "bytes": 702,
+      "zip_crc32": 1265626174
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-outer-prototypes-resume1/bindings.jsonl",
+      "bytes": 16987102,
+      "zip_crc32": 3613515439
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-outer-prototypes-resume1/GROUPS.json",
+      "bytes": 49794,
+      "zip_crc32": 2495655329
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-outer-prototype-force-resume1/outcomes.jsonl",
+      "bytes": 30888,
+      "zip_crc32": 3072759386
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-paid-run0-outer-prototype-force-resume1/SUMMARY.json",
+      "bytes": 43619,
+      "zip_crc32": 3702964554
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-cross-volume-freezer-controls-resume1/C-CONTROL-DATA.json",
+      "bytes": 29,
+      "zip_crc32": 363350674
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-cross-volume-freezer-controls-resume1/TWO-FILE-CONTROL-SNAPSHOT.json",
+      "bytes": 698,
+      "zip_crc32": 1153101049
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-cross-volume-freezer-controls-resume1/VERIFIED.json",
+      "bytes": 1259,
+      "zip_crc32": 1567388763
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-all-outer-root-force-resume1/outcomes.jsonl",
+      "bytes": 1127509,
+      "zip_crc32": 3384098578
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-all-outer-root-force-resume1/SUMMARY.json",
+      "bytes": 1591327,
+      "zip_crc32": 3154365137
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-all-outer-groups-resume1/bindings.jsonl",
+      "bytes": 268895404,
+      "zip_crc32": 499174900
+    },
+    {
+      "archive": "math-delta-0031.zip",
+      "member": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n23-B13-all-outer-groups-resume1/GROUPS.json",
+      "bytes": 956039,
+      "zip_crc32": 3387228699
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/N23-B13-CATALOGUE-SNAPSHOT-cross-volume-resume1.json",
+      "bytes": 117049720,
+      "zip_crc32": 2408268964
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-full-disjoint-replayed-union-resume1.json",
+      "bytes": 335871429,
+      "zip_crc32": 4174094441
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-full-prefix-afterdiskfull-exact-replay-resume1.json",
+      "bytes": 834,
+      "zip_crc32": 3996798385
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-full-suffix-exact-replay-resume1.json",
+      "bytes": 837,
+      "zip_crc32": 1972033218
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-hierarchy-audit-complete-cross-volume-resume1.json",
+      "bytes": 1907,
+      "zip_crc32": 4004477019
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-hierarchy-audit-complete-cross-volume-resume1.pending.jsonl",
+      "bytes": 0,
+      "zip_crc32": 0
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-outer-and-full-prefix-hierarchy-audit-resume1.json",
+      "bytes": 1711,
+      "zip_crc32": 1052490596
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-outer-and-full-prefix-hierarchy-audit-resume1.pending.jsonl",
+      "bytes": 5936866,
+      "zip_crc32": 2931990182
+    },
+    {
+      "archive": "math-delta-0053.zip",
+      "member": "bulk/n23-B13-snapshot-full-integrity-cross-volume-resume1.json",
+      "bytes": 576,
+      "zip_crc32": 817267871
+    },
+    {
+      "archive": "math-delta-0054.zip",
+      "member": "bulk/n23-b13-freezer-controls-resume1/E-CONTROL-DATA.json",
+      "bytes": 24,
+      "zip_crc32": 783443215
+    },
+    {
+      "archive": "math-delta-0054.zip",
+      "member": "bulk/n23-B13-full-root-suffix-afterdiskfull-resume1/COMPLETE-ACCOUNTING-LEDGER-resume1.json",
+      "bytes": 126032687,
+      "zip_crc32": 2171702280
+    },
+    {
+      "archive": "math-delta-0060.zip",
+      "member": "bulk/n23-B13-full-root-suffix-afterdiskfull-resume1/outcomes.jsonl",
+      "bytes": 104317868,
+      "zip_crc32": 3865389600
+    },
+    {
+      "archive": "math-delta-0060.zip",
+      "member": "bulk/n23-B13-full-root-suffix-afterdiskfull-resume1/SUMMARY.json",
+      "bytes": 145294553,
+      "zip_crc32": 943645632
+    },
+    {
+      "archive": "math-delta-0069.zip",
+      "member": "bulk/n23-b13-freezer-controls-resume1/relocated-root/E-CONTROL-DATA.json",
+      "bytes": 41,
+      "zip_crc32": 1387764408
+    }
+  ],
+  "selected_names_found": [
+    "N23-B13-CATALOGUE-SNAPSHOT-cross-volume-resume1.json",
+    "n23-B13-full-disjoint-replayed-union-resume1.json"
+  ],
+  "names_only_not_integrity_or_mathematical_acceptance": true,
+  "source_sha256": "92c13014b91916bc3762a7799a6560d5800f23c3584d39f867010ebf6b4784a5",
+  "global_optimality_proved": false
+}

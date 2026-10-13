@@ -1,0 +1,62 @@
+{
+  "schema": "N26-independent-full134rod-closed-intersection-operator-OLD-fixture-controls-v1",
+  "verified": false,
+  "seed_OLD_v7_sha256": "390c514c230e38da309025467a3e293cd29f23fc7a8b90701af06f99f7e88e08",
+  "old_v7_nodes_supports_and_strict_ledgers_retained": [
+    1865,
+    186,
+    414
+  ],
+  "actual_OLD_fixture_strict_closed_intersections_independently_checked": 2,
+  "actual_OLD_fixture_closed_splits": 19,
+  "all_actual_closed_shared_boundaries_and_OPEN_remainders_reconstructed": true,
+  "independent_sine_square_secant_and_square_completion_checks": 6,
+  "actual_operator_rejection_controls_passed": [
+    "operator-boolean-target-budget",
+    "operator-zero-target-budget",
+    "operator-closed-region-coordinate-omitted",
+    "operator-reversed-closed-region",
+    "operator-hidden-unreachable-remainder",
+    "operator-one-closed-half-lost",
+    "operator-paid-region-summary-omitted",
+    "operator-actual-target-domain-escaped"
+  ],
+  "region_scans": [
+    {
+      "region_index": 0,
+      "actual_OPEN_regions_examined": 519,
+      "disjoint": 469,
+      "non_strict_retained_OPEN": 0,
+      "unsupported_boundary_only_retained_OPEN": 49,
+      "strict_whole_OPEN_leaves": 0,
+      "strict_isolated_subboxes": 1,
+      "target_limit_reached_with_all_remainders_retained": false
+    },
+    {
+      "region_index": 1,
+      "actual_OPEN_regions_examined": 527,
+      "disjoint": 500,
+      "non_strict_retained_OPEN": 0,
+      "unsupported_boundary_only_retained_OPEN": 26,
+      "strict_whole_OPEN_leaves": 0,
+      "strict_isolated_subboxes": 1,
+      "target_limit_reached_with_all_remainders_retained": false
+    }
+  ],
+  "remaining_OPEN_fixture_regions": 536,
+  "fixture_NOT_latest_v8_successor_or_current_source_geometry_acceptance": true,
+  "all_original_and_NEWEST_running_histories_UNMODIFIED": true,
+  "source_file_sha256": {
+    "PENDING-ANGLES.json": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "PROPOSAL.json": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7",
+    "SOURCE-ROOT-HISTORY.json": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+  },
+  "new_geometric_payments": 0,
+  "candidate_whole_roots_removed": 0,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_test_sha256": "f864f0beae05ff33965f76910c66f1365346f6c573a9ca2325ee07299461315d",
+  "tested_intersection_operator_sha256": "45390a001a51bf6098ffaf3acddaadcbfd583e245c5eaf02a18bbf60a43c9a98",
+  "tested_independent_domain_and_target_checker_sha256": "fb3a7bc31e7bbba11f7041f07db63f84a8b3b409d0c6f9698a34c56740c528fe"
+}

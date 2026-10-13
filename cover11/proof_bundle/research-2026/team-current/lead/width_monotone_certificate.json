@@ -1,0 +1,33 @@
+{
+  "scope": "width derivative strictly positive b<=1, source-pinned full subdivision",
+  "count": 330,
+  "live": 0,
+  "closed": {
+    "illegal": 42,
+    "positive": 124
+  },
+  "minimum": 0.0006942385318255791,
+  "seconds": 0.34233784675598145,
+  "domain": [
+    [
+      0.3789999999999999,
+      0.37999000000000005
+    ],
+    [
+      0.5905000151603179,
+      1
+    ],
+    [
+      0.04644456359141745,
+      0.7795925929485212
+    ]
+  ],
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "source_sha256": {
+    "certify_width_monotone.py": "3ad1c23e25880aff842de2e454c0ad283705306831b9c57cca4125e2b34034b3",
+    "check_width_curvature.py": "0d637ee21a1c609463bf6bbefc0dc5456fefbfe01f3d549ccff105159d65251b",
+    "face_second_jet.py": "0895040dc5865b6974fc2b0867d39ffb48ba567e51b86d4f07e183779e772c7a",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358"
+  },
+  "topboxes": []
+}

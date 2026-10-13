@@ -1,0 +1,39 @@
+{
+  "scope": "No smooth interior local maximum on universal distance lens d[.45,1.049], Lj<=.76; actual regional coverage in accompanying proof",
+  "count": 1851,
+  "live": 0,
+  "closed": {
+    "distance": 151,
+    "gradient": 691,
+    "curvature": 84,
+    "rootempty": 0,
+    "contracted": 0
+  },
+  "seconds": 3.804661273956299,
+  "domain": [
+    [
+      0.4499999999999999,
+      1.0490000000000002
+    ],
+    [
+      -0.76,
+      0.76
+    ],
+    [
+      -0.535,
+      0.535
+    ]
+  ],
+  "coefficient_sha256": "5671967c5a3df341b068975b161900c8b7df4fd59298a4e4fb9f7210438221fb",
+  "source_sha256": {
+    "certify_axis_no_contraction.py": "8fcd248c05f5ac1b9adbbd7b2a4b113081ccf64a1c26fd6541dcbb1b9de29a38",
+    "hub_axis_stationary.py": "180eb90414a363ed98037a8ce0ce5d5266c7faf90813aeccdbdfd1f7a43171e6",
+    "patch_smooth_jet.py": "0ea533809a58940014e0fd980d29c80747cb9e05a467936645817bb74b0b68d0",
+    "interval_joint_patch.py": "27474921459411ca85f31d7e82aa7030926c27faff653e1e3c4f6bea9182b358"
+  },
+  "radial_margins": [
+    "[0.0592731725841174910747590538553, 0.0592731725841174910747595837678]",
+    "[0.0721254837195818957316147990353, 0.0721254837195818957316153806466]"
+  ],
+  "topboxes": []
+}

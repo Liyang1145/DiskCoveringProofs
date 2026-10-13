@@ -1,0 +1,30 @@
+{
+  "verified": true,
+  "schema": "N23-B14-actual-full-residual-type-controls-v1",
+  "actual_current_pending_complete_type_positive_control": 682333,
+  "all30_real_original_faces_and_pure_internal_face_preserved": true,
+  "positive_full_type_tree_mathematically_verified": true,
+  "positive_tree_sha256": "f47c65c83a33bf09f86a5a3306015a2471675739b3a84f847b9ac378a1c5da78",
+  "negative_controls_rejected": [
+    "wrong-full-N",
+    "wrong-B",
+    "outer-only-center-count",
+    "wrong-original-source-index",
+    "omitted-pure-internal-face",
+    "wrong-parent-residual-binding",
+    "wrong-constants-binding",
+    "wrong-radius",
+    "missing-math-nodes",
+    "LOCAL-not-a-strict-full-type-payment",
+    "missing-actual-outcome",
+    "duplicate-actual-outcome",
+    "extra-actual-outcome",
+    "wrong-declared-current-count",
+    "wrong-current-index-matched"
+  ],
+  "audit_source_sha256": "48da8df65976da108305b066fbe191566e23fc6129f81213f1a92c4e9311ce8c",
+  "proposal_source_sha256": "864da7f67107a9dd2ea7efb8919515fd5cc5d444263e8e0de31b351ff8aae0a0",
+  "source_sha256": "fa97a54533a16d3925fe26479475bea4900e66cb8ef97cfce59c17b7ad00cb70",
+  "frozen_exact_checker_sha256": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9",
+  "global_optimality_proved": false
+}

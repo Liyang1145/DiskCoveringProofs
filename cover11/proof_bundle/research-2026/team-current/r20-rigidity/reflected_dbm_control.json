@@ -1,0 +1,39 @@
+{
+  "reflection": "rho(y)_j = y_{(2-j) mod 9}",
+  "y": [
+    "1/12",
+    "1/15",
+    "1/10",
+    "1/8",
+    "1/9",
+    "1/7",
+    "1/11",
+    "1/13",
+    "14645/72072"
+  ],
+  "y_reflected": [
+    "1/10",
+    "1/15",
+    "1/12",
+    "14645/72072",
+    "1/13",
+    "1/11",
+    "1/7",
+    "1/9",
+    "1/8"
+  ],
+  "non_singleton_dbm": true,
+  "contains_point": true,
+  "tt_contains_true_reflected_prefix_diff": true,
+  "tt_contains_after_splits": true,
+  "cyclic_block_sum_identity": true,
+  "rq2_true": "111834657709979/12985932960000",
+  "rq2_interval": [
+    "417247/61250",
+    "626547/61250"
+  ],
+  "rq2_contains_true": true,
+  "convention_check": "the code uses t'_i - t'_6 (same as the direct patch: tt=[-db[i][6],db[6][i]]); the i<6 flip -u,-l maps a bound on sum_{[i,6)} y' to t'_i - t'_6 = -sum",
+  "scope": "controls for the reflected-DBM patch only; C920 radius not re-audited",
+  "repro": "py -3 -B -X utf8 reflected_dbm_control.py"
+}

@@ -1,0 +1,23 @@
+a = hub A (cert 2) = (0.000296021329, 0.272977305852) ; b = hub B (cert 0) = (-0.000162042987, -0.149428411085)
+central near roots q_0 = (0.315948155771, 0.061431900196) |q_0-b|-r = -3.34e-18 ; q_4 = (-0.315814177428, 0.062116994571) |q_4-b|-r = -1.28e-16
+  fan-B pin (6, 4) at (-0.378668737, -0.115955861) ; |pin-b|-r = -7.47e-17
+  fan-B pin (4, 9) at (-0.295148907, -0.384419898) ; |pin-b|-r = -2.84e-03
+  fan-B pin (9, 10) at (-0.000574102, -0.529412041) ; |pin-b|-r = -2.44e-18
+  fan-B pin (10, 3) at (0.294314471, -0.385059126) ; |pin-b|-r = -2.84e-03
+  fan-B pin (3, 5) at (0.378416357, -0.116776858) ; |pin-b|-r = -2.44e-17
+
+triples (psi, branch, singleton at b, max gap):
+  psi - r = -1.565e-01  psi=0.223507410150180  ('central4', 'pin(6, 4)', 'pin(4, 9)')  diameter  singleton=False (max gap 287.63 deg)
+  psi - r = -1.565e-01  psi=0.223507411997850  ('central0', 'pin(10, 3)', 'pin(3, 5)')  diameter  singleton=False (max gap 287.63 deg)
+  psi - r = -9.985e-02  psi=0.280134593473636  ('pin(9, 10)', 'pin(10, 3)', 'pin(3, 5)')  diameter  singleton=False (max gap 265.01 deg)
+  psi - r = -9.985e-02  psi=0.280134594750420  ('pin(6, 4)', 'pin(4, 9)', 'pin(9, 10)')  diameter  singleton=False (max gap 265.01 deg)
+  psi - r = -8.525e-02  psi=0.294731862097990  ('pin(4, 9)', 'pin(9, 10)', 'pin(10, 3)')  diameter  singleton=False (max gap 257.21 deg)
+  psi - r = -4.484e-02  psi=0.335142843605394  ('central0', 'pin(9, 10)', 'pin(10, 3)')  diameter  singleton=False (max gap 236.23 deg)
+  psi - r = -4.484e-02  psi=0.335142843605394  ('central0', 'pin(9, 10)', 'pin(3, 5)')  diameter  singleton=False (max gap 236.23 deg)
+  psi - r = -4.484e-02  psi=0.335142844396689  ('central4', 'pin(4, 9)', 'pin(9, 10)')  diameter  singleton=False (max gap 236.23 deg)
+
+tight triples (psi = r to 1e-12): 4
+   ('central4', 'pin(9, 10)', 'pin(3, 5)') : psi-r = -6.089e-17, branch circumcircle, singleton at b: True
+   ('pin(6, 4)', 'pin(9, 10)', 'pin(3, 5)') : psi-r = -4.580e-17, branch circumcircle, singleton at b: True
+   ('central0', 'central4', 'pin(9, 10)') : psi-r = -4.310e-17, branch circumcircle, singleton at b: True
+   ('central0', 'pin(6, 4)', 'pin(9, 10)') : psi-r = -2.730e-17, branch circumcircle, singleton at b: True

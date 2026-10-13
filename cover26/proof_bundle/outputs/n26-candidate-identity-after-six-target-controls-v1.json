@@ -1,0 +1,146 @@
+{
+  "schema": "N26-candidate-identity-after-six-target-synthetic-controls-v1",
+  "verified": false,
+  "new_geometric_payments": 0,
+  "tested_identity_module_sha256": "8b28f54f9f21d333eaed3b50932662f237e736bf11dd1ca8b0cb1c277d6e0192",
+  "executed_test_sha256": "cfffa08c984f597a12626ba5f0109ffe0f2fe8d1be4afa1b49e19ff039b52d5c",
+  "actual_parent_current_sha256": "d306ec18c476fc4dc40d19284cb0281db82e457201a97f85e361c1b37c6a17ea",
+  "actual_old_source_layer_identity_snapshot": {
+    "schema": "N26-bound-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "d306ec18c476fc4dc40d19284cb0281db82e457201a97f85e361c1b37c6a17ea",
+    "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-seventh-conditional-current-audit-v27-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "26d274a012b6ec816313110c488ba79df77133c2fb9c4063f85c306ef0f1afe3"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-sixth-conditional-current-audit-v26-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "91e9ec1f31ab26cfd6f924cc3c4e7ab4acb14b820d1873cd08436e76d8175688"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fifth-conditional-current-audit-v25-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "10c31954c30a42227040cdc507c0390c7312d75f16c02362ba13ddbe8aacb49f"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fourth-conditional-current-audit-v24-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "4ad5cda43ef2b9606ed8a054844e0fa43485429bd2fdee2f39b925691ef078bd"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-third-conditional-current-audit-v23-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "cdd3af2afa13028d63d9378480b31ef479972d956af4b9a85704788b88fa0b61"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-second-conditional-current-audit-v22-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f211ad82c936ee0e4c0d50f663dd181b6fec55ebb625490e702004d3c2aec39b"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-first-conditional-current-audit-v21-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "351270611f0273abd38730c99bc268a9338116627164327c8358dd37a1e4fe49"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twentieth-conditional-current-audit-v20-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f722f716e125c1ca8896b9bea83f49b43b0a9d296c3149dc582a5c6c0d2adf37"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v8-strict-parent-v1.json",
+        "sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "synthetic_six_header_wrapper_identity_snapshot_NOT_current": {
+    "schema": "N26-candidate-identity-through-six-target-enumeration-supplement-v1",
+    "actual_current_parent_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "new_enumeration_schema": "N26-complete-current-with-six-target-source-geometry-audit-v1",
+        "actual_six_target_current_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-eighth-conditional-current-audit-v28-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "d306ec18c476fc4dc40d19284cb0281db82e457201a97f85e361c1b37c6a17ea"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-seventh-conditional-current-audit-v27-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "26d274a012b6ec816313110c488ba79df77133c2fb9c4063f85c306ef0f1afe3"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-sixth-conditional-current-audit-v26-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "91e9ec1f31ab26cfd6f924cc3c4e7ab4acb14b820d1873cd08436e76d8175688"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fifth-conditional-current-audit-v25-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "10c31954c30a42227040cdc507c0390c7312d75f16c02362ba13ddbe8aacb49f"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fourth-conditional-current-audit-v24-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "4ad5cda43ef2b9606ed8a054844e0fa43485429bd2fdee2f39b925691ef078bd"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-third-conditional-current-audit-v23-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "cdd3af2afa13028d63d9378480b31ef479972d956af4b9a85704788b88fa0b61"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-second-conditional-current-audit-v22-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f211ad82c936ee0e4c0d50f663dd181b6fec55ebb625490e702004d3c2aec39b"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-first-conditional-current-audit-v21-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "351270611f0273abd38730c99bc268a9338116627164327c8358dd37a1e4fe49"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twentieth-conditional-current-audit-v20-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f722f716e125c1ca8896b9bea83f49b43b0a9d296c3149dc582a5c6c0d2adf37"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v8-strict-parent-v1.json",
+        "sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0,
+    "explicit_NEW_six_schema_not_relabelled_as_old_enumeration": true,
+    "identity_only_NOT_current_final_or_whole_geometry_acceptance": true
+  },
+  "synthetic_invalid_six_schema_ancestry_controls_rejected": [
+    "unbound-current-bytes",
+    "old-semantic-chain-missing",
+    "six-full-semantic-main-not-completed",
+    "six-publication-not-matched",
+    "newer-histories-discarded",
+    "candidate-root-payment-in-enumeration",
+    "smaller-six-candidate-objective",
+    "old-unfiltered-frontier-restored",
+    "six-exclusion-count-changed",
+    "different-source-partition",
+    "radius-scope-promoted-to-U",
+    "original-U-state-discarded",
+    "LOCAL-allowance-erased",
+    "global-optimality-overclaim",
+    "new-six-enumeration-relabelled-as-candidate-layer",
+    "six-parent-ancestry-cycle",
+    "actual-parent-not-bound",
+    "old-proof-dependency-dropped",
+    "recorded-source-identity-reset",
+    "older-equal-count-owned-source-substituted"
+  ],
+  "actual_owned8_source_AND_all_original_25_roots_identically_retained": true,
+  "synthetic_six_header_NOT_completed_current_or_geometry_acceptance": true,
+  "no_old_sealed_identity_module_modified_or_monkey_patched": true,
+  "actual_formal_frontier_STILL": 11183,
+  "candidate_whole_roots_STILL": 25,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false
+}

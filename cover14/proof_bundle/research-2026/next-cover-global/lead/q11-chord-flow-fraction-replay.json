@@ -1,0 +1,17 @@
+{
+  "source_sha256": "4438734363954a9081b98e38fa6c3b6f25147a4e65c6e335c7dc1b4f3a515ffe",
+  "runs": [
+    {
+      "family": "11/3",
+      "index": 899,
+      "lower_radius_exact": "177647880360148745578478718647739937770594503/500000000000000000000000000000000000000000000",
+      "lower_radius_display": 0.3552957607202975,
+      "excluded": true,
+      "vertices": 24,
+      "incidence_rebuilt": true,
+      "exact_balance": true,
+      "vertex_coverage": "pending_separate_independent_audit",
+      "all_endpoint_signs_positive": true
+    }
+  ]
+}

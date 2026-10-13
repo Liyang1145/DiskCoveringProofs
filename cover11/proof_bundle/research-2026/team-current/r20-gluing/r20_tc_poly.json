@@ -1,0 +1,341 @@
+{
+ "role": "polynomial reformulation of the 5 TC residuals + branch equivalence data",
+ "n_vars": 37,
+ "n_eqs": 35,
+ "n_identity": 30,
+ "n_condition": 5,
+ "names": [
+  "unit_w0",
+  "unit_w1",
+  "unit_w2",
+  "unit_w3",
+  "w4_real",
+  "w4_imag",
+  "rotp_c5",
+  "rotp_s5",
+  "rotp_c6",
+  "rotp_s6",
+  "rotp_c7",
+  "rotp_s7",
+  "rotp_c8",
+  "rotp_s8",
+  "rotm_c0",
+  "rotm_s0",
+  "rotm_c1",
+  "rotm_s1",
+  "rotm_c2",
+  "rotm_s2",
+  "rotm_c3",
+  "rotm_s3",
+  "norm_c4",
+  "norm_s4",
+  "t0",
+  "t1",
+  "t2",
+  "t3",
+  "t4",
+  "hub_h",
+  "res_k1_l1",
+  "res_k2_l0",
+  "res_k3_l0",
+  "res_k8_l1",
+  "res_hub"
+ ],
+ "kinds": [
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "identity",
+  "condition",
+  "condition",
+  "condition",
+  "condition",
+  "condition"
+ ],
+ "total_degrees": [
+  1,
+  2,
+  3,
+  4,
+  8
+ ],
+ "noninteger_coefficients": [
+  "-1/2",
+  "1/2",
+  "1/4"
+ ],
+ "pi_nodes": 0,
+ "transcendental_nodes": 0,
+ "lemmas": {
+  "L1": "0",
+  "L2": [
+   "0",
+   "0"
+  ],
+  "L3": "0",
+  "L4": "0"
+ },
+ "root": [
+  "0.37200861998019260122141926796",
+  "0.34084306504344867228075663264",
+  "0.28082192144638567434511185646",
+  "0.383012021506243543116004249347",
+  "0.272977466346363395009533747397",
+  "-0.149428498926956476438885135016",
+  "0.379983853119838689722261606136"
+ ],
+ "root_inside_certified_box": true,
+ "max_equation_residual": "5.5059e-61",
+ "worst_equation": "res_k3_l0",
+ "equations": [
+  [
+   "unit_w0",
+   "identity",
+   "0.0"
+  ],
+  [
+   "unit_w1",
+   "identity",
+   "-6.8064e-62"
+  ],
+  [
+   "unit_w2",
+   "identity",
+   "-9.7235e-63"
+  ],
+  [
+   "unit_w3",
+   "identity",
+   "-5.8341e-62"
+  ],
+  [
+   "w4_real",
+   "identity",
+   "1.9447e-62"
+  ],
+  [
+   "w4_imag",
+   "identity",
+   "-1.9447e-61"
+  ],
+  [
+   "rotp_c5",
+   "identity",
+   "7.7788e-62"
+  ],
+  [
+   "rotp_s5",
+   "identity",
+   "0.0"
+  ],
+  [
+   "rotp_c6",
+   "identity",
+   "-1.5558e-61"
+  ],
+  [
+   "rotp_s6",
+   "identity",
+   "1.5558e-61"
+  ],
+  [
+   "rotp_c7",
+   "identity",
+   "-9.7235e-63"
+  ],
+  [
+   "rotp_s7",
+   "identity",
+   "0.0"
+  ],
+  [
+   "rotp_c8",
+   "identity",
+   "-1.1668e-61"
+  ],
+  [
+   "rotp_s8",
+   "identity",
+   "-9.7235e-62"
+  ],
+  [
+   "rotm_c0",
+   "identity",
+   "-7.7788e-62"
+  ],
+  [
+   "rotm_s0",
+   "identity",
+   "0.0"
+  ],
+  [
+   "rotm_c1",
+   "identity",
+   "3.8894e-62"
+  ],
+  [
+   "rotm_s1",
+   "identity",
+   "-7.7788e-62"
+  ],
+  [
+   "rotm_c2",
+   "identity",
+   "0.0"
+  ],
+  [
+   "rotm_s2",
+   "identity",
+   "0.0"
+  ],
+  [
+   "rotm_c3",
+   "identity",
+   "7.7788e-62"
+  ],
+  [
+   "rotm_s3",
+   "identity",
+   "0.0"
+  ],
+  [
+   "norm_c4",
+   "identity",
+   "0.0"
+  ],
+  [
+   "norm_s4",
+   "identity",
+   "0.0"
+  ],
+  [
+   "t0",
+   "identity",
+   "0.0"
+  ],
+  [
+   "t1",
+   "identity",
+   "0.0"
+  ],
+  [
+   "t2",
+   "identity",
+   "0.0"
+  ],
+  [
+   "t3",
+   "identity",
+   "0.0"
+  ],
+  [
+   "t4",
+   "identity",
+   "0.0"
+  ],
+  [
+   "hub_h",
+   "identity",
+   "-2.4309e-63"
+  ],
+  [
+   "res_k1_l1",
+   "condition",
+   "-6.8064e-62"
+  ],
+  [
+   "res_k2_l0",
+   "condition",
+   "7.7788e-62"
+  ],
+  [
+   "res_k3_l0",
+   "condition",
+   "-5.5059e-61"
+  ],
+  [
+   "res_k8_l1",
+   "condition",
+   "2.4309e-62"
+  ],
+  [
+   "res_hub",
+   "condition",
+   "3.8894e-62"
+  ]
+ ],
+ "branch": {
+  "t0": "0.110745853558",
+  "t1": "0.180674907427",
+  "t2": "0.259957917056",
+  "t3": "0.0687322664621",
+  "t4": "0.0330620706604",
+  "h": "0.315881352342",
+  "R": "0.37998385312",
+  "sin a0": "0.363487392562",
+  "cos a0": "0.931599117351",
+  "sin a1": "0.334281777035",
+  "cos a1": "0.942473179216",
+  "sin a2": "0.277145467204",
+  "cos a2": "0.960827971079",
+  "sin a3": "0.373715940493",
+  "cos a3": "0.927543204288",
+  "rho_min": "0.700870054024"
+ },
+ "branch_all_positive": true,
+ "backward_leg": {
+  "dev_theta": "7.779e-62",
+  "dev_t": "0.0",
+  "residuals": [
+   "-7.779e-62",
+   "1.167e-61",
+   "-7.001e-61",
+   "-7.779e-62",
+   "1.167e-61"
+  ],
+  "dev_h": "0.0"
+ },
+ "controls": {
+  "a0+1e-6": "1.211e-5",
+  "wrong_branch_t0": "0.4839",
+  "wrong_branch_h": "0.8774"
+ },
+ "analytic_rank": 5,
+ "analytic_singular_values": [
+  "34.025747",
+  "11.410038",
+  "3.9545547",
+  "1.9652754",
+  "0.66616207"
+ ],
+ "algebraic_rank": 35,
+ "algebraic_sigma_max": "5.2627613",
+ "algebraic_sigma_min": "0.085594613",
+ "scope": "algebraic reformulation + local branch data; no global claim, no Groebner"
+}
