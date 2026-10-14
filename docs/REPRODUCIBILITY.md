@@ -72,3 +72,12 @@ CI runs mathematical rejection controls, n11 arithmetic and a labelled n12
 sample on each change. Its manual workflow can request the complete n12
 replay and uploads fresh reports. Sample CI is never advertised as a complete
 global mathematical acceptance.
+
+## Frozen dependencies for 23–26
+
+See [the dependency audit and export guide](REPLAY_ASSET_PLAN.md) for actual
+omissions, the downloadable 55-file core bundle, and the n26 server commands.
+`tools/export_frozen_assets.py` and `tools/restore_frozen_assets.py` check and
+transport frozen bytes; they never infer mathematical success from archived
+acceptance flags. Complete global replay for these orders is not provided by
+these data tools. `tools/test_frozen_assets.py` tests their rejection behavior.

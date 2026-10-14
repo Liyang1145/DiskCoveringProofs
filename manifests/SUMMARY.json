@@ -18,8 +18,8 @@
     12,
     14
   ],
-  "delivered_files": 14517,
-  "delivered_original_bytes": 2111073003,
+  "delivered_files": 14538,
+  "delivered_original_bytes": 2112018978,
   "complete_historical_dependency_mirror": false,
   "complete_not_delivered_file_inventory": false,
   "this_delivery_is_new_mathematical_acceptance": false,
@@ -39,5 +39,9 @@
     "n11": "root, candidate geometry, 371 Schur fields; global not replayed",
     "n12": "full root and k10 arithmetic: 7041 terminals, 6723 fresh atomic checks; analytic/global chain not replayed"
   },
-  "new_unrestricted_global_acceptance": false
+  "new_unrestricted_global_acceptance": false,
+  "global_agent_handoff": "START_HERE.md / PROJECT_STATE.json",
+  "external_core_bundle_files": 55,
+  "external_core_bundle_raw_bytes": 61130881,
+  "full_n23_n25_asset_content_public": false
 }

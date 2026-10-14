@@ -1,0 +1,1000 @@
+{
+  "schema": "n23-n25-core-frozen-assets-profile-v1",
+  "scope": "Selected mathematical core inputs and source routines; not full final-ledger closure.",
+  "files": [
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/exact_graph.py",
+      "bytes": 3426,
+      "sha256": "7ee72c72d57fc6aa0113960076177dbb6860c8254f6a1485341215f07551caf9",
+      "roles": [
+        "shared-exact-runtime"
+      ],
+      "orders": [
+        23,
+        24,
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/exact_graph.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/replay_candidate.py",
+      "bytes": 5055,
+      "sha256": "ea723b6c7e70d672a53e8c70c050ac781e1a38abb09d8eefda55b0aa5758768e",
+      "roles": [
+        "shared-exact-runtime"
+      ],
+      "orders": [
+        23,
+        24,
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/replay_candidate.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/stream_catalog.py",
+      "bytes": 3078,
+      "sha256": "9f722be547cb693c8255b8a50e7567e723e5196202183430d924ae83a1024a2d",
+      "roles": [
+        "shared-exact-runtime"
+      ],
+      "orders": [
+        23,
+        24,
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/stream_catalog.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round2-grouped/partial_force_exact.py",
+      "bytes": 7374,
+      "sha256": "f0fd44362eaede709ec91fe1492073d51ea34757d879089fead8bfe853f614b6",
+      "roles": [
+        "shared-exact-runtime"
+      ],
+      "orders": [
+        23,
+        24,
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round2-grouped/partial_force_exact.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/disk-cover-proof-library/external/pinned/cover20/proof_bundle/core/exact_arcs.py",
+      "bytes": 2488,
+      "sha256": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+      "roles": [
+        "shared-exact-runtime"
+      ],
+      "orders": [
+        23,
+        24,
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "cover21/proof_bundle/research-2026/n21-global/evidence/milestone-v1-archive/research-2026/disk-cover-proof-library/external/pinned/cover20/proof_bundle/core/exact_arcs.py",
+        "cover26/proof_bundle/outputs/n26-anchor-pinning-published-replay-v2/exact_arcs.py",
+        "cover26/proof_bundle/outputs/n26-anchor-pinning-published-replay-v3/exact_arcs.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/algebraic_roots.py",
+      "bytes": 11675,
+      "sha256": "ad0be18cfcbf233d97edd08301794086d6f3a8ed88cb8e8e07845e4d507737ac",
+      "roles": [
+        "root-upper-runtime-or-source-boundary"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/algebraic_roots.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/local_certificates.py",
+      "bytes": 4714,
+      "sha256": "e4e9ac217d39dff04384dd965a1dc694eb1ea5a9259e0d2afdca7bfc31eaa0bb",
+      "roles": [
+        "root-upper-runtime-or-source-boundary"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/local_certificates.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-global/root_certificate.py",
+      "bytes": 14485,
+      "sha256": "a39bc0d4c789d852749b7dfbac4a1b7333dbe657763e2348448bfad289a9df9b",
+      "roles": [
+        "root-upper-runtime-or-source-boundary"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "cover21/proof_bundle/research-2026/n21-global/evidence/milestone-v1-archive/research-2026/n21-global/root_certificate.py",
+        "cover21/proof_bundle/research-2026/n21-global/root_certificate.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n13-global/independent_checks.py",
+      "bytes": 10898,
+      "sha256": "76431ce80cd316ea6a31d4fda85b8a099ae5e6d5f3eeef202254b14dff499377",
+      "roles": [
+        "root-upper-runtime-or-source-boundary"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "cover21/proof_bundle/research-2026/n21-global/evidence/milestone-v1-archive/research-2026/n13-global/independent_checks.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n25_outer_search.py",
+      "bytes": 13120,
+      "sha256": "0dfc9e810e74fc58c9c28b1ff82c2e9e424a2aeb9cda327c6c024870a8675905",
+      "roles": [
+        "original-entry-import-dependency-not-native-execution"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25_outer_search.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/merge_paid_runs_bounded.py",
+      "bytes": 15454,
+      "sha256": "807f41a1feccc6317fa52e936289289481585f614549c580abe1e79195094579",
+      "roles": [
+        "original-entry-import-dependency-not-native-execution"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/merge_paid_runs_bounded.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/paid_binary_residual.py",
+      "bytes": 4416,
+      "sha256": "bf6f37d144227befab7ca5c82562d21eedc3173ad3a9fdfaa8b10b5ab5c4edfb",
+      "roles": [
+        "original-entry-import-dependency-not-native-execution"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/paid_binary_residual.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/audit_streamed_hierarchy.py",
+      "bytes": 9986,
+      "sha256": "a5e0aab2ba0822beb2af0df2143d5aa53df6ced376d591a3cf8b42ed02426ab3",
+      "roles": [
+        "original-entry-import-dependency-not-native-execution"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/audit_streamed_hierarchy.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/replay_isolated_n23_core_prerequisites.py",
+      "bytes": 11288,
+      "sha256": "f0f8614de0321a2bbca06fd3506d4e4fdd48dff5b142b128052b9d7570d02a07",
+      "roles": [
+        "fresh-mathematical-entry"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/replay_isolated_n23_core_prerequisites.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/recover_n23_nonstrict_core_assets.py",
+      "bytes": 6135,
+      "sha256": "959aa47132366e8dd148e1d4e16fead884324be480f3d9e13cec5a68214922a7",
+      "roles": [
+        "provenance-gate-source-only-not-recovery-required"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/recover_n23_nonstrict_core_assets.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n23/core-system.json",
+      "bytes": 13663,
+      "sha256": "cb6d87d69e9c4673e47c1e960ca013c5bb5e8e20f72bb2470653e8e11b8dcb10",
+      "roles": [
+        "mathematical-input-not-an-accepted-result"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n23/core-root.json",
+      "bytes": 4558897,
+      "sha256": "ad18358164d0d36335b54281b2b000efa9f252250aef161c2df87dc7c55a8a45",
+      "roles": [
+        "mathematical-input-not-an-accepted-result"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n23/candidate-numeric.json",
+      "bytes": 13635,
+      "sha256": "9b20bed3fc611e2fc15398a000998f776196df341882277bd50741b99340a9e2",
+      "roles": [
+        "mathematical-input-not-an-accepted-result"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/evidence/core-reduction/constants/n23.json",
+      "bytes": 1439,
+      "sha256": "0b08dd350e33852d46207fb709b88ad5535cb2a003a51cf429b7cddb200c8ed1",
+      "roles": [
+        "rational-domain-and-radius-budget-input"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/core-angle-tree.json.gz",
+      "bytes": 4061474,
+      "sha256": "940a589692067826b9c5db731a16c45515422735eaead95f4dc5e8f69f550f79",
+      "roles": [
+        "complete-angular-proof-tree-replay-required"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/local-isolation-certificate.json",
+      "bytes": 9438,
+      "sha256": "2dc2da7da348ce5e89f929394c0b07af494887d7a0c2187545bcb8b26d64cba5",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/local-isolation-certificate.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/root-verified.json",
+      "bytes": 2293,
+      "sha256": "74181d04d0b3c900deaea4ffa18b60711c668ec6eb7cc519fb4d0cf7f2877e52",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/root-verified.json",
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-fresh-root-upper-local-angle-audit-solo-v1/root-verified.json",
+        "assets/configurations/sources/n23-root-verified.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/upper-verified.json",
+      "bytes": 3877,
+      "sha256": "44e5fb723ed2c448affa2c7ca88bf68d44f9cec076cfbee132aee299db60c6f3",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/upper-verified.json",
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-fresh-root-upper-local-angle-audit-solo-v1/upper-verified.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/VERIFIED.json",
+      "bytes": 5701,
+      "sha256": "d097b72874a59146fbdd6ba6e91f1e25d8fd3ef677394e82a9aaafc448a9fd47",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        23
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/VERIFIED.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/VERIFIED.json",
+      "bytes": 5593,
+      "sha256": "fb9c235f371d5b3b2c899fba96d84ae2286349ad9cebaf7dfab0aac39ee2d710",
+      "roles": [
+        "historical-source-extraction-provenance-not-arithmetic-proof"
+      ],
+      "orders": [
+        23,
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/VERIFIED.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/replay_isolated_n24_core_prerequisites.py",
+      "bytes": 11418,
+      "sha256": "67b52ca5398e124221f1e12f56a826a078f2e5ce56284036d4eaac3a81574f9d",
+      "roles": [
+        "fresh-mathematical-entry"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/replay_isolated_n24_core_prerequisites.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/recover_n24_core_prerequisites.py",
+      "bytes": 7188,
+      "sha256": "d33d3da94d3912adda1b68229535e82dc3f1b9df78b9d27c5bc5f8886eda3061",
+      "roles": [
+        "provenance-gate-source-only-not-recovery-required"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/recover_n24_core_prerequisites.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n24/core-system.json",
+      "bytes": 12939,
+      "sha256": "32def465537d348df93794f721513a9f3baeec58a66037355bfd236795a9a187",
+      "roles": [
+        "mathematical-input-not-an-accepted-result"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n24/core-root.json",
+      "bytes": 3992573,
+      "sha256": "8384779f792a2fcec2e897fcaafb8de0a20f9a1d859cb8c6532989d0d8600091",
+      "roles": [
+        "mathematical-input-not-an-accepted-result"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n24/candidate-numeric.json",
+      "bytes": 14182,
+      "sha256": "ebe696aca6f2f9674f2a4ea0ed888819b314e30808c1d62a1b6a47750524a02f",
+      "roles": [
+        "mathematical-input-not-an-accepted-result"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/evidence/core-reduction/constants/n24.json",
+      "bytes": 1474,
+      "sha256": "90de2d44e0992bd86806645b5e2c3b9c60f27279f204e2d506cf564a34b4952d",
+      "roles": [
+        "rational-domain-and-radius-budget-input"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/core-angle-tree.json.gz",
+      "bytes": 8697165,
+      "sha256": "cad86f5f8eddfdb6eabc002fb2ba1c4195038a7a70798bdc790fd5de66943752",
+      "roles": [
+        "complete-angular-proof-tree-replay-required"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/local-isolation-certificate.json",
+      "bytes": 8996,
+      "sha256": "6ab6d6337732ac366eb038c97dbb3c8de96e6fa4abc52f1da35a15749528afc7",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/local-isolation-certificate.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/root-verified.json",
+      "bytes": 2293,
+      "sha256": "91e48e25ce5cfc91bc9609fca81d964b0d7c6d229ce15545652d38aed16460ff",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/root-verified.json",
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-fresh-v1/root-verified.json",
+        "assets/configurations/sources/n24-root-verified.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/upper-verified.json",
+      "bytes": 6506,
+      "sha256": "47a9eeb34e2f674cc10402145dac28d9ffbc537bd64229b4d81cee236a26a018",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/upper-verified.json",
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-fresh-v1/upper-verified.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/VERIFIED.json",
+      "bytes": 6276,
+      "sha256": "4e1b4c2e3ab5d2567051c58c704d099e46cd39177b43d9543685a1c90b2864b6",
+      "roles": [
+        "historical-equality-provenance-gate-not-arithmetic-proof"
+      ],
+      "orders": [
+        24
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/VERIFIED.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/n25_algebraic_upper.py",
+      "bytes": 8322,
+      "sha256": "9b40e47eb87c563552f3bd6ecf74fac76e89f6d38ac5800798dad5150eab9a88",
+      "roles": [
+        "fresh-Qsqrt2-arithmetic-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/n25_algebraic_upper.py",
+        "assets/configurations/sources/n25-geometry-source.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/n25_core_analysis.py",
+      "bytes": 7560,
+      "sha256": "70f8914c948278b39243c3762d8be7e850a30cbb119246db0df0df4839c7c3f8",
+      "roles": [
+        "fresh-Qsqrt2-arithmetic-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/n25_core_analysis.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_anchor_isolation.py",
+      "bytes": 7924,
+      "sha256": "a53bc33ef3f0169cda00ac92a1011da6d1e6a3be400556ffbf04497922174b13",
+      "roles": [
+        "fresh-field-local-angle-arithmetic-or-original-input-binding-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/n25_anchor_isolation.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_stress_freedom.py",
+      "bytes": 8511,
+      "sha256": "05d46cf4b8cd50cbc1382685d2e10331848fa0d36ff77dba4294dc10b3567037",
+      "roles": [
+        "fresh-field-local-angle-arithmetic-or-original-input-binding-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/n25_stress_freedom.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_stress_character.py",
+      "bytes": 8688,
+      "sha256": "0b8842e504cfe258f3f504b1e4685709bbb35c313addca2ba9095eb17d43573e",
+      "roles": [
+        "fresh-field-local-angle-arithmetic-or-original-input-binding-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/n25_stress_character.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_endpoint_core_isolation.py",
+      "bytes": 8142,
+      "sha256": "52714659c1c45dc26f911be46856d7cc312f243404833df96e9e8b60a41e1043",
+      "roles": [
+        "fresh-field-local-angle-arithmetic-or-original-input-binding-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/n25_endpoint_core_isolation.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_endpoint_tight_isolation.py",
+      "bytes": 8393,
+      "sha256": "3e5468e11a2c037eff4bdf5d6fcf3bb9521e34416d7a6e1eb4b39920afe9543a",
+      "roles": [
+        "fresh-field-local-angle-arithmetic-or-original-input-binding-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/n25_endpoint_tight_isolation.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/replay_n25_endpoint_domain.py",
+      "bytes": 7642,
+      "sha256": "09accec333ead388a391b85441fdd345b289eae194c58943bc5aeb5d6ae1ba6b",
+      "roles": [
+        "fresh-field-local-angle-arithmetic-or-original-input-binding-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/replay_n25_endpoint_domain.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/replay_n25_tight_domain.py",
+      "bytes": 4049,
+      "sha256": "553b27cec1ace5cd6b5c4c25d1c5b5a0d9d2f06a598b9a7c91488ea21fa3cfcf",
+      "roles": [
+        "fresh-field-local-angle-arithmetic-or-original-input-binding-source"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/replay_n25_tight_domain.py"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/evidence/core-reduction/constants/n25.json",
+      "bytes": 1477,
+      "sha256": "aa118ad52754a8e45f55e4a27b8ec5c3ede646c257b9b6d45c6e78529ded11bb",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json",
+      "bytes": 12956,
+      "sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json",
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-exact-upper-fresh/geometry.json",
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-own-exact-upper-fresh-v1/geometry.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/evidence/n25-core-analysis-stable3/stress-verified.json",
+      "bytes": 2169,
+      "sha256": "dec8013c1e91bd7e171ab489af1f8e0190c36b14c935d7f3279938d9817f4a94",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/evidence/n25-core-analysis-stable3/stress-verified.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-isolation-exact-resume1/rotated-geometry.json",
+      "bytes": 20473,
+      "sha256": "661882bdba448c8abfdb9f58830ec4538f5ae4c41c5aceae8b376f34d6f1d230",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-stress-freedom-exact-resume1/VERIFIED.json",
+      "bytes": 20901,
+      "sha256": "12454bdb24be3dba57213044f6bc8a81f4789290e034cbc4064c60a65a51ce48",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-stress-character-resume2.json",
+      "bytes": 8128,
+      "sha256": "4937b99976d3e57b9082deb9a56e5d50793088ace7fa8a9b1bb6f628f63455a3",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/evidence/n25-stress-character-replay-resume2.json",
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/evidence/n25-stress-character-resume2.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-core-isolation-resume1/REPORT.json",
+      "bytes": 66488,
+      "sha256": "60fefdc7b649858ad42fc734c4c6fda2eee89cef055dc755d9fd201d200db254",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-tight-isolation-gamma2000-resume1/REPORT.json",
+      "bytes": 66521,
+      "sha256": "9d5c92e2ca1d5923873b93f27392fc0854f92b8d3109a831204b961a4d4d1bac",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-own-exact-endpoint-local-fresh-v1/REPORT.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-tight-isolation-gamma2000-replay-resume1/REPORT.json",
+      "bytes": 66521,
+      "sha256": "9d5c92e2ca1d5923873b93f27392fc0854f92b8d3109a831204b961a4d4d1bac",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": true,
+      "public_paths": [
+        "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-own-exact-endpoint-local-fresh-v1/REPORT.json"
+      ]
+    },
+    {
+      "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-negative-angle-tight-pruned-resume1.json.gz",
+      "bytes": 39235404,
+      "sha256": "f67a6511db3f58a9010d700c7a40f55a22765bd504c09a206f4ff347da6eb739",
+      "roles": [
+        "explicit-field-input-and-revalidated-certificate-data"
+      ],
+      "orders": [
+        25
+      ],
+      "same_bytes_present_in_public_delivery": false,
+      "public_paths": []
+    }
+  ],
+  "file_count": 55,
+  "raw_bytes": 61130881,
+  "profiles": [
+    {
+      "n": 23,
+      "original_entry": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/replay_isolated_n23_core_prerequisites.py",
+      "original_arguments": [
+        "--inputs",
+        "ROUND4/n23-n24-archive-core-inputs-20261005-v1",
+        "--assets",
+        "ROUND4/n23-nonstrict-core-exact-archive-assets-solo-v1",
+        "--output",
+        "ROUND4/new-fresh-n23"
+      ],
+      "original_entry_unchanged_portable": false,
+      "original_blockers": [
+        "Frozen receipts contain original Windows absolute paths.",
+        "N23 original driver checks old absolute frozen_files, including recovery observation sources."
+      ],
+      "portable_math_possible_with_standard_library": true,
+      "portable_driver_work_required": "New separately scoped driver resolves explicit path aliases and runs the existing verify/upper/isolation/exact.verify routines; do not edit old receipts, bypass mathematical checks, or report full global acceptance.",
+      "mathematical_inputs": [
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n23/core-system.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n23/core-root.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n23/candidate-numeric.json",
+        "workspace/research-2026/n21-25-synthesis/evidence/core-reduction/constants/n23.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/core-angle-tree.json.gz"
+      ],
+      "historical_gate_receipts": [
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/local-isolation-certificate.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/root-verified.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/upper-verified.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-nonstrict-core-exact-archive-assets-solo-v1/VERIFIED.json"
+      ],
+      "node_count": 30653,
+      "scope": "specified nonstrict same-root core; not a complete competitor/global theorem",
+      "available_arithmetic_steps": [
+        "same-root rational Krawczyk isolation",
+        "whole-disk upper geometry from the same root",
+        "positive Bareiss principal minors and transported local gap",
+        "30653 complete angular tree nodes, including exact LOCAL containment"
+      ]
+    },
+    {
+      "n": 24,
+      "original_entry": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/replay_isolated_n24_core_prerequisites.py",
+      "original_arguments": [
+        "--inputs",
+        "ROUND4/n23-n24-archive-core-inputs-20261005-v1",
+        "--assets",
+        "ROUND4/n24-core-assets-v1",
+        "--output",
+        "ROUND4/new-fresh-n24"
+      ],
+      "original_entry_unchanged_portable": false,
+      "original_blockers": [
+        "Frozen receipts contain original Windows absolute paths.",
+        "N24 original driver additionally hashes entire source ZIP archives."
+      ],
+      "portable_math_possible_with_standard_library": true,
+      "portable_driver_work_required": "New separately scoped driver resolves explicit path aliases and runs the existing verify/upper/isolation/exact.verify routines; do not edit old receipts, bypass mathematical checks, or report full global acceptance.",
+      "mathematical_inputs": [
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n24/core-system.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n24/core-root.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-n24-archive-core-inputs-20261005-v1/n24/candidate-numeric.json",
+        "workspace/research-2026/n21-25-synthesis/evidence/core-reduction/constants/n24.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/core-angle-tree.json.gz"
+      ],
+      "historical_gate_receipts": [
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/local-isolation-certificate.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/root-verified.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/upper-verified.json",
+        "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-core-assets-v1/VERIFIED.json"
+      ],
+      "node_count": 69215,
+      "scope": "specified nonstrict same-root core; not a complete competitor/global theorem",
+      "available_arithmetic_steps": [
+        "same-root rational Krawczyk isolation",
+        "whole-disk upper geometry from the same root",
+        "positive Bareiss principal minors and transported local gap",
+        "69215 complete angular tree nodes, including exact LOCAL containment"
+      ]
+    },
+    {
+      "n": 25,
+      "original_entries": [
+        {
+          "canonical": "workspace/research-2026/n21-25-synthesis/n25_algebraic_upper.py",
+          "arguments": [
+            "--output",
+            "NEW_UPPER"
+          ]
+        },
+        {
+          "canonical": "workspace/research-2026/n21-25-synthesis/n25_core_analysis.py",
+          "arguments": [
+            "--output",
+            "NEW_STRESS"
+          ]
+        },
+        {
+          "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_stress_freedom.py",
+          "arguments": [
+            "--output",
+            "NEW_FIBRE"
+          ]
+        },
+        {
+          "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_stress_character.py",
+          "arguments": [
+            "--output",
+            "NEW_CHARACTER_JSON"
+          ]
+        },
+        {
+          "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/n25_endpoint_tight_isolation.py",
+          "arguments": [
+            "--output",
+            "NEW_LOCAL",
+            "--gamma",
+            "2000",
+            "--nu",
+            "21/5000",
+            "--radius",
+            "1/20"
+          ]
+        },
+        {
+          "canonical": "workspace/research-2026/n21-25-synthesis/round3-high/replay_n25_tight_domain.py",
+          "arguments": [
+            "--tree",
+            "HIGH/evidence/n25-endpoint-negative-angle-tight-pruned-resume1.json.gz",
+            "--output",
+            "NEW_ANGLE_JSON"
+          ]
+        }
+      ],
+      "original_entry_unchanged_portable": "individual exact arithmetic routines largely use relative paths, but whole-chain fresh report routing is hardcoded to historical evidence directories",
+      "portable_math_possible_with_standard_library": true,
+      "portable_driver_work_required": "New scoped dispatcher must route freshly generated geometry, invariant/affine stress and local reports into the existing accepting routines or compare all their bearing fields with historical certificate inputs. Original angle wrapper alone reads archived LOCAL/stress flags and is not an end-to-end fresh local proof.",
+      "mathematical_inputs": [
+        "workspace/research-2026/n21-25-synthesis/evidence/core-reduction/constants/n25.json",
+        "workspace/research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json",
+        "workspace/research-2026/n21-25-synthesis/evidence/n25-core-analysis-stable3/stress-verified.json",
+        "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-isolation-exact-resume1/rotated-geometry.json",
+        "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-stress-freedom-exact-resume1/VERIFIED.json",
+        "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-stress-character-resume2.json",
+        "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-core-isolation-resume1/REPORT.json",
+        "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-tight-isolation-gamma2000-resume1/REPORT.json",
+        "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-tight-isolation-gamma2000-replay-resume1/REPORT.json",
+        "workspace/research-2026/n21-25-synthesis/round3-high/evidence/n25-endpoint-negative-angle-tight-pruned-resume1.json.gz"
+      ],
+      "node_count": 311883,
+      "scope": "specified nonstrict radical-radius core only; not all 721329 necessary residual graph families",
+      "available_arithmetic_steps": [
+        "explicit 25-centre upper coverage in Q(sqrt2), no 288-variable KKT isolation needed",
+        "stationarity/normalization and exact affine stress fibre rank",
+        "both 120D endpoint local matrices and perturbation gaps",
+        "311883 complete angle nodes, including 2375 LOCAL leaves with fresh local theorem"
+      ]
+    }
+  ],
+  "mathematical_replay_performed": false,
+  "portable_mathematical_dispatcher_available": false,
+  "global_replay_achieved": false,
+  "newly_available_content_files_vs_base_delivery": 15,
+  "license_scope": "Frozen source and input bytes retain their existing provenance and rights; wrapper MIT does not relicense them."
+}

@@ -1,0 +1,249 @@
+{
+  "schema": "disk-covering-agent-handoff-v1",
+  "updated_at": "2026-10-14 Asia/Shanghai",
+  "complete_global_math_replay_available": false,
+  "entry": "START_HERE.md",
+  "instructions": "AGENTS.md",
+  "delivery_base_commit": "6869e8ad9a92693e88b891e74ec3e10f703b4146",
+  "orders": [
+    {
+      "n": 11,
+      "current_scope": "Archived source proof; Lean arbitrary-center full-disk theorem incomplete. Last accepted framework A25, current tree WIP.",
+      "authorities": [
+        {
+          "path": "cover11/proof_bundle/research-2026/team-current/lead/N11-GLOBAL-OPTIMALITY-THEOREM.md",
+          "sha256": "ee8ffdbac54d5897850c60befda0a880f771ddf086c5d8b6dd91902040aedcd1",
+          "bytes": 7562,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [
+        "python tools/check_math.py n11"
+      ],
+      "asset_availability": "Public n11 arithmetic plus complete own-source WIP Release snapshot (2383 files); third-party pinned Lean/Mathlib dependencies retrieved separately, build not accepted.",
+      "next_actions": [
+        "Finish serial C450 gates/builds, preserving timeout/failure logs. Then root-integrate Source14..36 and prove the telescope from empty drop36 to h450; an empty tail does not pay the last segment itself.",
+        "Run frozen root builds first, then fresh type/axiom/control probes and a newly tagged manifest/acceptance for the actual current root.",
+        "Instantiate the balanced two-table and six other class inputs. Fix switch aggregation/identity bridge first; qualify LeafControls bound 1/2000 versus SwitchBatch bound 141/1000000.",
+        "Complete the remaining energy certificates; 389 require actual mathematical certificate/refinement work."
+      ],
+      "complete_fresh_global_replay": false,
+      "latest_source_handoff": "assets/replay/n11-wip/HANDOFF.json",
+      "last_accepted_credits": {
+        "c450_paid": 11,
+        "c450_total": 36,
+        "c450_remaining": 25,
+        "energy_paid": 310,
+        "energy_total": 2386,
+        "energy_remaining": 2076,
+        "energy_candidate_routes": 1687,
+        "energy_needing_genuine_certificate_or_refinement": 389,
+        "sharp_paid": 120,
+        "sharp_total": 120,
+        "actual_class_exclusions_remaining": 7
+      },
+      "wip_snapshot_root_sha256": "f6e3419a258b0afc0b62cb50317661d3bcc5a9538ae5a0fa4037918366b0fce0",
+      "last_accepted_root_sha256": "4f470af507f320488dfbc168f9ae39645904af569ae46b9ffb8f5e520bc5edaf"
+    },
+    {
+      "n": 12,
+      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "authorities": [
+        {
+          "path": "cover12/proof_bundle/research-2026/n12-global/lead/GLOBAL-SYNTHESIS.md",
+          "sha256": "5c48386648de888d7dd126202a8701322a5441f9e33b5a492226034156e0f3c2",
+          "bytes": 6112,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [
+        "python tools/check_math.py n12 --workers 4"
+      ],
+      "asset_availability": "Selected Git archive; historical full-chain dependency closure not guaranteed.",
+      "next_actions": [
+        "Complete the analytic/global-chain replay around the freshly checked full k10 arithmetic."
+      ],
+      "complete_fresh_global_replay": false
+    },
+    {
+      "n": 14,
+      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "authorities": [
+        {
+          "path": "cover14/proof_bundle/research-2026/next-cover-global/lead/FINAL-THEOREM-CHAIN.md",
+          "sha256": "83db833af24fb55675d0897a9641091fe8f5f146063a8b0c9568680d57ec1d00",
+          "bytes": 6925,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [],
+      "asset_availability": "Selected Git archive; historical full-chain dependency closure not guaranteed.",
+      "next_actions": [
+        "Port the archived mathematical acceptance chain with exact input closure; preserve qualifications."
+      ],
+      "complete_fresh_global_replay": false
+    },
+    {
+      "n": 21,
+      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "authorities": [
+        {
+          "path": "shared/proof_bundle/research-2026/n21-25-synthesis/round2-grouped/N21-GLOBAL-PROOF.md",
+          "sha256": "78d5e6c7bdbdaae44ce13f8ddc764b61956a242eb9a7f9b3faac099ad2f029de",
+          "bytes": 13408,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [],
+      "asset_availability": "Full local frozen union n21/n22: 990407 files/6031570517 bytes; public coverage not freshly counted. Maintainer source tree, not public download.",
+      "next_actions": [
+        "Publish canonical frozen dependency inventory and bundles for n21/n22, then port original acceptance math."
+      ],
+      "complete_fresh_global_replay": false
+    },
+    {
+      "n": 22,
+      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "authorities": [
+        {
+          "path": "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/N22-GLOBAL-PROOF.md",
+          "sha256": "42ced93f55ca58ca0b84f9b11c7b4ad14bc40dd14f2195112ee6a53ed530f0db",
+          "bytes": 17354,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [],
+      "asset_availability": "Full local frozen union n21/n22: 990407 files/6031570517 bytes; public coverage not freshly counted. Maintainer source tree, not public download.",
+      "next_actions": [
+        "Publish canonical frozen dependency inventory and bundles for n21/n22, then port original acceptance math."
+      ],
+      "complete_fresh_global_replay": false
+    },
+    {
+      "n": 23,
+      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "authorities": [
+        {
+          "path": "cover23/verification/final-acceptance/ACCEPTED/GLOBAL-SOURCE-ACCEPTED.json",
+          "sha256": "6da6c5e1c80ade821bb033ce3b3b547c9ff5fb4a71cac16a531442a867e5da12",
+          "bytes": 5666,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [],
+      "asset_availability": "Public 55-file shared core bundle; full 1020085-file migrated union inventory downloadable, full data not yet released.",
+      "next_actions": [
+        "Implement a separately scoped portable core mathematical dispatcher using restored exact inputs.",
+        "Publish full migrated-union data packages with complete coverage, then replay catalog/global chains."
+      ],
+      "complete_fresh_global_replay": false
+    },
+    {
+      "n": 24,
+      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "authorities": [
+        {
+          "path": "cover24/verification/final-acceptance/ACCEPTED/GLOBAL-SOURCE-ACCEPTED.json",
+          "sha256": "5bb55c9858a4dc1245249b12fd45cab3c5ed132a238eb6f7e70ddd6f2d0bb777",
+          "bytes": 11436,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [],
+      "asset_availability": "Public 55-file shared core bundle; full 1020085-file migrated union inventory downloadable, full data not yet released.",
+      "next_actions": [
+        "Implement a separately scoped portable core mathematical dispatcher using restored exact inputs.",
+        "Publish full migrated-union data packages with complete coverage, then replay catalog/global chains."
+      ],
+      "complete_fresh_global_replay": false
+    },
+    {
+      "n": 25,
+      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "authorities": [
+        {
+          "path": "cover25/verification/final-acceptance/ACCEPTED/GLOBAL-SOURCE-ACCEPTED.json",
+          "sha256": "30389bfa3132d08954281e743db670fbb3874785e0d90c9876d4f5ddeec31dd1",
+          "bytes": 16739,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [],
+      "asset_availability": "Public 55-file shared core bundle; full 1020085-file migrated union inventory downloadable, full data not yet released.",
+      "next_actions": [
+        "Route freshly recomputed local/stress results into n25 angle-tree math; archived flags alone are insufficient.",
+        "Publish full migrated-union data packages with complete coverage, then replay catalog/global chains."
+      ],
+      "complete_fresh_global_replay": false
+    },
+    {
+      "n": 26,
+      "current_scope": "Global theorem incomplete; formal 16 roots/4957 frontier; arithmetic 344 OPEN on 29 supports, zero new geometric payments.",
+      "authorities": [
+        {
+          "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json",
+          "sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+          "bytes": 54342803,
+          "encoding": "gzip-parts-v1"
+        },
+        {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json",
+          "sha256": "c1675552b56d762de0bca83ca3adbb28e06c71e95c94b387d7f216eee41187c9",
+          "bytes": 480441790,
+          "encoding": "gzip-parts-v1"
+        }
+      ],
+      "fresh_portable_commands": [],
+      "asset_availability": "Selected Git snapshots; arithmetic 1035/1170 direct-input references lack public bytes; full formal ledger inventory not audited here. Original server access presently times out.",
+      "next_actions": [
+        "Restore maintainer server access or run the frozen export seed on the original server; do not overwrite research.",
+        "Audit formal current files-map closure separately, then continue unpaid mathematical branches."
+      ],
+      "complete_fresh_global_replay": false
+    }
+  ],
+  "bundles": [
+    {
+      "id": "n23-n25-core",
+      "scope": "55 selected source/input files; byte bundle, mathematical dispatcher pending",
+      "package_index": "assets/replay/n23-n25-core/PACKAGES.json",
+      "release": "https://github.com/Liyang1145/DiskCoveringProofs/releases/tag/proof-assets-core-20261014",
+      "restore_command": "make restore-core-n23-n25"
+    },
+    {
+      "id": "n23-n25-full-inventory",
+      "scope": "Full canonical inventory, not all file content",
+      "files": 1020085,
+      "bytes": 49080537,
+      "sha256": "1a003f7b0b3e478d071b8881f7b407e76312a0275452424e9a6b918322d817de",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/releases/download/proof-assets-core-20261014/n23-n25-full-closure.jsonl.gz",
+      "full_asset_content_public": false
+    },
+    {
+      "id": "n26-arithmetic-server-seed",
+      "scope": "1170 direct inputs plus current/controls, not recursive closure",
+      "ledger": "verification/reproducibility/n26-arithmetic-export-inputs.jsonl.gz",
+      "instructions": "docs/REPLAY_ASSET_PLAN.md"
+    },
+    {
+      "id": "n11-current-wip-source",
+      "scope": "2383 own source/config/tool/handoff files, 137601778 raw bytes; frozen WIP snapshot, not accepted A25 build",
+      "package_index": "assets/replay/n11-wip/PACKAGES.json",
+      "release": "https://github.com/Liyang1145/DiskCoveringProofs/releases/tag/proof-assets-core-20261014",
+      "restore_command": "make restore-n11-wip",
+      "external_pinned_dependencies": "Read lean/lean-toolchain and lean/lake-manifest.json; caches not included"
+    }
+  ],
+  "storage_roles": {
+    "public": "Git archive plus hash-pinned Release assets",
+    "maintainer_n21_n22": "Original local synthesis tree plus preserved migration receipts",
+    "maintainer_n23_n25": "2026-10-08 proof integration assets; original data retained",
+    "maintainer_n26": "Original Windows server n-26 work/outputs; no public SSH credentials"
+  },
+  "handoff_rules": [
+    "Read newest qualified source handoff, not old ACTIVE headings.",
+    "Content hashes and accepted frameworks do not prove an unrestricted theorem.",
+    "Keep existing frozen sources unchanged; preserve exact roots and explicit unpaid premises."
+  ],
+  "detailed_orders21_26": "verification/reproducibility/orders21-26-handoff.json"
+}

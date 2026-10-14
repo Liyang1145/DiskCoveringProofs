@@ -1,0 +1,748 @@
+{
+  "schema": "global-orders21-26-preserved-authority-handoff-v1",
+  "scope": "Small source authority/state handoff for an agent working anywhere. No new mathematical acceptance, leaf traversal, search or formalization. Large snapshot/ledger hashes are preserved authority values, not fresh content audits.",
+  "source_records_checked_now": [
+    {
+      "path": "E:\\ai4math2-proof-integration-20261008\\PROOFS-N21-N25.json",
+      "sha256": "0e2e2e78cf709f1ff422903e4e6251eb7aa642c80bf7eee239d678090b6a1c91",
+      "bytes": 15997,
+      "checked_now": "source record bytes only, no leaf traversal"
+    },
+    {
+      "path": "E:\\ai4math2-proof-integration-20261008\\INTEGRATION-COMPLETE.json",
+      "sha256": "735f868d80970abe8edadc6332f1bb489361701a79c34b61b150976bd641afe2",
+      "bytes": 2230,
+      "checked_now": "source record bytes only, no leaf traversal"
+    },
+    {
+      "path": "E:\\ai4math2-proof-integration-20261008\\LOCAL-N21-N22-VERIFICATION.json",
+      "sha256": "86652dd39c19cf1359bb33347c98faab4c8fa66e4046f26fa2e4ee90cf232525",
+      "bytes": 765,
+      "checked_now": "source record bytes only, no leaf traversal"
+    },
+    {
+      "path": "E:\\ai4math2-proof-integration-20261008\\LOCAL-VERIFICATION.json",
+      "sha256": "01bbc4aa9b99e48e6fdd3804d65f9b52ac53c9e85912af3b4713d1c985d1aca8",
+      "bytes": 408,
+      "checked_now": "source record bytes only, no leaf traversal"
+    },
+    {
+      "path": "E:\\ai4math2-proof-integration-20261008\\PATH-MAP.json",
+      "sha256": "4c639c80383fbcc98d2d7bf1599a5aeb50cf449aabbf520087df777e41fb1007",
+      "bytes": 1930,
+      "checked_now": "source record bytes only, no leaf traversal"
+    },
+    {
+      "path": "E:\\ai4math2\\.tmp\\dcp-sparse\\manifests\\FILES.jsonl",
+      "sha256": "da7344954b0f90991151f18e9fa01070e7023caa7756155020166325b665ddb6",
+      "bytes": 6475679,
+      "checked_now": "source record bytes only, no leaf traversal"
+    }
+  ],
+  "small_authority_files_freshly_sha_checked": 22,
+  "source_state_freshness": "Catalogue state is preserved at 2026-10-08; n26 saved head is midarc formal/344 arithmetic from the later source records. No newer uncatalogued accepted state is asserted.",
+  "invariants": [
+    "Original source proof files, snapshots, ledgers and receipts are immutable.",
+    "Byte migration/availability, saved mathematical source acceptance, formal proof completion and peer review are distinct claims.",
+    "A public entry document or VERIFIED flag cannot replace the complete frozen input closure.",
+    "n21/n22 per-order public gaps remain uncounted here and cannot be derived from the n23/n24/n25 union.",
+    "Any relocated replay needs an explicit root/path resolver and original-path/SHA manifest; do not edit authoritative absolute references in place."
+  ],
+  "orders": [
+    {
+      "n": 21,
+      "source_authority_basis": "2026-10-08 preserved catalogue, small authority records freshly hashed now; later unrecorded states not inferred",
+      "origin": "existing local proof",
+      "theorem_as_source_recorded": "r_D(21)=R",
+      "exact_radius_definition": "positive square root of the specified 173-variable isolated root t",
+      "radius_navigation_20_places": "0.26284507240358458065",
+      "source_proof_completed_as_recorded": true,
+      "formalization_completed_as_recorded": false,
+      "third_party_peer_review_completed_as_recorded": false,
+      "current_research_completion_changed_by_this_handoff": false,
+      "directories": {
+        "proof_directory": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round2-grouped",
+        "public_order_entry": "cover21/README.md"
+      },
+      "authorities": {
+        "proof": {
+          "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round2-grouped\\N21-GLOBAL-PROOF.md",
+          "sha256": "78d5e6c7bdbdaae44ce13f8ddc764b61956a242eb9a7f9b3faac099ad2f029de",
+          "bytes": 13408,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round2-grouped/N21-GLOBAL-PROOF.md"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "78d5e6c7bdbdaae44ce13f8ddc764b61956a242eb9a7f9b3faac099ad2f029de",
+          "hash_matches_catalogue_now": true
+        },
+        "frozen_snapshot": {
+          "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round2-grouped\\evidence\\N21-GLOBAL-SNAPSHOT-resume1.json",
+          "sha256": "79d4339fdc42075febdccbd7322a9138f8c37668061a8604015e058b733d9881",
+          "bytes": 14958400,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [],
+          "local_size_matches_catalogue": true,
+          "hash_matches_catalogue_now": null,
+          "verification_limit": "Large ledger/snapshot hash copied from authority catalogue; file existence and byte size checked, content not read during this handoff."
+        },
+        "original_full_content_audit": {
+          "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round3-high\\evidence\\n21-global-snapshot-integrity-resume1.json",
+          "sha256": "61dfde0d4b03400f3945a67e993da989fb317748b33064e763528ae17978edfe",
+          "bytes": 352,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/evidence/n21-global-snapshot-integrity-resume1.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "61dfde0d4b03400f3945a67e993da989fb317748b33064e763528ae17978edfe",
+          "hash_matches_catalogue_now": true
+        },
+        "fresh_full_content_audit": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\LOCAL-N21-N22-VERIFICATION.json",
+          "sha256": "86652dd39c19cf1359bb33347c98faab4c8fa66e4046f26fa2e4ee90cf232525",
+          "bytes": 765,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "86652dd39c19cf1359bb33347c98faab4c8fa66e4046f26fa2e4ee90cf232525",
+          "hash_matches_catalogue_now": true
+        }
+      },
+      "frozen_bound_file_count_as_recorded": 86144,
+      "local_asset_state": {
+        "source_tree_retained_as_recorded": true,
+        "last_recorded_full_byte_audit": "2026-10-08",
+        "audit_record": "E:\\ai4math2-proof-integration-20261008\\LOCAL-N21-N22-VERIFICATION.json",
+        "last_recorded_joint_files": 990407,
+        "last_recorded_joint_bytes": 6031570517,
+        "last_recorded_joint_mismatches": 0,
+        "fresh_leaf_byte_audit_this_handoff": false,
+        "live_leaf_completeness_today": "not re-enumerated; do not promote the old audit to a fresh whole-tree check"
+      },
+      "public_dependency_closure": {
+        "fully_compared": false,
+        "missing_file_count": null,
+        "reason": "No per-order complete public comparison was run for the local n21/n22 snapshots. The n23-n25 frozen union is a different authority/ledger and cannot establish the public completeness of these local snapshots.",
+        "known_scope": "deep per-leaf/checkpoint inventories are explicitly not guaranteed by the delivery scope",
+        "do_not_infer_from_n23_n25_union": true
+      },
+      "actionable_next_tasks": [
+        "Use authorities.frozen_snapshot SHA/path as the n21 dependency-ledger authority; inspect its actual schema and root namespaces before exporting.",
+        "Compare every local snapshot reference to public raw SHA inventory using exact original-root aliases; keep a per-order coverage report, including same-byte alternate paths.",
+        "Export only genuinely absent byte dependencies with original paths/SHA and preserved failed/unpaid histories; do not rerun completed searches merely to supply missing files.",
+        "Provide a portable replay adapter with an explicit relocation map; preserve original receipt bytes and distinguish mathematical acceptance from file integrity."
+      ]
+    },
+    {
+      "n": 22,
+      "source_authority_basis": "2026-10-08 preserved catalogue, small authority records freshly hashed now; later unrecorded states not inferred",
+      "origin": "existing local proof",
+      "theorem_as_source_recorded": "r_D(22)=R",
+      "exact_radius_definition": "sqrt(t), 29t^3-55t^2+19t-1=0, 641/10000<t<321/5000",
+      "radius_navigation_20_places": "0.25325145983509235808",
+      "source_proof_completed_as_recorded": true,
+      "formalization_completed_as_recorded": false,
+      "third_party_peer_review_completed_as_recorded": false,
+      "current_research_completion_changed_by_this_handoff": false,
+      "directories": {
+        "proof_directory": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round3-high",
+        "public_order_entry": "cover22/README.md"
+      },
+      "authorities": {
+        "proof": {
+          "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round3-high\\N22-GLOBAL-PROOF.md",
+          "sha256": "42ced93f55ca58ca0b84f9b11c7b4ad14bc40dd14f2195112ee6a53ed530f0db",
+          "bytes": 17354,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/N22-GLOBAL-PROOF.md"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "42ced93f55ca58ca0b84f9b11c7b4ad14bc40dd14f2195112ee6a53ed530f0db",
+          "hash_matches_catalogue_now": true
+        },
+        "frozen_snapshot": {
+          "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round3-high\\evidence\\N22-GLOBAL-SNAPSHOT-resume1.json",
+          "sha256": "22aa3a7f8d99ccf0352ca702d74d07918b987b676063baee090392223dd99877",
+          "bytes": 162017055,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [],
+          "local_size_matches_catalogue": true,
+          "hash_matches_catalogue_now": null,
+          "verification_limit": "Large ledger/snapshot hash copied from authority catalogue; file existence and byte size checked, content not read during this handoff."
+        },
+        "original_full_content_audit": {
+          "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round3-high\\evidence\\n22-global-snapshot-integrity-streamed-resume1.json",
+          "sha256": "1251052e053155abeafd0bec6d537aefbb631ec28cf6cea12bcc24d124f6c24f",
+          "bytes": 406,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/evidence/n22-global-snapshot-integrity-streamed-resume1.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "1251052e053155abeafd0bec6d537aefbb631ec28cf6cea12bcc24d124f6c24f",
+          "hash_matches_catalogue_now": true
+        },
+        "fresh_full_content_audit": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\LOCAL-N21-N22-VERIFICATION.json",
+          "sha256": "86652dd39c19cf1359bb33347c98faab4c8fa66e4046f26fa2e4ee90cf232525",
+          "bytes": 765,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "86652dd39c19cf1359bb33347c98faab4c8fa66e4046f26fa2e4ee90cf232525",
+          "hash_matches_catalogue_now": true
+        }
+      },
+      "frozen_bound_file_count_as_recorded": 904281,
+      "local_asset_state": {
+        "source_tree_retained_as_recorded": true,
+        "last_recorded_full_byte_audit": "2026-10-08",
+        "audit_record": "E:\\ai4math2-proof-integration-20261008\\LOCAL-N21-N22-VERIFICATION.json",
+        "last_recorded_joint_files": 990407,
+        "last_recorded_joint_bytes": 6031570517,
+        "last_recorded_joint_mismatches": 0,
+        "fresh_leaf_byte_audit_this_handoff": false,
+        "live_leaf_completeness_today": "not re-enumerated; do not promote the old audit to a fresh whole-tree check"
+      },
+      "public_dependency_closure": {
+        "fully_compared": false,
+        "missing_file_count": null,
+        "reason": "No per-order complete public comparison was run for the local n21/n22 snapshots. The n23-n25 frozen union is a different authority/ledger and cannot establish the public completeness of these local snapshots.",
+        "known_scope": "deep per-leaf/checkpoint inventories are explicitly not guaranteed by the delivery scope",
+        "do_not_infer_from_n23_n25_union": true
+      },
+      "actionable_next_tasks": [
+        "Use authorities.frozen_snapshot SHA/path as the n22 dependency-ledger authority; inspect its actual schema and root namespaces before exporting.",
+        "Compare every local snapshot reference to public raw SHA inventory using exact original-root aliases; keep a per-order coverage report, including same-byte alternate paths.",
+        "Export only genuinely absent byte dependencies with original paths/SHA and preserved failed/unpaid histories; do not rerun completed searches merely to supply missing files.",
+        "Provide a portable replay adapter with an explicit relocation map; preserve original receipt bytes and distinguish mathematical acceptance from file integrity."
+      ]
+    },
+    {
+      "n": 23,
+      "source_authority_basis": "2026-10-08 preserved catalogue, small authority records freshly hashed now; later unrecorded states not inferred",
+      "origin": "completed Windows server proof",
+      "theorem_as_source_recorded": "r_D(23)=R",
+      "exact_radius_definition": "positive square root of t in the isolated unique234-variable own root system; not a float",
+      "radius_navigation_20_places": "0.24995377658605018325",
+      "source_proof_completed_as_recorded": true,
+      "formalization_completed_as_recorded": false,
+      "third_party_peer_review_completed_as_recorded": false,
+      "current_research_completion_changed_by_this_handoff": false,
+      "directories": {
+        "proof_directory": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004",
+        "public_order_entry": "cover23/README.md"
+      },
+      "authorities": {
+        "proof": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N23-GLOBAL-SOURCE-PROOF-v1.md",
+          "sha256": "e0bcb61a36d69eb7c98bcabd099d63f0510bb969e748b13c0dde54b0834144fb",
+          "bytes": 11829,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/N23-GLOBAL-SOURCE-PROOF-v1.md"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "e0bcb61a36d69eb7c98bcabd099d63f0510bb969e748b13c0dde54b0834144fb",
+          "hash_matches_catalogue_now": true
+        },
+        "final_acceptance": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-global-final1\\ACCEPTED\\GLOBAL-SOURCE-ACCEPTED.json",
+          "sha256": "6da6c5e1c80ade821bb033ce3b3b547c9ff5fb4a71cac16a531442a867e5da12",
+          "bytes": 5666,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover23/verification/final-acceptance/ACCEPTED/GLOBAL-SOURCE-ACCEPTED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "6da6c5e1c80ade821bb033ce3b3b547c9ff5fb4a71cac16a531442a867e5da12",
+          "hash_matches_catalogue_now": true
+        },
+        "frozen_input_ledger": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-all-final-prerequisites-byte-binding-v1\\CURRENT-INPUTS.jsonl",
+          "sha256": "b56fa56b2c73bc7e87d76d1da0d7adacb92908894a03530bd23fba3d553ac38b",
+          "bytes": 76363947,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover23/verification/final-acceptance/ACCEPTED/FROZEN-INPUTS.jsonl"
+          ],
+          "local_size_matches_catalogue": true,
+          "hash_matches_catalogue_now": null,
+          "verification_limit": "Large ledger/snapshot hash copied from authority catalogue; file existence and byte size checked, content not read during this handoff."
+        },
+        "binding_report": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-all-final-prerequisites-byte-binding-v1\\VERIFIED.json",
+          "sha256": "0e6ea0f5958958e12118a6aeb823d7e9881458deb33b2c053b85641a1d9f1037",
+          "bytes": 4603,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-all-final-prerequisites-byte-binding-v1/VERIFIED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "0e6ea0f5958958e12118a6aeb823d7e9881458deb33b2c053b85641a1d9f1037",
+          "hash_matches_catalogue_now": true
+        },
+        "pipeline_record": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-global-final1\\PIPELINE-COMPLETED.json",
+          "sha256": "2b1f6766c32ec44f71df30fc641b3e13fadc3e0ca2ac672dd28e05e0cbcd6349",
+          "bytes": 437,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover23/verification/final-acceptance/PIPELINE-COMPLETED.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-global-final1/PIPELINE-COMPLETED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "2b1f6766c32ec44f71df30fc641b3e13fadc3e0ca2ac672dd28e05e0cbcd6349",
+          "hash_matches_catalogue_now": true
+        },
+        "final_audit_terminal": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n23-global-final1\\FINAL-AUDIT-TERMINAL.json",
+          "sha256": "bb2fd1b93c152d7f072efedb1566bcd900a22b413529134d7b4c95ae8dfeab22",
+          "bytes": 189,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover23/verification/final-acceptance/FINAL-AUDIT-TERMINAL.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n23-global-final1/FINAL-AUDIT-TERMINAL.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "bb2fd1b93c152d7f072efedb1566bcd900a22b413529134d7b4c95ae8dfeab22",
+          "hash_matches_catalogue_now": true
+        }
+      },
+      "strict_radius_interval": [
+        "0.249953776586050183252369502777379010046867111695424496992599",
+        "0.249953776586050183252369502777379010046867111695424496992600"
+      ],
+      "accepted_version": "n23-global-final1",
+      "frozen_binding_version": "n23-all-final-prerequisites-byte-binding-v1",
+      "local_asset_state": {
+        "source_ledger": "authorities.frozen_input_ledger",
+        "last_recorded_full_byte_audit": "2026-10-08",
+        "frozen_union_orders": [
+          23,
+          24,
+          25
+        ],
+        "frozen_union_files_as_recorded": 1020085,
+        "frozen_union_bytes_as_recorded": 66482183809,
+        "last_recorded_union_missing_dependencies": 0,
+        "fresh_leaf_byte_audit_this_handoff": false
+      },
+      "public_dependency_closure": {
+        "fully_compared_in_this_handoff": false,
+        "missing_file_count_in_this_handoff": null,
+        "scope": "The local migration is recorded complete for the frozen n23-n25 union; public delivery completeness requires the separate current root inventory report, not an inference from local migration."
+      },
+      "actionable_next_tasks": [
+        "Use this exact final acceptance and binding ledger pair; retain inherited type/leaf proof receipts and final terminal sidecars.",
+        "Consult the root PROJECT_STATE/public gap inventory for public availability; export genuinely absent frozen inputs from the local migrated tree, preserving source bytes.",
+        "Build cross-platform mathematical replay only after an explicit per-order reference closure and relocation resolver are available."
+      ]
+    },
+    {
+      "n": 24,
+      "source_authority_basis": "2026-10-08 preserved catalogue, small authority records freshly hashed now; later unrecorded states not inferred",
+      "origin": "completed Windows server proof",
+      "theorem_as_source_recorded": "r_D(24)=R",
+      "exact_radius_definition": "positive square root of t=G114 in the isolated unique219-variable own root system; not a float",
+      "radius_navigation_20_places": "0.24530165016852390995",
+      "source_proof_completed_as_recorded": true,
+      "formalization_completed_as_recorded": false,
+      "third_party_peer_review_completed_as_recorded": false,
+      "current_research_completion_changed_by_this_handoff": false,
+      "directories": {
+        "proof_directory": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004",
+        "public_order_entry": "cover24/README.md"
+      },
+      "authorities": {
+        "proof": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N24-GLOBAL-SOURCE-PROOF-v1.md",
+          "sha256": "8f890ae0d41625e2099d2d6353ae8d07c3e30d4a3ed4e55b2bed1f04676b7436",
+          "bytes": 10641,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/N24-GLOBAL-SOURCE-PROOF-v1.md"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "8f890ae0d41625e2099d2d6353ae8d07c3e30d4a3ed4e55b2bed1f04676b7436",
+          "hash_matches_catalogue_now": true
+        },
+        "final_acceptance": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-global-final1\\ACCEPTED\\GLOBAL-SOURCE-ACCEPTED.json",
+          "sha256": "5bb55c9858a4dc1245249b12fd45cab3c5ed132a238eb6f7e70ddd6f2d0bb777",
+          "bytes": 11436,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover24/verification/final-acceptance/ACCEPTED/GLOBAL-SOURCE-ACCEPTED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "5bb55c9858a4dc1245249b12fd45cab3c5ed132a238eb6f7e70ddd6f2d0bb777",
+          "hash_matches_catalogue_now": true
+        },
+        "frozen_input_ledger": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-all-final-prerequisites-byte-binding-v1\\CURRENT-INPUTS.jsonl",
+          "sha256": "67c744fa5329e18fb28d92bd307f3f538d5b69fea31035cfbb127e726d5ce017",
+          "bytes": 83437360,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover24/verification/final-acceptance/ACCEPTED/FROZEN-INPUTS.jsonl"
+          ],
+          "local_size_matches_catalogue": true,
+          "hash_matches_catalogue_now": null,
+          "verification_limit": "Large ledger/snapshot hash copied from authority catalogue; file existence and byte size checked, content not read during this handoff."
+        },
+        "binding_report": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-all-final-prerequisites-byte-binding-v1\\VERIFIED.json",
+          "sha256": "c53f4082f104008f3b1b2b083cc7cf2c4fdfb30d41463a0aee951bd4a18e6a09",
+          "bytes": 4772,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-all-final-prerequisites-byte-binding-v1/VERIFIED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "c53f4082f104008f3b1b2b083cc7cf2c4fdfb30d41463a0aee951bd4a18e6a09",
+          "hash_matches_catalogue_now": true
+        },
+        "pipeline_record": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-global-final1\\PIPELINE-COMPLETED.json",
+          "sha256": "846c12a08b0c1245a0900af179d4ab54d7d981f9e3a9853116662a665909f417",
+          "bytes": 449,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover24/verification/final-acceptance/PIPELINE-COMPLETED.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-global-final1/PIPELINE-COMPLETED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "846c12a08b0c1245a0900af179d4ab54d7d981f9e3a9853116662a665909f417",
+          "hash_matches_catalogue_now": true
+        },
+        "final_audit_terminal": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n24-global-final1\\FINAL-AUDIT-TERMINAL.json",
+          "sha256": "6c24d85d667f8a604f568edfe51d930e36c1a2ac47928d14d1291fef7be760f4",
+          "bytes": 177,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover24/verification/final-acceptance/FINAL-AUDIT-TERMINAL.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n24-global-final1/FINAL-AUDIT-TERMINAL.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "6c24d85d667f8a604f568edfe51d930e36c1a2ac47928d14d1291fef7be760f4",
+          "hash_matches_catalogue_now": true
+        }
+      },
+      "strict_radius_interval": [
+        "0.245301650168523909950581281845913154110540814246744181950122",
+        "0.245301650168523909950581281845913154110540814246744181950123"
+      ],
+      "accepted_version": "n24-global-final1",
+      "frozen_binding_version": "n24-all-final-prerequisites-byte-binding-v1",
+      "local_asset_state": {
+        "source_ledger": "authorities.frozen_input_ledger",
+        "last_recorded_full_byte_audit": "2026-10-08",
+        "frozen_union_orders": [
+          23,
+          24,
+          25
+        ],
+        "frozen_union_files_as_recorded": 1020085,
+        "frozen_union_bytes_as_recorded": 66482183809,
+        "last_recorded_union_missing_dependencies": 0,
+        "fresh_leaf_byte_audit_this_handoff": false
+      },
+      "public_dependency_closure": {
+        "fully_compared_in_this_handoff": false,
+        "missing_file_count_in_this_handoff": null,
+        "scope": "The local migration is recorded complete for the frozen n23-n25 union; public delivery completeness requires the separate current root inventory report, not an inference from local migration."
+      },
+      "actionable_next_tasks": [
+        "Use this exact final acceptance and binding ledger pair; retain inherited type/leaf proof receipts and final terminal sidecars.",
+        "Consult the root PROJECT_STATE/public gap inventory for public availability; export genuinely absent frozen inputs from the local migrated tree, preserving source bytes.",
+        "Build cross-platform mathematical replay only after an explicit per-order reference closure and relocation resolver are available."
+      ]
+    },
+    {
+      "n": 25,
+      "source_authority_basis": "2026-10-08 preserved catalogue, small authority records freshly hashed now; later unrecorded states not inferred",
+      "origin": "completed Windows server proof",
+      "theorem_as_source_recorded": "r_D(25)=1/(sqrt(6)+sqrt(3))",
+      "exact_radius_definition": "1/(sqrt(6)+sqrt(3)); R^2=1-2*sqrt(2)/3",
+      "radius_navigation_20_places": "0.23914631173810026822",
+      "source_proof_completed_as_recorded": true,
+      "formalization_completed_as_recorded": false,
+      "third_party_peer_review_completed_as_recorded": false,
+      "current_research_completion_changed_by_this_handoff": false,
+      "directories": {
+        "proof_directory": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004",
+        "public_order_entry": "cover25/README.md"
+      },
+      "authorities": {
+        "proof": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N25-GLOBAL-SOURCE-PROOF-v1.md",
+          "sha256": "558db07252fc518aeed7d878e047bd5241b7e3d765309acc69e55469ea5dd4aa",
+          "bytes": 9959,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/N25-GLOBAL-SOURCE-PROOF-v1.md"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "558db07252fc518aeed7d878e047bd5241b7e3d765309acc69e55469ea5dd4aa",
+          "hash_matches_catalogue_now": true
+        },
+        "final_acceptance": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-global-final5\\ACCEPTED\\GLOBAL-SOURCE-ACCEPTED.json",
+          "sha256": "30389bfa3132d08954281e743db670fbb3874785e0d90c9876d4f5ddeec31dd1",
+          "bytes": 16739,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover25/verification/final-acceptance/ACCEPTED/GLOBAL-SOURCE-ACCEPTED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "30389bfa3132d08954281e743db670fbb3874785e0d90c9876d4f5ddeec31dd1",
+          "hash_matches_catalogue_now": true
+        },
+        "frozen_input_ledger": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-all-final-prerequisites-byte-binding-v4\\CURRENT-INPUTS.jsonl",
+          "sha256": "69be5a2ca453e1581792db62c5300470fef7df2055ca61c630ed50790aa6b058",
+          "bytes": 197442157,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover25/verification/final-acceptance/ACCEPTED/FROZEN-INPUTS.jsonl"
+          ],
+          "local_size_matches_catalogue": true,
+          "hash_matches_catalogue_now": null,
+          "verification_limit": "Large ledger/snapshot hash copied from authority catalogue; file existence and byte size checked, content not read during this handoff."
+        },
+        "binding_report": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-all-final-prerequisites-byte-binding-v4\\VERIFIED.json",
+          "sha256": "76939a3cebda597280e67d8ba95319458eb3654a65898e0fd27724e8cfedf33b",
+          "bytes": 7758,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-all-final-prerequisites-byte-binding-v4/VERIFIED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "76939a3cebda597280e67d8ba95319458eb3654a65898e0fd27724e8cfedf33b",
+          "hash_matches_catalogue_now": true
+        },
+        "pipeline_record": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-global-final5\\PIPELINE-COMPLETED.json",
+          "sha256": "3d23d2b2dfd341973ce88f2ee236d0e79e10f38c0b029327b9a70f70041b69c0",
+          "bytes": 582,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover25/verification/final-acceptance/PIPELINE-COMPLETED.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-global-final5/PIPELINE-COMPLETED.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "3d23d2b2dfd341973ce88f2ee236d0e79e10f38c0b029327b9a70f70041b69c0",
+          "hash_matches_catalogue_now": true
+        },
+        "final_audit_terminal": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-global-final5\\FINAL-AUDIT-TERMINAL.json",
+          "sha256": "1f51bd081e93f62be2a8f58edca529e2f5c89b2c50ba2e4cd982efee44c8c339",
+          "bytes": 177,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover25/verification/final-acceptance/FINAL-AUDIT-TERMINAL.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-global-final5/FINAL-AUDIT-TERMINAL.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "1f51bd081e93f62be2a8f58edca529e2f5c89b2c50ba2e4cd982efee44c8c339",
+          "hash_matches_catalogue_now": true
+        },
+        "erratum": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\N25-GLOBAL-SOURCE-PROOF-ERRATUM-B17-v1.md",
+          "sha256": "7cd958e02d4bcd54998b1e183eb4b6b1cfbcbe9ee0b040aff7ec22480f016c63",
+          "bytes": 1741,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/N25-GLOBAL-SOURCE-PROOF-ERRATUM-B17-v1.md"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "7cd958e02d4bcd54998b1e183eb4b6b1cfbcbe9ee0b040aff7ec22480f016c63",
+          "hash_matches_catalogue_now": true
+        },
+        "original_B17_terminal": {
+          "path": "E:\\ai4math2-proof-integration-20261008\\assets\\workspace\\research-2026\\n21-25-synthesis\\round4-solo-20261004\\n25-global-final5\\ORIGINAL-B17-FINAL-TERMINAL.json",
+          "sha256": "385500fc10811f5f308877c777e71bd779599cfc3c199ec9e2b9161577ba1578",
+          "bytes": 367,
+          "local_file_exists_now": true,
+          "public_manifest_matching_sha_paths": [
+            "cover25/verification/final-acceptance/ORIGINAL-B17-FINAL-TERMINAL.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-global-final2/ORIGINAL-B17-FINAL-TERMINAL.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-global-final3/ORIGINAL-B17-FINAL-TERMINAL.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-global-final4/ORIGINAL-B17-FINAL-TERMINAL.json",
+            "shared/proof_bundle/research-2026/n21-25-synthesis/round4-solo-20261004/n25-global-final5/ORIGINAL-B17-FINAL-TERMINAL.json"
+          ],
+          "local_size_matches_catalogue": true,
+          "sha256_checked_now": "385500fc10811f5f308877c777e71bd779599cfc3c199ec9e2b9161577ba1578",
+          "hash_matches_catalogue_now": true
+        }
+      },
+      "strict_radius_interval": [
+        "0.239146311738100268223279244400006341674380742282096500125628",
+        "0.239146311738100268223279244400006341674380742282096500125629"
+      ],
+      "accepted_version": "n25-global-final5",
+      "frozen_binding_version": "n25-all-final-prerequisites-byte-binding-v4",
+      "local_asset_state": {
+        "source_ledger": "authorities.frozen_input_ledger",
+        "last_recorded_full_byte_audit": "2026-10-08",
+        "frozen_union_orders": [
+          23,
+          24,
+          25
+        ],
+        "frozen_union_files_as_recorded": 1020085,
+        "frozen_union_bytes_as_recorded": 66482183809,
+        "last_recorded_union_missing_dependencies": 0,
+        "fresh_leaf_byte_audit_this_handoff": false
+      },
+      "public_dependency_closure": {
+        "fully_compared_in_this_handoff": false,
+        "missing_file_count_in_this_handoff": null,
+        "scope": "The local migration is recorded complete for the frozen n23-n25 union; public delivery completeness requires the separate current root inventory report, not an inference from local migration."
+      },
+      "actionable_next_tasks": [
+        "Use this exact final acceptance and binding ledger pair; retain inherited type/leaf proof receipts and final terminal sidecars.",
+        "Consult the root PROJECT_STATE/public gap inventory for public availability; export genuinely absent frozen inputs from the local migrated tree, preserving source bytes.",
+        "Build cross-platform mathematical replay only after an explicit per-order reference closure and relocation resolver are available."
+      ],
+      "qualification": "binding creator terminal not retained; later independent full current-content audit verified the binding report; original B17 terminal observed; B17 erratum retained",
+      "B17_count_correction": "289140 = 222283 + 66857; erratum and ORIGINAL-B17-FINAL-TERMINAL remain bound",
+      "do_not_revert_to_older_authorities": [
+        "n25-global-final1",
+        "n25-global-final2",
+        "n25-global-final3",
+        "n25-global-final4",
+        "binding v1-v3"
+      ]
+    },
+    {
+      "n": 26,
+      "source_authority_basis": "Preserved n26 formal midarc pair and independently labelled arithmetic root25 pair; authoritative source server paths recorded in the inventory. No complete n26 migration found in known local shallow roots.",
+      "source_proof_completed_as_recorded": false,
+      "formalization_completed_as_recorded": false,
+      "global_optimality_proved": false,
+      "next_order_n27_started_as_recorded": false,
+      "directories": {
+        "server_source_root": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26",
+        "public_order_entry": "cover26/README.md"
+      },
+      "authorities": {
+        "formal_current": {
+          "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json",
+          "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-mixed-after-six-midarc-supplemental-current-v1.json",
+          "category": "n26-authoritative-pair-and-independent-mathematics",
+          "bytes": 54342803,
+          "sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+          "encoding": "gzip-parts-v1",
+          "parts": [
+            {
+              "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json.gz.part0001",
+              "bytes": 12645909,
+              "sha256": "97397b6d339d672aba44527c2d21923366340000eda3358028ed77aa52003faf"
+            }
+          ]
+        },
+        "formal_independent_final": {
+          "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-independent-final-v1.json",
+          "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-mixed-after-six-midarc-independent-final-v1.json",
+          "category": "n26-authoritative-pair-and-independent-mathematics",
+          "bytes": 10760,
+          "sha256": "6099c25ff78f074c5a02dd90c33c2d3f481df350ea71b2e853ca9fc2deeabbbc",
+          "encoding": "identity"
+        },
+        "arithmetic_current": {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json",
+          "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-root25-current346-refit2-origin-append-composition-v1.json",
+          "category": "n26-authoritative-pair-and-independent-mathematics",
+          "bytes": 480441790,
+          "sha256": "c1675552b56d762de0bca83ca3adbb28e06c71e95c94b387d7f216eee41187c9",
+          "encoding": "gzip-parts-v1",
+          "parts": [
+            {
+              "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0001",
+              "bytes": 41943040,
+              "sha256": "a4dbdaec816b859cb9d9b8f105d743a6944a725cd3156b332c6979026c5d0c74"
+            },
+            {
+              "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0002",
+              "bytes": 41943040,
+              "sha256": "0d02d34c65b296fa4935e351d7505f9e4167795804254e2daa2207721be38218"
+            },
+            {
+              "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0003",
+              "bytes": 41943040,
+              "sha256": "854d639d04e8be97b000fa212111bcc4115684db7626637005d3a32c81a10130"
+            },
+            {
+              "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0004",
+              "bytes": 41943040,
+              "sha256": "0052832be7ae2b1b54391b45cc7d920c21c2fda310f02417a3a08b3a73d14616"
+            },
+            {
+              "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0005",
+              "bytes": 41943040,
+              "sha256": "69104deffbfb8503af1ebbb948254b83adb6739f64e25a3801c60301e7e93ab4"
+            },
+            {
+              "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0006",
+              "bytes": 7437048,
+              "sha256": "7c62e3e91349a2b026e41dca9abec229df7452fc0d1318954b6fe0c1cd037df9"
+            }
+          ]
+        },
+        "arithmetic_independent_controls": {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-independent-controls-v1.json",
+          "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-root25-current346-refit2-origin-append-independent-controls-v1.json",
+          "category": "n26-authoritative-pair-and-independent-mathematics",
+          "bytes": 247001,
+          "sha256": "8bed44fd9d1c2dfbba0d26c8cfe2a2e2e231aca36037829ce7de3432b7c858ef",
+          "encoding": "identity"
+        },
+        "reference_inventory": {
+          "path": "E:\\ai4math2\\.tmp\\publication-repro-n26-inventory.json",
+          "sha256": "ef272cfb420a692cf6a070145ce8f7dd37d483d81d3ce2da867c7a0d0aba157f",
+          "bytes": 563399
+        }
+      },
+      "exact_pending": {
+        "formal_candidate_whole_angle_roots": 16,
+        "formal_same_root_conditional_frontier_prefixes": 4957,
+        "formal_previous_source_prefixes": 5637,
+        "formal_new_midarc_whole_prefix_exclusions": 680,
+        "arithmetic_root25_OPEN_subdomains": 344,
+        "arithmetic_root25_physical_supports": 29,
+        "arithmetic_new_formal_geometric_payments": 0,
+        "these_are_mathematical_pending_not_missing_files": true
+      },
+      "public_dependency_closure": {
+        "formal_inventory_recorded_size": 273731,
+        "formal_full_inventory_compared": false,
+        "arithmetic_reference_entries_compared": 1170,
+        "arithmetic_public_counts": {
+          "missing_bytes_from_public_manifest": 1035,
+          "present_same_source_path": 132,
+          "present_same_bytes_other_path": 3
+        },
+        "arithmetic_missing_unique_hashes": 1031,
+        "formal_comparison_limit": {
+          "compressed_part_blob_oid": "7334217a39b2f93b32c4a8f95be91f9b79b4f565",
+          "local_blob_available": false,
+          "remote_lazy_fetch_stopped": "Attempted git show triggered lazy fetch; the audit stopped only its own reader/fetch process tree. No complete current blob was obtained; partial network-transfer volume is unknown. Native git cat-file with GIT_NO_LAZY_FETCH=1 subsequently confirmed the blob absent in three local clones."
+        }
+      },
+      "actionable_next_tasks": [
+        "Read the preserved formal current files map and arithmetic controls input_sha256 map on the source server; union exact original-path/SHA references and export genuinely absent bytes.",
+        "Do not mistake public compressed records awaiting restoration or the 16/4957/344 mathematical counters for missing inputs.",
+        "Retain all original LOCAL, actual root/source ownership, failed/unpaid histories and proof receipts; arithmetic payments cannot be promoted to formal geometry.",
+        "Resume formal research from the same midarc head and separate 344-OPEN arithmetic pair only after source access/path binding is established; do not reset to old current346/347 or confuse root25 with the n25 theorem."
+      ]
+    }
+  ],
+  "small_authority_hash_checks": 23
+}

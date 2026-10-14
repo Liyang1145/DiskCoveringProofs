@@ -1,0 +1,244 @@
+{
+  "schema": "n11-current-public-relay-handoff-v1",
+  "capture_utc": "2026-10-14T12:14:49+00:00",
+  "tool_clock_confirmed_utc": "2026-10-14T12:09:40Z",
+  "timezone": "Asia/Shanghai",
+  "asset_root": "n11-formalization",
+  "scope": "read-only current WIP source inventory; no Lean run and no new mathematical acceptance",
+  "summary_zh": "最后正式验收为2026-10-13 A25：233/233框架模块、1521 owned sources，完整n11形式化未完成。当前工作树有2026-10-14 C450 Source13根集成pilot及782个生成模块，正在serial批量验证。正式残余信用仍C45025、energy2076、七类排除全未付、120 sharp patches已付。当前全源不能冒称A25已接受快照；必须完成新全根集成与重新验收。",
+  "frozen_goal": "forall (r : Real) (c : Fin 11 -> Point), 0 <= r -> Covers c r -> SourceExactRoot.sourceRadius <= r",
+  "root_identity": "SAME C891 boxed TC/KKT12 root coordinate6 (sourceRoot 6); full closed unit disk; arbitrary, repeated or degenerate Fin11 centres",
+  "last_accepted": {
+    "checkpoint": "A25-CANONICAL-FINITE-CERTIFICATES-20261013",
+    "acceptance": "evidence/codex-handoff/ACCEPTANCE-A25-CANONICAL-FINITE-CERTIFICATES-20261013.json",
+    "root_sha256": "4f470af507f320488dfbc168f9ae39645904af569ae46b9ffb8f5e520bc5edaf",
+    "framework_modules_green": 233,
+    "owned_sources_at_root_pair": 1521,
+    "unconditional_n11_complete": false,
+    "accepted_module_sources_hash_rechecked": 233,
+    "accepted_module_source_drift": [],
+    "exact_accepted_root_backup": "lean/N11Formalization.lean.pre-c450pilot-20261014",
+    "backup_matches_accepted_root": true
+  },
+  "current_wip": {
+    "root_sha256": "f6e3419a258b0afc0b62cb50317661d3bcc5a9538ae5a0fa4037918366b0fce0",
+    "same_as_last_accepted_root": false,
+    "root_addition": "C450Source13Segment pilot import; Source14..36 full root integration remains pending",
+    "emitted_C450_source_files": 782,
+    "emitted_source_segment_range_one_based": [
+      14,
+      36
+    ],
+    "batch_snapshot_exit0_rows": 340,
+    "batch_snapshot_full_segment_keys": [
+      "k=13",
+      "k=14",
+      "k=15",
+      "k=16",
+      "k=17",
+      "k=18",
+      "k=19",
+      "k=20",
+      "k=21",
+      "k=22"
+    ],
+    "batch_snapshot_source_reported_latest_completed_local_time": "2026-10-14 20:00:28 +08:00",
+    "batch_receipts_scope": "source-reported earlier work; no independent Lean validation in this read-only audit. Current Source24 partial run is not used as evidence.",
+    "full_root_acceptance_after_batch": false,
+    "manifest_stale_for_current_root": true,
+    "draft_warning": "Own source inventory includes unaccepted WIP probes; not every source is a paid/root-imported theorem."
+  },
+  "accepted_credits": {
+    "c450_paid": 11,
+    "c450_total": 36,
+    "c450_remaining": 25,
+    "energy_paid": 310,
+    "energy_total": 2386,
+    "energy_remaining": 2076,
+    "energy_candidate_routes": 1687,
+    "energy_needing_genuine_certificate_or_refinement": 389,
+    "sharp_paid": 120,
+    "sharp_total": 120,
+    "actual_class_exclusions_remaining": 7
+  },
+  "paid_backbone": [
+    "actual canonical face/slot/edge coordinates and rational coefficient/mask/constant transport",
+    "signed whole-cell derivatives, pi-plane gradients and finite radius enclosures",
+    "SevenFiniteTables produces seven-class and full arbitrary-cover SAME-root consumers with h450/henergy explicit",
+    "q1-balanced orbit transport reduces eight cuts to two representative finite tables",
+    "nine concrete switch factors and one 1239-node face factor, currently no class credit"
+  ],
+  "remaining_bearing_obligations": [
+    "C450Source11Segment.RemainingSourceObligation",
+    "EnergyTerminalBatchB11.RemainingTerminalRadius",
+    "ActualMainRoute.Canonical33Obligation",
+    "all seven actual Q0/Q1 class exclusions need concrete coefficient/mask tables, every factor certificate and a strict rational total",
+    "two q1-balanced representative finite tables remain uninstantiated",
+    "nine-switch batch needs aggregation plus coefficient-identity/structure bridge to FiniteCanonicalCertificate.switches"
+  ],
+  "next_steps": [
+    "Finish serial C450 gates/builds, preserving timeout/failure logs. Then root-integrate Source14..36 and prove the telescope from empty drop36 to h450; an empty tail does not pay the last segment itself.",
+    "Run frozen root builds first, then fresh type/axiom/control probes and a newly tagged manifest/acceptance for the actual current root.",
+    "Instantiate the balanced two-table and six other class inputs. Fix switch aggregation/identity bridge first; qualify LeafControls bound 1/2000 versus SwitchBatch bound 141/1000000.",
+    "Complete the remaining energy certificates; 389 require actual mathematical certificate/refinement work."
+  ],
+  "hard_constraints": [
+    "Allowed axioms only propext, Classical.choice, Quot.sound.",
+    "No sorry, research axioms, native_decide, Lean.ofReduceBool, radius replacement, symmetry weakening, or mathematics resource-limit increases.",
+    "Use one serial Lean/Lake mutex. Never use the stale desktop checkout.",
+    "Append-only logs and JSON. Wrapper .result.json, not LASTEXITCODE after a throw, determines success.",
+    "Fresh olean must match current source; lake env lean does not rebuild imports."
+  ],
+  "runtime": {
+    "lean_toolchain": "leanprover/lean4:v4.33.1",
+    "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+    "config": "lean/lakefile.toml",
+    "lock": "lean/lake-manifest.json",
+    "external_dependencies_shipped": false,
+    "serial_tool": {
+      "canonical": "evidence/resume-lead/Invoke-LeanSerial20261013.ps1",
+      "bytes": 2305,
+      "sha256": "edee41c3389d6910ea0855a04df14dbe9c94d21e2f1953222d57eda4956aaeb4"
+    },
+    "serial_mutex": "Local/N11Formalization_LeanSerial_20260929",
+    "serial_mutex_wait_seconds": 5400,
+    "root_pair_mutex_wait_seconds": 600,
+    "windows_command_from_asset_root": "& .\\evidence\\resume-lead\\Invoke-LeanSerial20261013.ps1 -File N11Formalization -Build -Log <fresh-absolute-log-path>",
+    "machine_path_warning": "Existing Windows verification/batch scripts embed local ELAN/workspace paths. Another agent must create a separate path-adapted launcher, keep originals byte-identical and preserve serial/evidence semantics.",
+    "order": [
+      "fetch the pinned Lean toolchain and mathlib/Lake dependencies; cache is not shipped",
+      "adapt machine paths in a new launcher, preserving original source hashes",
+      "serial root build before any root-import audit probe",
+      "run fresh ProbeA25CanonicalFiniteRootAudit.lean and ProbeA25CanonicalFiniteControls.lean after root build",
+      "old A25 driver is tied to old checkpoint evidence; it is not a shortcut to accepting this WIP root"
+    ]
+  },
+  "key_files": [
+    {
+      "canonical": "STATUS.md",
+      "bytes": 163473,
+      "sha256": "63a5c33987d70348cf429a23599e5c0013f1e7c32c6f8860c27a1f61bfe8b040",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "evidence/codex-handoff/A25-CANONICAL-FINITE-HANDOFF-20261013.md",
+      "bytes": 14516,
+      "sha256": "44d8ce9135d31963731331989a9ceaaf721837d8e4e92d8e786053f78b1aea4b",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "evidence/codex-handoff/ACCEPTANCE-A25-CANONICAL-FINITE-CERTIFICATES-20261013.json",
+      "bytes": 3640,
+      "sha256": "7f22de8fc752c9d6bc3d795647d53740149ac17cd1f62e7f73b7c40904eb057a",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "evidence/codex-handoff/a25-canonical-finite-certificates-20261013-manifest.json",
+      "bytes": 149239,
+      "sha256": "bc248997cd00c7a873d3098351e73775f48222832bdcf7fcddc1d86bc5ec4668",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "lean/N11Formalization.lean",
+      "bytes": 160981,
+      "sha256": "f6e3419a258b0afc0b62cb50317661d3bcc5a9538ae5a0fa4037918366b0fce0",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "lean/N11Formalization.lean.pre-c450pilot-20261014",
+      "bytes": 160334,
+      "sha256": "4f470af507f320488dfbc168f9ae39645904af569ae46b9ffb8f5e520bc5edaf",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "lean/N11Formalization/CanonicalSharedMomentFiniteCertificate.lean",
+      "bytes": 6516,
+      "sha256": "f3a05b26fdef1b67a91e2fd48f4b580d81ea99dfc11e1fdc48234cf760434cfd",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "evidence/a25-landing-20261013/LEAD-STATUS-20261013.md",
+      "bytes": 68111,
+      "sha256": "fe1d7feeb975abe9a62b5e0f0f436282c1cd9d11c9abb9962396e2f91b5a23c7",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "evidence/c450-emit-20261014/run-batch2.ps1",
+      "bytes": 8434,
+      "sha256": "c123dfb8b703f41ba3b2b7081d460c2a0cc4d74488ef610d5ab0bb612c165679",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    },
+    {
+      "canonical": "evidence/resume-lead/Invoke-LeanSerial20261013.ps1",
+      "bytes": 2305,
+      "sha256": "edee41c3389d6910ea0855a04df14dbe9c94d21e2f1953222d57eda4956aaeb4",
+      "public_manifest_same_sha256": false,
+      "public_paths": []
+    }
+  ],
+  "source_package": {
+    "canonical_ledger_filename": "n11-current-source-ledger-20261014.jsonl.gz",
+    "canonical_ledger_sha256": "0d1a31ff584c2b3c68b32291c50cf1b63e05dd24e66e27ad32fd2aa08d446431",
+    "canonical_ledger_bytes": 122368,
+    "row_schema": [
+      "canonical",
+      "bytes",
+      "sha256"
+    ],
+    "entries": 2383,
+    "owned_lean_sources": 2348,
+    "owned_lean_bytes": 136488689,
+    "other_config_tool_doc_metadata_bytes": 1113089,
+    "uncompressed_total_bytes": 137601778,
+    "under_512MiB": true,
+    "immutable_source_configuration_tools_double_hash_changes": [],
+    "mutable_small_receipt_drift_after_capture": [],
+    "profile": "current WIP source relay, not an accepted all-current-root build",
+    "export_created_by_this_audit": false,
+    "public_same_sha256_entries": 0,
+    "excluded": [
+      ".lake caches and external packages",
+      "large growing gate/build logs",
+      "full historical evidence closure",
+      "credentials and machine environments"
+    ],
+    "exporter_contract": [
+      "All canonical paths resolve beneath asset_root; reject traversal.",
+      "Reject any byte-length or SHA mismatch against this ledger during packing.",
+      "If mutable WIP receipts change, reinventory them or explicitly omit them; never silently accept changed bytes.",
+      "Retain this handoff claim boundary and do not describe current root as A25 accepted."
+    ]
+  },
+  "optional_C450_generator_inputs": [
+    {
+      "canonical": "evidence/codex-handoff/c450-grouped-remaining8-35-host.json",
+      "bytes": 39165879,
+      "sha256": "5abf3dc52437370016c6c1d7897639b48f03044042140a85409905dc0b908b4c",
+      "public_same_sha256": false
+    },
+    {
+      "canonical": "evidence/codex-handoff/c450-grouped-pilot-packets-host.json",
+      "bytes": 3483291,
+      "sha256": "20ce7f8f9cfcb189995b2e0ebeec9e3ec1b0180d56a934bb171ac6ab7fd75102",
+      "public_same_sha256": false
+    },
+    {
+      "canonical": "evidence/codex-handoff/ACCEPTANCE-CX081.json",
+      "bytes": 70409,
+      "sha256": "1cd4b52dad7e65d181e1a1bf299c0bee09ebe3aec1437f1ec2a63720478618ec",
+      "public_same_sha256": false
+    }
+  ],
+  "optional_generator_input_bytes": 42719579,
+  "optional_seed_scope": "Needed to regenerate the already-emitted C450 sources; generated Lean is self-contained for mathematical compilation without these JSON proposals. These large proposals are not included in the source ledger.",
+  "no_credentials": true
+}

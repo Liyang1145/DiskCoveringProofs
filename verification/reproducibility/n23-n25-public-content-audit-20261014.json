@@ -1,0 +1,83 @@
+{
+  "schema": "disk-covering-replay-inventory-audit-v1",
+  "mode": "manifest-content-comparison",
+  "mathematical_replay": false,
+  "fresh_full_local_file_hash_audit": false,
+  "matching_rule": "original SHA256 content, regardless of repository path",
+  "correct_runtime_path_layout_established": false,
+  "inventory_sqlite_sha256": "136f574ea8d491eaf67060362e73c7162368f0c792b2b592667445684c603ee1",
+  "delivery_manifest_sha256": "da7344954b0f90991151f18e9fa01070e7023caa7756155020166325b665ddb6",
+  "delivered_logical_files": 14517,
+  "union": {
+    "inventory_files": 1020085,
+    "inventory_bytes": 66482183809,
+    "files_with_identical_delivered_content": 2563,
+    "files_without_identical_delivered_content": 1017522,
+    "bytes_without_identical_delivered_content": 65136631995
+  },
+  "roles": {
+    "n23": {
+      "inventory_files": 233801,
+      "inventory_bytes": 33238593121,
+      "files_with_identical_delivered_content": 191,
+      "files_without_identical_delivered_content": 233610,
+      "bytes_without_identical_delivered_content": 33234005519
+    },
+    "n24": {
+      "inventory_files": 230568,
+      "inventory_bytes": 2447857236,
+      "files_with_identical_delivered_content": 1731,
+      "files_without_identical_delivered_content": 228837,
+      "bytes_without_identical_delivered_content": 2257080809
+    },
+    "n25": {
+      "inventory_files": 555483,
+      "inventory_bytes": 29555228713,
+      "files_with_identical_delivered_content": 406,
+      "files_without_identical_delivered_content": 555077,
+      "bytes_without_identical_delivered_content": 29534464869
+    }
+  },
+  "migration_status_counts": {
+    "local_copy": 121463,
+    "metadata": 622,
+    "server_import": 898000
+  },
+  "notes": [
+    "Role counts may overlap; sum the union, not the per-order rows.",
+    "A shared digest is counted for every corresponding inventory path.",
+    "This checks inventory declarations; it does not reread all source assets.",
+    "Missing content, runtime relocation, and mathematical obligations are separate."
+  ],
+  "closure_ledger": {
+    "name": "n23-n25-full-closure.jsonl.gz",
+    "encoding": "gzip-jsonl",
+    "files": 1020085,
+    "sha256": "1a003f7b0b3e478d071b8881f7b407e76312a0275452424e9a6b918322d817de",
+    "bytes": 49080537,
+    "contains_source_machine_paths": false
+  },
+  "audit_date": "2026-10-14",
+  "timezone": "Asia/Shanghai",
+  "delivery_snapshot_commit": "6869e8ad9a92693e88b891e74ec3e10f703b4146",
+  "source_inventory_declarations_are_input": true,
+  "historical_asset_integrity": {
+    "date": "2026-10-08",
+    "freshly_repeated_this_audit": false,
+    "files": 1020085,
+    "bytes": 66482183809,
+    "missing": 0,
+    "mismatches": 0,
+    "record_sha256": "01bbc4aa9b99e48e6fdd3804d65f9b52ac53c9e85912af3b4713d1c985d1aca8",
+    "dependency_ledger_sha256": "05b803c3ca6c8a245cfd5f3ed0482ad9cf79a72fda96284035d4945d9e5e3891",
+    "integration_complete_sha256": "735f868d80970abe8edadc6332f1bb489361701a79c34b61b150976bd641afe2"
+  },
+  "existing_server_transfer_packages": {
+    "files": 898000,
+    "packages": 252,
+    "archive_bytes": 6155404577,
+    "covers_complete_union": false,
+    "additional_local_copy_files": 121463,
+    "additional_metadata_files": 622
+  }
+}

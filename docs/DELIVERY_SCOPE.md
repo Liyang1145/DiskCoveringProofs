@@ -32,3 +32,12 @@ entry points need no historical Windows/WSL path mapping or large-file restore.
 The original delivery manifest is preserved byte-for-byte in
 `manifests/history/FILES-20261013.jsonl.gz`; the live manifest tracks maintained
 documentation and new assets. Original proof-bundle bytes are unchanged.
+
+## 2026-10-14: quantified missing frozen inputs
+
+The [23–26 audit](REPLAY_ASSET_PLAN.md) compares the pre-update delivery
+manifest with the complete migrated n23–25 inventory and the n26 arithmetic
+direct-input ledger. The complete union remains outside Git. A separate
+55-file core Release supplements selected bearing inputs and has its own
+package index; it is not included in the repository's logical file count.
+Its successful restoration is a byte check, not a new mathematical replay.

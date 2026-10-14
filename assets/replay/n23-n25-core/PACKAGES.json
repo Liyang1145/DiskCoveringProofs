@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "files_manifest": {
+    "bytes": 3425,
+    "file": "FILES.jsonl.gz",
+    "sha256": "faf86a417d5cb398543e20053157e68f566b67c4b74c7490ad751835a7f55b51"
+  },
+  "inventory_sha256": "faf86a417d5cb398543e20053157e68f566b67c4b74c7490ad751835a7f55b51",
+  "ledger_sha256": "a96b24cb5a23e140de9e1e6ebc9a39b840a37825842e376635715bb8c5edb8af",
+  "mathematical_verification": "not_performed",
+  "packages": [
+    {
+      "bytes": 56122713,
+      "file": "frozen-assets-0001.zip",
+      "files": 55,
+      "sha256": "4d3feb7e0a723748edcb26923f1126b2a87c545c7a86c23bb20ef023223c27e7",
+      "uncompressed_bytes": 61130881
+    }
+  ],
+  "schema": "frozen-assets-packages-v1"
+}
