@@ -1,0 +1,218 @@
+{
+  "schema": "disk-covering-gallery-provenance-v1",
+  "scope": "Small visualization inputs copied from source records. Gallery regeneration is not a proof acceptance run.",
+  "sources": [
+    {
+      "snapshot": "sources/n11-root.json",
+      "snapshot_sha256": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5",
+      "snapshot_bytes": 12694,
+      "workspace_relative_source": "research-2026/team-current/lead/repaired_tc_krawczyk.json",
+      "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/repaired_tc_krawczyk.json",
+      "original_sha256": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n11-radius.json",
+      "snapshot_sha256": "2a06ce96f5fa2490f4526cfce9e2151bb3f272aaed77a8c2d5bf6fe4c645415d",
+      "snapshot_bytes": 3663,
+      "workspace_relative_source": "research-2026/team-current/lead/exact_root_threshold.json",
+      "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/exact_root_threshold.json",
+      "original_sha256": "2a06ce96f5fa2490f4526cfce9e2151bb3f272aaed77a8c2d5bf6fe4c645415d",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n11-triangulation.json",
+      "snapshot_sha256": "d78ded55c29de7b4b6b31f1350ec5112235fcf78f1711499158ce33c08505b99",
+      "snapshot_bytes": 5327,
+      "workspace_relative_source": "research-2026/team-current/lead/tc_root_geometry.json",
+      "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/tc_root_geometry.json",
+      "original_sha256": "d78ded55c29de7b4b6b31f1350ec5112235fcf78f1711499158ce33c08505b99",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n11-geometry-source.py",
+      "snapshot_sha256": "1767b2f777136b29119e18d6091cdab457c938fb2398d3759a6c089d60be14fa",
+      "snapshot_bytes": 5081,
+      "workspace_relative_source": "research-2026/team-current/lead/check_tc_root_geometry.py",
+      "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/check_tc_root_geometry.py",
+      "original_sha256": "1767b2f777136b29119e18d6091cdab457c938fb2398d3759a6c089d60be14fa",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n12-root.json",
+      "snapshot_sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+      "snapshot_bytes": 6975,
+      "workspace_relative_source": "research-2026/n12-global/evidence/root-t-certificate.json",
+      "delivered_source": "cover12/proof_bundle/research-2026/n12-global/evidence/root-t-certificate.json",
+      "original_sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n12-geometry.json",
+      "snapshot_sha256": "cca45eed54d4e3cf83c01e9c37895ac859ba73dc8f5d26cd2088e5d1aed13f9e",
+      "snapshot_bytes": 9473,
+      "workspace_relative_source": "research-2026/n12-global/evidence/ideal-coverage-certificate.json",
+      "delivered_source": "cover12/proof_bundle/research-2026/n12-global/evidence/ideal-coverage-certificate.json",
+      "original_sha256": "cca45eed54d4e3cf83c01e9c37895ac859ba73dc8f5d26cd2088e5d1aed13f9e",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n12-geometry-source.py",
+      "snapshot_sha256": "a492a2a9dbb3dccc0801adcfc7417fc7eea13aeff130dd910f1c9176d2794c22",
+      "snapshot_bytes": 3111,
+      "workspace_relative_source": "research-2026/n12-global/lead/ideal_coverage_certificate.py",
+      "delivered_source": "cover12/proof_bundle/research-2026/n12-global/lead/ideal_coverage_certificate.py",
+      "original_sha256": "a492a2a9dbb3dccc0801adcfc7417fc7eea13aeff130dd910f1c9176d2794c22",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n22-core-system.json",
+      "snapshot_sha256": "1d91c88518b928a2523b9a0b4468dcbc5eb53f653bdf25c02c25b079c9aa5c55",
+      "snapshot_bytes": 14842,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/core-system.json",
+      "delivered_source": null,
+      "original_sha256": "1d91c88518b928a2523b9a0b4468dcbc5eb53f653bdf25c02c25b079c9aa5c55",
+      "copy_kind": "verbatim",
+      "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+    },
+    {
+      "snapshot": "sources/n22-root-verified.json",
+      "snapshot_sha256": "7b03b9f0b21c9d214b8ae2c34e69d911489da5b6f9bb4f9a9c5aca24439e1963",
+      "snapshot_bytes": 2292,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/algebraic-check1/root-verified.json",
+      "delivered_source": null,
+      "original_sha256": "7b03b9f0b21c9d214b8ae2c34e69d911489da5b6f9bb4f9a9c5aca24439e1963",
+      "copy_kind": "verbatim",
+      "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+    },
+    {
+      "snapshot": "sources/n22-upper-verified.json",
+      "snapshot_sha256": "2522ac4b676e47211aff1aa41a53bb635d19a4b47134d21e108fe83afefdbce7",
+      "snapshot_bytes": 408,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/algebraic-check1/upper-verified.json",
+      "delivered_source": null,
+      "original_sha256": "2522ac4b676e47211aff1aa41a53bb635d19a4b47134d21e108fe83afefdbce7",
+      "copy_kind": "verbatim",
+      "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+    },
+    {
+      "snapshot": "sources/n22-radius-link.md",
+      "snapshot_sha256": "f495f615a5fa68098e9fcab6e41c8aca070a8fd5c444f04ca02061cdbb32c225",
+      "snapshot_bytes": 4581,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/round3-high/N22-RADIUS-LINK.md",
+      "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/N22-RADIUS-LINK.md",
+      "original_sha256": "f495f615a5fa68098e9fcab6e41c8aca070a8fd5c444f04ca02061cdbb32c225",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n22-symmetry.json",
+      "snapshot_sha256": "f8c5248761fd98b0ef97951df71f8384897f5d8544b98c44d97057b8501e5f6d",
+      "snapshot_bytes": 7130,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/round3-high/evidence/n22-symmetry-cubic-replay-resume1.json",
+      "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/evidence/n22-symmetry-cubic-replay-resume1.json",
+      "original_sha256": "f8c5248761fd98b0ef97951df71f8384897f5d8544b98c44d97057b8501e5f6d",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n22-core-root-extract.json",
+      "snapshot_sha256": "9fd60320dbdbc141d940d575cf8da5cf97261689bf3c987c4d99e86121045f12",
+      "snapshot_bytes": 12846,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/core-root.json",
+      "delivered_source": null,
+      "original_sha256": "3bd4bc813d9215770ec4c66b8d09fba1afcd25c749fcd9b790c0f3a30dea1a70",
+      "original_bytes": 5304877,
+      "copy_kind": "field-extract",
+      "fields": [
+        "dimension",
+        "Qx",
+        "xnum[:G+1]",
+        "system_sha256"
+      ],
+      "omitted": "Ynum preconditioner and non-coordinate xnum entries. This extract alone does not certify root isolation."
+    },
+    {
+      "snapshot": "sources/n14-root.json",
+      "snapshot_sha256": "15b1fda5d835114bbde38fd3d52df69043b7b084c60134c65fb91f8a93cb5fe9",
+      "snapshot_bytes": 4873,
+      "workspace_relative_source": "research-2026/next-cover-global/lead/root-integer-certificate.json",
+      "delivered_source": "cover14/proof_bundle/research-2026/next-cover-global/lead/root-integer-certificate.json",
+      "original_sha256": "15b1fda5d835114bbde38fd3d52df69043b7b084c60134c65fb91f8a93cb5fe9",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n14-geometry.json",
+      "snapshot_sha256": "edcfbd5290345d4cc2fae1806a1c54947ea549c3e085f310aedef8a508ab77ce",
+      "snapshot_bytes": 8071,
+      "workspace_relative_source": "research-2026/next-cover-global/lead/root-cover-controls.json",
+      "delivered_source": "cover14/proof_bundle/research-2026/next-cover-global/lead/root-cover-controls.json",
+      "original_sha256": "edcfbd5290345d4cc2fae1806a1c54947ea549c3e085f310aedef8a508ab77ce",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n14-definition.md",
+      "snapshot_sha256": "a7f6ed1bfa53d8329f25c6dfeb345518fa976bba3b6a3802549d186c99ae144e",
+      "snapshot_bytes": 4990,
+      "workspace_relative_source": "research-2026/next-cover-global/lead/ROOT-ATTAINMENT.md",
+      "delivered_source": "cover14/proof_bundle/research-2026/next-cover-global/lead/ROOT-ATTAINMENT.md",
+      "original_sha256": "a7f6ed1bfa53d8329f25c6dfeb345518fa976bba3b6a3802549d186c99ae144e",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n21-root-verified.json",
+      "snapshot_sha256": "cc4af689cae5b2d232d49f8e6d6678d392d7fc385a8cd2a5eec91ff2add7ca3c",
+      "snapshot_bytes": 2342,
+      "workspace_relative_source": "research-2026/n21-global/evidence/core-root-verified.json",
+      "delivered_source": "cover21/proof_bundle/research-2026/n21-global/evidence/core-root-verified.json",
+      "original_sha256": "cc4af689cae5b2d232d49f8e6d6678d392d7fc385a8cd2a5eec91ff2add7ca3c",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n23-root-verified.json",
+      "snapshot_sha256": "74181d04d0b3c900deaea4ffa18b60711c668ec6eb7cc519fb4d0cf7f2877e52",
+      "snapshot_bytes": 2293,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n23/algebraic-check1/root-verified.json",
+      "delivered_source": null,
+      "original_sha256": "74181d04d0b3c900deaea4ffa18b60711c668ec6eb7cc519fb4d0cf7f2877e52",
+      "copy_kind": "verbatim",
+      "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+    },
+    {
+      "snapshot": "sources/n24-root-verified.json",
+      "snapshot_sha256": "91e48e25ce5cfc91bc9609fca81d964b0d7c6d229ce15545652d38aed16460ff",
+      "snapshot_bytes": 2293,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n24/algebraic-check1/root-verified.json",
+      "delivered_source": null,
+      "original_sha256": "91e48e25ce5cfc91bc9609fca81d964b0d7c6d229ce15545652d38aed16460ff",
+      "copy_kind": "verbatim",
+      "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+    },
+    {
+      "snapshot": "sources/n25-geometry.json",
+      "snapshot_sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+      "snapshot_bytes": 12956,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json",
+      "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json",
+      "original_sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n25-upper-verified.json",
+      "snapshot_sha256": "31be4173ab599ee18cbcd0a29cd646b6679dc1f9f26357a0eac6bbd656862340",
+      "snapshot_bytes": 897,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/VERIFIED.json",
+      "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/VERIFIED.json",
+      "original_sha256": "31be4173ab599ee18cbcd0a29cd646b6679dc1f9f26357a0eac6bbd656862340",
+      "copy_kind": "verbatim"
+    },
+    {
+      "snapshot": "sources/n25-geometry-source.py",
+      "snapshot_sha256": "9b40e47eb87c563552f3bd6ecf74fac76e89f6d38ac5800798dad5150eab9a88",
+      "snapshot_bytes": 8322,
+      "workspace_relative_source": "research-2026/n21-25-synthesis/n25_algebraic_upper.py",
+      "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/n25_algebraic_upper.py",
+      "original_sha256": "9b40e47eb87c563552f3bd6ecf74fac76e89f6d38ac5800798dad5150eab9a88",
+      "copy_kind": "verbatim"
+    }
+  ],
+  "generated_metadata_license": "MIT; verbatim snapshots and original proof sources retain their original scope"
+}

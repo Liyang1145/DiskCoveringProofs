@@ -1,0 +1,15 @@
+{
+  "verified": true,
+  "N": 22,
+  "same_core_root_entire_disk_upper": true,
+  "cover_radius_equals_core_radius": true,
+  "vertices": 36,
+  "edges": 91,
+  "triangles": 56,
+  "caps": 14,
+  "active_center_faces": 28,
+  "strict_slack_faces": [],
+  "fixed_slack_centers": {},
+  "root_sha256": "3bd4bc813d9215770ec4c66b8d09fba1afcd25c749fcd9b790c0f3a30dea1a70",
+  "global_optimality_proved": false
+}

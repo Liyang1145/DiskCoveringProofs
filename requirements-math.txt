@@ -1,0 +1,3 @@
+# Exact root, partition and prune checks use Python's standard library.
+# NumPy accelerates guarded integer-only atomic rectangle computations.
+numpy>=1.24,<3

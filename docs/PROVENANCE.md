@@ -20,3 +20,16 @@
 没有添加新的数学 claim 编号，没有追加外部审查等级。
 不替他人来源文件新指定许可证；公开发布或再分发前仍须核对权利。
 
+
+## Portable public verification layer (2026-10-14)
+
+`math_data/n11/` and `math_data/n12/` are small extracted witness inputs. Their
+provenance records pin the archived source paths and SHA256 values. Fresh
+checkers recompute inequalities; stored verdicts are never accepting premises.
+The new layer is a separate implementation of the scoped arithmetic, not an
+independent rederivation of the unrestricted analytic proof.
+
+See `REPRODUCIBILITY.md`, `N11_CHECK_SCOPE.md`, `CONFIGURATIONS.md`, and
+`LICENSE_SCOPE.md` for execution scope, exact configuration definitions and
+the explicit first-party MIT grant. The original proof archive is not
+relicensed. The original byte manifest is retained in `manifests/history/`.

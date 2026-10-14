@@ -20,6 +20,7 @@ def require(condition, message):
 def run(fixture, script, success, *arguments):
     environment = os.environ.copy()
     environment["PYTHONDONTWRITEBYTECODE"] = "1"
+    environment["PYTHONIOENCODING"] = "utf-8"
     result = subprocess.run(
         [sys.executable, "-O", str(fixture / "tools" / script), *arguments],
         stdout=subprocess.PIPE, stderr=subprocess.PIPE, env=environment,

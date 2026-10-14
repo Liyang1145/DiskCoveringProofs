@@ -1,0 +1,2122 @@
+{
+  "schema": "disk-covering-configuration-gallery-v1",
+  "generated_output_license": "MIT; raw snapshots under sources/ retain their original scope",
+  "normalization": "closed unit disk, Euclidean equal-radius covering disks",
+  "configurations": [
+    {
+      "n": 11,
+      "label": "11 disks: symmetric TC/KKT source candidate",
+      "radius": {
+        "rounded_20_places": "0.37998385311983868972",
+        "rational_enclosure": [
+          "20980417360873990807892147536756871648094391304288507956502318130074453/55213970774324510299478046898216203619608871777363092441300193790394368",
+          "41960834721747981615784295073567334841668387037962545903051432423660093/110427941548649020598956093796432407239217743554726184882600387580788736"
+        ],
+        "exact_definition": "Coordinate 6 of the unique 12-dimensional symmetric TC/KKT root in n11-root.json's dyadic box; the contracted enclosure is n11-radius.json.",
+        "minimal_polynomial": null
+      },
+      "root_box": {
+        "center_hex": [
+          "0x1.7cefd3e2947ffp-2",
+          "0x1.5d05f6e5b8555p-2",
+          "0x1.1f8fc82272cc5p-2",
+          "0x1.88344da9606cbp-2",
+          "0x1.178767aa02a21p-2",
+          "-0x1.3207919fda6aep-3",
+          "0x1.851a7cb8a18fbp-2",
+          "-0x1.d2440d1cffcb4p-4",
+          "-0x1.a3cad4ddf3cb9p-6",
+          "-0x1.b382ad399e43dp-8",
+          "-0x1.4536865654152p-6",
+          "-0x1.b0b66f60b890dp-6"
+        ],
+        "halfwidth_hex": "0x1.12e0be826d695p-30",
+        "dimension": 12,
+        "radius_coordinate": 6
+      },
+      "coordinate_definition": "a=(z0,z1,z2,z3,pi-2*(z0+z1+z2+z3),z3,z2,z1,z0); theta4=0, theta[k+1]-theta[k]=a[k]+a[k+1]; rho[k]=cos(a[k])-sqrt(r^2-sin(a[k])^2). See the verbatim geometry source for the cyclic convention.",
+      "centers": [
+        {
+          "id": 0,
+          "x_approx": "-0.764706176023",
+          "y_approx": "-0.298369812532",
+          "exact_definition": "rho[0]*(cos(theta[0]),sin(theta[0]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 1,
+          "x_approx": "-0.355787392974",
+          "y_approx": "-0.673611117709",
+          "exact_definition": "rho[1]*(cos(theta[1]),sin(theta[1]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 2,
+          "x_approx": "0.094836554370",
+          "y_approx": "-0.694424121544",
+          "exact_definition": "rho[2]*(cos(theta[2]),sin(theta[2]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 3,
+          "x_approx": "0.615811668790",
+          "y_approx": "-0.598608566186",
+          "exact_definition": "rho[3]*(cos(theta[3]),sin(theta[3]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 4,
+          "x_approx": "0.892521729913",
+          "y_approx": "0.000000000000",
+          "exact_definition": "rho[4]*(cos(theta[4]),sin(theta[4]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 5,
+          "x_approx": "0.615811668790",
+          "y_approx": "0.598608566186",
+          "exact_definition": "rho[5]*(cos(theta[5]),sin(theta[5]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 6,
+          "x_approx": "0.094836554370",
+          "y_approx": "0.694424121544",
+          "exact_definition": "rho[6]*(cos(theta[6]),sin(theta[6]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 7,
+          "x_approx": "-0.355787392974",
+          "y_approx": "0.673611117709",
+          "exact_definition": "rho[7]*(cos(theta[7]),sin(theta[7]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 8,
+          "x_approx": "-0.764706176023",
+          "y_approx": "0.298369812532",
+          "exact_definition": "rho[8]*(cos(theta[8]),sin(theta[8]))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 9,
+          "x_approx": "0.272977466346",
+          "y_approx": "0.000000000000",
+          "exact_definition": "(z4,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 10,
+          "x_approx": "-0.149428498927",
+          "y_approx": "0.000000000000",
+          "exact_definition": "(z5,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        }
+      ],
+      "source_faces": [
+        [
+          2,
+          9,
+          10
+        ],
+        [
+          6,
+          9,
+          10
+        ],
+        [
+          0,
+          1,
+          10
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          2,
+          3,
+          9
+        ],
+        [
+          3,
+          4,
+          9
+        ],
+        [
+          4,
+          5,
+          9
+        ],
+        [
+          5,
+          6,
+          9
+        ],
+        [
+          6,
+          7,
+          10
+        ],
+        [
+          7,
+          8,
+          10
+        ],
+        [
+          8,
+          0,
+          10
+        ]
+      ],
+      "graph_kind": "Source's 11 triangular faces, not a disk-tangency graph. Active equalities require root equations.",
+      "symmetry": {
+        "documented_candidate_symmetry": "Reflection across the x axis, by the displayed parametrization",
+        "full_symmetry_group_classification": null
+      },
+      "sources": [
+        {
+          "snapshot": "sources/n11-root.json",
+          "snapshot_sha256": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5",
+          "snapshot_bytes": 12694,
+          "workspace_relative_source": "research-2026/team-current/lead/repaired_tc_krawczyk.json",
+          "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/repaired_tc_krawczyk.json",
+          "original_sha256": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n11-radius.json",
+          "snapshot_sha256": "2a06ce96f5fa2490f4526cfce9e2151bb3f272aaed77a8c2d5bf6fe4c645415d",
+          "snapshot_bytes": 3663,
+          "workspace_relative_source": "research-2026/team-current/lead/exact_root_threshold.json",
+          "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/exact_root_threshold.json",
+          "original_sha256": "2a06ce96f5fa2490f4526cfce9e2151bb3f272aaed77a8c2d5bf6fe4c645415d",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n11-triangulation.json",
+          "snapshot_sha256": "d78ded55c29de7b4b6b31f1350ec5112235fcf78f1711499158ce33c08505b99",
+          "snapshot_bytes": 5327,
+          "workspace_relative_source": "research-2026/team-current/lead/tc_root_geometry.json",
+          "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/tc_root_geometry.json",
+          "original_sha256": "d78ded55c29de7b4b6b31f1350ec5112235fcf78f1711499158ce33c08505b99",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n11-geometry-source.py",
+          "snapshot_sha256": "1767b2f777136b29119e18d6091cdab457c938fb2398d3759a6c089d60be14fa",
+          "snapshot_bytes": 5081,
+          "workspace_relative_source": "research-2026/team-current/lead/check_tc_root_geometry.py",
+          "delivered_source": "cover11/proof_bundle/research-2026/team-current/lead/check_tc_root_geometry.py",
+          "original_sha256": "1767b2f777136b29119e18d6091cdab457c938fb2398d3759a6c089d60be14fa",
+          "copy_kind": "verbatim"
+        }
+      ],
+      "proof_scope": "Source candidate/attainment illustration. This generator does not verify root isolation, every terminal box, global optimality, or uniqueness of optimal covers."
+    },
+    {
+      "n": 12,
+      "label": "12 disks: F,G,H,T source candidate",
+      "radius": {
+        "rounded_20_places": "0.36110296374450864411",
+        "rational_enclosure": [
+          "361102963744508644113087702017065180848530557/1000000000000000000000000000000000000000000000",
+          "180551481872254322056543851008532590424265287/500000000000000000000000000000000000000000000"
+        ],
+        "exact_definition": "The r coordinate of the unique common root of the four polynomials F,G,H,T in sources/n12-root.json's rational box.",
+        "minimal_polynomial": null
+      },
+      "root_variables": [
+        "a",
+        "t",
+        "r",
+        "w"
+      ],
+      "root_polynomials": [
+        "a**2 + a*r - a*t - 2*r*t + t**2",
+        "-3*a**2*r**2 + 3*a**2*t**2 - 3*a**2*t + 3*a**2 - 6*a*r**3 - 6*a*r**2 + 6*a*r*t**2 - 6*a*r*t + 6*a*r + 6*a*t**2 - 12*a*t*w - 6*a*t + 6*a - 3*r**4 - 6*r**3 + 3*r**2*t**2 - 3*r**2*t - 4*r**2*w**2 + 6*r*t**2 - 12*r*t*w - 6*r*t + 6*r + 4*t**2*w**2 + 3*t**2 + 4*t*w**2 - 12*t*w - 3*t + 4*w**2 + 3",
+        "3*a**2 + 6*a*r - 6*a - 9*r**2 - 6*r + 4*w**2 + 3",
+        "-18*a**5*r**2*w - 18*a**5*t**2*w - 27*a**5*t**2 + 18*a**5*w - 81*a**4*r**3*w + 9*a**4*r**2*t*w - 72*a**4*r**2*w - 81*a**4*r*t**2*w - 162*a**4*r*t**2 + 81*a**4*r*w + 9*a**4*t**3*w + 54*a**4*t**3 - 36*a**4*t**2*w - 54*a**4*t**2 - 9*a**4*t*w + 72*a**4*w - 144*a**3*r**4*w + 36*a**3*r**3*t*w - 252*a**3*r**3*w - 144*a**3*r**2*t**2*w - 378*a**3*r**2*t**2 + 36*a**3*r**2*t*w - 48*a**3*r**2*w**3 + 36*a**3*r**2*w + 36*a**3*r*t**3*w + 216*a**3*r*t**3 - 72*a**3*r*t**2*w - 270*a**3*r*t**2 - 36*a**3*r*t*w + 252*a**3*r*w - 36*a**3*t**3*w + 108*a**3*t**3 - 48*a**3*t**2*w**3 - 72*a**3*t**2*w - 36*a**3*t*w + 48*a**3*w**3 + 108*a**3*w - 126*a**2*r**5*w + 54*a**2*r**4*t*w - 324*a**2*r**4*w - 126*a**2*r**3*t**2*w - 432*a**2*r**3*t**2 + 108*a**2*r**3*t*w - 120*a**2*r**3*w**3 - 144*a**2*r**3*w + 54*a**2*r**2*t**3*w + 324*a**2*r**2*t**3 - 486*a**2*r**2*t**2 + 24*a**2*r**2*t*w**3 - 96*a**2*r**2*w**3 + 252*a**2*r**2*w - 108*a**2*r*t**3*w + 324*a**2*r*t**3 - 120*a**2*r*t**2*w**3 - 126*a**2*r*t**2*w - 108*a**2*r*t*w + 120*a**2*r*w**3 + 270*a**2*r*w + 24*a**2*t**3*w**3 - 18*a**2*t**3*w - 48*a**2*t**2*w**3 - 72*a**2*t**2*w**2 - 108*a**2*t**2*w + 54*a**2*t**2 - 24*a**2*t*w**3 - 54*a**2*t*w + 96*a**2*w**3 + 72*a**2*w - 54*a*r**6*w + 36*a*r**5*t*w - 180*a*r**5*w - 54*a*r**4*t**2*w - 243*a*r**4*t**2 + 108*a*r**4*t*w - 96*a*r**4*w**3 - 162*a*r**4*w + 36*a*r**3*t**3*w + 216*a*r**3*t**3 + 72*a*r**3*t**2*w - 378*a*r**3*t**2 + 48*a*r**3*t*w**3 + 72*a*r**3*t*w - 144*a*r**3*w**3 + 72*a*r**3*w - 108*a*r**2*t**3*w + 324*a*r**2*t**3 - 96*a*r**2*t**2*w**3 - 36*a*r**2*t**2*w + 48*a*r**2*t*w**3 - 72*a*r**2*t*w - 32*a*r**2*w**5 + 48*a*r**2*w**3 + 198*a*r**2*w + 48*a*r*t**3*w**3 - 36*a*r*t**3*w - 216*a*r*t**2*w**2 - 216*a*r*t**2*w + 162*a*r*t**2 - 48*a*r*t*w**3 - 108*a*r*t*w + 144*a*r*w**3 + 108*a*r*w - 48*a*t**3*w**3 + 144*a*t**3*w**2 + 108*a*t**3*w - 108*a*t**3 - 32*a*t**2*w**5 + 48*a*t**2*w**4 - 72*a*t**2*w**2 - 54*a*t**2*w + 27*a*t**2 - 48*a*t*w**3 - 36*a*t*w + 32*a*w**5 + 48*a*w**3 + 18*a*w - 9*r**7*w + 9*r**6*t*w - 36*r**6*w - 9*r**5*t**2*w - 54*r**5*t**2 + 36*r**5*t*w - 24*r**5*w**3 - 45*r**5*w + 9*r**4*t**3*w + 54*r**4*t**3 + 36*r**4*t**2*w - 108*r**4*t**2 + 24*r**4*t*w**3 + 45*r**4*t*w - 48*r**4*w**3 - 36*r**3*t**3*w + 108*r**3*t**3 - 24*r**3*t**2*w**3 + 18*r**3*t**2*w + 48*r**3*t*w**3 - 16*r**3*w**5 + 45*r**3*w + 24*r**2*t**3*w**3 - 18*r**2*t**3*w + 48*r**2*t**2*w**3 - 144*r**2*t**2*w**2 - 108*r**2*t**2*w + 108*r**2*t**2 + 16*r**2*t*w**5 - 45*r**2*t*w + 48*r**2*w**3 + 36*r**2*w - 48*r*t**3*w**3 + 144*r*t**3*w**2 + 108*r*t**3*w - 108*r*t**3 - 16*r*t**2*w**5 + 96*r*t**2*w**4 + 72*r*t**2*w**3 - 144*r*t**2*w**2 - 81*r*t**2*w + 54*r*t**2 - 48*r*t*w**3 - 36*r*t*w + 16*r*w**5 + 24*r*w**3 + 9*r*w + 16*t**3*w**5 - 96*t**3*w**4 - 72*t**3*w**3 + 144*t**3*w**2 + 81*t**3*w - 54*t**3 - 16*t*w**5 - 24*t*w**3 - 9*t*w"
+      ],
+      "root_box": [
+        [
+          "27824166087442791214863102289747881/100000000000000000000000000000000000",
+          "27824166087442791214863102289947881/100000000000000000000000000000000000"
+        ],
+        [
+          "15383380383268101865995386886331911/20000000000000000000000000000000000",
+          "15383380383268101865995386886371911/20000000000000000000000000000000000"
+        ],
+        [
+          "18055148187225432205654385100803259/50000000000000000000000000000000000",
+          "18055148187225432205654385100903259/50000000000000000000000000000000000"
+        ],
+        [
+          "13546951373643119765451323706707271/25000000000000000000000000000000000",
+          "13546951373643119765451323706757271/25000000000000000000000000000000000"
+        ]
+      ],
+      "coordinate_definition": "b=(1+a+r)/2; rot is rotation by 120 degrees. In scaled coordinates (x,Y=sqrt(3)*y), rot(x,Y)=((-x-Y)/2,(3*x-Y)/2). Center IDs retain the source's ordering.",
+      "centers": [
+        {
+          "id": 0,
+          "x_approx": "0.819672312309",
+          "y_approx": "0.312853440891",
+          "exact_definition": "rot^0(b,w/sqrt(3))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "163934462461893655626171872491354399/200000000000000000000000000000000000",
+              "163934462461893655626171872491754399/200000000000000000000000000000000000"
+            ],
+            "Y": [
+              "13546951373643119765451323706707271/25000000000000000000000000000000000",
+              "13546951373643119765451323706757271/25000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "x_approx": "0.384584509582",
+          "y_approx": "0.666119910399",
+          "exact_definition": "rot^0(t/2,sqrt(3)*t/2)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "15383380383268101865995386886331911/40000000000000000000000000000000000",
+              "15383380383268101865995386886371911/40000000000000000000000000000000000"
+            ],
+            "Y": [
+              "46150141149804305597986160658995733/40000000000000000000000000000000000",
+              "46150141149804305597986160659115733/40000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "x_approx": "-0.138897128682",
+          "y_approx": "0.866283765684",
+          "exact_definition": "rot^1(b,-w/sqrt(3))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "-55558851472748697502561282838096231/400000000000000000000000000000000000",
+              "-55558851472748697502561282837296231/400000000000000000000000000000000000"
+            ],
+            "Y": [
+              "120035799674965185000425241425544273/80000000000000000000000000000000000",
+              "120035799674965185000425241425864273/80000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "x_approx": "-0.680775183628",
+          "y_approx": "0.553430324793",
+          "exact_definition": "rot^1(b,w/sqrt(3))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "-272310073451038613749782462145812567/400000000000000000000000000000000000",
+              "-272310073451038613749782462145012567/400000000000000000000000000000000000"
+            ],
+            "Y": [
+              "383427776396536008754905027820005029/400000000000000000000000000000000000",
+              "383427776396536008754905027821605029/400000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "x_approx": "-0.769169019163",
+          "y_approx": "0.000000000000",
+          "exact_definition": "rot^1(t/2,sqrt(3)*t/2)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "-15383380383268101865995386886371911/20000000000000000000000000000000000",
+              "-15383380383268101865995386886331911/20000000000000000000000000000000000"
+            ],
+            "Y": [
+              "-3/2000000000000000000000000000000",
+              "3/2000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "x_approx": "-0.680775183628",
+          "y_approx": "-0.553430324793",
+          "exact_definition": "rot^2(b,-w/sqrt(3))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "-272310073451038613749782462146012567/400000000000000000000000000000000000",
+              "-272310073451038613749782462144812567/400000000000000000000000000000000000"
+            ],
+            "Y": [
+              "-383427776396536008754905027821805029/400000000000000000000000000000000000",
+              "-383427776396536008754905027819805029/400000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "x_approx": "-0.138897128682",
+          "y_approx": "-0.866283765684",
+          "exact_definition": "rot^2(b,w/sqrt(3))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "-55558851472748697502561282838296231/400000000000000000000000000000000000",
+              "-55558851472748697502561282837096231/400000000000000000000000000000000000"
+            ],
+            "Y": [
+              "-120035799674965185000425241425904273/80000000000000000000000000000000000",
+              "-120035799674965185000425241425504273/80000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 7,
+          "x_approx": "0.384584509582",
+          "y_approx": "-0.666119910399",
+          "exact_definition": "rot^2(t/2,sqrt(3)*t/2)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "15383380383268101865995386886301911/40000000000000000000000000000000000",
+              "15383380383268101865995386886401911/40000000000000000000000000000000000"
+            ],
+            "Y": [
+              "-46150141149804305597986160659145733/40000000000000000000000000000000000",
+              "-46150141149804305597986160658965733/40000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "x_approx": "0.819672312309",
+          "y_approx": "-0.312853440891",
+          "exact_definition": "rot^0(b,-w/sqrt(3))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "163934462461893655626171872491354399/200000000000000000000000000000000000",
+              "163934462461893655626171872491754399/200000000000000000000000000000000000"
+            ],
+            "Y": [
+              "-13546951373643119765451323706757271/25000000000000000000000000000000000",
+              "-13546951373643119765451323706707271/25000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 9,
+          "x_approx": "0.278241660874",
+          "y_approx": "0.000000000000",
+          "exact_definition": "rot^0(a,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "27824166087442791214863102289747881/100000000000000000000000000000000000",
+              "27824166087442791214863102289947881/100000000000000000000000000000000000"
+            ],
+            "Y": [
+              "0",
+              "0"
+            ]
+          }
+        },
+        {
+          "id": 10,
+          "x_approx": "-0.139120830437",
+          "y_approx": "0.240964346708",
+          "exact_definition": "rot^1(a,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "-27824166087442791214863102289947881/200000000000000000000000000000000000",
+              "-27824166087442791214863102289747881/200000000000000000000000000000000000"
+            ],
+            "Y": [
+              "83472498262328373644589306869243643/200000000000000000000000000000000000",
+              "83472498262328373644589306869843643/200000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 11,
+          "x_approx": "-0.139120830437",
+          "y_approx": "-0.240964346708",
+          "exact_definition": "rot^2(a,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "x, Y=sqrt(3)*y",
+            "x": [
+              "-27824166087442791214863102290047881/200000000000000000000000000000000000",
+              "-27824166087442791214863102289647881/200000000000000000000000000000000000"
+            ],
+            "Y": [
+              "-83472498262328373644589306869843643/200000000000000000000000000000000000",
+              "-83472498262328373644589306869243643/200000000000000000000000000000000000"
+            ]
+          }
+        }
+      ],
+      "source_faces": [
+        [
+          7,
+          8,
+          9
+        ],
+        [
+          8,
+          0,
+          9
+        ],
+        [
+          0,
+          1,
+          9
+        ],
+        [
+          1,
+          2,
+          10
+        ],
+        [
+          2,
+          3,
+          10
+        ],
+        [
+          3,
+          4,
+          10
+        ],
+        [
+          4,
+          5,
+          11
+        ],
+        [
+          5,
+          6,
+          11
+        ],
+        [
+          6,
+          7,
+          11
+        ],
+        [
+          1,
+          10,
+          9
+        ],
+        [
+          4,
+          11,
+          10
+        ],
+        [
+          7,
+          9,
+          11
+        ],
+        [
+          9,
+          10,
+          11
+        ]
+      ],
+      "graph_kind": "Source's 13 triangular faces; no claim that these edges are disk tangencies.",
+      "symmetry": {
+        "documented_candidate_symmetry": "D3 (120 degree rotations and a reflection), directly from the coordinate formula",
+        "full_symmetry_group_classification": null
+      },
+      "sources": [
+        {
+          "snapshot": "sources/n12-root.json",
+          "snapshot_sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+          "snapshot_bytes": 6975,
+          "workspace_relative_source": "research-2026/n12-global/evidence/root-t-certificate.json",
+          "delivered_source": "cover12/proof_bundle/research-2026/n12-global/evidence/root-t-certificate.json",
+          "original_sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n12-geometry.json",
+          "snapshot_sha256": "cca45eed54d4e3cf83c01e9c37895ac859ba73dc8f5d26cd2088e5d1aed13f9e",
+          "snapshot_bytes": 9473,
+          "workspace_relative_source": "research-2026/n12-global/evidence/ideal-coverage-certificate.json",
+          "delivered_source": "cover12/proof_bundle/research-2026/n12-global/evidence/ideal-coverage-certificate.json",
+          "original_sha256": "cca45eed54d4e3cf83c01e9c37895ac859ba73dc8f5d26cd2088e5d1aed13f9e",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n12-geometry-source.py",
+          "snapshot_sha256": "a492a2a9dbb3dccc0801adcfc7417fc7eea13aeff130dd910f1c9176d2794c22",
+          "snapshot_bytes": 3111,
+          "workspace_relative_source": "research-2026/n12-global/lead/ideal_coverage_certificate.py",
+          "delivered_source": "cover12/proof_bundle/research-2026/n12-global/lead/ideal_coverage_certificate.py",
+          "original_sha256": "a492a2a9dbb3dccc0801adcfc7417fc7eea13aeff130dd910f1c9176d2794c22",
+          "copy_kind": "verbatim"
+        }
+      ],
+      "proof_scope": "Source candidate/attainment illustration. This generator does not verify root isolation, every terminal box, global optimality, or uniqueness of optimal covers."
+    },
+    {
+      "n": 14,
+      "label": "14 disks: F,G,H radical-system source candidate",
+      "radius": {
+        "rounded_20_places": "0.33173203427623412256",
+        "rational_enclosure": [
+          "586119771053926641519302537298846571861575122264795608990494191564803329/1766847064778384329583297500742918515827483896875618958121606201292619776",
+          "586119771053926641519302537298846572417505738842959124040665969686570525/1766847064778384329583297500742918515827483896875618958121606201292619776"
+        ],
+        "exact_definition": "r coordinate of the unique F,G,H root in n14-root.json's dyadic box, using positive radical branches. Equations and coordinates are specified in n14-definition.md.",
+        "minimal_polynomial": null
+      },
+      "root_variables": [
+        "z",
+        "c",
+        "r"
+      ],
+      "root_box": [
+        [
+          "577437545840695289304052477804065391269276354029229225116302873615642355/1766847064778384329583297500742918515827483896875618958121606201292619776",
+          "577437545840695289339389419099633077860942304044087595432852551553154735/1766847064778384329583297500742918515827483896875618958121606201292619776"
+        ],
+        [
+          "515815309131320752789785485108764797690645798975722801169832866040728611/1766847064778384329583297500742918515827483896875618958121606201292619776",
+          "515815309131320752825122426404332484282311748990581171486382543978240991/1766847064778384329583297500742918515827483896875618958121606201292619776"
+        ],
+        [
+          "586119771053926641501634066651062728843707455546448181357305241494494739/1766847064778384329583297500742918515827483896875618958121606201292619776",
+          "36632485690870415096060687996664400964710837847581659479615932464500445/110427941548649020598956093796432407239217743554726184882600387580788736"
+        ]
+      ],
+      "coordinate_definition": "s=sqrt(1-r^2), a=(s+z)/2, t=r+sqrt(r^2-z^2), b=r+sqrt(r^2-(a-z)^2), d=1-sqrt(r^2-c^2). All square roots are positive. Center order comes from n14-geometry.json.",
+      "centers": [
+        {
+          "id": 0,
+          "x_approx": "-0.635095863164",
+          "y_approx": "-0.454251192613",
+          "exact_definition": "(-a,-b)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 1,
+          "x_approx": "-0.635095863164",
+          "y_approx": "0.454251192613",
+          "exact_definition": "(-a,b)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 2,
+          "x_approx": "0.635095863164",
+          "y_approx": "-0.454251192613",
+          "exact_definition": "(a,-b)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 3,
+          "x_approx": "0.635095863164",
+          "y_approx": "0.454251192613",
+          "exact_definition": "(a,b)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 4,
+          "x_approx": "-0.291941118965",
+          "y_approx": "-0.842467382354",
+          "exact_definition": "(-c,-d)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 5,
+          "x_approx": "-0.291941118965",
+          "y_approx": "0.842467382354",
+          "exact_definition": "(-c,d)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 6,
+          "x_approx": "0.291941118965",
+          "y_approx": "-0.842467382354",
+          "exact_definition": "(c,-d)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 7,
+          "x_approx": "0.291941118965",
+          "y_approx": "0.842467382354",
+          "exact_definition": "(c,d)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 8,
+          "x_approx": "0.943373657378",
+          "y_approx": "0.000000000000",
+          "exact_definition": "(s,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 9,
+          "x_approx": "-0.943373657378",
+          "y_approx": "0.000000000000",
+          "exact_definition": "(-s,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 10,
+          "x_approx": "0.326818068950",
+          "y_approx": "0.000000000000",
+          "exact_definition": "(z,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 11,
+          "x_approx": "-0.326818068950",
+          "y_approx": "0.000000000000",
+          "exact_definition": "(-z,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 12,
+          "x_approx": "0.000000000000",
+          "y_approx": "0.388618696798",
+          "exact_definition": "(0,t)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 13,
+          "x_approx": "0.000000000000",
+          "y_approx": "-0.388618696798",
+          "exact_definition": "(0,-t)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        }
+      ],
+      "source_faces": [
+        [
+          0,
+          4,
+          13
+        ],
+        [
+          0,
+          9,
+          11
+        ],
+        [
+          0,
+          11,
+          13
+        ],
+        [
+          1,
+          5,
+          12
+        ],
+        [
+          1,
+          9,
+          11
+        ],
+        [
+          1,
+          11,
+          12
+        ],
+        [
+          2,
+          6,
+          13
+        ],
+        [
+          2,
+          8,
+          10
+        ],
+        [
+          2,
+          10,
+          13
+        ],
+        [
+          3,
+          7,
+          12
+        ],
+        [
+          3,
+          8,
+          10
+        ],
+        [
+          3,
+          10,
+          12
+        ],
+        [
+          4,
+          6,
+          13
+        ],
+        [
+          5,
+          7,
+          12
+        ],
+        [
+          10,
+          11,
+          12
+        ],
+        [
+          10,
+          11,
+          13
+        ]
+      ],
+      "graph_kind": "16 source nearest-site triangles, including two strict slack triangles; not disk tangencies.",
+      "symmetry": {
+        "documented_candidate_symmetry": "D2 (reflections across both coordinate axes), directly from the coordinate formula",
+        "full_symmetry_group_classification": null
+      },
+      "sources": [
+        {
+          "snapshot": "sources/n14-root.json",
+          "snapshot_sha256": "15b1fda5d835114bbde38fd3d52df69043b7b084c60134c65fb91f8a93cb5fe9",
+          "snapshot_bytes": 4873,
+          "workspace_relative_source": "research-2026/next-cover-global/lead/root-integer-certificate.json",
+          "delivered_source": "cover14/proof_bundle/research-2026/next-cover-global/lead/root-integer-certificate.json",
+          "original_sha256": "15b1fda5d835114bbde38fd3d52df69043b7b084c60134c65fb91f8a93cb5fe9",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n14-geometry.json",
+          "snapshot_sha256": "edcfbd5290345d4cc2fae1806a1c54947ea549c3e085f310aedef8a508ab77ce",
+          "snapshot_bytes": 8071,
+          "workspace_relative_source": "research-2026/next-cover-global/lead/root-cover-controls.json",
+          "delivered_source": "cover14/proof_bundle/research-2026/next-cover-global/lead/root-cover-controls.json",
+          "original_sha256": "edcfbd5290345d4cc2fae1806a1c54947ea549c3e085f310aedef8a508ab77ce",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n14-definition.md",
+          "snapshot_sha256": "a7f6ed1bfa53d8329f25c6dfeb345518fa976bba3b6a3802549d186c99ae144e",
+          "snapshot_bytes": 4990,
+          "workspace_relative_source": "research-2026/next-cover-global/lead/ROOT-ATTAINMENT.md",
+          "delivered_source": "cover14/proof_bundle/research-2026/next-cover-global/lead/ROOT-ATTAINMENT.md",
+          "original_sha256": "a7f6ed1bfa53d8329f25c6dfeb345518fa976bba3b6a3802549d186c99ae144e",
+          "copy_kind": "verbatim"
+        }
+      ],
+      "proof_scope": "Source candidate/attainment illustration. This generator does not verify root isolation, every terminal box, global optimality, or uniqueness of optimal covers."
+    },
+    {
+      "n": 22,
+      "label": "22 disks: D7 core-root source candidate",
+      "radius": {
+        "rounded_20_places": "0.25325145983509235808",
+        "rational_enclosure": [
+          "0.253251459835092358077649055387843359594568644621451609304243",
+          "0.253251459835092358077649055387843359594568644621451609304244"
+        ],
+        "exact_definition": "r=sqrt(t), where t is the unique root of 29*t^3-55*t^2+19*t-1 in (641/10000,321/5000). The source radius-link record identifies this with the full core root.",
+        "polynomial_variable": "t=r^2",
+        "polynomial_coefficients_descending": [
+          29,
+          -55,
+          19,
+          -1
+        ],
+        "isolating_interval_for_t": [
+          "641/10000",
+          "321/5000"
+        ],
+        "minimal_polynomial": "29*t^3-55*t^2+19*t-1 (for squared radius t)"
+      },
+      "coordinate_definition": "theta=2*pi/7, c=cos(theta), s=sin(theta), a=2*r*cos(theta/2), X=(1+4*a^2-r^2)/(4*a), Y=-(1-c)*(1-r^2)/(4*a*s), e=(X,-Y); R rotates by theta. Center formulas below use the exact linked radius r. The source core-root extract independently supplies drawing-coordinate enclosures: node j is (z[2j-2],z[2j-1]), z in xnum/Qx +/- 10^-80. Boundary anchors and auxiliary face witnesses are not centers.",
+      "centers": [
+        {
+          "id": 0,
+          "x_approx": "0.806022405646",
+          "y_approx": "-0.162815830917",
+          "exact_definition": "a*(R^6*e+R^0*e)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "806022405646099642139854894707214124160342040161927920118704292269955856753412492168305647/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "806022405646099642139854894707214124160342040161927920118704292269955856753412512168305647/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-162815830917263944880822963438395321815506686603255811346385915763770688899697673214722159/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-162815830917263944880822963438395321815506686603255811346385915763770688899697653214722159/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 1,
+          "x_approx": "0.884430377356",
+          "y_approx": "0.225344101832",
+          "exact_definition": "2*a*R^0*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "27638449292372251975545093373837289964434561477399983627298077016755991163486062672940623/31250000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "27638449292372251975545093373837289964434561477399983627298077016755991163486063297940623/31250000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "225344101832083714005357446837792325845650196218901436418739237816315912865019216371987241/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "225344101832083714005357446837792325845650196218901436418739237816315912865019236371987241/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 2,
+          "x_approx": "0.629841292445",
+          "y_approx": "0.528659682151",
+          "exact_definition": "a*(R^0*e+R^1*e)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "314920646222647479998467870819605581475721418593218480820903594773748413579712942543671707/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "314920646222647479998467870819605581475721418593218480820903594773748413579712952543671707/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "528659682150667805295973106765674617485333151710697029268195246358510188483071849050791893/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "528659682150667805295973106765674617485333151710697029268195246358510188483071869050791893/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 3,
+          "x_approx": "0.375252207535",
+          "y_approx": "0.831975262469",
+          "exact_definition": "2*a*R^1*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "93813051883669464194107123828907261760244926774018611802518978639700484271824441160146723/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "93813051883669464194107123828907261760244926774018611802518978639700484271824446160146723/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "415987631234625948293294383346778454562508053601246311058825627450352232050562240864798273/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "415987631234625948293294383346778454562508053601246311058825627450352232050562250864798273/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 4,
+          "x_approx": "-0.020623160388",
+          "y_approx": "0.822043671867",
+          "exact_definition": "a*(R^1*e+R^2*e)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-20623160387768452686309587236975794132516910753271293991603404534331719093918531132844257/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-20623160387768452686309587236975794132516910753271293991603404534331719093918511132844257/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "411021835933452889680974371562273201135573805304808562104836228556144926708957650553746711/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "411021835933452889680974371562273201135573805304808562104836228556144926708957660553746711/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 5,
+          "x_approx": "-0.416498528310",
+          "y_approx": "0.812112081265",
+          "exact_definition": "2*a*R^2*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-83299705662042952429809533957916127061202705720523407038656544725493075055026965381255081/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-83299705662042952429809533957916127061202705720523407038656544725493075055026961381255081/200000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "812112081264559662137308719555535895417279114016741626301693659323875242734706120485390299/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "812112081264559662137308719555535895417279114016741626301693659323875242734706140485390299/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 6,
+          "x_approx": "-0.655557952813",
+          "y_approx": "0.496412010032",
+          "exact_definition": "a*(R^2*e+R^3*e)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-655557952813036229456609565831027167076382292222219664485293698188127310500068095948117977/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-655557952813036229456609565831027167076382292222219664485293698188127310500068075948117977/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "31025750627023618100018926015484734915008389837694093844806289099046779726157498417378069/62500000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "31025750627023618100018926015484734915008389837694093844806289099046779726157499667378069/62500000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 7,
+          "x_approx": "-0.894617377316",
+          "y_approx": "0.180711938800",
+          "exact_definition": "2*a*R^3*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-223654344328964424191042865468118424711687763960455573444326168187197311431250341247490137/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-223654344328964424191042865468118424711687763960455573444326168187197311431250336247490137/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "45177984700049029265824228234993905465747340197367344183026897961405427125583457217676977/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "45177984700049029265824228234993905465747340197367344183026897961405427125583462217676977/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 8,
+          "x_approx": "-0.796844235825",
+          "y_approx": "-0.203028020316",
+          "exact_definition": "a*(R^3*e+R^4*e)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-796844235824865435698840402060049892339415779981202891255241742292566076609156271274792603/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-796844235824865435698840402060049892339415779981202891255241742292566076609156251274792603/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-8121120812645596621373087195555358954172791140167416263016936593238752427347061704853903/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-8121120812645596621373087195555358954172791140167416263016936593238752427347060904853903/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 9,
+          "x_approx": "-0.699071094334",
+          "y_approx": "-0.586767979432",
+          "exact_definition": "2*a*R^4*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-699071094333873174633509342247626085832080504120583488733178811836342907493311177559624659/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-699071094333873174633509342247626085832080504120583488733178811836342907493311157559624659/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-293383989716237974065975636358871784785814458898920094941477210753779664934843457056701529/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-293383989716237974065975636358871784785814458898920094941477210753779664934843447056701529/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 10,
+          "x_approx": "-0.338090556600",
+          "y_approx": "-0.749583810350",
+          "exact_definition": "a*(R^4*e+R^5*e)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-338090556600402341071459576534001480604449601487745479238448551361229514796993313540481117/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-338090556600402341071459576534001480604449601487745479238448551361229514796993293540481117/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-749583810349739893012774236156138891387135604401096001229340337271330018769384577328125217/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-749583810349739893012774236156138891387135604401096001229340337271330018769384557328125217/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 11,
+          "x_approx": "0.022889981133",
+          "y_approx": "-0.912399641267",
+          "exact_definition": "2*a*R^5*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "915599245322739699623607567184924984927252045803701210251268364555355115972982019146497/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "915599245322739699623607567184924984927252045803701210251268364555355115972982819146497/40000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-57024977579187739868349824974658388325165143187771988285982890814693794229317640033927961/62500000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-57024977579187739868349824974658388325165143187771988285982890814693794229317638783927961/62500000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 12,
+          "x_approx": "0.375252207535",
+          "y_approx": "-0.731687702467",
+          "exact_definition": "a*(R^5*e+R^6*e)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "93813051883669464194107123828907261760244926774018611802518978639700484271824441160146723/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "93813051883669464194107123828907261760244926774018611802518978639700484271824446160146723/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-182921925616701930207575071663639647834913232553720608960904665297369749791687100418034867/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-182921925616701930207575071663639647834913232553720608960904665297369749791687095418034867/250000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 13,
+          "x_approx": "0.727614433936",
+          "y_approx": "-0.550975763667",
+          "exact_definition": "2*a*R^6*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "727614433936287221062266801451634969458778113047056364163870120003719996275270978802511359/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "727614433936287221062266801451634969458778113047056364163870120003719996275270998802511359/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-13774394091665290094175084342864574236916589235635326477787776733596432266610364070035789/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-13774394091665290094175084342864574236916589235635326477787776733596432266610363570035789/25000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 14,
+          "x_approx": "0.442215188678",
+          "y_approx": "0.112672050916",
+          "exact_definition": "a*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "27638449292372251975545093373837289964434561477399983627298077016755991163486062360440623/62500000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "27638449292372251975545093373837289964434561477399983627298077016755991163486063610440623/62500000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "112672050916041857002678723418896162922825098109450718209369618908157956432509603185993621/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "112672050916041857002678723418896162922825098109450718209369618908157956432509623185993621/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 15,
+          "x_approx": "0.000000000000",
+          "y_approx": "0.000000000000",
+          "exact_definition": "(0,0)",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-1/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-1/100000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "1/100000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 16,
+          "x_approx": "-0.349535547167",
+          "y_approx": "-0.293383989716",
+          "exact_definition": "a*R^4*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-349535547166936587316754671123813042916040252060291744366589405918171453746655593779812329/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-349535547166936587316754671123813042916040252060291744366589405918171453746655573779812329/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-293383989716237974065975636358871784785814458898920094941477210753779664934843462056701529/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-293383989716237974065975636358871784785814458898920094941477210753779664934843442056701529/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 17,
+          "x_approx": "0.011444990567",
+          "y_approx": "-0.456199820634",
+          "exact_definition": "a*R^5*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "11444990566534246245295094589811562311590650572546265128140854556941938949662270239331213/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "11444990566534246245295094589811562311590650572546265128140854556941938949662290239331213/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-57024977579187739868349824974658388325165143187771988285982890814693794229317640658927961/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-57024977579187739868349824974658388325165143187771988285982890814693794229317638158927961/125000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 18,
+          "x_approx": "0.363807216968",
+          "y_approx": "-0.275487881833",
+          "exact_definition": "a*R^6*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "363807216968143610531133400725817484729389056523528182081935060001859998137635484401255679/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "363807216968143610531133400725817484729389056523528182081935060001859998137635504401255679/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "-13774394091665290094175084342864574236916589235635326477787776733596432266610364320035789/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-13774394091665290094175084342864574236916589235635326477787776733596432266610363320035789/50000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 19,
+          "x_approx": "0.187626103767",
+          "y_approx": "0.415987631235",
+          "exact_definition": "a*R^1*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "93813051883669464194107123828907261760244926774018611802518978639700484271824438660146723/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "93813051883669464194107123828907261760244926774018611802518978639700484271824448660146723/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "415987631234625948293294383346778454562508053601246311058825627450352232050562235864798273/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "415987631234625948293294383346778454562508053601246311058825627450352232050562255864798273/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 20,
+          "x_approx": "-0.208249264155",
+          "y_approx": "0.406056040632",
+          "exact_definition": "a*R^2*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-208249264155107381074523834894790317653006764301308517596641361813732687637567418453137703/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-208249264155107381074523834894790317653006764301308517596641361813732687637567398453137703/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "406056040632279831068654359777767947708639557008370813150846829661937621367353055242695149/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "406056040632279831068654359777767947708639557008370813150846829661937621367353075242695149/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        },
+        {
+          "id": 21,
+          "x_approx": "-0.447308688658",
+          "y_approx": "0.090355969400",
+          "exact_definition": "a*R^3*e",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers.",
+          "source_coordinate_enclosure": {
+            "coordinate_system": "Cartesian x,y",
+            "x": [
+              "-223654344328964424191042865468118424711687763960455573444326168187197311431250343747490137/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "-223654344328964424191042865468118424711687763960455573444326168187197311431250333747490137/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "y": [
+              "45177984700049029265824228234993905465747340197367344183026897961405427125583454717676977/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+              "45177984700049029265824228234993905465747340197367344183026897961405427125583464717676977/500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+            ]
+          }
+        }
+      ],
+      "source_faces": [
+        [
+          0,
+          1,
+          14
+        ],
+        [
+          0,
+          13,
+          18
+        ],
+        [
+          0,
+          14,
+          18
+        ],
+        [
+          1,
+          2,
+          14
+        ],
+        [
+          2,
+          3,
+          19
+        ],
+        [
+          2,
+          14,
+          19
+        ],
+        [
+          3,
+          4,
+          19
+        ],
+        [
+          4,
+          5,
+          20
+        ],
+        [
+          4,
+          19,
+          20
+        ],
+        [
+          5,
+          6,
+          20
+        ],
+        [
+          6,
+          7,
+          21
+        ],
+        [
+          6,
+          20,
+          21
+        ],
+        [
+          7,
+          8,
+          21
+        ],
+        [
+          8,
+          9,
+          16
+        ],
+        [
+          8,
+          16,
+          21
+        ],
+        [
+          9,
+          10,
+          16
+        ],
+        [
+          10,
+          11,
+          17
+        ],
+        [
+          10,
+          16,
+          17
+        ],
+        [
+          11,
+          12,
+          17
+        ],
+        [
+          12,
+          13,
+          18
+        ],
+        [
+          12,
+          17,
+          18
+        ],
+        [
+          14,
+          15,
+          18
+        ],
+        [
+          14,
+          15,
+          19
+        ],
+        [
+          15,
+          16,
+          17
+        ],
+        [
+          15,
+          16,
+          21
+        ],
+        [
+          15,
+          17,
+          18
+        ],
+        [
+          15,
+          19,
+          20
+        ],
+        [
+          15,
+          20,
+          21
+        ]
+      ],
+      "graph_kind": "28 center triangles from the core-system; source active-face graph, not a disk-tangency graph.",
+      "symmetry": {
+        "documented_candidate_symmetry": "D7, identified by source root-box transports in n22-radius-link.md and n22-symmetry.json",
+        "full_symmetry_group_classification": null
+      },
+      "sources": [
+        {
+          "snapshot": "sources/n22-core-system.json",
+          "snapshot_sha256": "1d91c88518b928a2523b9a0b4468dcbc5eb53f653bdf25c02c25b079c9aa5c55",
+          "snapshot_bytes": 14842,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/core-system.json",
+          "delivered_source": null,
+          "original_sha256": "1d91c88518b928a2523b9a0b4468dcbc5eb53f653bdf25c02c25b079c9aa5c55",
+          "copy_kind": "verbatim",
+          "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+        },
+        {
+          "snapshot": "sources/n22-root-verified.json",
+          "snapshot_sha256": "7b03b9f0b21c9d214b8ae2c34e69d911489da5b6f9bb4f9a9c5aca24439e1963",
+          "snapshot_bytes": 2292,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/algebraic-check1/root-verified.json",
+          "delivered_source": null,
+          "original_sha256": "7b03b9f0b21c9d214b8ae2c34e69d911489da5b6f9bb4f9a9c5aca24439e1963",
+          "copy_kind": "verbatim",
+          "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+        },
+        {
+          "snapshot": "sources/n22-upper-verified.json",
+          "snapshot_sha256": "2522ac4b676e47211aff1aa41a53bb635d19a4b47134d21e108fe83afefdbce7",
+          "snapshot_bytes": 408,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/algebraic-check1/upper-verified.json",
+          "delivered_source": null,
+          "original_sha256": "2522ac4b676e47211aff1aa41a53bb635d19a4b47134d21e108fe83afefdbce7",
+          "copy_kind": "verbatim",
+          "delivery_note": "Small verbatim source snapshot supplied with the gallery; original source is not present as a direct file at that path in the baseline delivery."
+        },
+        {
+          "snapshot": "sources/n22-radius-link.md",
+          "snapshot_sha256": "f495f615a5fa68098e9fcab6e41c8aca070a8fd5c444f04ca02061cdbb32c225",
+          "snapshot_bytes": 4581,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/round3-high/N22-RADIUS-LINK.md",
+          "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/N22-RADIUS-LINK.md",
+          "original_sha256": "f495f615a5fa68098e9fcab6e41c8aca070a8fd5c444f04ca02061cdbb32c225",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n22-symmetry.json",
+          "snapshot_sha256": "f8c5248761fd98b0ef97951df71f8384897f5d8544b98c44d97057b8501e5f6d",
+          "snapshot_bytes": 7130,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/round3-high/evidence/n22-symmetry-cubic-replay-resume1.json",
+          "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/evidence/n22-symmetry-cubic-replay-resume1.json",
+          "original_sha256": "f8c5248761fd98b0ef97951df71f8384897f5d8544b98c44d97057b8501e5f6d",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n22-core-root-extract.json",
+          "snapshot_sha256": "9fd60320dbdbc141d940d575cf8da5cf97261689bf3c987c4d99e86121045f12",
+          "snapshot_bytes": 12846,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n22/core-root.json",
+          "delivered_source": null,
+          "original_sha256": "3bd4bc813d9215770ec4c66b8d09fba1afcd25c749fcd9b790c0f3a30dea1a70",
+          "original_bytes": 5304877,
+          "copy_kind": "field-extract",
+          "fields": [
+            "dimension",
+            "Qx",
+            "xnum[:G+1]",
+            "system_sha256"
+          ],
+          "omitted": "Ynum preconditioner and non-coordinate xnum entries. This extract alone does not certify root isolation."
+        }
+      ],
+      "proof_scope": "Source candidate/attainment illustration. This generator does not verify root isolation, every terminal box, global optimality, or uniqueness of optimal covers."
+    },
+    {
+      "n": 25,
+      "label": "25 disks: exact quadratic-field source candidate",
+      "radius": {
+        "rounded_20_places": "0.23914631173810026822",
+        "rational_enclosure": [
+          "0.239146311738100268223279244400006341674380742282096500125628",
+          "0.239146311738100268223279244400006341674380742282096500125629"
+        ],
+        "exact_definition": "r=1/(sqrt(6)+sqrt(3)); r^2=1-2*sqrt(2)/3. Exact construction uses Q(sqrt(2)) times a=sqrt((2-sqrt(2))/3).",
+        "minimal_polynomial": "9*t^2-18*t+1 (for squared radius t)",
+        "polynomial_variable": "t=r^2",
+        "polynomial_coefficients_descending": [
+          9,
+          -18,
+          1
+        ],
+        "isolating_interval_for_t": [
+          "57/1000",
+          "58/1000"
+        ]
+      },
+      "coordinate_definition": "a=sqrt((2-sqrt(2))/3); each stored coefficient pair [u,v] represents u+v*sqrt(2). Physical centers are a times these coefficients. No fitted floating point centers are used.",
+      "coordinate_coefficients_Q_sqrt2": [
+        [
+          [
+            "2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "1",
+            "1/2"
+          ],
+          [
+            "0",
+            "1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1/2"
+          ],
+          [
+            "1",
+            "1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "2",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1/2"
+          ],
+          [
+            "1",
+            "1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ],
+        [
+          [
+            "-1",
+            "-1/2"
+          ],
+          [
+            "0",
+            "1/2"
+          ]
+        ],
+        [
+          [
+            "-2",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "-1",
+            "-1/2"
+          ],
+          [
+            "0",
+            "-1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1/2"
+          ],
+          [
+            "-1",
+            "-1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-2",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1/2"
+          ],
+          [
+            "-1",
+            "-1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "-1"
+          ]
+        ],
+        [
+          [
+            "1",
+            "1/2"
+          ],
+          [
+            "0",
+            "-1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1/2"
+          ],
+          [
+            "0",
+            "1/2"
+          ]
+        ],
+        [
+          [
+            "-1",
+            "0"
+          ],
+          [
+            "0",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "-1/2"
+          ],
+          [
+            "0",
+            "-1/2"
+          ]
+        ],
+        [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "-1",
+            "0"
+          ]
+        ],
+        [
+          [
+            "0",
+            "1/2"
+          ],
+          [
+            "0",
+            "-1/2"
+          ]
+        ]
+      ],
+      "centers": [
+        {
+          "id": 0,
+          "x_approx": "0.883769530762",
+          "y_approx": "0.000000000000",
+          "exact_definition": "a*(2+(0)*sqrt(2), 0+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 1,
+          "x_approx": "0.754344479485",
+          "y_approx": "0.312459714104",
+          "exact_definition": "a*(1+(1/2)*sqrt(2), 0+(1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 2,
+          "x_approx": "0.624919428208",
+          "y_approx": "0.624919428208",
+          "exact_definition": "a*(0+(1)*sqrt(2), 0+(1)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 3,
+          "x_approx": "0.312459714104",
+          "y_approx": "0.754344479485",
+          "exact_definition": "a*(0+(1/2)*sqrt(2), 1+(1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 4,
+          "x_approx": "0.000000000000",
+          "y_approx": "0.883769530762",
+          "exact_definition": "a*(0+(0)*sqrt(2), 2+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 5,
+          "x_approx": "-0.312459714104",
+          "y_approx": "0.754344479485",
+          "exact_definition": "a*(0+(-1/2)*sqrt(2), 1+(1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 6,
+          "x_approx": "-0.624919428208",
+          "y_approx": "0.624919428208",
+          "exact_definition": "a*(0+(-1)*sqrt(2), 0+(1)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 7,
+          "x_approx": "-0.754344479485",
+          "y_approx": "0.312459714104",
+          "exact_definition": "a*(-1+(-1/2)*sqrt(2), 0+(1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 8,
+          "x_approx": "-0.883769530762",
+          "y_approx": "0.000000000000",
+          "exact_definition": "a*(-2+(0)*sqrt(2), 0+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 9,
+          "x_approx": "-0.754344479485",
+          "y_approx": "-0.312459714104",
+          "exact_definition": "a*(-1+(-1/2)*sqrt(2), 0+(-1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 10,
+          "x_approx": "-0.624919428208",
+          "y_approx": "-0.624919428208",
+          "exact_definition": "a*(0+(-1)*sqrt(2), 0+(-1)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 11,
+          "x_approx": "-0.312459714104",
+          "y_approx": "-0.754344479485",
+          "exact_definition": "a*(0+(-1/2)*sqrt(2), -1+(-1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 12,
+          "x_approx": "0.000000000000",
+          "y_approx": "-0.883769530762",
+          "exact_definition": "a*(0+(0)*sqrt(2), -2+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 13,
+          "x_approx": "0.312459714104",
+          "y_approx": "-0.754344479485",
+          "exact_definition": "a*(0+(1/2)*sqrt(2), -1+(-1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 14,
+          "x_approx": "0.624919428208",
+          "y_approx": "-0.624919428208",
+          "exact_definition": "a*(0+(1)*sqrt(2), 0+(-1)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 15,
+          "x_approx": "0.754344479485",
+          "y_approx": "-0.312459714104",
+          "exact_definition": "a*(1+(1/2)*sqrt(2), 0+(-1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 16,
+          "x_approx": "0.000000000000",
+          "y_approx": "0.000000000000",
+          "exact_definition": "a*(0+(0)*sqrt(2), 0+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 17,
+          "x_approx": "0.441884765381",
+          "y_approx": "0.000000000000",
+          "exact_definition": "a*(1+(0)*sqrt(2), 0+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 18,
+          "x_approx": "0.312459714104",
+          "y_approx": "0.312459714104",
+          "exact_definition": "a*(0+(1/2)*sqrt(2), 0+(1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 19,
+          "x_approx": "0.000000000000",
+          "y_approx": "0.441884765381",
+          "exact_definition": "a*(0+(0)*sqrt(2), 1+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 20,
+          "x_approx": "-0.312459714104",
+          "y_approx": "0.312459714104",
+          "exact_definition": "a*(0+(-1/2)*sqrt(2), 0+(1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 21,
+          "x_approx": "-0.441884765381",
+          "y_approx": "0.000000000000",
+          "exact_definition": "a*(-1+(0)*sqrt(2), 0+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 22,
+          "x_approx": "-0.312459714104",
+          "y_approx": "-0.312459714104",
+          "exact_definition": "a*(0+(-1/2)*sqrt(2), 0+(-1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 23,
+          "x_approx": "0.000000000000",
+          "y_approx": "-0.441884765381",
+          "exact_definition": "a*(0+(0)*sqrt(2), -1+(0)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        },
+        {
+          "id": 24,
+          "x_approx": "0.312459714104",
+          "y_approx": "-0.312459714104",
+          "exact_definition": "a*(0+(1/2)*sqrt(2), 0+(-1/2)*sqrt(2))",
+          "approximation_scope": "Drawing coordinates rounded to 12 places; not exact rational centers."
+        }
+      ],
+      "source_faces": [
+        [
+          16,
+          17,
+          18
+        ],
+        [
+          0,
+          1,
+          17
+        ],
+        [
+          1,
+          17,
+          18
+        ],
+        [
+          1,
+          2,
+          18
+        ],
+        [
+          16,
+          18,
+          19
+        ],
+        [
+          2,
+          3,
+          18
+        ],
+        [
+          3,
+          18,
+          19
+        ],
+        [
+          3,
+          4,
+          19
+        ],
+        [
+          16,
+          19,
+          20
+        ],
+        [
+          4,
+          5,
+          19
+        ],
+        [
+          5,
+          19,
+          20
+        ],
+        [
+          5,
+          6,
+          20
+        ],
+        [
+          16,
+          20,
+          21
+        ],
+        [
+          6,
+          7,
+          20
+        ],
+        [
+          7,
+          20,
+          21
+        ],
+        [
+          7,
+          8,
+          21
+        ],
+        [
+          16,
+          21,
+          22
+        ],
+        [
+          8,
+          9,
+          21
+        ],
+        [
+          9,
+          21,
+          22
+        ],
+        [
+          9,
+          10,
+          22
+        ],
+        [
+          16,
+          22,
+          23
+        ],
+        [
+          10,
+          11,
+          22
+        ],
+        [
+          11,
+          22,
+          23
+        ],
+        [
+          11,
+          12,
+          23
+        ],
+        [
+          16,
+          23,
+          24
+        ],
+        [
+          12,
+          13,
+          23
+        ],
+        [
+          13,
+          23,
+          24
+        ],
+        [
+          13,
+          14,
+          24
+        ],
+        [
+          16,
+          17,
+          24
+        ],
+        [
+          14,
+          15,
+          24
+        ],
+        [
+          15,
+          17,
+          24
+        ],
+        [
+          0,
+          15,
+          17
+        ]
+      ],
+      "graph_kind": "32 source active center triangles; not disk tangencies.",
+      "symmetry": {
+        "documented_candidate_symmetry": null,
+        "full_symmetry_group_classification": null
+      },
+      "sources": [
+        {
+          "snapshot": "sources/n25-geometry.json",
+          "snapshot_sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+          "snapshot_bytes": 12956,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json",
+          "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/geometry.json",
+          "original_sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n25-upper-verified.json",
+          "snapshot_sha256": "31be4173ab599ee18cbcd0a29cd646b6679dc1f9f26357a0eac6bbd656862340",
+          "snapshot_bytes": 897,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/VERIFIED.json",
+          "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/evidence/n25-algebraic-upper-round2/VERIFIED.json",
+          "original_sha256": "31be4173ab599ee18cbcd0a29cd646b6679dc1f9f26357a0eac6bbd656862340",
+          "copy_kind": "verbatim"
+        },
+        {
+          "snapshot": "sources/n25-geometry-source.py",
+          "snapshot_sha256": "9b40e47eb87c563552f3bd6ecf74fac76e89f6d38ac5800798dad5150eab9a88",
+          "snapshot_bytes": 8322,
+          "workspace_relative_source": "research-2026/n21-25-synthesis/n25_algebraic_upper.py",
+          "delivered_source": "shared/proof_bundle/research-2026/n21-25-synthesis/n25_algebraic_upper.py",
+          "original_sha256": "9b40e47eb87c563552f3bd6ecf74fac76e89f6d38ac5800798dad5150eab9a88",
+          "copy_kind": "verbatim"
+        }
+      ],
+      "proof_scope": "Source candidate/attainment illustration. This generator does not verify root isolation, every terminal box, global optimality, or uniqueness of optimal covers."
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "hull_orientation_margin": 0.05401980926959493,
+  "scope": "interval geometry around unique TC root; active identities require analytic root equations, not intervals containing zero",
+  "faces": [
+    {
+      "face": [
+        2,
+        9,
+        10
+      ],
+      "edge": null,
+      "active": true,
+      "numeric_radius": 0.37998385311983873,
+      "empty_margin": 0.15794075942508962,
+      "root_identity_residual_interval": [
+        -5.635378623145998e-09,
+        5.635378891684698e-09
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        6,
+        9,
+        10
+      ],
+      "edge": null,
+      "active": true,
+      "numeric_radius": 0.37998385311983873,
+      "empty_margin": 0.15794075942508962,
+      "root_identity_residual_interval": [
+        -5.635378623145998e-09,
+        5.635378891684698e-09
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        0,
+        1,
+        10
+      ],
+      "edge": 0,
+      "active": false,
+      "numeric_radius": 0.3788311711992195,
+      "empty_margin": 0.24633747004910353,
+      "root_identity_residual_interval": [
+        -0.0021495153791161415,
+        -0.0021494422677898898
+      ],
+      "radius_minus_r_squared_interval": [
+        -0.0008747481700382593,
+        -0.0008745965491836083
+      ]
+    },
+    {
+      "face": [
+        1,
+        2,
+        10
+      ],
+      "edge": 1,
+      "active": true,
+      "numeric_radius": 0.37998385311983884,
+      "empty_margin": 0.1504955301557012,
+      "root_identity_residual_interval": [
+        -1.3675870950868529e-08,
+        1.3675873817186997e-08
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        2,
+        3,
+        9
+      ],
+      "edge": 2,
+      "active": true,
+      "numeric_radius": 0.3799838531198389,
+      "empty_margin": 0.20635798370712297,
+      "root_identity_residual_interval": [
+        -1.946716359855383e-08,
+        1.9467167894360637e-08
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        3,
+        4,
+        9
+      ],
+      "edge": 3,
+      "active": true,
+      "numeric_radius": 0.37998385311987304,
+      "empty_margin": 0.3186870827655023,
+      "root_identity_residual_interval": [
+        -8.331716906161686e-08,
+        8.331737402761283e-08
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        4,
+        5,
+        9
+      ],
+      "edge": 4,
+      "active": true,
+      "numeric_radius": 0.3799838531198731,
+      "empty_margin": 0.31868708526051936,
+      "root_identity_residual_interval": [
+        -8.203336398227465e-08,
+        8.203356840826976e-08
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        5,
+        6,
+        9
+      ],
+      "edge": 5,
+      "active": true,
+      "numeric_radius": 0.37998385311983884,
+      "empty_margin": 0.20635798598585325,
+      "root_identity_residual_interval": [
+        -1.8733577275976697e-08,
+        1.8733581234501567e-08
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        6,
+        7,
+        10
+      ],
+      "edge": 6,
+      "active": true,
+      "numeric_radius": 0.37998385311983873,
+      "empty_margin": 0.15049553191563797,
+      "root_identity_residual_interval": [
+        -1.3326086895016626e-08,
+        1.3326089448757524e-08
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    },
+    {
+      "face": [
+        7,
+        8,
+        10
+      ],
+      "edge": 7,
+      "active": false,
+      "numeric_radius": 0.3788311711992195,
+      "empty_margin": 0.24633749843556474,
+      "root_identity_residual_interval": [
+        -0.0021495138742586945,
+        -0.0021494437726477553
+      ],
+      "radius_minus_r_squared_interval": [
+        -0.000874735220410871,
+        -0.0008746094988132602
+      ]
+    },
+    {
+      "face": [
+        8,
+        0,
+        10
+      ],
+      "edge": 8,
+      "active": true,
+      "numeric_radius": 0.37998385311983884,
+      "empty_margin": 0.3395097532767777,
+      "root_identity_residual_interval": [
+        -1.8025122954678335e-08,
+        1.8025126386667594e-08
+      ],
+      "radius_minus_r_squared_interval": [
+        -1.5199354124793548e-09,
+        1.5199354124793548e-09
+      ]
+    }
+  ],
+  "hub_norm_squared_margin": 0.3099033234732546,
+  "root_branch_margin": 0.0010930941504161491,
+  "boundary_arc_halfwidth_min": 0.28082192044638565,
+  "boundary_arc_halfwidth_max": 0.38822140563725227
+}

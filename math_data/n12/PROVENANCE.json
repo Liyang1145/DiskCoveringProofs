@@ -1,0 +1,28 @@
+{
+  "schema": 1,
+  "files": {
+    "domain.json.gz": {
+      "source": "cover12/proof_bundle/research-2026/n12-global/members/structure/parallel-domain/completed-domain-base.json",
+      "source_sha256": "7f44132b8dd09c8377b7e300caebe6ca5485b8933bde86455f67062733c1c57a",
+      "stored_sha256": "d08b39946d7585c92b71fbfc1a85cb271b2217f5f074f5ca13480e261f6eaa4d"
+    },
+    "root.json": {
+      "source": "cover12/proof_bundle/research-2026/n12-global/evidence/root-t-certificate.json",
+      "source_sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+      "stored_sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0"
+    },
+    "vectors-2048.json": {
+      "source": "cover12/proof_bundle/research-2026/n12-global/evidence/atomic-unit-vectors-2048.json",
+      "source_sha256": "acc14b2c954c91748e38a0e78720d717de8f45ce17456d4f121dc6a4c1085481",
+      "stored_sha256": "acc14b2c954c91748e38a0e78720d717de8f45ce17456d4f121dc6a4c1085481"
+    },
+    "vectors-8192.json": {
+      "source": "cover12/proof_bundle/research-2026/n12-global/members/upper-audit/integer-atomic/evidence/canonical-unit-vectors-8192.json",
+      "source_sha256": "e2fe3e7d6f0ab37587e83a9214b1abbe1127f8a83593732de1a584d88b7fb77a",
+      "stored_sha256": "e2fe3e7d6f0ab37587e83a9214b1abbe1127f8a83593732de1a584d88b7fb77a"
+    }
+  },
+  "scale_source_sha256": "d1f2e6e9be25d03001d6a7f665854b798cfb470bb1ba6ac986a1ae49b3ee0ee7",
+  "scale_policy": "Only scale exponents are reused as arbitrary witness parameters. Every capture, demand and inequality is freshly recomputed. No historical verdict/cache is used.",
+  "core_points": "Exact rational witness proposals from core_net_32; verifier independently checks their squared norms. No quadrature or tan approximation is a premise."
+}
