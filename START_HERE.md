@@ -38,3 +38,5 @@ python tools/project_status.py --json
 
 根 README 是数学导读；本页是任务接力入口。不要从旧会话的最后一句话或旧
 STATUS 中随意挑一个 ACTIVE 标记替代这里指向的最新状态。
+
+完整 n21–25 冻结输入与 n11 生成／验证补充包已公开。见 [下载与范围](docs/FROZEN_REPLAY_ASSETS.md)。完整清单、全部对应分包及远端摘要均已确认；旧路径的数学入口迁移和新鲜全局重放仍须继续。

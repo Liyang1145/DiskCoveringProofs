@@ -3,7 +3,8 @@
 
 Use a PACKAGES.json pinned by the repository delivery manifest. This is a byte
 restorer, not a mathematical checker. Source files and differing destination
-files are never overwritten. The ZIP layout is assets/<canonical>.
+files are never overwritten. The ZIP layout is assets/<canonical>. Optional
+metadata members must be explicitly size/hash bound and are never extracted.
 """
 import argparse
 from contextlib import closing
@@ -35,6 +36,19 @@ def filename(value):
     safe_relative(value)
     require("/" not in value, "Package file must be a basename")
     return value
+
+
+def metadata_entries(package):
+    entries = package.get("metadata_members", [])
+    require(isinstance(entries, list), "Invalid metadata member list")
+    result, folded = {}, set()
+    for entry in entries:
+        name = filename(entry["file"])
+        require(name.casefold() != "assets", "Metadata conflicts with asset namespace")
+        require(name.casefold() not in folded, "Duplicate metadata declaration")
+        folded.add(name.casefold())
+        result[name] = (expected_hash(entry["sha256"]), size_value(entry["bytes"]))
+    return result
 
 
 def checked_file(path, expected):
@@ -107,6 +121,7 @@ def restore(index_path, package_dir, destination, base_url=None):
         name = filename(entry["file"])
         require(name.casefold() not in names, "Duplicate package filename")
         names.add(name.casefold())
+    metadata = {entry["file"]: metadata_entries(entry) for entry in packages}
     ledger_path = acquire(index["files_manifest"], directory, base_url)
     # A disk index permits restoring million-file closures without a huge dict.
     with tempfile.TemporaryDirectory(prefix="frozen-restore-") as temporary:
@@ -130,13 +145,28 @@ def restore(index_path, package_dir, destination, base_url=None):
                 archive_path = acquire(entry, directory, base_url)
                 with zipfile.ZipFile(archive_path) as archive:
                     members = archive.infolist()
-                    require(len(members) == entry["files"], "Unexpected archive member count")
+                    bound_metadata = metadata[entry["file"]]
+                    seen_metadata = set()
+                    require(len(members) == entry["files"] + len(bound_metadata), "Unexpected archive member count")
                     raw_bytes = 0
                     for member in members:
-                        require(member.filename.startswith("assets/"), "Unbound archive member")
                         require(not member.is_dir(), "Unexpected directory member")
                         mode = member.external_attr >> 16
                         require(not stat.S_ISLNK(mode), "Symlink archive member")
+                        if not member.filename.startswith("assets/"):
+                            require(member.filename in bound_metadata, "Unbound archive member")
+                            require(member.filename.casefold() not in seen_metadata, "Duplicate metadata archive member")
+                            sha, size = bound_metadata[member.filename]
+                            require(member.file_size == size, "Metadata member length differs from index")
+                            digest, read_bytes = hashlib.sha256(), 0
+                            with archive.open(member) as source:
+                                for block in iter(lambda: source.read(1024 * 1024), b""):
+                                    read_bytes += len(block)
+                                    require(read_bytes <= size, "Metadata exceeds frozen size")
+                                    digest.update(block)
+                            require(read_bytes == size and digest.hexdigest() == sha, "Metadata member SHA256 mismatch")
+                            seen_metadata.add(member.filename.casefold())
+                            continue
                         canonical = safe_relative(member.filename[len("assets/"):])
                         row = database.execute("SELECT sha,bytes,seen FROM files WHERE path=?", (canonical,)).fetchone()
                         require(row is not None, "Archive contains a file outside the ledger")
@@ -169,6 +199,7 @@ def restore(index_path, package_dir, destination, base_url=None):
                         restored += 1
                         raw_bytes += size
                     require(raw_bytes == size_value(entry["uncompressed_bytes"]), "Package raw-byte count mismatch")
+                    require(seen_metadata == {name.casefold() for name in bound_metadata}, "Missing declared metadata member")
                 database.commit()
                 print(f"Restored bytes verified: {restored}/{count} files", flush=True)
             require(database.execute("SELECT count(*) FROM files WHERE seen=0").fetchone()[0] == 0, "Incomplete restored closure")

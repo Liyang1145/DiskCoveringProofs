@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-agent-handoff-v1",
-  "updated_at": "2026-10-14 Asia/Shanghai",
+  "updated_at": "2026-10-15T00:50:31.731880+08:00",
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
@@ -95,9 +95,9 @@
         }
       ],
       "fresh_portable_commands": [],
-      "asset_availability": "Full local frozen union n21/n22: 990407 files/6031570517 bytes; public coverage not freshly counted. Maintainer source tree, not public download.",
+      "asset_availability": "Complete snapshot-bound input union publicly downloadable; historical unrelated files excluded.",
       "next_actions": [
-        "Publish canonical frozen dependency inventory and bundles for n21/n22, then port original acceptance math."
+        "Port and freshly replay the mathematical acceptance chain with explicit path relocation; preserve written-reduction qualifications."
       ],
       "complete_fresh_global_replay": false
     },
@@ -113,9 +113,9 @@
         }
       ],
       "fresh_portable_commands": [],
-      "asset_availability": "Full local frozen union n21/n22: 990407 files/6031570517 bytes; public coverage not freshly counted. Maintainer source tree, not public download.",
+      "asset_availability": "Complete snapshot-bound input union publicly downloadable; historical unrelated files excluded.",
       "next_actions": [
-        "Publish canonical frozen dependency inventory and bundles for n21/n22, then port original acceptance math."
+        "Port and freshly replay the mathematical acceptance chain with explicit path relocation; preserve written-reduction qualifications."
       ],
       "complete_fresh_global_replay": false
     },
@@ -131,10 +131,10 @@
         }
       ],
       "fresh_portable_commands": [],
-      "asset_availability": "Public 55-file shared core bundle; full 1020085-file migrated union inventory downloadable, full data not yet released.",
+      "asset_availability": "Core bundle and complete 1020085-file migrated frozen union publicly downloadable; 260 hash-bound packages, not a proved minimal proof package.",
       "next_actions": [
         "Implement a separately scoped portable core mathematical dispatcher using restored exact inputs.",
-        "Publish full migrated-union data packages with complete coverage, then replay catalog/global chains."
+        "Freshly replay the supplied global/catalog chains with explicit path relocation and mathematical checks."
       ],
       "complete_fresh_global_replay": false
     },
@@ -150,10 +150,10 @@
         }
       ],
       "fresh_portable_commands": [],
-      "asset_availability": "Public 55-file shared core bundle; full 1020085-file migrated union inventory downloadable, full data not yet released.",
+      "asset_availability": "Core bundle and complete 1020085-file migrated frozen union publicly downloadable; 260 hash-bound packages, not a proved minimal proof package.",
       "next_actions": [
         "Implement a separately scoped portable core mathematical dispatcher using restored exact inputs.",
-        "Publish full migrated-union data packages with complete coverage, then replay catalog/global chains."
+        "Freshly replay the supplied global/catalog chains with explicit path relocation and mathematical checks."
       ],
       "complete_fresh_global_replay": false
     },
@@ -169,10 +169,10 @@
         }
       ],
       "fresh_portable_commands": [],
-      "asset_availability": "Public 55-file shared core bundle; full 1020085-file migrated union inventory downloadable, full data not yet released.",
+      "asset_availability": "Core bundle and complete 1020085-file migrated frozen union publicly downloadable; 260 hash-bound packages, not a proved minimal proof package.",
       "next_actions": [
         "Route freshly recomputed local/stress results into n25 angle-tree math; archived flags alone are insufficient.",
-        "Publish full migrated-union data packages with complete coverage, then replay catalog/global chains."
+        "Freshly replay the supplied global/catalog chains with explicit path relocation and mathematical checks."
       ],
       "complete_fresh_global_replay": false
     },
@@ -217,7 +217,7 @@
       "bytes": 49080537,
       "sha256": "1a003f7b0b3e478d071b8881f7b407e76312a0275452424e9a6b918322d817de",
       "url": "https://github.com/Liyang1145/DiskCoveringProofs/releases/download/proof-assets-core-20261014/n23-n25-full-closure.jsonl.gz",
-      "full_asset_content_public": false
+      "full_asset_content_public": true
     },
     {
       "id": "n26-arithmetic-server-seed",
@@ -232,6 +232,35 @@
       "release": "https://github.com/Liyang1145/DiskCoveringProofs/releases/tag/proof-assets-core-20261014",
       "restore_command": "make restore-n11-wip",
       "external_pinned_dependencies": "Read lean/lean-toolchain and lean/lake-manifest.json; caches not included"
+    },
+    {
+      "id": "n11-generator-and-gate-supplement",
+      "scope": "Three generator inputs and 680 original reported gate logs/results; null source-hash fields explicitly recorded, no new root acceptance",
+      "package_index": "assets/replay/n11-supplement/PACKAGES.json",
+      "profile": "assets/replay/n11-supplement/PROFILE.json",
+      "release": "https://github.com/Liyang1145/DiskCoveringProofs/releases/tag/proof-assets-replay-20261014",
+      "restore_command": "make restore-n11-supplement"
+    },
+    {
+      "id": "n23-n25-full-frozen-inputs",
+      "scope": "Complete migrated frozen union, not a proved minimum input set or fresh mathematical replay",
+      "files": 1020085,
+      "raw_bytes": 66482183809,
+      "archive_bytes": 8646763961,
+      "package_index": "assets/replay/n23-n25-full/PACKAGES.json",
+      "release": "https://github.com/Liyang1145/DiskCoveringProofs/releases/tag/proof-assets-replay-20261014",
+      "all_packages_uploaded_and_confirmed": true,
+      "restore_command": "make restore-replay-n23-n25"
+    },
+    {
+      "id": "n21-n22-frozen-inputs",
+      "scope": "Exact snapshot union plus snapshots themselves; no new mathematical replay",
+      "files": 990409,
+      "raw_bytes": 6208545972,
+      "package_index": "assets/replay/n21-n22/PACKAGES.json",
+      "release": "https://github.com/Liyang1145/DiskCoveringProofs/releases/tag/proof-assets-replay-20261014",
+      "all_packages_uploaded_and_confirmed": true,
+      "restore_command": "make restore-replay-n21-n22"
     }
   ],
   "storage_roles": {

@@ -1,6 +1,6 @@
 PYTHON ?= python
 
-.PHONY: verify restore check-math-n11 check-math-n12 check-math-n12-quick test-math gallery test-assets restore-core-n23-n25 restore-n11-wip
+.PHONY: verify restore check-math-n11 check-math-n12 check-math-n12-quick test-math gallery test-assets restore-core-n23-n25 restore-n11-wip restore-n11-supplement restore-replay-n21-n22 restore-replay-n23-n25
 verify:
 	$(PYTHON) tools/verify_delivery.py
 
@@ -32,3 +32,12 @@ restore-core-n23-n25:
 
 restore-n11-wip:
 	$(PYTHON) tools/restore_frozen_assets.py --package-index assets/replay/n11-wip/PACKAGES.json --from-url https://github.com/Liyang1145/DiskCoveringProofs/releases/download/proof-assets-core-20261014 --destination build/n11-wip
+
+restore-n11-supplement:
+	$(PYTHON) tools/restore_frozen_assets.py --package-index assets/replay/n11-supplement/PACKAGES.json --from-url https://github.com/Liyang1145/DiskCoveringProofs/releases/download/proof-assets-replay-20261014 --destination build/n11-wip
+
+restore-replay-n21-n22:
+	$(PYTHON) tools/restore_frozen_assets.py --package-index assets/replay/n21-n22/PACKAGES.json --from-url https://github.com/Liyang1145/DiskCoveringProofs/releases/download/proof-assets-replay-20261014 --destination build/n21-n22-assets
+
+restore-replay-n23-n25:
+	$(PYTHON) tools/restore_frozen_assets.py --package-index assets/replay/n23-n25-full/PACKAGES.json --from-url https://github.com/Liyang1145/DiskCoveringProofs/releases/download/proof-assets-replay-20261014 --destination build/n23-n25-assets

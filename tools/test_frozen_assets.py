@@ -375,6 +375,84 @@ class RestoreControls(unittest.TestCase):
                                          files=len(members), uncompressed_bytes=sum(len(data) for _, data in members))
         self.save_index()
 
+    def metadata_bundle(self, declarations=None, members=None):
+        self.make_bundle()
+        metadata = b'{"canonical":"a.bin"}\n'
+        if declarations is None:
+            declarations = [{"file": "ASSET-MANIFEST.jsonl", "bytes": len(metadata), "sha256": sha(metadata)}]
+        if members is None:
+            members = [("assets/a.bin", self.payload), ("assets/z.bin", self.payload),
+                       ("ASSET-MANIFEST.jsonl", metadata)]
+        self.rewrite_package(members)
+        self.index["packages"][0].update(metadata_members=declarations, files=2,
+                                         uncompressed_bytes=2 * len(self.payload))
+        self.save_index()
+        return metadata
+
+    def test_declared_metadata_validated_but_not_restored(self):
+        self.metadata_bundle()
+        result = restorer.restore(self.package_index, self.output, self.destination)
+        self.assertEqual(result["files"], 2)
+        self.assertEqual(result["bytes"], 2 * len(self.payload))
+        self.assertFalse((self.destination / "ASSET-MANIFEST.jsonl").exists())
+        self.assertEqual(sorted(path.name for path in self.destination.rglob("*") if path.is_file()),
+                         ["a.bin", "z.bin"])
+
+    def test_metadata_hash_mismatch_rejected_even_when_assets_already_restored(self):
+        self.metadata_bundle()
+        restorer.restore(self.package_index, self.output, self.destination)
+        self.index["packages"][0]["metadata_members"][0]["sha256"] = "0" * 64
+        self.save_index()
+        with self.assertRaisesRegex(ValueError, "Metadata member SHA256 mismatch"):
+            restorer.restore(self.package_index, self.output, self.destination)
+
+    def test_metadata_length_mismatch_rejected(self):
+        self.metadata_bundle()
+        self.index["packages"][0]["metadata_members"][0]["bytes"] += 1
+        self.save_index()
+        with self.assertRaisesRegex(ValueError, "Metadata member length"):
+            restorer.restore(self.package_index, self.output, self.destination)
+
+    def test_duplicate_metadata_member_rejected(self):
+        metadata = b'{"canonical":"a.bin"}\n'
+        self.metadata_bundle(members=[("assets/a.bin", self.payload),
+                                      ("ASSET-MANIFEST.jsonl", metadata),
+                                      ("ASSET-MANIFEST.jsonl", metadata)])
+        with self.assertRaisesRegex(ValueError, "Duplicate metadata archive member"):
+            restorer.restore(self.package_index, self.output, self.destination)
+
+    def test_undeclared_metadata_rejected(self):
+        self.metadata_bundle(members=[("assets/a.bin", self.payload), ("assets/z.bin", self.payload),
+                                      ("UNDECLARED.jsonl", b"not declared")])
+        with self.assertRaisesRegex(ValueError, "Unbound archive member"):
+            restorer.restore(self.package_index, self.output, self.destination)
+
+    def test_unsafe_metadata_names_and_casefold_declarations_rejected(self):
+        self.metadata_bundle()
+        for name in ("../escape", "assets/a.bin", "a\\b", "CON.txt", "assets", "/absolute"):
+            with self.subTest(name=name):
+                self.index["packages"][0]["metadata_members"] = [
+                    {"file": name, "bytes": 0, "sha256": sha(b"")}]
+                self.save_index()
+                with self.assertRaises((ValueError, exporter.Rejected)):
+                    restorer.restore(self.package_index, self.output, self.destination)
+                self.assertFalse(self.destination.exists())
+        self.index["packages"][0]["metadata_members"] = [
+            {"file": name, "bytes": 0, "sha256": sha(b"")}
+            for name in ("ASSET-MANIFEST.jsonl", "asset-manifest.JSONL")]
+        self.save_index()
+        with self.assertRaisesRegex(ValueError, "Duplicate metadata declaration"):
+            restorer.restore(self.package_index, self.output, self.destination)
+
+    def test_invalid_metadata_schema_rejected(self):
+        self.metadata_bundle()
+        for value in (None, {}, "ASSET-MANIFEST.jsonl"):
+            with self.subTest(value=value):
+                self.index["packages"][0]["metadata_members"] = value
+                self.save_index()
+                with self.assertRaisesRegex(ValueError, "Invalid metadata member list"):
+                    restorer.restore(self.package_index, self.output, self.destination)
+
     def test_export_restore_round_trip_and_identical_existing_assets(self):
         self.make_bundle()
         result = restorer.restore(self.package_index, self.output, self.destination)
