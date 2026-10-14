@@ -1,0 +1,18 @@
+{
+  "policy": "Explicit relocation only; original frozen documents and source bytes are unchanged.",
+  "roots": [
+    {"original": "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\workspace", "namespace": "workspace"},
+    {"original": "F:\\ai4math2-proof-output-20261007-v1\\recovered-20261004-migrated\\bulk", "namespace": "bulk"},
+    {"original": "F:\\ai4math2-proof-output-20261007-v1\\migrated-source-20261008\\n23-global-final1", "namespace": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n23-global-final1"},
+    {"original": "F:\\ai4math2-proof-output-20261007-v1\\migrated-source-20261008\\n24-global-final1", "namespace": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n24-global-final1"},
+    {"original": "F:\\ai4math2-proof-output-20261007-v1\\migrated-source-20261008\\n25-global-final5", "namespace": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n25-global-final5"},
+    {"original": "F:\\ai4math2-proof-output-20261007-v1\\migrated-source-20261008\\n25-all-final-prerequisites-byte-binding-v4", "namespace": "workspace/research-2026/n21-25-synthesis/round4-solo-20261004/n25-all-final-prerequisites-byte-binding-v4"},
+    {"original": "C:\\热爱单机但萌新\\_incoming-local-math-20261004\\recovered-20261004\\workspace", "namespace": "workspace"},
+    {"original": "C:\\热爱单机但萌新\\_incoming-local-math-20261004\\recovered-20261004\\bulk", "namespace": "bulk"},
+    {"original": "C:\\热爱单机但萌新\\_incoming-local-math-20261004", "namespace": "archives"},
+    {"original": "F:\\ai4math2-proof-output-20261007-v1", "namespace": "server-output"},
+    {"original": "C:\\Users\\Administrator\\Documents\\Codex", "namespace": "server-tools"},
+    {"original": "C:\\热爱单机但萌新\\ai4math2", "namespace": "migrated-workspace"},
+    {"original": "C:\\热爱单机但萌新", "namespace": "server-environment"}
+  ]
+}

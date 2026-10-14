@@ -1,0 +1,63 @@
+{
+  "complete": true,
+  "files_manifest": {
+    "bytes": 46901904,
+    "file": "n21-n22-FILES.jsonl.gz",
+    "sha256": "4d3034e785750d5481121aede78fe9d6964bf73ed6b06890f4e9c1c99c0f170f"
+  },
+  "inventory_sha256": "4d3034e785750d5481121aede78fe9d6964bf73ed6b06890f4e9c1c99c0f170f",
+  "ledger_sha256": "dd45f23a62985f68d9940dab938fcac21a4d74103929b57e8b7415d334d5d409",
+  "mathematical_verification": "not_performed",
+  "packages": [
+    {
+      "bytes": 137939390,
+      "file": "n21-n22-0001.zip",
+      "files": 83984,
+      "sha256": "701c80a3847af4c7a6aed052d1f81972effb167d2f6292ef574ad59e114f5d31",
+      "uncompressed_bytes": 1034480663
+    },
+    {
+      "bytes": 119732127,
+      "file": "n21-n22-0002.zip",
+      "files": 51792,
+      "sha256": "76ed6db726af242c16b91379aa7727bc7d1d9052afa1f1af9281316245d65f6b",
+      "uncompressed_bytes": 982733620
+    },
+    {
+      "bytes": 44543036,
+      "file": "n21-n22-0003.zip",
+      "files": 8014,
+      "sha256": "e3e6fe2f3e3d8c6df81336b3d0ff9ec5a4c8274b70a99ad353a3ee351edde8f3",
+      "uncompressed_bytes": 990665680
+    },
+    {
+      "bytes": 447065046,
+      "file": "n21-n22-0004.zip",
+      "files": 437542,
+      "sha256": "455e5773072bd60d9338a69bd8108c40a776c494a058b9b7148f67869da7bab0",
+      "uncompressed_bytes": 959745401
+    },
+    {
+      "bytes": 167197874,
+      "file": "n21-n22-0005.zip",
+      "files": 112218,
+      "sha256": "88498d6dee466ff655e68b39da0fd9b30dd259ce250a77e88bed89ca075788c5",
+      "uncompressed_bytes": 1073701129
+    },
+    {
+      "bytes": 303153765,
+      "file": "n21-n22-0006.zip",
+      "files": 289381,
+      "sha256": "53526eb4a342af7cb6a3412beda3c5554119fd175f8a3f07223c45fd3e875d83",
+      "uncompressed_bytes": 745005068
+    },
+    {
+      "bytes": 24232213,
+      "file": "n21-n22-0007.zip",
+      "files": 7478,
+      "sha256": "dae6e72be13356bfc46107c4d8dbd351432b6a5c99953f562b9569a32207687f",
+      "uncompressed_bytes": 422214411
+    }
+  ],
+  "schema": "frozen-assets-packages-v1"
+}

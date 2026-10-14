@@ -1,0 +1,95 @@
+{
+  "schema": "n21-n22-frozen-reference-publication-profile-v1",
+  "scope": "Selected union of final frozen snapshots, plus the snapshots themselves and explicit written-proof/audit entry points if not already bound. This is a frozen-input delivery profile, not a proof-minimality claim or fresh mathematical replay.",
+  "source_snapshots": [
+    {
+      "n": 21,
+      "source_snapshot": {
+        "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round2-grouped\\evidence\\N21-GLOBAL-SNAPSHOT-resume1.json",
+        "sha256": "79d4339fdc42075febdccbd7322a9138f8c37668061a8604015e058b733d9881",
+        "bytes": 14958400
+      },
+      "schema": "n21-unrestricted-written-and-exact-certificate-proof-v1",
+      "files": 86144,
+      "top_level_fields": [
+        "schema",
+        "date",
+        "timezone",
+        "N",
+        "global_optimality_source_proof_completed",
+        "written_arbitrary_cover_and_peeling_argument",
+        "mathematical_argument_is_not_machine_formalized",
+        "formalization_completed",
+        "third_party_peer_review_completed",
+        "r_strict_interval",
+        "type_closure",
+        "remaining_five_target_global_proofs"
+      ]
+    },
+    {
+      "n": 22,
+      "source_snapshot": {
+        "path": "E:\\ai4math2\\research-2026\\n21-25-synthesis\\round3-high\\evidence\\N22-GLOBAL-SNAPSHOT-resume1.json",
+        "sha256": "22aa3a7f8d99ccf0352ca702d74d07918b987b676063baee090392223dd99877",
+        "bytes": 162017055
+      },
+      "schema": "n22-unrestricted-written-and-exact-certificate-proof-v1",
+      "files": 904281,
+      "top_level_fields": [
+        "schema",
+        "verified",
+        "N",
+        "global_optimality_source_proof_completed",
+        "written_arbitrary_cover_and_peeling_argument",
+        "mathematical_argument_is_not_machine_formalized",
+        "formalization_completed",
+        "third_party_peer_review_completed",
+        "r_strict_interval",
+        "radius_square_polynomial_ascending",
+        "radius_square_isolating_interval",
+        "type_closure",
+        "file_count",
+        "remaining_five_target_global_proofs"
+      ]
+    }
+  ],
+  "snapshot_union_files": 990407,
+  "common_identical_snapshot_paths": 18,
+  "selected_files": 990409,
+  "additional_entries": [
+    {
+      "n": 21,
+      "canonical": "research-2026/n21-25-synthesis/round2-grouped/evidence/N21-GLOBAL-SNAPSHOT-resume1.json",
+      "sha256": "79d4339fdc42075febdccbd7322a9138f8c37668061a8604015e058b733d9881",
+      "bytes": 14958400,
+      "role": "frozen_snapshot"
+    },
+    {
+      "n": 22,
+      "canonical": "research-2026/n21-25-synthesis/round3-high/evidence/N22-GLOBAL-SNAPSHOT-resume1.json",
+      "sha256": "22aa3a7f8d99ccf0352ca702d74d07918b987b676063baee090392223dd99877",
+      "bytes": 162017055,
+      "role": "frozen_snapshot"
+    }
+  ],
+  "raw_byte_budget_from_20261008_full_audit": 6031570517,
+  "additional_bytes": 176975455,
+  "target_raw_bytes_as_expected_from_old_audit": 6208545972,
+  "canonical_ledger": {
+    "file": "CANONICAL-INPUTS.jsonl.gz",
+    "sha256": "dd45f23a62985f68d9940dab938fcac21a4d74103929b57e8b7415d334d5d409",
+    "bytes": 44845515
+  },
+  "root_map": {
+    "file": "ROOT-MAP.json",
+    "sha256": "6086f351094b2de25831842d5a7a8ef8f6fffde22cca676ccba924cd77afa41c"
+  },
+  "top_namespaces": [
+    "research-2026"
+  ],
+  "snapshot_bound_archives_preserved": [],
+  "credential_shape_scan": "required during the selected-source hashing pass; hits block export and never print matching bytes",
+  "per_package_raw_limit": 536870912,
+  "source_files_changed": false,
+  "fresh_mathematical_verification": "not_performed"
+}

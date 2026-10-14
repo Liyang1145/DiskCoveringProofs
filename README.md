@@ -167,3 +167,5 @@ provenance; they are not automatically relicensed.
 Use the [Zenodo DOI](https://doi.org/10.5281/zenodo.23344751) to cite the deposited
 version, and record the repository commit and the fresh report's scope when
 describing a replay.
+
+The [frozen replay asset release](docs/FROZEN_REPLAY_ASSETS.md) additionally supplies n11 generator/gate records, the complete n21/n22 snapshot inputs and the complete migrated n23–25 input union. All indexed release assets have confirmed remote digests. These are byte-bound inputs; portable global mathematical replay remains separate.
