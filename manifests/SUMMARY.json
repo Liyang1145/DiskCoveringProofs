@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-bounded-source-results-checked-part-reuse-v3",
-  "snapshot_date": "2026-10-13",
+  "snapshot_date": "2026-10-14",
   "timezone": "Asia/Shanghai",
   "covers": [
     11,
@@ -18,8 +18,8 @@
     12,
     14
   ],
-  "delivered_files": 14456,
-  "delivered_original_bytes": 2104071504,
+  "delivered_files": 14517,
+  "delivered_original_bytes": 2111073199,
   "complete_historical_dependency_mirror": false,
   "complete_not_delivered_file_inventory": false,
   "this_delivery_is_new_mathematical_acceptance": false,
@@ -32,5 +32,12 @@
   "previous_collector": "v1 stopped after >2.8 million inventory items; original files and staged bytes preserved; incomplete journal ignored",
   "seconds": 159.7,
   "existing_gzip_parts_freshly_reconstructed_before_reuse": true,
-  "selection_reused_after_actual_v2_post_selection_failure": true
+  "selection_reused_after_actual_v2_post_selection_failure": true,
+  "preserved_source_proof_entries": 14444,
+  "original_snapshot_commit": "1790e4aad4d06a70c272c9608f186beaccc4e9f9",
+  "fresh_portable_math_scopes": {
+    "n11": "root, candidate geometry, 371 Schur fields; global not replayed",
+    "n12": "full root and k10 arithmetic: 7041 terminals, 6723 fresh atomic checks; analytic/global chain not replayed"
+  },
+  "new_unrestricted_global_acceptance": false
 }

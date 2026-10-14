@@ -1,54 +1,155 @@
+<!-- SPDX-License-Identifier: MIT -->
 # DiskCoveringProofs
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23344751.svg)](https://doi.org/10.5281/zenodo.23344751)
 
-单位闭圆盘的等半径圆盘覆盖：本地证明成果、精确证书与研究记录。
-本仓库按 `coverN / docs / proof_bundle / verification` 组织，参考
-VonEquinox/DiskCoveringSolve 的 11–20 分阶布局，但保留本地证明路线，
-不把已有公开包的编号重叠当作删除理由。
+Covering the closed unit disk with congruent disks: archived source proofs,
+exact certificates, and reproducible mathematical checks.
+单位闭圆盘的等半径圆盘覆盖：源证明、精确证书与可复现数学检查。
 
-这里包含 **11、12、14、21、22、23、24、25、26**。
-本地 11、12、14 全部单独提交，不用另一仓库的同阶证明替换。
-13、15、16 的公开包复现不是本仓库的原创成果；17–20 不新增本地认证。
+For arbitrary centers $c_i\in\mathbb R^2$, the problem is to determine
 
-| 阶数 | 本地成果状态 | 阅读入口 |
+$$
+r_D(n)=\inf_{c_1,\ldots,c_n}\max_{x\in D}\min_i\lVert x-c_i\rVert,
+\qquad D=\{x:\lVert x\rVert\leq1\}.
+$$
+
+Start with the [mathematical reader's guide](docs/MATHEMATICAL_GUIDE.md) and
+[notation dictionary](docs/NOTATION.md). They translate names such as `C450`,
+`C891`, `C924`, `k10`, and `root25` into mathematical statements and domains.
+编号是归档索引；先看数学名称、量词、证明链与实际执行范围。
+
+## Run mathematical checks / 运行数学检查
+
+Use Python 3.10 or later. The twelve-disk atomic replay additionally requires
+NumPy; the other checker computations use the Python standard library.
+The new checkers use repository-relative data paths and write fresh reports.
+
+```sh
+python -m pip install -r requirements-math.txt
+make check-math-n11
+make check-math-n12
+```
+
+Without Make, including on Windows, use the same direct entry points:
+
+```sh
+python tools/check_math.py n11 --report build/math-n11.json
+python tools/check_math.py n12 --workers 4 --report build/math-n12.json
+```
+
+| Entry point | Fresh mathematical computation | Scope of a successful result |
 |---|---|---|
-| 11 | 既有计算机辅助全局源证明 C924；非完整 Lean 形式化 | [cover11](cover11/README.md) |
-| 12 | 既有计算机辅助全局源证明 C1141 | [cover12](cover12/README.md) |
-| 14 | 既有计算机辅助全局源证明 C1372 | [cover14](cover14/README.md) |
-| 21 | 历史完整全局源证明交付，保留本轮复查范围 | [cover21](cover21/README.md) |
-| 22 | 历史完整全局源证明交付，保留本轮复查范围 | [cover22](cover22/README.md) |
-| 23 | 已接受的计算机辅助全局源证明 | [cover23](cover23/README.md) |
-| 24 | 已接受的计算机辅助全局源证明 | [cover24](cover24/README.md) |
-| 25 | 已接受的计算机辅助全局源证明，接受件限定一并保留 | [cover25](cover25/README.md) |
-| 26 | **未完成全局证明**；精确根、部分排除与未决前沿 | [cover26](cover26/README.md) |
+| `check-math-n11` | Recomputes the 12-dimensional isolated root, same-root threshold, attaining-candidate interval geometry, and all 371 rational Schur energy fields. | A **scoped arithmetic check**. It does not replay the global two-circle bound, all metric-class exclusions, or all global oracle leaves. Read [N11_CHECK_SCOPE.md](docs/N11_CHECK_SCOPE.md). |
+| `check-math-n12` | Recomputes exact root isolation, the full hub-domain partition, all 318 infeasibility predicates, and all 6723 atomic capture inequalities, without using cached acceptance verdicts. | The **complete 7041-terminal-box `k10` branch arithmetic**, plus root isolation. The analytic cover-to-domain reduction, attainment, and other branches of the global theorem remain separate source obligations. |
 
-以上是源证明与保存的接受记录，不是本次上传重新证明了这些结论。
-不主张外部同行评审、全部最优构型唯一性、原创优先权或 Lean/Coq 完成。
-数值显示不是精确根定义。
+The complete twelve-disk command performs substantial computation; its report
+records the number of fresh inequalities and subdivided ring-center boxes.
+To inspect a small sample first, run
+`python tools/check_math.py n12 --quick --workers 2`.
+A sampled run is explicitly labeled **NOT FULL**.
+Neither command claims a complete global-proof replay. The `--require-global`
+option turns that unmet requirement into a failed command.
 
-## 目录
+中文范围说明：`n11` 的入口给根、阈值、达到构型的区间几何与371个能量场消元检查，仍不等于
+全局下界重放；`n12` 默认重新计算十活跃盘分支全部 7041 个终端盒的数学条件，
+不读取缓存结论。这个完整分支也不替代全局定理的解析归约和其他分支。
+核验项目及数量以本次生成的报告为准。
 
-- `cover11/`, `cover12/`, `cover14/`：不同于参考仓库的本地路线。
-- `cover21/` 至 `cover25/`：分阶文档、最终接受记录及共享证明代码。
-- `cover26/`：原始执行代码、精确证书、正式/算术两层进展与未决义务。
-- `shared/proof_bundle/`：21–25 的跨阶共享源文件，不改原始字节。
-- `manifests/`：来源、原始 SHA256、已提交字节与大文件无损封装记录。
-- `tools/`：仅核对交付字节和恢复无损封装，不冒充数学接受器。
-- `docs/`：交付范围、来源、复现限制与凭据安全说明。
+## Results and archive status / 成果与归档状态
 
-## 先核对，再复现
+The repository contains orders **11, 12, 14, 21, 22, 23, 24, 25, and 26**.
+These are archived source-proof and acceptance states. A new upload, byte
+verification, or partial mathematical replay does not establish a new global
+theorem. Complete Lean/Coq formalization, external peer review, novelty priority,
+and classification of all optimal configurations are not claimed.
+
+| $n$ | Radius rounded to 20 decimal places | Exact object / 精确对象 | Archived source status / 原来源状态 |
+|---|---|---|---|
+| 11 | $0.37998385311983868972$ | Boxed contact/stationarity root, radius coordinate / 接触与驻定隔离根 | [Global source proof `C924`](cover11/README.md); separate Lean formalization incomplete. / 非完整 Lean 形式化 |
+| 12 | $0.36110296374450864411$ | Boxed algebraic solution $F=G=H=T=0$, radius coordinate / 四方程隔离根 | [Global source proof `C1141`](cover12/README.md) / 全局源证明 |
+| 14 | $0.33173203427623412256$ | Boxed $F=G=H=0$ root with positive radical branches / 正根分支隔离根 | [Global source proof `C1372`](cover14/README.md) / 全局源证明 |
+| 21 | $0.26284507240358458065$ | Square root of boxed core-system radius-squared coordinate / 核心系统隔离根 | [Historical complete global delivery](cover21/README.md), recheck scope retained. / 保留复查范围 |
+| 22 | $0.25325145983509235808$ | $\sqrt{t_*}$, isolated root of $29t^3-55t^2+19t-1$ / 三次方程的平方半径根 | [Historical complete global delivery](cover22/README.md), recheck scope retained. / 保留复查范围 |
+| 23 | $0.24995377658605018325$ | Square root of boxed core-system radius-squared coordinate / 核心系统隔离根 | [Accepted global source proof](cover23/README.md) / 已接受全局源证明 |
+| 24 | $0.24530165016852390995$ | Square root of boxed core-system radius-squared coordinate / 核心系统隔离根 | [Accepted global source proof](cover24/README.md) / 已接受全局源证明 |
+| 25 | $0.23914631173810026822$ | $1/(\sqrt6+\sqrt3)$ | [Accepted global source proof](cover25/README.md), original qualification retained. / 保留接受件限定 |
+| 26 | — | Candidate root only / 仅候选根 | [**Global proof incomplete**](cover26/README.md) / **全局证明未完成** |
+
+Decimals are displays, not exact root definitions. For the eleven-disk system,
+read the [boxed root definition](cover11/proof_bundle/research-2026/team-current/lead/N11-GLOBAL-OPTIMALITY-THEOREM.md);
+for twelve disks, read the [four equations](cover12/proof_bundle/research-2026/n12-global/lead/GLOBAL-SYNTHESIS.md).
+The twenty-two-disk polynomial is in **squared radius** and its isolating
+interval is $(641/10000,321/5000)$; the
+[same-root link](shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/N22-GLOBAL-PROOF.md)
+identifies it with the attaining core root. Read each source for the branch,
+root proof, attainment, and lower-bound quantifiers.
+The [radius index](assets/configurations/radius-index.json) gives source-bound
+rounded displays for all eight completed source-proof orders, with their exact
+definition entries and available symmetry information.
+
+## Configuration atlas / 构型图集
+
+| Eleven disks / 十一盘 | Twelve disks / 十二盘 | Twenty-two disks / 二十二盘 |
+|---|---|---|
+| [![Eleven-disk configuration](assets/configurations/n11.svg)](assets/configurations/n11.svg) | [![Twelve-disk configuration](assets/configurations/n12.svg)](assets/configurations/n12.svg) | [![Twenty-two-disk configuration](assets/configurations/n22.svg)](assets/configurations/n22.svg) |
+
+The [atlas](docs/CONFIGURATIONS.md) explains the coverage drawings, center
+triangulations, and boundary anchors, including additional diagrams for 14 and
+25 disks. Download the
+[center coordinate table](assets/configurations/coordinates.csv) or the
+[machine-readable configuration data](assets/configurations/configurations.json).
+The [source map](assets/configurations/provenance.json) records where the
+coordinates come from. Drawings and approximate coordinates aid reading;
+the exact root certificates and whole-disk arguments carry the proof.
+图形与近似坐标用于理解构型；精确含义由原根证书和全闭盘覆盖论证给出。
+
+## Delivery integrity / 交付完整性
 
 ```sh
 python tools/verify_delivery.py
 python tools/restore_large_files.py --destination ../restored
 ```
 
-第一条只验证提交材料的 SHA256 和无损封装。
-第二条在新的目录恢复大文件，拒绝覆盖不同内容。
-它们**不证明全局最优性**。数学复现应使用各阶原始证明入口；
-所需的原工作区布局、绝对路径映射和大型依赖必须另外满足。
-未随本次提交交付的历史逐叶材料范围在交付说明中明确标记，
-不能因为入口或接受报告已经提交，就宣称全依赖已自包含或全链重新跑完。
+The first command checks submitted bytes, SHA256, and lossless packaging.
+The second restores packaged large files into a new directory and refuses to
+overwrite different contents. These are integrity tools, separate from the
+mathematical checkers above.
 
-本仓库初始为私有。仓库不包含 GitHub 令牌、登录配置或认证文件。
+This delivery is a selected extraction from a 100 GB-scale historical workspace.
+Some archived full-chain scripts retain Windows/WSL absolute paths or depend on
+historical leaf assets not submitted here. The new mathematical checks have
+their own bundled input set; archived full-chain replay has the separate
+limitations documented in [DELIVERY_SCOPE.md](docs/DELIVERY_SCOPE.md) and
+[PROVENANCE.md](docs/PROVENANCE.md). A complete inventory of all historical
+omissions has not been claimed.
+
+## Layout and provenance / 目录与来源
+
+- `cover11/`, `cover12/`, `cover14/`: local proof routes, retained separately
+  from the reference repository's same-order proofs.
+- `cover21/` through `cover25/`: per-order guides, final acceptance records,
+  and references to shared proof sources.
+- `cover26/`: unfinished research, original execution code, and selected
+  current/check pairs. Its `root25` label refers to an **$n=26$ branch**.
+- `shared/proof_bundle/`: original cross-order proof bytes for 21–25.
+- `math_data/`, `tools/mathcheck_*.py`: bundled arithmetic inputs and new
+  portable mathematical checkers.
+- `manifests/`: source identities, delivered bytes, and lossless packaging.
+- `docs/`: mathematical guide, notation, check scope, delivery, and provenance.
+
+The original per-order layout references VonEquinox/DiskCoveringSolve.
+Reproductions of public packages for 13, 15, and 16 are not original results
+of this repository; no new local certification for 17–20 is added.
+Archive files and historical acceptance records retain their original bytes
+and qualifications.
+
+## License and citation / 许可与引用
+
+[MIT](LICENSE) covers maintainer-authored new tools and public-facing material
+as specified in [LICENSE_SCOPE.md](docs/LICENSE_SCOPE.md). Archived sources,
+historical certificate inputs, and third-party material retain their original rights and
+provenance; they are not automatically relicensed.
+Use the [Zenodo DOI](https://doi.org/10.5281/zenodo.23344751) to cite the deposited
+version, and record the repository commit and the fresh report's scope when
+describing a replay.

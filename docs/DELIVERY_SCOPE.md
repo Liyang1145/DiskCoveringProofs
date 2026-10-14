@@ -21,3 +21,14 @@
 
 保存接受件和验证交付哈希，不等于本轮独立重做了数学证明。
 本仓库的字节检查器遇到缺件、改字节或错误封装必须失败。
+
+## 2026-10-14: portable mathematical checks
+
+The new `tools/check_math.py` uses only small `math_data/` snapshots. The n12
+entry recomputes all 7041 terminals of the k10 branch, while n11 performs
+root, configuration geometry and finite stress-field checks. Neither entry
+replays every analytic/global obligation; see `REPRODUCIBILITY.md`. These new
+entry points need no historical Windows/WSL path mapping or large-file restore.
+The original delivery manifest is preserved byte-for-byte in
+`manifests/history/FILES-20261013.jsonl.gz`; the live manifest tracks maintained
+documentation and new assets. Original proof-bundle bytes are unchanged.

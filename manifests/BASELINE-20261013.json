@@ -1,0 +1,7 @@
+{
+  "git_commit": "1790e4aad4d06a70c272c9608f186beaccc4e9f9",
+  "original_manifest_sha256": "d021bd6685634e8bf373f385567287dbd9ec0d2ee5de55e68910d3649740e004",
+  "original_summary_sha256": "e79ee47bb8c9cdaab9e0df9a6ec8c520ad124e8938195d2641e1c58cb6cbe4b7",
+  "manifest_archive": "history/FILES-20261013.jsonl.gz",
+  "note": "The archived manifest decompresses to the exact original bytes. Source proof-bundle entries remain unchanged. The live manifest is updated for maintained documentation and new portable verification assets."
+}

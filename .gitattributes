@@ -1,0 +1,4 @@
+# Proof inputs and reports are byte-bound. Never rewrite line endings on checkout.
+* -text
+# Imported Windows source files intentionally retain their original CRLF bytes.
+* whitespace=cr-at-eol

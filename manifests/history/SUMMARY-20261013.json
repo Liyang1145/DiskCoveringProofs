@@ -1,0 +1,36 @@
+{
+  "schema": "disk-covering-bounded-source-results-checked-part-reuse-v3",
+  "snapshot_date": "2026-10-13",
+  "timezone": "Asia/Shanghai",
+  "covers": [
+    11,
+    12,
+    14,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26
+  ],
+  "duplicate_numbered_local_proofs_preserved": [
+    11,
+    12,
+    14
+  ],
+  "delivered_files": 14456,
+  "delivered_original_bytes": 2104071504,
+  "complete_historical_dependency_mirror": false,
+  "complete_not_delivered_file_inventory": false,
+  "this_delivery_is_new_mathematical_acceptance": false,
+  "n26_global_optimality_proved": false,
+  "n26_candidate_angle_roots_pending": 16,
+  "n26_same_root_conditional_frontier_pending": 4957,
+  "n26_root25_arithmetic_open_domains": 344,
+  "raw_original_sources_unchanged": true,
+  "credentials_persisted": false,
+  "previous_collector": "v1 stopped after >2.8 million inventory items; original files and staged bytes preserved; incomplete journal ignored",
+  "seconds": 159.7,
+  "existing_gzip_parts_freshly_reconstructed_before_reuse": true,
+  "selection_reused_after_actual_v2_post_selection_failure": true
+}

@@ -1,0 +1,34 @@
+name: Scoped mathematical replay
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      full_n12:
+        description: 'Freshly replay all 6723 atomic inequalities (longer run)'
+        type: boolean
+        default: false
+jobs:
+  math:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-math.txt
+      - name: Reject mathematical corruption and incomplete partitions
+        run: python tools/test_math_checks.py
+      - name: Fresh n11 root, geometry and finite Schur arithmetic
+        run: python tools/check_math.py n11 --report publication-local/n11.json
+      - name: Fresh n12 exact root, complete partition/prunes and sampled atoms
+        if: ${{ !inputs.full_n12 }}
+        run: python tools/check_math.py n12 --quick --report publication-local/n12.json
+      - name: All n12 k10 mathematical terminal checks
+        if: ${{ inputs.full_n12 }}
+        run: python tools/check_math.py n12 --workers 2 --report publication-local/n12.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: fresh-mathematical-results
+          path: publication-local/*.json

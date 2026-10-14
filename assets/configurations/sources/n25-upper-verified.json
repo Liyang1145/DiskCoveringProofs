@@ -1,0 +1,21 @@
+{
+  "verified": true,
+  "statement": "The specified 25 equal disks cover the entire closed unit disk with radius 1/(sqrt(6)+sqrt(3))",
+  "r_strict_interval": [
+    "0.239146311738100268223279244400006341674380742282096500125628",
+    "0.239146311738100268223279244400006341674380742282096500125629"
+  ],
+  "radius_isolated_by": "exact quadratic-field squared comparisons; not decimal definition",
+  "actual_cover_radius_equals_r": true,
+  "exact_nearest_anchors_checked": 16,
+  "vertices": 41,
+  "edges": 104,
+  "triangles": 64,
+  "boundary_caps": 16,
+  "center_faces": 32,
+  "exact_active_center_faces": 32,
+  "geometry_sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+  "acceptance_source_sha256": "9b40e47eb87c563552f3bd6ecf74fac76e89f6d38ac5800798dad5150eab9a88",
+  "global_optimality_proved": false,
+  "uniqueness_of_optimizers_proved": false
+}
