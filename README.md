@@ -14,6 +14,11 @@ r_D(n)=\inf_{c_1,\ldots,c_n}\max_{x\in D}\min_i\lVert x-c_i\rVert,
 \qquad D=\{x:\lVert x\rVert\leq1\}.
 $$
 
+Agents continuing the project should start at [START_HERE.md](START_HERE.md)
+and run `python tools/project_status.py --check`. The machine-readable
+[project state](PROJECT_STATE.json) separates current progress, authoritative
+hashes, available bundles, missing assets and the next actions for every order.
+
 Start with the [mathematical reader's guide](docs/MATHEMATICAL_GUIDE.md) and
 [notation dictionary](docs/NOTATION.md). They translate names such as `C450`,
 `C891`, `C924`, `k10`, and `root25` into mathematical statements and domains.
@@ -123,6 +128,15 @@ their own bundled input set; archived full-chain replay has the separate
 limitations documented in [DELIVERY_SCOPE.md](docs/DELIVERY_SCOPE.md) and
 [PROVENANCE.md](docs/PROVENANCE.md). A complete inventory of all historical
 omissions has not been claimed.
+
+The [23–26 dependency audit and export guide](docs/REPLAY_ASSET_PLAN.md) now
+quantifies the missing frozen content. A separately downloadable
+[23–25 core asset bundle](https://github.com/Liyang1145/DiskCoveringProofs/releases/tag/proof-assets-core-20261014)
+supplies 55 source/input files, including 15 previously absent core inputs.
+`make restore-core-n23-n25` downloads and verifies it. This is a byte restoration
+entry; a portable mathematical dispatcher for these cores and the full
+global dependency release are still pending. The n26 guide includes a
+hash-bound server export seed and preserves its unfinished mathematical state.
 
 ## Layout and provenance / 目录与来源
 

@@ -15,5 +15,9 @@ jobs:
         run: python tools/scan_sensitive.py
       - name: Check rejection controls without modifying evidence
         run: python tools/test_delivery_checks.py
+      - name: Reject missing or corrupted external frozen assets
+        run: python -O tools/test_frozen_assets.py
+      - name: Check the global agent handoff index
+        run: python tools/project_status.py --check
       - name: Check exact delivered bytes and lossless large files
         run: python -O tools/verify_delivery.py

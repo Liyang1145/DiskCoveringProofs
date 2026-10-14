@@ -1,0 +1,21 @@
+{
+  "complete": true,
+  "files_manifest": {
+    "bytes": 123387,
+    "file": "n11-wip-FILES.jsonl.gz",
+    "sha256": "2aa324a3b127cd207bccdfc1cb7249acc96d6df7b1b80825ca373ef2030ba15d"
+  },
+  "inventory_sha256": "2aa324a3b127cd207bccdfc1cb7249acc96d6df7b1b80825ca373ef2030ba15d",
+  "ledger_sha256": "0d1a31ff584c2b3c68b32291c50cf1b63e05dd24e66e27ad32fd2aa08d446431",
+  "mathematical_verification": "not_performed",
+  "packages": [
+    {
+      "bytes": 47133937,
+      "file": "n11-wip-0001.zip",
+      "files": 2383,
+      "sha256": "378b6501c77f279c4141c0844ed74b2754883a000fb8c86a15e8b38befe45367",
+      "uncompressed_bytes": 137601778
+    }
+  ],
+  "schema": "frozen-assets-packages-v1"
+}
