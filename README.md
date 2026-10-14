@@ -1,5 +1,7 @@
 # DiskCoveringProofs
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23344751.svg)](https://doi.org/10.5281/zenodo.23344751)
+
 单位闭圆盘的等半径圆盘覆盖：本地证明成果、精确证书与研究记录。
 本仓库按 `coverN / docs / proof_bundle / verification` 组织，参考
 VonEquinox/DiskCoveringSolve 的 11–20 分阶布局，但保留本地证明路线，
