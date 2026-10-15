@@ -24,6 +24,23 @@ EOF
      -f description="$DESC" -f target_url="$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" >/dev/null 2>&1 \
      || echo "status push failed"
   echo "STATUS n11/$TRACK $STATE $DESC"
+  DIAG=$(python3 - <<'EOF2'
+import os, re, subprocess
+mi = dict(l.split(':', 1) for l in open('/proc/meminfo').read().splitlines() if ':' in l)
+g = lambda k: int(mi[k].split()[0]) / 2**20
+ps = subprocess.run(['ps', '-eo', 'etimes=,rss=,args='], capture_output=True, text=True).stdout.splitlines()
+run = []
+for l in ps:
+    m = re.match(r'\s*(\d+)\s+(\d+)\s+\S*lean\b.*?N11Formalization/(\S+)\.lean', l)
+    if m: run.append((int(m.group(1)), int(m.group(2)) / 2**20, m.group(3)))
+run.sort(reverse=True)
+d = f"avail {g('MemAvailable'):.1f}G swap {g('SwapTotal')-g('SwapFree'):.1f}G | " + ', '.join(f'{n}({t//60}m,{r:.1f}G)' for t, r, n in run[:4])
+print(d[:139])
+EOF2
+)
+  gh api -X POST "repos/$GITHUB_REPOSITORY/statuses/$GITHUB_SHA" -f state=pending -f context="n11/$TRACK/diag" \
+     -f description="$DIAG" >/dev/null 2>&1 || true
+  echo "DIAG $DIAG"
 }
 if [ "${3:-}" = "once" ]; then push final; exit 0; fi
 sleep 120; push
