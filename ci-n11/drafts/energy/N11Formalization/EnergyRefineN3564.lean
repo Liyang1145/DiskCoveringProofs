@@ -72,7 +72,7 @@ theorem valid22 : MValid pk22 := by
 def pk : Fin K → MPacket := ![pk2,pk2,pk2,pk2,pk4,pk2,pk6,pk2,pk2,pk2,pk10,pk11,pk2,pk2,pk2,pk15,pk2,pk17,pk18,pk19,pk20,pk21,pk22]
 theorem pk_ok : ∀ l, (sub l).terminal = true → MValid (pk l) ∧ (pk l).D = (sub l).db ∧ (pk l).S = 1048576 := by
   intro l hl
-  fin_cases l <;> simp_all [sub, pk] <;> first | exact ⟨by assumption, rfl, rfl⟩ | (refine ⟨?_, rfl, rfl⟩; first exact valid2 | exact valid4 | exact valid6 | exact valid10 | exact valid11 | exact valid15 | exact valid17 | exact valid18 | exact valid19 | exact valid20 | exact valid21 | exact valid22)
+  fin_cases l <;> first | exact absurd hl (by decide +kernel) | exact ⟨valid2, rfl, rfl⟩ | exact ⟨valid4, rfl, rfl⟩ | exact ⟨valid6, rfl, rfl⟩ | exact ⟨valid10, rfl, rfl⟩ | exact ⟨valid11, rfl, rfl⟩ | exact ⟨valid15, rfl, rfl⟩ | exact ⟨valid17, rfl, rfl⟩ | exact ⟨valid18, rfl, rfl⟩ | exact ⟨valid19, rfl, rfl⟩ | exact ⟨valid20, rfl, rfl⟩ | exact ⟨valid21, rfl, rfl⟩ | exact ⟨valid22, rfl, rfl⟩
 theorem terminal : (DBMSourceTree.data 3564).terminal = true := by decide +kernel
 theorem node_radius
     (y : Fin 9 → ℝ) (hy0 : ∀ q, 0 ≤ y q) (hy1 : ∑ q, y q = 1)
@@ -90,7 +90,8 @@ theorem new_radius (n : Fin 5011) (hn : n ∈ newIDs)
       (FlashLeafSplit.tlift y)) (C Z : Fin 11 → Point) (r : ℝ)
     (hf : ResumeNetwork.Feasible (SourceChartIsometry.chartAnchors y) C Z r) :
     SourceExactRoot.sourceRadius < r := by
-  rw [Finset.mem_singleton.mp hn] at hc ⊢
+  have hn' := Finset.mem_singleton.mp hn
+  subst hn'
   exact node_radius y hy0 hy1 hc C Z r hf
 end
 end N11Formalization.EnergyRefineN3564

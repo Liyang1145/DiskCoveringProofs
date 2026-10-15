@@ -187,7 +187,7 @@ theorem valid68 : MValid pk68 := by
 def pk : Fin K → MPacket := ![pk8,pk8,pk8,pk8,pk8,pk8,pk8,pk8,pk8,pk9,pk10,pk11,pk8,pk8,pk8,pk15,pk16,pk17,pk18,pk8,pk8,pk8,pk22,pk23,pk24,pk25,pk26,pk27,pk8,pk8,pk8,pk8,pk8,pk8,pk8,pk35,pk8,pk8,pk38,pk39,pk40,pk41,pk42,pk8,pk8,pk8,pk8,pk47,pk8,pk8,pk50,pk51,pk52,pk53,pk54,pk8,pk8,pk8,pk58,pk8,pk8,pk61,pk62,pk63,pk64,pk65,pk66,pk67,pk68]
 theorem pk_ok : ∀ l, (sub l).terminal = true → MValid (pk l) ∧ (pk l).D = (sub l).db ∧ (pk l).S = 1048576 := by
   intro l hl
-  fin_cases l <;> simp_all [sub, pk] <;> first | exact ⟨by assumption, rfl, rfl⟩ | (refine ⟨?_, rfl, rfl⟩; first exact valid8 | exact valid9 | exact valid10 | exact valid11 | exact valid15 | exact valid16 | exact valid17 | exact valid18 | exact valid22 | exact valid23 | exact valid24 | exact valid25 | exact valid26 | exact valid27 | exact valid35 | exact valid38 | exact valid39 | exact valid40 | exact valid41 | exact valid42 | exact valid47 | exact valid50 | exact valid51 | exact valid52 | exact valid53 | exact valid54 | exact valid58 | exact valid61 | exact valid62 | exact valid63 | exact valid64 | exact valid65 | exact valid66 | exact valid67 | exact valid68)
+  fin_cases l <;> first | exact absurd hl (by decide +kernel) | exact ⟨valid8, rfl, rfl⟩ | exact ⟨valid9, rfl, rfl⟩ | exact ⟨valid10, rfl, rfl⟩ | exact ⟨valid11, rfl, rfl⟩ | exact ⟨valid15, rfl, rfl⟩ | exact ⟨valid16, rfl, rfl⟩ | exact ⟨valid17, rfl, rfl⟩ | exact ⟨valid18, rfl, rfl⟩ | exact ⟨valid22, rfl, rfl⟩ | exact ⟨valid23, rfl, rfl⟩ | exact ⟨valid24, rfl, rfl⟩ | exact ⟨valid25, rfl, rfl⟩ | exact ⟨valid26, rfl, rfl⟩ | exact ⟨valid27, rfl, rfl⟩ | exact ⟨valid35, rfl, rfl⟩ | exact ⟨valid38, rfl, rfl⟩ | exact ⟨valid39, rfl, rfl⟩ | exact ⟨valid40, rfl, rfl⟩ | exact ⟨valid41, rfl, rfl⟩ | exact ⟨valid42, rfl, rfl⟩ | exact ⟨valid47, rfl, rfl⟩ | exact ⟨valid50, rfl, rfl⟩ | exact ⟨valid51, rfl, rfl⟩ | exact ⟨valid52, rfl, rfl⟩ | exact ⟨valid53, rfl, rfl⟩ | exact ⟨valid54, rfl, rfl⟩ | exact ⟨valid58, rfl, rfl⟩ | exact ⟨valid61, rfl, rfl⟩ | exact ⟨valid62, rfl, rfl⟩ | exact ⟨valid63, rfl, rfl⟩ | exact ⟨valid64, rfl, rfl⟩ | exact ⟨valid65, rfl, rfl⟩ | exact ⟨valid66, rfl, rfl⟩ | exact ⟨valid67, rfl, rfl⟩ | exact ⟨valid68, rfl, rfl⟩
 theorem terminal : (DBMSourceTree.data 3490).terminal = true := by decide +kernel
 theorem node_radius
     (y : Fin 9 → ℝ) (hy0 : ∀ q, 0 ≤ y q) (hy1 : ∑ q, y q = 1)
@@ -205,7 +205,8 @@ theorem new_radius (n : Fin 5011) (hn : n ∈ newIDs)
       (FlashLeafSplit.tlift y)) (C Z : Fin 11 → Point) (r : ℝ)
     (hf : ResumeNetwork.Feasible (SourceChartIsometry.chartAnchors y) C Z r) :
     SourceExactRoot.sourceRadius < r := by
-  rw [Finset.mem_singleton.mp hn] at hc ⊢
+  have hn' := Finset.mem_singleton.mp hn
+  subst hn'
   exact node_radius y hy0 hy1 hc C Z r hf
 end
 end N11Formalization.EnergyRefineN3490
