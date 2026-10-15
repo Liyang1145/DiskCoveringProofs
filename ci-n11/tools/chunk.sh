@@ -24,28 +24,20 @@ for d in drafts/*/N11Formalization; do
 done
 done_all=true
 cd lean
+args=()
 for G in $GRPS; do
   stage=${G%%-*}
   if [[ "$STAGES" != *",$G,"* && "$STAGES" != *",$stage,"* && "$STAGES" != *",all,"* ]]; then
     echo "skip group $G (not selected)"; continue
   fi
   tf=$ROOT/tools/targets/$G.txt
-  [ -f $tf ] || { echo "no targets for $G"; continue; }
-  now=$(date +%s); left=$((DEADLINE-now))
-  if [ $left -lt 300 ]; then echo "deadline reached before $G"; done_all=false; break; fi
-  echo "::group::lake build $G ($(wc -l <$tf) targets, ${left}s left)"
-  t0=$(date +%s)
-  timeout --signal=INT --kill-after=180 $left lake build $(cat $tf) > $RES/logs/$TRACK-c$K-$G.log 2>&1
-  rc=$?
-  echo "::endgroup::"
-  dt=$(( $(date +%s)-t0 ))
-  grep -E "^(✖|error)" $RES/logs/$TRACK-c$K-$G.log | head -50
-  tail -5 $RES/logs/$TRACK-c$K-$G.log
-  python3 $ROOT/tools/parse_lake_log.py $RES/logs/$TRACK-c$K-$G.log $G $RES/$TRACK-c$K.jsonl $tf
-  echo "{\"group\":\"$G\",\"lake_rc\":$rc,\"seconds\":$dt,\"chunk\":$K,\"track\":\"$TRACK\"}" >> $RES/$TRACK-c$K-groups.jsonl
-  echo "GROUP $G rc=$rc ${dt}s"
-  if [ $rc -eq 124 ] || [ $rc -eq 130 ] || [ $rc -eq 137 ]; then done_all=false; break; fi
+  [ -f $tf ] && args+=("$G=$tf")
 done
+t0=$(date +%s)
+python3 -u $ROOT/tools/sched.py $TRACK $K $DEADLINE $RES "${args[@]}" 2>&1 | tee $RES/logs/$TRACK-c$K-sched.log | grep -v '"status": "cached"'
+rc=${PIPESTATUS[0]}
+echo "{\"groups\":\"${args[*]}\",\"sched_rc\":$rc,\"seconds\":$(( $(date +%s)-t0 )),\"chunk\":$K,\"track\":\"$TRACK\"}" >> $RES/$TRACK-c$K-groups.jsonl
+[ $rc -eq 0 ] || done_all=false
 # audit whatever compiled
 for a in $AUDITS; do
   timeout 1500 python3 $ROOT/tools/audit.py $ROOT/tools/audit/$a.txt $RES/$TRACK-c$K-audit.jsonl $TRACK-$a-c$K || true
