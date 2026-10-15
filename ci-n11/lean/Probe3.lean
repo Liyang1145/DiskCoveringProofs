@@ -1,0 +1,19 @@
+import N11Formalization.HexFloat
+
+-- 找正确的除法不等式引理名
+#check @div_le_div_iff
+#check @div_le_div_iff_of_pos
+#check @div_le_div_iff_of_pos_left
+#check @div_le_div_iff_of_pos_right
+#check @div_lt_div_iff
+#check @div_lt_iff₀
+#check @div_le_iff₀
+#check @lt_div_iff₀
+#check @le_div_iff₀
+#check @Rat.div_le_div_iff
+#check @div_le_div_iff_ofNeg
+#check @div_le_div_iff_of_pos_of_pos
+#check @div_le_div_iff_of_pos_of_neg
+#check @div_le_div_iff_of_neg_of_pos
+#check @div_le_div_iff_of_neg_of_neg
+#check @div_le_div_iff₀

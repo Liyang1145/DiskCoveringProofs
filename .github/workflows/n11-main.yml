@@ -1,0 +1,108 @@
+name: n11-main
+on:
+  push:
+    branches: [ci/n11-build]
+    paths:
+      - 'ci-n11/lean/**'
+      - 'ci-n11/drafts/telescope/**'
+      - '.github/workflows/n11-main.yml'
+      - 'ci-n11/tools/**'
+      - '.github/workflows/n11-chunk.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  statuses: write
+concurrency:
+  group: n11-main
+  cancel-in-progress: false
+env:
+  STAGES: all
+jobs:
+  c1:
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 1
+  c2:
+    needs: c1
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 2
+      skip: ${{ needs.c1.outputs.done == 'true' }}
+  c3:
+    needs: c2
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 3
+      skip: ${{ needs.c2.outputs.done == 'true' }}
+  c4:
+    needs: c3
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 4
+      skip: ${{ needs.c3.outputs.done == 'true' }}
+  c5:
+    needs: c4
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 5
+      skip: ${{ needs.c4.outputs.done == 'true' }}
+  c6:
+    needs: c5
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 6
+      skip: ${{ needs.c5.outputs.done == 'true' }}
+  c7:
+    needs: c6
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 7
+      skip: ${{ needs.c6.outputs.done == 'true' }}
+  c8:
+    needs: c7
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: main
+      stages: all
+      k: 8
+      skip: ${{ needs.c7.outputs.done == 'true' }}
+  summary:
+    needs: [c8]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ci-n11/tools
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: results-main-*
+          path: all
+        continue-on-error: true
+      - run: python3 ci-n11/tools/summarize.py all summary.json >> "$GITHUB_STEP_SUMMARY"; head -c 20000 summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: summary-main
+          path: summary.json

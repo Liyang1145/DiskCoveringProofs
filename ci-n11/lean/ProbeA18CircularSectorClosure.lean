@@ -1,0 +1,16 @@
+import N11Formalization
+
+open N11Formalization
+open N11Formalization.ActualCircularSectorClosure
+open N11Formalization.ActualSwitchAtomAggregate
+
+#check @N11Formalization.ActualCircularSectorClosure.anchor_det_gap
+#check @N11Formalization.ActualCircularSectorClosure.anchor_shoelace_sine
+#check @N11Formalization.ActualCircularSectorClosure.segment_sum_of_actual_gaps
+#check @N11Formalization.ActualCircularSectorClosure.segment_sum_nonneg_of_actual_gaps
+#check @N11Formalization.ActualCircularSectorClosure.anchor_sector_identity
+#print axioms N11Formalization.ActualCircularSectorClosure.anchor_sector_identity
+#print axioms N11Formalization.ActualCircularSectorClosure.segment_sum_nonneg_of_actual_gaps
+#check @N11Formalization.ActualSwitchAtomAggregate.switch_atom_sum_pos
+#check @N11Formalization.ActualSwitchAtomAggregate.switch_area_sum_eq_atom_sum
+#print axioms N11Formalization.ActualSwitchAtomAggregate.switch_atom_sum_pos

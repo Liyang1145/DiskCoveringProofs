@@ -1,0 +1,12 @@
+import Mathlib
+import N11Formalization.Interval.Core
+#check @Real.strictMonoOn_sin
+#check @Real.monotoneOn_sin
+#check @Real.pi_gt_three
+#check @Real.one_lt_pi_div_two
+#check @Real.cos_antiOn
+#check @Real.strictAntiOn_cos
+#check @RatInterval.intv
+#check @RatInterval.mem_lo_le
+#check @RatInterval.mem_le_hi
+#check @RatInterval.Mem

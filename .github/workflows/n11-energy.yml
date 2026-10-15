@@ -1,0 +1,62 @@
+name: n11-energy
+on:
+  push:
+    branches: [ci/n11-build]
+    paths:
+      - 'ci-n11/drafts/energy/**'
+      - '.github/workflows/n11-energy.yml'
+      - 'ci-n11/tools/**'
+      - '.github/workflows/n11-chunk.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+  statuses: write
+concurrency:
+  group: n11-energy
+  cancel-in-progress: true
+env:
+  STAGES: all
+jobs:
+  c1:
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: energy
+      stages: all
+      k: 1
+  c2:
+    needs: c1
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: energy
+      stages: all
+      k: 2
+      skip: ${{ needs.c1.outputs.done == 'true' }}
+  c3:
+    needs: c2
+    if: ${{ !cancelled() }}
+    uses: ./.github/workflows/n11-chunk.yml
+    with:
+      track: energy
+      stages: all
+      k: 3
+      skip: ${{ needs.c2.outputs.done == 'true' }}
+  summary:
+    needs: [c3]
+    if: ${{ always() }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: ci-n11/tools
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: results-energy-*
+          path: all
+        continue-on-error: true
+      - run: python3 ci-n11/tools/summarize.py all summary.json >> "$GITHUB_STEP_SUMMARY"; head -c 20000 summary.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: summary-energy
+          path: summary.json

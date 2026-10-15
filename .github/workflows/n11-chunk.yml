@@ -1,0 +1,98 @@
+name: n11-chunk
+on:
+  workflow_call:
+    inputs:
+      track: {type: string, required: true}
+      stages: {type: string, required: true}
+      k: {type: number, required: true}
+      skip: {type: boolean, default: false}
+    outputs:
+      done:
+        value: ${{ jobs.build.outputs.done }}
+
+permissions:
+  contents: read
+  actions: read
+  statuses: write
+
+jobs:
+  build:
+    name: ${{ inputs.track }}-c${{ inputs.k }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    outputs:
+      done: ${{ steps.skipped.outputs.done || steps.run.outputs.done }}
+    steps:
+      - id: skipped
+        if: ${{ inputs.skip }}
+        run: echo "done=true" >> "$GITHUB_OUTPUT"
+
+      - name: clock
+        if: ${{ !inputs.skip }}
+        run: echo "T0=$(date +%s)" >> "$GITHUB_ENV"
+
+      - uses: actions/checkout@v4
+        if: ${{ !inputs.skip }}
+        with:
+          sparse-checkout: ci-n11
+
+      - name: free disk + swap
+        if: ${{ !inputs.skip }}
+        run: |
+          df -h /
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android /opt/ghc /usr/local/.ghcup /opt/hostedtoolcache/CodeQL /usr/local/share/boost /usr/share/swift /usr/local/lib/node_modules || true
+          sudo docker image prune --all --force >/dev/null 2>&1 || true
+          sudo swapoff -a || true; sudo rm -f /mnt/swapfile /swapfile
+          sudo fallocate -l 12G /swapfile && sudo chmod 600 /swapfile && sudo mkswap /swapfile && sudo swapon /swapfile
+          free -g; df -h /; nproc
+
+      - name: install elan
+        if: ${{ !inputs.skip }}
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> "$GITHUB_PATH"
+
+      - name: restore project build cache
+        if: ${{ !inputs.skip }}
+        uses: actions/cache/restore@v4
+        with:
+          path: ci-n11/lean/.lake/build
+          key: n11-${{ inputs.track }}-${{ github.run_id }}-${{ github.run_attempt }}-${{ inputs.k }}
+          restore-keys: |
+            n11-${{ inputs.track }}-
+
+      - name: mathlib cache
+        if: ${{ !inputs.skip }}
+        working-directory: ci-n11/lean
+        run: |
+          lean --version
+          for i in 1 2 3; do lake exe cache get && break; sleep 30; done
+          du -sh .lake/packages || true; df -h /
+
+      - name: build
+        id: run
+        if: ${{ !inputs.skip }}
+        working-directory: ci-n11
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          DEADLINE=$((T0 + 300*60))
+          bash tools/report.sh ${{ inputs.track }} ${{ inputs.k }} &
+          bash tools/chunk.sh ${{ inputs.track }} "${{ inputs.stages }}" $DEADLINE ${{ inputs.k }}
+          kill %1 2>/dev/null || true
+
+      - name: upload results
+        if: ${{ always() && !inputs.skip }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: results-${{ inputs.track }}-c${{ inputs.k }}
+          path: ci-n11/results/
+          retention-days: 30
+          if-no-files-found: warn
+
+      - name: save project build cache
+        if: ${{ always() && !inputs.skip }}
+        uses: actions/cache/save@v4
+        with:
+          path: ci-n11/lean/.lake/build
+          key: n11-${{ inputs.track }}-${{ github.run_id }}-${{ github.run_attempt }}-${{ inputs.k }}

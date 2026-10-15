@@ -1,0 +1,10 @@
+import N11Formalization.FlashTenBoundaryAnalytic
+open scoped Interval
+open MeasureTheory
+namespace N11Formalization
+#check intervalIntegral.integral_congr
+#check intervalIntegral.integral_congr_ae
+#check MeasureTheory.setIntegral_indicator
+#check intervalIntegral.integral_indicator
+#check intervalIntegral.integral_of_le
+end N11Formalization
