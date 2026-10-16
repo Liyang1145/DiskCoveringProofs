@@ -474,7 +474,8 @@ theorem rep7_balance : CanonicalMaskBalancedQ rep7D := by
     intro f
     exact sum_slots f.val (q1FaceCard 7 4 f)
       (fun i => if f.val.erase i = e then (rep7MaskCode (edgeCode f.val) (edgeCode (f.val.erase i)) : ℚ) else 0)
-  simp only [hslot]
+  have hsw : ∀ k : Fin 9, rep7D.switchMask k = -1 := fun _ => rfl
+  simp only [hslot, hsw]
   rw [Finset.sum_coe_sort (q1Faces 7 4)
     (fun f => ∑ i ∈ f, (if f.erase i = e then (rep7MaskCode (edgeCode f) (edgeCode (f.erase i)) : ℚ) else 0))]
   have hc := congrArg (fun z : ℤ => (z : ℚ)) H
@@ -503,7 +504,8 @@ theorem rep1_balance : CanonicalMaskBalancedQ rep1D := by
     intro f
     exact sum_slots f.val (q1FaceCard 1 4 f)
       (fun i => if f.val.erase i = e then (rep1MaskCode (edgeCode f.val) (edgeCode (f.val.erase i)) : ℚ) else 0)
-  simp only [hslot]
+  have hsw : ∀ k : Fin 9, rep1D.switchMask k = -1 := fun _ => rfl
+  simp only [hslot, hsw]
   rw [Finset.sum_coe_sort (q1Faces 1 4)
     (fun f => ∑ i ∈ f, (if f.erase i = e then (rep1MaskCode (edgeCode f) (edgeCode (f.erase i)) : ℚ) else 0))]
   have hc := congrArg (fun z : ℤ => (z : ℚ)) H
@@ -532,7 +534,8 @@ theorem q0m2_balance : CanonicalMaskBalancedQ q0m2D := by
     intro f
     exact sum_slots f.val (q0FaceCard 2 f)
       (fun i => if f.val.erase i = e then (q0m2MaskCode (edgeCode f.val) (edgeCode (f.val.erase i)) : ℚ) else 0)
-  simp only [hslot]
+  have hsw : ∀ k : Fin 9, q0m2D.switchMask k = -1 := fun _ => rfl
+  simp only [hslot, hsw]
   rw [Finset.sum_coe_sort (q0Faces 2)
     (fun f => ∑ i ∈ f, (if f.erase i = e then (q0m2MaskCode (edgeCode f) (edgeCode (f.erase i)) : ℚ) else 0))]
   have hc := congrArg (fun z : ℤ => (z : ℚ)) H
