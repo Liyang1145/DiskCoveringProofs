@@ -88,9 +88,8 @@ def rep7SwitchMax (i : Fin 9) : ℚ := rep7SwitchMaxN i.val
 theorem rep7_switch_aggregate :
     (∑ i : Fin 9, rep7SwitchMax i) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch_total_bound := by
   show (∑ i : Fin 9, rep7SwitchMaxN i.val) = _
-  rw [Fin.sum_univ_eq_sum_range (fun n => rep7SwitchMaxN n) 9]
-  simp only [Finset.sum_range_succ,Finset.sum_range_zero,rep7SwitchMaxN]
-  norm_num [N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch1_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch2_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch3_bound,
+  simp only [Fin.sum_univ_succ, Fin.sum_univ_zero, Fin.val_zero, Fin.val_succ, Fin.isValue]
+  norm_num [rep7SwitchMaxN,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch1_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch2_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch3_bound,
     N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch4_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch5_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch6_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch7_bound,
     N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch8_bound,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch_total_bound]
 
@@ -246,66 +245,66 @@ def rep7Switches : ∀ i : Fin 9, SwitchCertificate (canonicalSwitchP rep7D rep7
   fin_cases i
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch0_eq
     have hm : rep7SwitchMax (0 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch1_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch1)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch1)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch1)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch1)
       | (convert batchSwitch1 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch1_eq
     have hm : rep7SwitchMax (1 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch2_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch2)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch2)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch2)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch2)
       | (convert batchSwitch2 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch2_eq
     have hm : rep7SwitchMax (2 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch3_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch3)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch3)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch3)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch3)
       | (convert batchSwitch3 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch3_eq
     have hm : rep7SwitchMax (3 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch4_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch4)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch4)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch4)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch4)
       | (convert batchSwitch4 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch4_eq
     have hm : rep7SwitchMax (4 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch5_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch5)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch5)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch5)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch5)
       | (convert batchSwitch5 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch5_eq
     have hm : rep7SwitchMax (5 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch6_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch6)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch6)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch6)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch6)
       | (convert batchSwitch6 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch6_eq
     have hm : rep7SwitchMax (6 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch7_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch7)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch7)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch7)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch7)
       | (convert batchSwitch7 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch7_eq
     have hm : rep7SwitchMax (7 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch8_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch8)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch8)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch8)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch8)
       | (convert batchSwitch8 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
   · obtain ⟨h1,h2,h3,h4,h5⟩ := rep7_switch8_eq
     have hm : rep7SwitchMax (8 : Fin 9) = N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_bound := rfl
-    try simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
     first
+      | exact (by simpa only [h1,h2,h3,h4,h5,hm] using batchSwitch0)
+      | exact (by simpa [h1,h2,h3,h4,h5,hm] using batchSwitch0)
       | (rw [h1,h2,h3,h4,h5,hm]; exact batchSwitch0)
-      | (simp only [h1,h2,h3,h4,h5,hm]; exact batchSwitch0)
       | (convert batchSwitch0 using 2 <;> simp [h1,h2,h3,h4,h5,hm])
 end N11Formalization.Class33SwitchBridge
 #print axioms N11Formalization.Class33SwitchBridge.certificate_mono

@@ -1,4 +1,0 @@
-N11Formalization.Class33BalancedAssembly
-N11Formalization.Class33Q0M2Assembly
-N11Formalization.Class33Rep1Assembly
-N11Formalization.Class33Rep7Assembly

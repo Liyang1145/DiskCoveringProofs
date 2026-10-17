@@ -1,8 +1,0 @@
-import Mathlib
-#check HasStrictDerivAt.to_localInverse
-#check HasStrictDerivAt.localInverse
-#check HasStrictDerivAt.hasStrictDerivAt_localInverse
-#check HasDerivAt.hasStrictDerivAt
-#check ContDiffAt.hasStrictFDerivAt
-#check HasStrictDerivAt.of_hasDerivAt
-#check HasStrictDerivAt.eventually_left_inverse
