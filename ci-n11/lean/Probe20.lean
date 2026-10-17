@@ -1,0 +1,13 @@
+import N11Formalization.Interval.Vector
+open N11Formalization
+#check @N11Formalization.RatInterval.dot_mem
+#check @N11Formalization.RatInterval.dotR
+#check @N11Formalization.RatInterval.supNorm_mem
+#check @N11Formalization.RatInterval.supNormR
+#check @N11Formalization.RatInterval.supNorm_valid
+#check @N11Formalization.RatInterval.hull
+#check @N11Formalization.RatInterval.abs_mem
+#check @N11Formalization.RatInterval.hull_mem_left
+#check @N11Formalization.RatInterval.hull_mem_right
+#check @N11Formalization.RatInterval.abs
+#check @N11Formalization.RatInterval.dot

@@ -1,0 +1,29 @@
+import Mathlib
+
+-- API 探测：确认实际存在的引理名（不写进交付物）
+#check @dist_zero_right
+#check @dist_nonneg
+#check @IsLeast
+#check @IsLeast.csInf_eq
+#check @csInf_le
+#check @BddBelow
+#check @Set.Nonempty
+#check @isLeast_iff
+#check @Real.sInf_def
+#check @IsLeast.isGLB
+#check @isGLB_iff
+#check @csInf_mem
+#check @IsGLB.csInf_eq
+#check @le_csInf
+#check @Real.sInf
+#check @EuclideanSpace
+#check @Char.toNat
+#check @String.toList
+#check @List.length
+#check @zpow_neg
+#check @Rat.cast_mk
+#check @Rat.cast_le
+#check @Rat.cast_lt
+#check @Rat.cast_inj
+#check @Hex
+#check @Nat.hexDigit

@@ -1,0 +1,6 @@
+import N11Formalization.FlashTenBoundary
+#print axioms N11Formalization.MeetsCircle.mono
+#print axioms N11Formalization.hub_offset_le
+#print axioms N11Formalization.c450_of_c450_offset
+#print axioms N11Formalization.not_card_boundaryIdx_eq_ten
+#print axioms N11Formalization.card_boundaryIdx_eq_nine_of_c450

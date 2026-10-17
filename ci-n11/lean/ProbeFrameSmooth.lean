@@ -1,0 +1,9 @@
+import Mathlib
+#check contDiffAt_piLp
+#check ContDiffAt.dist
+#check ContDiffAt.sum
+#check ContDiffAt.differentiableAt
+#check ContDiffAt.sqrt
+#check contDiffAt_pi
+#check HasFDerivAt.congr_of_eventuallyEq
+#check DifferentiableAt.hasFDerivAt

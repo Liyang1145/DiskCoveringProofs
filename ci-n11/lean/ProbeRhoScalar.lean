@@ -1,0 +1,12 @@
+import Mathlib
+#check HasDerivAt.sqrt
+#check Real.hasDerivAt_sqrt
+#check HasDerivAt.pow
+#check HasDerivAt.const_sub
+#check Real.sqrt_pos.2
+#check Real.cos_pos_of_mem_Ioo
+#check Real.sin_pos_of_pos_of_lt_pi
+#check Real.sq_sqrt
+#check HasDerivAt.smul
+#check HasDerivAt.sub
+#check Real.hasDerivAt_sin
