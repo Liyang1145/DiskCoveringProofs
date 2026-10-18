@@ -237,7 +237,7 @@ theorem rep7_switch8_eq :
     norm_num [rep7MuN,rep7SideFirstCode,rep7SideSecondCode,rep7KapCode,rep7LeftFirstN,rep7LeftSecondN,
       rep7RightFirstN,rep7RightSecondN,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_p,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_q,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_b,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_d2,N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_d1]
 
-theorem sc_cast_aux {P P' Q Q' B B' D2 D2' D1 D1' M M' : ℚ}
+def sc_cast_aux {P P' Q Q' B B' D2 D2' D1 D1' M M' : ℚ}
     (h1 : P = P') (h2 : Q = Q') (h3 : B = B') (h4 : D2 = D2') (h5 : D1 = D1') (hm : M = M')
     (s : SwitchCertificate P' Q' B' D2' D1' M') : SwitchCertificate P Q B D2 D1 M := by
   subst h1 h2 h3 h4 h5 hm
