@@ -38,8 +38,8 @@ def rep1SwitchMaxN : ℕ → ℚ
   | _ => 0
 def rep1SwitchMax (i : Fin 9) : ℚ := rep1SwitchMaxN i.val
 theorem rep1_switch_aggregate : (∑ i : Fin 9, rep1SwitchMax i) = (101521/100000 : ℚ) := by
-  rw [Fin.sum_univ_eq_sum_range (fun n => rep1SwitchMaxN n) 9]
-  simp only [Finset.sum_range_succ,Finset.sum_range_zero,rep1SwitchMaxN]
+  show (∑ i : Fin 9, rep1SwitchMaxN i.val) = _
+  simp only [Fin.sum_univ_succ, Fin.sum_univ_zero, Fin.val_zero, Fin.val_succ, Fin.isValue, rep1SwitchMaxN]
   norm_num
 
 theorem rep1_switch0_eq :
@@ -179,63 +179,36 @@ theorem rep1_switch8_eq :
 
 def rep1Switches : ∀ i : Fin 9, SwitchCertificate (canonicalSwitchP rep1D rep1Kap i)
     (canonicalSwitchQ rep1D i) (canonicalSwitchB rep1D i) (canonicalSwitchD2 rep1D i)
-    (canonicalSwitchD1 rep1D i) (rep1SwitchMax i) := by
-  intro i
-  fin_cases i
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch0_eq
-    have hm : rep1SwitchMax (0 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S0.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S0.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S0.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch1_eq
-    have hm : rep1SwitchMax (1 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S1.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S1.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S1.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch2_eq
-    have hm : rep1SwitchMax (2 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S2.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S2.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S2.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch3_eq
-    have hm : rep1SwitchMax (3 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S3.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S3.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S3.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch4_eq
-    have hm : rep1SwitchMax (4 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S4.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S4.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S4.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch5_eq
-    have hm : rep1SwitchMax (5 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S5.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S5.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S5.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch6_eq
-    have hm : rep1SwitchMax (6 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S6.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S6.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S6.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch7_eq
-    have hm : rep1SwitchMax (7 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S7.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S7.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S7.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := rep1_switch8_eq
-    have hm : rep1SwitchMax (8 : Fin 9) = N11Formalization.Class33SwitchTreeRep1S8.sw_bound := by
-      simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S8.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S8.root
+    (canonicalSwitchD1 rep1D i) (rep1SwitchMax i) :=
+  fun i => match i with
+  | ⟨0, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch0_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S0.sw_bound] : rep1SwitchMax (⟨0, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S0.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S0.root)
+  | ⟨1, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch1_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S1.sw_bound] : rep1SwitchMax (⟨1, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S1.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S1.root)
+  | ⟨2, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch2_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S2.sw_bound] : rep1SwitchMax (⟨2, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S2.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S2.root)
+  | ⟨3, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch3_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S3.sw_bound] : rep1SwitchMax (⟨3, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S3.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S3.root)
+  | ⟨4, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch4_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S4.sw_bound] : rep1SwitchMax (⟨4, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S4.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S4.root)
+  | ⟨5, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch5_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S5.sw_bound] : rep1SwitchMax (⟨5, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S5.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S5.root)
+  | ⟨6, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch6_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S6.sw_bound] : rep1SwitchMax (⟨6, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S6.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S6.root)
+  | ⟨7, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch7_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S7.sw_bound] : rep1SwitchMax (⟨7, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S7.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S7.root)
+  | ⟨8, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := rep1_switch8_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [rep1SwitchMax,rep1SwitchMaxN,N11Formalization.Class33SwitchTreeRep1S8.sw_bound] : rep1SwitchMax (⟨8, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeRep1S8.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeRep1S8.root)
+  | ⟨n+9, h⟩ => absurd h (by omega)
 
 def q0m2SwitchMaxN : ℕ → ℚ
   | 0 => (84031/1000000 : ℚ)
@@ -250,8 +223,8 @@ def q0m2SwitchMaxN : ℕ → ℚ
   | _ => 0
 def q0m2SwitchMax (i : Fin 9) : ℚ := q0m2SwitchMaxN i.val
 theorem q0m2_switch_aggregate : (∑ i : Fin 9, q0m2SwitchMax i) = (81639/50000 : ℚ) := by
-  rw [Fin.sum_univ_eq_sum_range (fun n => q0m2SwitchMaxN n) 9]
-  simp only [Finset.sum_range_succ,Finset.sum_range_zero,q0m2SwitchMaxN]
+  show (∑ i : Fin 9, q0m2SwitchMaxN i.val) = _
+  simp only [Fin.sum_univ_succ, Fin.sum_univ_zero, Fin.val_zero, Fin.val_succ, Fin.isValue, q0m2SwitchMaxN]
   norm_num
 
 theorem q0m2_switch0_eq :
@@ -391,63 +364,36 @@ theorem q0m2_switch8_eq :
 
 def q0m2Switches : ∀ i : Fin 9, SwitchCertificate (canonicalSwitchP q0m2D q0m2Kap i)
     (canonicalSwitchQ q0m2D i) (canonicalSwitchB q0m2D i) (canonicalSwitchD2 q0m2D i)
-    (canonicalSwitchD1 q0m2D i) (q0m2SwitchMax i) := by
-  intro i
-  fin_cases i
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch0_eq
-    have hm : q0m2SwitchMax (0 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S0.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S0.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S0.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch1_eq
-    have hm : q0m2SwitchMax (1 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S1.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S1.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S1.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch2_eq
-    have hm : q0m2SwitchMax (2 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S2.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S2.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S2.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch3_eq
-    have hm : q0m2SwitchMax (3 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S3.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S3.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S3.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch4_eq
-    have hm : q0m2SwitchMax (4 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S4.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S4.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S4.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch5_eq
-    have hm : q0m2SwitchMax (5 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S5.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S5.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S5.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch6_eq
-    have hm : q0m2SwitchMax (6 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S6.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S6.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S6.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch7_eq
-    have hm : q0m2SwitchMax (7 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S7.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S7.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S7.root
-  · obtain ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch8_eq
-    have hm : q0m2SwitchMax (8 : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S8.sw_bound := by
-      simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S8.sw_bound]
-    simp only [Fin.isValue] at h1 h2 h3 h4 h5 ⊢
-    rw [h1,h2,h3,h4,h5,hm]
-    exact switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S8.root
+    (canonicalSwitchD1 q0m2D i) (q0m2SwitchMax i) :=
+  fun i => match i with
+  | ⟨0, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch0_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S0.sw_bound] : q0m2SwitchMax (⟨0, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S0.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S0.root)
+  | ⟨1, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch1_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S1.sw_bound] : q0m2SwitchMax (⟨1, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S1.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S1.root)
+  | ⟨2, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch2_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S2.sw_bound] : q0m2SwitchMax (⟨2, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S2.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S2.root)
+  | ⟨3, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch3_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S3.sw_bound] : q0m2SwitchMax (⟨3, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S3.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S3.root)
+  | ⟨4, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch4_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S4.sw_bound] : q0m2SwitchMax (⟨4, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S4.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S4.root)
+  | ⟨5, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch5_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S5.sw_bound] : q0m2SwitchMax (⟨5, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S5.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S5.root)
+  | ⟨6, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch6_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S6.sw_bound] : q0m2SwitchMax (⟨6, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S6.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S6.root)
+  | ⟨7, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch7_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S7.sw_bound] : q0m2SwitchMax (⟨7, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S7.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S7.root)
+  | ⟨8, _⟩ =>
+    let ⟨h1,h2,h3,h4,h5⟩ := q0m2_switch8_eq
+    sc_cast_aux h1 h2 h3 h4 h5 (by simp [q0m2SwitchMax,q0m2SwitchMaxN,N11Formalization.Class33SwitchTreeQ0M2S8.sw_bound] : q0m2SwitchMax (⟨8, by decide⟩ : Fin 9) = N11Formalization.Class33SwitchTreeQ0M2S8.sw_bound) (switchCertificate_of_direct N11Formalization.Class33SwitchTreeQ0M2S8.root)
+  | ⟨n+9, h⟩ => absurd h (by omega)
 
 end N11Formalization.Class33SwitchFields
 #print axioms N11Formalization.Class33SwitchFields.rep1Switches
