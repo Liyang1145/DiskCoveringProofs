@@ -1,5 +1,9 @@
 """Region R = Q6 ∩ box1669 (the single OPEN node of certs/1669.json) and its shells about c*=THSTAR."""
-import sys; sys.path.insert(0,'/workspace/work/dcp-n26')
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
+import sys; sys.path.insert(0,DCP_N26)
 from fractions import Fraction as F
 import shells1669 as S, hp
 LO6,HI6=S.Q(6)

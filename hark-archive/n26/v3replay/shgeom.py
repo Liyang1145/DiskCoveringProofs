@@ -1,8 +1,12 @@
 """Shared LOCAL-SLAB annulus forest about c*=theta*: A_m = cube(c*,rho_m) minus cube(c*,rho_{m+1}), rho_m=RHO0/2^m,
 carved axis 0..14 (low side, then high side) exactly like lgeom. Every lgeom shell slab of level m>=0 that is not a
 terminal slab (Q(m+1) empty) lies inside one shared slab of level m (map_slab checks containment exactly)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys
-sys.path.insert(0,'/workspace/work/dcp-n26/v3replay')
+sys.path.insert(0,DCP_N26+'/v3replay')
 import lgeom
 from fractions import Fraction as F
 C=lgeom.C; RHO0=lgeom.RHO0

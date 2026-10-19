@@ -3,9 +3,13 @@ c = rational midpoint of C; Q_0 = C ∩ 1669 (LOCAL-PINNING-CELL leaf);
 Q_j = ([c-rho_j, c+rho_j] ∩ 1669) on the 9 wide axes (thin axes 0..5 untouched),
 rho_j = 2^j * 1e-7 for j>=1 until Q_J = 1669.  Q_{j+1} \\ Q_j is cut by exact
 closed SPLITs axis by axis into slabs; each slab is an energy job."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json
 from fractions import Fraction as F
-ROOT='/workspace/work/dcp-n26'
+ROOT=DCP_N26
 PROP=ROOT+'/repo/cover26/proof_bundle/work/n26-refined-anchor-pinning-broad-proposal-v2.json'
 CELL=[(F(a),F(b)) for a,b in json.load(open(PROP))['closed_anchor_angle_cells']]
 B=[b for b in json.load(open(ROOT+'/pending.json'))['pending_closed_leaf_boxes'] if b['index']==1669][0]

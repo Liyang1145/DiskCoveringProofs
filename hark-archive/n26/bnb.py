@@ -3,6 +3,10 @@ root25 OPEN boxes (no-origin 134-rod model; stronger than either origin branch).
 Output: certs/<index>.json with a split tree; leaves carry integer weight
 numerators (denominator 10^12) and the claimed rigorous margin (re-checked
 independently by verify_certs.py)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, os, sys, time
 from fractions import Fraction as F
 import numpy as np
@@ -11,10 +15,10 @@ import certify_box as cb
 import diag_open as dg
 
 DEN = 10 ** 12
-d = json.load(open('/workspace/work/dcp-n26/pending.json'))
+d = json.load(open(DCP_N26+'/pending.json'))
 BOX = {b['index']: b for b in d['pending_closed_leaf_boxes']}
-DIAG = {r['index']: r for r in json.load(open('/workspace/work/dcp-n26/diag_merged.json'))}
-os.makedirs('/workspace/work/dcp-n26/certs', exist_ok=True)
+DIAG = {r['index']: r for r in json.load(open(DCP_N26+'/diag_merged.json'))}
+os.makedirs(DCP_N26+'/certs', exist_ok=True)
 
 
 def worst_point(lo, hi):
@@ -83,14 +87,14 @@ def certify(idx, max_nodes=600, tlimit=float(os.environ.get('TLIMIT','45'))):
            'nodes': nodes, 'seconds': time.time() - t0}
     if out['open'] and any(True for _ in [0]) and time.time() - t0 >= tlimit - 1:
         out['budget_hit'] = True
-    tmp = '/workspace/work/dcp-n26/certs/.%d.tmp' % idx
-    json.dump(out, open(tmp, 'w')); os.replace(tmp, '/workspace/work/dcp-n26/certs/%d.json' % idx)
+    tmp = DCP_N26+'/certs/.%d.tmp' % idx
+    json.dump(out, open(tmp, 'w')); os.replace(tmp, DCP_N26+'/certs/%d.json' % idx)
     return idx, out['leaves'], out['open'], nodes, round(out['seconds'], 1)
 
 
 if __name__ == '__main__':
     from multiprocessing import Pool
-    done = {int(f[:-5]) for f in os.listdir('/workspace/work/dcp-n26/certs') if f.endswith('.json')}
+    done = {int(f[:-5]) for f in os.listdir(DCP_N26+'/certs') if f.endswith('.json')}
     order = sorted(BOX, key=lambda i: -DIAG[i]['None'][0])  # easiest first
     todo = [i for i in order if i not in done]
     if len(sys.argv) > 1 and sys.argv[1] == 'hard':

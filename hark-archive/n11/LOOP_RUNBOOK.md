@@ -27,6 +27,7 @@ CI step of every loop turn (build line):
 - If an approach loops twice without progress, record it in LOOP_STATE blockers and pick the next queue item.
 
 Core-Lean toolchain recipe (after container restart; / is RAM-backed, keep it small):
-  mkdir -p /var/tmp/lean && cd /var/tmp/lean && tar --zstd -xf /workspace/work/toolcache/lean-4.33.1-linux_aarch64.tar.zst --wildcards 'lean-4.33.1-linux_aarch64/bin*' 'lean-4.33.1-linux_aarch64/lib/lean/*' --exclude='*.ilean' --exclude='*.a' --exclude='*/Lake*'
-  (needs Init/Std/Lean .olean AND .ir files; deleting .ir breaks codegen; ~2.2 GB). Then class33/drive2.sh (list data/core_modules_v2.txt, oleans /tmp/c33).
+  (historical sandbox recipe; on a new machine just set LEAN_TOOLCHAIN, see HARK_ARCHIVE.md)
+  mkdir -p "$(dirname "$LEAN_TOOLCHAIN")" && cd "$(dirname "$LEAN_TOOLCHAIN")" && tar --zstd -xf <toolcache>/lean-4.33.1-linux_aarch64.tar.zst --wildcards 'lean-4.33.1-linux_aarch64/bin*' 'lean-4.33.1-linux_aarch64/lib/lean/*' --exclude='*.ilean' --exclude='*.a' --exclude='*/Lake*'
+  (needs Init/Std/Lean .olean AND .ir files; deleting .ir breaks codegen; ~2.2 GB). Then class33/drive2.sh (list data/core_modules_v2.txt, oleans $DCP_TMP/c33).
 Core-Lean parts must stay ≤100 leaves / 25-leaf chunks (300-leaf parts OOM at ~2 GB free).

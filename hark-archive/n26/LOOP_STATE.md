@@ -16,7 +16,7 @@ RUNNING: (none)
 ## Blockers
 - 959/1023 盒无法从 v3 树重建；pinning/SYSTEM.json 未公开。
 ## Rule
-所有产物必须写在 /workspace/work/dcp-n26 下（/tmp 会丢）；每块 ≤110s。
+所有产物必须写在 $DCP_N26_ROOT（hark-archive/n26）下（原沙箱的临时目录会丢）；每块 ≤110s。
 
 - 看护轮 12:55：6(b) 节点 59 pilot（v3replay/pilot59.py <预算> 12，可续跑，输出 lleaves/59pilot/）A 侧推进到壳 m0..m7 全闭合（205 片，0 OPEN，最小 bound/ρ²=3.76e-4），m8 已有 4 片；仅 A，未做 B。下一步：继续 pilot59.py 到足够小的 m（预算参数用 100–104 轮换），再写 B 复核（参照 local/certB.py 壳片），内核立方仍为 LOCAL。
 

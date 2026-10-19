@@ -1,9 +1,13 @@
 """Exact tree-integrity check of replay-tree node 28 subtree: binary SPLITs, each node reached once,
 and along every path the split mids on each axis nest strictly (left child <=mid, right >=mid, interval nonempty
 => no mid equals a boundary already imposed). Fractions exact."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json,sys
 from fractions import Fraction as F
-t=json.load(open('/workspace/work/dcp-n26/v3replay/V3-REPLAY-TREE.json'));N=t['nodes']
+t=json.load(open(DCP_N26+'/v3replay/V3-REPLAY-TREE.json'));N=t['nodes']
 root=int(sys.argv[1]) if len(sys.argv)>1 else 28
 seen=set();bad=[];leaves=0;st=[(root,{})]
 while st:
@@ -18,4 +22,4 @@ while st:
     st.append((l,{**iv,a:(lo,m)}));st.append((r,{**iv,a:(m,hi)}))
 res={'root':root,'nodes':len(seen),'leaves':leaves,'bad':bad[:10],'nbad':len(bad),'pass':not bad}
 print(json.dumps(res))
-open('/workspace/work/dcp-n26/local/tree28_integrity.json','w').write(json.dumps(res))
+open(DCP_N26+'/local/tree28_integrity.json','w').write(json.dumps(res))

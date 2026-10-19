@@ -7,11 +7,15 @@ middle box is a subset of C -> leaf kind LOCAL-PINNING-CELL (paid by the archive
 refined pinning + centered local barrier, NOT re-proved here).  Every slab is a
 separate job certified by the same robust-weight energy B&B as bnb2.py and
 checkpointed in certs1669/slab_<n>.json; assemble() writes certs/1669.json."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, os, sys, time, hashlib
 from fractions import Fraction as F
 import numpy as np
 import certify_box as cb, robust as rb, robust2 as rb2
-ROOT='/workspace/work/dcp-n26'; DEN=10**15; FLOOR=float(os.environ.get('FLOOR','1e-11'))
+ROOT=DCP_N26; DEN=10**15; FLOOR=float(os.environ.get('FLOOR','1e-11'))
 PROP=ROOT+'/repo/cover26/proof_bundle/work/n26-refined-anchor-pinning-broad-proposal-v2.json'
 CELL=[(F(a),F(b)) for a,b in json.load(open(PROP))['closed_anchor_angle_cells']]
 B=[b for b in json.load(open(ROOT+'/pending.json'))['pending_closed_leaf_boxes'] if b['index']==1669][0]

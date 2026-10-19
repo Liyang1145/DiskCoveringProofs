@@ -1,5 +1,9 @@
 """After A (verA_open23.json complete) and B (verB_v3_*.json all leaves of target) pass: record closure in
 V3-REPLAY-RESULT.json + ledger. usage: close_target.py <t>..."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,json,os,pickle,hashlib,time
 from fractions import Fraction as F
 R='V3-REPLAY-RESULT.json'; res=json.load(open(R))
@@ -22,7 +26,7 @@ for t in sys.argv[1:]:
     lst=res.setdefault('closed_open23',[])
     if t not in lst: lst.append(t)
     res['remaining_open_v3_nodes']=[x for x in res['remaining_open_v3_nodes'] if str(x)!=t]
-    with open('/workspace/work/dcp-n26/ledger.jsonl','a') as f:
+    with open(DCP_N26+'/ledger.jsonl','a') as f:
         f.write(json.dumps({'event':'v3-open23-CLOSED-A+B','target':t,'A':a['summary'],'B':b,'tree_sha256':sha,'t':time.time(),'cst':time.strftime('%Y-%m-%d %H:%M',time.gmtime(time.time()+8*3600))})+'\n')
     print(t,json.dumps(res['per_target'][t]))
 res['tree_sha256']=sha

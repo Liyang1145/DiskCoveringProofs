@@ -1,6 +1,10 @@
 """Emit core-Lean replays of the generated switch trees (and the A25 batch switch0 as positive control).
 Class33Core/SwTrees/<Tab>S<j>.lean : coefficients taken FROM the table module (Rep1.table / Q0M2.table),
 leaves chunked, each chunk checked by decide +kernel; global tiling checked from chunk endpoints."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json,sys,os,re
 from fractions import Fraction as F
 from pathlib import Path
@@ -38,7 +42,7 @@ def emit(name, imports, coeff_expr, M, leaves, note):
   return mods
 if __name__=='__main__':
   # positive control: A25 batch switch0 leaves (Lean-green module)
-  src=Path('/workspace/work/dcp-n11-lean/wip/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean').read_text()
+  src=Path(DCP_N11+'/wip/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean').read_text()
   v={m.group(1):F(m.group(2).strip('()')) for m in re.finditer(r'def start0_switch0_(p|q|b|d2|d1|bound) : ℚ := \((.*?) : ℚ\)',src)}
   pat=re.compile(r'theorem start0_switch0_node_\d+ : Certificate start0_switch0_leaf\n    \(switchCell \((.*?) : ℚ\) \((.*?) : ℚ\)\) := by\n  apply Certificate.accept')
   lv=sorted((F(a),F(b)) for a,b in pat.findall(src))

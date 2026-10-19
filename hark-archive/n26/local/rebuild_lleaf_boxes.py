@@ -1,15 +1,19 @@
 """Rebuild boxes of ALL LOCAL-SLAB leaves by replaying SPLIT+tighten from root (as v3replay/replay.py); compare with disk leaf files.
 Writes local/lleaf_boxes.json atomically. Float-free (Fractions)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26, DCP_MAIN_REPO
 import sys,json,os,time,glob
 from fractions import Fraction as F
-SRC='/workspace/work/dcp-n26/repo/cover26/proof_bundle/outputs/n26-sharp-candidate-angles-published-replay-v1'
+SRC=DCP_MAIN_REPO+'/cover26/proof_bundle/outputs/n26-sharp-candidate-angles-published-replay-v1'
 sys.path.insert(0,SRC)
 from n26_force import angular_domain, rootbox, tighten
-P=json.load(open('/workspace/work/dcp-n26/repo/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'))
-T=json.load(open('/workspace/work/dcp-n26/v3replay/V3-REPLAY-TREE.json'))['nodes']
+P=json.load(open(DCP_MAIN_REPO+'/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'))
+T=json.load(open(DCP_N26+'/v3replay/V3-REPLAY-TREE.json'))['nodes']
 mat=angular_domain(P['spec']);lo,hi=rootbox(mat)
 import pickle
-CK='/workspace/work/dcp-n26/local/lleaf_ck.pkl'
+CK=DCP_N26+'/local/lleaf_ck.pkl'
 if os.path.exists(CK):st,out=pickle.load(open(CK,'rb'))
 else:st=[(0,lo,hi,0)];out={}
 t0=time.time();BUD=float(sys.argv[1]) if len(sys.argv)>1 else 95
@@ -33,7 +37,7 @@ print('LS leaves',len(out),time.time()-t0)
 # compare with disk
 bad=0;chk=0;miss=[]
 disk={}
-for f in glob.glob('/workspace/work/dcp-n26/v3replay/lleaves/*/s*.json'):
+for f in glob.glob(DCP_N26+'/v3replay/lleaves/*/s*.json'):
     disk[int(os.path.basename(f)[1:-5])]=f
 for i,v in out.items():
     if i in disk:

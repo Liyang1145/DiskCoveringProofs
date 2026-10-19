@@ -1,10 +1,14 @@
 """Checker A, per-target, resumable: walks V3-REPLAY-TREE.json from root with archive tighten; for leaves under the
 given targets: FORCE -> archive force_check vs RUP; LOCAL-SLAB -> sha + containment + b-range coverage + positive bounds
 (bounds produced by local/certA.leaf_bound). State: verA_open23.json. usage: replayA_t.py <budget> <targets...>"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26, DCP_MAIN_REPO
 import sys,json,os,hashlib,time
 from fractions import Fraction as F
-SRC='/workspace/work/dcp-n26/repo/cover26/proof_bundle/outputs/n26-sharp-candidate-angles-published-replay-v1'
-sys.path.insert(0,SRC); sys.path.insert(0,'/workspace/work/dcp-n26/local'); sys.path.insert(0,'/workspace/work/dcp-n26')
+SRC=DCP_MAIN_REPO+'/cover26/proof_bundle/outputs/n26-sharp-candidate-angles-published-replay-v1'
+sys.path.insert(0,SRC); sys.path.insert(0,DCP_N26+'/local'); sys.path.insert(0,DCP_N26)
 from n26_force import angular_domain, rootbox, tighten, load_trig
 from n26_direct_arc_force import force_check
 import prop
@@ -70,7 +74,7 @@ for (i,k,lo,hi,tg) in leaves:
         r=force_check(spec,lo,hi,n['cert'],arcs); m=F(r['required_radius_lower'])-RUP; assert m>0,i
         rec['checked'][str(i)]=['F',str(m)]
     elif k=='LOCAL-SLAB':
-        p='/workspace/work/dcp-n26/'+n['file']; assert hashlib.sha256(open(p,'rb').read()).hexdigest()==n['sha256']
+        p=DCP_N26+'/'+n['file']; assert hashlib.sha256(open(p,'rb').read()).hexdigest()==n['sha256']
         d=json.load(open(p)); L=[F(x) for x in d['lower']]; H=[F(x) for x in d['upper']]
         assert all(a<=x and y<=c for a,x,y,c in zip(L,lo,hi,H)), i
         b1,b2=prop.brange(lo,hi); ps=d['pieces']

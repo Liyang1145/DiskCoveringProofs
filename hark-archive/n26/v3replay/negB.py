@@ -1,3 +1,7 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json,sys
 from fractions import Fraction as F
 import certB_v3 as CB
@@ -18,7 +22,7 @@ print('zero-g cert ->',CB.force_B(spec,[F(x) for x in A['boxes']['97']['lo']],[F
 # LOCAL energy check on a slab containing theta*: use LOCAL box 59 with piece kappa from a real leaf
 d=json.load(open('lleaves/135/s51.json')); x=d['pieces'][0]
 kap=F(x['kappa']); w=[a+kap*t for a,t in zip(CB.LB.L0,CB.LB.TAU)]
-V=[F(v) for v in json.load(open('/workspace/work/dcp-n26/local/prop.json'))['v']]
+V=[F(v) for v in json.load(open(DCP_N26+'/local/prop.json'))['v']]
 b1=sum(min(v*(a-c),v*(bb-c)) for v,a,bb,c in zip(V,lo,hi,CB.LB.CS)); b2=sum(max(v*(a-c),v*(bb-c)) for v,a,bb,c in zip(V,lo,hi,CB.LB.CS))
 bd=CB.LB.check_leaf(w,lo,hi,b1,b2,F(d['mu']))
 print('energy check on box 59 (contains theta*):',bd if bd is None else float(bd))

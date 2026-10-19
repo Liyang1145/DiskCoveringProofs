@@ -36,13 +36,13 @@ Push a commit to `ci/n11-build` touching the track's paths (e.g. a fixed draft).
 `curl -X POST $API/actions/runs/<id>/rerun` (or apicall github workflow_run_rerun). Cancel: workflow_run_cancel.
 Push recipe (sandbox, credentials github): partial clone, add on top of the branch head:
 ```
-git clone -q --depth 1 --filter=blob:none --no-checkout --single-branch --branch ci/n11-build https://github.com/Liyang1145/DiskCoveringProofs.git /tmp/dcp
-cd /tmp/dcp; export GIT_INDEX_FILE=/tmp/dcp-index; git read-tree HEAD
-git --work-tree=/workspace/work/dcp-n11-lean/ci/repo add ci-n11 .github/workflows/n11-*.yml   # only changed files get new blobs
+git clone -q --depth 1 --filter=blob:none --no-checkout --single-branch --branch ci/n11-build https://github.com/Liyang1145/DiskCoveringProofs.git "${TMPDIR:-/tmp}/dcp"
+cd "${TMPDIR:-/tmp}/dcp"; export GIT_INDEX_FILE="${TMPDIR:-/tmp}/dcp-index"; git read-tree HEAD
+git --work-tree="$DCP_N11_ROOT/ci/repo" add ci-n11 .github/workflows/n11-*.yml   # only changed files get new blobs
 T=$(git write-tree --missing-ok); C=$(git commit-tree $T -p HEAD -m "...")
 git push origin $C:refs/heads/ci/n11-build
 ```
-(Working in /tmp: `git add` on JuiceFS of 2,600 files times out; with the tar copy to /tmp/stage it takes ~3 s.)
+(Work in a local tmp dir: in the sandbox `git add` on the JuiceFS workspace of 2,600 files timed out; with a tar copy to `${TMPDIR:-/tmp}/stage` it took ~3 s.)
 
 ## How to read results
 `python3 ci/mon.py` (shell with github credentials): runs, jobs, current step, failed steps, live commit statuses

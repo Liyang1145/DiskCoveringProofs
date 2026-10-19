@@ -11,6 +11,10 @@ SOURCES (wip/lean/N11Formalization/):
   FlashCosineLeaf284Bridge.lean (iOf, jOf, T), IntervalsHigh(.Lag).lean (sinTQ, cosTQ,
   sinLoNLag, sinHiNLag, cosHiNLag), RoundedPaid16.lean (weight, mix).
 """
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 from fractions import Fraction as F
 from math import factorial
 import json
@@ -109,7 +113,7 @@ def check(ctx, p, fast_lines=False):
     ok = all(v >= 0 for kk, v in res.items() if kk != 'numeric') and res['numeric'] > 0
     return ok, res, low
 
-def load_parsed(path='/workspace/work/dcp-n11-lean/energy/parsed.json'):
+def load_parsed(path=DCP_N11+'/energy/parsed.json'):
     d = json.load(open(path))
     def dec(x):
         if isinstance(x, str) and '/' in x:

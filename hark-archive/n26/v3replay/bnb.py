@@ -1,3 +1,7 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,json,os,time
 from fractions import Fraction as F
 import numpy as np, mpmath as mp
@@ -58,4 +62,4 @@ if __name__=='__main__':
         if left<5: break
         r=run(t,left); r['t']=time.time()
         print(json.dumps(r),flush=True)
-        with open('/workspace/work/dcp-n26/ledger.jsonl','a') as f: f.write(json.dumps({'event':'v3-replay-bnb',**r})+'\n')
+        with open(DCP_N26+'/ledger.jsonl','a') as f: f.write(json.dumps({'event':'v3-replay-bnb',**r})+'\n')

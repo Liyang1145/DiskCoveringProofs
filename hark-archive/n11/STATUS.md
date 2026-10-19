@@ -31,7 +31,7 @@ Liyang1145/DiskCoveringProofs (user-approved; branch only, `main` untouched, no 
 | Package index | repo `assets/replay/n11-wip/PACKAGES.json` (complete=true, mathematical_verification=not_performed) |
 | Downloaded | `proof-assets-core-20261014/n11-wip-FILES.jsonl.gz` sha256 `2aa324a3…ba15d` ✓; `n11-wip-0001.zip` 47,133,937 B sha256 `378b6501…45367` ✓ |
 | Per-file check | 2383/2383 members match ledger (sha256 + length), 0 mismatches |
-| Location | `/workspace/work/dcp-n11-lean/wip/` (= `build/n11-wip/assets/` layout; `wip/lean` = asset `lean/`). Ledger copy: `wip-LEDGER.jsonl.gz` |
+| Location | `hark-archive/n11/wip/` (= `build/n11-wip/assets/` layout; `wip/lean` = asset `lean/`). Ledger copy: `wip-LEDGER.jsonl.gz` |
 | Not fetched | Lean v4.33.1 / Mathlib `0df444a3…` caches (not shipped; see §4); `n11-supplement` (636 MB generator inputs + 680 receipts) — not needed, the emitted Lean is self-contained |
 
 Repo files read via API (copies under `src/`): `assets/replay/n11-wip/HANDOFF.json`,
@@ -118,7 +118,7 @@ as given.
 * `C450ReplayAudit.lean` — `#print axioms`: 61/61 = `[propext, Classical.choice, Quot.sound]`
   (`c450-replay/logs/axioms-audit.out`).
 * Build: manual `lean -o` per module (script `c450-replay/build.sh`, oleans in RAM
-  `/tmp/lc`, not persisted), append-only log `c450-replay/logs/build.jsonl`
+  `$DCP_TMP/lc`, not persisted), append-only log `c450-replay/logs/build.jsonl`
   (117 rows, 109 rc=0; the 8 non-zero rows are a path bug before the first real build and
   SIGKILL/OOM of the oversized Source36 chunk, fixed by re-chunking; every module in the
   final set has an rc=0 row with its source sha256). `lake build` of the original
@@ -153,7 +153,7 @@ Arithmetic only; the aggregation/bridge theorem itself is still missing.
 ## 4. Build attempts (step 3)
 
 * RAM 7.9 GB total; available fluctuated 1.2–6.3 GB (shared with other agents). No local
-  disk: `/` is overlay on `/mnt/tmp` (RAM-backed), `/workspace` is JuiceFS FUSE. CPU arch is
+  disk (original sandbox): root fs was a RAM-backed overlay, the persistent workspace was JuiceFS FUSE. CPU arch is
   **aarch64**.
 * Attempt 1: Lean v4.33.1 toolchain unpacked to RAM (2.1 GB trimmed). Wrong architecture
   (x86-64 asset), and available RAM fell to 1.4 GB. Deleted.
@@ -161,7 +161,7 @@ Arithmetic only; the aggregation/bridge theorem itself is still missing.
   elaborating Lean process (one 79-packet core-only check already peaked at 1.95 GB RSS)
   does not fit in what was left. Stopped per rule. WIP Mathlib build needs a normal machine
   (≥16 GB RAM, local disk, aarch64/x86 matching `lean-toolchain` v4.33.1).
-* What works: a slim **core-only** v4.35.0 toolchain copied to `/tmp/slim` (Init only,
+* What works: a slim **core-only** v4.35.0 toolchain copied to `$DCP_TMP/slim` (use `C450_LEAN_TOOLCHAIN` now) (Init only,
   ~620 MB): about 0.36 s per small file, about 0.19 s CPU per packet check.
 
 ## 5. Remaining obligations, ranked (value ÷ effort, for the next agent or the team)
@@ -202,9 +202,9 @@ import order with `lean -o`. Keep each chunk at 60 packets or fewer, or use abou
 
 What now exists (reusable):
 * **Correct aarch64 Lean v4.33.1** (`lean-4.33.1-linux_aarch64.tar.zst`, commit 819816b2): hot part
-  (bin, .so, `.olean`, `.olean.server`) in RAM at `/var/tmp/lean/lean-4.33.1-linux_aarch64` (675 MB);
+  (bin, .so, `.olean`, `.olean.server`) in RAM at `$LEAN_TOOLCHAIN` (sandbox: lean-4.33.1-linux_aarch64) (675 MB);
   `.olean.private`, `.ir`, `.a`, libLLVM on JuiceFS `wip-build/tc-cold/` and symlinked back.
-  Core-only control `import Lean` + `decide` + `#print axioms` (`/var/tmp/t1.lean`): OK, 2.1 s warm.
+  Core-only control `import Lean` + `decide` + `#print axioms` (`$DCP_TMP/t1.lean`): OK, 2.1 s warm.
   (The class line is currently using this toolchain too.)
 * **Exact Mathlib cache hashes** for rev 0df444a3, computed by `wip-build/hashes.lean` (a port of
   `Cache/Hashing.lean`, run with `lean --run`): 8,690 modules (Mathlib + Batteries, Aesop, Qq,
@@ -362,7 +362,7 @@ Obligation `EnergyTerminalBatchB11.RemainingTerminalRadius`. All files under `en
 * **Inventory.** 2506 terminals in `DBMSourceTreeData` = 2386 energy + 120 sharp; paid 310; remaining **2076** (matches HANDOFF). 274/310 paid use the uniform `Paid16CellCertificate` packet (G01..G12 = 252, Batch22 = 22); 36 are bespoke consumers. The "1687 candidate routes" are HOST proposals that are **not shipped** in n11-wip-0001 or in the `n11-supplement` release (that release is C450 logs/inputs only; FILES manifest sha256 e7fca1ae… verified). So I regenerated certificates in the Paid16 format: the same 16 paid fields and rounded weights, ≤7 DBM dual rows, and the exact strict T² check.
 * **Exact replay** (`energy/checker.py`, Fraction transcription of `Paid16CellCertificate.Valid` and every helper): positive control **274/274** paid packets pass (min numeric margin 2.8e−6); **10/10** negative controls rejected (beta sum, beta<0, λ<0, rmin up, line intercept +1e−6, wrong arc shift, endpoint, wrong node, non-terminal node, zero dual).
 * **Single-cell certificates** (`gen.py`: float LP in (β,λ,rmin) with damped tangent-point iteration, then rational rounding, rmin computed exactly, exact check): **1734/2076 pass** (min exact margin 1.1e−9). WIP-format Lean emitted: `energy/lean-wip/N11Formalization/Paid16GeneralH001..H083` (21 cases each, G03 template), `Paid16GeneralHAgg01..09`, `Paid16GeneralHAll`, `EnergyTerminalBatchB12` (`paidIDs` = B11 ∪ H, new explicit `RemainingTerminalRadius`, bridge `remaining11_of_remaining12`). The emitted text was re-parsed and re-checked: 1734/1734. **Not compiled** (no Mathlib here); B12 adds no paid credit until the build line compiles and audits it.
-* **Core-Lean kernel sample** (`energy/lean-core/EnergyReplay/`, Lean 4.33.1 core, no Mathlib): `Kernel.lean` defines `ValidQ` as a field-for-field restatement over `Rat` and proves `validB_sound`. Compiled green: 2 paid G01 packets (positive), the **4 new packets with the smallest margins** (nodes 4670, 4931, 4038, 3453), and `Controls` (2 mutated packets evaluate to `false`). The bulk run (248 chunks, about 10 s and 0.9 GB per packet chunk) was stopped: two chunks were OOM-killed (rc −9) and the sandbox restarted. Axiom audit **not run** for these modules. The toolchain copy at /var/tmp/lean disappeared at the restart.
+* **Core-Lean kernel sample** (`energy/lean-core/EnergyReplay/`, Lean 4.33.1 core, no Mathlib): `Kernel.lean` defines `ValidQ` as a field-for-field restatement over `Rat` and proves `validB_sound`. Compiled green: 2 paid G01 packets (positive), the **4 new packets with the smallest margins** (nodes 4670, 4931, 4038, 3453), and `Controls` (2 mutated packets evaluate to `false`). The bulk run (248 chunks, about 10 s and 0.9 GB per packet chunk) was stopped: two chunks were OOM-killed (rc −9) and the sandbox restarted. Axiom audit **not run** for these modules. The sandbox toolchain copy (now `$LEAN_TOOLCHAIN`) disappeared at the restart.
 * **342 failures → refinement.** The long-iteration and Kelley upper bound (`refine.py`, 203 nodes, float) show **194/203 have no single-cell Paid16 certificate at all** (V_up < T²). `split.py` subdivides the cell by the `DBMTreeKernel.Valid` split rule at scale 4096·2⁸ (depth ≤ 12, ≤ 64 leaves) and checks each leaf packet exactly. Result: **57 nodes certified, 496 leaves**; **285 still open**. DRAFT Lean: `Paid16MatrixCellCertificate.lean` (explicit-matrix packet, generic copies of the rows/angles/dual lemmas, `node_radius_of_refinement` via `DBMTreeKernel.terminal_cover`), `EnergyRefineNxxxx` (57 modules), `EnergyRefineAgg01..06`, `EnergyRefineAll`, `EnergyTerminalBatchB13` (`remaining11_of_remaining13`). The generic proofs and `pk_ok` were written blind and will need repair at first compile.
 * **Count if the build line compiles everything green:** energy remaining would drop from 2076 to **285** (1734 single-cell + 57 refined). The 285 open nodes sit at node ids ≥ 3000, mostly 3500–5010, near the sharp-patch region. Depth-12 leaves fail by 2e−8…1e−5 below T². This needs genuinely new mathematics (more paid fields, sharp-patch-style certificates, or another oracle), not more search.
 

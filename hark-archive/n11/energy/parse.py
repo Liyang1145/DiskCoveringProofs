@@ -1,10 +1,14 @@
 #!/usr/bin/env python3
 """Parse the WIP Lean sources (read-only) into energy/parsed.json.
 Exact rationals are kept as "num/den" strings."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import re, json, os, sys
 from fractions import Fraction as F
-W = '/workspace/work/dcp-n11-lean/wip/lean/N11Formalization'
-OUT = '/workspace/work/dcp-n11-lean/energy/parsed.json'
+W = DCP_N11+'/wip/lean/N11Formalization'
+OUT = DCP_N11+'/energy/parsed.json'
 
 def rd(n): return open(os.path.join(W, n), encoding='utf-8').read()
 
@@ -133,4 +137,4 @@ if __name__ == '__main__':
     rem = [i for i in term if i not in paid and i not in set(ids['sharp'])]
     print('remaining', len(rem))
     json.dump(dict(terminals=term, paid=sorted(paid), sharp=sorted(ids['sharp']), remaining=rem),
-              open('/workspace/work/dcp-n11-lean/energy/ids.json', 'w'))
+              open(DCP_N11+'/energy/ids.json', 'w'))

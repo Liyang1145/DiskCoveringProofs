@@ -2,15 +2,19 @@
 (bisect the 9 wide axes once), model radius minimised by SLSQP (diag_open.solve,
 no origin constraint) from centre + 2 random starts. Resumable: appends
 screen28.jsonl per sub-box."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, os, sys, itertools, numpy as np
 from fractions import Fraction as F
 from multiprocessing import Pool
 import diag_open as dg
 RS=0.2347000904004482396
-B=json.load(open('/workspace/work/dcp-n26/root28_box_inferred.json'))
+B=json.load(open(DCP_N26+'/root28_box_inferred.json'))
 LO=np.array([float(F(x)) for x in B['lower']]); HI=np.array([float(F(x)) for x in B['upper']])
 WIDE=[k for k in range(15) if HI[k]-LO[k]>1e-6]
-OUT='/workspace/work/dcp-n26/screen28.jsonl'
+OUT=DCP_N26+'/screen28.jsonl'
 def sub(code):
     lo=LO.copy(); hi=HI.copy()
     for bit,k in zip(code,WIDE):

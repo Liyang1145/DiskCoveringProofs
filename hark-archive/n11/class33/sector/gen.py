@@ -1,10 +1,14 @@
 """Adaptive sector tree generator (exact Fractions), resumable.  usage: gen.py <tag> <sector i> [budget_s]
 State file data/sector_<tag>_<i>.state.json = {M, tokens(pre-order, done so far), stack(pending boxes)}.
 Tokens: ['S',dim,t] | ['L',cl,ch,hl,hh]  (Fractions as 'n/d')."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json, os, sys, time
 from fractions import Fraction as F
 from kernel import *
-D = '/workspace/work/dcp-n11-lean/class33/data/'
+D = DCP_N11+'/class33/data/'
 def fs(x): return f'{x.numerator}/{x.denominator}'
 def wr(p, obj):
     t = p + '.tmp'; open(t, 'w').write(json.dumps(obj)); os.replace(t, p)

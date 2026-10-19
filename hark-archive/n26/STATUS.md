@@ -110,7 +110,7 @@ These hold no matter what the counts above are.
 ## 4. What failed or limits this
 
 * I **stopped the branch-and-bound at 138 of 344 boxes** under the loop rule. Repeated runs stopped making progress: the sandbox ran my commands concurrently in several containers with inconsistent views of the files, so results vanished or were recomputed. This was not a mathematical failure.
-* The working directory `/workspace/work` briefly disappeared once. Python packages had to be reinstalled (`pip install --user numpy scipy python-flint cvxpy mpmath`).
+* The sandbox working directory briefly disappeared once. Python packages had to be reinstalled (`pip install --user numpy scipy python-flint cvxpy mpmath`).
 * Soundness scope:
   * I check arithmetic only.
   * The facts that the 134 rods are necessary, the labels/owners, the B16 34-face type, the use of original-26 cardinality, and root25 being a correct root box all come from the archive's interface proofs. I did not re-prove them.
@@ -132,7 +132,7 @@ These hold no matter what the counts above are.
    * Any box whose minimum does fall below R\* is a genuine model counterexample. It needs a new geometric constraint (for example |c_i| ≥ 1−ρ for boundary centres, or core-coverage), not more fitting.
 4. Commit the 134-rod edge list or SYSTEM.json and the other 1035 missing inputs (user approval needed), so third parties can replay the chain.
 
-## Artifacts (all under /workspace/work/dcp-n26/)
+## Artifacts (all under hark-archive/n26/, i.e. $DCP_N26_ROOT)
 * Scripts: `reconstruct_model.py`, `n26model.py`, `validate1.py`, `diag_open.py`, `certify_box.py`, `bnb.py`, `verify_certs.py`.
 * Model: `model134.json`. Pending boxes: `pending.json` (copied verbatim from the committed root25 file).
 * Results:
@@ -150,13 +150,13 @@ These hold no matter what the counts above are.
 - Model still the reconstructed 134-rod list; not checked vs SYSTEM.json.
 
 ## 2026-10-15 晚 会话 b（结果文件已丢失，仅存结论，需重做）
-子代理在 21:30 左右遭遇持久盘掉挂，所有产物写在 /tmp/n26 和 UNMERGED 目录，容器重建后全部丢失。以下结论**未保留证书，不算闭合**，需按此思路重做并复核：
+子代理在 21:30 左右遭遇持久盘掉挂，所有产物写在沙箱临时目录（原 tmp 下的 n26）和 UNMERGED 目录，容器重建后全部丢失。以下结论**未保留证书，不算闭合**，需按此思路重做并复核：
 1. 用已提交 outputs/n26-candidate-full134rod-minimax-relaxation-diagnosis-v1.json 的 NEW_distinct_full134rod_edges，80 位求解最优性方程复现 60 位 R*；候选精确 D2 对称（θ8=½）。
 2. 候选处单一权重 Hessian 有负特征值（−0.044）；10 个见证三元组在 R* 处乘子为 0，5 个方向半径线性增长，其余 10 维 Hessian 正（最小约 0.009）。故用「有限组权重取最大」的局部证书：10 组非负有理权重 + 10 方向扇区覆盖，覆盖 ∞-距离 1e-26 到 1.2e-5 的环（双复核器 A=flint/arb、B=Fraction/mpmath 均通过，最小 bound/W≈1.9e-55）。此叶型尚非存档接受类型，需写成接口引理。
 3. 盒 1669 并不包含候选：候选在轴 6、7 上越出盒上界 2.945e-10。旧树唯一 OPEN 节点 Q6∩1669 用局部证书闭合（bound/W≈3.6e-22）；与 certs1669/ 旧 165 叶合并即 root25 344/344（算术层），合并待做。
 4. 重放已提交 work/n26-sharp-candidate-angles-proposal-v3.json（用 n26_force.tighten）：38 OPEN + 1 LOCAL（节点 59，含候选的 7e-10 立方）。曾闭合 14 个 OPEN 节点（97,98,99,100,135,136,175,176,289,290,296,308,295,304），均不在 16 根名单。
 5. root28：旧 inferred box 与重放树节点 28 在轴 6–13 不符，应改用重放盒。其余根数值分诊未见低于 R* 的点，远场估计需 1e6+ 叶。959/1023 不在 v3 树中。
-环境：shell 每条 120s 上限，后台进程随命令返回被杀，必须 ≤110s 分块且结果直接写 /workspace/work/dcp-n26 下。
+环境：shell 每条 120s 上限，后台进程随命令返回被杀，必须 ≤110s 分块且结果直接写 $DCP_N26_ROOT（hark-archive/n26）下。
 
 ## 2026-10-16 00:45–01:40 CST 看护轮：盒 1669 的 Q6 用局部切片森林闭合 → root25 344/344（算术层）
 - 方法（产物全在 local/，未用 /tmp）：c* = kkt2_122.json 的 58 位 θ*；hp.py 复现 Φ_λ0(θ*)−R*² = −4.4e-61、H0 最小特征 −0.0444（与会话 b 一致）。

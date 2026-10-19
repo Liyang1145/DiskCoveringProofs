@@ -5,12 +5,16 @@
  (3) aggregation: sum of the nine batch bounds == start0_switch_total_bound (22523/250000);
  (4) strict-total budgets for both representatives with proposed rational maxima.
 """
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import re, json, sys
 from fractions import Fraction as F
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent))
 import rep_tables as RT
-WIP = Path('/workspace/work/dcp-n11-lean/wip/lean/N11Formalization')
+WIP = Path(DCP_N11+'/wip/lean/N11Formalization')
 src = (WIP / 'SharedMomentConcreteSwitchBatch.lean').read_text()
 def rat(s):
     s = s.strip().strip('()').replace(': ℚ', '').strip()

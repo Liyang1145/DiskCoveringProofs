@@ -2,12 +2,16 @@
 candidate theta*.  PROPOSAL/diagnostic tool; verdicts go through rigorous
 checkers only.  Weights: rational, >=0, rods with zero weight dropped; free
 vertices with no weighted rod dropped (energy unchanged)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json
 from fractions import Fraction as F
 import flint
 from flint import arb, fmpq, arb_mat
 flint.ctx.prec = 320
-ROOT = '/workspace/work/dcp-n26'
+ROOT = DCP_N26
 E = [tuple(e) for e in json.load(open(ROOT + '/model134.json'))['edges']]
 K = json.load(open(ROOT + '/kkt2_122.json'))
 ACT = K['A']; LIVE = K['live']; nX = 2 * len(LIVE)

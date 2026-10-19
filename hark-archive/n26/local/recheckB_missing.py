@@ -1,9 +1,13 @@
 """certB independent recheck of close_missing_A pieces. Resumable. usage: recheckB_missing.py budget"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,os,json,time
-sys.path.insert(0,'/workspace/work/dcp-n26/v3replay'); sys.path.insert(0,'/workspace/work/dcp-n26/local')
+sys.path.insert(0,DCP_N26+'/v3replay'); sys.path.insert(0,DCP_N26+'/local')
 from fractions import Fraction as F
 import prop,certB
-D='/workspace/work/dcp-n26/local/'; OUT=D+'recheckB_missing.jsonl'
+D=DCP_N26+'/local/'; OUT=D+'recheckB_missing.jsonl'
 d=json.load(open(D+'lleaf_boxes_missing.json'))['missing']
 done=set()
 if os.path.exists(OUT): done={json.loads(l)['leaf'] for l in open(OUT)}

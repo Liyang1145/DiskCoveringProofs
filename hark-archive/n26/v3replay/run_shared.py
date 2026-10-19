@@ -1,11 +1,15 @@
 """Checker-A side: certA LOCAL-SLAB energy certs on the shared annulus slabs (shgeom) needed by the OPEN23 targets.
 Resumable; usage: run_shared.py <budget_s>"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,os,json,time
-sys.path.insert(0,'/workspace/work/dcp-n26/v3replay'); sys.path.insert(0,'/workspace/work/dcp-n26/local')
+sys.path.insert(0,DCP_N26+'/v3replay'); sys.path.insert(0,DCP_N26+'/local')
 from fractions import Fraction as F
 import lgeom, shgeom, prop
 from run_local import piece
-OUT='/workspace/work/dcp-n26/v3replay/lleaves/shared'; os.makedirs(OUT,exist_ok=True)
+OUT=DCP_N26+'/v3replay/lleaves/shared'; os.makedirs(OUT,exist_ok=True)
 NF=OUT+'/NEED.json'
 if not os.path.exists(NF):
     need=set()
@@ -33,6 +37,6 @@ for m,s in need:
          'min_bound_over_rho2':float(mb/rho**2) if mb is not None else None}
     json.dump(rec,open(fn+'.tmp','w')); os.replace(fn+'.tmp',fn); done+=1
     if not ok: bad.append((m,s))
-    with open('/workspace/work/dcp-n26/ledger.jsonl','a') as f:
+    with open(DCP_N26+'/ledger.jsonl','a') as f:
         f.write(json.dumps({'event':'v3-shared-local-A','t':time.time(),'m':m,'slab':s,'pieces':len(acc),'closed':ok,'min_b_rho2':rec['min_bound_over_rho2']})+'\n')
 print(json.dumps({'ALL_DONE':True,'need':len(need),'bad':bad}))

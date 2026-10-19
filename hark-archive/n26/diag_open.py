@@ -4,14 +4,18 @@ owner branch v in {16,25}, minimise the 134-rod model radius
 over theta in the closed box, free positions x unrestricted.
 If min t < R* the energy+origin route CANNOT close that branch on that box
 (weak duality: any energy certificate is <= the model optimum)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, sys, math, time
 import numpy as np
 from scipy.optimize import minimize
 from multiprocessing import Pool
 from fractions import Fraction as F
-M=json.load(open('/workspace/work/dcp-n26/model134.json')); E=[tuple(e) for e in M['edges']]
+M=json.load(open(DCP_N26+'/model134.json')); E=[tuple(e) for e in M['edges']]
 RS=0.2347000904004482396
-d=json.load(open('/workspace/work/dcp-n26/pending.json'))
+d=json.load(open(DCP_N26+'/pending.json'))
 boxes=d['pending_closed_leaf_boxes']
 U=np.array([e[0] for e in E]); V=np.array([e[1] for e in E])
 

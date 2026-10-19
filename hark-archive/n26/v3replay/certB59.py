@@ -1,9 +1,13 @@
 """Checker B for node-59 pilot shells: re-derives geometry from boxes.json (own code), checks coverage of b-range, runs local/certB.check_leaf (mpmath iv). Resumable."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,json,os,time,glob
-sys.path.insert(0,'/workspace/work/dcp-n26/local')
+sys.path.insert(0,DCP_N26+'/local')
 import certB
 from certB import F,CS,L0,TAU,V,check_leaf
-ROOT='/workspace/work/dcp-n26/v3replay'
+ROOT=DCP_N26+'/v3replay'
 B=json.load(open(ROOT+'/boxes.json'))['boxes']['59']; LO=[F(x) for x in B['lo']]; HI=[F(x) for x in B['hi']]
 R0=max(max(c-l,h-c) for l,h,c in zip(LO,HI,CS))
 MU=F(11,200); M=int(sys.argv[2]) if len(sys.argv)>2 else 12
@@ -38,5 +42,5 @@ for m in range(M):
             worst=bd if worst is None else min(worst,bd)
         S['done'][key]={'pieces':len(ps),'min':str(worst),'min_over_rho2':float(worst/(R0/2**m)**2)}
         json.dump(S,open(st+'.tmp','w')); os.replace(st+'.tmp',st)
-        open('/workspace/work/dcp-n26/ledger.jsonl','a').write(json.dumps({'event':'node59-pilot-B','key':key,'pieces':len(ps),'min':float(worst)})+'\n')
+        open(DCP_N26+'/ledger.jsonl','a').write(json.dumps({'event':'node59-pilot-B','key':key,'pieces':len(ps),'min':float(worst)})+'\n')
 print('ALL',tot,'verified',len(S['done']),'min/rho2',min(v['min_over_rho2'] for v in S['done'].values()))

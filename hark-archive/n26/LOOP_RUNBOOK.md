@@ -1,5 +1,5 @@
 # n26 loop runbook
-每轮：读 LOOP_STATE.md / STATUS.md / 本文件；看 /workspace/work/dcp-n11-lean/LOOP_STATE.md、free -g、ps（同时只一个重进程）。
+每轮：读 LOOP_STATE.md / STATUS.md / 本文件；看 hark-archive/n11/LOOP_STATE.md（$DCP_N11_ROOT/LOOP_STATE.md）、free -g、ps（同时只一个重进程）。
 标记格式「看护轮 RUNNING @<line> <时间 CST>」写在 LOOP_STATE.md 的 RUNNING 行；>4h 无进程即清。
 环境：pip install --user -q python-flint mpmath numpy scipy cvxpy（容器重建后需重装）。每条命令 ≤110s，脚本须可续跑并原子写盘（tmp+os.replace）。
 ## 局部切片森林方法（local/，用于含/贴近候选 θ* 的盒）

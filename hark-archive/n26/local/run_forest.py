@@ -1,9 +1,13 @@
 """Chunked driver (<=100 s per call, resumable): certify every shell slab of R with checker A."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, os, sys, time
 from fractions import Fraction as F
 import geom, prop, certA
 T0=time.time(); BUD=float(sys.argv[1]) if len(sys.argv)>1 else 100
-OUT='/workspace/work/dcp-n26/local/leaves'
+OUT=DCP_N26+'/local/leaves'
 def piece(lo,hi,ba,bb,depth,acc):
     kap=(ba+bb)/2/prop.AA
     bd,_=certA.leaf_bound(prop.weight(kap),lo,hi,prop.V,ba,bb,prop.MU)
@@ -26,6 +30,6 @@ for m in range(geom.mmax()):
         rec={'m':m,'slab':si,'lower':[str(x) for x in lo],'upper':[str(x) for x in hi],'b_range':[str(b1),str(b2)],
              'mu':str(prop.MU),'closed':ok,'pieces':acc,'min_bound_over_rho2':min(float(F(p['bound'])/rho**2) for p in acc if 'bound' in p)}
         json.dump(rec,open(fn+'.tmp','w')); os.replace(fn+'.tmp',fn); done+=1
-        with open('/workspace/work/dcp-n26/local/ledger.jsonl','a') as f:
+        with open(DCP_N26+'/local/ledger.jsonl','a') as f:
             f.write(json.dumps({'t':time.time(),'m':m,'slab':si,'pieces':len(acc),'closed':ok,'min_b_rho2':rec['min_bound_over_rho2']})+'\n')
 print('ALL DONE' ,done)

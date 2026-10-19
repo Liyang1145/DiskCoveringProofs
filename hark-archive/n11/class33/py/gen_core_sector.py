@@ -1,9 +1,13 @@
 """Emit core-Lean replays of generated sector trees.  usage: gen_core_sector.py <tag> [LIM leaves per part]
 Class33Core/SecTrees/<Mod>S<i>{Base,P<k>,}.lean ; pure pre-validation (NOT credit)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json, sys, os
 from fractions import Fraction as F
 from pathlib import Path
-ROOT = Path('/workspace/work/dcp-n11-lean/class33'); OUT = ROOT / 'lean-core' / 'Class33Core' / 'SecTrees'; OUT.mkdir(parents=True, exist_ok=True)
+ROOT = Path(DCP_N11+'/class33'); OUT = ROOT / 'lean-core' / 'Class33Core' / 'SecTrees'; OUT.mkdir(parents=True, exist_ok=True)
 PIHI = F(314159265358979323847, 10**20)
 def q(x):
     x = F(x); return f'({x.numerator}/{x.denominator} : Rat)' if x.denominator != 1 else f'({x.numerator} : Rat)'

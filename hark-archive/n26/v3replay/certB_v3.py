@@ -6,13 +6,17 @@ verify_degree_area, propose, bnb, lgeom, run_local, certA, hp, prop, geom.
 - LOCAL-SLAB: local/certB.check_leaf (mpmath iv 420-bit Kron/Schur energy, exact Fraction PSD, breakpoint LP)
   evaluated on B's own node box; pieces' b-range recomputed from raw prop.json V.
 Resumable: state in verB_v3.json; usage: certB_v3.py <budget_s> <shard> <nshards>"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,json,os,time,hashlib
 from fractions import Fraction as F
 from collections import deque
 from mpmath import iv, mp
-sys.path.insert(0,'/workspace/work/dcp-n26/local')
+sys.path.insert(0,DCP_N26+'/local')
 import certB as LB   # independent energy checker (raw JSON inputs only)
-ROOT='/workspace/work/dcp-n26'
+ROOT=DCP_N26
 RUP=F("0.234700090400448239616790133776692127560495963654971391785925")
 SC=10**7; CAP=(754112,1555305,2486507,3880649)
 def domain(spec):

@@ -1,13 +1,17 @@
 """Driver for the 23 remaining v3 OPEN nodes: outer FORCE slabs (bnb) then LOCAL-SLAB energy (certA) per target.
 Resumable; usage: open23.py <budget_s> [targets...]. Proposal + checker-A side only."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,os,json,time
-sys.path.insert(0,'/workspace/work/dcp-n26/local'); sys.path.insert(0,'/workspace/work/dcp-n26')
-sys.path.insert(0,'/workspace/work/dcp-n26/v3replay')
+sys.path.insert(0,DCP_N26+'/local'); sys.path.insert(0,DCP_N26)
+sys.path.insert(0,DCP_N26+'/v3replay')
 import warnings; warnings.filterwarnings('ignore')
 from fractions import Fraction as F
 import bnb, lgeom, prop, shgeom
 from run_local import piece, OUT
-LED='/workspace/work/dcp-n26/ledger.jsonl'
+LED=DCP_N26+'/ledger.jsonl'
 T0=time.time(); BUD=float(sys.argv[1]); ts=sys.argv[2:] or lgeom.OPEN23
 def left(): return BUD-(time.time()-T0)
 for t in ts:

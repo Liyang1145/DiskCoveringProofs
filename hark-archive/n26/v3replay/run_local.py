@@ -1,9 +1,13 @@
 """Checker-A driver: LOCAL-SLAB energy leaves for shell slabs (level>=0) of v3 boxes. Resumable, <=budget s."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys, json, os, time
-sys.path.insert(0,'/workspace/work/dcp-n26/local'); sys.path.insert(0,'/workspace/work/dcp-n26')
+sys.path.insert(0,DCP_N26+'/local'); sys.path.insert(0,DCP_N26)
 from fractions import Fraction as F
 import lgeom, prop, certA
-OUT='/workspace/work/dcp-n26/v3replay/lleaves'
+OUT=DCP_N26+'/v3replay/lleaves'
 def piece(lo,hi,ba,bb,depth,acc):
     kap=(ba+bb)/2/prop.AA
     bd,_=certA.leaf_bound(prop.weight(kap),lo,hi,prop.V,ba,bb,prop.MU)
@@ -33,6 +37,6 @@ if __name__=='__main__':
             rec['min_bound_over_rho2']=float(rec['min_bound']/rho**2) if rec['min_bound'] is not None else None
             rec['min_bound']=str(rec['min_bound'])
             json.dump(rec,open(fn+'.tmp','w')); os.replace(fn+'.tmp',fn); done+=1
-            with open('/workspace/work/dcp-n26/ledger.jsonl','a') as f:
+            with open(DCP_N26+'/ledger.jsonl','a') as f:
                 f.write(json.dumps({'event':'v3-local-A','t':time.time(),'target':t,'slab':n,'m':m,'pieces':len(acc),'closed':ok,'min_b_rho2':rec['min_bound_over_rho2']})+'\n')
     print('ALL DONE',ts,done)

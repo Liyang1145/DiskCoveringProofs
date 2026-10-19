@@ -1,13 +1,17 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_TMP
 import subprocess,time,os,sys
 order=[int(x) for x in sys.argv[1:]] or list(range(23,37))+list(range(12,23))+[11]
 mods=[]
 for k in order:
     mods+= [f"DCPN11Core/C450Replay/Seg{k}/Cells{j}" for j in range(1,5)]+[f"DCPN11Core/C450Replay/Seg{k}/All"]
-todo=[m for m in mods if not os.path.exists(f"/tmp/lc/{m}.olean")]
+todo=[m for m in mods if not os.path.exists(f"{DCP_TMP}/lc/{m}.olean")]
 t0=time.time(); run=[]; done=[]
 def deps_ok(m):
     if m.endswith('/All'):
-        b=m[:-4]; return all(os.path.exists(f"/tmp/lc/{b}/Cells{j}.olean") for j in range(1,5))
+        b=m[:-4]; return all(os.path.exists(f"{DCP_TMP}/lc/{b}/Cells{j}.olean") for j in range(1,5))
     return True
 while (todo or run):
     run=[(m,p) for m,p in run if p.poll() is None or done.append((m,p.returncode))]

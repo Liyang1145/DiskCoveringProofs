@@ -1,8 +1,12 @@
 """Parse emitted C450 SourceK GroupedC / Data / Segment Lean files (WIP snapshot) into JSON.
 Read-only on the WIP sources; exact rationals kept as [num,den] strings."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import re,json,sys,os,glob
 from fractions import Fraction as F
-W=sys.argv[1] if len(sys.argv)>1 else '/tmp/wip/lean/N11Formalization'
+W=sys.argv[1] if len(sys.argv)>1 else DCP_N11+'/wip/lean/N11Formalization'
 TERM=r'\(\(?(-?\d+):ℚ\)(?:/(\d+)\))?'
 def terms(s):
     out=[]

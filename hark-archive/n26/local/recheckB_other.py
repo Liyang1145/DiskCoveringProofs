@@ -1,11 +1,15 @@
 """Independent certB recheck of sampled node-28 LOCAL-SLAB leaf pieces (energy bound > 0). Resumable; appends to recheckB_other.jsonl."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json,glob,sys,time,os
 from fractions import Fraction as F
 import prop,certB
-T0=time.time();BUD=float(sys.argv[1]);OUT='/workspace/work/dcp-n26/local/recheckB_other.jsonl'
+T0=time.time();BUD=float(sys.argv[1]);OUT=DCP_N26+'/local/recheckB_other.jsonl'
 done=set()
 if os.path.exists(OUT): done={tuple(json.loads(l)['k']) for l in open(OUT)}
-fs=sorted(glob.glob('/workspace/work/dcp-n26/v3replay/lleaves/*/s*.json'))
+fs=sorted(glob.glob(DCP_N26+'/v3replay/lleaves/*/s*.json'))
 fs=[f for f in fs if '/lleaves/28/' not in f]
 for f in fs:
     d=json.load(open(f));lo=[F(x) for x in d['lower']];hi=[F(x) for x in d['upper']]

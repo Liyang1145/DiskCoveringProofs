@@ -1,5 +1,9 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11, DCP_TMP
 import os,re,json,sys
-root='/tmp/wip/lean'
+root=DCP_N11+'/wip/lean'
 mods={}
 for dp,dn,fn in os.walk(root):
     if '.lake' in dp: continue
@@ -54,4 +58,4 @@ for m in sorted(cur):
     if info[m]['sorry'] or info[m]['axiom'] or info[m]['native']: print('BAD',m,info[m])
 outside=[m for m in info if m not in cur]
 print('outside closure',len(outside),agg(outside))
-json.dump(dict(info=info,cur=sorted(cur),old=sorted(old)),open('/tmp/ana/graph.json','w'))
+json.dump(dict(info=info,cur=sorted(cur),old=sorted(old)),open((os.makedirs(DCP_TMP+'/ana',exist_ok=True) or DCP_TMP)+'/ana/graph.json','w'))

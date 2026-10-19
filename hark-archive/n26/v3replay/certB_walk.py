@@ -1,9 +1,13 @@
 """Resumable version of checker B's tree walk (same code path: certB_v3.domain / certB_v3.tight, B's own
 re-implementation). Produces verB_walkcache.pkl {'sha','leaves','cnt'} exactly as certB_v3.main would, but in
 <=budget chunks (state in verB_walk_state.pkl + verB_walk_part_*.pkl). usage: certB_walk.py <budget_s>"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,os,json,time,hashlib,pickle,glob
 from fractions import Fraction as F
-sys.path.insert(0,'/workspace/work/dcp-n26/v3replay')
+sys.path.insert(0,DCP_N26+'/v3replay')
 from certB_v3 import domain,tight,SC,ROOT
 T0=time.time(); BUD=float(sys.argv[1])
 W=ROOT+'/v3replay/'; STF=W+'verB_walk_state.pkl'; CP=W+'verB_walkcache.pkl'

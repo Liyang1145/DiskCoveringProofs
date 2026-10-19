@@ -1,9 +1,13 @@
 """Low-memory checker-B worker: identical per-leaf checks to certB_v3.main (FORCE via certB_v3.force_B, LOCAL-SLAB via
 local certB.check_leaf / verB_shared.json), reading the work list from verB_pending_<shard>.pkl (made by certB_prep.py
 from B's own walk). Verifies the tree file sha matches the pending list. usage: certB_lite.py <budget> <shard> <nshards>"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,os,json,time,hashlib,pickle
 from fractions import Fraction as F
-sys.path.insert(0,'/workspace/work/dcp-n26/v3replay')
+sys.path.insert(0,DCP_N26+'/v3replay')
 from certB_v3 import ROOT,RUP,force_B,LB
 BUD=float(sys.argv[1]); shard=int(sys.argv[2]); ns=int(sys.argv[3]); T0=time.time()
 W=ROOT+'/v3replay/'

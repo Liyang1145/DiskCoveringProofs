@@ -1,9 +1,13 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_MAIN_REPO
 import sys,json
 from fractions import Fraction as F
-sys.path.insert(0,'/workspace/work/dcp-n26/repo/cover26/proof_bundle/outputs/n26-sharp-candidate-angles-published-replay-v1')
+sys.path.insert(0,DCP_MAIN_REPO+'/cover26/proof_bundle/outputs/n26-sharp-candidate-angles-published-replay-v1')
 from n26_force import angular_domain,tighten
 import lgeom
-P=json.load(open('/workspace/work/dcp-n26/repo/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'))
+P=json.load(open(DCP_MAIN_REPO+'/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'))
 mat=angular_domain(P['spec'])
 tr,sl=lgeom.tree('304')
 def walk(n,lo,hi,path):

@@ -13,13 +13,17 @@ For each certificate file:
     interval cubic remainder, exact-LDL PSD split, convex-QP supporting plane).
 Verdict per file: CLOSED only if every leaf passes and there is no OPEN leaf.
 """
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, os, sys
 from fractions import Fraction as F
 import numpy as np
 from mpmath import iv, mp
 iv.prec = 160
 
-ROOT = '/workspace/work/dcp-n26'
+ROOT = DCP_N26
 M = json.load(open(ROOT + '/model134.json')); E = [tuple(e) for e in M['edges']]
 PEND = {b['index']: b for b in json.load(open(ROOT + '/pending.json'))['pending_closed_leaf_boxes']}
 RUP = F("0.234700090400448239616790133776692127560495963654971391785925")

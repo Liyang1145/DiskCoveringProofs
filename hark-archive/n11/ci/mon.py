@@ -3,6 +3,10 @@
 usage: mon.py            -> runs + jobs (with failed step) + commit statuses of branch head
        mon.py log <job>  -> print tail of a finished job's log
        mon.py art <run>  -> download all artifacts of a run into ci/artifacts/<run>/"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json, subprocess, sys, os
 API = 'https://api.github.com/repos/Liyang1145/DiskCoveringProofs'
 def get(u, raw=False):
@@ -13,7 +17,7 @@ if len(sys.argv) > 2 and sys.argv[1] == 'log':
     n = int(sys.argv[3]) if len(sys.argv) > 3 else 120
     print('\n'.join(txt.splitlines()[-n:])); sys.exit()
 if len(sys.argv) > 2 and sys.argv[1] == 'art':
-    run = sys.argv[2]; d = f'/workspace/work/dcp-n11-lean/ci/artifacts/{run}'; os.makedirs(d, exist_ok=True)
+    run = sys.argv[2]; d = f'{DCP_N11}/ci/artifacts/{run}'; os.makedirs(d, exist_ok=True)
     for a in get(f'/actions/runs/{run}/artifacts?per_page=100')['artifacts']:
         z = f'{d}/{a["name"]}.zip'
         open(z, 'wb').write(get(a['archive_download_url'], raw=True))

@@ -1,8 +1,12 @@
 """Re-verify every root25 OPEN-box certificate with verify_certs.py (fresh subprocess
 per file, 2 in parallel) and write ROOT25-FOREST-INDEX.json (atomic)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, os, hashlib, subprocess, sys
 from multiprocessing import Pool
-ROOT='/workspace/work/dcp-n26'
+ROOT=DCP_N26
 P=[b['index'] for b in json.load(open(ROOT+'/pending.json'))['pending_closed_leaf_boxes']]
 def one(i):
     path=ROOT+'/certs/%d.json'%i

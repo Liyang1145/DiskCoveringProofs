@@ -2,6 +2,10 @@
 SharedMomentConcreteFace1Part* files (GradientPlaneLeaf, planeBox_split_zero/one, identical norm_num set),
 for a table's generated face trees (data/face_trees_<tab>.json), plus per-face `EfficientFaceCertificate`
 via FaceCertificate.plane. Usage: gen_mathlib_faces.py <tab> <Mod>.  UNCOMPILED here."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json, sys, os, re
 from fractions import Fraction as F
 from pathlib import Path
@@ -10,7 +14,7 @@ tab, Mod = sys.argv[1], sys.argv[2]
 def q(x): x = F(x); return f'({x.numerator}/{x.denominator} : ℚ)' if x.denominator != 1 else f'({x.numerator} : ℚ)'
 def wr(p, s):
     t = str(p) + '.tmp'; Path(t).write_text(s); os.replace(t, p)
-W = Path('/workspace/work/dcp-n11-lean/wip/lean/N11Formalization')
+W = Path(DCP_N11+'/wip/lean/N11Formalization')
 norm = re.search(r'norm_num \[start0_face1_p,start0_face1_q,start0_face1_b,start0_face1_bound,(.*?)\]', (W / 'SharedMomentConcreteFace1Part0.lean').read_text()).group(1)
 d = json.loads((ROOT / 'data' / f'face_trees_{tab}.json').read_text())
 for key, r in sorted(d.items()):

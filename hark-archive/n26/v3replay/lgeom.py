@@ -1,7 +1,11 @@
 """Carve a v3 OPEN box T (touching LOCAL cube 59) into: outer slabs (level -1, FORCE B&B)
 and shell slabs about c*=theta* (level m>=0, LOCAL-SLAB energy leaves). Proposal-side (checker A side)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys, json
-sys.path.insert(0,'/workspace/work/dcp-n26/local'); sys.path.insert(0,'/workspace/work/dcp-n26')
+sys.path.insert(0,DCP_N26+'/local'); sys.path.insert(0,DCP_N26)
 from fractions import Fraction as F
 import hp
 C=hp.THSTAR
@@ -9,7 +13,7 @@ RHO0=F(66,10**7)
 KOUT={'304':12,'28':15}
 OPEN23=['1','5','9','13','17','21','25','29','33','37','41','45','48','44','40','36','32','24','20','16','12','8','4']
 for _t in OPEN23: KOUT[_t]=15   # outer doubling levels (force leaves) per target
-B=json.load(open('/workspace/work/dcp-n26/v3replay/boxes.json'))['boxes']
+B=json.load(open(DCP_N26+'/v3replay/boxes.json'))['boxes']
 def T(t): return [F(x) for x in B[str(t)]['lo']],[F(x) for x in B[str(t)]['hi']]
 def Qp(t,m):
     lo,hi=T(t)

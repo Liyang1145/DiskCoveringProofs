@@ -1,8 +1,12 @@
 """Float proposer: robust weights w maximizing min_{theta in box} Phi_w(theta)/W - R*^2
 (Kelley/level bundle on the concave function). Floats only propose; verdict is rigorous elsewhere."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import numpy as np, cvxpy as cp, json
 from scipy.optimize import minimize
-M=json.load(open('/workspace/work/dcp-n26/model134.json')); E=[tuple(e) for e in M['edges']]
+M=json.load(open(DCP_N26+'/model134.json')); E=[tuple(e) for e in M['edges']]
 U=np.array([e[0] for e in E]); V=np.array([e[1] for e in E])
 RS2=0.234700090400448239616790133776692127560495963654971391785925**2
 IU,JU=np.triu_indices(16,1)

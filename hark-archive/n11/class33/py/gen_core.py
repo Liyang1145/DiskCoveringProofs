@@ -4,13 +4,17 @@ The definitions in Defs.lean transcribe (over Nat labels / sorted Lists / core R
 q1Fan, q1Faces, q1Ear, coreSite, cycleEdge, canonicalLabel (s-th smallest), flagEdge, canonicalFace{P,Q,B},
 canonicalSwitch{P,Q,B,D2,D1}, canonicalSectorC, CanonicalMaskBalancedQ, canonicalConstantCoeffQ,
 piProductUpper, canonicalTotalUpperQ.  Pre-validation only."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json, re, sys, os
 from fractions import Fraction as F
 from pathlib import Path
 sys.path.insert(0, str(Path(__file__).parent)); import rep_tables as RT
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / 'lean-core' / 'Class33Core'; OUT.mkdir(parents=True, exist_ok=True)
-WIP = Path('/workspace/work/dcp-n11-lean/wip/lean/N11Formalization')
+WIP = Path(DCP_N11+'/wip/lean/N11Formalization')
 def q(x): x = F(x); return f'({x.numerator}/{x.denominator} : Rat)' if x.denominator != 1 else f'({x.numerator} : Rat)'
 def lst(xs): return '[' + ','.join(xs) + ']'
 def nl(l): return '[' + ','.join(map(str, l)) + ']'

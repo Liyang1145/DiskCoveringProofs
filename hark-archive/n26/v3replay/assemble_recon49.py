@@ -1,6 +1,10 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_MAIN_REPO
 import json,os,hashlib,copy
 import lgeom
-P=json.load(open('/workspace/work/dcp-n26/repo/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'))
+P=json.load(open(DCP_MAIN_REPO+'/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'))
 nodes=copy.deepcopy(P['nodes'])
 TF=['97','98','99','100','136','176','289','290','296','308']
 TL=['135','175','295','304','28']
@@ -54,7 +58,7 @@ assert all(n is not None for n in nodes)
 from collections import Counter
 c=Counter(n['kind'] for n in nodes); print(c)
 out={'schema':'N26-v3-replay-extension-proposal-ARITHMETIC-ONLY','base':'repo/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json',
-     'base_sha256':sha('/workspace/work/dcp-n26/repo/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'),
+     'base_sha256':sha(DCP_MAIN_REPO+'/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'),
      'closed_targets':TF+TL,'spec':P['spec'],'nodes':nodes,
      'note':'LOCAL-SLAB is NOT an archive-accepted leaf kind (134-rod Schur-energy 2nd-order local cert, needs interface lemma). FORCE leaves use archive direct-arc force_check. Radius compared to RSTAR_UP 0.234700090400448239616790133776692127560495963654971391785925 (not the stress VERIFIED.json endpoint, which is not public).'}
 json.dump(out,open('V3-REPLAY-TREE.recon49.json.tmp','w')); os.replace('V3-REPLAY-TREE.recon49.json.tmp','V3-REPLAY-TREE.recon49.json')

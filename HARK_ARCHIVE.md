@@ -1,6 +1,6 @@
 # HARK_ARCHIVE — DiskCoveringProofs 工作区归档（分支 archive/hark-work）
 
-- 来源：Hark 沙箱 `/workspace/work/dcp-n11-lean`（约 13 GB）、`/workspace/work/dcp-n26`（约 2 GB）、`/workspace/work/PROGRESS_RUBRIC.md`
+- 来源：Hark 沙箱中的 n=11 工作目录 `dcp-n11-lean`（约 13 GB，现为 `hark-archive/n11`）、n=26 工作目录 `dcp-n26`（约 2 GB，现为 `hark-archive/n26`）与 `PROGRESS_RUBRIC.md`（现为 `hark-archive/PROGRESS_RUBRIC.md`）
 - 归档日期：2026-10-19（Asia/Shanghai）
 - 这是一个**孤立分支**（orphan），只含 `hark-archive/` 与本文件，不与 main 共享历史；不打算合并 main。
 - 状态快照为 2026-10-19 傍晚的工作区状态；归档时 n=11 / n=26 的看护循环可能仍在跑，之后的新产物不在此分支。
@@ -34,10 +34,52 @@
 4. CI：分支 `ci/n11-build`，工作流 `n11-main.yml` / `n11-energy.yml` / `n11-class.yml`（说明见 `hark-archive/n11/ci/README.md`），https://github.com/Liyang1145/DiskCoveringProofs/actions?query=branch%3Aci%2Fn11-build
 
 ### n=26
-- `V3-REPLAY-TREE.json`：`cd v3replay && python3 assemble.py`。输入为 main 上的 `cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json`（脚本里写死了 `/workspace/work/dcp-n26/repo/...` 路径，需改成本仓库路径）+ 本分支的 `subtrees/`、`fleaves/`、`lleaves/`、`open23_assembled.json`。结果 sha256 应为 `beab24c50223608f277d984f0cde2df7c7f7416b35e93c6d94c694c9d8b9aa07`。
+- `V3-REPLAY-TREE.json`：`cd v3replay && python3 assemble.py`。输入为 main 上的 `cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json`（脚本通过 `DCP_MAIN_REPO` 找 main 的检出，默认 `hark-archive/n26/repo`，见下文「在新机器上运行」）+ 本分支的 `subtrees/`、`fleaves/`、`lleaves/`、`open23_assembled.json`。结果 sha256 应为 `beab24c50223608f277d984f0cde2df7c7f7416b35e93c6d94c694c9d8b9aa07`。
 - `dl/root25*.json`、`midarc.json`：来自本仓库已发布的冻结数据（Release `proof-assets-*-20261014`，见 main 的 `docs/REPLAY_ASSET_PLAN.md` 与 `tools/restore_frozen_assets.py`）；`midarc.json` 也可由已搬的 `dl/midarc.json.gz` 解压。用 `n26/EXCLUDED_BIG_FILES.sha256` 校验。
 - `*.pkl` 缓存：由 `v3replay/certB_walk.py`、`certB_prep.py`、`local/rebuild_lleaf_boxes.py` 等重跑生成。
-- 脚本里大量写死 `/workspace/work/dcp-n26/...` 绝对路径，换环境运行前需替换。
+- 脚本已去掉沙箱绝对路径，统一走环境变量（见下文「在新机器上运行」）。
+
+## 在新机器上运行
+
+脚本已不含 Hark 沙箱绝对路径，克隆到任意位置、从任意 cwd 运行即可。路径根由 `hark-archive/_paths.py`（Python）和 `hark-archive/_paths.sh`（bash，脚本内 `source`）统一解析：每个 Python 脚本顶部有 4 行引导代码，从自身 `__file__` 向上找到 `hark-archive/` 目录并 `from _paths import ...`；每个 `.sh` 顶部 source `_paths.sh`。
+
+| 环境变量 | 用途 | 默认值 |
+|---|---|---|
+| `DCP_N26_ROOT` | n=26 工作树（原沙箱 dcp-n26） | `<仓库>/hark-archive/n26` |
+| `DCP_N11_ROOT` | n=11 工作树（原沙箱 dcp-n11-lean） | `<仓库>/hark-archive/n11` |
+| `DCP_MAIN_REPO` | 本仓库 **main** 的检出（v3replay/assemble*.py、replay*.py、propose.py、chk_tight*.py、trycerts.py、local/rebuild_lleaf_boxes.py 读 `cover26/proof_bundle/...`，并 import 其中的 `n26_force` 等模块） | `$DCP_N26_ROOT/repo` |
+| `DCP_TMP` | 原来放在 `/tmp`、`/var/tmp` 的编译产物/暂存（`lc/`、`en/`、`c33/`、`wb/`、`stage/`、`ana/`） | Python：`tempfile.gettempdir()`；bash：`${TMPDIR:-/tmp}` |
+| `LEAN_TOOLCHAIN` | Lean 工具链前缀（含 `bin/lean`、`lib/lean`） | `${ELAN_HOME:-~/.elan}/toolchains/leanprover--lean4---v4.33.1`；不存在时用 `lean --print-prefix` |
+| `LEAN` | lean 可执行文件 | `$LEAN_TOOLCHAIN/bin/lean` |
+| `LEANTAR` | leantar（仅 wip-build/fetch_mathlib.py） | PATH 中的 `leantar`，否则 `$LEAN_TOOLCHAIN/bin/leantar` |
+| `C450_LEAN_TOOLCHAIN` | 仅 n11/c450-replay/build.sh；原回放用的是 slim core-only Lean v4.35.0 | `$LEAN_TOOLCHAIN` |
+
+路径中不要含空格（部分 shell 脚本保留了原来的不加引号写法）。少数脚本（如 n11/energy/control.py、roundtrip.py）按原设计把结果写到**当前目录**的相对路径，需要时先 `cd` 到脚本所在目录。
+
+**依赖**
+- n=26（纯 Python，无 Lean）：Python ≥ 3.10（验证用 3.12.15）；`pip install numpy scipy mpmath python-flint cvxpy`（验证用 numpy 2.5.4、scipy 1.18.1、mpmath 1.4.1、python-flint 0.9.0、cvxpy 1.9.3）。只跑检查器（verify_certs*.py、local/certA.py / certB.py、check_local_slab.py 等）只需 numpy + mpmath；搜索/构造脚本（certify_box.py、bnb*.py）还要 python-flint、cvxpy、scipy。
+- n=11：Lean **v4.33.1** + Mathlib **0df444a3**（`elan toolchain install leanprover/lean4:v4.33.1`；Mathlib 用 `lake exe cache get` 取缓存）。core-Lean 回放（class33/、energy/lean-core、c450-replay）不需要 Mathlib；Python 检查脚本（energy/checker.py、control.py、class33/py/*）只需 Python 标准库。
+- n11/fetch.sh 依赖 Hark 的 `apicall` 命令，换机器时用 `gh api repos/Liyang1145/DiskCoveringProofs/contents/<path>` 代替。
+
+**两个按哈希钉住的检查器保持原字节不变**：`n26/local/certB.py`（`local/FOREST-Q6.json` 记录 sha256 `f8dc2f98…5be18`）与 `n26/verify_certs_v3_pre_slabforest.py`（`ROOT25-FOREST-INDEX.json` 记录 sha256 `cbb67463…ca6b`）。它们文件里仍是原沙箱根路径字面量；直接运行请用 `python3 hark-archive/run_pinned.py <脚本> [参数]`（先核对 sha256，再在内存里把根路径换成 `$DCP_N26_ROOT` 后执行）；被其它脚本 `import certB` 时由 `_paths.py` 里的 import hook 做同样的内存替换。
+
+**示例**
+```bash
+git clone --branch archive/hark-work --single-branch https://github.com/Liyang1145/DiskCoveringProofs.git DCP
+cd /anywhere
+python3 DCP/hark-archive/n26/verify_certs.py DCP/hark-archive/n26/certs/1670.json          # 与 regress_v3.json 中 1670 记录一致
+python3 DCP/hark-archive/run_pinned.py DCP/hark-archive/n26/verify_certs_v3_pre_slabforest.py DCP/hark-archive/n26/certs/1681.json
+python3 DCP/hark-archive/n26/local/check_local_slab.py                                       # FOREST-Q6 结构检查，PASS
+(cd DCP/hark-archive/n11/energy && python3 control.py)                                        # 274/274 正例 + 负例全拒
+# main 检出（v3replay 需要）：
+git -C DCP worktree add hark-archive/n26/repo origin/main   # 或 export DCP_MAIN_REPO=/path/to/main-checkout
+(cd DCP/hark-archive/n26/v3replay && python3 assemble.py)   # 需另取 V3 输入，见上文「如何重建」
+# Lean core 回放：
+export LEAN_TOOLCHAIN=~/.elan/toolchains/leanprover--lean4---v4.33.1
+bash DCP/hark-archive/n11/class33/build_core.sh Class33Core/Defs
+```
+
+**保留的绝对路径（历史数据，故意不改）**：日志与输出文件 `n11/c450-replay/logs/bg-driver.log`、`n11/class33/logs/drive_sec.progress`、`n11/energy/logs/split-seg.log`、`n26/run2.err`、`n26/v3replay/bl_1.out`、`n26/v3replay/p.out` 中记录的是当时运行的原始输出；`.json/.jsonl` 账本与证书一律未改（改动会破坏 sha256 与证书绑定）。上面两个钉住的检查器同理。
 
 ## 状态快照（2026-10-19）
 

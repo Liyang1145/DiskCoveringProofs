@@ -1,11 +1,15 @@
 """Positive control for switch_kernel.py: every Certificate.accept leaf of the A25 SwitchBatch (Lean-green)
 must pass the transcribed switchDirectUpperQ <= bound, and the accepted leaves must tile [0,1571/1000].
 Negative control: shrinking the bound by 1e-3 must reject some leaf."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import re,sys,time,json
 from fractions import Fraction as F
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).parent)); import switch_kernel as K
-src=Path('/workspace/work/dcp-n11-lean/wip/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean').read_text()
+src=Path(DCP_N11+'/wip/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean').read_text()
 vals={}
 for m in re.finditer(r'def start0_switch(\d)_(p|q|b|d2|d1|bound) : ℚ := \((.*?) : ℚ\)',src): vals.setdefault(int(m.group(1)),{})[m.group(2)]=F(m.group(3).strip('()'))
 pat=re.compile(r'theorem start0_switch(\d)_node_\d+ : Certificate start0_switch\d_leaf\n    \(switchCell \((.*?) : ℚ\) \((.*?) : ℚ\)\) := by\n  apply Certificate.accept')

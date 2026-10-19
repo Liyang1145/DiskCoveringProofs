@@ -2,10 +2,14 @@
 """Resumable serial builder for the team WIP (Lean v4.33.1 + Mathlib cache on JuiceFS).
 usage: build.py <phase|module-list-file|MOD=name> [budget_seconds]
 phases: a25, pilot12_13, src14_36, all"""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11, LEAN_TOOLCHAIN
 import json,os,sys,time,subprocess,hashlib
-W='/workspace/work/dcp-n11-lean'
+W=DCP_N11
 SRC=W+'/wip/lean'; WB=W+'/wip-build'; OUT=WB+'/out'
-TC='/var/tmp/lean/lean-4.33.1-linux_aarch64'
+TC=LEAN_TOOLCHAIN
 LEDGER=WB+'/ledger.jsonl'; LOGD=WB+'/logs/mod'
 os.makedirs(OUT,exist_ok=True); os.makedirs(LOGD,exist_ok=True)
 env=dict(os.environ, LEAN_PATH=':'.join([TC+'/lib/lean',WB+'/mlib',OUT]), LEAN_NUM_THREADS='1', PATH=TC+'/bin:'+os.environ['PATH'])

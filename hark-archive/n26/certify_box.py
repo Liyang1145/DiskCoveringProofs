@@ -19,6 +19,10 @@ convex quadratic minimised over the box with an exact supporting-hyperplane
 lower bound.  No floating point quantity enters a verdict: floats only PROPOSE
 weights, the evaluation point and the QP minimiser.
 """
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, math, sys, time
 from fractions import Fraction as F
 import numpy as np
@@ -27,7 +31,7 @@ from flint import arb, fmpq, fmpq_mat, fmpz
 import cvxpy as cp
 
 flint.ctx.prec = 200
-M = json.load(open('/workspace/work/dcp-n26/model134.json'))
+M = json.load(open(DCP_N26+'/model134.json'))
 E = [tuple(e) for e in M['edges']]
 RSTAR_UP = F("0.234700090400448239616790133776692127560495963654971391785925")
 RUP2 = RSTAR_UP ** 2

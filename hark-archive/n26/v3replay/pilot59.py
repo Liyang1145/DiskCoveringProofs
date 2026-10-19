@@ -1,6 +1,10 @@
 """Pilot: local slab energy certs on shells of LOCAL cube 59 around theta* (inner cube stays LOCAL)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import sys,json,os,time
-sys.path.insert(0,'/workspace/work/dcp-n26/local'); sys.path.insert(0,'/workspace/work/dcp-n26')
+sys.path.insert(0,DCP_N26+'/local'); sys.path.insert(0,DCP_N26)
 from fractions import Fraction as F
 import prop, lgeom
 from run_local import piece

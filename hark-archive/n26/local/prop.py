@@ -1,10 +1,14 @@
 """PROPOSAL data (floats -> fixed rationals): u0, tau0=D^+ G u0 on positive rods, v=N u0, a=u0.N.u0."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import numpy as np, json, hp
 from fractions import Fraction as F
 import os
-P='/workspace/work/dcp-n26/local/prop.json'
+P=DCP_N26+'/local/prop.json'
 if not os.path.exists(P):
-    Z=np.load('/workspace/work/dcp-n26/local/homog2.npz'); G,D,Pr=Z['G'],Z['D'],Z['P']; H0=np.load('/workspace/work/dcp-n26/local/H0_hp.npy')
+    Z=np.load(DCP_N26+'/local/homog2.npz'); G,D,Pr=Z['G'],Z['D'],Z['P']; H0=np.load(DCP_N26+'/local/H0_hp.npy')
     Dp=np.linalg.pinv(D,rcond=1e-10); N=G.T@Dp@G; u0=np.linalg.eigh(H0)[1][:,0]
     if u0[9]<0: u0=-u0
     t=Dp@G@u0; v=N@u0; a=float(u0@v)

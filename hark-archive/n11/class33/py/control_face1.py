@@ -1,8 +1,12 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import re,sys
 from fractions import Fraction as F
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).parent)); import face_kernel as FK
-W=Path('/workspace/work/dcp-n11-lean/wip/lean/N11Formalization')
+W=Path(DCP_N11+'/wip/lean/N11Formalization')
 d=(W/'SharedMomentConcreteFace1Data.lean').read_text()
 def vec(n):
   m=re.search(rf'def {n} : Fin 3 → ℚ := !\[(.*?)\]\n',d).group(1); return [F(x.strip()) for x in re.findall(r'\(([^()]*?) : ℚ\)',m)]

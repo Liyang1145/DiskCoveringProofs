@@ -4,11 +4,15 @@ exact fmpq Schur, arb Taylor + cubic remainder, exact LDL PSD split, convex-QP p
 Certificate format identical to bnb.py (checked by verify_certs.py, unchanged).
 Each finished box: atomic write certs/<idx>.json, independent check by subprocess
 verify_certs.py, append to ledger.jsonl."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N26
 import json, os, sys, time, subprocess
 from fractions import Fraction as F
 import numpy as np
 import certify_box as cb, robust as rb
-ROOT='/workspace/work/dcp-n26'; DEN=10**12
+ROOT=DCP_N26; DEN=10**12
 BOX={b['index']:b for b in json.load(open(ROOT+'/pending.json'))['pending_closed_leaf_boxes']}
 DIAG={r['index']:r for r in json.load(open(ROOT+'/diag_merged.json'))}
 TBOX=float(os.environ.get('TBOX','2400'))

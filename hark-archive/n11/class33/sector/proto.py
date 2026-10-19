@@ -1,6 +1,10 @@
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json, numpy as np
 from fractions import Fraction as F
-d=json.load(open('/workspace/work/dcp-n11-lean/class33/data/q0_m2.json'))
+d=json.load(open(DCP_N11+'/class33/data/q0_m2.json'))
 S=d['sectors']
 def coef(i): return {k:float(F(v)) for k,v in S[str(i)].items()}
 def obj(c,a,u,v):

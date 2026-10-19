@@ -1,10 +1,14 @@
 """Emit Mathlib reflective modules for sector trees (DRAFT, uncompiled in WIP toolchain).
 usage: gen_mathlib_sectors.py <tag> [LIM leaves/part=25] [PARTS/group=40] [sectors]
 Class33Sec<Mod>S<i>Base (co,M) / G<g> (parts + ok) / aggregator (certificate)."""
+import os as _os, sys as _sys  # hark-archive portable paths (see hark-archive/_paths.py)
+_hd = _os.path.dirname(_os.path.abspath(__file__))
+while _os.path.basename(_hd) != 'hark-archive' and _os.path.dirname(_hd) != _hd: _hd = _os.path.dirname(_hd)
+_sys.path.append(_hd); from _paths import DCP_N11
 import json, sys, os
 from fractions import Fraction as F
 from pathlib import Path
-sys.path.insert(0, '/workspace/work/dcp-n11-lean/class33/py')
+sys.path.insert(0, DCP_N11+'/class33/py')
 import gen_core_sector as G
 ROOT = G.ROOT; OUT = ROOT / 'lean' / 'N11Formalization'
 def q(x):
