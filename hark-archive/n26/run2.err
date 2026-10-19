@@ -1,0 +1,18 @@
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')
+/workspace/work/dcp-n26/robust.py:45: UserWarning: Solution may be inaccurate. Try another solver, adjusting the solver settings, or solve with verbose=True for more information.
+  ub=cp.Problem(cp.Maximize(tt),[tt<=Dm@x-RS2,cp.sum(x)==1,x>=floor]); ub.solve(solver='CLARABEL')

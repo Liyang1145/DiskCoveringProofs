@@ -1,0 +1,9 @@
+{"leaves": 18, "pass": 18, "open": 0, "fail": 0, "min_margin_over_W": 3.767529528925423e-06, "CLOSED": true, "index": 2341}
+{"leaves": 9, "pass": 9, "open": 0, "fail": 0, "min_margin_over_W": 1.6405865301281392e-06, "CLOSED": true, "index": 2343}
+{"leaves": 1, "pass": 1, "open": 0, "fail": 0, "min_margin_over_W": 6.049108037020484e-05, "CLOSED": true, "index": 2344}
+{"leaves": 1, "pass": 1, "open": 0, "fail": 0, "min_margin_over_W": 0.000272091090591425, "CLOSED": true, "index": 2345}
+{"leaves": 1, "pass": 1, "open": 0, "fail": 0, "min_margin_over_W": 0.000272113181590672, "CLOSED": true, "index": 2346}
+{"leaves": 2, "pass": 2, "open": 3, "fail": 0, "min_margin_over_W": 0.0007736955098036303, "CLOSED": false, "index": 1685}
+{"leaves": 11, "pass": 11, "open": 6, "fail": 0, "min_margin_over_W": 5.381891205003835e-05, "CLOSED": false, "index": 1686}
+{"leaves": 13, "pass": 13, "open": 8, "fail": 0, "min_margin_over_W": 4.034539551184012e-06, "CLOSED": false, "index": 1978}
+{"leaves": 11, "pass": 11, "open": 6, "fail": 0, "min_margin_over_W": 4.0984883266944766e-05, "CLOSED": false, "index": 2007}

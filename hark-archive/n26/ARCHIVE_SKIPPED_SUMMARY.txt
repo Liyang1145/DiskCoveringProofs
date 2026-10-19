@@ -1,0 +1,11 @@
+skip >maxsz: 5 files 1194.2MB
+skip ext:.pkl: 34 files 351.4MB
+skip glob: 2 files 21.0MB
+skip dedupe: 11 files 13.1MB
+skip dirname:__pycache__
+skip dir:repo
+too-big 480.4MB dl/root25.json
+too-big 258.5MB v3replay/V3-REPLAY-TREE.json
+too-big 217.2MB dl/root25.json.gz
+too-big 183.7MB dl/root25-slim.json
+too-big 54.3MB dl/midarc.json

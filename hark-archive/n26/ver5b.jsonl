@@ -1,0 +1,4 @@
+{"leaves": 1, "pass": 1, "open": 3, "fail": 0, "min_margin_over_W": 0.0008446350627253582, "CLOSED": false, "index": 2010}
+{"leaves": 2, "pass": 2, "open": 4, "fail": 0, "min_margin_over_W": 1.325301815674892e-05, "CLOSED": false, "index": 2209}
+{"leaves": 2, "pass": 2, "open": 4, "fail": 0, "min_margin_over_W": 1.3253096472400826e-05, "CLOSED": false, "index": 2211}
+{"leaves": 101, "pass": 101, "open": 15, "fail": 0, "min_margin_over_W": 3.91651757199817e-05, "CLOSED": false, "index": 2289}
