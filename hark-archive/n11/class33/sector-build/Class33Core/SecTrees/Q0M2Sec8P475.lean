@@ -1,0 +1,7 @@
+import Class33Core.SecTrees.Q0M2Sec8Base
+namespace Class33Core.SecTrees.Q0M2Sec8.P475
+open Class33Core.SectorKernel Class33Core.SecTrees.Q0M2Sec8
+def box : Box := ⟨(37/16 : Rat),(19/8 : Rat),(31/32 : Rat),(1 : Rat),(15/16 : Rat),(31/32 : Rat)⟩
+def toks : List Tok := [.S 1 (63/64 : Rat),.S 0 (75/32 : Rat),.S 2 (61/64 : Rat),.L (909995/524288 : Rat) (941071/524288 : Rat) (176197/524288 : Rat) (182465/524288 : Rat),.S 1 (125/128 : Rat),.L (458755/262144 : Rat) (1889477/1048576 : Rat) (88855/262144 : Rat) (366413/1048576 : Rat),.L (1842423/1048576 : Rat) (1897143/1048576 : Rat) (22307/65536 : Rat) (367963/1048576 : Rat),.S 2 (61/64 : Rat),.L (1832119/1048576 : Rat) (947233/524288 : Rat) (88709/262144 : Rat) (183711/524288 : Rat),.L (923625/524288 : Rat) (954785/524288 : Rat) (357885/1048576 : Rat) (370479/1048576 : Rat),.S 0 (75/32 : Rat),.S 2 (61/64 : Rat),.L (1834827/1048576 : Rat) (948753/524288 : Rat) (355381/1048576 : Rat) (368037/1048576 : Rat),.S 1 (127/128 : Rat),.L (231229/131072 : Rat) (476203/262144 : Rat) (179203/524288 : Rat) (369515/1048576 : Rat),.L (58039/32768 : Rat) (956243/524288 : Rat) (179951/524288 : Rat) (371069/1048576 : Rat),.S 2 (61/64 : Rat),.L (461763/262144 : Rat) (477481/262144 : Rat) (357845/1048576 : Rat) (185275/524288 : Rat),.L (116385/65536 : Rat) (962505/524288 : Rat) (360893/1048576 : Rat) (373607/1048576 : Rat)]
+theorem ok : chkAll co M box toks [] = true := by decide +kernel
+end Class33Core.SecTrees.Q0M2Sec8.P475

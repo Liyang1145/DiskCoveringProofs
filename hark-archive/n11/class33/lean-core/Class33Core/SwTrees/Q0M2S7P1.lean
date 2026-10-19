@@ -1,0 +1,8 @@
+import Class33Core.SwTrees.Q0M2S7Base
+namespace Class33Core.SwTrees.Q0M2S7.P1
+open Class33Core Class33Core.SwitchKernel Class33Core.SwTrees.Q0M2S7
+def c0 : List (Rat × Rat) := [((17281/16000 : Rat),(139819/128000 : Rat)),((139819/128000 : Rat),(14139/12800 : Rat)),((14139/12800 : Rat),(36133/32000 : Rat)),((36133/32000 : Rat),(73837/64000 : Rat)),((73837/64000 : Rat),(4713/4000 : Rat)),((4713/4000 : Rat),(76979/64000 : Rat)),((76979/64000 : Rat),(1571/1280 : Rat)),((1571/1280 : Rat),(80121/64000 : Rat)),((80121/64000 : Rat),(20423/16000 : Rat)),((20423/16000 : Rat),(83263/64000 : Rat)),((83263/64000 : Rat),(42417/32000 : Rat)),((42417/32000 : Rat),(10997/8000 : Rat)),((10997/8000 : Rat),(45559/32000 : Rat)),((45559/32000 : Rat),(4713/3200 : Rat)),((4713/3200 : Rat),(48701/32000 : Rat)),((48701/32000 : Rat),(1571/1000 : Rat))]
+theorem c0_ok : allLeavesOK coeff M c0 = true ∧ chainB c0 = true := by decide +kernel
+def ends : List (Rat × Rat) := [((17281/16000 : Rat),(1571/1000 : Rat))]
+theorem ends_ok : chainB ends = true ∧ [(c0.head?.map (·.1), c0.getLast?.map (·.2))] = ends.map (fun x => (some x.1, some x.2)) := by decide +kernel
+end Class33Core.SwTrees.Q0M2S7.P1

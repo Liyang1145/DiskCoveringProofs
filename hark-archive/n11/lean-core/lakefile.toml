@@ -1,0 +1,5 @@
+name = "DCPN11Core"
+defaultTargets = ["DCPN11Core"]
+
+[[lean_lib]]
+name = "DCPN11Core"

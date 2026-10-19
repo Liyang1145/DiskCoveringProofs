@@ -1,0 +1,184 @@
+{
+ "11": {
+  "packets": 602,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 8.75940175421637e-06
+ },
+ "12": {
+  "packets": 586,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 3.2867304641622796e-05
+ },
+ "13": {
+  "packets": 586,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 1.4579023796028262e-05
+ },
+ "14": {
+  "packets": 561,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 1.1987206014514363e-06
+ },
+ "15": {
+  "packets": 549,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 3.4237445665656205e-05
+ },
+ "16": {
+  "packets": 524,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 5.195893928314297e-05
+ },
+ "17": {
+  "packets": 505,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 0.00015927882109288596
+ },
+ "18": {
+  "packets": 491,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 3.4410742308610356e-05
+ },
+ "19": {
+  "packets": 484,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 0.0002841344834821461
+ },
+ "20": {
+  "packets": 461,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 0.00022411682618715537
+ },
+ "21": {
+  "packets": 474,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 9.05094522216775e-06
+ },
+ "22": {
+  "packets": 483,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 7.043528249447348e-05
+ },
+ "23": {
+  "packets": 485,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 6.157176982370601e-05
+ },
+ "24": {
+  "packets": 506,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 5.92631794123993e-05
+ },
+ "25": {
+  "packets": 511,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 3.55570029359396e-05
+ },
+ "26": {
+  "packets": 510,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 6.530088144035807e-05
+ },
+ "27": {
+  "packets": 510,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 0.00011406126820533379
+ },
+ "28": {
+  "packets": 514,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 1.5715339026199273e-05
+ },
+ "29": {
+  "packets": 443,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 3.103547490336224e-05
+ },
+ "30": {
+  "packets": 434,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 1.4665632498222437e-05
+ },
+ "31": {
+  "packets": 443,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 0.00010917821455970533
+ },
+ "32": {
+  "packets": 445,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 0.0002212766454428928
+ },
+ "33": {
+  "packets": 462,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 2.3817181216458102e-05
+ },
+ "34": {
+  "packets": 489,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 1.2550256668655066e-05
+ },
+ "35": {
+  "packets": 532,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 1.5343273640494348e-06
+ },
+ "36": {
+  "packets": 672,
+  "failed_packets": 0,
+  "issues": [],
+  "n_issues": 0,
+  "min_numeric_slack": 5.692023957449697e-07
+ }
+}

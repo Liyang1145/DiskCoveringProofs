@@ -1,0 +1,65 @@
+{
+ "0": {
+  "leaves": 382,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.23
+ },
+ "1": {
+  "leaves": 381,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.22
+ },
+ "2": {
+  "leaves": 457,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.28
+ },
+ "3": {
+  "leaves": 428,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.22
+ },
+ "4": {
+  "leaves": 472,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.25
+ },
+ "5": {
+  "leaves": 499,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.28
+ },
+ "6": {
+  "leaves": 443,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.22
+ },
+ "7": {
+  "leaves": 440,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.29
+ },
+ "8": {
+  "leaves": 464,
+  "all_accept": true,
+  "tiles": true,
+  "neg_control_rejects": true,
+  "sec": 0.22
+ }
+}

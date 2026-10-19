@@ -1,0 +1,10 @@
+import Mathlib
+#check @div_le_iff_of_neg
+#check @le_div_iff_of_neg
+#check @div_le_iff_of_neg'
+#check @le_div_iff_of_neg'
+#check @div_le_iff₀
+#check @le_div_iff₀
+#check @Finset.exists_max_image
+#check @Finset.sup'_le
+#check @Finset.le_sup'

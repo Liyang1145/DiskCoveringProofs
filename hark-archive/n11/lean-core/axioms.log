@@ -1,0 +1,34 @@
+'DCPCore.faces_length' does not depend on any axioms
+'DCPCore.distinctEdges_length' does not depend on any axioms
+'DCPCore.face_incidence' does not depend on any axioms
+'DCPCore.hull_edges_present' does not depend on any axioms
+'DCPCore.euler_disk' does not depend on any axioms
+'DCPCore.reflPin_involutive' does not depend on any axioms
+'DCPCore.reflSite_involutive' does not depend on any axioms
+'DCPCore.reflPin_matches_reflSite' does not depend on any axioms
+'DCPCore.activeFan_edges' does not depend on any axioms
+'DCPCore.activeFan_are_faces' does not depend on any axioms
+'DCPCore.central_faces' does not depend on any axioms
+'DCPCore.slack_faces' does not depend on any axioms
+'DCPCore.face_partition' does not depend on any axioms
+'DCPCore.oracle_counts' does not depend on any axioms
+'DCPCore.oracle_edges_literal' does not depend on any axioms
+'DCPCore.hub_degrees' does not depend on any axioms
+'DCPCore.raw_to_canonical' does not depend on any axioms
+'DCPCore.missing_canonical_fans' does not depend on any axioms
+'DCPCore.clique_consecutive' does not depend on any axioms
+'DCPCore.degreePairs_eq' does not depend on any axioms
+'DCPCore.only_q0_6_7_survives' does not depend on any axioms
+'DCPCore.RootBox.cN_length' does not depend on any axioms
+'DCPCore.RootBox.R_center_from_hex' depends on axioms: [propext]
+'DCPCore.RootBox.rN_from_hex' does not depend on any axioms
+'DCPCore.RootBox.R_hi_lt_19_50' depends on axioms: [propext]
+'DCPCore.RootBox.R_enclosure' depends on axioms: [propext]
+'DCPCore.RootBox.angles_pos' depends on axioms: [propext]
+'DCPCore.RootBox.angle_sum_hi' depends on axioms: [propext]
+'DCPCore.RootBox.angle_sum_lo' depends on axioms: [propext]
+'DCPCore.RootBox.angles_hi' depends on axioms: [propext]
+'DCPCore.RootBox.hubs_interior' depends on axioms: [propext]
+'DCPCore.RootBox.hub_order' depends on axioms: [propext]
+'DCPCore.RootBox.waist_branch' depends on axioms: [propext]
+'DCPCore.RootBox.multipliers_neg' depends on axioms: [propext]

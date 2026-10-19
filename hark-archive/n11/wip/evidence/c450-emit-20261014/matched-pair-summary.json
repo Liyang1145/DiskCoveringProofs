@@ -1,0 +1,39 @@
+[
+  "exit=0 log=E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\c450-emit-20261014\\logs\\pair-A-revert-norebuild.log",
+  "  [A-revert-norebuild] exit=0 unknownIdentifier=0",
+  {
+    "unknown": 0,
+    "exit": 0,
+    "tag": "A-revert-norebuild"
+  },
+  {
+    "tag": "B-rootbuild",
+    "exit": [
+      "exit=0 log=E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\c450-emit-20261014\\logs\\pair-rootbuild-B-reverted.log",
+      "  [rootbuild-B-reverted] exit=0",
+      0
+    ]
+  },
+  "exit=1 log=E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\c450-emit-20261014\\logs\\pair-B-revert-rebuild.log",
+  "  [B-revert-rebuild] exit=1 unknownIdentifier=13",
+  {
+    "unknown": 13,
+    "exit": 1,
+    "tag": "B-revert-rebuild"
+  },
+  {
+    "tag": "C-rootbuild",
+    "exit": [
+      "exit=0 log=E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\c450-emit-20261014\\logs\\pair-rootbuild-C-restored.log",
+      "  [rootbuild-C-restored] exit=0",
+      0
+    ]
+  },
+  "exit=0 log=E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\c450-emit-20261014\\logs\\pair-C-restore-rebuild.log",
+  "  [C-restore-rebuild] exit=0 unknownIdentifier=0",
+  {
+    "unknown": 0,
+    "exit": 0,
+    "tag": "C-restore-rebuild"
+  }
+]

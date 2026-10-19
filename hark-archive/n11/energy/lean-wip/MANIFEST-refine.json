@@ -1,0 +1,405 @@
+{
+ "nodes": 57,
+ "leaves": 496,
+ "modules": [
+  {
+   "module": "EnergyRefineN0003",
+   "node": 3,
+   "tree_nodes": 35,
+   "leaves": 18,
+   "sha256": "630c88ebdd837a25218533dda9a078e1d7f002ec737e36738ccf7477b1c1fa64"
+  },
+  {
+   "module": "EnergyRefineN0023",
+   "node": 23,
+   "tree_nodes": 31,
+   "leaves": 16,
+   "sha256": "9b38c1f112173dc39b46230ae6216c72dbcb771b5b7ad7f234ccff4afa63b415"
+  },
+  {
+   "module": "EnergyRefineN0037",
+   "node": 37,
+   "tree_nodes": 7,
+   "leaves": 4,
+   "sha256": "fd76fec919bc842c08cefb2d5aa45ba3d9e7752ecb2381049ff0f4d7e47fbb38"
+  },
+  {
+   "module": "EnergyRefineN0038",
+   "node": 38,
+   "tree_nodes": 27,
+   "leaves": 14,
+   "sha256": "40aa9ef511d840356d988f5ea9b53a2075ed84277ef96dfbbbda8cebcb1f432c"
+  },
+  {
+   "module": "EnergyRefineN0039",
+   "node": 39,
+   "tree_nodes": 13,
+   "leaves": 7,
+   "sha256": "5b162b4092fc67cb72d80f57ab3172bdbbdff37b3dbe45a8e91eb60e3f76a6a1"
+  },
+  {
+   "module": "EnergyRefineN0040",
+   "node": 40,
+   "tree_nodes": 17,
+   "leaves": 9,
+   "sha256": "9d941138edbf57e64f5ce084042c796ebce27c9117900e43d3b6a53d8b59731c"
+  },
+  {
+   "module": "EnergyRefineN2337",
+   "node": 2337,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "434429b402b4edecbb698fbbcbb292af86571cf166d2ce2c86f7ef3f608358a3"
+  },
+  {
+   "module": "EnergyRefineN2341",
+   "node": 2341,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "a0ffa5b865e44661f99d60709ca103676181e5bcce2c941eb3e216117240beb9"
+  },
+  {
+   "module": "EnergyRefineN2965",
+   "node": 2965,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "1fd4932f24492c0d3fc626ccab899541e9e52e6d878d4f70ec4948d23e7ae0e0"
+  },
+  {
+   "module": "EnergyRefineN3040",
+   "node": 3040,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "cc1a628b2f1cac2ec93aec33aa8d0bdc264ab4325c30b5fa973f5da58f39849a"
+  },
+  {
+   "module": "EnergyRefineN3112",
+   "node": 3112,
+   "tree_nodes": 5,
+   "leaves": 3,
+   "sha256": "4f9ae028c89f7a1f7a299be6fd590558a24e65632dd3f5c9c7f144869bee796d"
+  },
+  {
+   "module": "EnergyRefineN3116",
+   "node": 3116,
+   "tree_nodes": 5,
+   "leaves": 3,
+   "sha256": "c9be9c34b3adb57e87085a3fc182d83ca69b660836174f878b8fe1c69fb6f5b2"
+  },
+  {
+   "module": "EnergyRefineN3149",
+   "node": 3149,
+   "tree_nodes": 9,
+   "leaves": 5,
+   "sha256": "35a1368b07690a7499a4b03af4d4d6d71f1eb1a207ab0db12acac39815cc01bf"
+  },
+  {
+   "module": "EnergyRefineN3431",
+   "node": 3431,
+   "tree_nodes": 5,
+   "leaves": 3,
+   "sha256": "9d1ad9a5e21efac6d608a406984c0ffddb8569a5520cfd970706f4761fd11b4e"
+  },
+  {
+   "module": "EnergyRefineN3432",
+   "node": 3432,
+   "tree_nodes": 51,
+   "leaves": 26,
+   "sha256": "66f851c93a1f272982a0960ba0fa2e511af097ed24cb5488760285369cfd5dfd"
+  },
+  {
+   "module": "EnergyRefineN3440",
+   "node": 3440,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "d63aa69e61fd66dd1d8b1cb99d853787d7698b0f5bbe96a965797a02017272a8"
+  },
+  {
+   "module": "EnergyRefineN3490",
+   "node": 3490,
+   "tree_nodes": 69,
+   "leaves": 35,
+   "sha256": "d11bc5325af1fc9fc7415070da1c458f149114980eee36c7e1acf493e5870c21"
+  },
+  {
+   "module": "EnergyRefineN3496",
+   "node": 3496,
+   "tree_nodes": 9,
+   "leaves": 5,
+   "sha256": "e9cefb1b1e2f0452e328ef840fb5562ad91609c2b40259885f09277cd0c8012b"
+  },
+  {
+   "module": "EnergyRefineN3517",
+   "node": 3517,
+   "tree_nodes": 29,
+   "leaves": 15,
+   "sha256": "5aef5041b6896f678f168e71e7f19b5273b7985e613f673dcfd57fd66e359999"
+  },
+  {
+   "module": "EnergyRefineN3520",
+   "node": 3520,
+   "tree_nodes": 13,
+   "leaves": 7,
+   "sha256": "78f6c869d2a0cdd0a544be39852a9917304d22cf8eb0e9c2e6cc610f2568a78e"
+  },
+  {
+   "module": "EnergyRefineN3522",
+   "node": 3522,
+   "tree_nodes": 25,
+   "leaves": 13,
+   "sha256": "30a652347bfe46c6cf56f11d4ab561bbd4720b09574dbeb92df1c91e174d6a5b"
+  },
+  {
+   "module": "EnergyRefineN3550",
+   "node": 3550,
+   "tree_nodes": 41,
+   "leaves": 21,
+   "sha256": "02673f80da60fe68d731aa64aa25ca08bd198b433f6655c61dc9c7bcc3b5220d"
+  },
+  {
+   "module": "EnergyRefineN3564",
+   "node": 3564,
+   "tree_nodes": 23,
+   "leaves": 12,
+   "sha256": "a3914d1d7fc8f2dcc92614e5c08cb02694e98a53a8878f077f25716837d6595c"
+  },
+  {
+   "module": "EnergyRefineN3569",
+   "node": 3569,
+   "tree_nodes": 29,
+   "leaves": 15,
+   "sha256": "7e846ee93265703ec411ff268250ee50cd03519a38585f773ac94eea502d02f5"
+  },
+  {
+   "module": "EnergyRefineN3573",
+   "node": 3573,
+   "tree_nodes": 5,
+   "leaves": 3,
+   "sha256": "283a5070f5fa5dbabe7c70b0e99896d00bf44c4a7f9ab41cedcc59d9259510a3"
+  },
+  {
+   "module": "EnergyRefineN3578",
+   "node": 3578,
+   "tree_nodes": 33,
+   "leaves": 17,
+   "sha256": "59c59a1f34046dc384b0a10f12d78941980b391c81c01d356db061b3a7626686"
+  },
+  {
+   "module": "EnergyRefineN3589",
+   "node": 3589,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "fe1010129615552b4a1ccf712ee373abe3862628a51f94188510f0899876e1f5"
+  },
+  {
+   "module": "EnergyRefineN3623",
+   "node": 3623,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "65513f80e750f8bf63b5ba0e9d9f68f2757441b9e94a4cbdbbec2c1f80b95ffc"
+  },
+  {
+   "module": "EnergyRefineN3633",
+   "node": 3633,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "1ec5dc10c4737c3f9cb32a33a994a38e72d0599fabc8e1c96007a9c2b23174f2"
+  },
+  {
+   "module": "EnergyRefineN3738",
+   "node": 3738,
+   "tree_nodes": 47,
+   "leaves": 24,
+   "sha256": "127d42e306c5ab584b5a5e099442b3846209adb909ef7b2ba51778e4c7756e3d"
+  },
+  {
+   "module": "EnergyRefineN3777",
+   "node": 3777,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "dc6a2a382907501be7a5f7ada40e8ff4abf80cddc9f63fff41173cbdca5f254e"
+  },
+  {
+   "module": "EnergyRefineN3778",
+   "node": 3778,
+   "tree_nodes": 5,
+   "leaves": 3,
+   "sha256": "07b9d1576e5a9410cfa9c5de61b7aee36e2006a0724c3fad7c8f3ee01029ecde"
+  },
+  {
+   "module": "EnergyRefineN3781",
+   "node": 3781,
+   "tree_nodes": 17,
+   "leaves": 9,
+   "sha256": "b9c936fe5719e716c5f6ece1ecf0ebcdf532285ac695eabe232757fd5183e811"
+  },
+  {
+   "module": "EnergyRefineN3783",
+   "node": 3783,
+   "tree_nodes": 27,
+   "leaves": 14,
+   "sha256": "0fd604800af99d124a2f90af475de115369b891e175d39838c9f3e421c3f3f6f"
+  },
+  {
+   "module": "EnergyRefineN3792",
+   "node": 3792,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "3f38c8ce03866938f969838a6c00b77c577abdbadad121c0cee9907389b03f04"
+  },
+  {
+   "module": "EnergyRefineN3794",
+   "node": 3794,
+   "tree_nodes": 9,
+   "leaves": 5,
+   "sha256": "3062ddfd456d665ca746b4ed0a0f00d20829dbfe3a308defa01a86169a999bc5"
+  },
+  {
+   "module": "EnergyRefineN3795",
+   "node": 3795,
+   "tree_nodes": 9,
+   "leaves": 5,
+   "sha256": "34addd37c80745133d350292d540b163bf3ca10c74593ef92ec84105d017e85b"
+  },
+  {
+   "module": "EnergyRefineN3800",
+   "node": 3800,
+   "tree_nodes": 5,
+   "leaves": 3,
+   "sha256": "eab5b1746473794284c9fa03e59985dfd1d5ecddc6dc0382812967a16b2ea5de"
+  },
+  {
+   "module": "EnergyRefineN3802",
+   "node": 3802,
+   "tree_nodes": 17,
+   "leaves": 9,
+   "sha256": "60b12a9596c91266361ef6f5df978369fa68882c2c9221ece53bddd934ba65ef"
+  },
+  {
+   "module": "EnergyRefineN3803",
+   "node": 3803,
+   "tree_nodes": 5,
+   "leaves": 3,
+   "sha256": "c0617b820c0349c5fec86047ec03f34bdfb3e663270aa5d30050d49fbd920476"
+  },
+  {
+   "module": "EnergyRefineN3807",
+   "node": 3807,
+   "tree_nodes": 15,
+   "leaves": 8,
+   "sha256": "70a09d2ccd756da3f3e00a66eb868b1727b448c6fa8e0dd37305e86363508373"
+  },
+  {
+   "module": "EnergyRefineN3808",
+   "node": 3808,
+   "tree_nodes": 23,
+   "leaves": 12,
+   "sha256": "cd2ba287e1018c009539b9f442eec969ca1de965c6b34930342074f6d3e6237d"
+  },
+  {
+   "module": "EnergyRefineN3810",
+   "node": 3810,
+   "tree_nodes": 9,
+   "leaves": 5,
+   "sha256": "edfb7c0e58fd6b634a880f77f1306f6eced4dc966b9e0d294b40787d06caca60"
+  },
+  {
+   "module": "EnergyRefineN3821",
+   "node": 3821,
+   "tree_nodes": 17,
+   "leaves": 9,
+   "sha256": "eadd0bd434b3468694b9ee5b521a87aaa56c8909db0813d343d2a157e6440bfb"
+  },
+  {
+   "module": "EnergyRefineN3825",
+   "node": 3825,
+   "tree_nodes": 25,
+   "leaves": 13,
+   "sha256": "c6d7af67410be04c6333eca0f442a55639b26fc0c9ba5dd57573121269241ced"
+  },
+  {
+   "module": "EnergyRefineN3841",
+   "node": 3841,
+   "tree_nodes": 33,
+   "leaves": 17,
+   "sha256": "61b9f61bc19d566665bdb04973868b2ff61c66e160d00f530767705195e4fcce"
+  },
+  {
+   "module": "EnergyRefineN3851",
+   "node": 3851,
+   "tree_nodes": 29,
+   "leaves": 15,
+   "sha256": "deeb5fa75976d27517c905a54ed2f0dbd1e54e82816dd63481656027c4797993"
+  },
+  {
+   "module": "EnergyRefineN3853",
+   "node": 3853,
+   "tree_nodes": 3,
+   "leaves": 2,
+   "sha256": "986c01e7084b2e12cec6599e6a7312d5aaad4be2a781ab33ffb7f3a336a73617"
+  },
+  {
+   "module": "EnergyRefineN3854",
+   "node": 3854,
+   "tree_nodes": 25,
+   "leaves": 13,
+   "sha256": "5dfaad240e5e4861d91872348b7167dbc420b5a87f4af4166319ce0afef0b72b"
+  },
+  {
+   "module": "EnergyRefineN3863",
+   "node": 3863,
+   "tree_nodes": 13,
+   "leaves": 7,
+   "sha256": "9fd31fefa47a8d2d3ab381af9f880b42d6a93cd949fb72338bbb9391ed406091"
+  },
+  {
+   "module": "EnergyRefineN3865",
+   "node": 3865,
+   "tree_nodes": 11,
+   "leaves": 6,
+   "sha256": "ff1fda82a7cd6538446f5b6b0d82c4230f79145d74ab2d8c5bc27a05730592e5"
+  },
+  {
+   "module": "EnergyRefineN3979",
+   "node": 3979,
+   "tree_nodes": 7,
+   "leaves": 4,
+   "sha256": "f925d32c41ede22c6d3357ee56400993a69411a40129a8d2ab45afda8511aac3"
+  },
+  {
+   "module": "EnergyRefineN4162",
+   "node": 4162,
+   "tree_nodes": 25,
+   "leaves": 13,
+   "sha256": "8abb79bb54d28a00d1f463cac15a26da506075a236f90c63bfa5166a85524b94"
+  },
+  {
+   "module": "EnergyRefineN4244",
+   "node": 4244,
+   "tree_nodes": 25,
+   "leaves": 13,
+   "sha256": "d78b8c9880858c785bec3d6d65b774be9cdcf7c5fbb3fd75d63886015c5759f7"
+  },
+  {
+   "module": "EnergyRefineN4313",
+   "node": 4313,
+   "tree_nodes": 7,
+   "leaves": 4,
+   "sha256": "52f7b61bb019ca91867b164ba339a39f2f0794fd5831dabe580c47fbd4db5270"
+  },
+  {
+   "module": "EnergyRefineN4650",
+   "node": 4650,
+   "tree_nodes": 9,
+   "leaves": 5,
+   "sha256": "680d8921036f6a23378b939b0bf94242045e5d74af08f2546dcca2be5f7541ec"
+  },
+  {
+   "module": "EnergyRefineN4684",
+   "node": 4684,
+   "tree_nodes": 7,
+   "leaves": 4,
+   "sha256": "8edf28bedc5ba5f48e746cf987573540ae7ebaca07d222e4a2375f20767c9116"
+  }
+ ]
+}

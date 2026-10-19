@@ -1,0 +1,2109 @@
+{
+  "tag": "a25-canonical-finite-certificates-20261013",
+  "timestamp": "2026-10-13T17:04:12.3998232+08:00",
+  "project": "E:\\ai4math2\\research-2026\\n11-formalization",
+  "root_sha256": "4F470AF507F320488DFBC168F9AE39645904AF569AE46B9FFB8F5E520BC5EDAF",
+  "modules_total": 233,
+  "modules_green": 233,
+  "modules": [
+    {
+      "module": "N11Formalization.ActualVoronoiCells",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualVoronoiCells.lean",
+      "sha256": "1574B3229710AAA4912804303C08527C4D1F4D0B2DD9584F925D52FE2848A5E6",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-voronoi-cells-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-voronoi-cells-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualInwardNormalization",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualInwardNormalization.lean",
+      "sha256": "81425ED2975E981348F55F6433A2AD17BAE46BF1847EE9D48978B05969289EAF",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-inward-normalization-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-inward-normalization-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingEssentiality",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingEssentiality.lean",
+      "sha256": "FCE165D38993D310616506A3B751F4B58523CEC323C290259507638FFB6B446B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringessentiality-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringessentiality-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualVoronoiRadialExit",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualVoronoiRadialExit.lean",
+      "sha256": "C8CD5000C012E77321BBB561C8C44F7F277ECEA374BD6532969FE46130EF7949",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-voronoi-radial-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-voronoi-radial-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubCoreSupport",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubCoreSupport.lean",
+      "sha256": "F6A12ABEC180E8F9CE1425969DDC21017CF523323F487A7CAB30F0147A8EDD9F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubcoresupport-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubcoresupport-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualTwoCircleCapacity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualTwoCircleCapacity.lean",
+      "sha256": "67D7A67AE73BD309BCAFC033433080060BEF21483290C730A8FE8E0E55D382D0",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualtwocirclecapacity-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualtwocirclecapacity-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubAdjacency",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubAdjacency.lean",
+      "sha256": "654FA769BC8890A048F5BC81A19924F7331307813D7A3ABB9DDBE941E99F196B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubadjacency-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubadjacency-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubEdgeGeometry",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubEdgeGeometry.lean",
+      "sha256": "0957A938D9AD29964D71240042F46F331B3BA9F9D15E952E4C9A471E2D4C5D05",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubedgegeometry-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubedgegeometry-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubPositiveEdge",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubPositiveEdge.lean",
+      "sha256": "339704333CB779F0136DC7DD519254A835DD3B6B0948453365E30975F10B8686",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubpositiveedge-gate4-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubpositiveedge-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingDirectionOrder",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingDirectionOrder.lean",
+      "sha256": "00A2FF10CAD139520A2BEFBD53E8EF5F0F7151E1856301195D2AFF0EA7A07217",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringdirectionorder-gate5-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringdirectionorder-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCoverStructuralReduction",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCoverStructuralReduction.lean",
+      "sha256": "43B101E8BB9BAAD7A8B5BFEA1046B3A7E3D58DBDA7500832095714635ADB4440",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-cover-structural-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-cover-structural-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryArcFrame",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryArcFrame.lean",
+      "sha256": "B5A3477AB0104116B4871E58B3F683E40B5266C16AD78E838822460B5DDA683D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryarcframe-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryarcframe-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryArcOrder",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryArcOrder.lean",
+      "sha256": "843D3675CBBCD05DF10FEF44C9690D3B31B5DB96FC84279E0B00BE3256B4A02F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryarcorder-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryarcorder-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryTieUniqueness",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryTieUniqueness.lean",
+      "sha256": "B8B32D864D56DF4EA59F9A4DDC0E8827BAEC0E2D3B98F8A6A47B1FB3D9D7FD9F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarytieuniqueness-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarytieuniqueness-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryNearestPairs",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryNearestPairs.lean",
+      "sha256": "4BFCE88FF1B379019E761C6CFC3E801D217CD353754832DC174CFC7F75869AD8",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarynearestpairs-gate2b-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarynearestpairs-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubEdgeEndpointGeometry",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubEdgeEndpointGeometry.lean",
+      "sha256": "69AC6E95669468E33720A813D7A40A14579D3037747848B1926B5279F84426E9",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubedgeendpointgeometry-gate2b-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubedgeendpointgeometry-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubEdgeEndpoints",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubEdgeEndpoints.lean",
+      "sha256": "BBB5392B90DF26B6108973D91B2304C6274572D728065B653AF056AF2A3F076E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubedgeendpoints-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualhubedgeendpoints-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryCyclicOrder",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryCyclicOrder.lean",
+      "sha256": "E54FA454F7F95E982F893403437FACA7810A691B67E5A3C7CF6349016C991EE2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarycyclicorder-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarycyclicorder-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryAnchorWidths",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryAnchorWidths.lean",
+      "sha256": "95327DFD5774A906355869E675A2FE2B82E20F4A64DF80AF7A24B02F20990FD5",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryanchorwidths-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryanchorwidths-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryChart",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryChart.lean",
+      "sha256": "E862F0F1A9649E3054A7F3EDC7449B9994389DEFDD983403C91CBDDFCC196290",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarychart-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarychart-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryNeighborTies",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryNeighborTies.lean",
+      "sha256": "28B2FA2A97BCFE69ED912C711631C475F69B1FB807799BBA9A0567FCAC2FFF2B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryneighborties-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryneighborties-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryOverlapAdjacency",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryOverlapAdjacency.lean",
+      "sha256": "CA11F48C95FBAB01530DBBFEF7691CF4EB67B90FB2A10651E7CCAE9ECC8DF87C",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryoverlapadjacency-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryoverlapadjacency-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryChartRelabeling",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryChartRelabeling.lean",
+      "sha256": "ACF6DD28B4916D4BFF4599708AF4571C7FB56F84612EB0287B3D6B5AF9D02456",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarychartrelabeling-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarychartrelabeling-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryNineTies",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryNineTies.lean",
+      "sha256": "2A3A0EB5FEDA4264D3A1D51E0E9A48F097E753B05A93C866C924D5DA5372B78E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarynineties-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarynineties-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryTransversality",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryTransversality.lean",
+      "sha256": "2113BD1DA7BC0A3B68A16058CF33F8B60FC064FF3F966F4B3B99F7D006BB8E1D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarytransversality-gate4-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundarytransversality-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundarySwitches",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundarySwitches.lean",
+      "sha256": "3735AE77DB0717FA4262652337B1A139C7FFBC1453485AB384D86649173C4839",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryswitches-gate4-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryswitches-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualMixedCircleCapacity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualMixedCircleCapacity.lean",
+      "sha256": "F7519FC19C0D898B3786AB9B665676AB1AF6BB1B8EBE83BCD4EC8BB462283823",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualmixedcirclecapacity-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualmixedcirclecapacity-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualPeriodicMidpointOrder",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualPeriodicMidpointOrder.lean",
+      "sha256": "A0425D770872D47CBCCAEC66CF413406BF28437465F1BE1A97D38B4ADF7B7EA2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualperiodicmidpointorder-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualperiodicmidpointorder-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCapClusterLift",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCapClusterLift.lean",
+      "sha256": "B47C0F66EFC0C8AB261B6B09FB82258A013B5291C1DA229784A48E8D8E11F4CB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualcapclusterlift-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualcapclusterlift-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCapClusterCapacity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCapClusterCapacity.lean",
+      "sha256": "F9855AD60D7B76C277A957C7450C20D390D20F87592B4BD3423F77799F724FAC",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualcapclustercapacity-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualcapclustercapacity-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingLocality",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingLocality.lean",
+      "sha256": "E88A87D916EF210BE98B7BBA89664BC39B265A75D5F47685FC16BEFC0D381E9E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringlocality-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringlocality-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingCommonPoints",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingCommonPoints.lean",
+      "sha256": "B7E30117DA50CE774216BAF78B267F315E440D4DDE978667C8733BA1238F940C",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringcommonpoints-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualringcommonpoints-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualFiveRingStar",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualFiveRingStar.lean",
+      "sha256": "BDD034D0FAB54FADA69BDB1636F13B7A220782B26B91C55F096E46B75F9858D9",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualfiveringstar-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualfiveringstar-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualTwoTripleCapacity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualTwoTripleCapacity.lean",
+      "sha256": "3A5C43110D98C46C0E5DDC11D963C21059A9BDA51DF41DC5E877ADEFDCE953A9",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualtwotriplecapacity-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualtwotriplecapacity-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualEarCapacity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualEarCapacity.lean",
+      "sha256": "1AECD26B5E6F81AB7B037B4477A37195D6715EBEC8B52B93C24DC8F61815985B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualearcapacity-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualearcapacity-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryFacets",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryFacets.lean",
+      "sha256": "D80016B56ECDABF677F52BA83C4C390C6BB43B674FC51A313551878742F1CB4A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryfacets-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryfacets-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryFacetEndpoints",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryFacetEndpoints.lean",
+      "sha256": "F341F04A73590DF2EB01DC6525178552E1152E8A27145CF17AC37F1CF9462D01",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryfacetendpoints-gate4-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryfacetendpoints-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryVertexLocality",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryVertexLocality.lean",
+      "sha256": "D776436E4844CE6A90443E942384F9B86229EB1AE32B5C8E0AFD45438C2E00B5",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryvertexlocality-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryvertexlocality-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualDelaunaySupport",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualDelaunaySupport.lean",
+      "sha256": "CCC3280874DC996A0F0E1E2A81B463F61D43E24C07D5FE9D06C067C4C11272DA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualdelaunaysupport-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualdelaunaysupport-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualDelaunayCrossing",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualDelaunayCrossing.lean",
+      "sha256": "D58A8FDF69723710D9099E943998B528049B4F4427C033B756F617D91DCE6967",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualdelaunaycrossing-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualdelaunaycrossing-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualVoronoiIncidence",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualVoronoiIncidence.lean",
+      "sha256": "77BFBBF7CCB02802FD81843F3D20ADC1973786EC9D9C9DFDEC07353CD9059208",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualvoronoiincidence-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualvoronoiincidence-module3-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualClippedCellPartition",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualClippedCellPartition.lean",
+      "sha256": "4806804C0B3008846E617036186C2ABCFEA2DE06D8CB5E076F72EC3839229C91",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualclippedcellpartition-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualclippedcellpartition-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryOwnershipIntervals",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryOwnershipIntervals.lean",
+      "sha256": "0E23A2163CD6404453135FA5839444BD593868258F0E9379E867080FA512B992",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryownershipintervals-gate5-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualboundaryownershipintervals-module5-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualMainRoute",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualMainRoute.lean",
+      "sha256": "250AA902CCEF741B569ACCE5C42B1307A1B5D6EE25747D114F22B854FB129229",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualmainroute-gate1b-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actualmainroute-module-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualVoronoiLocalFan",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualVoronoiLocalFan.lean",
+      "sha256": "E34D45ABA4E654D8EB6691BC3DE5574E10D107E542105FA2093CADECF2FB227B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-local-fan-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-local-fan-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentPolygonOrder",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentPolygonOrder.lean",
+      "sha256": "7EAB1F8CBBC794DDF858BCD59D368A6C21F697E0A7462149A81A36B3C53437CA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-order-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-order-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentFacetGerms",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentFacetGerms.lean",
+      "sha256": "34FD3E1771D7D82D62FD89B9C1473DB71D1B0BC70B280896B42C5BC46205F4A0",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-germs-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-germs-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCyclicChordSupport",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCyclicChordSupport.lean",
+      "sha256": "B158A713E6AD317B9A71FC9FFCD312C58A8AF3D85F4D29542E4B572E512CDEC4",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-cyclic-chord-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-cyclic-chord-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentPolygonFacets",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentPolygonFacets.lean",
+      "sha256": "914BBD0E3A30284F75A010EF8FD44116189EE339594587D410D0A39BBD8DB40A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-facets-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-facets-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentChordGeometry",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentChordGeometry.lean",
+      "sha256": "CB51F1437E6340CEBA7FB229EAA70121A8C279E7EE629CD1F9EA95DC226A0955",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-chord-geometry-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-chord-geometry-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualClippedFacetIntervals",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualClippedFacetIntervals.lean",
+      "sha256": "B9A723AF34185AA4EEE2AD23B1A317F339A8DA3152315909987E7F979D8709AC",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-facet-intervals-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-facet-intervals-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentPolygonConvexity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentPolygonConvexity.lean",
+      "sha256": "132578A54BA77F1A819D0576CC643D3FEFAE5B3A15898394ADE0F8A22474F951",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-convexity-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-convexity-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualClippedMeshVertices",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualClippedMeshVertices.lean",
+      "sha256": "A2C830AD1E2B55C56F07D24310C213A0AE6651A4BAC443591D029A80EE1D0DD1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-mesh-vertices-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-mesh-vertices-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentFacetAdjacency",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentFacetAdjacency.lean",
+      "sha256": "054A9DB603951863CF68BB62493A452262FCA10883A54522343CA2DFF0293D16",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-facet-adjacency-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-facet-adjacency-module2-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualClippedFacetInterior",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualClippedFacetInterior.lean",
+      "sha256": "808B541622DB24934AA35FB637D6BAD80A64BF59DBFF8C2C60B51220291A0E04",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-facet-interior-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-facet-interior-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualClippedSpokeEmbedding",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualClippedSpokeEmbedding.lean",
+      "sha256": "AF2FE0BB3AD4374F76513053EDD6DB997D94C84AEAEEA9FF6D040806417A5830",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-spokes-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-spokes-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualClippedDualSkeleton",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualClippedDualSkeleton.lean",
+      "sha256": "53DF6DF6F1F608E05FCCFF25CBDCA9BCA2EDE2C33A7898C0E27D681188DCF231",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-dual-skeleton-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-dual-skeleton-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentFanRefinement",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentFanRefinement.lean",
+      "sha256": "47BFA53E2B80B3FDF6911AF9D06416BCA575AA00ACA7964AD236A4C06E37215A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-fan-refinement-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-fan-refinement-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryFacetUniqueness",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryFacetUniqueness.lean",
+      "sha256": "CDDD91A5DE0E9BE004DF108A8CAC90122BE76D041AD4332E97043AD8CAFB9DBB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-facet-unique-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-facet-unique-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualNearestEarExclusion",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualNearestEarExclusion.lean",
+      "sha256": "B516760EDB8F2E3936D3C5E61166F6327C0AAB3465C35A9E6EB3E844553BAAEB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-nearest-ear-exclusion-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-nearest-ear-exclusion-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualNearestRingTriangles",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualNearestRingTriangles.lean",
+      "sha256": "96F052D30CA04ADB4F715A7BFED2B5893673D2B35039B31BEBA2BF48429364B1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-nearest-ring-triangles-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-nearest-ring-triangles-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubFacetComplete",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubFacetComplete.lean",
+      "sha256": "991307CF01268F6DBCB696E2993916D59F1CD115A71678693AA25C657087FE2E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-facet-complete-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-facet-complete-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualPuncturedDiskConnected",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualPuncturedDiskConnected.lean",
+      "sha256": "B7035615E09E0D3D0D555FCD21A6E14B78E71CD730EDF72F0E69F3888161846E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-punctured-disk-connected-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-punctured-disk-connected-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualPositiveFacetGraph",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualPositiveFacetGraph.lean",
+      "sha256": "5F2147983C98DA27DF1301D46002F07CE97F7AE0A12E811EA4ACB0C2EFBD8F7D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-positive-facet-graph-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-positive-facet-graph-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualDelaunayPolygonSeparation",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualDelaunayPolygonSeparation.lean",
+      "sha256": "DDBE387E4B5A4C9F7BAEB4C550E6817CE6AB544A4A70E60CD7EBDC76643C6950",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-delaunay-polygon-separation-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-delaunay-polygon-separation-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualIncidentFanInteriors",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualIncidentFanInteriors.lean",
+      "sha256": "1A20A81189558A42C57EBF95E1A5BAB928C2A8A4CEDAB5574E707E03442308FD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-fan-interiors-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-incident-fan-interiors-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualFiniteNearestRefinement",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualFiniteNearestRefinement.lean",
+      "sha256": "3A10D141AE43F4FFB2EFFD21B7E8058D9C0434F2A3B51C214EA84AE04C14283D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-finite-nearest-refinement-gate4-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-finite-nearest-refinement-module2-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementFacetRetention",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementFacetRetention.lean",
+      "sha256": "82BE13D56249488690480AC5AFAB874A895B7551F0CB95198A2012DF89C18CA1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-facet-retention-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-facet-retention-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementTriangleUniqueness",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementTriangleUniqueness.lean",
+      "sha256": "4409A36BAA9F007C7A33FC1E222141BF50F3FF41785AB0F3385C636D5D050439",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-triangle-uniqueness-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-triangle-uniqueness-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementEarCount",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementEarCount.lean",
+      "sha256": "36B25C3E8FBDAD5626A49FAF04BEE8CE5CEA96ECE660ACFB549F95CD594156B9",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-ear-count-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-ear-count-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubPositiveDegree",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubPositiveDegree.lean",
+      "sha256": "C8EBFE57EA7779E2CAC8B2AAE8241B7F1EBA6B416DE0B1E265C98185CF1EA009",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-positive-degree-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-positive-degree-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementSideMultiplicity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementSideMultiplicity.lean",
+      "sha256": "80CF44FAB6FA95AAC398DE3410D58F46E129ED72C63D7DA063920014DBCB96FA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-side-multiplicity-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-side-multiplicity-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementGraphConnected",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementGraphConnected.lean",
+      "sha256": "9C2C6E968473B4F1BBA7B44318E9391A4EF38EE4B313F2650871056E825C31D7",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-graph-connected-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-graph-connected-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementHubCount",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementHubCount.lean",
+      "sha256": "492221A2FBC6B3A9F3CDA7211B66A9B588B912754DEB0D145BD328D87914B822",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-hub-count-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-hub-count-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementBoundaryCount",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementBoundaryCount.lean",
+      "sha256": "77D4278253235873C6C08B19CE2967F578C80F5C8547A187E49DE9E8BD20E7CA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-boundary-count-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-boundary-count-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualNearestPairRigidity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualNearestPairRigidity.lean",
+      "sha256": "3AC7F4000222A4455674033A6AC30815B40C11E953F39DBBDDCB0570B7EF3AC4",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-nearest-pair-rigidity-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-nearest-pair-rigidity-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualLocalRefinementPairCounts",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualLocalRefinementPairCounts.lean",
+      "sha256": "17AD5F8A62E78A26C18AD319DA3B8FDD00AE12605DE54F88FC99FEF6B0B1E1F3",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-local-refinement-pair-counts-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-local-refinement-pair-counts-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementInteriorFacetCount",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementInteriorFacetCount.lean",
+      "sha256": "B1A70D2ACE26D9A09BF096A6F5DEA1117C848F56FFF2A0C2B2DB9E7E11BA2F74",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-interior-facet-count-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-interior-facet-count-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementDiagonalCount",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementDiagonalCount.lean",
+      "sha256": "68FDF5449B7270D3AC8B25CD0CFFB8482BE26C8B11DE56F306B6E012D2310EB1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-diagonal-count-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-diagonal-count-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSelectedEdgeIncidence",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSelectedEdgeIncidence.lean",
+      "sha256": "6B221B8927000A2AF3D8E612250930DCF6F468993E5441AE9EDFCCD584545DC6",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-edge-incidence-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-edge-incidence-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementDoubleCounting",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementDoubleCounting.lean",
+      "sha256": "7375FA9A880BED6A0F2E880A2BC07E6EA58544967ADD4CD0BF03A2279389EDC6",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-double-counting-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-double-counting-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementLinkDegrees",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementLinkDegrees.lean",
+      "sha256": "0DDF374917AE7863E55BC3BDB176CFBEC794531009423DA38C1C772AFB7F83D2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-link-degrees-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-link-degrees-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualClippedCellFrontiers",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualClippedCellFrontiers.lean",
+      "sha256": "B7A4F5459F8BEE397A619A337410391C505052E60BB5A0766C2AD46E6ECBB1AB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-cell-frontiers-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-clipped-cell-frontiers-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementLocalLinks",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementLocalLinks.lean",
+      "sha256": "ADDBC9205BA727A022043E191D63ACAA41FF71DD96B76A04F0FBBF243933E86B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-local-links-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-local-links-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementVertexLinks",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementVertexLinks.lean",
+      "sha256": "1BF34A55C5825751D69F8932145998F0088AE8B344C5807C1F9642E7997CE5F1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-vertex-links-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-vertex-links-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubLinkConnected",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubLinkConnected.lean",
+      "sha256": "CB72198E8361A4329398299134AF0DE9850B4094F26AF914E494EE4DD7CD09E1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-link-connected-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-link-connected-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubLinkCycles",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubLinkCycles.lean",
+      "sha256": "AABB8C50C5D32ACC0FEEE31370BF0CAD17CC76B8123E9F3A371E2CFBD681A543",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-link-cycles-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-link-cycles-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubRingPaths",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubRingPaths.lean",
+      "sha256": "878458D0AC07B93A1919133064E9C26250FF43A42ECC4570919149E39C43B923",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-ring-paths-gate3-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-ring-paths-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCentralRingEndpoints",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCentralRingEndpoints.lean",
+      "sha256": "2FB62AA0BB8CBA52CA1FD32FE912BE345D51D876799B05CE56F55422A3309183",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-central-ring-endpoints-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-central-ring-endpoints-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingLinkBoundaryData",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingLinkBoundaryData.lean",
+      "sha256": "28AE162A1DD48CD85B1902895EDD1439BA728ED7A1883F9CDC1EB15E27DE10FB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-link-boundary-data-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-link-boundary-data-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualAugmentedRingLinkConnected",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualAugmentedRingLinkConnected.lean",
+      "sha256": "703E46AAD3B828F02B2EA672663D083DC26792BA1CA8E69F896D59A0FE4F5CA2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-augmented-ring-link-connected-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-augmented-ring-link-connected-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualAugmentedRingLinkCycles",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualAugmentedRingLinkCycles.lean",
+      "sha256": "A79166C4E5BE6FB81ECBE2BD1EA9D47D331F1ACECF121CF41D564369EB384A15",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-augmented-ring-link-cycles-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-augmented-ring-link-cycles-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCycleDeletion",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCycleDeletion.lean",
+      "sha256": "124E55D145A02F86A94E205538254EA01987747906CC418375266A2D8E312F60",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-cycle-deletion-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-cycle-deletion-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingLinkConnected",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingLinkConnected.lean",
+      "sha256": "A5D7DA1520820F73957A56EC89564DB271B813EF6F3BB6F3A5DAA341B115133E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-link-connected-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-link-connected-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingLinkSimplePaths",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingLinkSimplePaths.lean",
+      "sha256": "2EC96352FE03C255CD4EE78F2989856ADE12917D7914C31AE8E8474A8C51A230",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-link-simple-paths-gate2-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-link-simple-paths-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualLocalSurfaceData",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualLocalSurfaceData.lean",
+      "sha256": "39CE604DBF0336EC8EA07C163737DE54F1E52C3B4E87C684B8E7E13FBF77D9DF",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-local-surface-data-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-local-surface-data-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubTriangleCensus",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubTriangleCensus.lean",
+      "sha256": "DCC5C022E296C1A5577F0928EFD404EE49F29ABBAA8255D2222857F1975EEE27",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-triangle-census-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-triangle-census-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSelectedEarRemoval",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSelectedEarRemoval.lean",
+      "sha256": "A9E29D68AD857873A0391F3B0F2366771C1837ADE0D3F654B4BCFAFE8489F726",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-ear-removal-gate1-20261005.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-ear-removal-module1-20261005.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubNeighborCoverage",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubNeighborCoverage.lean",
+      "sha256": "78AA3C7E2EEA4555D8D75D9B5D9E67B47C5202AF031133E01C5390BEDC476B23",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-neighbor-coverage-gate2-20261006.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-neighbor-coverage-module1-20261006.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSelectedEdgeOrientation",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSelectedEdgeOrientation.lean",
+      "sha256": "AEAF8FCBE3FE4B43DFF668D4BE74D561513D544B52DC16B683DC748A0390555D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-edge-orientation-gate12-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-edge-orientation-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualTriangleBoundaryChain",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualTriangleBoundaryChain.lean",
+      "sha256": "3D8BDF3259D503CBAF90A531A75C471A917F0BF6B3BD96B1714EBEA36E66DBD7",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-triangle-boundary-chain-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-triangle-boundary-chain-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryChainConservation",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryChainConservation.lean",
+      "sha256": "B08BB7DB29AA20FE5AF96D72E163A51FC707DC3A8B89CC48B0935CC0CF5626C8",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-chain-conservation-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-chain-conservation-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualTriangleChainRows",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualTriangleChainRows.lean",
+      "sha256": "9D38CAEBE4949145985B824CB102DB360C4646C54494A1C5D648D0BBED0EA4DD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-triangle-chain-rows-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-triangle-chain-rows-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubLinkNoRingCycle",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubLinkNoRingCycle.lean",
+      "sha256": "9ADDCACB4579C7E1D21C45A64E40D2C40BA06EC4DA00D3BAAB1C93A0F91DC0A3",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-link-no-ring-cycle-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-link-no-ring-cycle-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualShortChordHubData",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualShortChordHubData.lean",
+      "sha256": "531DD1CF1223E58DA395958E4B7491523964866AD5F733EE7C88AA7284BC5C8F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-short-chord-hub-data-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-short-chord-hub-data-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSelectedSkipChordEar",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSelectedSkipChordEar.lean",
+      "sha256": "3AD19F4A5A906EE19D06ACE58FCAD19BD1B9E1757792EC05088E80AD0530760C",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-skip-chord-ear-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-skip-chord-ear-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSelectedRingEdges",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSelectedRingEdges.lean",
+      "sha256": "B37AE68FF1718D4FC8149DA527007B174AE6A29D8EE43C97D5C29F422A9FA014",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-ring-edges-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-selected-ring-edges-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRefinementEulerCount",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRefinementEulerCount.lean",
+      "sha256": "166E4AC5CF6FFE6A44017AF101A57EA5DA3DDE1907A42F332E950A7BBB4238B2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-euler-count-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-refinement-euler-count-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubPathCounts",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubPathCounts.lean",
+      "sha256": "006FF80A9E036923C1F7A76854F879CC318916EF307210A12B93BA3F24BA6F50",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-path-counts-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-path-counts-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubDegreeClasses",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubDegreeClasses.lean",
+      "sha256": "420EB11350300F9CEED830589BF69F1D8D57ADFD09A20E736EABE385E51531EE",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-degree-classes-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-hub-degree-classes-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ0BoundaryFans",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ0BoundaryFans.lean",
+      "sha256": "D0407AA9A01D8A6B068A9BA79BA5445BE1916C82484ACBDBFF2FEDAEC1B27512",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-boundary-fans-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-boundary-fans-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSameHubBoundarySides",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSameHubBoundarySides.lean",
+      "sha256": "D88382E7CFC132EB5F2F2F202A8882369FA8F426858C27C837B5A5D8E021AF32",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-same-hub-boundary-sides-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-same-hub-boundary-sides-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ0FanTransitions",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ0FanTransitions.lean",
+      "sha256": "C12A9363813BECFD920FA322A4B000ABA12B300DE44E6AA15A33321923E3D074",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-fan-transitions-gate4-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-fan-transitions-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBinaryCycleRuns",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBinaryCycleRuns.lean",
+      "sha256": "1750BF54644A26C0DA5129F0DC230415CFFAB65C860A45701DC7A6BC3CABDD11",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-binary-cycle-runs-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-binary-cycle-runs-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ0OrderedTwoFans",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ0OrderedTwoFans.lean",
+      "sha256": "B317C25037EFBC2CC53371327C234FB43A235F2EC70AAA6A1B002418B85B0A80",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-ordered-two-fans-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-ordered-two-fans-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ0FacePartition",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ0FacePartition.lean",
+      "sha256": "46778821615334DC59074BE036753C153F38E84BD61D8EDC9F5C3A6E9F117D60",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-face-partition-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-face-partition-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ0RunDegrees",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ0RunDegrees.lean",
+      "sha256": "9EBD3F6262A8B7CB93C0817025DC5DCAF9AF0CCA7D507AD7708DB8A26D9B7E4F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-run-degrees-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-run-degrees-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ0FourRunNormalization",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ0FourRunNormalization.lean",
+      "sha256": "51DE814E978847444131E4F8ECC0540EED65FC9B58A4601E4213F85D58ED45CB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-four-run-normalization-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-four-run-normalization-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCanonicalSitePermutation",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCanonicalSitePermutation.lean",
+      "sha256": "B4462FF247AE5091AF6ADA71527ED5BB233E6083B05298D7CA56B16647F837BF",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-canonical-site-permutation-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-canonical-site-permutation-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ0CanonicalNearestRows",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ0CanonicalNearestRows.lean",
+      "sha256": "44F1BDFD35BAAE5F980C28EC9350B9DC13AAD6E9F9C21AA95927A06443194B93",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-canonical-nearest-rows-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q0-canonical-nearest-rows-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ1CoreCycle",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ1CoreCycle.lean",
+      "sha256": "7C2C5F2FF9B5B6EF5E4D2792602AED2EBC618226441E3F0CECB2BEE689B1E84C",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-core-cycle-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-core-cycle-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ1CoreFans",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ1CoreFans.lean",
+      "sha256": "C8530AC83BC282F89A6F1B3B146753C7DFE452263ED1A459E78C62B1C26B6542",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-core-fans-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-core-fans-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryExteriorGeometry",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryExteriorGeometry.lean",
+      "sha256": "2C8ABF0727D711601371E8C3A317237D300FBA24FB8E78E7F26D9325C50A7BC4",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-exterior-geometry-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-exterior-geometry-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryTriangleExterior",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryTriangleExterior.lean",
+      "sha256": "265B0D30D2DDFBA7FE585F096E7FB72B586A602B79C3DD1848C3FBAB5CB58CF6",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-triangle-exterior-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-triangle-exterior-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualFiniteBinaryCycleRuns",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualFiniteBinaryCycleRuns.lean",
+      "sha256": "551141EFFFCAE18AB0325F9373DDE89F20435756B2A2E7030AB7CC334262EA91",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-finite-binary-cycle-runs-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-finite-binary-cycle-runs-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ1CoreTransitions",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ1CoreTransitions.lean",
+      "sha256": "DC18DDB0AE117A0C1ABA3553AEB37420C2675B5C32F453D1C48AE9CB84FD66F3",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-core-transitions-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-core-transitions-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ1OrderedCoreFans",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ1OrderedCoreFans.lean",
+      "sha256": "5072946491A385A3E8DE493A85E802F8D8B754C2017ED97BEA13425E1C36E6D3",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-ordered-core-fans-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-ordered-core-fans-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundarySwitchMetric",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundarySwitchMetric.lean",
+      "sha256": "2CA4516ADB8F37DE11B27D409C0C1D83CC89D55932928F7B051CDD9B25CC696D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-switch-metric-gate3-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-switch-metric-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundarySwitchAngles",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundarySwitchAngles.lean",
+      "sha256": "E7049E524CE7616BB1B9D47CB84E19A94A8860942BBAA000602D3DE1B2878F9E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-switch-angles-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-switch-angles-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ1FacePartition",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ1FacePartition.lean",
+      "sha256": "D781C85DFA20406F730D544C9E74C977541F08EF4B2944D6722B1A7B50624373",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-face-partition-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-face-partition-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualQ1RunDegrees",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualQ1RunDegrees.lean",
+      "sha256": "CF5B95CC75FDE7122C9CA60F4C09323E362DE0544EF58322D88CE56E60A844FF",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-run-degrees-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-q1-run-degrees-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualFiniteFanFamilies",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualFiniteFanFamilies.lean",
+      "sha256": "DEB9D0775B78A0DF7DF86184085462C30AE82428BE572A6458A4EF5A58CCA799",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-finite-fan-families-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-finite-fan-families-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualMetricClassReduction",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualMetricClassReduction.lean",
+      "sha256": "4C6B872ADBD37A812898A80C39DECF1CB500937A6E79A695D06F6FC3320C8936",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-metric-class-reduction-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-metric-class-reduction-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualTriangleShoelace",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualTriangleShoelace.lean",
+      "sha256": "F0D06E3CC52585E658FA18667E9EB255ED56FF11F7601FD8FDF26BD16BD67608",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-triangle-shoelace-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-triangle-shoelace-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingShoelacePositive",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingShoelacePositive.lean",
+      "sha256": "954F78DA6786AA0ACDFECAFD20CBA0B5F5A34FE8724E039904893BD685FA7981",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-shoelace-positive-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-ring-shoelace-positive-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryShoelace",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryShoelace.lean",
+      "sha256": "B790DEC45AF46FD1A8307079A7406420B096430B81D570B44A24BA66D2C9D5C6",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-shoelace-gate1-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-boundary-shoelace-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCenterRingShoelace",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCenterRingShoelace.lean",
+      "sha256": "2734B214418833D459EEE5388FF0F4983A330A46CE7189961DD1EB790E963F3F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-center-ring-shoelace-gate2-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-center-ring-shoelace-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCircleSegmentAlgebra",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCircleSegmentAlgebra.lean",
+      "sha256": "1D10EC5DC27E80923CD5F4441BEC18E1928511F287F99EEF1367B70E2EE7A053",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-circle-segment-algebra-gate3-continued.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-circle-segment-algebra-module1-continued.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCircularSectorClosure",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCircularSectorClosure.lean",
+      "sha256": "D24FB3D2102251B6E7C96FC7FCC99DF2A51249B34BDAA2F32209ED48551B9009",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualCircularSectorClosure-gate.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualCircularSectorClosure-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSwitchAtomAggregate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSwitchAtomAggregate.lean",
+      "sha256": "03A1E4CB2FD0F616F1C6F244FE6814E65A85F780FD6AC0258DC69DA54946C7CC",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualSwitchAtomAggregate-gate.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualSwitchAtomAggregate-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualOwnershipSwitchWidths",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualOwnershipSwitchWidths.lean",
+      "sha256": "3618F6592636BA762C38D826D0CDB4CD6986B28F4FC0C0F8A91F49B3F44F3772",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualOwnershipSwitchWidths-gate.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualOwnershipSwitchWidths-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualOwnedChordGeometry",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualOwnedChordGeometry.lean",
+      "sha256": "A1E8BBD7060C2B9F1B2CED9D40D7C55F11CE95FA9E74FD964CA7779E489CD779",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualOwnedChordGeometry-gate.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualOwnedChordGeometry-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSwitchWedgeArea",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSwitchWedgeArea.lean",
+      "sha256": "6BC5AEC73042AFD8DA10DD4FED37449C86628CA1BFCD242C5D89075EDFB02A4A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualSwitchWedgeArea-gate.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualSwitchWedgeArea-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualOwnedSectorDecomposition",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualOwnedSectorDecomposition.lean",
+      "sha256": "2D749DD747BA721DFF4850C84C981788079AEDCCFFE3512E5CDAAFBDE5456374",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualOwnedSectorDecomposition-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a18-ownership-area-final-ActualOwnedSectorDecomposition-module2.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualMetricAngleAtoms",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualMetricAngleAtoms.lean",
+      "sha256": "58E895BCEDC082786407E3374FDE1697BE536A31F3C64CB59EEEE63BBA2BAFFD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-metric-angle-atoms-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-metric-angle-atoms-module2.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSectorMetricDomain",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSectorMetricDomain.lean",
+      "sha256": "CD4C80E9C41172F1D42CCA3CF7239A3B0973FDFE8C7615862681EE290E2BB101",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-sector-metric-domain-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-sector-metric-domain-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualFaceCircumradiusAtoms",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualFaceCircumradiusAtoms.lean",
+      "sha256": "EAD8980B505D24614773F574CAA59D9DF57FB5E22C7B8711BC5317748E4FEF47",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-face-circumradius-atoms-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-face-circumradius-atoms-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSwitchSineAtoms",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSwitchSineAtoms.lean",
+      "sha256": "26A6C68295B5623D516FA424EF7169394E738CBB96D459946CDE4161882E7AB7",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-switch-sine-atoms-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-switch-sine-atoms-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedFactorArea",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedFactorArea.lean",
+      "sha256": "6DE23FD1C1DBBD6FA94325EDD8E85D1D067FF276D4769EBDF3B18A2AAA382658",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-shared-factor-area-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-shared-factor-area-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSquaredSideMatching",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSquaredSideMatching.lean",
+      "sha256": "B18E2E25D83E67187EF76D705CA63AB53B4F76B712E9D45A46CD0A832232021B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-squared-side-matching-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-squared-side-matching-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualAnglePhase",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualAnglePhase.lean",
+      "sha256": "30B77E9854A73D433A17B41232249F19B02CBBC4AF45697EA82DA72D4AE4ABA1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-angle-phase-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-angle-phase-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSiteAngleChain",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSiteAngleChain.lean",
+      "sha256": "4094AF6A9150E00F8CC7D671F7543348F2EFF62998854EAADD6292C988DBE8FC",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-site-angle-chain-gate7.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\actual-site-angle-chain-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubAngleSum",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubAngleSum.lean",
+      "sha256": "8C5BC484DC493C6FD0BE1A12D776026D0839A9B1A67854D9360A4A7D45EE2306",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\hub-angle-gate5.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\hub-angle-module5.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualMetricBridgeAudit",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualMetricBridgeAudit.lean",
+      "sha256": "BA0F1E5854D6F55BB3D4B0BBED9FEFD85094DE15A26EB5AB77A6FD3DD26391EA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\metric-bridge-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\metric-bridge-module5.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualDelaunayAngleBounds",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualDelaunayAngleBounds.lean",
+      "sha256": "CC1F1161C53A20FFE5EA5FB2BD1700B6057ECB81376E1B5173BB5A450A50F1BD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-delaunay-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-delaunay-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualDelaunayAngleConsumer",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualDelaunayAngleConsumer.lean",
+      "sha256": "53228784E21B6C648718CD8CDE5F509570494554BD669854F4E0C806F608BE27",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-delaunay-consumer-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-delaunay-consumer-module2.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualDelaunayFlatDiagonal",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualDelaunayFlatDiagonal.lean",
+      "sha256": "5846632DE1E186886434B214E36A3C2B0DDD5F3BB977E110613845E1647E2260",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-flat-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-flat-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSwitchBaseAngle",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSwitchBaseAngle.lean",
+      "sha256": "720250CC4D231C6194FAB49E242FB17083653374AA10CA1AC8BBD62D15D38DA6",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-switch-base-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-switch-base-module2.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualHubOneTurn",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualHubOneTurn.lean",
+      "sha256": "29DD728FFE097CA868F93E3083DECD00659B7FB7E9A215EC594C38216C6F6AE2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\recover-hub-one-turn4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-hub-final-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSiteAnglePacking",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSiteAnglePacking.lean",
+      "sha256": "E9FB6A1718A6581E2D4CA0B753179E6A8DDA75DACF6CAA86EB5B1F53DF4BEDF7",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\recover-hub-packing2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-site-packing-final-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualRingAngleClosure",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualRingAngleClosure.lean",
+      "sha256": "47ABD24197F22E59F3C41FBB9931BF6D3D0E7849E55550CE7D57DF248A8DEAAB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-ring-closure-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-ring-closure-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryDelaunayAngle",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryDelaunayAngle.lean",
+      "sha256": "37678BAAC73F116304108A3ACD896FC97AE387796E85BAE79CA5535378CAB17F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-boundary-delaunay-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-boundary-delaunay-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSectorAreaEnvelope",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSectorAreaEnvelope.lean",
+      "sha256": "36F17B016DD1EFAD0B94DFFDD029B823EF54D2D5F003F9EA2C0130D5AEC44F84",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-sector-envelope-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-sector-envelope-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualEdgeAreaAtoms",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualEdgeAreaAtoms.lean",
+      "sha256": "2DA6B3449D65B163ED4B2042AF32F36F48864306A2ADC0A7D760E7A110ADD4EA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\recover-edge-area-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-edge-area-final-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualBoundaryEdgeAreaAtoms",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualBoundaryEdgeAreaAtoms.lean",
+      "sha256": "5C65C02371F715C823BA2D6841516DFEF460A4F0DCD4E2689EDB91FFBC40A5C4",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-boundary-edge-area-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-boundary-edge-area-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualEdgeFlagSums",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualEdgeFlagSums.lean",
+      "sha256": "DA287AD061F35605D87C98CE0070D770184FA631AC276F54BC4DA6E1ED9014C5",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\recover-edge-flags-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-edge-flags-final-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualEdgeMetricModel",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualEdgeMetricModel.lean",
+      "sha256": "B5DBDDD03009C4086312917FA36DB49440B4CD60E688F36EEC26C9CE2B3F6F93",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-edge-model-final-gate.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-edge-model-final-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricAreaDual",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricAreaDual.lean",
+      "sha256": "B8F6F463DD322D005CE3AF6554B2A186E202443F26D6739A96333F64BB600635",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-metric-area-dual-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-metric-area-dual-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricAreaEnvelopeRegularity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricAreaEnvelopeRegularity.lean",
+      "sha256": "D6E881C29D81BAEF212D933108FA537DDE8AC07C38ECD82BB0462F028A65B6D2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-envelope-regularity-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-envelope-regularity-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricAreaGridCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricAreaGridCertificate.lean",
+      "sha256": "2A80E09683E5DE3B1A93B7AA3752CEFF935C370CC831F777B5647244CC7E2673",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-area-grid-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-area-grid-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricAreaGridDual",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricAreaGridDual.lean",
+      "sha256": "1A117161EA4EB129F5A9D5948BD8352A5FCAB5891127C2CC17DA9BE55E3A6DBA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-area-grid-dual-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-area-grid-dual-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualMetricGridBridge",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualMetricGridBridge.lean",
+      "sha256": "10EAB5AA1BCADF19D67F265ECE72DD871A3F4A467E0C33E1F9E4327E00FC3FA6",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-actual-grid-bridge-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-actual-grid-bridge-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricAreaRationalCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricAreaRationalCertificate.lean",
+      "sha256": "5F0373E12B1B86C60D5B88868CF76A7DD34D597E7F2F36EC04B79FAE4B4AAE06",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-area-rational-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-area-rational-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSwitchPointClosure",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSwitchPointClosure.lean",
+      "sha256": "E4114E27428E9A694F2CEEC06C5E0A544784098224BEA00E7ADC666965E2E14D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-switch-point-closure-gate5.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-switch-point-closure-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSectorEndpointCoordinates",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSectorEndpointCoordinates.lean",
+      "sha256": "E0311E8305CA72932F188ED61382B957B315C6F21C68E84AAEF12B6E525CB54E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-sector-endpoint-coordinates-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-sector-endpoint-coordinates-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualDBMCellEnergyAdapter",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualDBMCellEnergyAdapter.lean",
+      "sha256": "39F2A49DD78218E3BF23246A45AF700577738FD4A0A60B642B6C02AEC93AC43A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-dbm-cell-energy-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-dbm-cell-energy-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualOrderedMetricGraphs",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualOrderedMetricGraphs.lean",
+      "sha256": "D52466D67F0A52473A44F0C2386CDACAC7F6CC2830140217B8AAB4DEA1B75079",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-ordered-metric-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-ordered-metric-final-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualEarOwnedWidth",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualEarOwnedWidth.lean",
+      "sha256": "744DDA768AB2F6F4DEBDAEEA662E4B5B7F4A912EA6B0280B898EB0224BFC235B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-ear-owned-width-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-ear-owned-width-module2.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricAreaMaskedGridDual",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricAreaMaskedGridDual.lean",
+      "sha256": "44B56856E08055C540B42DF253EAA4A9A9968193A7741F77F94D65E61E00A8CE",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-masked-grid-dual-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-masked-grid-dual-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualEarMaskedGridBridge",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualEarMaskedGridBridge.lean",
+      "sha256": "88BB9F9D1A9CE3E3A0D6B5D59BD739A4DEC4806EE12F0189105FF9CAA1ABEA00",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-ear-masked-grid-bridge-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-ear-masked-grid-bridge-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricAreaMaskedRationalCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricAreaMaskedRationalCertificate.lean",
+      "sha256": "30A182CCC2934F4D21ACF2700FFEDF8DEB73E304CD609D4FCC1B13F427C2FEE7",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-ear-masked-rational-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-ear-masked-rational-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentData",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentData.lean",
+      "sha256": "11C5EB3D451B13FFD05197B7C006A5447AB93A83DD6D2A2035D630E89BA0312A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-shared-moment-fresh-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-shared-moment-fresh-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricSectorCompactRegularity",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricSectorCompactRegularity.lean",
+      "sha256": "B2F002E2461395C739CBEB153ABA3F15C73A37F2AB2240EF470FD0B125B0F792",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-sector-compact-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-sector-compact-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CompactBoxGridCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CompactBoxGridCertificate.lean",
+      "sha256": "F21C2F72785E88CCBE5699150CE1CFB26EBF2F208B11027DBD43B0B016FFAE8E",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-box-grid-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-box-grid-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricSectorBoxCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricSectorBoxCertificate.lean",
+      "sha256": "8F0CD210DEBDA4091CF503E289AF20006C6D9A5491DE6B119F319DAD58898B2A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\resume-lead\\a21-sector-box-fresh-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\resume-lead\\a21-sector-box-fresh-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentDual",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentDual.lean",
+      "sha256": "21985C83190F97C61F1073459F342F3D765F9CCF5D8A57430298A57D3A56AE44",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-shared-moment-dual-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-shared-moment-dual-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentMaskedDual",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentMaskedDual.lean",
+      "sha256": "C8DDE308F51DB7382062A6E02BD53E4C09E640B1BA3DE222BFD4B4679D3794FA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-shared-masked-dual-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a21-shared-masked-dual-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CompactQuadraticMomentMaximum",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CompactQuadraticMomentMaximum.lean",
+      "sha256": "6794CFFAE90755F9A1C52F44C71CDA43965CD8FCB4E805C8E8F9A1A512B9BC26",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-quadratic-max-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-quadratic-max-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricSectorRationalNodes",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricSectorRationalNodes.lean",
+      "sha256": "720E278845545168A21E387A0686F4EC850C5DD90414A3C79F5BE773D55A559F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-sector-rational-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-sector-rational-bare-module.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CompactSimplexGridCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CompactSimplexGridCertificate.lean",
+      "sha256": "81B1CBC87273A38681E2D8120E81B124A9AEA2BA76F2168007573C2B049078A1",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-simplex-grid-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-simplex-grid-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFactorGridCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFactorGridCertificate.lean",
+      "sha256": "7C95BD425C705A46813010CAB222DEDDCC9ADE86217F3DA825C17122BE884133",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-factor-grid-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-factor-grid-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFactorRationalNodes",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFactorRationalNodes.lean",
+      "sha256": "D19F7D401B287C672F82DC7A266BE46FE7DAF312F0E22EBE5075828C567BD6CD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-factor-rational-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-factor-rational-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentRationalCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentRationalCertificate.lean",
+      "sha256": "BEE5EAAEFDA6E55F3832307CDAB2B2BCBCDF42C172D54824F2AE8E4A7B07762D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-shared-rational-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a22-shared-rational-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.RationalBoxSubdivision",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\RationalBoxSubdivision.lean",
+      "sha256": "7A99992A25A01F6F7FCFE9EAA8AC0DE4BA9125F5876CE99EEAE5B2A43429EC3F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-box-subdivision-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-box-subdivision-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFactorLocalCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFactorLocalCertificate.lean",
+      "sha256": "48B71A9A518E5484BA1B3523820D41C50DE1CB8B2339C8520408AB7710E125CC",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-factor-local-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-factor-local-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricSectorLocalCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricSectorLocalCertificate.lean",
+      "sha256": "C61787278E9B1DC22E7A2C34793E013FA47604061889A5410021D8F9DAB29492",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-sector-local-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-sector-local-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentUnmaskedDual",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentUnmaskedDual.lean",
+      "sha256": "9E689F1F59F2391D1F21D7B928A8ACE719245F9FD30C7EAFFFE7D341F54309CB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-unmasked-moment-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-unmasked-moment-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentAdaptiveCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentAdaptiveCertificate.lean",
+      "sha256": "925E3F2428F2158BB2E7D4571576A3DC693C80CA140A35B7AA3A525E77F6B3CD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-actual-adaptive-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a23-actual-adaptive-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CompactQuadraticArgmaxRange",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CompactQuadraticArgmaxRange.lean",
+      "sha256": "8E2926295619C2871830ADF3C867178F5DBA4D306C30CED7298D3D56145B9F7C",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-argmax-range-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-argmax-range-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.RationalTrigCellBounds",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\RationalTrigCellBounds.lean",
+      "sha256": "FEC39B50C15BDCB4759D0991C34A64670F4DD2BE6A3B48DCCEB1A61D569503FF",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-trig-cell-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-trig-cell-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFactorIntervalCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFactorIntervalCertificate.lean",
+      "sha256": "DB852F319FD2093E7111574BC9CF617BBACA50D58EBCAF2465F99FAD5BE58C5D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-factor-interval-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-factor-interval-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentActiveRadiusCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentActiveRadiusCertificate.lean",
+      "sha256": "7CDE980B3D95B23A2C65F6D2EC74D1EC2BC2FE63BFDAAA076F3A7D351E392A33",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-active-radius-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-active-radius-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentTightAdaptiveCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentTightAdaptiveCertificate.lean",
+      "sha256": "6683A26D509413FF2774E1EBFCEACA40CE130AE8D539C1242615F7967C7B0757",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-tight-adaptive-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-tight-adaptive-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFactorPermutation",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFactorPermutation.lean",
+      "sha256": "C94345A3A482CC25BBF0EAA1B2FA91AC83844725C72C8C7289F3DF623159BF6F",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentFactorPermutation-gate-10132026131057.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentFactorPermutation-build-10132026132239.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCanonicalFaceCoordinates",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCanonicalFaceCoordinates.lean",
+      "sha256": "6B5233B305DC54C8398A8EE072AE2ACBA5EBCFCF549B4AA9BBE86C78FC6B01AE",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-coordinates-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-coordinates-module3.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCanonicalMomentTransport",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCanonicalMomentTransport.lean",
+      "sha256": "773157858788F685C6E67DA34153EFFB354319FFD60346AC3FFCFEB82A6818FB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-transport-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-transport-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualSharedMomentSharpConstant",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualSharedMomentSharpConstant.lean",
+      "sha256": "5719E0DDEA35D9740E78FE5431C5163EB058FEA86AE2B082C03234E1A2DFE29B",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-sharp-constant-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-sharp-constant-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.RationalTrigLocalLipschitz",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\RationalTrigLocalLipschitz.lean",
+      "sha256": "876955BFDFE49E758DC616D7605AD724B3CC8AA326CB200F6C6D9DCC75EACC7A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-trig-local-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-trig-local-module2.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFactorLocalGradientCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFactorLocalGradientCertificate.lean",
+      "sha256": "023130F4C25C8516E103E36E036D151A6653785CDA59466E95B8D2D99AFB0010",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-factor-gradient-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-factor-gradient-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFacePlaneCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFacePlaneCertificate.lean",
+      "sha256": "BFCC25082501381CD92957EDD32E10CAF06A85C571FF47A7383AB35BA9F69E8D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face-plane-gate4.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face-plane-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFacePlaneDirectCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFacePlaneDirectCertificate.lean",
+      "sha256": "6AC9C5C62658ECE68527DDB57651A2A51F097D4F27ABD8950EAE3788139722F0",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face-plane-direct-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face-plane-direct-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFacePlaneGradientCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFacePlaneGradientCertificate.lean",
+      "sha256": "BB09C4771CB387CE29E7663831DB18F0A80919504B0D27AA6BC7FB363F1967B8",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face-plane-gradient-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face-plane-gradient-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFacePlaneRoundedGradientCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFacePlaneRoundedGradientCertificate.lean",
+      "sha256": "01EC95A8C982B38FF9AF5D24B007CAB241DA556DD70E99BED2423B031E61C883",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-plane-rounded-gradient-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-plane-rounded-gradient-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricSectorRationalCellCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricSectorRationalCellCertificate.lean",
+      "sha256": "6A98ABAA274C836FA0BC879AD8797D2D904D54C8F6525B3DAA117FE9ED3A8BEA",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-sector-cell-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-sector-cell-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.MetricSectorLocalGradientCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\MetricSectorLocalGradientCertificate.lean",
+      "sha256": "4997DE0B770AE4858CE7940154FCC163B05D907D5F5B53587D590FEA23868197",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-sector-gradient-gate3.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-sector-gradient-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentFiniteFactorCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentFiniteFactorCertificate.lean",
+      "sha256": "B6C7E27186BBBACF9C87A3C8524A629E5A16CF40AE458AB39BFA7EB46D8F03D2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-finite-factor-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-finite-factor-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentEfficientFactorCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentEfficientFactorCertificate.lean",
+      "sha256": "956AEC0F5651EA64E43484AAA69A98FAED3E47BBFCE77599B9EE253581E6B354",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-efficient-factor-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-efficient-factor-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.ActualCanonicalSharedMomentConsumer",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\ActualCanonicalSharedMomentConsumer.lean",
+      "sha256": "A9D5DC97B1F8535238BCB188FEA5047D6A85A920991A0D63FC6CD7F5415E6BF2",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-consumer-gate2.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-consumer-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CanonicalSharedMomentFiniteCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CanonicalSharedMomentFiniteCertificate.lean",
+      "sha256": "F3A05B26FDEF1B67A91E2FD48F4B580D81EA99DFC11E1FDC48234CF760434CFD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-CanonicalSharedMomentFiniteCertificate-gate-10132026135831.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-CanonicalSharedMomentFiniteCertificate-build-10132026140038.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CanonicalBalancedGraphOrbits",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CanonicalBalancedGraphOrbits.lean",
+      "sha256": "BBB7F9466029A665379F666851626F37D60C602EAC89439A03B943D705D128AD",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-balanced-orbits-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-balanced-orbits-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CanonicalSharedMomentOrbitTransport",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CanonicalSharedMomentOrbitTransport.lean",
+      "sha256": "17F49B41C2C3898708A9A210C976E65D39B79C482FCFEAD11D9A632FBACA035C",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-CanonicalSharedMomentOrbitTransport-gate-10132026135914.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-CanonicalSharedMomentOrbitTransport-build-10132026140113.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteLeafControls",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteLeafControls.lean",
+      "sha256": "D5A55E531D32961AC0D82F0027B3C860CEB7544B1768C53184676CE7610E3EDB",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-concrete-full-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-concrete-full-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteSwitchBatch",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteSwitchBatch.lean",
+      "sha256": "7A5FE630FAA838CA6BD394D41A3F8A78384968F56E21D6612304A73E03622236",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteSwitchBatch-gate-10132026132221.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteSwitchBatch-build-10132026132407.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteSectorControls",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteSectorControls.lean",
+      "sha256": "9934C2959C770A5F66604E7EF30A6D0559BAD5E5CDA540116219E146E46E5624",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteSectorControls-gate-10132026131012.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteSectorControls-build-10132026131109.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentA25CertificateControls",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentA25CertificateControls.lean",
+      "sha256": "006CD78C1841971875B0E305F086F66EB5E99A6DD0F0B8EB9C2908AD02B56443",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-finite-controls-20261013-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentA25CertificateControls-build-10132026150313.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteFace1Data",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteFace1Data.lean",
+      "sha256": "FA53EF3AD4E14BFB55031F67421201F8268A1152B35DA318BA073B9282A59822",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face1-data-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face1-data-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteFace1Part0",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteFace1Part0.lean",
+      "sha256": "AFA746F0E302B919E0922022750A9D0BD924886E956A836450A44AA6C0C7FB56",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face1-part0-gate1.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-face1-part0-module1.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteFace1Part1",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteFace1Part1.lean",
+      "sha256": "5473A19AEAA7F7FF48B7EE240F496F3A72B6AAE77E0FB71C4D45E873A9EC7D9D",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Part1-gate-10132026132751.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Part1-build-10132026134813.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteFace1Part2",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteFace1Part2.lean",
+      "sha256": "8FB1B1346284A478C1DA0887650E3721DF7FFFDEE8CE7A96AADB5C23312F9189",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Part2-gate-10132026135133.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Part2-build-10132026135519.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteFace1Part3",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteFace1Part3.lean",
+      "sha256": "4A8AD77A5BC07EF1574E7A85D8624300B59B0CA48BCF1F6692FD3DA34D2A3497",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Part3-gate-10132026135701.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Part3-build-10132026140251.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteFace1Certificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteFace1Certificate.lean",
+      "sha256": "33271992C7680E4754EE1417AC0FE2C8C3717B7E48AD94460D3E67E412BBC271",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Certificate-gate-10132026140357.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteFace1Certificate-build-10132026140442.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.CanonicalBalancedFiniteClassCertificate",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\CanonicalBalancedFiniteClassCertificate.lean",
+      "sha256": "F71D338797184F8550C407FBD0E9CFD53CC4246F42581608750ECF7EA968644A",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-CanonicalBalancedFiniteClassCertificate-gate-10132026151123.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-CanonicalBalancedFiniteClassCertificate-build-10132026151240.log",
+      "standard_axioms_only": true
+    },
+    {
+      "module": "N11Formalization.SharedMomentConcreteSectorGradientControls",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\N11Formalization\\SharedMomentConcreteSectorGradientControls.lean",
+      "sha256": "C29F17636C41EBD1E6D5C56CC66ED1AF61D7683FD553DC01A68C22AD2D68EA45",
+      "module_green": true,
+      "standalone_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteSectorGradientControls-gate-10132026131207.log",
+      "module_log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25stg-SharedMomentConcreteSectorGradientControls-build-10132026131219.log",
+      "standard_axioms_only": true
+    }
+  ],
+  "incomplete_modules": [],
+  "scope": "Actual framework MODULE evidence; root acceptance separate; n11 INCOMPLETE"
+}

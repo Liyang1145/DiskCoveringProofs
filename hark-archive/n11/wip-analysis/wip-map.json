@@ -1,0 +1,197 @@
+{
+ "root_current_sha256": "f6e3419a258b0afc0b62cb50317661d3bcc5a9538ae5a0fa4037918366b0fce0",
+ "lean_files_total": 2348,
+ "root_closure_modules": 1202,
+ "accepted_A25_root_closure_modules": 1134,
+ "new_in_current_root": [
+  "N11Formalization.C450Source12Data",
+  "N11Formalization.C450Source12GroupedC01",
+  "N11Formalization.C450Source12GroupedC02",
+  "N11Formalization.C450Source12GroupedC03",
+  "N11Formalization.C450Source12GroupedC04",
+  "N11Formalization.C450Source12GroupedC05",
+  "N11Formalization.C450Source12GroupedC06",
+  "N11Formalization.C450Source12GroupedC07",
+  "N11Formalization.C450Source12GroupedC08",
+  "N11Formalization.C450Source12GroupedC09",
+  "N11Formalization.C450Source12GroupedC10",
+  "N11Formalization.C450Source12GroupedC11",
+  "N11Formalization.C450Source12GroupedC12",
+  "N11Formalization.C450Source12GroupedC13",
+  "N11Formalization.C450Source12GroupedC14",
+  "N11Formalization.C450Source12GroupedC15",
+  "N11Formalization.C450Source12GroupedC16",
+  "N11Formalization.C450Source12GroupedC17",
+  "N11Formalization.C450Source12GroupedC18",
+  "N11Formalization.C450Source12GroupedC19",
+  "N11Formalization.C450Source12GroupedC20",
+  "N11Formalization.C450Source12GroupedC21",
+  "N11Formalization.C450Source12GroupedC22",
+  "N11Formalization.C450Source12GroupedC23",
+  "N11Formalization.C450Source12GroupedC24",
+  "N11Formalization.C450Source12GroupedC25",
+  "N11Formalization.C450Source12GroupedC26",
+  "N11Formalization.C450Source12GroupedC27",
+  "N11Formalization.C450Source12GroupedC28",
+  "N11Formalization.C450Source12GroupedC29",
+  "N11Formalization.C450Source12GroupedC30",
+  "N11Formalization.C450Source12GroupedC31",
+  "N11Formalization.C450Source12GroupedC32",
+  "N11Formalization.C450Source12Segment",
+  "N11Formalization.C450Source13Data",
+  "N11Formalization.C450Source13GroupedC01",
+  "N11Formalization.C450Source13GroupedC02",
+  "N11Formalization.C450Source13GroupedC03",
+  "N11Formalization.C450Source13GroupedC04",
+  "N11Formalization.C450Source13GroupedC05",
+  "N11Formalization.C450Source13GroupedC06",
+  "N11Formalization.C450Source13GroupedC07",
+  "N11Formalization.C450Source13GroupedC08",
+  "N11Formalization.C450Source13GroupedC09",
+  "N11Formalization.C450Source13GroupedC10",
+  "N11Formalization.C450Source13GroupedC11",
+  "N11Formalization.C450Source13GroupedC12",
+  "N11Formalization.C450Source13GroupedC13",
+  "N11Formalization.C450Source13GroupedC14",
+  "N11Formalization.C450Source13GroupedC15",
+  "N11Formalization.C450Source13GroupedC16",
+  "N11Formalization.C450Source13GroupedC17",
+  "N11Formalization.C450Source13GroupedC18",
+  "N11Formalization.C450Source13GroupedC19",
+  "N11Formalization.C450Source13GroupedC20",
+  "N11Formalization.C450Source13GroupedC21",
+  "N11Formalization.C450Source13GroupedC22",
+  "N11Formalization.C450Source13GroupedC23",
+  "N11Formalization.C450Source13GroupedC24",
+  "N11Formalization.C450Source13GroupedC25",
+  "N11Formalization.C450Source13GroupedC26",
+  "N11Formalization.C450Source13GroupedC27",
+  "N11Formalization.C450Source13GroupedC28",
+  "N11Formalization.C450Source13GroupedC29",
+  "N11Formalization.C450Source13GroupedC30",
+  "N11Formalization.C450Source13GroupedC31",
+  "N11Formalization.C450Source13GroupedC32",
+  "N11Formalization.C450Source13Segment"
+ ],
+ "closure_static": {
+  "sorry": 0,
+  "axiom": 0,
+  "native": 0,
+  "thms": 57955,
+  "defs": 27514,
+  "bytes": 118339563
+ },
+ "outside_closure_static": {
+  "sorry": 1,
+  "axiom": 0,
+  "native": 0,
+  "thms": 42006
+ },
+ "sorry_files_outside_closure": [
+  "Probe37"
+ ],
+ "family_counts_in_closure": {
+  "C#Source#GroupedC#": [
+   96,
+   5514
+  ],
+  "C#SixthRadialC#": [
+   64,
+   6585
+  ],
+  "C#SeventhGroupedC#": [
+   32,
+   1882
+  ],
+  "C#EighthGroupedC#": [
+   32,
+   1885
+  ],
+  "C#NinthGroupedC#": [
+   32,
+   1891
+  ],
+  "C#TenthGroupedC#": [
+   32,
+   1861
+  ],
+  "C#FifthRadialC#": [
+   16,
+   1241
+  ],
+  "BallD#C#": [
+   13,
+   84
+  ],
+  "G#Batch_#_#": [
+   12,
+   2386
+  ],
+  "Paid#GeneralG#": [
+   12,
+   360
+  ],
+  "EnergyTerminalBatchB#": [
+   11,
+   65
+  ],
+  "DBMTreeWindow#": [
+   10,
+   79
+  ],
+  "C#FourthRadialC#": [
+   8,
+   670
+  ],
+  "C#FirstRadialG#": [
+   8,
+   1536
+  ],
+  "SliceL#": [
+   7,
+   74
+  ],
+  "Leaf#Pairs_s#": [
+   6,
+   144
+  ],
+  "DrowK#": [
+   5,
+   1311
+  ],
+  "Terminal#Consumer": [
+   4,
+   24
+  ],
+  "Terminal#Oracle": [
+   4,
+   47
+  ],
+  "SharedMomentConcreteFace#Part#": [
+   4,
+   1239
+  ],
+  "DSHTerminalBatchL#G#Zplus_#": [
+   4,
+   288
+  ],
+  "Terminal#Packet": [
+   4,
+   44
+  ],
+  "Terminal#Angles": [
+   3,
+   9
+  ],
+  "HarmonicFieldsB#": [
+   3,
+   14
+  ],
+  "C#Source#Segment": [
+   3,
+   216
+  ]
+ },
+ "emitted_not_in_root": 782,
+ "method": "static: comments/strings stripped; regex counts of theorem/lemma/def; import closure from lean/N11Formalization.lean and .pre-c450pilot-20261014; no Lean run"
+}

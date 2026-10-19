@@ -1,0 +1,15 @@
+import N11Formalization
+
+open N11Formalization
+
+#check @N11Formalization.DSHTopologyInterior.hub_coverer_of_inner_point
+#check @N11Formalization.DSHTopologyInterior.faceWitness_of_voronoiFace
+#check @N11Formalization.DSHTopologyInterior.hub10FanRealized_of_voronoiFaces
+#check @N11Formalization.DSHTopologyInterior.feasible_of_source_block_and_two_voronoiFaces
+#check @N11Formalization.DSHTopologyInterior.oracle_le_of_source_block_and_two_voronoiFaces
+
+#print axioms N11Formalization.DSHTopologyInterior.hub_coverer_of_inner_point
+#print axioms N11Formalization.DSHTopologyInterior.faceWitness_of_voronoiFace
+#print axioms N11Formalization.DSHTopologyInterior.hub10FanRealized_of_voronoiFaces
+#print axioms N11Formalization.DSHTopologyInterior.feasible_of_source_block_and_two_voronoiFaces
+#print axioms N11Formalization.DSHTopologyInterior.oracle_le_of_source_block_and_two_voronoiFaces

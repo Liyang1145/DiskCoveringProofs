@@ -1,0 +1,30 @@
+done [('DCPN11Core/C450Replay/Seg24/All', 0), ('DCPN11Core/C450Replay/Seg25/Cells3', 0), ('DCPN11Core/C450Replay/Seg25/Cells2', 0)] remaining 116 elapsed 73
+done [('DCPN11Core/C450Replay/Seg25/Cells4', 0), ('DCPN11Core/C450Replay/Seg26/Cells1', 0)] remaining 114 elapsed 113
+done [('DCPN11Core/C450Replay/Seg25/All', 0), ('DCPN11Core/C450Replay/Seg26/Cells3', 0), ('DCPN11Core/C450Replay/Seg26/Cells2', 0)] remaining 111 elapsed 94
+done [('DCPN11Core/C450Replay/Seg27/Cells1', 0), ('DCPN11Core/C450Replay/Seg26/Cells4', 0)] remaining 109 elapsed 134
+done [('DCPN11Core/C450Replay/Seg26/All', 0), ('DCPN11Core/C450Replay/Seg27/Cells3', 0), ('DCPN11Core/C450Replay/Seg27/Cells2', 0)] remaining 106 elapsed 105
+done [('DCPN11Core/C450Replay/Seg28/Cells1', 0), ('DCPN11Core/C450Replay/Seg27/Cells4', 0)] remaining 104 elapsed 133
+done [('DCPN11Core/C450Replay/Seg27/All', 0), ('DCPN11Core/C450Replay/Seg28/Cells3', 0), ('DCPN11Core/C450Replay/Seg28/Cells2', 0)] remaining 101 elapsed 87
+done [('DCPN11Core/C450Replay/Seg29/Cells1', 0), ('DCPN11Core/C450Replay/Seg28/Cells4', 0)] remaining 99 elapsed 101
+done [('DCPN11Core/C450Replay/Seg28/All', 0), ('DCPN11Core/C450Replay/Seg29/Cells3', 0), ('DCPN11Core/C450Replay/Seg29/Cells2', 0)] remaining 96 elapsed 64
+done [('DCPN11Core/C450Replay/Seg30/Cells1', 0), ('DCPN11Core/C450Replay/Seg29/Cells4', 0)] remaining 94 elapsed 70
+done [('DCPN11Core/C450Replay/Seg29/All', 0), ('DCPN11Core/C450Replay/Seg30/Cells3', 0), ('DCPN11Core/C450Replay/Seg30/Cells2', 0)] remaining 91 elapsed 51
+done [('DCPN11Core/C450Replay/Seg31/Cells1', 0), ('DCPN11Core/C450Replay/Seg30/Cells4', 0)] remaining 89 elapsed 45
+done [('DCPN11Core/C450Replay/Seg30/All', 0), ('DCPN11Core/C450Replay/Seg31/Cells3', 0), ('DCPN11Core/C450Replay/Seg31/Cells2', 0)] remaining 86 elapsed 43
+done [('DCPN11Core/C450Replay/Seg32/Cells1', 0), ('DCPN11Core/C450Replay/Seg31/Cells4', 0)] remaining 84 elapsed 51
+done [('DCPN11Core/C450Replay/Seg31/All', 0), ('DCPN11Core/C450Replay/Seg32/Cells3', 0), ('DCPN11Core/C450Replay/Seg32/Cells2', 0)] remaining 81 elapsed 43
+done [('DCPN11Core/C450Replay/Seg33/Cells1', 0), ('DCPN11Core/C450Replay/Seg32/Cells4', 0)] remaining 79 elapsed 50
+done [('DCPN11Core/C450Replay/Seg32/All', 0), ('DCPN11Core/C450Replay/Seg33/Cells3', 0), ('DCPN11Core/C450Replay/Seg33/Cells2', 0)] remaining 76 elapsed 44
+done [('DCPN11Core/C450Replay/Seg34/Cells1', 0), ('DCPN11Core/C450Replay/Seg33/Cells4', 0)] remaining 74 elapsed 50
+done [('DCPN11Core/C450Replay/Seg33/All', 0), ('DCPN11Core/C450Replay/Seg34/Cells3', 0), ('DCPN11Core/C450Replay/Seg34/Cells2', 0)] remaining 71 elapsed 45
+done [('DCPN11Core/C450Replay/Seg35/Cells1', 0), ('DCPN11Core/C450Replay/Seg34/Cells4', 0)] remaining 69 elapsed 55
+done [('DCPN11Core/C450Replay/Seg34/All', 0), ('DCPN11Core/C450Replay/Seg35/Cells3', 0), ('DCPN11Core/C450Replay/Seg35/Cells2', 0)] remaining 66 elapsed 50
+done [('DCPN11Core/C450Replay/Seg36/Cells2', 0), ('DCPN11Core/C450Replay/Seg35/Cells4', 0)] remaining 64 elapsed 73
+build.sh: line 10: 12899 Killed                  /tmp/slim/bin/lean -o $OUT.part $M.lean > /tmp/lc/$M.out 2>&1
+done [('DCPN11Core/C450Replay/Seg35/All', 0), ('DCPN11Core/C450Replay/Seg36/Cells3', 0), ('DCPN11Core/C450Replay/Seg36/Cells4', 137)] remaining 61 elapsed 82
+build.sh: line 10: 12974 Killed                  /tmp/slim/bin/lean -o $OUT.part $M.lean > /tmp/lc/$M.out 2>&1
+build.sh: line 10: 12963 Killed                  /tmp/slim/bin/lean -o $OUT.part $M.lean > /tmp/lc/$M.out 2>&1
+done [('DCPN11Core/C450Replay/Seg12/Cells1', 137), ('DCPN11Core/C450Replay/Seg36/Cells4', 137)] remaining 60 elapsed 80
+build.sh: line 10: 13088 Killed                  /tmp/slim/bin/lean -o $OUT.part $M.lean > /tmp/lc/$M.out 2>&1
+build.sh: line 10: 13077 Killed                  /tmp/slim/bin/lean -o $OUT.part $M.lean > /tmp/lc/$M.out 2>&1
+done [('DCPN11Core/C450Replay/Seg12/Cells1', 137), ('DCPN11Core/C450Replay/Seg36/Cells4', 137)] remaining 60 elapsed 80

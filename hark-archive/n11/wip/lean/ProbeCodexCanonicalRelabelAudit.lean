@@ -1,0 +1,13 @@
+import N11Formalization
+
+open N11Formalization
+
+#check @N11Formalization.DSHTopologyInterior.exists_ring_relabel
+#check @N11Formalization.DSHTopologyInterior.covers_relabel
+#check @N11Formalization.DSHTopologyInterior.exists_covers_ringLabels
+#check @N11Formalization.DSHTopologyInterior.exists_covers_ringLabels_of_c450
+
+#print axioms N11Formalization.DSHTopologyInterior.exists_ring_relabel
+#print axioms N11Formalization.DSHTopologyInterior.covers_relabel
+#print axioms N11Formalization.DSHTopologyInterior.exists_covers_ringLabels
+#print axioms N11Formalization.DSHTopologyInterior.exists_covers_ringLabels_of_c450

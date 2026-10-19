@@ -1,0 +1,7 @@
+{"module": "EnergyReplay.Kernel", "rc": 1, "seconds": 7.8, "maxrss_kb": 417208, "src_sha256": "e673e6ffb98aa60498b3f94ddcbb7c58a09f25ee600f10b1a92b0192f46908c1", "utc": "2026-10-15T05:53:59Z"}
+{"module": "EnergyReplay.Kernel", "rc": 0, "seconds": 8.8, "maxrss_kb": 433524, "src_sha256": "b3c2bfee38d0b2de89f2cb88c3fb324a8bc3c31b50223bb6916d479166b53177", "utc": "2026-10-15T05:54:21Z"}
+{"module": "EnergyReplay.Weights", "rc": 0, "seconds": 8.8, "maxrss_kb": 433524, "src_sha256": "effa33d2f0126c9520a9c65df0cc45063c3eb82fe9d97ea7d2ee017a2d3c8f45", "utc": "2026-10-15T05:54:30Z"}
+{"module": "EnergyReplay.Grp.PosG01a", "rc": 0, "seconds": 94.3, "maxrss_kb": 756900, "src_sha256": "bc2dc6cbaf458f66f05106573531227cefb4b3dce52df4f6d9a045f05cdd5ed1", "utc": "2026-10-15T05:56:08Z"}
+{"module": "EnergyReplay.Controls", "rc": 0, "seconds": 7.8, "maxrss_kb": 668432, "src_sha256": "48db7a20e3622b5f2eeb3d12fd91852d406cbc0cd934862013ae5247c7917d77", "utc": "2026-10-15T05:57:56Z"}
+{"module": "EnergyReplay.Grp.NewTight4", "rc": 0, "seconds": 42.1, "maxrss_kb": 876664, "src_sha256": "41bce6bd344da1862e9a43138a999a9dfb39dcbf7e1dd4cbdce5d2c196ff5e75", "utc": "2026-10-15T05:58:39Z"}
+{"module": "EnergyReplay.Grp.H001c0", "rc": -9, "seconds": 66.3, "maxrss_kb": 934628, "src_sha256": "592c7444998dd2a5311f40cb8fa6c25709912b9c60a8f7270b05487e19f73dcb", "utc": "2026-10-15T06:01:02Z"}

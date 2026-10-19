@@ -1,0 +1,5 @@
+./build_core.sh: line 9:  7086 Killed                  timeout 1100 nice -n 10 $L -o $B/$M.olean.part $M.lean > $B/$M.out 2>&1
+./build_core.sh: line 9:  8307 Killed                  timeout 1100 nice -n 10 $L -o $B/$M.olean.part $M.lean > $B/$M.out 2>&1
+BUDGET stop before Class33Core.SecTrees.Q0M2Sec0P28
+FAIL Class33Core.SecTrees.Q0M2Sec0P32
+nice: ‘/var/tmp/lean/lean-4.33.1-linux_aarch64/bin/lean’: No such file or directory

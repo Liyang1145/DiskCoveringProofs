@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "files_manifest": {
+    "bytes": 64260,
+    "file": "n11-supplement-FILES.jsonl.gz",
+    "sha256": "e7fca1ae0c2f7b4548105a98c3b6c2318f3ede64bc94a2962af2a0a8b679bca4"
+  },
+  "inventory_sha256": "e7fca1ae0c2f7b4548105a98c3b6c2318f3ede64bc94a2962af2a0a8b679bca4",
+  "ledger_sha256": "2d503112af4ef6b4179e3e5bf6b5440599296005fd9f4e14cfb4752050b565cf",
+  "mathematical_verification": "not_performed",
+  "packages": [
+    {
+      "bytes": 50136069,
+      "file": "n11-supplement-0001.zip",
+      "files": 1233,
+      "sha256": "c3682994a5dcbf3e238898e888c613f8345458fe349d1fc893728f2fbf9e0edb",
+      "uncompressed_bytes": 536185307
+    },
+    {
+      "bytes": 13974258,
+      "file": "n11-supplement-0002.zip",
+      "files": 131,
+      "sha256": "97cd2d7e657a2aca888e14af6197986e67aef00030f61a4d0ad615f653ddcb3a",
+      "uncompressed_bytes": 100755868
+    }
+  ],
+  "schema": "frozen-assets-packages-v1"
+}

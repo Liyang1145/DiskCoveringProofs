@@ -1,0 +1,49 @@
+{
+  "claim": "A24-ACTIVE-INTERVAL-CERTIFICATES-20261008",
+  "timestamp": "2026-10-08T13:53:32.2678224+08:00",
+  "project": "E:\\ai4math2\\research-2026\\n11-formalization",
+  "root_sha256": "16EA50867C0702B4DE6B293FD4DCB4579AF6411F64C2AA47FE66B74973FAA1F6",
+  "prior_acceptance": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\ACCEPTANCE-A23-ADAPTIVE-CERTIFICATES-20261008.json",
+  "manifest": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-active-interval-certificates-20261008-manifest.json",
+  "root_pair": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\resume-lead\\root-a24-active-interval-certificates-20261008-pair.json",
+  "paid_framework_modules": 203,
+  "new_modules": 5,
+  "unconditional_n11_complete": false,
+  "source": "SAME C891 boxed TC/KKT12 unique root,coordinate6;full arbitrary Fin11 Covers",
+  "unchanged_historical_counts": {
+    "sharp_paid": 120,
+    "energy_remaining": 2076,
+    "c450_paid": 11,
+    "c450_total": 36,
+    "sharp_total": 120,
+    "c450_remaining": 25,
+    "energy_total": 2386,
+    "energy_paid": 310
+  },
+  "unpaid": [
+    "C450Source11Segment.RemainingSourceObligation",
+    "EnergyTerminalBatchB11.RemainingTerminalRadius",
+    "ActualMainRoute.Canonical33Obligation"
+  ],
+  "new_paid": "Exact extremal quadratic maximizers and rational corner enclosure preserving ties and flat objectives; whole-cell rational sine/cosine and dependence-preserving square intervals; direct signed face/switch interval bounds after whole-radius maximization; certified maximizing-radius-scaled centered errors; actual masked and unmasked adaptive consumers with alternative complete leaf bounds, original closed domains and existing genuine geometric duals.",
+  "not_paid": "25 C450 source segments; 2076 energy terminals; all seven actual Q0/Q1 class exclusions and unconditional SAME sourceRoot6 arbitrary-cover theorem. Concrete coefficients, adaptive trees, rational sector brackets and class specialization remain to be instantiated and kernel checked. Local gradient enclosures and efficient plane coordinates may still need further proof work. Generic consumers and HOST certificates receive no class or terminal credit; 389 energy cases need genuine certificates/refinement.",
+  "evidence": [
+    {
+      "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a24-active-interval-root-audit-gate2.log",
+      "log_sha256": "41E46FBB747BEDFD10E74BB77A9E10F6B16BF32EE14D55D3C00F00738CBB276D",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\ProbeA24ActiveIntervalRootAudit.lean",
+      "source_sha256": "0787425618232E530CBABD61B63E5D6F27E71F020315DCA5AE3765DC54012E21"
+    },
+    {
+      "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\recover-a20-incident-controls.log",
+      "log_sha256": "62B0B37E9D29A3247F8DE87C884450ED0C08F6DC5D76D090B6BCBE2AA93EB504",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\ProbeActualIncidentControls.lean",
+      "source_sha256": "903E428FCE6841C21D1D1448B532E8325994C0D1987B746EFD82F5392B43AB6D"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

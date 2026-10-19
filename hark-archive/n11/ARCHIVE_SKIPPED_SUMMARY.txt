@@ -1,0 +1,12 @@
+skip ext:.olean: 2888 files 843.7MB
+skip dedupe: 2071 files 149.2MB
+skip >maxsz: 1 files 69.9MB
+skip glob: 6033 files 0.0MB
+skip dirname:.elan
+skip dir:ci/artifacts
+skip dir:ci/repo
+skip dirname:__pycache__
+skip dirname:.lake
+skip dir:wip-build/mlib
+skip dir:wip-build/tc-cold
+too-big 69.9MB wip/lean/N11Formalization/Ladder49_jt_kkt_z.lean

@@ -1,0 +1,12 @@
+import N11Formalization
+open N11Formalization
+#check @Terminal562SimplexEnergy.angles_in_cell
+#check @Terminal562SimplexEnergy.affine_lower
+#check @Terminal562SimplexEnergy.energy_gt_on_actual_terminal
+#check @Terminal562SimplexEnergy.threshold_identity
+#check @Terminal562SimplexEnergy.zero_weights_rejected
+#print axioms Terminal562SimplexEnergy.energy_gt_on_actual_terminal
+#print axioms Terminal562SimplexEnergy.zero_weights_rejected
+#print SourceExactRoot.sourceRadius
+#check SourceExactRoot.source_attainment
+#check SourceExactRoot.main_of_lower_bound

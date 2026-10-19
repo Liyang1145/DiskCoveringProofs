@@ -1,0 +1,66 @@
+{
+ "remaining": 2076,
+ "classes": {
+  "refinement_prevalidated": 57,
+  "single_cell_prevalidated": 1734,
+  "open_split_failed": 285
+ },
+ "refinement_leaves": 496,
+ "positive_control": {
+  "passed": 274,
+  "total": 274,
+  "note": "all 274 paid packets in Paid16 format (G01..G12 252 + Batch22 22); other 36 paid use different certificate types, not replayed"
+ },
+ "negative_controls": [
+  [
+   "beta_sum_2",
+   true
+  ],
+  [
+   "beta_neg",
+   true
+  ],
+  [
+   "lam_neg",
+   true
+  ],
+  [
+   "rmin_up",
+   true
+  ],
+  [
+   "line_c_up",
+   true
+  ],
+  [
+   "line_shift",
+   true
+  ],
+  [
+   "endpoint_a_up",
+   true
+  ],
+  [
+   "wrong_node",
+   true
+  ],
+  [
+   "nonterminal_node",
+   true
+  ],
+  [
+   "zero_dual",
+   true
+  ]
+ ],
+ "lean_text_roundtrip": {
+  "ok": 1734,
+  "total": 1734,
+  "bad": []
+ },
+ "kelley_diag": {
+  "nodes": 203,
+  "format_impossible_float": 194
+ },
+ "min_single_margin": 1.1130189790315224e-09
+}
