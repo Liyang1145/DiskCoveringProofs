@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "/workspace/work/dcp-n26/v3replay/certB_lite.py", line 52, in <module>
+    if n0%300==0: save()
+                  ^^^^^^
+  File "/workspace/work/dcp-n26/v3replay/certB_lite.py", line 17, in save
+    def save(): json.dump(S,open(st+'.tmp','w')); os.replace(st+'.tmp',st)
+                                                  ^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/work/dcp-n26/v3replay/verB_v3_1.json.tmp' -> '/workspace/work/dcp-n26/v3replay/verB_v3_1.json'
+rc=1

@@ -1,0 +1,207 @@
+"""Checker B for V3-REPLAY-TREE.json. Imports NONE of: n26_force, n26_direct_arc_force, exact_arcs,
+verify_degree_area, propose, bnb, lgeom, run_local, certA, hp, prop, geom.
+- angular domain + tightening re-implemented from spec;
+- FORCE: own spanning tree + leaf-peeling flow completion, exact divergence check, mpmath interval (300 bit)
+  arc minimum (monotone-endpoint or Taylor fallback), interval sqrt for sum |f_e|; requires L > RUP;
+- LOCAL-SLAB: local/certB.check_leaf (mpmath iv 420-bit Kron/Schur energy, exact Fraction PSD, breakpoint LP)
+  evaluated on B's own node box; pieces' b-range recomputed from raw prop.json V.
+Resumable: state in verB_v3.json; usage: certB_v3.py <budget_s> <shard> <nshards>"""
+import sys,json,os,time,hashlib
+from fractions import Fraction as F
+from collections import deque
+from mpmath import iv, mp
+sys.path.insert(0,'/workspace/work/dcp-n26/local')
+import certB as LB   # independent energy checker (raw JSON inputs only)
+ROOT='/workspace/work/dcp-n26'
+RUP=F("0.234700090400448239616790133776692127560495963654971391785925")
+SC=10**7; CAP=(754112,1555305,2486507,3880649)
+def domain(spec):
+    b,nx,faces=spec['B'],spec['next'],spec['faces']
+    nb=[set() for _ in range(nx)]
+    for i in range(b): nb[i]|={(i-1)%b,(i+1)%b}
+    for fc in faces:
+        vs=[i for i in range(nx) if fc>>i&1]; assert len(vs)==3
+        for x in vs: nb[x]|=set(vs)-{x}
+    INF=10**9; M=[[0 if i==j else INF for j in range(b)] for i in range(b)]
+    for i in range(b):
+        j=(i+1)%b
+        M[i][j]=CAP[0]-(SC if j==0 else 0); M[j][i]=SC if j==0 else 0
+    for i in range(b):
+        dist={i:0,(i+1)%b:0}; q=deque([i,(i+1)%b])
+        while q:
+            v=q.popleft()
+            if dist[v]>=3: continue
+            for w in sorted(nb[v]):
+                if w not in dist: dist[w]=dist[v]+1; q.append(w)
+        for j in range(i+1,b):
+            h=min(dist.get(j,99),dist.get((j+1)%b,99))
+            if h>3: continue
+            cap=CAP[h]; k=j-i
+            if min(k,b-k)*CAP[0]<=cap: continue
+            fw=k*CAP[0]<SC-cap; bw=(b-k)*CAP[0]<SC-cap
+            assert not(fw and bw)
+            if fw: M[i][j]=min(M[i][j],cap)
+            elif bw: M[j][i]=min(M[j][i],cap-SC)
+    for k in range(b):
+        for i in range(b):
+            for j in range(b):
+                if M[i][k]+M[k][j]<M[i][j]: M[i][j]=M[i][k]+M[k][j]
+    assert all(M[i][i]>=0 for i in range(b))
+    return M
+def tight(M,lo,hi):
+    b=len(M); L=[F(0)]+list(lo); H=[F(0)]+list(hi)
+    nl=[max(L[i]-F(M[j][i],SC) for i in range(b)) for j in range(b)]
+    nh=[min(H[i]+F(M[i][j],SC) for i in range(b)) for j in range(b)]
+    if any(x>y for x,y in zip(nl,nh)): return None
+    assert nl[0]==0==nh[0]
+    return nl[1:],nh[1:]
+def rods(spec):
+    b,nx,faces=spec['B'],spec['next'],spec['faces']
+    E=[(i,b+i) for i in range(b)]+[(i,b+(i+1)%b) for i in range(b)]
+    for k,fc in enumerate(faces): E+=[(b+nx+k,b+i) for i in range(nx) if fc>>i&1]
+    return b+nx+len(faces),E
+def chords_of(nv,E):
+    adj=[[] for _ in range(nv)]
+    for k,(u,v) in enumerate(E): adj[u].append((v,k)); adj[v].append((u,k))
+    seen=[False]*nv; seen[0]=True; order=[0]; used=set()
+    for u in order:
+        for v,k in adj[u]:
+            if not seen[v]: seen[v]=True; used.add(k); order.append(v)
+    assert all(seen)
+    return [k for k in range(len(E)) if k not in used], used
+iv.prec=300; mp.prec=300
+def MF(x):
+    sg,man,ex,bc=mp.mpf(x)._mpf_
+    v=F(int(man)*2**ex) if ex>=0 else F(int(man),2**(-ex)); return -v if sg else v
+def I(x): x=F(x); return iv.mpf(x.numerator)/iv.mpf(x.denominator)
+def arcmin(gx,gy,lo,hi):
+    """rigorous lower bound of gx*cos(2pi t)+gy*sin(2pi t) over t in [lo,hi]."""
+    tw=2*iv.pi
+    T=iv.mpf([mp.mpf(lo.numerator)/lo.denominator, mp.mpf(hi.numerator)/hi.denominator])
+    # widen T outward by rounding safety
+    T=iv.mpf([T.a-mp.mpf(2)**-280, T.b+mp.mpf(2)**-280])
+    der=-I(gx)*iv.sin(tw*T)+I(gy)*iv.cos(tw*T)
+    def val(t): a=tw*I(t); return I(gx)*iv.cos(a)+I(gy)*iv.sin(a)
+    if der.a>0 or der.b<0:
+        return min(MF(val(lo).a),MF(val(hi).a))
+    m=(lo+hi)/2; v=val(m); dm=-I(gx)*iv.sin(tw*I(m))+I(gy)*iv.cos(tw*I(m))
+    h=tw*I((hi-lo)/2); nrm=iv.sqrt(I(gx*gx+gy*gy))
+    return MF((v-abs(dm)*h-nrm*h*h/2).a)
+def force_B(spec,lo,hi,cert,cache):
+    if 'rod' not in cache:
+        nv,E=rods(spec); ch,used=chords_of(nv,E); cache['rod']=(nv,E,ch)
+    nv,E,ch=cache['rod']; b=spec['B']; g=cert['g']; f=cert['f']
+    assert len(g)==2*(b-1) and len(f)==2*len(ch) and all(type(x) is int for x in g+f)
+    flow={}
+    for j,k in enumerate(ch): flow[k]=(f[2*j],f[2*j+1])
+    need=[[0,0] for _ in range(nv)]   # required net outflow
+    for i in range(1,b): need[i]=[g[2*i-2],g[2*i-1]]
+    need[0]=[-sum(g[0::2]),-sum(g[1::2])]
+    # residual after chords; then peel tree leaves
+    res=[list(x) for x in need]
+    for k,(fx,fy) in flow.items():
+        u,v=E[k]; res[u][0]-=fx; res[u][1]-=fy; res[v][0]+=fx; res[v][1]+=fy
+    tadj={}
+    for k in range(len(E)):
+        if k in flow: continue
+        u,v=E[k]; tadj.setdefault(u,set()).add(k); tadj.setdefault(v,set()).add(k)
+    leaves=[v for v in range(nv) if len(tadj.get(v,()))==1 and v!=0]
+    while leaves:
+        v=leaves.pop(); 
+        if len(tadj[v])!=1: continue
+        k=tadj[v].pop(); u,w=E[k]; o=w if u==v else u
+        # flow on k oriented u->w; outflow of v must equal res[v]
+        fx,fy=(res[v][0],res[v][1]) if u==v else (-res[v][0],-res[v][1])
+        flow[k]=(fx,fy); res[v]=[0,0]
+        if u==v: res[o][0]+=fx; res[o][1]+=fy
+        else: res[o][0]-=fx; res[o][1]-=fy
+        tadj[o].discard(k)
+        if o!=0 and len(tadj[o])==1: leaves.append(o)
+    assert len(flow)==len(E) and all(r==[0,0] for r in res)
+    out=[[0,0] for _ in range(nv)]
+    for k,(u,v) in enumerate(E):
+        fx,fy=flow[k]; out[u][0]+=fx; out[u][1]+=fy; out[v][0]-=fx; out[v][1]-=fy
+    assert out==need
+    den=iv.mpf(0)
+    for fx,fy in flow.values(): den+=iv.sqrt(iv.mpf(fx*fx+fy*fy))
+    num=F(0)
+    for i in range(b-1):
+        assert lo[i]<=hi[i] and hi[i]-lo[i]<F(1,2)
+        num+=arcmin(g[2*i],g[2*i+1],lo[i],hi[i])-g[2*i]
+    if num<=0: return None
+    L=I(num)/den
+    return MF(L.a)
+def main():
+    BUD=float(sys.argv[1]); shard=int(sys.argv[2]); ns=int(sys.argv[3]); T0=time.time()
+    RAW=open(ROOT+'/v3replay/V3-REPLAY-TREE.json','rb').read(); TSHA=hashlib.sha256(RAW).hexdigest()
+    D=json.loads(RAW); del RAW; spec=D["spec"]; nodes=D["nodes"]
+    import pickle; CP=ROOT+'/v3replay/verB_walkcache.pkl'
+    C=pickle.load(open(CP,'rb')) if os.path.exists(CP) else None
+    base=json.load(open(ROOT+'/repo/cover26/proof_bundle/work/n26-sharp-candidate-angles-proposal-v3.json'))
+    assert base['spec']==spec
+    T=set(int(x) for x in D['closed_targets'])
+    for i,n in enumerate(base['nodes']):
+        if i in T: assert n=={'kind':'OPEN'}
+        else: assert nodes[i]==n, i
+    M=domain(spec)
+    b=spec['B']; lo=[F(-M[i][0],SC) for i in range(1,b)]; hi=[F(M[0][i],SC) for i in range(1,b)]
+    st=ROOT+f'/v3replay/verB_v3_{shard}.json'; S=json.load(open(st)) if os.path.exists(st) else {'done':{}}
+    stack=[(0,lo,hi,None)]; seen=set(); cnt={}; leaves=[]
+    if C is not None and C['sha']==TSHA: stack=[]; leaves=C['leaves']; cnt=C['cnt']; seen=set(range(len(nodes)))
+    while stack:
+        i,lo,hi,tg=stack.pop(); assert i not in seen; seen.add(i)
+        n=nodes[i]; k=n['kind']; cnt[k]=cnt.get(k,0)+1
+        if i in T: tg=i
+        bx=tight(M,lo,hi)
+        if k=='EMPTY': assert bx is None; continue
+        assert bx is not None; lo,hi=bx
+        if k=='SPLIT':
+            a=n['axis']; m=F(n['mid']); assert lo[a]<m<hi[a]
+            assert len(n['children'])==2 and all(c>i for c in n['children'])
+            h1=list(hi); h1[a]=m; l2=list(lo); l2[a]=m
+            stack.append((n['children'][1],l2,list(hi),tg)); stack.append((n['children'][0],list(lo),h1,tg)); continue
+        leaves.append((i,k,lo,hi,tg))
+    assert len(seen)==len(nodes) and cnt['SPLIT']+1==len(nodes)-cnt['SPLIT']
+    if C is None or C['sha']!=TSHA:
+        pickle.dump({'sha':TSHA,'leaves':leaves,'cnt':cnt},open(CP+'.tmp','wb')); os.replace(CP+'.tmp',CP)
+    SHB={}; cache={}; PJ=json.load(open(ROOT+'/local/prop.json')); V=[F(x) for x in PJ['v']]
+    for (i,k,lo,hi,tg) in leaves:
+        if i%ns!=shard or (str(i) in S['done'] and S['done'][str(i)]['kind']==k): continue
+        if time.time()-T0>BUD: break
+        if k=='FORCE':
+            L=force_B(spec,lo,hi,n_:=nodes[i]['cert'],cache); assert L is not None and L>RUP,(i,L)
+            S['done'][str(i)]={'kind':k,'target':tg,'margin':str(L-RUP)}
+        elif k=='LOCAL-SLAB':
+            p=ROOT+'/'+nodes[i]['file']; raw=open(p,'rb').read(); assert hashlib.sha256(raw).hexdigest()==nodes[i]['sha256']
+            d=json.loads(raw); mu=F(d['mu']); assert mu>=0
+            if nodes[i]['file'].startswith('v3replay/lleaves/shared/'):
+                SH=SHB.setdefault('x',json.load(open(ROOT+'/v3replay/verB_shared.json')))
+                e=SH[os.path.basename(p)]; assert e['ok'] and e['sha256']==nodes[i]['sha256']
+                FL=[F(x) for x in e['lower']]; FH=[F(x) for x in e['upper']]
+                assert all(a<=x and y<=c for a,x,y,c in zip(FL,lo,hi,FH)),(i,'node box not inside shared file box')
+                b1=sum(min(v*(a-c),v*(bb-c)) for v,a,bb,c in zip(V,lo,hi,LB.CS)); b2=sum(max(v*(a-c),v*(bb-c)) for v,a,bb,c in zip(V,lo,hi,LB.CS))
+                assert F(e['b_cov'][0])<=b1 and F(e['b_cov'][1])>=b2
+                S['done'][str(i)]={'kind':k,'target':tg,'min_energy_bound':e['min_bound'],'via':'shared'}
+                continue
+            b1=sum(min(v*(a-c),v*(bb-c)) for v,a,bb,c in zip(V,lo,hi,LB.CS)); b2=sum(max(v*(a-c),v*(bb-c)) for v,a,bb,c in zip(V,lo,hi,LB.CS))
+            ps=d['pieces']; assert F(ps[0]['ba'])<=b1 and F(ps[-1]['bb'])>=b2
+            for x,y in zip(ps,ps[1:]): assert x['bb']==y['ba']
+            worst=None
+            for x in ps:
+                ba,bb_=F(x['ba']),F(x['bb'])
+                if bb_<b1 or ba>b2: continue     # piece misses this node's b-range
+                kap=F(x['kappa']); w=[a+kap*t for a,t in zip(LB.L0,LB.TAU)]; assert all(y>=0 for y in w)
+                bd=LB.check_leaf(w,lo,hi,ba,bb_,mu); assert bd is not None and bd>0,(i,x['ba'])
+                worst=bd if worst is None else min(worst,bd)
+            S['done'][str(i)]={'kind':k,'target':tg,'min_energy_bound':str(worst)}
+        elif k=='OPEN':
+            S['done'][str(i)]={'kind':k,'target':tg}
+        elif k=='LOCAL':
+            S['done'][str(i)]={'kind':k,'target':tg,'note':'archive LOCAL leaf (pinning cell), not re-checked here'}
+        else: raise ValueError(k)
+        if len(S['done'])%300==0 or time.time()-T0>BUD-15: json.dump(S,open(st+'.tmp','w')); os.replace(st+'.tmp',st)
+    json.dump(S,open(st+'.tmp','w')); os.replace(st+'.tmp',st)
+    mine=[l for l in leaves if l[0]%ns==shard]
+    nd=sum(1 for l in mine if str(l[0]) in S['done'] and S['done'][str(l[0])]['kind']==l[1])
+    print(json.dumps({'shard':shard,'leaves_in_shard':len(mine),'done':nd,'complete':nd==len(mine),'counts':cnt}))
+if __name__=='__main__': main()

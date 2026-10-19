@@ -1,0 +1,1 @@
+{"shard": 0, "leaves_in_shard": 596, "done": 596, "complete": true, "counts": {"SPLIT": 1167, "OPEN": 23, "FORCE": 684, "LOCAL-SLAB": 460, "LOCAL": 1}}
