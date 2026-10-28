@@ -14,7 +14,8 @@ theorem main_of_energy_b13_and_seven_classes
     (hclasses : ActualMetricClassReduction.SevenClassExclusions) :
     N11MainStatement SourceExactRoot.sourceRadius :=
   C450ChainCompletionMain.main_of_energy_and_seven_classes
-    (EnergyTerminalBatchB13.remaining_of_b13 henergy) hclasses
+    (EnergyTerminalBatchB12.remaining_of_b12
+      (EnergyTerminalBatchB13.remaining_of_b13 henergy)) hclasses
 
 theorem full_disk_bound_of_energy_b13_and_seven_classes
     (henergy : EnergyTerminalBatchB13.RemainingTerminalRadius)

@@ -1,0 +1,18 @@
+{
+  "module": "EnergyTerminalResidualCensus",
+  "inputs": {
+    "rest1182-emission-manifest.json": "D0588829A1C74F17328D61AF5AE3D9D3004333946A47E42D26BD6BBB4B8A6BBD"
+  },
+  "terminal_count": 2506,
+  "sharp_count": 120,
+  "paid_b13_count": 1997,
+  "residual_count": 389,
+  "chunk_sizes": [
+    100,
+    100,
+    100,
+    89
+  ],
+  "output_sha256": "B9504B9282D87E3D3FA85842E538A5CCB6CABE5234F1A8AC27F08C3AFBF0C362",
+  "scope": "source reconstruction and emitted bytes; Lean elaboration is CI-pending"
+}
