@@ -37,30 +37,64 @@ private theorem b11_disjoint_s08 :
     Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S08.newIDs := by
   decide +kernel
 
-private theorem next505_disjoint_s01 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S01.newIDs := by
-  decide +kernel
-private theorem next505_disjoint_s02 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S02.newIDs := by
-  decide +kernel
-private theorem next505_disjoint_s03 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S03.newIDs := by
-  decide +kernel
-private theorem next505_disjoint_s04 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S04.newIDs := by
-  decide +kernel
-private theorem next505_disjoint_s05 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S05.newIDs := by
-  decide +kernel
-private theorem next505_disjoint_s06 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S06.newIDs := by
-  decide +kernel
-private theorem next505_disjoint_s07 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S07.newIDs := by
-  decide +kernel
-private theorem next505_disjoint_s08 :
-    Disjoint Paid16GeneralNext505.newIDs Paid16GeneralNext1182S08.newIDs := by
-  decide +kernel
+private theorem of_all_lt {s : Finset (Fin 5011)}
+    (h : (s.all fun n => n.val < 2565) = true) :
+    ∀ n, n ∈ s → n.val < 2565 := by
+  intro n hn
+  exact (Finset.all_eq_true.mp h) n hn
+
+private theorem of_all_ge {s : Finset (Fin 5011)}
+    (h : (s.all fun n => 2565 ≤ n.val) = true) :
+    ∀ n, n ∈ s → 2565 ≤ n.val := by
+  intro n hn
+  exact (Finset.all_eq_true.mp h) n hn
+
+private theorem next505_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralNext505.newIDs) :
+    n.val < 2565 := by
+  rcases (Paid16GeneralNext505.new_mem n).mp hn with
+    h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids00) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids01) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids02) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids03) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids04) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids05) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids06) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids07) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids08) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids09) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids10) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids11) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids12) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids13) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids14) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids15) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids16) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids17) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids18) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids19) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids20) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids21) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids22) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids23) (by decide +kernel)) n h
+  · exact (of_all_lt (s := Paid16GeneralNext505.ids24) (by decide +kernel)) n h
+
+private theorem s01_ge : ∀ n, n ∈ Paid16GeneralNext1182S01.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S01.newIDs) (by decide +kernel)
+private theorem s02_ge : ∀ n, n ∈ Paid16GeneralNext1182S02.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S02.newIDs) (by decide +kernel)
+private theorem s03_ge : ∀ n, n ∈ Paid16GeneralNext1182S03.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S03.newIDs) (by decide +kernel)
+private theorem s04_ge : ∀ n, n ∈ Paid16GeneralNext1182S04.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S04.newIDs) (by decide +kernel)
+private theorem s05_ge : ∀ n, n ∈ Paid16GeneralNext1182S05.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S05.newIDs) (by decide +kernel)
+private theorem s06_ge : ∀ n, n ∈ Paid16GeneralNext1182S06.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S06.newIDs) (by decide +kernel)
+private theorem s07_ge : ∀ n, n ∈ Paid16GeneralNext1182S07.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S07.newIDs) (by decide +kernel)
+private theorem s08_ge : ∀ n, n ∈ Paid16GeneralNext1182S08.newIDs → 2565 ≤ n.val :=
+  of_all_ge (s := Paid16GeneralNext1182S08.newIDs) (by decide +kernel)
 
 theorem new_disjoint_old :
     Disjoint EnergyTerminalBatchB12.paidIDs Paid16GeneralNext1182.newIDs := by
@@ -69,25 +103,26 @@ theorem new_disjoint_old :
   · rw [Finset.disjoint_left]
     intro a ha hb
     rcases (Paid16GeneralNext1182.new_mem a).mp hb with h1 | h2 | h3 | h4 | h5 | h6 | h7 | h8
-    · exact (Finset.disjoint_left.mp b11_disjoint_s01) a ha h1
-    · exact (Finset.disjoint_left.mp b11_disjoint_s02) a ha h2
-    · exact (Finset.disjoint_left.mp b11_disjoint_s03) a ha h3
-    · exact (Finset.disjoint_left.mp b11_disjoint_s04) a ha h4
-    · exact (Finset.disjoint_left.mp b11_disjoint_s05) a ha h5
-    · exact (Finset.disjoint_left.mp b11_disjoint_s06) a ha h6
-    · exact (Finset.disjoint_left.mp b11_disjoint_s07) a ha h7
-    · exact (Finset.disjoint_left.mp b11_disjoint_s08) a ha h8
+    · exact (Finset.disjoint_left.mp b11_disjoint_s01) (a := a) ha h1
+    · exact (Finset.disjoint_left.mp b11_disjoint_s02) (a := a) ha h2
+    · exact (Finset.disjoint_left.mp b11_disjoint_s03) (a := a) ha h3
+    · exact (Finset.disjoint_left.mp b11_disjoint_s04) (a := a) ha h4
+    · exact (Finset.disjoint_left.mp b11_disjoint_s05) (a := a) ha h5
+    · exact (Finset.disjoint_left.mp b11_disjoint_s06) (a := a) ha h6
+    · exact (Finset.disjoint_left.mp b11_disjoint_s07) (a := a) ha h7
+    · exact (Finset.disjoint_left.mp b11_disjoint_s08) (a := a) ha h8
   · rw [Finset.disjoint_left]
     intro a ha hb
+    have hlt := next505_lt a ha
     rcases (Paid16GeneralNext1182.new_mem a).mp hb with h1 | h2 | h3 | h4 | h5 | h6 | h7 | h8
-    · exact (Finset.disjoint_left.mp next505_disjoint_s01) a ha h1
-    · exact (Finset.disjoint_left.mp next505_disjoint_s02) a ha h2
-    · exact (Finset.disjoint_left.mp next505_disjoint_s03) a ha h3
-    · exact (Finset.disjoint_left.mp next505_disjoint_s04) a ha h4
-    · exact (Finset.disjoint_left.mp next505_disjoint_s05) a ha h5
-    · exact (Finset.disjoint_left.mp next505_disjoint_s06) a ha h6
-    · exact (Finset.disjoint_left.mp next505_disjoint_s07) a ha h7
-    · exact (Finset.disjoint_left.mp next505_disjoint_s08) a ha h8
+    · have hge := s01_ge a h1; omega
+    · have hge := s02_ge a h2; omega
+    · have hge := s03_ge a h3; omega
+    · have hge := s04_ge a h4; omega
+    · have hge := s05_ge a h5; omega
+    · have hge := s06_ge a h6; omega
+    · have hge := s07_ge a h7; omega
+    · have hge := s08_ge a h8; omega
 
 theorem paid_count : paidIDs.card = 1997 := by
   rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,
@@ -125,6 +160,32 @@ def RemainingTerminalRadius : Prop :=
         (FlashLeafSplit.tlift y) →
       ∀ (C Z : Fin 11 → Point) (r : ℝ),
         Feasible (chartAnchors y) C Z r → SourceExactRoot.sourceRadius ≤ r
+
+/-- The actual terminal ids not already paid by B13.  This is the census set
+on which `RemainingTerminalRadius` is posed (389 elements by the rest1182
+manifest's total-terminal count; that cardinality is not proved here). -/
+def residualIDs : Finset (Fin 5011) :=
+  (Finset.univ.filter fun n => (DBMSourceTree.data n).terminal = true).filter
+    fun n => n ∉ Patch120SharpDispatch.sharpIDs ∧ n ∉ paidIDs
+
+theorem mem_residualIDs_iff (n : Fin 5011) :
+    n ∈ residualIDs ↔ (DBMSourceTree.data n).terminal = true ∧
+      n ∉ Patch120SharpDispatch.sharpIDs ∧ n ∉ paidIDs := by
+  simp only [residualIDs, Finset.mem_filter, Finset.mem_univ, true_and]
+
+theorem remaining_iff :
+    RemainingTerminalRadius ↔ ∀ n, n ∈ residualIDs →
+      ∀ (y : Fin 9 → ℝ), (∀ q, 0 ≤ y q) → (∑ q, y q = 1) →
+        FlashLeafSplit.Cell (DBMTreeKernel.matrix DBMSourceTree.data 4096 n)
+          (FlashLeafSplit.tlift y) →
+        ∀ (C Z : Fin 11 → Point) (r : ℝ),
+          Feasible (chartAnchors y) C Z r → SourceExactRoot.sourceRadius ≤ r := by
+  constructor
+  · intro h n hn
+    obtain ⟨ht, hs, hp⟩ := (mem_residualIDs_iff n).mp hn
+    exact h n ht hs hp
+  · intro h n ht hs hp
+    exact h n ((mem_residualIDs_iff n).mpr ⟨ht, hs, hp⟩)
 
 theorem chart_radius_of_remaining (hremaining : RemainingTerminalRadius)
     (y : Fin 9 → ℝ) (hy0 : ∀ q, 0 ≤ y q) (hy1 : ∑ q, y q = 1)
