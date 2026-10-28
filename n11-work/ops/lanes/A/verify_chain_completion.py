@@ -6,6 +6,7 @@ local build cannot cheaply obtain here: all 36 data indices, every transfer
 signature, the emitted call order, and determinism of the emitter.
 """
 
+import hashlib
 import importlib.util
 import re
 from pathlib import Path
@@ -70,6 +71,32 @@ def main():
     assert chain == emitter.chain, "C450ChainCompletion.lean is not emitter output"
     assert main_text == emitter.main_text, "C450ChainCompletionMain.lean is not emitter output"
 
+    expected_sha256 = {
+        "C450ChainCompletion.lean":
+            "935dcd6a0078ad0216e8e195e092c033cf2be7b46deb0d22b7d7cbd05000f191",
+        "C450ChainCompletionMain.lean":
+            "942dd90f69781a7ce1d57c5a393c3c11626cfe4135b30c5834fb2656ca3b6c03",
+    }
+    for name, expected in expected_sha256.items():
+        digest = hashlib.sha256((LEAN / name).read_bytes()).hexdigest()
+        assert digest == expected, (name, digest)
+
+    assert chain.startswith(
+        "import N11Formalization.C450Source36Segment\n"
+        "import N11Formalization.C450NormalizedInterface\n"
+    ), "chain import closure drifted"
+    assert main_text.startswith(
+        "import N11Formalization.C450ChainCompletion\n"
+        "import N11Formalization.ActualMetricClassReduction\n"
+    ), "main import closure drifted"
+
+    targets = (HERE / "TARGETS.txt").read_text(encoding="utf-8").splitlines()
+    targets = [line.strip() for line in targets if line.strip() and not line.startswith("#")]
+    assert targets == [
+        "N11Formalization.C450ChainCompletion",
+        "N11Formalization.C450ChainCompletionMain",
+    ], targets
+
     calls = re.findall(
         r"C450Source(\d+)Segment\.source(\d+)_remaining_of_remaining \(", chain
     )
@@ -92,6 +119,8 @@ def main():
     print("PASS: 25 predecessor transfers have exact signatures, consume sourceN_paid, and call order is exact")
     print("PASS: drop 36 is the vacuous tail; h450 reaches Source11")
     print("PASS: both Lean modules are deterministic emitter output; no forbidden tokens")
+    print("PASS: both Lean modules match their pinned SHA256 bytes")
+    print("PASS: direct import closure and CI target order are exact")
 
 
 if __name__ == "__main__":

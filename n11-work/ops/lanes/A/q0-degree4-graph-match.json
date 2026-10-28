@@ -1,0 +1,109 @@
+{
+  "status": "PASS_SOURCE_GRAPH_AND_LAYOUT_ONLY",
+  "claim_boundary": "No Lean kernel check, factor bound, balance proof, or exclusion proved.",
+  "start": 0,
+  "span": 2,
+  "lean_module": "N11Formalization.ActualOrderedMetricGraphs",
+  "source_graph": "cover11/proof_bundle/research-2026/team-current/lead/q0_moment_dual_0_2.json",
+  "source_graph_sha256": "f19b038c92a64b88f8b013a751f68bcb6b8ee2bf73fe3813ff8a683d75930c38",
+  "source_certificate": "cover11/proof_bundle/research-2026/team-current/lead/q0_moment_dual_certificate_0_2.json",
+  "source_certificate_sha256": "5759e36f602ea5837f87dd7d20edd3be48ebdf67e19d062c7077501659ccedea",
+  "lean_graph_source": "n11-work/lean/N11Formalization/ActualOrderedMetricGraphs.lean",
+  "lean_graph_source_sha256": "d52466d67f0a52473a44f0c2386cdacac7f6cc2830140217b8aab4dea1b75079",
+  "faces": [
+    [
+      0,
+      1,
+      9
+    ],
+    [
+      0,
+      8,
+      10
+    ],
+    [
+      0,
+      9,
+      10
+    ],
+    [
+      1,
+      2,
+      9
+    ],
+    [
+      2,
+      3,
+      10
+    ],
+    [
+      2,
+      9,
+      10
+    ],
+    [
+      3,
+      4,
+      10
+    ],
+    [
+      4,
+      5,
+      10
+    ],
+    [
+      5,
+      6,
+      10
+    ],
+    [
+      6,
+      7,
+      10
+    ],
+    [
+      7,
+      8,
+      10
+    ]
+  ],
+  "face_count": 11,
+  "edge_count": 21,
+  "declared_source_face_multiset_matches": true,
+  "declared_source_edge_set_matches": true,
+  "coefficient_count": 112,
+  "z_slot_count": 112,
+  "z_slot_groups": {
+    "hub": 2,
+    "angle": 9,
+    "side2": 21,
+    "radius2": 18,
+    "edge_angle": 21,
+    "width": 2,
+    "side1": 21,
+    "radius1": 18
+  },
+  "symbolic_atom_count": 200,
+  "symbolic_atom_groups": {
+    "face_angle": 33,
+    "face_side2": 33,
+    "face_side1": 33,
+    "ring_b": 9,
+    "switch_side2": 9,
+    "switch_radius2": 9,
+    "switch_side1": 9,
+    "switch_radius1": 9,
+    "alpha": 9,
+    "width": 9,
+    "copy2": 18,
+    "copy1": 18,
+    "pi": 1,
+    "asin2R": 1
+  },
+  "factor_count": 29,
+  "factor_layout": {
+    "face": 11,
+    "switch": 9,
+    "ring": 9
+  }
+}
