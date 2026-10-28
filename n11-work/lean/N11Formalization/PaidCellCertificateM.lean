@@ -1,6 +1,7 @@
 import N11Formalization.RoundedPaid16
 import N11Formalization.CosineLinePacket
 import N11Formalization.DBMAngleProvider
+import N11Formalization.Paid16CellCertificate
 
 /-! Row-count-generic version of `Paid16CellCertificate`. The field mixture is
 still the explicit genuine16 packet; only the number `m` of nonnegative DBM
@@ -43,6 +44,30 @@ structure Valid {m : ℕ} (p : Packet m) : Prop where
   numeric : FlashCosineLeaf284Bridge.T ^ 2 <
     lower (W p) (slopeQ p) (interQ p) p.nodeID p.rowFrom p.rowTo p.lam p.rmin
   terminal : (DBMSourceTree.data p.nodeID).terminal = true
+
+/-- The frozen seven-row packets are the `m = 7` instance of the generic API. -/
+def of7 (p : Paid16CellCertificate.Packet) : Packet 7 where
+  nodeID := p.nodeID
+  beta := p.beta
+  line := p.line
+  rowFrom := p.rowFrom
+  rowTo := p.rowTo
+  lam := p.lam
+  rmin := p.rmin
+
+theorem of7_valid {p : Paid16CellCertificate.Packet}
+    (hp : Paid16CellCertificate.Valid p) : Valid (of7 p) := by
+  constructor
+  · exact hp.beta_nonneg
+  · exact hp.beta_sum
+  · exact hp.lines
+  · intro k
+    simpa only [of7, PA, PB] using hp.endpoints k
+  · exact hp.lam_nonneg
+  · intro q
+    simpa only [of7, W, slopeQ] using hp.reduced q
+  · simpa only [of7, W, slopeQ, interQ] using hp.numeric
+  · exact hp.terminal
 
 theorem W_nonneg {m : ℕ} (p : Packet m) (hp : Valid p) (k : Fin 36) : 0 ≤ W p k :=
   RoundedPaid16.mix_nonneg p.beta hp.beta_nonneg k
