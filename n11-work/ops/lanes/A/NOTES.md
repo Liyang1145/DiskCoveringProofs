@@ -1,5 +1,13 @@
 # Lane A notes
 
+SUPERVISOR (2026-10-29 01:05 CST): STOP further hardening of verify_chain_completion.py: C450 modules are frozen
+pending CI (run on n11/work in progress). Do NOT edit C450ChainCompletion(+Main) unless CI LATEST.md shows a Lean error
+in them; then fix from the first error line only. Meanwhile spend sessions on SevenClassExclusions: pick the
+smallest field (q0_degree3, Q0RunExclusion 1), write the precise math statement + a finite-case proof sketch in
+SEVEN-CLASS-PLAN.md, then draft a standalone Lean module N11Formalization/SevenClassQ0Deg3.lean proving that one
+field (no sorry/axiom/native_decide; decide/norm_num only on small finite data). Keep the C450 notes short.
+
+
 ## 2026-10-28 (part 3) — C450 preflight hardening; CI still pending
 
 **Did.** Re-audited the two drafted C450 completion modules and their emitter.
