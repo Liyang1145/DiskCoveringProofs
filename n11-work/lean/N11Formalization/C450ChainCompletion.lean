@@ -27,32 +27,57 @@ theorem source36_remaining : C450Source36Segment.RemainingSourceObligation := by
       exact absurd hlen (by simp)
 
 theorem h450 : C450Source11Segment.RemainingSourceObligation :=
-  C450Source12Segment.source11_remaining_of_remaining
-    C450Source13Segment.source12_remaining_of_remaining
-      C450Source14Segment.source13_remaining_of_remaining
-        C450Source15Segment.source14_remaining_of_remaining
-          C450Source16Segment.source15_remaining_of_remaining
-            C450Source17Segment.source16_remaining_of_remaining
-              C450Source18Segment.source17_remaining_of_remaining
-                C450Source19Segment.source18_remaining_of_remaining
-                  C450Source20Segment.source19_remaining_of_remaining
-                    C450Source21Segment.source20_remaining_of_remaining
-                      C450Source22Segment.source21_remaining_of_remaining
-                        C450Source23Segment.source22_remaining_of_remaining
-                          C450Source24Segment.source23_remaining_of_remaining
-                            C450Source25Segment.source24_remaining_of_remaining
-                              C450Source26Segment.source25_remaining_of_remaining
-                                C450Source27Segment.source26_remaining_of_remaining
-                                  C450Source28Segment.source27_remaining_of_remaining
-                                    C450Source29Segment.source28_remaining_of_remaining
-                                      C450Source30Segment.source29_remaining_of_remaining
-                                        C450Source31Segment.source30_remaining_of_remaining
-                                          C450Source32Segment.source31_remaining_of_remaining
-                                            C450Source33Segment.source32_remaining_of_remaining
-                                              C450Source34Segment.source33_remaining_of_remaining
-                                                C450Source35Segment.source34_remaining_of_remaining
-                                                  C450Source36Segment.source35_remaining_of_remaining
+  C450Source12Segment.source11_remaining_of_remaining (
+    C450Source13Segment.source12_remaining_of_remaining (
+      C450Source14Segment.source13_remaining_of_remaining (
+        C450Source15Segment.source14_remaining_of_remaining (
+          C450Source16Segment.source15_remaining_of_remaining (
+            C450Source17Segment.source16_remaining_of_remaining (
+              C450Source18Segment.source17_remaining_of_remaining (
+                C450Source19Segment.source18_remaining_of_remaining (
+                  C450Source20Segment.source19_remaining_of_remaining (
+                    C450Source21Segment.source20_remaining_of_remaining (
+                      C450Source22Segment.source21_remaining_of_remaining (
+                        C450Source23Segment.source22_remaining_of_remaining (
+                          C450Source24Segment.source23_remaining_of_remaining (
+                            C450Source25Segment.source24_remaining_of_remaining (
+                              C450Source26Segment.source25_remaining_of_remaining (
+                                C450Source27Segment.source26_remaining_of_remaining (
+                                  C450Source28Segment.source27_remaining_of_remaining (
+                                    C450Source29Segment.source28_remaining_of_remaining (
+                                      C450Source30Segment.source29_remaining_of_remaining (
+                                        C450Source31Segment.source30_remaining_of_remaining (
+                                          C450Source32Segment.source31_remaining_of_remaining (
+                                            C450Source33Segment.source32_remaining_of_remaining (
+                                              C450Source34Segment.source33_remaining_of_remaining (
+                                                C450Source35Segment.source34_remaining_of_remaining (
+                                                  C450Source36Segment.source35_remaining_of_remaining (
                                                     source36_remaining
+                                                  )
+                                                )
+                                              )
+                                            )
+                                          )
+                                        )
+                                      )
+                                    )
+                                  )
+                                )
+                              )
+                            )
+                          )
+                        )
+                      )
+                    )
+                  )
+                )
+              )
+            )
+          )
+        )
+      )
+    )
+  )
 
 theorem source_obligation : SourceObligation :=
   C450Source11Segment.source_of_remaining h450

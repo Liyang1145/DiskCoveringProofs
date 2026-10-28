@@ -10,13 +10,18 @@ ROOT = Path(__file__).resolve().parents[3] / "lean" / "N11Formalization"
 def nested_transfer() -> str:
     lines = []
     indent = "  "
+    opens = 0
     for source in range(12, 37):
         lines.append(
             f"{indent}C450Source{source}Segment."
-            f"source{source - 1}_remaining_of_remaining"
+            f"source{source - 1}_remaining_of_remaining ("
         )
         indent += "  "
+        opens += 1
     lines.append(f"{indent}source36_remaining")
+    for _ in range(opens):
+        indent = indent[:-2]
+        lines.append(f"{indent})")
     return "\n".join(lines)
 
 
@@ -131,7 +136,13 @@ def main() -> None:
     hits = [token for token in forbidden if token in joined]
     assert not hits, hits
     assert chain.count("source{source - 1}") == 0
-    assert nested_transfer().count("remaining_of_remaining") == 25
+    nest = nested_transfer()
+    assert nest.count("remaining_of_remaining (") == 25
+    assert nest.count("(") == nest.count(")")
+    for source in range(12, 37):
+        segment = ROOT / f"C450Source{source}Segment.lean"
+        declaration = f"source{source - 1}_remaining_of_remaining"
+        assert declaration in segment.read_text(encoding="utf-8"), (segment, declaration)
 
 
 if __name__ == "__main__":
