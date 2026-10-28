@@ -4,8 +4,9 @@
 The upstream emitter uses ``Path(o["path"]).stem`` on manifests whose paths
 contain Windows separators.  That is harmless on Windows but makes every path
 a single filename on Linux.  This lane-local emitter reads the already emitted
-sub-aggregates and reproduces only the top module, byte-for-byte according to
-the recorded manifest.
+sub-aggregates and reconstructs the recorded upstream bytes exactly, then
+fixes the generated `Disjoint` eliminations (Lean `⦃a⦄` binders cannot be
+supplied positionally as `f a h`).
 """
 from pathlib import Path
 import hashlib
@@ -79,7 +80,7 @@ lines.append("  rw [Finset.disjoint_left]")
 lines.append("  intro a ha hb")
 lines.append("  rcases (new_mem a).mp ha with " + " | ".join("h" for _ in SUBS))
 for s in SUBS:
-    lines.append(f"  · exact (Finset.disjoint_left.mp {s}.disjoint_sharp) a h hb")
+    lines.append(f"  · exact (Finset.disjoint_left.mp {s}.disjoint_sharp) (a := a) h hb")
 lines.append("end")
 lines.append(f"end N11Formalization.{TOP}")
 lines.append(f"#check @N11Formalization.{TOP}.new_count")
@@ -89,10 +90,33 @@ lines.append(f"#print axioms N11Formalization.{TOP}.new_terminal")
 text = "\n".join(lines) + "\n"
 data = text.encode("utf-8")
 expected = hier["outputs"][-1]
+# Establish provenance against the frozen upstream manifest before writing the
+# corrected bytes: reverse only the lane-local implicit-argument fix.
+legacy = text
+for s in SUBS:
+    legacy = legacy.replace(
+        f"  · exact (Finset.disjoint_left.mp {s}.disjoint_sharp) (a := a) h hb",
+        f"  · exact (Finset.disjoint_left.mp {s}.disjoint_sharp) a h hb",
+    )
+legacy_data = legacy.encode("utf-8")
 # The upstream manifest records len(text), not UTF-8 byte length.
-assert len(text) == expected["bytes"], (len(text), expected["bytes"])
-assert sha256(data) == expected["sha256"], (sha256(data), expected["sha256"])
+assert len(legacy) == expected["bytes"], (len(legacy), expected["bytes"])
+assert sha256(legacy_data) == expected["sha256"], (sha256(legacy_data), expected["sha256"])
 
 out = LEAN / f"{TOP}.lean"
 out.write_bytes(data)
+report = {
+    "module": TOP,
+    "upstream_manifest": "Paid16GeneralNext1182-hier-manifest.json",
+    "upstream_chars": len(legacy),
+    "upstream_utf8_bytes": len(legacy_data),
+    "upstream_sha256": sha256(legacy_data),
+    "correction": "supply implicit Disjoint.left element with (a := a)",
+    "corrected_chars": len(text),
+    "corrected_utf8_bytes": len(data),
+    "corrected_sha256": sha256(data),
+}
+(LANE / "emit_next1182_top-report.json").write_text(
+    json.dumps(report, indent=2) + "\n", encoding="utf-8"
+)
 print(f"wrote {out} ({len(data)} bytes, sha256 {sha256(data)})")

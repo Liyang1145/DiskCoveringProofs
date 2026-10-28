@@ -1,0 +1,11 @@
+{
+  "module": "Paid16GeneralNext1182",
+  "upstream_manifest": "Paid16GeneralNext1182-hier-manifest.json",
+  "upstream_chars": 6389,
+  "upstream_utf8_bytes": 6521,
+  "upstream_sha256": "0EA12578B8541200A4AB803C4BFEFCF53D230A85F4345F8509A707B67A455E2F",
+  "correction": "supply implicit Disjoint.left element with (a := a)",
+  "corrected_chars": 6445,
+  "corrected_utf8_bytes": 6577,
+  "corrected_sha256": "5F6CB04F84D20AE127DE13498E6929BCE3E3C5BABFA751EF99BE630D0266CB17"
+}

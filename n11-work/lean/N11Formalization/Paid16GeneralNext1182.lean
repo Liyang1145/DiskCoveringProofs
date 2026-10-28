@@ -69,14 +69,14 @@ theorem disjoint_sharp : Disjoint newIDs Patch120SharpDispatch.sharpIDs := by
   rw [Finset.disjoint_left]
   intro a ha hb
   rcases (new_mem a).mp ha with h | h | h | h | h | h | h | h
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S01.disjoint_sharp) a h hb
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S02.disjoint_sharp) a h hb
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S03.disjoint_sharp) a h hb
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S04.disjoint_sharp) a h hb
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S05.disjoint_sharp) a h hb
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S06.disjoint_sharp) a h hb
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S07.disjoint_sharp) a h hb
-  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S08.disjoint_sharp) a h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S01.disjoint_sharp) (a := a) h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S02.disjoint_sharp) (a := a) h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S03.disjoint_sharp) (a := a) h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S04.disjoint_sharp) (a := a) h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S05.disjoint_sharp) (a := a) h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S06.disjoint_sharp) (a := a) h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S07.disjoint_sharp) (a := a) h hb
+  · exact (Finset.disjoint_left.mp Paid16GeneralNext1182S08.disjoint_sharp) (a := a) h hb
 end
 end N11Formalization.Paid16GeneralNext1182
 #check @N11Formalization.Paid16GeneralNext1182.new_count
