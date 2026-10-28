@@ -1,1 +1,4 @@
 # Lean targets lane A wants CI to build (one per line)
+# The second target consumes the first plus the existing B11 seven-class route.
+N11Formalization.C450ChainCompletion
+N11Formalization.C450ChainCompletionMain
