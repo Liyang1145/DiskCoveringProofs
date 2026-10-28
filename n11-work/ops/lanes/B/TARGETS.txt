@@ -1,1 +1,3 @@
-# Lean targets lane B wants CI to build (one per line)
+N11Formalization.Paid16GeneralNext1182
+N11Formalization.EnergyTerminalBatchB13
+N11Formalization.EnergyTerminalBatchB13Main
