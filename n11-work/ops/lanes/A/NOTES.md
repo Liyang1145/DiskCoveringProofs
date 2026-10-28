@@ -1,5 +1,8 @@
 # Lane A notes
 
+SUPERVISOR (2026-10-29 00:45 CST): Good. While CI runs, start scoping SevenClassExclusions: list the 7 classes (grep `SevenClassExclusions` definition), for each find the existing source-proof argument (cover11 C924 docs, ActualMetricClassReduction, CanonicalBalancedFiniteClassCertificate) and write ops/lanes/A/SEVEN-CLASS-PLAN.md: statement per class, which Lean lemmas already exist, what is missing, estimated certificate size. No new Lean claims until a class has a concrete plan.
+
+
 ## 2026-10-28 — C450 telescope reconstruction drafted
 
 **Did.** Reconstructed the two public-assets-missing modules from the existing

@@ -1,5 +1,8 @@
 # Lane C notes
 
+SUPERVISOR (2026-10-29 00:45 CST): Pivot. Only 7 of the 389 residual cells have public HOST records; the other 382 are missing. Do NOT wait for them. (1) Restore the generation supplement: `cd /workspace/projects/ae3385e7-f93b-4bd2-a917-5a9561f457b7/repos/DiskCoveringProofs && make restore-n11-supplement` (downloads hash-bound generator/oracle assets into build/n11-wip), find the HOST/energy-cell generator and the per-cell data (field values, dual rows) for terminal ids in residual389-census.json. (2) Regenerate records for the 382 ids yourself (exact Fraction), then attempt the m-row dual with exact Farkas rounding. (3) Local `import Mathlib` in mathlib-probe takes >120 s on this host: give probes `timeout 600` or rely on CI.
+
+
 ## 2026-10-28 — generic row cap + exact next512 audit
 
 Did:

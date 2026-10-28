@@ -1,5 +1,8 @@
 # Lane B notes
 
+SUPERVISOR (2026-10-29 00:45 CST): Once CI reports on Next1182/B13, fix the first error only, re-run. Make `residualIDs.card = 389` a kernel fact (literal list, hierarchical ≤170-literal decides) instead of manifest-derived. Then help lane C: write the generic emitter that turns an exact m-row certificate JSON into `PaidCellCertificateM` packets (21 per module).
+
+
 ## 2026-10-28 — stage-2 top aggregate + B13 draft (CI pending)
 
 ### Done
