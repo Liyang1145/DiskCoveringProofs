@@ -31,41 +31,6 @@ theorem residualIDs_card : residualIDs.card = 389 := by
   rw [Finset.card_union_of_disjoint chunk2_disjoint, chunk2_card]
   rw [chunk3_card]
   norm_num
-
-private theorem chunk0_sound : ∀ n ∈ chunk0, (DBMSourceTree.data n).terminal = true ∧
-      n ∉ Patch120SharpDispatch.sharpIDs ∧
-      n ∉ EnergyTerminalBatchB13.paidIDs := by
-  decide +kernel
-
-private theorem chunk1_sound : ∀ n ∈ chunk1, (DBMSourceTree.data n).terminal = true ∧
-      n ∉ Patch120SharpDispatch.sharpIDs ∧
-      n ∉ EnergyTerminalBatchB13.paidIDs := by
-  decide +kernel
-
-private theorem chunk2_sound : ∀ n ∈ chunk2, (DBMSourceTree.data n).terminal = true ∧
-      n ∉ Patch120SharpDispatch.sharpIDs ∧
-      n ∉ EnergyTerminalBatchB13.paidIDs := by
-  decide +kernel
-
-private theorem chunk3_sound : ∀ n ∈ chunk3, (DBMSourceTree.data n).terminal = true ∧
-      n ∉ Patch120SharpDispatch.sharpIDs ∧
-      n ∉ EnergyTerminalBatchB13.paidIDs := by
-  decide +kernel
-
-theorem residualIDs_sound :
-    ∀ n ∈ residualIDs, (DBMSourceTree.data n).terminal = true ∧
-      n ∉ Patch120SharpDispatch.sharpIDs ∧
-      n ∉ EnergyTerminalBatchB13.paidIDs := by
-  intro n hn
-  rw [residualIDs] at hn
-  rcases Finset.mem_union.mp hn with h0 | h123
-  · exact chunk0_sound n h0
-  rcases Finset.mem_union.mp h123 with h1 | h23
-  · exact chunk1_sound n h1
-  rcases Finset.mem_union.mp h23 with h2 | h3
-  · exact chunk2_sound n h2
-  · exact chunk3_sound n h3
-
 private theorem mem_iff_block00 (n : Fin 5011)
     (hlo : 0 ≤ n.val) (hhi : n.val < 100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
@@ -428,9 +393,44 @@ theorem residualIDs_eq :
   · exact mem_iff_block48 n h48.1 h48.2
   · exact mem_iff_block49 n h49.1 h49.2
   · exact mem_iff_block50 n h50 n.isLt
+
+theorem b13_residualIDs_card :
+    EnergyTerminalBatchB13.residualIDs.card = 389 := by
+  rw [← residualIDs_eq, residualIDs_card]
+
+theorem residualIDs_sound :
+    ∀ n ∈ residualIDs, (DBMSourceTree.data n).terminal = true ∧
+      n ∉ Patch120SharpDispatch.sharpIDs ∧
+      n ∉ EnergyTerminalBatchB13.paidIDs := by
+  intro n hn
+  rw [residualIDs_eq] at hn
+  exact (EnergyTerminalBatchB13.mem_residualIDs_iff n).mp hn
+
+def RemainingTerminalRadius : Prop :=
+  ∀ n : Fin 5011, n ∈ residualIDs →
+    ∀ (y : Fin 9 → ℝ), (∀ q, 0 ≤ y q) → (∑ q, y q = 1) →
+      FlashLeafSplit.Cell (DBMTreeKernel.matrix DBMSourceTree.data 4096 n)
+        (FlashLeafSplit.tlift y) →
+      ∀ (C Z : Fin 11 → Point) (r : ℝ),
+        ResumeNetwork.Feasible (SourceChartIsometry.chartAnchors y) C Z r →
+          SourceExactRoot.sourceRadius ≤ r
+
+theorem remaining_iff_b13 :
+    RemainingTerminalRadius ↔ EnergyTerminalBatchB13.RemainingTerminalRadius := by
+  rw [EnergyTerminalBatchB13.remaining_iff]
+  constructor
+  · intro h n hn
+    rw [← residualIDs_eq] at hn
+    exact h n hn
+  · intro h n hn
+    rw [residualIDs_eq] at hn
+    exact h n hn
 end
 end N11Formalization.EnergyTerminalResidualCensus
 #check @N11Formalization.EnergyTerminalResidualCensus.residualIDs_card
 #check @N11Formalization.EnergyTerminalResidualCensus.residualIDs_eq
+#check @N11Formalization.EnergyTerminalResidualCensus.b13_residualIDs_card
+#check @N11Formalization.EnergyTerminalResidualCensus.remaining_iff_b13
 #print axioms N11Formalization.EnergyTerminalResidualCensus.residualIDs_card
 #print axioms N11Formalization.EnergyTerminalResidualCensus.residualIDs_eq
+#print axioms N11Formalization.EnergyTerminalResidualCensus.b13_residualIDs_card

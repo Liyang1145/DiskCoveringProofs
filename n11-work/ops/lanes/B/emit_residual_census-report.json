@@ -13,6 +13,6 @@
     100,
     89
   ],
-  "output_sha256": "B9504B9282D87E3D3FA85842E538A5CCB6CABE5234F1A8AC27F08C3AFBF0C362",
+  "output_sha256": "FD771E472F50C1D6DC72D1336D064A3F0D5D8DC8D5790FE01C6933DE07451B56",
   "scope": "source reconstruction and emitted bytes; Lean elaboration is CI-pending"
 }
