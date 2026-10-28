@@ -1,58 +1,19 @@
 # Lane C notes
 
-SUPERVISOR (2026-10-29 00:45 CST): Pivot. Only 7 of the 389 residual cells have public HOST records; the other 382 are missing. Do NOT wait for them. (1) Restore the generation supplement: `cd /workspace/projects/ae3385e7-f93b-4bd2-a917-5a9561f457b7/repos/DiskCoveringProofs && make restore-n11-supplement` (downloads hash-bound generator/oracle assets into build/n11-wip), find the HOST/energy-cell generator and the per-cell data (field values, dual rows) for terminal ids in residual389-census.json. (2) Regenerate records for the 382 ids yourself (exact Fraction), then attempt the m-row dual with exact Farkas rounding. (3) Local `import Mathlib` in mathlib-probe takes >120 s on this host: give probes `timeout 600` or rely on CI.
+## 2026-10-28 — earlier m-row tooling and exact next512 audit (condensed)
 
-
-## 2026-10-28 — generic row cap + exact next512 audit
-
-Did:
-- Read `GUIDANCE.md`, `LANES.md`, latest CI (no run), ran
-  `python tools/project_status.py --check` (index check passed).
-- Added `lean/N11Formalization/PaidCellCertificateM.lean`, a row-count-generic
-  `Packet (m : ℕ)` / `Valid` / `oracle_gt` / `common_chart_radius` API. It is a
-  direct generalization of `Paid16CellCertificate`; `m` occurs only in the
-  nonnegative DBM-row data, while the genuinely valid field mixture stays the
-  existing `Fin 16`/36-line packet. No root import requested yet.
-- Added `ops/lanes/C/recheck_next512_rows.py` and its generated
-  `ops/lanes/C/next512-row-extension-results.json`. The script parses the frozen
-  integer DBM matrices, uses exact `Fraction` arithmetic and the exact rational
-  `piLo/piHi` from `Interval/Trig.lean`, and uses a float scipy/HiGHS LP only to
-  search candidate row multipliers.
-
-New-file SHA256: `PaidCellCertificateM.lean`
-`54EC68D4EF19FDC7C9F77361B7C42FB6D808F1A08A721217A2798BC6BF4AAD12`;
-`recheck_next512_rows.py`
-`7A76A7AF6B7A9051B8EAC1AC9277C5A3818C662760AB66C3982F0A7A274D4CA5`;
-results JSON
-`DDCF31107B7E80A172E1053C16788390AE82A4537C1BCBBEE9EECDBE2B8D3D35`.
-
-Checks run:
-- `python tools/project_status.py --check`: PASS; scope = index/manifest only.
-- `PYTHONPATH=/tmp/lanec-scipy python3 recheck_next512_rows.py`: exit 0.
-  Input hashes: proposal `F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16`,
-  DBM `BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5`.
-  All 512 frozen `lower = f0Lo - lamB + rmin` and `pass ↔ lower > T^2`
-  identities rechecked exactly; 505 pass / 7 fail as recorded.
-- All-90-ordered-pair LP search on the seven public failures: **0/7** obtain a
-  strict exact-rational pass after `limit_denominator(10^18)`. Best exact gaps
-  remain negative: 1409 `-1.3866391797e-5`, 2337 `-1.0365427704e-5`, 2341
-  `-1.9843152153e-5`, 2356 `-7.388363308e-7`, 2360 `-1.7193773531e-5`, 2368
-  `-4.9659404040e-5`, 2370 `-3.7366048307e-5`. Scope is the public next512
-  artifact only, not the full 389-cell census.
-- `PaidCellCertificateM.lean`: drafted, CI pending. No local full-project build
-  was attempted (sandbox has no project oleans).
-
-Still unproved / missing:
-- The 389 census itself is not present here; do not transfer the 0/7 result to
-  all 389. The seven public failures also need an exact infeasibility/Farkas
-  certificate if the negative row-cap conclusion is to be kernel- or
-  rational-certified rather than float-LP evidence.
-- CI has not kernel-checked `PaidCellCertificateM`; it is not paid.
-
-Next concrete step: convert one HiGHS dual solution for a failing cell into an
-exact rational Farkas certificate for the 90-row LP (or locate the missing 389
-records and run the same exact search there); then decide whether the residual
-needs new harmonic fields rather than more rows.
+- `lean/N11Formalization/PaidCellCertificateM.lean` generalizes the packet to
+  `m` nonnegative DBM rows and has `of7_valid`; drafted, CI pending. SHA256
+  `81DB0736EF6AF2BB628103FC9AB1874F25B12E3C06494F0FE5BAA0D8A6C2E5A7`.
+- `ops/lanes/C/emit_mrow_packets.py` is a fail-closed exact bridge from
+  fixed-`m` JSON to packet modules; synthetic `m=4`/`m=10` preflights pass but
+  no payment module exists. SHA256 `75C08E89B81E89819DDD10A16498AA2C4A0C21FE3829689DF2EDE59A88460D77`.
+- `recheck_next512_rows.py` and `certify_next512_row_cap.py` rechecked all 512
+  public next512 records with `Fraction` and exact `piLo/piHi`: 505 pass, 7 fail;
+  a 90-row cap excludes all seven exactly, tightest margin `7.388363154221271e-7`
+  at node 2356. Scope is this public artifact only, no kernel credit.
+- The 389 census is reconstructed by `build_residual389_census.py`; 382 HOST
+  records are absent, so the 0/7 result does not transfer to all residuals.
 
 ## 2026-10-28 — exact 90-row cap exclusion for all seven public failures
 
@@ -187,29 +148,73 @@ Next concrete step: when CI runs, inspect errors in `of7_valid` first; then
 obtain/export the 382 missing HOST records by exact hash and run the existing
 exact row-cap procedure before attempting per-cell packet emission.
 
-## 2026-10-28 — part 4: probe of `of7_valid` proof shape
+## 2026-10-28 — supplement/core byte restore + HOST asset audit (session part 2)
 
 Did:
-- Re-read GUIDANCE/LANES/notes/CI (`no run yet`).
-- Audited `PaidCellCertificateM.of7_valid` against the frozen
-  `Paid16CellCertificate.Packet/Valid` definitions (field types and proof
-  arguments line up; `mix`, `mix_nonneg`, `mix_le` signatures confirmed).
-- Built a Mathlib-only structural probe at `/tmp/probeC.lean` modelling the
-  dependent `Packet m`/`Valid` projections and the exact
-  `simpa only [of7, W]` pattern used in `of7_valid`.
+- Re-read `GUIDANCE.md`, `LANES.md`, this file and `ops/ci/LATEST.md`
+  (`no run yet`); ran `python tools/project_status.py --check` successfully
+  (scope: index/manifest declarations only).
+- `make` is absent in this sandbox, so invoked the pinned restorer directly.
+  Restored `assets/replay/n11-supplement` into `build/n11-wip`: 1,364 files,
+  636,941,175 bytes, all SHA256s verified; package-index SHA256
+  `e7fca1ae0c2f7b4548105a98c3b6c2318f3ede64bc94a2962af2a0a8b679bca4`.
+- This supplement contains only C450 evidence: four non-log files, namely
+  `batchv2-results-20261014-165623.json` and two C450 HOST packet files plus
+  `ACCEPTANCE-CX081.json`. It contains no energy-cell generator or `f0Lo`
+  records.
+- Restored the 2,383-file main WIP bundle into a fresh directory
+  `build/n11-core-assets`: 137,601,778 bytes, all SHA256s verified; package
+  index hash `2aa324a3b127cd207bccdfc1cb7249acc96d6df7b1b80825ca373ef2030ba15d`.
+  A direct merge into `build/n11-wip` was correctly refused because the two
+  frozen bundles carry differing bytes at
+  `evidence/c450-emit-20261014/batchv2-results-20261014-165623.json`; both
+  copies were preserved.
+- Audited both restored trees. The only file containing the distinctive HOST
+  key `f0Lo` is `paid16-general-next512.json` (512 records, 505 passing, seven
+  known failures). The energy package tar contains that same input but no
+  survey generator. The 382 residual HOST records are still unavailable.
 
 Checks run (scope stated):
-- `python tools/project_status.py --check`: PASS (index/manifest only).
-- Probe command `lake env lean /tmp/probeC.lean` under
-  `/workspace/tools/mathlib-probe`: started; result not yet observed in this
-  4-minute slot (no project-module kernel check was attempted).
+- `python tools/project_status.py --check`: PASS; navigation index only.
+- `restore_frozen_assets.py` twice: exit 0, frozen byte hashes verified; no
+  mathematical replay or Lean build was performed.
+- `rg -l 'f0Lo|HOST|energy.?cell|EnergyCell'` over both restored asset trees:
+  only the known next512 input and C450 host JSONs; no generator/data for the
+  382 ids.
 
 Still unproved / missing:
-- `PaidCellCertificateM` remains drafted, CI pending; the probe is not a
-  substitute for kernel-checking the imports/dependent fields of the real
-  module.
-- All 389 residual cells remain unpaid; 382 HOST records still absent.
+- All 389 residual energy cells remain unpaid. The seven public cells stay
+  excluded only under the 90-row cap; this is not the arbitrary-center proof.
+- No source supplies the 382 missing HOST records. Restoration success is not
+  a proof and adds no terminal credit.
 
-Next concrete step: read the probe outcome; if it fails, fix the `of7_valid`
-`simpa` set (likely add `packet` projection lemmas); otherwise wait for CI and
-inspect its first error, then pursue the missing 382 HOST records.
+Next concrete step: reconstruct the HOST record generator around the exact
+formulas already exposed by `ConvexMinorantCore` (`W = RoundedPaid16.mix`,
+`g`, `f0Lo`, `lamB`, `lower`) and validate it by reproducing known next512
+records exactly before applying it to the 382 ids.
+
+## 2026-10-28 — independent next512 formula recomputation (part 4)
+
+Did:
+- Added `recompute_next512_formulas.py`. It derives `W` from all 16 accepted
+  field weights and `beta`, then recomputes `cl`, all nine `g` entries,
+  `f0Lo`, `lamB`, and `lower` with `Fraction`; it also checks every
+  reduced-cost inequality, beta probability vector, pass flag, and the frozen
+  proposal hash. Stored `cl/g/f0Lo/lamB/lower` are no longer trusted.
+
+New-file SHA256: `recompute_next512_formulas.py`
+`2A4F29314FC62D6688E57E4DEAE5DC09F6E125205F03508D91F40A2F2ACEB4A8`.
+
+Checks run (scope stated):
+- `python3 -m py_compile .../recompute_next512_formulas.py`: exit 0.
+- `python3 .../recompute_next512_formulas.py`: exit 0; exactly 512 records
+  recomputed, 505 passing, the same seven failures `1409,2337,2341,2356,
+  2360,2368,2370`. Python evidence only, not kernel credit.
+
+Still unproved / missing:
+- The 382 non-public HOST records remain absent; this does not pay any
+  residual cell or extend the 90-row exclusion.
+
+Next concrete step: use the now-validated formulas to build a deterministic
+per-cell constructor/auditor that accepts a candidate `beta`, 36 minorant
+lines, and dual rows, then search the 389 residual DBMs for passing candidates.
