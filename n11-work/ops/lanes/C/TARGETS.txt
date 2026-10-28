@@ -1,2 +1,4 @@
 # Lean targets lane C wants CI to build (one per line)
 N11Formalization.PaidCellCertificateM
+N11Formalization.PaidCellCertificateMCap
+N11Formalization.FrozenCapCertificates

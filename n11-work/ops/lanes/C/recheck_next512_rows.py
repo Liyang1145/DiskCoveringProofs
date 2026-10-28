@@ -11,9 +11,6 @@ import json
 from pathlib import Path
 import re
 
-import numpy as np
-from scipy.optimize import linprog
-
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 PROPOSAL = ROOT / "n11-work/evidence-20261028/inputs/paid16-general-next512.json"
@@ -60,6 +57,11 @@ def parse_db(text, node):
 
 
 def main():
+    # The LP dependency is search-only.  Exact auditors import this module for
+    # PAIRS/row_a/endpoint_lo and must remain runnable without SciPy installed.
+    import numpy as np
+    from scipy.optimize import linprog
+
     text = DBM.read_text()
     doc = json.loads(PROPOSAL.read_text(encoding="utf-8-sig"))
     rows = doc["records"]

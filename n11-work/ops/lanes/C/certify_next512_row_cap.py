@@ -9,7 +9,9 @@ nonnegative row vector lam and every rmin <= min_q endpointLo(s_q) + A_q lam,
     rmin - sum_k lam_k db_k/4096 <= sum_q y_q endpointLo(s_q).
 
 Thus the weighted endpoint value is an exact upper bound on the attainable
-increase from the 90-row cap.  No floating-point value enters the verdict.
+increase from ANY number of DBM rows.  The earlier 90-row search omitted the
+ten diagonal pairs; they are included below (their row coefficients and DBM
+entries are both zero).  No floating-point value enters the verdict.
 """
 from fractions import Fraction as Q
 import hashlib
@@ -40,13 +42,16 @@ def certify(rec, db, weights):
         raise AssertionError(f"node {rec['id']}: invalid dual weights")
 
     row_slacks = []
-    for k, (i, j) in enumerate(common.PAIRS):
-        row_cap = Q(db[i][j], 4096)
-        weighted_row = sum(y[q] * common.row_a(i, j, q) for q in range(9))
-        if weighted_row > row_cap:
-            raise AssertionError(
-                f"node {rec['id']}: row {(i, j)} violates cap by {weighted_row-row_cap}")
-        row_slacks.append(row_cap - weighted_row)
+    # A packet may use i = j rows too.  Checking all 100 ordered pairs removes
+    # the former 90-row interpretation: m is completely unrestricted.
+    for i in range(10):
+        for j in range(10):
+            row_cap = Q(db[i][j], 4096)
+            weighted_row = sum(y[q] * common.row_a(i, j, q) for q in range(9))
+            if weighted_row > row_cap:
+                raise AssertionError(
+                    f"node {rec['id']}: row {(i, j)} violates cap by {weighted_row-row_cap}")
+            row_slacks.append(row_cap - weighted_row)
 
     endpoint = [common.endpoint_lo(Q(s)) for s in rec["g"]]
     upper_gain = sum(y[q] * endpoint[q] for q in range(9))
@@ -64,7 +69,7 @@ def certify(rec, db, weights):
         "upper_gain": str(upper_gain),
         "required_gain": str(required_gain),
         "strict_margin": str(required_gain - upper_gain),
-        "excludes_90_row_pass": True,
+        "excludes_any_row_count": True,
     }
 
 
@@ -78,10 +83,11 @@ def main():
     certs = [certify(rec, common.parse_db(text, rec["id"]), CANDIDATES[rec["id"]])
              for rec in failures]
     result = {
-        "scope": "public next512 HOST failures under the 90 ordered-pair row cap; exact rational certificate, no kernel credit",
+        "scope": "public next512 HOST failures with an arbitrary number of ordered-pair DBM rows; exact rational certificate, no kernel credit",
         "proposal_sha256": hashlib.sha256(common.PROPOSAL.read_bytes()).hexdigest().upper(),
         "dbm_sha256": hashlib.sha256(common.DBM.read_bytes()).hexdigest().upper(),
         "records_checked": len(rows),
+        "ordered_pairs_checked": 100,
         "failures_excluded": len(certs),
         "certificates": certs,
     }
