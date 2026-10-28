@@ -157,3 +157,20 @@ pwsh  run-matched-pair2.ps1
 plus the two emitters regenerate every Lean file in
 `n11-energy-sources-20261028.tar.gz` byte-exactly; the tarball also pins each
 member's SHA256 in `MANIFEST.json`.
+## 8. Sync state of this package
+
+Uploaded 2026-10-28 to Liyang1145/DiskCoveringProofs on main:
+
+* ssets/replay/n11-wip/energy-stage1-20261028/{HANDOFF.md,MANIFEST.json,n11-energy-package-20261028.tar.gz}
+  (first commit 23009f28cb515b7e2e204c9df328176f8d7f5767);
+* cover11/README.md now points at this package (commit  9b2c264ac6ec4bc11bb969780474c9668ec9f33).
+
+The upload path was the Git Data API: this host could reach pi.github.com only
+intermittently and **github.com git-over-HTTPS failed** (Recv failure:
+Connection was reset), so a normal git push was not available. Nothing was
+committed that is not in MANIFEST.json.
+
+**Not updated:** PROJECT_STATE.json's n11 next-action line. It is the
+machine-checked index (python tools/project_status.py --check) and could not be
+re-validated from this host, so it was left untouched rather than edited blind.
+A maintainer-side update should add this package to the n11 entry.
