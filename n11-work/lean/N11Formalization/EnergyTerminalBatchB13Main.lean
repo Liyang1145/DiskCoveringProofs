@@ -1,5 +1,6 @@
 import N11Formalization.C450ChainCompletionMain
 import N11Formalization.EnergyTerminalBatchB13
+import N11Formalization.EnergyTerminalResidualCensus
 import N11Formalization.ActualMetricClassReduction
 
 /-! The conditional main statement with the energy premise weakened from
@@ -23,7 +24,25 @@ theorem full_disk_bound_of_energy_b13_and_seven_classes
     ∀ (r : ℝ) (c : Fin 11 → Point), 0 ≤ r → Covers c r → SourceExactRoot.sourceRadius ≤ r :=
   (strongInterface_of_n11_main (main_of_energy_b13_and_seven_classes henergy hclasses)).bounds
 
+/-- The same conditional theorem, with the energy obligation stated over the
+kernel-counted literal 389-id residual census. -/
+theorem main_of_energy_literal_and_seven_classes
+    (henergy : EnergyTerminalResidualCensus.RemainingTerminalRadius)
+    (hclasses : ActualMetricClassReduction.SevenClassExclusions) :
+    N11MainStatement SourceExactRoot.sourceRadius :=
+  main_of_energy_b13_and_seven_classes
+    (EnergyTerminalResidualCensus.remaining_iff_b13.mp henergy) hclasses
+
+theorem full_disk_bound_of_energy_literal_and_seven_classes
+    (henergy : EnergyTerminalResidualCensus.RemainingTerminalRadius)
+    (hclasses : ActualMetricClassReduction.SevenClassExclusions) :
+    ∀ (r : ℝ) (c : Fin 11 → Point), 0 ≤ r → Covers c r → SourceExactRoot.sourceRadius ≤ r :=
+  (strongInterface_of_n11_main
+    (main_of_energy_literal_and_seven_classes henergy hclasses)).bounds
+
 end
 end N11Formalization.EnergyTerminalBatchB13Main
 #check @N11Formalization.EnergyTerminalBatchB13Main.main_of_energy_b13_and_seven_classes
+#check @N11Formalization.EnergyTerminalBatchB13Main.main_of_energy_literal_and_seven_classes
 #print axioms N11Formalization.EnergyTerminalBatchB13Main.main_of_energy_b13_and_seven_classes
+#print axioms N11Formalization.EnergyTerminalBatchB13Main.main_of_energy_literal_and_seven_classes
