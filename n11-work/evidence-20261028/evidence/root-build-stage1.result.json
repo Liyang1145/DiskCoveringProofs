@@ -1,0 +1,13 @@
+{
+  "file": "N11Formalization",
+  "build": true,
+  "started": "2026-10-28T20:21:11.5607852+08:00",
+  "finished": "2026-10-28T20:21:48.0978931+08:00",
+  "exit": 0,
+  "sha256_before": null,
+  "sha256_after": null,
+  "unchanged": true,
+  "project": "E:\\ai4math2\\research-2026\\n11-formalization\\lean",
+  "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\energy-emit-20261028\\logs\\root1\\build-N11Formalization.log",
+  "mutex_wait_seconds": 5400
+}

@@ -1,0 +1,67 @@
+{
+  "spec": {
+    "sub": 8,
+    "base": "EnergyTerminalBatchB12",
+    "manifest": "rest1182-emission-manifest.json",
+    "top": "Paid16GeneralNext1182",
+    "tag": "rest1182",
+    "count": 1182
+  },
+  "subs": [
+    "Paid16GeneralNext1182S01",
+    "Paid16GeneralNext1182S02",
+    "Paid16GeneralNext1182S03",
+    "Paid16GeneralNext1182S04",
+    "Paid16GeneralNext1182S05",
+    "Paid16GeneralNext1182S06",
+    "Paid16GeneralNext1182S07",
+    "Paid16GeneralNext1182S08"
+  ],
+  "outputs": [
+    {
+      "module": "Paid16GeneralNext1182S01",
+      "sha256": "9EF32CBC323F52AB4B1AABB6519BFAA6BF371CF4CE01E2A80C326E39791359F4",
+      "bytes": 19104
+    },
+    {
+      "module": "Paid16GeneralNext1182S02",
+      "sha256": "43CBDFD0876DA226587CA03B03A02BFC56C9F609EEAA2F0A50F8F70575542BBF",
+      "bytes": 19104
+    },
+    {
+      "module": "Paid16GeneralNext1182S03",
+      "sha256": "E6197F3EAE9EA01734F81C7BFD333954ADB07EFE453881275FF1B3696656C702",
+      "bytes": 19104
+    },
+    {
+      "module": "Paid16GeneralNext1182S04",
+      "sha256": "87E00271A9EC1950E77B20AD22EA8C1EFC1B7183E5D74AEF38BD7714C73D6BF6",
+      "bytes": 19104
+    },
+    {
+      "module": "Paid16GeneralNext1182S05",
+      "sha256": "38913ECCB79C1E82E5ECD0B3961AD10EF3E9D30D2FFE3308534FF7DF407E236D",
+      "bytes": 19104
+    },
+    {
+      "module": "Paid16GeneralNext1182S06",
+      "sha256": "9D477BE1D7B28AEA1607492390A6B5402F5491A85CFACE9C3CAD9BCEEBFFAC5F",
+      "bytes": 19104
+    },
+    {
+      "module": "Paid16GeneralNext1182S07",
+      "sha256": "91F5B59C460CD8BFE52A7D97CB6E3E64FB12E78823EC0D7496C49CBCEDD4FE48",
+      "bytes": 19104
+    },
+    {
+      "module": "Paid16GeneralNext1182S08",
+      "sha256": "78DAAC0EA798604F35F9CE6B81BC7CE6C3B5D735AE54D70773A93ED62C8737CE",
+      "bytes": 2263
+    },
+    {
+      "module": "Paid16GeneralNext1182",
+      "sha256": "0EA12578B8541200A4AB803C4BFEFCF53D230A85F4345F8509A707B67A455E2F",
+      "bytes": 6389
+    }
+  ]
+}

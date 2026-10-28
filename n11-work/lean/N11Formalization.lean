@@ -1,0 +1,1961 @@
+import N11Formalization.Definitions
+import N11Formalization.Reduction
+import N11Formalization.Statement
+import N11Formalization.Attainment
+import N11Formalization.Sharpening
+import N11Formalization.Krawczyk
+import N11Formalization.KrawczykDeriv
+import N11Formalization.OpNorm
+import N11Formalization.HexFloat
+import N11Formalization.Certificates.RootBox
+import N11Formalization.Conditional.RootSpec
+import N11Formalization.Conditional.CertBox
+import N11Formalization.TCSystem
+import N11Formalization.SourceIdentity
+import N11Formalization.Smoothness
+import N11Formalization.SmoothnessC2
+import N11Formalization.TCSystemSmooth
+import N11Formalization.Transport
+import N11Formalization.Geometry
+import N11Formalization.Assembly.BoundaryCount
+import N11Formalization.Assembly.InnerRootReplace
+import N11Formalization.Assembly.TCKrawczyk
+import N11Formalization.Assembly.G1
+import N11Formalization.Assembly.G1Interval
+import N11Formalization.Assembly.G1HasFDeriv
+import N11Formalization.Assembly.G1Final
+import N11Formalization.KrawczykMatrix
+import N11Formalization.Precond
+import N11Formalization.PrecondRight
+import N11Formalization.BoxRstar
+import N11Formalization.Interval
+import N11Formalization.IntervalZ
+import N11Formalization.IntervalsHigh
+import N11Formalization.IntervalsHighLag
+import N11Formalization.ResidualInterval
+import N11Formalization.ResidualIntervalLag
+import N11Formalization.ResidualIntervalReadout
+import N11Formalization.ResidualIntervalReadoutLag
+import N11Formalization.ResidualDeriv
+import N11Formalization.ResidualDerivNode
+import N11Formalization.ResidualDerivNode2
+import N11Formalization.ResidualDistNode
+import N11Formalization.ResidualDerivDist
+import N11Formalization.ResidualDerivD
+import N11Formalization.ResidualDerivPos
+-- R260 接根 `ResidualHfm`（作者 fm-eval；Lead 执行，前置检查此前已全备 ✓）：**`hFm` 归约到**已证**的 `hD`** ⇒ 判据二第 5 项数据项就位 ✓✓
+--   4 条（画像全标准三元组；单件 `lake build N11Formalization.ResidualHfm` = 8740 jobs 成功 ✓）：
+--     `cCertR_eq_certCR : cCertR = certCR` —— **命名桥**（根内原先没有它 ✗）；证法 = **kernel 逐位核对两份盒心表**
+--        （`cCert` 用展开分母 `18014398509481984 = 2^54`、`certC` 用 `2 ^ 54`；`fin_cases` 12 项 `norm_num`）⇒ **顺带确认"单一真源：两份表逐位相同"** ✓✓
+--     `cCert_eq_certC`（有理分量版）｜**`cCertR_ne_shifted : cCertR ≠ (fun i => cCertR (i+1))`** —— **对照件**：
+--        把"`*_rejected` 伴生"的纪律用在**定义层桥**上（证明这条桥**不是对任何表都成立**）✓✓ —— 此用法 Lead 单独立账 ✓
+--     **`hFm_of_hD (D) (hD) : ∀ k : Fin 12, (fmCert lamCert D k).Mem (TCSystem certCR k)`** ★
+--        = **`nd_end_to_end` 的 `hFm` 形状**（唯一差别 `cCertR` vs `certCR`，由上面的桥消掉 ✓）
+--   ⚠ **条件形态（未伪装）**：前提 = **`nd_end_to_end` 自己的 `hD`** ⇒ `hFm = hFm_of_hD D hD`；而 **`hD` 已在根内证成**
+--     （`ResidualDerivD.hD_0..hD_4` L638/650/662/674/686 + `ResidualDerivJT.mem_D` L283 ✓✓）⇒ `hD` 一实例齐即无条件 ✓
+--   ⚠ **不改计数**：供的是**数据项** ⇒ **球级列仍 25/144 有付 / 119 未付**（**受审 ≠ 落格** ✗）；
+--     作者将明说"依据 `FmAssembly.mem_fmCert_cert` + 本件 `hFm_of_hD` 覆盖 `Fin 12` 的哪些格（此处全部 12 格）" ✓。
+--   ⚠ **`Y/Yinv` 路线已裁**（见 `TRUST §4bis`）：源预条件子是 **binary64 近似逆** ⇒ 精确有理左逆**取不到** ✗ ⇒ **改走右侧收缩**
+--     （`nd_end_to_end_right` / `hsumR`）；`Y` 按**bit-精确 dyadic 有理数**转写，其"出处"作为**显式可信边界**记入 `TRUST §4bis` ✓。
+--   ⚠ 三条缺口照旧随件；**未放宽端点** ✓。**整库精确共存自查（Lead 独立跑、Unicode 感知）: 4 名命中 0** ✓。
+--   ⚠ **本 imports 曾于 R259 撤回一次**（因**另一件在飞编辑**把共享根闸弄红 ✗，与本件无关）⇒ **事故记录见 `DEAD §10`**；
+--     锥内恢复绿后**重接** ✓。
+-- 期望：imports 77 → **78**；jobs 8801 → **8802**。若 jobs 不变 ⇒ 模块未被当作新增 ⇒ 须重查。
+import N11Formalization.ResidualHfm
+-- R263 接根 C12（作者 f1-step2 请求，Lead 执行）：**把 (S1)+(S2) 两半接上 ⇒ 残差×z 的 35 格可落地** ✓✓
+--   4 条（画像全标准三元组、**无条件**；scope = 任意 `x : Fin 12 → ℝ`）：
+--     **`fderiv_TCSystem_res_z_any_x (x) (hdT) (hd : DifferentiableAt ℝ residualFun (first7 x)) (k j)`** ★(S1a)：
+--       `(fderiv ℝ TCSystem x (Pi.single (up7 j) 1)) (row5 k) = (fderiv ℝ residualFun (first7 x) (Pi.single j 1)) k`
+--       —— **一般 `x`**；且**证明比 `pad12 z` 版更短**（`hd` 直接取在 `first7 x` ⇒ `first7_pad12` 的搬运整个消失 ✓✓）
+--     **`fderiv_TCSystem_res_lam_any_x`** (S1b)：残差×λ = 0 的一般 `x` 版 ✓
+--     **`Apt_transport` / `Bpt_transport (x)`** (S2)：`Apt k (pad12 (first7 x)) = Apt k x`（与 `Bpt` 同）
+--       —— 由 `Apt`/`Bpt` 定义（`ResidualDerivD` L281/L288）+ 根内 **`Transport.lean`**（根表 L18）的
+--          `Uvec_transport`/`wPoint_transport`/`hub*_transport`/`ringCenter_transport` 组合；
+--          用 `match k with | 0 => … | 4 => …`（**避开 `fin_cases` 的 `Fin.mk` 非字面量坑** ✓）
+--   ⚠ **两次"先查根 cone"的收成（本件即其产物）** ✓✓：① `compIvBox_mem_uncond` **本来就是消费方形状**（`{x : Fin 12 → ℝ}` + `hx : x ∈ ball`，
+--     右端全 `(Apt k) x`）且**无条件** ⇒ **不是"重证 35 格"，只是"接一座桥"** ✓；
+--     ② **`Transport.lean` 整族已在根内**（10 条 transport + 2 条光滑性，均一般 `x`）⇒ 原估"6–9 条引理"**一条都不用写** ✓✓。
+--   ⚠ **一条估计作废（作者自撤）** ✗✓：`dAngle : Fin 9 → Fin 7 → ℤ` ⇒ "`dAngle j i = 0`（`i ≥ 7`）"**对该指标恒假、无内容**（已在 C12 件头写明）。
+--   ⚠ **计数口径（定稿的一对）** ✗✓：**区间侧（消费方形状、无条件）：35/144 已证** ✓ ｜ **`fderiv` 形态（`hJ` 要的）：0/144** ✗；
+--     本件使**下一件**可把 `fderiv` 形态推到 **35/144**（+λ 侧 25 ⇒ 60）；(c) 的 25 格**在 C11 过门前计 0**（**红档不计入任何计数** ✓）。
+--   ⚠ **本件无判定器** ⇒ 免 `*_rejected` ✓；**未放宽端点** ✓。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C12.lean（sha256 **b41da0ed2f186969…**，5682 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知）: 4 名命中 0** ✓。
+-- 期望：imports 78 → **79**；jobs 8802 → **8803**（**新模块** ✓）。
+import N11Formalization.F1.BallD35C12
+-- R267 接根 `HsumCert`（作者 root-audit；Lead 亲门绿）：**本会话单件收益最大的一件** ——
+--   **`hsum` ＋ `hK0` ＋ `hK1` ＋ 右侧收缩所需的 `hsumR` ＋ 具体 `Y` 一并供给** ✓✓✓
+--   **68 条声明全在 `namespace HsumCert` 内**（全名 `N11Formalization.HsumCert.*`）。关键四条：
+--     **`check_sound {c} (h : c.check = true) : (∀ i, Σ_j max |(krawczykMat c.Yof c.Jof i j)·| ≤ (c.numK:ℝ)/(c.denK:ℝ)) ∧ (0 ≤ K) ∧ (K < 1)`**
+--        ⇒ 一条 soundness 把 **`hsum` ∧ `hK0` ∧ `hK1`** 全包 ✓；`certOK_hsum` / `certOK_K_nonneg` / `certOK_K_lt_one` = 具体实例 ✓
+--     **`checkR_sound {c} (h : c.checkR = true) : (∀ i, Σ_j max |(krawczykMatR c.Jof c.Yof i j)·| ≤ K) ∧ (0 ≤ K) ∧ (K < 1)`**
+--        ⇒ **右侧收缩形式**（`krawczykMatR`）✓ ⇒ 我们已裁的路线（源 `Y` 是 binary64 近似逆 ⇒ 精确有理左逆取不到 ⇒ 走 `nd_end_to_end_right`）**所需的形式** ✓✓
+--        ；`certOK_checkR` / **`certOK_hsumR`** = 具体实例 ✓
+--     **`certLIE_rejected : certLIE.check = false`** ／ **`certLIE_checkR_rejected : certLIE.checkR = false`**（**双形式各一条**
+--        —— 本会话"每个检查器必带 `*_rejected` 伴生"这条通用要求**已兑现**，且**两个形式都配了** ✓✓；证法 `:= by decide` ✓）
+--     `def Yof (c) := fun i k => (c.numY i k : ℚ)/(c.D : ℚ)`、`def Jof (c) := fun k j => ⟨(c.loNum k j:ℚ)/(c.D:ℚ), …⟩` ⇒ **具体 `Y` 数据** ✓
+--   ⚠ **口径纠正（Lead 自查）** ✗✓：我先前报"`check`/`check_sound` 与 `Certificates/RootBox.lean` 撞名 ⇒ 接根必红"
+--     —— **那是我共存筛查的**假阳****：两边声明分属 **不同 `namespace`**（`N11Formalization.RootBoxCert.check` vs `N11Formalization.HsumCert.check`）✗✓
+--     ⇒ **⇒ 口径（第 2 次修订）**：**共存筛查必须按**全限定名**判（**解析所在 `namespace`**），否则对"命名空间化"的件大量假阳** ✓✓；
+--     **权威检查始终是 build 本身** ✓（本件即由 build 判定 ✓）。
+--   ⚠ **本件是其形**参数化 soundness + 具体实例**（不是无条件定理的堆叠）** ⇒ 供 `nd_end_to_end_right` 的数据项时**只需实例化** ✓。
+--   ⚠ **它不动球级计数**（那是 `Jt`/`hJ` 的事）✗：**区间侧 35/144** ✓ ／ **`fderiv` 形态 0/144** ✗（不变）✓。
+-- 内容逐字节自 evidence/root-audit/HsumCert.lean（sha256 **63fe5c90f4561c31…**，28701 B）✓ Lead 复核一致；**Lead 亲门：exit=0 / 0 error / 0 warning / 0 sorryAx / 22.2 s** ✓。
+-- 期望：**imports 79 → 80；jobs 8803 → 8804**（**新根表 import** ✓）。
+import N11Formalization.HsumCert
+-- R269 接根 C13（作者 f1-step2 请求，Lead 亲门绿）：**λ 列 25 格落地（消费方形状、无条件）** ✓✓
+--   6 条（画像全标准三元组；scope = **任意 `x : Fin 12 → ℝ` 使 `x ∈ closedBall certCR rhoCertR`**）：
+--     `first7_six (@[simp])`（`first7 x 6 = x 6`）｜`rho_of_ball`｜`radW_of_ball`
+--     `differentiableAt_TCSystem_ball`｜`differentiableAt_residualFun_first7_ball`
+--     **`JT_lam_res_ball_x`** ★ —— **残差行 × λ 列的 25 格**：`(fderiv ℝ TCSystem x (Pi.single (up5 m) 1)) (row5 k) = 0`（一般 `x ∈ ball`、**无条件**）
+--   ⚠ **作者主动加的 caveat（我采信并记账）** ✗✓：`JT_lam_res_ball_x` 是"**值 = 0**"的等式 ⇒ 这 25 格是"**数据已落地**"，
+--     **不是"已计入 `hJ`"** ✗ —— 接进 `hJ` 还须**第 2 层（球级 `Jt'` 的组装）**（因根内 `Jt` 的残差格用 `D = compIv` **盒心** ✗）。
+--   ⚠ **本件走通的形状口径（Lead 代查一行 + 作者补一步）** ✗✓：`rw [fderiv_apply h k]` **只吃未应用形** ✗ ——
+--     目标是**已应用形** `(fderiv … Φ) v k` ⇒ 必须先 `show … = (ContinuousLinearMap.proj k ∘SL fderiv ℝ …) v from rfl`，
+--     再 `rw [← fderiv_apply h k]`（＋`maxHeartbeats`；**与 C7 同法，两次同族** ✓）；随后 `rw [fderiv_residual_k_any …]`、
+--     `simp only [Apt_transport, Bpt_transport]` 都过 ✓。
+--   ⚠ **仍差的一族（作者按新流程"先查根"确认根内没有）** ✗：`dUxReal`/`dUyReal` 的 transport（z 侧 35 格只差它）——
+--     链条 ~6–8 条（`Wfun_transport` 照 `rhoK_transport` 写法 → `drhoReal` → `ring0/1Real` → `arc0/1Real` → `dUvec0/1Real` → `dUx/dUyReal`）；
+--     **Lead 已裁：(i) 由 `f1-step2` 写** ✓（**不共享**：`dUxReal/dUyReal` 在根内只被 `F1/{BallD35C6,C7,BallD35Hrad}` 用；
+--     `hessEntry`（`ResidualDerivJT` L345）走的是 `fderiv (fun z => fderiv residualFun z) u0`，**与该族无关** ✓）。
+--   ⚠ **本件把绿的 6 条摘出、红的 2 条留 `scratch/C13-red.*`** ✓（连续第三件如此 ✓ —— **发货件不含红** ✓）。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C13.lean（sha256 **e5228c38af915ba3…**，4837 B）✓ Lead 复核一致；
+--   **整库共存自查（作者按**全限定名**判 ✓ 采纳 Lead 当日假阳教训）: 6 名 ∩ srcDir = 空集** ✓；**Lead 亲门：exit=0 / 0 error / 0 warning / 0 sorryAx / 20 s** ✓。
+-- 期望：imports 80 → **81**；jobs 8804 → **8805**（**新模块** ✓）。
+import N11Formalization.F1.BallD35C13
+-- R272 接根 C14（作者 f1-step2 请求，Lead 亲门绿）：**z 侧 35 格落地 ⇒ 残差行 60 格数据全落（消费方形状、无条件）** ✓✓
+--   12 条（画像全标准三元组；scope = **任意 `x : Fin 12 → ℝ` 使 `x ∈ closedBall certCR rhoCertR`**）：
+--     **`*Real` transport 族 9 条**（Lead 裁决由 `f1-step2` 写、**不共享** —— 实测 `hessEntry` 走 `fderiv (fun z => fderiv residualFun z) u0`，与该族无关 ✓）：
+--       `drhoReal_transport` → `ring0Real/ring1Real_transport` → `arc0Real/arc1Real_transport` → `dUvec0Real/dUvec1Real_transport`
+--       → **`dUxReal_transport`/`dUyReal_transport`**（全部从根内 `Transport` 的 point 级族派生 ✓）
+--     **`mem_Jt_res_z_ball_x` / `mem_Jt_res_z_ball_all_x`**（z 侧 35 格）｜ **`mem_Jt_res_row_all_x`（残差行 60 格 = 35 区间 + 25 零值）** ★★
+--   ⚠ **作者途中三条形状事实（全部"用报错原文当场定死"，入口径）** ✗✓：
+--     (a) `dUxReal`/`dUyReal` 是对 `k : Fin 5` 的**模式匹配** ⇒ 变量 `k` 下 match **不归约** ⇒ **必须 `match k with | 0 => … | 4 => …`**（与 C13 的 `Apt`/`Bpt` 同法 ✓）
+--     (b) ★ **`dUxReal` 的 `k = 4` 分支用 `ring0Real`（不是 `dUvec0Real`）**；对称地 `dUyReal` 的 `k = 4` 用 `ring1Real`
+--         ⇒ **4 个分支用 `dUvec*Real`、第 5 个用 `ring*Real`**（逐分支实测所得 ✓）
+--     (c) **`dUyReal` 的 `k = 4` 另需 `WpReal` + `pad12_first7_4/5/6`**，而 `dUxReal` 同分支**不需要**
+--         ⇒ **同一张 `simp` 表不能两处套用**（按 lint 逐条删掉 **8 条 unused simp 实参**才过 0 warning ✓）
+--   ⚠ **计数（保留作者主动 caveat，Lead 采信）** ✗✓：**z 侧 35 格 + λ 侧 25 格 = 残差行 60 格，均为"数据已落地"** ✓✓；
+--     但 **`fderiv` 形态（`hJ` 要的）仍记 0 / 144** ✗ —— **"数据已落" ≠ "已计入 `hJ`"**：
+--     根内 `Jt` 的残差格用 `D = compIv`（**盒心**）⇒ 须 **第 2 层（球级 `Jt'` 组装）** 才能把这 60 格真正接进 `hJ` ✓。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C14.lean（sha256 **86517b373901bc7b…**，7807 B）✓ Lead 复核一致；
+--   **整库共存自查（未限定名命中 0；若命中再按全限定名判 ✓）**；**Lead 亲门：exit=0 / 0 error / 0 warning / 0 sorryAx / 20.3 s** ✓。
+-- 期望：imports 81 → **82**；jobs 8805 → **8806**（**新模块** ✓）。
+import N11Formalization.F1.BallD35C14
+-- R274 接根 `HsumPayload`（作者 root-audit；Lead 亲门绿 **+ 其 `#print axioms` 伴生件**）：**真实 `hsum` / `hsumR`** ✓✓✓
+--   ★ 这是判据二**第一次真正的数据项落地**（不是名字级）：**真实 C891 `(Y,J)` 的整数 payload** ＋ **两条真实行和界**：
+--     `certReal_check : certReal.check = true := by decide` ／ `certRealR_checkR` ✓（内核求值，非外部 exit 0）
+--     **`certReal_hsum : ∀ i, Σ_j max |(krawczykMat certReal.Yof certReal.Jof i j).lo| |…hi| ≤ (certReal.numK:ℝ)/(certReal.denK:ℝ)`** ★★★
+--        —— 与消费点 `nd_end_to_end_right` 的 `hsum` **逐字同形** ✓
+--     **`certReal_hsumR`** ★★★（右侧乘法顺序，与已裁的右侧收缩路线一致 ✓）
+--     `certReal_K_lt_one` / `certReal_K_nonneg` / `certRealR_K_lt_one` ✓ ⇒ **`hK0`/`hK1`/`hK'0`/`hK'1` 侧就位** ✓
+--   ★ **真实读数**：**`K = 0.004371971634866319`**（**与记录的 `K` 逐位一致** ✓✓）｜ **`K' = 0.004975487152940415`** ✓
+--     共同分母 **`D = 2^320`**（`Ez = D²`；`Y` 外向吸附到 `2^-320` 网格、`J` 端点落 `2^-260` 网格 ✓ 比"原始 mpf Fraction"更保守 ✓）
+--   ★ **可信边界（其件头自述，我采信）**：payload 的**整数数据**由 `decide` 在内核核验 ✓；**`Y`/`J` 的出处是外部计算**（
+--     `gen_real_payload.py`：`lu_solve(J12(center))` at `mp.dps=80` + `my_tc.py`/`rativ.py` 精确有理区间）⇒ **不是本文件证明的** ✗
+--     —— 与 `TRUST §4bis` 的可信边界口径一致 ✓；**盒心`/`盒半宽逐位 = 根内 `certC`/`rhoCert`** ✓（半宽 `4835703278458517/2^82` ✓）
+--   ⚠ **消费口径（其件头自述 + Lead 记）**：本条走 **(甲)**（**让 F1 的 `Jt` 就是这里的 `Jof`**）✓；
+--     若 F1 自建更宽 `Jt'` ⇒ 须对 `Jt'` **重新实例化** `check`（`K` 可能变大 ✗）⇒ **(甲)/(乙) 取舍仍待 Lead 裁** ✓
+--   ⚠ **Lead 的独立 Python 读出差 ~10×（如实记账）** ✗✓：`evidence/lead/payload-extract.py` 给 `Kmax = 4.1828e-4`，
+--     与本件 `decide` 核过的 `K = 4.372e-3` 不符 ⇒ **以本件为准** ✓（`decide` 是权威），**我的脚本低置信、待查** ✗（已上报作者）
+--   ⚠ **与源侧 `contraction_Q_inf_upper_exact` ≈ 4.37e-2 的 10× 关系**：两者**不同对象**（后者是更保守的 `Q_∞` 上界）—— 由本件读数澄清 ✓
+-- 内容逐字节自 evidence/root-audit/HsumPayload.lean（sha256 **a82270b7397bff30…**，40339 B）✓ Lead 复核一致；
+--   **整库共存自查 0 命中** ✓；**在 `namespace HsumPayload` 内**（无撞名风险 ✓）；
+--   **Lead 亲门：exit=0 / 0 error / 0 warning / 0 sorryAx / 26.1 s** ✓；**其 `#print axioms` 伴生件：8 条全 `[propext, Classical.choice, Quot.sound]`** ✓✓
+-- 期望：imports 82 → **83**；jobs 8806 → **8807**（**新模块** ✓）。
+import N11Formalization.HsumPayload
+-- R284 接根 C11（作者 f1-step2；Lead 亲门绿）：**KKT×λ 25 格落地 → 球级 `Jt'` 只差 `Hess` 49 格** ✓✓
+--   6 条（画像全标准三元组、**`sorryAx = 0`**；scope = **任意 `x : Fin 12 → ℝ`**）：
+--     `hasFDerivAt_gFun_any`｜`fderiv_adjointBlock_val_any`｜**`fderiv_adjointBlock_up5_any`**（T3，与 `Hess` 消费同一对象 ✓）
+--     ｜`differentiableAt_adjointBlockRow_any`｜**`fderiv_TCSystem_kkt_lam_any`**｜**`JT_kkt_lam_all`**（KKT×λ 25 格 ✓）
+--   ★ **Lead 诊断直接生效**：唯一 `unsolved goal`（L114）= `Finset.sum_eq_single` 的 `h₂` 分支
+--     （`m ∉ Finset.univ → … = 0`，**恒真空真**）⇒ **补一行 `· intro h; exact absurd (Finset.mem_univ m) h`** ✓（**形状族第 (f) 条** ✓）
+--   ★ **`sorryAx` 的来源已查清（作者自查 + Lead 复核）**：**全是错误恢复产物** —— T3 未过门时 Lean 把该定理留成 `sorryAx`，
+--     下游 `fderiv_TCSystem_kkt_lam_any`/`JT_kkt_lam_all` **继承** ✗；**件内无字面 `sorry`**（`grep` 仅命中件头注释文字 ✓）
+--     ⇒ 闭掉那一行后 **`sorryAx` 计数 = 0、六条画像全标准三元组** ✓✓
+--   ★ **我点的"报读数须点明 `sorryAx` 计数"已被作者接受并补进其报件模板** ✓✓
+--   ⚠ 另修一处**非数学**：`object file '…F1/BallD35C9.olean' does not exist` ⇒ 按纪律 **`lake build <该模块>`（串行、单件）、
+--     **不改代码**** ⇒ 8762 jobs 成功 ✓（**环境问题 ≠ 代码问题** ✓）
+--   ⚠ **计数（两条口径 + caveat 不变）** ✗✓：**残差行 60 格 + KKT×λ 25 格 = 数据全落** ✓；
+--     **区间侧 35/144** ✓ ／ **`fderiv` 形态（`hJ` 要的）仍记 0/144** ✗ —— **"数据已落" ≠ "已计入 `hJ`"**（须第 2 层球级 `Jt'` 组装 ✗）
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C11.lean（sha256 **bb492b333120ea92…**，11119 B）✓；
+--   **整库共存自查（按全限定名）: 6 名 ∩ srcDir = 空集** ✓；**Lead 亲门：exit=0 / 0 error / 0 warning / 0 sorryAx / 21 s** ✓。
+-- 期望：imports 83 → **84**；jobs 8807 → **8808**（**新模块** ✓）。
+import N11Formalization.F1.BallD35C11
+-- R284bis 接根 `EtaResCert`（作者 root-audit；Lead 亲门绿）：**η 侧的**参数化**证书（判据二第 6/7 项的共同 checker）** ✓✓
+--   `structure EtaResCert { Dcom, numY, loF, hiF, numEta, denEta, numK, denK, rhoNum, rhoDen }`（`loF/hiF` 是**向量** ✓）
+--   `def etaCheck (c) : Bool` = **9 条纯 ℤ 判据** ✓
+--   ★ **`etaCheck_sound {c} (h : c.etaCheck = true) : (∀ i, ((incrMatVec c.Yof c.Fof i).abs).hi ≤ η) ∧ (0 ≤ η) ∧ (η + K·ρ < ρ)`**
+--      ⇒ **一条 soundness 同时给 `hηb` ∧ `hη0` ∧ `hres`** ✓✓✓（即消费点第 6、7 项）
+--   ★ **两条 `*_rejected` 伴生**：`certEtaLIE_rejected`（`η` 压成 0，真实需 ≥1）｜`certEtaLIE2_rejected`（破坏 `hres`）✓✓
+--   `certEtaOK_hηb` / `certEtaOK_hη0` / `certEtaOK_hres`（诚实实例，由 soundness 一次得到 ✓）
+--   ⚠ **按 Lead 裁决做成**参数化形态**** ✓✓：`Fm` 是**显式数据**，**不触碰** `fmCert (lam) (D)`/`hD` ✗；
+--     **具体实例 = 把 `fmCert lamCert D` 的 12 对端点填进 `loF/hiF`**（`Dcom` 取共同分母）⇒ 判据自动生效、**无新数学** ✓
+--   ⚠ **避开同名陷阱** ✓：它把共同分母字段命名为 `Dcom`（**不引用** `ResidualDerivD.lean:619` 的残差块 `D` ✓）
+--   ⚠ **一条自查提醒（我采信）**：`HsumCert.lean` L26 的**注释**里含"零 `sorry`/零 `axiom`/零 `native_decide`"字样 ⇒ **按词 grep 会假阳 1 次** ✗
+--     （**注释块假阳类** ✓）；三个交付件的真实计数均为 0 ✓（逐件 `grep` + `#print axioms` **双证** ✓）
+--   `#print axioms` 八条 = **[propext, Classical.choice, Quot.sound]** ✓；**0 sorry / 0 axiom / 0 native_decide** ✓
+-- 内容逐字节自 evidence/root-audit/EtaResCert.lean（sha256 **628175c2a0967697…**，12803 B）✓；
+--   在 `namespace EtaResCert` 内（6 处未限定"命中"与 `HsumCert` 同名 ⇒ **命名空间不同 ⇒ 非真撞** ✓，build 为权威 ✓）；
+--   **Lead 亲门：exit=0 / 0 error / 0 warning / 0 sorryAx / 20.2 s** ✓。
+-- 期望：imports 84 → **85**；jobs 8808 → **8809**（**两件新模块，同一轮 +2** ✓）。
+import N11Formalization.EtaResCert
+-- R288 接根 `HfmUncond`（**Lead 自撰的"短装配"**，Leader 亲门绿）：**`hFm` 去条件 ⇒ 消费点第 5 项无条件** ✓✓
+--   ★ 依据（Lead 亲验：两处 `hD` 绑元形状**逐字相同**）：`hFm_of_hD` 是**参数化**的 ✓ ⇒
+--     **`hFm_uncond : ∀ k : Fin 12, (fmCert lamCert D k).Mem (TCSystem certCR k) := hFm_of_hD D hD`**（**一次应用** ✓✓）
+--     其中 `hD := ResidualDerivPos.hD`（`ResidualDerivPos.lean` L175–177，**零未消前提** ✓；链 `hD_of_diff` L130 +
+--     `differentiableAt_residualFun_cCertR` L146 **全在根** ✓）；`D := compIv 0..3 / compIv4`（`ResidualDerivD.lean` L619 ✓）
+--   `def FmUncond : Fin 12 → RatInterval := fmCert lamCert D` ＋ `hFm_uncond'`（同一结论的 `FmUncond` 表述 ✓）
+--   ⚠ **命名口径（Lead 本轮复发一次老坑）** ✗✓：**文件名不是 `namespace`** —— `D` 的全名是 **`N11Formalization.D`** ✗
+--     （我先写成 `ResidualDerivD.D` ⇒ `unknownIdentifier` ✗✓）；**凡引用跨文件声明，先 `#check`/`grep` 真名** ✓
+--   ⚠ **本条是"装配"不是"新数学"** ✓（`hD` 数据早已在根；本条只把它接上 `hFm_of_hD` ✓）
+--   ⇒ **计数不动**（`hFm` 属消费点第 5 项，**不在**球级 `Jt` 的 144 格账里 ✓）：区间侧 **35/144** ✓ ／ `fderiv` 形态 **0/144** ✗
+-- 内容逐字节自 evidence/lead/scratch/HfmUncond.lean（Lead 亲门：exit=0 / 0 error / 0 warning / 0 sorryAx / 0 输出行 ✓）。
+-- 期望：imports 85 → **86**；jobs 8809 → **8810**（**新模块** ✓）。
+import N11Formalization.HfmUncond
+-- R291 接根 `EtaResCons`（**Lead 自撰的短装配**，亲门绿）：**消费点的"数值级六项"用真实数据证出** ✓✓
+--   `hK0 : 0 ≤ KCons` ✓｜`hK1 : KCons < 1` ✓｜`hK'0 : 0 ≤ KConsR` ✓｜`hK'1 : KConsR < 1` ✓｜`hη0 : 0 ≤ etaCons` ✓
+--   ★★ **`hresCons : etaCons + KCons * rhoCertR < rhoCertR`** ✓✓（**Krawczyk 收缩不等式，用真实数据** ✓）
+--   选值（**全部取自根内已证常数** ✓，不自造数 ✗）：
+--     `K  := HsumPayload.certReal.numK / certReal.denK`（真实收缩 ✓，`HsumPayload` 已内核证）— 直接复用
+--            `HsumPayload.certReal_K_nonneg` / `certReal_K_lt_one` ✓（`.2.1`/`.2.2` 形态 ✓）
+--     `K' := HsumPayload.certRealR.numK / certRealR.denK` ✓（`certRealR_K_lt_one` ✓；非负由 `HsumCert.checkR_sound` 第二分量 ✓）
+--     `η  := 1 / 10^14`（**远宽于所需**：实测 `‖Y·F12(certCR)‖∞ = 2.263e-17` ✓）
+--     `ρ  := rhoCertR`（= `4835703278517…/2^82` ✓）
+--   证法：`K` 的整数展开给 `K ≤ 1/2` ✓、`ρ` 的展开给 `ρ/2 > 1e-14` ✓ ⇒ `nlinarith` ✓（**纯有理，无塔** ✓）
+--   ⚠ **命名口径（我又踩一次 ✗✓）**：`certReal*` 族全名 = **`N11Formalization.HsumPayload.*`**（`HsumPayload.certReal` 单独写**不解** ✗）；
+--     `rhoCert`/`rhoCertR` = **裸名**（`N11Formalization` 下 ✓，不是 `BoxRstar.*` ✗）⇒ **凡跨文件引用先 `#check` 真名** ✓
+--   ⚠ **作用域（如实）** ✗：本件**只**收这六项数值级前提；**不**触碰 `hηb`（依赖 `Fm` 的区间端点 ✗，**承重前置** ✗）
+--     ⇒ **不得据此宣称消费点第 6/7 项已关** ✗（`hηb` 仍缺 ✓）。
+-- 内容逐字节自 evidence/lead/scratch/EtaResCons.lean（sha256 **8c110a7ad016c48d…**，3110 B ✓；亲门 exit=0 / 0/0 / 0 输出行 ✓）。
+-- 期望：imports 86 → **87**；jobs 8810 → **8811**（**新模块** ✓）。
+import N11Formalization.EtaResCons
+-- R294 接根 `D2Leaves`（作者 `d2-leaves`；**Lead 代拷 + 单件门 + 代改本表** ✓）：**`Δ` 的二阶区间族（叶子二阶）**
+--   ★ 承重：`mem_hessEntry_of_leaves`（`Hess` 49 格缝证）的**最后一块输入** = `d2xIv`/`d2yIv`
+--     （= 根内 `ResidualDerivJTHess` 的 `hessIv`/`HessOf` 的**参数** ✓）⇒ 本件落地后该线**不再缺输入** ✓✓
+--   内容（Lead 从件里读到 ✓）：**`d2xIv_mem` / `d2yIv_mem`（`Fin 5 → Fin 7` ✓）** ＋ 逐格版
+--     `d2xIv_mem_cell_0_0_0` / `d2yIv_mem_cell_0_0_0` / `…_cell_4_0_0` ＋ **`ring2_mem` ／ `rho2Iv_mem`** ✓
+--   ⚠ **排序（本会话已证规矩）**：`d2xIv`/`d2yIv` **必须先落 `srcDir`**，缝证流才能 `import` 后在其上写定理 ✓
+--     （`evidence/` 下的在飞件**不可 import** ✗ —— 这是 `jth-assembly` 早先踩过的坑 ✓）
+--   ⚠ 作者自报其 `D2Axioms.lean` 是**探针（含输出 ⇒ 非零 ✓）**，不作交付物 ✓ ⇒ 落根前的 `#print axioms`
+--     由 **Lead 独立复核** ✓（其本文件门：**exit=0 / 0 B / 24.7 s** ✓，Lead 亲跑 ✓）
+-- 内容逐字节自 evidence/d2-leaves/scratch/D2Cell.lean（sha256 **0aa9c5cad571e8fd…**，75739 B ✓）。
+-- 期望：imports 87 → **88**；jobs 8811 → **8812**（**新模块** ✓）。
+-- R295 接根 **D 行读出（Lag 族）5 模块**（作者 `tower-bc`；Lead 代拷 + 逐件门 + 代改本表 ✓）
+--   ★ 承重：消费点 `hηb` 的**后 7 格**需要 `D : Fin 5 → Fin 7 → RatInterval` 的**全部 35 格**端点 ✓
+--     （前 5 格读出 `FmLagReadout.res_*` **早已在根** ✓）⇒ 本批落地后 **`D` 行 35/35 全在根内** ✓✓（**C1269 关闭** ✓）
+--   覆盖：`DrowK0`..`DrowK4` = `compIv 0..3` 与 `compIv4` 各 7 格（**逐 i = 0..6** ✓）
+--   规模：**466 中间格 / 932 条端点内核恒等式**（每件 **103 格/206 条**，`k4` 为 **54 格/108 条** ✓）
+--   口径（作者实证，Lead 采信 ✓）：**逐格界须逐格算** ✗ —— 最紧两格 = `(0,1) .hi = 1.0690`、`(1,3) .hi = 2.9724`
+--     ⇒ **`(compIv k i).hi ≤ 1` 不可套用**（多数 ≤1，个别 ≤2/≤5 ✓）；`(0,3)/(0,4)` 与 `(3,1..4)` 恰为 `⟨0,0⟩` ✓
+--   ⚠ 生成器级两条坑（作者实证 ✓）：`resHub 3 = 5`（`ResidualDerivD.lean` L274–279 逐字为
+--     `| 0 => 5 | 1 => 4 | 2 => 4 | 3 => 5 | 4 => 0` ✓）；**`rw [← 读出]` 需与读出**逐字同风格****（整数也写 `n / 1` ✓），
+--     即"字面量渲染"问题，与"索引 `if` 需就地补引理"（索引归约）是两件事 ✓
+--   Lead 亲验：七件（含 C/E/F/G×3/H）在本基线上**逐件 exit=0 / 输出 0 B** ✓✓（sha：F `8C209EB668131EBB`、
+--     G `029FBDD3F543A60F`/`C78DDD06708DE3E3`/`29F6D18B19111407`、H `5E7C92EAA1C61662` ✓）
+-- 内容逐字节自 evidence/tower-bc/scratch/TowerBC_{F,G,G,G,H}_drow_k{0..4}_ladder.lean（各件门：exit=0 / 0 B ✓）。
+-- 期望：imports 88 → **93**；jobs 8812 → **8817**（**5 个新模块** ✓）。
+-- ⚠ R295-fix（Lead 自查）：上一发 `edit` **误把 `import N11Formalization.D2Leaves` 整行替换掉** ✗✓
+--   ⇒ `D2Leaves` 掉出**根锥**（虽仍在 `srcDir` 被 glob 编译 ⇒ jobs 少 1、且**无任何引用者 ⇒ 静默** ✗）
+--   ⇒ 现补回；算术即对上：imports 88 − 1 + 5 = 92（错）→ **88 + 5 = 93（对）**；jobs 8812 + 5 = **8817** ✓
+import N11Formalization.D2Leaves
+import N11Formalization.DrowK0
+import N11Formalization.DrowK1
+import N11Formalization.DrowK2
+import N11Formalization.DrowK3
+import N11Formalization.DrowK4
+-- R298 接根 **`FmAdjReadout`**（作者 `eta-instance`；Lead 代拷 + 单件门 + **同时-import 探针** + 代改本表 ✓）
+--   ★ 承重：(消费点 `hηb` 的输入）**`fmAdj`（= `Fm` 的后 7 个分量）的区间读出** ✓✓
+--     —— 这正是此前判为"消费点缺的那一块"（`Fm` 前 5 格读出 `FmLagReadout.res_*` 早已在根 ✓）
+--   内容（Lead 从件里读到 ✓）：**7 格 × 2 端点 = 14 条端点恒等式** ＋ 14 条 `fmCert` 侧形态 ＋ 7 条整区间等式
+--     ＋ 11 条先决（`BC_finRange5`／`BC_to12b_*`／`BC_lamCert_*`／`BC_colidx_{5..11}` ✓）；**层数 = 1 层**；表 ≈ 26 条 ✓
+--   Lead 亲验：**单件门 exit=0 / 0 error / 0 warning / 输出 0 B / 28.4 s** ✓；`lake build N11Formalization.FmAdjReadout` ✓（8751 jobs）
+--     ；**同时-import 探针（`import N11Formalization` ＋ 本件）exit=0 / 0 B** ✓✓（第 16 条口径 ✓ —— 接表前必跑 ✓）
+--     冲突预检：其 **60 条声明名与 `srcDir` 既有声明零交集** ✓（其 `BC_*` 在**裸** `N11Formalization` 下，
+--     而 `DrowK*` 的同名前缀在 `N11Formalization.DrowK{i}` **子命名空间**内 ⇒ 不冲突 ✓）
+--   ⚠ 流程细节（记账 ✓）：**"拷进 srcDir"≠"可被 import"** ✗ —— 必须先 **`lake build <模块>`** 产 `.olean`
+--     到 `.lake/build/lib/lean/…`，探针才通过 ✓（我这轮先漏了这步 ⇒ 探针报 `object file … does not exist` ✗✓）
+--   ⚠ 作者本轮另报一处**实测硬阻断**（真实端点喂 `EtaResCert` ⇒ `Dcom` **53869 位**／`E` **107737 位** ⇒ 内核 `decide` 不可行 ✗✓，
+--     与 `HsumPayload` 的 `2^320`=**96 位**差 ~5 个数量级）⇒ Lead 已裁决走"**外舍二进网格 ＋ 现成 etaCheck ＋ 单调性引理**"✓
+--     （保 `hηb`/`hFm` 同一对象 ✓ —— C1270 教训 ✓；详见 STATUS R94 / DEAD §37 ✓）
+-- 内容逐字节自 evidence/eta-instance/scratch/FmAdjReadout.lean（sha256 **7b339fecf9681ba4…**，1,987,012 B ✓）。
+-- 期望：imports 93 → **94**；jobs 8817 → **8818**（**1 个新模块** ✓）。
+import N11Formalization.FmAdjReadout
+-- R303 接根 **`EtaInstance`**（作者 `eta-instance`；Lead 代拷 + build + 单件门 + 同时-import 探针 + 代改本表 ✓）
+--   ★★★ 承重：**消费点第 (8) 项 `hηb` 的完整实例** ✓✓ —— 这是本会话**第一个整项闭合的消费点前提** ✓✓
+--     `Fm` = **真 `fmCert lamCert D`**（**不是**外舍件 ⇒ **对象同一性守住** ✓，C1270 教训 ✓）；
+--     `η` = `EtaResCons.etaCons = 1/10^14`（与 `hresCons` **同一 η** ✓）；`Y` = `HsumPayload.certReal.Yof`
+--     （`Dcom = 2^320` ⇒ **与 `numY` 同网格 ⇒ 零重标定** ✓）；**无新增前提** ✓（12 条 `Fm` 合法性由读出字面量比较**无条件**证出，不依赖 `hD` ✓）
+--   件内**六层，全部 kernel-proved** ✓：L1 数据（`EtaDcom` 字面量 `2^320`、`EtaDcom_eq_payload` rfl 级、`etaLoF/etaHiF`）｜
+--     **L2 取整包络 24 条（`enc_lo_{0..11}`/`enc_hi_{0..11}` — 其具名义务 ③ 已闭 ✓）**｜L3 组装（`FmW` ＋ `enc_{0..11}` ＋ `enc_all`）｜
+--     L4 单调性（5 条；工具全在根 ⇒ **零新数学**）｜L4b 真 `Fm` 12 条合法性（无条件）｜L5 `EtaResCert` 实例 ＋ `cEta_check`｜**L6 `eta_hηb`/`eta_hηb_pair`** ✓
+--   公理画像（其报，我复核方向一致）：`eta_hηb`/`eta_hηb_pair`/`cEta_check`/`etaValid_all`/`etaAbs_hi_mono`/`enc_all`/`enc_lo_5`
+--     全 = `[propext, Classical.choice, Quot.sound]`；`EtaDcom_eq_payload` = **无公理** ✓ ⇒ 0 `sorryAx` / 0 自定义公理 / 0 `native_decide` ✓
+--   ★ **与 `tower-bc` 的件 I 是**交叉复核**而**不是**两份铺设**** ✓✓（第 16 条 ✓）：同 24 条包络，但**证法/数据源不同** ——
+--     件 I 把 `num/den` **字面量写进 ℤ 语句**（575 KB，`simp only` + `decide`）；本件**不写字面量**，靠 **`rw [读出]`**（读出是根内 kernel 事实）
+--     ⇒ `div_le_iff₀`/`le_div_iff₀` ⇒ ℤ 交叉相乘 ⇒ **`norm_cast`**（**26.7 KB，零转写面 ⇒ 转写漂移风险 = 0** ✓）；
+--     `check_fmdata.py` 用**它自己的 12 个精确端点**独立核过：ENCLOSURE **12/12**、`loF/hiF` 与 floor/ceil **精确命中** ✓
+--   ★ **口径更精确（本件实测 ✓✓）**：根因不是"必须抬 `exponentiation.threshold`"，而是 `norm_num`/`norm_cast` 撞 `2^320` 被**指数阈值 256** 挡住 ⇒
+--     **两条修法**：抬阈值 ✓ **或把 `Dcom` 直接写成**字面量****（本件 ✓ ⇒ **连全局 `set_option` 都不需要**、全程零 warning ✓）；
+--     且**收尾一律用 `norm_cast`**（`norm_num` **收不了**交叉相乘后的 ℚ 目标 ✗ —— 实测 ✓）
+--   Lead 亲验：单件门 **exit=0 / 0 error / 0 warning / 输出 0 B / 24.3 s** ✓；`lake build N11Formalization.EtaInstance` ✓（8760 jobs）
+--     ；**同时-import 探针（根 ＋ 本件）exit=0 / 0 B** ✓✓
+--   ⚠ 作者另有子件 `EtaFmEnclosure.lean`（25724 B，门绿 ✓）＝ L1–L3 的**里程碑**，**不单独落根**（以本件为交付 ✓）
+-- 内容逐字节自 evidence/eta-instance/scratch/EtaInstance.lean（sha256 **a00a3cf6273dd6fa…**，26748 B ✓）。
+-- 期望：imports 96 → **97**；jobs 8820 → **8821**（**1 个新模块** ✓）。
+import N11Formalization.EtaInstance
+-- R297 接根 **`hess-seam` 的缝证件（2 模块）**（作者 `hess-seam`；Lead 代拷 + 逐件门 + 代改本表 ✓）
+--   ★ 承重：(消费点第 (6) 项 `hJ` 的**上游**）`hessIv`/`HessOf` 的 **`Mem` 缝**
+--     ① **缝**一律**全称**（`∀ k i j` / `∀ i j mm`）⇒ **49 个 KKT×z 格 ＋ 12×12 总装 = 0 条引理** ✓✓
+--        （49 格 = 一行/格：`mem_Jt_kkt_z … (mem_hessEntry_of_leaves …) i j` ✓）
+--     ② `hL7` **不是 `rfl`**（`hessEntry` 走 CLM 值函数的 `mm` 分量、`secondPartial` 走标量函数 ⇒ 类型不同 ✓）
+--        ⇒ 绿件里它**只作显式参数**（**无暗塞** ✓）；其**一阶桥**已在本批 `HessSeamBridge` 内核证明 ✓
+--     ③ `hH_ball` 形状已给（`HHBall Hess := ∀ x ∈ closedBall u0 rhoCertR, ∀ i j mm, (Hess i j mm).Mem (hessEntryAt x i j mm)` ✓）
+--        ＋ `mem_hessEntry_of_hH_ball (h) (hρ : 0 ≤ rhoCertR) ⇒ hH`（**零新层** ✓）
+--        ⇒ 其缺口**精确为盒版二阶叶 6 族**：`rho2IvBox`／`ring2Box`／`arc2Box`／`Wy2Box`／`d2xIvBox`／`d2yIvBox` ✗
+--          （成本 ≈ `D2Leaves` 的 box 平移 ✓ ＋ `hessIvBox` 1 行 ＋ 缝脚本逐字复用 ⇒ **0 条新数学** ✓）
+--   Lead 亲验（从 srcDir 跑）：`HessSeamMain` exit=0 / 0 B / 20.4 s ✓；`HessSeamBridge` exit=0 / 0 B / 19.4 s ✓
+--   公理：Cell000 11/11 ＋ Bridge 8/8 全 = `[propext, Classical.choice, Quot.sound]` ✓（作者报，Lead 抽核 ✓）
+--   ⚠ **只落这两个** ✗：作者的同命名空间变异件（`HessSeam_ENeg_control` / `HessSeam_MD_mulswap` / `HessSeam_MC2_hL7swap`）
+--      **同名** ⇒ 若落根会与此批**硬错** ✗（留档在 evidence/ ✓）
+--   ⚠ 作者另有件 `d1xIv_mem`/`d1yIv_mem`（在 `namespace HessSeam` 内 ✓）＝ `d2-leaves` 的 `D2Wiring.lean` 的**同内容备选**
+--      ⇒ **不落**（避免同内容两份；`D2Wiring` 亦保留在 evidence/ 作备选 ✓）
+-- 内容逐字节自 evidence/hess-seam/scratch/HessSeam_{Cell000,Bridge}.lean（各件门：exit=0 / 0 B ✓）。
+-- 期望：imports 93 → **95**；jobs 8817 → **8819**（**2 个新模块** ✓）。
+-- ⛔ R297 **已回退**（Lead，2026-09-27）：接 `HessSeamMain` + `HessSeamBridge` 时根构失败 ×3：
+--   `import N11Formalization.HessSeamBridge failed, environment already contains 'N11Formalization.…'`
+--   **真因**（Lead 定位 ✓）：两件在共享 `namespace HessSeam` 内**各自声明了 `d1xR`／`d1yR`** ✗（`Main ∩ Bridge = {d1xR, d1yR}` ✓）
+--     ⇒ 同名的**硬错**（本工程"同名不同陈述 ⇒ 硬错"的第 N 次实例 ✓）；两件**分别**单件门都绿 ✓（19–20 s / 0 B ✓）
+--   **⇒ 处置**：① **先回退本表**（**绝不让根停在红** ✓✓ —— 根恢复 `93 imports / jobs=8817` ✓）
+--             ② 唤醒作者 `hess-seam` 去重（**约定**：让 `HessSeamBridge` `import` `HessSeamMain` 并**删掉自己的重复 `d1xR`/`d1yR`**（若两者定义逐字相同 ✓）
+--                或按"新来者改名"规矩改名 ✓）；去重后**重跑两件单件门**并报我 ✓ ⇒ 我再接表 + 两连门 ✓
+--   ⚠ 两个件仍**安全留在 `srcDir`** ✓（**未被根表 import ⇒ 不入锥 ⇒ 不影响根构** ✓ —— 这是"先放 srcDir、后接表"的分步好处 ✓）
+--   ⚠ 教训（写入口径 ✓）：**"两个单件各自门绿"不足以证明"能同时入根"** ✗✓ —— 接表前必须查**两件声明名的交集** ✓
+-- R299 接根 **`hess-seam` 的缝证件（2 模块，**去重版 v2**）**（作者 `hess-seam`；Lead 代拷 + 去重恢复 + 逐件门 + 同时-import 探针 + 代改本表 ✓）
+--   ★ 承重：(消费点第 (6) 项 `hJ` 的**上游**）`hessIv`/`HessOf` 的 **`Mem` 缝** —— 见 R297 段的完整说明 ✓
+--   **本轮解决的两件事** ✓：
+--     ① **去重**：作者已出 **v2**（`evidence/hess-seam/scratch/HessSeamBridge_v2.lean`，sha16 **`CF5E077F841A165B`** ✓ ——
+--        即**现安装态**；其"注释前身" `AAC9D3EE7B9ECD6A` 与它**数学逐字节相同**，仅件头一行注释由"12 条"订正为"16 条" ✓）——
+--        把 `import D2Leaves` → **`import N11Formalization.HessSeamMain`** ＋ **删掉自带的 `d1xR`/`d1yR`** ✓（= 我建议的方案 (a) ✓）
+--        ⇒ 冲突消除 ✓（我先前落的 v1 报 `environment already contains` ✗）
+--     ⚠ **Lead 自己的失误（已修，记账 ✓）**：我把 evidence 里的**旧 v1** 覆盖到了 `srcDir`（**覆盖了更新的 v2** ✗✓）⇒
+--        现已从 `HessSeamBridge_v2.lean` **恢复 v2** ✓。**新口径**：**拷贝前必须比 mtime/sha——绝不用旧版覆盖新版** ✗✓
+--     ② **验收三连**（Lead 亲跑 ✓）：`lake build` 两件 exit=0 ✓；逐件门 **`HessSeamMain` exit=0 / 0 B** ✓、**`HessSeamBridge` exit=0 / 0 B** ✓；
+--        **同时-import 探针**（根 ＋ 两件）**exit=0 / 0 B** ✓✓（第 16 条口径 ✓ —— 本轮它第二次起作用 ✓）
+--   ⚠ **只落这两个** ✗：作者的同命名空间变异件（`HessSeam_ENeg_control`／`HessSeam_MD_mulswap`／`HessSeam_MC2_hL7swap`）
+--     **同名** ⇒ 若落根会与此批**硬错** ✗（留档在 evidence/ ✓）
+--   ⚠ `hL7` **不是 `rfl`**（真具名 gap，绿件里**只作显式参数** ✓）；其一阶桥已在本批 `HessSeamBridge` 内核证明 ✓
+--   ⚠ `hH_ball` 的缺口**精确为盒版二阶叶 6 族**（`rho2IvBox`/`ring2Box`/`arc2Box`/`Wy2Box`/`d2xIvBox`/`d2yIvBox` ✗）
+--     ⇒ 已把靶单转交 `drow-ball` ✓（成本 ≈ `D2Leaves` 的 box 平移 ＋ `hessIvBox` 1 行 ＋ 缝脚本逐字复用 ⇒ **0 条新数学** ✓）
+-- 内容逐字节自 evidence/hess-seam/scratch/HessSeam_{Cell000,Bridge_v2}.lean（各件门：exit=0 / 0 B ✓）。
+-- 期望：imports 94 → **96**；jobs 8818 → **8820**（**2 个新模块** ✓）。
+import N11Formalization.HessSeamMain
+import N11Formalization.HessSeamBridge
+-- R305 接根 **`HessSeamHL7`**（作者 `hess-seam`；Lead 代拷 + build + 单件门 + **三件同时-import 探针** + 代改本表 ✓）
+--   ★ 承重：**`hL7`（C1296，缝的具名 gap）的两步已 kernel-proved** ✓✓
+--     ① `hessEntry_eq_secondPartial_residualFun`（∀ i j mm）✓ —— CLM 值二阶的 `mm` 分量 → 标量函数 `f_mm` 的二阶偏导
+--        （`Φ := compL ℝ … (proj mm)` ＋ `EventuallyEq.fderiv_eq` ＋ `HasFDerivAt.comp`，两端降到同一正规形 ✓）
+--     ② 节点层 ✓：`L2DeltaX`/`L2DeltaY`（5 支镜像 `Apt`/`Bpt`；hub 侧仿射 ⇒ 0）＋ `hasFDerivAt_fderiv_DeltaX/Y`
+--        ＋ `hasFDerivAt_DeltaX/Y` ＋ `eventually_diff_DeltaX/Y`
+--   ★★ **接口新闻（消费侧必须知道 ✓✓）**：①-步**必须**多带 **`hd : ∀ᶠ z in nhds u0, DifferentiableAt ℝ residualFun z`** ✗
+--      —— **不能由 `hadj` 推出** ✓（作者反例：`residualFun = (光滑分量, Weierstrass 分量)` ⇒ `fderiv residualFun ≡ 0`
+--         （常值 ⇒ `hadj` 无条件成立）而光滑分量 `secondPartial ≠ 0` ⇒ **去掉 `hd` 结论假** ✓✓）；
+--      `hd` 与 T1/T2/T3 既有前提**同形** ⇒ **合并同一批**（不增总负担 ✓）；根内供给 = `Smoothness.contDiffAt_residualFun` ✓
+--   ⚠ `hL7` **本身仍 gap**（C1296 ✓）；剩余清单（作者具名）：(i) `SRad := Δx·Δx+Δy·Δy` 三节点 →(ii) `dSRad_single`/`SRad2_single`
+--      →(iii) `L2SqrtSRad`＋T2（**逐字同型** `D2Leaves.L2SqrtW` ✓）→(iv) `sqrtSRad2_single` →(v) →(vi) 终装 ⇒ **`hL7_proved`**
+--   Lead 亲验：`lake build N11Formalization.HessSeamHL7` ✓（`Built … (16s)`，8752 jobs）；单件门 **exit=0 / 0 error / 0 warning / 0 B / 23.7 s** ✓
+--      ；**三件同时-import 探针**（根 ＋ Main ＋ Bridge ＋ 本件）**exit=0 / 0 B** ✓✓（第 16 条 v2 ✓）；依赖链 **单向无环** ✓；axioms 6/6 标准 ✓
+-- 内容逐字节自 evidence/hess-seam/scratch/HessSeamHL7.lean（sha256 **92402ec6195d3f69…**，14398 B / 235 行 ✓）。
+-- 期望：imports 97 → **98**；jobs 8821 → **8822**（**1 个新模块** ✓）。
+import N11Formalization.HessSeamHL7
+import N11Formalization.ResidualDerivJT
+import N11Formalization.ResidualDerivJTHess  -- R145 接根（Lead）：T2 = hasFDerivAt_fderiv_comp_scalar（R144 证成）+ H4 层 1 六条；Lead 实测 7/7 公理画像 = 标准三元组；该模块本在 srcDir 内（按 DEAD §C¹¹ 须常绿）⇒ 接根只增审计覆盖、不增风险
+import N11Formalization.NondegProof
+import N11Formalization.NondegInterface
+import N11Formalization.SourceLoop  -- R44 接回：作者交付只含 §1–§6 的 green 版（SHA 42B483D9BB5321FC，425 行；§7/§8 未落稿移至 evidence/source-loop/_sec78attempt.lean，§7 未证以 s5Loop_eq_residual_pending 显式标注）。R43 曾因破损态（EDFB86F72A79B114）暂停
+import N11Formalization.FmAssembly
+import N11Formalization.IntervalAD
+import N11Formalization.Assembly.ArcCover
+import N11Formalization.Audit.Drift
+import N11Formalization.Audit.CrossCheck
+import N11Formalization.Audit.CertBoxPinning
+import N11Formalization.Audit.InterfaceSharpening
+import N11Formalization.Assembly.G2Unified
+-- R217 接根（作者 g3-recon 请求，Lead 执行）：G3 的 L0/L1 两片从 evidence/ 移入 srcDir。
+-- 理由：evidence/ 不在 lake srcDir 内 ⇒ 其中件**不可被 import**（L2 依赖 L1 时编译失败，已由 L74 实证）
+--   且**不计已付**（SOURCE-MAP §8.2「绿件在根 cone 外 = 零审计覆盖」的操作性后果）。
+-- 内容：逐字节自 evidence/g3-recon/G3-SLICE-L0.lean（sha256 73e7ce4d…8c0a8，13552 B）、
+--   G3-SLICE-L1.lean（sha256 8e1e6dd4…7affa，11790 B）拷贝，落地后 Lead 已复核 sha256 一致。
+-- 件内命名空间保留 N11Formalization.G3SliceL0 / G3SliceL1（作者 L2 按此限定名引用，改则引用断）。
+-- 期望 jobs：+2。若 jobs 不变 ⇒ 模块未被当作新增（路径/文件名问题）⇒ 须重查。
+import N11Formalization.G3.SliceL0
+import N11Formalization.G3.SliceL1
+-- R220 接根 L2（作者 g3-recon 请求，Lead 执行）：π-平移层，L1 扩窗 cos 界与真实格区间之间的唯一缺环。
+-- 内容逐字节自 evidence/g3-recon/G3-SLICE-L2.lean（sha256 e8db60ae…5be5，11452 B），落地后 Lead 复核一致。
+-- 它现只依赖已入根的 N11Formalization.G3.SliceL1（+ Interval.Taylor19C），**已无第二份副本**（R219 去重）✓。
+-- 件内命名空间 N11Formalization.G3SliceL2（与模块名 N11Formalization.G3.SliceL2 不同名，属允许）。
+-- 期望 jobs：+1（8784 → 8785）。若不变 ⇒ 模块未被当作新增 ⇒ 须重查。
+import N11Formalization.G3.SliceL2
+-- R231 接根 F1（作者 f1-step2 请求，Lead 执行）：F1 球级 35 格的层序件 + 第一批具体正性。
+-- 内容逐字节自 evidence/f1-step2/ 拷贝：
+--   F1-BallD35.lean     → F1/BallD35.lean（sha256 b7518651…99e1，23485 B）✓ 与作者指纹一致
+--   F1-BallD35-hrad.lean → F1/BallD35Hrad.lean（sha256 **e489f3cb0713b6d8**，**27286 B**）
+-- ⚠ 作者报告时给的是 f5aa80d61b2dfee3 / 25645 B（17 条画像）；**源件在报告之后又被追加 2 条定理**
+--   ⇒ 其旧读数**按 DEAD C⁷ 作废** ✗；Lead **自行编译新内容**：exit=0 / error=0 / sorryAx=0 / **19 条画像** ✓，
+--   故以 **Lead 实测的新指纹 e489f3cb0713b6d8 为准**（**不采用其过期读数**）。
+-- 理由：承重（球级 35 格层序件 ①–③+⑤，及 hrad = 两批具体正性的第一批）。
+-- 期望 jobs：8785 → **8787（+2）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+-- ⚠ R231 冲突与解决（**重要** ✗✓）：作者请求"两件一起接根"，但**两件在 namespace N11Formalization 里
+--   声明了同名集合**（连行号都相同：wkBox L34 / wkBox_pos L37 / wkBox_mem L40 / AptBox_mem L87 /
+--   compIvBox_mem L448）⇒ **BallD35Hrad 是 BallD35 的超集**（同一前缀 + ⑦ 收口新增 2 条）。
+--   同时 import 两者 ⇒ 根闸红：`environment already contains 'N11Formalization.BptBox_mem.match_1_1'
+--   from N11Formalization.F1.BallD35` ✗ ⇒ **故只 import 超集 BallD35Hrad**（Lead 已自测其 19 条画像全绿 ✓）。
+--   期望 jobs：8785 → **8786（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35Hrad
+-- R236 接根 C1（作者 f1-step2 请求，Lead 执行；Lead 裁决见 STATUS R235）：
+--   件 C1 = 件 C（把 *Real 桥到 fderiv ℝ residualFun (first7 x)）的第一片，内容为**角层点无关**：
+--     hasFDerivAt_linComb_any / hasFDerivAt_angleVec_any / hasFDerivAt_thetaOf_any /
+--     fderiv_angleVec_any_single（∂a_j/∂z_i = dAngle j i 与点无关）/ fderiv_thetaOf_any_single /
+--     angle_layer_pointfree
+--   ⇒ **把 Lead R231/232 的**断言**（"可省的一环 = daCLM/dthetaCLM 为常数整数矩阵"）证成定理** ✓
+--   ⇒ 件 C 的剩余义务因此精确缩窄为：ρ、ringCenter、arcEnd、Uvec/hub/wPoint、乘积、dist 各层。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C1.lean（sha256 **03612f77…59bf**，4191 B）✓ Lead 复核一致；
+--   其 6 条画像全 [propext, Classical.choice, Quot.sound] ✓。
+-- **共存自查（Lead 独立复核）**：C1 顶层名 6 ∩ F1/BallD35Hrad 顶层名 71 ⇒ **交集 = 0** ✓（与作者自查一致）。
+-- 期望 jobs：8786 → **8787（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35C1
+-- R241 接根 L3（作者 g3-recon 请求，Lead 执行）：叶义务的**精确归约**。
+--   核心 minorant_iff_endpoints_and_critical：紧性 + Fermat（IsCompact.exists_isMaxOn → IsMaxOn.isLocalMax
+--   → IsLocalMax.deriv_eq_zero）⇒ "∀z∈[a,b], s z+v ≤ 1−cos z" ⟺ 两端条件 ∧ ∀z∈[a,b], sin z = s → s z+v ≤ 1−cos z"
+--   （**不强不弱**）；并有 cos_eq_sqrt_one_sub_sq / critical_condition_algebraic（临界条件化归）。
+--   配套 L4（asin 有理外壳，6 条，亦已自过门）随后要 import 本件。
+-- 内容逐字节自 evidence/g3-recon/G3-SLICE-L3.lean（sha256 **4d32fca3b9893c39…**，8720 B）✓ Lead 复核一致；
+--   6 条画像全 [propext, Classical.choice, Quot.sound] ✓；自包含（只 import Mathlib）。
+-- **共存自查（Lead 独立、精确匹配）**：L3 的 9 个顶层名在 lean/ 内**精确命中 0** ⇒ 可共存 ✓
+--   ⚠ 口径精化 ✗✓：**共存自查必须**精确匹配整行声明**（`^(theorem|def|…)\s+名\b`）**；
+--     **子串匹配会给假阳**（本例初查曾因单字母名 `S` 与 `BoxRstarPrintAxioms.lean` 误报）✗。
+-- 期望 jobs：8787 → **8788（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.G3.SliceL3
+-- R253 接根 L4（作者 g3-recon 请求，Lead 执行）：**asin/arcsin 有理夹逼**——R252 实测证明它是**必需**的。
+--   R252 的反例：作者自设 `no_critical_route_probe.py` ⇒ **不定位临界点的路线失败 544/2386 叶** ✗✗
+--     （最差叶 3: 余量 2.917420e-05 vs 叶级损失 7.090118e-04 ⇒ 比 4.1e-02 < 1）
+--     ⇒ 故 Lead 撤回其 R247 的 (a) 裁决（该裁决的前提"重算 v' 无需定位极小点"已被证伪 ✗）。
+--   正确路线：平移窗内 |t| ≤ 39/25 < π/2 ⇒ cos > 0 ⇒ φ'' = cos > 0 ⇒ φ' = sin − s 严格单增
+--     ⇒ **内部极小点唯一** ✓；端点情由根核判，否则二分夹 sin z* = s 到 ε ⇒
+--     `1 − cos z*` 用根核括号 + Lipschitz、**`s·z*` 用本件的 `s·z ≤ max(s·x)(s·y)`** ⇒ 叶级损失 ~3e-12 ≪ 1.642e-9 ✓。
+--   本件 6 条: eq_arcsin_of_sin_eq / le_arcsin_of_sin_le / arcsin_le_of_sin_le / arcsin_bracket /
+--     critical_condition_of_bracket / critical_condition_of_arcsin_bracket（自包含，只 import Mathlib ✓）。
+-- 内容逐字节自 evidence/g3-recon/G3-SLICE-L4.lean（sha256 **a4aa9b35775c997b…**，6056 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑）: 命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8788 → **8789（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.G3.SliceL4
+-- R255 接根 C2（作者 f1-step2 的精简版；**Lead 自行补做前置检查并 import**）：
+--   背景：作者未及发正式请求（余额仅 1 轮），但 **Lead 已两次独立编译该件均 clean**
+--   （exit=0 / 0 error / 0 warning / sorryAx=0 / 7 条画像），且整库共存自查命中 0 ⇒ 由 Lead 直接接根。
+--   内容 = 件 C 的 **ringCenter 层**（作者 R247 普查所定的真缺口之一，原判"一行"）+ arc 层接合定理：
+--     fderiv_ArcC_zero_eq_arc0Real / fderiv_ArcC_one_eq_arc1Real（根内 ArcC 的导数 = 件 AB 的 arc*Real）
+--     hasFDerivAt_ringCenter0_any / hasFDerivAt_ringCenter1_any
+--     fderiv_ringCenter0_any_eq_ring0Real / fderiv_ringCenter1_any_eq_ring1Real
+--   ⇒ **已按 Lead 裁决删去与根内重复的 ρ 层三条**（hasFDerivAt_radicand_any / rhoCLMAt / hasFDerivAt_rhoK_any）；
+--     其余按名引用根内件（ResidualDerivJT / F1.BallD35Hrad / F1.BallD35C1），不重证 ✓。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C2.lean（sha256 **d55d39e29ab82f2a…**，6941 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑）: 命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8789 → **8790（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35C2
+-- R256 接根 L5（作者 g3-recon 请求，Lead 执行）：**记录数据上第一条完整的 per-line minorant**（无需 arcsin）。
+--   核心 `minorant4348` = **整条义务**：∀ z ∈ Icc a4348 b4348, 0·z + v4348 ≤ 1 − cos z；叶 4348 为最紧叶（余量 1.642332e-09）。
+--   一般引理 `minorant_of_no_interior_critical`：临界点被端点耗尽时端点条件即足够。
+--   **⚠ 该引理 sound 但**假设过强****（作者 R256 自查纠正）：正确的判据是**凹性/奇偶**而非"无临界点"——
+--     平移后 ψ''(t) = −(−1)^k·cos t，窗口内 cos t > 0 ⇒ k 偶 ⇒ ψ 严格凹 ⇒ 最小值必在端点（与临界点无关）；
+--     ⇒ 其实例正确、可留；但 L6 将加两条**语句不同**（假设不同 ⇒ 不构成两份）的正确引理：
+--       `minorant_of_concave_on_shifted`（凹 ⇒ 端点够，覆盖 59266 条）与 `minorant_of_deriv_const_sign`（ψ' 常号，覆盖 11909 条）。
+--   松弛取法（L 类交付项）：每端取**近端**括号点 ⇒ 松弛 = π 括号宽 1e-20（而非格宽 2.863859e-03）⇒ 叶级损失 1.512e-24、余量比 1.086e15。
+-- 内容逐字节自 evidence/g3-recon/G3-SLICE-L5.lean（sha256 **53d62087da761f5b…**，11222 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 19 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8790 → **8791（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.G3.SliceL5
+-- R256 接根 L6（作者 g3-recon 请求，Lead 执行）：**两条**方向正确**的通用端点引理**，覆盖 78139/124130 条（62.9%）。
+--   `convexOn_S_of_cos_nonpos`（∀z∈[a,b], cos z ≤ 0 ⇒ ConvexOn ℝ (Icc a b) (S s v)）+ `deriv2_S`（deriv^[2] S = −cos）。
+--   **`minorant_of_cos_nonpos`**：cos ≤ 0 ＋ 两条端点条件 ⇒ **整条义务** ——
+--     经 `ConvexOn.le_on_segment` 得 **`φ(z) ≤ max(φ a, φ b)`**，**正是上界型义务（φ ≤ 0）所需的"最大值在端点"** ✓✓
+--     ⇒ 覆盖 **A 类 64864 条（52.3%）**（A = k 奇 ⇒ 原区间 cos z < 0 ⇒ φ'' > 0 ⇒ φ 凸）。
+--   **`minorant_of_deriv_nonneg` / `minorant_of_deriv_nonpos`**：φ' 常号 ＋ 相应端点条件 ⇒ 整条义务
+--     ⇒ 覆盖 **B 类 13275 条（10.7%）**。**合计 62.9%；余 C 类 45991 条（37.1%）待夹缝片。**
+--   ⚠ 背景（R256 的三次同轴纠正）：判别性质是**凸性/奇偶**、且方向必须是"**最大值**在端点"（上界型义务）；
+--     本条把方向写进了**证明本身**（`φ(z) ≤ max(φa, φb)`）⇒ 不再依赖散文陈述 ✓✓。
+--   ⚠ 与 L5 的 `minorant_of_no_interior_critical` **假设不同**（后者要求"无内临界点"，假设过强）⇒ **不构成"两份"**：一为更优工具、一为 sound 但弱 ✓。
+-- 内容逐字节自 evidence/g3-recon/G3-SLICE-L6.lean（sha256 **0be6e7e7abb60397…**，6439 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 6 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8791 → **8792（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.G3.SliceL6
+-- R256 接根 ArcsinBracket（作者 g3-recon 请求，Lead 执行）：**G3/G5 共享缺失内核的独立件**。
+--   内容（4 条，画像全标准三元组）：
+--     **`arcsin_bracket_of_kernel`** —— **一条无字面量的一般定理**：核的有理界 `sinHiNLag x ≤ s ≤ sinLoNLag y`
+--       ⇒ `arcsin s ∈ [x,y]` ✓✓（**正是 L4 的夹逼框架所缺的"由核产生括号"的那一半** ✓）；
+--     `asinLo = 3897/10000`、`asinHi = 3899/10000`（+ 两条 kernel 比较 + 窗口）；
+--     **`arcsin_19_50_mem`**：`3897/10000 ≤ arcsin(19/50) ≤ 3899/10000` ✓；
+--     **`arc_L_mem`**：**`3897/5000 ≤ L = 2·arcsin(19/50) ≤ 3899/5000`** ✓✓（**乘 2 保方向**）。
+--   ⇒ **它解除了 G3 关键路径的前置**：叶级聚合（2386 条，而非 124130）需 `L` 的向外有理括号 —— 现已具 ✓✓。
+--   ⚠ **架构：独立件**（`import` 只有 Mathlib + `IntervalsHighLag`，**无 G3 依赖** ✓）—— 且这是**自然**满足的：
+--     mathlib 自带 `Real.arcsin_le_iff_le_sin` / `Real.le_arcsin_iff_sin_le`（即 L4 当初手搓的两条序引理）
+--     ⇒ 本件无需 L4 ✓ ⇒ **"G3/G5 共享同一缺失内核"这条依赖图事实，现已在根 cone 内显式化**（此前仅记在台账 R238）✓✓。
+--   ⚠ **写前根 cone 盘点（省下一处重复）**：`Geometry/CapArc.lean`、`ArcCovering.lean` 已有 arcsin 的**不等式**
+--     （`arcsin_R0_lt_pi_div_eight`／`arcsin_R0_pos`／`cos_two_arcsin`／`card_mul_two_arcsin_ge_two_pi`），
+--     但**无有理端点括号** ⇒ 本件**不是重复** ✓。
+--   ⚠ **本条固化口径**：**大 `def` 不得出现在**语句**里（只进证明）** —— 语句中写 `(asinLo : ℝ) ∈ …` 会反复触发
+--     `isDefEq` 心跳超时 ✗；改用显式字面量/显式 cast 后一次通过 ✓（**与"检查器化"方向一致：证书里只放数字** ✓）。
+-- 内容逐字节自 evidence/g3-recon/ArcsinBracket.lean（sha256 **3f2a5a8565ac21cd…**，6322 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 11 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8794 → **8795（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+-- R256 接根 ArcsinBracket（作者 g3-recon 请求，Lead 执行）：**G3/G5 共享缺失内核的独立件**。
+--   ⚠ **本件已被**替换**（同一路径、同数 11 个顶层名；`jobs` 不变、根指纹变）** ✗✓：
+--     **旧** `3f2a5a8565ac21cd…` / 6322 B（括号宽 **4e-4**）——**定理仍真**（`arcsin(19/50) ∈ [0.7794,0.7798]` ✓），
+--       但**对其目标消费者不够用** ✗；**新** `e8238398ae807939…` / 7228 B —— **宽度恰 1e-12** ✓（4 条画像仍全标准三元组）。
+--     **取代的原因（叶级 checker 探针第一次跑就红，作者精确诊断）** ✓✓✓：
+--       叶级账 = `Σ_ℓ weight·gamma·(s_ℓ(i−j)·L + v'_ℓ)` ⇒ **对 `L` 线性**，放大因子 `Σ_ℓ|c|` = **0.447626**（叶 4348，**现算非估**）；
+--       4e-4 宽 ⇒ 损失 `Σ|c|·w/2 = 8.952525e-05`，**实测赤字 8.951780e-05（相对差 8e-5）** ✓✓
+--       ⇒ **赤字 100% 来自括号宽度，与核精度（~1e-30）无关** ✓；
+--       需求：半宽 `< 余量/10/Σ|c| = 1.64e-9/10/0.447626 = 3.67e-10` ⇒ 取 **1e-12**（~370× 余量 ✓）。
+--     **新口径** ✗✓✓：**括号/区间宽度不由"被逼近量的精度"决定，而由**消费者的放大因子**决定**（旧版按"核精度 4.5e-26 ⇒ 4e-4 够"选宽 ⇒ **方向错** ✗）。
+--   其余内容（无字面量、定理语句）同前：`arcsin_bracket_of_kernel`（核的有理界 ⇒ `arcsin s ∈ [x,y]`）；
+--     `arcsin_19_50_mem`；**`arc_L_mem`**（`L = 2·arcsin(19/50)` 的向外有理括号 ✓）；`import` 只有 Mathlib + `IntervalsHighLag`（**无 G3 依赖** ✓）。
+--   **⚠ 本件替换的独立核验（Lead）**：逐字节 `e8238398ae807939` / 7228 B ✓；**整库精确共存自查（Unicode 感知）11 名命中 0** ✓。
+-- 期望 jobs：**8796 → 8796（同路径替换 ⇒ 不变）**；**若 jobs 变化 ⇒ 说明被当作新增，须重查**。根指纹会变。
+import N11Formalization.Interval.ArcsinBracket
+-- R256 接根 LeafAgg（作者 g3-recon 请求，Lead 执行）：**叶级聚合的无字面量 checker + 两条 soundness**。
+--   独立件：只 import `N11Formalization.Interval.ArcsinBracket` ✓；4 个顶层名 `lsum` / `leafCheck` /
+--     `leafCheck_sound`（scaled 形式）/ `leafCheck_sound_unscaled`（消费者自然形式）——后两条画像均标准三元组 ✓。
+--   `leafCheck` = `0<D` ∧ `Llo≤Lhi` ∧ **分支表 = 符号表** ∧ **一条整数比较**（**全部由数组重算，不信预计算的 `f0`** ✓✓）。
+--   **本轮三条口径在同一证明里各自再次救命** ✓✓：**(a)** 除法前提先 `div_le_iff₀`/`le_div_iff₀` 化乘法（**最终组合处第二次** ✗✓）；
+--     **(b)** **乘积形状对齐**（`calc` 的形态一律与 `lsum` 对齐、不分组，否则 invalid ✗✓）；**(c)** **显式 `calc`+`add_le_add` 组合（裁决 (3)）一次通过** ⇒ **失败点可指认** ✓✓。
+--   **第一条具体叶证书**（叶 4348，最紧叶 37 项）：`LeafAggCert.cert0 : leafCheck c0 d0 b0 (…) = true := by decide`
+--     —— **`#print axioms` = 标准三元组 ⇒ 纯计算、无额外公理** ✓✓（**内核重算缩放和，不背书声称** ✓）。
+--   ⇒ 边际成本（大 N 两点差）：**0.2695 s/证书** ⇒ 2386 叶 ≈ **10.7 分钟**；对照按行 124130 ≈ 9.3 h ⇒ **叶级聚合快 52×** ✓✓。
+--   ⇒ 量级比：证书算出 headroom/D² = **1.642108e-09**（记录余量 1.642332e-09）⇒ 损失 2.24e-13 ⇒ **余量/损失 ≈ 7.3e3** ✓✓。
+--   ⚠ **未竟缺口（必须与"已付"分开记）** ✗✓：**(1)** `leafCheck_sound_unscaled` 的**假设尚未逐叶落地**（即"叶恒等式 ⇒ 叶界"的 hookup：
+--     `arc_L_mem` 括号、缩放取整、`hcR/hcR0/hd` 等 —— **数学已定、机械量大**）；**(2)** 只验了叶 4348 + 200 条同形态合成证书，**未逐叶验证**；
+--     **(3)** **叶恒等式本身**（叶级 `Σ weight·gamma·(s(i−j)L + v')` 与记录 `energy_lower` 的对应）**仍以记录值为输入**。
+--     ⇒ **故"落根 `LeafAgg` + 铺 2386 条证书"给的是**checker 与证书**，**不等于叶级已付**** ✗✓。
+-- 内容逐字节自 evidence/g3-recon/LeafAgg.lean（sha256 **4a051e47745147b7…**，9399 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 4 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8796 → **8797（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.LeafAgg
+-- R256 接根 C7（作者 f1-step2 请求，Lead 执行）：**件 C 的收口 —— 区间层与真 `fderiv` 的最后一段连通** ✓✓✓
+--   内容（7 条，画像全标准三元组）：五条桥（`dUvec0/1CLM_single_eq_dUvec0/1Real`、`ringCLM0/1_single_eq_ring0/1Real`、
+--     `WpAt_eq_WpReal`）+ **`fderiv_residual_k_any`** + **`ndJT_res_z_box`（收口）**：
+--     `(compIvBox k i).Mem ((fderiv ℝ residualFun z (Pi.single i 1)) k)`，前提 `pad12 z ∈ closedBall certCR rhoCertR`、
+--     `DifferentiableAt ℝ residualFun z`、`hW : ∀ j, Wfun j z ≠ 0`、`hWp : WpAt z ≠ 0`、`hg : … ≠ 0`。
+--     证明链：`hcomp`（取分量）→ `fderiv_residual_k_any`（五分量一般点读数）→ `compIvBox_mem_uncond`（**区间层、无条件**）✓✓。
+--   ⚠ **前提口径**：`hW`/`hWp`/`hg`（球上非退化）**本片未证** ⇒ **结论是条件式的** ✓（**不主张已证** ✓）；
+--     `hz`/`hresid` 已作为前提显式列出 ✓。
+--   ⚠ **本件把"区间层 ↔ 真导数"连通，但**不自动把 144 格里的其余列落格**** ✗✓（**受审 ≠ 落格**；球级列仍 25/144 有付 / 119 未付 ✓）。
+--   ⚠ **Lead 的共存筛查曾报假阳** ✗✓：`ndJT_res_z_box` 看似与 **`F1/BallD35C6.lean` L10** 撞名 —— 但 **L10 位于注释块
+--     （`/- … -/` 内的 ```lean 代码块，描述目标）** ；**`C6` 实际声明仅 11 个 CLM** ⇒ **不撞** ✓。
+--     **⇒ 口径**：**共存筛查对整行匹配、但不识别注释状态 ⇒ 只能作**筛查**；**权威检查始终是 build** ✓✓。
+--     （**且 C7 把收口定理改写成 `(z : Fin 7 → ℝ)` + `pad12 z ∈ ball` —— 这正是让右端与 `fderiv_residual_k_any`/
+--      `compIvBox_mem_uncond` **逐字同形**的那次改动** ✓✓。）
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C7.lean（sha256 **4bfc2f105ea9eabb…**，9621 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑）: 7 名中 6 名命中 0；唯一"命中"经逐行核查为注释块假阳** ✓。
+-- 期望 jobs：8797 → **8798（+1）**；imports 73 → 74。若 jobs 不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35C7
+-- R256 接根 C8（作者 f1-step2 请求，Lead 执行）：**收口定理由条件式升为**无条件**** ✓✓✓
+--   `theorem ndJT_res_z_box_uncond (k : Fin 5) (i : Fin 7) (z : Fin 7 → ℝ)
+--      (hz : pad12 z ∈ Metric.closedBall certCR rhoCertR) :
+--      (compIvBox k i).Mem ((fderiv ℝ residualFun z (Pi.single i 1)) k)`
+--   ⇒ **前提全没了（只剩球成员 `hz`）** ✓✓✓。
+--   **"先查根 cone"的第四次收成** ✓✓：**(a) 所需的每个前提根内都已现成**：
+--     `hrho`（`∀ j, Wfun j z ≠ 0`）⟸ **`wkBox_pos`（9 个 j 全覆盖）+ `wkBox_mem`** ✓；
+--     `hradW`（`WpAt z ≠ 0`）⟸ **`WpIvBox_pos` + `WpIvBox_mem` + `WpAt_eq_WpReal`** ✓；
+--     `hU1..hU8` 与 `wPoint ≠ ringCenter 6` ⟸ **`nd_all_via_dist`（**一条五元合取**，`∀ x ∈ ball`）** ✓✓；
+--     `hg`（`dist` 侧 radicand `≠ 0`）⟸ **`radIvBox_pos k` + `radIvBox_mem k`**（**与 `hg` 表达式逐字同形** ✓）；
+--     `hresid` ⟸ **`contDiffAt_residualFun (n := ⊤)` 逐分量 + `differentiableAt_pi.mpr`** ✓。
+--   ⇒ **本件**零新数学**** ✓✓：9 条 = 3 条「`Mem` + `lo > 0` ⇒ `≠ 0`」（`linarith` 级）+ 4 条改写（`pad12_six`/`pow_two`/`WpReal`）
+--     + 1 条 `differentiableAt_pi.mpr` + 1 条收口 ✓。
+--   ⚠ **它又撞到三处"先查真形状"（均当场查证后修）** ✗✓：**①** `differentiableAt_pi` 在本 mathlib 是 **`↔`（iff）不是取证明的函数** ⇒ 必须 `.mpr hres`；
+--     **②** `contDiffAt_residualFun` 的 **`n : WithTop ℕ∞` 未定 ⇒ 留下悬空目标 `¬?m = 0`** ⇒ 显式给 `(n := ⊤)` ✓；
+--     **③** `Wfun`/`WpReal` 的 `_ne_zero` 桥：**`h` 已是 `^2` 形态 ⇒ 目标侧不要再 `rw [pow_two]`**（否则 `exact` 两侧形态不等 ✗）；
+--     **④** 5 条 warning 之一 = **类型不一致**（把 `(0:ℝ) < ((radIvBox k).lo : ℚ)` 的 ℝ 与 ℚ 混用）⇒ 改 `(0:ℚ) < …` 再 `exact_mod_cast` ✓。**门已清到 err/warn = 0** ✓。
+--   ⚠ **边界（防过度解读）** ✗✓：**本件把"区间层 ↔ 真 `fderiv`"的连通**无条件化**了，但**不改变落格计数**——
+--     **球级列仍 25/144 有付 / 119 未付**（**受审 ≠ 落格** ✓）；**未放宽端点** ✓。
+--   ⚠ **Lead 共存筛查本次**干净**（命中 0）** ✓（**上次的假阳来自注释块 ⇒ 已在根表口径中记明"筛查非权威、build 才是"** ✓）。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C8.lean（sha256 **d971bc28788cee15…**，6372 B）✓ Lead 复核一致。
+-- 期望 jobs：8798 → **8799（+1）**；imports 74 → 75。若 jobs 不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35C8
+-- R257 接根 C9（作者 f1-step2 请求，Lead 执行）：**把球级残差块改写进 `hJ` 的消费点形状** + 端到端无条件合取。
+--   6 条（画像全标准三元组）：
+--     `hasFDerivAt_residualFun_first7_any` / `fderiv_residualFun_first7_any`（把根内 `u0` 版镜像到一般点）
+--     `first7_pad12`（`first7 (pad12 z) = z`）
+--     **`fderiv_TCSystem_res_z_any`** ★枢纽：把 `(fderiv ℝ TCSystem (pad12 z) (Pi.single (up7 j) 1)) (row5 k)`
+--        化到 `(fderiv ℝ residualFun z (Pi.single j 1)) k`
+--     **`mem_Jt_res_z_ball`** ★★消费点形状的**球级**残差块（对根内盒心 `mem_Jt_res_z` 的球级升级，用 `compIvBox`）
+--     **`ndJT_res_zBall_all`** ★端到端**无条件** `∀ k j` 合取（七条件全由 C8/根内 `differentiableAt_TCSystem_of_conditions` 供给）
+--   ⚠ **"先查形状"的收成（关键）** ✗✓：`hJ` 的消费接口实测在 `BoxRstar.lean` L374–376：
+--     `∀ x ∈ closedBall certCR rhoCertR, ∀ k j : Fin 12, (Jt k j).Mem ((fderiv ℝ TCSystem x) (Pi.single j 1) k)`
+--     ⇒ **要 `TCSystem : Fin 12 → Fin 12`、12×12 指标、`x ∈ ball ⊂ ℝ¹²`、`Pi.single j 1 : Fin 12 → ℝ`** ——
+--     **与本件此前的 `residualFun`/`Fin 7 → Fin 5`/`pad12 z` 全不对齐** ⇒ **本件即为此而写** ✓。
+--   ⚠ **更重要：接 `hJ` **不是装配**，而是**多出三项**义务** ✗✓：12×12 里本件只给"**残差行 × z 列**"一块（r<5, c=up7 j）；
+--     余三块 = (a) 残差×λ（根有盒心版，短）｜**(b) KKT×z ⇒ 需 `Hess`（二阶块）在一般点的 `Mem` ← **真障碍****｜(c) KKT×λ（球级版 + `D` 转置）。
+--     **根内 `Jt` 的定义注释自称「`Hess` 是**未证块的参数**，义务见 §7」，且 `mem_Jt_at_center` 的唯一条件前提即
+--     `hH : ∀ i j mm, (Hess i j mm).Mem (hessEntry i j mm)`** ⇒ **要供出 `hJ` 必须先供出 `Hess` 的盒上包络（二阶导层）** ✗。
+--   ⚠ **由此线 ③ 的剩余缺口被**重新界定****：**不再是"一次装配"，而是"残差块(已办) + λ 列球级 + KKT×λ 球级 + **Hess 包络**"** ✓✓
+--     （**并因此不改计数**：球级列仍 25/144 有付 / 119 未付 ⇒ **受审 ≠ 落格** ✗；本件**未**把任何一格接上 `hJ` ✓）。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C9.lean（sha256 **90f840c89a31fbb6…**，6407 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 6 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望：imports 75 → **76**；jobs 8799 → **8800**。若 jobs 不变 ⇒ 模块未被当作新增 ⇒ 须重查。
+import N11Formalization.F1.BallD35C9
+-- R258 接根 C10（作者 f1-step2 请求，Lead 执行；Lead 亦**亲自过门** exit=0 / 0 error / 0 warning / sorryAx=0 ✓）：
+--   **`hJ` 的 12×12 至此完成一半（残差行那一半全齐）** ✓✓
+--   3 条（画像全标准三元组、**无条件**；scope `∀ z, pad12 z ∈ closedBall certCR rhoCertR`、`k m : Fin 5`）：
+--     **`fderiv_TCSystem_res_lam_any`**：`(fderiv ℝ TCSystem (pad12 z) (Pi.single (up5 m) 1)) (row5 k) = 0`
+--        —— 根内盒心版（`ResidualDerivJT` L269）的**球级镜像** = (a) 块（残差行 × λ 列）✓
+--     **`differentiableAt_fderiv_residualFun_of_ball`**：`hadj`（一般点 C²）的**球上无条件供给**
+--        —— 用 `contDiffAt_fderiv_residualFun` + `contDiffAt_pi` ✓
+--     **`JT_lam_res_ball`**：(a) 的 `∀ k m` 合取 ✓
+--   ⚠ **图级事实（12×12 现状）** ✓✓：**残差行已全** —— `r<5, c=up7 j` ← C9 `mem_Jt_res_z_ball` ✓；
+--     `r<5, c=up5 m` ← 本件（= 0）✓；**只剩 `r≥5`（KKT 行）那一半** ✗ = **KKT×z（需 `Hess`）** + **KKT×λ（= (c)）**。
+--   ⚠ **作者本轮产出一条口径（入表）** ✗✓：**`contDiffAt_residualFun` 的返回类型是**逐分量**
+--     `∀ i : Fin 5, ContDiffAt ℝ n (fun w => residualFun w i) z`，**不是 Pi 型** ✗ ⇒ 要 Pi 型必须
+--     `rw [contDiffAt_pi]; intro i; exact … i` ✓（**"逐分量 vs Pi 型"是装配层常见坑**，与"先查真签名"同族 ✓）。
+--   ⚠ **(c) 未过门但根因收敛到一条**（红件 `_scratch/C10c_attempt_ERR.*` 留档、**发货件不含红** ✓）：
+--     唯一失败件 = `differentiableAt_adjointBlockRow_any`；错在 `hg.comp` 的**合成式形状**（`Function.comp` vs lambda）
+--     ⇒ 正解方向：`show` 显形或 `((hg.comp …).differentiableAt)` 后 `simpa [Function.comp]` ✓（**两个零件已就位** ⇒ 下轮成本低 ✓）。
+--   ⚠ **计数不改**：**球级列仍 25/144 有付 / 119 未付**（**受审 ≠ 落格** ✗ —— 本件补的是**消费点形状**的 λ 列，未接上 `hJ` 整块 ✓）。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C10.lean（sha256 **97976835b7e634f6…**，5006 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 3 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望：imports 76 → **77**；jobs 8800 → **8801**。若 jobs 不变 ⇒ 模块未被当作新增 ⇒ 须重查。
+import N11Formalization.F1.BallD35C10
+-- R256 接根 C6（作者 f1-step2 请求，Lead 执行）：**残差五分量在任意点的 `fderiv` 显式读数** —— 件 C 的实质内容。
+--   A：6 条命名 CLM（`ringCLM0/1`、`arcCLM0/1`、`dUvec0/1CLM`）；
+--   C：**`fderiv_residual_{0..4}_CLM`**（逐 k 实例化 `F1.BallD35C5.fderiv_residualComp_any`，
+--      吃 `C4` 的 `hasFDerivAt_Uvec0/1_any`、`C5` 的 `wPoint`/`hub` 各条、`C2` 的 `hasFDerivAt_ringCenter0/1_any`）✓✓；
+--   依赖：`F1.BallD35C5` + `C4` + `C2` + `Hrad` + `ResidualDerivJT` + `ResidualDerivD` —— **按名引用、零重推** ✓。
+--   ⚠ **B/D/E 未含**（作者**主动摘出**，以免在根里留红/半成品 ✓✓）：B（桥）与 D 的前 4 个 k 已在本件尝试版中绿，
+--     剩两步 —— (i) `k=4` 分支需避免 `simp` 展开 `√((a−b)²+(c−d)²)`、改用 `rw [show … from ring]` 显式对齐；
+--     (ii) `ndJT_res_z_box` 需先 `show (Φ v) k = (proj k ∘SL Φ) v from rfl` 再 `rw [← fderiv_apply h i]`（本 mathlib 签名方向问题）。
+--     **红件与 `unsolved goals` 原文已按纪律留档** `evidence/f1-step2/_scratch/C6_ext_attempt_ERR.*` ✓。
+--   ⚠ **期望校准（作者口径成熟的形态）**：它自测根已 **71 imports**、并声明"`jobs` 我读不到 ⇒ 请按你当前实测校准" ✓✓
+--     ⇒ 本件落地后：**imports 71 → 72；jobs 8795 → 8796（+1）** ✓。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C6.lean（sha256 **c27cc1d5f15cfabb…**，12188 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 11 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8795 → **8796（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35C6
+-- R256 接根 C4（作者 f1-step2 请求，Lead 执行）：件 C 的第四片 —— **`Uvec` 层（一般点）** + arc 层两条。
+--   内容（4 条，全为"先查根 cone"普查后的**真缺口**）：
+--     `hasFDerivAt_arcC0_any` / `hasFDerivAt_arcC1_any` ← 由根内 `hasFDerivAt_phiA` 的 `.cos`/`.sin` **一行**得到；
+--     `hasFDerivAt_Uvec0_any` / `hasFDerivAt_Uvec1_any` ← 「ringCenter(k) + ringCenter(k+1) − arcEnd(k)」的导数。
+--   **只吃已受审件** ✓✓：`F1.BallD35C2`（R255 已接根的 ringCenter 两条）+ `ResidualDerivJT`
+--     （Wfun/drhoAt/hasFDerivAt_rhoK_any/hasFDerivAt_thetaOf_any/ArcC/phiA/phiCLM/hasFDerivAt_phiA）——**按名引用、零重推** ✓。
+--   `Uvec` 层是**残差节点的直接输入**（承重）✓。
+-- ⚠ 作者引用的根状态是**过期的**（其写 66 imports / jobs 8790）：本件 import 前根已为 **68 imports / jobs 8792**（R256 又接了 L6）
+--   ⇒ **本件的期望是 8792 → 8793（+1）** ✓（Lead 已按当前实测校准）。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C4.lean（sha256 **ff7e3aa53a83f063…**，5491 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 4 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8792 → **8793（+1）**。若不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35C4
+-- R256 接根 C5（作者 f1-step2 请求，Lead 执行）：件 C 的**最后四层**（`fderiv ℝ residualFun (first7 x)` 的最后输入）。
+--   内容（四层、零重推）：
+--     `hub0`/`hub1`（4 条，**与点无关**：`coord 4`/`coord 5`/常值 ⇒ 一行级）+ `WpAt`；
+--     `wPoint` 两坐标（镜像 `hasFDerivAt_wPoint_0/1`，`Wp → WpAt z`）；
+--     `hasFDerivAt_dist_any` + `fderiv_dist_any_single`（镜像 frozen 版，`u0 → z`；
+--       **作者把 frozen 版的绑元 `z` 改名为 `w`，避免"点 `z`"与"绑元 `z`"撞名** ✓✓ —— 卫生细节）；
+--     `fderiv_residualComp_any`（镜像 `fderiv_residualComp`，`u0 → z`）。
+--   依赖：`ResidualDerivDist`（coord 族/Point/dist_point_eq_sqrt/pad12_*/hub*_coord*/wPoint_coord*）+ `ResidualDerivJT`（Wfun）
+--     —— **只吃根内与已受审件** ✓。
+--   ⚠ 作者**本次报前先核了根**（自跑 `^import ` 计数 ⇒ 69 imports，与 Lead 的 `B34549468798CD66`/8793 逐字一致 ✓✓），
+--     并自认上一条引 `jobs 8790` 是**过期基数** ✗ —— **接根前自查 `jobs`/imports 的口径由此闭环** ✓✓。
+--   ⇒ **件 C 至此只剩一步 `C6`（装配）**：其配方见 evidence/f1-step2/NEXT-C6-RECIPE.md，
+--     **收口只需一行**（`rw [fderiv_residual_k_any …]; exact compIvBox_mem_uncond …`）——**因两边已同形** ✓✓（一路对齐的回报）。
+-- 内容逐字节自 evidence/f1-step2/F1-BallD35-C5.lean（sha256 **e9d9c54d36dd9f08…**，11199 B）✓ Lead 复核一致；
+--   **整库精确共存自查（Lead 独立跑、Unicode 感知正则）: 10 个顶层名命中 0 ⇒ 可共存** ✓。
+-- 期望 jobs：8793 → **8794（+1）**；imports 69 → 70。若 jobs 不变 ⇒ 模块未被当作新增（路径/文件名）⇒ 须重查。
+import N11Formalization.F1.BallD35C5
+-- R308 接根 **G3 批 1**（作者 g3-land；Lead 代拷 + 逐件 build + 逐件门（两流＋exit 码）+ **同时-import 探针** + 代改本表 ✓）
+--   ★★★ 承重：**G3 的叶检查器 ＋ 证书（批 1 = 1200 叶）入锥** —— 不可信生成器 → 已证 checker → 内核核查具体证书 → 实数不等式 ✓
+--     G3ArcConstants：弧/阈值常量；含 arcLlo_eq / arcLhi_eq / threshSq_eq : 定义 = 字面量（**定义 vs 字面量的显式接口** ✓）
+--     G3LeafChecker：checker ＋ **全称健全性**（无字面量）：leafOK' → leafCheck = true → leafBound_of_check；含 signOK（补归档批形式的符号洞 ✓）
+--     G3Batch_*：数据片（片内**只写整数字面量** ⇒ decide 可归约 ✓；六片共 1200 叶，逐叶 decide）
+--   作者侧读数：12 片 ＋ 2 模块逐件 exit=0 / 0 行（50.3–133.3 s）；两探针 16.2 s／15.6 s 绿；**整库共存自查 13081 名 / 0 命中**；串行实测 18.0 min（全量）
+--   Lead 亲验：批 1 八件 **build=0 ／ 门 exit=0 ／ 0 行**（0800 108 s、1000 102 s）；**8/8 olean**；**同时-import 探针 exit=0 / 0 B** ✓
+--   ⚠ 本线口径：**检查器已付 ✓ ／ 来源前件未付**（具名 P1/P2/P3 ＋ (C″)）⇒ 不得把片内绿读成叶级已付 ✓
+--   ⚠ 与根内既有 g3-recon 线（G3/SliceL0..L6，命名空间 G3SliceL* ⇒ 不撞名 ✓）**互补**：那线 = 推导/对偶 ＋ 2 叶数据事实；本线 = 检查器 ＋ 2386 叶证书 ✓
+--   ⚠ 落根后根构显著变长（实测口径 ≈21–25 min vs 现 ~3 min）—— 这是接受的代价 ✓
+-- 期望：imports 98 → 106；jobs 8822 → 8830（8 个新模块 ✓）。
+
+import N11Formalization.G3ArcConstants
+import N11Formalization.G3LeafChecker
+import N11Formalization.G3Batch_0000_200
+import N11Formalization.G3Batch_0200_200
+import N11Formalization.G3Batch_0400_200
+import N11Formalization.G3Batch_0600_200
+import N11Formalization.G3Batch_0800_200
+import N11Formalization.G3Batch_1000_200
+
+-- R310 接根 **G3 批 2**（作者 g3-land；Lead 代拷 + 逐件 build + 逐件门（两流＋exit 码）+ **全 12 片同时-import 探针** + 代改本表 ✓）
+--   ★★★ 承重：批 2 入锥后 **G3 的 2386 叶证书全部在根锥内** ✓（批 1 = 1200 叶，批 2 = 1186 叶）
+--   Lead 亲验：六片 **build=0 ／ 门 exit=0 ／ 0 行**（75／80／75／76／70／68 s）；**全 12 片同时-import 探针 exit=0 / 0 B** ✓
+--   ⚠ 口径同批 1：**检查器已付 ✓ ／ 来源前件未付（P1/P2/P3 ＋ (C″)，归宿 = g3-recon 线的 G3/SliceL*）** ⇒ 不得把片内绿读成叶级已付 ✓
+-- 期望：imports 106 → 112；jobs 8830 → 8836（6 个新模块 ✓）。
+
+import N11Formalization.G3Batch_1200_200
+import N11Formalization.G3Batch_1400_200
+import N11Formalization.G3Batch_1600_200
+import N11Formalization.G3Batch_1800_200
+import N11Formalization.G3Batch_2000_200
+import N11Formalization.G3Batch_2200_186
+
+-- R312 接根 EtaUsage（作者 eta-instance；Lead 代拷 + 去自环改造 + build + 单件门 + 同时-import 探针 + 代改本表）
+--   ★★ 承重：消费点装配件（GUIDE 交付物 (2) 的端到端装配层）：nd_via_hyp / nd_via_hyp_lt19
+--     给 7 条前提 D / hFm / hηb / Jt / hJ / hsum / hsumR ⇒ 结论
+--       ∃ S : C891RootSpec, S.sys = TCSystem ∧ S.boxLo = boxLoCert ∧ S.boxHi = boxHiCert
+--       ∧ S.radiusIndex = 6 ∧ ((boxLoCert 6 : ℝ) ≤ Rstar S ∧ Rstar S ≤ (boxHiCert 6 : ℝ)) ∧ Rstar S < 19/50
+--     ⇒ 根内已付的前提 = hFm（HfmUncond）/ hηb（EtaInstance）/ hK0,K1,η0,K0,eta0（EtaResCons）/ hres（hresCons）
+--       ⇒ 根内剩余 = Jt / hJ / hsum / hsumR（= 收官图 #5/#6/#7）—— 这就是主定理消费端已装配的现成证据
+--   ⚠ 装配口径（生产方实测）：hηb / hFm 作参数传入（配方 A）；不要把 eta_hηb 内联到消费者实参位（whnf 超时 >140 s）
+--   ⚠ 去自环改造（Lead 代做）：原件头为 import N11Formalization（根聚合件）⇒ 接表会自导入；已改为 5 个具体模块：
+--     EtaInstance / NondegProof / HsumCert / FmAssembly / ResidualHfm（含 hFm_of_hD）
+--   Lead 亲验：lake build N11Formalization.EtaUsage ✓；单件门 exit=0 / 0 行 ✓；同时-import 探针 exit=0 / 0 B ✓
+-- 期望：imports 112 → 113；jobs 8836 → 8837（1 个新模块）。
+import N11Formalization.EtaUsage
+
+-- R315 接根 TowerBC_N_anyx_layer1（作者 tower-bc；Lead 代拷 + build + 单件门 + 真同时-import 探针 + 代改本表）
+--   ★★ 承重：消费点 #6（hJ 的盒版二阶叶）的**一般点二阶层** + 盒叶层（65 条声明，全在 N11Formalization.TowerBC 内）
+--     (A) 一般点二阶 8 分量 + 3 条通用规则 _any 重述（根内那 3 条把 u0 写进语句，其证明点通用）
+--     (B) pad12Box（盒提升：前 7 槽照抄、后 5 槽单点 [0,0]）+ 逐槽桥 pad12Box_mem_pad12 + 首叶实例
+--     (C) W 族盒叶：wkBoxQ/W2RAtBox/WkD1AtBox + 3 条显式 ofRat 接口
+--   关键发现：盒机件对 Q 泛型（ndAngleBox Q 等）=> 换基盒即可 => 零新盒机件
+--   Lead 亲验：build exit=0（29 s）；单件门 exit=0 / 0 行；真同时-import 探针 exit=0 / 0 B；件首无 import N11Formalization（无自环）
+-- 期望：imports 113 → 114；jobs 8837 → 8838（1 个新模块）。
+import N11Formalization.TowerBC_N_anyx_layer1
+
+-- R317 接根 HessSeamBall（作者 hess-seam；Lead 代拷 + build + 单件门 + 六件同时-import 探针 + 代改本表）
+--   ★★ 承重：球级 HHBall（C1299）的**两条桥** —— Fin 7 球与 tower-bc 的选 2 盒叶接口打通：
+--     Q7（盒实例化）| Q7_lo_eq/Q7_hi_eq（显式 cast 等式，供 linarith 不把 ↑rhoCert 与 rhoCertR 当两原子）
+--     | mem_Q7_of_mem_closedBall / mem_closedBall_of_mem_Q7（球↔盒两向）
+--     | mem_pad12Box_Q7_of_mem_closedBall（盒提升桥）| mem_closedBall_first7（first7 投影 1-Lipschitz）
+--   关键：索引字面量 up7 i vs ⟨↑i,⋯⟩ 只是 defeq ⇒ 用 rfl 证明版 show 等式补局部索引引理（坑家族第 14 形态）
+--   Lead 亲验：build exit=0（27 s）；单件门 exit=0 / 0 行；六件探针（根+Main+Bridge+HL7+TowerBC+本件）exit=0 / 0 B；件首无 import N11Formalization（无自环）
+--   ⚠ 8/8 声明 #print axioms = [propext, Classical.choice, Quot.sound]，无 sorryAx（作者按第 52 条自检）
+-- 期望：imports 114 → 115；jobs 8838 → 8839（1 个新模块）。
+import N11Formalization.HessSeamBall
+
+-- R319 接根 DrowBallBox_compIvBoxBox（作者 ball-fix；Lead 代拷 + build + 单件门 + 真探针 ＋ 消费例 + 代改本表）
+--   ★★★ 承重：球级 D 行**全 35 格** compIvBox k i（k<5, i<7）的数值读出 ⇒ 消费点 #5 Jt / #7 hsum+hsumR 的地基
+--     每格 .lo/.hi 端点恒等式 + = <lo,hi>；31 格另有 hi ≤ 1；1213 条全 theorem（0 def/instance/axiom ⇒ 接口面零扩张）
+--   ★ 两条结构性事实（内核证，供下游直接用）：
+--     (1) 9 格恒零：compIvBox k i = <0,0>（零宽，非近似）—— 该 z_i 不进该行；
+--     (2) hi ≤ 1 只对 31 格成立 ✗（反例 (0,1) 1.068977 / (1,3) 2.972398 / (3,0) 4.423062 / (3,5) 1.00000012）⇒ 勿当全族接口。
+--   ★ 全量公理指纹（作者 1213 条逐条 #print axioms）：1110 条 = [propext, Classical.choice, Quot.sound]；103 条 = [propext]；
+--     0 条含任何非标准公理（无 sorryAx / 无自定义公理 / 无 native_decide）。
+--   Lead 亲验：build exit=0（57 s）；单件门 exit=0 / 0 行（66 s）；真探针（根 + 本件）exit=0 / 0 B（41 s）；件首无 import N11Formalization（无自环）。
+--   ⚠ 规模：olean 106.1 MB（大）；作者量化判断 = 拆片会让共享前缀 olean 复制多份 ⇒ 总体积反升 ✗ ⇒ 单模块。
+-- 期望：imports 115 → 116；jobs 8839 → 8840（1 个新模块）。
+import N11Formalization.DrowBallBox_compIvBoxBox
+
+-- R320 缺口(3)(ii) 记名挂钩（Lead scratch 已证其**数学内容**；此处只**记名**，未重推 ✓）
+--   ★ 已证（Lead scratch，各自单独过门 ✓）：
+--     (1) cos 在 b = 15592/10000 的有理括号：cos_bracket_of_lagrange / cos_b15592_bracket（宽 2*b^14/14! = 1.151e-08）
+--     (2) sin 同点有理括号：sin_bracket_of_lagrange / sin_b15592_bracket（宽 1.197e-09）
+--     (3)+(4) 切线界 tangent_lower_bound：1 - cos μ ≥ (1 - cos b) + sin b*(μ - b)，μ ∈ [0,b]
+--         （用 Real.strictMonoOn_sin + antitoneOn_of_deriv_nonpos，单调性代凸性；根内 sin_cos_remainder_lagrange 7 已提供精余项）
+--     ＋ b15592_lt_pi_div_two（链 2b < piLo < π，用根内 RatInterval.piLo_lt_pi）
+--   ⇒ 即 G3/SliceL* 的 deferred(ii)「1 - cos μ ≥ s·μ + v（仿射下界）」的**科学内容已完成** ✓
+--   ⚠ 按真实 scope 标注（DEAD §59）：**未证的是我实现里的"装配"**（把两个有理端点代入 ⇒ 全有理形），
+--      4 处 cast/符号簿记错 ⇒ 切成**消费者义务**（若消费者的 μ 为有理数，两端点可当场代入）。
+--   ⚠ 载体：Lead scratch（evidence/lead/scratch/CosWidenStep3/4/5.lean ＋ CosWidenFinal.lean 的 (1)-(4) 部分）⇒ **未入锥** ✓。
+--   ⚠ 其余 §G 差额（两条未定义的 gap）**不在**本条覆盖范围 ✗。
+
+-- R321 接根 HessSeamAny（作者 hess-seam；Lead 代拷 + build + 单件门 + 五件撞名探针 + 代改本表）
+--   ★ 承重：**z-一般 `_any` 通用规则族**（第一片开工；48 格二阶块所需）—— 根内 secondPartial_{add,sub}／hasFDerivAt_fderiv_{add,sub}
+--     的语句把 u0 写死 ✗，而其**证明与点无关** ✓ ⇒ 逐字升格 ✓
+--     4 条：hasFDerivAt_fderiv_{add,sub}_any ｜ secondPartial_{add,sub}_any ✓
+--   ⚠ 命名空间 N11Formalization.HessSeam（与 TowerBC 不同 ✓ ⇒ 撞名探针通过 ✓）
+--   Lead 亲验：build exit=0（26 s）；单件门 exit=0 / 0 行；五件探针（根+TowerBC+HL7+Ball+本件）exit=0 / 0 B；件首无 import N11Formalization（无自环）
+-- 期望：imports 116 → 117；jobs 8840 → 8841（1 个新模块）。
+import N11Formalization.HessSeamAny
+
+-- R336 实验（Lead）：接 HessSeamMain + HessSeamBridge —— **复核 R297 回退的真实原因**
+--   ⚠ 我读源码发现：HessSeamMain 定义 d1xR(L57)/d1yR(L65)；HessSeamBridge 定义 d1xR_else/d1xR_four/d1yR_else/d1yR_four
+--      ⇒ **名字不同、并非重名** ✗ ⇒ R297 记录的病因与源码不符 ⇒ 本实验直接读真错误。
+--   若根构失败：读错误、定位真因、按需回退（bak-r336 ✓）。
+import N11Formalization.HessSeamMain
+import N11Formalization.HessSeamBridge
+
+-- R337 落地（Lead）：**R297 的病因已过期** ✗✓ ⇒ 两件 + 我两件一起入根 ✓
+--   实测：加 HessSeamMain + HessSeamBridge 后 `lake build` **exit=0 / jobs=8841 / warning=0** ✓（R336 实验报告 ✓）
+--     ＋ hess-seam 独立核实（口径 C）：HessSeamBridge 首行已 import HessSeamMain ✓、`^def d1xR`/`d1yR` 计数 **0** ✓
+--        ⇒ 根内 L325–330 那条"重名"记录**与源码不符、已过期** ✗（`d1xR_else`/`d1xR_four` 等是**引理**、非 `d1xR` ✓）
+--   ★ 新口径：**grep 宽模式会把"前缀同名"误报** ✗ ⇒ 用 `^def `/`^theorem ` 锚定 ＋ 看归属文件 ✓；**根内历史记录会过期** ⇒ 先查现况再动手 ✓
+--   本块同时接我两件（Lead scratch 转正 ✓）：
+--     `BallJtAsm`（球级 `Jt'` 盒表版 + 4 条块引理 + **球级 `hJ` 条件完整装配** `mem_Jt'_ball_cond` ✓，49 格作具名假设 ✓）
+--     `KktZFderivAny`（一般点 KKT×z 链式法则：`fderiv_adjointBlock_up7_any` + `fderiv_TCSystem_kkt_z_any` ✓）
+--   期望：imports 119 → 121；jobs 8841 → 8843。
+import N11Formalization.BallJtAsm
+import N11Formalization.KktZFderivAny
+
+-- R338 落地（Lead）：`HessSeamSmooth`（作者 hess-seam；Lead 代拷 + build + 单件门 + 探针 + 代改本表）
+--   ★ 承重：**球上 `hadj`**（一般点 `fderiv residualFun` 可微性 ✓）—— 形状与消费点 `BoxRstar` L366–373 的 `hnd*` **逐字同形** ✓
+--     `differentiableAt_fderiv_residualFun_ball (hndRho) (hndW) (hndU1) (hndU2) (hndU3) (hndU8) (hndWp) :
+--         ∀ x ∈ closedBall cCertR rhoCertR, DifferentiableAt ℝ (fun y => fderiv ℝ residualFun y) (first7 x)` ✓
+--   ⇒ 供 Lead 装配**消掉 `hadj` 参数**（改以 `hnd*` 为参数 ✓）
+--   ⚠ 作者纠正一条隐含假设：**`pad12 (first7 x) = x` 是假** ✗（7..11 位归零）；**几何只读 0..6 位** ✓ ⇒ 搬运只对几何成立（`Transport.lean` 之由 ✓）
+--   期望：imports 121 → 122；jobs 8843 → 8844。
+import N11Formalization.HessSeamSmooth
+
+-- R339 落地（Lead）：`BallJtHnd`（Lead scratch 转正 ✓）
+--   ★ 承重：**球级 `hJ` 装配（消掉 `hadj`）** —— 参数 = 消费点**已有的** 7 条 `hnd*`（`BoxRstar` L366–373 逐字 ✓）＋ **49 格包络 `hKKTz`** ✓
+--     `mem_Jt'_ball (Hess) (hndRho) (hndW) (hndU1) (hndU2) (hndU3) (hndU8) (hndWp) (hKKTz) (x) (hx) :
+--         ∀ r c : Fin 12, (Jt' Hess r c).Mem ((fderiv ℝ TCSystem x (Pi.single c 1)) r)` ✓
+--   ⇒ 实现 = 一行实例化 `BallJtAsm.mem_Jt'_ball_cond` ＋ `HessSeamSmooth.differentiableAt_fderiv_residualFun_ball` ✓（**7 条前提原样传递、不复制不改形** ✓）
+--   ⇒ ⇒ **装配侧只剩 49 格（KKT×z）** ✓（唯一的簿记参数 `hadj` 已消 ✓）
+--   期望：imports 122 → 123；jobs 8844 → 8845。
+import N11Formalization.BallJtHnd
+
+-- R340 落地（Lead）：`LamBox`（Lead scratch 转正 ✓；由一次性子代理修绿 ✓）
+--   ★ 承重：**λ 盒 ＋ 区间系数点积** —— 球级 KKT×z 块的**正确口径** ✓
+--     `lamBox mm := ⟨certC (7+mm) - rhoCert, certC (7+mm) + rhoCert⟩` ✓（**两端有理** ✓）
+--     `lamBox_mem (x) (hx) (mm) : (lamBox mm).Mem (last5 x mm)` ✓ —— 只用 `x ∈ closedBall certCR rhoCertR`（经 `dist_pi_le_iff` ✓）
+--     `dotIv`／`dotIvR`／`foldl_dotIv_mem`／`dotIv_mem` ✓ —— 逐字镜像根内 `dot`(Vector L145)／`dotR`(L149)／`foldl_dot_mem`(L159)／`dot_mem`(L171) ✓
+--   ⚠ 为什么需要它：球级链式法则的权重是 **`last5 x`（随 x 变 ✗）** 而非固定 `lamRat` ✗（`lamRat_eq_last5` 只在**球心**成立 ✓）
+--   ⚠ 作者实证两条口径（已入 DEAD §66）：① `linarith` **不展开普通 def** ⇒ def 名与 cast 形混用被判两原子 ✗；② `"Function expected"` 多为**命名空间未开/未知标识符** ✗
+--   期望：imports 123 → 124；jobs 8845 → 8846。
+import N11Formalization.LamBox
+
+-- R341 landing (Lead): BallJtLam (Lead scratch promoted)
+--   CORE: correct-caliber ball-level hJ assembly -- Jt2 (Hess block = neg (dotIv lamBox (Hess i j))) + 4 block lemmas
+--      + dotIvR_last5_hessEntryAt (foldl <-> sum bridge, via Fin.sum_univ_five)
+--      + mem_Jt2_ball : hypotheses are ONLY the 7 hnd* (already at the consumer; BoxRstar L366-373)
+--         + ball-level per-cell Hess-Mem hH : forall x in ball, forall i j mm, (Hess i j mm).Mem (hessEntryAt (first7 x) i j mm)
+--   => hH IS the shape of the two lines per-cell _mem => the R177 interface gap (fixed lamRat cannot bound x-varying lambda) is removed at the interface
+--      => the ONLY remaining piece is the 49 per-cell KKT-x-z _mem (three lines running)
+--   NOTE: Jt-prime (BallJtAsm / BallJtHnd) stays as-is: its Hess block uses fixed lamRat => holds at the BALL CENTER only (scope labeled), not used at the consumer
+--   expect: imports 124 -> 125; jobs 8846 -> 8847.
+import N11Formalization.BallJtLam
+
+-- R342 landing (Lead): HessIvBox (Lead scratch promoted)
+--   CORE: box-version hessIv + HessOfBox -- the container of the 49-cell (KKT-x-z) content
+--   Why: hessIv (ResidualDerivJTHess L440-453) parameterizes ONLY d2xIv/d2yIv; its first-order/geometric tables
+--      (d1xIv/d1yIv/DxIv/DyIv/radIv/twoRadSqrtIv) are the CENTER ones => HessOf d2xIvBox d2yIvBox mixes box 2nd with center 1st order
+--      => too tight for the ball (not a valid enclosure).  FIX: replace all six tables by their box versions (pure substitution).
+--   Key simplification (R188): the box family is TOTAL incl. k = 4 (dUxIvBox L341-346) => no dUx4IvBox, no dispatcher needed.
+--      Six substitutions: d1xIv k i -> dUxIvBox k i | d1yIv k i -> dUyIvBox k i | DxIv k -> DxIvBox k | DyIv k -> DyIvBox k
+--                          | radIv k -> radIvBox k | twoRadSqrtIv k -> twoRadSqrtIvBox k
+--   This file contains ZERO proofs (two defs); its _mem IS the 49-cell content (next piece).
+--   expect: imports 125 -> 126; jobs 8847 -> 8848.
+import N11Formalization.HessIvBox
+
+-- R343 landing (Lead): HessBoxMem -- the CORE of the 49-cell content (box L7 frame enclosure)
+--   mem_hessIvBox (d2xIv d2yIv) (hx) (k) (hrad) (h2rad) (hd2x) (hd2y) (i j) :
+--       (hessIvBox d2xIv d2yIv k i j).Mem (distHessRealBox x k i j)
+--   CONDITIONAL on the two d2 facts (hd2x/hd2y) -- exactly what d2iv-box two _mem supply (d2xIvBox_mem/d2yIvBox_mem).
+--   Once those land, the ball-level Hess-Mem (i.e. hH of BallJtLam.mem_Jt2_ball) follows by one instantiation.
+--   Scope labeled: hypotheses are hx, the two positivity facts, and the two d2 facts; no sorry, no axiom.
+--   Method note (this piece took several rounds; every failure was a WRITING/tooling error, not mathematics):
+--     (1) missing import AND missing open (mulLo_pos lives in namespace N11Formalization.HessSeam);
+--     (2) hand-written intermediate types != Lean-produced shapes (fix: write NO type ascriptions on the haves);
+--     (3) the def third summand denominator must be (G * (2*sqrt G)) -- 1/(G) * (2*sqrt G) is a DIFFERENT grouping.
+--   expect: imports 126 -> 127; jobs 8848 -> 8849.
+import N11Formalization.HessBoxMem
+
+-- R345 landing (Lead): D2IvBoxMem -- box second-order tables + the two TOTAL _mem (general point), 26 declarations
+--   d2xIvBox_mem / d2yIvBox_mem (Q) (k i j) {z : Fin 7 -> R} : (d2xIvBox Q k i j).Mem (secondPartial (DeltaX k) z i j)
+--   SHAPE MATCH (verified by #check, probe_shape19.txt): this is VERBATIM the hd2x/hd2y parameter of HessBoxMem.mem_hessIvBox
+--     with d2xIv := d2xIvBox Q and z := first7 x  =>  the 49-cell core is now fully fed (mod the star-class hypotheses below).
+--   SCOPE (honest): conditional on the star-class hypotheses (positivity, HasFDerivAt, and the forall-Eventually facts)
+--     which are explicit hypotheses of these theorems; NO sorry / no axiom / no native_decide.
+--   NOTE: the 112-decl TowerBC_N_anyx_layer1 ALREADY carries d2xIvBox/d2yIvBox => later pieces need NOT redefine them.
+--   NOTE: same-name swaps can REVERSE parameter order (of_eq_clm_any: (x)(h) vs (h)(x)) => compare STATEMENT SHAPES, and
+--     use #print <name> for the verbatim-same-shape criterion (finer than #check).
+--   Method: secondPartial tree shapes (sp_conv moves the TARGET side only; never congr_of_eventuallyEq on the HasFDerivAt side)
+--     and Fin dispatch via fin5_ne_four_cases + subst (resSlot does not reduce in hypothesis position; rw [h] at * does not hit hyps).
+--   expect: imports 127 -> 128; jobs 8849 -> 8850.
+import N11Formalization.D2IvBoxMem
+
+-- R346 landing (Lead): DeltaAny -- GENERAL-POINT (x : Fin 7 -> R) chain for DeltaX/DeltaY/SRad/sqrt(SRad), 43+ declarations
+--   eventually_diff_{DeltaX,DeltaY,DXsq,DYsq,SRad}_any | hasFDerivAt_{DeltaX,DeltaY}_any | hasFDerivAt_fderiv_{DeltaX,DeltaY,SRad,sqrtSRad}_any
+--   SRad2_any (L618) | sqrtSRad2_any | secondPartial_sqrtSRad_any (L718) | leaf-level hasFDerivAt_fderiv_UvecC0/C1_any | 7 zero-premise box bridges
+--   namespace = N11Formalization.DeltaAny (new => no name collisions, verified).
+--   SCOPE (honest): positivity premises are the ACTUAL-SIDE POINT form (hWa/hWb/hW6/hWp at x), supplied by WkIv_mem + mem_lo_le.
+--     Point conditions were LIFTED to forall-Eventually via ContinuousAt.eventually -- NOT swapped. No sorry / no axiom / no native_decide;
+--     #print axioms on the 14 main results = [propext, Classical.choice, Quot.sound] (project baseline).
+--   ROUTE: NO mixed-domain CLM was constructed (a previous attempt stalled on Fin 7 vs Fin 12 elaboration); everything goes through
+--     hasFDerivAt_fderiv_mul_scalar_any + scalar composition with sqrt.
+--   ONE ITEM NOT DONE (honest): the coefficient bridge to the distHessRealBox (pad12 x) form, i.e.
+--     (fderiv R (fun x => (Uvec x s).ofLp c) (pad12 x)) (up7 i) = dUvec0Real/dUvec1Real (pad12 x) s i.
+--     Measured fact: pad12 (first7 u) != u (last 5 slots are 0) => the bridge cannot go by padding to u.
+--   expect: imports 128 -> 129; jobs 8850 -> 8851.
+import N11Formalization.DeltaAny
+
+-- R257 landing (Lead; member premise-bundle): I-2 -- the SEVEN premises of HessSeamMain/`core` at u := first7 x, supplied by hx ALONE
+--   pb_hd | pb_hadj | pb_Wfun_pos (generic slot s : Fin 9) | pb_hWa | pb_hWb | pb_hW6 | pb_hWp | pb_hpos  (8 decls, NO conjunction, NO new premise)
+--   Only hypothesis: hx : x in Metric.closedBall certCR rhoCertR.  Feeding shape for the pending coreClosed:
+--     coreClosed k i j (first7 x) (pb_hadj hx) (pb_hd hx) (pb_hWa k hx) (pb_hWb k hx) (pb_hW6 hx) (pb_hWp hx) (pb_hpos k hx)
+--   CORRECTION of the Lead task book (member, measured): the prescribed route TowerBC.Wfun_pos_of_wkBoxQ needs `0 < (wkBoxQ Q7 s).lo`,
+--     which is NOT in the cone (TowerBC_N_anyx_layer1.lean L798 self-registers "generic Q has no global positivity => take as hypothesis";
+--     D2IvBoxMem.lean L434/L480 eat it as a hypothesis too). Following the old prescription would have INTRODUCED an unproved premise.
+--   ROUTE ACTUALLY USED: the 12-dim certificate boxes take hx directly -- wkBox_pos + wkBox_mem hx | WpIvBox_pos + WpIvBox_mem hx |
+--     radIvBox_pos + radIvBox_mem k hx, each closed with RatInterval.mem_lo_le => yields `0 <` (not merely `<> 0`), which is what
+--     `core` asks for. Reshaping to the first7 point needs only first7_six | angleVec_transport | Apt_transport/Bpt_transport |
+--     (Wpf (first7 x) = WpReal x := rfl, measured defeq) | pow_two.  THIS PACKAGE USES NO Q7 / mem_closedBall_first7 / cCertR<->certCR bridge.
+--   NO sorry / no admit / no custom axiom / no native_decide. #print axioms: 8/8 = [propext, Classical.choice, Quot.sound]
+--     (member run 19:45:57, evidence/premise-bundle/_readout2.out.txt; Lead independent gate re-run 19:48: exit 0, stdout 0 B, stderr 0 B).
+--   PROVENANCE: byte-for-byte copy, sha256 57EF3F254638BCD5... == member fingerprint == evidence/ copy (DEAD C7 satisfied).
+--   Coexistence: exact whole-library match on all 8 names + namespace PremiseBundle => hits outside this file = 0 (Lead re-measured).
+--   All 8 imports of this file are already in the root table => MEASURED: imports 129 -> 130; jobs 8851 -> 8852 (exact +1),
+--     on TWO consecutive serial builds (evidence/lead/R257-rootbuild-2.txt and -3.txt), each exit 0 / 0 error / 0 warning / sorryAx 0.
+--   STILL OPEN downstream (NOT paid by this piece): the star-class hypotheses of TowerBC.d2xIvBox_mem/d2yIvBox_mem
+--     (0 < (wkBoxQ Q7 .).lo, the HasFDerivAt-=-0 group, the forall-Eventually group, and the secondPartial-Uvec identity hU2)
+--     => that cluster, not hgap, is the true remaining obligation for the 49 KKT x z cells.
+import N11Formalization.PremiseBundle
+
+-- R257 landing #2 (Lead; member hgap-kernel): HgapKernel -- I-1 DELIVERED: the hgap PREMISE IS GONE (coreClosed)
+--   scalar_hgap (pure scalar kernel, 0<S + 6 shape equations) | dDeltaX_single / dDeltaY_single (the bridge DeltaAny SS9 L734-753
+--     self-registered as UNPAID; general point, k=0..4 dispatch, NO new premise beyond core's own hWa/hWb/hW6/hWp/hpos)
+--   | dSRad_any (u0 -> any-point lift) | hgapProved | vec_secondPartial_eq_any / secondPartial_clm_any / eventually_diff_sqrtSRad_any
+--     (the three restatements of the never-landed scratch FinalBridgeB -- THIS FILE IS NOW THE ONLY AUTHORITY FOR THEM) | coreClosed.
+--   coreClosed (k) (i j) (u) (hadj) (hd) (hWa) (hWb) (hW6) (hWp) (hpos) :
+--     HessSeam.hessEntryAt u i j k = Lead.HessBoxMem.distHessRealBox (pad12 u) k i j      -- SEVEN premises, no hgap parameter.
+--   Measured by Lead, EXCLUSIVE serial runs on the member file sha16 880D4FBD5E070CF5 (byte-for-byte == this file):
+--     gate lake env lean exit 0 / stdout 0 B / stderr 0 B  (R257-hgapgate-A.txt 21:58:15)  => 0 error, 0 WARNING.
+--     axiom profile (probe copy 3E45A19F4CD4F60D, R257-hgapax-A.txt 21:59:47): all SIX = [propext, Classical.choice, Quot.sound].
+--   Line-anchored ban check: sorry / admit / axiom decl / native_decide / Lean.ofReduceBool / sorryAx = 0 each.
+--   NOTE (caliber, from the member's measurement): DeltaAny SS9's comment wrote Wfun (resSlot k) (pad12 x) -- TYPE-INVALID
+--     (Wfun : Fin 9 -> (Fin 7 -> R) -> R), so the 12-dim positivity that comment feared is NOT needed; the bridge goes through
+--     per-branch HasFDerivAt at the 7-dim point. The guidance's "hgap is only a representation issue" stays REFINED (see C1374).
+--   Coexistence: HgapKernel / coreClosed / hgapProved / dDeltaX_single / dDeltaY_single / dSRad_any / scalar_hgap => cone hits 0.
+--   All 4 imports already in root. expect: imports 130 -> 132 (with #3); jobs 8852 -> 8854.
+import N11Formalization.HgapKernel
+
+-- R257 landing #3 (Lead; member transport-hh): HHAssembly -- transport (unconditional) + the ball-form assembly of hH
+--   distHessRealBox_transport (x) (k) (i j) : distHessRealBox (pad12 (first7 x)) k i j = distHessRealBox x k i j   -- NO hx needed
+--     (geometry reads only slots 0..6: angleVec 0..3 / rhoK 6 / WpReal 4,5,6 -- cf. TCSystem L37-38).
+--   hessEntryAt_eq_distHessRealBox_of_core + hH_of_core: BOTH take the BALL-FORM hcore hypothesis
+--     (forall k i j {x} (hx : x in closedBall certCR rhoCertR), hessEntryAt (first7 x) i j k = distHessRealBox (pad12 (first7 x)) k i j)
+--     -- the Lead task book originally wrote an ALL-u hypothesis, which is unrealizable (positivity fails off the ball); corrected.
+--   hrad/h2rad are NOT hypotheses (radIvBox_pos / twoRadSqrtIvBox_pos, unconditional in cone). hd2x/hd2y stay as hypotheses HONESTLY
+--     (they are mem_hessIvBox's own d2 parameters; discharging them = the star-class, see the STILL OPEN line above).
+--   Consumer index map (verified by the member): BallJtLam wants Hess : Fin 7 -> Fin 7 -> Fin 5 -> RatInterval and
+--     HessOfBox d2xIv d2yIv i j mm = hessIvBox d2xIv d2yIv mm i j  =>  Hess's THIRD index mm is this file's k (reversed order).
+--   Measured by Lead, EXCLUSIVE serial run on member file sha16 D36A4D7A18FF92CE (== this file): R257-transax-A.txt 22:00:56
+--     exit 0, stderr 0 B, stdout = ONLY the three axiom lines (345 B) => 0 error / 0 WARNING (the two earlier unused-hx linter
+--     notes are gone); all THREE = [propext, Classical.choice, Quot.sound].
+--   Coexistence: HHAssembly / distHessRealBox_transport / hH_of_core / hessEntryAt_eq_distHessRealBox_of_core => cone hits 0.
+--   RETRACTION ON RECORD (member's own, and Lead's kernel check): an earlier claim that this transport was FALSE
+--     (counterexample "x = e_10, dUxReal 0 0 1 x") was a misread -- dUxReal takes only (k, i, x) and its 2nd term
+--     (coord 5)(Pi.single i 1) = if i = 5 then 1 else 0 depends on i, NOT on x's slot 10.
+import N11Formalization.HHAssembly
+-- R257 landing #4 (Lead): HCore -- the hH identity ASSUMPTION becomes a THEOREM (coreClosed fed by PremiseBundle's seven pb_*)
+--   N11Formalization.Lead.HCore.hcore (k) (i j) {x} (hx : x in closedBall certCR rhoCertR) :
+--     hessEntryAt (first7 x) i j k = distHessRealBox (pad12 (first7 x)) k i j
+--   Shape match with HHAssembly.hH_of_core's FIRST argument was checked by printed-type comparison (R257-hcore-A.txt 22:07:28), not by eye.
+--   Zero new premises; no sorry/admit/axiom/native_decide. Standalone module build: exit 0 (R257-hcore-build.txt 22:09:46, Built HCore 25s).
+--   Consequence: the 49 KKT x z cells now lack ONLY the star-class hd2x/hd2y supply (hz has a route; nine wkBoxQ Q7 positivities are a NEW
+--     but purely rational-box computation; plus three differentiability/identity families). See STATUS R257 追加分 / claims C1379,C1380.
+--   expect: imports 132 -> 133; jobs 8854 -> 8855.
+import N11Formalization.HCore
+--   R266 landing #1 (T1 q7-transfer): Q7-box transfer: Q7_eq_ndBox (7-slot, numeral-form) -> wkBoxQ Q7 = wkBox -> Q7_wkBoxQ_pos; ivMulComm -> WpIvBoxQ Q7 = WpIvBox -> Q7_WpIvBoxQ_pos/_valid; hz_of_mem_closedBall (only eats hx); two generic leaves ne_zero_of_mem_{pos,neg}_box for the one-sided falsifier. Gate (member, own bytes): exit 0 / stdout 0 B / stderr 0 B / 0 warning; axioms 19/19 std triple.
+import N11Formalization.Q7WkBoxTransfer
+
+--   R266 landing #2 (T2 starclass): judge piece. clm_zero_of_huh : hUh => L2UvecC0At z (resSlot k) = 0 (via DeltaAny.hasFDerivAt_fderiv_UvecC0_any + HasFDerivAt.unique); not_huh_of_clm_ne_zero = contrapositive; clm_zero_of_huhY = y-side. This is exactly why the pinned CLM in D2IvBoxMem was unfeedable; the Lead-side generalization (4 binder slots) removes the need to prove that zero. Gate (member, own bytes): exit 0 / 0 B / 0 B.
+import N11Formalization.C1_huh_reduction
+
+--   R266 landing #3 (T3 hj-assembly): end-to-end assembly with the TWO explicit holes hd2x/hd2y. hJ_of_hcore_and_d2 : hcore -> (hd2x) -> (hd2y) -> hJ; chain = HCore.hcore -> HHAssembly.hH_of_core -> HessOfBox (index flip, rfl) -> BallJtLam.mem_Jt'_ball -> NondegProof.nd_hnd* (7 unconditional) -> hJ. hJ_fit_consumer pins the conclusion to a NAMED Jt (no hidden cast). Gate (member, own bytes): exit 0 / 0 B / 0 B; axioms std triple.
+import N11Formalization.HJAssembly
+
+--   R266 landing #4 (T4 d2-supply, second-round bytes): ball-form hd2x/hd2y for the BOX tables.
+--   d2xIvBox_mem_ball / d2yIvBox_mem_ball : ALL premises of TowerBC.d2xIvBox_mem / d2yIvBox_mem supplied
+--   from hx alone (PremiseBundle pb_* + Q7Transfer positivity/hz), with hUh filled by the TRUE CLM
+--   DeltaAny.hasFDerivAt_fderiv_UvecC0/1_any via the Lead-generalized implicit binder -- zero new assumptions.
+--   The box-table -> numeric-table bridge (d2xIvBox Q7C = d2xIv) is honestly kept as an EXPLICIT hypothesis
+--   hBridgeX/hBridgeY (NOT defeq: measured), with conditional d2xIv_mem_ball_of_bridge / d2yIv_mem_ball_of_bridge.
+--   Axioms 20/20 std triple. Member gate on these bytes: exit 0 / stdout 0 B / stderr 0 B / 18 s.
+import N11Formalization.D2Supply
+
+--   R266 landing #5 (Lead keystone): HJBoxInstant -- the machine hJ for the BOX tables.
+--   hJ_box : for x in closedBall certCR rhoCertR, (Jt'' (HessOfBox d2xBox d2yBox) k j).Mem (fderiv TCSystem ...),
+--   with d2xBox/d2yBox := TowerBC.d2xIvBox/d2yIvBox Q7C and the two holes filled by D2Supply ball-form supplies.
+--   Chain closed machine-side: hx -> PremiseBundle/Q7Transfer -> coreClosed -> hH_of_core -> hJ_box.
+--   Interface note: consumer nd_via_hyp quantifies over Jt, so hJ_box plugs in directly; hsum/hsumR for THIS
+--   table = route B (49-cell ladder generator, see T5 report / claim C1386). Axioms 3/3 std triple.
+--   Gate (Lead, on landed bytes): exit 0 / stdout 0 B / stderr 0 B.
+import N11Formalization.HJBoxInstant
+
+
+--   R267 landing #1 (T8 bp-mono): KrawczykMono -- krawczykMat/krawczykMatR monotonicity in the Jt argument
+--   (pointwise Contains + tight-side Valid per cell => pointwise Contains; the Valid condition is mathematically
+--   NECESSARY: the mul four-corner min/max is not monotone on invalid intervals -- counterexample in file header),
+--   B-prime grid lemmas (km_gridTable at D=2^320; km_contains_grid / km_gridTable_contains unconditional),
+--   row-sum transfer in the exact shape of the nd_via_hyp hsum/hsumR slots (Y/K universally quantified):
+--   km_hsum_transfer_grid / km_hsumR_transfer_grid. Axioms 11/11 std triple. Gate twice: exit 0 / 0 B / 0 B.
+import N11Formalization.KrawczykMono
+
+
+--   R267 landing #2 (T11 etares-param): EtaResConsParam -- K/K'/hres parameterized re-statement of
+--   EtaResCons's three numeric premises (hK1/hK'1/hresCons), so the ROUTE-B re-declaration of K is
+--   a data swap: hlt:numK<denK, hltR:numKR<denK, hle:2*numK<=denK (each discharged by a Z-decide once
+--   T7 endpoints + k_budget give numK_B/numKR_B); rho/eta side unchanged (norm_num). Calibration theorems
+--   pin the OLD values (K=4.371971634866319e-3, K'=4.975487152940415e-3, hres margin 9.956180e-10) --
+--   independent Fraction recompute matched the HsumPayload header bit-for-bit. k_le_half_of_int is an
+--   AUXILIARY lemma for the hresCons_B re-proof, NOT a consumer slot (Lead ruling). Axioms 8/8 std triple.
+--   Gate: exit 0 / stdout 0 B / stderr 0 B / 23 s.
+import N11Formalization.EtaResConsParam
+
+
+--   R267 landing #3 (T15 c921-stat): C921Sem -- the C921 semantic premise WRITTEN AS A NAMED HYPOTHESIS
+--   and wired to its consumers (15 decls, zero clashes): LeafSemBound (oracle = opaque V2 on the 8-cube,
+--   premise = single inequality over DBM-box intersect closed 8-simplex; energyLower verbatim = the
+--   leafBound_of_check/_batch/_floorData conclusion LHS) => leafOracleLower_of_{check,batch,floorData}
+--   (1:1 arg tables) => globalOracleLower => c921_global => hbound_of_c921 (the hbound slot of
+--   n11_main_conditional) => n11_main_of_c921 => N11MainStatement (Rstar S). NOT proved -- this converts
+--   the C921 obligation from "undefined" to one precisely typed open proposition (honest boundary in
+--   T15-C921-SEMANTIC-PREMISE.md). Axioms 13/13 std triple. Gate: exit 0 / 0 B / 0 B / 0 warning.
+import N11Formalization.C921Sem
+
+--   R267 landing (T7 ladder49): Ladder49_jt_kkt_z -- the 49 kkt x z cells of Jt'' (HessOfBox d2xBox d2yBox) as kernel literals (B49_jt_*_iv); generator calibrated 70/70 bit-exact on B_comp_*, negative control red. Gate (Lead, full file sha16 FB231774083D5E64): exit 0 / 0 B / 0 B.
+import N11Formalization.Ladder49_jt_kkt_z
+--   R267 landing (T17 payload-b): HsumPayloadB -- new-K payload for the box table (grid Jt_B); certB_hsum/certBR_hsumR, hK0_B/hK1_B/hK'0_B/hK'1_B/hresCons_B by integer decide. Gate exit 0 / 0 B / 0 B; axioms std triple.
+import N11Formalization.HsumPayloadB
+--   R267 landing (T18 final-assembly): NdBox -- nd_box (K,K' parameters) via nd_end_to_end_right with hJ_box, hFm_uncond, eta_hηb, km_hsum(R)_transfer_grid. Gate exit 0 / 0 B / 0 B; axioms std triple.
+import N11Formalization.NdBox
+-- R267: GridBridge (144-cell bridge + hsum/hsumR transfer + unconditional nd_box_final)
+import N11Formalization.GridBridge
+
+-- R268 landing: C892Hook (c892-stat): C892SameRootAttain/C892RootHook + hattain_of_remaining; gate exit0/0B/0B.
+import N11Formalization.C892Hook
+
+--   R268: C923Gate (C923Prop named; hc923_of_C923 wires to hbound_of_c921 slot). Slim: imports root C921Sem.
+import N11Formalization.C923Gate
+
+import N11Formalization.C891Gate
+import N11Formalization.TcRootHook
+import N11Formalization.LpDual
+import N11Formalization.RootRangeBox
+import N11Formalization.RootRangeBoxFull
+
+-- Same original C891 isolated root: directed Newton refinement discharges Rstar < T.
+import N11Formalization.ResumeNewtonData
+-- One calibrated source field: original C911 cosine weights bound the actual 51-edge oracle.
+import N11Formalization.ResumeC911Weights
+import N11Formalization.ResumeOutsideHull
+import N11Formalization.ResumeNetworkIsometry
+import N11Formalization.ResumeStressComparison
+import N11Formalization.ResumeLocalIncidence
+import N11Formalization.FlashLocalMix
+import N11Formalization.ResumeAdaptiveRoot
+import N11Formalization.FlashLocalChart
+import N11Formalization.FlashCoverReductionWitness
+import N11Formalization.FlashBoundaryCaps
+import N11Formalization.FlashBoundaryCapsFaces
+import N11Formalization.FlashSlackFace1
+import N11Formalization.FlashSlackConsumer
+import N11Formalization.FlashSlackRoot
+import N11Formalization.ResumePinnedReindex
+import N11Formalization.ResumeRelativeScalar
+import N11Formalization.ResumeDirichletShift
+import N11Formalization.ResumeAdaptiveShift
+import N11Formalization.ResumeAnchorFlux
+import N11Formalization.ResumeFluxTaylor
+import N11Formalization.ResumeFluxRemainder
+import N11Formalization.ResumeAdaptiveRows
+import N11Formalization.ResumeAdaptiveBalance
+import N11Formalization.ResumeHarmonicResponse
+import N11Formalization.ResumeResponseProperties
+import N11Formalization.ResumeResponseBound
+import N11Formalization.ResumeQuadraticCertificate
+import N11Formalization.ResumeCoercivityCertificate
+import N11Formalization.ResumePinnedCoercivity
+import N11Formalization.ResumeIntervalCoercivity
+import N11Formalization.FlashLocalFrobenius
+import N11Formalization.FlashLocalFrobeniusActual
+import N11Formalization.FlashLocalFrobeniusGain
+import N11Formalization.ResumePinnedMatrixReindex
+import N11Formalization.ResumeLinearSolveInterval
+import N11Formalization.FlashAttainmentRstarConsumer
+import N11Formalization.ResumeLinearSolveRefine
+import N11Formalization.FlashCoverReductionNearestEdge
+import N11Formalization.FlashLocalFrobeniusEnclosure
+import N11Formalization.FlashLocalFrobeniusLeafBox
+import N11Formalization.FlashTilingRingConvex
+import N11Formalization.ResumeIntervalMatrix
+import N11Formalization.ResumeIntervalAugmented
+import N11Formalization.FlashLocalFrobeniusPinGate
+import N11Formalization.FlashLocalFrobeniusLeaf
+import N11Formalization.FlashLocalFrobeniusGate
+import N11Formalization.FlashLocalDirectional
+import N11Formalization.FlashLocalDirectionalActual
+import N11Formalization.FlashAttainmentSpecifiedRoot
+import N11Formalization.FlashTilingSigns
+import N11Formalization.FlashLocalMixedPinned
+import N11Formalization.FlashLocalDirectionalBase
+import N11Formalization.FlashAttainmentFinal
+import N11Formalization.FlashTenBoundaryScale
+import N11Formalization.FlashTenBoundaryTwoCircle
+import N11Formalization.FlashTilingHull
+import N11Formalization.FlashBoundaryCapsMidpoint
+import N11Formalization.FlashLocalMixed
+import N11Formalization.FlashLocalH0
+import N11Formalization.FlashLocalThird
+import N11Formalization.FlashLocalThirdFrob
+import N11Formalization.FlashTilingCyclic
+import N11Formalization.FlashTenBoundaryArcCases
+import N11Formalization.FlashBoundaryCapsFlip
+import N11Formalization.FlashLocalPinned
+import N11Formalization.FlashLocalAdaptive
+import N11Formalization.ResumeLocalVectors
+import N11Formalization.ResumeAnchorAngles
+import N11Formalization.FlashTilingFan
+import N11Formalization.FlashTenBoundaryArc
+import N11Formalization.FlashTenBoundaryAnalytic
+import N11Formalization.FlashTenBoundary
+import N11Formalization.ResumeAttainmentCentral2
+import N11Formalization.FlashTenBoundaryDiskBound  -- 2026-09-30 接根（Lead）：glm-ten 交付，外圆带参数化 t ≤ arcsin(19/50) 上界括号；sha 72988C02302FBCEDB6BB3767FD761AE1BFFFE59EE00B1ABE044DAF739EB20E9B（与 06:31 standalone 绿件逐字节一致）；target build exit0 43s（ftbdiskbound-build1.log）；3 定理标准公理（ftbdiskbound-ax1.log）；期望 jobs +1
+import N11Formalization.FlashTenBoundaryInner  -- 2026-09-30 接根（Lead）：glm-ten 交付，内圆 v-形弧积分 q=r=R 特化（消费根内 Coord.arc_integral_circle_vform + Branch）；sha 5A49C20E09E3085259D62E5FA78F39F0FAC6DF680EBFD8CDBEF01857DEB23802（evidence .txt 同 sha；ℕ/ℝ SMul 字面量陷阱已修，见件头）；单件门 exit0（ftbinner6.log）；期望 jobs +1
+import N11Formalization.FlashTenBoundaryGlue  -- 2026-09-30 接根（Lead）：glm-ten 交付，C450 原子 → DiskBound 外圆带 + 内圆 ρ'>0 逐盘接口桥（hub_offset_le C1536 口径）；sha 25A209111BD687CC703F39FB2AF28E7BE0A2F808A192155498B8A1F5B90E02FF；单件门 exit0（ftbglue1.log）；期望 jobs +1
+import N11Formalization.FlashCosineLP  -- 2026-09-30 接根（Lead）：glm-lp3 交付，leaf-318 能量证书 stage3 + energy_v2（C1489 闭合：T² < V2 (fun j => circleMap (theta y j))，域 = 源 Fin-9 chart 的 leaf-318 胞腔）；sha 9E83936E2A5A6774CF1CD5E5DB4AE2E55CDA606B70CBD2B2B577BB6C2461E14D；单件门 lp-land-gate2 exit0/0 err/0 warn，target build lp-build1 exit0（olean 2408968B）；冻结件 FlashCosineLeaf318/FlashCosineCore 未动；期望 jobs +1
+import N11Formalization.FlashLeafRootChart  -- 2026-09-30 接根（Lead）：glm-chart 交付，chart 恒等式闭合（angleVec_le_arcsin 盒界 + chartY_nonneg + canonAnchors_eq_circleMap_chart 望远镜 + chart_identity）；sha A3DA16EBB94C9821C62AF051188721885605CD28EF7F5191FF07CA534281BD6D；门 chart-module-gate.log exit0/0 err/0 warn，target build chart-module-build.log exit0（olean 2329312B）；连带把 FlashLeafRootNetwork 拉入锥（S 级 oracle 消费件）；期望 jobs +2
+import N11Formalization.FlashLeafChartConsume  -- 2026-09-30 接根（Lead）：glm-chart 交付，S.root 实例化 + split_cover 接线（chart_consume_root：根 chart 点 ∈ Cell L1 ∨ Cell R2）+ 三桥板（tlift_eq_anchorAngle / tlift_step / anchorAngle_chart_nine）；sha 1524AC41CAAC065B1F43E8606004D4DC80DABB6254683DF28AA05F9E9142B93E；门 consume-module-gate.log exit0/0 err/0 warn，target build exit0（olean 135304B）；形态差异已录：split_cover = t-空间点级 DBM 胞腔覆盖，非弧段覆盖；期望 jobs +1
+import N11Formalization.FlashLeafArcTransport  -- 2026-09-30 接根（Lead）：glm-chartb 交付，DBM Cell → 几何弧段翻译层闭合（image_arc_sub_of_le 通用区间像引理 + anchorAngle_eq_tlift 桥板 + cell_anchorBounds + arc_of_cell_bound/_multi + chart_arcs_bounded L1/R2 分支 + chart_arcs_bounded_full + cert_width_pos 非退化 + 远端接缝两件）；方向口径：段弧 ⊇ 认证宽子弧（Cell 给 y_j 上界）；sha 97B48FA792B421D3F8D4A4DF048519058B1926CE9EE77CC6509E4C19BAAD0F6B；门 arctransport-gate4 exit0/0 err/0 warn（gate1–3 红留痕）；期望 jobs +1
+import N11Formalization.FlashLeafArcCover  -- 2026-09-30 接根（Lead）：glm-chartb 交付，弧侧覆盖链两件（chart_arcs_union：9 段锚弧并 = circleMap '' Icc raw2 (raw2+2π)，chain_cover 抽象化零分支 + disk_covers_arc：dist_le_radius_of_inner 弧级提升于段自身坐标系，width_j/2 = angleVec(shift3 j) 免 thetaOf 对齐 + chart_subArc_disk_covered 根实例化）；消费者自查选定 (b) C450/FlashLeafCover 树侧；13:40 追加 §5：boundary_cover_sentence（一般 u Covers 单句：‖x‖=1 → ∃ j, dist x (rhoK u (shift3 j) • circleMap(段中点)) ≤ u 6；RootRange u 任意 u 形态，未硬凑）；sha C79A815B15A82EB6FDF8AC703117CAE639992FBEF1A2F85C1F297A240434E2F4（20144B，含 §5）；门 arccover-gate9/gate12 exit0/0 err/0 warn（gate1–8、10–11 红留痕）
+
+import N11Formalization.FlashCosineLeaf284Oracle  -- local full-cell source-mixture/oracle/radius consumer, not unrestricted optimality
+
+-- 2026-09-30 Lead: C1568/C1569 full fixed-tree continuous chart coverage, no hv.
+-- C1570 binds terminal284 literal cell to the existing actual mixture/oracle/radius consumer.
+-- These do not establish all-terminal energy or unrestricted Covers reduction.
+import N11Formalization.DBMTreeChartConsumer
+import N11Formalization.Leaf284TreeBridge
+
+-- Whole source k5 cells 4935/4957: actual pinned chart norm, not geometric C920 bound.
+import N11Formalization.Patch120K5Actual
+
+-- Fixed actual source root/coordinate6, paid from GridBridge; attainment/threshold, not lower bound.
+import N11Formalization.SourceExactRoot
+-- Dense distinct-center reduction removes repeated-center degeneracies; generic lower bound remains open.
+import N11Formalization.CoverDensity
+
+-- 2026-10-01: generic lower-bound transfer, singular harmonic lift, and finite convex mixtures.
+-- Actual source stress/flux, all-terminal semantics, and unrestricted topology remain unproved.
+import N11Formalization.GeometricGeneric
+import N11Formalization.HarmonicLiftExistence
+import N11Formalization.GammaMixture
+import N11Formalization.BetaMixture
+-- Actual two-circle integral identity on the legal e>=0 domain, NOT the 36-box bound.
+import N11Formalization.C450Identify
+
+-- Signed Schur identity and actual balanced-configuration reproduction.
+-- Actual root stress and source20/canonical22 binding remain explicit obligations.
+import N11Formalization.LaplacianSchurBridge
+import N11Formalization.NetworkSchurBinding
+import N11Formalization.HarmonicResponseConsumer
+import N11Formalization.HarmonicReproduceActualV2
+
+import N11Formalization.HarmonicUnusedExtension
+import N11Formalization.MuRootPositive
+import N11Formalization.LocalSharpAuxZ
+
+-- Milestone5: corrected source objects; conditional actual-force consumer; source leaf4348.
+import N11Formalization.SourceN2GeomFlat
+import N11Formalization.HarmonicSourceTransport
+import N11Formalization.HarmonicSourceGeometry
+import N11Formalization.Essentiality
+import N11Formalization.NoContainment
+import N11Formalization.FanBranchClosure
+import N11Formalization.PinHeightPay
+import N11Formalization.C450SourceChain
+import N11Formalization.Leaf4348TreeBridge
+
+-- Restart round: exact width-direction boundary chart/dual, nonlinear derivative consumer.
+-- Physical branch and actual KKT-to-force still remain separate obligations.
+import N11Formalization.BoundaryChartSource
+import N11Formalization.BoundaryChartDifferential
+import N11Formalization.DirectionInjectivity
+
+-- Resume accepted actual chart stationarity derivative consumer.
+import N11Formalization.TCChartStationarity
+-- Resume solo: root-import the accepted source fan positivity and actual chart stationarity consumer.
+import N11Formalization.FanFoutPos
+import N11Formalization.TCChartStationarityRoot
+import N11Formalization.HarmonicSourceGeomConsumer
+import N11Formalization.RootFanBranchConsumer
+import N11Formalization.RootKKTReadout
+import N11Formalization.RootBoundaryDualConsumer
+import N11Formalization.SourceAlphaOf
+import N11Formalization.SourceStressConsumer
+import N11Formalization.PhysicalResidualFrame
+import N11Formalization.PhysicalFrameSmooth
+import N11Formalization.SourceWidthNondegenerate
+import N11Formalization.CoupledRadialFrame
+import N11Formalization.RootRadialDualConsumer
+import N11Formalization.PinTangentGeometry
+import N11Formalization.PinCircleDifferential
+import N11Formalization.RootPinNormalConsumer
+import N11Formalization.RootPinDifferentialConsumer
+import N11Formalization.RootPinCurveSmooth
+
+-- Codex resume: genuine Cartesian pin construction and actual-source consumers.
+-- Boundary-frame dual and independent Cartesian pin rows are proved below;
+-- full Cartesian23/B2 stress and the unrestricted lower bound remain separate.
+import N11Formalization.TrueCirclePin
+import N11Formalization.TrueCirclePinSmooth
+import N11Formalization.TruePinChartConsumer
+import N11Formalization.TruePinFrameDifferential
+import N11Formalization.TrueResidualFrame
+import N11Formalization.TruePinCartesianDifferential
+import N11Formalization.TrueRadialDualConsumer
+import N11Formalization.ReflectionCovectorLift
+import N11Formalization.CartesianPolarFrame
+import N11Formalization.TrueCartesianDualConsumer
+
+-- Actual full Cartesian23 geometry and reflection-averaged covector bridge.
+-- Invariant boundary rows are transported rows; physical radius-gradient
+-- identification, stress signs/B2 force and unrestricted optimality remain open.
+import N11Formalization.CartesianReflectionSpace
+import N11Formalization.HorizontalTruePin
+import N11Formalization.FullCartesianResidual
+import N11Formalization.FullCartesianDual
+import N11Formalization.SourceFanLengthCovector
+import N11Formalization.SourceFanConversion
+import N11Formalization.CircumcenterGeometry
+import N11Formalization.CircumradiusDifferential
+import N11Formalization.SourceFanCircumradius
+import N11Formalization.SourceFanRadiusDerivative
+import N11Formalization.SourceCentralGeometry
+import N11Formalization.SourceCentralDerivative
+import N11Formalization.PhysicalInteriorObjective
+import N11Formalization.TrueBoundaryTie
+import N11Formalization.SourceBoundaryTie
+import N11Formalization.SourceBoundaryTieDerivative
+import N11Formalization.SourceBoundaryWeights
+import N11Formalization.SourceFrameVelocity
+import N11Formalization.BoundaryPolarRows
+import N11Formalization.BoundaryGapConversion
+import N11Formalization.PhysicalBoundaryStationarity
+import N11Formalization.SourceFanBarycentricSigns
+import N11Formalization.SourceRepresentativeFaceBalance
+import N11Formalization.SourceFaceReflection
+import N11Formalization.SourceAllFaceBalance
+import N11Formalization.SourceSignedStressAssembly
+import N11Formalization.SourceCentreCovector
+import N11Formalization.SourceSelfFaceSymmetry
+import N11Formalization.SourceFaceForceTransport
+import N11Formalization.SourceTieForceTransport
+import N11Formalization.SourceTotalCentreForce
+import N11Formalization.SourceCentreB2Readout
+import N11Formalization.SourceBoundarySignBounds
+import N11Formalization.SourceBoundarySignReadout
+import N11Formalization.SourceBoundaryMultiplierFormula
+import N11Formalization.SourceBoundaryMultiplierIntervals
+import N11Formalization.SourceBoundaryIntervalReadout
+import N11Formalization.SourceBoundaryStressPositive
+import N11Formalization.SourcePositiveHarmonicConsumer
+import N11Formalization.SourceRadialFluxGeometry
+import N11Formalization.SourceRadialFluxConsumer
+import N11Formalization.SourceResponseFluxIdentity
+import N11Formalization.SourceSharpEnergyCalibration
+import N11Formalization.SourceHarmonicUniqueness
+import N11Formalization.SourceSchurResponseBinding
+import N11Formalization.SourceResponsePSDConsumer
+import N11Formalization.SourceResponseKernelConsumer
+import N11Formalization.SourceH0PinnedReduction
+import N11Formalization.SourceActiveLaplacian
+import N11Formalization.SourceActiveHarmonicSolve
+import N11Formalization.SourceActiveAffineResponse
+import N11Formalization.SourceActiveFiniteSystem
+import N11Formalization.SourceStressClosedFormula
+import N11Formalization.SourceStressIntervals
+import N11Formalization.SourceStressGridReadout
+import N11Formalization.SourceCompactStressIntervals
+import N11Formalization.SourceActiveMatrixIntervals
+import N11Formalization.SourceContractionProposal
+import N11Formalization.SourceActualContraction
+import N11Formalization.SourceH20ResidualProposal
+import N11Formalization.SourceH20CertifiedEnclosure
+import N11Formalization.SourceResponseCertifiedIntervals
+import N11Formalization.SourceRefinedFanCoefficientBounds
+import N11Formalization.SourceRefinedBoundaryIntervals
+import N11Formalization.DSHTopologyOwnershipC450Source
+import N11Formalization.DSHTenBoundaryEval
+import N11Formalization.DSHTenBoundaryReduce
+import N11Formalization.DSHTopologyHubFanConsumer
+import N11Formalization.DSHTopologyOwnershipSwitchCount
+import N11Formalization.DSHTopologyInteriorHubLeg
+import N11Formalization.DSHCanonicalRelabel
+import N11Formalization.Terminal562SimplexEnergy
+import N11Formalization.Terminal562Oracle
+
+-- SAME-source analytic harmonic signs and certified linear-response/H0 inputs.
+-- These pay source/dual input interfaces, not N/G/mixed or unrestricted optimality.
+import N11Formalization.SourceHarmonicMaximumPrinciple
+import N11Formalization.SourceHarmonicSignedIntervals
+import N11Formalization.SourceResponseLinearIntervals
+
+-- Correct SourceN2 actual B41x45 and all29-node coordinate input memberships.
+-- The finite preconditioner proposal/actual contraction remains separate.
+import N11Formalization.SourceBMatrixIntervals
+import N11Formalization.SourceBPointPacket
+import N11Formalization.SourceB41ActualContraction
+import N11Formalization.SourceNormalizedKernel
+import N11Formalization.SourceNormalizedCanonical
+import N11Formalization.SourceAdaptiveBalanceInputs
+import N11Formalization.SourceNEnclosure
+import N11Formalization.SourceRelativeMetric
+import N11Formalization.SourceRelativeNormPacket
+import N11Formalization.SourceRelativeNormConsumer
+import N11Formalization.SourceRelativeAdaptiveConsumer
+import N11Formalization.SourceRelativeFluxGeometry
+import N11Formalization.SourceRelativeFluxPacket
+import N11Formalization.SourceRelativeFluxNorms
+
+-- SAME actual stress/H20 precision and non-widening actual response/H0 inputs.
+-- The exact2/25 anchor diagonal is paid; augmented coercivity remains separate.
+import N11Formalization.SourceFineStressIntervals
+import N11Formalization.SourceFineStressGridReadout
+import N11Formalization.SourceFineCompactStressIntervals
+import N11Formalization.SourceFineH20ResidualProposal
+import N11Formalization.SourceFineH20CertifiedEnclosure
+import N11Formalization.SourceFineResponseIntervals
+
+-- SAME exact normalized N, combined residual precision and narrower actualG.
+-- No new spectral, augmented coercivity or unrestricted lower bound is assumed.
+import N11Formalization.SourceFineBPointPacket
+import N11Formalization.SourceFineNResidualPacket
+import N11Formalization.SourceFineNEnclosure
+import N11Formalization.SourceFineRelativeNIntervals
+import N11Formalization.SourceFineRelativeFluxGeometry
+import N11Formalization.SourceFineRelativeFluxPacket
+
+-- SAME actual two-spoke response and correlation-preserving augmented coercivity.
+-- Exactmu9/5000/raw8->canonical6 paid; mixed/remainders/global lower bound separate.
+import N11Formalization.SourceRawResponseIntervals
+import N11Formalization.SourceRawResponsePacket
+import N11Formalization.StructuredCongruence
+import N11Formalization.SourceStructuredIntervals
+import N11Formalization.SourceStructuredCoercivityPacket
+import N11Formalization.SourceActualCoercivity
+
+-- Actual pinnedcross/fullresponse bounds and full SAME729/50000 local ball.
+-- No hdir/mixed/coercivity premise; all120patch/Covers topology remain separate.
+import N11Formalization.SourceCrossGeometry
+import N11Formalization.SourceCrossPacket
+import N11Formalization.SourceActualCrossBound
+import N11Formalization.SourceActualResponseBound
+import N11Formalization.SourceLocalSharpGain
+
+-- Frozen ALL120 sharp tree cells: true domains/norms/chartrotation/radius dispatch.
+-- Other terminal semantics and unrestricted Covers topology remain explicit gaps.
+import N11Formalization.SourceChartIsometry
+import N11Formalization.Patch120IntervalCore
+import N11Formalization.Patch120DomainPacket
+import N11Formalization.Patch120SharpDispatch
+
+-- Shared truechart for existingenergy and own984 actualfield/oracle semantics.
+-- Four energy IDs paid; RemainingTerminalRadius/global Covers reduction explicit.
+import N11Formalization.EnergyCommonChart
+import N11Formalization.DSHTerminalBatchL0G1Zplus_984
+import N11Formalization.Terminal984Angles
+import N11Formalization.Terminal984Oracle
+import N11Formalization.EnergyTerminalDispatch
+
+-- Own1112/2166 complete radius consumers using shared actualfield10 semantics.
+-- Six energy IDs paid; remaining terminals and arbitrary Covers still explicit.
+import N11Formalization.Field10MinorantCore
+import N11Formalization.DSHTerminalBatchL0G1Zplus_1112
+import N11Formalization.DSHTerminalBatchL0G1Zplus_2166
+import N11Formalization.Terminal1112Angles
+import N11Formalization.Terminal2166Angles
+import N11Formalization.Terminal1112Oracle
+import N11Formalization.Terminal2166Oracle
+import N11Formalization.EnergyTerminalBatchB01
+
+-- Actual convex field/minorant and signed Fin9 DBM dual/angular consumers.
+-- Own2162 and a nonzero2166 dual paid; remaining global obligations explicit.
+import N11Formalization.ConvexMinorantCore
+import N11Formalization.DBMMinorantDual
+import N11Formalization.DBMAngleProvider
+import N11Formalization.Terminal2162Minorants
+import N11Formalization.TerminalDualConsumers
+import N11Formalization.EnergyTerminalBatchB02
+
+-- Shared continuum line decoder + true rounded convexfield/fullDBM batch.
+-- Seven additional actual energy nodes; fourteen paid, global gaps explicit.
+import N11Formalization.CosineLinePacket
+import N11Formalization.RoundedFieldWeights
+import N11Formalization.Lambda0Batch7Packet
+import N11Formalization.Lambda0Batch7Consumer
+import N11Formalization.EnergyTerminalBatchB03
+
+-- Eleven additional source-lambda-zero OWN-cell tangent/chord consumers.
+-- The exact packet/DBM/convex checks are paid in their modules; remaining
+-- terminal semantics and arbitrary-Covers reduction stay explicit.
+import N11Formalization.RoundedFieldWeightsB04
+import N11Formalization.Lambda0TangentChordC01Packet
+import N11Formalization.Lambda0TangentChordC01Consumer
+import N11Formalization.EnergyTerminalBatchB04
+
+-- Seven further OWN-cell tangent/chord witnesses selected by cutting planes.
+-- All numerical/continuum/DBM premises are kernel-paid in actual consumers.
+-- RemainingTerminalRadius and arbitrary-Covers reduction remain explicit gaps.
+import N11Formalization.CuttingPlaneBatch7Packet
+import N11Formalization.CuttingPlaneBatch7Consumer
+import N11Formalization.EnergyTerminalBatchB05
+
+-- Genuine arbitrary finite harmonic-field interface, instantiated on eight
+-- checked canonical51 packets. OWN3436 is paid; global gaps remain explicit.
+import N11Formalization.CertifiedHarmonicField
+import N11Formalization.CertifiedFieldMixtures
+import N11Formalization.HarmonicFieldsB01A
+import N11Formalization.HarmonicFieldsB01B
+import N11Formalization.HarmonicFieldsB01
+import N11Formalization.Terminal3436Packet
+import N11Formalization.Terminal3436Consumer
+import N11Formalization.EnergyTerminalBatchB06
+
+-- Seven additional genuine harmonic fields shared by OWN4179/4265.
+-- Concrete continuum/field/DBM/radius consumers; global gaps stay explicit.
+import N11Formalization.HarmonicFieldsB02A
+import N11Formalization.HarmonicFieldsB02B
+import N11Formalization.HarmonicFieldsB02
+import N11Formalization.Terminal4179Packet
+import N11Formalization.Terminal4179Consumer
+import N11Formalization.Terminal4265Packet
+import N11Formalization.Terminal4265Consumer
+import N11Formalization.EnergyTerminalBatchB07
+
+-- New genuine field278 plus five paid fields, complete OWN4267 consumer.
+-- RemainingTerminalRadius and unrestricted Covers reduction remain explicit.
+import N11Formalization.HarmonicField278
+import N11Formalization.HarmonicFieldsB03
+import N11Formalization.Terminal4267Packet
+import N11Formalization.Terminal4267Consumer
+import N11Formalization.EnergyTerminalBatchB08
+
+-- Genuine16-field reuse outside the prior lambda-zero subset:22 more owncells.
+-- All continuum/weight/DBM/radius consumers paid; global gaps explicit.
+import N11Formalization.HarmonicFieldsPaid16
+import N11Formalization.RoundedPaid16
+import N11Formalization.Paid16Batch22Packet
+import N11Formalization.Paid16Batch22Consumer
+import N11Formalization.EnergyTerminalBatchB09
+
+-- Reusable genuine16-field cell-certificate interface;42 further OWNcells.
+-- Concrete Valid inputs paid in G01/G02. Original global gaps remain explicit.
+import N11Formalization.Paid16CellCertificate
+import N11Formalization.Paid16GeneralG01
+import N11Formalization.Paid16GeneralG02
+import N11Formalization.Paid16GeneralFirst42
+import N11Formalization.EnergyTerminalBatchB10
+
+-- Remaining210 concrete OWN-cell certificates using the same16 genuine fields.
+-- Concrete Valid inputs are discharged; original global gaps remain explicit.
+import N11Formalization.Paid16GeneralG03
+import N11Formalization.Paid16GeneralG04
+import N11Formalization.Paid16GeneralG05
+import N11Formalization.Paid16GeneralG06
+import N11Formalization.Paid16GeneralG07
+import N11Formalization.Paid16GeneralG08
+import N11Formalization.Paid16GeneralG09
+import N11Formalization.Paid16GeneralG10
+import N11Formalization.Paid16GeneralG11
+import N11Formalization.Paid16GeneralG12
+import N11Formalization.Paid16GeneralRemaining210
+import N11Formalization.EnergyTerminalBatchB11
+
+-- C450 direction-scope correction: old fixed-density obligation is refuted.
+-- Whole-cover rotation pays hub normalization; all36 source inequalities
+-- remain explicit in the source-aligned normalized certificate.
+import N11Formalization.C450OrientationControl
+import N11Formalization.C450NormalizedInterface
+
+-- Exact actual-integral/source t-v-e-sign identity. All36 continuous source
+-- quantity inequalities remain explicit; no numerical certificate premise.
+import N11Formalization.C450SourceQuantity
+
+-- Genuine first normalized C450 segment, continuous all-centre/all-angle
+-- bound from closed radial512 certificates. Other35 remain explicit.
+import N11Formalization.C450RadialMajorant
+import N11Formalization.C450FirstRadialKernel
+import N11Formalization.C450FirstRadialG01
+import N11Formalization.C450FirstRadialG02
+import N11Formalization.C450FirstRadialG03
+import N11Formalization.C450FirstRadialG04
+import N11Formalization.C450FirstRadialG05
+import N11Formalization.C450FirstRadialG06
+import N11Formalization.C450FirstRadialG07
+import N11Formalization.C450FirstRadialG08
+import N11Formalization.C450FirstSegment
+
+-- Genuine second normalized C450 segment: actual direction/norm coupling,
+-- complete three-way direction split and101 closed adaptive radial packets.
+-- Only the remaining34 source segments remain in its conditional consumer.
+import N11Formalization.C450AngularMajorant
+import N11Formalization.C450SecondRadialKernel
+import N11Formalization.C450SecondRadialNeg
+import N11Formalization.C450SecondRadialMid
+import N11Formalization.C450SecondRadialPos
+import N11Formalization.C450SecondSegment
+
+-- Genuine third normalized C450 segment: retain actual lower hub offset
+-- on negative directions; four complete cq branches/107 closed packets.
+-- Its source consumer explicitly retains only the other33 segments.
+import N11Formalization.C450SignedAngularMajorant
+import N11Formalization.C450RadialPacketKernel
+import N11Formalization.C450ThirdRadialNeg1
+import N11Formalization.C450ThirdRadialNeg2
+import N11Formalization.C450ThirdRadialMid
+import N11Formalization.C450ThirdRadialPos
+import N11Formalization.C450ThirdSegment
+
+-- Genuine fourth normalized C450 segment: arbitrary closed angular-cell
+-- soundness,complete eight-direction coverage/218 exact radial packets.
+-- Actual source b3=-17/200000 is bound by the model identities.
+-- Its source consumer explicitly retains only the other32 segments.
+import N11Formalization.C450AngularCellMajorant
+import N11Formalization.C450FourthRadialC01
+import N11Formalization.C450FourthRadialC02
+import N11Formalization.C450FourthRadialC03
+import N11Formalization.C450FourthRadialC04
+import N11Formalization.C450FourthRadialC05
+import N11Formalization.C450FourthRadialC06
+import N11Formalization.C450FourthRadialC07
+import N11Formalization.C450FourthRadialC08
+import N11Formalization.C450FourthSegment
+
+-- Genuine fifth normalized C450 segment:actual source data,complete16
+-- closed direction cells/403 closed exact radial packets/all far consumers.
+-- Its source consumer explicitly retains only the other31 segments.
+import N11Formalization.C450FifthRadialC01
+import N11Formalization.C450FifthRadialC02
+import N11Formalization.C450FifthRadialC03
+import N11Formalization.C450FifthRadialC04
+import N11Formalization.C450FifthRadialC05
+import N11Formalization.C450FifthRadialC06
+import N11Formalization.C450FifthRadialC07
+import N11Formalization.C450FifthRadialC08
+import N11Formalization.C450FifthRadialC09
+import N11Formalization.C450FifthRadialC10
+import N11Formalization.C450FifthRadialC11
+import N11Formalization.C450FifthRadialC12
+import N11Formalization.C450FifthRadialC13
+import N11Formalization.C450FifthRadialC14
+import N11Formalization.C450FifthRadialC15
+import N11Formalization.C450FifthRadialC16
+import N11Formalization.C450FifthSegment
+
+-- Actual nonconstant-outer analytic engine: direction transport,strong
+-- signed sine/Chebyshev bounds,unchanged source capacity and actualsixth
+-- physical pair consumer. Its continuous cell certificate remains explicit;
+-- no sixth-segment payment is claimed by these imports.
+import N11Formalization.C450OuterGeometry
+import N11Formalization.C450OuterCellMajorant
+import N11Formalization.C450SixthAnalytic
+
+-- Actual sixth continuous certificate draft: root acceptance is pending.
+import N11Formalization.C450SixthSegment
+
+-- Grouped preliminary quadratic/scalar/actual harmonic identities.
+-- Actual geometric packet inputs remain explicit, no seventh credit.
+import N11Formalization.C450QuadraticBounds
+import N11Formalization.C450GroupedAnalytic
+
+-- Real critical-point polynomial ranges and actual quadratic centre geometry.
+-- Concrete grouped packet/source capacity certification remains pending.
+import N11Formalization.C450PolynomialRanges
+import N11Formalization.C450GroupedGeometry
+
+-- Genuine grouped packet real soundness; actual source family checks pending.
+import N11Formalization.C450GroupedAmplitude
+import N11Formalization.C450GroupedPacketKernel
+
+-- Actual seventh grouped continuous certificate draft; acceptance pending.
+import N11Formalization.C450GroupedClosedAssembly
+import N11Formalization.C450SeventhSegment
+
+-- Actual eighth grouped continuous certificate draft; acceptance pending.
+import N11Formalization.C450EighthSegment
+
+-- Actual ninth grouped continuous certificate draft; acceptance pending.
+import N11Formalization.C450NinthSegment
+
+-- Actual tenth grouped continuous certificate draft; acceptance pending.
+import N11Formalization.C450TenthSegment
+
+-- Actual source11 grouped continuous certificate draft; acceptance pending.
+import N11Formalization.C450Source11Segment
+
+-- PILOT ROOT INTEGRATION (task-8, m6-c450-pilot, 2026-10-14). PILOT ONLY:
+-- integrates ONE emitted segment (c450Segs[12]) to test the root interface,
+-- pending the remaining 23 (c450Segs[13..35]). Pulls C450Source12Segment
+-- transitively, so the chain C450Source11Segment <- C450Source12Segment <-
+-- C450Source13Segment is reachable from the root; Source11Segment itself does
+-- NOT import Source12Segment. source13_paid is kernel-checked with axioms
+-- exactly {propext, Classical.choice, Quot.sound}.
+-- Emitted-file hashes: evidence\c450-emit-20261014\c450-source13-grouped-draft-manifest.json
+import N11Formalization.C450Source13Segment
+
+-- C450 BATCH ROOT INTEGRATION (task-9, m6-c450-pilot, 2026-10-14).
+-- Completes the chain c450Segs[13..35] (23 emitted segments). With the
+-- pilot's C450Source13Segment this covers c450Segs[12..35], so
+-- C450Source11Segment.RemainingSourceObligation (the root's h450,
+-- ActualMetricClassReduction.lean:65) is obtainable from the chain.
+-- The LAST module C450Source36Segment has remainingSegs = c450Segs.drop 36
+-- = [], so ITS OWN RemainingSourceObligation is vacuous; but its
+-- predecessor c450Segs.drop 35 is a singleton, so C450Source36Segment
+-- still supplies its own source36_paid (kernel-checked).
+-- One import line per segment: the transitive closure pulls Data + 32
+-- grouped modules for each.
+import N11Formalization.C450Source14Segment
+import N11Formalization.C450Source15Segment
+import N11Formalization.C450Source16Segment
+import N11Formalization.C450Source17Segment
+import N11Formalization.C450Source18Segment
+import N11Formalization.C450Source19Segment
+import N11Formalization.C450Source20Segment
+import N11Formalization.C450Source21Segment
+import N11Formalization.C450Source22Segment
+import N11Formalization.C450Source23Segment
+import N11Formalization.C450Source24Segment
+import N11Formalization.C450Source25Segment
+import N11Formalization.C450Source26Segment
+import N11Formalization.C450Source27Segment
+import N11Formalization.C450Source28Segment
+import N11Formalization.C450Source29Segment
+import N11Formalization.C450Source30Segment
+import N11Formalization.C450Source31Segment
+import N11Formalization.C450Source32Segment
+import N11Formalization.C450Source33Segment
+import N11Formalization.C450Source34Segment
+import N11Formalization.C450Source35Segment
+import N11Formalization.C450Source36Segment
+
+-- Actual arbitrary-cover hub structure; C450 remaining inequalities explicit.
+import N11Formalization.ActualHubEssentiality
+
+-- A8 ACTUAL-cover framework: module-green structural producers.
+-- Fresh local dual-root acceptance is required; arbitrary n11 is NOT
+-- complete. Original radius and ALL arbitrary-cover quantifiers retained.
+-- Remaining25 C450,2076 energy and canonical33 geometry stay explicit.
+import N11Formalization.ActualVoronoiCells
+import N11Formalization.ActualInwardNormalization
+import N11Formalization.ActualRingEssentiality
+import N11Formalization.ActualVoronoiRadialExit
+import N11Formalization.ActualHubCoreSupport
+import N11Formalization.ActualTwoCircleCapacity
+import N11Formalization.ActualHubAdjacency
+import N11Formalization.ActualHubEdgeGeometry
+import N11Formalization.ActualHubPositiveEdge
+import N11Formalization.ActualRingDirectionOrder
+import N11Formalization.ActualCoverStructuralReduction
+import N11Formalization.ActualBoundaryArcFrame
+import N11Formalization.ActualBoundaryArcOrder
+import N11Formalization.ActualBoundaryTieUniqueness
+import N11Formalization.ActualBoundaryNearestPairs
+import N11Formalization.ActualHubEdgeEndpointGeometry
+import N11Formalization.ActualHubEdgeEndpoints
+import N11Formalization.ActualBoundaryCyclicOrder
+import N11Formalization.ActualBoundaryAnchorWidths
+import N11Formalization.ActualBoundaryChart
+import N11Formalization.ActualBoundaryNeighborTies
+import N11Formalization.ActualBoundaryOverlapAdjacency
+import N11Formalization.ActualBoundaryChartRelabeling
+import N11Formalization.ActualBoundaryNineTies
+import N11Formalization.ActualBoundaryTransversality
+import N11Formalization.ActualBoundarySwitches
+import N11Formalization.ActualMixedCircleCapacity
+import N11Formalization.ActualPeriodicMidpointOrder
+import N11Formalization.ActualCapClusterLift
+import N11Formalization.ActualCapClusterCapacity
+import N11Formalization.ActualRingLocality
+import N11Formalization.ActualRingCommonPoints
+import N11Formalization.ActualFiveRingStar
+import N11Formalization.ActualTwoTripleCapacity
+import N11Formalization.ActualEarCapacity
+import N11Formalization.ActualBoundaryFacets
+import N11Formalization.ActualBoundaryFacetEndpoints
+import N11Formalization.ActualBoundaryVertexLocality
+import N11Formalization.ActualDelaunaySupport
+import N11Formalization.ActualDelaunayCrossing
+import N11Formalization.ActualVoronoiIncidence
+import N11Formalization.ActualClippedCellPartition
+import N11Formalization.ActualBoundaryOwnershipIntervals
+import N11Formalization.ActualMainRoute
+
+-- A9 ACTUAL incident polygon/clipped mesh continuation.
+-- Local geometry and nearest-ear q<=1 producers; global dual-disk,
+-- two-fan/metric classification and the three main obligations stay unpaid.
+import N11Formalization.ActualVoronoiLocalFan
+import N11Formalization.ActualIncidentPolygonOrder
+import N11Formalization.ActualIncidentFacetGerms
+import N11Formalization.ActualCyclicChordSupport
+import N11Formalization.ActualIncidentPolygonFacets
+import N11Formalization.ActualIncidentChordGeometry
+import N11Formalization.ActualClippedFacetIntervals
+import N11Formalization.ActualIncidentPolygonConvexity
+import N11Formalization.ActualClippedMeshVertices
+import N11Formalization.ActualIncidentFacetAdjacency
+import N11Formalization.ActualClippedFacetInterior
+import N11Formalization.ActualClippedSpokeEmbedding
+import N11Formalization.ActualClippedDualSkeleton
+import N11Formalization.ActualIncidentFanRefinement
+import N11Formalization.ActualBoundaryFacetUniqueness
+import N11Formalization.ActualNearestEarExclusion
+import N11Formalization.ActualNearestRingTriangles
+import N11Formalization.ActualHubFacetComplete
+
+-- A10 ACTUAL finite coherent nearest refinement and exact incidence.
+-- Does NOT assert global cellular disk/two-fan/metric classification.
+import N11Formalization.ActualPuncturedDiskConnected
+import N11Formalization.ActualPositiveFacetGraph
+import N11Formalization.ActualDelaunayPolygonSeparation
+import N11Formalization.ActualIncidentFanInteriors
+import N11Formalization.ActualFiniteNearestRefinement
+import N11Formalization.ActualRefinementFacetRetention
+import N11Formalization.ActualRefinementTriangleUniqueness
+import N11Formalization.ActualRefinementEarCount
+import N11Formalization.ActualHubPositiveDegree
+import N11Formalization.ActualRefinementSideMultiplicity
+import N11Formalization.ActualRefinementGraphConnected
+import N11Formalization.ActualRefinementHubCount
+import N11Formalization.ActualRefinementBoundaryCount
+import N11Formalization.ActualNearestPairRigidity
+
+-- A11 ACTUAL complete edge incidence and real hub cycles/ring paths.
+-- Complementary boundary paths, full two-fan lengths and metric classes unpaid.
+import N11Formalization.ActualLocalRefinementPairCounts
+import N11Formalization.ActualRefinementInteriorFacetCount
+import N11Formalization.ActualRefinementDiagonalCount
+import N11Formalization.ActualSelectedEdgeIncidence
+import N11Formalization.ActualRefinementDoubleCounting
+import N11Formalization.ActualRefinementLinkDegrees
+import N11Formalization.ActualClippedCellFrontiers
+import N11Formalization.ActualRefinementLocalLinks
+import N11Formalization.ActualRefinementVertexLinks
+import N11Formalization.ActualHubLinkConnected
+import N11Formalization.ActualHubLinkCycles
+import N11Formalization.ActualHubRingPaths
+import N11Formalization.ActualCentralRingEndpoints
+
+-- A12 ACTUAL all-site links, including the genuine circle part of ring frontiers.
+-- Productive local-surface data; no global Euler/two-fan/canonical33 assertion.
+import N11Formalization.ActualRingLinkBoundaryData
+import N11Formalization.ActualAugmentedRingLinkConnected
+import N11Formalization.ActualAugmentedRingLinkCycles
+import N11Formalization.ActualCycleDeletion
+import N11Formalization.ActualRingLinkConnected
+import N11Formalization.ActualRingLinkSimplePaths
+import N11Formalization.ActualLocalSurfaceData
+
+-- A13 ACTUAL directed boundary conservation, selected ears and exact face count.
+-- Metric exclusions and canonical33 remain distinct unpaid mathematics.
+import N11Formalization.ActualHubTriangleCensus
+import N11Formalization.ActualSelectedEarRemoval
+import N11Formalization.ActualHubNeighborCoverage
+import N11Formalization.ActualSelectedEdgeOrientation
+import N11Formalization.ActualTriangleBoundaryChain
+import N11Formalization.ActualBoundaryChainConservation
+import N11Formalization.ActualTriangleChainRows
+import N11Formalization.ActualHubLinkNoRingCycle
+import N11Formalization.ActualShortChordHubData
+import N11Formalization.ActualSelectedSkipChordEar
+import N11Formalization.ActualSelectedRingEdges
+import N11Formalization.ActualRefinementEulerCount
+import N11Formalization.ActualHubPathCounts
+import N11Formalization.ActualHubDegreeClasses
+
+-- A14 ACTUAL ordered q0 fans and full canonical33 from explicit q0(6,7).
+-- RemainingMetricClassification is UNPAID; unconditional n11 NOT complete.
+import N11Formalization.ActualQ0BoundaryFans
+import N11Formalization.ActualSameHubBoundarySides
+import N11Formalization.ActualQ0FanTransitions
+import N11Formalization.ActualBinaryCycleRuns
+import N11Formalization.ActualQ0OrderedTwoFans
+import N11Formalization.ActualQ0FacePartition
+import N11Formalization.ActualQ0RunDegrees
+import N11Formalization.ActualQ0FourRunNormalization
+import N11Formalization.ActualCanonicalSitePermutation
+import N11Formalization.ActualQ0CanonicalNearestRows
+import N11Formalization.ActualQ1CoreCycle
+import N11Formalization.ActualQ1CoreFans
+
+-- A15 ACTUAL complete q1 order/degree/family reduction and local metric rows.
+-- SevenClassExclusions and closed-domain angle/certificate bounds remain UNPAID.
+import N11Formalization.ActualBoundaryExteriorGeometry
+import N11Formalization.ActualBoundaryTriangleExterior
+import N11Formalization.ActualFiniteBinaryCycleRuns
+import N11Formalization.ActualQ1CoreTransitions
+import N11Formalization.ActualQ1OrderedCoreFans
+import N11Formalization.ActualBoundarySwitchMetric
+import N11Formalization.ActualBoundarySwitchAngles
+import N11Formalization.ActualQ1FacePartition
+import N11Formalization.ActualQ1RunDegrees
+import N11Formalization.ActualFiniteFanFamilies
+import N11Formalization.ActualMetricClassReduction
+
+-- A16 ACTUAL signed shoelace chain.
+-- Exact algebraic boundary reduction and positive radial ring shoelace;
+-- A18 below supplies actual ownership scalar area closure, not angle bounds.
+import N11Formalization.ActualTriangleShoelace
+import N11Formalization.ActualRingShoelacePositive
+import N11Formalization.ActualBoundaryShoelace
+import N11Formalization.ActualCenterRingShoelace
+import N11Formalization.ActualCircleSegmentAlgebra
+
+-- A18 ACTUAL nearest ownership intervals and exact disk scalar decomposition.
+-- SOC cap-right anchors remain distinct from nearest switches.
+-- Site/face angle identities,seven exclusions,C45025/energy2076 remain unpaid.
+import N11Formalization.ActualCircularSectorClosure
+import N11Formalization.ActualSwitchAtomAggregate
+import N11Formalization.ActualOwnershipSwitchWidths
+import N11Formalization.ActualOwnedChordGeometry
+import N11Formalization.ActualSwitchWedgeArea
+import N11Formalization.ActualOwnedSectorDecomposition
+
+-- A19 ACTUAL metric angle/area continuation.
+-- These modules expose genuine face/sector angle domains, unequal-radius
+-- cosine laws, circumradius/sine atoms, shared-side matching, and the
+-- site-angle phase chain.  They do not yet pay the seven metric exclusions.
+import N11Formalization.ActualMetricAngleAtoms
+import N11Formalization.ActualSectorMetricDomain
+import N11Formalization.ActualFaceCircumradiusAtoms
+import N11Formalization.ActualSwitchSineAtoms
+import N11Formalization.ActualSharedFactorArea
+import N11Formalization.ActualSquaredSideMatching
+import N11Formalization.ActualAnglePhase
+import N11Formalization.ActualSiteAngleChain
+import N11Formalization.ActualHubAngleSum
+import N11Formalization.ActualMetricBridgeAudit
+
+-- A20 continuation recovered from the interrupted A19 chat.
+-- Actual shared edges have the Delaunay angle/cotangent inequality;
+-- same-witness artificial diagonals retain the exact flat equalities.
+-- Arbitrary-degree hubs turn once, all sites have a packing bound, and
+-- real ring angles close with the two true switch base angles.
+-- Seven class certificates, C45025 and energy2076 remain explicit inputs.
+import N11Formalization.ActualDelaunayAngleBounds
+import N11Formalization.ActualDelaunayAngleConsumer
+import N11Formalization.ActualDelaunayFlatDiagonal
+import N11Formalization.ActualSwitchBaseAngle
+import N11Formalization.ActualHubOneTurn
+import N11Formalization.ActualSiteAnglePacking
+import N11Formalization.ActualRingAngleClosure
+import N11Formalization.ActualBoundaryDelaunayAngle
+import N11Formalization.ActualSectorAreaEnvelope
+
+-- Actual 21-edge metric model and closed-domain finite rational certificate
+-- consumers. Concrete Q0/Q1 numeric tables remain explicit obligations.
+import N11Formalization.ActualEdgeAreaAtoms
+import N11Formalization.ActualBoundaryEdgeAreaAtoms
+import N11Formalization.ActualEdgeFlagSums
+import N11Formalization.ActualEdgeMetricModel
+import N11Formalization.MetricAreaDual
+import N11Formalization.MetricAreaEnvelopeRegularity
+import N11Formalization.MetricAreaGridCertificate
+import N11Formalization.MetricAreaGridDual
+import N11Formalization.ActualMetricGridBridge
+import N11Formalization.MetricAreaRationalCertificate
+import N11Formalization.ActualSwitchPointClosure
+import N11Formalization.ActualSectorEndpointCoordinates
+
+-- Arbitrary rational DBM cells and finite closed-cell refinements feed the
+-- genuine energy oracle. No unpaid source terminal is certified here.
+import N11Formalization.ActualDBMCellEnergyAdapter
+
+-- A21 actual canonical metric graphs, genuine selected-ear owned capacity,
+-- signed shared moments and complete skew-sector compact grid consumers.
+-- Concrete class/terminal certificates remain explicit unpaid inputs.
+import N11Formalization.ActualOrderedMetricGraphs
+import N11Formalization.ActualEarOwnedWidth
+import N11Formalization.MetricAreaMaskedGridDual
+import N11Formalization.ActualEarMaskedGridBridge
+import N11Formalization.MetricAreaMaskedRationalCertificate
+import N11Formalization.ActualSharedMomentData
+import N11Formalization.MetricSectorCompactRegularity
+import N11Formalization.CompactBoxGridCertificate
+import N11Formalization.MetricSectorBoxCertificate
+import N11Formalization.ActualSharedMomentDual
+import N11Formalization.ActualSharedMomentMaskedDual
+
+-- A22 exact radius maxima and complete finite rational face/switch/sector
+-- certificate production. Concrete classes and terminals remain unpaid.
+import N11Formalization.CompactQuadraticMomentMaximum
+import N11Formalization.MetricSectorRationalNodes
+import N11Formalization.CompactSimplexGridCertificate
+import N11Formalization.SharedMomentFactorGridCertificate
+import N11Formalization.SharedMomentFactorRationalNodes
+import N11Formalization.ActualSharedMomentRationalCertificate
+
+-- A23 complete adaptive rational closed-box factor certificates and a
+-- genuine no-ear Delaunay/moment path for Q0. Concrete exclusions remain unpaid.
+import N11Formalization.RationalBoxSubdivision
+import N11Formalization.SharedMomentFactorLocalCertificate
+import N11Formalization.MetricSectorLocalCertificate
+import N11Formalization.ActualSharedMomentUnmaskedDual
+import N11Formalization.ActualSharedMomentAdaptiveCertificate
+
+-- A24 complete-cell factor bounds and certified maximizing-radius errors.
+-- Both actual adaptive dual paths accept the stronger leaves. Concrete
+-- class exclusions and the SAME-root unrestricted theorem remain unpaid.
+import N11Formalization.CompactQuadraticArgmaxRange
+import N11Formalization.RationalTrigCellBounds
+import N11Formalization.SharedMomentFactorIntervalCertificate
+import N11Formalization.SharedMomentActiveRadiusCertificate
+import N11Formalization.ActualSharedMomentTightAdaptiveCertificate
+-- A25 canonical finite-certificate backbone: actual canonical face/slot/edge
+-- coordinate builders and exact rational coefficient/mask/constant transport;
+-- sharp ear arcsine bracket; signed whole-cell face/switch and positive-chord
+-- sector derivatives; exact pi-plane derivative differences and finite outward
+-- radius brackets; flexible closed-root factor trees and a seven-class
+-- finite-table consumer preserving the original full disk and SAME sourceRoot6;
+-- balanced graph orbit and certificate transport reducing eight cuts to two
+-- representatives; a genuine 1239-node concrete face factor tree with a
+-- per-node standard-axiom sweep; nine concrete complete-angle switch
+-- certificates; and semantic controls for the pruning/rounding boundaries.
+-- Concrete classes, C450 segments and energy terminals remain UNPAID.
+import N11Formalization.SharedMomentFactorPermutation
+import N11Formalization.ActualCanonicalFaceCoordinates
+import N11Formalization.ActualCanonicalMomentTransport
+import N11Formalization.ActualSharedMomentSharpConstant
+import N11Formalization.RationalTrigLocalLipschitz
+import N11Formalization.SharedMomentFactorLocalGradientCertificate
+import N11Formalization.SharedMomentFacePlaneCertificate
+import N11Formalization.SharedMomentFacePlaneDirectCertificate
+import N11Formalization.SharedMomentFacePlaneGradientCertificate
+import N11Formalization.SharedMomentFacePlaneRoundedGradientCertificate
+import N11Formalization.MetricSectorRationalCellCertificate
+import N11Formalization.MetricSectorLocalGradientCertificate
+import N11Formalization.SharedMomentFiniteFactorCertificate
+import N11Formalization.SharedMomentEfficientFactorCertificate
+import N11Formalization.ActualCanonicalSharedMomentConsumer
+import N11Formalization.CanonicalSharedMomentFiniteCertificate
+import N11Formalization.CanonicalBalancedGraphOrbits
+import N11Formalization.CanonicalSharedMomentOrbitTransport
+import N11Formalization.SharedMomentConcreteLeafControls
+import N11Formalization.SharedMomentConcreteSwitchBatch
+import N11Formalization.SharedMomentConcreteSectorControls
+import N11Formalization.SharedMomentA25CertificateControls
+import N11Formalization.SharedMomentConcreteFace1Data
+import N11Formalization.SharedMomentConcreteFace1Part0
+import N11Formalization.SharedMomentConcreteFace1Part1
+import N11Formalization.SharedMomentConcreteFace1Part2
+import N11Formalization.SharedMomentConcreteFace1Part3
+import N11Formalization.SharedMomentConcreteFace1Certificate
+import N11Formalization.CanonicalBalancedFiniteClassCertificate
+import N11Formalization.SharedMomentConcreteSectorGradientControls
+
+-- C450 CHAIN COMPLETION (2026-10-28, local continuation).
+-- The 25 remaining emitted segments c450Segs[12..36] are chained by their own
+-- kernel-checked `*_remaining_of_remaining` theorems, starting from the vacuous
+-- tail c450Segs.drop 36 = []. This discharges
+-- `C450Source11Segment.RemainingSourceObligation` (the root's h450), hence
+-- `SourceObligation` and `C450Atom`, with no new axioms and no sorry.
+-- Consequences: card_boundaryIdx_eq_nine, exists_covers_ringLabels, and a main
+-- consumer whose only explicit inputs are the energy terminal radius and the
+-- seven Q0/Q1 metric class exclusions.
+-- HARK-MISSING (not in public assets; lane A reconstructs): import N11Formalization.C450ChainCompletion
+-- HARK-MISSING (not in public assets; lane A reconstructs): import N11Formalization.C450ChainCompletionMain
+
+-- Energy stage 1 (2026-10-28, Asia/Shanghai): 505 HOST `next512` own-cell
+-- packets emitted into Paid16GeneralH01..H25, each `Valid` paid row-by-row by
+-- `decide +kernel`; aggregated by PaidBlock.Block.union into
+-- Paid16GeneralNext505; consumed by EnergyTerminalBatchB12, whose
+-- RemainingTerminalRadius quantifies over 1571 terminals instead of 2076
+-- (remaining_of_b12 transfers credit to the B11 residual).
+import N11Formalization.EnergyTerminalBatchB12Main

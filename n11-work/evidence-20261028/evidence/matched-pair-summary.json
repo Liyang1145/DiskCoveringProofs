@@ -1,0 +1,36 @@
+{
+  "restoredRootSha": "9321A97F790D6DA2BFD5232A1761E0FDE92FD25DC0CFBEB77A067EC14406ED03",
+  "backup": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\energy-emit-20261028\\N11Formalization-root-stage1.lean.bak",
+  "rows": [
+    {
+      "arm": "A",
+      "rebuilt": false,
+      "expected": "probe must STILL pass on the stale root olean",
+      "probeExit": 0,
+      "unchanged": true,
+      "unknownIdentifier": 0,
+      "rootSha": "4F5FE148D74B36DC77A7D69F80C7D3BD816AA0F069768E8A98B98D08EEF179BC",
+      "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\energy-emit-20261028\\logs\\matched-pair\\probe-arm-A.log"
+    },
+    {
+      "arm": "B",
+      "rebuilt": true,
+      "expected": "probe must FAIL with unknownIdentifier",
+      "probeExit": 1,
+      "unchanged": true,
+      "unknownIdentifier": 42,
+      "rootSha": "4F5FE148D74B36DC77A7D69F80C7D3BD816AA0F069768E8A98B98D08EEF179BC",
+      "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\energy-emit-20261028\\logs\\matched-pair\\probe-arm-B.log"
+    },
+    {
+      "arm": "C",
+      "rebuilt": true,
+      "expected": "probe must pass again",
+      "probeExit": 0,
+      "unchanged": true,
+      "unknownIdentifier": 0,
+      "rootSha": "9321A97F790D6DA2BFD5232A1761E0FDE92FD25DC0CFBEB77A067EC14406ED03",
+      "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\energy-emit-20261028\\logs\\matched-pair\\probe-arm-C.log"
+    }
+  ]
+}

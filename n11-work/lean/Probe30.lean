@@ -1,0 +1,16 @@
+import Mathlib
+#check @norm_image_sub_le_of_norm_deriv_le
+#check @Convex.norm_image_sub_le_of_norm_deriv_le
+#check @norm_image_sub_le_of_norm_deriv_le'
+#check @HasDerivAt.sum
+#check @Finset.hasDerivAt_sum
+#check @Real.hasDerivAt_sin
+#check @Real.hasDerivAt_cos
+#check @hasDerivAt_pow
+#check @Real.abs_sin_le_one
+#check @Real.sin_bound
+#check @Real.cos_bound
+#check @abs_sin_le_abs
+#check @Real.abs_sin_le_abs
+#check @Real.sin_sub_sin
+#check @Real.abs_sin_sub_sin_le

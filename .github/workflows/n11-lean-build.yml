@@ -1,0 +1,82 @@
+name: n11-lean-build
+# Kernel-checks the n11 working tree (branch n11/work). Lean builds stay serial per runner.
+# Partial progress survives timeouts: .lake/build is cached per run and restored next time.
+on:
+  push:
+    branches: ['n11/work']
+    paths: ['n11-work/lean/**', 'n11-work/ops/BUILD_TARGETS.txt', '.github/workflows/n11-lean-build.yml']
+concurrency:
+  group: n11-lean-build
+  cancel-in-progress: false
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    steps:
+      - name: Free disk
+        run: |
+          sudo rm -rf /usr/share/dotnet /opt/ghc /usr/local/share/boost /usr/local/lib/android /opt/hostedtoolcache/CodeQL /usr/local/.ghcup || true
+          df -h /
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          sparse-checkout: |
+            n11-work/lean
+            n11-work/ops
+      - name: Install elan
+        run: |
+          curl -sSfL https://raw.githubusercontent.com/leanprover/elan/master/elan-init.sh | sh -s -- -y --default-toolchain none
+          echo "$HOME/.elan/bin" >> $GITHUB_PATH
+      - name: Restore project build cache
+        uses: actions/cache/restore@v4
+        with:
+          path: n11-work/lean/.lake/build
+          key: n11-lake-build-${{ github.run_id }}
+          restore-keys: n11-lake-build-
+      - name: Mathlib cache
+        working-directory: n11-work/lean
+        run: lake exe cache get
+      - name: Build
+        id: build
+        working-directory: n11-work/lean
+        run: |
+          targets=$(grep -v -E '^\s*(#|$)' ../ops/BUILD_TARGETS.txt | tr '\n' ' ')
+          echo "targets: $targets"
+          set +e
+          for t in $targets; do
+            echo "=== BUILD $t" | tee -a ../../build.log
+            timeout 300m lake build "$t" 2>&1 | tee -a ../../build.log
+            rc=${PIPESTATUS[0]}
+            echo "=== EXIT $t $rc" | tee -a ../../build.log
+          done
+          true
+      - name: Save project build cache
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: n11-work/lean/.lake/build
+          key: n11-lake-build-${{ github.run_id }}
+      - name: Summarize
+        if: always()
+        run: |
+          python3 - <<'PY'
+          import re, json, os
+          log = open('build.log', errors='ignore').read() if os.path.exists('build.log') else ''
+          exits = re.findall(r'^=== EXIT (\S+) (\d+)', log, re.M)
+          errs = [l for l in log.splitlines() if re.search(r'error:|✖', l)][:200]
+          built = re.findall(r'Built (N11Formalization\.[\w.]+)', log)
+          s = {'sha': os.environ.get('GITHUB_SHA'), 'exits': exits, 'built_count': len(built), 'errors_head': errs}
+          json.dump(s, open('summary.json', 'w'), indent=1, ensure_ascii=False)
+          print(json.dumps(s, indent=1, ensure_ascii=False)[:6000])
+          PY
+          tail -c 300000 build.log > build-tail.log || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: n11-build-${{ github.run_id }}
+          path: |
+            summary.json
+            build-tail.log
+          retention-days: 14

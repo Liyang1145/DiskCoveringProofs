@@ -1,0 +1,49 @@
+{
+  "claim": "A25-CANONICAL-FINITE-CERTIFICATES-20261013",
+  "timestamp": "2026-10-13T17:23:43.2072043+08:00",
+  "project": "E:\\ai4math2\\research-2026\\n11-formalization",
+  "root_sha256": "4F470AF507F320488DFBC168F9AE39645904AF569AE46B9FFB8F5E520BC5EDAF",
+  "prior_acceptance": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\ACCEPTANCE-A24-ACTIVE-INTERVAL-CERTIFICATES-20261008.json",
+  "manifest": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-finite-certificates-20261013-manifest.json",
+  "root_pair": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\resume-lead\\root-a25-canonical-finite-certificates-20261013-pair.json",
+  "paid_framework_modules": 233,
+  "new_modules": 30,
+  "unconditional_n11_complete": false,
+  "source": "SAME C891 boxed TC/KKT12 unique root,coordinate6;full arbitrary Fin11 Covers",
+  "unchanged_historical_counts": {
+    "sharp_paid": 120,
+    "energy_remaining": 2076,
+    "c450_paid": 11,
+    "c450_total": 36,
+    "sharp_total": 120,
+    "c450_remaining": 25,
+    "energy_total": 2386,
+    "energy_paid": 310
+  },
+  "unpaid": [
+    "C450Source11Segment.RemainingSourceObligation",
+    "EnergyTerminalBatchB11.RemainingTerminalRadius",
+    "ActualMainRoute.Canonical33Obligation"
+  ],
+  "new_paid": "Canonical actual face/slot/edge coordinate builders and exact rational coefficient/mask/constant transport; sharp ear arcsine bracket; signed full-cell face/switch and positive-chord sector derivatives; exact pi-plane derivative differences and finite outward radius brackets; flexible closed-root factor trees and seven-class finite-table consumer preserving the original full disk and SAME sourceRoot6; balanced graph orbit and certificate transport reducing eight cuts to two representatives; exact finite-table Q1-balanced exclusion from two representative tables; genuine HOST coefficient switch and face trees and a full-domain sector control, each with finite kernel checks.",
+  "not_paid": "25 C450 source segments; 2076 energy terminals, including 389 without genuine routes; all seven actual Q0/Q1 class exclusions and unconditional SAME sourceRoot6 arbitrary-cover theorem. Concrete individual factor certificates do not pay a class before complete coefficient/mask tables, every factor certificate and strict total are instantiated and checked. HOST complete tree plans and exact total budgets are not Lean evidence. The eight-to-two balanced orbit transport and the two-table balanced finite class certificate still require the representative finite tables to be instantiated.",
+  "evidence": [
+    {
+      "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-finite-root-audit-20261013-gate2.log",
+      "log_sha256": "FFC881D6ACE4204AF4A2DC34138A9B8CDA7A731D79659BDB120F471DB315C4BC",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\ProbeA25CanonicalFiniteRootAudit.lean",
+      "source_sha256": "9D56E89107FD16C62D08223337CB8E0A396BFC0E00D641031C43FD298CABEC96"
+    },
+    {
+      "log": "E:\\ai4math2\\research-2026\\n11-formalization\\evidence\\codex-handoff\\a25-canonical-finite-controls-20261013-gate2.log",
+      "log_sha256": "1CEDD30D80E0510B06C21FD13F53300EFC965B1C4B73797C938505330B0D7001",
+      "source": "E:\\ai4math2\\research-2026\\n11-formalization\\lean\\ProbeA25CanonicalFiniteControls.lean",
+      "source_sha256": "9DB9E9095B3560605928EB8B61424C019694D32707F3921138DD6E3C775BED37"
+    }
+  ],
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "timestamp": "2026-10-13T17:53:53.4636144+08:00",
+  "root_sha256": "4F470AF507F320488DFBC168F9AE39645904AF569AE46B9FFB8F5E520BC5EDAF",
+  "modules_green": 233,
+  "prior_module_sources_unchanged": 203,
+  "new_modules": 30,
+  "frozen_root_runs": 2,
+  "owned_lean_sources": 1521,
+  "root_standard_axiom_reports": 174,
+  "control_standard_axiom_reports": 14,
+  "accepted_sources_and_evidence_unchanged": true,
+  "documentation_current": true,
+  "unconditional_n11_complete": false,
+  "c450_remaining": 25,
+  "energy_remaining": 2076,
+  "classes_remaining": 7
+}

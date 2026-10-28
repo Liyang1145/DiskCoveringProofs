@@ -1,0 +1,66 @@
+N11Formalization.Paid16GeneralNext505.new_count : N11Formalization.Paid16GeneralNext505.newIDs.card = 505
+N11Formalization.Paid16GeneralNext505.new_radius : ∀ n ∈ N11Formalization.Paid16GeneralNext505.newIDs,
+  ∀ (y : Fin 9 → ℝ),
+    (∀ (q : Fin 9), 0 ≤ y q) →
+      ∑ q, y q = 1 →
+        N11Formalization.FlashLeafSplit.Cell
+            (N11Formalization.DBMTreeKernel.matrix N11Formalization.DBMSourceTree.data 4096 n)
+            (N11Formalization.FlashLeafSplit.tlift y) →
+          ∀ (C Z : Fin 11 → N11Formalization.Point) (r : ℝ),
+            N11Formalization.ResumeNetwork.Feasible (N11Formalization.SourceChartIsometry.chartAnchors y) C Z r →
+              N11Formalization.SourceExactRoot.sourceRadius < r
+N11Formalization.EnergyTerminalBatchB12.paid_count : N11Formalization.EnergyTerminalBatchB12.paidIDs.card = 815
+N11Formalization.EnergyTerminalBatchB12.paid_radius : ∀ n ∈ N11Formalization.EnergyTerminalBatchB12.paidIDs,
+  ∀ (y : Fin 9 → ℝ),
+    (∀ (q : Fin 9), 0 ≤ y q) →
+      ∑ q, y q = 1 →
+        N11Formalization.FlashLeafSplit.Cell
+            (N11Formalization.DBMTreeKernel.matrix N11Formalization.DBMSourceTree.data 4096 n)
+            (N11Formalization.FlashLeafSplit.tlift y) →
+          ∀ (C Z : Fin 11 → N11Formalization.Point) (r : ℝ),
+            N11Formalization.ResumeNetwork.Feasible (N11Formalization.SourceChartIsometry.chartAnchors y) C Z r →
+              N11Formalization.SourceExactRoot.sourceRadius < r
+N11Formalization.EnergyTerminalBatchB12.chart_radius_of_remaining : N11Formalization.EnergyTerminalBatchB12.RemainingTerminalRadius →
+  ∀ (y : Fin 9 → ℝ),
+    (∀ (q : Fin 9), 0 ≤ y q) →
+      ∑ q, y q = 1 →
+        ∀ (C Z : Fin 11 → N11Formalization.Point) (r : ℝ),
+          N11Formalization.ResumeNetwork.Feasible (N11Formalization.SourceChartIsometry.chartAnchors y) C Z r →
+            N11Formalization.SourceExactRoot.sourceRadius ≤ r
+N11Formalization.EnergyTerminalBatchB12.remaining_of_b12 : N11Formalization.EnergyTerminalBatchB12.RemainingTerminalRadius →
+  N11Formalization.EnergyTerminalBatchB11.RemainingTerminalRadius
+N11Formalization.EnergyTerminalBatchB12Main.main_of_energy_b12_and_seven_classes : N11Formalization.EnergyTerminalBatchB12.RemainingTerminalRadius →
+  N11Formalization.ActualMetricClassReduction.SevenClassExclusions →
+    N11Formalization.N11MainStatement N11Formalization.SourceExactRoot.sourceRadius
+'N11Formalization.Paid16GeneralH01.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH02.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH03.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH04.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH05.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH06.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH07.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH08.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH09.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH10.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH11.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH12.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH13.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH14.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH15.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH16.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH17.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH18.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH19.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH20.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH21.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH22.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH23.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH24.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralH25.all_valid' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralNext505.new_count' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.Paid16GeneralNext505.new_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.EnergyTerminalBatchB12.paid_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.EnergyTerminalBatchB12.remaining_of_b12' depends on axioms: [propext, Classical.choice, Quot.sound]
+'N11Formalization.EnergyTerminalBatchB12Main.main_of_energy_b12_and_seven_classes' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

@@ -1,0 +1,14 @@
+import Mathlib
+#check HasFDerivAt.sqrt
+#check HasFDerivAt.sin
+#check HasFDerivAt.cos
+#check HasFDerivAt.pow
+#check hasFDerivAt_pi
+#check ContDiffAt.hasStrictFDerivAt'
+#check LinearEquiv.toContinuousLinearEquiv
+#check HasStrictFDerivAt.localInverse
+#check HasStrictFDerivAt.to_localInverse
+#check HasStrictFDerivAt.eventually_left_inverse
+#check HasStrictFDerivAt.eventually_right_inverse
+#check HasStrictFDerivAt.hasStrictFDerivAt_equiv
+#check HasStrictFDerivAt.toOpenPartialHomeomorph
