@@ -9,9 +9,9 @@ for Fin 11 centres, full closed unit disk, SAME C891 boxed root coordinate 6.
   `-- HARK-MISSING` (C450ChainCompletion, C450ChainCompletionMain: not in public assets).
 - Emitters / evidence: `n11-work/evidence-20261014/`, `n11-work/evidence-20261028/`
   (HANDOFF: `assets/replay/n11-wip/energy-stage1-20261028/HANDOFF.md` on main).
-- CI: every push to `n11/work` touching `n11-work/lean/**` or `ops/BUILD_TARGETS.txt`
+- CI: every push to `n11/work` touching `n11-work/lean/**` or `ops/lanes/*/TARGETS.txt`
   runs `n11-lean-build` on GitHub Actions (4 cores / 16 GB, serial `lake build` of
-  BUILD_TARGETS, ≤5 h, partial .lake/build cached). Results: `ops/ci/LATEST.md`
+  lanes/*/TARGETS.txt then the root, ≤5 h, partial .lake/build cached). Results: `ops/ci/LATEST.md`
   (refreshed by the supervisor each cycle).
 
 ## Hard rules (from AGENTS.md / handoff — violations get reverted)

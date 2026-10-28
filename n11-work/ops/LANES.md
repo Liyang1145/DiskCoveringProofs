@@ -8,8 +8,7 @@ Steps: (1) grep how earlier C450 aggregate/"Main" modules combine segments (e.g.
 `C450*Chain*`, `C450*Main*`, telescoping in `evidence-20261014/c450-emit-20261014/verify_telescope.py`,
 `segment_gate_verdict.py`); (2) infer the exact statement consumers need (grep for uses of
 the residual `C45025`/C450 remaining credit, `C450Source13Segment` pilot integration);
-(3) emit both modules (prefer a python emitter), add them to BUILD_TARGETS.txt before the
-root, and request the root re-import.
+(3) emit both modules (prefer a python emitter), add them to lanes/A/TARGETS.txt, and request the root re-import.
 
 ## Lane B — energy stage 2 top aggregate + B13 (HANDOFF §5, exact steps)
 1. `Paid16GeneralNext1182.lean`: `newIDs := Finset.univ.biUnion part`,
@@ -21,7 +20,7 @@ root, and request the root re-import.
    Disjointness B12 vs Next1182 is NOT interval-separable: split it hierarchically
    (B12 = B11 ∪ Next505 parts; Next1182 = 8 parts → many small pairwise decides).
 3. `EnergyTerminalBatchB13Main`: `B13.Remaining → SevenClassExclusions → N11MainStatement`.
-   Add targets to BUILD_TARGETS.txt; request root import of B13Main.
+   Add targets to lanes/B/TARGETS.txt; request root import of B13Main.
 Inputs: `evidence-20261028/evidence/{emit_aggregate_hier.py, Paid16GeneralNext1182-hier-manifest.json, rest1182-emission-manifest.json}`.
 
 ## Lane C — energy residual 389 (raise the dual-row cap)

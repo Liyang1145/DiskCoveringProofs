@@ -4,7 +4,7 @@ name: n11-lean-build
 on:
   push:
     branches: ['n11/work']
-    paths: ['n11-work/lean/**', 'n11-work/ops/BUILD_TARGETS.txt', '.github/workflows/n11-lean-build.yml']
+    paths: ['n11-work/lean/**', 'n11-work/ops/BUILD_TARGETS.txt', 'n11-work/ops/lanes/*/TARGETS.txt', '.github/workflows/n11-lean-build.yml']
 concurrency:
   group: n11-lean-build
   cancel-in-progress: false
@@ -42,7 +42,8 @@ jobs:
         id: build
         working-directory: n11-work/lean
         run: |
-          targets=$(grep -v -E '^\s*(#|$)' ../ops/BUILD_TARGETS.txt | tr '\n' ' ')
+          targets=$(cat ../ops/lanes/*/TARGETS.txt ../ops/BUILD_TARGETS.txt 2>/dev/null | grep -v -E '^\s*(#|$)' | awk '!seen[$1]++ && $1!="N11Formalization"' | tr '\n' ' ')
+          targets="$targets N11Formalization"
           echo "targets: $targets"
           set +e
           for t in $targets; do

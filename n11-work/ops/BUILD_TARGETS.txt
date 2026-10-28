@@ -1,3 +1,2 @@
-# One Lake target per line, built in order (serial). Workers append module targets
-# they changed (e.g. N11Formalization.Paid16GeneralNext1182); the root stays last.
+# Supervisor-owned. CI builds every lanes/*/TARGETS.txt entry first, then the root.
 N11Formalization

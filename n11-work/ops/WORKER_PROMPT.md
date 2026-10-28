@@ -12,8 +12,8 @@ Work rules:
   lakefile, toolchain, frozen modules).
 - Keep shell commands bounded (use `timeout`); never start long Lean builds locally on the
   full project (2 cores). Use /workspace/tools/mathlib-probe for small Mathlib experiments.
-- Append new Lean targets you want CI to check to n11-work/ops/BUILD_TARGETS.txt
-  (above the final `N11Formalization` line).
+- List new Lean module targets you want CI to kernel-check in n11-work/ops/lanes/<LANE>/TARGETS.txt
+  (one `N11Formalization.Module` per line). Only touch files of your own lane plus new Lean modules.
 - BEFORE minute 14: update n11-work/ops/lanes/<LANE>/NOTES.md — append a dated entry:
   what you did, exact file names, check results (with scope), what is still unproved,
   the very next concrete step. Keep NOTES.md under ~250 lines (condense old entries).
