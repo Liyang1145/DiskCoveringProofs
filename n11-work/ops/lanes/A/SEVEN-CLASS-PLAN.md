@@ -206,3 +206,36 @@ q0(4,9) pilot.  It should reconstruct `q0Faces 2` and the source graph from
 `check_q0_moment_symbolic.py`, compare labelled face/edge sets and coefficient
 field counts, and emit a manifest with no Lean claim.  Do not emit the Lean
 table until that match is exact.
+
+## q0_degree3 exact statement and Lean reduction (2026-10-28)
+
+Field:
+`Q0RunExclusion 1`, i.e. for every representative `(c,r)` with
+`r < 19/50`, every refinement `R`, and every ordered q0 data `O` with
+`O.run_length.val = 1`, `False`.
+
+Math route from `DEGREE3-AREA-EXCLUSION.md`:
+1. A q0 run of length one has hub degrees 3 and 10. The actual graph is
+   already normalized by `ActualOrderedMetricGraphs.actual_q0_degree_three_table_graph`
+   to the unique unrotated 21-edge table (up to the produced label rotation).
+2. For that table, the source certifies rational multipliers `mu`, `lambda` and
+   grid/Lipschitz maxima over the whole angle domain with interval arithmetic.
+   The dual upper bound is `< pi`, contradicting the actual area budget; the
+   Lean emitter must still turn the maxima into exact rational data.
+3. The generic Lean consumer
+   `MetricAreaRationalCertificate.exclude_representative_of_rational_certificate`
+   checks all node inequalities and the final strict rational inequality.
+
+New module `N11Formalization/SevenClassQ0Deg3.lean`:
+- `Degree3AreaCertificate h hr R` bundles exactly the consumer data for one
+  actual refinement (including `NineTies`, node vector, edge/sector maxima,
+  and the strict bound).
+- `false_of_areaCertificate` feeds that bundle to the existing consumer.
+- `Q0Degree3AreaInput` is the exact remaining universal obligation: supply
+  one such bundle for every actual q0 length-one run.
+- `q0_degree3_of_areaInput : Q0Degree3AreaInput -> Q0RunExclusion 1`.
+- `degree_three_table_graph` restates the unconditional unique-graph result.
+
+This is a reduction, **not** a proof of the field: `Q0Degree3AreaInput` is
+not inhabited. In particular, the node maxima still must be emitted from the
+source certificate into exact rational Lean data and kernel-checked by CI.

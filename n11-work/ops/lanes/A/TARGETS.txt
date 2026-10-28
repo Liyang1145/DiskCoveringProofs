@@ -2,3 +2,4 @@
 # The second target consumes the first plus the existing B11 seven-class route.
 N11Formalization.C450ChainCompletion
 N11Formalization.C450ChainCompletionMain
+N11Formalization.SevenClassQ0Deg3
