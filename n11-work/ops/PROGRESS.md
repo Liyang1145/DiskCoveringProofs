@@ -6,3 +6,5 @@
 LAST-REPORT: 2026-10-29 00:45 CST
 - 2026-10-29 01:05 CST: round 3 merged (B: fixed B13Main type error, B13→B12→B11 composition; A: verifier hash-pinning only — redirected to SevenClassExclusions q0_degree3; C: exact recompute of next512 formulas, 505/512 pass, same 7 fail). Counts unchanged (CI not yet green): energy 815/2386, C450 drafted, class exclusions 0/7. CI: first full build still in progress.
 - 2026-10-29 01:40 CST: round 4 merged (A: q0 degree-3 node probe + SevenClassQ0Deg3 draft; B: residual census literal audit; C: FrozenCapCertificates + row-cap certs). Counts unchanged (CI not green yet): energy 815/2386, C450 drafted, class exclusions 0/7. CI run 40731771155 pending.
+- 2026-10-29 02:05 CST: round 5 worker launch failed: CommandCode API returned 401 for both deepseek-v4.1-flash-fast and -flash (key proxy substitution no longer valid; commandcode connection needs re-authorization). No new lane output. Counts unchanged: energy 815/2386, C450 drafted, class exclusions 0/7. CI: run 40723430575 in progress, 40736931996 queued.
+LAST-REPORT: 2026-10-29 02:05 CST
