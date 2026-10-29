@@ -8,6 +8,7 @@ only for supports of size at most five, not a kernel theorem.
 """
 from fractions import Fraction as Q
 from itertools import combinations
+import argparse
 import hashlib
 import json
 import sys
@@ -24,6 +25,29 @@ PAIRS = [(i, j) for i in range(10) for j in range(10)]
 
 def det(matrix):
     n = len(matrix)
+    if n == 2:
+        return matrix[0][0] * matrix[1][1] - matrix[0][1] * matrix[1][0]
+    if n == 3:
+        return (matrix[0][0] * (matrix[1][1] * matrix[2][2] -
+                                matrix[1][2] * matrix[2][1])
+                - matrix[0][1] * (matrix[1][0] * matrix[2][2] -
+                                  matrix[1][2] * matrix[2][0])
+                + matrix[0][2] * (matrix[1][0] * matrix[2][1] -
+                                  matrix[1][1] * matrix[2][0]))
+    if n == 4:
+        a, b, c, d = matrix
+        return (a[0] * (b[1] * (c[2] * d[3] - c[3] * d[2])
+                        - b[2] * (c[1] * d[3] - c[3] * d[1])
+                        + b[3] * (c[1] * d[2] - c[2] * d[1]))
+                - a[1] * (b[0] * (c[2] * d[3] - c[3] * d[2])
+                          - b[2] * (c[0] * d[3] - c[3] * d[0])
+                          + b[3] * (c[0] * d[2] - c[2] * d[0]))
+                + a[2] * (b[0] * (c[1] * d[3] - c[3] * d[1])
+                          - b[1] * (c[0] * d[3] - c[3] * d[0])
+                          + b[3] * (c[0] * d[1] - c[1] * d[0]))
+                - a[3] * (b[0] * (c[1] * d[2] - c[2] * d[1])
+                          - b[1] * (c[0] * d[2] - c[2] * d[0])
+                          + b[2] * (c[0] * d[1] - c[1] * d[0])))
     if n == 1:
         return matrix[0][0]
     return sum(((-1) ** c) * matrix[0][c] * det(
@@ -48,17 +72,16 @@ def solve(lines):
 def face5(fields, gains, rhs):
     subset_rhs = {}
     for (i, j), cap in rhs.items():
-        mask = sum(1 << k for k, field in enumerate(fields)
-                   if i <= field < j)
-        subset_rhs[mask] = min(cap, subset_rhs.get(mask, cap))
+        bits = tuple(Q((field < j) - (field < i)) for field in fields)
+        coeffs = tuple(bits[k] - bits[4] for k in range(4))
+        line_rhs = cap - bits[4]
+        subset_rhs[coeffs] = min(line_rhs, subset_rhs.get(coeffs, line_rhs))
 
     lines = [tuple(Q(-1 if k == column else 0) for k in range(4)) + (Q(0),)
              for column in range(4)]
     lines.append((Q(1), Q(1), Q(1), Q(1), Q(1)))
-    for mask, cap in subset_rhs.items():
-        bits = [Q(1 if mask & (1 << k) else 0) for k in range(5)]
-        lines.append(tuple(bits[k] - bits[4] for k in range(4)) +
-                     (cap - bits[4],))
+    for coeffs, line_rhs in subset_rhs.items():
+        lines.append(coeffs + (line_rhs,))
 
     best = None
     for tight in combinations(lines, 4):
@@ -76,12 +99,17 @@ def face5(fields, gains, rhs):
 
 
 def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--ids", default=",".join(map(str, IDS)),
+                        help="comma-separated residual node ids")
+    args = parser.parse_args()
+    ids = [int(value) for value in args.ids.split(",") if value]
     prop_path = ROOT / "evidence-20261028/inputs/paid16-general-next512.json"
     recs = {rec["id"]: rec for rec in json.loads(
         prop_path.read_text(encoding="utf-8-sig"))["records"]}
     text = common.DBM.read_text()
     results = []
-    for node in IDS:
+    for node in ids:
         rec = recs[node]
         db = common.parse_db(text, node)
         rhs = {ij: Q(db[ij[0]][ij[1]], 4096) for ij in PAIRS}
@@ -116,7 +144,8 @@ def main():
         "records": results,
         "pass_count": sum(r["status"] == "PASS" for r in results),
     }
-    (HERE / "residual-mixture-faces5.json").write_text(
+    suffix = "" if ids == IDS else "-" + "-".join(map(str, ids))
+    (HERE / f"residual-mixture-faces5{suffix}.json").write_text(
         json.dumps(payload, indent=1) + "\n")
     print("pass_count", payload["pass_count"])
 

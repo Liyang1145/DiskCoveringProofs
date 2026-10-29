@@ -12,100 +12,22 @@
   `FrozenCapCertificates` to the rational core. Do not claim class/energy credit
   while 382 public residual records remain absent.
 
-## Condensed history through 2026-10-29 part 18
+## Condensed history through part 27
 
-- `PaidCellCertificateM` generalizes the 16-field packet to arbitrary DBM-row
-  count; `PaidCellCertificateMCap` proves weighted reduced-cost transport and
-  `not_valid_of_frozen_cap` exactly. Both remain **CI pending**; neither reduces
-  the energy count.
-- `recompute_next512_formulas.py` checks 512 public records exactly: 505 pass and
-  seven fail (`1409,2337,2341,2356,2360,2368,2370`). Extra DBM rows do not
-  rescue them. `certify_next512_row_cap.py` proves all 100 ordered-pair caps for
-  an arbitrary row count, tightest Python slack `7.388363154221271e-7` at 2356.
-- `build_residual389_census.py` reconstructs 389 residual IDs, but only seven
-  have public `g/f0Lo/weights`; 382 HOST records are absent. Census SHA256:
-  `747447E233634FBC9D9321824148165AC866105FE0367AED27F6F8D9A2E07F46`.
-- `FrozenCapRationalCore.lean` was emitted as an early, narrow-import target.
-  Earlier lane-C-first CI exposed a missing `Fintype (Fin 9)` import, repaired.
-  Subsequent large M/MCap builds hit dependency OOM/exit 137. The core's current
-  declarations have no kernel verdict because later runs were cancelled.
-- The probe contains only the top-level `Mathlib.olean`; narrower oleans are
-  absent. `lake env lean LaneCProbeTiny.lean` timed out at 120 s while loading
-  Mathlib. This is an environment limitation, not a Lean error verdict.
-- Core emitter checks all seven frozen records with exact `Fraction` arithmetic:
-  nonnegative/unit-sum weights, `H = y*E`, frozen margins, and hash-pinned
-  constants. Current core SHA256:
-  `C48270A5017006F8276C4ECA4367DBA712EA405A965F3C8508F3FD34865B7A5A`.
-
-## 2026-10-29 — parts 19–22 (condensed; superseded by later checks)
-
-- `emit_frozen_cap_row_caps.py` emitted all seven row-cap modules after an
-  exact 700/700 inequality check; `FrozenCapRowCapTreeBridges.lean` links the
-  copied matrices to `DBMSourceTree.data` by kernel `decide`. Both remain
-  **CI pending**. Local Mathlib probing was unavailable (stub olean).
-
-## 2026-10-29 — sessions part 23–24 (condensed; exact <=4-field gain search)
-
-- Exact rational search over all 84 triples and 126 quadruples found no gain
-  rescue for the seven public ids. Five/six-field witness supports remain
-  cap-feasible but still fall below the strict gain threshold (see part 34).
-- `certify_next512_row_cap.py` passes 7/7 arbitrary-row-count exclusions over
-  all 100 ordered pairs; tightest margin `7.39e-7` at 2356. Extra DBM rows do
-  not rescue the frozen formulas.
-- Scripts: `residual_mixture_faces3.py` (`b7768e0c...e0794f`) and
-  `residual_mixture_faces4.py` (`579c1c72...e332e01`); JSON counterparts
-  `e773e520...72b668b` and `34bce5b7...0f860551`. All CI waiting items below
-  remain unpaid Python evidence, not kernel conclusions.
-
-## 2026-10-29 — sessions 25–26 (seven node-pinned exclusion wrappers)
-
-- Added `FrozenCapExcludedTree{1409,2337,2341,2356,2360,2368,2370}.lean`.
-  Each fixes `p.nodeID` to its frozen node, derives every row cap from the exact
-  `row_cap` certificate via the source-tree bridge, and applies the matching
-  `FrozenCapCertificates.excluded_*`. Packet `hf0`/`hg` remain explicit; none of
-  the seven exclusions is unconditional.
-- Wrapper SHA256: 1409 `e801dfe92443ea05c2b90143ea2e4f75d23a888e6c96341ed19c40f4aba3f36b`;
-  2337 `0003985c0af1700b979e8babc781a69f340bf9962b8cdca16d1cc3119ea37c18`;
-  2341 `07105ea763d2b5c7750ed8d1a712e95122703bbb8d1c07647392e8d8156e4614`;
-  2356 `3feb38e6e0c95455397e14c3c5335edf575cd65d8b5449bf423235c692da691b`;
-  2360 `703b0a8b16294bc0626b96351e528694cab299d8046bdc8cd5e8f25ffb077973`;
-  2368 `d2163c41ba093eaa9d8008fede1a926a20bb93ca411bafacdd086b0a4984b879`;
-  2370 `73fbc36151574be9c3347d5f71c25324b0ef5401a2ad242420bbbc8a967754eb`.
-- Checks: emitter/id/import/theorem substitution assertions exit 0; forbidden
-  token scan clean; `git diff --check` exit 0. All wrappers **CI pending**.
-
-## 2026-10-29 — session part 27 (row-cap exact rerun)
-
-Did:
-- Re-ran `python3 ops/lanes/C/emit_frozen_cap_row_caps.py` (the script has no
-  argument parser; even `--help` regenerates). It deterministically rewrote the
-  seven `FrozenCapRowCap<id>.lean` modules from the hash-pinned source matrices.
-- Exact self-check passed: 7 modules × 100 ordered pairs = 700 caps, with
-  `global_min_slack = 0`. Every module reports `dbm_sha256
-  BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5`.
-- Current row-cap SHA256: 1409 `A41DC2BD8220550E0A76B60FF8F621C8DE6B8A9CECA6F7CF444FCE3F1BF284EB`;
-  2337 `6B5DB3392BF8A0FF24C897469516D7077008716B2EC48F58519C86ACD0B50409`;
-  2341 `27C184EA60E2A2F2DF41EA077220EA4746E9AE2B58F99DB7B148F45B052D077F`;
-  2356 `21588672F99257A63E3084EC2592DE03AE996AD48707331E3836764984F389C9`;
-  2360 `2A0579653E679A38BE5AD2A3462F0D7E28087C3AF2EB8C20BE1DBC109F95583C`;
-  2368 `944C57D4FB501AF1B6E74869E937168A3AE8005569722468F2F31938BEA21DC3`;
-  2370 `2FABE7633E2F45ABA8C940BCA4BA063265227E2A0FE395D9E14020F35AD92D0C`.
-- Static audit confirms all seven wrappers have three imports, explicit
-  `hf0`/`hg` packet hypotheses, and conclude `False`; the 1409 wrapper's hcap
-  proof rewrites `p.nodeID`, unfolds `DBMMinorantDual.db`, and applies the exact
-  tree bridge plus `row_cap`.
-
-Checks run (scope stated):
-- Emitter exact Fraction arithmetic: exit 0, 700/700 caps, minimum slack 0.
-- `git diff --check`: see final session check; no Lean elaboration locally.
-
-Still unproved / missing:
-- Python cap checks are not kernel proofs. Core/M/MCap/row caps/bridges/wrappers
-  remain **CI pending**; `hf0`/`hg` and 382 HOST records remain absent.
-
-Very next concrete step: on the next session/CI verdict, route only
-`FrozenCapRationalCore`; if green, route `FrozenCapRowCap1409` and inspect the
-first error before adding the bridge and 1409 wrapper.
+- The residual census reconstructs 389 IDs, but only seven have public
+  `g/f0Lo/weights`: `1409,2337,2341,2356,2360,2368,2370`; 382 HOST records
+  are absent. Census SHA256 `747447E2...E07F46`.
+- `recompute_next512_formulas.py` checks 512 public records exactly (505 pass,
+  seven fail); no extra-row or <=4-field gain rescue exists.
+  `certify_next512_row_cap.py` proves all 100 ordered-pair caps for arbitrary
+  row count, tightest Python slack `7.39e-7` at 2356 (not kernel evidence).
+- `emit_frozen_cap_row_caps.py` deterministically emits seven 100-cap row-cap
+  modules; exact self-check is 700/700 with minimum slack 0. The tree bridge,
+  seven node-pinned `FrozenCapExcludedTree*` wrappers, and packet `hf0`/`hg`
+  remain **CI pending**. The wrappers are conditional on `hf0`/`hg`.
+- Core emitter exact-checks all seven frozen witnesses. The core is now CI
+  green; M/MCap/row-cap/bridge/wrapper kernel verdicts remain pending. Local
+  Mathlib probing is unavailable (startup timeout), not a Lean error verdict.
 
 ## 2026-10-29 — session part 28 (bounded local core elaboration attempts)
 - `project_status.py --check` passed (declarations only); project/probe Lean
@@ -241,3 +163,81 @@ Very next concrete step: run `python3 -u residual_mixture_faces5.py` per node
 under separate bounded timeouts (or precompute/cache the repeated rational
 hyperspace determinants first), save partial per-node JSON, and report the exact
 best five-field margin. Do not restart the full seven-record loop blindly.
+
+## 2026-10-29 — part 35 (M projection fix after core-green CI)
+
+Did:
+- Read the public log archive for run `40861839784` (head `1a7c95c3`, HTTP 200).
+  Exact target exits: `FrozenCapRationalCore 0`; `PaidCellCertificateM 1`;
+  `PaidCellCertificateMCap 1` only because its M dependency failed. This is the
+  first kernel-green core verdict; M/MCap are still **CI pending**.
+- Diagnosed M's two errors at old lines 69/71 from the full log: `simpa [of7]`
+  unfolded `of7 p` to a structure literal, but left `Paid16CellCertificate.W`
+  versus the generic `W` unreduced under `rho`/`lower`. Expected/actual types
+  differed there, not in the mathematics.
+- Patched only `of7_valid` in `PaidCellCertificateM.lean`: `change` first exposes
+  the common `p.rowFrom`/`p.rowTo`/`p.lam` arguments, then definitional `rfl`
+  equalities `hW`, `hs`, `hi` transport `W`, `slopeQ`, and `interQ`; the final
+  `simpa` closes from the corresponding frozen theorem. MCap source unchanged.
+
+Files / hashes:
+- `n11-work/lean/N11Formalization/PaidCellCertificateM.lean`
+  `7b4115BE6CC89719129C4AE67D027D7F2BDC3E7C23FA7484E977731F9578CAEE`.
+- `PaidCellCertificateMCap.lean` unchanged,
+  `1697C1BE7034D9BB803A297C8105D3234BC536F610D88250687B6F282BB6F6EA`.
+
+Checks (scope stated): full public CI log extraction (run above); `git diff
+--check` exit 0; forbidden-token scan clean for both modules. No local Lean
+verdict: direct `lean` startup exceeded a 10 s bound, so the kernel result is
+**CI pending**.
+
+Still unproved / missing: no kernel verdict for the M patch or MCap; row caps,
+tree bridges, seven conditional wrappers, packet `hf0`/`hg`, five-to-nine-field
+rescue, and 382 HOST records all remain unpaid. Energy count unchanged.
+
+Very next concrete step: CI-build only `PaidCellCertificateM`; if green, build
+`PaidCellCertificateMCap`. Only after both are exit 0, add
+`FrozenCapRowCap1409` alone to `TARGETS.txt` and inspect its first diagnostic.
+
+## 2026-10-29 — part 36 (five-field search; later invalidated)
+
+Added per-node `--ids` runs and produced `pass_count=0` outputs for all seven
+nodes. Those outputs are **INVALIDATED by part 37**: the support model omitted
+negative coefficients of reversed ordered pairs. Do not cite their JSON files.
+
+## 2026-10-29 — part 37 (five-field model corrected; rerun still open)
+
+Did:
+- Found that the old bitmask enumerator encoded only positive intervals
+  `i <= q < j`. But `rowA(i,j,q) = [q<j]-[q<i]` is `-1` for reversed pairs.
+  Replaced masks with the exact coefficient vector
+  `bits[k]-bits[4]`, deduplicating by vector and keeping the minimum RHS.
+  The simplex reduction is `x4 = 1-x0-x1-x2-x3`, bounded by
+  `x0+x1+x2+x3 <= 1`.
+- Corrected witness-support sanity check for 1409 `[1,3,4,7,8]`: `face5` now
+  returns a feasible exact rational point and gain. The old model had falsely
+  marked this support infeasible via a reversed-pair mask-0 row.
+
+File / SHA256:
+- `ops/lanes/C/residual_mixture_faces5.py`
+  `3132f5456501b092dbc79ff20ac097309428cfc92c554de5a624f0dbf810f88d`.
+- Stale `residual-mixture-faces5-*.json` artifacts were removed; regenerate
+  from the corrected emitter before citing any figure.
+
+Checks (scope stated):
+- `python3 -m py_compile ops/lanes/C/residual_mixture_faces5.py`: exit 0.
+- Corrected 3-node parallel rerun (1409/2337/2341) reached `timeout 120s`
+  exit 124 with no output: **inconclusive**, not a verdict.
+- Corrected single-node 1409 full 126-support run exceeded 150 s without
+  output and was terminated: **inconclusive**.
+- Exact frozen inputs remain proposal `F49F06FC...3DD16` and DBM
+  `BD4E71CB...8ED5`; no Lean was run.
+
+Still unproved / missing:
+- No trustworthy <=5-field pass/fail count for any residual node yet; supports
+  6-9 are unsearched. M/MCap/row caps/bridges/wrappers, packet `hf0`/`hg`, and
+  382 HOST records remain unpaid.
+
+Very next concrete step: profile corrected `face5` on one support, precompute
+or cache its 4x4 determinant/inverse data across the 4-line combinations, then
+rerun node 1409 alone under a fresh bound.
