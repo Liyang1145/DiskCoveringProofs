@@ -78,50 +78,15 @@ N11Formalization.FrozenCapRationalCore 0`, then M and MCap 0; only after that ad
 `N11Formalization.FrozenCapRowCap1409` alone to `TARGETS.txt`. Do not infer a
 green target from the workflow's overall badge.
 
-## 2026-10-29 — sessions 30-32 (condensed; corrected CI still pending)
+## 2026-10-29 — sessions 30-33 (condensed history)
 
-- Old run `40818062141` was red at all three targets due to the now-repaired
-  missing `Mathlib.Algebra.BigOperators.Fin` import and old `of7_valid`
-  simplifications. Pinned Mathlib `0df444a...` does define `Fin.sum_univ_succ`.
-- Corrected run `40857762507` (head `0cb4f8de`, job `123392944402`) has had its
-  `Build` step in progress throughout sessions 30-32. No target exit exists, so
-  core/M/MCap remain **CI pending**, not green.
-- Emitter reran twice after the fixes (exit 0): all seven records passed exact
-  `Fraction` nonnegativity, unit-sum, frozen-source, weighted-term, and strict
-  margin checks; regenerated core stayed byte-identical. Frozen inputs checked:
-  `FlashCosineLeaf318` `08F36489...788A`, `Interval/Trig` `FB3DF66D...A04C`,
-  `FlashCosineLeaf284Bridge` `C001704C...B1F8`.
-- MCap transport was audited against `lower = f0Lo - lamB + rmin` and
-  `rho = sum_a lam_a * rowA`; the weighted reduction, `lamB` bound, and
-  strict-gain contradiction are algebraically sound.
-
-SHA256: core `3ed6bb50...e7c4`, M `b0c1f6d5...4072`, MCap
-`1697c1be...f6ea`, emitter `10ecb550...7d93`.
-Checks: emitter exit 0, static declaration audit, `git diff --check` exit 0,
-forbidden-token scan clean. No Lean kernel verdict.
-
-Still unproved: no green core/M/MCap verdict; row caps, bridges, tree wrappers,
-packet `hf0`/`hg`, and 382 HOST records remain unpaid.
-
-## 2026-10-29 — session part 33 (bounded local check attempted)
-
-Did: polled run `40857762507`; job `123392944402` is still `in_progress`, with
-only `Build` marked `in_progress` and no target exit. Confirmed current core/M/
-MCap SHA256 values exactly as above, `git diff --check` exit 0, and no forbidden
-tokens in those three modules. Attempted bounded direct elaboration from
-`n11-work/lean`: `timeout 110s lake env lean N11Formalization/FrozenCapRationalCore.lean`.
-It exited 124 after ~110 s while Lake reported `info: mathlib: cloning
-https://github.com/leanprover-community/mathlib4`; scope was local core only and
-it produced **no Lean verdict**. The CI build remains the only candidate kernel
-check.
-
-Still unproved: same as above; in particular the core theorem set, M/MCap, all
-seven row caps and tree wrappers, `hf0`/`hg`, and 382 HOST records.
-
-Very next concrete step: read `=== EXIT N11Formalization.FrozenCapRationalCore`,
-then M and MCap, from run `40857762507`. If all are 0, add only
-`N11Formalization.FrozenCapRowCap1409` to `TARGETS.txt`; otherwise patch the
-first reported core/M/MCap diagnostic. Do not treat local timeout as red.
+- Core is kernel-green in run `40861839784`; M/MCap are not. The seven-record
+  exact emitter checks pass, and the MCap algebra (`lower = f0Lo - lamB + rmin`,
+  `rho = sum_a lam_a * rowA`) is statically sound.
+- Old lane-C run `40818062141` was red despite a green workflow badge; read the
+  `=== EXIT` lines, because the trailing `true` masks failures.
+- Bounded local elaboration is unavailable: Lake tries to clone/checkout Mathlib
+  and exits 124 with no Lean verdict. This is not a red kernel result.
 
 ## 2026-10-29 — part 34 (support audit; five-field search drafted)
 
@@ -199,45 +164,86 @@ Very next concrete step: CI-build only `PaidCellCertificateM`; if green, build
 `PaidCellCertificateMCap`. Only after both are exit 0, add
 `FrozenCapRowCap1409` alone to `TARGETS.txt` and inspect its first diagnostic.
 
-## 2026-10-29 — part 36 (five-field search; later invalidated)
+## 2026-10-29 — parts 36-38 (condensed: five-field search and M transport)
 
-Added per-node `--ids` runs and produced `pass_count=0` outputs for all seven
-nodes. Those outputs are **INVALIDATED by part 37**: the support model omitted
-negative coefficients of reversed ordered pairs. Do not cite their JSON files.
+- The old 5-field `pass_count=0` artifacts are invalid: they omitted negative
+  reversed-pair coefficients. The corrected generator uses `bits[k]-bits[4]`;
+  1409 support `[1,3,4,7,8]` is now feasible, but runs were still timeout-
+  inconclusive. No trustworthy <=5-field count exists; supports 6-9 unsearched.
+- `of7_valid` transport was changed from `change` to explicit `hW`/`hs`/`hi`.
+  CI showed the `change` errors at old lines 69/71; that attempt never passed.
 
-## 2026-10-29 — part 37 (five-field model corrected; rerun still open)
+## 2026-10-29 — part 39 (M proof form corrected; row-cap emitter rechecked)
 
 Did:
-- Found that the old bitmask enumerator encoded only positive intervals
-  `i <= q < j`. But `rowA(i,j,q) = [q<j]-[q<i]` is `-1` for reversed pairs.
-  Replaced masks with the exact coefficient vector
-  `bits[k]-bits[4]`, deduplicating by vector and keeping the minimum RHS.
-  The simplex reduction is `x4 = 1-x0-x1-x2-x3`, bounded by
-  `x0+x1+x2+x3 <= 1`.
-- Corrected witness-support sanity check for 1409 `[1,3,4,7,8]`: `face5` now
-  returns a feasible exact rational point and gain. The old model had falsely
-  marked this support infeasible via a reversed-pair mask-0 row.
+- Replaced the failed `change` block in `PaidCellCertificateM.of7_valid` with
+  direct definitional `simpa only` over `of7`, lane `W/slopeQ/interQ`, and
+  `Paid16CellCertificate` counterparts. Statements and numeric inputs unchanged.
+- Reran the deterministic seven-node row-cap emitter; it regenerated all seven
+  modules and exact-checked 700 ordered-pair caps, global minimum slack 0.
 
-File / SHA256:
-- `ops/lanes/C/residual_mixture_faces5.py`
-  `3132f5456501b092dbc79ff20ac097309428cfc92c554de5a624f0dbf810f88d`.
-- Stale `residual-mixture-faces5-*.json` artifacts were removed; regenerate
-  from the corrected emitter before citing any figure.
+Files (SHA256):
+- `n11-work/lean/N11Formalization/PaidCellCertificateM.lean`
+  `b0c1f6d583b5c4d748a281e14dc7289d75c2d761a95748fb59977fb8afa44072`.
+- `PaidCellCertificateMCap.lean` unchanged,
+  `1697c1be7034d9bb803a297c8105d3234bc536f610d88250687b6f282bb6f6ea`.
+- Row caps now `A41DC2BD...84EB` (1409), `6B5DB339...0409` (2337),
+  `27C184EA...077F` (2341), `21588672...89C9` (2356), `2A057965...583C`
+  (2360), `944C57D4...1DC3` (2368), `2FABE763...D0C` (2370).
 
 Checks (scope stated):
-- `python3 -m py_compile ops/lanes/C/residual_mixture_faces5.py`: exit 0.
-- Corrected 3-node parallel rerun (1409/2337/2341) reached `timeout 120s`
-  exit 124 with no output: **inconclusive**, not a verdict.
-- Corrected single-node 1409 full 126-support run exceeded 150 s without
-  output and was terminated: **inconclusive**.
-- Exact frozen inputs remain proposal `F49F06FC...3DD16` and DBM
-  `BD4E71CB...8ED5`; no Lean was run.
+- `python3 -m py_compile emit_frozen_cap_row_caps.py`: exit 0.
+- Emitter output: 7 modules, 700 rows checked, `global_min_slack 0`; this is
+  exact rational Python evidence, not a Lean/kernel verdict.
+- `git diff --check`: exit 0. Forbidden-token scan over M/MCap: clean.
+- No local Lean build attempted; M/MCap/row caps/bridges remain **CI pending**
+  (core is the only kernel-green module). Energy count unchanged.
 
 Still unproved / missing:
-- No trustworthy <=5-field pass/fail count for any residual node yet; supports
-  6-9 are unsearched. M/MCap/row caps/bridges/wrappers, packet `hf0`/`hg`, and
-  382 HOST records remain unpaid.
+- M and MCap kernel verdicts; seven row-cap kernels, tree bridges, conditional
+  wrappers, packet `hf0`/`hg`, 5-to-9-field rescue, 382 HOST records.
 
-Very next concrete step: profile corrected `face5` on one support, precompute
-or cache its 4x4 determinant/inverse data across the 4-line combinations, then
-rerun node 1409 alone under a fresh bound.
+Very next concrete step: CI-build only M, require `=== EXIT
+N11Formalization.PaidCellCertificateM 0`, then MCap. If both are 0, add only
+`N11Formalization.FrozenCapRowCap1409` to `TARGETS.txt` and inspect its first
+diagnostic.
+
+## 2026-10-29 — part 40 (M proof transport corrected; CI pending)
+
+- Old M failure was a `simpa` transport mismatch between the `of7` packet and
+  `Paid16CellCertificate.W/slopeQ/interQ`; mathematics was unaffected.
+  Replaced it with `hW`/`hs`/`hi` proved by `rfl`, then `rw` and the source facts.
+- M SHA256 `FE19DB72F25113B78A9A098E43E4CBF0C103354AD19D61BF9510AA03CA9065F2`;
+  MCap unchanged `1697C1BE...F6EA`. `git diff --check` and forbidden-token scan
+  clean. No local Lean verdict: M/MCap are **CI pending**, not paid.
+- Still unpaid: M/MCap kernels, row caps, bridges, seven wrappers, packet
+  `hf0`/`hg`, 5-to-9-field rescue, 382 HOST records. Energy count unchanged.
+
+## 2026-10-29 — part 41 (definitional transport audited)
+
+- Re-read current M lines 58–78 and confirmed all three `rfl` transports unfold
+  through `of7` to the same `Paid16CellCertificate` projections.
+- `project_status.py --check` exit 0 (manifest/index declarations only, not math);
+  `git diff --check` exit 0; M/MCap forbidden-token scan clean. No local kernel run.
+- M remains **CI pending** at SHA256 `FE19DB...65F2`; MCap at `1697C1BE...F6EA`.
+
+Very next concrete step: supervisor push, then require `=== EXIT
+N11Formalization.PaidCellCertificateM 0` and MCap 0 before adding row-cap 1409.
+
+## 2026-10-29 — part 42 (transport patch retained; bounded probe inconclusive)
+
+- Re-read M lines 58–78: both `hp.reduced q` and `hp.numeric` now transport via
+  definitional `hW`/`hs`/`hi` and `rw`, with no `change` or generic `simpa`.
+- `project_status.py --check` exit 0 (manifest/index declarations only).
+  `git diff --check` exit 0; M/MCap forbidden-token scan clean.
+- M SHA256 `FE19DB72F25113B78A9A098E43E4CBF0C103354AD19D61BF9510AA03CA9065F2`;
+  MCap unchanged `1697C1BE7034D9BB803A297C8105D3234BC536F610D88250687B6F282BB6F6EA`.
+- A minimal `Mathlib` probe of the `rfl`+`rw` pattern hit the known 90 s Lake
+  startup timeout (`EXIT:124`), so it gives no Lean verdict. M/MCap are **CI
+  pending**, not paid.
+
+Still unproved: M/MCap kernels, row caps, bridges, seven wrappers, packet
+`hf0`/`hg`, 5-to-9-field rescue, and 382 HOST records. Energy count unchanged.
+
+Very next concrete step: supervisor push, then require exactly `=== EXIT
+N11Formalization.PaidCellCertificateM 0`; only then test MCap, then row-cap 1409.
