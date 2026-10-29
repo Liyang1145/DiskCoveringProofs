@@ -13,6 +13,29 @@
     100,
     89
   ],
-  "output_sha256": "4D4124713E50CDF3A3CA602D15737572570CB1447720B940C8B7C6E28E70645B",
+  "modules": {
+    "EnergyTerminalResidualCensusBase": {
+      "bytes": 3040,
+      "sha256": "642F5A5BC18FD1F4D8DA1889C3D4D5EBDFF1BFE1658CDC5A94DABC25BFD4442D"
+    },
+    "EnergyTerminalResidualCensusC01": {
+      "bytes": 4075,
+      "sha256": "D629D5BCD466DFA66C82352D2D214432BAC2B8FA33BB884B83F759725B470499"
+    },
+    "EnergyTerminalResidualCensusC02": {
+      "bytes": 4078,
+      "sha256": "FFC9FF2CD42538FDB5F76766A22514393BA9C1D93BF9EE42026099A808CE4A94"
+    },
+    "EnergyTerminalResidualCensusC03": {
+      "bytes": 4079,
+      "sha256": "BC4A9BF45C5DCC9C9C762E1066999565914473561CBC20F286600B1E35B8E697"
+    },
+    "EnergyTerminalResidualCensusC04": {
+      "bytes": 3794,
+      "sha256": "70D5FFD57515B97B88E25F48377EF196A9953CBE7C399C7CB089EBDA49AEF66B"
+    }
+  },
+  "output_bytes": 7950,
+  "output_sha256": "84593DBA542ED58A3FAFDB9211C8622659FB509773DB1A5251B3C32C3EE24D6B",
   "scope": "source reconstruction and emitted bytes; Lean elaboration is CI-pending"
 }

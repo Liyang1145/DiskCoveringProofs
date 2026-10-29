@@ -1,0 +1,10 @@
+{
+  "closure_size": 594,
+  "forbidden": [],
+  "missing": [],
+  "ok": true,
+  "targets": [
+    "N11Formalization.Paid16GeneralNext1182",
+    "N11Formalization.EnergyTerminalBatchB13"
+  ]
+}

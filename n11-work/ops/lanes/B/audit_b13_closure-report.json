@@ -1,0 +1,31 @@
+{
+  "counts": {
+    "b11": 310,
+    "b12": 815,
+    "next1182": 1182,
+    "b13": 1997,
+    "terminals": 2506,
+    "sharp": 120,
+    "residual": 389
+  },
+  "checks": {
+    "b11_count_310": true,
+    "b12_count_815": true,
+    "next1182_count": true,
+    "b13_count_1997": true,
+    "b12_next1182_disjoint": true,
+    "terminal_count_2506": true,
+    "sharp_count_120": true,
+    "paid_terminal_subset": true,
+    "sharp_terminal_subset": true,
+    "paid_sharp_disjoint": true,
+    "residual_count_389": true,
+    "literal_census_equals_residual": true,
+    "literal_census_is_sorted_chunks": true
+  },
+  "digest": {
+    "b13_ids_sha256": "B2B3268F8B3FB1D441D22BEE908AE18FA0F118F8C395BE696D5675CA04D9F239",
+    "residual_ids_sha256": "747447E233634FBC9D9321824148165AC866105FE0367AED27F6F8D9A2E07F46"
+  },
+  "scope": "inventory equality only; Lean elaboration is CI-pending"
+}

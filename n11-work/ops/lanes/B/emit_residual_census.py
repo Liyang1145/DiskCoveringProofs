@@ -4,7 +4,9 @@
 The source of truth is the checked-in Lean table and the checked-in packet
 definitions/manifests.  No manifest count is trusted: the script reconstructs
 B11, B12 and B13 from their component ID arrays and asserts every set relation
-before emitting a Lean module.
+before emitting Lean modules.  The census is split into four source-index
+blocks and a small assembly module so no single elaboration walks all 5011
+source indices.
 """
 from pathlib import Path
 import hashlib
@@ -16,6 +18,8 @@ ROOT = LANE.parents[3]
 LEAN = ROOT / "n11-work/lean/N11Formalization"
 EVIDENCE = ROOT / "n11-work/evidence-20261028/evidence"
 OUT = LEAN / "EnergyTerminalResidualCensus.lean"
+BASE = LEAN / "EnergyTerminalResidualCensusBase.lean"
+PARTS = [LEAN / f"EnergyTerminalResidualCensusC{i:02d}.lean" for i in range(1, 5)]
 
 
 def sha256(path: Path) -> str:
@@ -123,31 +127,69 @@ def finset(ids: list[int]) -> str:
     return "{" + ",".join(map(str, ids)) + "}"
 
 
-lines = [f"""import N11Formalization.EnergyTerminalBatchB13
+block_size = 100
+block_count = (5011 + block_size - 1) // block_size
+base_lines = [f"""import N11Formalization.EnergyTerminalBatchB13
 
-/-! Literal census of the {len(residual)} B13 residual terminal ids.
-
-`terminal_ids` below are reconstructed from `DBMSourceTreeData.nodeN`; the
-packet ids are reconstructed from their checked-in packet arrays and manifests.
-The literal chunks keep every `decide +kernel` below 101 elements.  The final
-equality connects the literal list to the semantic filter in B13 via 51
-source-index interval lemmas, each deciding at most 100 nodes. -/
+/-! Shared literal chunks for the {len(residual)}-element B13 residual census.
+The source-index equality proofs are split across four census parts. -/
 set_option autoImplicit false
-set_option maxRecDepth 10000
 namespace N11Formalization.EnergyTerminalResidualCensus
 open Finset
 noncomputable section
 """]
-
 for i, chunk in enumerate(chunks):
-    lines.append(f"def chunk{i} : Finset (Fin 5011) := {finset(chunk)}")
-    lines.append(f"theorem chunk{i}_card : chunk{i}.card = {len(chunk)} := by decide +kernel")
+    base_lines.append(f"def chunk{i} : Finset (Fin 5011) := {finset(chunk)}")
+    base_lines.append(f"theorem chunk{i}_card : chunk{i}.card = {len(chunk)} := by decide +kernel")
+base_lines.append("def residualIDs : Finset (Fin 5011) := chunk0 ∪ (chunk1 ∪ (chunk2 ∪ chunk3))")
+base_lines.append("end")
+base_lines.append("end N11Formalization.EnergyTerminalResidualCensus")
+for i in range(4):
+    base_lines.append(f"#print axioms N11Formalization.EnergyTerminalResidualCensus.chunk{i}_card")
+BASE.write_text("\n".join(base_lines) + "\n", encoding="utf-8")
 
-chain = "chunk3"
-for i in reversed(range(3)):
-    chain = f"chunk{i} ∪ ({chain})"
-lines.append(f"def residualIDs : Finset (Fin 5011) := {chain}")
+part_outputs: list[Path] = []
+for part_index, out in enumerate(PARTS):
+    lines = [f"""import N11Formalization.EnergyTerminalResidualCensusBase
 
+/-! Census part {part_index + 1}/4: source-index equivalence blocks congruent to
+{part_index} modulo 4.  Every kernel decision below covers at most 100 source
+indices. -/
+set_option autoImplicit false
+namespace N11Formalization.EnergyTerminalResidualCensus
+open Finset
+noncomputable section
+"""]
+    for i in range(part_index, block_count, len(PARTS)):
+        lo = i * block_size
+        hi = min((i + 1) * block_size, 5011)
+        lines.append(f"theorem mem_iff_block{i:02d} (n : Fin 5011)")
+        if i == 0:
+            lines.append(f"    (hlo : 0 ≤ n.val) (hhi : n.val < {hi}) :")
+        else:
+            lines.append(f"    (hlo : {lo} ≤ n.val) (hhi : n.val < {hi}) :")
+        lines.append("    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by")
+        lines.append("  rcases n with ⟨k, hk⟩")
+        lines.append("  interval_cases k <;>")
+        lines.append("    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel")
+        lines.append("")
+    lines.append("end")
+    lines.append("end N11Formalization.EnergyTerminalResidualCensus")
+    out.write_text("\n".join(lines) + "\n", encoding="utf-8")
+    part_outputs.append(out)
+
+lines = [f"""import N11Formalization.EnergyTerminalResidualCensusC01
+import N11Formalization.EnergyTerminalResidualCensusC02
+import N11Formalization.EnergyTerminalResidualCensusC03
+import N11Formalization.EnergyTerminalResidualCensusC04
+
+/-! Assembly of the {len(residual)}-element B13 residual census from four
+source-index parts.  No single kernel decision covers more than 101 literals. -/
+set_option autoImplicit false
+namespace N11Formalization.EnergyTerminalResidualCensus
+open Finset
+noncomputable section
+"""]
 for i in range(4):
     for j in range(i + 1, 4):
         lines.append(
@@ -171,22 +213,6 @@ lines.append("  rw [Finset.card_union_of_disjoint chunk1_disjoint, chunk1_card]"
 lines.append("  rw [Finset.card_union_of_disjoint chunk2_disjoint, chunk2_card]")
 lines.append("  rw [chunk3_card]")
 lines.append("  norm_num")
-block_size = 100
-block_count = (5011 + block_size - 1) // block_size
-for i in range(block_count):
-    lo = i * block_size
-    hi = min((i + 1) * block_size, 5011)
-    lines.append(f"private theorem mem_iff_block{i:02d} (n : Fin 5011)")
-    if i == 0:
-        lines.append(f"    (hlo : 0 ≤ n.val) (hhi : n.val < {hi}) :")
-    else:
-        lines.append(f"    (hlo : {lo} ≤ n.val) (hhi : n.val < {hi}) :")
-    lines.append("    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by")
-    lines.append("  rcases n with ⟨k, hk⟩")
-    lines.append("  interval_cases k <;>")
-    lines.append("    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel")
-    lines.append("")
-
 lines.append("theorem residualIDs_eq :")
 lines.append("    residualIDs = EnergyTerminalBatchB13.residualIDs := by")
 lines.append("  ext n")
@@ -259,6 +285,11 @@ report = {
     "paid_b13_count": len(b13),
     "residual_count": len(residual),
     "chunk_sizes": [len(c) for c in chunks],
+    "modules": {
+        out.stem: {"bytes": out.stat().st_size, "sha256": sha256(out)}
+        for out in [BASE, *part_outputs]
+    },
+    "output_bytes": OUT.stat().st_size,
     "output_sha256": sha256(OUT),
     "scope": "source reconstruction and emitted bytes; Lean elaboration is CI-pending",
 }
