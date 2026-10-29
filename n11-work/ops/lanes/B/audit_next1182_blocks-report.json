@@ -1,0 +1,51 @@
+{
+  "manifest": "n11-work/evidence-20261028/evidence/rest1182-emission-manifest.json",
+  "ids": 1182,
+  "part_sizes": [
+    168,
+    168,
+    168,
+    168,
+    168,
+    168,
+    168,
+    6
+  ],
+  "bounds": [
+    [
+      2565,
+      2736
+    ],
+    [
+      2737,
+      2906
+    ],
+    [
+      2907,
+      3087
+    ],
+    [
+      3088,
+      3266
+    ],
+    [
+      3267,
+      3445
+    ],
+    [
+      3446,
+      3954
+    ],
+    [
+      3955,
+      4984
+    ],
+    [
+      4986,
+      5007
+    ]
+  ],
+  "pairwise_disjoint": true,
+  "top_sha256": "87F97BD05360486558B4DD831235F4207440BD099F2DCF4DD6CDCFAD46B3DD50",
+  "scope": "exact manifest/literal-block audit only; not Lean elaboration"
+}
