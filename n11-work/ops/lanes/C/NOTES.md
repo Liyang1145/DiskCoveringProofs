@@ -137,3 +137,48 @@ Still unproved / missing:
 Very next concrete step: run/inspect a lane-C-only `n11-lean-build` for
 `N11Formalization.FrozenCapRationalCore`; do not edit packet emission until CI
 returns the first declaration-level result.
+
+## 2026-10-29 — session part 14 (CI triage + public-record coverage audit)
+
+Did:
+- Pulled the complete log for run `40797575073` / job `123204085190`. It used
+  the pre-`ebc9d4ce` target order, built lane A first, reached
+  `N11Formalization.C450Identify`, then died from runner shutdown (exit 143)
+  at 01:52:34 UTC. It never started a lane-C target; there is still no
+  kernel verdict for any lane-C module.
+- Recursively parsed every JSON file under `evidence-20261014`,
+  `evidence-20261028`, and `assets/replay/n11-wip`, looking for residual IDs
+  carrying `g`, `f0Lo`, or `weights`. Exactly the same seven IDs are present:
+  `1409, 2337, 2341, 2356, 2360, 2368, 2370`; all 382 other residual IDs have
+  no public field record. This independently confirms the census gap rather
+  than merely repeating its manifest claim.
+- Confirmed the old run executed target order A, A, ..., B, ..., C. The current
+  workflow at supervisor commit `ebc9d4ce` reads lane C first; run
+  `40802064355` (head `2f5a2d11`) started at 01:52:36 UTC and is the first run
+  that can reach the core first. It was still in Mathlib-cache setup when this
+  session ended.
+- Local probe setup remains unavailable: `lake exe cache get` rebuilt the cache
+  executable, then exceeded bounded timeout while computing the requested
+  module closure; no Mathlib olean was fetched and no Lean declaration was
+  elaborated. This is an environment failure, not a red proof.
+
+Checks run (scope stated):
+- Public JSON coverage scan over the three listed evidence trees: 389 target
+  IDs, 7 present, 382 absent. Scope is local public bytes only.
+- CI log scan: no lane-C `error:` exists in run `40797575073`; absence of an
+  error is not a build pass because lane C was never reached.
+- `git diff --check`: exit 0. `python tools/project_status.py --check`: PASS
+  (index/manifest scope only).
+
+Still unproved / missing:
+- `FrozenCapRationalCore` remains draft/CI pending. The seven strict-gain
+  inequalities, weight facts, endpoint bridges, and arbitrary-row exclusions
+  have no kernel verdict. All 389 residual IDs remain unpaid; 382 lack the
+  public field record needed even for a Python dual audit.
+
+Very next concrete step: read run `40802064355` as soon as its first lane-C
+target reports. If `FrozenCapRationalCore` is green, replace duplicated
+`FrozenCapCertificates` rational proofs with core lemmas; if red, fix only the
+first declaration-level error. If the runner again dies before lane C, ask the
+supervisor for a lane-C-only workflow invocation rather than another serial
+all-lane run.
