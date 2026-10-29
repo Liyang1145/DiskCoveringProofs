@@ -1,0 +1,11 @@
+{
+  "census_api_present": true,
+  "direct_imports": 4,
+  "forbidden_main": [],
+  "in_targets": false,
+  "missing_imports": [],
+  "missing_required_names": [],
+  "ok": true,
+  "root": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Main.lean",
+  "scope": "static source/import/API audit only; no Lean elaboration"
+}
