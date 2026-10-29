@@ -101,7 +101,8 @@ for i, (sub, blocks) in enumerate(zip(SUBS, part_blocks)):
     lines.append(f"  rcases ({sub}.new_mem n).mp h with " +
                  " | ".join(f"h{k}" for k in range(len(blocks))))
     for k, (idx, vals) in enumerate(blocks):
-        lines.append(f"  · exact block_s{i+1:02}_{k:02}_bounds n h{k}")
+        lines.append(f"  · have hb := block_s{i+1:02}_{k:02}_bounds n h{k}")
+        lines.append("    omega")
 pair_names = []
 for i in range(8):
     for j in range(i + 1, 8):
@@ -124,7 +125,6 @@ lines.append(f"    fin_cases i <;> fin_cases j <;> simp_all [part, {', '.join(pa
 lines.append("  rw [newIDs, Finset.card_biUnion hdisj]")
 lines.append("  simp [Fin.sum_univ_succ, part,")
 lines.append("      " + ",\n      ".join(f"{s}.new_count" for s in SUBS) + "]")
-lines.append("  norm_num")
 lines.append("""theorem new_terminal (n : Fin 5011) (hn : n ∈ newIDs) :
     (DBMSourceTree.data n).terminal = true := by
   rcases (new_mem n).mp hn with """ + " | ".join("h" for _ in SUBS))

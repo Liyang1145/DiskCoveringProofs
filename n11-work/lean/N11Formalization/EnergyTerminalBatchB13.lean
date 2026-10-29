@@ -12,10 +12,22 @@ noncomputable section
 def paidIDs : Finset (Fin 5011) :=
   EnergyTerminalBatchB12.paidIDs ∪ Paid16GeneralNext1182.newIDs
 
-private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
+private theorem b10_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB10.paidIDs) :
     n.val < 2565 :=
-  (Finset.all_eq_true.mp (s := EnergyTerminalBatchB11.paidIDs)
+  (Finset.all_eq_true.mp (s := EnergyTerminalBatchB10.paidIDs)
     (p := fun n => n.val < 2565) (by decide +kernel)) n hn
+
+private theorem remaining210_lt (n : Fin 5011)
+    (hn : n ∈ Paid16GeneralRemaining210.newIDs) : n.val < 2565 :=
+  (Finset.all_eq_true.mp (s := Paid16GeneralRemaining210.newIDs)
+    (p := fun n => n.val < 2565) (by decide +kernel)) n hn
+
+private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
+    n.val < 2565 := by
+  rw [EnergyTerminalBatchB11.paidIDs] at hn
+  rcases (Finset.mem_union.mp hn) with hn | hn
+  · exact b10_lt n hn
+  · exact remaining210_lt n hn
 
 private theorem next505_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralNext505.newIDs) :
     n.val < 2565 := by
