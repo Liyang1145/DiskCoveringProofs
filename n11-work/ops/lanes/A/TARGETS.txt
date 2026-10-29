@@ -1,6 +1,8 @@
 # Lean targets lane A wants CI to build (one per line)
 # The C450 telescope is split into five small modules; the final one preserves
 # the public h450 interface. The Main target consumes it plus the B11 route.
+N11Formalization.C450Source36Segment
+N11Formalization.C450ChainCompletionEndpoint
 N11Formalization.C450ChainCompletionTail
 N11Formalization.C450ChainCompletionMid1
 N11Formalization.C450ChainCompletionMid2
