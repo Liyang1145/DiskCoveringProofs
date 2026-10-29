@@ -14,6 +14,7 @@ noncomputable section
 namespace N11Formalization.SevenClassQ0Deg3Cos
 
 open N11Formalization
+open MetricAreaRationalCertificate
 
 theorem sinT_succ (m : ℕ) (x : ℝ) :
     sinT (m + 1) x = sinT m x + (-1 : ℝ) ^ m * x ^ (2 * m + 1) /
@@ -33,14 +34,16 @@ theorem hasDerivAt_cosHiReal (x : ℝ) :
     have h := (hasDerivAt_pow 28 x).div_const ((Nat.factorial 28 : ℕ) : ℝ)
     simpa using h
   refine (h1.add h2).congr_deriv ?_
-  rw [show (14 : ℕ) = 13 + 1 by norm_num, sinT_succ]
+  have hsin : sinT 14 x = sinT 13 x -
+      x ^ 27 / ((Nat.factorial 27 : ℕ) : ℝ) := by
+    rw [show (14 : ℕ) = 13 + 1 by norm_num, sinT_succ]
+    norm_num
   have hfac : ((Nat.factorial 28 : ℕ) : ℝ) =
       28 * ((Nat.factorial 27 : ℕ) : ℝ) := by
     rw [show (28 : ℕ) = 27 + 1 by norm_num, Nat.factorial_succ]
     push_cast
     ring
-  rw [hfac]
-  norm_num
+  rw [hsin, hfac]
   field_simp
   ring
 
@@ -97,14 +100,15 @@ theorem cosHiNLag_cast (q : ℚ) :
 /-- Rational antitone monotonicity of the upper cosine bracket on `[0, π/2]`. -/
 theorem cosHiNLag_antitone {a b : ℚ} (ha : 0 ≤ a) (hab : a ≤ b)
     (hb : (b : ℝ) ≤ Real.pi / 2) : cosHiNLag b ≤ cosHiNLag a := by
-  refine Rat.cast_le.mp ?_
-  rw [cosHiNLag_cast, cosHiNLag_cast]
-  have haR : (0 : ℝ) ≤ (a : ℝ) := by exact_mod_cast ha
-  have habR : (a : ℝ) ≤ (b : ℝ) := by exact_mod_cast hab
-  have hmem_a : (a : ℝ) ∈ Set.Icc 0 (Real.pi / 2) := ⟨haR, habR.trans hb⟩
-  have hmem_b : (b : ℝ) ∈ Set.Icc 0 (Real.pi / 2) := ⟨haR.trans habR, hb⟩
-  have h := cosHiReal_antitoneOn hmem_a hmem_b habR
-  simpa [cosHiReal, abs_of_nonneg haR, abs_of_nonneg (haR.trans habR)] using h
+  have hR : ((cosHiNLag b : ℚ) : ℝ) ≤ ((cosHiNLag a : ℚ) : ℝ) := by
+    rw [cosHiNLag_cast, cosHiNLag_cast]
+    have haR : (0 : ℝ) ≤ (a : ℝ) := by exact_mod_cast ha
+    have habR : (a : ℝ) ≤ (b : ℝ) := by exact_mod_cast hab
+    have hmem_a : (a : ℝ) ∈ Set.Icc 0 (Real.pi / 2) := ⟨haR, habR.trans hb⟩
+    have hmem_b : (b : ℝ) ∈ Set.Icc 0 (Real.pi / 2) := ⟨haR.trans habR, hb⟩
+    have h := cosHiReal_antitoneOn hmem_a hmem_b habR
+    simpa [cosHiReal, abs_of_nonneg haR, abs_of_nonneg (haR.trans habR)] using h
+  exact Rat.cast_le.mp hR
 
 /-- The final grid step crosses `π/2` by less than a grid spacing; it is checked
 exactly rather than inferred from the real antitone theorem. -/
@@ -137,7 +141,9 @@ theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
         have hpi : RatInterval.piHi * 2047 / 2048 / 2 ≤ RatInterval.piLo / 2 := by
           norm_num [RatInterval.piHi, RatInterval.piLo]
         nlinarith
-      exact_mod_cast hle.trans RatInterval.pi_div_two_lo_lt.le
+      have hleR : ((gridArg (n + 1) : ℚ) : ℝ) ≤
+          (((RatInterval.piLo / 2 : ℚ)) : ℝ) := by exact_mod_cast hle
+      exact hleR.trans RatInterval.pi_div_two_lo_lt.le
     have ha : 0 ≤ gridArg n := by
       unfold gridArg nodeQ
       have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]

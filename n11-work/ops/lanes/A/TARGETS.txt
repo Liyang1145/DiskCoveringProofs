@@ -9,5 +9,6 @@ N11Formalization.C450ChainCompletionMid2
 N11Formalization.C450ChainCompletionMid3
 N11Formalization.C450ChainCompletion
 N11Formalization.C450ChainCompletionMain
-
 N11Formalization.SevenClassQ0Deg3Cos
+N11Formalization.SevenClassQ0Deg3UpperReduction
+N11Formalization.SevenClassQ0Deg3UpperReductionCounterexample
