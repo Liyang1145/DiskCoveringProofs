@@ -36,10 +36,8 @@ theorem hasDerivAt_cosHiReal (x : ℝ) :
   refine (h1.add h2).congr_deriv ?_
   have hsin : sinT 14 x = sinT 13 x -
       x ^ 27 / ((Nat.factorial 27 : ℕ) : ℝ) := by
-    have h := sinT_succ 13 x
-    norm_num only [show (-1 : ℝ) ^ 13 = -1 by norm_num, show 2 * 13 + 1 = 27 by norm_num] at h
-    rw [h]
-    ring
+    rw [sinT_succ]
+    norm_num
   have hfac : ((Nat.factorial 28 : ℕ) : ℝ) =
       28 * ((Nat.factorial 27 : ℕ) : ℝ) := by
     rw [show (28 : ℕ) = 27 + 1 by norm_num, Nat.factorial_succ]
@@ -127,12 +125,19 @@ def gridArg (n : ℕ) : ℚ :=
 
 def gridCos (n : ℕ) : ℚ := cosHiNLag (gridArg n)
 
+/-- `gridArg` agrees with the certificate's `nodeQ` expression on the grid. -/
+theorem gridArg_eq_nodeQ {n : ℕ} (hn : n ≤ 2048) :
+    gridArg n = N11Formalization.MetricAreaRationalCertificate.nodeQ
+      RatInterval.piHi 2048 (⟨n, Nat.lt_succ_of_le hn⟩ : Fin 2049) / 2 := by
+  simp [gridArg, N11Formalization.MetricAreaRationalCertificate.nodeQ,
+    Nat.min_eq_right hn]
+
 /-- The final grid step in the `gridArg` coordinate, matching the last case of
 `gridCos_succ_le` syntactically. -/
 theorem cosHiNLag_gridArg_last : cosHiNLag (gridArg 2048) ≤
     cosHiNLag (gridArg 2047) := by
-  simpa [gridArg, N11Formalization.MetricAreaRationalCertificate.nodeQ]
-    using cosHiNLag_grid_last
+  rw [gridArg_eq_nodeQ (le_refl 2048), gridArg_eq_nodeQ (by norm_num)]
+  exact cosHiNLag_grid_last
 
 theorem gridArg_mono {m n : ℕ} (hmn : m ≤ n) : gridArg m ≤ gridArg n := by
   unfold gridArg
@@ -140,7 +145,13 @@ theorem gridArg_mono {m n : ℕ} (hmn : m ≤ n) : gridArg m ≤ gridArg n := by
     have hm' : min m 2048 ≤ min n 2048 := by omega
     exact_mod_cast hm'
   have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
-  nlinarith
+  calc
+    RatInterval.piHi * (min m 2048 : ℚ) / 2048 / 2
+        = RatInterval.piHi * (min m 2048 : ℚ) / (2048 * 2) := by ring
+    _ ≤ RatInterval.piHi * (min n 2048 : ℚ) / (2048 * 2) := by
+      exact div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hm hp) (by norm_num)
+    _ = RatInterval.piHi * (min n 2048 : ℚ) / 2048 / 2 := by ring
 
 theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
   by_cases hn : n < 2047
@@ -156,7 +167,12 @@ theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
         calc
           RatInterval.piHi * (min (n + 1) 2048 : ℚ) / 2048 / 2
               ≤ RatInterval.piHi * (2047 : ℚ) / 2048 / 2 := by
-                gcongr
+                rw [show RatInterval.piHi * (min (n + 1) 2048 : ℚ) / 2048 / 2
+                    = RatInterval.piHi * (min (n + 1) 2048 : ℚ) / (2048 * 2) by ring]
+                rw [show RatInterval.piHi * (2047 : ℚ) / 2048 / 2
+                    = RatInterval.piHi * (2047 : ℚ) / (2048 * 2) by ring]
+                exact div_le_div_of_nonneg_right
+                  (mul_le_mul_of_nonneg_left hq hp) (by norm_num)
           _ ≤ RatInterval.piLo / 2 := hpi
       have hleR : ((gridArg (n + 1) : ℚ) : ℝ) ≤
           (((RatInterval.piLo / 2 : ℚ)) : ℝ) := by exact_mod_cast hle
@@ -191,12 +207,10 @@ theorem cosHiNLag_grid_antitone {k l : Fin 2049} (hkl : k ≤ l) :
         RatInterval.piHi 2048 k / 2) := by
   have hk : N11Formalization.MetricAreaRationalCertificate.nodeQ
         RatInterval.piHi 2048 k / 2 = gridArg (k : ℕ) := by
-    simp [N11Formalization.MetricAreaRationalCertificate.nodeQ, gridArg,
-      Nat.min_eq_right (show (k : ℕ) ≤ 2048 by omega)]
+    simpa using (gridArg_eq_nodeQ (show (k : ℕ) ≤ 2048 by omega)).symm
   have hl : N11Formalization.MetricAreaRationalCertificate.nodeQ
         RatInterval.piHi 2048 l / 2 = gridArg (l : ℕ) := by
-    simp [N11Formalization.MetricAreaRationalCertificate.nodeQ, gridArg,
-      Nat.min_eq_right (show (l : ℕ) ≤ 2048 by omega)]
+    simpa using (gridArg_eq_nodeQ (show (l : ℕ) ≤ 2048 by omega)).symm
   rw [hk, hl]
   exact gridCos_antitone (show (k : ℕ) ≤ (l : ℕ) from hkl)
 
