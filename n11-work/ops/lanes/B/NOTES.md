@@ -10,37 +10,86 @@ SUPERVISOR (2026-10-29): TARGETS remain Next1182 + B13 until both are CI-green; 
 
 # Lane B notes
 
-## 2026-10-29 - session part 41: reran emitters/audits on the patched top
+## 2026-10-29 - session part 5: hierarchical B13 lower-bound proof
 
 ### Done
-- Re-ran the deterministic top emitter after the part-40 block-proof rewrite.
-  It reproduced `Paid16GeneralNext1182.lean` byte-for-byte at SHA
-  `F78988D4…A0FE8`, with 1182 ids, parts `168x7 + 6`, 57 literal-block
-  theorems, 28 interval-disjointness theorems and **zero** top-level
-  `decide +kernel` checks. The emitter self-check and block auditor passed.
-- Re-ran the independent B13 closure inventory: exact counts
-  B11=310, B12=815, Next1182=1182, B13=1997, terminals=2506, sharp=120,
-  residual=389; B12/Next1182 disjointness, terminal-subset, sharp-disjointness,
-  and the four literal census chunks all passed (13/13 inventory assertions).
+- Replaced B13's monolithic 310-element `b11_lt` kernel decode with
+  `b10_lt` (100-element B10 set), `remaining210_lt` (210-element G03--G12
+  union), and a union dispatch. This follows the recorded CI-timeout risk and
+  leaves each new decode at or below the measured safe range.
+- Re-read `Paid16GeneralNext505` and retained its existing 505-element
+  `next505_lt`; a recursive 25-chunk replacement is the next refinement if CI
+  still times out there.
+
+### Files (SHA256)
+- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13.lean`
+  `7C73BD67377D1F72B920439F20C7F81D51EAD063EA20A61395EC8E4362758DFC`
 
 ### Checks executed (scope)
-- `emit_next1182_top.py` regenerated SHA `F78988D4…A0FE8`; emitter report
-  `60D2066E…FC6CF`, block audit report `78C7BEEE…33577`, B13 closure report
-  `4A02341E…142EB`. These are source/manifest/inventory checks, **not Lean
-  elaboration**. No local project build was started; CI remains authoritative.
-- `ops/ci/LATEST.md` run `40861839784` is red on the pre-part-40 source at
-  `Paid16GeneralNext1182.lean:47`; it supplies no verdict for the current top.
+- `git diff --check` exit 0; forbidden-token scan over B13 exit 0. Static
+  source inspection only. No local project build was started; CI remains the
+  only project kernel authority. Both targets remain CI pending / unpaid.
 
 ### Still unproved / unverified
-- Next1182 and B13 remain **CI pending / unpaid**. B13Main, residual census
-  kernel equality, `SevenClassExclusions`, and arbitrary-center full-disk
-  theorem remain unverified/unpaid.
+- Next1182 and B13 have no CI verdict on current bytes. B13 cardinality and
+  transfer, residual census 389, B13Main, `SevenClassExclusions`, and the
+  arbitrary-center full-disk theorem remain unverified.
 
 ### Next concrete step
-- In the next session, inspect the first CI log built from SHA `F78988D4…`
-  (or newer). If Next1182 processes beyond its first block lemma, keep the
-  current 21-case `rcases`/`norm_num` pattern and diagnose B13's first
-  independent error; otherwise patch only the first failing block lemma.
+- On the next CI run, quote the first genuine Next1182 error. If both existing
+  targets exit 0, update the root-import request; otherwise split
+  `next505_lt` recursively across `Paid16GeneralNext505.ids00`--`ids24`.
+
+## 2026-10-29 - session part 43: removed redundant `norm_num` in `new_count`
+
+### Done
+- Re-read CI run `40893868710` (sha `495c970c`, source 648 lines) against the
+  current WT source. Besides the 126 now-fixed part-bound `Type mismatch`
+  lines, `new_count` had two independent errors: `590:75 unsolved goals`
+  (the `hdisj` block, cascading because the 28 disjoint lemmas failed) and
+  `603:2 No goals to be solved` (the trailing `norm_num`).
+- Local Mathlib probe `/workspace/tools/mathlib-probe/LaneBCountProbe.lean`
+  reproduces the exact `new_count` shape with 8 `Icc` parts and 28 `Disjoint`
+  lemmas. It compiled exit 0 (~4.5 min, Mathlib import dominated): the
+  `fin_cases i <;> fin_cases j <;> simp_all [part, d01, ...]` hdisj pattern is
+  valid, and `simp [Fin.sum_univ_succ, part, c01, ...]` alone closes the
+  cardinality goal. Hence the trailing `norm_num` is genuinely redundant.
+- Removed `lines.append("  norm_num")` from `emit_next1182_top.py` after the
+  `new_count` `simp`, regenerated the module. Part-42 `have hb := ...; omega`
+  composition retained.
+
+### Files (SHA256, uppercase)
+- `n11-work/lean/N11Formalization/Paid16GeneralNext1182.lean`
+  `73FE3DA40C7CE0B1F9D7703EACECD6739D388A4297E7FAA1735203D675248B76`
+- `n11-work/ops/lanes/B/emit_next1182_top.py`
+  `4EB412D623899EC2D08696A9E81102EFA2E7CB4EA2FC06486DC6992C20F9A827`
+- `n11-work/ops/lanes/B/emit_next1182_top-report.json`
+  `0438CDCA939DBB7FB75C2F9622A287081EB9C3503D5F6E407116D13328F23718`
+- `n11-work/ops/lanes/B/audit_next1182_blocks-report.json`
+  `01F84D3F5CE3E50B3D393589E00C68E2CF0BF3CFA84DE7F652A93AC6A6E9E70B`
+- `EnergyTerminalBatchB13.lean` unchanged
+  `B4F556F05B8C4D0618C8287094AFB14AD7DF494DD999567F83C6CF4B20EC5096`;
+  `TARGETS.txt` unchanged `D0572BD0...` (targets Next1182 + B13).
+
+### Checks executed (scope)
+- Emitter rerun wrote 37,355 bytes, sha `73FE3DA4...`; audit exit 0 with 1182
+  ids, parts `168x7 + 6`, 57 literal-block theorems, 28 interval-disjointness
+  theorems, 0 top-level kernel decodes.
+- `py_compile`, `git diff --check`, forbidden-token scan pass (only expected
+  `#print axioms` lines match "axiom").
+- Probe check is a Mathlib-only analogue, **not** project elaboration. No local
+  project build was started; CI remains authoritative.
+
+### Still unproved / unverified
+- Next1182 and B13 remain **CI pending / unpaid**. The part-42 `omega`
+  composition and the `new_count` change have no project Lean verdict yet.
+  B13Main, residual census 389, `SevenClassExclusions`, and the arbitrary-center
+  full-disk theorem remain unverified.
+
+### Next concrete step
+- On CI for sha `73FE3DA4...`: if Next1182 exits 0, inspect B13's first
+  independent error; if not, quote the first error line only. Do not expand
+  TARGETS or claim payment until both targets exit 0.
 
 ## 2026-10-29 - session part 40: patched CI timeout in Next1182 block bounds
 
@@ -129,76 +178,15 @@ SUPERVISOR (2026-10-29): TARGETS remain Next1182 + B13 until both are CI-green; 
   `EnergyTerminalBatchB13`, then update the root-import request. Do not add
   TARGETS before both are green.
 
-## 2026-10-29 - session part 37: small kernel block bounds for Next1182
-
-### Done
-- Replaced the 57 `rcases`/`all_goals omega` literal-block bound proofs with
-  one `Finset.all` kernel check per block (21 literals maximum), then reused
-  the eight part assemblies and 28 interval-disjointness proofs. This follows
-  GUIDANCE's measured rule to keep kernel decodes under ~170--500 literals and
-  avoids the prior 200000-heartbeat tactic block.
-- Removed `set_option maxRecDepth 10000` from all eight lane-B subaggregates
-  `Paid16GeneralNext1182S01..S08`; extended the lane audit to reject its
-  reappearance. The branch remains `Finset.univ.biUnion` over eight parts.
-- Regenerated the top aggregate from the deterministic emitter and audited the
-  frozen manifest inventory and literal blocks. No count or interval changed.
-
-### Files (SHA256)
-- `n11-work/lean/N11Formalization/Paid16GeneralNext1182.lean`
-  `26F316A808543D0306F2987F2075989B737F895B99401843B2755DA877583F6F`
-- `n11-work/ops/lanes/B/emit_next1182_top.py`
-  `E644D18A5BC24CC367263D66EE1DF7D97D53F050C66E3DDC32744D354602AF06`
-- `n11-work/ops/lanes/B/emit_next1182_top-report.json`
-  `5230BE8124E6668C9C66CC161CBE7DD9474010B03F28560FCFA9E495A447FB35`
-- `n11-work/ops/lanes/B/audit_next1182_blocks.py`
-  `3BFE829C63EBA00058F811F49C6329DCB0205066B4BC0AB3FC120CC1FC68AAF6`
-- `n11-work/ops/lanes/B/audit_next1182_blocks-report.json`
-  `3B2CEB47B63A755226EA629187C7A890C7E2BF085105BF394E7CEDE80720AE7C`
-- Subaggregates `Paid16GeneralNext1182S01..S08.lean` (depth option removed):
-  `D7BFEA1C4FC64322CA8C1F18944B4A943634CE84C1FE2AC64C0D68971ACBBB14`,
-  `8F06CA3BDE0D58D1E4A91046423A1C8921E203FBBAD8D32D965BDBC9BFC2CD9A`,
-  `D89C3427F5A5201A7FD7DA2C545E0210789A88D92AB2D13BB742F366ADF8CA89`,
-  `2F39391EE79F2E9D9A18ACD825C2F4DBA98C401AEBEBC8F216DC8D05F909C54F`,
-  `C1F56607A9972F75F26A3483B40C4C5C47DE00069B8C47A46D0520B808398927`,
-  `1498B8F24EB0D32CF4F69E8B676FD4FA91A1F144929B8E7C2B750200B6A0B1C7`,
-  `99D9CBE825CDD0D9000B3931972E74F2AA5BFE208EA85C6B6D92CC404997CF97`,
-  `68AC386C2D7AFD31C63412E467AA510F5FD3DFD9DECB6B318CAF196A6A86BE4F`
-- `EnergyTerminalBatchB13.lean` unchanged
-  `B4F556F05B8C4D0618C8287094AFB14AD7DF494DD999567F83C6CF4B20EC5096`;
-  `TARGETS.txt` unchanged
-  `D0572BD0309F49830EFE59C36F208F624FCEAD21D75974E8CE29D85CC45B7C72`.
-
-### Checks executed (scope)
-- `audit_next1182_blocks.py`: exact manifest inventory 1182 ids, part sizes
-  `168x7 + 6`, eight disjoint increasing intervals, 57 block lemmas, 28 pair
-  lemmas, 57 kernel decodes, no `all_goals`, no depth override; `ok` by
-  assertions. This is source/manifest inspection, not Lean elaboration.
-- `py_compile`, `git diff --check`, and forbidden-token scans passed. No local
-  project build was started; CI remains the kernel authority.
-- Latest CI `40861839784` predates this edit and is red on the older source.
-  Therefore the 57-check change has **no kernel verdict yet**.
-
-### Still unproved / unverified
-- Next1182 and B13 are **CI pending**, not paid. B13's 1997-cardinality and
-  radius transfer and B13Main remain conditional. Census 389,
-  `SevenClassExclusions`, and the arbitrary-center full-disk theorem remain
-  unpaid.
-
-### Next concrete step
-- On the next lane-B CI run, quote the first genuine error for Next1182 and
-  patch only that; if green, inspect B13's first error. Do not expand TARGETS
-  or claim payment until both existing targets build.
+## 2026-10-29 - session part 37 (condensed)
+- Replaced 57 `rcases`/`all_goals omega` block bounds by one
+  `Finset.all` kernel check per block (<=21 literals); removed
+  `maxRecDepth 10000` from S01..S08. Audit script rejects its return.
 
 ## Earlier progress (condensed)
 - Sessions 35--36 split the former 168-case bound proof into eight parts and
-  57 literal blocks after CI timeout at 200000 heartbeats. Part-37 replaces
-  those block tactics by small kernel checks.
-- Sessions 21--22 replaced B13's eight large old/new kernel decodes with one
-  B11 bound plus eight `omega` contradictions; B13 still has large `decide`
-  checks for B11 and Next505.
-- Sessions 15--20 confirmed the 28 Next1182 pairwise facts and B13 dispatch;
-  CI queue/infra supplied no kernel verdict. Session 18 attributed prior red
-  logs to frozen-dependency OOM, outside lane B.
+  57 literal blocks after CI timeout at 200000 heartbeats; later parts replaced
+  those tactics by literal membership elimination plus `norm_num`.
 - Session 16 reproduced `2506 terminals - 120 sharp - 1997 paid = 389`, with
   literal chunks 100/100/100/89. This is arithmetic inventory, not proof.
 - Session 30 audited conditional `EnergyTerminalBatchB13Main.lean` statically;
@@ -213,6 +201,40 @@ SUPERVISOR (2026-10-29): TARGETS remain Next1182 + B13 until both are CI-green; 
   instead of assuming an interval.
 - `Finset.disjoint_left.mp` needs `(a := a)` in generated proofs.
 - Emitters: `emit_next1182_top.py`, `emit_residual_census.py`. The former now
-  emits one `Finset.all`/`decide +kernel` proof per <=21-literal block.
-- Local Mathlib probes repeatedly timed out without a verdict; CI is the only
-  Lean-build authority for project modules.
+  emits literal-membership block proofs with no top-level kernel decodes.
+- Mathlib probes can give tactic verdicts (`LaneBCountProbe.lean`, part 43);
+  CI remains the only Lean-build authority for project modules.
+
+## 2026-10-29 - session part 4 (same slot): post-CI source inspection
+
+### Done
+- Confirmed `n11-work/ops/ci/LATEST.md` run `40893868710` (sha `495c970c`)
+  predates the part-43 rewrite: its `Paid16GeneralNext1182` errors are the 126
+  old part-bound `Type mismatch` lines plus `590:75 unsolved goals` and
+  `603:2 No goals to be solved`. The current worktree source (647 lines, sha
+  `73FE3DA4...`) has literal `have hb := block_...; omega` part bounds and no
+  trailing `norm_num`, so those exact errors are not evidence against it.
+- Verified part/block inventory consistency in the current source: 57 block
+  lemmas, S01--S07 have 8 blocks each, S08 has 1 (`rcases ... with h0`), and
+  all 28 pairwise disjointness lemmas use part bounds, not kernel decodes.
+- Inspected `EnergyTerminalBatchB13.lean` (129 lines) end to end: `paidIDs`,
+  `new_disjoint_old` (B11/Next505 split), `paid_count = 1997`,
+  `paid_not_sharp`, `paid_radius`, `remaining_of_b13` shapes are internally
+  consistent with B12 and Next1182 exports.
+
+### Risk identified (not fixed)
+- B13's `b11_lt` does a single `decide +kernel` over the whole 815-element
+  `EnergyTerminalBatchB11.paidIDs`, and `next505_lt` over 505 elements. This
+  is above GUIDANCE's measured ~170--500-literal kernel-decode range and is
+  the most likely next CI timeout. A hierarchical replacement must recurse
+  through B11→B10→B09→...→B01 (each `paidIDs` is `previous ∪ smallBatch`).
+
+### Checks executed (scope)
+- Static source/CI-log inspection only; no local project build, no Lean
+  elaboration of the current source. Both targets remain CI pending / unpaid.
+
+### Next concrete step
+- Replace `b11_lt` by a recursive per-batch bound: prove a chain of lemmas
+  `EnergyTerminalBatchBk.paidIDs ⊆ {n | n.val < 2565}` down through B01 using
+  each `new_disjoint_old`/`paidIDs` definition, then combine. Do this before
+  asking CI to re-run B13.
