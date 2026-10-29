@@ -1,0 +1,85 @@
+{
+ "scope": "exact <=3-field HOST-only search; no kernel credit",
+ "proposal_sha256": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
+ "dbm_sha256": "BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5",
+ "records": [
+  {
+   "id": 1409,
+   "best_gain": null,
+   "support": null,
+   "alpha": null,
+   "beta": null,
+   "required": "-84327256237517163749855273465881069312371471746510359389469572321492297/109951162777270146511667200000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "no <=3-field rescue",
+   "faces_checked": 84
+  },
+  {
+   "id": 2337,
+   "best_gain": null,
+   "support": null,
+   "alpha": null,
+   "beta": null,
+   "required": "-1012147727529519286257517955157641301039097481248025668273140124700735543/3518437208879681562791116800000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "no <=3-field rescue",
+   "faces_checked": 84
+  },
+  {
+   "id": 2341,
+   "best_gain": null,
+   "support": null,
+   "alpha": null,
+   "beta": null,
+   "required": "-1687900164896983241805350819250859046411840528673693854533215784801861711/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "no <=3-field rescue",
+   "faces_checked": 84
+  },
+  {
+   "id": 2356,
+   "best_gain": null,
+   "support": null,
+   "alpha": null,
+   "beta": null,
+   "required": "66463241121496635732157845941096455148739459315314057152365697131732039/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "no <=3-field rescue",
+   "faces_checked": 84
+  },
+  {
+   "id": 2360,
+   "best_gain": null,
+   "support": null,
+   "alpha": null,
+   "beta": null,
+   "required": "582983525132626779808829117759202522411794356914946199054324229846575789/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "no <=3-field rescue",
+   "faces_checked": 84
+  },
+  {
+   "id": 2368,
+   "best_gain": null,
+   "support": null,
+   "alpha": null,
+   "beta": null,
+   "required": "-266941464033749444411495079012310792025081897571724882139690760387799211/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "no <=3-field rescue",
+   "faces_checked": 84
+  },
+  {
+   "id": 2370,
+   "best_gain": null,
+   "support": null,
+   "alpha": null,
+   "beta": null,
+   "required": "-619128944349653660146725083374029744791875738389840157140377091009329293/1759218604438081562791116800000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "no <=3-field rescue",
+   "faces_checked": 84
+  }
+ ],
+ "pass_count": 0
+}
