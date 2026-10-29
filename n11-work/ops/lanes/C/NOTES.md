@@ -74,120 +74,167 @@ replace the full module's duplicated heavy endpoint/strict-gain proofs with
 small bridge theorems to the core; if red, fix the first `norm_num`/elaboration
 error in the core before touching the packet chain.
 
-## 2026-10-29 — session part 12 (CI triage + narrow imports)
+## Condensed 2026-10-29 parts 12--14 (CI/probe/coverage)
+
+- Narrowed the core imports; the first lane-C-first CI run exposed only a
+  missing `Fintype (Fin 9)` import, now repaired. Later lane-C targets remain
+  OOM/exit-137 blocked in their large dependency chains, with no own-declaration
+  error.
+- Recursive public-evidence scan reconfirmed 389 residual IDs: exactly seven
+  (`1409,2337,2341,2356,2360,2368,2370`) carry `g/f0Lo/weights`; 382 do not.
+- The local Mathlib probe still lacks the required oleans; `cache get` could not
+  complete in bounded time. This is an environment limitation, not a proof or
+  build verdict.
+
+## 2026-10-29 — session part 15 (first lane-C CI diagnosis and import repair)
 
 Did:
-- Downloaded and inspected the actual job log for run `40736931996` (`gh` is
-  absent; used the public GitHub jobs/logs API). It contains no Lean `error:`
-  from lane C: the job was killed while building lane A, ending with runner
-  shutdown / exit 143 at 18:37:58 UTC. Thus the run is an infrastructure
-  failure, not a red lane-C module.
-- Replaced the standalone core's blanket `import Mathlib` with the five
-  modules actually used: `Data.Rat.Defs`, `Data.Fin.VecNotation`,
-  `Algebra.BigOperators.Group.Finset.Basic`, `Tactic.NormNum`, and
-  `Tactic.FinCases`. Regenerated the Lean file from the deterministic emitter.
+- Read the complete log of run `40802064355` / job `123215323857`. Lane C did
+  run first. `FrozenCapRationalCore` failed at every theorem with
+  `failed to synthesize Fintype (Fin 9)`; the failed sum/`fin_cases`
+  elaboration inserted synthetic `sorry` placeholders, so the following
+  `#print axioms` reported `sorryAx`. This is the first declaration-level
+  lane-C verdict, not a mathematical counterexample.
+- Fixed the narrowed import set by adding `Mathlib.Data.Fintype.Basic` to the
+  deterministic emitter and regenerating the core. All seven exact rational
+  weight/margin self-checks still pass in Python.
+- Also recorded the later lane-C failures: `PaidCellCertificateM`,
+  `PaidCellCertificateMCap`, and `FrozenCapCertificates` ended in dependency
+  builds killed with exit 137 (OOM guard); no error was reported in their own
+  declarations. `PaidCellCertificateM` specifically lost
+  `FlashCosineLeaf284Energy`, `DBMSourceTreeData`, and `Ladder49_jt_kkt_z`.
+- Reran `build_residual389_census.py`; it reproduced 389 residual IDs, seven
+  public records and 382 absent records. The tracked census JSON did not change.
 
 Files / SHA256 (current bytes):
 - `ops/lanes/C/emit_frozen_cap_rational_core.py`
-  `EC617EDF75772882162BA7015D48D0D6C0459578B2B034E9215CA12F23AC2731`
+  `A536A59AE84A4B2E2A9C6A30220F52580D6A8D7E2972A3E9B0A5AA8FCE74AEB9`
 - `lean/N11Formalization/FrozenCapRationalCore.lean`
-  `DCAEFF8CEEE7A514E2B13E3A260A8B0B1FB18025BE53A01FBD04794024113862`
-- `ops/lanes/C/TARGETS.txt` unchanged at
-  `BED53B62E9339CEB40615595E1203AE8293C035B056C12EAAA582892564C18AD`
-
-Checks run (scope stated):
-- `python3 -m py_compile emit_frozen_cap_rational_core.py` and rerun of the
-  emitter: exit 0; all seven records passed exact `Fraction` checks.
-- Forbidden-token grep over generator/core: no hits; `git diff --check`: exit 0;
-  `python tools/project_status.py --check`: PASS (index/manifest scope only).
-- Bounded local probe of the full core: timeout after 150 s, no Lean
-  diagnostic. Even the narrowed imports do not load within the weak sandbox;
-  this is NOT a build verdict. Core remains **CI pending**.
-
-Still unproved / missing:
-- No Lean kernel check of `weights_nonneg_*`, `weights_sum_*`, or
-  `strict_gain_*`. The endpoint bridge and packet hypotheses remain explicit;
-  all 389 residual IDs remain unpaid; 382 source records remain absent.
-
-Very next step: on the next `n11-lean-build` that actually starts lane C,
-inspect `FrozenCapRationalCore` first. If green, replace the seven duplicated
-endpoint/strict-gain blocks in `FrozenCapCertificates` with bridges to the core.
-If red, fix the first reported declaration only. If lane C is still not reached
-because lane A consumes the runner, ask the supervisor to run a lane-C-only
-serial build before extending any packet emission.
-
-## 2026-10-29 — session part 13 (probe blocker isolated)
-
-Did:
-- Rechecked the current core and emitter bytes; no source change was needed.
-- Attempted a bounded probe-only check of the core. The probe contains a
-  partial Mathlib tree but lacks `Mathlib/Data/Rat/Defs.olean`; adding a local
-  empty root `Mathlib.olean` shifted the error to that exact missing narrow
-  olean. This is an environment limitation, not a Lean diagnostic.
-
-Current hashes:
-- `ops/lanes/C/emit_frozen_cap_rational_core.py`
-  `EC617EDF75772882162BA7015D48D0D6C0459578B2B034E9215CA12F23AC2731`
-- `lean/N11Formalization/FrozenCapRationalCore.lean`
-  `DCAEFF8CEEE7A514E2B13E3A260A8B0B1FB18025BE53A01FBD04794024113862`
+  `BB2A57BF716DCE759647036250F423902DDB656C7391882E1166D360C53BDDA4`
 - `ops/lanes/C/TARGETS.txt`
   `BED53B62E9339CEB40615595E1203AE8293C035B056C12EAAA582892564C18AD`
 
 Checks run (scope stated):
-- `lake env lean FrozenCapRationalCore.lean` in `/workspace/tools/mathlib-probe`
-  failed at import resolution because `Mathlib/Data/Rat/Defs.olean` is absent;
-  no declaration was elaborated. Core remains **CI pending**, not paid.
+- `python3 emit_frozen_cap_rational_core.py`: exit 0; all seven frozen records
+  passed exact `Fraction` checks. `python3 build_residual389_census.py`: exit 0
+  with the counts above. Forbidden-token grep: no proof-placeholder hits;
+  `git diff --check`: exit 0. `python tools/project_status.py --check`: PASS
+  (index/manifest only).
+- No local Lean build: the sandbox Mathlib probe still lacks the required
+  oleans. The repaired core is **CI pending**, not paid.
 
 Still unproved / missing:
-- All seven weight nonnegativity/sum and strict-gain declarations remain
-  un-kernel-checked. Endpoint bridges and packet hypotheses are still explicit;
-  all 389 residual IDs remain unpaid and 382 source records are absent.
+- None of the seven weight/strict-gain declarations has a green kernel verdict
+  yet. Endpoint bridges and packet hypotheses remain explicit. All 389 residual
+  IDs remain unpaid, and 382 still lack public field records.
 
-Very next concrete step: run/inspect a lane-C-only `n11-lean-build` for
-`N11Formalization.FrozenCapRationalCore`; do not edit packet emission until CI
-returns the first declaration-level result.
+Very next concrete step: on the next committed lane-C run, inspect the first
+diagnostic for `FrozenCapRationalCore`. If green, bridge
+`FrozenCapCertificates` to the core. If red, fix only the first reported
+declaration. Separately, prevent the M/MCap dependency OOM by narrowing their
+imports or building a standalone checker API before adding packets.
 
-## 2026-10-29 — session part 14 (CI triage + public-record coverage audit)
+## 2026-10-29 — session part 16 (constant-drift guard; CI still queued)
 
 Did:
-- Pulled the complete log for run `40797575073` / job `123204085190`. It used
-  the pre-`ebc9d4ce` target order, built lane A first, reached
-  `N11Formalization.C450Identify`, then died from runner shutdown (exit 143)
-  at 01:52:34 UTC. It never started a lane-C target; there is still no
-  kernel verdict for any lane-C module.
-- Recursively parsed every JSON file under `evidence-20261014`,
-  `evidence-20261028`, and `assets/replay/n11-wip`, looking for residual IDs
-  carrying `g`, `f0Lo`, or `weights`. Exactly the same seven IDs are present:
-  `1409, 2337, 2341, 2356, 2360, 2368, 2370`; all 382 other residual IDs have
-  no public field record. This independently confirms the census gap rather
-  than merely repeating its manifest claim.
-- Confirmed the old run executed target order A, A, ..., B, ..., C. The current
-  workflow at supervisor commit `ebc9d4ce` reads lane C first; run
-  `40802064355` (head `2f5a2d11`) started at 01:52:36 UTC and is the first run
-  that can reach the core first. It was still in Mathlib-cache setup when this
-  session ended.
-- Local probe setup remains unavailable: `lake exe cache get` rebuilt the cache
-  executable, then exceeded bounded timeout while computing the requested
-  module closure; no Mathlib olean was fetched and no Lean declaration was
-  elaborated. This is an environment failure, not a red proof.
+- Hardened `emit_frozen_cap_rational_core.py`: before emitting, it now requires
+  the exact frozen definition lines for `Lq`, `LQ`, `Dq`, `DQ`, `piLo`, `piHi`
+  and `T` in `FlashCosineLeaf318.lean`, `Interval/Trig.lean`, and
+  `FlashCosineLeaf284Bridge.lean`. Any copied-constant drift fails closed.
+- Regenerated the standalone core and printed SHA256 provenance for those three
+  source files: `08F36489…F788A` (FlashCosineLeaf318),
+  `FB3DF66D…2A04C` (Interval/Trig), `C001704C…D9B1F8` (Bridge).
+- Checked CI run `40803687450` (HEAD `7f7157f4`): still `pending`, no job has
+  been assigned (`total_count = 0`), so there is no new kernel verdict.
+
+Files / SHA256 (current bytes):
+- `ops/lanes/C/emit_frozen_cap_rational_core.py`
+  `ABE03F4DDED4CFA4AB44729C8D52BF67640A19918C7B315174A9F9D45587FC93`
+- `lean/N11Formalization/FrozenCapRationalCore.lean`
+  `BB2A57BF716DCE759647036250F423902DDB656C7391882E1166D360C53BDDA4`
+- `ops/lanes/C/TARGETS.txt` unchanged at
+  `BED53B62E9339CEB40615595E1203AE8293C035B056C12EAAA582892564C18AD`
 
 Checks run (scope stated):
-- Public JSON coverage scan over the three listed evidence trees: 389 target
-  IDs, 7 present, 382 absent. Scope is local public bytes only.
-- CI log scan: no lane-C `error:` exists in run `40797575073`; absence of an
-  error is not a build pass because lane C was never reached.
-- `git diff --check`: exit 0. `python tools/project_status.py --check`: PASS
-  (index/manifest scope only).
+- `py_compile` and emitter rerun: exit 0; all seven exact `Fraction`
+  weight/unit-sum/endpoint/margin checks pass, including the constant-drift
+  assertions. `git diff --check`: exit 0. Forbidden-token scan: no proof
+  placeholders. `tools/project_status.py --check`: PASS (index/manifest scope).
+- No local Lean elaboration: probe oleans remain unavailable. The core is
+  **CI pending**, not paid.
 
 Still unproved / missing:
-- `FrozenCapRationalCore` remains draft/CI pending. The seven strict-gain
-  inequalities, weight facts, endpoint bridges, and arbitrary-row exclusions
-  have no kernel verdict. All 389 residual IDs remain unpaid; 382 lack the
-  public field record needed even for a Python dual audit.
+- Seven `strict_gain_*` plus fourteen weight declarations still have no kernel
+  verdict. Endpoint bridges and packet hypotheses remain explicit. All 389
+  residual IDs remain unpaid; 382 public field records remain absent.
 
-Very next concrete step: read run `40802064355` as soon as its first lane-C
-target reports. If `FrozenCapRationalCore` is green, replace duplicated
-`FrozenCapCertificates` rational proofs with core lemmas; if red, fix only the
-first declaration-level error. If the runner again dies before lane C, ask the
-supervisor for a lane-C-only workflow invocation rather than another serial
-all-lane run.
+Very next concrete step: inspect the first lane-C diagnostic once GitHub assigns
+a job to run `40803687450`; fix only the first core declaration error, or if the
+core is green, bridge `FrozenCapCertificates` to these core lemmas.
+
+## 2026-10-29 — session part 17 (weighted-term proof decomposition)
+
+Did:
+- Reworked `emit_frozen_cap_rational_core.py` to emit, for each of the seven
+  nodes, an exact `H_<id> : Fin 9 → ℚ` vector equal to `y_<id> * E_<id>`
+  componentwise. Each node now proves nine small `weighted_terms_<id> q`
+  equalities and rewrites the final `strict_gain_<id>` sum to `∑ H`; the last
+  `norm_num` performs only the nine-term rational addition and comparison.
+- Added `Fin.sum_univ_succ` explicitly to the finite-sum proofs. The generator
+  still fail-closes on the exact frozen constants, unit weights, nonnegative
+  weights, and `T² - f0Lo - gain = strict_margin`.
+- Attempted a local standalone elaboration in `/workspace/tools/mathlib-probe`.
+  It timed out at 180 s with no diagnostic; the probe has only a top-level
+  `Mathlib.olean` and is missing `Mathlib/Tactic/NormNum.olean`, so this is an
+  environment/build-cache failure, not a Lean verdict. No full project build run.
+
+Files / SHA256 (current bytes):
+- `ops/lanes/C/emit_frozen_cap_rational_core.py`
+  `FE80580DDBF2B2D0530373DAEB563E7583AED9717D897BBDDBEB24067A8D0ECF`
+- `lean/N11Formalization/FrozenCapRationalCore.lean`
+  `C48270A5017006F8276C4ECA4367DBA712EA405A965F3C8508F3FD34865B7A5A`
+- `ops/lanes/C/TARGETS.txt` unchanged at
+  `BED53B62E9339CEB40615595E1203AE8293C035B056C12EAAA582892564C18AD`
+
+Checks run (scope stated):
+- `py_compile` and emitter rerun: exit 0; all seven exact `Fraction`
+  weight/unit-sum/margin checks passed. `git diff --check`: exit 0.
+- Generated-module grep confirms `H_1409`, `weighted_terms_1409`, and the
+  rewritten `strict_gain_1409`; the same block is emitted for all seven IDs.
+- CI run `40803687450` (HEAD `7f7157f4`) remains `pending` with
+  `total_count = 0` jobs, so there is still no kernel verdict.
+
+Still unproved / missing:
+- All 21 weight lemmas, seven strict-gain lemmas, and 63 weighted-term lemmas
+  are **CI pending**, not paid. Endpoint bridges and packet hypotheses remain
+  explicit. All 389 residual IDs remain unpaid; 382 lack public field records.
+
+Very next concrete step: on the next lane-C CI attempt, inspect the first
+`weighted_terms_<id>` diagnostic (the most likely place for a malformed `E`
+vector). If green through `strict_gain_1409`, extend the same checked core to
+the remaining six and remove their duplicated heavy proofs from
+`FrozenCapCertificates`; if red, fix only that first declaration.
+
+## 2026-10-29 — session part 18 (status + emitted-byte recheck)
+
+Did:
+- Re-ran the deterministic core emitter in this worktree. Exit 0; regenerated
+  `lean/N11Formalization/FrozenCapRationalCore.lean` with unchanged SHA256
+  `C48270A5017006F8276C4ECA4367DBA712EA405A965F3C8508F3FD34865B7A5A`.
+- Emitter's exact `Fraction` checks again passed for all seven nodes (nonnegative
+  and unit-sum weights, `H = y*E` componentwise, `F0 + sum H < T^2`, exact frozen
+  strict margins). Pinned source hashes printed and unchanged: Leaf318
+  `08F36489…F788A`, Trig `FB3DF66D…2A04C`, Bridge `C001704C…D9B1F8`.
+- `python tools/project_status.py --check`: PASS (handoff navigation/manifest
+  scope only). HEAD remains `7f7157f4`; `gh` is absent and the public GitHub API
+  returns 404 for the remote, so this session obtained no new CI verdict.
+- `git diff --check`: exit 0. No local Lean build attempted (probe oleans absent).
+
+Still unproved / missing:
+- The 21 weight, 63 weighted-term, and seven strict-gain declarations remain
+  **CI pending**, not kernel-paid. Endpoint bridges and packet hypotheses remain
+  explicit; all 389 residual IDs unpaid and 382 lack public source fields.
+
+Very next concrete step: obtain the lane-C segment of the next CI log for HEAD
+`7f7157f4` or newer and inspect the first `weighted_terms_1409`/`strict_gain_1409`
+diagnostic; advance to `FrozenCapCertificates` bridging only after core green.

@@ -8,6 +8,9 @@ ROOT=HERE.parents[2]
 CERT=HERE/'next512-row-cap-certificates.json'
 PROP=ROOT/'evidence-20261028/inputs/paid16-general-next512.json'
 OUT=ROOT/'lean/N11Formalization/FrozenCapRationalCore.lean'
+FLASH=ROOT/'lean/N11Formalization/FlashCosineLeaf318.lean'
+TRIG=ROOT/'lean/N11Formalization/Interval/Trig.lean'
+BRIDGE=ROOT/'lean/N11Formalization/FlashCosineLeaf284Bridge.lean'
 sys.path.insert(0,str(HERE))
 import recheck_next512_rows as common
 
@@ -17,6 +20,24 @@ def rat(text):
 def vec(vs): return '!['+', '.join(rat(v) for v in vs)+']'
 
 def main():
+    sources={'FlashCosineLeaf318.lean':FLASH.read_text(),
+             'Interval/Trig.lean':TRIG.read_text(),
+             'FlashCosineLeaf284Bridge.lean':BRIDGE.read_text()}
+    required={
+      'FlashCosineLeaf318.lean':[
+        'def Lq : ℚ := 2 * (1150475603510479590494077 / 2951479051793528258560000)',
+        'def LQ : ℚ := 2 * (449404532622434011541355675101 / 1152921504606846976000000000000)',
+        'def Dq : ℚ := 9 * Lq - 2 * N11Formalization.RatInterval.piHi',
+        'def DQ : ℚ := 9 * LQ - 2 * N11Formalization.RatInterval.piLo'],
+      'Interval/Trig.lean':[
+        'def piLo : ℚ := 314159265358979323846 / 10 ^ 20',
+        'def piHi : ℚ := 314159265358979323847 / 10 ^ 20'],
+      'FlashCosineLeaf284Bridge.lean':[
+        'def T : ℚ := ((1899919265599193545242591 : ℚ) / 5000000000000000000000000)']}
+    for name,snippets in required.items():
+        for snippet in snippets:
+            if snippet not in sources[name]:
+                raise AssertionError(f'{name}: frozen constant drift: {snippet}')
     cert_doc=json.loads(CERT.read_text())
     proposal=json.loads(PROP.read_text(encoding='utf-8-sig'))
     recs={r['id']:r for r in proposal['records']}
@@ -28,6 +49,7 @@ def main():
         raise AssertionError('stale proposal hash')
     lines=['import Mathlib.Data.Rat.Defs',
       'import Mathlib.Data.Fin.VecNotation',
+      'import Mathlib.Data.Fintype.Basic',
       'import Mathlib.Algebra.BigOperators.Group.Finset.Basic',
       'import Mathlib.Tactic.NormNum',
       'import Mathlib.Tactic.FinCases',
@@ -42,20 +64,23 @@ def main():
         n=c['id']; rec=recs[n]
         y=[Q(v) for v in c['weights']]
         ep=[common.endpoint_lo(Q(v)) for v in rec['g']]
+        weighted=[y[q]*ep[q] for q in range(9)]
         if len(y)!=9 or any(v<0 for v in y) or sum(y)!=1:
             raise AssertionError(f'node {n}: invalid weights')
-        gain=sum(y[q]*ep[q] for q in range(9))
+        gain=sum(weighted)
         required=common.T2-Q(rec['f0Lo'])
         if gain>=required or required-gain!=Q(c['strict_margin']):
             raise AssertionError(f'node {n}: exact margin mismatch')
-        lines += [f'def F0_{n} : ℚ := {rat(rec["f0Lo"])}',f'def G_{n} : Fin 9 → ℚ := {vec(rec["g"])}',f'def y_{n} : Fin 9 → ℚ := {vec(c["weights"])}',f'def E_{n} : Fin 9 → ℚ := {vec(ep)}','']
+        lines += [f'def F0_{n} : ℚ := {rat(rec["f0Lo"])}',f'def G_{n} : Fin 9 → ℚ := {vec(rec["g"])}',f'def y_{n} : Fin 9 → ℚ := {vec(c["weights"])}',f'def E_{n} : Fin 9 → ℚ := {vec(ep)}',f'def H_{n} : Fin 9 → ℚ := {vec(weighted)}','']
     for c in certs:
         n=c['id']
-        lines += [f'theorem weights_nonneg_{n} (q : Fin 9) : 0 ≤ y_{n} q := by',f'  fin_cases q <;> norm_num [y_{n}]','',f'theorem weights_sum_{n} : (∑ q : Fin 9, y_{n} q) = 1 := by',f'  norm_num [y_{n}]','',f'theorem strict_gain_{n} :',f'    F0_{n} + ∑ q : Fin 9, y_{n} q * E_{n} q < T ^ 2 := by',f'  norm_num [F0_{n}, y_{n}, E_{n}, T]','']
+        lines += [f'theorem weights_nonneg_{n} (q : Fin 9) : 0 ≤ y_{n} q := by',f'  fin_cases q <;> norm_num [y_{n}]','',f'theorem weights_sum_{n} : (∑ q : Fin 9, y_{n} q) = 1 := by',f'  norm_num [y_{n}, Fin.sum_univ_succ]','',f'theorem weighted_terms_{n} (q : Fin 9) : y_{n} q * E_{n} q = H_{n} q := by',f'  fin_cases q <;> norm_num [y_{n}, E_{n}, H_{n}]','',f'theorem strict_gain_{n} :',f'    F0_{n} + ∑ q : Fin 9, y_{n} q * E_{n} q < T ^ 2 := by',f'  have hsum : (∑ q : Fin 9, y_{n} q * E_{n} q) = ∑ q : Fin 9, H_{n} q := by',f'    apply Finset.sum_congr rfl',f'    intro q _',f'    exact weighted_terms_{n} q',f'  rw [hsum]',f'  norm_num [F0_{n}, H_{n}, T, Fin.sum_univ_succ]','']
     lines += ['end','end N11Formalization.FrozenCapRationalCore']
     for c in certs:
         n=c['id']; lines += [f'#check @N11Formalization.FrozenCapRationalCore.strict_gain_{n}',f'#print axioms N11Formalization.FrozenCapRationalCore.strict_gain_{n}']
     OUT.write_text('\n'.join(lines)+'\n')
     print(OUT)
     print('sha256',hashlib.sha256(OUT.read_bytes()).hexdigest().upper())
+    for name in ('FlashCosineLeaf318.lean','Interval/Trig.lean','FlashCosineLeaf284Bridge.lean'):
+        print(name,'sha256',hashlib.sha256(ROOT.joinpath('lean/N11Formalization',name).read_bytes()).hexdigest().upper())
 if __name__=='__main__': main()
