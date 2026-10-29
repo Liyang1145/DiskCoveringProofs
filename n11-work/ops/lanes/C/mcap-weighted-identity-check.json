@@ -1,0 +1,15 @@
+{
+  "scope": "exact-rational finite-sum identity only; no Lean/kernel credit",
+  "seed": 20261029,
+  "row_counts": [
+    1,
+    2,
+    5,
+    9,
+    16
+  ],
+  "cases_per_row_count": 200,
+  "cases_checked": 1000,
+  "failures": 0,
+  "mcap_sha256": "47F3340796EC555E495BDDEDFB33F63B2F1E96B76CC947684F7AD94DA8BF70DA"
+}

@@ -4,9 +4,10 @@
 The 100 ordered-pair row caps collapse on a fixed 4-field support to at most
 15 distinct half-spaces.  Vertices of the resulting bounded polytope are
 intersections of three tight half-spaces; all arithmetic is rational.  A PASS
-would include an exact 9-field cap-feasible witness.  Failure means only that
-no <=4-field mixture passes (the existing five/six-field cap certificates
-already exclude every number of rows).
+includes an exact 9-field cap-feasible witness.  Failure means only that no
+<=4-field mixture passes; it says nothing about supports of size 5--9.
+Both orientations of every ordered pair must be retained: `rowA i j` is
+negative on entries between `j` and `i` when `j < i`.
 """
 from fractions import Fraction as Q
 from itertools import combinations
@@ -48,18 +49,19 @@ def solve3(l1, l2, l3):
 def face4(fields, E, rhs):
     subset_rhs = {}
     for (i, j), cap in rhs.items():
-        mask = sum(1 << k for k, field in enumerate(fields)
-                   if i <= field < j)
-        subset_rhs[mask] = min(cap, subset_rhs.get(mask, cap))
+        # Keep the signed row vector.  Encoding only forward intervals drops
+        # the negative coefficients of reversed pairs and gives false misses.
+        bits = tuple(Q(common.row_a(i, j, field)) for field in fields)
+        coeffs = tuple(bits[k] - bits[3] for k in range(3))
+        line_rhs = cap - bits[3]
+        subset_rhs[coeffs] = min(line_rhs, subset_rhs.get(coeffs, line_rhs))
 
     lines = [(Q(-1), Q(0), Q(0), Q(0)),
              (Q(0), Q(-1), Q(0), Q(0)),
              (Q(0), Q(0), -Q(1), Q(0)),
              (Q(1), Q(1), Q(1), Q(1))]
-    for mask, cap in subset_rhs.items():
-        bits = [Q(1 if mask & (1 << k) else 0) for k in range(4)]
-        lines.append(tuple(bits[k] - bits[3] for k in range(3)) +
-                     (cap - bits[3],))
+    for coeffs, line_rhs in subset_rhs.items():
+        lines.append(coeffs + (line_rhs,))
 
     best = None
     for l1, l2, l3 in combinations(lines, 3):
