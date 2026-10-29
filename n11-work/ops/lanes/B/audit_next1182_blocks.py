@@ -20,13 +20,31 @@ assert all(bounds[i][1] < bounds[i+1][0] for i in range(7))
 for i in range(8):
     for j in range(i+1, 8):
         assert set(parts[i]).isdisjoint(parts[j])
+sub_sources = [(LEAN / f"Paid16GeneralNext1182S{i:02}.lean").read_text() for i in range(1, 9)]
+assert all("maxRecDepth" not in s for s in sub_sources)
 top = (LEAN / "Paid16GeneralNext1182.lean").read_text()
 assert "Finset.univ.biUnion part" in top
 assert "maxRecDepth" not in top
+assert "of_all_" not in top
+assert "Fin.sum_univ_eight" not in top and "Fin.sum_univ_succ" in top
+assert top.count("private theorem block_s") == 57
+assert top.count("decide +kernel") == 0
+assert top.count("simp only [Paid16GeneralNext1182S") == 57
+assert top.count("<;> norm_num") == 57
+assert "all_goals omega" not in top
+assert top.count("private theorem part_s") == 8
+assert top.count("private theorem disjoint_s") == 28
+assert "theorem lower_bound" in top
 report = {
     "manifest": str(MAN.relative_to(ROOT)),
     "ids": len(ids), "part_sizes": [len(p) for p in parts],
     "bounds": bounds, "pairwise_disjoint": True,
+    "part_bound_theorems": top.count("private theorem part_s"),
+    "literal_block_bound_theorems": top.count("private theorem block_s"),
+    "max_block_cases": 21,
+    "interval_disjoint_theorems": top.count("private theorem disjoint_s"),
+    "kernel_decide_checks": top.count("decide +kernel"),
+    "membership_case_proofs": top.count("<;> norm_num"),
     "top_sha256": hashlib.sha256(top.encode()).hexdigest().upper(),
     "scope": "exact manifest/literal-block audit only; not Lean elaboration",
 }

@@ -3,7 +3,6 @@ import N11Formalization.Paid16GeneralH82
 /-! Sub-aggregate 8/8: 1 packet modules, 6 ids.
 Cardinality is kernel-checked on <= 168-element literal sets only. -/
 set_option autoImplicit false
-set_option maxRecDepth 10000
 namespace N11Formalization.Paid16GeneralNext1182S08
 open Finset
 noncomputable section

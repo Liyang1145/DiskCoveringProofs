@@ -8,14 +8,14 @@ sub-aggregates and preserves the upstream packet inventory.  It fixes the
 generated `Disjoint` eliminations (Lean `⦃a⦄` binders cannot be supplied
 positionally as `f a h`) and aggregates the eight parts with
 `Finset.univ.biUnion`, avoiding the upstream's kernel-heavy nested-union
-disjointness checks.  The eight parts are consecutive id intervals, so their
-pairwise disjointness is proved from two small `Finset.all` interval checks per
-part plus `omega`, rather than by intersecting every pair of 168-element sets
-in the kernel.
+disjointness checks.  The eight parts are consecutive id intervals.  Their
+bounds are assembled from 57 small literal-block lemmas (at most 21 ids each),
+using each block's membership disjunction rather than kernel-reducing the set.
 """
 from pathlib import Path
 import hashlib
 import json
+import re
 
 LANE = Path(__file__).resolve().parent
 ROOT = LANE.parents[3]
@@ -42,11 +42,26 @@ assert [len(c) for c in chunks] == [168] * 7 + [6]
 bounds = [(min(c), max(c)) for c in chunks]
 assert all(bounds[i][1] < bounds[i + 1][0] for i in range(7))
 
+# Recover the literal `idsNN` blocks from the imported sub-aggregates.  The
+# top-level disjointness proofs use only these integer bounds; they do not ask
+# the kernel to compare two 168-element `Finset` values.
+part_blocks = []
+for i, sub in enumerate(SUBS):
+    source = (LEAN / f"{sub}.lean").read_text()
+    blocks = [(int(k), [int(x) for x in vals.split(",")])
+              for k, vals in re.findall(
+                  r"def ids(\d+) : Finset \(Fin 5011\) := \{([^}]*)\}", source)]
+    assert blocks, sub
+    assert len(blocks) * 21 >= len(chunks[i]) > (len(blocks) - 1) * 21
+    assert [x for _, vals in blocks for x in vals] == chunks[i], sub
+    part_blocks.append(blocks)
+
 lines = ["".join(f"import N11Formalization.{s}\n" for s in SUBS)]
 lines.append(f"import N11Formalization.{BASE}\n")
 lines.append(f"""/-! Top aggregate of {count} packets, assembled from {len(SUBS)} sub-aggregates.
-Every `decide +kernel` here compares at most 168-element literal sets, so the
-kernel never walks a >168-deep insert chain. -/
+The eight parts are consecutive integer intervals.  Their pairwise
+disjointness is proved from literal membership bounds, not by kernel-reducing
+168-element `Finset` values. -/
 set_option autoImplicit false
 namespace N11Formalization.{TOP}
 open Finset
@@ -65,39 +80,47 @@ lines.append("    fin_cases i <;> simp_all [part]")
 lines.append("  · rintro (" + " | ".join(f"h{i}" for i in range(len(SUBS))) + ")")
 for i, s in enumerate(SUBS):
     lines.append(f"    · exact ⟨{i}, by simpa [part] using h{i}⟩")
-lines.append("""private theorem of_all_le {s : Finset (Fin 5011)} {hi : ℕ}
-    (h : (s.all fun n => n.val ≤ hi) = true) :
-    ∀ n, n ∈ s → n.val ≤ hi := by
-  intro n hn
-  exact (Finset.all_eq_true.mp h) n hn
-private theorem of_all_ge {s : Finset (Fin 5011)} {lo : ℕ}
-    (h : (s.all fun n => lo ≤ n.val) = true) :
-    ∀ n, n ∈ s → lo ≤ n.val := by
-  intro n hn
-  exact (Finset.all_eq_true.mp h) n hn""")
-for i, (lo, hi) in enumerate(bounds, 1):
-    lines.append(f"""private theorem s{i:02}_bounds : ∀ n, n ∈ {SUBS[i-1]}.newIDs →
-    {lo} ≤ n.val ∧ n.val ≤ {hi} := by
-  intro n hn
-  exact ⟨of_all_ge (s := {SUBS[i-1]}.newIDs) (by decide +kernel) n hn,
-    of_all_le (s := {SUBS[i-1]}.newIDs) (by decide +kernel) n hn⟩""")
+block_names = []
+for i, (sub, blocks) in enumerate(zip(SUBS, part_blocks)):
+    names = []
+    for k, (idx, vals) in enumerate(blocks):
+        name = f"block_s{i+1:02}_{k:02}_bounds"
+        names.append(name)
+        lines.append(f"private theorem {name} (n : Fin 5011)")
+        lines.append(f"    (h : n ∈ {sub}.ids{idx:02}) : {min(vals)} ≤ n.val ∧ n.val ≤ {max(vals)} := by")
+        lines.append(f"  simp only [{sub}.mem_ids{idx:02}] at h")
+        lines.append("  rcases h with " + " | ".join("rfl" for _ in vals))
+        lines.append("  <;> norm_num")
+    block_names.append(names)
+for i, (sub, blocks) in enumerate(zip(SUBS, part_blocks)):
+    lo, hi = bounds[i]
+    lines.append(f"private theorem part_s{i+1:02}_bounds (n : Fin 5011)")
+    lines.append(f"    (h : n ∈ {sub}.newIDs) : {lo} ≤ n.val ∧ n.val ≤ {hi} := by")
+    lines.append(f"  rcases ({sub}.new_mem n).mp h with " +
+                 " | ".join(f"h{k}" for k in range(len(blocks))))
+    for k, (idx, vals) in enumerate(blocks):
+        lines.append(f"  · exact block_s{i+1:02}_{k:02}_bounds n h{k}")
 pair_names = []
 for i in range(8):
     for j in range(i + 1, 8):
         name = f"disjoint_s{i+1:02}_s{j+1:02}"
         pair_names.append(name)
-        lines.append(f"""private theorem {name} : Disjoint {SUBS[i]}.newIDs {SUBS[j]}.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hi hj
-  have bi := s{i+1:02}_bounds n hi
-  have bj := s{j+1:02}_bounds n hj
-  omega""")
+        lines.append(f"private theorem {name} : Disjoint {SUBS[i]}.newIDs {SUBS[j]}.newIDs := by")
+        lines.append("  rw [Finset.disjoint_left]")
+        lines.append("  intro n hi hj")
+        lines.append(f"  have hi := part_s{i+1:02}_bounds n hi")
+        lines.append(f"  have hj := part_s{j+1:02}_bounds n hj")
+        lines.append("  omega")
+lines.append("theorem lower_bound (n : Fin 5011) (hn : n ∈ newIDs) : 2565 ≤ n.val := by")
+lines.append("  rcases (new_mem n).mp hn with " + " | ".join("h" for _ in SUBS))
+for i, sub in enumerate(SUBS):
+    lines.append(f"  · exact (part_s{i+1:02}_bounds n h).1")
 lines.append(f"theorem new_count : newIDs.card = {count} := by")
 lines.append("  have hdisj : Set.PairwiseDisjoint (Finset.univ : Finset (Fin 8)) part := by")
 lines.append("    intro i _ j _ hij")
 lines.append(f"    fin_cases i <;> fin_cases j <;> simp_all [part, {', '.join(pair_names)}]")
 lines.append("  rw [newIDs, Finset.card_biUnion hdisj]")
-lines.append("  simp only [Fin.sum_univ_eight, part,")
+lines.append("  simp [Fin.sum_univ_succ, part,")
 lines.append("      " + ",\n      ".join(f"{s}.new_count" for s in SUBS) + "]")
 lines.append("  norm_num")
 lines.append("""theorem new_terminal (n : Fin 5011) (hn : n ∈ newIDs) :
@@ -126,6 +149,7 @@ lines.append(f"#check @N11Formalization.{TOP}.new_count")
 lines.append(f"#print axioms N11Formalization.{TOP}.new_count")
 lines.append(f"#print axioms N11Formalization.{TOP}.new_radius")
 lines.append(f"#print axioms N11Formalization.{TOP}.new_terminal")
+lines.append(f"#print axioms N11Formalization.{TOP}.lower_bound")
 text = "\n".join(lines) + "\n"
 data = text.encode("utf-8")
 expected = hier["outputs"][-1]
@@ -145,8 +169,9 @@ report = {
     "corrections": [
         "supply implicit Disjoint.left element with (a := a)",
         "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
-        "prove part disjointness from manifest interval bounds plus omega, with 16 set-local kernel checks instead of 28 pairwise set intersections",
-        "replace the final kernel numeral evaluation by norm_num",
+        "prove part disjointness from literal membership bounds (consecutive intervals)",
+        "prove each literal-block bound by its <=21-case membership disjunction, then assemble parts",
+        "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
         "remove maxRecDepth 10000",
     ],
     "corrected_chars": len(text),
