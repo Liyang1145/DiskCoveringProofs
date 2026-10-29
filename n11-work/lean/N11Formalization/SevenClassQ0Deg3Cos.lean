@@ -38,7 +38,7 @@ theorem hasDerivAt_cosHiReal (x : ℝ) :
       x ^ 27 / ((Nat.factorial 27 : ℕ) : ℝ) := by
     rw [sinT_succ]
     norm_num
-    ring
+    ring_nf
   have hfac : ((Nat.factorial 28 : ℕ) : ℝ) =
       28 * ((Nat.factorial 27 : ℕ) : ℝ) := by
     rw [show (28 : ℕ) = 27 + 1 by norm_num, Nat.factorial_succ]
@@ -122,7 +122,7 @@ theorem cosHiNLag_grid_last :
     RatInterval.piHi, Finset.sum_range_succ]
 
 def gridArg (n : ℕ) : ℚ :=
-  RatInterval.piHi * ((min n 2048 : ℕ) : ℚ) / 2048 / 2
+  RatInterval.piHi * min (n : ℚ) 2048 / 2048 / 2
 
 def gridCos (n : ℕ) : ℚ := cosHiNLag (gridArg n)
 
@@ -130,8 +130,9 @@ def gridCos (n : ℕ) : ℚ := cosHiNLag (gridArg n)
 theorem gridArg_eq_nodeQ {n : ℕ} (hn : n ≤ 2048) :
     gridArg n = N11Formalization.MetricAreaRationalCertificate.nodeQ
       RatInterval.piHi 2048 (⟨n, Nat.lt_succ_of_le hn⟩ : Fin 2049) / 2 := by
-  unfold gridArg N11Formalization.MetricAreaRationalCertificate.nodeQ
-  rw [Nat.min_eq_right hn]
+  have hmin : min (n : ℚ) 2048 = n :=
+    min_eq_left (by exact_mod_cast hn)
+  simp [gridArg, N11Formalization.MetricAreaRationalCertificate.nodeQ, hmin]
 
 /-- The final grid step in the `gridArg` coordinate, matching the last case of
 `gridCos_succ_le` syntactically. -/
@@ -142,34 +143,36 @@ theorem cosHiNLag_gridArg_last : cosHiNLag (gridArg 2048) ≤
 
 theorem gridArg_mono {m n : ℕ} (hmn : m ≤ n) : gridArg m ≤ gridArg n := by
   unfold gridArg
-  have hm : ((min m 2048 : ℕ) : ℚ) ≤ ((min n 2048 : ℕ) : ℚ) := by
-    have hm' : min m 2048 ≤ min n 2048 := by omega
-    exact_mod_cast hm'
+  have hm : (m : ℚ) ≤ (n : ℚ) := by exact_mod_cast hmn
+  have hmin : min (m : ℚ) 2048 ≤ min (n : ℚ) 2048 :=
+    min_le_min hm le_rfl
   have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
   calc
-    RatInterval.piHi * ((min m 2048 : ℕ) : ℚ) / 2048 / 2
-        = RatInterval.piHi * ((min m 2048 : ℕ) : ℚ) / (2048 * 2) := by ring
-    _ ≤ RatInterval.piHi * ((min n 2048 : ℕ) : ℚ) / (2048 * 2) := by
+    RatInterval.piHi * min (m : ℚ) 2048 / 2048 / 2
+        = RatInterval.piHi * min (m : ℚ) 2048 / (2048 * 2) := by ring
+    _ ≤ RatInterval.piHi * min (n : ℚ) 2048 / (2048 * 2) := by
       exact div_le_div_of_nonneg_right
-        (mul_le_mul_of_nonneg_left hm hp) (by norm_num)
-    _ = RatInterval.piHi * ((min n 2048 : ℕ) : ℚ) / 2048 / 2 := by ring
+        (mul_le_mul_of_nonneg_left hmin hp) (by norm_num)
+    _ = RatInterval.piHi * min (n : ℚ) 2048 / 2048 / 2 := by ring
 
 theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
   by_cases hn : n < 2047
   · have hb : ((gridArg (n + 1) : ℚ) : ℝ) ≤ Real.pi / 2 := by
       have hle : gridArg (n + 1) ≤ RatInterval.piLo / 2 := by
         unfold gridArg
-        have hmn : min (n + 1) 2048 ≤ 2047 := by omega
-        have hq : ((min (n + 1) 2048 : ℕ) : ℚ) ≤ (2047 : ℚ) :=
-          Nat.cast_le.mpr hmn
+        have hq : min (((n + 1 : ℕ) : ℚ)) 2048 ≤ (2047 : ℚ) := by
+          calc
+            min (((n + 1 : ℕ) : ℚ)) 2048 ≤ (((n + 1 : ℕ) : ℚ)) :=
+              min_le_left _ _
+            _ ≤ 2047 := by exact_mod_cast (by omega : n + 1 ≤ 2047)
         have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
         have hpi : RatInterval.piHi * 2047 / 2048 / 2 ≤ RatInterval.piLo / 2 := by
           norm_num [RatInterval.piHi, RatInterval.piLo]
         calc
-          RatInterval.piHi * ((min (n + 1) 2048 : ℕ) : ℚ) / 2048 / 2
+          RatInterval.piHi * min (((n + 1 : ℕ) : ℚ)) 2048 / 2048 / 2
               ≤ RatInterval.piHi * (2047 : ℚ) / 2048 / 2 := by
-                rw [show RatInterval.piHi * ((min (n + 1) 2048 : ℕ) : ℚ) / 2048 / 2
-                    = RatInterval.piHi * ((min (n + 1) 2048 : ℕ) : ℚ) / (2048 * 2) by ring]
+                rw [show RatInterval.piHi * min (((n + 1 : ℕ) : ℚ)) 2048 / 2048 / 2
+                    = RatInterval.piHi * min (((n + 1 : ℕ) : ℚ)) 2048 / (2048 * 2) by ring]
                 rw [show RatInterval.piHi * (2047 : ℚ) / 2048 / 2
                     = RatInterval.piHi * (2047 : ℚ) / (2048 * 2) by ring]
                 exact div_le_div_of_nonneg_right
@@ -189,8 +192,12 @@ theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
     · have hnge : 2048 ≤ n := by omega
       have h1 : gridArg (n + 1) = gridArg n := by
         unfold gridArg
-        have hs : min (n + 1) 2048 = 2048 := Nat.min_eq_right (by omega)
-        have ht : min n 2048 = 2048 := Nat.min_eq_right (by omega)
+        have hs : min (((n + 1 : ℕ) : ℚ)) 2048 = 2048 := by
+          apply min_eq_right
+          exact_mod_cast (by omega : 2048 ≤ n + 1)
+        have ht : min ((n : ℕ) : ℚ) 2048 = 2048 := by
+          apply min_eq_right
+          exact_mod_cast (by omega : 2048 ≤ n)
         rw [hs, ht]
       rw [gridCos, gridCos, h1]
       exact le_rfl

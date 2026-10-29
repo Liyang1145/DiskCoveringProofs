@@ -46,7 +46,7 @@ theorem cos_le_deriv_sinHiReal {x : ℝ} (hx0 : 0 ≤ x) (hx : x ≤ Real.pi / 2
   calc
     Real.cos x = Real.cos x - cosT 14 x + cosT 14 x := by ring
     _ ≤ x ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) + cosT 14 x := by
-      linarith [hlow]
+      exact (add_le_add_iff_right (cosT 14 x)).mpr hlow
     _ = cosT 14 x + x ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) := by ring
 
 theorem sinHiReal_monotoneOn : MonotoneOn sinHiReal (Set.Icc 0 (Real.pi / 2)) := by
