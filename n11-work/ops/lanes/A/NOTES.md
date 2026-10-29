@@ -154,76 +154,97 @@ as a finite rational theorem, then assemble `Degree3AreaCertificate`.
 
 ## 2026-10-29 (part 9) — edge/sector table emission scoped
 
-**Did.** Re-read the complete area-certificate consumer and the exact-rational
-manifest. Confirmed the 21 edge maxima and 9 sector maxima are recorded with
-exact source multipliers and grid witnesses in `q0-degree3-piecewise-8.json`.
-The endpoint/node route is now unconditional: `capMonotoneOnGrid`,
-`endpointValid`, and `allNodeValid` are drafted. Important scope correction:
-node-cap monotonicity does **not** imply the edge or sector all-node bounds;
-each has a different monotonicity boundary and needs an indexed proof table.
+Generated the 70,882-byte `SevenClassQ0Deg3UpperTables.lean` from the exact
+manifest and added it to `TARGETS.txt`; `py_compile` and emitter rerun passed.
+It defines the 21 edge and 9 sector indexed premises but proves neither.
+Node monotonicity does not imply the edge/sector bounds. Hashes:
+emitter `f9f53b9957300af624528e3594ebb668fb20025058e2f47707885c3ea83f19d2`,
+table `5296d73e779f8d443d6a66456bfc73d3b52f9100b16bfc5a20d2135fbfd20612`.
+No Lean elaboration or build; all 30 bounds and `Q0Degree3AreaInput` remain open.
 
-**Check (scope).** Inspected `MetricAreaRationalCertificate.edgeUpper`,
-`sectorUpper`, `totalUpper`, and `Degree3AreaCertificate`; verified the manifest
-has 21 edges, 9 sectors, N=2048, and `totalUpper < piLo`. No Lean build or
-kernel check was run in this short session. The deterministic emitter was then created and run: it generated the
-70,882-byte table module, and the module was added to `TARGETS.txt`.
+## 2026-10-29 (parts 10--11, condensed) — upper-table audit and scan bottleneck
 
-**Still unproved.** All 21 `EdgeCheck` bounds, all 9 `SectorCheck` bounds,
-instantiation of `Degree3AreaCertificate`, `Q0Degree3AreaInput`, and therefore
-`Q0RunExclusion 1`. C450 remains frozen/CI-pending.
+**Did.** Audited `SevenClassQ0Deg3UpperTables.lean` against
+`Degree3AreaCertificate`: `EdgeCheck`/`SectorCheck` argument shapes match the
+certificate fields, but the module only defines `EdgeValid`/`SectorValid` as
+indexed premises, neither proved. An exact `Fraction` finite-difference scan of
+all 30 upper functions at all 2049 nodes was attempted and timed out (35 s)
+before its first table because it renormalized each 400-digit value; no artifact
+or claim resulted.
 
-**Next concrete step.** Emit `SevenClassQ0Deg3UpperTables.lean` with namespace
-`N11Formalization.SevenClassQ0Deg3UpperTables`: exact `mu`, `lam`,
-`tableEdges : Fin 21 → Finset (Fin 11)`, `edgeMaxAt : Fin 21 → ℚ`,
-`sectorMax : Fin 9 → ℚ`, and indexed `EdgeCheck`/`SectorCheck` propositions.
-Generate it deterministically from `q0-degree3-piecewise-8.json`, add only that
-new module to `TARGETS.txt`, then split each indexed all-grid bound at the
-rational maximum witness.
+**Checks (scope).** `timeout 35s python3 ...`: TIMEOUT (124). No Lean
+invocation, elaboration, build, or kernel check. All 21 `EdgeCheck`/9
+`SectorCheck`, `Degree3AreaCertificate`, `Q0Degree3AreaInput`, `Q0RunExclusion 1`
+remain unproved.
 
-**Part-9 artifacts.** `emit_q0_degree3_upper_tables.py` sha256 `f9f53b9957300af624528e3594ebb668fb20025058e2f47707885c3ea83f19d2`; `SevenClassQ0Deg3UpperTables.lean` sha256 `5296d73e779f8d443d6a66456bfc73d3b52f9100b16bfc5a20d2135fbfd20612`. Checks: `py_compile` PASS and emitter rerun PASS; static scan found no forbidden escapes. No Lean elaboration/build.
+**Next concrete step.** `probe_q0_degree3_upper_runs.py`: shared integer
+denominator `q=n/D`, Horner/integer powers, one division by `D^29` per node;
+use floats only to locate sign runs, then verify every run endpoint and maximum
+exactly. Do not use a 2049-literal `decide`.
 
-## 2026-10-29 (part 10) — upper-table consumer audit (short session)
+## 2026-10-29 (parts 12--13, condensed) — C450 telescope split for CI OOM
 
-**Did.** Re-read GUIDANCE/LANES/CI. Inspected
-`SevenClassQ0Deg3UpperTables.lean` (70882 B) against the consumer
-`SevenClassQ0Deg3.Degree3AreaCertificate`: its `EdgeCheck`/`SectorCheck`
-arguments match the certificate fields (`edgeUpper (sum mu over tableEdges i)`
-at `nodeQ piHi 2048 k`; `sectorUpper (mu (nextSite i)) lam` at `(nodeQ, nodeBin k)`).
-Confirmed the module currently only *defines* `EdgeValid`/`SectorValid` as explicit
-indexed premises; neither is proved.
+Replaced the single 25-deep telescope with five chunks (transfers 36--32, 31--27,
+26--22, 21--17, 16--12), preserving the public `h450`, `source_obligation`,
+`c450_atom`, boundary-cardinality and ring-label interfaces. Emitter hash
+`f37eae8ef22aee5187084a5004a27e1561ffa677915f15ba2e10feacd5390e0a`.
+Static verification passed; current module/verifier hashes and exact checks are in
+part 14. These bytes remained CI-pending and never kernel-checked.
 
-**Checks (scope).** File/kernel nothing new. No Lean elaboration or build run;
-no CI result available beyond LATEST failure 40736931996 (empty log tail).
+## 2026-10-29 (part 14) — consumer audit strengthened; CI still queue-blocked
 
-**Still unproved.** All 21 `EdgeCheck` and 9 `SectorCheck` all-grid bounds;
-`Degree3AreaCertificate`; `Q0Degree3AreaInput`; `Q0RunExclusion 1`. C450 modules
-remain frozen/CI-pending per supervisor.
+**Did.** Continued the split telescope work. Extended `verify_chain_completion.py`
+to fail closed on the Source36 vacuous endpoint (proof in Tail, delegation through
+the public Completion interface) and on the exact
+`ActualMetricClassReduction.main_of_seven_class_certificates` consumer signature
+(`h450`, energy, seven-class arguments and output type). Confirmed CI run
+40802064355 (commit `2f5a2d11`) still has zero jobs: serial concurrency is held by
+run 40797575073, whose Build step has been in progress since 01:17:52Z. The two
+other commit workflows are unrelated: math-check succeeded and delivery-bytes
+failed; neither kernel-checks lane A.
+**Files/hashes.** Verifier `eee23f8c7db4ccfab230866a35c94299139ca91fa04ec9882cc1d5d5bb4129f4`.
+Unchanged split bytes: Tail `6a89a2f010f951c400bb377187400691d9d4e865aea334bb91060fb7187d6cae`;
+Mid1 `522f2c609aab4c43da7b0189a6c05b42cab426251eaa5c84675c94673cdaedce`;
+Mid2 `ebdcd8e92235d2774af2ba6d80b0223259fc13d6f3328ff69fd2213c76b4c766`;
+Mid3 `f95882a7d411d158e209d7a3a5fd8cdefa7065f2fb82ed6b71e9b950f9ee4229`;
+Completion `d04b9dcfcb0a06ce84ff0412de48faa00af53627f643352a033af68aa81eaf2a`;
+Main `3f6088615e0a88e2a8927562c947c0c685e3e57bb15376ca3467fc7f6a33539c`.
+**Checks (scope).** `py_compile` PASS; `timeout 60s python3 verify_chain_completion.py`
+exit 0: emitter determinism, target order, 25 unique transfers, Source31/26/21/16/11
+outputs, Source36 endpoint, public consumer signature, forbidden-token absence.
+API status only for CI. No Lean elaboration, kernel check, or CI build of these bytes.
 
-**Next concrete step.** Emit one lemma module splitting each of the 30 indexed
-grid bounds into ≤ 500-literal blocks via exact `norm_num` (or, preferably,
-monotone subintervals at sign changes of the exact finite difference), then
-prove `EdgeValid`/`SectorValid` by `fin_cases` over blocks; do not use a single
-2049-node `decide`.
+**Still unproved / unpaid.** All five split modules and `C450ChainCompletionMain`
+remain CI-pending and never kernel-checked. Root still has both `HARK-MISSING`
+imports. Seven-class/q0 degree-three obligations unchanged.
 
-## 2026-10-29 (part 11) — upper-bound scan bottleneck measured
+**ROOT-IMPORT REQUEST:** after CI green, import
+`N11Formalization.C450ChainCompletionMain` in place of the two missing-import comments.
 
-**Did.** Re-read GUIDANCE/LANES/CI and inspected the upper-table API plus
-`edgeUpper`/`sectorUpper`. Attempted an exact `Fraction` finite-difference scan
-of all 30 functions at all 2049 nodes. The implementation normalized each
-400-digit Taylor value independently and was killed by the 35 s bound before
-producing data. No result artifact was written and no mathematical claim is
-made from this run.
+**Next concrete step.** Poll run 40802064355 until a job exists; read the first
+failing lane-A target from `build.log` and patch only from that error. If it stays
+queue-blocked, supervisor should cancel/stall-check run 40797575073 so the split
+bytes can execute.
+## 2026-10-29 (part 15) — exact concavity audit for q0 upper tables
 
-**Checks (scope).** `timeout 35s python3 ...`: TIMEOUT (exit 124), before the
-first table completed. No Lean invocation, elaboration, build, or kernel check.
-C450 modules remain frozen/CI-pending.
+**Did.** Added `probe_q0_degree3_concavity.py`. Since
+`d/dq sinHiNLag(q) = cosHiNLag(q)`, every edge/sector maximum reduces to the
+decreasing bracket `R2*cosHiNLag(q)-b` (half for sectors) on each fixed-node
+bin. The script checks exact concavity at all 2049 grid points, finds the unique
+sign crossing, compares adjacent values, and confirms all 21 edge plus 9 sector
+maxima and witness indices in `q0-degree3-piecewise-8.json`.
+**Checks (scope).** `py_compile` PASS; `timeout 90s python3
+probe_q0_degree3_concavity.py` PASS in 4.4 s: `cosHiMonotoneNonincreasing=True`,
+21/21 edge and 9/9 sector maxima confirmed. Exact-rational data audit only; no
+Lean elaboration, kernel check, or CI build.
+**Hashes.** Script `ec18dfe34990e9b3d96c2cfd92054d4641f77a6b223771093214c1f43d3a104f`;
+report `93ca02d35663e9240084ba62f6224dc12a4649b256bbb4e78134dc1c1cd5b77b`.
+At 01:57Z CI run 40802064355 completed mathlib cache and entered Build; split
+C450 modules were still CI-pending.
+**Still unproved.** Concavity/sign-crossing facts are Python-audited, not Lean
+theorems. `EdgeValid`, `SectorValid`, the strict total, and
+`Q0Degree3AreaInput` remain unproved; C450 split modules remain unverified.
 
-**Still unproved.** All 21 `EdgeCheck` and 9 `SectorCheck` bounds,
-`Degree3AreaCertificate`, `Q0Degree3AreaInput`, and `Q0RunExclusion 1`.
-
-**Next concrete step.** Replace per-node `Fraction` evaluation by a shared
-integer denominator: write `q = n/D`, evaluate `sinTQ`/the degree-29 absolute
-term with Horner and integer powers, and divide by `D^29` only once per node.
-Use floating-point values solely to locate sign runs, then verify every run
-endpoint and maximum exactly. Persist the scanner as
-`probe_q0_degree3_upper_runs.py`; do not use a 2049-literal `decide`.
+**Next concrete step.** Emit per-bin Lean sign-crossing lemmas (one derivative
+sign pair and two value comparisons per edge/bin), proving
+`EdgeValid`/`SectorValid` without a 2049-case kernel decide.

@@ -21,4 +21,3 @@ theorem main_of_energy_and_seven_classes
 
 end N11Formalization.C450ChainCompletionMain
 #check @N11Formalization.C450ChainCompletionMain.main_of_energy_and_seven_classes
-#print axioms N11Formalization.C450ChainCompletionMain.main_of_energy_and_seven_classes
