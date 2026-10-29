@@ -4,3 +4,7 @@ N11Formalization.C450ChainCompletion
 N11Formalization.C450ChainCompletionMain
 N11Formalization.SevenClassQ0Deg3
 N11Formalization.SevenClassQ0Deg3Bins
+N11Formalization.SevenClassQ0Deg3Mono
+N11Formalization.SevenClassQ0Deg3EndpointChecks
+
+N11Formalization.SevenClassQ0Deg3UpperTables

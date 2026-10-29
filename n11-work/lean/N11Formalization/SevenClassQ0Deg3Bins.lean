@@ -1,4 +1,5 @@
 import N11Formalization.MetricAreaRationalCertificate
+import N11Formalization.SevenClassQ0Deg3Mono
 
 /-! Lane A: eight-bin node data for the q0 degree-three certificate.
 
@@ -12,6 +13,7 @@ noncomputable section
 namespace N11Formalization.SevenClassQ0Deg3Bins
 
 open MetricAreaRationalCertificate
+open SevenClassQ0Deg3Mono
 
 /-- The eight-bin index of a node of the 2048-subdivision of `[0, piHi]`. -/
 def binIndex (k : Fin 2049) : Fin 8 :=
@@ -44,6 +46,77 @@ def EndpointValid : Prop :=
 comparisons can be discharged independently. -/
 def EndpointCheck (j : Fin 8) : Prop :=
   capQ (nodeQ RatInterval.piHi 2048 (binHi j)) ≤ sinLoNLag (nodeBinAt j)
+
+/-- Rational saturation of the cap at the right end of the grid.  This is the
+one remaining rational inequality in the last bin; it is isolated rather than
+assumed by the monotonicity theorem below. -/
+def PiHiCapSaturated : Prop := capQ RatInterval.piHi = 19 / 50
+
+theorem capQ_piHi_of_upper_one (h : 1 ≤ sinHiNLag (RatInterval.piHi / 2)) :
+    PiHiCapSaturated := by
+  unfold PiHiCapSaturated capQ
+  rw [min_eq_left h, max_eq_right (by norm_num)]
+  norm_num
+
+/-- The cap is saturated at `piHi`: the 15-term Taylor upper bracket at
+`piHi / 2`, including its positive degree-29 Lagrange remainder, exceeds one.
+This is a single denominator-cleared rational comparison, not a grid scan. -/
+theorem piHiCapSaturated : PiHiCapSaturated := by
+  apply capQ_piHi_of_upper_one
+  norm_num [sinHiNLag, sinTQ, Finset.sum_range_succ]
+
+/-- Grid monotonicity of `capQ`, conditional only on saturation in the final
+bin.  Bins 0--6 lie strictly below `piLo / 2 < Real.pi / 2`; bin 7 is handled
+by the universal upper bound `capQ ≤ 19/50`. -/
+theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
+    CapMonotoneOnGrid := by
+  intro k
+  by_cases h7 : (binIndex k).val = 7
+  · have hk7 : binIndex k = ⟨7, by omega⟩ := Fin.ext h7
+    have htop : capQ (nodeQ RatInterval.piHi 2048 (binHi (binIndex k))) = 19 / 50 := by
+      rw [hk7]
+      simpa [PiHiCapSaturated, binHi, nodeQ] using hsat
+    rw [htop]
+    exact (capQ_bounds (nodeQ RatInterval.piHi 2048 k)).2
+  · have hjlt : (binIndex k).val < 7 := lt_of_le_of_ne (Fin.isLt _) h7
+    have hkhi : k.val ≤ (binHi (binIndex k)).val := by
+      simp only [binIndex, binHi]
+      split <;> omega
+    have hqle : nodeQ RatInterval.piHi 2048 k ≤
+        nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) := by
+      unfold nodeQ
+      have hkq : (k.val : ℚ) ≤ ((binHi (binIndex k)).val : ℚ) := by
+        exact_mod_cast hkhi
+      have hpi : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+      nlinarith
+    have hbhi : (binHi (binIndex k)).val ≤ 1791 := by
+      simp only [binHi]
+      split
+      · omega
+      · omega
+    have hnode : nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) ≤
+        RatInterval.piHi * 1791 / 2048 := by
+      unfold nodeQ
+      have hbq : ((binHi (binIndex k)).val : ℚ) ≤ 1791 := by
+        exact_mod_cast hbhi
+      have hpi : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+      nlinarith
+    have hhalf : nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 ≤
+        RatInterval.piLo / 2 := by
+      have hrat : RatInterval.piHi * 1791 / 4096 ≤ RatInterval.piLo / 2 := by
+        norm_num [RatInterval.piHi, RatInterval.piLo]
+      linarith
+    have hb : ((nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 : ℚ) : ℝ) ≤
+        Real.pi / 2 := by
+      exact_mod_cast hhalf.trans RatInterval.pi_div_two_lo_lt.le
+    have ha : 0 ≤ nodeQ RatInterval.piHi 2048 k / 2 := by positivity
+    have hqhalf : nodeQ RatInterval.piHi 2048 k / 2 ≤
+        nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 := by linarith
+    exact capQ_mono (sinHiNLag_mono ha hqhalf hb)
+
+/-- Unconditional grid monotonicity of the rational cap. -/
+theorem capMonotoneOnGrid : CapMonotoneOnGrid :=
+  capMonotoneOnGrid_of_piHiCapSaturated piHiCapSaturated
 
 theorem endpointValid_of_eight (h : ∀ j : Fin 8, EndpointCheck j) :
     EndpointValid := h
