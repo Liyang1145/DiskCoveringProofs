@@ -1,17 +1,17 @@
-# CI latest (run 40914236268)
+# CI latest (run 40935785584)
 
 ```
+40949277719 in_progress null f30e46f0 2026-10-29T20:28:02Z
+40935785584 completed success cea391a9 2026-10-29T18:58:28Z
 40914236268 completed success 95df31a3 2026-10-29T16:42:38Z
 40911502022 completed success e1683b29 2026-10-29T16:25:55Z
 40901508838 completed success 1b0171c4 2026-10-29T15:26:02Z
-40893868710 completed success 495c970c 2026-10-29T14:40:38Z
-40874245082 completed success 6150e538 2026-10-29T12:33:31Z
 ```
 
 ## summary.json
 ```json
 {
- "sha": "95df31a3299609694acf01613997ef04c770d8ae",
+ "sha": "cea391a9a3f276cfb3c9fde6de3d04cdb69e138d",
  "exits": [
   [
    "N11Formalization.FrozenCapRationalCore",
@@ -30,36 +30,12 @@
    "1"
   ],
   [
+   "N11Formalization.EnergyTerminalBatchB13Next505Bounds",
+   "0"
+  ],
+  [
    "N11Formalization.EnergyTerminalBatchB13",
    "1"
-  ],
-  [
-   "N11Formalization.C450Source36Segment",
-   "0"
-  ],
-  [
-   "N11Formalization.C450ChainCompletionEndpoint",
-   "0"
-  ],
-  [
-   "N11Formalization.C450ChainCompletionTail",
-   "0"
-  ],
-  [
-   "N11Formalization.C450ChainCompletionMid1",
-   "0"
-  ],
-  [
-   "N11Formalization.C450ChainCompletionMid2",
-   "0"
-  ],
-  [
-   "N11Formalization.C450ChainCompletionMid3",
-   "0"
-  ],
-  [
-   "N11Formalization.C450ChainCompletion",
-   "0"
   ],
   [
    "N11Formalization.C450ChainCompletionMain",
@@ -71,48 +47,20 @@
   ],
   [
    "N11Formalization.SevenClassQ0Deg3Mono",
-   "1"
-  ],
-  [
-   "N11Formalization.SevenClassQ0Deg3Bins",
-   "1"
-  ],
-  [
-   "N11Formalization.SevenClassQ0Deg3EndpointChecks",
-   "1"
-  ],
-  [
-   "N11Formalization.SevenClassQ0Deg3UpperReduction",
-   "1"
-  ],
-  [
-   "N11Formalization.SevenClassQ0Deg3UpperReductionCounterexample",
-   "1"
-  ],
-  [
-   "N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal",
-   "1"
-  ],
-  [
-   "N11Formalization.SevenClassQ0Deg3EdgeReal",
-   "1"
-  ],
-  [
-   "N11Formalization.SevenClassQ0Deg3EdgeSuffixHigh",
-   "1"
+   "0"
   ],
   [
    "N11Formalization",
    "1"
   ]
  ],
- "built_count": 0,
+ "built_count": 2,
  "errors_head": [
-  "✖ [9154/9154] Building N11Formalization.PaidCellCertificateMCap (21s)",
+  "✖ [9154/9154] Building N11Formalization.PaidCellCertificateMCap (18s)",
   "error: N11Formalization/PaidCellCertificateMCap.lean:79:6: Type mismatch",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9298/9298] Building N11Formalization.Paid16GeneralNext1182 (30s)",
+  "✖ [9298/9298] Building N11Formalization.Paid16GeneralNext1182 (19s)",
   "error: N11Formalization/Paid16GeneralNext1182.lean:582:4: Type mismatch",
   "error: N11Formalization/Paid16GeneralNext1182.lean:583:4: Type mismatch",
   "error: N11Formalization/Paid16GeneralNext1182.lean:584:4: Type mismatch",
@@ -123,7 +71,7 @@
   "error: N11Formalization/Paid16GeneralNext1182.lean:590:75: unsolved goals",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9298/9299] Building N11Formalization.Paid16GeneralNext1182 (26s)",
+  "✖ [9299/9300] Building N11Formalization.Paid16GeneralNext1182 (17s)",
   "error: N11Formalization/Paid16GeneralNext1182.lean:582:4: Type mismatch",
   "error: N11Formalization/Paid16GeneralNext1182.lean:583:4: Type mismatch",
   "error: N11Formalization/Paid16GeneralNext1182.lean:584:4: Type mismatch",
@@ -134,85 +82,30 @@
   "error: N11Formalization/Paid16GeneralNext1182.lean:590:75: unsolved goals",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9260/9260] Building N11Formalization.SevenClassQ0Deg3Cos (5.8s)",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:38:47: unsolved goals",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:131:74: unsolved goals",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:153:35: Application type mismatch: The argument",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:168:10: invalid 'calc' step, left-hand side is",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:175:45: Application type mismatch: The argument",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:193:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:195:6: No goals to be solved",
+  "✖ [9260/9260] Building N11Formalization.SevenClassQ0Deg3Cos (3.6s)",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:134:6: Tactic `rewrite` failed: Did not find an occurrence of the pattern",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:196:6: No goals to be solved",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9260/9260] Building N11Formalization.SevenClassQ0Deg3Mono (4.0s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9260/9261] Building N11Formalization.SevenClassQ0Deg3Mono (5.0s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9260/9262] Building N11Formalization.SevenClassQ0Deg3Mono (4.0s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9260/9264] Building N11Formalization.SevenClassQ0Deg3Mono (5.0s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9260/9265] Building N11Formalization.SevenClassQ0Deg3Mono (5.0s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9260/9264] Building N11Formalization.SevenClassQ0Deg3Mono (5.0s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9260/9266] Building N11Formalization.SevenClassQ0Deg3Mono (5.7s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "✖ [9265/9266] Building N11Formalization.SevenClassQ0Deg3Cos (6.3s)",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:38:47: unsolved goals",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:131:74: unsolved goals",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:153:35: Application type mismatch: The argument",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:168:10: invalid 'calc' step, left-hand side is",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:175:45: Application type mismatch: The argument",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:193:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:195:6: No goals to be solved",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9260/9267] Building N11Formalization.SevenClassQ0Deg3Mono (5.8s)",
-  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:49:6: Type mismatch",
-  "error: Lean exited with code 1",
-  "✖ [9265/9267] Building N11Formalization.SevenClassQ0Deg3Cos (6.3s)",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:38:47: unsolved goals",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:131:74: unsolved goals",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:153:35: Application type mismatch: The argument",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:168:10: invalid 'calc' step, left-hand side is",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:175:45: Application type mismatch: The argument",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:193:12: Tactic `rewrite` failed: Did not find an occurrence of the pattern",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:195:6: No goals to be solved",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (2008s)",
+  "✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (963s)",
   "error: Lean exited with code 137",
   "error: build failed"
  ]
 }```
 ## build log tail
 ```
-ner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:43:51 avail=1109MB top: 14304068 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:44:11 avail=1027MB top: 14406756 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:44:31 avail=1074MB top: 14533744 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:44:51 avail=1078MB top: 14521540 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:45:11 avail=1075MB top: 14521792 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:45:31 avail=1073MB top: 14523252 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:45:51 avail=1074MB top: 14522680 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:46:11 avail=1085MB top: 14529440 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 17:46:31 avail=831MB top: 14633052 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=839MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (2008s)
+/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:18:44 avail=2213MB top: 13804648 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:19:04 avail=2184MB top: 13737824 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:19:24 avail=1857MB top: 13963668 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:19:44 avail=1530MB top: 14045280 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:20:04 avail=1193MB top: 14169424 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:20:24 avail=979MB top: 14354824 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:20:44 avail=940MB top: 14530032 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:21:04 avail=947MB top: 14524564 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:21:24 avail=748MB top: 14651716 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=747MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (963s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
