@@ -10,6 +10,7 @@ from fractions import Fraction as Q
 from itertools import combinations
 import argparse
 import hashlib
+import time
 import json
 import sys
 from pathlib import Path
@@ -77,24 +78,45 @@ def face5(fields, gains, rhs):
         line_rhs = cap - bits[4]
         subset_rhs[coeffs] = min(line_rhs, subset_rhs.get(coeffs, line_rhs))
 
-    lines = [tuple(Q(-1 if k == column else 0) for k in range(4)) + (Q(0),)
-             for column in range(4)]
-    lines.append((Q(1), Q(1), Q(1), Q(1), Q(1)))
+    # Every vertex of {sum x = 1, x >= 0, caps <= 0} is the intersection of
+    # the mandatory simplex equality with three active inequalities, so it
+    # suffices to enumerate simplex + 3 inequalities.  This is exact and
+    # reduces 35 choose 3 candidates instead of 36 choose 4.
+    simplex = (Q(1), Q(1), Q(1), Q(1), Q(1))
+    inequalities = [tuple(Q(-1 if k == column else 0) for k in range(4))
+                    + (Q(0),) for column in range(4)]
     for coeffs, line_rhs in subset_rhs.items():
-        lines.append(coeffs + (line_rhs,))
+        inequalities.append(coeffs + (line_rhs,))
 
+    def feasible(point):
+        return all(A * point[0] + B * point[1] + C * point[2] + D * point[3] <= E
+                   for A, B, C, D, E in inequalities)
+
+    def gain_at(point):
+        return gains[fields[4]] + sum(
+            (gains[fields[k]] - gains[fields[4]]) * point[k]
+            for k in range(4))
+
+    # The simplex constraint is sum x <= 1, so vertices activate it together
+    # with three of the nonnegativity/cap inequalities; x = 0 is the only
+    # vertex at which the simplex constraint can be inactive.
     best = None
-    for tight in combinations(lines, 4):
-        point = solve(tight)
-        if point is None:
+    if feasible((Q(0),) * 4):
+        best = (gain_at((Q(0),) * 4),) + (Q(0),) * 4
+    for tight in combinations(inequalities, 3):
+        point = solve((simplex,) + tight)
+        if point is None or not feasible(point):
             continue
-        if all(A * point[0] + B * point[1] + C * point[2] + D * point[3] <= E
-               for A, B, C, D, E in lines):
-            gain = gains[fields[4]] + sum(
-                (gains[fields[k]] - gains[fields[4]]) * point[k]
-                for k in range(4))
-            if best is None or gain > best[0]:
-                best = (gain,) + point
+        gain = gain_at(point)
+        if best is None or gain > best[0]:
+            best = (gain,) + point
+    for tight in combinations(inequalities, 4):
+        point = solve(tight)
+        if point is None or not feasible(point):
+            continue
+        gain = gain_at(point)
+        if best is None or gain > best[0]:
+            best = (gain,) + point
     return best
 
 
@@ -102,8 +124,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--ids", default=",".join(map(str, IDS)),
                         help="comma-separated residual node ids")
+    parser.add_argument("--time-budget", type=float, default=None,
+                        help="seconds of search before stopping (partial)")
     args = parser.parse_args()
     ids = [int(value) for value in args.ids.split(",") if value]
+    started = time.monotonic()
     prop_path = ROOT / "evidence-20261028/inputs/paid16-general-next512.json"
     recs = {rec["id"]: rec for rec in json.loads(
         prop_path.read_text(encoding="utf-8-sig"))["records"]}
@@ -116,11 +141,19 @@ def main():
         gains = [common.endpoint_lo(Q(s)) for s in rec["g"]]
         required = common.T2 - Q(rec["f0Lo"])
         best = None
-        for fields in combinations(range(9), 5):
+        timed_out = False
+        faces = list(combinations(range(9), 5))
+        for index, fields in enumerate(faces):
+            if (args.time_budget is not None and
+                    time.monotonic() - started > args.time_budget):
+                timed_out = True
+                print(node, "time budget hit after", index, "faces")
+                break
             candidate = face5(fields, gains, rhs)
             if candidate is not None and (best is None or candidate[0] > best[0]):
                 best = (candidate[0], fields, candidate[1:])
-        status = ("PASS" if best is not None and best[0] > required else
+        status = ("timeout-partial" if timed_out else
+                  "PASS" if best is not None and best[0] > required else
                   "no <=5-field rescue")
         row = {
             "id": node,
@@ -130,12 +163,16 @@ def main():
             "required": str(required),
             "exact_margin": str(best[0] - required) if best else None,
             "status": status,
-            "faces_checked": len(list(combinations(range(9), 5))),
+            "faces_checked": len(faces),
+            "faces_completed": (len(faces) if not timed_out
+                                else index + 1),
         }
         results.append(row)
         print(node, status,
               ("margin=%.3e" % float(best[0] - required)) if best else "",
               "support=", row["support"])
+        if timed_out:
+            break
 
     payload = {
         "scope": "exact <=5-field HOST-only search; no kernel credit",
