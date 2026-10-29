@@ -10,11 +10,12 @@
     "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts from the block conjunction using omega",
     "lift each part-local lower bound to the global lower bound by transitivity with omega",
     "dispatch the 64 ordered PairwiseDisjoint cases explicitly instead of relying on simp_all",
+    "unfold Function.onFun to expose Disjoint (part i) (part j) before the 64-case dispatch",
     "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
     "remove maxRecDepth 10000"
   ],
-  "corrected_chars": 40114,
-  "corrected_utf8_bytes": 40899,
-  "corrected_sha256": "F63677C532B2778AAB72D3AFD8C0EFF9B6AA00C3E7328A3EDD4601016186DAB3",
+  "corrected_chars": 41048,
+  "corrected_utf8_bytes": 41833,
+  "corrected_sha256": "C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22",
   "scope": "source emission and inventory only; Lean elaboration is CI-pending"
 }

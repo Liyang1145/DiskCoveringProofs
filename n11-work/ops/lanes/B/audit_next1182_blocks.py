@@ -41,7 +41,8 @@ assert top.count("have hb := (part_s") == 8
 assert "exact (part_s01_bounds n h).1" not in top
 assert top.count("fin_cases j") == 8
 assert top.count("exact (hij rfl).elim") == 8
-assert top.count("simpa [part] using disjoint_s") == 56
+assert top.count("change Disjoint (part i) (part j)") == 1
+assert top.count("simpa [part, Function.onFun] using disjoint_s") == 56
 assert top.count(".symm") == 28
 report = {
     "manifest": str(MAN.relative_to(ROOT)),
@@ -52,7 +53,9 @@ report = {
     "max_block_cases": 21,
     "interval_disjoint_theorems": top.count("private theorem disjoint_s"),
     "pairwise_dispatch_diagonal_cases": top.count("exact (hij rfl).elim"),
-    "pairwise_dispatch_off_diagonal_cases": top.count("simpa [part] using disjoint_s"),
+    "pairwise_dispatch_off_diagonal_cases": top.count(
+        "simpa [part, Function.onFun] using disjoint_s"
+    ),
     "literal_membership_block_proofs": top.count("all_goals norm_num"),
     "global_lower_bound_transfers": top.count("have hb := (part_s"),
     "direct_part_lower_bound_exacts": top.count("exact (part_s"),

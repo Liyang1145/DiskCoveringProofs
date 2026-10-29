@@ -56,6 +56,6 @@
   "global_lower_bound_transfers": 8,
   "direct_part_lower_bound_exacts": 0,
   "kernel_decide_checks": 0,
-  "top_sha256": "F63677C532B2778AAB72D3AFD8C0EFF9B6AA00C3E7328A3EDD4601016186DAB3",
+  "top_sha256": "C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22",
   "scope": "exact manifest/literal-block audit only; not Lean elaboration"
 }

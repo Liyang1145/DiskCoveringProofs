@@ -1,214 +1,227 @@
 # Lane B notes
 
-## 2026-10-29 - session part 14: diagnose stale CI lower-bound failures
+## 2026-10-29 - session part 16: explicit `Function.onFun` unfold in 56 dispatches
 
 ### Done
-- Re-read GUIDANCE, LANES, part-13 notes and CI LATEST. Mapped CI run
-  `40914236268` error lines to committed `0AFA07FB...`, not current worktree
-  `F63677C5...`.
-- Root cause of the seven `Type mismatch` errors: in `0AFA...`, part 1 uses
-  `exact (part_s01_bounds n h).1` because its lower endpoint is 2565, but
-  parts 2-8 start at 2737, 2907, 3088, 3267, 3446, 3955 and 4986. The current
-  emitter transfers each part-local bound with `have hb` + `omega`, which
-  covers the global target 2565; its 64-case disjointness dispatch is already
-  explicit.
-- Added regression assertions to `audit_next1182_blocks.py`: exactly eight
-  global lower-bound transfers and zero direct `exact (part_s...)` proofs.
-
-### Checks executed (scope)
-- `audit_next1182_blocks.py`: exit 0 on `F63677C5...`; 8 parts, 57 literal
-  blocks (max 21 cases), 28 interval-disjoint theorems, 8 diagonal + 56
-  off-diagonal dispatch branches, 8 transfers, 0 direct part exacts, 0 kernel
-  decodes. Scope is source/manifest inventory, **not Lean elaboration**.
-- `python tools/project_status.py --check`: passed (handoff index only).
-- `git diff --check` and forbidden-token scan: clean.
-- A minimal Mathlib `omega` probe exceeded its 100s local cap and produced no
-  verdict; no Lean elaboration claim.
-
-### Still unproved / unverified
-- `Next1182` `F63677C5...`, Next505Bounds, B13 and B13Main remain **CI
-  pending / unpaid**. B13Main root import still requires CI green. Residual
-  389, `SevenClassExclusions`, and the arbitrary-center full-disk theorem
-  remain unpaid.
-
-### Next concrete step
-- On the next CI run, inspect `F63677C5...` first and quote the first genuine
-  Next1182 error if any. If green, require separate exits for Next505Bounds,
-  B13 and B13Main before requesting the root import.
-
-## 2026-10-29 - session part 13: audit the repaired 64-case dispatch
-
-### Done
-- Re-read GUIDANCE, LANES, part-12 notes and CI LATEST. Latest shown run
-  `40914236268` still reports the pre-fix Next1182 bytes; current worktree
-  bytes are the repaired SHA256 `F63677C532B2778AAB72D3AFD8C0EFF9B6AA00C3E7328A3EDD4601016186DAB3`.
-- Strengthened `audit_next1182_blocks.py` to check the exact `hdisj` dispatch
-  inventory: 8 `fin_cases j`, 8 diagonal `(hij rfl).elim` branches, 56
-  off-diagonal `simpa [part] using disjoint_s...` branches, and 28 `.symm`
-  uses. This closes the static risk that one of the 64 ordered pairs was
-  omitted or duplicated.
-- Rechecked B13Main's direct API chain: `remaining_of_b13` -> B12
-  `remaining_of_b12` -> `C450ChainCompletionMain`; the literal-census variant
-  uses `EnergyTerminalResidualCensus.remaining_iff_b13` in the expected
-  direction. `audit_b13main.py` remains clean.
-
-### Checks executed (scope)
-- `python tools/project_status.py --check`: passed (handoff index only).
-- `audit_next1182_blocks.py`: passed; manifest 1182 ids, part sizes
-  `168x7+6`, 57 literal blocks of at most 21 cases, 28 interval-disjoint
-  theorems, 8 diagonal + 56 off-diagonal dispatch branches. Scope is source,
-  manifest and proof-shape inventory, **not Lean elaboration**.
-- `audit_b13main.py`: passed static imports/API. SHA256:
-  Next1182 `F63677C5...`; B13 `79CE135A...`; B13Main `2A6A206F...`.
-
-### Still unproved / unverified
-- Next1182, Next505Bounds, B13 and B13Main remain **CI pending / unpaid**.
-  No local Lean build exists; this session made no elaboration claim.
-- Residual 389, `SevenClassExclusions`, and the arbitrary-center full-disk
-  theorem remain unpaid.
-
-### Next concrete step
-- On the next CI run, inspect Next1182 first and quote the first genuine error
-  if any. If green, require explicit exits for Next505Bounds, B13 and B13Main;
-  only then issue the root-import request.
-
-## 2026-10-29 - session part 12: CI target for B13Main
-
-### Done
-- Re-read current bytes after CI `40914236268`: the reported Next1182 errors
-  are on the pre-fix file, but the worktree now has SHA256
-  `F63677C532B2778AAB72D3AFD8C0EFF9B6AA00C3E7328A3EDD4601016186DAB3`
-  with `.1`/`omega` lower-bound branches and explicit 64-case `hdisj`.
-- Added `N11Formalization.EnergyTerminalBatchB13Main` to TARGETS. The module
-  was already present, statically audited, and forwards B13 residual 389 to
-  B12 via `remaining_of_b13`; it was not previously kernel-checked by CI.
-- Added a lane-local Mathlib probe for the exact pairwise-disjoint dispatch
-  shape. `import Mathlib` exceeded the 120s timeout without a verdict; no Lean
-  conclusion is claimed from it.
-
-### Checks executed (scope)
-- `python tools/project_status.py --check` passed (handoff index only).
-- `audit_b13_closure.py` passed all 13 inventory checks: B13=1997,
-  residual=389, terminals=2506, sharp=120; scope is inventory equality only.
-- `audit_b13main.py` passed all static import/API checks.
-- `audit_target_imports.py` passed over a 1919-module closure with no missing
-  imports and no forbidden proof escapes; scope excludes Lean elaboration.
-- SHA256 and source inspection of current Next1182/B13Main; TARGETS update.
-- Local probe timed out at 120s (scope: tactic syntax only, no verdict).
-
-### Still unproved / unverified
-- `F63677C5...` is **CI pending / unpaid**; Next505Bounds, B13, and B13Main
-  are also **CI pending**. Residual 389, `SevenClassExclusions`, and the
-  arbitrary-center theorem remain unpaid.
-
-### Next concrete step
-- On the next CI run, quote the first genuine error for `F63677C5...`; if it
-  passes, check B13 then B13Main. Only request the root import after B13Main
-  is CI green.
-
-## 2026-10-29 - session part 11: fixed Next1182 lower-bound and hdisj proofs
-
-### Done
-- Quoted CI run `40914236268` errors: `Paid16GeneralNext1182.lean:582-588`
-  part-local lower bounds were passed directly to global `2565 ≤ n.val`, and
-  line 590 had an unsolved `hdisj` goal. B13 showed no independent error line in
-  `errors_head`; its exit 1 is consistent with the failed Next1182 dependency.
-- Updated `emit_next1182_top.py`: each `lower_bound` branch now extracts the
-  part-local lower bound then uses `omega`; `hdisj` now dispatches all 64 ordered
-  `Fin 8` pairs explicitly, using `(hij rfl).elim` on the diagonal and the named
-  interval-disjoint theorem (or its `.symm`) off diagonal.
-- Regenerated `Paid16GeneralNext1182.lean` (40,899 bytes). Structure remains
-  8 parts of `168x7 + 6`, 57 literal blocks with max 21 cases, 28 disjointness
-  theorems, and zero kernel decodes.
+- Re-read the current guidance, Lane B entry, part-15 notes and `ci/LATEST.md`;
+  `python tools/project_status.py --check` passed (index check only).
+- Retrieved completed workflow run `40949277719` at `f30e46f0` and its full
+  job log (workflow conclusion `success`; per-target exits Next1182 `1`,
+  Next505Bounds `0`, B13 `1`, B13Main `1`). This run is **stale to the local
+  `change` fix**: it predates that uncommitted source change.
+- Exact stale failure: all 56 off-diagonal branches still expected
+  `Function.onFun Disjoint part i j`; Lean's synthetic error recovery made
+  `new_count` depend on `sorryAx`, confirming those declarations are not
+  paid. B13/B13Main were import-blocked by Next1182 and received no independent
+  verdict.
+- Changed every off-diagonal branch in the emitter and generated module from
+  `simpa [part]` to `simpa [part, Function.onFun]`, retaining the preceding
+  `change Disjoint (part i) (part j)`. Updated the audit's exact-count check.
 
 ### Files (SHA256, uppercase)
-- Next1182 `F63677C532B2778AAB72D3AFD8C0EFF9B6AA00C3E7328A3EDD4601016186DAB3`.
-- Emitter `893DA20241B45E63255EAD5F2E38947A3F2F07D8EE666B96B0A6890C79B2D2F4`.
-- TARGETS unchanged. B13 bytes unchanged
-  `79CE135A14299ACC32CB324FB8D8ABD69346B6E1303C5FAC68031C631A87B51F`.
+- Next1182 `C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22`
+  (41,833 bytes).
+- Emitter `8248CC972485566B2C71EC3695E6AEB60F6F65DF1A2AA6A3837E78CAAB420B24`.
+- Emitter report `620D634AC202B663078F304D821069A3F0C09E8B5CF807D2F5FDC517FECA48E8`.
+- Audit `C35D0A7C800163EEB3C97C585347D81312B84ABA435F22D7873A5E848E4C68B8`.
+- Audit report `EEB3BB299428D01909DA6A27EDD2CEB25811D5B730F94B3FB73118134B7D7C24`.
 
 ### Checks executed (scope)
-- Regeneration, `audit_next1182_blocks.py`, `py_compile`, `git diff --check`,
-  and forbidden-token scan all exit 0. Scope is source/inventory only; **not
-  Lean elaboration**. A Mathlib tactic probe exceeded its 120s cap and produced
-  no verdict.
+- Regenerated module and report (exit 0): 1182 ids, parts `168x7+6`, 57 literal
+  blocks (max 21 cases), 28 interval-disjoint theorems, 8 diagonal + 56
+  off-diagonal branches, 0 whole-set kernel decodes.
+- `audit_next1182_blocks.py`, `audit_target_imports.py`, `py_compile`,
+  `git diff --check`, and forbidden-token scan exited 0. Target import closure
+  is 1919 modules with no missing/forbidden target. Scope is source/manifest
+  inventory only, **not Lean elaboration**.
+- A small `/workspace/tools/mathlib-probe` replay of the `PairwiseDisjoint`
+  pattern hit its 180-second cap with no verdict; it is not evidence.
 
 ### Still unproved / unverified
-- New `F63677C5...` is **CI pending / unpaid**. Next505Bounds, B13, B13Main,
-  residual 389, `SevenClassExclusions`, and the arbitrary-center theorem remain
+- Next1182 `C3BD2A12...` is **CI pending / unpaid**; B13 and B13Main remain
+  CI pending/unpaid pending a run that reaches them. Residual 389,
+  `SevenClassExclusions`, and the arbitrary-center full-disk theorem remain
   unpaid.
 
 ### Next concrete step
-- On CI for `F63677C5...`, quote the first genuine Next1182 error. If green,
-  inspect B13's own elaboration independently, then B13Main. Do not request the
-  root import until B13Main is CI green.
+- On the first CI run containing `C3BD2A12...`, require Next1182 exit `0` before
+  interpreting B13. If Next1182 still fails, inspect its first full error block;
+  do not treat synthetic `sorryAx` from an earlier error as a new source sorry.
 
-## 2026-10-29 - session part 10: replaced fragile part witnesses
+## 2026-10-29 - session part 15: fix the 64 folded `onFun` dispatches
 
 ### Done
-- CI failures at `Paid16GeneralNext1182.lean:276+` were part-bound `Type
-  mismatch`s in typed `le_trans` endpoint witnesses; literal block proofs were
-  not implicated. Replaced all 57 part branches with
-  `have hb := block_*_bounds n h_*` then `constructor <;> omega`, avoiding
-  overloaded numeral/endpoint inference.
-- Regenerated the module and reran the exact inventory audit (exit 0): 1182
-  ids, parts `168x7 + 6`, 57 blocks, max 21 cases, 28 disjointness theorems,
-  zero top-level kernel decodes.
+- Re-read `GUIDANCE.md`, Lane B entry, part-14 notes, `ci/LATEST.md`, and ran
+  `python tools/project_status.py --check` (passed; index only).
+- Pulled the full job log and artifact for n11 run `40949277719`, head
+  `f30e46f0ae29a0b11304bddae3e4457ab8d3ba68`. That run supersedes the stale
+  `LATEST.md` summary. Per-target exits were: Next1182 `1`, Next505Bounds `0`,
+  B13 `1`, B13Main `1`; it is not a green Lean run overall.
+- Exact Next1182 diagnosis from the full log: all 64 off-diagonal
+  `simpa [part] using disjoint_s...` branches expected
+  `Function.onFun Disjoint part i j`, while the supplied theorem simplified to
+  `Disjoint S_i.newIDs S_j.newIDs`. The interval proofs and lower-bound
+  transfers were not implicated.
+- Added `change Disjoint (part i) (part j)` immediately after the
+  `PairwiseDisjoint` intro, before `fin_cases`, and taught the emitter/audit
+  this required line. Regenerated the module and reports.
+- B13 and B13Main exited `1` in the same run, but no B13 source error was
+  reached; treat them as import-blocked by Next1182, not independently tested.
 
 ### Files (SHA256, uppercase)
-- Next1182 `0AFA07FB3BC7BB66C147CFC9B213993ABC2FE4646D8EE16FA6018F3802049D1B`
-  (38,267 bytes); emitter
-  `ED681C7D2FC4D3965133F4E9F00715598BFD7619AC59AE9BDA4356FE8C6DE6AD`.
-- TARGETS unchanged (`Next1182`, `Next505Bounds`, `B13`); B13 unchanged
-  `79CE135A14299ACC32CB324FB8D8ABD69346B6E1303C5FAC68031C631A87B51F`.
+- Next1182 `F5D918A5799684216FD74EBF754B9BE37BEF622750F00A8167543BCBAF99BAEE`
+  (40,937 bytes).
+- Emitter `F4665D9F826D4D63F3AA1423378889D74FA1B0619AB38727A970D5F7A6DAD3D5`.
+- Audit `EA9781393B4D3AD328E5F4A51F62E3BF360D95BF29277870827BCB8C7B602274`.
+- Emitter report `E0851D3E9495A36319334C2E361DDBDA1E84AA8143D08E5AEBA99540B8F70613`.
+- Audit report `EFFC52DE791EAC71C55DD43C490D971A0541F5A70702F159DEE1EFC2A2862E8C`.
+- TARGETS unchanged: Next1182, Next505Bounds, B13, B13Main.
 
 ### Checks executed (scope)
-- Emitter and audit exit 0; `py_compile`, `git diff --check`, forbidden-token
-  scan clean. Scope is source/inventory only; **not Lean elaboration**.
+- Emitter and `audit_next1182_blocks.py`: exit 0. Inventory is 1182 ids,
+  parts `168x7+6`, 57 literal blocks (max 21 cases), 28 interval-disjoint
+  theorems, 8 diagonal + 56 off-diagonal branches, one `change` exposure,
+  8 lower-bound transfers, 0 whole-set kernel decodes. Scope is source,
+  manifest and proof-shape inventory, **not Lean elaboration**.
+- `py_compile`, `git diff --check`, and forbidden-token scan: exit 0.
+- A narrowed Mathlib probe of `PairwiseDisjoint -> change Disjoint (part i)
+  (part j)` was launched, but its import/elaboration did not finish inside the
+  session cap. No Lean verdict from it.
 
 ### Still unproved / unverified
-- New `0AFA07FB...`, Next505Bounds, and B13 are **CI pending / unpaid**.
-  B13Main, residual 389, `SevenClassExclusions`, and arbitrary-center theorem
-  remain unpaid.
+- Next1182 `F5D918A5...` is **CI pending / unpaid**. B13 and B13Main remain
+  **CI pending / unpaid** because their target commands could not reach their
+  own sources. Next505Bounds is CI green at `f30e46f0` only (kernel check).
+- Residual 389, `SevenClassExclusions`, and the arbitrary-center full-disk
+  theorem remain unpaid. A package or inventory success is not mathematics.
 
 ### Next concrete step
-- On CI for `0AFA07FB...`, quote the first genuine Next1182 error. If green,
-  inspect Next505Bounds then B13 independently. Do not expand TARGETS early.
+- On the next n11 CI artifact, require Next1182 exit `0` first. Then require
+  separate B13 and B13Main exits `0`; if all three are green, issue the
+  existing ROOT-IMPORT REQUEST for `EnergyTerminalBatchB13Main` and quote that
+  run id. If Next1182 still fails, use its first full error block (not
+  `errors_head`) and fix that exact tactic.
 
-## Prior B13/Next1182 engineering (condensed)
+## Retained engineering facts
 
 ### Next1182
 - Top aggregate is `Finset.univ.biUnion part` over eight sub-aggregates.
-  Membership is dispatched with `mem_biUnion` plus `fin_cases`; cardinality
-  uses `Finset.card_biUnion hdisj` and `Fin.sum_univ_succ`.
-- The prior `new_count` trailing `norm_num` caused `No goals to be solved` and
-  was removed. A local Mathlib probe confirmed the 8-part/28-disjointness
-  `hdisj` pattern.
-- Source was split after a CI timeout: 57 literal blocks of at most 21 ids,
-  with 21-literal kernels only. Stale CI `40901508838` tested older bytes.
+  Membership uses `mem_biUnion` + `fin_cases`; cardinality uses
+  `Finset.card_biUnion hdisj` and `Fin.sum_univ_succ`.
+- The repaired lower-bound proof transfers every part-local lower bound to the
+  global 2565 target with `have hb := (part_sNN_bounds n h).1` then `omega`.
+  Never use a direct part exact for parts 2-8.
+- `Set.PairwiseDisjoint` unfolds through `Function.onFun`; after `intro` use
+  `change Disjoint (part i) (part j)` before `fin_cases`.
+- 57 literal blocks of at most 21 ids keep every kernel decode at 21 literals.
+- The prior trailing `norm_num` in `new_count` caused `No goals to be solved`.
 
 ### B13 / Next505
-- Added `EnergyTerminalBatchB13Next505Bounds`, replacing B13's single
-  505-element kernel decode with 25 literal blocks (24x21 plus one id). B13's
-  private `next505_lt` delegates there.
-- Next505 module SHA256
+- `EnergyTerminalBatchB13Next505Bounds` replaces B13's 505-element kernel
+  decode with 25 literal blocks (24x21 plus one id). Next505 module SHA256
   `FA5CA6EB9CD75158085EDDD3C0CB464AB7F96CF124FCE40C303EB176D31D46F2`;
-  emitter `emit_next505_bounds.py` SHA256
-  `BFE4A4C422CDF5F54E60AD21E9C78AE96BDBBC7FD7717556B3FACFAE9203480A`.
+  emitter `BFE4A4C422CDF5F54E60AD21E9C78AE96BDBBC7FD7717556B3FACFAE9203480A`.
 - B13 descent: `b11_lt` uses B10 (100 ids) plus Remaining210 (210 ids);
-  `next505_lt` uses the 25-block module. Thus B13 has no whole-505/1182
-  decode. B10/210 remain explicit per-decode risk.
-- If B13 fails in `b10_lt` or `remaining210_lt`, split those decodes into
-  hierarchical literal bounds rather than increasing timeout.
-
-## Retained engineering facts
+  `next505_lt` uses the 25-block module. If B13 reports `b10_lt` or
+  `remaining210_lt`, split those decodes hierarchically rather than raising
+  limits.
+- B13Main forwards residual 389 through B12's `remaining_of_b12`; the
+  literal-census variant uses `EnergyTerminalResidualCensus.remaining_iff_b13`.
 - **ROOT-IMPORT REQUEST (only after CI green):** import
   `EnergyTerminalBatchB13Main` instead of `EnergyTerminalBatchB12Main`.
+
+### Working rules retained
 - `Finset.card_biUnion` takes disjointness explicitly:
-  `Finset.card_biUnion hdisj`; `Fin.sum_univ_succ` expands the sum.
-- `Finset.disjoint_left.mp` needs `(a := a)` in generated proofs.
+  `Finset.card_biUnion hdisj`.
+- `Finset.disjoint_left.mp` needs `(a := a)` when the element is implicit.
 - Emitters: `emit_next1182_top.py`, `emit_next505_bounds.py`,
   `emit_residual_census.py`; audit: `audit_next1182_blocks.py`.
-- A successful source/inventory audit is not proof. CI remains the only Lean
-  build authority for project modules; Mathlib probes need `/workspace/tools/mathlib-probe`.
-- Do not claim payment for Next1182, Next505Bounds, or B13 until CI is green.
+- A successful source/inventory audit is not proof. CI is the project-module
+  Lean authority; local probes use `/workspace/tools/mathlib-probe`.
+- Do not claim payment for Next1182, B13, or B13Main until CI is green.
+
+## 2026-10-29 - session part 17: stale-run confirmation + local audit
+
+### Done
+- Re-read `GUIDANCE.md`, Lane B, part-16 notes and `ci/LATEST.md`.
+- Queried GitHub API for run `40949277719`: workflow `completed success`, head
+  `f30e46f0ae29a0b11304bddae3e4457ab8d3ba68`, updated `2026-10-29T21:02:39Z`.
+  Its target failures still concern the pre-fix Next1182 bytes, so the workflow
+  conclusion is not evidence for the local `C3BD2A12...` source.
+- Re-ran `audit_next1182_blocks.py` (exit 0): 1182 ids; eight parts
+  `168x7+6`; 57 literal blocks (max 21); 28 interval-disjoint theorems; 8
+  diagonal + 56 off-diagonal dispatch cases; 8 lower-bound transfers; zero
+  whole-set kernel decodes. Source SHA256 remains
+  `C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22`
+  (41,833 bytes), matching part 16.
+- Confirmed B13/B13Main source and prior closure/import audits remain internally
+  consistent (B13 count 815+1182=1997; residual inventory 389). These are static
+  checks only.
+
+### Still unproved / unverified
+- Next1182 `C3BD2A12...` remains **CI pending / unpaid**; B13 and B13Main remain
+  **CI pending / unpaid** and were import-blocked on the tested hash. Residual
+  389, `SevenClassExclusions`, and the arbitrary-center full-disk theorem are
+  unpaid.
+
+### Next concrete step
+- Wait for a CI run whose Next1182 artifact/source hash is `C3BD2A12...`.
+  Require Next1182 exit `0` first, then separate B13 and B13Main exits `0`.
+  Only then issue the root-import request, quoting the run id.
+
+## 2026-10-29 - session part 18: hash/audit recheck; CI access absent
+
+### Done
+- Re-read guidance, lane B, the part-17 notes, and `ci/LATEST.md`; the index
+  status check passed (inventory scope only).
+- Confirmed the working-tree Next1182 still has SHA256
+  `C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22`
+  and emitter SHA256
+  `8248CC972485566B2C71EC3695E6AEB60F6F65DF1A2AA6A3837E78CAAB420B24`.
+- Re-ran `audit_next1182_blocks.py` (exit 0) and `git diff --check` (exit 0):
+  1182 ids; parts `168x7+6`; 57 literal blocks (max 21); 28 interval
+  disjointness theorems; 8 diagonal + 56 off-diagonal branches; 8 global
+  lower-bound transfers; 0 whole-set kernel decodes.
+- `gh` is unavailable in this worktree/session, so no post-fix run or artifact
+  was accessible. `ci/LATEST.md` still records run `40949277719` against the
+  stale pre-fix Next1182 bytes.
+
+### Still unproved / unverified
+- Next1182 `C3BD2A12...` is **CI pending / unpaid**. B13 and B13Main are
+  **CI pending / unpaid**. Residual 389, `SevenClassExclusions`, and the
+  arbitrary-center full-disk theorem remain unpaid.
+
+### Next concrete step
+- On the next CI artifact, first require Next1182 `C3BD2A12...` exit `0`.
+  Then require separate B13 and B13Main exits `0`; only then request the root
+  import and quote the successful run id.
+
+## 2026-10-29 - session part 17 (same slot, part 5): determinism recheck of the `onFun` fix
+
+### Done
+- Re-read NOTES part 16; confirmed the local `Next1182` source is exactly the
+  fixed `C3BD2A12...` (41,833 bytes), with 56 `simpa [part, Function.onFun]`
+  off-diagonal branches and the single shared `change Disjoint (part i) (part j)`.
+- Re-ran `emit_next1182_top.py` (exit 0): regenerated the module to the same
+  SHA256 `C3BD2A12...`, so the fix is reproducible, not hand drift.
+- Re-ran `audit_next1182_blocks.py` (exit 0): 1182 ids, parts `168x7+6`,
+  57 literal blocks (max 21 cases), 28 interval-disjoint theorems, 8 diagonal +
+  56 off-diagonal dispatches, 0 whole-set kernel decodes; report retains
+  `top_sha256 C3BD2A12...`. Scope remains source/manifest inventory, **not**
+  Lean elaboration.
+
+### Files (SHA256, uppercase)
+- `Paid16GeneralNext1182.lean` `C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22`.
+- `emit_next1182_top.py` `8248CC972485566B2C71EC3695E6AEB60F6F65DF1A2AA6A3837E78CAAB420B24`.
+- `audit_next1182_blocks.py` `C35D0A7C800163EEB3C97C585347D81312B84ABA435F22D7873A5E848E4C68B8`.
+- TARGETS unchanged: Next1182, Next505Bounds, B13, B13Main.
+
+### Still unproved / unverified
+- Next1182, B13, B13Main all remain **CI pending / unpaid**; only a CI run on
+  this exact source can move them. Residual 389, `SevenClassExclusions`, and the
+  arbitrary-center full-disk theorem remain unpaid.
+
+### Next concrete step
+- On the next CI run for this tree, read Next1182's verdict first. If it is
+  green, inspect B13's first real error (not an import-block cascade); if red,
+  quote the first full error block verbatim before changing anything.
