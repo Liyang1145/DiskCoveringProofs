@@ -105,3 +105,132 @@ Next concrete step: request bounded CI on the namespace-corrected targets. If
 single precomputed exact rational equality/inequality lemma (emitted by Python
 with an exact `Fraction` self-check), then rerun CI. The 180 s local timeout is
 not evidence against the mathematics.
+
+## 2026-10-29 — session part 8 (quantifier fix, exact self-check, census schema)
+
+Did:
+- Fixed a definite elaboration bug in `emit_frozen_cap_certificates.py`: the
+  emitted `hy0 : ∀ q, 0 ≤ y q` was discharged by plain `norm_num [y_<id>]`.
+  It is now `by intro q; fin_cases q <;> norm_num [y_<id>]`; `hy1` remains a
+  separate `norm_num`.
+- Made the emitter fail closed before writing Lean: it checks the frozen
+  proposal SHA256, exact nonnegative/sum-one weights, recomputes each
+  `endpoint_lo`, `upper_gain`, `required_gain`, and `strict_margin` with
+  `Fraction`, and requires a strictly positive margin. Regenerated the module.
+- Repaired `build_residual389_census.py`, which consumed the retired schema key
+  `excludes_90_row_pass`; it now checks `excludes_any_row_count` from the
+  100-ordered-pair certificate and labels the output accordingly. Regenerated
+  the census.
+
+Files / SHA256 (current bytes):
+- `lean/N11Formalization/FrozenCapCertificates.lean`
+  `0A9AC9C77D67F01EDC314ED1F470D4E206DFC1A03C686337D3D01B833D31BED2`
+- `ops/lanes/C/emit_frozen_cap_certificates.py`
+  `C0749A4A67B3EB7E79DCB339E070C53FA594F67B86670E9E86FA4B8AC0EC96E2`
+- `ops/lanes/C/build_residual389_census.py`
+  `1B93D43B3C2E9EC00621E1A84E34276C10FF2C767AF8BC61AD8DEA41588BA0CF`
+- `ops/lanes/C/residual389-census.json`
+  `44166EE869A61F6858F2285A98F96CC3FAA4F59FBB98C01D76B4DC42A28827A8`
+- `ops/lanes/C/next512-row-cap-certificates.json`
+  `0B50B075DBEBC59BCA5374FBA604496F50660572C946AC6CE23F8F104027024B`
+
+Checks run (scope stated):
+- `python3 -m py_compile` on both edited scripts: exit 0.
+- `python3 emit_frozen_cap_certificates.py`: exit 0; seven records passed the
+  new exact self-check and the Lean module was regenerated.
+- `python3 certify_next512_row_cap.py`: exit 0; 512 records, all 100 ordered
+  pairs, seven failures excluded; tightest margin `7.388363154221271e-7` at
+  2356. Python exact-rational evidence only.
+- `python3 build_residual389_census.py`: exit 0; 2506 terminals, 120 sharp,
+  1997 paid, residual 389; residual-list SHA256
+  `747447E233634FBC9D9321824148165AC866105FE0367AED27F6F8D9A2E07F46`.
+- `python tools/project_status.py --check`: PASS; navigation/index scope only.
+- `git diff --check`: exit 0; forbidden-token scan over changed Lean/generator:
+  no hits. No Lean build was run locally.
+
+Still unproved / missing:
+- `FrozenCapCertificates` remains **CI pending**. In particular the seven
+  `strict_gain_*` `norm_num` proofs have not been kernel-checked.
+- Frozen `f0Lo`/`g` identities and the arbitrary-row cap are still explicit
+  hypotheses in each `excluded_*`; no concrete packet is instantiated.
+- All 389 residual terminals remain unpaid; 382 HOST records are absent.
+
+Next concrete step: request serial CI on the three lane-C targets. If red,
+fix the first elaborator error; if a `strict_gain_*` proof is the bottleneck,
+emit a per-node exact endpoint vector `E_n` plus separate pointwise
+`endpointLo = E_n` and weighted-sum rational lemmas, then recheck the margin.
+
+## 2026-10-29 — session part 9 (split endpoint evaluation)
+
+Did:
+- Hardened `emit_frozen_cap_certificates.py` and regenerated
+  `FrozenCapCertificates.lean`. Each node now has exact `E_<id> : Fin 9 → ℚ`
+  and a pointwise `endpoint_<id> : endpointLo Dq DQ (G_<id> q) = E_<id> q`,
+  proved by nine `fin_cases` rational checks. `strict_gain_<id>` rewrites with
+  that lemma, then runs a short `norm_num` over only `F0/y/E/T`. This replaces
+  the former nine-term nested `endpointLo`/π `norm_num` blow-up with 63 bounded
+  endpoint facts plus seven sums.
+- Added a fail-closed endpoint self-check to the generator. It still rejects a
+  stale frozen proposal hash, bad weights, or a non-positive/stale margin.
+
+Files / SHA256 (current bytes):
+- `ops/lanes/C/emit_frozen_cap_certificates.py`
+  `7831204BF871E574C2E9651EC03A95E461FC48EC1D240590E84909FE70DFDB37`
+- `lean/N11Formalization/FrozenCapCertificates.lean`
+  `FA89E3E9D4324BABBDBF69BF7F608B9660311765FAD61AE2115B64CE3766EBCB`
+
+Checks run (scope stated):
+- `python3 -m py_compile emit_frozen_cap_certificates.py`: exit 0.
+- `python3 emit_frozen_cap_certificates.py`: exit 0; all seven records passed
+  exact `Fraction` checks and the module was regenerated.
+- `python3 build_residual389_census.py`: exit 0; unchanged 389 residual count,
+  382 unavailable local records.
+- `git diff --check`: exit 0. Forbidden-token scan: only `#print axioms` lines.
+- No Lean kernel check: project oleans are absent locally; module is
+  **CI pending**, not paid.
+
+Still unproved / missing:
+- `endpoint_*`, `strict_gain_*`, and `excluded_*` are not yet kernel-checked.
+- Frozen `f0Lo`/`g` identities and arbitrary-row caps remain explicit
+  hypotheses; no concrete packet is instantiated for these seven nodes.
+- All 389 residual terminals remain unpaid; 382 HOST records remain absent.
+
+Very next step: supervisor commit/push, then inspect serial CI for the three
+lane-C targets. Fix the first elaborator error in `endpoint_*` if red; if those
+are green, attach concrete frozen identities/cap facts for the seven nodes.
+
+## 2026-10-29 — session part 10 (CI diagnosis)
+
+Did:
+- Fetched public GitHub Actions metadata/logs for the serial run still listed
+  as pending in `ops/ci/LATEST.md`: run `40736931996`, job `123004497123`,
+  head `9e4a3aebe5b6661d46f1209adef895a2cd9ab6af`.
+- Job metadata: build step ran 18:14:41–18:37:59 UTC and the whole job ended
+  failure at 18:38:03. The log tail says the runner received a shutdown signal
+  and exit 143; there is no Lean `error:` in the 470155-byte log. Last progress
+  was `[8931/9114]`. Thus this is an external cancellation, not a kernel red.
+- Confirmed the combined target list included all three lane-C targets, but
+  the run never reached them. No lane-C module gained CI credit.
+- Attempted bounded Mathlib probes of one `endpoint_*` normalization and a
+  definitional variant. They timed out in the local probe environment; a
+  follow-up showed `unknown module prefix 'Mathlib'` because that project has
+  no cached `Mathlib.olean`. These probes give **no** proof/performance signal.
+
+Checks run (scope stated):
+- GitHub Actions API job/log inspection only (network read, no credentials).
+- `grep` over the downloaded build log found zero `error:` lines and zero
+  lane-C target build lines before shutdown.
+- No Lean build locally and no repository source was changed this session.
+
+Still unproved / missing:
+- `FrozenCapCertificates` remains **CI pending**; its endpoint/strict-gain
+  proofs have not been kernel-checked.
+- All seven exclusions retain explicit frozen-identity, arbitrary-row-cap and
+  concrete-packet obligations; all 389 residual terminals remain unpaid.
+
+Very next step: split the generated module so an early, Mathlib-small
+`FrozenCapRationalCore` target kernel-checks the seven exact endpoint/gain
+inequalities first, then make `FrozenCapCertificates` import it and bridge the
+local `Lq/LQ/pi` constants to the real frozen constants by definitional/`rfl`
+lemmas. This avoids spending the next serial CI window inside the 9000-module
+dependency closure before the rational core is checked.
