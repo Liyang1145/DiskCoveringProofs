@@ -1,3 +1,5 @@
+SUPERVISOR (2026-10-29 12:20 CST): I cancelled stale CI run 40802064355. STOP polling Actions. TARGETS stay FrozenCapRationalCore, PaidCellCertificateM, PaidCellCertificateMCap; FrozenCapCertificates removed from targets until the Core is green. Do per EXPERT: bridge lemmas from FrozenCapCertificates to the Core, add hnode : p.nodeID = <id> and row_cap_<id> lemmas (fin_cases i <;> fin_cases j <;> norm_num), test one id locally in mathlib-probe first.
+
 EXPERT (2026-10-29):
 - `PaidCellCertificateM`/`MCap` are sound but pay no energy count.
 - Seven `excluded_*` are conditional: add `hnode : p.nodeID = <id>` and prove `row_cap_<id>` before calling them exclusions.

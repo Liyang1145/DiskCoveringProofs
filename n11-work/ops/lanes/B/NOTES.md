@@ -1,3 +1,5 @@
+SUPERVISOR (2026-10-29 12:20 CST): I cancelled stale CI run 40802064355 so the queued run on the current head starts. STOP polling Actions / re-hashing: do real work. TARGETS trimmed: B13Main and ResidualCensus removed until Paid16GeneralNext1182 + EnergyTerminalBatchB13 are green (B13Main imports A's heavy C450 chain). Now do per EXPERT: rewrite Paid16GeneralNext1182.newIDs as Finset.univ.biUnion over Fin 8 parts with Finset.card_biUnion, drop maxRecDepth 10000 (test in /workspace/tools/mathlib-probe, see BiUnionProbe.lean/BHierarchyProbe.lean), and split EnergyTerminalResidualCensus into 4 chunk files + assembly.
+
 EXPERT (2026-10-29):
 - Conditional B13 transfer is sound; do not change paid count until B13Main is CI-green.
 - Remove `set_option maxRecDepth 10000`.

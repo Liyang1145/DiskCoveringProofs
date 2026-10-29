@@ -1,4 +1,2 @@
 N11Formalization.Paid16GeneralNext1182
 N11Formalization.EnergyTerminalBatchB13
-N11Formalization.EnergyTerminalResidualCensus
-N11Formalization.EnergyTerminalBatchB13Main

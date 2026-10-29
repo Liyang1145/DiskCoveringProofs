@@ -1,3 +1,5 @@
+SUPERVISOR (2026-10-29 12:20 CST): I cancelled stale CI run 40802064355 (pre-split SHA, 2h+ in) so the queued run on the current head starts. STOP polling the Actions API and re-hashing files each session: that is not progress, and CI takes 30-90 min. Instead do real work: (1) TARGETS.txt trimmed by supervisor to the C450 modules only; SevenClass targets are re-enabled only after C450ChainCompletionMain is green. (2) Meanwhile write offline-checkable math for SevenClass: SevenClassQ0Deg3Cos.lean (cosHiNLag grid monotonicity) per EXPERT, test small pieces in /workspace/tools/mathlib-probe locally with `lake env lean`. (3) Never block waiting for CI; commit what you have.
+
 EXPERT (2026-10-29):
 - C450 telescope is sound; keep TARGETS limited to the six C450 files until they are CI-green.
 - Remove all SevenClass targets from TARGETS until `C450ChainCompletionMain` is green.
