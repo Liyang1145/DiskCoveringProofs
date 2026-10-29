@@ -37,14 +37,22 @@ theorem weighted_reduced_le {m : ℕ} (p : PaidCellCertificateM.Packet m)
         y q * rho p.rowFrom p.rowTo p.lam q) =
       ∑ a : Fin m, p.lam a *
         ∑ q : Fin 9, y q * rowA (p.rowFrom a) (p.rowTo a) q := by
-    rw [rho]
-    simp_rw [Finset.mul_sum]
-    rw [Finset.sum_comm]
-    apply Finset.sum_congr rfl
-    intro a _
-    apply Finset.sum_congr rfl
-    intro q _
-    ring
+    calc
+      (∑ q : Fin 9, y q * rho p.rowFrom p.rowTo p.lam q)
+          = ∑ q : Fin 9, ∑ a : Fin m,
+              y q * (p.lam a * rowA (p.rowFrom a) (p.rowTo a) q) := by
+            simp only [rho, Finset.mul_sum]
+      _ = ∑ a : Fin m, ∑ q : Fin 9,
+              y q * (p.lam a * rowA (p.rowFrom a) (p.rowTo a) q) :=
+            Finset.sum_comm
+      _ = ∑ a : Fin m, p.lam a *
+              ∑ q : Fin 9, y q * rowA (p.rowFrom a) (p.rowTo a) q := by
+            apply Finset.sum_congr rfl
+            intro a _
+            rw [Finset.mul_sum]
+            apply Finset.sum_congr rfl
+            intro q _
+            ring
   have hlam : (∑ a : Fin m, p.lam a *
         ∑ q : Fin 9, y q * rowA (p.rowFrom a) (p.rowTo a) q) ≤
       lamB p.nodeID p.rowFrom p.rowTo p.lam := by
@@ -68,7 +76,7 @@ theorem weighted_reduced_le {m : ℕ} (p : PaidCellCertificateM.Packet m)
           endpointLo Dq DQ (g (PaidCellCertificateM.W p)
             (PaidCellCertificateM.slopeQ p) q)) +
         lamB p.nodeID p.rowFrom p.rowTo p.lam := by
-      exact add_le_add_left (by rw [hrho]; exact hlam) _
+      exact add_le_add_left (hrho.trans_le hlam) _
 
 /-- The cap certificate contradicts the packet's strict numeric check. -/
 theorem not_valid_of_weighted_gain {m : ℕ}
@@ -119,5 +127,6 @@ end N11Formalization.PaidCellCertificateMCap
 #check @N11Formalization.PaidCellCertificateMCap.weighted_reduced_le
 #check @N11Formalization.PaidCellCertificateMCap.not_valid_of_weighted_gain
 #check @N11Formalization.PaidCellCertificateMCap.not_valid_of_frozen_cap
+#print axioms N11Formalization.PaidCellCertificateMCap.weighted_reduced_le
 #print axioms N11Formalization.PaidCellCertificateMCap.not_valid_of_weighted_gain
 #print axioms N11Formalization.PaidCellCertificateMCap.not_valid_of_frozen_cap
