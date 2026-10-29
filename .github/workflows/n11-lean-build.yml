@@ -42,16 +42,24 @@ jobs:
         id: build
         working-directory: n11-work/lean
         run: |
-          targets=$(cat ../ops/lanes/*/TARGETS.txt ../ops/BUILD_TARGETS.txt 2>/dev/null | grep -v -E '^\s*(#|$)' | awk '!seen[$1]++ && $1!="N11Formalization"' | tr '\n' ' ')
+          targets=$(cat ../ops/lanes/C/TARGETS.txt ../ops/lanes/B/TARGETS.txt ../ops/lanes/A/TARGETS.txt ../ops/BUILD_TARGETS.txt 2>/dev/null | grep -v -E '^\s*(#|$)' | awk '!seen[$1]++ && $1!="N11Formalization"' | tr '\n' ' ')
           targets="$targets N11Formalization"
           echo "targets: $targets"
           set +e
+          # OOM guard: log memory every 60s and kill lean if available memory < 900MB, so one heavy module cannot take the runner down
+          ( while true; do
+              echo "MEM $(date +%T) $(free -m | awk 'NR==2{print "avail="$7"MB"}') top: $(ps -eo rss,args --sort=-rss | sed -n 2p | cut -c1-160)"
+              av=$(awk '/MemAvailable/{print int($2/1024)}' /proc/meminfo)
+              if [ "$av" -lt 900 ]; then echo "OOM-GUARD killing lean (avail=${av}MB)"; pkill -9 -f 'lean ' ; fi
+              sleep 20
+            done ) | tee -a ../../build.log & 
           for t in $targets; do
             echo "=== BUILD $t" | tee -a ../../build.log
-            timeout 300m lake build "$t" 2>&1 | tee -a ../../build.log
+            timeout 90m lake build "$t" 2>&1 | tee -a ../../build.log
             rc=${PIPESTATUS[0]}
             echo "=== EXIT $t $rc" | tee -a ../../build.log
           done
+          kill $(jobs -p) 2>/dev/null
           true
       - name: Save project build cache
         if: always()
