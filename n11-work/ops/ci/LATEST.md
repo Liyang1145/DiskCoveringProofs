@@ -1,8 +1,8 @@
-# CI latest (run 40818062141)
+# CI latest (run 40861839784)
 
 ```
-40861839784 pending null 1a7c95c3 2026-10-29T10:59:20Z
-40857762507 in_progress null 0cb4f8de 2026-10-29T10:27:52Z
+40861839784 completed success 1a7c95c3 2026-10-29T10:59:20Z
+40857762507 completed success 0cb4f8de 2026-10-29T10:27:52Z
 40818062141 completed success a201da0d 2026-10-29T04:29:49Z
 40816724351 completed cancelled d08278f0 2026-10-29T04:15:28Z
 40815681024 completed success 1d7515cb 2026-10-29T04:04:38Z
@@ -11,11 +11,11 @@
 ## summary.json
 ```json
 {
- "sha": "a201da0d1ca99fc847495d7c84dc9f8da0faa7c3",
+ "sha": "1a7c95c3aebe3a623cb8492593884fde77143274",
  "exits": [
   [
    "N11Formalization.FrozenCapRationalCore",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.PaidCellCertificateM",
@@ -70,93 +70,130 @@
    "1"
   ],
   [
+   "N11Formalization.SevenClassQ0Deg3UpperReduction",
+   "1"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3UpperReductionCounterexample",
+   "1"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal",
+   "1"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3EdgeReal",
+   "1"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3EdgeSuffixHigh",
+   "1"
+  ],
+  [
    "N11Formalization",
    "1"
   ]
  ],
- "built_count": 1730,
+ "built_count": 4,
  "errors_head": [
-  "✖ [893/893] Building N11Formalization.FrozenCapRationalCore (2.3s)",
-  "error: N11Formalization/FrozenCapRationalCore.lean:69:20: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:68:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:81:32: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:75:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:87:20: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:86:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:99:32: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:93:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:105:20: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:104:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:117:32: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:111:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:123:20: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:122:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:135:32: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:129:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:141:20: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:140:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:153:32: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:147:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:159:20: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:158:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:171:32: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:165:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:177:20: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:176:58: unsolved goals",
-  "error: N11Formalization/FrozenCapRationalCore.lean:189:32: Unknown constant `Fin.sum_univ_succ`",
-  "error: N11Formalization/FrozenCapRationalCore.lean:183:58: unsolved goals",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [9153/9153] Building N11Formalization.PaidCellCertificateM (3.5s)",
-  "error: N11Formalization/PaidCellCertificateM.lean:65:4: Type mismatch: After simplification, term",
-  "error: N11Formalization/PaidCellCertificateM.lean:68:4: Type mismatch: After simplification, term",
+  "✖ [9153/9153] Building N11Formalization.PaidCellCertificateM (8.6s)",
   "error: N11Formalization/PaidCellCertificateM.lean:69:4: Type mismatch: After simplification, term",
+  "error: N11Formalization/PaidCellCertificateM.lean:71:4: Type mismatch: After simplification, term",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9153/9154] Building N11Formalization.PaidCellCertificateM (3.4s)",
-  "error: N11Formalization/PaidCellCertificateM.lean:65:4: Type mismatch: After simplification, term",
-  "error: N11Formalization/PaidCellCertificateM.lean:68:4: Type mismatch: After simplification, term",
+  "✖ [9153/9154] Building N11Formalization.PaidCellCertificateM (4.3s)",
   "error: N11Formalization/PaidCellCertificateM.lean:69:4: Type mismatch: After simplification, term",
+  "error: N11Formalization/PaidCellCertificateM.lean:71:4: Type mismatch: After simplification, term",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9298/9298] Building N11Formalization.Paid16GeneralNext1182 (31s)",
+  "✖ [9298/9298] Building N11Formalization.Paid16GeneralNext1182 (39s)",
   "error: N11Formalization/Paid16GeneralNext1182.lean:47:4: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached",
   "error: N11Formalization/Paid16GeneralNext1182.lean:44:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9298/9299] Building N11Formalization.Paid16GeneralNext1182 (32s)",
+  "✖ [9298/9299] Building N11Formalization.Paid16GeneralNext1182 (40s)",
   "error: N11Formalization/Paid16GeneralNext1182.lean:47:4: (deterministic) timeout at `«tactic execution»`, maximum number of heartbeats (200000) has been reached",
   "error: N11Formalization/Paid16GeneralNext1182.lean:44:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9260/9260] Building N11Formalization.SevenClassQ0Deg3Cos (3.9s)",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:28:45: unsolved goals",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:100:9: typeclass instance problem is stuck",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:112:15: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:113:17: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:114:30: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:117:2: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:122:17: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:133:23: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:140:6: mod_cast has type",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:140:31: Application type mismatch: The argument",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:142:21: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:163:15: Unknown identifier `nodeQ`",
-  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:164:17: Unknown identifier `nodeQ`",
+  "✖ [9260/9260] Building N11Formalization.SevenClassQ0Deg3Cos (4.5s)",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:38:47: unsolved goals",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:143:8: maximum recursion depth has been reached",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:158:12: Tactic `rewrite` failed: motive is not type correct:",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:172:2: Type mismatch: After simplification, term",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [10721/10727] Building N11Formalization.SharedMomentConcreteFace1Part1 (499s)",
-  "error: Lean exited with code 137",
-  "✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1088s)",
+  "✖ [9260/9264] Building N11Formalization.SevenClassQ0Deg3Mono (3.6s)",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:54:53: linarith failed to find a contradiction",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:66:9: typeclass instance problem is stuck",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:4: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:14: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:79:9: Unknown identifier `capQ`",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9260/9265] Building N11Formalization.SevenClassQ0Deg3Mono (3.7s)",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:54:53: linarith failed to find a contradiction",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:66:9: typeclass instance problem is stuck",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:4: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:14: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:79:9: Unknown identifier `capQ`",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9260/9264] Building N11Formalization.SevenClassQ0Deg3Mono (3.6s)",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:54:53: linarith failed to find a contradiction",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:66:9: typeclass instance problem is stuck",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:4: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:14: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:79:9: Unknown identifier `capQ`",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9260/9266] Building N11Formalization.SevenClassQ0Deg3Mono (4.0s)",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:54:53: linarith failed to find a contradiction",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:66:9: typeclass instance problem is stuck",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:4: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:14: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:79:9: Unknown identifier `capQ`",
+  "error: Lean exited with code 1",
+  "✖ [9265/9266] Building N11Formalization.SevenClassQ0Deg3Cos (4.7s)",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:38:47: unsolved goals",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:143:8: maximum recursion depth has been reached",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:158:12: Tactic `rewrite` failed: motive is not type correct:",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:172:2: Type mismatch: After simplification, term",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9260/9267] Building N11Formalization.SevenClassQ0Deg3Mono (3.0s)",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:54:53: linarith failed to find a contradiction",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:66:9: typeclass instance problem is stuck",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:4: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:78:14: Unknown identifier `capQ`",
+  "error: N11Formalization/SevenClassQ0Deg3Mono.lean:79:9: Unknown identifier `capQ`",
+  "error: Lean exited with code 1",
+  "✖ [9265/9267] Building N11Formalization.SevenClassQ0Deg3Cos (4.5s)",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:38:47: unsolved goals",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:143:8: maximum recursion depth has been reached",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:158:12: Tactic `rewrite` failed: motive is not type correct:",
+  "error: N11Formalization/SevenClassQ0Deg3Cos.lean:172:2: Type mismatch: After simplification, term",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1351s)",
   "error: Lean exited with code 137",
   "error: build failed"
  ]
 }```
 ## build log tail
 ```
-i/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteFace1Part1.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteFace1Part1.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteFace1Part1.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteFace1Part1.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteFace1Part1.setup.json --json
-error: Lean exited with code 137
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1088s)
+ner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:42:07 avail=2950MB top: 13642912 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:42:27 avail=2591MB top: 13958496 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:42:47 avail=2463MB top: 13974320 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:43:07 avail=2461MB top: 13969600 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:43:27 avail=2386MB top: 14003872 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:43:47 avail=1998MB top: 14021400 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:44:08 avail=1573MB top: 13980600 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:44:28 avail=1171MB top: 14034192 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 11:44:48 avail=870MB top: 14105940 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=878MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1351s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
@@ -190,7 +227,6 @@ info: stdout:
 
 error: Lean exited with code 137
 Some required targets logged failures:
-- N11Formalization.SharedMomentConcreteFace1Part1
 - N11Formalization.SharedMomentConcreteSwitchBatch
 error: build failed
 === EXIT N11Formalization 1
