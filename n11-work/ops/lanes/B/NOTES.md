@@ -1,237 +1,229 @@
 # Lane B notes
 
-SUPERVISOR (2026-10-29 00:45 CST): Once CI reports on Next1182/B13, fix the first error only, re-run. Make `residualIDs.card = 389` a kernel fact (literal list, hierarchical <=170-literal decides) instead of manifest-derived. Then help lane C: write the generic emitter that turns an exact m-row certificate JSON into `PaidCellCertificateM` packets (21 per module).
 
-## 2026-10-29 - session part 7: live CI triage (B targets still CI pending)
+## 2026-10-29T00:57Z - session part 13: fresh-run and hierarchy check
 
 ### Done
-- Resolved the stale LATEST entry: run `40736931996` (head `9e4a3aeb`) is
-  **completed/failure**, but the log shows runner shutdown, not a Lean error:
-  `##[error]The runner has received a shutdown signal` and exit 143 at
-  18:37:58. The run was still building `C450ChainCompletion`; there is no
-  `=== EXIT` line and neither Next1182 nor any other B target started.
-- Rechecked the current generated census: 51/51 block lemmas use the intended
-  `rcases n with ⟨k, hk⟩` then `interval_cases k`; no theorem statement or
-  literal ID changed. Re-ran the emitter and generated-byte checks.
-- Attempted a Mathlib-probe micro-test of the `Fin` destruct/interval shape
-  (timed out at 150 s) and a core `Std` destruct-only probe (timed out at 45 s).
-  Both stalled while loading imports, so they give **no Lean verdict**.
+- Identified the only new run at current head `a006b913`: `40795886068`
+  is the unrelated delivery-byte workflow and failed at
+  `FAIL: Size mismatch cover11/README.md`.  A successful sibling delivery run
+  is likewise not a Lean verdict.
+- Polled the live n11 serial build `40795824642` / job `123191945687` at
+  `00:56:53Z`: still `in_progress`, conclusion `None`; no B `error:` exists yet.
+- Typed a reduced hierarchy/cardinality proof in the cached Mathlib probe
+  (`/workspace/tools/mathlib-probe/BHierarchyProbe.lean`, six pairwise
+  `decide +kernel` facts assembled through `Finset.disjoint_union_right`,
+  then `card_union_of_disjoint`).  The 80 s probe timed out before elaboration,
+  so this is **no Lean verdict** and must not be cited as a check of the real
+  census proof.
 
-### Files and exact hashes (sha256)
+### Files and exact hashes (sha256, unchanged this session)
 - `n11-work/lean/N11Formalization/EnergyTerminalResidualCensus.lean`
-  `B518C606AECC9570E194C70498D57E95DD2B3D12EFE0313EF7FA945438222125`
-- `n11-work/ops/lanes/B/emit_residual_census.py`
-  `6D9DD0DED094C9098D7FD7F9A8988975EE0727CD04678C43C5649FAC0FCFA50E`
-- `n11-work/ops/lanes/B/emit_residual_census-report.json`
-  `616CFE8DFF4505395148EAB95013F4D8541A93074A93F13AF1596D7B9B8C6DE6`
+  `4D4124713E50CDF3A3CA602D15737572570CB1447720B940C8B7C6E28E70645B`
 - `n11-work/ops/lanes/B/TARGETS.txt`
   `8F8BA4842F17F3BE779A979EB3A69D17B1313D3D2967A017A4DD359D9B74B179`
 
 ### Checks executed (scope)
-- `python3 emit_residual_census.py`: PASS; 2,506 terminals, 120 sharp,
-  1,997 paid, 389 residual, chunks 100/100/100/89; source/byte checks only.
-- `python3 -m py_compile emit_residual_census.py` and `git diff --check`: PASS.
-- Generated-source scan: PASS for forbidden tokens; all 51 blocks have the
-  corrected destruct shape. `python tools/project_status.py --check`: PASS
-  (manifest declarations only).
-- No local project Lean build and no kernel evidence.
+- GitHub Actions API metadata only: run/job identity and status.
+- No new source-byte check was needed because neither file changed.
+- Mathlib-probe attempt exited 124 on timeout with no output; no local project
+  Lean build was launched.
 
 ### Still unproved / next concrete step
-- Every B Lean target remains **CI pending**, not paid. The 51 census lemmas,
-  `residualIDs_eq`, B13 disjointness/counts, both energy premises, and
-  `SevenClassExclusions` remain unpaid.
-- Next: on the next non-cancelled `n11-lean-build`, inspect the first
-  `=== EXIT` red target and its first `error:` line; fix only that. If the run
-  is cancelled again before B, report that exact boundary rather than treating
-  it as a Lean failure.
-
-## 2026-10-28 - session part 5: CI/literal-premise dependency audit (CI pending)
+- All four lane-B targets remain **CI pending**.  In particular, the
+  hierarchical census card/disjointness proofs are not locally verified.
+- Next: when job `123191945687` finishes, download its log and quote the first
+  `error:` from `Paid16GeneralNext1182`, `EnergyTerminalBatchB13`,
+  `EnergyTerminalResidualCensus`, or `EnergyTerminalBatchB13Main`; patch only
+  that error.  If green, request root import of `EnergyTerminalBatchB13Main`.
+## 2026-10-29T00:54Z - session part 12: live CI triage
 
 ### Done
-- Audited the literal-premise edge: `EnergyTerminalResidualCensus.RemainingTerminalRadius`
-  is over exactly the 389-id literal census, `remaining_iff_b13` has the claimed
-  direction, and `main_of_energy_literal_and_seven_classes` consumes it via
-  `remaining_iff_b13.mp` before the B13-to-C450 conclusion. No type-direction bug
-  was found in that edge. `residualIDs_card = 389` is already derived from four
-  literal disjoint chunks (100/100/100/89), not a manifest count.
-- GitHub API shows Lean run `40731771155` (`head_sha` `233818af`) **pending with
-  no job**, so there is no first elaboration error to fix yet.
-
-### Files and exact hashes (sha256)
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Main.lean`
-  `2A6A206FE49CD299FCA69221B12B888B55EF6A3A92E34189B3E48C72761D0F98`
-- `n11-work/lean/N11Formalization/EnergyTerminalResidualCensus.lean`
-  `FD771E472F50C1D6DC72D1336D064A3F0D5D8DC8D5790FE01C6933DE07451B56`
-- `n11-work/ops/lanes/B/emit_residual_census.py`
-  `6DBC9E7FEE38703335A22AC2462F965AF5ED58EE1C81A35678DD05F7F043197B`
+- Queried the actual `origin` repository (`Liyang1145/DiskCoveringProofs`), not
+  the placeholder owner used in earlier commands.  Run `40795824642`
+  (head `9614ed9f3cc24e306246355e66e4eea742fe0aa4`) is still `in_progress`;
+  job `123191945687` is still in `build`, so lane B has **no kernel verdict**.
+- Inspected the completed same-SHA failure `40795824632` / job `123191945154`.
+  It belongs to "Delivery bytes, not mathematical proof" and stops at
+  `FAIL: Size mismatch cover11/README.md`.  This is outside lane B and is not
+  evidence against any B target.
+- Rechecked the two part-11 m-row preflight hashes against their recorded
+  values; both match exactly.
 
 ### Checks executed (scope)
-- Source inspection of the two `RemainingTerminalRadius` definitions and their
-  iff lemma: PASS (dependency direction only; not Lean elaboration).
-- `python tools/project_status.py --check`: PASS (manifest declarations only).
-- No Lean build was run; all four B targets remain **CI pending**, not paid.
+- GitHub Actions API metadata for run/job status only.
+- Delivery job log inspection only; no delivery file edited.
+- `sha256sum` on `preflight_mrow_next512.py`
+  (`44CBDB5B...B39B51`) and `mrow-next512-preflight-report.json`
+  (`B9FE91FC...88F361`).  No Lean build launched locally.
 
 ### Still unproved / next concrete step
-- All 51 census block lemmas, B13 disjointness, both energy premises, and
-  `SevenClassExclusions` remain unelaborated/unpaid. Next: when
-  `40731771155` completes, read the first B-target failure, fix only that error,
-  and append its exact log line and rerun state here.
+- All four B Lean targets remain CI pending.  The delivery failure is unrelated
+  and must not be "fixed" by changing frozen bytes from this lane.
+- Next: poll job `123191945687`; on completion, extract the first B-target
+  `error:` and patch only that error.  If green, request root import of
+  `EnergyTerminalBatchB13Main`.
 
-## 2026-10-28 - session part 2: literal 389-ID premise (condensed, CI pending)
-
-- Added `EnergyTerminalResidualCensus.RemainingTerminalRadius` over four literal
-  chunks and `remaining_iff_b13`; added literal-energy wrappers in B13Main.
-- Emitter/regeneration checks passed at source/byte level: 2,506 terminals,
-  120 sharp, 1,997 paid, 389 residual, chunk sizes 100/100/100/89. No local
-  Lean elaboration; all Lean claims remained CI pending. The exact 389 energy
-  premise and `SevenClassExclusions` are still unpaid.
-- Superseded hashes are preserved in git history; current hashes are in the
-  session-part-4 entry. Next step is to read the first current CI failure.
-
-## 2026-10-28 - B13Main credit-transfer type fixed (CI pending)
+## 2026-10-29 - session part 11: next512 m-row preflight
 
 ### Done
-- Confirmed `residualIDs_card = 389` is already a literal hierarchical kernel
-  fact (four disjoint literal chunks of 100/100/100/89; all `decide +kernel`
-  checks see at most 101 literals), not a manifest-derived count. Re-ran the
-  deterministic emitter and reproduced the exact module hash.
-- Lane A's `C450ChainCompletionMain.lean` is now present. Its consumer requires
-  `EnergyTerminalBatchB11.RemainingTerminalRadius`, but B13Main passed the B12
-  premise directly. Fixed the edge in `EnergyTerminalBatchB13Main.lean` by
-  composing `EnergyTerminalBatchB12.remaining_of_b12` with
-  `EnergyTerminalBatchB13.remaining_of_b13`.
+- Re-checked CI run `40795824642` (`9614ed9f`): still `in_progress` at
+  `00:42:44Z`, so there is no B-target kernel verdict yet.
+- Audited the generic lane-C emitter against all public next512 HOST records.
+  It works only per fixed row count, while the survey mixes 2--7 rows.  Added
+  `ops/lanes/B/preflight_mrow_next512.py`, pinned to survey SHA256
+  `F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16`,
+  to partition the 505 passing records and run `audit_record` exactly.
+- All partitions pass exact rational arithmetic: row counts
+  `2:29, 3:97, 4:234, 5:116, 6:21, 7:8` (total 505); every gap is positive,
+  and only m=2--5 attain zero reduced-cost slack (still valid equality).
+  This is a Python preflight, not Lean credit.
+- Re-audited `EnergyTerminalResidualCensus.lean`: the 389 count is already
+  literal (`chunk0..chunk3`, counts 100/100/100/89) with hierarchical
+  disjointness; `b13_residualIDs_card` derives the semantic card from a
+  51-block source-index equality.  Its kernel status remains CI pending.
 
-### Files and exact hashes (sha256)
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Main.lean`
-  `A9F0FB735497EB7875FFB320BDBEF37ED4423FBA7975939FDD0C58EC191E4491`
-- `n11-work/lean/N11Formalization/C450ChainCompletionMain.lean` (Lane A input)
-  `942DD90F69781A7CE1D57C5A393C3C11626CFE4135B30C5834FB2656CA3B6C03`
-- `n11-work/lean/N11Formalization/EnergyTerminalResidualCensus.lean`
-  `B9504B9282D87E3D3FA85842E538A5CCB6CABE5234F1A8AC27F08C3AFBF0C362`
+### Files and SHA256
+- `n11-work/ops/lanes/B/preflight_mrow_next512.py`
+  `44CBDB5B2FBBC457D0116DB81E212AB5120CC58096F56EDBC7DBB976D8B39B51`
+- `n11-work/ops/lanes/B/mrow-next512-preflight-report.json`
+  `B9FE91FC46AC7AAE95BDEB9667E5FF6009DC03BB0DCCED883569FE794488F361`
 
-### Checks executed (scope stated)
-- `python3 n11-work/ops/lanes/B/emit_residual_census.py`: PASS; reproduced
-  2,506 terminals, 120 sharp, 1,997 B13 paid, 389 residual and the exact Lean
-  hash above.
-- Static hard-rule scan of B13Main: PASS. `git diff --check`: PASS.
-  `python tools/project_status.py --check`: PASS (manifest/index declarations
-  only). No Lean elaboration was run locally; all targets remain CI pending.
+### Checks executed (scope)
+- `python3 -m py_compile preflight_mrow_next512.py`: exit 0.
+- `python3 preflight_mrow_next512.py`: exit 0; 505 records, six fixed-m
+  partitions, per-partition positive exact gaps and ID-list hashes recorded.
+- `git diff --check`: PASS.  No local Lean build.
 
-### Still unproved / risks
-- The B13Main type composition is source-checked but not elaborated; CI must
-  confirm it. The 16 B13 disjointness checks and 51 census interval blocks also
-  remain CI pending.
-- `RemainingTerminalRadius` and `SevenClassExclusions` remain explicit unpaid
-  premises. B13Main is conditional and is not the full-disk theorem.
+### Still unproved / next concrete step
+- All four B Lean targets and the m-row `Valid` proofs remain CI pending.
+- Next: fetch job `123191945687` logs when run `40795824642` finishes and fix
+  only the first B-target error.  If green, generate m-row packet modules as
+  six separate fixed-`m` runs (21 records/module), then request root import of
+  `EnergyTerminalBatchB13Main`.
 
-### Very next concrete step
-When CI reports, fix only the first B-lane target error and rerun. If all four
-B targets are green, request the root import switch to
-`EnergyTerminalBatchB13Main`; otherwise do not request it.
-
-## 2026-10-28 — residual equality made blockwise (CI pending)
+## 2026-10-29 - session part 10: live CI recovery and B13 audit
 
 ### Done
-- Replaced the two whole-table `decide +kernel` checks in
-  `EnergyTerminalResidualCensus.lean` with emitted small checks:
-  four 100/100/100/89 chunk soundness lemmas, and 51 source-index interval
-  lemmas (`mem_iff_block00` ... `mem_iff_block50`), each covering at most 100
-  `Fin 5011` values. Each block rewrites semantic membership through
-  `EnergyTerminalBatchB13.mem_residualIDs_iff` before deciding, avoiding a
-  repeated scan of `Finset.univ.filter`; `residualIDs_eq` dispatches an `omega`
-  interval cover.
-- Kept `residualIDs_card = 389` hierarchical; no global semantic-filter decide
-  or manifest count remains in this module.
-- Regenerated the module and report from the checked-in source reconstruction.
+- Queried the public GitHub Actions API instead of trusting the stale local
+  `ci/LATEST.md`.  The current serial build is run `40795824642`, head
+  `9614ed9f3cc24e306246355e66e4eea742fe0aa4`, job `123191945687`; at
+  `00:51:33Z` it was still in the Lean `Build` step (started `00:45:22Z`).
+  No live log blob or annotation exists yet, so there is still no B verdict.
+- Audited `EnergyTerminalBatchB13.lean` and `EnergyTerminalBatchB13Main.lean`
+  against the imported declarations: `new_mem`, `new_count`, `new_radius`,
+  `B12.remaining_of_b12`, and the C450 main interface all have the referenced
+  names and types.  The B13 chain still has the correct direction
+  `B13.Remaining -> B12.Remaining -> C450 -> N11MainStatement`.
+- Re-ran the deterministic census generator.  It exactly reproduced the Lean
+  bytes and reported 2,506 terminals, 120 sharp, 1,997 paid, 389 residual;
+  chunk sizes remain 100/100/100/89.
+
+### Current file hashes (sha256)
+- `EnergyTerminalBatchB13.lean`
+  `54508878D90582A32B7FEF23532FE8892D29D9C30CE002951181979E3F53A75B`
+- `EnergyTerminalBatchB13Main.lean`
+  `2A6A206FE49CD299FCA69221B12B888B55EF6A3A92E34189B3E48C72761D0F98`
+- `EnergyTerminalResidualCensus.lean`
+  `4D4124713E50CDF3A3CA602D15737572570CB1447720B940C8B7C6E28E70645B`
+- `emit_residual_census.py`
+  `769C0797D80149A3CECA56BA14FB3F8D06EABF55801023F8E0CC08119027C9E3`
+
+### Checks executed (scope)
+- `python3 emit_residual_census.py`: PASS at source/byte level; all exact-set,
+  count, and output-hash assertions held.
+- Declaration/name audit by source grep only; `git diff --check`: PASS.
+- No Lean build was launched locally.  All four B targets remain **CI pending**.
+
+### Still unproved / next concrete step
+- The four target modules, all 51 census interval lemmas, `residualIDs_eq`,
+  `b13_residualIDs_card`, B13 counts/disjointness, and the finite energy
+  premise are still unverified by a kernel.  `B13Main` also depends on Lane A.
+- Next: when run `40795824642` finishes, download job `123191945687` logs,
+  extract the first `error:` pertaining to a B target, and fix only that error.
+
+SUPERVISOR (2026-10-29 00:45 CST): Once CI reports on Next1182/B13, fix the
+first error only, re-run. Make `residualIDs.card = 389` a kernel fact (literal
+list, hierarchical <=170-literal decides) instead of manifest-derived. Then
+help lane C: write the generic emitter that turns an exact m-row certificate
+JSON into `PaidCellCertificateM` packets (21 per module).
+
+## 2026-10-29 - session part 9: census reproducibility audit (CI pending)
+
+### Done
+- Re-ran the deterministic census reconstruction.  It exactly reproduced the
+  committed Lean bytes and reported 2,506 terminals, 120 sharp, 1,997 B13-paid,
+  389 residual, with literal chunks 100/100/100/89.
+- Re-audited `EnergyTerminalResidualCensus` and `EnergyTerminalBatchB13Main`:
+  `RemainingTerminalRadius` is over the literal residual set, `remaining_iff_b13`
+  maps it to B13 in the stated direction, and the literal-energy wrapper uses
+  that map before the C450 conclusion.  No type-direction or count mismatch was
+  found by source inspection.
+- No new n11 CI result is available in the worktree.  `ops/ci/LATEST.md` still
+  reports `40736931996` (infra shutdown before a Lean verdict), and run
+  `40795824642` from part 8 has no recorded exit/error.  Therefore none of the
+  B Lean declarations is claimed built.
 
 ### Files and exact hashes (sha256)
 - `n11-work/lean/N11Formalization/EnergyTerminalResidualCensus.lean`
-  `B9504B9282D87E3D3FA85842E538A5CCB6CABE5234F1A8AC27F08C3AFBF0C362`
+  `4D4124713E50CDF3A3CA602D15737572570CB1447720B940C8B7C6E28E70645B`
 - `n11-work/ops/lanes/B/emit_residual_census.py`
-  `fad4a8fe49d46008d6aa3616b378ee140c6a5f4f59388fb11ffffe7a9ec5092d`
+  `769C0797D80149A3CECA56BA14FB3F8D06EABF55801023F8E0CC08119027C9E3`
 - `n11-work/ops/lanes/B/emit_residual_census-report.json`
-  `76a56f3c032d7a4eb46c10b72e354eac763ce65dd1bbd878792523e817ca5fe8`
-- `n11-work/ops/lanes/B/TARGETS.txt` unchanged
-  `8f8ba4842f17f3be779a979eb3a69d17b1313d3d2967a017a4dd359d9b74b179`
+  `5BA63A65116697F739C550BCA0DFF45130A6BFA97288D9A4559AD6C9735941F8`
+- `n11-work/ops/lanes/B/TARGETS.txt`
+  `8F8BA4842F17F3BE779A979EB3A69D17B1313D3D2967A017A4DD359D9B74B179`
+- Unchanged inputs: `Paid16GeneralNext1182.lean`
+  `5F6CB04F84D20AE127DE13498E6929BCE3E3C5BABFA751EF99BE630D0266CB17`;
+  `EnergyTerminalBatchB13.lean`
+  `54508878D90582A32B7FEF23532FE8892D29D9C30CE002951181979E3F53A75B`;
+  `EnergyTerminalBatchB13Main.lean`
+  `2A6A206FE49CD299FCA69221B12B888B55EF6A3A92E34189B3E48C72761D0F98`.
 
-### Checks executed (scope stated)
-- `python3 n11-work/ops/lanes/B/emit_residual_census.py`: PASS; reconfirms
-  terminals 2506, sharp 120, B13 paid 1997, residual 389 and all set relations.
-- `python3 -m py_compile .../emit_residual_census.py`: PASS.
-- Generated Lean hard-rule scan: no `sorry`, `admit`, `axiom`,
-  `native_decide`, `ofReduceBool`, `implemented_by`, or `maxHeartbeats 0`.
-- `git diff --check`: PASS. `python tools/project_status.py --check`: PASS
-  (manifest declarations only).
-- A Mathlib-probe micro-test of the interval/`omega` proof shape timed out at
-  120 s during import, so it produced no Lean result. No project Lean build was
-  run locally; every Lean target remains **CI pending**, not paid.
+### Checks executed (scope)
+- `python3 n11-work/ops/lanes/B/emit_residual_census.py`: PASS at source/byte
+  level; every set/count assertion held and output hash reproduced exactly.
+- `python3 -m py_compile n11-work/ops/lanes/B/emit_residual_census.py`: PASS.
+- `git diff --check`: PASS.  No local project Lean build was run; all B targets
+  remain **CI pending**, not paid.
 
-### Still unproved / risks
-- Elaboration of the 51 new interval lemmas is CI-pending. If one fails, check
-  that block's interval endpoints and use the reported node rather than
-  widening kernel scope.
-- B13's 16 disjointness checks and the explicit `RemainingTerminalRadius` and
-  `SevenClassExclusions` premises remain unpaid. `B13Main` remains blocked on
-  Lane A's missing C450 completion module.
+### Still unproved / next concrete step
+- Unpaid: all four B targets' elaboration, the 51 census interval membership
+  lemmas, `residualIDs_eq`, `b13_residualIDs_card`, B13/Next1182 disjointness
+  and counts, `EnergyTerminalBatchB13.RemainingTerminalRadius`, and
+  `ActualMetricClassReduction.SevenClassExclusions`.  `B13Main` also depends on
+  Lane A's `C450ChainCompletionMain`.
+- Next: obtain the first B-target `error:` from a fresh n11 run and fix only
+  that error; if all four targets are green, request root import of
+  `EnergyTerminalBatchB13Main`, then proceed to Lane C's generic emitter.
 
-### Very next concrete step
-Read CI. If red, fix only the first B-target error and rerun; if green, request
-the root import switch to `EnergyTerminalBatchB13Main`, then implement Lane C's
-generic exact m-row `PaidCellCertificateM` packet emitter (21 packets/module).
+## Condensed prior history (all Lean items CI pending)
 
-## Condensed prior history (all still CI pending)
+### Hierarchical residual census (part 8)
+- Removed a kernel-budget violation from the census emitter: six pairwise
+  chunk disjointness decides (sizes <=100) now assemble through
+  `Finset.disjoint_union_right`; no decided disjointness exceeds two literal
+  chunks.
+- The 51 `mem_iff_block*` lemmas each decide at most 100 source indices and
+  connect the literal census to `EnergyTerminalBatchB13.residualIDs`.
+- Prior census hashes are retained in git history.
 
 ### Stage-2 aggregate and B13 draft
-- Root blocker was an upstream Windows-path bug in `emit_aggregate_hier.py`;
-  lane-local `emit_next1182_top.py` reproduced the frozen top module bytes
-  before applying the implicit-binder fix.
-- `Paid16GeneralNext1182.lean` sha256 (corrected):
-  `5F6CB04F84D20AE127DE13498E6929BCE3E3C5BABFA751EF99BE630D0266CB17`.
-- `EnergyTerminalBatchB13.lean` sha256:
-  `54508878D90582A32B7FEF23532FE8892D29D9C30CE002951181979E3F53A75B`.
-  It proves `paid_count = 1997`, `paid_not_sharp`, terminal/radius dispatch,
-  exact `remaining_iff` over the semantic residual filter, and
+- The lane-local `emit_next1182_top.py` reproduced the frozen top-module bytes
+  before the implicit-binder correction, avoiding an upstream Windows-path bug.
+- `EnergyTerminalBatchB13.lean` proves `paid_count = 1997`, `paid_not_sharp`,
+  terminal/radius dispatch, the semantic `remaining_iff`, and
   `remaining_of_b13 : B13.RemainingTerminalRadius -> B12.RemainingTerminalRadius`.
-- `EnergyTerminalBatchB13Main.lean` sha256:
-  `7685A0FFE7C192BC997EBD6FB5D17B96C197ABC72C42E43B319D9CA47655683C`.
-  It conditionally transfers B13 to the C450 main theorem and the full-disk
-  corollary. **ROOT-IMPORT REQUEST (after CI green):** import B13Main instead
-  of B12Main.
+- `EnergyTerminalBatchB13Main.lean` conditionally transfers B13 to the C450
+  main theorem and the full-disk corollary.
+- **ROOT-IMPORT REQUEST (only after CI green):** import
+  `EnergyTerminalBatchB13Main` instead of `EnergyTerminalBatchB12Main`.
 
 ### Earlier engineering history
 - `Finset.disjoint_left.mp` requires `(a := a)`; fixed in Next1182 and B13.
 - B11 straddles the 2565 boundary; if CI rejects it, split B11 into B10 plus
   G03-G12 rather than assuming a range.
 - The old 389 claim was manifest arithmetic only; the literal reconstruction is
-  now 2,506 terminals - 120 sharp - 1,997 paid = 389 residual.
-
-## 2026-10-28 - session part 4: semantic B13 residual cardinal (CI pending)
-
-### Done
-- Added `b13_residualIDs_card : EnergyTerminalBatchB13.residualIDs.card = 389`
-  to the deterministic census emitter/generated module. It rewrites the B13
-  semantic set through `residualIDs_eq` and `residualIDs_card`; no new kernel
-  decide is introduced. Emitter regenerated 2,506 terminals, 120 sharp,
-  1,997 paid and 389 residual.
-- API audit: n11 run `40731771155` remains pending with no job; runs
-  `40731863840`/`40731863933` are the replay/delivery workflows, not Lean.
-
-### Files (sha256)
-- Lean `EnergyTerminalResidualCensus.lean`
-  `FD771E472F50C1D6DC72D1336D064A3F0D5D8DC8D5790FE01C6933DE07451B56`
-- `emit_residual_census.py`
-  `6DBC9E7FEE38703335A22AC2462F965AF5ED58EE1C81A35678DD05F7F043197B`
-- `emit_residual_census-report.json`
-  `F0B342655F9CE2EA56F49BDD20570A07F401CDFC7533054DFA57C06494566518`
-
-### Checks executed (scope)
-- Emitter and `py_compile`: PASS at source/byte level; count assertions PASS.
-- Forbidden-token scan of generated Lean: PASS; `git diff --check`: PASS.
-- Project status: PASS (manifest/index declarations only).
-- No local project Lean elaboration; new theorem is **CI pending**.
-
-### Still unproved / next concrete step
-- Unpaid: all 51 `mem_iff_block*` lemmas, `residualIDs_eq`, the new derived
-  cardinal lemma, B13 disjointness and both mathematical premises.
-- Next: read the first `n11-lean-build` failure for run `40731771155`; fix only
-  that error, then rerun. Do not edit lane C files while doing so.
+  2,506 terminals - 120 sharp - 1,997 paid = 389 residual.
+- Mathlib-probe import attempts (150 s and 45 s) timed out before elaboration,
+  so they gave no Lean verdict.  CI is the only Lean-build authority.

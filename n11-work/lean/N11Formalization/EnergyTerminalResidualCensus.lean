@@ -22,9 +22,21 @@ theorem chunk2_card : chunk2.card = 100 := by decide +kernel
 def chunk3 : Finset (Fin 5011) := {4620,4622,4633,4634,4639,4641,4643,4645,4646,4650,4654,4656,4660,4663,4671,4672,4673,4674,4678,4682,4683,4684,4685,4688,4692,4704,4706,4708,4710,4712,4714,4716,4717,4721,4723,4726,4727,4730,4735,4737,4744,4745,4747,4753,4755,4757,4761,4765,4770,4773,4775,4783,4785,4786,4787,4789,4792,4793,4794,4797,4801,4825,4829,4831,4843,4844,4879,4905,4921,4922,4923,4924,4926,4936,4937,4938,4939,4940,4941,4947,4954,4962,4963,4965,4966,4967,4971,4982,4992}
 theorem chunk3_card : chunk3.card = 89 := by decide +kernel
 def residualIDs : Finset (Fin 5011) := chunk0 ∪ (chunk1 ∪ (chunk2 ∪ (chunk3)))
-private theorem chunk0_disjoint : Disjoint chunk0 (chunk1 ∪ (chunk2 ∪ (chunk3))) := by decide +kernel
-private theorem chunk1_disjoint : Disjoint chunk1 (chunk2 ∪ (chunk3)) := by decide +kernel
-private theorem chunk2_disjoint : Disjoint chunk2 (chunk3) := by decide +kernel
+private theorem chunk0_disjoint_chunk1 : Disjoint chunk0 chunk1 := by decide +kernel
+private theorem chunk0_disjoint_chunk2 : Disjoint chunk0 chunk2 := by decide +kernel
+private theorem chunk0_disjoint_chunk3 : Disjoint chunk0 chunk3 := by decide +kernel
+private theorem chunk1_disjoint_chunk2 : Disjoint chunk1 chunk2 := by decide +kernel
+private theorem chunk1_disjoint_chunk3 : Disjoint chunk1 chunk3 := by decide +kernel
+private theorem chunk2_disjoint_chunk3 : Disjoint chunk2 chunk3 := by decide +kernel
+private theorem chunk0_disjoint : Disjoint chunk0 (chunk1 ∪ (chunk2 ∪ chunk3)) := by
+  rw [Finset.disjoint_union_right]
+  exact ⟨chunk0_disjoint_chunk1, by
+    rw [Finset.disjoint_union_right]
+    exact ⟨chunk0_disjoint_chunk2, chunk0_disjoint_chunk3⟩⟩
+private theorem chunk1_disjoint : Disjoint chunk1 (chunk2 ∪ chunk3) := by
+  rw [Finset.disjoint_union_right]
+  exact ⟨chunk1_disjoint_chunk2, chunk1_disjoint_chunk3⟩
+private theorem chunk2_disjoint : Disjoint chunk2 chunk3 := chunk2_disjoint_chunk3
 theorem residualIDs_card : residualIDs.card = 389 := by
   rw [residualIDs, Finset.card_union_of_disjoint chunk0_disjoint, chunk0_card]
   rw [Finset.card_union_of_disjoint chunk1_disjoint, chunk1_card]

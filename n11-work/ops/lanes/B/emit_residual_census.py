@@ -148,11 +148,22 @@ for i in reversed(range(3)):
     chain = f"chunk{i} ∪ ({chain})"
 lines.append(f"def residualIDs : Finset (Fin 5011) := {chain}")
 
-for i in range(3):
-    tail = "chunk3"
-    for j in reversed(range(i + 1, 3)):
-        tail = f"chunk{j} ∪ ({tail})"
-    lines.append(f"private theorem chunk{i}_disjoint : Disjoint chunk{i} ({tail}) := by decide +kernel")
+for i in range(4):
+    for j in range(i + 1, 4):
+        lines.append(
+            f"private theorem chunk{i}_disjoint_chunk{j} : "
+            f"Disjoint chunk{i} chunk{j} := by decide +kernel"
+        )
+lines.append("private theorem chunk0_disjoint : "
+             "Disjoint chunk0 (chunk1 ∪ (chunk2 ∪ chunk3)) := by")
+lines.append("  rw [Finset.disjoint_union_right]")
+lines.append("  exact ⟨chunk0_disjoint_chunk1, by")
+lines.append("    rw [Finset.disjoint_union_right]")
+lines.append("    exact ⟨chunk0_disjoint_chunk2, chunk0_disjoint_chunk3⟩⟩")
+lines.append("private theorem chunk1_disjoint : Disjoint chunk1 (chunk2 ∪ chunk3) := by")
+lines.append("  rw [Finset.disjoint_union_right]")
+lines.append("  exact ⟨chunk1_disjoint_chunk2, chunk1_disjoint_chunk3⟩")
+lines.append("private theorem chunk2_disjoint : Disjoint chunk2 chunk3 := chunk2_disjoint_chunk3")
 
 lines.append("theorem residualIDs_card : residualIDs.card = 389 := by")
 lines.append("  rw [residualIDs, Finset.card_union_of_disjoint chunk0_disjoint, chunk0_card]")
