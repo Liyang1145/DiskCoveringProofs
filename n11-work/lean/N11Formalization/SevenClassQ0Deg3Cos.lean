@@ -78,7 +78,7 @@ theorem sinT14_nonneg {x : ℝ} (hx0 : 0 ≤ x) (hx : x ≤ Real.pi / 2) :
   have hcoef : 0 ≤ 2 / Real.pi - 1 / 2 := sub_nonneg.mpr hpi
   have hlower : x * (2 / Real.pi - 1 / 2) ≤
       Real.sin x - x ^ 29 / ((Nat.factorial 29 : ℕ) : ℝ) := by
-    nlinarith
+    linarith [hsin, hq]
   exact (mul_nonneg hx0 hcoef).trans (hlower.trans herr)
 
 theorem cosHiReal_antitoneOn : AntitoneOn cosHiReal (Set.Icc 0 (Real.pi / 2)) := by
@@ -192,6 +192,7 @@ theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
         have ht : min n 2048 = 2048 := Nat.min_eq_right (by omega)
         rw [hs, ht]
       rw [gridCos, gridCos, h1]
+      exact le_rfl
 
 /-- Adjacent grid monotonicity of `cosHiNLag` on all 2048 steps. -/
 theorem gridCos_antitone : Antitone gridCos := by

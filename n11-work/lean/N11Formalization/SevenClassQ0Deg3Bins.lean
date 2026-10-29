@@ -88,7 +88,8 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
       have hkq : (k.val : ℚ) ≤ ((binHi (binIndex k)).val : ℚ) := by
         exact_mod_cast hkhi
       have hpi : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
-      nlinarith
+      exact div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hkq hpi) (by norm_num)
     have hbhi : (binHi (binIndex k)).val ≤ 1791 := by
       simp only [binHi]
       split
@@ -100,7 +101,8 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
       have hbq : ((binHi (binIndex k)).val : ℚ) ≤ 1791 := by
         exact_mod_cast hbhi
       have hpi : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
-      nlinarith
+      exact div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hbq hpi) (by norm_num)
     have hhalf : nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 ≤
         RatInterval.piLo / 2 := by
       have hrat : RatInterval.piHi * 1791 / 4096 ≤ RatInterval.piLo / 2 := by
