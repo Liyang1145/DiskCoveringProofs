@@ -44,41 +44,18 @@
   copied matrices to `DBMSourceTree.data` by kernel `decide`. Both remain
   **CI pending**. Local Mathlib probing was unavailable (stub olean).
 
-## 2026-10-29 — sessions part 23–24 (exact support threshold <=4; no row rescue)
+## 2026-10-29 — sessions part 23–24 (condensed; exact <=4-field gain search)
 
-Did:
-- Confirmed no local Lean elaboration: Mathlib olean is a 1128-byte stub; CI is
-  the only kernel authority. numpy/scipy also absent, so all searches are exact.
-- Recognised the 100 ordered-pair caps are interval sums in `y`. On a fixed
-  support they collapse to at most `2^k-1` half-spaces, allowing exhaustive
-  rational vertex enumeration. `residual_mixture_faces.py` then excluded every
-  <=2-field mixture for all seven public ids.
-- Added `residual_mixture_faces3.py` and `residual_mixture_faces4.py`. For every
-  id they enumerate all 84 triples / 126 quadruples and every polytope vertex
-  exactly, asserting all 100 caps and `Σy=1`, `y>=0`. Result: **all <=3- and
-  <=4-field faces are infeasible**. Hence any cap-feasible mixture for these ids
-  has support >=5; the existing five/six-field certificates attain that bound.
-- Re-ran `certify_next512_row_cap.py`: exit 0, 7/7 exact arbitrary-row-count
-  exclusions, all 100 ordered pairs, strict margins `7.39e-7` to `4.97e-5`.
-  Thus there is no passing packet to emit, and the former LANES-C row-extension
-  plan is mathematically dead for these seven. Any rescue must change the
-  certified cap/row set, not just its size.
-
-Files: `residual_mixture_faces3.py` SHA256 `b7768e0c...e0794f`,
-`residual-mixture-faces3.json` `e773e520...72b668b`,
-`residual_mixture_faces4.py` `579c1c72...e332e01`,
-`residual-mixture-faces4.json` `34bce5b7...0f860551`; `TARGETS.txt` unchanged.
-
-Checks run (scope stated):
-- `python3 residual_mixture_faces3.py`: exit 0, 7x84 faces, `pass_count=0`.
-- `python3 residual_mixture_faces4.py`: exit 0, 7x126 faces, `pass_count=0`.
-- `certify_next512_row_cap.py`: exit 0, 512 inspected, 7 excluded, 100 caps each.
-- `py_compile` both new scripts: exit 0. `git diff --check`: exit 0. No Lean.
-
-Still unproved / missing:
-- The <=3/<=4 support results are Python exact-rational evidence, not kernel
-  theorems. Core/M/MCap/row caps/bridges remain CI pending. The 382 absent HOST
-  records still block the global energy count; no exclusion is unconditional.
+- Exact rational search over all 84 triples and 126 quadruples found no gain
+  rescue for the seven public ids. Five/six-field witness supports remain
+  cap-feasible but still fall below the strict gain threshold (see part 34).
+- `certify_next512_row_cap.py` passes 7/7 arbitrary-row-count exclusions over
+  all 100 ordered pairs; tightest margin `7.39e-7` at 2356. Extra DBM rows do
+  not rescue the frozen formulas.
+- Scripts: `residual_mixture_faces3.py` (`b7768e0c...e0794f`) and
+  `residual_mixture_faces4.py` (`579c1c72...e332e01`); JSON counterparts
+  `e773e520...72b668b` and `34bce5b7...0f860551`. All CI waiting items below
+  remain unpaid Python evidence, not kernel conclusions.
 
 ## 2026-10-29 — sessions 25–26 (seven node-pinned exclusion wrappers)
 
@@ -223,3 +200,44 @@ Very next concrete step: read `=== EXIT N11Formalization.FrozenCapRationalCore`,
 then M and MCap, from run `40857762507`. If all are 0, add only
 `N11Formalization.FrozenCapRowCap1409` to `TARGETS.txt`; otherwise patch the
 first reported core/M/MCap diagnostic. Do not treat local timeout as red.
+
+## 2026-10-29 — part 34 (support audit; five-field search drafted)
+
+Did:
+- Re-audited the seven public residual witnesses in `FrozenCapRationalCore.lean`
+  against `DBMSourceTreeData.lean` and the frozen proposal with exact
+  `fractions.Fraction` arithmetic. All seven weight vectors sum to 1, satisfy
+  all 100 ordered-pair caps, and have exact gain strictly below `T^2`.
+  Supports are 1409 `[1,3,4,7,8]`, 2337 `[3,4,5,7,8]`,
+  2341 `[1,3,4,6,7,8]`, 2356 `[1,3,4,5,7,8]`,
+  2360 `[2,3,4,5,7,8]`, 2368 `[2,3,4,6,7,8]`,
+  2370 `[3,4,5,7,8]`.
+- Corrected the interpretation of the old <=4-field result: it excludes a
+  **gain rescue**, not cap feasibility. Those face scripts correctly say
+  "no <=4-field rescue"; the prior note's word "infeasible" was too strong.
+- Added `residual_mixture_faces5.py`, an exact five-field vertex enumerator
+  over all 126 supports and all 100 caps, with a PASS only when the exact gain
+  exceeds the record threshold. It is a HOST-side search, not kernel evidence.
+
+File SHA256:
+- `ops/lanes/C/residual_mixture_faces5.py`
+  `b94f4899205d4fc4f9dbacfb15421cb1acebdf94656c4620e14b41442b8a25be`.
+
+Checks run (scope stated):
+- Exact witness/audit snippet: 7/7 unit-sum, 7/7 all-100-caps feasible,
+  7/7 strict-gain-failing; no Lean.
+- `python3 -m py_compile residual_mixture_faces5.py`: exit 0.
+- `timeout 50s python3 residual_mixture_faces5.py`: exit 124, no JSON emitted.
+- A separate 25s node-1409-only run also exited 124 before any result. Both are
+  **inconclusive**; no five-field margin or seven-record pass count exists.
+- CI verdict still unavailable; do not claim any Lean kernel credit.
+
+Still unproved / missing:
+- No five-field rescue result yet; supports 6–9 were not searched.
+- Core/M/MCap/row-caps/bridges/wrappers remain **CI pending**. Packet
+  `hf0`/`hg` inputs and 382 HOST records remain absent. No energy-count change.
+
+Very next concrete step: run `python3 -u residual_mixture_faces5.py` per node
+under separate bounded timeouts (or precompute/cache the repeated rational
+hyperspace determinants first), save partial per-node JSON, and report the exact
+best five-field margin. Do not restart the full seven-record loop blindly.
