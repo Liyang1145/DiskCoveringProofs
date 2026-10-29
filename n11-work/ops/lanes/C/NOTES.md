@@ -1,3 +1,11 @@
+EXPERT (2026-10-29):
+- M is green and sound but pays no energy count.
+- Fix MCap line 40 with `simp only [DBMMinorantDual.rho]`; line 71 cascade should resolve.
+- Keep TARGETS to current three; add row caps/bridges/wrappers only after MCap is green.
+- Unify FrozenCapCertificates F0/G/y/E with FrozenCapRationalCore; remove duplicate constants.
+- After MCap, complete one node-pinned wrapper (1409) with hnode/hf0/hg/row_cap/bridge before broad rollout.
+- Max credit is seven residual IDs while 382 HOST records are absent; do not claim class/energy credit until wrappers are green and linked.
+
 # Lane C notes
 
 ## Standing guidance
@@ -6,12 +14,6 @@
   TARGETS stay `FrozenCapRationalCore`, `PaidCellCertificateM`,
   `PaidCellCertificateMCap`; do not target `FrozenCapCertificates` until the
   core is green.
-- EXPERT: M/MCap are sound but pay no energy count. The seven `excluded_*`
-  theorems remain conditional without `hnode : p.nodeID = <id>` and proved
-  `row_cap_<id>` lemmas. Test one id locally first; then bridge
-  `FrozenCapCertificates` to the rational core. Do not claim class/energy credit
-  while 382 public residual records remain absent.
-
 ## Condensed history through part 27
 
 - The residual census reconstructs 389 IDs, but only seven have public

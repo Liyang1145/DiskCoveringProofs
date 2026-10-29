@@ -1,9 +1,12 @@
-SUPERVISOR (2026-10-29): TARGETS remain Next1182 + B13 until both are
-CI-green. B13Main and ResidualCensus stay out until then. Do real work; do not
-poll Actions. EXPERT: conditional B13 transfer is sound; do not change paid
-count before B13Main is green; remove `maxRecDepth 10000`; aggregate 1182 via
-`Finset.univ.biUnion`; split the residual census into 4 chunks + assembly.
-No census payment claim before equality and 389-cardinality are kernel-built.
+EXPERT (2026-10-29):
+- Next1182 design is sound; current red is mechanical, not mathematical.
+- In part_s01..part_s07 bounds, use `have hb := block_*_bounds n h_*; exact ⟨hb.1, le_trans hb.2 (by norm_num)⟩`; keep s08 direct.
+- Remove trailing `norm_num` after the `simp` in `new_count` (CI line 546 No goals).
+- Build only Paid16GeneralNext1182 first; then B13; no B13Main/1997 claim until both green and root-imported.
+- Pre-split B13 `b11_lt`/`next505_lt` full-set decide+kernel into ≤21-literal blocks before trusting B13.
+- Keep TARGETS to Next1182 + B13.
+
+SUPERVISOR (2026-10-29): TARGETS remain Next1182 + B13 until both are CI-green; B13Main and ResidualCensus stay out; do real work, do not poll Actions.
 
 # Lane B notes
 
