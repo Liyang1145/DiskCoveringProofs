@@ -101,3 +101,144 @@ The atom-key/field bijection is not yet emitted.
 - `extract_finite_class_tables.py` audits q0(4,9) finite graph/layout only.
 - C450 modules and verifier are static-audited but never kernel checked.
 - `ROOT-IMPORT REQUEST` for C450Main after CI green; no root edit by lane A.
+
+## 2026-10-29 — q0 degree-three feasible 8-bin node family
+
+**Did.** Added `probe_q0_degree3_piecewise.py` and
+`q0-degree3-piecewise-8.json`. The node is constant on eight equal q-bins with
+exact rational values:
+
+`239/1250, 239/1250, 133/625, 2721/10000, 643/2000, 897/2500, 191/500, 1949/5000`.
+
+Each value is the least denominator-10000 rational selected by exact bisection
+against `sinLoNLag a >= max capQ` on its bin. The manifest stores exact source
+multiplier midpoints, bin endpoints/thresholds, 21 edge maxima with grid
+witnesses, 9 sector maxima with grid witnesses, `totalUpper`, and the exact
+positive slack. Exact result: all 2049 grid nodes are `NodeValid`, and
+`totalUpper < RatInterval.piLo`; relative slack is approximately
+`0.0038492865576 * piLo` (the exact fraction is in the JSON).
+
+**Checks (scope).** `timeout 180s python3 probe_q0_degree3_piecewise.py`: PASS,
+exact `Fraction` arithmetic over the source interval midpoints and N=2048 grid;
+it asserts every node inequality, all maxima are attained on the grid, and the
+final strict inequality. `python3 -m py_compile`: PASS. This is a candidate-data
+audit only; no Lean elaboration, kernel check, or CI claim.
+
+Hashes:
+- `probe_q0_degree3_piecewise.py`: `262fd25a50fd1d3e06e7eda2dde08ff69ae0944e885e8dc418d8a1ec710bd036`
+- `q0-degree3-piecewise-8.json`: `22e49d9dc6962602100f47668ebaaf3d7b3defd3fc126567fbdd7b9084cb6996`
+- source `degree3_area_certificate.json`: `fe73e1f3e78b7041d563de4fde94b235226ab460210949f59888fb623d89ceb2`
+
+**Still unproved.** No Lean module yet defines this node or proves
+`Degree3AreaCertificate`; `Q0Degree3AreaInput` remains uninhabited. The maxima
+are exact rational grid witnesses, but their all-node bounds and the bin
+`NodeValid` implications still need Lean proofs. Existing C450 modules remain
+frozen/CI-pending per supervisor instruction.
+
+**Next concrete step.** Emit a table module for the eight constants and prove
+`NodeValid` per bin using rational threshold comparison plus `capQ`
+monotonicity. Then split each of the 21 edge and 9 sector all-node bounds into
+small monotone subintervals (avoid any 2049-literal `decide`), instantiate
+`Degree3AreaCertificate`, and add only the resulting new module to
+`TARGETS.txt` for CI.
+
+## 2026-10-29 (part 2) — q0 deg3: per-bin endpoint reduction checked
+
+**Did.** Added `probe_q0_degree3_binmax.py` (exact `Fraction`). It partitions all
+2049 grid nodes into the eight existing bins (no overlap, full coverage), checks
+for each bin that `capQ` attains its grid maximum exactly at the bin's last node
+(`kHi`, whose q equals the exact bin `qHi`), and records the exact positive
+`sinLoNLag a - capQ(qHi)` margin. Thus the `NodeValid` obligation over
+`Fin 2049` reduces to 8 endpoint comparisons *provided* `capQ` is monotone on
+each bin (that monotonicity is NOT checked and remains to be proved in Lean).
+Minimum exact margin (all positive; exact fraction in JSON):
+`277922260153149832458652959035620408410554828194697398625334509669382088268179002957611323326117355433047119206676837749851 / 81128399449723602539062500000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000`.
+
+**Checks (scope).** `timeout 120s python3 probe_q0_degree3_binmax.py`: PASS,
+exact rational arithmetic over the source interval midpoints and the N=2048
+grid; covers all 2049 nodes; asserts positive margin per bin. No Lean
+elaboration/build/kernel check; `q0-degree3-binmax.json` is a data audit only.
+
+Hashes:
+- `probe_q0_degree3_binmax.py`: `bc4efb69f3a15fda546e01af1353dd1ca03db77e039e4688eebd6eb8c173b872`
+- `q0-degree3-binmax.json`: `f582c26c9e0688526078881f12ce2b3be54231b595a3d6eda54fd8c86a82add0`
+
+**Still unproved.** No Lean module defines `nodeBin`/proves `NodeValid`;
+`Q0Degree3AreaInput` remains uninhabited; `capQ` monotonicity on bins unproved;
+the 21 edge / 9 sector all-node maxima unproved in Lean. C450 modules remain
+frozen/CI-pending (LATEST.md still shows no successful lane-A build).
+
+**Next concrete step.** Emit `SevenClassQ0Deg3Bins.lean`: define `nodeBin :
+Fin 2049 → ℚ` from the 8 constants and prove `∀ k, NodeValid (nodeQ piHi 2048 k)
+(nodeBin k)` via 8 endpoint comparisons plus a `capQ` monotonicity lemma (find
+`sinHiNLag` monotone lemmas in `IntervalsHighLag`/`Interval/Trig`; fall back to
+splitting each bin into monotone subintervals). Add only that new module to
+TARGETS.txt; do not touch the frozen C450 files.
+
+Lead for next step: `grep sinHiNLag.*mono` found no direct monotonicity lemma;
+only `IntervalsHighLag.lean:172` uses `Real.monotoneOn_sin`. Expect to prove
+`capQ` monotonicity from `sinHiNLag_le_sin`/`sin_le_sinHiNLag` and
+`Real.monotoneOn_sin` on `[0, piHi/2]`, or subdivide bins further.
+
+## 2026-10-29 (part 3) — q0 deg3 eight-bin Lean reduction drafted
+
+**Did.** Added `SevenClassQ0Deg3Bins.lean`, defining `binIndex`, `binHi`,
+`nodeBinAt`, `nodeBin` and proving `nodeBinAt_mem`. The theorem
+`node_valid_of_grid_cap` reduces all 2049 `NodeValid` obligations to two named
+unpaid premises: `CapMonotoneOnGrid` (grid cap at `k` ≤ cap at its bin endpoint)
+and `EndpointValid` (the eight exact endpoint comparisons). Added only this new
+module to lane-A `TARGETS.txt`; frozen C450 modules untouched.
+
+Also tested the alternative small-`Fin` kernel route in mathlib-probe with the
+same rational definitions: `decide +kernel` over 8 nodes did not finish within
+90 s, and `norm_num` on one node did not finish within 60 s. Scope: isolated
+Mathlib probe, no project imports/build; these are engineering negatives, not
+proofs.
+
+Hashes:
+- `SevenClassQ0Deg3Bins.lean`: `71c27a8d1083f66d861facd3f112fbe499c820ba7aeb5f0b63d6dd69c8f170f8`
+- `TARGETS.txt`: `713fd7cf247684cc81dfc762e0bbe7d731a7f376db6916bba2980eaf23064270`
+
+**Checks (scope).** No local Lean project build was run (per weak-host rule).
+CI pending for all four lane-A targets listed in `TARGETS.txt`. Python audits
+from part 2 remain PASS, exact rational data only.
+
+**Still unproved.** Both `CapMonotoneOnGrid` and `EndpointValid` are uninhabited.
+`Q0Degree3AreaInput` remains uninhabited; the 21 edge/9 sector maxima and strict
+total still need Lean proofs. No axiom claim is made for the new module.
+
+**Next concrete step.** Prove the eight `EndpointValid` conjunctions by
+`norm_num [EndpointValid,binHi,nodeBinAt,capQ,nodeQ,sinLoNLag,sinHiNLag,sinTQ]`
+if tractable on CI; otherwise emit denominator-cleared polynomial endpoint
+lemmas. Then attack `CapMonotoneOnGrid` via `Real.monotoneOn_sin` and Taylor
+remainders, splitting bins if needed.
+
+## 2026-10-29 (part 4) — endpoint obligations separated; probe blocked
+
+**Did.** Split the eight-conjunction endpoint target into a named
+`EndpointCheck (j : Fin 8)` plus `endpointValid_of_eight`, so each rational
+Taylor endpoint comparison is an independent Lean goal. This is a structural
+reduction only; none of the eight checks has been proved.
+
+Attempted an isolated one-endpoint probe of `19/100 ≤ sinLoNLag (239/1250)`
+with copied `sinLoNLag`/`sinTQ` definitions. The sandbox Mathlib-probe has no
+built `Mathlib.olean` (`unknown module prefix 'Mathlib'`), so this probe
+produced no mathematical evidence. Do not count the prior 60/90 s probe
+negatives as current evidence either until the probe cache is inspected.
+
+**Checks (scope).** `python3 tools/project_status.py --check`: exits 0,
+handoff status only. No Lean build/elaboration/kernel check for the edited
+module. CI remains pending.
+
+Hash:
+- `SevenClassQ0Deg3Bins.lean`: `ce88107a561a1ab57de9d7715200ff3aa723c264b9da6a392169e56c25f11a55`
+
+**Still unproved.** All eight `EndpointCheck` goals, `CapMonotoneOnGrid`,
+the edge/sector maxima, strict total, and inhabitation of
+`Q0Degree3AreaInput`. C450 remains frozen/CI-pending.
+
+**Next concrete step.** Inspect `/workspace/tools/mathlib-probe/.lake` to
+restore a usable probe (or compile only `Mathlib.Data.Rat.Defs`), then test
+endpoint 0. Prefer a coarse rational chain: bound `capQ` by
+`(19/50)*max (1/2) (q/2)` and compare against a low-degree Taylor lower bound,
+rather than expanding the full 29th-degree `sinTQ 14` expression.
