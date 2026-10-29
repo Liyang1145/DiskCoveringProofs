@@ -118,11 +118,21 @@ for i in range(8):
 lines.append("theorem lower_bound (n : Fin 5011) (hn : n ∈ newIDs) : 2565 ≤ n.val := by")
 lines.append("  rcases (new_mem n).mp hn with " + " | ".join("h" for _ in SUBS))
 for i, sub in enumerate(SUBS):
-    lines.append(f"  · exact (part_s{i+1:02}_bounds n h).1")
+    lines.append(f"  · have hb := (part_s{i+1:02}_bounds n h).1")
+    lines.append("    omega")
 lines.append(f"theorem new_count : newIDs.card = {count} := by")
 lines.append("  have hdisj : Set.PairwiseDisjoint (Finset.univ : Finset (Fin 8)) part := by")
 lines.append("    intro i _ j _ hij")
-lines.append(f"    fin_cases i <;> fin_cases j <;> simp_all [part, {', '.join(pair_names)}]")
+lines.append("    fin_cases i")
+for i in range(8):
+    lines.append("    · fin_cases j")
+    for j in range(8):
+        if i == j:
+            lines.append("      · exact (hij rfl).elim")
+        elif i < j:
+            lines.append(f"      · simpa [part] using disjoint_s{i+1:02}_s{j+1:02}")
+        else:
+            lines.append(f"      · simpa [part] using disjoint_s{j+1:02}_s{i+1:02}.symm")
 lines.append("  rw [newIDs, Finset.card_biUnion hdisj]")
 lines.append("  simp [Fin.sum_univ_succ, part,")
 lines.append("      " + ",\n      ".join(f"{s}.new_count" for s in SUBS) + "]")
@@ -174,6 +184,8 @@ report = {
         "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
         "prove part disjointness from literal membership bounds (consecutive intervals)",
         "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts from the block conjunction using omega",
+        "lift each part-local lower bound to the global lower bound by transitivity with omega",
+        "dispatch the 64 ordered PairwiseDisjoint cases explicitly instead of relying on simp_all",
         "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
         "remove maxRecDepth 10000",
     ],

@@ -8,11 +8,13 @@
     "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
     "prove part disjointness from literal membership bounds (consecutive intervals)",
     "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts from the block conjunction using omega",
+    "lift each part-local lower bound to the global lower bound by transitivity with omega",
+    "dispatch the 64 ordered PairwiseDisjoint cases explicitly instead of relying on simp_all",
     "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
     "remove maxRecDepth 10000"
   ],
-  "corrected_chars": 37554,
-  "corrected_utf8_bytes": 38267,
-  "corrected_sha256": "0AFA07FB3BC7BB66C147CFC9B213993ABC2FE4646D8EE16FA6018F3802049D1B",
+  "corrected_chars": 40114,
+  "corrected_utf8_bytes": 40899,
+  "corrected_sha256": "F63677C532B2778AAB72D3AFD8C0EFF9B6AA00C3E7328A3EDD4601016186DAB3",
   "scope": "source emission and inventory only; Lean elaboration is CI-pending"
 }

@@ -2,7 +2,7 @@
   "census_api_present": true,
   "direct_imports": 4,
   "forbidden_main": [],
-  "in_targets": false,
+  "in_targets": true,
   "missing_imports": [],
   "missing_required_names": [],
   "ok": true,

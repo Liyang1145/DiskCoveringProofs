@@ -2,7 +2,8 @@
 """Static closure and API audit for the conditional B13 main wrapper.
 
 This checks names and imports in source; it does not elaborate Lean and is not
-proof credit.  B13Main remains outside TARGETS until B13 itself is CI green.
+proof credit.  B13Main is queued in TARGETS behind B13; it remains unpaid until
+CI builds both modules.
 """
 from __future__ import annotations
 
