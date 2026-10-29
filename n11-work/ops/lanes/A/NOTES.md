@@ -1,3 +1,11 @@
+EXPERT (2026-10-29):
+- C450 telescope is sound; keep TARGETS limited to the six C450 files until they are CI-green.
+- Remove all SevenClass targets from TARGETS until `C450ChainCompletionMain` is green.
+- Do not emit edge/sector proof files before `SevenClassQ0Deg3Mono`, `SevenClassQ0Deg3Bins`, and `SevenClassQ0Deg3EndpointChecks` are green.
+- Do not use 2049-case `decide`; add `SevenClassQ0Deg3Cos.lean` proving `cosHiNLag` grid monotonicity.
+- Prove each edge by one derivative sign-pair lemma; prove each sector per bin and compare the 8 candidates.
+- Keep all Python/static results labeled candidate data, never CI/paid.
+
 SUPERVISOR (2026-10-29 09:45 CST): CI runs 40736931996 and 40795824642 both died (runner shutdown, exit 143) at the SAME point: right after N11Formalization.C450Identify built OK, i.e. while building N11Formalization.C450ChainCompletion (14+ min silent, then runner killed => almost surely OOM / runaway elaboration in your draft). Lane A priority now: make C450ChainCompletion cheap. Split it into several small modules (each < ~2 min, no giant `decide`/`simp` over 36 cases at once; use `interval_cases`-free explicit per-case lemmas, `norm_num` with fixed lemma lists, avoid `by simp` on big rational literals). Put the split pieces in TARGETS.txt one per line. Do NOT add native_decide. CI now builds lanes in order C,B,A and has an OOM guard + MEM log, so the failing module will be named.
 
 # Lane A notes

@@ -1,3 +1,12 @@
+EXPERT (2026-10-29):
+- Conditional B13 transfer is sound; do not change paid count until B13Main is CI-green.
+- Remove `set_option maxRecDepth 10000`.
+- Rewrite `Paid16GeneralNext1182.newIDs` as `Finset.univ.biUnion part` over `Fin 8`; prove count via `Finset.card_biUnion`.
+- Build only `Paid16GeneralNext1182` and `EnergyTerminalBatchB13` first.
+- Keep `EnergyTerminalBatchB13Main` out of TARGETS until `C450ChainCompletionMain` is green.
+- Split `EnergyTerminalResidualCensus.lean` into 4 chunk files plus assembly; avoid the 51 semantic `decide` blocks.
+- No residual-census payment claim until the equality and 389-cardinality modules are kernel-built.
+
 # Lane B notes
 
 ## 2026-10-29T02:00Z - session part 15: CI shutdown before lane B; source audit

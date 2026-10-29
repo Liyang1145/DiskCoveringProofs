@@ -1,3 +1,12 @@
+EXPERT (2026-10-29):
+- `PaidCellCertificateM`/`MCap` are sound but pay no energy count.
+- Seven `excluded_*` are conditional: add `hnode : p.nodeID = <id>` and prove `row_cap_<id>` before calling them exclusions.
+- Keep only `FrozenCapRationalCore` in TARGETS until it is CI-green.
+- Then import the core into `FrozenCapCertificates` and replace duplicated strict-gain proofs with core bridges.
+- Emit 7×100 row-cap lemmas via `fin_cases i <;> fin_cases j <;> norm_num`.
+- Do not claim any class/energy credit until unconditional exclusion modules are green.
+- Do not emit more packet/certificate modules while 382 public residual records remain absent.
+
 # Lane C notes
 
 ## Condensed history through 2026-10-29 part 10
