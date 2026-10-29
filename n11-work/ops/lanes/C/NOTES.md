@@ -33,50 +33,13 @@
 - `project_status.py --check` passed (declarations only); project/probe Lean
   timed out. Core then `c48270a5...65b7a5a`; no kernel verdict.
 
-## 2026-10-29 — session part 29 (CI red diagnosed; two compile fixes)
+## 2026-10-29 — part 29 (condensed: CI-red diagnosis and core fix)
 
-Did:
-- Inspected run `40818062141` / job `123308953128`. Its API/job conclusion is
-  `success`, but the job log has `=== EXIT FrozenCapRationalCore 1`,
-  `PaidCellCertificateM 1`, and `PaidCellCertificateMCap 1`. The workflow's
-  unconditional `true` at the end of the build step masks target failures; the
-  run is **CI red** for lane C and the success badge must not be cited.
-- Core failure cause: all 14 uses of `Fin.sum_univ_succ` failed as an unknown
-  constant because the generated import list omitted
-  `Mathlib.Algebra.BigOperators.Fin`.
-- `PaidCellCertificateM.of7_valid` failed at lines 65/68/69 because `simpa only`
-  did not unfold `Paid16CellCertificate.PA/PB/W/slopeQ/interQ`. MCap's own build
-  was then blocked by the missing M olean, not by a separate diagnostic.
-
-Changes:
-- `ops/lanes/C/emit_frozen_cap_rational_core.py`: added the missing import; reran
-  it, which regenerated the core deterministically.
-- `lean/N11Formalization/PaidCellCertificateM.lean`: added the source namespace
-  definitions to the three `simpa only` sets.
-
-Files (SHA256):
-- `lean/N11Formalization/FrozenCapRationalCore.lean`
-  `3ed6bb5026d4eeb00c6bc8cc3f350fb8d522c0414c592370fd3a91f36fc4e7c4`
-- `lean/N11Formalization/PaidCellCertificateM.lean`
-  `b0c1f6d583b5c4d748a281e14dc7289d75c2d761a95748fb59977fb8afa44072`
-- `ops/lanes/C/emit_frozen_cap_rational_core.py`
-  `10ecb5500eff5b22366910c4c01f4d3299bf4e5c841f917efe2c7e7ca1a87d93`
-
-Checks run (scope stated):
-- Core emitter: exit 0, deterministic output and frozen-source hashes printed.
-- `git diff --check`: exit 0; forbidden-token scan over core/M/MCap: clean.
-- No local Lean elaboration (Mathlib probe olean remains a 1128-byte stub), so
-  the fixes are **CI pending**, not paid.
-
-Still unproved / missing:
-- Core, M, MCap, row caps, tree bridges, and seven wrappers still have no green
-  kernel verdict. `hf0`/`hg` packet inputs and 382 residual HOST records remain
-  absent; no energy count changes.
-
-Very next concrete step: rerun CI and require `=== EXIT
-N11Formalization.FrozenCapRationalCore 0`, then M and MCap 0; only after that add
-`N11Formalization.FrozenCapRowCap1409` alone to `TARGETS.txt`. Do not infer a
-green target from the workflow's overall badge.
+- Run `40818062141` was lane-C red despite a green workflow badge; its trailing
+  `true` masks target exits. Core failed because the generated import list
+  omitted `Mathlib.Algebra.BigOperators.Fin`; adding it made the core green.
+- M's `of7` transport failed because `simpa only` omitted the source namespace
+  projections. Core SHA256 at that checkpoint was `3ED6BB50...FC4E7C4`.
 
 ## 2026-10-29 — sessions 30-33 (condensed history)
 
@@ -208,42 +171,81 @@ N11Formalization.PaidCellCertificateM 0`, then MCap. If both are 0, add only
 `N11Formalization.FrozenCapRowCap1409` to `TARGETS.txt` and inspect its first
 diagnostic.
 
-## 2026-10-29 — part 40 (M proof transport corrected; CI pending)
+## 2026-10-29 — parts 40-42 (condensed: M transport history)
 
-- Old M failure was a `simpa` transport mismatch between the `of7` packet and
-  `Paid16CellCertificate.W/slopeQ/interQ`; mathematics was unaffected.
-  Replaced it with `hW`/`hs`/`hi` proved by `rfl`, then `rw` and the source facts.
-- M SHA256 `FE19DB72F25113B78A9A098E43E4CBF0C103354AD19D61BF9510AA03CA9065F2`;
-  MCap unchanged `1697C1BE...F6EA`. `git diff --check` and forbidden-token scan
-  clean. No local Lean verdict: M/MCap are **CI pending**, not paid.
-- Still unpaid: M/MCap kernels, row caps, bridges, seven wrappers, packet
-  `hf0`/`hg`, 5-to-9-field rescue, 382 HOST records. Energy count unchanged.
+- M's `of7` transport now uses definitional `hW`/`hs`/`hi` plus `rw`; latest CI
+  run `40893868710` reports `=== EXIT N11Formalization.PaidCellCertificateM 0`.
+- Bounded Mathlib probes remained startup-timeout inconclusive; no local kernel
+  verdict was obtained.
 
-## 2026-10-29 — part 41 (definitional transport audited)
+## 2026-10-29 — parts 43-45 (condensed: MCap transport iterations)
 
-- Re-read current M lines 58–78 and confirmed all three `rfl` transports unfold
-  through `of7` to the same `Paid16CellCertificate` projections.
-- `project_status.py --check` exit 0 (manifest/index declarations only, not math);
-  `git diff --check` exit 0; M/MCap forbidden-token scan clean. No local kernel run.
-- M remains **CI pending** at SHA256 `FE19DB...65F2`; MCap at `1697C1BE...F6EA`.
+- CI `40893868710`: M green, MCap red at the old `rw [rho]` sites. Successive
+  repairs localized `weighted_reduced_le` into a `calc`, added the missing
+  inner `Finset.mul_sum`, and changed the final order step to
+  `hrho.trans_le hlam`; statements and inputs unchanged.
+- Exact-rational Python check of the identity: 1000 random cases, m in
+  {1,2,5,9,16}, PASS (algorithm evidence, not Lean). The seven row caps still
+  exact-check 700/700 with `global_min_slack 0`.
+- `project_status.py --check`, `git diff --check`, and `py_compile` exited 0.
+  Mathlib startup timed out and no project `.olean` exists, so MCap stayed
+  **CI pending**; all seven row-cap kernels/bridges/wrappers/`hf0`/`hg` unpaid.
 
-Very next concrete step: supervisor push, then require `=== EXIT
-N11Formalization.PaidCellCertificateM 0` and MCap 0 before adding row-cap 1409.
+## 2026-10-29 — part 46 (MCap identity made definitional; CI pending)
 
-## 2026-10-29 — part 42 (transport patch retained; bounded probe inconclusive)
+- In `PaidCellCertificateMCap.weighted_reduced_le`, replaced the per-summand
+  `unfold rho; rw [Finset.mul_sum]` step with direct
+  `simp only [rho, Finset.mul_sum]`. This preserves the exact statement and
+  numeric inputs while avoiding the rewrite failure at the old `rw [rho]` site.
+- MCap SHA256 now
+  `47f3340796ec555e495bddedfb33f63b2f1e96b76cc947684f7ad94da8bf70da`.
 
-- Re-read M lines 58–78: both `hp.reduced q` and `hp.numeric` now transport via
-  definitional `hW`/`hs`/`hi` and `rw`, with no `change` or generic `simpa`.
-- `project_status.py --check` exit 0 (manifest/index declarations only).
-  `git diff --check` exit 0; M/MCap forbidden-token scan clean.
-- M SHA256 `FE19DB72F25113B78A9A098E43E4CBF0C103354AD19D61BF9510AA03CA9065F2`;
-  MCap unchanged `1697C1BE7034D9BB803A297C8105D3234BC536F610D88250687B6F282BB6F6EA`.
-- A minimal `Mathlib` probe of the `rfl`+`rw` pattern hit the known 90 s Lake
-  startup timeout (`EXIT:124`), so it gives no Lean verdict. M/MCap are **CI
-  pending**, not paid.
+Checks (scope stated):
+- `python tools/project_status.py --check`: exit 0 (handoff index/manifest
+  declarations only; not math or full file integrity).
+- A Mathlib-only `Finset` identity probe was written to `/tmp/CProbe.lean` and
+  run under `timeout 120 lake env lean`; it exited 124 at startup, so it gave
+  **no Lean verdict**.
+- `git diff --check` exit 0; forbidden-token scan over MCap clean.
+- No project `.olean` build; MCap remains **CI pending**, not paid. Energy
+  count unchanged.
 
-Still unproved: M/MCap kernels, row caps, bridges, seven wrappers, packet
-`hf0`/`hg`, 5-to-9-field rescue, and 382 HOST records. Energy count unchanged.
+Still unproved / missing: MCap kernel verdict; seven row-cap kernels, tree
+bridges, conditional wrappers, packet `hf0`/`hg`, 5-to-9-field rescue, and 382
+HOST records.
 
-Very next concrete step: supervisor push, then require exactly `=== EXIT
-N11Formalization.PaidCellCertificateM 0`; only then test MCap, then row-cap 1409.
+Very next concrete step: require exactly `=== EXIT
+N11Formalization.PaidCellCertificateMCap 0`; if green, add only
+`N11Formalization.FrozenCapRowCap1409` to TARGETS and inspect its first
+diagnostic.
+
+## 2026-10-29 — part 47 (MCap CI diagnostics matched old source; calc replacement)
+
+Did:
+- Compared `ops/ci/LATEST.md` errors against `git show HEAD:...MCap.lean`:
+  run `40893868710` built the pre-part-46 source. Its `40:8` and `71:36`
+  failures are exactly the old `rw [rho]` and `by rw [hrho]` sites, not the
+  current working-tree proof.
+- Current proof replaces those sites with a four-step `calc`: unfold `rho`
+  by `simp only`, commute finite sums, distribute `Finset.mul_sum` per row,
+  and finish with `hrho.trans_le hlam`. Statement/inputs unchanged.
+
+File SHA256:
+- `n11-work/lean/N11Formalization/PaidCellCertificateMCap.lean`
+  `47f3340796ec555e495bddedfb33f63b2f1e96b76cc947684f7ad94da8bf70da`.
+
+Checks (scope stated):
+- `python3 tools/project_status.py --check`: exit 0 (handoff/manifest declarations only).
+- Static source inspection only; no Lean/kernel verdict for the current bytes.
+- Existing deterministic exact-rational checks remain: 1000 identity cases
+  and 700/700 row caps, `global_min_slack 0` (Python, not kernel).
+- CI run `40893868710` result applies to old MCap bytes; current MCap is
+  **CI pending**.
+
+Still unproved / missing: current MCap kernel verdict; row-cap kernels, tree
+bridges, conditional wrappers, packet `hf0`/`hg`, 5-to-9-field rescue, 382
+HOST records. Energy count unchanged.
+
+Very next concrete step: CI-build only current MCap and require
+`=== EXIT N11Formalization.PaidCellCertificateMCap 0`; if green, add only
+`N11Formalization.FrozenCapRowCap1409` to TARGETS and inspect its first error.
