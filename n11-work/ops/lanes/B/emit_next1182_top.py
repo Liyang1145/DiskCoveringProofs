@@ -101,8 +101,9 @@ for i, (sub, blocks) in enumerate(zip(SUBS, part_blocks)):
     lines.append(f"  rcases ({sub}.new_mem n).mp h with " +
                  " | ".join(f"h{k}" for k in range(len(blocks))))
     for k, (idx, vals) in enumerate(blocks):
-        lines.append(f"  · have hb := block_s{i+1:02}_{k:02}_bounds n h{k}")
-        lines.append("    omega")
+        b = f"block_s{i+1:02}_{k:02}_bounds n h{k}"
+        lines.append(f"  · have hb := {b}")
+        lines.append("    constructor <;> omega")
 pair_names = []
 for i in range(8):
     for j in range(i + 1, 8):
@@ -172,7 +173,7 @@ report = {
         "supply implicit Disjoint.left element with (a := a)",
         "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
         "prove part disjointness from literal membership bounds (consecutive intervals)",
-        "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts",
+        "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts from the block conjunction using omega",
         "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
         "remove maxRecDepth 10000",
     ],

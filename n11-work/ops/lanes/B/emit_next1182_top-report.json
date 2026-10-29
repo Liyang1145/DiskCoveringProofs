@@ -7,12 +7,12 @@
     "supply implicit Disjoint.left element with (a := a)",
     "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
     "prove part disjointness from literal membership bounds (consecutive intervals)",
-    "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts",
+    "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts from the block conjunction using omega",
     "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
     "remove maxRecDepth 10000"
   ],
-  "corrected_chars": 36642,
-  "corrected_utf8_bytes": 37355,
-  "corrected_sha256": "73FE3DA40C7CE0B1F9D7703EACECD6739D388A4297E7FAA1735203D675248B76",
+  "corrected_chars": 37554,
+  "corrected_utf8_bytes": 38267,
+  "corrected_sha256": "0AFA07FB3BC7BB66C147CFC9B213993ABC2FE4646D8EE16FA6018F3802049D1B",
   "scope": "source emission and inventory only; Lean elaboration is CI-pending"
 }

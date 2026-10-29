@@ -52,6 +52,6 @@
   "interval_disjoint_theorems": 28,
   "literal_membership_block_proofs": 57,
   "kernel_decide_checks": 0,
-  "top_sha256": "73FE3DA40C7CE0B1F9D7703EACECD6739D388A4297E7FAA1735203D675248B76",
+  "top_sha256": "0AFA07FB3BC7BB66C147CFC9B213993ABC2FE4646D8EE16FA6018F3802049D1B",
   "scope": "exact manifest/literal-block audit only; not Lean elaboration"
 }
