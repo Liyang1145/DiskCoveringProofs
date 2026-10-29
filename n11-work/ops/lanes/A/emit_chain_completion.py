@@ -39,39 +39,38 @@ namespace N11Formalization.{name}
 '''
 
 
-tail = module_preamble(
-    "C450ChainCompletionTail",
-    [
-        "N11Formalization.C450Source36Segment",
-        "N11Formalization.C450NormalizedInterface",
-    ],
-    "Vacuous C450 source-36 tail and the first five telescope transfers (36 through 32).",
-) + f'''open N11Formalization C450NormalizedInterface
+endpoint = module_preamble(
+    "C450ChainCompletionEndpoint",
+    ["N11Formalization.C450Source36Segment"],
+    "The vacuous C450 source-36 endpoint, isolated from all telescope transfers.",
+) + f'''open N11Formalization
+
+theorem source36_remaining_vacuous : C450Source36Segment.remainingSegs = [] :=
+  List.eq_nil_of_length_eq_zero C450Source36Segment.remaining_count
 
 theorem source36_remaining : C450Source36Segment.RemainingSourceObligation := by
   intro s hs
-  have hlen : C450Source36Segment.remainingSegs.length = 0 :=
-    C450Source36Segment.remaining_count
-  cases h : C450Source36Segment.remainingSegs with
-  | nil =>
-      rw [h] at hs
-      simp at hs
-  | cons a as =>
-      rw [h] at hlen
-      exfalso
-      exact absurd hlen (by simp)
+  rw [source36_remaining_vacuous] at hs
+  cases hs
+
+end N11Formalization.C450ChainCompletionEndpoint
+#check @N11Formalization.C450ChainCompletionEndpoint.source36_remaining
+'''
+
+tail = module_preamble(
+    "C450ChainCompletionTail",
+    ["N11Formalization.C450ChainCompletionEndpoint"],
+    "The first five C450 telescope transfers (36 through 32).",
+) + f'''open N11Formalization
+
+theorem source36_remaining_vacuous : C450Source36Segment.remainingSegs = [] :=
+  C450ChainCompletionEndpoint.source36_remaining_vacuous
+
+theorem source36_remaining : C450Source36Segment.RemainingSourceObligation :=
+  C450ChainCompletionEndpoint.source36_remaining
 
 theorem source31_remaining : C450Source31Segment.RemainingSourceObligation :=
 {nested_transfer([32, 33, 34, 35, 36], "source36_remaining")}
-
-theorem source36_remaining_vacuous : C450Source36Segment.remainingSegs = [] := by
-  cases h : C450Source36Segment.remainingSegs with
-  | nil => rfl
-  | cons a as =>
-      have hlen := C450Source36Segment.remaining_count
-      rw [h] at hlen
-      exfalso
-      exact absurd hlen (by simp)
 
 end N11Formalization.C450ChainCompletionTail
 #check @N11Formalization.C450ChainCompletionTail.source36_remaining
@@ -188,6 +187,7 @@ end N11Formalization.C450ChainCompletionMain
 '''
 
 MODULES = {
+    "C450ChainCompletionEndpoint.lean": endpoint,
     "C450ChainCompletionTail.lean": tail,
     "C450ChainCompletionMid1.lean": mid1,
     "C450ChainCompletionMid2.lean": mid2,

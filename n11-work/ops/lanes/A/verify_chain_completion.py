@@ -10,6 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 LEAN = HERE.parents[2] / "lean" / "N11Formalization"
 ORDER = [
+    "C450ChainCompletionEndpoint.lean",
     "C450ChainCompletionTail.lean",
     "C450ChainCompletionMid1.lean",
     "C450ChainCompletionMid2.lean",
@@ -62,11 +63,12 @@ def main():
         joined += text + "\n"
 
     assert "import N11Formalization.C450Source36Segment\n" in emitter.MODULES[ORDER[0]]
-    assert "import N11Formalization.C450ChainCompletionTail\n" in emitter.MODULES[ORDER[1]]
-    assert "import N11Formalization.C450ChainCompletionMid1\n" in emitter.MODULES[ORDER[2]]
-    assert "import N11Formalization.C450ChainCompletionMid2\n" in emitter.MODULES[ORDER[3]]
-    assert "import N11Formalization.C450ChainCompletionMid3\n" in emitter.MODULES[ORDER[4]]
-    assert "import N11Formalization.C450ChainCompletion\n" in emitter.MODULES[ORDER[5]]
+    assert "import N11Formalization.C450ChainCompletionEndpoint\n" in emitter.MODULES[ORDER[1]]
+    assert "import N11Formalization.C450ChainCompletionTail\n" in emitter.MODULES[ORDER[2]]
+    assert "import N11Formalization.C450ChainCompletionMid1\n" in emitter.MODULES[ORDER[3]]
+    assert "import N11Formalization.C450ChainCompletionMid2\n" in emitter.MODULES[ORDER[4]]
+    assert "import N11Formalization.C450ChainCompletionMid3\n" in emitter.MODULES[ORDER[5]]
+    assert "import N11Formalization.C450ChainCompletion\n" in emitter.MODULES[ORDER[6]]
 
     calls = re.findall(
         r"C450Source(\d+)Segment\.source(\d+)_remaining_of_remaining \(", joined
@@ -95,27 +97,37 @@ def main():
         assert f"theorem {theorem_names[name]} : {typ} :=" in emitter.MODULES[name]
 
     assert (
+        "theorem source36_remaining_vacuous : "
+        "C450Source36Segment.remainingSegs = [] :=\n"
+        "  List.eq_nil_of_length_eq_zero C450Source36Segment.remaining_count"
+        in emitter.MODULES[ORDER[0]]
+    ), "Source36 endpoint must use the frozen zero-length count directly"
+    assert (
         "theorem source36_remaining : "
         "C450Source36Segment.RemainingSourceObligation := by\n"
-        "  intro s hs" in emitter.MODULES[ORDER[0]]
-    ), "Source36 endpoint must be proved from its empty remaining list"
+        "  intro s hs\n"
+        "  rw [source36_remaining_vacuous] at hs\n"
+        "  cases hs" in emitter.MODULES[ORDER[0]]
+    ), "Source36 obligation must be derived from the vacuous list"
     assert (
-        "theorem source36_remaining_vacuous : "
-        "C450Source36Segment.remainingSegs = [] := by" in emitter.MODULES[ORDER[0]]
-    ), "the Source36 chunk must prove the vacuous remaining list"
+        "theorem source36_remaining : "
+        "C450Source36Segment.RemainingSourceObligation :=\n"
+        "  C450ChainCompletionEndpoint.source36_remaining"
+        in emitter.MODULES[ORDER[1]]
+    ), "the transfer tail must consume the isolated Source36 endpoint"
     assert (
         "theorem source36_remaining_vacuous : "
         "C450Source36Segment.remainingSegs = [] :=\n"
-        "  C450ChainCompletionTail.source36_remaining_vacuous" in emitter.MODULES[ORDER[4]]
+        "  C450ChainCompletionTail.source36_remaining_vacuous" in emitter.MODULES[ORDER[5]]
     ), "the final interface must expose the vacuous Source36 endpoint"
 
     assert joined.count("remaining_of_remaining (") == 25
     assert joined.count("(") == joined.count(")")
-    assert "C450Source11Segment.source_of_remaining h450" in emitter.MODULES[ORDER[4]]
+    assert "C450Source11Segment.source_of_remaining h450" in emitter.MODULES[ORDER[5]]
     assert (
         "ActualMetricClassReduction.main_of_seven_class_certificates\n"
         "    C450ChainCompletion.h450 henergy hclasses"
-    ) in emitter.MODULES[ORDER[5]]
+    ) in emitter.MODULES[ORDER[6]]
 
     consumer = (LEAN / "ActualMetricClassReduction.lean").read_text(encoding="utf-8")
     assert (
@@ -138,7 +150,9 @@ def main():
 
     targets = (HERE / "TARGETS.txt").read_text(encoding="utf-8").splitlines()
     targets = [line.strip() for line in targets if line.strip() and not line.startswith("#")]
-    assert targets[:6] == [
+    assert targets[:8] == [
+        "N11Formalization.C450Source36Segment",
+        "N11Formalization.C450ChainCompletionEndpoint",
         "N11Formalization.C450ChainCompletionTail",
         "N11Formalization.C450ChainCompletionMid1",
         "N11Formalization.C450ChainCompletionMid2",
@@ -151,7 +165,7 @@ def main():
     print("PASS: chunk imports and output types reach Source31,26,21,16,11 in order")
     print("PASS: h450 retains the C450Source11 consumer interface")
     print("PASS: Source36 endpoint and ActualMetricClassReduction consumer signatures agree")
-    print("PASS: all six emitted modules are deterministic and CI target order is exact")
+    print("PASS: all seven emitted modules are deterministic and CI target order is exact")
     print("PASS: no forbidden tokens and no proof-term-wide #print axioms in CI files")
 
 
