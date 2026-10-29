@@ -601,75 +601,187 @@ theorem new_count : newIDs.card = 1182 := by
     fin_cases i
     · fin_cases j
       · exact (hij rfl).elim
-      · simpa [part, Function.onFun] using disjoint_s01_s02
-      · simpa [part, Function.onFun] using disjoint_s01_s03
-      · simpa [part, Function.onFun] using disjoint_s01_s04
-      · simpa [part, Function.onFun] using disjoint_s01_s05
-      · simpa [part, Function.onFun] using disjoint_s01_s06
-      · simpa [part, Function.onFun] using disjoint_s01_s07
-      · simpa [part, Function.onFun] using disjoint_s01_s08
+      · first
+          | (change Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S02.newIDs; exact disjoint_s01_s02)
+          | (simpa [part, Function.onFun] using disjoint_s01_s02)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S03.newIDs; exact disjoint_s01_s03)
+          | (simpa [part, Function.onFun] using disjoint_s01_s03)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S04.newIDs; exact disjoint_s01_s04)
+          | (simpa [part, Function.onFun] using disjoint_s01_s04)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S05.newIDs; exact disjoint_s01_s05)
+          | (simpa [part, Function.onFun] using disjoint_s01_s05)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S06.newIDs; exact disjoint_s01_s06)
+          | (simpa [part, Function.onFun] using disjoint_s01_s06)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S07.newIDs; exact disjoint_s01_s07)
+          | (simpa [part, Function.onFun] using disjoint_s01_s07)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S08.newIDs; exact disjoint_s01_s08)
+          | (simpa [part, Function.onFun] using disjoint_s01_s08)
     · fin_cases j
-      · simpa [part, Function.onFun] using disjoint_s01_s02.symm
+      · first
+          | (change Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S01.newIDs; exact disjoint_s01_s02.symm)
+          | (simpa [part, Function.onFun] using disjoint_s01_s02.symm)
       · exact (hij rfl).elim
-      · simpa [part, Function.onFun] using disjoint_s02_s03
-      · simpa [part, Function.onFun] using disjoint_s02_s04
-      · simpa [part, Function.onFun] using disjoint_s02_s05
-      · simpa [part, Function.onFun] using disjoint_s02_s06
-      · simpa [part, Function.onFun] using disjoint_s02_s07
-      · simpa [part, Function.onFun] using disjoint_s02_s08
+      · first
+          | (change Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S03.newIDs; exact disjoint_s02_s03)
+          | (simpa [part, Function.onFun] using disjoint_s02_s03)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S04.newIDs; exact disjoint_s02_s04)
+          | (simpa [part, Function.onFun] using disjoint_s02_s04)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S05.newIDs; exact disjoint_s02_s05)
+          | (simpa [part, Function.onFun] using disjoint_s02_s05)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S06.newIDs; exact disjoint_s02_s06)
+          | (simpa [part, Function.onFun] using disjoint_s02_s06)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S07.newIDs; exact disjoint_s02_s07)
+          | (simpa [part, Function.onFun] using disjoint_s02_s07)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S08.newIDs; exact disjoint_s02_s08)
+          | (simpa [part, Function.onFun] using disjoint_s02_s08)
     · fin_cases j
-      · simpa [part, Function.onFun] using disjoint_s01_s03.symm
-      · simpa [part, Function.onFun] using disjoint_s02_s03.symm
+      · first
+          | (change Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S01.newIDs; exact disjoint_s01_s03.symm)
+          | (simpa [part, Function.onFun] using disjoint_s01_s03.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S02.newIDs; exact disjoint_s02_s03.symm)
+          | (simpa [part, Function.onFun] using disjoint_s02_s03.symm)
       · exact (hij rfl).elim
-      · simpa [part, Function.onFun] using disjoint_s03_s04
-      · simpa [part, Function.onFun] using disjoint_s03_s05
-      · simpa [part, Function.onFun] using disjoint_s03_s06
-      · simpa [part, Function.onFun] using disjoint_s03_s07
-      · simpa [part, Function.onFun] using disjoint_s03_s08
+      · first
+          | (change Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S04.newIDs; exact disjoint_s03_s04)
+          | (simpa [part, Function.onFun] using disjoint_s03_s04)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S05.newIDs; exact disjoint_s03_s05)
+          | (simpa [part, Function.onFun] using disjoint_s03_s05)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S06.newIDs; exact disjoint_s03_s06)
+          | (simpa [part, Function.onFun] using disjoint_s03_s06)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S07.newIDs; exact disjoint_s03_s07)
+          | (simpa [part, Function.onFun] using disjoint_s03_s07)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S08.newIDs; exact disjoint_s03_s08)
+          | (simpa [part, Function.onFun] using disjoint_s03_s08)
     · fin_cases j
-      · simpa [part, Function.onFun] using disjoint_s01_s04.symm
-      · simpa [part, Function.onFun] using disjoint_s02_s04.symm
-      · simpa [part, Function.onFun] using disjoint_s03_s04.symm
+      · first
+          | (change Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S01.newIDs; exact disjoint_s01_s04.symm)
+          | (simpa [part, Function.onFun] using disjoint_s01_s04.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S02.newIDs; exact disjoint_s02_s04.symm)
+          | (simpa [part, Function.onFun] using disjoint_s02_s04.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S03.newIDs; exact disjoint_s03_s04.symm)
+          | (simpa [part, Function.onFun] using disjoint_s03_s04.symm)
       · exact (hij rfl).elim
-      · simpa [part, Function.onFun] using disjoint_s04_s05
-      · simpa [part, Function.onFun] using disjoint_s04_s06
-      · simpa [part, Function.onFun] using disjoint_s04_s07
-      · simpa [part, Function.onFun] using disjoint_s04_s08
+      · first
+          | (change Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S05.newIDs; exact disjoint_s04_s05)
+          | (simpa [part, Function.onFun] using disjoint_s04_s05)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S06.newIDs; exact disjoint_s04_s06)
+          | (simpa [part, Function.onFun] using disjoint_s04_s06)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S07.newIDs; exact disjoint_s04_s07)
+          | (simpa [part, Function.onFun] using disjoint_s04_s07)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S08.newIDs; exact disjoint_s04_s08)
+          | (simpa [part, Function.onFun] using disjoint_s04_s08)
     · fin_cases j
-      · simpa [part, Function.onFun] using disjoint_s01_s05.symm
-      · simpa [part, Function.onFun] using disjoint_s02_s05.symm
-      · simpa [part, Function.onFun] using disjoint_s03_s05.symm
-      · simpa [part, Function.onFun] using disjoint_s04_s05.symm
+      · first
+          | (change Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S01.newIDs; exact disjoint_s01_s05.symm)
+          | (simpa [part, Function.onFun] using disjoint_s01_s05.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S02.newIDs; exact disjoint_s02_s05.symm)
+          | (simpa [part, Function.onFun] using disjoint_s02_s05.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S03.newIDs; exact disjoint_s03_s05.symm)
+          | (simpa [part, Function.onFun] using disjoint_s03_s05.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S04.newIDs; exact disjoint_s04_s05.symm)
+          | (simpa [part, Function.onFun] using disjoint_s04_s05.symm)
       · exact (hij rfl).elim
-      · simpa [part, Function.onFun] using disjoint_s05_s06
-      · simpa [part, Function.onFun] using disjoint_s05_s07
-      · simpa [part, Function.onFun] using disjoint_s05_s08
+      · first
+          | (change Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S06.newIDs; exact disjoint_s05_s06)
+          | (simpa [part, Function.onFun] using disjoint_s05_s06)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S07.newIDs; exact disjoint_s05_s07)
+          | (simpa [part, Function.onFun] using disjoint_s05_s07)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S08.newIDs; exact disjoint_s05_s08)
+          | (simpa [part, Function.onFun] using disjoint_s05_s08)
     · fin_cases j
-      · simpa [part, Function.onFun] using disjoint_s01_s06.symm
-      · simpa [part, Function.onFun] using disjoint_s02_s06.symm
-      · simpa [part, Function.onFun] using disjoint_s03_s06.symm
-      · simpa [part, Function.onFun] using disjoint_s04_s06.symm
-      · simpa [part, Function.onFun] using disjoint_s05_s06.symm
+      · first
+          | (change Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S01.newIDs; exact disjoint_s01_s06.symm)
+          | (simpa [part, Function.onFun] using disjoint_s01_s06.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S02.newIDs; exact disjoint_s02_s06.symm)
+          | (simpa [part, Function.onFun] using disjoint_s02_s06.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S03.newIDs; exact disjoint_s03_s06.symm)
+          | (simpa [part, Function.onFun] using disjoint_s03_s06.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S04.newIDs; exact disjoint_s04_s06.symm)
+          | (simpa [part, Function.onFun] using disjoint_s04_s06.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S05.newIDs; exact disjoint_s05_s06.symm)
+          | (simpa [part, Function.onFun] using disjoint_s05_s06.symm)
       · exact (hij rfl).elim
-      · simpa [part, Function.onFun] using disjoint_s06_s07
-      · simpa [part, Function.onFun] using disjoint_s06_s08
+      · first
+          | (change Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S07.newIDs; exact disjoint_s06_s07)
+          | (simpa [part, Function.onFun] using disjoint_s06_s07)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S08.newIDs; exact disjoint_s06_s08)
+          | (simpa [part, Function.onFun] using disjoint_s06_s08)
     · fin_cases j
-      · simpa [part, Function.onFun] using disjoint_s01_s07.symm
-      · simpa [part, Function.onFun] using disjoint_s02_s07.symm
-      · simpa [part, Function.onFun] using disjoint_s03_s07.symm
-      · simpa [part, Function.onFun] using disjoint_s04_s07.symm
-      · simpa [part, Function.onFun] using disjoint_s05_s07.symm
-      · simpa [part, Function.onFun] using disjoint_s06_s07.symm
+      · first
+          | (change Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S01.newIDs; exact disjoint_s01_s07.symm)
+          | (simpa [part, Function.onFun] using disjoint_s01_s07.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S02.newIDs; exact disjoint_s02_s07.symm)
+          | (simpa [part, Function.onFun] using disjoint_s02_s07.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S03.newIDs; exact disjoint_s03_s07.symm)
+          | (simpa [part, Function.onFun] using disjoint_s03_s07.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S04.newIDs; exact disjoint_s04_s07.symm)
+          | (simpa [part, Function.onFun] using disjoint_s04_s07.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S05.newIDs; exact disjoint_s05_s07.symm)
+          | (simpa [part, Function.onFun] using disjoint_s05_s07.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S06.newIDs; exact disjoint_s06_s07.symm)
+          | (simpa [part, Function.onFun] using disjoint_s06_s07.symm)
       · exact (hij rfl).elim
-      · simpa [part, Function.onFun] using disjoint_s07_s08
+      · first
+          | (change Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S08.newIDs; exact disjoint_s07_s08)
+          | (simpa [part, Function.onFun] using disjoint_s07_s08)
     · fin_cases j
-      · simpa [part, Function.onFun] using disjoint_s01_s08.symm
-      · simpa [part, Function.onFun] using disjoint_s02_s08.symm
-      · simpa [part, Function.onFun] using disjoint_s03_s08.symm
-      · simpa [part, Function.onFun] using disjoint_s04_s08.symm
-      · simpa [part, Function.onFun] using disjoint_s05_s08.symm
-      · simpa [part, Function.onFun] using disjoint_s06_s08.symm
-      · simpa [part, Function.onFun] using disjoint_s07_s08.symm
+      · first
+          | (change Disjoint Paid16GeneralNext1182S08.newIDs Paid16GeneralNext1182S01.newIDs; exact disjoint_s01_s08.symm)
+          | (simpa [part, Function.onFun] using disjoint_s01_s08.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S08.newIDs Paid16GeneralNext1182S02.newIDs; exact disjoint_s02_s08.symm)
+          | (simpa [part, Function.onFun] using disjoint_s02_s08.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S08.newIDs Paid16GeneralNext1182S03.newIDs; exact disjoint_s03_s08.symm)
+          | (simpa [part, Function.onFun] using disjoint_s03_s08.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S08.newIDs Paid16GeneralNext1182S04.newIDs; exact disjoint_s04_s08.symm)
+          | (simpa [part, Function.onFun] using disjoint_s04_s08.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S08.newIDs Paid16GeneralNext1182S05.newIDs; exact disjoint_s05_s08.symm)
+          | (simpa [part, Function.onFun] using disjoint_s05_s08.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S08.newIDs Paid16GeneralNext1182S06.newIDs; exact disjoint_s06_s08.symm)
+          | (simpa [part, Function.onFun] using disjoint_s06_s08.symm)
+      · first
+          | (change Disjoint Paid16GeneralNext1182S08.newIDs Paid16GeneralNext1182S07.newIDs; exact disjoint_s07_s08.symm)
+          | (simpa [part, Function.onFun] using disjoint_s07_s08.symm)
       · exact (hij rfl).elim
   rw [newIDs, Finset.card_biUnion hdisj]
   simp [Fin.sum_univ_succ, part,

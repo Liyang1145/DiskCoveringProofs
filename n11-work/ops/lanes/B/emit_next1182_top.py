@@ -130,10 +130,14 @@ for i in range(8):
     for j in range(8):
         if i == j:
             lines.append("      · exact (hij rfl).elim")
-        elif i < j:
-            lines.append(f"      · simpa [part, Function.onFun] using disjoint_s{i+1:02}_s{j+1:02}")
         else:
-            lines.append(f"      · simpa [part, Function.onFun] using disjoint_s{j+1:02}_s{i+1:02}.symm")
+            thm = (f"disjoint_s{i+1:02}_s{j+1:02}" if i < j
+                   else f"disjoint_s{j+1:02}_s{i+1:02}.symm")
+            left = f"Paid16GeneralNext1182S{i+1:02}.newIDs"
+            right = f"Paid16GeneralNext1182S{j+1:02}.newIDs"
+            lines.append("      · first")
+            lines.append(f"          | (change Disjoint {left} {right}; exact {thm})")
+            lines.append(f"          | (simpa [part, Function.onFun] using {thm})")
 lines.append("  rw [newIDs, Finset.card_biUnion hdisj]")
 lines.append("  simp [Fin.sum_univ_succ, part,")
 lines.append("      " + ",\n      ".join(f"{s}.new_count" for s in SUBS) + "]")

@@ -1,106 +1,18 @@
 # Lane B notes
 
-## 2026-10-29 - session part 16: explicit `Function.onFun` unfold in 56 dispatches
+## Condensed history (parts 1-18, 2026-10-29)
 
-### Done
-- Re-read the current guidance, Lane B entry, part-15 notes and `ci/LATEST.md`;
-  `python tools/project_status.py --check` passed (index check only).
-- Retrieved completed workflow run `40949277719` at `f30e46f0` and its full
-  job log (workflow conclusion `success`; per-target exits Next1182 `1`,
-  Next505Bounds `0`, B13 `1`, B13Main `1`). This run is **stale to the local
-  `change` fix**: it predates that uncommitted source change.
-- Exact stale failure: all 56 off-diagonal branches still expected
-  `Function.onFun Disjoint part i j`; Lean's synthetic error recovery made
-  `new_count` depend on `sorryAx`, confirming those declarations are not
-  paid. B13/B13Main were import-blocked by Next1182 and received no independent
-  verdict.
-- Changed every off-diagonal branch in the emitter and generated module from
-  `simpa [part]` to `simpa [part, Function.onFun]`, retaining the preceding
-  `change Disjoint (part i) (part j)`. Updated the audit's exact-count check.
-
-### Files (SHA256, uppercase)
-- Next1182 `C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22`
-  (41,833 bytes).
-- Emitter `8248CC972485566B2C71EC3695E6AEB60F6F65DF1A2AA6A3837E78CAAB420B24`.
-- Emitter report `620D634AC202B663078F304D821069A3F0C09E8B5CF807D2F5FDC517FECA48E8`.
-- Audit `C35D0A7C800163EEB3C97C585347D81312B84ABA435F22D7873A5E848E4C68B8`.
-- Audit report `EEB3BB299428D01909DA6A27EDD2CEB25811D5B730F94B3FB73118134B7D7C24`.
-
-### Checks executed (scope)
-- Regenerated module and report (exit 0): 1182 ids, parts `168x7+6`, 57 literal
-  blocks (max 21 cases), 28 interval-disjoint theorems, 8 diagonal + 56
-  off-diagonal branches, 0 whole-set kernel decodes.
-- `audit_next1182_blocks.py`, `audit_target_imports.py`, `py_compile`,
-  `git diff --check`, and forbidden-token scan exited 0. Target import closure
-  is 1919 modules with no missing/forbidden target. Scope is source/manifest
-  inventory only, **not Lean elaboration**.
-- A small `/workspace/tools/mathlib-probe` replay of the `PairwiseDisjoint`
-  pattern hit its 180-second cap with no verdict; it is not evidence.
-
-### Still unproved / unverified
-- Next1182 `C3BD2A12...` is **CI pending / unpaid**; B13 and B13Main remain
-  CI pending/unpaid pending a run that reaches them. Residual 389,
-  `SevenClassExclusions`, and the arbitrary-center full-disk theorem remain
-  unpaid.
-
-### Next concrete step
-- On the first CI run containing `C3BD2A12...`, require Next1182 exit `0` before
-  interpreting B13. If Next1182 still fails, inspect its first full error block;
-  do not treat synthetic `sorryAx` from an earlier error as a new source sorry.
-
-## 2026-10-29 - session part 15: fix the 64 folded `onFun` dispatches
-
-### Done
-- Re-read `GUIDANCE.md`, Lane B entry, part-14 notes, `ci/LATEST.md`, and ran
-  `python tools/project_status.py --check` (passed; index only).
-- Pulled the full job log and artifact for n11 run `40949277719`, head
-  `f30e46f0ae29a0b11304bddae3e4457ab8d3ba68`. That run supersedes the stale
-  `LATEST.md` summary. Per-target exits were: Next1182 `1`, Next505Bounds `0`,
-  B13 `1`, B13Main `1`; it is not a green Lean run overall.
-- Exact Next1182 diagnosis from the full log: all 64 off-diagonal
-  `simpa [part] using disjoint_s...` branches expected
-  `Function.onFun Disjoint part i j`, while the supplied theorem simplified to
-  `Disjoint S_i.newIDs S_j.newIDs`. The interval proofs and lower-bound
-  transfers were not implicated.
-- Added `change Disjoint (part i) (part j)` immediately after the
-  `PairwiseDisjoint` intro, before `fin_cases`, and taught the emitter/audit
-  this required line. Regenerated the module and reports.
-- B13 and B13Main exited `1` in the same run, but no B13 source error was
-  reached; treat them as import-blocked by Next1182, not independently tested.
-
-### Files (SHA256, uppercase)
-- Next1182 `F5D918A5799684216FD74EBF754B9BE37BEF622750F00A8167543BCBAF99BAEE`
-  (40,937 bytes).
-- Emitter `F4665D9F826D4D63F3AA1423378889D74FA1B0619AB38727A970D5F7A6DAD3D5`.
-- Audit `EA9781393B4D3AD328E5F4A51F62E3BF360D95BF29277870827BCB8C7B602274`.
-- Emitter report `E0851D3E9495A36319334C2E361DDBDA1E84AA8143D08E5AEBA99540B8F70613`.
-- Audit report `EFFC52DE791EAC71C55DD43C490D971A0541F5A70702F159DEE1EFC2A2862E8C`.
-- TARGETS unchanged: Next1182, Next505Bounds, B13, B13Main.
-
-### Checks executed (scope)
-- Emitter and `audit_next1182_blocks.py`: exit 0. Inventory is 1182 ids,
-  parts `168x7+6`, 57 literal blocks (max 21 cases), 28 interval-disjoint
-  theorems, 8 diagonal + 56 off-diagonal branches, one `change` exposure,
-  8 lower-bound transfers, 0 whole-set kernel decodes. Scope is source,
-  manifest and proof-shape inventory, **not Lean elaboration**.
-- `py_compile`, `git diff --check`, and forbidden-token scan: exit 0.
-- A narrowed Mathlib probe of `PairwiseDisjoint -> change Disjoint (part i)
-  (part j)` was launched, but its import/elaboration did not finish inside the
-  session cap. No Lean verdict from it.
-
-### Still unproved / unverified
-- Next1182 `F5D918A5...` is **CI pending / unpaid**. B13 and B13Main remain
-  **CI pending / unpaid** because their target commands could not reach their
-  own sources. Next505Bounds is CI green at `f30e46f0` only (kernel check).
-- Residual 389, `SevenClassExclusions`, and the arbitrary-center full-disk
-  theorem remain unpaid. A package or inventory success is not mathematics.
-
-### Next concrete step
-- On the next n11 CI artifact, require Next1182 exit `0` first. Then require
-  separate B13 and B13Main exits `0`; if all three are green, issue the
-  existing ROOT-IMPORT REQUEST for `EnergyTerminalBatchB13Main` and quote that
-  run id. If Next1182 still fails, use its first full error block (not
-  `errors_head`) and fix that exact tactic.
+- Next1182 top aggregate was written and repeatedly repaired: `simpa [part]`
+  -> `change Disjoint (part i) (part j)` -> `simpa [part, Function.onFun]`.
+  Current source `C3BD2A12...`, reproducible from `emit_next1182_top.py`
+  (`8248CC97...`); audits exit 0. All of it is **CI pending / unpaid**.
+- CI runs `40949277719`/`40802064355`/`40935785584` never reached a lane-B
+  source error after the fix: failures were (a) the pre-fix `Function.onFun`
+  mismatch, (b) OOM kills of shared frozen deps (`DBMSourceTreeData`,
+  `Ladder49_jt_kkt_z`, `SharedMomentConcreteSwitchBatch` — the last is outside
+  lane B and killed the root target in `40935785584`).
+- Next505Bounds `FA5CA6EB...` and B13Next505Bounds are CI green; B13 and
+  B13Main source exist and are import-blocked on Next1182.
 
 ## Retained engineering facts
 
@@ -225,3 +137,51 @@
 - On the next CI run for this tree, read Next1182's verdict first. If it is
   green, inspect B13's first real error (not an import-block cascade); if red,
   quote the first full error block verbatim before changing anything.
+
+## 2026-10-29 - session part 19: defeq-fallback for the 56 pairwise dispatches
+
+### Done
+- Read `GUIDANCE.md`, Lane B, condensed notes, `ci/LATEST.md` and ran
+  `python tools/project_status.py --check` (exit 0; index check only).
+- Confirmed the only lane-B Lean blocker left is `Paid16GeneralNext1182`;
+  `EnergyTerminalBatchB13` (`paidIDs := B12.paidIDs ∪ Next1182.newIDs`,
+  `paid_count 1997`) and `B13Main` are written and merely import-blocked on it.
+- Hardened `new_count`'s `Set.PairwiseDisjoint` proof: every off-diagonal
+  branch is now `first | (change Disjoint S_i.newIDs S_j.newIDs; exact
+  disjoint_sIJ) | (simpa [part, Function.onFun] using disjoint_sIJ)`. The first
+  branch is a pure defeq transport (independent of simp lemmas for
+  `Function.onFun`/matrix cons), so a simp-set regression cannot red the module;
+  the previous `simpa` syntax stays as fallback.
+- Emitter change is in `emit_next1182_top.py`; regenerated module, updated
+  `audit_next1182_blocks.py` assertions (56 fallback branches, `.symm` count 56).
+
+### Files (SHA256, uppercase)
+- `Paid16GeneralNext1182.lean` `5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1`
+  (49,701 bytes; supersedes `C3BD2A12...`).
+- `emit_next1182_top.py` `5A670144F705FBD7C664A1C0BE2CE5BFFD02A53232EFDCB21472E3F5892EFE0E`.
+- `audit_next1182_blocks.py` regenerated report `audit_next1182_blocks-report.json`
+  (top_sha256 `5D941203...`).
+- TARGETS unchanged: Next1182, Next505Bounds, B13, B13Main.
+
+### Checks executed (scope)
+- `emit_next1182_top.py` exit 0; `audit_next1182_blocks.py` exit 0: 1182 ids,
+  parts `168x7+6`, bounds `2565..5007` non-overlapping, 57 literal blocks
+  (max 21), 28 interval-disjoint theorems, 8 diagonal + 56 off-diagonal
+  dispatches, 56 defeq-fallback branches, 0 whole-set kernel decodes.
+  `py_compile` and `git diff --check` exit 0. Scope is source/manifest
+  inventory, **not Lean elaboration**.
+- Two `/workspace/tools/mathlib-probe` probes (`import Mathlib`; then
+  `Mathlib.Data.Finset.Card`) both hit 95-170 s caps with no verdict on this
+  weak FS; neither is evidence.
+
+### Still unproved / unverified
+- Next1182 `5D941203...` is **CI pending / unpaid**; B13, B13Main likewise.
+  Residual 389, `SevenClassExclusions`, arbitrary-center full-disk: unpaid.
+- Root `N11Formalization` also fails on non-lane-B OOM of
+  `SharedMomentConcreteSwitchBatch` (run `40935785584`) — not a lane-B defect.
+
+### Next concrete step
+- On the first CI run containing `5D941203...`: require Next1182 exit `0`,
+  then separate B13 exit `0`, then B13Main exit `0`; only then issue the
+  root-import request (quote run id). If Next1182 is red, copy the first full
+  error block and check whether `change Disjoint S_i S_j` was the failing step.
