@@ -111,7 +111,10 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
     have hb : ((nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 : ℚ) : ℝ) ≤
         Real.pi / 2 := by
       exact_mod_cast hhalf.trans RatInterval.pi_div_two_lo_lt.le
-    have ha : 0 ≤ nodeQ RatInterval.piHi 2048 k / 2 := by positivity
+    have ha : 0 ≤ nodeQ RatInterval.piHi 2048 k / 2 := by
+      unfold nodeQ
+      have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+      positivity
     have hqhalf : nodeQ RatInterval.piHi 2048 k / 2 ≤
         nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 := by linarith
     exact capQ_mono (sinHiNLag_mono ha hqhalf hb)

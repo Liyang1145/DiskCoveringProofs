@@ -37,175 +37,123 @@ were made.  Runs `40893868710` and `40901508838` OOM-killed in unrelated
 Lean diagnostics.  The local cache lacks `IntervalsHighLag.olean` and
 `MetricAreaRationalCertificate.olean`; no bounded local project elaboration.
 
-## 2026-10-29 (part 56) — live diagnostics and cast repair
+## 2026-10-29 (parts 56–63) — compact diagnostics ledger
 
-From the run `40901508838` log, confirmed C450 main exit 0 and repaired all live
-Cos/Mono diagnostics:
-- Cos derivative closing now ends `field_simp; ring` (remaining `+ -x^27`).
-- `gridArg_eq_nodeQ` uses `unfold` plus `rw [Nat.min_eq_right hn]`.
-- `(min n 2048 : ℚ)` was a rational min; all grid expressions now cast the
-  natural min explicitly: `((min n 2048 : ℕ) : ℚ)`.
-- Mono:49 replaces mis-oriented `add_le_add_right` with `linarith [hlow]`.
+CI `40914236268` confirmed C450 and all five completion modules green.  The old
+Cos/Mono failures were repaired: degree-27 Taylor closing uses `ring_nf`;
+`gridArg` uses the rational min `min (n : ℚ) 2048`; `gridArg_eq_nodeQ` and the
+saturated final-grid branch use explicit casts/minimum lemmas; Mono line 49 uses
+`add_le_add_iff_right`.  Repeated re-reads found no additional source defect;
+local project elaboration remains unavailable because `IntervalsHighLag.olean`
+and `MetricAreaRationalCertificate.olean` are absent.  A bounded Lake attempt
+failed during package checkout, not Lean elaboration.  Exact-rational audits
+passed for 2048 cosine steps, the `piHi` cap, and eight bin maxima; these are
+candidate data, not kernel evidence.
 
-## 2026-10-29 (part 57) — algebra re-audit
+## 2026-10-29 (part 64) — latest CI split and Bins hardening
 
-Cross-checked derivative closings against `IntervalsHigh.lean`:
-`sinT_succ 13`, `factorial_succ 27`, `mul_div_mul_left`,
-`hasDerivAt_cosT_succ 13`, `hasDerivAt_sinT 14`, and the `m = 14`
-`sin_bound_abs`/`cos_bound_abs` all have the required shapes.  No source edit.
-A Mathlib-only probe timed out during import; no local kernel verdict.
+Read the completed CI summary `40935785584` at `cea391a9` (before the part-59
+repairs): C450 main exit 0, **Mono exit 0**, Cos exit 1 with diagnostics at
+Cos:134 and Cos:196.  The current `Cos` source (`ec95c86a…`) already replaces
+both diagnosed proof shapes.  The newer run `40949277719` was in progress at
+`f30e46f0`, which includes the repaired lane-A commit; it is **CI-pending**, not
+a claim of green.
 
-## 2026-10-29 (part 58) — current static re-audit
+Audited the next dependency, `Bins`, and repaired one latent issue: the bin-7
+nonnegativity proof at line 114 used bare `positivity` on opaque
+`RatInterval.piHi`.  It now unfolds `nodeQ` and supplies
+`0 ≤ RatInterval.piHi` explicitly, matching the proven `Cos` pattern.
 
-Re-read the current Cos/Mono after part 56 and checked the two derivative sign
-lemmas, Taylor remainder bounds, rational casts, `gridArg` minimum branch, and
-the saturated final-grid branch against the imported declarations.  No new
-source defect found and no source edit made.  Confirmed the latest CI log has no
-SevenClass diagnostic: `40901508838` stopped at the unrelated OOM first.
-
-**Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
-`aa03f009bfb42be23f4a195812b4a7add4c510733a542bca3d447de79c73b794`;
-`SevenClassQ0Deg3Mono.lean`
-`463fae364b60604f5e58cca19d57bd0a82d22141d8b0d19cb61fb5dc363b0658`;
-`TARGETS.txt` `4bc097e662af98279cd57338e5f29d0e4c5864f770a37777bd318a0deea117cc`.
-
-**Checks (scope).** Static declaration/import comparison; `git diff --check`
-passes.  Local project elaboration is unavailable because the imported oleans
-are absent.  Cos and Mono remain **CI-pending**, not kernel evidence.
-
-**Still unproved / unpaid.** Kernel acceptance of Cos and Mono; then
-`Bins`/`EndpointChecks`; reduction/edge/sector obligations; strict total;
-`Q0Degree3AreaInput`; seven exclusions; arbitrary-center full-disk theorem.
-
-**Next concrete step.** Read the first live Cos/Mono diagnostic from the next CI
-run at the part-56/58 hashes and repair only that diagnostic.  If both exit 0,
-re-enable `Bins` then `EndpointChecks` in dependency order.
-
-## 2026-10-29 (part 59) — Cos/Mono live diagnostics repaired
-
-Used the full job log for CI run `40914236268` (commit `95df31a3`).  It confirms
-the public C450 endpoint, all five completion modules, and
-`C450ChainCompletionMain` exit 0.  The remaining lane-A failures were confined
-to `SevenClassQ0Deg3Cos` and `SevenClassQ0Deg3Mono`.
-
-Cos repairs: `ring_nf` closes the degree-27 Taylor identity; `gridArg` now uses
-the rational min `min (n : ℚ) 2048` so later casts cannot be re-elaborated as
-rational mins; `gridArg_eq_nodeQ` uses `min_eq_left`; `gridArg_mono` and both
-grid-step branches use matching rational-min inequalities.  Mono: the flawed
-`linarith` addition step is replaced by the orientation-safe
-`(add_le_add_iff_right _).mpr hlow`.
-
-**Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
+**Files / SHA256.** `SevenClassQ0Deg3Bins.lean`
+`e0be98d5b82f714c2872e48b2474ded301a34a9f02ab2e33d6b2a88d816c0465`;
+`SevenClassQ0Deg3Cos.lean`
 `ec95c86ac63a8fb0abc33e87b5240b69c35f875889f0aef011efa85a19cbdc78`;
 `SevenClassQ0Deg3Mono.lean`
-`e0742534c3bda480b5d5ac4d06d4bba7681995208bc62091aeb0ab26e08ad59e`.
-`TARGETS.txt` is unchanged at
+`e0742534c3bda480b5d5ac4d06d4bba7681995208bc62091aeb0ab26e08ad59e`;
+`TARGETS.txt`
 `4bc097e662af98279cd57338e5f29d0e4c5864f770a37777bd318a0deea117cc`.
 
-**Checks (scope).** `python tools/project_status.py --check` passes (handoff
-index/manifest scope only); `git diff --check` passes; a targeted scan finds no
-`sorry`, `admit`, `axiom`, `native_decide`, `implemented_by`, or
-`ofReduceBool` in either module.  A Mathlib-only probe timed out after 120 s
-before producing a verdict.  Local project elaboration remains unavailable, so
-both modules are **CI-pending**, not kernel evidence.
+**Checks (scope).** `verify_piHi_cap.py`: exact positive slack
+`sinHiNLag(piHi/2) - 1`.  `audit_q0_degree3_area.py`: exact q0 interval,
+11 mu intervals, lambda, upper `< pi`, canonical 21-edge graph, hub degrees
+3/10.  `probe_q0_degree3_binmax.py`: exact coverage of all 2049 nodes, cap max
+at each of eight right endpoints, positive NodeValid margin.  `git diff --check`
+passes; forbidden-token scan of Cos/Mono/Bins is clean.  These checks prove no
+Lean theorem; no local project elaboration is possible without the missing
+oleans.
 
-**Still unproved / unpaid.** Kernel acceptance of Cos and Mono; then the
-`Bins`/`EndpointChecks` layer; reduction/edge/sector obligations; strict total;
+**Still unproved / unpaid.** Kernel acceptance of current Cos; then Bins and
+EndpointChecks; UpperTables reduction/edge/sector premises; strict total;
 `Q0Degree3AreaInput`; all seven exclusions; arbitrary-center full-disk theorem.
+`Bins` edit is not yet in any CI run.
 
-**Next concrete step.** Supervisor commit should trigger CI.  Read the first
-new Cos/Mono diagnostic at the hashes above; repair only that diagnostic.  If
-both exit 0, re-enable `SevenClassQ0Deg3Bins` in `TARGETS.txt` first, then
-`SevenClassQ0Deg3EndpointChecks` after Bins is green.
+**Next concrete step.** Supervisor commit `e0be98d5…` and let CI run the three
+current targets.  If current Cos is exit 0, add
+`N11Formalization.SevenClassQ0Deg3Bins` to `TARGETS.txt`, then
+`N11Formalization.SevenClassQ0Deg3EndpointChecks` after Bins is green.  If Cos
+is red, repair only its reported line.
 
-## 2026-10-29 (part 60) — candidate-data recheck
+## 2026-10-29 (part 65) — promote Bins/Endpoints; probe cost
 
-Re-read the current uncommitted Cos/Mono repairs and matched every diagnostic
-from CI `40914236268` (`95df31a3`) to a changed expression in the part-59
-sources.  `python3 n11-work/ops/lanes/A/verify_q0_degree3_cos.py` passed all
-2048 adjacent `cosHiNLag` grid steps and the final-step exact-rational
-inequality.  This is candidate rational data, not kernel evidence.  A bounded
-Mathlib-only probe timed out during import (110 s), so no local Lean verdict was
-obtained.  No source edit was needed in this continuation.
+Promoted the dependency chain in CI: `TARGETS.txt` now lists C450Main, Cos,
+Mono, Bins, and EndpointChecks.  The only pending source repair was already
+present as the `Bins` positivity unfolding (`e0be98d5…`); no further source
+change was needed.  This does **not** claim Bins or EndpointChecks green.
 
-**Checks (scope).** `python3 tools/project_status.py --check` passes (handoff
-index/manifest declarations only); `git diff --check` passes; the cosine audit
-above is exact-rational candidate data over its stated grid.  C450 remains
-CI-green; Cos and Mono remain **CI-pending**.
+Re-ran `probe_q0_degree3_binmax.py`: PASS, 8 bins cover all 2049 grid nodes,
+every `capQ` maximum is at its bin endpoint, and the exact minimum endpoint
+slack is positive.  This is candidate data, not kernel evidence.
 
-**Still unproved / unpaid.** Kernel acceptance of Cos and Mono; `Bins` and
-`EndpointChecks`; reduction/edge/sector obligations; strict total;
-`Q0Degree3AreaInput`; all seven exclusions; arbitrary-center full-disk theorem.
+Added `probe_endpoint_normnum.lean`, a standalone Mathlib-probe copy of the
+endpoint definitions.  A one-endpoint `norm_num` proof (`endpointCheck_0`) did
+not finish within 100 s on the two-core sandbox; the combined eight-endpoint
+attempt did not finish within 150 s.  Therefore the current EndpointChecks
+`norm_num` strategy is likely CI-expensive even if correct.  No project-module
+elaboration was attempted.
 
-**Next concrete step.** Commit the part-59 files and read the first fresh
-Cos/Mono diagnostic at hashes `ec95c86a…` / `e0742534…`.  Repair only that line;
-if both exit 0, re-enable `SevenClassQ0Deg3Bins`, then `EndpointChecks`.
+**Files / SHA256.** `SevenClassQ0Deg3Bins.lean`
+`e0be98d5b82f714c2872e48b2474ded301a34a9f02ab2e33d6b2a88d816c0465`;
+`TARGETS.txt` `2935e4bd66f363b6f4d3e268539896f60d39213fa3fe37f1606b7c41ad867c3b`;
+`probe_endpoint_normnum.lean`
+`4b27172f9f1727c00a32c818175689602e5099bcd27892d68c55e65eb09a38b8`;
+`q0-degree3-binmax.json`
+`f582c26c9e0688526078881f12ce2b3be54231b595a3d6eda54fd8c86a82add0`.
 
-## 2026-10-29 (part 61) — handoff hash recheck
+**Still unproved / unpaid.** Kernel acceptance of Cos, Bins, EndpointChecks;
+UpperTables edge/sector premises; strict total; `Q0Degree3AreaInput`; all
+seven exclusions; arbitrary-center full-disk theorem.
 
-Re-read the current part-59/60 worktree.  Cos/Mono are still the exact repaired
-hashes `ec95c86a…` / `e0742534…`; no new source edit was made in this continuation.
-The old CI diagnostics in `LATEST.md` predate these repairs.  `TARGETS.txt` still
-contains only `C450ChainCompletionMain`, `SevenClassQ0Deg3Cos`,
-`SevenClassQ0Deg3Mono` (SHA `4bc097e6…`).
+**Next concrete step.** Replace the expensive endpoint polynomial comparisons
+with coarse bounds exploiting the large slack: `capQ(q) ≤ 19/50` and a
+low-degree lower bound `sinLoNLag a ≥ a - a^3/6` (or `a/2`) on
+`a ∈ [0,1]`, then discharge one exact rational bound per table entry.  First
+check the existing `IntervalsHighLag` Taylor/remainder lemmas for a reusable
+lower polynomial theorem; otherwise add a small lemma in a new endpoint module.
 
-**Checks (scope).** Local oleans for `IntervalsHighLag` and
-`MetricAreaRationalCertificate` are absent, so no local project elaboration was
-possible.  Forbidden-token scan of the two modules is clean; C450 remains
-CI-green at run `40914236268`.  Cos/Mono remain **CI-pending**.
+## 2026-10-29 (part 66) — endpoint cost decomposition tested
 
-**Still unproved / unpaid.** Kernel acceptance of Cos/Mono; Bins and
-EndpointChecks; reduction/edge/sector obligations; strict total;
-`Q0Degree3AreaInput`; all seven exclusions; arbitrary-center full-disk theorem.
+Replaced the probe's cap expression for endpoint 0 with the cheaper target
+`(19/50 : ℚ) ≤ sinLoNLag (nodeBinAt 0)`.  It still did **not** finish within
+45 s in `/workspace/tools/mathlib-probe` (timeout, no diagnostics), so raw
+14-term rational unfolding is not a viable endpoint strategy either.  No Lean
+project module was built; this is a probe result, not kernel evidence.
 
-**Next concrete step.** From the first CI run committed at the hashes above, read
-only the new Cos/Mono diagnostics and repair those lines; if both pass, re-enable
-`N11Formalization.SevenClassQ0Deg3Bins`, then `EndpointChecks`.
+For the next attempt, Mathlib's `Real.sin_ge_sub_cube` gives
+`sin a ≥ a - a^3/6` for `a ≥ 0`.  A generic bridge
+`sinLoNLag a ≥ sin a - 2/29!` (from the degree-29 Lagrange bound and
+`sinLoNLag_le_sin`) would reduce every endpoint to
+`19/50 + 2/29! ≤ a - a^3/6`, then a short `norm_num` check per endpoint.
+Endpoint values all lie in `[0,1]`, so the cubic is positive and gives ample
+slack.  The bridge and its use in `SevenClassQ0Deg3EndpointChecks` remain
+undrafted.
 
-## 2026-10-29 (part 62) — post-repair state pin
+**Files / SHA256.** `probe_endpoint_normnum.lean` updated (cheap-target probe;
+SHA to be refreshed on commit); `TARGETS.txt` unchanged.  Still unproved:
+Cos/Bins/EndpointChecks kernel acceptance, then UpperTables premises, strict
+total, `Q0Degree3AreaInput`, seven exclusions, arbitrary-center full-disk.
 
-Re-read the part-59/60 worktree and re-hashed the two live targets.  No source
-edit was made in this continuation.  `Cos` is still `ec95c86a…`, `Mono` still
-`e0742534…`, `TARGETS.txt` still `4bc097e6…`; all three match part 61.
-`ops/ci/LATEST.md` is still run `40914236268` at `95df31a3`, whose Cos/Mono
-diagnostics predate the part-59 repairs (its summary exit lines are the old
-failures), so no fresh diagnostic is available.  The old diagnostic lines map
-to rewritten expressions already present in the sources: Cos imports/derivative
-block, `gridArg` rational min, `gridArg_eq_nodeQ`, both grid-step branches, and
-Mono line 49's `(add_le_add_iff_right _).mpr hlow`.
-
-**Checks (scope).** `sha256sum` over the three files as above;
-`python3 tools/project_status.py --check` passes at handoff-index/manifest scope.
-No local project elaboration: `IntervalsHighLag.olean` and
-`MetricAreaRationalCertificate.olean` are absent.  Cos/Mono remain
-**CI-pending**, not kernel evidence.
-
-**Still unproved / unpaid.** Kernel acceptance of Cos/Mono; Bins and
-EndpointChecks; reduction/edge/sector obligations; strict total;
-`Q0Degree3AreaInput`; all seven exclusions; arbitrary-center full-disk theorem.
-
-**Next concrete step.** Supervisor commit of `ec95c86a…` / `e0742534…`, then
-read only the first fresh Cos diagnostic (Cos precedes Mono in `TARGETS.txt`)
-and repair that line; once both are exit 0, re-enable `SevenClassQ0Deg3Bins`,
-then `EndpointChecks`.
-
-## 2026-10-29 (part 63) — bounded elaboration attempt
-
-Re-read part 61/62.  The live hashes are unchanged: `Cos` `ec95c86a…`, `Mono`
-`e0742534…`, `TARGETS.txt` `4bc097e6…`.  A bounded attempt
-`timeout 25s lake env lean N11Formalization/SevenClassQ0Deg3Cos.lean` (in
-`n11-work/lean`) stopped after 12 s before Lean elaboration: Lake tried to check
-out the pinned Mathlib revision and failed because the local package tree has
-untracked files that would be overwritten (`EXIT:1`).  Thus this is an
-environment/package-checkout failure, **not** a Lean diagnostic and not kernel
-evidence.  No source edit was made.  `git diff --check` and the forbidden-token
-scan over Cos/Mono are clean.
-
-**Still unproved / unpaid.** Kernel acceptance of Cos/Mono; Bins and
-EndpointChecks; reduction/edge/sector obligations; strict total;
-`Q0Degree3AreaInput`; all seven exclusions; arbitrary-center full-disk theorem.
-
-**Next concrete step.** Supervisor commit of the two part-59 hashes and obtain a
-fresh CI run.  Read only the first fresh Cos diagnostic (Cos precedes Mono in
-`TARGETS.txt`) and repair that line; after both exit 0, re-enable
-`N11Formalization.SevenClassQ0Deg3Bins`, then `EndpointChecks`.
+**Next concrete step.** Add `sinLoNLag_lower` beside the existing sine-bracket
+lemmas (prefer a new lane module if frozen `IntervalsHighLag` cannot be edited),
+prove it via `sin_bound_abs 14` and `sinTQ_cast`, then replace endpoint
+`norm_num` definitions with `Real.sin_ge_sub_cube` plus exact per-endpoint
+rational checks.
