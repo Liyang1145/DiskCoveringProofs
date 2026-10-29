@@ -4,9 +4,10 @@
 The upstream emitter uses ``Path(o["path"]).stem`` on manifests whose paths
 contain Windows separators.  That is harmless on Windows but makes every path
 a single filename on Linux.  This lane-local emitter reads the already emitted
-sub-aggregates and reconstructs the recorded upstream bytes exactly, then
-fixes the generated `Disjoint` eliminations (Lean `⦃a⦄` binders cannot be
-supplied positionally as `f a h`).
+sub-aggregates and preserves the upstream packet inventory.  It fixes the
+generated `Disjoint` eliminations (Lean `⦃a⦄` binders cannot be supplied
+positionally as `f a h`) and replaces the upstream's kernel-heavy nested-union
+disjointness checks with 28 pairwise checks assembled hierarchically.
 """
 from pathlib import Path
 import hashlib
@@ -51,11 +52,30 @@ lines.append("theorem new_mem (n : Fin 5011) : n ∈ newIDs ↔ " +
              " ∨ ".join(f"n ∈ {s}.newIDs" for s in SUBS) + " := by")
 lines.append("  simp only [newIDs, Finset.mem_union]")
 lines.append(f"theorem new_count : newIDs.card = {count} := by")
-for i, s in enumerate(SUBS[:-1]):
-    expr = SUBS[i + 1] + ".newIDs"
-    for tail in SUBS[i + 2:]:
+# Keep every kernel-decided disjointness at one pair of sub-aggregates.  The
+# previous emitter checked each part against a nested union of all later parts,
+# so the first check walked 168 * 1014 membership tests.  These 28 pair facts are
+# assembled into seven union-disjointness facts below.
+for i, left in enumerate(SUBS):
+    for j, right in enumerate(SUBS):
+        if i < j:
+            lines.append(f"  have d{i}{j} : Disjoint {left}.newIDs {right}.newIDs := by decide +kernel")
+for i in range(len(SUBS) - 1):
+    def hierarchy(j: int, indent: str) -> list[str]:
+        left = f"d{i}{j}"
+        if j == len(SUBS) - 1:
+            return [f"{indent}exact {left}"]
+        return [
+            f"{indent}rw [Finset.disjoint_union_right]",
+            f"{indent}exact ⟨{left}, by",
+            *hierarchy(j + 1, indent + "  "),
+            f"{indent}⟩",
+        ]
+    expr = SUBS[-1] + ".newIDs"
+    for tail in reversed(SUBS[i + 1:-1]):
         expr = f"{tail}.newIDs ∪ ({expr})"
-    lines.append(f"  have d{i} : Disjoint {s}.newIDs ({expr}) := by decide +kernel")
+    lines.append(f"  have d{i} : Disjoint {SUBS[i]}.newIDs ({expr}) := by")
+    lines.extend(hierarchy(i + 1, "    "))
 lines.append("  rw [newIDs]")
 for i, s in enumerate(SUBS[:-1]):
     lines.append(f"  rw [Finset.card_union_of_disjoint d{i}, {s}.new_count]")
@@ -90,31 +110,27 @@ lines.append(f"#print axioms N11Formalization.{TOP}.new_terminal")
 text = "\n".join(lines) + "\n"
 data = text.encode("utf-8")
 expected = hier["outputs"][-1]
-# Establish provenance against the frozen upstream manifest before writing the
-# corrected bytes: reverse only the lane-local implicit-argument fix.
-legacy = text
-for s in SUBS:
-    legacy = legacy.replace(
-        f"  · exact (Finset.disjoint_left.mp {s}.disjoint_sharp) (a := a) h hb",
-        f"  · exact (Finset.disjoint_left.mp {s}.disjoint_sharp) a h hb",
-    )
-legacy_data = legacy.encode("utf-8")
-# The upstream manifest records len(text), not UTF-8 byte length.
-assert len(legacy) == expected["bytes"], (len(legacy), expected["bytes"])
-assert sha256(legacy_data) == expected["sha256"], (sha256(legacy_data), expected["sha256"])
+# The output intentionally differs from the frozen upstream bytes: the latter
+# contains a kernel-heavy first disjointness check and the `⦃a⦄` call bug.  The
+# upstream record remains the provenance anchor for the 1182-member inventory.
+assert expected["module"] == TOP
+assert count == 1182
 
 out = LEAN / f"{TOP}.lean"
 out.write_bytes(data)
 report = {
     "module": TOP,
     "upstream_manifest": "Paid16GeneralNext1182-hier-manifest.json",
-    "upstream_chars": len(legacy),
-    "upstream_utf8_bytes": len(legacy_data),
-    "upstream_sha256": sha256(legacy_data),
-    "correction": "supply implicit Disjoint.left element with (a := a)",
+    "upstream_chars": expected["bytes"],
+    "upstream_sha256": expected["sha256"],
+    "corrections": [
+        "supply implicit Disjoint.left element with (a := a)",
+        "replace nested-union disjointness checks with 28 pairwise checks",
+    ],
     "corrected_chars": len(text),
     "corrected_utf8_bytes": len(data),
     "corrected_sha256": sha256(data),
+    "scope": "source emission and inventory only; Lean elaboration is CI-pending",
 }
 (LANE / "emit_next1182_top-report.json").write_text(
     json.dumps(report, indent=2) + "\n", encoding="utf-8"
