@@ -15,3 +15,4 @@ LAST-REPORT: 2026-10-29 09:45 CST
 - 2026-10-29 12:36 CST: round merged; A Cos fix, B biUnion proof, C row-cap files. Counts unchanged (CI not green).
 LAST-REPORT: 2026-10-29 12:36 CST
 LAST-REPORT: 2026-10-29 14:12 CST
+LAST-REPORT: 2026-10-29 17:12 CST
