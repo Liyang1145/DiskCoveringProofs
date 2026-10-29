@@ -22,126 +22,23 @@ no `native_decide`. Current workflow builds lanes C, B, A and has an OOM guard.
   but no certificate instance or Lean all-node bound.
 - Energy and B13 are lane B; arbitrary-center full-disk theorem remains open.
 
-## 2026-10-29 (part 28) — consumer audit; next reduction isolated
+## 2026-10-29 (parts 28–31, condensed) — edge reduction corrected
 
-**Did.** Re-read the lane handoff and audited the actual consumers of the cosine
-grid theorem. `SevenClassQ0Deg3UpperTables` exposes exactly 21 edge checks and
-9 sector checks over `Fin 2049`; no reduction from `cosHiNLag_grid_antitone` to
-those checks exists yet. The current `CapMonotoneOnGrid` reduction in
-`SevenClassQ0Deg3Bins` is complete and independent of the cosine module.
+`UpperTables` exposes 21 edge and 9 sector grid obligations.  The first
+right-endpoint reduction (`SevenClassQ0Deg3UpperReduction`, SHA256
+`b74510b5…`) was invalid: edge 12 has multiplier `0.17097552… > (19/50)^2`, and
+`edgeUpper` decreases from zero on its first bin.  The counterexample module
+(`957ef5d5…`) records that disproof.  The replacement
+`SevenClassQ0Deg3UpperReductionUnimodal.lean` (`375e7950…`) defines 21 exact
+peaks and proves `edgeValid_of_unimodal` from `EdgeIncTo`, `EdgeDecFrom`, and
+`EdgePeakValid`.  Its exact-rational audit `audit_q0_degree3_edge_unimodal.py`
+shows all 21 edges are single-peaked, but implements no Lean proof.
 
-**Checks (scope).** Source/interface audit only (`Bins`, `Cos`, `UpperTables`,
-and `MetricAreaRationalCertificate`); no Lean build and no new kernel claim.
-The lane-A C450 byte/target state and the pending Cos target are unchanged.
-
-**Still unproved / unpaid.** `Cos` is CI-pending. All 30 `EdgeCheck`/`SectorCheck`
-instances, `EdgeValid`, `SectorValid`, the strict total, `Q0Degree3AreaInput`,
-the seven exclusions, and the arbitrary-center theorem remain unproved.
-
-**Next concrete step.** Add a new `SevenClassQ0Deg3SectorMono` module (no edits to
-generated tables) proving the derivative-sign reduction for one generic edge and
-one generic sector, then add only that module to `TARGETS.txt`; if CI is green,
-emit endpoint/binwise checks from it. Do not re-run the full project locally.
-
-## 2026-10-29 (part 29) — upper-table finite-bin reduction added
-
-**Did.** Added `SevenClassQ0Deg3UpperReduction.lean`, importing the generated
-upper tables.  It replaces the 21 all-grid edge obligations and 9 all-grid
-sector obligations by eight right-endpoint checks per family plus explicit
-`EdgeBinMono` / `SectorBinMono` premises.  Proved `edgeValid_of_binMono` and
-`sectorValid_of_binMono`; the analytic derivative-sign work is now separated
-from the finite endpoint tables and no 2049-way enumeration is needed.
-
-**Files / SHA256.** `n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReduction.lean`
-(new) `b74510b591a6c879760f5f07f59d9a1c70b01682982032e462e71ef96c56475d`;
-`n11-work/ops/lanes/A/TARGETS.txt` (Cos and UpperReduction targets)
-`57acd118568f93a306c7f3bd6fa080dbba7bb860b7e57d7da1e1ea62a2dc8f76`.
-
-**Checks (scope).** Static source scan only: no `sorry`/`admit`/`axiom`/
-`native_decide`; no Lean build was run.  CI kernel status of both
-`SevenClassQ0Deg3Cos` and `SevenClassQ0Deg3UpperReduction` is pending.
-
-**Still unproved / unpaid.** `EdgeBinMono`, `SectorBinMono`, all 168 edge
-endpoint checks, all 72 sector endpoint checks, `EdgeValid`, `SectorValid`,
-the strict total, `Q0Degree3AreaInput`, seven exclusions, and the arbitrary-
-center theorem remain unproved.  C450 is CI-green at `a201da0d`, but not the
-full theorem.
-
-**Next concrete step.** On the next CI artifact, fix the first error in the two
-new SevenClass modules.  If UpperReduction elaborates, prove `EdgeBinMono` by
-the derivative pair for `edgeUpper` and `SectorBinMono` by the corresponding
-`sectorUpper` derivative/sign split, then discharge the 240 endpoint checks in
-small indexed modules.  Keep static candidate data labelled non-paid.
-
-**ROOT-IMPORT REQUEST:** import `N11Formalization.C450ChainCompletionMain` only
-after the supervisor's integration choice; it is CI-green at `a201da0d`.
-
-## 2026-10-29 (part 30) — false edge monotonicity premise isolated
-
-**Did.** Audited the exact 21 edge multipliers in `tableEdges`.  Edge 12
-(`{10,0}`) has positive multiplier `0.17097552…`, above
-`(19/50)^2 = 0.1444`, so `edgeUpper` decreases near zero.  On its first bin,
-`edgeUpper b 0 = 0` but `edgeUpper b (nodeQ piHi 2048 255) ≈ -0.01182487946`;
-therefore the `EdgeBinMono` premise in part 29 is false, not merely unproved.
-Added `SevenClassQ0Deg3UpperReductionCounterexample.lean` with
-`edgeBinMono_false`, a one-witness rational `norm_num` disproof.  This prevents
-emitting 168 endpoint checks for an invalid reduction.
-
-**Files / SHA256.** `n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionCounterexample.lean`
-(new) `957ef5d5d93145f5228aa9750f964381b57d65167bf3baad155894ee2ca686d9`;
-`n11-work/ops/lanes/A/TARGETS.txt` (counterexample target added)
-`c1f4555c41dbfad1d2d13e2bcd69983984b52845bf0675d9706a9f042e6d8de6`.
-
-**Checks (scope).** Static exact-rational witness calculation with `Fraction`
-confirmed strict decrease (`-0.011824879458… < 0`).  Source scan found no
-forbidden constructs.  No Lean build locally (2-core and full-project rules);
-CI kernel status is pending for the counterexample and earlier SevenClass
-modules.
-
-**Still unproved / unpaid.** The all-grid `EdgeValid` remains required; the
-right-endpoint replacement is invalid and must not be used for positive-
-multiplier edges.  `SectorBinMono`, endpoint checks, strict total,
-`Q0Degree3AreaInput`, seven exclusions, and the arbitrary-center theorem remain
-unproved.  C450 is CI-green at `a201da0d`, not the full theorem.
-
-**Next concrete step.** Repair the reduction by splitting edges by multiplier
-sign.  For negative-multiplier edges retain the right-endpoint argument; for
-positive-multiplier edges bound `edgeUpper` by its left endpoint or use the
-derivative critical point.  Check CI on this counterexample first, then write a
-corrected reduction in a new module rather than editing frozen/generated table
-bytes.
-## 2026-10-29 (part 31) — correct single-peak edge reduction
-
-**Did.** Replaced the false endpoint-monotonicity direction with a single-peak
-factorization.  `SevenClassQ0Deg3UpperReductionUnimodal.lean` records the 21
-exact witnesses, defines `EdgeIncTo`, `EdgeDecFrom`, `EdgePeakValid`, and proves
-`edgeValid_of_unimodal`: an increasing prefix plus decreasing suffix plus one
-peak comparison implies `EdgeValid`.  Added an exact-rational audit which checked
-all 21 × 2049 edge values, each reported maximum, and both monotone sides.  This
-is a genuine reduction, not a claim that the analytic shape obligations hold in
-Lean.
-
-**Files / SHA256.** `n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionUnimodal.lean`
-(new) `375e795088a646251498df68ca6b2fcdaa6c4e912a703e069ced7e51ecf53126`;
-`n11-work/ops/lanes/A/audit_q0_degree3_edge_unimodal.py` (new)
-`9fafcb7bbe31f7fdf0831f6cc9046e182a3991052ec8562970db89fb607ea1a0`;
-`q0-degree3-edge-unimodal.json` (new)
-`2a0a38b150cae0b9d200c90f273084b3bdbd4f51d43f4eca1270d8ea5b2f412f`;
-`TARGETS.txt` `65affc3098e476644a36331da601535de5dc40c27e226c6d65eb55909c67cbdb`.
-
-**Checks (scope).** `timeout 120 python3 audit_q0_degree3_edge_unimodal.py` exited
-0 after the exact `Fraction` scan: all 21 edges single-peaked, witnesses and
-maxima agree.  Source scan found no forbidden constructs.  No Lean build was run
-locally; the new module is CI-pending.
-
-**Still unproved / unpaid.** `EdgeUnimodal` is not proved.  In particular the
-analytic prefix/suffix monotonicity of the degree-29 sine bracket (or an exact
-derivative-sign certificate) remains open, as do `SectorValid`, the strict total,
-`Q0Degree3AreaInput`, seven exclusions, and the arbitrary-center theorem.
-
-**Next concrete step.** Prove `EdgeIncTo`/`EdgeDecFrom` per edge from two
-derivative-sign lemmas and the witness table, starting with the positive-multiplier
-edge 12 as the regression case; do not use the disproved right-endpoint premise.
+**Unpaid then.** All analytic edge-shape premises, all sector obligations,
+strict total, `Q0Degree3AreaInput`, seven exclusions, and the arbitrary-center
+theorem.  CI was pending.  **ROOT-IMPORT REQUEST:** import
+`N11Formalization.C450ChainCompletionMain` only after the supervisor's
+integration choice; it is CI-green at `a201da0d`.
 
 ## 2026-10-29 (part 32) — exact derivative-sign audit
 
@@ -243,3 +140,37 @@ and the arbitrary-center theorem remain open.
 error; then take edge 11 (largest coefficient below the threshold) and derive
 the prefix/suffix crossing from the exact derivative-sign audit rather than
 extending the high-coefficient bound.
+
+## 2026-10-29 (part 35) — cosine namespace/coercion repair
+
+**Did.** Repaired `SevenClassQ0Deg3Cos` against the actionable errors in the
+last completed CI log (`a201da0d`).  The missing `open` is now explicitly rooted
+at `N11Formalization.MetricAreaRationalCertificate`, every `nodeQ` use in the
+grid proof is fully qualified, and the rational cast comparison uses
+`exact_mod_cast` instead of the stuck `Rat.cast_le.mp` instance search.  The
+current source already contained the derivative-algebra repair; no generated or
+frozen bytes were edited.
+
+**Files / SHA256.** `n11-work/lean/N11Formalization/SevenClassQ0Deg3Cos.lean`
+`abc16decf48b5fbc4bb79a23b07463c4dd6a162a8e5bf7af7e5cee4405f73ee0`;
+`n11-work/ops/lanes/A/TARGETS.txt` unchanged
+`14853114a1b236e96c0140b5333af9991cc10542cae3e517289b312457732408`.
+
+**Checks (scope).** The tiny Mathlib derivative probe exceeded its local
+120-second budget before producing a result; no full-project build was run.
+`timeout 120 python3 verify_q0_degree3_cos.py` exited 0: exact rational
+monotonicity on all 2048 adjacent steps and a strictly positive final-step gap.
+`audit_q0_degree3_edge_derivative.py` exited 0 on all 21 x 2049 derivative
+signs, `audit_q0_degree3_edge_unimodal.py` exited 0 on all 21 peaks, and
+`audit_q0_degree3_suffix_threshold.py` reproduced exactly `[12, 13]`.  These are
+candidate rational checks, not kernel evidence.  Static source scan found no
+forbidden constructs.  `Cos`, `EdgeReal`, and `EdgeSuffixHigh` remain
+CI-pending.
+
+**Still unproved / unpaid.** `EdgeIncTo`/`EdgeDecFrom` for all 21 edges,
+`EdgePeakValid`, all `SectorValid` obligations, the strict total,
+`Q0Degree3AreaInput`, the seven exclusions, and the arbitrary-center theorem.
+
+**Next concrete step.** Read the next CI artifact for `Cos` first; if green,
+repair the first error in `EdgeReal`, then prove `cosHiReal_le_one` consumers in
+`EdgeSuffixHigh`.  Do not rerun the full project locally.
