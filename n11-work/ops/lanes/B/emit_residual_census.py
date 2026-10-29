@@ -171,7 +171,8 @@ for i in range(block_count):
     else:
         lines.append(f"    (hlo : {lo} ≤ n.val) (hhi : n.val < {hi}) :")
     lines.append("    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by")
-    lines.append("  interval_cases n.val <;>")
+    lines.append("  rcases n with ⟨k, hk⟩")
+    lines.append("  interval_cases k <;>")
     lines.append("    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel")
     lines.append("")
 

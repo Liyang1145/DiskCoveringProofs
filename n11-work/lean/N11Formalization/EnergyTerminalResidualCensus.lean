@@ -34,307 +34,358 @@ theorem residualIDs_card : residualIDs.card = 389 := by
 private theorem mem_iff_block00 (n : Fin 5011)
     (hlo : 0 ≤ n.val) (hhi : n.val < 100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block01 (n : Fin 5011)
     (hlo : 100 ≤ n.val) (hhi : n.val < 200) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block02 (n : Fin 5011)
     (hlo : 200 ≤ n.val) (hhi : n.val < 300) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block03 (n : Fin 5011)
     (hlo : 300 ≤ n.val) (hhi : n.val < 400) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block04 (n : Fin 5011)
     (hlo : 400 ≤ n.val) (hhi : n.val < 500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block05 (n : Fin 5011)
     (hlo : 500 ≤ n.val) (hhi : n.val < 600) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block06 (n : Fin 5011)
     (hlo : 600 ≤ n.val) (hhi : n.val < 700) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block07 (n : Fin 5011)
     (hlo : 700 ≤ n.val) (hhi : n.val < 800) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block08 (n : Fin 5011)
     (hlo : 800 ≤ n.val) (hhi : n.val < 900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block09 (n : Fin 5011)
     (hlo : 900 ≤ n.val) (hhi : n.val < 1000) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block10 (n : Fin 5011)
     (hlo : 1000 ≤ n.val) (hhi : n.val < 1100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block11 (n : Fin 5011)
     (hlo : 1100 ≤ n.val) (hhi : n.val < 1200) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block12 (n : Fin 5011)
     (hlo : 1200 ≤ n.val) (hhi : n.val < 1300) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block13 (n : Fin 5011)
     (hlo : 1300 ≤ n.val) (hhi : n.val < 1400) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block14 (n : Fin 5011)
     (hlo : 1400 ≤ n.val) (hhi : n.val < 1500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block15 (n : Fin 5011)
     (hlo : 1500 ≤ n.val) (hhi : n.val < 1600) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block16 (n : Fin 5011)
     (hlo : 1600 ≤ n.val) (hhi : n.val < 1700) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block17 (n : Fin 5011)
     (hlo : 1700 ≤ n.val) (hhi : n.val < 1800) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block18 (n : Fin 5011)
     (hlo : 1800 ≤ n.val) (hhi : n.val < 1900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block19 (n : Fin 5011)
     (hlo : 1900 ≤ n.val) (hhi : n.val < 2000) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block20 (n : Fin 5011)
     (hlo : 2000 ≤ n.val) (hhi : n.val < 2100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block21 (n : Fin 5011)
     (hlo : 2100 ≤ n.val) (hhi : n.val < 2200) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block22 (n : Fin 5011)
     (hlo : 2200 ≤ n.val) (hhi : n.val < 2300) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block23 (n : Fin 5011)
     (hlo : 2300 ≤ n.val) (hhi : n.val < 2400) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block24 (n : Fin 5011)
     (hlo : 2400 ≤ n.val) (hhi : n.val < 2500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block25 (n : Fin 5011)
     (hlo : 2500 ≤ n.val) (hhi : n.val < 2600) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block26 (n : Fin 5011)
     (hlo : 2600 ≤ n.val) (hhi : n.val < 2700) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block27 (n : Fin 5011)
     (hlo : 2700 ≤ n.val) (hhi : n.val < 2800) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block28 (n : Fin 5011)
     (hlo : 2800 ≤ n.val) (hhi : n.val < 2900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block29 (n : Fin 5011)
     (hlo : 2900 ≤ n.val) (hhi : n.val < 3000) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block30 (n : Fin 5011)
     (hlo : 3000 ≤ n.val) (hhi : n.val < 3100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block31 (n : Fin 5011)
     (hlo : 3100 ≤ n.val) (hhi : n.val < 3200) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block32 (n : Fin 5011)
     (hlo : 3200 ≤ n.val) (hhi : n.val < 3300) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block33 (n : Fin 5011)
     (hlo : 3300 ≤ n.val) (hhi : n.val < 3400) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block34 (n : Fin 5011)
     (hlo : 3400 ≤ n.val) (hhi : n.val < 3500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block35 (n : Fin 5011)
     (hlo : 3500 ≤ n.val) (hhi : n.val < 3600) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block36 (n : Fin 5011)
     (hlo : 3600 ≤ n.val) (hhi : n.val < 3700) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block37 (n : Fin 5011)
     (hlo : 3700 ≤ n.val) (hhi : n.val < 3800) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block38 (n : Fin 5011)
     (hlo : 3800 ≤ n.val) (hhi : n.val < 3900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block39 (n : Fin 5011)
     (hlo : 3900 ≤ n.val) (hhi : n.val < 4000) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block40 (n : Fin 5011)
     (hlo : 4000 ≤ n.val) (hhi : n.val < 4100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block41 (n : Fin 5011)
     (hlo : 4100 ≤ n.val) (hhi : n.val < 4200) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block42 (n : Fin 5011)
     (hlo : 4200 ≤ n.val) (hhi : n.val < 4300) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block43 (n : Fin 5011)
     (hlo : 4300 ≤ n.val) (hhi : n.val < 4400) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block44 (n : Fin 5011)
     (hlo : 4400 ≤ n.val) (hhi : n.val < 4500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block45 (n : Fin 5011)
     (hlo : 4500 ≤ n.val) (hhi : n.val < 4600) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block46 (n : Fin 5011)
     (hlo : 4600 ≤ n.val) (hhi : n.val < 4700) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block47 (n : Fin 5011)
     (hlo : 4700 ≤ n.val) (hhi : n.val < 4800) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block48 (n : Fin 5011)
     (hlo : 4800 ≤ n.val) (hhi : n.val < 4900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block49 (n : Fin 5011)
     (hlo : 4900 ≤ n.val) (hhi : n.val < 5000) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 private theorem mem_iff_block50 (n : Fin 5011)
     (hlo : 5000 ≤ n.val) (hhi : n.val < 5011) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  interval_cases n.val <;>
+  rcases n with ⟨k, hk⟩
+  interval_cases k <;>
     rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel
 
 theorem residualIDs_eq :
