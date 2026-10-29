@@ -79,7 +79,7 @@ def main():
     caps = {cert["id"]: cert for cert in
             json.loads(CAP_CERTS.read_text())["certificates"]}
     assert set(caps) == set(local_residual)
-    assert all(caps[node_id]["excludes_90_row_pass"] for node_id in local_residual)
+    assert all(caps[node_id]["excludes_any_row_count"] for node_id in local_residual)
 
     result = {
         "scope": "exact complement of frozen terminal, sharp, and paid ID sets; no mathematical payment of residual cells",
@@ -105,7 +105,7 @@ def main():
             {
                 "id": node_id,
                 "pass_recorded": records[node_id]["pass"],
-                "excluded_under_90_row_cap": True,
+                "excluded_for_any_row_count": True,
                 "strict_cap_margin": caps[node_id]["strict_margin"],
             }
             for node_id in local_residual

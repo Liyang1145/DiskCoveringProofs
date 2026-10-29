@@ -10,6 +10,8 @@ import hashlib
 import json
 from pathlib import Path
 
+import recheck_next512_rows as common
+
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[2]
 CERT = HERE / "next512-row-cap-certificates.json"
@@ -28,6 +30,27 @@ def vec(values) -> str:
     return "![" + ", ".join(rat(v) for v in values) + "]"
 
 
+def check_certificate(cert: dict, rec: dict) -> None:
+    """Fail closed on every algebraic fact the emitted Lean theorem uses."""
+    y = [Q(v) for v in cert["weights"]]
+    g = [Q(v) for v in rec["g"]]
+    f0 = Q(rec["f0Lo"])
+    if len(y) != 9 or any(v < 0 for v in y) or sum(y) != 1:
+        raise AssertionError(f"node {cert['id']}: invalid dual weights")
+    endpoint = [common.endpoint_lo(value) for value in g]
+    upper_gain = sum(y[q] * endpoint[q] for q in range(9))
+    required_gain = common.T2 - f0
+    if upper_gain != Q(cert["upper_gain"]):
+        raise AssertionError(f"node {cert['id']}: stale upper_gain")
+    if required_gain != Q(cert["required_gain"]):
+        raise AssertionError(f"node {cert['id']}: stale required_gain")
+    margin = required_gain - upper_gain
+    if margin != Q(cert["strict_margin"]) or margin <= 0:
+        raise AssertionError(f"node {cert['id']}: non-positive or stale margin")
+    if sum(y[q] * endpoint[q] for q in range(9)) != upper_gain:
+        raise AssertionError(f"node {cert['id']}: stale endpoint evaluation")
+
+
 def main() -> None:
     cert_doc = json.loads(CERT.read_text())
     proposal = json.loads(PROP.read_text(encoding="utf-8-sig"))
@@ -35,6 +58,10 @@ def main() -> None:
     certs = cert_doc["certificates"]
     if len(certs) != 7 or {c["id"] for c in certs} != {1409, 2337, 2341, 2356, 2360, 2368, 2370}:
         raise AssertionError("stale or unexpected frozen certificate set")
+    if cert_doc["proposal_sha256"] != hashlib.sha256(PROP.read_bytes()).hexdigest().upper():
+        raise AssertionError("certificate was not computed from the frozen proposal")
+    for cert in certs:
+        check_certificate(cert, records[cert["id"]])
     lines = [
         "import N11Formalization.PaidCellCertificateMCap",
         "",
@@ -53,19 +80,26 @@ def main() -> None:
             f"def F0_{n} : ℚ := {rat(rec['f0Lo'])}",
             f"def G_{n} : Fin 9 → ℚ := {vec(rec['g'])}",
             f"def y_{n} : Fin 9 → ℚ := {vec(cert['weights'])}",
+            f"def E_{n} : Fin 9 → ℚ := "
+            f"{vec([common.endpoint_lo(Q(value)) for value in rec['g']])}",
             "",
         ]
     for cert in certs:
         n = cert["id"]
         lines += [
+            f"theorem endpoint_{n} (q : Fin 9) :",
+            f"    endpointLo N11Formalization.FlashCosine.Dq N11Formalization.FlashCosine.DQ (G_{n} q) = E_{n} q := by",
+            f"  fin_cases q <;> norm_num [G_{n}, E_{n}, endpointLo,",
+            "    N11Formalization.FlashCosine.Dq, N11Formalization.FlashCosine.DQ,",
+            "    N11Formalization.FlashCosine.Lq, N11Formalization.FlashCosine.LQ,",
+            "    N11Formalization.RatInterval.piLo, N11Formalization.RatInterval.piHi]",
+            "",
             f"theorem strict_gain_{n} :",
             f"    F0_{n} + ∑ q : Fin 9, y_{n} q *",
             "      endpointLo N11Formalization.FlashCosine.Dq N11Formalization.FlashCosine.DQ (G_"
             f"{n} q) < N11Formalization.FlashCosineLeaf284Bridge.T ^ 2 := by",
-            f"  norm_num [F0_{n}, G_{n}, y_{n}, endpointLo, N11Formalization.FlashCosine.Dq,",
-            "    N11Formalization.FlashCosine.DQ, N11Formalization.FlashCosineLeaf284Bridge.T,",
-            "    N11Formalization.FlashCosine.Lq, N11Formalization.FlashCosine.LQ,",
-            "    N11Formalization.RatInterval.piLo, N11Formalization.RatInterval.piHi]",
+            f"  simp only [endpoint_{n}]",
+            f"  norm_num [F0_{n}, y_{n}, E_{n}, N11Formalization.FlashCosineLeaf284Bridge.T]",
             "",
             f"theorem excluded_{n} {{m : ℕ}} (p : PaidCellCertificateM.Packet m)",
             "    (hp : PaidCellCertificateM.Valid p)",
@@ -76,7 +110,8 @@ def main() -> None:
             f"      (∑ q : Fin 9, y_{n} q * rowA (p.rowFrom a) (p.rowTo a) q) ≤",
             "        db p.nodeID (p.rowFrom a) (p.rowTo a)) : False :=",
             f"  PaidCellCertificateMCap.not_valid_of_frozen_cap p hp F0_{n} G_{n} y_{n}",
-            f"    hf0 hg (by norm_num [y_{n}]) (by norm_num [y_{n}]) hcap",
+            f"    hf0 hg (by intro q; fin_cases q <;> norm_num [y_{n}])",
+            f"    (by norm_num [y_{n}]) hcap",
             f"    (by simpa only using strict_gain_{n})",
             "",
         ]

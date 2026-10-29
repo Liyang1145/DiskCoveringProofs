@@ -5,7 +5,7 @@
     "Patch120DomainPacket.lean": "521713A418FDCD859A517D5895FF0CFFAD7BABE1A17E85448B30AE8FE79E3156",
     "Paid16Batch22Packet.lean": "695D18DAA75C6C539B342E11EAA988AEF91AC64AC05DB502FC650C5EB6A587E8",
     "paid16-general-next512.json": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
-    "next512-row-cap-certificates.json": "A5939E05C90824B61488D0CD3B65A9A5361CE5C59D71B1ADD9F082E8A116BCEB"
+    "next512-row-cap-certificates.json": "0B50B075DBEBC59BCA5374FBA604496F50660572C946AC6CE23F8F104027024B"
   },
   "counts": {
     "terminal_true": 2506,
@@ -411,43 +411,43 @@
     {
       "id": 1409,
       "pass_recorded": false,
-      "excluded_under_90_row_cap": true,
+      "excluded_for_any_row_count": true,
       "strict_cap_margin": "390304229949576289222845910201661095786287712074942464471934994128612593/28147497670981157506986803200000000000000000000000000000000000000000000000000"
     },
     {
       "id": 2337,
       "pass_recorded": false,
-      "excluded_under_90_row_cap": true,
+      "excluded_for_any_row_count": true,
       "strict_cap_margin": "12156702162911963368534840783246294273824761193522638356031159094161069/1172812402959893854263705600000000000000000000000000000000000000000000000000"
     },
     {
       "id": 2341,
       "pass_recorded": false,
-      "excluded_under_90_row_cap": true,
+      "excluded_for_any_row_count": true,
       "strict_cap_margin": "139633769724042930699285631814574020566034422076366708906265227962385953/7036874417752326251164467200000000000000000000000000000000000000000000000000"
     },
     {
       "id": 2356,
       "pass_recorded": false,
-      "excluded_under_90_row_cap": true,
+      "excluded_for_any_row_count": true,
       "strict_cap_margin": "20796393467601419154369032803701431955808549123614118697722543453621937/28147497671009305004657868800000000000000000000000000000000000000000000000000"
     },
     {
       "id": 2360,
       "pass_recorded": false,
-      "excluded_under_90_row_cap": true,
+      "excluded_for_any_row_count": true,
       "strict_cap_margin": "483961699968918663421332416950207462755289589097264426276395536084590687/28147497671009305004657868800000000000000000000000000000000000000000000000000"
     },
     {
       "id": 2368,
       "pass_recorded": false,
-      "excluded_under_90_row_cap": true,
+      "excluded_for_any_row_count": true,
       "strict_cap_margin": "349446989818988324916966783635087930727661291038825717252046077392979703/7036874417752326251164467200000000000000000000000000000000000000000000000000"
     },
     {
       "id": 2370,
       "pass_recorded": false,
-      "excluded_under_90_row_cap": true,
+      "excluded_for_any_row_count": true,
       "strict_cap_margin": "131470094712132408604709641499592176947007928119533619584271861106669539/3518437208876163125582233600000000000000000000000000000000000000000000000000"
     }
   ],
