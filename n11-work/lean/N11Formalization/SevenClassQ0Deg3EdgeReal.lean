@@ -74,11 +74,13 @@ theorem edgeDecFrom_of_antitoneOn (i : Fin 21) (hw : edgeWitness i = 0)
   have hanti' : edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
       edgeHiReal (edgeCoeff i) 0 := by
     exact hanti ⟨le_rfl, hpi0⟩ ⟨hq0R, by exact_mod_cast hqhiR⟩ hq0R
-  apply Rat.cast_le.mp
-  rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) hq0]
-  rw [hw]
-  rw [edgeUpper_cast_eq (edgeCoeff i) 0 (le_refl 0)]
-  simpa only [nodeQ, Nat.cast_zero, mul_zero, zero_div] using hanti'
+  have hR : ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) : ℚ) : ℝ) ≤
+      ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 (edgeWitness i)) : ℚ) : ℝ) := by
+    rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) hq0]
+    rw [hw]
+    rw [edgeUpper_cast_eq (edgeCoeff i) 0 (le_refl 0)]
+    simpa only [nodeQ, Nat.cast_zero, mul_zero, zero_div] using hanti'
+  exact_mod_cast hR
 
 end N11Formalization.SevenClassQ0Deg3EdgeReal
 #check @N11Formalization.SevenClassQ0Deg3EdgeReal.hasDerivAt_edgeHiReal

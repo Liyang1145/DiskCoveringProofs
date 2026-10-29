@@ -13,6 +13,7 @@ noncomputable section
 namespace N11Formalization.SevenClassQ0Deg3Mono
 
 open N11Formalization
+open N11Formalization.MetricAreaRationalCertificate
 
 /-- The real factorial Taylor upper bracket, for nonnegative arguments. -/
 def sinHiReal (x : ℝ) : ℝ :=
@@ -40,8 +41,13 @@ theorem cos_le_deriv_sinHiReal {x : ℝ} (hx0 : 0 ≤ x) (hx : x ≤ Real.pi / 2
   rw [abs_of_nonneg hx0] at hlow
   rw [(hasDerivAt_sinHiReal x).deriv]
   have hc : 0 ≤ Real.cos x :=
-    Real.cos_nonneg_of_neg_pi_div_two_le_of_le (by linarith [Real.pi_pos]) hx
-  linarith
+    Real.cos_nonneg_of_neg_pi_div_two_le_of_le
+      (by linarith [Real.pi_pos]) hx
+  calc
+    Real.cos x = Real.cos x - cosT 14 x + cosT 14 x := by ring
+    _ ≤ x ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) + cosT 14 x :=
+      add_le_add_right hlow _
+    _ = cosT 14 x + x ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) := by ring
 
 theorem sinHiReal_monotoneOn : MonotoneOn sinHiReal (Set.Icc 0 (Real.pi / 2)) := by
   refine monotoneOn_of_deriv_nonneg (convex_Icc _ _) ?_ ?_ ?_
@@ -50,28 +56,32 @@ theorem sinHiReal_monotoneOn : MonotoneOn sinHiReal (Set.Icc 0 (Real.pi / 2)) :=
     exact (hasDerivAt_sinHiReal x).differentiableAt.differentiableWithinAt
   · intro x hx
     rw [interior_Icc] at hx
+    have hneg : -(Real.pi / 2) ≤ x :=
+      (neg_nonpos.mpr (by positivity)).trans (le_of_lt hx.1)
     have hc : 0 ≤ Real.cos x :=
-      Real.cos_nonneg_of_neg_pi_div_two_le_of_le (by linarith [Real.pi_pos]) (le_of_lt hx.2)
+      Real.cos_nonneg_of_neg_pi_div_two_le_of_le hneg (le_of_lt hx.2)
     exact hc.trans (cos_le_deriv_sinHiReal (le_of_lt hx.1) (le_of_lt hx.2))
 
 theorem sinHiNLag_cast (q : ℚ) :
     ((sinHiNLag q : ℚ) : ℝ) = sinT 14 (q : ℝ) + |(q : ℝ)| ^ 29 /
       ((Nat.factorial 29 : ℕ) : ℝ) := by
-  simp only [sinHiNLag, Rat.cast_sub, Rat.cast_add, Rat.cast_pow, Rat.cast_abs,
-    sinTQ_cast, Rat.cast_div, Rat.cast_natCast]
+  simp only [sinHiNLag]
+  push_cast
+  rw [sinTQ_cast]
 
 /-- Rational monotonicity of `sinHiNLag` on `[0, π/2]`. -/
 theorem sinHiNLag_mono {a b : ℚ} (ha : 0 ≤ a) (hab : a ≤ b)
     (hb : (b : ℝ) ≤ Real.pi / 2) : sinHiNLag a ≤ sinHiNLag b := by
-  refine Rat.cast_le.mp ?_
-  rw [sinHiNLag_cast, sinHiNLag_cast]
-  have haR : (0 : ℝ) ≤ (a : ℝ) := by exact_mod_cast ha
-  have habR : (a : ℝ) ≤ (b : ℝ) := by exact_mod_cast hab
-  have hmem_a : (a : ℝ) ∈ Set.Icc 0 (Real.pi / 2) := ⟨haR, habR.trans hb⟩
-  have hmem_b : (b : ℝ) ∈ Set.Icc 0 (Real.pi / 2) :=
-    ⟨haR.trans habR, hb⟩
-  have h := sinHiReal_monotoneOn hmem_a hmem_b habR
-  simpa [sinHiReal, abs_of_nonneg haR, abs_of_nonneg (haR.trans habR)] using h
+  have hR : ((sinHiNLag a : ℚ) : ℝ) ≤ ((sinHiNLag b : ℚ) : ℝ) := by
+    rw [sinHiNLag_cast, sinHiNLag_cast]
+    have haR : (0 : ℝ) ≤ (a : ℝ) := by exact_mod_cast ha
+    have habR : (a : ℝ) ≤ (b : ℝ) := by exact_mod_cast hab
+    have hmem_a : (a : ℝ) ∈ Set.Icc 0 (Real.pi / 2) := ⟨haR, habR.trans hb⟩
+    have hmem_b : (b : ℝ) ∈ Set.Icc 0 (Real.pi / 2) :=
+      ⟨haR.trans habR, hb⟩
+    have h := sinHiReal_monotoneOn hmem_a hmem_b habR
+    simpa [sinHiReal, abs_of_nonneg haR, abs_of_nonneg (haR.trans habR)] using h
+  exact_mod_cast hR
 
 /-- `capQ` is monotone in its argument, provided the upper sine bracket is. -/
 theorem capQ_mono {q₁ q₂ : ℚ} (h : sinHiNLag (q₁ / 2) ≤ sinHiNLag (q₂ / 2)) :

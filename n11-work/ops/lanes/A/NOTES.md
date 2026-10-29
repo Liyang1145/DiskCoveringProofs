@@ -8,11 +8,6 @@ EXPERT (2026-10-29):
 - Prove each edge by one derivative sign-pair lemma; prove each sector per bin and compare the 8 candidates.
 - Keep all Python/static results labeled candidate data, never CI/paid.
 
-SUPERVISOR (2026-10-29 09:45 CST): make `C450ChainCompletion` cheap. The two
-pre-split CI runs died after `C450Identify` while loading the 25-deep telescope.
-Use several small modules, one `TARGETS.txt` entry each, no giant `decide`/`simp`,
-no `native_decide`. Current workflow builds lanes C, B, A and has an OOM guard.
-
 # Lane A notes
 
 ## Obligation ledger
@@ -40,137 +35,133 @@ theorem.  CI was pending.  **ROOT-IMPORT REQUEST:** import
 `N11Formalization.C450ChainCompletionMain` only after the supervisor's
 integration choice; it is CI-green at `a201da0d`.
 
-## 2026-10-29 (part 32) — exact derivative-sign audit
+## 2026-10-29 (part 32, condensed) — exact derivative-sign audit
 
-**Did.** Added a deterministic exact-rational audit of the real derivative route
-for `edgeUpper`.  For each of the 21 edges it evaluates
-`(19/50)^2 * cosHiNLag(q) - b` at all 2049 grid nodes, where `b = edgeCoeff i`.
-All 21 sign patterns align with the recorded peaks: the prefix has nonnegative
-slope and the strict suffix has nonpositive slope, including the two peaks at
-zero (edges 12 and 13, whose peak slopes are about `-0.18404`).  This gives
-finite endpoint data for the monotonicity of the derivative of the real sine
-upper bracket, instead of relying on the disproved right-endpoint reduction.
+Added `audit_q0_degree3_edge_derivative.py` (SHA256 `f6482b60…`) and its
+`q0-degree3-edge-derivative.json` output (`628a20f6…`); all 21 × 2049 exact
+rational derivative signs align with the recorded peaks.  Added
+`SevenClassQ0Deg3EdgeReal.lean` (`100a3c19…`, now revised), including
+`hasDerivAt_edgeHiReal`, `edgeUpper_cast_eq`, and
+`edgeDecFrom_of_antitoneOn`.  These are candidate data plus a CI-pending draft,
+not kernel evidence.  All edge/sector/peak obligations, strict total, area input,
+seven exclusions, and the arbitrary-center theorem remained open.
 
-**Files / SHA256.** `n11-work/ops/lanes/A/audit_q0_degree3_edge_derivative.py`
-(new) `f6482b608b5f2913257c4ee4e357745ca1ecc436095287bbced5e129d1d28521`;
-`n11-work/ops/lanes/A/q0-degree3-edge-derivative.json` (new)
-`628a20f6e4758b3a18ccd83215ac23a7e2fabbb11c701bd667a820643b97d726`.
-Added `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeReal.lean` (new)
-`100a3c1979bbd9f2e0f5cbee18d28a8a365c4552378a92d7df2fbc720a3ce5eb`:
-it defines the real bracket, proves
-`HasDerivAt (edgeHiReal b) (A*cosHiReal x - b)`, proves
-`((edgeUpper b q : ℚ) : ℝ) = edgeHiReal b q` for `0 ≤ q`, and derives
-`EdgeDecFrom i` from real antitone behavior and a zero peak.
-Input `q0-degree3-piecewise-8.json` has SHA256
-`22e49d9dc6962602100f47668ebaaf3d7b3defd3fc126567fbdd7b9084cb6996`.
-`TARGETS.txt` now includes `SevenClassQ0Deg3EdgeReal`
-(`a2f7d8acbf27ac78e55626a40dd1a1d21f30bb01f5fd370c5fa9a90c9e1793c9`).
+## 2026-10-29 (parts 33–36, condensed) — suffix scope, coercions, Cos wrapper
 
-**Checks (scope).** `timeout 60 python3 audit_q0_degree3_edge_derivative.py`
-exited 0 after the exact `Fraction` scan of 21 × 2049 grid nodes.  It verifies
-the exact derivative signs and witness agreement only; it is candidate data,
-not a Lean or kernel proof.  A static source scan found no forbidden constructs.
-No local Lean build was run; `SevenClassQ0Deg3EdgeReal` is CI-pending.
+`SevenClassQ0Deg3EdgeSuffixHigh.lean` (`ab2c0233…`) proves
+`cosHiReal_le_one` on `[0, piHi]` and `EdgeDecFrom` at edges 12/13.
+Parts 34–36 fixed high-coefficient suffix scope, cosine namespace/coercion
+problems, and the `Cos` grid wrapper; those repairs were superseded by the
+current `Cos`/`Mono` SHAs.  All these modules were CI-pending, with no kernel
+evidence claimed.  Remaining obligations were unchanged: other edge/peak
+checks, sectors, strict total, area input, and seven exclusions.
+## 2026-10-29 (parts 37–39, condensed) — Cos/Mono hardening
 
-**Still unproved / unpaid.** All `EdgeIncTo`/`EdgeDecFrom` instances,
-`EdgePeakValid`, `SectorValid`, the strict total, `Q0Degree3AreaInput`, the seven
-exclusions, and the arbitrary-center theorem remain unproved.  The new real
-derivative bridge is drafted but has no kernel status yet.
+Parts 37–38 opened the certificate namespace, repaired rational casts, replaced
+fragile grid `nlinarith` with `gcongr`, and made coherence equalities explicit.
+Part 39 removed the remaining recursive/ambiguous steps: `Mono` now proves
+`-(π/2) ≤ x` via `neg_nonpos` + `positivity`; `Cos` names both `min` equalities
+before rewriting.  No frozen/root/toolchain/generated/certificate file changed.
 
-**Next concrete step.** On the first CI result, repair any kernel errors in
-`SevenClassQ0Deg3EdgeReal`, then discharge `edgeDecFrom_of_antitoneOn` for edge
-12 (and similarly 13) by proving `cosHiReal x ≤ 1` on the grid range.  Since
-`edgeCoeff 12 > (19/50)^2`, this makes the derivative strictly negative and
-closes the first two decreasing-suffix obligations.  Do not rerun the full
-project locally.
+**Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
+`8385ee9109a2e43ef5ba981014efb0fd43b76edbc5aa1df1a1d5e2367001b71d`;
+`SevenClassQ0Deg3Mono.lean`
+`ddf06804dd3847e9375ca5bfff1323352c453b6e9bbb043c0fa079d6fcb144fb`;
+`SevenClassQ0Deg3EdgeReal.lean`
+`4ed2c5816272ebcef894fdfd12b6f2e3746de33192693cfb8f1642e6d69ddc4d`.
 
-## 2026-10-29 (part 33) — zero-peak edge suffixes: generic reduction + two instances
+**Checks (scope).** `project_status.py --check` passed only the handoff
+index/manifest check; `git diff --check` and forbidden-token scans passed.
+`verify_q0_degree3_cos.py` passed all 2048 exact rational grid steps plus the
+positive final gap; `audit_q0_degree3_edge_derivative.py` passed all 21×2049
+exact derivative signs.  These are candidate data, not kernel evidence.  Local
+project oleans are absent and the Mathlib probe exceeded its budget, so no Lean
+build ran.  CI at `1a7c95c3` predates these edits: `Cos`/`Mono` are
+**CI-pending**, not paid.  C450 remains CI-green at `1a7c95c3`.
 
-**Did.** Added `SevenClassQ0Deg3EdgeSuffixHigh.lean`.  Proved
-`cosHiReal_le_one` on `[0, RatInterval.piHi]`: on `[0, π/2]` it follows from
-`cosHiReal_antitoneOn`; on the rest, the Lagrange bound gives
-`cosHiReal x ≤ cos x + 2*x^28/28!`, with `cos x ≤ 0` and the remainder below
-`1/2`.  Then proved the generic implication
-`(19/50)^2 < b → AntitoneOn (edgeHiReal b) [0, piHi]`, and instantiated it at
-edges 12 and 13.  Their exact coefficients are checked by kernel `norm_num`
-from `mu`/`tableEdges`; both `EdgeDecFrom 12` and `EdgeDecFrom 13` are drafted.
+**Still unproved / unpaid.** `Cos`/`Mono` need CI exit 0; `EdgeReal`, both
+high-suffix instances, every other edge/peak obligation, all sectors, strict
+total, area input, seven exclusions, and the arbitrary-center theorem are open.
 
-**Files / SHA256.** `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeSuffixHigh.lean`
-(new) `ab2c023394b3c70781d5e72a316c078b83c5327f8b44f7992557bc4892c10c32`;
-`n11-work/ops/lanes/A/TARGETS.txt` `14853114a1b236e96c0140b5333af9991cc10542cae3e517289b312457732408`
-(adds the new target).
+**Next concrete step.** Read CI for `Mono`, then `Cos`; repair only the first
+current error.  If green, return to `EdgeReal`; do not rerun a local full build.
 
-**Checks (scope).** Static forbidden-token scan only; no local Lean build was
-run.  The new module, including `cosHiReal_le_one`, coefficient comparisons,
-and both `EdgeDecFrom` instances, is CI-pending.  Exact candidate data remain
-the separate 21 × 2049 derivative-sign audit, not kernel evidence.
+## 2026-10-29 (part 40) — Mono cast/inequality proofs made explicit
 
-**Still unproved / unpaid.** All other `EdgeDecFrom` and all `EdgeIncTo`
-instances, all `EdgePeakValid` checks, `SectorValid`, the strict total,
-`Q0Degree3AreaInput`, seven exclusions, and the arbitrary-center theorem.
+**Did.** Addressed the two remaining local proof hazards in `Mono`: replaced
+`linarith` after the cosine Lagrange bound by an explicit `calc` chain through
+`add_le_add_right`; and rewrote `sinHiNLag_cast` in the same `push_cast` +
+`sinTQ_cast` form already used by the frozen interval lemmas, avoiding the
+stuck coercion simplification.  Also removed the unnecessary `14 = 13 + 1`
+rewrite in the `Cos` sine-coherence proof and simplified the coefficient signs
+in one `norm_num only` step.  No root/frozen/toolchain/lakefile file changed.
 
-**Next concrete step.** Read the first CI error in `EdgeSuffixHigh`; first repair
-`norm_num` unfolding of `edgeCoeff`/`tableEdges` if needed, then reuse the same
-`cosHiReal_le_one` argument for every remaining positive-coefficient edge,
-while treating zero/negative coefficients by their recorded derivative signs.
+**Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
+`cc5a11c0f8252c33b41446e007160db5cfb3aafd416c3eeeb61690c152c8d85b`;
+`SevenClassQ0Deg3Mono.lean`
+`1e204915b94419352408f4b4773f1a6a61065f13fd4793fba7f0d64a37e6e23d`;
+`TARGETS.txt` unchanged
+`dc1c1732a7e0e357d141784d5e828328522277356c0f496fd6d96b9440f84f25`.
 
-## 2026-10-29 (part 34) — high-coefficient suffix scope fixed
+**Checks (scope).** Forbidden-token scan over both edited Lean files found
+none; `git diff --check` passed.  `project_status.py --check` passed its handoff
+index/manifest check only.  No local Lean build ran (no project oleans; the
+Mathlib probe timed out during startup at 30 s).  Both modules remain
+**CI-pending**; C450 is CI-green only at `1a7c95c3`.
 
-**Did.** Added an exact-rational classifier for the high-coefficient suffix
-lemma.  It verifies that precisely edges 12 and 13 have `edgeCoeff i > (19/50)^2`
-(their coefficients differ by only `1e-35`), so the two Lean instances are the
-complete scope of this route.  Edges 0–11 and 14–20 require the other
-derivative-sign regimes; extending the lemma to them would be unsound.
+**Still unproved / unpaid.** `Cos`/`Mono` need CI exit 0; `EdgeReal`, both
+high-suffix instances, all other edge/peak obligations, all sectors, strict
+total, area input, seven exclusions, and the arbitrary-center theorem are open.
 
-**Files / SHA256.** `n11-work/ops/lanes/A/audit_q0_degree3_suffix_threshold.py`
-(new) `368893358c9afea5fc13984ce7903bca0a226de6f114805016693221082e378f`;
-`n11-work/ops/lanes/A/q0-degree3-suffix-threshold.json` (new)
-`97eb19def65af9fbe567645c29a9e62f7e666c40b757395f0b90c30454b11fec`.
+**Next concrete step.** CI-read `Mono` first, then `Cos`; fix only the first
+current error.  If both are green, compile `EdgeReal` and then repair
+`EdgeSuffixHigh`.
 
-**Checks (scope).** `python3 audit_q0_degree3_suffix_threshold.py` exited 0 and
-asserted the complete list `[12, 13]`; this is exact finite candidate data, not
-a kernel proof.  `SevenClassQ0Deg3EdgeSuffixHigh` remains CI-pending; no local
-Lean build was run.
+## 2026-10-29 (part 41) — CI block is stale; grid-last interface mismatch found
 
-**Still unproved / unpaid.** All other edge shape obligations, both Lean
-instances until CI, `SectorValid`, strict total, area input, seven exclusions,
-and the arbitrary-center theorem remain open.
+**Did.** Established by reading headers that `ops/ci/LATEST.md` records only
+run 40861839784 at `1a7c95c3` (2026-10-29T10:59Z), which predates the parts
+37–40 edits to `Cos`/`Mono`.  The quoted `Cos` errors (lines 38, 143, 158, 172)
+therefore refer to an older source, not the current SHA
+`cc5a11c0…`/`1e204915…`; they must not be used for repair.  Verified by bounded
+`rg` + `sed` that `cosHiNLag_grid_last` (`SevenClassQ0Deg3Cos.lean:117`) is
+stated in `nodeQ … (2048 : Fin 2049)` form while `gridArg 2048` unfolds to
+`piHi * 2048 / 2048 / 2`; that interface difference is the one structural
+mismatch left in `gridCos_succ_le`'s last-step branch.  No file was edited.
 
-**Next concrete step.** On CI, repair `EdgeSuffixHigh` beginning with its first
-error; then take edge 11 (largest coefficient below the threshold) and derive
-the prefix/suffix crossing from the exact derivative-sign audit rather than
-extending the high-coefficient bound.
+**Files / SHA256.** No Lean change this part.  `NOTES.md` only.
 
-## 2026-10-29 (part 35) — cosine namespace/coercion repair
+**Checks (scope).** Static reading and `rg`/`sed` only; no Lean build, no
+kernel evidence.  CI status for the current `Cos`/`Mono` SHA remains unknown.
 
-**Did.** Repaired `SevenClassQ0Deg3Cos` against the actionable errors in the
-last completed CI log (`a201da0d`).  The missing `open` is now explicitly rooted
-at `N11Formalization.MetricAreaRationalCertificate`, every `nodeQ` use in the
-grid proof is fully qualified, and the rational cast comparison uses
-`exact_mod_cast` instead of the stuck `Rat.cast_le.mp` instance search.  The
-current source already contained the derivative-algebra repair; no generated or
-frozen bytes were edited.
+**Still unproved / unpaid.** `Cos`/`Mono` (CI-pending), `EdgeReal`, both
+high-suffix instances, all other edge/peak obligations, all sectors, strict
+total, area input, seven exclusions, and the arbitrary-center theorem.
 
-**Files / SHA256.** `n11-work/lean/N11Formalization/SevenClassQ0Deg3Cos.lean`
-`abc16decf48b5fbc4bb79a23b07463c4dd6a162a8e5bf7af7e5cee4405f73ee0`;
-`n11-work/ops/lanes/A/TARGETS.txt` unchanged
-`14853114a1b236e96c0140b5333af9991cc10542cae3e517289b312457732408`.
+**Next concrete step.** Restate `cosHiNLag_grid_last` with `gridArg 2048` and
+`gridArg 2047` (or add a corollary `cosHiNLag_gridArg_last`) so the last-step
+`simpa` is syntactic, then let CI kernel-check `Cos`.
 
-**Checks (scope).** The tiny Mathlib derivative probe exceeded its local
-120-second budget before producing a result; no full-project build was run.
-`timeout 120 python3 verify_q0_degree3_cos.py` exited 0: exact rational
-monotonicity on all 2048 adjacent steps and a strictly positive final-step gap.
-`audit_q0_degree3_edge_derivative.py` exited 0 on all 21 x 2049 derivative
-signs, `audit_q0_degree3_edge_unimodal.py` exited 0 on all 21 peaks, and
-`audit_q0_degree3_suffix_threshold.py` reproduced exactly `[12, 13]`.  These are
-candidate rational checks, not kernel evidence.  Static source scan found no
-forbidden constructs.  `Cos`, `EdgeReal`, and `EdgeSuffixHigh` remain
-CI-pending.
+## 2026-10-29 (part 42) — grid-last interface aligned
 
-**Still unproved / unpaid.** `EdgeIncTo`/`EdgeDecFrom` for all 21 edges,
-`EdgePeakValid`, all `SectorValid` obligations, the strict total,
-`Q0Degree3AreaInput`, the seven exclusions, and the arbitrary-center theorem.
+**Did.** Added `cosHiNLag_gridArg_last` (after `gridArg`) stating the final
+grid step directly in `gridArg 2048`/`gridArg 2047` form, proved by
+`simpa [gridArg, nodeQ]` from `cosHiNLag_grid_last`. Replaced the suspicious
+last-branch `simpa [gridCos, gridArg]` with `simpa [gridCos] using
+cosHiNLag_gridArg_last`. No root/frozen/toolchain/lakefile edit.
 
-**Next concrete step.** Read the next CI artifact for `Cos` first; if green,
-repair the first error in `EdgeReal`, then prove `cosHiReal_le_one` consumers in
-`EdgeSuffixHigh`.  Do not rerun the full project locally.
+**Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
+`ac358ff90f3bbb68a8223aaa3061ece0a33815798a0acb1d229f69c4dc326c1b`;
+`TARGETS.txt` unchanged.
+
+**Checks (scope).** Static forbidden-token scan (only the legitimate
+`#print axioms`) and `git diff --check` passed. No Lean build ran; `Cos`/`Mono`
+remain **CI-pending** at current SHAs.
+
+**Still unproved / unpaid.** `Cos` and `Mono` need CI exit 0; `EdgeReal`,
+suffix instances, all remaining edge/peak obligations, sectors, strict total,
+`Q0Degree3AreaInput`, seven exclusions, and the arbitrary-center theorem open.
+
+**Next concrete step.** CI-read `Cos` first. If the `gridArg` corollary fails,
+inspect `nodeQ`'s argument order and restate with the exact `nodeQ` expression;
+then CI-read `Mono`.
