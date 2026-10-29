@@ -1,20 +1,6 @@
 # Lean targets lane A wants CI to build (one per line)
-# The C450 telescope is split into five small modules; the final one preserves
-# the public h450 interface. The Main target consumes it plus the B11 route.
-N11Formalization.C450Source36Segment
-N11Formalization.C450ChainCompletionEndpoint
-N11Formalization.C450ChainCompletionTail
-N11Formalization.C450ChainCompletionMid1
-N11Formalization.C450ChainCompletionMid2
-N11Formalization.C450ChainCompletionMid3
-N11Formalization.C450ChainCompletion
+# Critical path only until Cos and Mono are green.  Re-enable dependent
+# Bins/endpoint and edge/sector targets in dependency order after that.
 N11Formalization.C450ChainCompletionMain
 N11Formalization.SevenClassQ0Deg3Cos
 N11Formalization.SevenClassQ0Deg3Mono
-N11Formalization.SevenClassQ0Deg3Bins
-N11Formalization.SevenClassQ0Deg3EndpointChecks
-N11Formalization.SevenClassQ0Deg3UpperReduction
-N11Formalization.SevenClassQ0Deg3UpperReductionCounterexample
-N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal
-N11Formalization.SevenClassQ0Deg3EdgeReal
-N11Formalization.SevenClassQ0Deg3EdgeSuffixHigh

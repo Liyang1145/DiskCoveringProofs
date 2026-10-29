@@ -1,151 +1,82 @@
-EXPERT (2026-10-29):
-- C450 telescope is sound and CI-green; request supervisor root import of `C450ChainCompletionMain` now.
-- Set TARGETS.txt to `C450ChainCompletionMain`, `SevenClassQ0Deg3Cos`, `SevenClassQ0Deg3Mono` only.
-- Remove UpperReduction, Counterexample, Unimodal, EdgeReal, EdgeSuffixHigh from TARGETS until Cos/Mono are green.
-- Fix Cos closing block with `field_simp [show (28:ℝ) ≠ 0 by norm_num, show ((Nat.factorial 27:ℕ):ℝ) ≠ 0 by positivity]` then `ring_nf`.
-- Fix Mono only from the current CI error and current imported names; no stale line numbers.
-- Emit no edge/sector file until Cos and Mono are both green.
-- Python/static results stay candidate data; CI exit 0 is the only payment.
-
-SUPERVISOR (2026-10-29 12:20 CST): I cancelled stale CI run 40802064355 (pre-split SHA, 2h+ in) so the queued run on the current head starts. STOP polling the Actions API and re-hashing files each session: that is not progress, and CI takes 30-90 min. Instead do real work: (1) TARGETS.txt trimmed by supervisor to the C450 modules only; SevenClass targets are re-enabled only after C450ChainCompletionMain is green. (2) Meanwhile write offline-checkable math for SevenClass: SevenClassQ0Deg3Cos.lean (cosHiNLag grid monotonicity) per EXPERT, test small pieces in /workspace/tools/mathlib-probe locally with `lake env lean`. (3) Never block waiting for CI; commit what you have.
-
 # Lane A notes
 
-## Obligation ledger
+## Directives and ledger
 
-- C450 chain: CI-green at `a201da0d`; root integration still a supervisor decision.
-- Seven-class: 0/7 exclusions paid; q0 degree three has audited candidate data
-  but no certificate instance or Lean all-node bound.
-- Energy and B13 are lane B; arbitrary-center full-disk theorem remains open.
+- EXPERT: C450 telescope CI-green; keep `TARGETS.txt` at C450ChainCompletionMain,
+  Cos, Mono until both SevenClass modules are green.  Do not emit edge/sector work
+  before that.  Python/static checks are candidate data; only CI exit 0 pays.
+- SUPERVISOR: stop polling Actions/re-hashing; work offline and never block on CI.
+- C450 chain: CI-green at `495c970c`; **ROOT-IMPORT REQUEST** for
+  `N11Formalization.C450ChainCompletionMain` remains a supervisor decision.
+- Seven-class: 0/7 exclusions paid.  q0 degree three has exact-rational candidate
+  data, but no kernel green all-node certificate.  Energy/B13 are lane B; the
+  arbitrary-center full-disk theorem remains open.
 
-## 2026-10-29 (parts 28–31, condensed) — edge reduction corrected
+## 2026-10-29 (parts 28–31) — edge reduction corrected
 
-`UpperTables` exposes 21 edge and 9 sector grid obligations.  The first
-right-endpoint reduction (`SevenClassQ0Deg3UpperReduction`, SHA256
-`b74510b5…`) was invalid: edge 12 has multiplier `0.17097552… > (19/50)^2`, and
-`edgeUpper` decreases from zero on its first bin.  The counterexample module
-(`957ef5d5…`) records that disproof.  The replacement
-`SevenClassQ0Deg3UpperReductionUnimodal.lean` (`375e7950…`) defines 21 exact
-peaks and proves `edgeValid_of_unimodal` from `EdgeIncTo`, `EdgeDecFrom`, and
-`EdgePeakValid`.  Its exact-rational audit `audit_q0_degree3_edge_unimodal.py`
-shows all 21 edges are single-peaked, but implements no Lean proof.
+`UpperTables` has 21 edge and 9 sector grid obligations.  The first right-endpoint
+reduction (`SevenClassQ0Deg3UpperReduction`, `b74510b5…`) was invalid: edge 12
+has multiplier `0.17097552… > (19/50)^2`.  `SevenClassQ0Deg3UpperReductionCounterexample`
+(`957ef5d5…`) records the disproof.  `SevenClassQ0Deg3UpperReductionUnimodal`
+(`375e7950…`) defines 21 exact peaks and proves `edgeValid_of_unimodal` from
+`EdgeIncTo`, `EdgeDecFrom`, `EdgePeakValid`; the exact-rational audit shows all
+21 edges single-peaked, but no Lean premise proof exists.
 
-**Unpaid then.** All analytic edge-shape premises, all sector obligations,
-strict total, `Q0Degree3AreaInput`, seven exclusions, and the arbitrary-center
-theorem.  CI was pending.  **ROOT-IMPORT REQUEST:** import
-`N11Formalization.C450ChainCompletionMain` only after the supervisor's
-integration choice; it is CI-green at `a201da0d`.
+## 2026-10-29 (parts 32–55) — Cos/Mono hardening and diagnostics
 
-## 2026-10-29 (parts 32–46, condensed) — Cos/Mono hardening + CI error mapping
+Drafted `SevenClassQ0Deg3EdgeReal.lean` and two high-suffix instances
+(CI-pending, now off the critical target list).  Hardened Cos/Mono with explicit
+natural-min casts, `gridArg_eq_nodeQ`, `cosHiNLag_gridArg_last`, and an explicit
+`le_rfl` in the saturated grid branch.  Exact-rational audits passed for 2048 cos
+grid steps, the `piHi` cap, 8-bin maxima, 21×2049 edge derivative signs, and the
+q0 area/hub graph.  These are not kernel evidence.
 
-Drafted `SevenClassQ0Deg3EdgeReal.lean` (`hasDerivAt_edgeHiReal`,
-`edgeUpper_cast_eq`, `edgeDecFrom_of_antitoneOn`) and the two high-suffix
-instances; all CI-pending. Hardened `Cos`/`Mono` (explicit min equalities,
-`gcongr`/`nlinarith` removed, `gridArg_eq_nodeQ`, `cosHiNLag_gridArg_last`).
-Exact-rational audits passed: 2048-step grid adjacency + positive final gap
-(`verify_q0_degree3_cos.py`), 21×2049 derivative signs
-(`audit_q0_degree3_edge_derivative.py`, JSON `628a20f6…`). These are candidate
-data, not kernel evidence. CI run `40861839784` (SHA `1a7c95c3`) returned
-C450 0/0 on all eight C450 targets, and red `Cos` at 38:47/143/158/172; 143/158/
-172 map to source already rewritten in parts 43–45, so only 38:47 stayed live.
+Run `40861839784` (`1a7c95c3`) returned C450 0/0 and red Cos; later casts/repairs
+were made.  Runs `40893868710` and `40901508838` OOM-killed in unrelated
+`SharedMomentConcreteSwitchBatch`, so their SevenClass exit `1` entries are not
+Lean diagnostics.  The local cache lacks `IntervalsHighLag.olean` and
+`MetricAreaRationalCertificate.olean`; no bounded local project elaboration.
 
-## 2026-10-29 (parts 47–50, condensed) — Cos repairs and target closure
+## 2026-10-29 (part 56) — live diagnostics and cast repair
 
-Rewrote the stale `hsin` proof as direct `sinT_succ`/`norm_num`, removed
-`nlinarith` from `sinT14_nonneg` and `gridArg_mono`, and queued the discovered
-dependency order `Cos → Mono → Bins → EndpointChecks`.  C450, including
-`C450ChainCompletionMain`, is CI-green at `495c970c`.  Run `40893868710`
-reported SevenClass exits as 1 only because the build OOM-killed earlier in
-unrelated `SharedMomentConcreteSwitchBatch`; this is not Lean rejection.
-Exact-rational audits passed for 2048 cos grid steps and the `piHi` cap, but
-remain candidate data.  No Lean evidence for SevenClass; no local build.
+From the run `40901508838` log, confirmed C450 main exit 0 and repaired all live
+Cos/Mono diagnostics:
+- Cos derivative closing now ends `field_simp; ring` (remaining `+ -x^27`).
+- `gridArg_eq_nodeQ` uses `unfold` plus `rw [Nat.min_eq_right hn]`.
+- `(min n 2048 : ℚ)` was a rational min; all grid expressions now cast the
+  natural min explicitly: `((min n 2048 : ℕ) : ℚ)`.
+- Mono:49 replaces mis-oriented `add_le_add_right` with `linarith [hlow]`.
 
-## 2026-10-29 (part 51) — local-check feasibility audit
+## 2026-10-29 (part 57) — algebra re-audit
 
-**Did.** Confirmed `project_status.py --check` passes (index only). C450 is
-CI-green at `495c970c`. Local cache lacks `IntervalsHighLag.olean` and
-`MetricAreaRationalCertificate.olean`, so no bounded local check of `Cos` is
-possible. No source edit. Run `40893868710` OOM-killed before SevenClass, so
-its exit `1` entries are not Lean diagnostics.
+Cross-checked derivative closings against `IntervalsHigh.lean`:
+`sinT_succ 13`, `factorial_succ 27`, `mul_div_mul_left`,
+`hasDerivAt_cosT_succ 13`, `hasDerivAt_sinT 14`, and the `m = 14`
+`sin_bound_abs`/`cos_bound_abs` all have the required shapes.  No source edit.
+A Mathlib-only probe timed out during import; no local kernel verdict.
 
-**Still unproved / unpaid.** Kernel acceptance of the SevenClass modules;
-reduction/edge/sector obligations; strict total; `Q0Degree3AreaInput`; seven
-exclusions; arbitrary-center theorem.
+## 2026-10-29 (part 58) — current static re-audit
 
-## 2026-10-29 (part 52) — Cos tautological-branch fix
-
-**Did.** Inspected the live `SevenClassQ0Deg3Cos.lean` after the part 47–50
-rewrites.  The `n ≥ 2048` branch of `gridCos_succ_le` rewrote both sides to the
-same `cosHiNLag (gridArg n)` but ended with `rw` only, leaving a reflexive
-`≤` goal that `rw` need not discharge.  Added an explicit `exact le_rfl` after
-the rewrite.  No other source change; no root/frozen/toolchain/lakefile edit.
-`TARGETS.txt` still lists the eight C450 targets and the Nine SevenClass
-dependency/consumer targets.
-
-**Checks (scope).** `git diff --check` passed on the modified `Cos` file.
-Static source inspection only; no Lean build ran locally, so `Cos` remains
-**CI-pending**.  C450 remains CI-green at `495c970c`; the latest available run
-OOM-killed in unrelated `SharedMomentConcreteSwitchBatch` before SevenClass.
-
-**Still unproved / unpaid.** Kernel acceptance of `Cos`, `Mono`, `Bins`,
-`EndpointChecks`; all queued reduction/edge modules; analytic edge-shape and
-sector obligations; strict total; `Q0Degree3AreaInput`; seven exclusions; the
-arbitrary-center full-disk theorem.
-
-**Next concrete step.** On the next CI run that reaches SevenClass, repair only
-the first `Cos` diagnostic; if `Cos` is green, inspect `Mono`, then
-`Bins`/`EndpointChecks`.  Do not read an OOM exit `1` as Lean rejection.
-
-## 2026-10-29 (part 53) — Mono dependency audit
-
-**Did.** Re-read the live `SevenClassQ0Deg3Mono.lean` (current source has no
-`nlinarith`, no forbidden tokens).  Confirmed every imported identifier it
-uses exists in the declared imports: `cos_bound_abs` (`IntervalsHighLag`),
-`hasDerivAt_sinT` (`IntervalsHigh`), `sinTQ_cast` (`IntervalsHighLag` /
-`IntervalsHigh`), and `sinHiNLag` (`IntervalsHighLag`).  No source edit was
-needed; the stale CI lines 54/66/78 were against an older Mono source.
+Re-read the current Cos/Mono after part 56 and checked the two derivative sign
+lemmas, Taylor remainder bounds, rational casts, `gridArg` minimum branch, and
+the saturated final-grid branch against the imported declarations.  No new
+source defect found and no source edit made.  Confirmed the latest CI log has no
+SevenClass diagnostic: `40901508838` stopped at the unrelated OOM first.
 
 **Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
-`8ea1f6f58683bc0d453e0145c15e8edadfd443e462cf874f3a0b5963ab53c923`;
+`aa03f009bfb42be23f4a195812b4a7add4c510733a542bca3d447de79c73b794`;
 `SevenClassQ0Deg3Mono.lean`
-`1e204915b94419352408f4b4773f1a6a61065f13fd4793fba7f0d64a37e6e23d`;
-`SevenClassQ0Deg3Bins.lean`
-`9e22ca4f007c773a98922bd8dba73b92604c0e1768e93f27c09c592789e56f8a`.
-`TARGETS.txt` unchanged (C450 chain then Cos→Mono→Bins→EndpointChecks→reductions).
+`463fae364b60604f5e58cca19d57bd0a82d22141d8b0d19cb61fb5dc363b0658`;
+`TARGETS.txt` `4bc097e662af98279cd57338e5f29d0e4c5864f770a37777bd318a0deea117cc`.
 
-**Checks (scope).** Static identifier-resolution grep over the import closure;
-`git diff --check` passed on the three Lean files. No Lean build ran locally
-(cache lacks the imported oleans), so all SevenClass modules remain
-**CI-pending**; this is not kernel evidence.
+**Checks (scope).** Static declaration/import comparison; `git diff --check`
+passes.  Local project elaboration is unavailable because the imported oleans
+are absent.  Cos and Mono remain **CI-pending**, not kernel evidence.
 
-**Still unproved / unpaid.** Kernel acceptance of `Cos`, `Mono`, `Bins`,
-`EndpointChecks`; queued reductions/edge modules; analytic edge-shape and
-sector obligations; strict total; `Q0Degree3AreaInput`; seven exclusions; the
-arbitrary-center full-disk theorem.
-
-**Next concrete step.** On the first CI run that reaches SevenClass, fix only
-the first diagnostic (expected first in `Cos`); if `Cos` builds, read `Mono`
-next.  If OOM again, do not count exit `1` as a Lean rejection.
-
-## 2026-10-29 (part 54) — Cos definition/derivative audit
-
-**Did.** Checked the live `Cos` against its imported definitions.  `sinT 14`
-is the 14-term odd Taylor partial sum; `hasDerivAt_cosT_succ 13` gives
-`cosT 14' = -sinT 13`; the added `x^28/28!` has derivative `x^27/27!`, and
-`sinT_succ` identifies `sinT 14 = sinT 13 - x^27/27!`.  Thus
-`cosHiReal' = -(sinT 14)` and the antitone-on-`[0,π/2]` reduction is
-mathematically sound.  Also checked `nodeQ U 2048 k = U*k.val/2048`, so
-`nodeQ ... / 2 = gridArg k`; no definition mismatch found.  No source edit.
-
-**Checks (scope).** Static comparison of `Cos` declarations with
-`IntervalsHigh.lean` and `MetricAreaRationalCertificate.lean`; no Lean build.
-`Cos` remains **CI-pending**.  C450 remains CI-green at `495c970c`.
-
-**Still unproved / unpaid.** Kernel acceptance of `Cos`, `Mono`, `Bins`, and
-`EndpointChecks`; reduction/edge/sector obligations; strict total;
+**Still unproved / unpaid.** Kernel acceptance of Cos and Mono; then
+`Bins`/`EndpointChecks`; reduction/edge/sector obligations; strict total;
 `Q0Degree3AreaInput`; seven exclusions; arbitrary-center full-disk theorem.
 
-**Next concrete step.** When CI reaches `Cos`, repair its first diagnostic
-only; then proceed to `Mono`, `Bins`, and `EndpointChecks`.  A local Mathlib
-probe should isolate `field_simp; ring` in `hasDerivAt_cosHiReal` using copied
-`sinT`/`cosT` definitions and the imported derivative lemmas.
+**Next concrete step.** Read the first live Cos/Mono diagnostic from the next CI
+run at the part-56/58 hashes and repair only that diagnostic.  If both exit 0,
+re-enable `Bins` then `EndpointChecks` in dependency order.
