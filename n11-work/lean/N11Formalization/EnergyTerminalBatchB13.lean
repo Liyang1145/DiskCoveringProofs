@@ -1,5 +1,6 @@
 import N11Formalization.EnergyTerminalBatchB12
 import N11Formalization.Paid16GeneralNext1182
+import N11Formalization.EnergyTerminalBatchB13Next505Bounds
 
 /-! One thousand nine hundred ninety-seven actual energy terminals on the
 SAME closed truechart: 815 from B12 plus the 1182 `rest1182` packets.
@@ -31,8 +32,7 @@ private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs
 
 private theorem next505_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralNext505.newIDs) :
     n.val < 2565 := by
-  exact (Finset.all_eq_true.mp (s := Paid16GeneralNext505.newIDs)
-    (p := fun n => n.val < 2565) (by decide +kernel)) n hn
+  exact N11Formalization.EnergyTerminalBatchB13Next505Bounds.next505_lt n hn
 
 theorem new_disjoint_old :
     Disjoint EnergyTerminalBatchB12.paidIDs Paid16GeneralNext1182.newIDs := by

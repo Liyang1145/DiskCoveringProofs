@@ -274,140 +274,140 @@ private theorem part_s01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.newIDs) : 2565 ≤ n.val ∧ n.val ≤ 2736 := by
   rcases (Paid16GeneralNext1182S01.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7
   · have hb := block_s01_00_bounds n h0
-    omega
+    constructor <;> omega
   · have hb := block_s01_01_bounds n h1
-    omega
+    constructor <;> omega
   · have hb := block_s01_02_bounds n h2
-    omega
+    constructor <;> omega
   · have hb := block_s01_03_bounds n h3
-    omega
+    constructor <;> omega
   · have hb := block_s01_04_bounds n h4
-    omega
+    constructor <;> omega
   · have hb := block_s01_05_bounds n h5
-    omega
+    constructor <;> omega
   · have hb := block_s01_06_bounds n h6
-    omega
+    constructor <;> omega
   · have hb := block_s01_07_bounds n h7
-    omega
+    constructor <;> omega
 private theorem part_s02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.newIDs) : 2737 ≤ n.val ∧ n.val ≤ 2906 := by
   rcases (Paid16GeneralNext1182S02.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7
   · have hb := block_s02_00_bounds n h0
-    omega
+    constructor <;> omega
   · have hb := block_s02_01_bounds n h1
-    omega
+    constructor <;> omega
   · have hb := block_s02_02_bounds n h2
-    omega
+    constructor <;> omega
   · have hb := block_s02_03_bounds n h3
-    omega
+    constructor <;> omega
   · have hb := block_s02_04_bounds n h4
-    omega
+    constructor <;> omega
   · have hb := block_s02_05_bounds n h5
-    omega
+    constructor <;> omega
   · have hb := block_s02_06_bounds n h6
-    omega
+    constructor <;> omega
   · have hb := block_s02_07_bounds n h7
-    omega
+    constructor <;> omega
 private theorem part_s03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.newIDs) : 2907 ≤ n.val ∧ n.val ≤ 3087 := by
   rcases (Paid16GeneralNext1182S03.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7
   · have hb := block_s03_00_bounds n h0
-    omega
+    constructor <;> omega
   · have hb := block_s03_01_bounds n h1
-    omega
+    constructor <;> omega
   · have hb := block_s03_02_bounds n h2
-    omega
+    constructor <;> omega
   · have hb := block_s03_03_bounds n h3
-    omega
+    constructor <;> omega
   · have hb := block_s03_04_bounds n h4
-    omega
+    constructor <;> omega
   · have hb := block_s03_05_bounds n h5
-    omega
+    constructor <;> omega
   · have hb := block_s03_06_bounds n h6
-    omega
+    constructor <;> omega
   · have hb := block_s03_07_bounds n h7
-    omega
+    constructor <;> omega
 private theorem part_s04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.newIDs) : 3088 ≤ n.val ∧ n.val ≤ 3266 := by
   rcases (Paid16GeneralNext1182S04.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7
   · have hb := block_s04_00_bounds n h0
-    omega
+    constructor <;> omega
   · have hb := block_s04_01_bounds n h1
-    omega
+    constructor <;> omega
   · have hb := block_s04_02_bounds n h2
-    omega
+    constructor <;> omega
   · have hb := block_s04_03_bounds n h3
-    omega
+    constructor <;> omega
   · have hb := block_s04_04_bounds n h4
-    omega
+    constructor <;> omega
   · have hb := block_s04_05_bounds n h5
-    omega
+    constructor <;> omega
   · have hb := block_s04_06_bounds n h6
-    omega
+    constructor <;> omega
   · have hb := block_s04_07_bounds n h7
-    omega
+    constructor <;> omega
 private theorem part_s05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.newIDs) : 3267 ≤ n.val ∧ n.val ≤ 3445 := by
   rcases (Paid16GeneralNext1182S05.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7
   · have hb := block_s05_00_bounds n h0
-    omega
+    constructor <;> omega
   · have hb := block_s05_01_bounds n h1
-    omega
+    constructor <;> omega
   · have hb := block_s05_02_bounds n h2
-    omega
+    constructor <;> omega
   · have hb := block_s05_03_bounds n h3
-    omega
+    constructor <;> omega
   · have hb := block_s05_04_bounds n h4
-    omega
+    constructor <;> omega
   · have hb := block_s05_05_bounds n h5
-    omega
+    constructor <;> omega
   · have hb := block_s05_06_bounds n h6
-    omega
+    constructor <;> omega
   · have hb := block_s05_07_bounds n h7
-    omega
+    constructor <;> omega
 private theorem part_s06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.newIDs) : 3446 ≤ n.val ∧ n.val ≤ 3954 := by
   rcases (Paid16GeneralNext1182S06.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7
   · have hb := block_s06_00_bounds n h0
-    omega
+    constructor <;> omega
   · have hb := block_s06_01_bounds n h1
-    omega
+    constructor <;> omega
   · have hb := block_s06_02_bounds n h2
-    omega
+    constructor <;> omega
   · have hb := block_s06_03_bounds n h3
-    omega
+    constructor <;> omega
   · have hb := block_s06_04_bounds n h4
-    omega
+    constructor <;> omega
   · have hb := block_s06_05_bounds n h5
-    omega
+    constructor <;> omega
   · have hb := block_s06_06_bounds n h6
-    omega
+    constructor <;> omega
   · have hb := block_s06_07_bounds n h7
-    omega
+    constructor <;> omega
 private theorem part_s07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.newIDs) : 3955 ≤ n.val ∧ n.val ≤ 4984 := by
   rcases (Paid16GeneralNext1182S07.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7
   · have hb := block_s07_00_bounds n h0
-    omega
+    constructor <;> omega
   · have hb := block_s07_01_bounds n h1
-    omega
+    constructor <;> omega
   · have hb := block_s07_02_bounds n h2
-    omega
+    constructor <;> omega
   · have hb := block_s07_03_bounds n h3
-    omega
+    constructor <;> omega
   · have hb := block_s07_04_bounds n h4
-    omega
+    constructor <;> omega
   · have hb := block_s07_05_bounds n h5
-    omega
+    constructor <;> omega
   · have hb := block_s07_06_bounds n h6
-    omega
+    constructor <;> omega
   · have hb := block_s07_07_bounds n h7
-    omega
+    constructor <;> omega
 private theorem part_s08_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S08.newIDs) : 4986 ≤ n.val ∧ n.val ≤ 5007 := by
   rcases (Paid16GeneralNext1182S08.new_mem n).mp h with h0
   · have hb := block_s08_00_bounds n h0
-    omega
+    constructor <;> omega
 private theorem disjoint_s01_s02 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S02.newIDs := by
   rw [Finset.disjoint_left]
   intro n hi hj
