@@ -66,19 +66,15 @@ theorem of7_valid {p : Paid16CellCertificate.Packet}
       using hp.endpoints k
   · exact hp.lam_nonneg
   · intro q
-    change p.rmin ≤
-      endpointLo Dq DQ (g (W (of7 p)) (slopeQ (of7 p)) q) +
-        rho p.rowFrom p.rowTo p.lam q
     have hW : W (of7 p) = Paid16CellCertificate.W p := rfl
     have hs : slopeQ (of7 p) = Paid16CellCertificate.slopeQ p := rfl
-    simpa only [hW, hs] using hp.reduced q
-  · change FlashCosineLeaf284Bridge.T ^ 2 <
-      lower (W (of7 p)) (slopeQ (of7 p)) (interQ (of7 p))
-        p.nodeID p.rowFrom p.rowTo p.lam p.rmin
-    have hW : W (of7 p) = Paid16CellCertificate.W p := rfl
+    rw [hW, hs]
+    exact hp.reduced q
+  · have hW : W (of7 p) = Paid16CellCertificate.W p := rfl
     have hs : slopeQ (of7 p) = Paid16CellCertificate.slopeQ p := rfl
     have hi : interQ (of7 p) = Paid16CellCertificate.interQ p := rfl
-    simpa only [hW, hs, hi] using hp.numeric
+    rw [hW, hs, hi]
+    exact hp.numeric
   · exact hp.terminal
 
 theorem W_nonneg {m : ℕ} (p : Packet m) (hp : Valid p) (k : Fin 36) : 0 ≤ W p k :=
