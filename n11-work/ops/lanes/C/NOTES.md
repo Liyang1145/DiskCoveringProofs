@@ -39,14 +39,10 @@
 
 ## 2026-10-29 — parts 19–22 (condensed; superseded by later checks)
 
-- Emitters generated exact row-cap modules for 1409 and then all seven public
-  ids, checking 700 ordered-pair inequalities over `Fraction` before output:
-  `emit_frozen_cap_row_caps.py` and `FrozenCapRowCap{1409,2337,2341,2356,2360,2368,2370}.lean`.
-- `FrozenCapRowCapTreeBridges.lean` connects all seven copied matrices to
-  `DBMSourceTree.data` using `decide +kernel`; all bridge/row-cap modules remain
-  **CI pending**. Earlier one-off 1409 emitter/output hashes are superseded.
-- Local Lean probing was unavailable: the Mathlib probe olean is a stub; a
-  150-second attempt exited 124 without a verdict. No paid claim follows.
+- `emit_frozen_cap_row_caps.py` emitted all seven row-cap modules after an
+  exact 700/700 inequality check; `FrozenCapRowCapTreeBridges.lean` links the
+  copied matrices to `DBMSourceTree.data` by kernel `decide`. Both remain
+  **CI pending**. Local Mathlib probing was unavailable (stub olean).
 
 ## 2026-10-29 — sessions part 23–24 (exact support threshold <=4; no row rescue)
 
@@ -68,16 +64,10 @@ Did:
   plan is mathematically dead for these seven. Any rescue must change the
   certified cap/row set, not just its size.
 
-Files / SHA256 (current bytes, uppercase in manifest when needed):
-- `ops/lanes/C/residual_mixture_faces3.py`
-  `b7768e0c6ea15b4f64f875275a0eb0787338a3ef232701bae0b3edc032e0794f`
-- `ops/lanes/C/residual-mixture-faces3.json`
-  `e773e520f89475689c89e0e7b67c78d7d7f925982a5d128c4abb4d53472b668b`
-- `ops/lanes/C/residual_mixture_faces4.py`
-  `579c1c7244ff452ad8a7a65d0f18c4b69f22c9596cf6f02dc241b7d42e332e01`
-- `ops/lanes/C/residual-mixture-faces4.json`
-  `34bce5b7c91692d8e8c8d5cb5144e2d01c465d08750fcf56488a76bc0f860551`
-- `TARGETS.txt` unchanged.
+Files: `residual_mixture_faces3.py` SHA256 `b7768e0c...e0794f`,
+`residual-mixture-faces3.json` `e773e520...72b668b`,
+`residual_mixture_faces4.py` `579c1c72...e332e01`,
+`residual-mixture-faces4.json` `34bce5b7...0f860551`; `TARGETS.txt` unchanged.
 
 Checks run (scope stated):
 - `python3 residual_mixture_faces3.py`: exit 0, 7x84 faces, `pass_count=0`.
@@ -90,76 +80,22 @@ Still unproved / missing:
   theorems. Core/M/MCap/row caps/bridges remain CI pending. The 382 absent HOST
   records still block the global energy count; no exclusion is unconditional.
 
-## 2026-10-29 — session part 25 (tree-pinned 1409 exclusion wrapper)
+## 2026-10-29 — sessions 25–26 (seven node-pinned exclusion wrappers)
 
-Did:
-- Added `lean/N11Formalization/FrozenCapExcludedTree1409.lean`. It applies
-  `FrozenCapCertificates.excluded_1409` after fixing `p.nodeID = 1409` and
-  deriving every row cap from `FrozenCapRowCap1409.row_cap` through
-  `FrozenCapRowCapTreeBridges.db_eq_tree_1409`.
-- This closes only the node/row-database wiring for 1409. The packet hypotheses
-  `hf0` and `hg` remain explicit; no `excluded_1409` instance is unconditional.
-
-File SHA256:
-- `lean/N11Formalization/FrozenCapExcludedTree1409.lean`
-  `3EEBE24D7FD4DA84A134DF97404C5001498E4E5D802903C946B05DF5D1A94B5C`.
-
-Checks run (scope stated):
-- `git diff --check`: exit 0. Placeholder scan: clean (no forbidden tactics or
-  declarations). No Lean elaboration locally; module is **CI pending**.
-- `TARGETS.txt` unchanged per the standing instruction to wait for the core.
-- `timeout 60 python tools/project_status.py --check`: exit 0; this validates
-  handoff-index/manifest declarations only, not mathematics or file integrity.
-
-Still unproved / missing:
-- Core/M/MCap/row caps/bridges remain CI pending. `hf0`/`hg` must be supplied by
-  actual packets, and 382 residual HOST records remain absent.
-
-Very next concrete step: after core is CI green, route this module alone and
-inspect the first elaboration diagnostic; then generate the same wrapper for
-2337–2370 only if 1409 is green.
-## 2026-10-29 — session part 26 (seven node-pinned exclusion wrappers)
-
-Did:
-- Generalized the 1409 wrapper to all seven public ids with one uniform,
-  deterministic lane-C generation pass. Each `FrozenCapExcludedTree<id>.lean`
-  imports the id's exact row-cap module and `FrozenCapRowCapTreeBridges`, fixes
-  `p.nodeID = id`, derives all row caps from `row_cap` plus
-  `db_eq_tree_<id>`, and applies `FrozenCapCertificates.excluded_<id>`.
-- `hf0` and `hg` remain explicit packet hypotheses. No exclusion is
-  unconditional, and `TARGETS.txt` remains unchanged pending core CI green.
-- The 1409 file was regenerated with the same template; current bytes differ
-  from part 25 because the template comment/import list is now explicit. It is
-  not kernel-checked.
-
-Files (SHA256):
-- `lean/N11Formalization/FrozenCapExcludedTree1409.lean`
-  `e801dfe92443ea05c2b90143ea2e4f75d23a888e6c96341ed19c40f4aba3f36b`
-- `.../FrozenCapExcludedTree2337.lean`
-  `0003985c0af1700b979e8babc781a69f340bf9962b8cdca16d1cc3119ea37c18`
-- `.../FrozenCapExcludedTree2341.lean`
-  `07105ea763d2b5c7750ed8d1a712e95122703bbb8d1c07647392e8d8156e4614`
-- `.../FrozenCapExcludedTree2356.lean`
-  `3feb38e6e0c95455397e14c3c5335edf575cd65d8b5449bf423235c692da691b`
-- `.../FrozenCapExcludedTree2360.lean`
-  `703b0a8b16294bc0626b96351e528694cab299d8046bdc8cd5e8f25ffb077973`
-- `.../FrozenCapExcludedTree2368.lean`
-  `d2163c41ba093eaa9d8008fede1a926a20bb93ca411bafacdd086b0a4984b879`
-- `.../FrozenCapExcludedTree2370.lean`
-  `73fbc36151574be9c3347d5f71c25324b0ef5401a2ad242420bbbc8a967754eb`
-
-Checks run (scope stated):
-- Generation and id/import/theorem substitution asserts: exit 0, 7 files.
-- Forbidden-token scan over all seven wrappers: clean.
-- `git diff --check`: exit 0. No Lean elaboration locally; all wrappers **CI pending**.
-
-Still unproved / missing:
-- Core/M/MCap/row caps/bridges/wrappers have no kernel verdict. Actual packets
-  must supply `hf0`/`hg`; 382 HOST residual records remain absent.
-
-Very next concrete step: once `FrozenCapRationalCore` is CI green, add
-`FrozenCapRowCap1409` and then its tree bridge/wrapper alone to `TARGETS.txt`;
-inspect first diagnostics before routing the other six.
+- Added `FrozenCapExcludedTree{1409,2337,2341,2356,2360,2368,2370}.lean`.
+  Each fixes `p.nodeID` to its frozen node, derives every row cap from the exact
+  `row_cap` certificate via the source-tree bridge, and applies the matching
+  `FrozenCapCertificates.excluded_*`. Packet `hf0`/`hg` remain explicit; none of
+  the seven exclusions is unconditional.
+- Wrapper SHA256: 1409 `e801dfe92443ea05c2b90143ea2e4f75d23a888e6c96341ed19c40f4aba3f36b`;
+  2337 `0003985c0af1700b979e8babc781a69f340bf9962b8cdca16d1cc3119ea37c18`;
+  2341 `07105ea763d2b5c7750ed8d1a712e95122703bbb8d1c07647392e8d8156e4614`;
+  2356 `3feb38e6e0c95455397e14c3c5335edf575cd65d8b5449bf423235c692da691b`;
+  2360 `703b0a8b16294bc0626b96351e528694cab299d8046bdc8cd5e8f25ffb077973`;
+  2368 `d2163c41ba093eaa9d8008fede1a926a20bb93ca411bafacdd086b0a4984b879`;
+  2370 `73fbc36151574be9c3347d5f71c25324b0ef5401a2ad242420bbbc8a967754eb`.
+- Checks: emitter/id/import/theorem substitution assertions exit 0; forbidden
+  token scan clean; `git diff --check` exit 0. All wrappers **CI pending**.
 
 ## 2026-10-29 — session part 27 (row-cap exact rerun)
 
@@ -195,30 +131,95 @@ Very next concrete step: on the next session/CI verdict, route only
 first error before adding the bridge and 1409 wrapper.
 
 ## 2026-10-29 — session part 28 (bounded local core elaboration attempts)
+- `project_status.py --check` passed (declarations only); project/probe Lean
+  timed out. Core then `c48270a5...65b7a5a`; no kernel verdict.
+
+## 2026-10-29 — session part 29 (CI red diagnosed; two compile fixes)
 
 Did:
-- Re-read guidance, lane C scope, notes, and `ops/ci/LATEST.md`; ran
-  `python3 tools/project_status.py --check` (exit 0, handoff declarations only).
-- Audited current `TARGETS.txt`: still exactly `FrozenCapRationalCore`,
-  `PaidCellCertificateM`, `PaidCellCertificateMCap`.
-- Tried the Mathlib-only `FrozenCapRationalCore.lean` alone, not the project:
-  project `lake env lean` timed out at 90 s while fetching Mathlib (no Lean
-  verdict); `/workspace/tools/mathlib-probe` `lake env lean` timed out at 120 s
-  with zero diagnostics (no Lean verdict).
+- Inspected run `40818062141` / job `123308953128`. Its API/job conclusion is
+  `success`, but the job log has `=== EXIT FrozenCapRationalCore 1`,
+  `PaidCellCertificateM 1`, and `PaidCellCertificateMCap 1`. The workflow's
+  unconditional `true` at the end of the build step masks target failures; the
+  run is **CI red** for lane C and the success badge must not be cited.
+- Core failure cause: all 14 uses of `Fin.sum_univ_succ` failed as an unknown
+  constant because the generated import list omitted
+  `Mathlib.Algebra.BigOperators.Fin`.
+- `PaidCellCertificateM.of7_valid` failed at lines 65/68/69 because `simpa only`
+  did not unfold `Paid16CellCertificate.PA/PB/W/slopeQ/interQ`. MCap's own build
+  was then blocked by the missing M olean, not by a separate diagnostic.
 
-File:
-- `lean/N11Formalization/FrozenCapRationalCore.lean`, unchanged, SHA256
-  `c48270a5017006f8276c4eca4367dba712ea405a965f3c8508f3fd34865b7a5a`.
+Changes:
+- `ops/lanes/C/emit_frozen_cap_rational_core.py`: added the missing import; reran
+  it, which regenerated the core deterministically.
+- `lean/N11Formalization/PaidCellCertificateM.lean`: added the source namespace
+  definitions to the three `simpa only` sets.
+
+Files (SHA256):
+- `lean/N11Formalization/FrozenCapRationalCore.lean`
+  `3ed6bb5026d4eeb00c6bc8cc3f350fb8d522c0414c592370fd3a91f36fc4e7c4`
+- `lean/N11Formalization/PaidCellCertificateM.lean`
+  `b0c1f6d583b5c4d748a281e14dc7289d75c2d761a95748fb59977fb8afa44072`
+- `ops/lanes/C/emit_frozen_cap_rational_core.py`
+  `10ecb5500eff5b22366910c4c01f4d3299bf4e5c841f917efe2c7e7ca1a87d93`
 
 Checks run (scope stated):
-- `tools/project_status.py --check`: exit 0; manifest/index declarations only.
-- `git diff --check`: exit 0.
-- No local Lean elaboration succeeded; core remains **CI pending**.
+- Core emitter: exit 0, deterministic output and frozen-source hashes printed.
+- `git diff --check`: exit 0; forbidden-token scan over core/M/MCap: clean.
+- No local Lean elaboration (Mathlib probe olean remains a 1128-byte stub), so
+  the fixes are **CI pending**, not paid.
 
 Still unproved / missing:
-- Core/M/MCap/row caps/bridges/wrappers have no kernel verdict; `hf0`/`hg`
-  packet inputs and 382 residual HOST records remain absent.
+- Core, M, MCap, row caps, tree bridges, and seven wrappers still have no green
+  kernel verdict. `hf0`/`hg` packet inputs and 382 residual HOST records remain
+  absent; no energy count changes.
 
-Very next concrete step: inspect the current CI run's first diagnostic for
-`FrozenCapRationalCore`; if green, add only `FrozenCapRowCap1409` to
-`TARGETS.txt`, otherwise patch the reported core error.
+Very next concrete step: rerun CI and require `=== EXIT
+N11Formalization.FrozenCapRationalCore 0`, then M and MCap 0; only after that add
+`N11Formalization.FrozenCapRowCap1409` alone to `TARGETS.txt`. Do not infer a
+green target from the workflow's overall badge.
+
+## 2026-10-29 — sessions 30-32 (condensed; corrected CI still pending)
+
+- Old run `40818062141` was red at all three targets due to the now-repaired
+  missing `Mathlib.Algebra.BigOperators.Fin` import and old `of7_valid`
+  simplifications. Pinned Mathlib `0df444a...` does define `Fin.sum_univ_succ`.
+- Corrected run `40857762507` (head `0cb4f8de`, job `123392944402`) has had its
+  `Build` step in progress throughout sessions 30-32. No target exit exists, so
+  core/M/MCap remain **CI pending**, not green.
+- Emitter reran twice after the fixes (exit 0): all seven records passed exact
+  `Fraction` nonnegativity, unit-sum, frozen-source, weighted-term, and strict
+  margin checks; regenerated core stayed byte-identical. Frozen inputs checked:
+  `FlashCosineLeaf318` `08F36489...788A`, `Interval/Trig` `FB3DF66D...A04C`,
+  `FlashCosineLeaf284Bridge` `C001704C...B1F8`.
+- MCap transport was audited against `lower = f0Lo - lamB + rmin` and
+  `rho = sum_a lam_a * rowA`; the weighted reduction, `lamB` bound, and
+  strict-gain contradiction are algebraically sound.
+
+SHA256: core `3ed6bb50...e7c4`, M `b0c1f6d5...4072`, MCap
+`1697c1be...f6ea`, emitter `10ecb550...7d93`.
+Checks: emitter exit 0, static declaration audit, `git diff --check` exit 0,
+forbidden-token scan clean. No Lean kernel verdict.
+
+Still unproved: no green core/M/MCap verdict; row caps, bridges, tree wrappers,
+packet `hf0`/`hg`, and 382 HOST records remain unpaid.
+
+## 2026-10-29 — session part 33 (bounded local check attempted)
+
+Did: polled run `40857762507`; job `123392944402` is still `in_progress`, with
+only `Build` marked `in_progress` and no target exit. Confirmed current core/M/
+MCap SHA256 values exactly as above, `git diff --check` exit 0, and no forbidden
+tokens in those three modules. Attempted bounded direct elaboration from
+`n11-work/lean`: `timeout 110s lake env lean N11Formalization/FrozenCapRationalCore.lean`.
+It exited 124 after ~110 s while Lake reported `info: mathlib: cloning
+https://github.com/leanprover-community/mathlib4`; scope was local core only and
+it produced **no Lean verdict**. The CI build remains the only candidate kernel
+check.
+
+Still unproved: same as above; in particular the core theorem set, M/MCap, all
+seven row caps and tree wrappers, `hf0`/`hg`, and 382 HOST records.
+
+Very next concrete step: read `=== EXIT N11Formalization.FrozenCapRationalCore`,
+then M and MCap, from run `40857762507`. If all are 0, add only
+`N11Formalization.FrozenCapRowCap1409` to `TARGETS.txt`; otherwise patch the
+first reported core/M/MCap diagnostic. Do not treat local timeout as red.
