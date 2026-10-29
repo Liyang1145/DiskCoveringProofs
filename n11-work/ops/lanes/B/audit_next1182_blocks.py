@@ -25,12 +25,14 @@ assert all("maxRecDepth" not in s for s in sub_sources)
 top = (LEAN / "Paid16GeneralNext1182.lean").read_text()
 assert "Finset.univ.biUnion part" in top
 assert "maxRecDepth" not in top
-assert "of_all_" not in top
 assert "Fin.sum_univ_eight" not in top and "Fin.sum_univ_succ" in top
 assert top.count("private theorem block_s") == 57
-assert top.count("decide +kernel") == 0
-assert top.count("simp only [Paid16GeneralNext1182S") == 57
-assert top.count("<;> norm_num") == 57
+assert top.count("all_goals norm_num") == 57
+assert top.count(").mp h with rfl |") == 57
+assert "decide +kernel" not in top
+assert "Finset.all_eq_true.mp (s := Paid16GeneralNext1182S" not in top
+assert "simp only [Paid16GeneralNext1182S" not in top
+assert "<;> norm_num" not in top
 assert "all_goals omega" not in top
 assert top.count("private theorem part_s") == 8
 assert top.count("private theorem disjoint_s") == 28
@@ -43,8 +45,8 @@ report = {
     "literal_block_bound_theorems": top.count("private theorem block_s"),
     "max_block_cases": 21,
     "interval_disjoint_theorems": top.count("private theorem disjoint_s"),
+    "literal_membership_block_proofs": top.count("all_goals norm_num"),
     "kernel_decide_checks": top.count("decide +kernel"),
-    "membership_case_proofs": top.count("<;> norm_num"),
     "top_sha256": hashlib.sha256(top.encode()).hexdigest().upper(),
     "scope": "exact manifest/literal-block audit only; not Lean elaboration",
 }
