@@ -7,88 +7,54 @@ No census payment claim before equality and 389-cardinality are kernel-built.
 
 # Lane B notes
 
-## 2026-10-29 - session part 32: Next1182 block separation audited
+## 2026-10-29 - session part 33: explicit Fin 8 sum expansion
 
 ### Done
-- Added a bounded exact-manifest audit for Next1182's eight `biUnion` parts.
-  It verifies sizes `168×7 + 6 = 1182`, literal bounds `2565..2736`,
-  `2737..2906`, `2907..3087`, `3088..3266`, `3267..3445`, `3446..3954`,
-  `3955..4984`, `4986..5007`, and all 28 pairwise disjointness facts.
-- The blocks are strictly separated in index order. This supplies the premise
-  for a future cheaper `max'`/`min'` + `omega` replacement of the current 28
-  kernel decodes, but no Lean source was changed without a verdict.
-- Re-ran the B13 closure audit: all 13 checks pass
-  (`310/815/1997/1182/2506/120/389`).
+- Found an elaboration gap in the pending `biUnion` aggregate:
+  `Finset.card_biUnion` leaves `∑ i : Fin 8, (part i).card`, but the emitted
+  `simp only [part, ...new_count]` did not expand `Finset.univ`. Added
+  `Fin.sum_univ_eight` to that simplifier set and regenerated the module.
+- Replayed the exact manifest/block audit: sizes `168×7 + 6`, strict bounds,
+  and all 28 pairwise disjointness facts still hold.
 
 ### Files (SHA256)
-- `audit_next1182_blocks.py`
-  `9D1884F1283215BF1E66EE112931D97D4F16D5B489BE6FF4BC3E08E21F9ABD11`
+- `Paid16GeneralNext1182.lean`
+  `407BA2558C7D7C810E5B58F25CFD2B572C0C61EB824CE5E295B9009386C52B46`
+- `emit_next1182_top.py`
+  `381E320FD33C152D66FE0010CCAC95E01347FEFDB89055ED074D551419724F36`
+- `emit_next1182_top-report.json`
+  `05FA6C27C9FDBFAE21E7E70F70AE70CADA17349F25352C3E70B12A23E30A5D62`
 - `audit_next1182_blocks-report.json`
-  `02DF24B7CBA95081FF8E08BEA0A93B225148075F90E45D7A62AE399B2B8FCCE1`
-- `Paid16GeneralNext1182.lean` unchanged
-  `87F97BD05360486558B4DD831235F4207440BD099F2DCF4DD6CDCFAD46B3DD50`
-- `TARGETS.txt` unchanged `D0572BD0...`.
+  `950A1BEFB31EA35960BED974CD5929C40FD653FDD1D5CC08AEFD29C432EAAD3F`
+- `B13` unchanged `00E7AE98...`; `TARGETS` unchanged `D0572BD0...`.
 
 ### Checks executed (scope)
 - Mandatory `project_status.py --check`: handoff-index PASS only.
-- `audit_next1182_blocks.py`: exact inventory/bounds/pairwise-disjoint PASS;
-  not Lean elaboration or proof credit.
-- `audit_b13_closure.py`: exact-arithmetic inventory PASS only.
-- A Mathlib-probe `max'`/`min'` + `omega` experiment timed out at 90 s during
-  import loading, so it gave no Lean verdict; no project build was started.
+- Emitter rerun: deterministic 15199-byte output; exact inventory and 28-pair
+  audit PASS; B13 inventory all 13 checks PASS (`310/815/1997/1182/2506/120/389`).
+- `audit_target_imports.py`: closure 594, missing 0, forbidden 0, `ok:true`;
+  `py_compile`, forbidden-token scan, and `git diff --check` clean.
+- No Lean verdict: `lake env lean B13Probe.lean` timed out at 120 s; direct
+  Lean then showed the probe cache lacks `Mathlib/Data/Finset/Basic.olean`.
+  No project build was started, so the changed aggregate remains CI pending.
 
 ### Still unproved / unverified
-- Current Next1182 and B13 remain CI pending. Census 389, B13Main,
-  `SevenClassExclusions`, and the full-disk theorem remain unpaid.
+- Next1182/B13 have no fresh kernel verdict. Census equality/cardinality 389,
+  B13Main, the residual radius, `SevenClassExclusions`, and the full-disk
+  theorem remain unpaid.
 
 ### Next concrete step
-- If CI still lacks a genuine error, update `emit_next1182_top.py` to emit
-  separate `min'`/`max'` equality lemmas and 28 `omega`-separated pair proofs,
-  then let CI decide the replacement. Otherwise patch the first genuine error.
+- Let CI kernel-check the regenerated `407BA255...` Next1182 source (B13's
+  bytes already built in run `40815681024`); patch only the first genuine
+  error. If green, add census Base/C01-C04/assembly and B13Main to TARGETS.
 
-## 2026-10-29 - session part 31: CI-success baseline mapped
-
-### Done
-- Correlated `ops/ci/LATEST.md` run `40815681024` (completed success)
-  with commit `1d7515cb`. That tree's `EnergyTerminalBatchB13.lean` is
-  byte-identical to the current target, and its `TARGETS.txt` included
-  both B13 and Next1182. Therefore B13's current proof bytes already have a
-  successful CI build; its 310/815/1997 counts and transfer proofs are not
-  the pending failure surface.
-- Identified the only current target delta: `Paid16GeneralNext1182.lean`
-  changed from the CI-built nested union (`SHA256 CDC...` at `1d7515cb`)
-  to the safer `Finset.univ.biUnion part` form with `maxRecDepth 10000`
-  removed (`SHA256 87F97BD0...`). The pending kernel obligation is now
-  isolated to this one rewritten aggregate and its newly imported API use.
-- No source changes this session: the CI-built baseline is evidence for
-  B13, while the current Next1182 improvement remains worth preserving.
-
-### Files (SHA256)
-- `EnergyTerminalBatchB13.lean` (unchanged) `00E7AE98...`
-- `Paid16GeneralNext1182.lean` (unchanged) `87F97BD0...`
-- `TARGETS.txt` (unchanged) `D0572BD0...`
-
-### Checks executed (scope)
-- `project_status.py --check`: handoff-index PASS only.
-- `audit_b13_closure.py`: all 13 inventory checks pass: terminal 2506,
-  sharp 120, B12 815, B13 1997, Next1182 1182, residual 389, B11 310.
-- `audit_target_imports.py`: target closure 594, missing 0, forbidden 0,
-  `ok:true`. Forbidden-token scan and `git diff --check`: clean.
-- These are static/exact-arithmetic checks plus CI-index correlation, not
-  a fresh kernel build of the changed Next1182 source.
-
-### Still unproved / unverified
-- Current Next1182 (`87F97BD0...`) is **CI pending**. B13's baseline build
-  does not validate the regenerated Next1182 proof script.
-- Census equality/cardinality 389, B13Main, the 389-id residual radius,
-  `SevenClassExclusions`, and the arbitrary-center full-disk theorem remain
-  unpaid.
-
-### Next concrete step
-- Quote and patch the first genuine CI error for the current Next1182.
-  Once it is green, both supervisor gates are satisfied (B13 already has
-  the identical-byte success baseline); then add census Base/C01-C04/
-  assembly and B13Main to TARGETS.
+## Earlier session 32 / 31 (condensed)
+- Session 32 added `audit_next1182_blocks.py`; it proves only exact inventory,
+  literal bounds, and pairwise disjointness, not Lean elaboration. The blocks
+  are strictly separated and support the interval+`omega` proof strategy.
+- Session 31 correlated successful run `40815681024` with commit `1d7515cb`:
+  current `EnergyTerminalBatchB13.lean` bytes already have a CI-green build.
+  The only pending target delta is `Paid16GeneralNext1182.lean`.
 
 ## 2026-10-29 - session part 25 (condensed): census split 4 + assembly
 - Refactored `emit_residual_census.py` into Base + C01-C04 (100/100/100/89

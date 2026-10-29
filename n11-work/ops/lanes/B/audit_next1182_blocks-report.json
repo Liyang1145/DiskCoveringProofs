@@ -46,6 +46,6 @@
     ]
   ],
   "pairwise_disjoint": true,
-  "top_sha256": "87F97BD05360486558B4DD831235F4207440BD099F2DCF4DD6CDCFAD46B3DD50",
+  "top_sha256": "407BA2558C7D7C810E5B58F25CFD2B572C0C61EB824CE5E295B9009386C52B46",
   "scope": "exact manifest/literal-block audit only; not Lean elaboration"
 }
