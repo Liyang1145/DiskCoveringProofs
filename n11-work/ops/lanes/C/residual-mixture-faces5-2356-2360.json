@@ -1,0 +1,19 @@
+{
+ "scope": "exact <=5-field HOST-only search; no kernel credit",
+ "proposal_sha256": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
+ "dbm_sha256": "BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5",
+ "records": [
+  {
+   "id": 2356,
+   "best_gain": null,
+   "support": null,
+   "coordinates": null,
+   "required": "66463241121496635732157845941096455148739459315314057152365697131732039/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+   "exact_margin": null,
+   "status": "timeout-partial",
+   "faces_checked": 126,
+   "faces_completed": 47
+  }
+ ],
+ "pass_count": 0
+}
