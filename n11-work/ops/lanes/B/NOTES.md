@@ -2,6 +2,49 @@
 
 SUPERVISOR (2026-10-29 00:45 CST): Once CI reports on Next1182/B13, fix the first error only, re-run. Make `residualIDs.card = 389` a kernel fact (literal list, hierarchical <=170-literal decides) instead of manifest-derived. Then help lane C: write the generic emitter that turns an exact m-row certificate JSON into `PaidCellCertificateM` packets (21 per module).
 
+## 2026-10-29 - session part 7: live CI triage (B targets still CI pending)
+
+### Done
+- Resolved the stale LATEST entry: run `40736931996` (head `9e4a3aeb`) is
+  **completed/failure**, but the log shows runner shutdown, not a Lean error:
+  `##[error]The runner has received a shutdown signal` and exit 143 at
+  18:37:58. The run was still building `C450ChainCompletion`; there is no
+  `=== EXIT` line and neither Next1182 nor any other B target started.
+- Rechecked the current generated census: 51/51 block lemmas use the intended
+  `rcases n with ⟨k, hk⟩` then `interval_cases k`; no theorem statement or
+  literal ID changed. Re-ran the emitter and generated-byte checks.
+- Attempted a Mathlib-probe micro-test of the `Fin` destruct/interval shape
+  (timed out at 150 s) and a core `Std` destruct-only probe (timed out at 45 s).
+  Both stalled while loading imports, so they give **no Lean verdict**.
+
+### Files and exact hashes (sha256)
+- `n11-work/lean/N11Formalization/EnergyTerminalResidualCensus.lean`
+  `B518C606AECC9570E194C70498D57E95DD2B3D12EFE0313EF7FA945438222125`
+- `n11-work/ops/lanes/B/emit_residual_census.py`
+  `6D9DD0DED094C9098D7FD7F9A8988975EE0727CD04678C43C5649FAC0FCFA50E`
+- `n11-work/ops/lanes/B/emit_residual_census-report.json`
+  `616CFE8DFF4505395148EAB95013F4D8541A93074A93F13AF1596D7B9B8C6DE6`
+- `n11-work/ops/lanes/B/TARGETS.txt`
+  `8F8BA4842F17F3BE779A979EB3A69D17B1313D3D2967A017A4DD359D9B74B179`
+
+### Checks executed (scope)
+- `python3 emit_residual_census.py`: PASS; 2,506 terminals, 120 sharp,
+  1,997 paid, 389 residual, chunks 100/100/100/89; source/byte checks only.
+- `python3 -m py_compile emit_residual_census.py` and `git diff --check`: PASS.
+- Generated-source scan: PASS for forbidden tokens; all 51 blocks have the
+  corrected destruct shape. `python tools/project_status.py --check`: PASS
+  (manifest declarations only).
+- No local project Lean build and no kernel evidence.
+
+### Still unproved / next concrete step
+- Every B Lean target remains **CI pending**, not paid. The 51 census lemmas,
+  `residualIDs_eq`, B13 disjointness/counts, both energy premises, and
+  `SevenClassExclusions` remain unpaid.
+- Next: on the next non-cancelled `n11-lean-build`, inspect the first
+  `=== EXIT` red target and its first `error:` line; fix only that. If the run
+  is cancelled again before B, report that exact boundary rather than treating
+  it as a Lean failure.
+
 ## 2026-10-28 - session part 5: CI/literal-premise dependency audit (CI pending)
 
 ### Done
@@ -33,41 +76,6 @@ SUPERVISOR (2026-10-29 00:45 CST): Once CI reports on Next1182/B13, fix the firs
   `SevenClassExclusions` remain unelaborated/unpaid. Next: when
   `40731771155` completes, read the first B-target failure, fix only that error,
   and append its exact log line and rerun state here.
-
-## 2026-10-28 - session part 3: removed census kernel blowup (CI pending)
-
-### Done
-- Found that `residualIDs_sound` previously ran four `decide +kernel` checks over
-  the 1,997-element `B13.paidIDs`. Replaced them with one proof derived after
-  `residualIDs_eq` via `EnergyTerminalBatchB13.mem_residualIDs_iff`; no chunk now
-  normalizes the paid set during soundness checking.
-- Emitter regeneration still reconstructs 2,506 terminals, 120 sharp, 1,997
-  paid, 389 residual and chunk sizes 100/100/100/89.
-
-### Files and exact sha256
-- `n11-work/lean/N11Formalization/EnergyTerminalResidualCensus.lean`
-  `A0CE97CA2F774A1406A0C4B8CFEC55DCDC4250DAFDE60B7BF5D1A8C31202E15F`
-- `n11-work/ops/lanes/B/emit_residual_census.py`
-  `FC9E897D71D427585D2AFD48F12C49F6CDEC47F691365AB3138BD8288B27A3C3`
-- `n11-work/ops/lanes/B/emit_residual_census-report.json`
-  `0708675EA932A2EA0425136B96A176D5BBBDC3880C40A7D729D8D6DDE83F28A6`
-
-### Checks executed (scope)
-- `python3 emit_residual_census.py`: PASS, source reconstruction and emitted bytes.
-- `python3 -m py_compile emit_residual_census.py`: PASS.
-- Hard-rule scan of the generated module: PASS; `git diff --check`: PASS.
-- `python tools/project_status.py --check`: PASS (manifest declarations only).
-- GitHub Actions API: n11 run `40731771155` remains pending with no job; no Lean
-  elaboration or current CI failure is available locally. **CI pending.**
-
-### Still unproved
-- `residualIDs_eq`, `remaining_iff_b13`, the 51 block checks, B13 disjointness,
-  and the energy/SevenClassExclusions premises remain unelaborated/unpaid.
-
-### Very next concrete step
-Read the first CI failure for run `40731771155`. If `residualIDs_sound` or the
-block checks are implicated, reduce the block checks next; otherwise fix only
-that first failing target and append its exact error here.
 
 ## 2026-10-28 - session part 2: literal 389-ID premise (condensed, CI pending)
 
