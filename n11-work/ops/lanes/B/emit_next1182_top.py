@@ -123,6 +123,7 @@ for i, sub in enumerate(SUBS):
 lines.append(f"theorem new_count : newIDs.card = {count} := by")
 lines.append("  have hdisj : Set.PairwiseDisjoint (Finset.univ : Finset (Fin 8)) part := by")
 lines.append("    intro i _ j _ hij")
+lines.append("    change Disjoint (part i) (part j)")
 lines.append("    fin_cases i")
 for i in range(8):
     lines.append("    · fin_cases j")
@@ -130,9 +131,9 @@ for i in range(8):
         if i == j:
             lines.append("      · exact (hij rfl).elim")
         elif i < j:
-            lines.append(f"      · simpa [part] using disjoint_s{i+1:02}_s{j+1:02}")
+            lines.append(f"      · simpa [part, Function.onFun] using disjoint_s{i+1:02}_s{j+1:02}")
         else:
-            lines.append(f"      · simpa [part] using disjoint_s{j+1:02}_s{i+1:02}.symm")
+            lines.append(f"      · simpa [part, Function.onFun] using disjoint_s{j+1:02}_s{i+1:02}.symm")
 lines.append("  rw [newIDs, Finset.card_biUnion hdisj]")
 lines.append("  simp [Fin.sum_univ_succ, part,")
 lines.append("      " + ",\n      ".join(f"{s}.new_count" for s in SUBS) + "]")
@@ -186,6 +187,7 @@ report = {
         "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts from the block conjunction using omega",
         "lift each part-local lower bound to the global lower bound by transitivity with omega",
         "dispatch the 64 ordered PairwiseDisjoint cases explicitly instead of relying on simp_all",
+        "unfold Function.onFun to expose Disjoint (part i) (part j) before the 64-case dispatch",
         "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
         "remove maxRecDepth 10000",
     ],
