@@ -62,11 +62,14 @@ theorem of7_valid {p : Paid16CellCertificate.Packet}
   · exact hp.beta_sum
   · exact hp.lines
   · intro k
-    simpa only [of7, PA, PB] using hp.endpoints k
+    simpa only [of7, PA, PB, Paid16CellCertificate.PA, Paid16CellCertificate.PB]
+      using hp.endpoints k
   · exact hp.lam_nonneg
   · intro q
-    simpa only [of7, W, slopeQ] using hp.reduced q
-  · simpa only [of7, W, slopeQ, interQ] using hp.numeric
+    simpa only [of7, W, slopeQ, Paid16CellCertificate.W,
+      Paid16CellCertificate.slopeQ] using hp.reduced q
+  · simpa only [of7, W, slopeQ, interQ, Paid16CellCertificate.W,
+      Paid16CellCertificate.slopeQ, Paid16CellCertificate.interQ] using hp.numeric
   · exact hp.terminal
 
 theorem W_nonneg {m : ℕ} (p : Packet m) (hp : Valid p) (k : Fin 36) : 0 ≤ W p k :=

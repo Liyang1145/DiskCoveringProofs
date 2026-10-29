@@ -50,6 +50,7 @@ def main():
     lines=['import Mathlib.Data.Rat.Defs',
       'import Mathlib.Data.Fin.VecNotation',
       'import Mathlib.Data.Fintype.Basic',
+      'import Mathlib.Algebra.BigOperators.Fin',
       'import Mathlib.Algebra.BigOperators.Group.Finset.Basic',
       'import Mathlib.Tactic.NormNum',
       'import Mathlib.Tactic.FinCases',
