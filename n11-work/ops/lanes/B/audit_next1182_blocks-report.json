@@ -50,8 +50,12 @@
   "literal_block_bound_theorems": 57,
   "max_block_cases": 21,
   "interval_disjoint_theorems": 28,
+  "pairwise_dispatch_diagonal_cases": 8,
+  "pairwise_dispatch_off_diagonal_cases": 56,
   "literal_membership_block_proofs": 57,
+  "global_lower_bound_transfers": 8,
+  "direct_part_lower_bound_exacts": 0,
   "kernel_decide_checks": 0,
-  "top_sha256": "0AFA07FB3BC7BB66C147CFC9B213993ABC2FE4646D8EE16FA6018F3802049D1B",
+  "top_sha256": "F63677C532B2778AAB72D3AFD8C0EFF9B6AA00C3E7328A3EDD4601016186DAB3",
   "scope": "exact manifest/literal-block audit only; not Lean elaboration"
 }

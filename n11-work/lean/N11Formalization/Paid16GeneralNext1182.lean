@@ -578,18 +578,98 @@ private theorem disjoint_s07_s08 : Disjoint Paid16GeneralNext1182S07.newIDs Paid
   omega
 theorem lower_bound (n : Fin 5011) (hn : n ∈ newIDs) : 2565 ≤ n.val := by
   rcases (new_mem n).mp hn with h | h | h | h | h | h | h | h
-  · exact (part_s01_bounds n h).1
-  · exact (part_s02_bounds n h).1
-  · exact (part_s03_bounds n h).1
-  · exact (part_s04_bounds n h).1
-  · exact (part_s05_bounds n h).1
-  · exact (part_s06_bounds n h).1
-  · exact (part_s07_bounds n h).1
-  · exact (part_s08_bounds n h).1
+  · have hb := (part_s01_bounds n h).1
+    omega
+  · have hb := (part_s02_bounds n h).1
+    omega
+  · have hb := (part_s03_bounds n h).1
+    omega
+  · have hb := (part_s04_bounds n h).1
+    omega
+  · have hb := (part_s05_bounds n h).1
+    omega
+  · have hb := (part_s06_bounds n h).1
+    omega
+  · have hb := (part_s07_bounds n h).1
+    omega
+  · have hb := (part_s08_bounds n h).1
+    omega
 theorem new_count : newIDs.card = 1182 := by
   have hdisj : Set.PairwiseDisjoint (Finset.univ : Finset (Fin 8)) part := by
     intro i _ j _ hij
-    fin_cases i <;> fin_cases j <;> simp_all [part, disjoint_s01_s02, disjoint_s01_s03, disjoint_s01_s04, disjoint_s01_s05, disjoint_s01_s06, disjoint_s01_s07, disjoint_s01_s08, disjoint_s02_s03, disjoint_s02_s04, disjoint_s02_s05, disjoint_s02_s06, disjoint_s02_s07, disjoint_s02_s08, disjoint_s03_s04, disjoint_s03_s05, disjoint_s03_s06, disjoint_s03_s07, disjoint_s03_s08, disjoint_s04_s05, disjoint_s04_s06, disjoint_s04_s07, disjoint_s04_s08, disjoint_s05_s06, disjoint_s05_s07, disjoint_s05_s08, disjoint_s06_s07, disjoint_s06_s08, disjoint_s07_s08]
+    fin_cases i
+    · fin_cases j
+      · exact (hij rfl).elim
+      · simpa [part] using disjoint_s01_s02
+      · simpa [part] using disjoint_s01_s03
+      · simpa [part] using disjoint_s01_s04
+      · simpa [part] using disjoint_s01_s05
+      · simpa [part] using disjoint_s01_s06
+      · simpa [part] using disjoint_s01_s07
+      · simpa [part] using disjoint_s01_s08
+    · fin_cases j
+      · simpa [part] using disjoint_s01_s02.symm
+      · exact (hij rfl).elim
+      · simpa [part] using disjoint_s02_s03
+      · simpa [part] using disjoint_s02_s04
+      · simpa [part] using disjoint_s02_s05
+      · simpa [part] using disjoint_s02_s06
+      · simpa [part] using disjoint_s02_s07
+      · simpa [part] using disjoint_s02_s08
+    · fin_cases j
+      · simpa [part] using disjoint_s01_s03.symm
+      · simpa [part] using disjoint_s02_s03.symm
+      · exact (hij rfl).elim
+      · simpa [part] using disjoint_s03_s04
+      · simpa [part] using disjoint_s03_s05
+      · simpa [part] using disjoint_s03_s06
+      · simpa [part] using disjoint_s03_s07
+      · simpa [part] using disjoint_s03_s08
+    · fin_cases j
+      · simpa [part] using disjoint_s01_s04.symm
+      · simpa [part] using disjoint_s02_s04.symm
+      · simpa [part] using disjoint_s03_s04.symm
+      · exact (hij rfl).elim
+      · simpa [part] using disjoint_s04_s05
+      · simpa [part] using disjoint_s04_s06
+      · simpa [part] using disjoint_s04_s07
+      · simpa [part] using disjoint_s04_s08
+    · fin_cases j
+      · simpa [part] using disjoint_s01_s05.symm
+      · simpa [part] using disjoint_s02_s05.symm
+      · simpa [part] using disjoint_s03_s05.symm
+      · simpa [part] using disjoint_s04_s05.symm
+      · exact (hij rfl).elim
+      · simpa [part] using disjoint_s05_s06
+      · simpa [part] using disjoint_s05_s07
+      · simpa [part] using disjoint_s05_s08
+    · fin_cases j
+      · simpa [part] using disjoint_s01_s06.symm
+      · simpa [part] using disjoint_s02_s06.symm
+      · simpa [part] using disjoint_s03_s06.symm
+      · simpa [part] using disjoint_s04_s06.symm
+      · simpa [part] using disjoint_s05_s06.symm
+      · exact (hij rfl).elim
+      · simpa [part] using disjoint_s06_s07
+      · simpa [part] using disjoint_s06_s08
+    · fin_cases j
+      · simpa [part] using disjoint_s01_s07.symm
+      · simpa [part] using disjoint_s02_s07.symm
+      · simpa [part] using disjoint_s03_s07.symm
+      · simpa [part] using disjoint_s04_s07.symm
+      · simpa [part] using disjoint_s05_s07.symm
+      · simpa [part] using disjoint_s06_s07.symm
+      · exact (hij rfl).elim
+      · simpa [part] using disjoint_s07_s08
+    · fin_cases j
+      · simpa [part] using disjoint_s01_s08.symm
+      · simpa [part] using disjoint_s02_s08.symm
+      · simpa [part] using disjoint_s03_s08.symm
+      · simpa [part] using disjoint_s04_s08.symm
+      · simpa [part] using disjoint_s05_s08.symm
+      · simpa [part] using disjoint_s06_s08.symm
+      · simpa [part] using disjoint_s07_s08.symm
+      · exact (hij rfl).elim
   rw [newIDs, Finset.card_biUnion hdisj]
   simp [Fin.sum_univ_succ, part,
       Paid16GeneralNext1182S01.new_count,
