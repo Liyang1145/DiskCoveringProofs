@@ -159,61 +159,67 @@ current `PaidCellCertificateMCap`; require exactly
 `FrozenCapFourFieldWitnesses` to `TARGETS.txt`; if red, patch the next reported
 line rather than broadening targets.
 
-## 2026-10-29 — part 53 (bounded search attempt; no new verdict)
+## 2026-10-29 — parts 54-58 (condensed)
 
-Did: re-read lane guidance/state; confirmed the part-52 MCap repair remains an
-uncommitted worktree change at SHA256 `D859711A...B20DF`; `TARGETS.txt` still
-has exactly three targets. Source-audited `FrozenCapFourFieldWitnesses.lean`:
-five nonnegative unit-sum `y4` vectors and five strict-gain statements are
-present; frozen data unchanged.
+- Corrected faces5 polytope search reproduces the 1409 four-field gain; full
+  2356/2360 search still needs per-face checkpointing.
+- Archived MCap failure was `linarith` normalization at old line 79. Current
+  source uses `exact add_le_add_left (hrho.trans_le hlam) _`.
+- Witnesses now depend on `FrozenCapRationalCore` + `PaidCellCertificateMCap`,
+  not duplicate `FrozenCapCertificates`; five local `endpoint_*` bridges prove
+  core `G` endpoints equal core `E`.
+- Exact checks: MCap identity 1000/1000 (m=1,2,5,9,16); four-field row caps
+  500/500, minimum slack 0.
 
-Checks (scope stated): `project_status.py --check` exit 0
-(manifest/declarations); bounded Mathlib `linarith` probe exit 124 during
-startup, no Lean verdict; exact `residual_mixture_faces5.py --ids 2356,2360`
-run under `timeout 150s` exit 124 with no JSON artifact, so no search verdict.
-The default interpreter has no NumPy/SciPy/highspy, so a float-LP search needs
-a pure-exact fallback. No CI consumed current MCap: **CI pending**.
+## 2026-10-29 — part 59 (MCap/witness static audit)
 
-Still missing: MCap kernel; four-field witness/row-cap kernels; packet
-`hf0`/`hg`; 5-to-9-field rescue for 2356/2360; 382 HOST records. Energy count
-unchanged.
+Did: re-audited current MCap after the old-line-79 repair. The direct
+`add_le_add_left` term matches the normalized goal. Traced each operand's
+types: `hrho` rewrites the weighted `rho` sum to the `lamB` sum and `hlam`
+applies row caps with nonnegative weights. Re-audited all five witnesses:
+imports are core+MCap only, every `endpoint_*` bridges `G_<id>` to `E_<id>`,
+and the `strict_gain` declarations use exact `y4` weights.
 
-Next: add per-node checkpointing and half-space caching/pruning to
-`residual_mixture_faces5.py` (no solver dependencies), then run 2356 bounded. CI should build
-current MCap alone and require
-`=== EXIT N11Formalization.PaidCellCertificateMCap 0` before widening targets.
+Files / hashes:
+- `PaidCellCertificateMCap.lean`
+  `47F3340796EC555E495BDDEDFB33F63B2F1E96B76CC947684F7AD94DA8BF70DA`
+- `FrozenCapFourFieldWitnesses.lean`
+  `07A1CB1D671F65759C04CE8B505CA86CAB87BB9B413B19A2E0603DA496C9AC42`
+- `FrozenCapFourFieldRowCaps.lean`
+  `774390A36A9B94AB95AF761963B62F5700A41FB05EFD9DAF7A5554327A6738E2`
 
-## 2026-10-29 — part 54 (faces5 vertex enumeration repaired)
+Checks (scope stated): `project_status.py --check` exit 0 (manifest
+declarations only); MCap exact verifier 1000/1000; `git diff --check` exit 0;
+forbidden-token scan clean. No local Lean build or kernel verdict; MCap and
+witnesses remain **CI pending**.
 
-Did:
-- Reworked `residual_mixture_faces5.py`: added `--time-budget`, per-node
-  partial status, and an exact vertex enumeration. The polytope is
-  `{sum x <= 1, x_k >= 0, 100 caps}` (the simplex line is an inequality, not
-  an equality). Correct vertices are simplex+3 inequalities, plus 4 active
-  inequalities, plus `x = 0`. Two intermediate variants (mandatory simplex
-  equality; simplex+3 only) wrongly returned `best_gain = null` even for the
-  known 1409 support `[2,3,4,8]`, so their JSON artifacts were deleted and
-  never cited. The final version reproduces that witness exactly on the
-  embedded support `(0,2,3,4,8)`: same rational gain as
-  `residual-mixture-faces4.json`, and it exceeds `required`.
-- Deleted untrusted `residual-mixture-faces5-{1409,2356,2360}.json`.
+Still unproved / missing: MCap/witness/row-cap kernels, packet `hf0`/`hg`,
+2356/2360 5-to-9-field rescue, 382 absent HOST records. Energy count unchanged.
 
-File / hash:
-- `n11-work/ops/lanes/C/residual_mixture_faces5.py`
-  `77693F9FE2B3BF5720B66077624600EF5644DCEDF657CFDD543A1E0CE2C458E5`.
+Next: supervisor commits. CI must show exactly
+`=== EXIT N11Formalization.PaidCellCertificateMCap 0`; if green add only
+`FrozenCapFourFieldWitnesses` to `TARGETS.txt`. If red, patch its first new
+diagnostic.
 
-Checks (scope stated):
-- `py_compile` exit 0; single-face validation (1409, support `(0,2,3,4,8)`,
-  exact `Fraction` arithmetic) returned the four-field witness gain;
-  1.28 s per face, so ~161 s per 126-face node. No full-node verdict yet, no
-  kernel credit. `git diff --check` exit 0.
+## 2026-10-29 — part 60 (MCap CI diagnostic reconciliation)
 
-Still unproved / missing: 5-to-9-field rescue search for 2356/2360 (script
-now correct but needs per-face checkpointing to run to completion under the
-time limit); MCap kernel verdict; four-field witness/row-cap kernels; packet
-`hf0`/`hg`; 382 absent HOST records. Energy count unchanged.
+Did: compared run `40935785584` (commit `cea391a9`) with the worktree. The CI
+failure at `PaidCellCertificateMCap.lean:79` is the old `linarith` source; the
+current worktree has the narrow exact term
+`add_le_add_left (hrho.trans_le hlam) _`. Rechecked its types against the goal:
+`hrho.trans_le hlam : weighted rho sum ≤ lamB`, so the term yields
+`endpoint sum + weighted rho sum ≤ endpoint sum + lamB`, definitionally the
+calc goal. No new Lean source change was needed.
 
-Next: add per-face checkpointing (resume index in JSON) to
-`residual_mixture_faces5.py`, then run 2356 and 2360 with `--time-budget`
-across two bounded invocations; only then record a search verdict. CI should
-still require `=== EXIT N11Formalization.PaidCellCertificateMCap 0` first.
+Checks (scope stated): static type/ordering audit of the current line 79 only;
+CI summary/log inspected for run `40935785584`. No local kernel run and no new
+CI verdict; current MCap remains **CI pending**.
+
+Still unproved/missing: kernel verdict for current MCap; witness/row-cap
+kernels, packet `hf0`/`hg`, 2356/2360 rescue, and 382 HOST records. Energy
+count unchanged.
+
+Next: supervisor commits the worktree; require exactly
+`=== EXIT N11Formalization.PaidCellCertificateMCap 0`. If green, add only
+`FrozenCapFourFieldWitnesses` to `TARGETS.txt`; if red, use its first new
+diagnostic, not the superseded commit's line 79.
