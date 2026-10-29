@@ -12,3 +12,5 @@
 - 2026-10-29 09:45 CST: round 7 merged nothing new. CI run 40795824642 died again with runner shutdown (exit 143) during first target C450ChainCompletion (after C450Identify built OK, no Lean errors) => suspected OOM in lane A draft. Workflow now builds C,B,A order, adds OOM guard + MEM log, 90m per-target timeout. Counts unchanged (CI not green): energy 815/2386, C450 drafted, class exclusions 0/7. Run 40797575073 in progress.
 LAST-REPORT: 2026-10-29 09:45 CST
 - 2026-10-29 12:20 CST: round merged (A: C450ChainCompletionEndpoint; B/C no new Lean). Workers were idling on CI polling; supervisor cancelled stale in_progress run 40802064355 (pre-split SHA, 2h20m), queued run 40815681024 on head now starts. Targets trimmed per expert (A: C450 only; B: Next1182+B13; C: Core+PaidCellM). Counts unchanged (CI not green): energy 815/2386, C450 drafted, class exclusions 0/7.
+- 2026-10-29 12:36 CST: round merged; A Cos fix, B biUnion proof, C row-cap files. Counts unchanged (CI not green).
+LAST-REPORT: 2026-10-29 12:36 CST
