@@ -13,130 +13,49 @@ import N11Formalization.EnergyTerminalBatchB12
 Every `decide +kernel` here compares at most 168-element literal sets, so the
 kernel never walks a >168-deep insert chain. -/
 set_option autoImplicit false
-set_option maxRecDepth 10000
 namespace N11Formalization.Paid16GeneralNext1182
 open Finset
 noncomputable section
 
-def newIDs : Finset (Fin 5011) := Paid16GeneralNext1182S01.newIDs ∪ (Paid16GeneralNext1182S02.newIDs ∪ (Paid16GeneralNext1182S03.newIDs ∪ (Paid16GeneralNext1182S04.newIDs ∪ (Paid16GeneralNext1182S05.newIDs ∪ (Paid16GeneralNext1182S06.newIDs ∪ (Paid16GeneralNext1182S07.newIDs ∪ (Paid16GeneralNext1182S08.newIDs)))))))
+def part : Fin 8 → Finset (Fin 5011)
+  | 0 => Paid16GeneralNext1182S01.newIDs
+  | 1 => Paid16GeneralNext1182S02.newIDs
+  | 2 => Paid16GeneralNext1182S03.newIDs
+  | 3 => Paid16GeneralNext1182S04.newIDs
+  | 4 => Paid16GeneralNext1182S05.newIDs
+  | 5 => Paid16GeneralNext1182S06.newIDs
+  | 6 => Paid16GeneralNext1182S07.newIDs
+  | 7 => Paid16GeneralNext1182S08.newIDs
+def newIDs : Finset (Fin 5011) := Finset.univ.biUnion part
 theorem new_mem (n : Fin 5011) : n ∈ newIDs ↔ n ∈ Paid16GeneralNext1182S01.newIDs ∨ n ∈ Paid16GeneralNext1182S02.newIDs ∨ n ∈ Paid16GeneralNext1182S03.newIDs ∨ n ∈ Paid16GeneralNext1182S04.newIDs ∨ n ∈ Paid16GeneralNext1182S05.newIDs ∨ n ∈ Paid16GeneralNext1182S06.newIDs ∨ n ∈ Paid16GeneralNext1182S07.newIDs ∨ n ∈ Paid16GeneralNext1182S08.newIDs := by
-  simp only [newIDs, Finset.mem_union]
+  simp only [newIDs, Finset.mem_biUnion, Finset.mem_univ, true_and]
+  constructor
+  · rintro ⟨i, hi⟩
+    fin_cases i <;> simp_all [part]
+  · rintro (h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7)
+    · exact ⟨0, by simpa [part] using h0⟩
+    · exact ⟨1, by simpa [part] using h1⟩
+    · exact ⟨2, by simpa [part] using h2⟩
+    · exact ⟨3, by simpa [part] using h3⟩
+    · exact ⟨4, by simpa [part] using h4⟩
+    · exact ⟨5, by simpa [part] using h5⟩
+    · exact ⟨6, by simpa [part] using h6⟩
+    · exact ⟨7, by simpa [part] using h7⟩
 theorem new_count : newIDs.card = 1182 := by
-  have d01 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S02.newIDs := by decide +kernel
-  have d02 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S03.newIDs := by decide +kernel
-  have d03 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S04.newIDs := by decide +kernel
-  have d04 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S05.newIDs := by decide +kernel
-  have d05 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S06.newIDs := by decide +kernel
-  have d06 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S07.newIDs := by decide +kernel
-  have d07 : Disjoint Paid16GeneralNext1182S01.newIDs Paid16GeneralNext1182S08.newIDs := by decide +kernel
-  have d12 : Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S03.newIDs := by decide +kernel
-  have d13 : Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S04.newIDs := by decide +kernel
-  have d14 : Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S05.newIDs := by decide +kernel
-  have d15 : Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S06.newIDs := by decide +kernel
-  have d16 : Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S07.newIDs := by decide +kernel
-  have d17 : Disjoint Paid16GeneralNext1182S02.newIDs Paid16GeneralNext1182S08.newIDs := by decide +kernel
-  have d23 : Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S04.newIDs := by decide +kernel
-  have d24 : Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S05.newIDs := by decide +kernel
-  have d25 : Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S06.newIDs := by decide +kernel
-  have d26 : Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S07.newIDs := by decide +kernel
-  have d27 : Disjoint Paid16GeneralNext1182S03.newIDs Paid16GeneralNext1182S08.newIDs := by decide +kernel
-  have d34 : Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S05.newIDs := by decide +kernel
-  have d35 : Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S06.newIDs := by decide +kernel
-  have d36 : Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S07.newIDs := by decide +kernel
-  have d37 : Disjoint Paid16GeneralNext1182S04.newIDs Paid16GeneralNext1182S08.newIDs := by decide +kernel
-  have d45 : Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S06.newIDs := by decide +kernel
-  have d46 : Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S07.newIDs := by decide +kernel
-  have d47 : Disjoint Paid16GeneralNext1182S05.newIDs Paid16GeneralNext1182S08.newIDs := by decide +kernel
-  have d56 : Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S07.newIDs := by decide +kernel
-  have d57 : Disjoint Paid16GeneralNext1182S06.newIDs Paid16GeneralNext1182S08.newIDs := by decide +kernel
-  have d67 : Disjoint Paid16GeneralNext1182S07.newIDs Paid16GeneralNext1182S08.newIDs := by decide +kernel
-  have d0 : Disjoint Paid16GeneralNext1182S01.newIDs (Paid16GeneralNext1182S02.newIDs ∪ (Paid16GeneralNext1182S03.newIDs ∪ (Paid16GeneralNext1182S04.newIDs ∪ (Paid16GeneralNext1182S05.newIDs ∪ (Paid16GeneralNext1182S06.newIDs ∪ (Paid16GeneralNext1182S07.newIDs ∪ (Paid16GeneralNext1182S08.newIDs))))))) := by
-    rw [Finset.disjoint_union_right]
-    exact ⟨d01, by
-      rw [Finset.disjoint_union_right]
-      exact ⟨d02, by
-        rw [Finset.disjoint_union_right]
-        exact ⟨d03, by
-          rw [Finset.disjoint_union_right]
-          exact ⟨d04, by
-            rw [Finset.disjoint_union_right]
-            exact ⟨d05, by
-              rw [Finset.disjoint_union_right]
-              exact ⟨d06, by
-                exact d07
-              ⟩
-            ⟩
-          ⟩
-        ⟩
-      ⟩
-    ⟩
-  have d1 : Disjoint Paid16GeneralNext1182S02.newIDs (Paid16GeneralNext1182S03.newIDs ∪ (Paid16GeneralNext1182S04.newIDs ∪ (Paid16GeneralNext1182S05.newIDs ∪ (Paid16GeneralNext1182S06.newIDs ∪ (Paid16GeneralNext1182S07.newIDs ∪ (Paid16GeneralNext1182S08.newIDs)))))) := by
-    rw [Finset.disjoint_union_right]
-    exact ⟨d12, by
-      rw [Finset.disjoint_union_right]
-      exact ⟨d13, by
-        rw [Finset.disjoint_union_right]
-        exact ⟨d14, by
-          rw [Finset.disjoint_union_right]
-          exact ⟨d15, by
-            rw [Finset.disjoint_union_right]
-            exact ⟨d16, by
-              exact d17
-            ⟩
-          ⟩
-        ⟩
-      ⟩
-    ⟩
-  have d2 : Disjoint Paid16GeneralNext1182S03.newIDs (Paid16GeneralNext1182S04.newIDs ∪ (Paid16GeneralNext1182S05.newIDs ∪ (Paid16GeneralNext1182S06.newIDs ∪ (Paid16GeneralNext1182S07.newIDs ∪ (Paid16GeneralNext1182S08.newIDs))))) := by
-    rw [Finset.disjoint_union_right]
-    exact ⟨d23, by
-      rw [Finset.disjoint_union_right]
-      exact ⟨d24, by
-        rw [Finset.disjoint_union_right]
-        exact ⟨d25, by
-          rw [Finset.disjoint_union_right]
-          exact ⟨d26, by
-            exact d27
-          ⟩
-        ⟩
-      ⟩
-    ⟩
-  have d3 : Disjoint Paid16GeneralNext1182S04.newIDs (Paid16GeneralNext1182S05.newIDs ∪ (Paid16GeneralNext1182S06.newIDs ∪ (Paid16GeneralNext1182S07.newIDs ∪ (Paid16GeneralNext1182S08.newIDs)))) := by
-    rw [Finset.disjoint_union_right]
-    exact ⟨d34, by
-      rw [Finset.disjoint_union_right]
-      exact ⟨d35, by
-        rw [Finset.disjoint_union_right]
-        exact ⟨d36, by
-          exact d37
-        ⟩
-      ⟩
-    ⟩
-  have d4 : Disjoint Paid16GeneralNext1182S05.newIDs (Paid16GeneralNext1182S06.newIDs ∪ (Paid16GeneralNext1182S07.newIDs ∪ (Paid16GeneralNext1182S08.newIDs))) := by
-    rw [Finset.disjoint_union_right]
-    exact ⟨d45, by
-      rw [Finset.disjoint_union_right]
-      exact ⟨d46, by
-        exact d47
-      ⟩
-    ⟩
-  have d5 : Disjoint Paid16GeneralNext1182S06.newIDs (Paid16GeneralNext1182S07.newIDs ∪ (Paid16GeneralNext1182S08.newIDs)) := by
-    rw [Finset.disjoint_union_right]
-    exact ⟨d56, by
-      exact d57
-    ⟩
-  have d6 : Disjoint Paid16GeneralNext1182S07.newIDs (Paid16GeneralNext1182S08.newIDs) := by
-    exact d67
-  rw [newIDs]
-  rw [Finset.card_union_of_disjoint d0, Paid16GeneralNext1182S01.new_count]
-  rw [Finset.card_union_of_disjoint d1, Paid16GeneralNext1182S02.new_count]
-  rw [Finset.card_union_of_disjoint d2, Paid16GeneralNext1182S03.new_count]
-  rw [Finset.card_union_of_disjoint d3, Paid16GeneralNext1182S04.new_count]
-  rw [Finset.card_union_of_disjoint d4, Paid16GeneralNext1182S05.new_count]
-  rw [Finset.card_union_of_disjoint d5, Paid16GeneralNext1182S06.new_count]
-  rw [Finset.card_union_of_disjoint d6, Paid16GeneralNext1182S07.new_count]
-  rw [Paid16GeneralNext1182S08.new_count]
-  norm_num
+  have hdisj : Set.PairwiseDisjoint (Finset.univ : Finset (Fin 8)) part := by
+    intro i _ j _ hij
+    fin_cases i <;> fin_cases j <;> simp_all [part] <;> decide +kernel
+  rw [newIDs, Finset.card_biUnion hdisj]
+  simp only [part,
+      Paid16GeneralNext1182S01.new_count,
+      Paid16GeneralNext1182S02.new_count,
+      Paid16GeneralNext1182S03.new_count,
+      Paid16GeneralNext1182S04.new_count,
+      Paid16GeneralNext1182S05.new_count,
+      Paid16GeneralNext1182S06.new_count,
+      Paid16GeneralNext1182S07.new_count,
+      Paid16GeneralNext1182S08.new_count]
+  decide +kernel
 theorem new_terminal (n : Fin 5011) (hn : n ∈ newIDs) :
     (DBMSourceTree.data n).terminal = true := by
   rcases (new_mem n).mp hn with h | h | h | h | h | h | h | h

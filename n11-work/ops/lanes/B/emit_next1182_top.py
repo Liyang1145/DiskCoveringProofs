@@ -6,8 +6,9 @@ contain Windows separators.  That is harmless on Windows but makes every path
 a single filename on Linux.  This lane-local emitter reads the already emitted
 sub-aggregates and preserves the upstream packet inventory.  It fixes the
 generated `Disjoint` eliminations (Lean `⦃a⦄` binders cannot be supplied
-positionally as `f a h`) and replaces the upstream's kernel-heavy nested-union
-disjointness checks with 28 pairwise checks assembled hierarchically.
+positionally as `f a h`) and aggregates the eight parts with
+`Finset.univ.biUnion`, avoiding the upstream's kernel-heavy nested-union
+disjointness checks.
 """
 from pathlib import Path
 import hashlib
@@ -39,48 +40,31 @@ lines.append(f"""/-! Top aggregate of {count} packets, assembled from {len(SUBS)
 Every `decide +kernel` here compares at most 168-element literal sets, so the
 kernel never walks a >168-deep insert chain. -/
 set_option autoImplicit false
-set_option maxRecDepth 10000
 namespace N11Formalization.{TOP}
 open Finset
 noncomputable section
 """)
-chain = SUBS[-1] + ".newIDs"
-for s in SUBS[-2::-1]:
-    chain = f"{s}.newIDs ∪ ({chain})"
-lines.append(f"def newIDs : Finset (Fin 5011) := {chain}")
+lines.append("def part : Fin 8 → Finset (Fin 5011)")
+for i, s in enumerate(SUBS):
+    lines.append(f"  | {i} => {s}.newIDs")
+lines.append("def newIDs : Finset (Fin 5011) := Finset.univ.biUnion part")
 lines.append("theorem new_mem (n : Fin 5011) : n ∈ newIDs ↔ " +
              " ∨ ".join(f"n ∈ {s}.newIDs" for s in SUBS) + " := by")
-lines.append("  simp only [newIDs, Finset.mem_union]")
+lines.append("  simp only [newIDs, Finset.mem_biUnion, Finset.mem_univ, true_and]")
+lines.append("  constructor")
+lines.append("  · rintro ⟨i, hi⟩")
+lines.append("    fin_cases i <;> simp_all [part]")
+lines.append("  · rintro (" + " | ".join(f"h{i}" for i in range(len(SUBS))) + ")")
+for i, s in enumerate(SUBS):
+    lines.append(f"    · exact ⟨{i}, by simpa [part] using h{i}⟩")
 lines.append(f"theorem new_count : newIDs.card = {count} := by")
-# Keep every kernel-decided disjointness at one pair of sub-aggregates.  The
-# previous emitter checked each part against a nested union of all later parts,
-# so the first check walked 168 * 1014 membership tests.  These 28 pair facts are
-# assembled into seven union-disjointness facts below.
-for i, left in enumerate(SUBS):
-    for j, right in enumerate(SUBS):
-        if i < j:
-            lines.append(f"  have d{i}{j} : Disjoint {left}.newIDs {right}.newIDs := by decide +kernel")
-for i in range(len(SUBS) - 1):
-    def hierarchy(j: int, indent: str) -> list[str]:
-        left = f"d{i}{j}"
-        if j == len(SUBS) - 1:
-            return [f"{indent}exact {left}"]
-        return [
-            f"{indent}rw [Finset.disjoint_union_right]",
-            f"{indent}exact ⟨{left}, by",
-            *hierarchy(j + 1, indent + "  "),
-            f"{indent}⟩",
-        ]
-    expr = SUBS[-1] + ".newIDs"
-    for tail in reversed(SUBS[i + 1:-1]):
-        expr = f"{tail}.newIDs ∪ ({expr})"
-    lines.append(f"  have d{i} : Disjoint {SUBS[i]}.newIDs ({expr}) := by")
-    lines.extend(hierarchy(i + 1, "    "))
-lines.append("  rw [newIDs]")
-for i, s in enumerate(SUBS[:-1]):
-    lines.append(f"  rw [Finset.card_union_of_disjoint d{i}, {s}.new_count]")
-lines.append(f"  rw [{SUBS[-1]}.new_count]")
-lines.append("  norm_num")
+lines.append("  have hdisj : Set.PairwiseDisjoint (Finset.univ : Finset (Fin 8)) part := by")
+lines.append("    intro i _ j _ hij")
+lines.append("    fin_cases i <;> fin_cases j <;> simp_all [part] <;> decide +kernel")
+lines.append("  rw [newIDs, Finset.card_biUnion hdisj]")
+lines.append("  simp only [part,")
+lines.append("      " + ",\n      ".join(f"{s}.new_count" for s in SUBS) + "]")
+lines.append("  decide +kernel")
 lines.append("""theorem new_terminal (n : Fin 5011) (hn : n ∈ newIDs) :
     (DBMSourceTree.data n).terminal = true := by
   rcases (new_mem n).mp hn with """ + " | ".join("h" for _ in SUBS))
@@ -125,7 +109,8 @@ report = {
     "upstream_sha256": expected["sha256"],
     "corrections": [
         "supply implicit Disjoint.left element with (a := a)",
-        "replace nested-union disjointness checks with 28 pairwise checks",
+        "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
+        "remove maxRecDepth 10000",
     ],
     "corrected_chars": len(text),
     "corrected_utf8_bytes": len(data),

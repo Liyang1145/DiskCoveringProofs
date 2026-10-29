@@ -5,10 +5,11 @@
   "upstream_sha256": "0EA12578B8541200A4AB803C4BFEFCF53D230A85F4345F8509A707B67A455E2F",
   "corrections": [
     "supply implicit Disjoint.left element with (a := a)",
-    "replace nested-union disjointness checks with 28 pairwise checks"
+    "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
+    "remove maxRecDepth 10000"
   ],
-  "corrected_chars": 10988,
-  "corrected_utf8_bytes": 11204,
-  "corrected_sha256": "CDCF2B97C4ABB986F8E60DC4AD720C242E2C2B7C2D37BD9A4AD180C9A3145C27",
+  "corrected_chars": 5480,
+  "corrected_utf8_bytes": 5604,
+  "corrected_sha256": "87F97BD05360486558B4DD831235F4207440BD099F2DCF4DD6CDCFAD46B3DD50",
   "scope": "source emission and inventory only; Lean elaboration is CI-pending"
 }
