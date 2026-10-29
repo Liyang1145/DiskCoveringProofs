@@ -43,7 +43,9 @@ assert top.count("fin_cases j") == 8
 assert top.count("exact (hij rfl).elim") == 8
 assert top.count("change Disjoint (part i) (part j)") == 1
 assert top.count("simpa [part, Function.onFun] using disjoint_s") == 56
-assert top.count(".symm") == 28
+assert top.count(".symm") == 56
+assert top.count("| (change Disjoint Paid16GeneralNext1182S") == 56
+assert top.count("; exact disjoint_s") == 56
 report = {
     "manifest": str(MAN.relative_to(ROOT)),
     "ids": len(ids), "part_sizes": [len(p) for p in parts],
@@ -55,6 +57,9 @@ report = {
     "pairwise_dispatch_diagonal_cases": top.count("exact (hij rfl).elim"),
     "pairwise_dispatch_off_diagonal_cases": top.count(
         "simpa [part, Function.onFun] using disjoint_s"
+    ),
+    "defeq_fallback_branches": top.count(
+        "| (change Disjoint Paid16GeneralNext1182S"
     ),
     "literal_membership_block_proofs": top.count("all_goals norm_num"),
     "global_lower_bound_transfers": top.count("have hb := (part_s"),

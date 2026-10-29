@@ -14,8 +14,8 @@
     "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
     "remove maxRecDepth 10000"
   ],
-  "corrected_chars": 41048,
-  "corrected_utf8_bytes": 41833,
-  "corrected_sha256": "C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22",
+  "corrected_chars": 48916,
+  "corrected_utf8_bytes": 49701,
+  "corrected_sha256": "5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1",
   "scope": "source emission and inventory only; Lean elaboration is CI-pending"
 }

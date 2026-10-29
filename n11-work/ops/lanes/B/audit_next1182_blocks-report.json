@@ -52,10 +52,11 @@
   "interval_disjoint_theorems": 28,
   "pairwise_dispatch_diagonal_cases": 8,
   "pairwise_dispatch_off_diagonal_cases": 56,
+  "defeq_fallback_branches": 56,
   "literal_membership_block_proofs": 57,
   "global_lower_bound_transfers": 8,
   "direct_part_lower_bound_exacts": 0,
   "kernel_decide_checks": 0,
-  "top_sha256": "C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22",
+  "top_sha256": "5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1",
   "scope": "exact manifest/literal-block audit only; not Lean elaboration"
 }
