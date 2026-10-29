@@ -10,7 +10,8 @@ positionally as `f a h`) and aggregates the eight parts with
 `Finset.univ.biUnion`, avoiding the upstream's kernel-heavy nested-union
 disjointness checks.  The eight parts are consecutive id intervals.  Their
 bounds are assembled from 57 small literal-block lemmas (at most 21 ids each),
-using each block's membership disjunction rather than kernel-reducing the set.
+using each block's already-proved membership disjunction and literal `norm_num`
+rather than kernel-reducing the set.
 """
 from pathlib import Path
 import hashlib
@@ -86,11 +87,12 @@ for i, (sub, blocks) in enumerate(zip(SUBS, part_blocks)):
     for k, (idx, vals) in enumerate(blocks):
         name = f"block_s{i+1:02}_{k:02}_bounds"
         names.append(name)
+        lo, hi = min(vals), max(vals)
         lines.append(f"private theorem {name} (n : Fin 5011)")
-        lines.append(f"    (h : n ∈ {sub}.ids{idx:02}) : {min(vals)} ≤ n.val ∧ n.val ≤ {max(vals)} := by")
-        lines.append(f"  simp only [{sub}.mem_ids{idx:02}] at h")
-        lines.append("  rcases h with " + " | ".join("rfl" for _ in vals))
-        lines.append("  <;> norm_num")
+        lines.append(f"    (h : n ∈ {sub}.ids{idx:02}) : {lo} ≤ n.val ∧ n.val ≤ {hi} := by")
+        lines.append(f"  rcases ({sub}.mem_ids{idx:02} n).mp h with " +
+                     " | ".join("rfl" for _ in vals))
+        lines.append("  all_goals norm_num")
     block_names.append(names)
 for i, (sub, blocks) in enumerate(zip(SUBS, part_blocks)):
     lo, hi = bounds[i]
@@ -170,7 +172,7 @@ report = {
         "supply implicit Disjoint.left element with (a := a)",
         "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
         "prove part disjointness from literal membership bounds (consecutive intervals)",
-        "prove each literal-block bound by its <=21-case membership disjunction, then assemble parts",
+        "prove each literal-block bound from its existing membership disjunction with literal norm_num, then assemble parts",
         "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
         "remove maxRecDepth 10000",
     ],

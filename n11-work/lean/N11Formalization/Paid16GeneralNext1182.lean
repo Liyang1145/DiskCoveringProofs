@@ -44,289 +44,232 @@ theorem new_mem (n : Fin 5011) : n ∈ newIDs ↔ n ∈ Paid16GeneralNext1182S01
     · exact ⟨7, by simpa [part] using h7⟩
 private theorem block_s01_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids00) : 2565 ≤ n.val ∧ n.val ≤ 2585 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids00] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids00 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s01_01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids01) : 2586 ≤ n.val ∧ n.val ≤ 2606 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids01] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids01 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s01_02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids02) : 2607 ≤ n.val ∧ n.val ≤ 2629 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids02] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids02 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s01_03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids03) : 2630 ≤ n.val ∧ n.val ≤ 2650 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids03] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids03 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s01_04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids04) : 2651 ≤ n.val ∧ n.val ≤ 2672 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids04] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids04 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s01_05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids05) : 2673 ≤ n.val ∧ n.val ≤ 2694 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids05] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids05 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s01_06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids06) : 2695 ≤ n.val ∧ n.val ≤ 2715 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids06] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids06 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s01_07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.ids07) : 2716 ≤ n.val ∧ n.val ≤ 2736 := by
-  simp only [Paid16GeneralNext1182S01.mem_ids07] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S01.mem_ids07 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids08) : 2737 ≤ n.val ∧ n.val ≤ 2757 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids08] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids08 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids09) : 2758 ≤ n.val ∧ n.val ≤ 2778 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids09] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids09 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids10) : 2779 ≤ n.val ∧ n.val ≤ 2799 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids10] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids10 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids11) : 2800 ≤ n.val ∧ n.val ≤ 2820 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids11] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids11 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids12) : 2821 ≤ n.val ∧ n.val ≤ 2841 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids12] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids12 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids13) : 2842 ≤ n.val ∧ n.val ≤ 2862 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids13] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids13 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids14) : 2863 ≤ n.val ∧ n.val ≤ 2884 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids14] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids14 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s02_07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S02.ids15) : 2885 ≤ n.val ∧ n.val ≤ 2906 := by
-  simp only [Paid16GeneralNext1182S02.mem_ids15] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S02.mem_ids15 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids16) : 2907 ≤ n.val ∧ n.val ≤ 2927 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids16] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids16 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids17) : 2928 ≤ n.val ∧ n.val ≤ 2948 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids17] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids17 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids18) : 2949 ≤ n.val ∧ n.val ≤ 2976 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids18] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids18 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids19) : 2977 ≤ n.val ∧ n.val ≤ 3000 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids19] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids19 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids20) : 3001 ≤ n.val ∧ n.val ≤ 3021 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids20] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids20 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids21) : 3022 ≤ n.val ∧ n.val ≤ 3043 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids21] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids21 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids22) : 3044 ≤ n.val ∧ n.val ≤ 3066 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids22] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids22 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s03_07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S03.ids23) : 3067 ≤ n.val ∧ n.val ≤ 3087 := by
-  simp only [Paid16GeneralNext1182S03.mem_ids23] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S03.mem_ids23 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids24) : 3088 ≤ n.val ∧ n.val ≤ 3109 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids24] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids24 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids25) : 3110 ≤ n.val ∧ n.val ≤ 3136 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids25] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids25 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids26) : 3137 ≤ n.val ∧ n.val ≤ 3160 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids26] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids26 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids27) : 3161 ≤ n.val ∧ n.val ≤ 3181 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids27] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids27 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids28) : 3183 ≤ n.val ∧ n.val ≤ 3203 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids28] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids28 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids29) : 3204 ≤ n.val ∧ n.val ≤ 3224 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids29] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids29 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids30) : 3225 ≤ n.val ∧ n.val ≤ 3245 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids30] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids30 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s04_07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S04.ids31) : 3246 ≤ n.val ∧ n.val ≤ 3266 := by
-  simp only [Paid16GeneralNext1182S04.mem_ids31] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S04.mem_ids31 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids32) : 3267 ≤ n.val ∧ n.val ≤ 3287 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids32] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids32 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids33) : 3288 ≤ n.val ∧ n.val ≤ 3308 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids33] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids33 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids34) : 3309 ≤ n.val ∧ n.val ≤ 3329 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids34] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids34 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids35) : 3330 ≤ n.val ∧ n.val ≤ 3350 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids35] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids35 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids36) : 3351 ≤ n.val ∧ n.val ≤ 3371 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids36] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids36 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids37) : 3372 ≤ n.val ∧ n.val ≤ 3392 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids37] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids37 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids38) : 3393 ≤ n.val ∧ n.val ≤ 3413 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids38] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids38 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s05_07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S05.ids39) : 3414 ≤ n.val ∧ n.val ≤ 3445 := by
-  simp only [Paid16GeneralNext1182S05.mem_ids39] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S05.mem_ids39 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids40) : 3446 ≤ n.val ∧ n.val ≤ 3466 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids40] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids40 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids41) : 3467 ≤ n.val ∧ n.val ≤ 3488 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids41] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids41 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids42) : 3492 ≤ n.val ∧ n.val ≤ 3526 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids42] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids42 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids43) : 3528 ≤ n.val ∧ n.val ≤ 3608 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids43] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids43 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids44) : 3609 ≤ n.val ∧ n.val ≤ 3721 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids44] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids44 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids45) : 3723 ≤ n.val ∧ n.val ≤ 3804 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids45] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids45 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids46) : 3805 ≤ n.val ∧ n.val ≤ 3868 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids46] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids46 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s06_07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S06.ids47) : 3869 ≤ n.val ∧ n.val ≤ 3954 := by
-  simp only [Paid16GeneralNext1182S06.mem_ids47] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S06.mem_ids47 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids48) : 3955 ≤ n.val ∧ n.val ≤ 4040 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids48] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids48 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids49) : 4042 ≤ n.val ∧ n.val ≤ 4164 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids49] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids49 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_02_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids50) : 4166 ≤ n.val ∧ n.val ≤ 4290 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids50] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids50 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_03_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids51) : 4297 ≤ n.val ∧ n.val ≤ 4376 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids51] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids51 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_04_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids52) : 4377 ≤ n.val ∧ n.val ≤ 4503 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids52] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids52 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_05_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids53) : 4505 ≤ n.val ∧ n.val ≤ 4675 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids53] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids53 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_06_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids54) : 4690 ≤ n.val ∧ n.val ≤ 4799 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids54] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids54 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s07_07_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S07.ids55) : 4804 ≤ n.val ∧ n.val ≤ 4984 := by
-  simp only [Paid16GeneralNext1182S07.mem_ids55] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S07.mem_ids55 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem block_s08_00_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S08.ids56) : 4986 ≤ n.val ∧ n.val ≤ 5007 := by
-  simp only [Paid16GeneralNext1182S08.mem_ids56] at h
-  rcases h with rfl | rfl | rfl | rfl | rfl | rfl
-  <;> norm_num
+  rcases (Paid16GeneralNext1182S08.mem_ids56 n).mp h with rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals norm_num
 private theorem part_s01_bounds (n : Fin 5011)
     (h : n ∈ Paid16GeneralNext1182S01.newIDs) : 2565 ≤ n.val ∧ n.val ≤ 2736 := by
   rcases (Paid16GeneralNext1182S01.new_mem n).mp h with h0 | h1 | h2 | h3 | h4 | h5 | h6 | h7

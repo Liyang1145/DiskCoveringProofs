@@ -7,6 +7,91 @@ No census payment claim before equality and 389-cardinality are kernel-built.
 
 # Lane B notes
 
+## 2026-10-29 - session part 41: reran emitters/audits on the patched top
+
+### Done
+- Re-ran the deterministic top emitter after the part-40 block-proof rewrite.
+  It reproduced `Paid16GeneralNext1182.lean` byte-for-byte at SHA
+  `F78988D4…A0FE8`, with 1182 ids, parts `168x7 + 6`, 57 literal-block
+  theorems, 28 interval-disjointness theorems and **zero** top-level
+  `decide +kernel` checks. The emitter self-check and block auditor passed.
+- Re-ran the independent B13 closure inventory: exact counts
+  B11=310, B12=815, Next1182=1182, B13=1997, terminals=2506, sharp=120,
+  residual=389; B12/Next1182 disjointness, terminal-subset, sharp-disjointness,
+  and the four literal census chunks all passed (13/13 inventory assertions).
+
+### Checks executed (scope)
+- `emit_next1182_top.py` regenerated SHA `F78988D4…A0FE8`; emitter report
+  `60D2066E…FC6CF`, block audit report `78C7BEEE…33577`, B13 closure report
+  `4A02341E…142EB`. These are source/manifest/inventory checks, **not Lean
+  elaboration**. No local project build was started; CI remains authoritative.
+- `ops/ci/LATEST.md` run `40861839784` is red on the pre-part-40 source at
+  `Paid16GeneralNext1182.lean:47`; it supplies no verdict for the current top.
+
+### Still unproved / unverified
+- Next1182 and B13 remain **CI pending / unpaid**. B13Main, residual census
+  kernel equality, `SevenClassExclusions`, and arbitrary-center full-disk
+  theorem remain unverified/unpaid.
+
+### Next concrete step
+- In the next session, inspect the first CI log built from SHA `F78988D4…`
+  (or newer). If Next1182 processes beyond its first block lemma, keep the
+  current 21-case `rcases`/`norm_num` pattern and diagnose B13's first
+  independent error; otherwise patch only the first failing block lemma.
+
+## 2026-10-29 - session part 40: patched CI timeout in Next1182 block bounds
+
+### Done
+- Read CI run `40861839784`: `Paid16GeneralNext1182` is red at the former
+  `Finset.all_eq_true.mp ... (by decide +kernel)` block proof; Lean reports a
+  200000-heartbeat tactic timeout and a dependent `whnf` timeout. B13 exits 1
+  through its Next1182 dependency; no independent B13 error is present.
+- Replaced all 57 block proofs by elimination of the imported
+  `mem_idsNN` literal disjunction followed by `all_goals norm_num`. This removes
+  every top-level kernel `decide`/`Finset.all` reduction while retaining the
+  literal interval bounds. Emitter and audit were updated accordingly.
+
+### Files (SHA256, uppercase)
+- `n11-work/lean/N11Formalization/Paid16GeneralNext1182.lean`
+  `F78988D46502FD1F6F147863C4DE8CF6C74E1243B185ED6757799AC4308A0FE8`
+- `n11-work/ops/lanes/B/emit_next1182_top.py`
+  `85B0D5BCD1FCFD7BD320027BEC07810E89ABD8CA3285CE624907E85891992F32`
+- `n11-work/ops/lanes/B/audit_next1182_blocks.py`
+  `F8DE4080AD0B7CB76A6657CDD4268160C77ABF6E973F6018BBB1519512EF159F`
+- reports: emitter `60D2066ED85AFE7F4FF273A40953B9A4CC9A3CA7D07840D9E56E3F799037C6CF`; audit `78C7BEEE62979E0BAA9059B374825254E06DFC56429862F9A8F665CBCE933577`.
+- `EnergyTerminalBatchB13.lean` unchanged
+  `B4F556F05B8C4D0618C8287094AFB14AD7DF494DD999567F83C6CF4B20EC5096`.
+
+### Checks executed (scope)
+- `py_compile`, emitter rerun, `audit_next1182_blocks.py`: exact 1182-id
+  inventory, part sizes `168x7 + 6`, 57 block theorems, 28 interval
+  disjointness theorems, 57 membership-disjunction proofs, zero top-level
+  kernel decodes; `ok`. `git diff --check` and forbidden-token scan passed.
+- This is source/manifest inspection only, **not Lean elaboration**. The new
+  `norm_num` block pattern has no kernel verdict yet. A bounded Mathlib probe
+  of the exact 21-way `rcases` + `all_goals norm_num` pattern
+  (`mathlib-probe/LaneBMemNormProbe.lean`, `timeout 180`) timed out during
+  import and supplied no verdict. No local project build was started.
+  Next1182/B13 remain **CI pending**, now with a new top SHA.
+
+### Still unproved / unverified
+- Next1182 and B13 remain unpaid. B13 1997-cardinality and radius transfer,
+  B13Main, census 389, `SevenClassExclusions`, and the arbitrary-center
+  full-disk theorem remain unverified/unpaid.
+
+### Next concrete step
+- On the next CI run quote the first genuine error in Next1182. If the
+  `mem_idsNN` + `norm_num` blocks pass, diagnose B13's first independent error;
+  otherwise patch only the first failing block line. Keep TARGETS at Next1182
+  and B13 and make no payment claim until both build.
+
+## 2026-10-29 - session part 39: bounded `Finset.all` block checks
+
+- Briefly replaced each 21-id block bound by one bounded `Finset.all` kernel
+  check. CI then reported a tactic timeout at the first such check, so part 40
+  superseded this design. The old top SHA was `00EF2A6C…33325`; it has no
+  surviving role. Inventory stayed 1182 ids (`168x7 + 6`).
+
 ## 2026-10-29 - session part 38: reproducible regeneration + isolated kernel idiom probe
 
 ### Done
