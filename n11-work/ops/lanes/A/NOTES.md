@@ -157,3 +157,42 @@ lemmas (prefer a new lane module if frozen `IntervalsHighLag` cannot be edited),
 prove it via `sin_bound_abs 14` and `sinTQ_cast`, then replace endpoint
 `norm_num` definitions with `Real.sin_ge_sub_cube` plus exact per-endpoint
 rational checks.
+
+## 2026-10-29 (part 67) — endpoint polynomial reduction drafted
+
+Replaced the eight expensive 14-term `sinTQ`/`sinLoNLag` endpoint expansions by
+two reusable kernel-bound routes in `SevenClassQ0Deg3EndpointChecks.lean`:
+`sin_bound_abs 4` gives the rational degree-seven lower/upper polynomial with
+explicit `1/9!` and `2/29!` losses; `sin_bound_abs 14` converts those into
+`sinLoNLag`/`sinHiNLag` bounds. `capQ_le_sinPoly4` then bounds each endpoint cap
+without unfolding the 29-term series. This is **drafted, CI pending**, not a
+green or paid module. One failed intermediate attempt used the uniform cap
+ceiling `19/50` as a lower bound; it was removed. The cubic-only lower bound was
+also rejected because the last endpoint missed by roughly `7e-5`; the degree-
+seven bound has positive slack there.
+
+**Files / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
+`5e522766ce46a64f722f1bfa4f4044dce33219c8da02d5695e861eb7dd036656`;
+`verify_q0_degree3_endpoint_polynomial.py`
+`0859e3b6ec1a3b5d5cfa456b4605b7a6975a7ffbe1420da571ef91edfc8f8a08`;
+`q0-degree3-endpoint-poly.json`
+`97873a192606db6c150caaf0a5fe406f5475b59406a374a0a1342e790878c8eb`.
+`TARGETS.txt` remains `2935e4bd…` and already lists the endpoint module.
+
+**Checks (scope).** The new Python verifier passed all eight exact-rational
+comparisons; minimum slack is `1813339696040923404218003961318003972770323 /
+52701008282540452209375000000000000000000000000` (about `3.44e-5`).
+`git diff --check` and the forbidden-token scan are clean. A narrow
+Mathlib-probe compilation of the lower-bound algebra timed out at 140 s on the
+2-core sandbox, and no project oleans exist locally, so there is **no Lean
+elaboration or kernel evidence yet**. C450 remains CI-green historically.
+
+**Still unproved / unpaid.** Kernel acceptance of the rewritten Cos, Bins and
+EndpointChecks modules; their CI run is pending. Then UpperTables
+edge/sector premises, strict total, `Q0Degree3AreaInput`, all seven exclusions,
+and the arbitrary-center full-disk theorem remain open.
+
+**Next concrete step.** Supervisor commit this endpoint rewrite and let CI run
+the existing five lane-A targets. If EndpointChecks is red, repair only the
+first reported proof line; if green, promote the UpperTables dependency in
+`TARGETS.txt` and inspect its three explicit premise families.
