@@ -12,31 +12,6 @@ noncomputable section
 def paidIDs : Finset (Fin 5011) :=
   EnergyTerminalBatchB12.paidIDs ∪ Paid16GeneralNext1182.newIDs
 
-private theorem b11_disjoint_s01 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S01.newIDs := by
-  decide +kernel
-private theorem b11_disjoint_s02 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S02.newIDs := by
-  decide +kernel
-private theorem b11_disjoint_s03 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S03.newIDs := by
-  decide +kernel
-private theorem b11_disjoint_s04 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S04.newIDs := by
-  decide +kernel
-private theorem b11_disjoint_s05 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S05.newIDs := by
-  decide +kernel
-private theorem b11_disjoint_s06 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S06.newIDs := by
-  decide +kernel
-private theorem b11_disjoint_s07 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S07.newIDs := by
-  decide +kernel
-private theorem b11_disjoint_s08 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S08.newIDs := by
-  decide +kernel
-
 private theorem of_all_lt {s : Finset (Fin 5011)}
     (h : (s.all fun n => n.val < 2565) = true) :
     ∀ n, n ∈ s → n.val < 2565 := by
@@ -95,6 +70,74 @@ private theorem s07_ge : ∀ n, n ∈ Paid16GeneralNext1182S07.newIDs → 2565 �
   of_all_ge (s := Paid16GeneralNext1182S07.newIDs) (by decide +kernel)
 private theorem s08_ge : ∀ n, n ∈ Paid16GeneralNext1182S08.newIDs → 2565 ≤ n.val :=
   of_all_ge (s := Paid16GeneralNext1182S08.newIDs) (by decide +kernel)
+
+private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
+    n.val < 1160 :=
+  of_all_lt (s := EnergyTerminalBatchB11.paidIDs) (by decide +kernel) n hn
+
+private theorem b11_disjoint_s01 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S01.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s01_ge n hs
+  omega
+
+private theorem b11_disjoint_s02 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S02.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s02_ge n hs
+  omega
+
+private theorem b11_disjoint_s03 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S03.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s03_ge n hs
+  omega
+
+private theorem b11_disjoint_s04 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S04.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s04_ge n hs
+  omega
+
+private theorem b11_disjoint_s05 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S05.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s05_ge n hs
+  omega
+
+private theorem b11_disjoint_s06 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S06.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s06_ge n hs
+  omega
+
+private theorem b11_disjoint_s07 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S07.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s07_ge n hs
+  omega
+
+private theorem b11_disjoint_s08 :
+    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S08.newIDs := by
+  rw [Finset.disjoint_left]
+  intro n hb hs
+  have hlt := b11_lt n hb
+  have hge := s08_ge n hs
+  omega
 
 theorem new_disjoint_old :
     Disjoint EnergyTerminalBatchB12.paidIDs Paid16GeneralNext1182.newIDs := by
