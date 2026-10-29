@@ -6,12 +6,13 @@
   "corrections": [
     "supply implicit Disjoint.left element with (a := a)",
     "use Finset.univ.biUnion over Fin 8 and pass card_biUnion's disjointness hypothesis explicitly",
-    "prove part disjointness from manifest interval bounds plus omega, with 16 set-local kernel checks instead of 28 pairwise set intersections",
-    "replace the final kernel numeral evaluation by norm_num",
+    "prove part disjointness from literal membership bounds (consecutive intervals)",
+    "prove each literal-block bound by its <=21-case membership disjunction, then assemble parts",
+    "expand the eight-term Fin sum recursively with Fin.sum_univ_succ",
     "remove maxRecDepth 10000"
   ],
-  "corrected_chars": 14923,
-  "corrected_utf8_bytes": 15199,
-  "corrected_sha256": "407BA2558C7D7C810E5B58F25CFD2B572C0C61EB824CE5E295B9009386C52B46",
+  "corrected_chars": 36140,
+  "corrected_utf8_bytes": 36853,
+  "corrected_sha256": "171B47DCE8042F7790B6FB41A5D016EB542C14B7FE0B76F44B9D611E7B096355",
   "scope": "source emission and inventory only; Lean elaboration is CI-pending"
 }

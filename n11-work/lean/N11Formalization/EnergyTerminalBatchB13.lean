@@ -12,132 +12,15 @@ noncomputable section
 def paidIDs : Finset (Fin 5011) :=
   EnergyTerminalBatchB12.paidIDs ∪ Paid16GeneralNext1182.newIDs
 
-private theorem of_all_lt {s : Finset (Fin 5011)}
-    (h : (s.all fun n => n.val < 2565) = true) :
-    ∀ n, n ∈ s → n.val < 2565 := by
-  intro n hn
-  exact (Finset.all_eq_true.mp h) n hn
-
-private theorem of_all_ge {s : Finset (Fin 5011)}
-    (h : (s.all fun n => 2565 ≤ n.val) = true) :
-    ∀ n, n ∈ s → 2565 ≤ n.val := by
-  intro n hn
-  exact (Finset.all_eq_true.mp h) n hn
+private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
+    n.val < 2565 :=
+  (Finset.all_eq_true.mp (s := EnergyTerminalBatchB11.paidIDs)
+    (p := fun n => n.val < 2565) (by decide +kernel)) n hn
 
 private theorem next505_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralNext505.newIDs) :
     n.val < 2565 := by
-  rcases (Paid16GeneralNext505.new_mem n).mp hn with
-    h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h | h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids00) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids01) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids02) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids03) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids04) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids05) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids06) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids07) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids08) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids09) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids10) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids11) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids12) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids13) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids14) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids15) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids16) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids17) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids18) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids19) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids20) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids21) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids22) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids23) (by decide +kernel)) n h
-  · exact (of_all_lt (s := Paid16GeneralNext505.ids24) (by decide +kernel)) n h
-
-private theorem s01_ge : ∀ n, n ∈ Paid16GeneralNext1182S01.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S01.newIDs) (by decide +kernel)
-private theorem s02_ge : ∀ n, n ∈ Paid16GeneralNext1182S02.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S02.newIDs) (by decide +kernel)
-private theorem s03_ge : ∀ n, n ∈ Paid16GeneralNext1182S03.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S03.newIDs) (by decide +kernel)
-private theorem s04_ge : ∀ n, n ∈ Paid16GeneralNext1182S04.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S04.newIDs) (by decide +kernel)
-private theorem s05_ge : ∀ n, n ∈ Paid16GeneralNext1182S05.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S05.newIDs) (by decide +kernel)
-private theorem s06_ge : ∀ n, n ∈ Paid16GeneralNext1182S06.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S06.newIDs) (by decide +kernel)
-private theorem s07_ge : ∀ n, n ∈ Paid16GeneralNext1182S07.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S07.newIDs) (by decide +kernel)
-private theorem s08_ge : ∀ n, n ∈ Paid16GeneralNext1182S08.newIDs → 2565 ≤ n.val :=
-  of_all_ge (s := Paid16GeneralNext1182S08.newIDs) (by decide +kernel)
-
-private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
-    n.val < 1160 :=
-  of_all_lt (s := EnergyTerminalBatchB11.paidIDs) (by decide +kernel) n hn
-
-private theorem b11_disjoint_s01 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S01.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s01_ge n hs
-  omega
-
-private theorem b11_disjoint_s02 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S02.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s02_ge n hs
-  omega
-
-private theorem b11_disjoint_s03 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S03.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s03_ge n hs
-  omega
-
-private theorem b11_disjoint_s04 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S04.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s04_ge n hs
-  omega
-
-private theorem b11_disjoint_s05 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S05.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s05_ge n hs
-  omega
-
-private theorem b11_disjoint_s06 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S06.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s06_ge n hs
-  omega
-
-private theorem b11_disjoint_s07 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S07.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s07_ge n hs
-  omega
-
-private theorem b11_disjoint_s08 :
-    Disjoint EnergyTerminalBatchB11.paidIDs Paid16GeneralNext1182S08.newIDs := by
-  rw [Finset.disjoint_left]
-  intro n hb hs
-  have hlt := b11_lt n hb
-  have hge := s08_ge n hs
-  omega
+  exact (Finset.all_eq_true.mp (s := Paid16GeneralNext505.newIDs)
+    (p := fun n => n.val < 2565) (by decide +kernel)) n hn
 
 theorem new_disjoint_old :
     Disjoint EnergyTerminalBatchB12.paidIDs Paid16GeneralNext1182.newIDs := by
@@ -145,27 +28,14 @@ theorem new_disjoint_old :
   constructor
   · rw [Finset.disjoint_left]
     intro a ha hb
-    rcases (Paid16GeneralNext1182.new_mem a).mp hb with h1 | h2 | h3 | h4 | h5 | h6 | h7 | h8
-    · exact (Finset.disjoint_left.mp b11_disjoint_s01) (a := a) ha h1
-    · exact (Finset.disjoint_left.mp b11_disjoint_s02) (a := a) ha h2
-    · exact (Finset.disjoint_left.mp b11_disjoint_s03) (a := a) ha h3
-    · exact (Finset.disjoint_left.mp b11_disjoint_s04) (a := a) ha h4
-    · exact (Finset.disjoint_left.mp b11_disjoint_s05) (a := a) ha h5
-    · exact (Finset.disjoint_left.mp b11_disjoint_s06) (a := a) ha h6
-    · exact (Finset.disjoint_left.mp b11_disjoint_s07) (a := a) ha h7
-    · exact (Finset.disjoint_left.mp b11_disjoint_s08) (a := a) ha h8
+    have hlt := b11_lt a ha
+    have hge := Paid16GeneralNext1182.lower_bound a hb
+    omega
   · rw [Finset.disjoint_left]
     intro a ha hb
     have hlt := next505_lt a ha
-    rcases (Paid16GeneralNext1182.new_mem a).mp hb with h1 | h2 | h3 | h4 | h5 | h6 | h7 | h8
-    · have hge := s01_ge a h1; omega
-    · have hge := s02_ge a h2; omega
-    · have hge := s03_ge a h3; omega
-    · have hge := s04_ge a h4; omega
-    · have hge := s05_ge a h5; omega
-    · have hge := s06_ge a h6; omega
-    · have hge := s07_ge a h7; omega
-    · have hge := s08_ge a h8; omega
+    have hge := Paid16GeneralNext1182.lower_bound a hb
+    omega
 
 theorem paid_count : paidIDs.card = 1997 := by
   rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,
