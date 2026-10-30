@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """Check low-denominator upper bounds for the eight endpoint comparisons.
 
-For bin j, q/2 is bounded above by uBin[j].  On [0,1], the degree-seven
-polynomial below is increasing: its derivative is at least 1 - 1/2 - 1/720.
-The endpoint side is unchanged.  All arithmetic is exact Fraction arithmetic;
-this establishes candidate data for a cheaper Lean proof, not kernel evidence.
+For bins 0--4, q/2 is bounded above by uBin[j] <= 1 and the degree-seven
+polynomial is increasing on [0,1].  Bins 5--6 need the degree-nine and
+degree-29 Taylor remainders kept explicitly because their arguments exceed 1.
+Bin 7 uses the separately proved saturation `capQ piHi = 19/50`; guessing a
+degree-seven upper bound outside [0,1] would not be sound.  All arithmetic is
+exact Fraction arithmetic; this is candidate data, not kernel evidence.
 """
 
 from fractions import Fraction
@@ -38,20 +40,37 @@ def sin_poly4(x: Fraction) -> Fraction:
     return x - x**3 / 6 + x**5 / 120 - x**7 / 5040
 
 
+def sin_hi_upper_pow(x: Fraction) -> Fraction:
+    return (sin_poly4(x) + abs(x) ** 9 / factorial(9) +
+            2 * abs(x) ** 29 / factorial(29))
+
+
 def main() -> int:
     eps = Fraction(1, factorial(9)) + 2 * Fraction(1, factorial(29))
     failures = 0
     for j, (u, a) in enumerate(zip(U_BIN, NODE_BIN)):
         q = PI_HI * (2048 if j == 7 else 256 * j + 255) / 2048
         q_le_u = q / 2 <= u
-        upper = Fraction(19, 50) * max(
-            Fraction(1, 2), min(Fraction(1), sin_poly4(u) + eps)
-        )
+        if j <= 4:
+            branch = "poly4/u"
+            upper = Fraction(19, 50) * max(
+                Fraction(1, 2), min(Fraction(1), sin_poly4(u) + eps)
+            )
+        elif j <= 6:
+            branch = "poly4+remainders"
+            y = sin_hi_upper_pow(q / 2)
+            upper = Fraction(19, 50) * y
+        else:
+            branch = "saturated"
+            upper = Fraction(19, 50)
         lower = sin_poly4(a) - eps
-        ok = q_le_u and upper <= lower
+        branch_ok = (j == 7) or q_le_u
+        if 5 <= j <= 6:
+            branch_ok = branch_ok and sin_hi_upper_pow(q / 2) >= Fraction(1, 2)
+        ok = branch_ok and upper <= lower
         failures += not ok
         print(
-            f"bin {j}: q/2 <= {u}: {q_le_u}; "
+            f"bin {j} [{branch}]: q/2 <= {u}: {q_le_u}; "
             f"slack={float(lower - upper):.12g}; {'PASS' if ok else 'FAIL'}"
         )
     print(f"FAILURES: {failures}")
