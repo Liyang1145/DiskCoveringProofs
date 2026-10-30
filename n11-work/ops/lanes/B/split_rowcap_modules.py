@@ -8,6 +8,7 @@ are exact and run before any file is written.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import re
 from fractions import Fraction
@@ -57,20 +58,50 @@ def check_exact(node: int, y: list[Fraction], matrix: list[list[int]]) -> dict:
             "violations": violations}
 
 
-def split_proof(text: str, node: int) -> str:
-    if "theorem row_cap_0 " in text:
-        return text
-    marker = "theorem row_cap (i j : Fin 10) :"
-    head, sep, _tail = text.partition(marker)
-    assert sep, node
-    rows = "".join(f'''theorem row_cap_{i} (j : Fin 10) :
+def lean_rat(q: Fraction) -> str:
+    if q.denominator == 1:
+        return f"({q.numerator} : ℚ)"
+    return f"({q.numerator} : ℚ) / {q.denominator}"
+
+
+def split_proof(text: str, node: int, y: list[Fraction],
+                matrix: list[list[int]]) -> str:
+    match = re.search(r"\ntheorem row_cap(?:_\d+_\d+|_\d+ | \()", text)
+    assert match, node
+    head = text[:match.start() + 1]
+    leaves = []
+    for i in range(10):
+        for j in range(10):
+            terms = " + ".join(
+                f"y_{node} {q} * rowA {i} {j} {q}" for q in range(9))
+            lhs = sum(y[q] * ((q < j) - (q < i)) for q in range(9))
+            raw = matrix[i][j]
+            rhs = Fraction(matrix[i][j], 4096)
+            leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
+    {terms} ≤ db {i} {j} := by
+  have hleft : {terms} = {lean_rat(lhs)} := by
+    norm_num [y_{node}, rowA]
+  have hright : db {i} {j} = {lean_rat(rhs)} := by
+    have hval : dbmVal {i} {j} = ({raw} : ℤ) := by
+      decide
+    rw [db, hval]
+    norm_num
+  rw [hleft, hright]
+  norm_num''')
+    rows = []
+    for i in range(10):
+        cases = "\n".join(
+            f"    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] "
+            f"using row_cap_{node}_{i}_{j}" for j in range(10))
+        rows.append(f'''theorem row_cap_{i} (j : Fin 10) :
     (∑ q : Fin 9, y_{node} q * rowA {i} j q) ≤ db {i} j := by
   fin_cases j <;>
-    norm_num [y_{node}, rowA, db, dbmVal, Fin.sum_univ_succ]
-
-''' for i in range(10))
+    first
+{cases}''')
     dispatch = "\n".join(f"  · exact row_cap_{i} j" for i in range(10))
-    return head + rows + f'''theorem row_cap (i j : Fin 10) :
+    return head + "\n\n".join(leaves) + "\n\n" + "\n\n".join(rows) + f'''
+
+theorem row_cap (i j : Fin 10) :
     (∑ q : Fin 9, y_{node} q * rowA i j q) ≤ db i j := by
   fin_cases i
 {dispatch}
@@ -94,12 +125,19 @@ def main() -> None:
         y = parse_y(node)
         matrix = parse_matrix(text, node)
         checks.append(check_exact(node, y, matrix))
-        outputs[path] = split_proof(text, node)
+        outputs[path] = split_proof(text, node, y, matrix)
     if not args.check:
         for path, text in outputs.items():
             path.write_text(text)
+    else:
+        stale = [str(path) for path, text in outputs.items()
+                 if path.read_text() != text]
+        assert not stale, stale
+    hashes = {path.name: hashlib.sha256(text.encode()).hexdigest().upper()
+              for path, text in outputs.items()}
     print(json.dumps({"ok": True, "checks": checks,
-                      "rewritten": not args.check}, indent=2))
+                      "leaf_proofs_per_module": 100,
+                      "rewritten": not args.check, "sha256": hashes}, indent=2))
 
 
 if __name__ == "__main__":

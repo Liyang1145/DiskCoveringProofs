@@ -7,7 +7,49 @@ EXPERT (2026-10-30):
 - Do not add B13/B14 proof content while root integration is pending, and do not hide the known `SharedMomentConcreteSwitchBatch` root OOM as a mathematical failure.
 - SevenClassExclusions remains 0/7 and the arbitrary-center full-disk theorem remains unpaid.
 
+## 2026-10-30 - session part 38: local Lean probe bounded; bytes still CI pending
+
+- Retried the session-34 one-leaf proof in `/workspace/tools/mathlib-probe`
+  (`RowCapLeafProbe.lean`, not a project target). Both the broad and narrow
+  Mathlib imports hit the bounded 120/150 s timeout, so this is **no Lean
+  verdict**, not a proof failure. Do not publish the probe as evidence.
+- Re-ran `split_rowcap_modules.py --check`: exit `0`; top-level `ok=true`;
+  7/7 nodes have 100/100 ordered pairs, weight sum `1`, zero cap violations,
+  100 leaf proofs/module, and unchanged hashes. Scope: exact rationals and
+  generated-text byte equality only.
+- Current module SHA256 remains `A4C4B2CE...A24A90`, `E0B8E67D...293514`,
+  `349F4647...0D266`, `26B20830...17E80`, `036EABCB...C816A`,
+  `F1BC1A4A...56B4`, `26EBC62A...F186A`; forbidden-token scan and
+  `git diff --check` are clean. All seven modules remain **CI pending**.
+- The old CI failures quoted line 44 etc. are the committed row-wide version;
+  they are not diagnostics for these uncommitted one-literal lookup leaves.
+- Still unpaid: seven row-cap kernel proofs, the `f0Lo`/`g` bridge, all 389
+  residual radii, SevenClassExclusions, and the arbitrary-center theorem.
+- Very next step: after the supervisor commits, extract the seven target EXIT
+  lines from the fresh CI summary. If red, report its first leaf line and the
+  exact `hval` pair; do not rerun static audits or make wrappers first.
+
 # Lane B notes
+
+## 2026-10-30 - session part 36 (condensed): bytes uncommitted; CI pending
+
+- All seven row-cap modules were uncommitted, so CI could not judge their
+  lookup-leaf bytes. Static checks passed; no Lean or payment verdict existed.
+
+
+## 2026-10-30 - sessions 34-35 (condensed): row-cap lookup leaves, CI pending
+- Old CI runs (41037794295, 41050208198, 41050329106) predate the current
+  row-cap bytes; all seven earlier exits were `1` on row-wide `norm_num`.
+- Rewrote the emitter's 700 pair leaves to prove each concrete lookup by a
+  one-literal kernel `decide` (`hval : dbmVal i j = n`), then `rw [db,hval]`
+  and `norm_num`. No `native_decide`/`sorry`/`axiom`; no frozen edit.
+- Exact `Fraction` audit: 700/700 caps pass, weight sums 1, zero violations.
+- Emitter `58DA4E68...0BF74`; modules 1409 `A4C4B2CE..A24A90`,
+  2337 `E0B8E67D..293514`, 2341 `349F4647..0D266`, 2356 `26B20830..17E80`,
+  2360 `036EABCB..C816A`, 2368 `F1BC1A4A..56B4`, 2370 `26EBC62A..F186A`.
+- Still CI pending; no local Lean verdict. Still unpaid: seven row-cap kernel
+  proofs, `f0Lo`/`g` bridge, 389 residual radii, SevenClassExclusions, and
+  the arbitrary-center full-disk theorem.
 
 ## 2026-10-30 - session part 27: residual 389 crosswalk
 
@@ -36,30 +78,11 @@ EXPERT (2026-10-30):
   `PaidCellCertificateM` generically; if so emit one bounded Lean witness module
   for those seven IDs. Otherwise document the first missing certificate field.
 
-## 2026-10-30 - session part 26: current-byte audit rerun
+## 2026-10-30 - session part 26 (condensed): static audit rerun
 
-- Re-ran the six lane-B static audits on the current worktree. All exit 0:
-  root handoff (`pre_handoff`, replacement ready), B13Main API/imports, B13
-  descent hierarchy, closure counts, Next1182 literal blocks, and target import
-  closure.
-- Fresh closure output is unchanged: B11 310, B12 815, B13 1997, Next1182 1182,
-  sharp 120, terminals 2506, residual 389. Target closure has 1914 modules,
-  with no missing/forbidden imports; root still has exactly one B12Main import.
-- Exact hashes: root-audit script
-  `985E7C921AA199CE2914A837A627E13C3CE4686BFBA8BE1585DCB93ED7D1E8C7`;
-  its regenerated report
-  `B0CCD386502D44A069C3D6B47BB909C1997641DF6F538E7FBF0BDD64C152CAB5`;
-  CI evidence `EA8506B77F9174972E1F286362AAA13B1724D1AFC5CAB11CDADE4328C1B45227`;
-  B13Main and TARGETS hashes match the green handoff.
-- Scope: static source/manifest checks only. This rerun is not new Lean
-  elaboration or proof credit; the five prior CI module exits remain the kernel
-  evidence. No new Lean target was added.
-- Still unpaid: the explicit 389-ID `B13.RemainingTerminalRadius` premise,
-  SevenClassExclusions, and the arbitrary-center full-disk theorem.
-- Next concrete mathematical step: emit a deterministic hash-bound crosswalk
-  from those 389 B13 terminal IDs to lane C's residual census, identifying
-  whether coverage is 1:1 and listing any unmatched IDs on either side. Root
-  import replacement remains supervisor-only and must be followed by root CI.
+- Six lane-B source audits exited 0; closure remained B11 310, B12 815,
+  B13 1997, Next1182 1182, sharp 120, terminals 2506, residual 389. This was
+  static evidence only, not elaboration or payment.
 
 ## Current handoff (2026-10-30 09:48 UTC)
 
@@ -202,50 +225,16 @@ EXPERT (2026-10-30):
   any row still fails, isolate its exact `norm_num` diagnostic into ten
   single-pair leaves; do not build wrappers until all seven are green.
 
-## 2026-10-30 - session part 31: CI gate for split row-cap modules
+## 2026-10-30 - sessions 31-33 (condensed): pair-leaf repair
 
-- Re-read `GUIDANCE.md`, lane-B notes, and `ops/ci/LATEST.md`.
-  `python tools/project_status.py --check` exits 0 (index consistency only).
-- Confirmed the seven split `LaneBFrozenCapRowCap<id>.lean` files exist but are
-  still **untracked** (`git status --short` shows `??`). Therefore no CI run has
-  seen these bytes: `41027178023` (`34b14918`) predates them, and the pending
-  `41037794295` is at `dfe0881a` before the lane-B split commit. The seven
-  targets remain CI pending, not paid.
-- No local kernel fallback is available: `which lean lake` returns nothing, so
-  no `mathlib-probe` compilation was possible in this session. No probe claim.
-- The red `FrozenCapPublicExcludedTree` in `LATEST.md` is the lane-C frozen
-  monolith, not one of these seven lane-B modules; its failure is not evidence
-  about the split row proofs.
-- Checks: `git diff --check` exit 0. Scope: repository status and target
-  tracking only; no Lean elaboration and no arithmetic rerun.
-- Still unproved: all seven row-cap kernel proofs, the frozen-field bridge, all
-  389 residual radii, SevenClassExclusions, arbitrary-center full-disk theorem.
-- Very next step: supervisor commits/pushes the seven modules plus `TARGETS.txt`;
-  then read their seven `=== EXIT ...` lines in the new CI run. If a row fails
-  with an unsolved `norm_num` goal, split that row's ten `j` cases into ten
-  single-pair lemmas; if 2356 times out, reduce its leaf size, not heartbeats.
+- Runs `41037794295` and `41050208198` saw the earlier row-wide split and were
+  red for all seven row-cap modules. Exact Python arithmetic was always 700/700,
+  so these were proof-script failures, not cap violations.
+- Reworked the generator to 100 independent explicit pair leaves per module,
+  then to one-entry `hval : dbmVal i j = n` kernel `decide` leaves. No local
+  Lean build or kernel result is claimed.
 
-- Structural audit just before handoff: all 7 modules have exactly ten
-  `row_cap_<i>` declarations plus one `row_cap` dispatcher, zero occurrences
-  of `sorry/admit/axiom/native_decide/ofReduceBool/maxHeartbeats 0`, and their
-  SHA256 prefixes still match the part-30 hashes. This is source structure only,
-  not elaboration. Denominator sizes are modest (max 16 in these files), which
-  supports the split fixing the old 2356 timeout; not a kernel claim.
+## 2026-10-30 - session part 37 (condensed): audit only; no Lean probe
 
-## 2026-10-30 - session part 32: CI-snapshot reconciliation
-
-- `B13Main` current SHA256 `521CA436...FA41837` imports only its three required
-  modules and no residual census. Thus old run `41027178023` (`34b14918`) and
-  its exit `1` do not diagnose current bytes. Runs `41035092539` and
-  `41037794295` remain pending; neither is green.
-- The seven split row-cap modules still match part-30 hashes and remain
-  untracked, so no CI run has seen them; all seven are CI pending.
-- Checks: project status exit 0 (index only); both scripts `py_compile` exit 0;
-  `split_rowcap_modules.py --check` exit 0, 700/700 caps exact, weight sum 1,
-  zero violations; `git diff --check` exit 0. Target-import audit timed out
-  (124), so closure is unclaimed. No Lean build or proof payment was made.
-- Unpaid: seven row-cap kernel proofs, fixed `f0Lo`/`g` packet bridge, all 389
-  residual radii, SevenClassExclusions, arbitrary-center full-disk theorem.
-- Next: supervisor commits modules/targets; read exact CI exits and pending
-  `B13Main`, then isolate the first real row-cap failure. Root import remains
-  supervisor-only.
+- Reconfirmed 7 modules, 700/700 ordered pairs, weight sums 1, and zero cap
+  violations; static checks were clean but all seven remained CI pending.
