@@ -9,13 +9,13 @@ namespace N11Formalization.C450ChainCompletionAudit
 open N11Formalization
 
 theorem source36_mem_h450_list :
-    C450Source36Segment.source36 ∈ C450Source11Segment.remainingSegs := by
-  change C450Source36Segment.source36 ∈ c450Segs.drop 11
+    C450Source36Data.source36 ∈ C450Source11Segment.remainingSegs := by
+  change C450Source36Data.source36 ∈ c450Segs.drop 11
   decide +kernel
 
 theorem source36_paid_from_h450 :
-    C450NormalizedInterface.SegmentNormalized C450Source36Segment.source36 :=
-  C450ChainCompletion.h450 C450Source36Segment.source36 source36_mem_h450_list
+    C450NormalizedInterface.SegmentNormalized C450Source36Data.source36 :=
+  C450ChainCompletion.h450 C450Source36Data.source36 source36_mem_h450_list
 
 theorem source36_mem_tail_not_empty :
     C450Source11Segment.remainingSegs ≠ [] := by

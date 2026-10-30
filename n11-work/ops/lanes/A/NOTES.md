@@ -14,12 +14,8 @@ EXPERT (2026-10-30):
 - C450 is closed at `495c970c`, CI-green, and transitively imported through
   `EnergyTerminalBatchB12Main`; stale `HARK-MISSING` comments are not a gap.
 - Cos and Mono were CI-green at `e5875cf8`.
-- Bins source repair is **drafted, CI pending**:
-  `n11-work/lean/N11Formalization/SevenClassQ0Deg3Bins.lean`
-  SHA256 `a3d8f972205f52d664ecb69073704de6d34bf1a5e15816d9a8ffc8f9f2e25326`.
-  It replaces the line-95 `Nat.mod_lt` call with the pinned-API form
-  `Nat.mod_lt k.val (by norm_num : 0 < 256)` plus `omega`, matching existing
-  uses in `SourceLoop.lean`.
+- Bins is **CI-green**: run `41082175973` exit 0. Its repaired API form is
+  `Nat.mod_lt k.val (by norm_num : 0 < 256)`; no source change pending.
 - EndpointChecks restricts lower Taylor premises to bins 0--4 and handles bins
   5--7 separately. Exact endpoint audit passed 8/8; minimum slack was
   `6.6940497252e-7` (bin 7).
@@ -180,36 +176,47 @@ exclusions all remain unpaid at this hash.
 containing `ea77c2ee` and `ff880fc9`; quote the first diagnostic of
 `C450ChainCompletionAudit` or `EndpointChecks` and repair only that site.
 
-## 2026-10-30 (session 51) -- completed-run provenance checked
+## 2026-10-30 (sessions 51--52, condensed)
 
-**Did.** Queried the GitHub Actions API directly because `ops/ci/LATEST.md` was
-stale. Run `41065332260` completed `success` at 14:15:52Z on `ede0d1c8`, but
-that artifact predates the repaired EndpointChecks bytes. Its EndpointChecks
-entry is therefore stale evidence, not a verdict on `ff880fc9`.
+Run `41082175973` at `40d03ae5` was read directly from its artifact and full job
+log. `C450ChainCompletionMain` is exit 0. The audit's four failures were all
+`C450Source36Segment.source36`; the declaration is
+`C450Source36Data.source36`. EndpointChecks failed at the degree-four sine
+normalization, derivative transport, 16 `decide`-based rational table facts,
+and three `hj.val < 5` false branches. Those files were repaired but never
+tested at the archived hash: both remained **CI pending**, and all later lane-A
+exits were dependency-only.
 
-Supervisor commit `79e52a68` touched only `ops/PROGRESS.md` and
-`ops/ci/LATEST.md`. Its two runs are `41072186791` (workflow "Scoped
-mathematical replay", success) and `41072186884` (workflow "Delivery bytes, not
-mathematical proof", failure). Neither is a lane-A Lean build verdict. The
-supervisor's `n11-lean-build` for the current lane-A bytes has not run because
-the audit is untracked and the two repaired files are uncommitted.
+## 2026-10-30 (session 53) -- scalar endpoint repairs
 
-**Files / SHA256.** No source edit this session. EndpointChecks remains
-`ff880fc9f255a06305ff0980686d9d1e3f3c21c68adcbddb6a7ad45a00aa65dc`;
-audit remains `ea77c2ee45437f4885b0d8061a7c7794fc439d5a87f7d3ce2e505d94fe1a015e`;
-TARGETS remains `39d32d75080cbd329a3068f8d3b3beaa40f899c3f1c7665b6a71fb2e8d27cc03`.
+**Did.** Re-read the complete `EndpointChecks` diagnostics in run
+`41082175973`. Rebuilt `hasDerivAt_sinPoly4Real` from pointwise polynomial
+derivatives, eliminating the incompatible composite `Pi` expression. Replaced
+the remaining concrete `![...] j` endpoint reductions with the scalar
+`endpointUBin_{zero..six}` / `nodeBinAt_{zero..seven}` rewrites before
+`norm_num`. The degree-four expansion now has its missing `ring`. The C450
+audit uses `C450Source36Data.source36` in all four places.
 
-**Checks (scope).** Confirmed HEAD and remote branch at `79e52a68`; confirmed the
-new commit contains no lane-A Lean changes. `git diff --check` and the
-forbidden-token scan over the audit and EndpointChecks pass. Current Git status
-shows the two modified lane-A files and untracked audit. No local project or full
-Lean build was run.
+**Files / SHA256.**
+`n11-work/lean/N11Formalization/SevenClassQ0Deg3EndpointChecks.lean`
+`c17381d16a30605b1335c9869cc498aafafec29e4173e73e254071e201fdc5fc`;
+`n11-work/lean/N11Formalization/C450ChainCompletionAudit.lean`
+`21abc9089fbe611c26e4b5b59eeeea6253eb88287f4ac338f167d18dafcb3dfd`;
+`TARGETS.txt` unchanged at
+`39d32d75080cbd329a3068f8d3b3beaa40f899c3f1c7665b6a71fb2e8d27cc03`.
 
-**Still unproved.** Kernel acceptance of the audit and repaired EndpointChecks;
-then UpperReductionUnimodal, suffix modules, EdgeShape/`edgeValid`, seven
+**Checks (scope).** `git diff --check` and the forbidden-token scan over both
+Lean files pass. `audit_endpoint_low_denom.py` passes 8/8 exact-rational bins;
+minimum slack is `6.6940497252e-7` at bin 7. A Mathlib probe of the derivative
+pattern timed out during import and is **not** a Lean verdict. No local project
+build was run. Both modified Lean files remain **CI pending**.
+
+**Still unproved.** Kernel acceptance of the repaired audit and EndpointChecks;
+then UpperReductionUnimodal, both suffix modules, EdgeShape/`edgeValid`, seven
 sectors, strict total, `Q0Degree3AreaInput`, seven exclusions, and the
 arbitrary-centre full-disk theorem.
 
-**Next concrete step.** After the supervisor commits this worktree, find the
-new `n11-lean-build` run at or after that commit, quote its first diagnostic for
-`C450ChainCompletionAudit` (TARGETS order), and repair only that line.
+**Next concrete step.** After the supervisor commits/pushes this worktree, read
+the new `n11-lean-build` run. Quote and repair the first fresh diagnostic for
+`C450ChainCompletionAudit`, then EndpointChecks; later lane-A exits are not
+independent evidence until those imports pass.
