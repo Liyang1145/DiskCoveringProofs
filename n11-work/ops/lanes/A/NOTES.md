@@ -71,3 +71,114 @@ build was run. Lean status is **CI pending**, not kernel-green.
 have `nodeBinAt 1`, reuse the same edge-0 cosine bound (both are at most 543),
 and note that witness 511 is again the bin endpoint so its decreasing half is
 vacuous.
+
+## 2026-10-30 (session 66) -- row 0/bin 1 complete shape
+
+**Did.** Added `SevenClassQ0Deg3SectorBin1.lean`.  Bins 0 and 1 have the same
+exact node-table value (`239/1250`), so the already-green edge-0 cosine prefix
+(monotone through node 543) pays all 255 increasing steps in bin 1.  The
+audited witness 511 is the bin endpoint, making the decreasing half vacuous.
+Also added the missing explicit `open SevenClassQ0Deg3Bins` needed by the new
+index lemmas and by the prior bin-0 module.
+
+**Files / SHA256.**
+`SevenClassQ0Deg3SectorBin1.lean`
+`48c44cf84695f45b4d177d50dcaef672952716a2cbf239a677f9a1d084fc7452`.
+`SevenClassQ0Deg3SectorBin0.lean`
+`2f998326825b2865f41dabc1117814d9a3948e6b5a36a665361d7e258d39e406`.
+`TARGETS.txt`
+`2572b874db22cd3c75ed6b44470df441f37462448b6494593711f9f0e84dac2e`.
+
+**Checks (scope).** `git diff --check` PASS and forbidden-token scan clean.
+A Mathlib-probe attempt to kernel-check the two index lemmas was bounded at
+240 s but timed out during the probe's Mathlib import; no Lean status follows
+from it. No project oleans exist locally, so the new module is **CI pending**,
+not kernel-green. The exact-rational 72-bin audit independently records node
+511 as the row-0/bin-1 argmax.
+
+**Still unproved / unpaid.** The other 70 row-bin shape obligations,
+`SectorBinUnimodal`/`SectorValid`, strict total assembly,
+`Q0Degree3AreaInput`, and all seven exclusions.
+
+**Next concrete step.** Let CI kernel-check the new target first. If green, do
+row 0/bin 2: split at witness 543, using edge-0 increase through 543 and
+decrease from 543; both node-543 and node-767 have `nodeBinAt 2`, so no node
+jump interferes.
+
+## 2026-10-30 (session 67) -- row 0/bin 2 drafted
+
+**Did.** Added `SevenClassQ0Deg3SectorBin2.lean`.  It proves the increasing
+half from bin start `512` through witness `543` using the same edge-0 cosine
+prefix, with a fresh `nodeQ <= nodeQ 543` bound.  For the decreasing half it
+checks the exact threshold at node `544`, proves the degree-28 cosine bracket
+stays below row 0's threshold on `[node544, piHi]`, and packages the full
+`Fin 8` row-bin obligation.
+
+**Files / SHA256.**
+`SevenClassQ0Deg3SectorBin2.lean`
+`4d0c9653985246a198fb57e343c48aa3aab7f4da35cb88d98faddb27a59e0cd4`.
+`TARGETS.txt`
+`65bc8dd9c22ed2dea4286a1fd8d2f66fc6dcad7b18b2ab8a9d1eec0d04f1962f`.
+
+**Checks (scope).** `git diff --check` PASS; forbidden-token scan found only
+the two `#print axioms` audits.  No local project build was run (no oleans; CI
+is authoritative), so Lean status is **CI pending**, not kernel-green.
+
+**Still unproved / unpaid.** The other 69 row-bin shape obligations,
+`SectorBinUnimodal`/`SectorValid`, strict total assembly,
+`Q0Degree3AreaInput`, and all seven exclusions.
+
+**Next concrete step.** Let CI check sessions 64--67.  If green, do row 0/bin
+3: witness `768` is the bin endpoint, so its decreasing half is vacuous; the
+cosine threshold drops at witness 543, requiring a new exact node-547/548
+prefix check for the increasing half.
+
+## 2026-10-30 (session 68) -- row 0/bin 3 drafted
+
+**Did.** Added `SevenClassQ0Deg3SectorBin3.lean`. The witness `768` is the
+bin's first grid point, so the increasing half is vacuous. For the full
+decreasing half through bin endpoint `1023`, the module proves the exact
+rational comparison `cosHiNLag (nodeQ 768) <= 2*mu(nextSite 0)/(19/50)^2`
+and transfers the row-0 cosine upper bound across the whole bin. It packages
+the complete `Fin 8` row-bin obligation.
+
+**Files / SHA256.**
+`SevenClassQ0Deg3SectorBin3.lean`
+`cdbad8ae8df6c4ffc91acb62ba2e5aaf009911d97de6f05f7fea72e51c6cb0f9`.
+`TARGETS.txt`
+`d74ddad1250502af8593c5e0bda74ee22f1adf88651101dea62de4b9f1b6907e`.
+
+**Checks (scope).** `git diff --check` PASS; forbidden-token scan clean. No
+local project oleans exist, so the module is **CI pending**, not kernel-green.
+The exact-rational witness table independently records row-0/bin-3 argmax 768.
+
+**Still unproved / unpaid.** The other 68 row-bin shape obligations,
+`SectorBinUnimodal`/`SectorValid`, strict total assembly,
+`Q0Degree3AreaInput`, and all seven exclusions.
+
+**Next concrete step.** After CI checks sessions 64--68, do row 0/bin 4:
+witness `1024` is again the bin start, so only its decreasing half needs the
+exact `cosHiNLag (nodeQ 1024) <= 2*mu/(19/50)^2` threshold and the fixed-bin
+antitone transfer through `1279`.
+
+## 2026-10-30 (session 69) -- row 0/bin 4 drafted
+
+**Did.** Added `SevenClassQ0Deg3SectorBin4.lean`, proving the exact node-1024
+cosine threshold, the row-0 antitone transfer through `1279`, and the complete
+`Fin 8` row-bin obligation. The witness `1024` is the bin start, so the
+increasing half is vacuous.
+
+**Files / SHA256.** `SevenClassQ0Deg3SectorBin4.lean`
+`63d8ff5cda0dbac04092e114530d7fa98e13d638803445ea93b83bddd0e58ba7`;
+`TARGETS.txt` `93eb3306ea90ce8b614817a4ba9102bb454759b1c796b69fa5c3cae820c88fc0`.
+
+**Checks (scope).** `git diff --check` PASS; forbidden-token scan clean. No
+local project oleans/build; Lean status is **CI pending**, not kernel-green.
+
+**Still unproved / unpaid.** The other 67 row-bin shape obligations,
+`SectorBinUnimodal`/`SectorValid`, strict total assembly,
+`Q0Degree3AreaInput`, and all seven exclusions.
+
+**Next concrete step.** After CI checks sessions 64--69, do row 0/bin 5
+(witness `1280`, again the bin start): prove its exact node-1280 threshold and
+antitone transfer through `1535`.

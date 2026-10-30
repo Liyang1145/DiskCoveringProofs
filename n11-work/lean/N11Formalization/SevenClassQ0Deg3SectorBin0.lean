@@ -12,6 +12,7 @@ noncomputable section
 namespace N11Formalization.SevenClassQ0Deg3SectorBin0
 
 open MetricAreaRationalCertificate
+open SevenClassQ0Deg3Bins
 open SevenClassQ0Deg3EdgeShape
 open SevenClassQ0Deg3SectorBinShape
 open SevenClassQ0Deg3SectorBinWitness

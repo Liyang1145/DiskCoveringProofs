@@ -28,3 +28,15 @@ N11Formalization.SevenClassQ0Deg3SectorBinWitnessBounds
 
 # Sessions 64--65: complete row 0 / bin 0 shape (CI pending)
 N11Formalization.SevenClassQ0Deg3SectorBin0
+
+# Session 66: complete row 0 / bin 1 shape (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBin1
+
+# Session 67: complete row 0 / bin 2 shape (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBin2
+
+# Session 68: complete row 0 / bin 3 shape (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBin3
+
+# Session 69: complete row 0 / bin 4 shape (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBin4
