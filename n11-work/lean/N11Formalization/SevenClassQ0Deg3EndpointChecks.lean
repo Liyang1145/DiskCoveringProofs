@@ -18,42 +18,46 @@ def sinPoly4 (a : ℚ) : ℚ :=
 /-- A degree-seven rational lower bound for `sinLoNLag`, with explicit
 degree-nine and degree-29 Lagrange remainders.  On `[0,1]` its loss is below
 one millionth, unlike the cubic bound at the final endpoint. -/
+theorem sinTaylorPair_le {a : ℚ} (ha0 : 0 ≤ a) (ha1 : a ≤ 1) (n : ℕ) :
+    a ^ (n + 2) / ((Nat.factorial (n + 2) : ℕ) : ℚ) ≤
+      a ^ n / ((Nat.factorial n : ℕ) : ℚ) := by
+  have hpow : a ^ (n + 2) ≤ a ^ n :=
+    pow_le_pow_of_le_one ha0 ha1 (by omega)
+  calc
+    a ^ (n + 2) / ((Nat.factorial (n + 2) : ℕ) : ℚ) ≤
+        a ^ n / ((Nat.factorial (n + 2) : ℕ) : ℚ) :=
+      div_le_div_of_nonneg_right hpow (by positivity)
+    _ ≤ a ^ n / ((Nat.factorial n : ℕ) : ℚ) := by
+      rw [div_le_div_iff (by positivity) (by positivity)]
+      exact mul_le_mul_of_nonneg_left
+        (by exact_mod_cast Nat.factorial_le (by omega)) (pow_nonneg ha0 n)
+
+theorem sinPoly4_le_sinTQ14 (a : ℚ) (ha0 : 0 ≤ a) (ha1 : a ≤ 1) :
+    sinPoly4 a ≤ sinTQ 14 a := by
+  have h9 := sinTaylorPair_le ha0 ha1 9
+  have h13 := sinTaylorPair_le ha0 ha1 13
+  have h17 := sinTaylorPair_le ha0 ha1 17
+  have h21 := sinTaylorPair_le ha0 ha1 21
+  have h25 := sinTaylorPair_le ha0 ha1 25
+  norm_num [sinPoly4, sinTQ, Finset.sum_range_succ]
+  linarith
+
 theorem sinLoNLag_ge_sinPoly4_sub (a : ℚ) (ha : 0 ≤ a) (ha1 : a ≤ 1) :
     sinPoly4 a - 1 / ((Nat.factorial 9 : ℕ) : ℚ) -
         2 / ((Nat.factorial 29 : ℕ) : ℚ) ≤ sinLoNLag a := by
-  have h4 := (abs_le.mp (sin_bound_abs 4 (a : ℝ))).1
-  have h14 := (abs_le.mp (sin_bound_abs 14 (a : ℝ))).1
-  have hS : ((sinLoNLag a : ℚ) : ℝ) =
-      sinT 14 (a : ℝ) -
-        |(a : ℝ)| ^ 29 / ((Nat.factorial 29 : ℕ) : ℝ) := by
-    simp only [sinLoNLag]
-    push_cast
-    rw [sinTQ_cast]
-  have hpoly : sinT 4 (a : ℝ) =
-      (a : ℝ) - (a : ℝ) ^ 3 / 6 + (a : ℝ) ^ 5 / 120 -
-        (a : ℝ) ^ 7 / 5040 := by
-    norm_num [sinT, Finset.sum_range_succ]
-  have habs : |(a : ℝ)| ≤ 1 := by
-    rw [abs_of_nonneg (by exact_mod_cast ha)]
-    exact_mod_cast ha1
-  have h9 : |(a : ℝ)| ^ 9 / ((Nat.factorial 9 : ℕ) : ℝ) ≤
-      1 / ((Nat.factorial 9 : ℕ) : ℝ) :=
-    div_le_div_of_nonneg_right (pow_le_one₀ (abs_nonneg _) habs) (by norm_num)
-  have h29 : |(a : ℝ)| ^ 29 / ((Nat.factorial 29 : ℕ) : ℝ) ≤
-      1 / ((Nat.factorial 29 : ℕ) : ℝ) :=
-    div_le_div_of_nonneg_right (pow_le_one₀ (abs_nonneg _) habs) (by norm_num)
-  have h4poly : ((a : ℝ) - (a : ℝ) ^ 3 / 6 + (a : ℝ) ^ 5 / 120 -
-      (a : ℝ) ^ 7 / 5040) - |(a : ℝ)| ^ 9 /
-        ((Nat.factorial 9 : ℕ) : ℝ) ≤ Real.sin (a : ℝ) := by
-    rw [← hpoly]
+  have hpoly := sinPoly4_le_sinTQ14 a ha ha1
+  have hrem : 0 ≤ |a| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ) := by positivity
+  have habs : |a| ≤ 1 := by
+    rw [abs_of_nonneg ha]
+    exact ha1
+  have h29 : |a| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ) ≤
+      1 / ((Nat.factorial 29 : ℕ) : ℚ) :=
+    div_le_div_of_nonneg_right (pow_le_one₀ (abs_nonneg _) habs) (by positivity)
+  have hmain : sinPoly4 a - 1 / ((Nat.factorial 9 : ℕ) : ℚ) -
+      2 / ((Nat.factorial 29 : ℕ) : ℚ) ≤
+      sinTQ 14 a - |a| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ) := by
     linarith
-  have hmain : (((sinPoly4 a - 1 / ((Nat.factorial 9 : ℕ) : ℚ) -
-      2 / ((Nat.factorial 29 : ℕ) : ℚ) : ℚ) : ℝ) ≤
-      ((sinLoNLag a : ℚ) : ℝ) := by
-    rw [hS]
-    push_cast [sinPoly4]
-    linarith [h4poly, h9, h29, h14]
-  exact_mod_cast hmain
+  simpa [sinLoNLag] using hmain
 
 /-- Matching rational upper bound for `sinHiNLag` on `[0,1]`. -/
 theorem sinHiNLag_le_sinPoly4_add (a : ℚ) (ha : 0 ≤ a) (ha1 : a ≤ 1) :
@@ -99,6 +103,38 @@ theorem sinHiNLag_le_sinPoly4_add (a : ℚ) (ha : 0 ≤ a) (ha1 : a ≤ 1) :
     rw [hS]
     push_cast
     linarith [h14poly, h9, h29]
+  exact_mod_cast hmain
+
+/-- The degree-seven upper bound does not need `a ≤ 1`; outside `[0,1]` the
+two Taylor remainders are retained explicitly.  This is the branch needed by
+the two endpoint bins whose arguments exceed one. -/
+theorem sinHiNLag_le_sinPoly4_add_pow (a : ℚ) :
+    sinHiNLag a ≤ sinPoly4 a + |a| ^ 9 / ((Nat.factorial 9 : ℕ) : ℚ) +
+      2 * (|a| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ)) := by
+  have h4 := (abs_le.mp (sin_bound_abs 4 (a : ℝ))).2
+  have h14 := (abs_le.mp (sin_bound_abs 14 (a : ℝ))).2
+  have hS : ((sinHiNLag a : ℚ) : ℝ) =
+      sinT 14 (a : ℝ) +
+        |(a : ℝ)| ^ 29 / ((Nat.factorial 29 : ℕ) : ℝ) := by
+    simp only [sinHiNLag]
+    push_cast
+    rw [sinTQ_cast]
+  have hpoly : sinT 4 (a : ℝ) =
+      (a : ℝ) - (a : ℝ) ^ 3 / 6 + (a : ℝ) ^ 5 / 120 -
+        (a : ℝ) ^ 7 / 5040 := by
+    norm_num [sinT, Finset.sum_range_succ]
+  have hupper : Real.sin (a : ℝ) ≤
+      ((a : ℝ) - (a : ℝ) ^ 3 / 6 + (a : ℝ) ^ 5 / 120 -
+        (a : ℝ) ^ 7 / 5040) + |(a : ℝ)| ^ 9 /
+          ((Nat.factorial 9 : ℕ) : ℝ) := by
+    rw [← hpoly]
+    linarith
+  have hmain : ((sinHiNLag a : ℚ) : ℝ) ≤
+      ((sinPoly4 a + |a| ^ 9 / ((Nat.factorial 9 : ℕ) : ℚ) +
+        2 * (|a| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ)) : ℚ) : ℝ) := by
+    rw [hS]
+    push_cast [sinPoly4]
+    linarith
   exact_mod_cast hmain
 
 /-- The real degree-seven polynomial underlying `sinPoly4`. -/
@@ -188,6 +224,86 @@ def endpointUBin (j : Fin 8) : ℚ :=
   ![1956 / 10000, 3920 / 10000, 5883 / 10000, 7847 / 10000,
     9810 / 10000, 11774 / 10000, 13737 / 10000, 15708 / 10000] j
 
+/-- The upper endpoint bound with both Taylor remainders kept.  Bins 5 and 6
+lie outside the `[0,1]` domain of the monotone degree-seven reduction. -/
+def endpointUpperBin (j : Fin 8) : ℚ :=
+  sinPoly4 (endpointUBin j) + |endpointUBin j| ^ 9 /
+      ((Nat.factorial 9 : ℕ) : ℚ) +
+    2 * (|endpointUBin j| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ))
+
+theorem capQ_le_mul_of_sinHiNLag_le (q y : ℚ) (hy0 : 1 / 2 ≤ y)
+    (hy : sinHiNLag (q / 2) ≤ y) : capQ q ≤ 19 / 50 * y := by
+  unfold capQ
+  have hm : max (1 / 2 : ℚ) (min 1 (sinHiNLag (q / 2))) ≤ y :=
+    max_le hy0 ((min_le_right 1 (sinHiNLag (q / 2))).trans hy)
+  exact mul_le_mul_of_nonneg_left hm (by norm_num)
+
+theorem capQ_binHi_le_endpointUpperBin_5 :
+    capQ (nodeQ RatInterval.piHi 2048 (binHi 5)) ≤
+      19 / 50 * endpointUpperBin 5 := by
+  have hx0 : 0 ≤ nodeQ RatInterval.piHi 2048 (binHi 5) / 2 := by
+    exact div_nonneg (nodeQ_binHi_nonneg 5) (by norm_num)
+  have hxu := nodeQ_binHi_div_two_le_endpointUBin 5
+  have hxuabs : |nodeQ RatInterval.piHi 2048 (binHi 5) / 2| ≤
+      |endpointUBin 5| := by
+    rw [abs_of_nonneg hx0, abs_of_nonneg (endpointUBin_nonneg 5)]
+    exact hxu
+  have hsin := sinHiNLag_le_sinPoly4_add_pow
+    (nodeQ RatInterval.piHi 2048 (binHi 5) / 2)
+  have hpoly : sinPoly4 (nodeQ RatInterval.piHi 2048 (binHi 5) / 2) ≤
+      sinPoly4 (endpointUBin 5) := by
+    norm_num [sinPoly4, nodeQ, binHi, endpointUBin, RatInterval.piHi]
+  have h9 : |nodeQ RatInterval.piHi 2048 (binHi 5) / 2| ^ 9 /
+        ((Nat.factorial 9 : ℕ) : ℚ) ≤
+      |endpointUBin 5| ^ 9 / ((Nat.factorial 9 : ℕ) : ℚ) :=
+    div_le_div_of_nonneg_right
+      (pow_le_pow_left₀ (abs_nonneg _) hxuabs 9) (by norm_num)
+  have h29 : |nodeQ RatInterval.piHi 2048 (binHi 5) / 2| ^ 29 /
+        ((Nat.factorial 29 : ℕ) : ℚ) ≤
+      |endpointUBin 5| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ) :=
+    div_le_div_of_nonneg_right
+      (pow_le_pow_left₀ (abs_nonneg _) hxuabs 29) (by norm_num)
+  have hupper : sinHiNLag (nodeQ RatInterval.piHi 2048 (binHi 5) / 2) ≤
+      endpointUpperBin 5 := by
+    unfold endpointUpperBin
+    exact hsin.trans (add_le_add (add_le_add hpoly h9)
+      (mul_le_mul_of_nonneg_left h29 (by norm_num)))
+  exact capQ_le_mul_of_sinHiNLag_le _ _ (by
+    norm_num [endpointUpperBin, endpointUBin, sinPoly4]) hupper
+
+theorem capQ_binHi_le_endpointUpperBin_6 :
+    capQ (nodeQ RatInterval.piHi 2048 (binHi 6)) ≤
+      19 / 50 * endpointUpperBin 6 := by
+  have hx0 : 0 ≤ nodeQ RatInterval.piHi 2048 (binHi 6) / 2 := by
+    exact div_nonneg (nodeQ_binHi_nonneg 6) (by norm_num)
+  have hxu := nodeQ_binHi_div_two_le_endpointUBin 6
+  have hxuabs : |nodeQ RatInterval.piHi 2048 (binHi 6) / 2| ≤
+      |endpointUBin 6| := by
+    rw [abs_of_nonneg hx0, abs_of_nonneg (endpointUBin_nonneg 6)]
+    exact hxu
+  have hsin := sinHiNLag_le_sinPoly4_add_pow
+    (nodeQ RatInterval.piHi 2048 (binHi 6) / 2)
+  have hpoly : sinPoly4 (nodeQ RatInterval.piHi 2048 (binHi 6) / 2) ≤
+      sinPoly4 (endpointUBin 6) := by
+    norm_num [sinPoly4, nodeQ, binHi, endpointUBin, RatInterval.piHi]
+  have h9 : |nodeQ RatInterval.piHi 2048 (binHi 6) / 2| ^ 9 /
+        ((Nat.factorial 9 : ℕ) : ℚ) ≤
+      |endpointUBin 6| ^ 9 / ((Nat.factorial 9 : ℕ) : ℚ) :=
+    div_le_div_of_nonneg_right
+      (pow_le_pow_left₀ (abs_nonneg _) hxuabs 9) (by norm_num)
+  have h29 : |nodeQ RatInterval.piHi 2048 (binHi 6) / 2| ^ 29 /
+        ((Nat.factorial 29 : ℕ) : ℚ) ≤
+      |endpointUBin 6| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ) :=
+    div_le_div_of_nonneg_right
+      (pow_le_pow_left₀ (abs_nonneg _) hxuabs 29) (by norm_num)
+  have hupper : sinHiNLag (nodeQ RatInterval.piHi 2048 (binHi 6) / 2) ≤
+      endpointUpperBin 6 := by
+    unfold endpointUpperBin
+    exact hsin.trans (add_le_add (add_le_add hpoly h9)
+      (mul_le_mul_of_nonneg_left h29 (by norm_num)))
+  exact capQ_le_mul_of_sinHiNLag_le _ _ (by
+    norm_num [endpointUpperBin, endpointUBin, sinPoly4]) hupper
+
 theorem endpointUBin_nonneg (j : Fin 8) : 0 ≤ endpointUBin j := by
   fin_cases j <;> norm_num [endpointUBin]
 
@@ -249,19 +365,40 @@ theorem endpointCheck_4 : EndpointCheck 4 := by
       norm_num [sinPoly4, endpointUBin, nodeBinAt]))
 
 theorem endpointCheck_5 : EndpointCheck 5 := by
-  exact endpointCheck_of_quartic 5
-    ((capQ_binHi_le_endpointUBin 5).trans (by
-      norm_num [sinPoly4, endpointUBin, nodeBinAt]))
+  have hpoly :
+      (19 / 50 : ℚ) * endpointUpperBin 5 ≤
+        sinPoly4 (nodeBinAt 5) - 1 / ((Nat.factorial 9 : ℕ) : ℚ) -
+          2 / ((Nat.factorial 29 : ℕ) : ℚ) := by
+    norm_num [endpointUpperBin, endpointUBin, sinPoly4, nodeBinAt]
+  exact (capQ_binHi_le_endpointUpperBin_5).trans (hpoly.trans
+    (sinLoNLag_ge_sinPoly4_sub (nodeBinAt 5) (nodeBinAt_mem 5).1
+      (nodeBinAt_mem 5).2))
 
 theorem endpointCheck_6 : EndpointCheck 6 := by
-  exact endpointCheck_of_quartic 6
-    ((capQ_binHi_le_endpointUBin 6).trans (by
-      norm_num [sinPoly4, endpointUBin, nodeBinAt]))
+  have hpoly :
+      (19 / 50 : ℚ) * endpointUpperBin 6 ≤
+        sinPoly4 (nodeBinAt 6) - 1 / ((Nat.factorial 9 : ℕ) : ℚ) -
+          2 / ((Nat.factorial 29 : ℕ) : ℚ) := by
+    norm_num [endpointUpperBin, endpointUBin, sinPoly4, nodeBinAt]
+  exact (capQ_binHi_le_endpointUpperBin_6).trans (hpoly.trans
+    (sinLoNLag_ge_sinPoly4_sub (nodeBinAt 6) (nodeBinAt_mem 6).1
+      (nodeBinAt_mem 6).2))
 
 theorem endpointCheck_7 : EndpointCheck 7 := by
-  exact endpointCheck_of_quartic 7
-    ((capQ_binHi_le_endpointUBin 7).trans (by
-      norm_num [sinPoly4, endpointUBin, nodeBinAt]))
+  have hnode : nodeQ RatInterval.piHi 2048 (binHi 7) = RatInterval.piHi := by
+    norm_num [nodeQ, binHi]
+  have hcap : capQ (nodeQ RatInterval.piHi 2048 (binHi 7)) = 19 / 50 := by
+    rw [hnode]
+    exact piHiCapSaturated
+  unfold EndpointCheck
+  rw [hcap]
+  exact (by
+    norm_num [sinPoly4, nodeBinAt] :
+      (19 / 50 : ℚ) ≤ sinPoly4 (nodeBinAt 7) -
+        1 / ((Nat.factorial 9 : ℕ) : ℚ) -
+          2 / ((Nat.factorial 29 : ℕ) : ℚ)).trans
+    (sinLoNLag_ge_sinPoly4_sub (nodeBinAt 7) (nodeBinAt_mem 7).1
+      (nodeBinAt_mem 7).2)
 
 theorem endpointChecks : ∀ j : Fin 8, EndpointCheck j := by
   intro j
