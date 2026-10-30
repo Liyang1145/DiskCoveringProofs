@@ -3,5 +3,6 @@ N11Formalization.FrozenCapRationalCore
 N11Formalization.PaidCellCertificateM
 N11Formalization.PaidCellCertificateMCap
 N11Formalization.FrozenCapFourFieldWitnesses
+N11Formalization.FrozenCapFourFieldRowCaps
 N11Formalization.FrozenCapFiveFieldWitnesses
 N11Formalization.FrozenCapFiveFieldRowCaps
