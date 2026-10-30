@@ -19,3 +19,12 @@ N11Formalization.SevenClassQ0Deg3SectorPeak
 N11Formalization.SevenClassQ0Deg3SectorShape
 # Session 57: fixed-bin sector derivative and monotonicity bridge (CI pending)
 N11Formalization.SevenClassQ0Deg3SectorCalculus
+# Session 61: corrected per-bin reduction after a global-step counterexample (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBinShape
+# Session 62: exact 72-bin argmax table and finite peak checks (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBinWitness
+# Session 63: discharges the 72 witness/bin range premises (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBinWitnessBounds
+
+# Sessions 64--65: complete row 0 / bin 0 shape (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBin0
