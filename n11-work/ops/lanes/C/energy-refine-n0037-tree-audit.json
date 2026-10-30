@@ -1,0 +1,18 @@
+{
+  "scope": "exact integer tree data only; no MPacket, Lean build or kernel credit",
+  "source_id": 37,
+  "source_sha256": "7a0137826c2ea9c5975ee9d3b19952e409e86551b93262778933c3752240d0ac",
+  "frozen_source_sha256": "bd4e71cb29804a5a3d5953727558f4656d23253a83b69f5c3d6e25eeb4ea8ed5",
+  "node_count": 7,
+  "terminal_nodes": [
+    2,
+    4,
+    5,
+    6
+  ],
+  "root_scale_entries_checked": 100,
+  "root_scale_mismatches": [],
+  "split_entries_checked": 600,
+  "split_violations": [],
+  "passed": true
+}
