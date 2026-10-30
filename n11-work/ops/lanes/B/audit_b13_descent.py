@@ -58,6 +58,10 @@ def main() -> None:
     b09_high_ids = {i for i in b09_ids if i >= 2565}
     checks = {
         "twelve_group_blocks": groups == [f"{i:02d}" for i in range(1, 13)],
+        "twelve_group_norm_num_decodes":
+            len(re.findall(
+                r"fin_cases i <;> norm_num \[Paid16GeneralG\d{2}\.nodeID\]",
+                text)) == 12,
         "no_kernel_decisions": "decide +kernel" not in text,
         "structural_image_decodes": text.count("rcases Finset.mem_image.mp hn") == 16,
         "b09_layered_classification": text.count("private theorem b") == 9,
