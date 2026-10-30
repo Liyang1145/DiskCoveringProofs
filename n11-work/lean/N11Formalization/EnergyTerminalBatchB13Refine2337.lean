@@ -222,6 +222,70 @@ private theorem not_next1182 :
     not_next1182_part04, not_next1182_part05, not_next1182_part06,
     not_next1182_part07, not_next1182_part08⟩
 
+private theorem not_next505_ids00 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids00 := by
+  decide +kernel
+private theorem not_next505_ids01 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids01 := by
+  decide +kernel
+private theorem not_next505_ids02 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids02 := by
+  decide +kernel
+private theorem not_next505_ids03 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids03 := by
+  decide +kernel
+private theorem not_next505_ids04 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids04 := by
+  decide +kernel
+private theorem not_next505_ids05 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids05 := by
+  decide +kernel
+private theorem not_next505_ids06 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids06 := by
+  decide +kernel
+private theorem not_next505_ids07 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids07 := by
+  decide +kernel
+private theorem not_next505_ids08 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids08 := by
+  decide +kernel
+private theorem not_next505_ids09 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids09 := by
+  decide +kernel
+private theorem not_next505_ids10 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids10 := by
+  decide +kernel
+private theorem not_next505_ids11 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids11 := by
+  decide +kernel
+private theorem not_next505_ids12 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids12 := by
+  decide +kernel
+private theorem not_next505_ids13 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids13 := by
+  decide +kernel
+private theorem not_next505_ids14 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids14 := by
+  decide +kernel
+private theorem not_next505_ids15 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids15 := by
+  decide +kernel
+private theorem not_next505_ids16 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids16 := by
+  decide +kernel
+private theorem not_next505_ids17 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids17 := by
+  decide +kernel
+private theorem not_next505_ids18 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids18 := by
+  decide +kernel
+private theorem not_next505_ids19 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids19 := by
+  decide +kernel
+private theorem not_next505_ids20 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids20 := by
+  decide +kernel
+private theorem not_next505_ids21 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids21 := by
+  decide +kernel
+private theorem not_next505_ids22 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids22 := by
+  decide +kernel
+private theorem not_next505_ids23 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids23 := by
+  decide +kernel
+private theorem not_next505_ids24 : (2337 : Fin 5011) ∉ Paid16GeneralNext505.ids24 := by
+  decide +kernel
+private theorem not_next505 :
+    (2337 : Fin 5011) ∉ Paid16GeneralNext505.newIDs := by
+  rw [Paid16GeneralNext505.new_mem]
+  push_neg
+  exact ⟨not_next505_ids00, not_next505_ids01, not_next505_ids02,
+    not_next505_ids03, not_next505_ids04, not_next505_ids05,
+    not_next505_ids06, not_next505_ids07, not_next505_ids08,
+    not_next505_ids09, not_next505_ids10, not_next505_ids11,
+    not_next505_ids12, not_next505_ids13, not_next505_ids14,
+    not_next505_ids15, not_next505_ids16, not_next505_ids17,
+    not_next505_ids18, not_next505_ids19, not_next505_ids20,
+    not_next505_ids21, not_next505_ids22, not_next505_ids23,
+    not_next505_ids24⟩
+
 theorem not_paid_2337 : (2337 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := by
   intro h
   rw [EnergyTerminalBatchB13.paidIDs, Finset.mem_union] at h
@@ -236,8 +300,7 @@ theorem not_paid_2337 : (2337 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := 
       · have h210' : (2337 : Fin 5011) ∉ Paid16GeneralRemaining210.newIDs := by
           decide +kernel
         exact h210' h210
-    · have hlt := EnergyTerminalBatchB13Next505Bounds.next505_lt (2337 : Fin 5011) h505
-      omega
+    · exact not_next505 h505
   · exact not_next1182 h1182
 
 theorem new_disjoint_old :

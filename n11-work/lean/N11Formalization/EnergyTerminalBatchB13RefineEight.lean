@@ -21,8 +21,7 @@ theorem new_terminal (n : Fin 5011) (hn : n ∈ newIDs) :
   rcases hn with hn | hn
   · exact EnergyTerminalBatchB13RefineSeven.new_terminal n hn
   · rw [EnergyRefineN2337.newIDs, Finset.mem_singleton] at hn
-    subst n
-    exact EnergyRefineN2337.terminal
+    simpa [hn] using EnergyRefineN2337.terminal
 
 theorem new_disjoint_old : Disjoint EnergyTerminalBatchB13.paidIDs newIDs := by
   rw [newIDs, Finset.disjoint_union_right]
@@ -41,7 +40,6 @@ theorem new_count : newIDs.card = 8 := by
 theorem paid_count : paidIDs.card = 2005 := by
   rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,
     EnergyTerminalBatchB13.paid_count, new_count]
-  norm_num
 
 theorem paid_terminal (n : Fin 5011) (hn : n ∈ paidIDs) :
     (DBMSourceTree.data n).terminal = true := by
@@ -62,8 +60,8 @@ theorem paid_radius (n : Fin 5011) (hn : n ∈ paidIDs)
     · exact EnergyTerminalBatchB13RefineSeven.paid_radius n
         (Finset.mem_union_right _ hn) y hy0 hy1 hc C Z r hf
     · rw [EnergyRefineN2337.newIDs, Finset.mem_singleton] at hn
-      subst n
-      exact EnergyRefineN2337.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
+      exact EnergyRefineN2337.new_radius 2337 (by simp) y hy0 hy1
+        (by simpa [hn] using hc) C Z r hf
 
 def RemainingTerminalRadius : Prop :=
   ∀ n : Fin 5011, (DBMSourceTree.data n).terminal = true →

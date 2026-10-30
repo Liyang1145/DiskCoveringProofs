@@ -1,5 +1,11 @@
 # Lean targets lane C wants CI to build (one per line)
+# Combined eleven-certificate integration first: it depends on all singletons.
+N11Formalization.EnergyTerminalBatchB13RefineEleven
+N11Formalization.EnergyTerminalBatchB13RefineElevenMain
 # Unpriced post-fix refinement chain: keep first so the next serial run reaches it.
+N11Formalization.EnergyRefineN3853
+N11Formalization.EnergyTerminalBatchB13Refine3853
+N11Formalization.EnergyTerminalBatchB13Refine3853Main
 N11Formalization.EnergyRefineN3777
 N11Formalization.EnergyTerminalBatchB13Refine3777
 N11Formalization.EnergyTerminalBatchB13Refine3777Main
