@@ -17,6 +17,7 @@
     "high_ids_absent_from_next1182": true,
     "high_ids_excluded": true,
     "high_ids_match_reconstructed_b09": true,
+    "high_leaves_use_tested_omega": true,
     "next1182_literals_57x1182": true,
     "no_forbidden_tokens": true,
     "no_kernel_decisions": true,

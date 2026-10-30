@@ -217,7 +217,7 @@ for _ in high_ids:
         lines += [
             "    · simp only [" + ", ".join(simp) + "] at h",
             "      simp only [Fin.ext_iff] at h",
-            "      norm_num at h",
+            "      omega",
         ]
 
 lines += [

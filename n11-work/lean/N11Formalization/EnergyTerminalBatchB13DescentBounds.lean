@@ -257,704 +257,704 @@ theorem high_not_next (n : Fin 5011) (hn : n ∈ b09HighIDs) :
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
   · rw [Paid16GeneralNext1182.new_mem]
     rintro (h | h | h | h | h | h | h | h)
     · simp only [Paid16GeneralNext1182S01.new_mem, Paid16GeneralNext1182S01.mem_ids00, Paid16GeneralNext1182S01.mem_ids01, Paid16GeneralNext1182S01.mem_ids02, Paid16GeneralNext1182S01.mem_ids03, Paid16GeneralNext1182S01.mem_ids04, Paid16GeneralNext1182S01.mem_ids05, Paid16GeneralNext1182S01.mem_ids06, Paid16GeneralNext1182S01.mem_ids07] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S02.new_mem, Paid16GeneralNext1182S02.mem_ids08, Paid16GeneralNext1182S02.mem_ids09, Paid16GeneralNext1182S02.mem_ids10, Paid16GeneralNext1182S02.mem_ids11, Paid16GeneralNext1182S02.mem_ids12, Paid16GeneralNext1182S02.mem_ids13, Paid16GeneralNext1182S02.mem_ids14, Paid16GeneralNext1182S02.mem_ids15] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S03.new_mem, Paid16GeneralNext1182S03.mem_ids16, Paid16GeneralNext1182S03.mem_ids17, Paid16GeneralNext1182S03.mem_ids18, Paid16GeneralNext1182S03.mem_ids19, Paid16GeneralNext1182S03.mem_ids20, Paid16GeneralNext1182S03.mem_ids21, Paid16GeneralNext1182S03.mem_ids22, Paid16GeneralNext1182S03.mem_ids23] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S04.new_mem, Paid16GeneralNext1182S04.mem_ids24, Paid16GeneralNext1182S04.mem_ids25, Paid16GeneralNext1182S04.mem_ids26, Paid16GeneralNext1182S04.mem_ids27, Paid16GeneralNext1182S04.mem_ids28, Paid16GeneralNext1182S04.mem_ids29, Paid16GeneralNext1182S04.mem_ids30, Paid16GeneralNext1182S04.mem_ids31] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S05.new_mem, Paid16GeneralNext1182S05.mem_ids32, Paid16GeneralNext1182S05.mem_ids33, Paid16GeneralNext1182S05.mem_ids34, Paid16GeneralNext1182S05.mem_ids35, Paid16GeneralNext1182S05.mem_ids36, Paid16GeneralNext1182S05.mem_ids37, Paid16GeneralNext1182S05.mem_ids38, Paid16GeneralNext1182S05.mem_ids39] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S06.new_mem, Paid16GeneralNext1182S06.mem_ids40, Paid16GeneralNext1182S06.mem_ids41, Paid16GeneralNext1182S06.mem_ids42, Paid16GeneralNext1182S06.mem_ids43, Paid16GeneralNext1182S06.mem_ids44, Paid16GeneralNext1182S06.mem_ids45, Paid16GeneralNext1182S06.mem_ids46, Paid16GeneralNext1182S06.mem_ids47] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S07.new_mem, Paid16GeneralNext1182S07.mem_ids48, Paid16GeneralNext1182S07.mem_ids49, Paid16GeneralNext1182S07.mem_ids50, Paid16GeneralNext1182S07.mem_ids51, Paid16GeneralNext1182S07.mem_ids52, Paid16GeneralNext1182S07.mem_ids53, Paid16GeneralNext1182S07.mem_ids54, Paid16GeneralNext1182S07.mem_ids55] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
     · simp only [Paid16GeneralNext1182S08.new_mem, Paid16GeneralNext1182S08.mem_ids56] at h
       simp only [Fin.ext_iff] at h
-      norm_num at h
+      omega
 
 end
 end N11Formalization.EnergyTerminalBatchB13DescentBounds

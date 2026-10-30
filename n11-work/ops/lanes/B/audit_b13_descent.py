@@ -108,6 +108,7 @@ def main() -> None:
     local_module = MODULE.stem
     closure = import_closure(local_module)
     unimported_reference_modules = sorted(referenced_modules - closure)
+    high_section = text.partition("theorem high_not_next")[2]
     checks = {
         "twelve_group_blocks": groups == [f"{i:02d}" for i in range(1, 13)],
         "twelve_group_norm_num_decodes":
@@ -121,6 +122,9 @@ def main() -> None:
             "theorem b09_bound (n : Fin 5011)" in text and
             "def b09HighIDs : Finset (Fin 5011) :=" in text,
         "high_ids_excluded": "theorem high_not_next" in text,
+        "high_leaves_use_tested_omega":
+            high_section.count("      omega") == 27 * 8 and
+            "norm_num at h" not in high_section,
         "high_ids_27": len(source_high_ids) == 27,
         "reconstructed_b09_58": len(b09_ids) == 58,
         "high_ids_match_reconstructed_b09": source_high_ids == b09_high_ids,
