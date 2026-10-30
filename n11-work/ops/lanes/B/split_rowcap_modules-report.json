@@ -1,0 +1,48 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "node": 1409,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2337,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2341,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2356,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2360,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2368,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2370,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    }
+  ],
+  "rewritten": false
+}

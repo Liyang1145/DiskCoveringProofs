@@ -7,6 +7,33 @@ EXPERT (2026-10-30):
 
 # Lane B notes
 
+## 2026-10-30 - session part 27: residual 389 crosswalk
+
+- Added `audit_residual389_crosswalk.py`, which parses the four literal chunks
+  in `EnergyTerminalResidualCensusBase.lean`, the lane-C `residual389-census.json`,
+  and the B13 closure report. It writes a 389-entry per-ID crosswalk and rejects
+  any count, ordering, hash, match, or local-record drift.
+- Result: exact 1:1 coverage, `389/389` matched, no unmatched IDs on either
+  side. Both sides and the independent B13 closure digest equal
+  `747447E233634FBC9D9321824148165AC866105FE0367AED27F6F8D9A2E07F46`.
+  Chunk sizes are `100,100,100,89`; all chunks are sorted contiguous slices.
+- Lane C exposes seven local survey records for these IDs, all with
+  `pass_recorded=false` and `excluded_for_any_row_count=true`; the other 382
+  have no local survey record. This crosswalk does not turn those exclusions
+  into proof of `RemainingTerminalRadius`.
+- Exact SHA256: script
+  `642C31A1B200931EB02D1BB5AC98BC27EF34449BC2C55EF8EC7E245A5B9F59D1`;
+  report `59FFCD5FF0DD4FFE67DC27255C7B775A481DBD8DFE07365A95311C49836D1E79`.
+- Checks: `py_compile` exit 0; script exit 0 with 13/13 checks;
+  `git diff --check` exit 0. Scope is source-ID inventory only, not Lean
+  elaboration and not mathematical payment. No Lean target changed.
+- Still unpaid: all 389 residual radius cases, SevenClassExclusions, and the
+  arbitrary-center full-disk theorem. Root import remains supervisor-only.
+- Next concrete step: for the seven locally represented exclusions, inspect
+  whether lane C's exact row-cap certificates instantiate
+  `PaidCellCertificateM` generically; if so emit one bounded Lean witness module
+  for those seven IDs. Otherwise document the first missing certificate field.
+
 ## 2026-10-30 - session part 26: current-byte audit rerun
 
 - Re-ran the six lane-B static audits on the current worktree. All exit 0:
@@ -119,60 +146,104 @@ EXPERT (2026-10-30):
 - Workflow's trailing `true` makes the top-level Build step non-semantic; only
   module `=== EXIT ... 0` lines and `summary.json` are verdicts.
 
-## 2026-10-30 - session part 22: B13Main separated from lane-C census
+## 2026-10-30 - sessions 22-23 (condensed): B13Main green on merged bytes
 
-- Pre-edit CI showed Next1182/T505Bounds/DescentBounds/B13 at `0`, B13Main at
-  `1` solely from lane-C `EnergyTerminalResidualCensusC03`.
-- Removed that optional import and two literal-census corollaries. Updated the
-  static audit to require the census dependency's absence.
-- B13Main hash became `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`;
-  `audit_b13main.py` became
-  `F5D5D8F01BF3147657A5834611C9A9C165EC5F60037EAFACAD5D30DFAB35E943`.
-
-## 2026-10-30 - session part 23: exact merged-byte green binding
-
-### Done
-- Verified merged head `22719e0d7aef585fdf0b179d7b9c4f23b14a2754` contains the
-  audited sources unchanged. Read live job `123993863813` log and extracted all
-  five lane-B target exits in serial order; each is exactly `0`.
-- Re-ran `audit_b13main.py`, `audit_b13_descent.py`, `audit_b13_closure.py`,
-  `audit_next1182_blocks.py`, and `audit_target_imports.py` on these bytes.
-- Added `ci-b13-green-20261030.json` recording run/job/head, timestamped exits,
-  source hashes, and the deliberately limited live-log scope.
-
-### Files (SHA256, uppercase)
-- `Paid16GeneralNext1182.lean`
-  `5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1`.
-- `EnergyTerminalBatchB13Next505Bounds.lean`
-  `FA5CA6EB9CD75158085EDDD3C0CB464AB7F96CF124FCE40C303EB176D31D46F2`.
-- `EnergyTerminalBatchB13DescentBounds.lean`
-  `F5E3C49DC61FC031CBB32C2686BBA721909EC695850A661BD8E789DC59EB8794`.
-- `EnergyTerminalBatchB13.lean`
-  `3DD37313505E0E8D608D50D42D3AFB1F1E08CEBBDF1ACD5DB570F57D9DC8FD03`.
-- `EnergyTerminalBatchB13Main.lean`
+- Removed B13Main's optional lane-C census import; its hash became
   `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`.
-- `TARGETS.txt`
-  `4E8E73251E43B27E7297C5D6CB21BD04FB93195021A5128C364A09795A476600`.
+- Job `123993863813` on head `22719e0d` gave exact kernel exits `0` for
+  Next1182, Next505Bounds, DescentBounds, B13, B13Main. Scope is those five
+  module targets only; the job was still `in_progress` on root.
+- Closure audit: B11 310, B12 815, B13 1997, sharp 120, terminals 2506,
+  residual 389. `project_status.py --check` exit 0 checks index declarations,
+  not mathematics. Root still imports B12Main; replacement is supervisor-only.
+- Full evidence: `ci-b13-green-20261030.json` and the static audit reports.
 
-### Checks (exact scope)
-- GitHub job `123993863813` on head `22719e0d`: five `=== EXIT ... 0` lines at
-  09:46:28, 09:46:33, 09:46:38, 09:46:42, and 09:47:00 UTC. These are kernel
-  build results for the five listed module targets on matching source hashes.
-- Static audits exit 0 with scope exactly as their reports state. Closure audit:
-  B11 310, B12 815, B13 1997, sharp 120, terminals 2506, residual 389.
-- `python3 tools/project_status.py --check` exit 0; this checks handoff-index
-  declarations only, not mathematics or full repository integrity.
-- No local full-project Lean build was run. The CI job itself was still
-  `in_progress` on remaining targets/root; this note does not claim run success.
+## 2026-10-30 - sessions 28-29 (condensed): frozen-cap API gap
 
-### Still unproved / unverified
-- `EnergyTerminalBatchB13.RemainingTerminalRadius` over 389 IDs is an explicit
-  unpaid premise. SevenClassExclusions and the arbitrary-center full-disk
-  theorem remain unpaid.
-- Root still imports `EnergyTerminalBatchB12Main`; supervisor has not applied
-  the requested B13Main replacement. Current root/module-tree CI is unverified.
+- The seven public residual IDs (`1409, 2337, 2341, 2356, 2360, 2368, 2370`)
+  have conditional exclusion trees only. Their packets do not force the fixed
+  `f0Lo`/`g` equalities, so these wrappers do not pay a residual radius.
+- `audit_frozen_cap_api_gap.py` / report SHA256 are
+  `12A58F9D...15CFCF` / `A64D2E7B...C1FE9E`; 7/7 source checks pass.
+- Part 29 created seven lane-B monolith row-cap candidates. CI at `34b14918`
+  still showed the old frozen monoliths red: unsolved `norm_num` goals on six
+  and a heartbeat timeout on 2356.
 
-### Next concrete step
-- Supervisor imports B13Main instead of B12Main, then fresh CI must prove the
-  root with that import. Mathematical work now returns to lane C's 389 residual
-  and SevenClassExclusions; do not report them as reduced by B13.
+## 2026-10-30 - session part 30: split frozen-cap row proofs
+
+- Exact-rational audit of all seven matrices: `700/700` ordered row caps pass,
+  every weight vector sums to 1, and there are zero violations. Scope is
+  arithmetic only, not Lean elaboration or payment.
+- Rewrote the seven `LaneBFrozenCapRowCap<id>.lean` candidates so each
+  monolithic 100-case proof is ten bounded row declarations plus a `fin_cases`
+  dispatcher. Frozen matrices/statements are unchanged.
+- Added idempotent exact-rational emitter/checker
+  `ops/lanes/B/split_rowcap_modules.py` and report
+  `split_rowcap_modules-report.json`. Lowercase SHA256: emitter
+  `ef69d39e07360e8096588ac9762b15331d5295d88c97acc099a9b25da0f238bb`;
+  report `3a5a9052fb1f7cd8288e1c7a4230983350fe17f3b40e7729c196069063770413`.
+- Candidate module SHA256: 1409 `3d5dc70c62cb050dd783de7714d750b8588dbd42f337fcee89a737f8056940d7`;
+  2337 `f01af4ee7ae948fca43f7037d6faef3b02a1c4a9d91a1e787f33297b84793e4f`;
+  2341 `ad49e73219430f1eba8c197a22dae289c104cca76eebd17bc06c58c731946e37`;
+  2356 `5725ab3aa017ee5dca6888dc719c2f8262ddad0f2f155730b4dcf36d03eddefc`;
+  2360 `e5a88d48bcec5a21b6247e2fedf3d9c250755ef966adf13b4a865c03b069e084`;
+  2368 `94f27b97e39f1364b999f24df8c03af33f1a57e4d7f306c7973a8069f6c79df0`;
+  2370 `1b504d26e853126d3896fe968367e5109fcf8e23b826a55dc4975dfae6dae5ff`.
+- Checks: `py_compile` exit 0; emitter `--check` exit 0; `git diff --check`
+  exit 0. A bounded target-import audit hit the 30 s timeout (exit 124), so
+  import closure is not claimed on these bytes. No local full-project Lean
+  build was run.
+- CI is **pending** for the split targets; none of the seven modules is paid.
+  Still unpaid: all row-cap kernel proofs, the frozen-field bridge, all 389
+  residual radii, SevenClassExclusions, and the arbitrary-center theorem.
+- Next concrete step: read the first CI exit for the seven split modules. If
+  any row still fails, isolate its exact `norm_num` diagnostic into ten
+  single-pair leaves; do not build wrappers until all seven are green.
+
+## 2026-10-30 - session part 31: CI gate for split row-cap modules
+
+- Re-read `GUIDANCE.md`, lane-B notes, and `ops/ci/LATEST.md`.
+  `python tools/project_status.py --check` exits 0 (index consistency only).
+- Confirmed the seven split `LaneBFrozenCapRowCap<id>.lean` files exist but are
+  still **untracked** (`git status --short` shows `??`). Therefore no CI run has
+  seen these bytes: `41027178023` (`34b14918`) predates them, and the pending
+  `41037794295` is at `dfe0881a` before the lane-B split commit. The seven
+  targets remain CI pending, not paid.
+- No local kernel fallback is available: `which lean lake` returns nothing, so
+  no `mathlib-probe` compilation was possible in this session. No probe claim.
+- The red `FrozenCapPublicExcludedTree` in `LATEST.md` is the lane-C frozen
+  monolith, not one of these seven lane-B modules; its failure is not evidence
+  about the split row proofs.
+- Checks: `git diff --check` exit 0. Scope: repository status and target
+  tracking only; no Lean elaboration and no arithmetic rerun.
+- Still unproved: all seven row-cap kernel proofs, the frozen-field bridge, all
+  389 residual radii, SevenClassExclusions, arbitrary-center full-disk theorem.
+- Very next step: supervisor commits/pushes the seven modules plus `TARGETS.txt`;
+  then read their seven `=== EXIT ...` lines in the new CI run. If a row fails
+  with an unsolved `norm_num` goal, split that row's ten `j` cases into ten
+  single-pair lemmas; if 2356 times out, reduce its leaf size, not heartbeats.
+
+- Structural audit just before handoff: all 7 modules have exactly ten
+  `row_cap_<i>` declarations plus one `row_cap` dispatcher, zero occurrences
+  of `sorry/admit/axiom/native_decide/ofReduceBool/maxHeartbeats 0`, and their
+  SHA256 prefixes still match the part-30 hashes. This is source structure only,
+  not elaboration. Denominator sizes are modest (max 16 in these files), which
+  supports the split fixing the old 2356 timeout; not a kernel claim.
+
+## 2026-10-30 - session part 32: CI-snapshot reconciliation
+
+- `B13Main` current SHA256 `521CA436...FA41837` imports only its three required
+  modules and no residual census. Thus old run `41027178023` (`34b14918`) and
+  its exit `1` do not diagnose current bytes. Runs `41035092539` and
+  `41037794295` remain pending; neither is green.
+- The seven split row-cap modules still match part-30 hashes and remain
+  untracked, so no CI run has seen them; all seven are CI pending.
+- Checks: project status exit 0 (index only); both scripts `py_compile` exit 0;
+  `split_rowcap_modules.py --check` exit 0, 700/700 caps exact, weight sum 1,
+  zero violations; `git diff --check` exit 0. Target-import audit timed out
+  (124), so closure is unclaimed. No Lean build or proof payment was made.
+- Unpaid: seven row-cap kernel proofs, fixed `f0Lo`/`g` packet bridge, all 389
+  residual radii, SevenClassExclusions, arbitrary-center full-disk theorem.
+- Next: supervisor commits modules/targets; read exact CI exits and pending
+  `B13Main`, then isolate the first real row-cap failure. Root import remains
+  supervisor-only.

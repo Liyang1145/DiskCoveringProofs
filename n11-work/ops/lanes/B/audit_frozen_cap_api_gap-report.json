@@ -1,0 +1,85 @@
+{
+  "scope": "source/API gap audit only; no Lean elaboration and no residual payment",
+  "source_sha256": {
+    "FrozenCapPublicExcludedTree.lean": "E5CA5E2A1968D1D50538C0F6917284E9A101931FB44CAF1A6F11E4679D9673A3",
+    "PaidCellCertificateM.lean": "FE19DB72F25113B78A9A098E43E4CBF0C103354AD19D61BF9510AA03CA9065F2",
+    "residual389-census.json": "44166EE869A61F6858F2285A98F96CC3FAA4F59FBB98C01D76B4DC42A28827A8"
+  },
+  "records": [
+    {
+      "id": 1409,
+      "in_residual_census": true,
+      "requires_hf0": true,
+      "requires_hg": true,
+      "requires_valid_packet": true,
+      "row_cap_module_present": true,
+      "row_cap_module_in_latest_ci_errors": true
+    },
+    {
+      "id": 2337,
+      "in_residual_census": true,
+      "requires_hf0": true,
+      "requires_hg": true,
+      "requires_valid_packet": true,
+      "row_cap_module_present": true,
+      "row_cap_module_in_latest_ci_errors": true
+    },
+    {
+      "id": 2341,
+      "in_residual_census": true,
+      "requires_hf0": true,
+      "requires_hg": true,
+      "requires_valid_packet": true,
+      "row_cap_module_present": true,
+      "row_cap_module_in_latest_ci_errors": true
+    },
+    {
+      "id": 2356,
+      "in_residual_census": true,
+      "requires_hf0": true,
+      "requires_hg": true,
+      "requires_valid_packet": true,
+      "row_cap_module_present": true,
+      "row_cap_module_in_latest_ci_errors": true
+    },
+    {
+      "id": 2360,
+      "in_residual_census": true,
+      "requires_hf0": true,
+      "requires_hg": true,
+      "requires_valid_packet": true,
+      "row_cap_module_present": true,
+      "row_cap_module_in_latest_ci_errors": true
+    },
+    {
+      "id": 2368,
+      "in_residual_census": true,
+      "requires_hf0": true,
+      "requires_hg": true,
+      "requires_valid_packet": true,
+      "row_cap_module_present": true,
+      "row_cap_module_in_latest_ci_errors": true
+    },
+    {
+      "id": 2370,
+      "in_residual_census": true,
+      "requires_hf0": true,
+      "requires_hg": true,
+      "requires_valid_packet": true,
+      "row_cap_module_present": true,
+      "row_cap_module_in_latest_ci_errors": true
+    }
+  ],
+  "checks": {
+    "seven_records": true,
+    "all_in_residual_census": true,
+    "all_conditional_on_hf0_and_hg": true,
+    "all_require_valid_packet": true,
+    "all_row_cap_modules_present": true,
+    "all_row_caps_red_in_latest_ci": true,
+    "packet_has_no_fixed_f0_or_g_field": true
+  },
+  "all_checks_pass": true,
+  "first_missing_link": "Every tree exclusion needs fixed equalities f0Lo(W,slopeQ)=F0 and g(W,slopeQ)=G for an arbitrary Valid packet. The Packet structure has no fields forcing those equalities, and no bridge theorem supplies them.",
+  "conclusion": "The seven frozen-cap wrappers do not instantiate a residual payment. They exclude a packet only after fixed F0/G identifications, and their row-cap dependencies are red in the latest CI snapshot."
+}
