@@ -189,3 +189,62 @@ supervisor action.
 **Next concrete step.** On the next CI report read the first EndpointChecks
 diagnostic; if green read Bins, then Cos.  Do not weaken the endpoint
 statement or reuse the withdrawn `q <= 2` premise.
+
+## 2026-10-30 (part 16) — false universal endpoint premises removed
+
+Re-audited `SevenClassQ0Deg3EndpointChecks.lean` after the split-domain
+repair.  Three helper statements still quantified over all `Fin 8`:
+`endpointUBin_le_one`, `nodeQ_binHi_le_two`, and their consumer
+`capQ_binHi_le_endpointUBin`.  They are false at bins 5--7, so the claimed
+universal bridge was not a valid proof path even though bins 5/6 and bin 7
+already had separate proofs.  Restricted all three helpers to `j.val < 5`
+and passed the proof at each of the five call sites.  Bins 5--6 remain on the
+explicit degree-9/degree-29 remainder branch; bin 7 remains on
+`piHiCapSaturated`.  The public `EndpointCheck`/`EndpointValid` statements are
+unchanged.
+
+**Files / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
+`4cb57028465dae98975045beb8ff7d6eca4fadae46662060c15d1bcafae522a2`;
+`audit_endpoint_low_denom.py`
+`2956cc05a49f342c08c356b6a7d52f34c39fb9dfef23a8f7cd8216649064e957`.
+No new module; `TARGETS.txt` remains unchanged.
+
+**Checks (scope).** Exact-`Fraction` endpoint audit PASS 8/8, minimum slack
+`6.6940497252e-7` at bin 7.  `git diff --check`, forbidden-token scan, and
+`python3 tools/project_status.py --check` (handoff index only) pass.  No local
+project Lean elaboration: the worktree lacks project oleans.  EndpointChecks
+is **drafted, CI pending**, not paid.
+
+**Still unpaid.** Kernel acceptance of EndpointChecks, Bins and Cos;
+`EdgeValid`/`SectorValid`; strict total; `Q0Degree3AreaInput`; all seven
+exclusions; arbitrary-center full-disk theorem.  C450 is already CI-green but
+its unchanged root import remains a supervisor action.
+
+
+## 2026-10-30 (part 17) — upstream Bins/Cos diagnostics repaired
+
+Made the stale `2fdf1a1c` diagnostics actionable: `Cos` now closes the
+unchanged final grid step with `simpa [gridCos, h1]` instead of the redundant
+`rw; exact le_rfl`; `Bins` no longer relies on `split` for either projection
+of `binHi (binIndex k)`, using explicit `by_cases`/`hval` rewrites and an
+explicit rational cast for the `piLo/2` transfer.  The endpoint split-domain
+repair is unchanged.  All three modules remain **drafted, CI pending**.
+
+**Files / SHA256.** EndpointChecks `4cb57028465dae98975045beb8ff7d6eca4fadae46662060c15d1bcafae522a2`;
+Bins `b997ee8dbfdb0c7b77dbe6ebde77e665ca2fcb1b018de8ec3adfee425f895584`;
+Cos `fa245b343adbf598b44a14af6cf177f3bb22fcd35e418f951cc2d58d14b22971`;
+TARGETS `500cc3707072af67a662fb6d14a5636560ccf462ae3a9f990f0e75350e01fbf4`.
+
+**Checks (scope).** Endpoint exact-`Fraction` audit PASS 8/8 (minimum slack
+`6.6940497252e-7`, bin 7); `project_status.py --check`, `git diff --check`,
+and forbidden-token scan pass.  No local project kernel check: the worktree
+has no N11 oleans, and a bounded broad-Mathlib probe timed out before
+elaboration.  CI exit 0 is still required.
+
+**Still unproved.** Kernel acceptance of Cos, Bins, EndpointChecks;
+`EdgeValid`/`SectorValid`; strict total; `Q0Degree3AreaInput`; all seven
+exclusions; arbitrary-center full-disk theorem.  C450 is CI-green.
+
+**Next step.** After supervisor push, read CI in order Cos, Bins,
+EndpointChecks; fix the first new source diagnostic rather than weakening a
+statement.  ROOT-IMPORT REQUEST remains for C450ChainCompletionMain.

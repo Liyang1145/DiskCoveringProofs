@@ -307,8 +307,9 @@ theorem capQ_binHi_le_endpointUpperBin_6 :
 theorem endpointUBin_nonneg (j : Fin 8) : 0 ≤ endpointUBin j := by
   fin_cases j <;> norm_num [endpointUBin]
 
-theorem endpointUBin_le_one (j : Fin 8) : endpointUBin j ≤ 1 := by
-  fin_cases j <;> norm_num [endpointUBin]
+theorem endpointUBin_le_one_of_lt5 (j : Fin 8) (hj : j.val < 5) :
+    endpointUBin j ≤ 1 := by
+  fin_cases j <;> norm_num [endpointUBin] at hj ⊢
 
 theorem nodeQ_binHi_div_two_le_endpointUBin (j : Fin 8) :
     nodeQ RatInterval.piHi 2048 (binHi j) / 2 ≤ endpointUBin j := by
@@ -318,18 +319,19 @@ theorem nodeQ_binHi_nonneg (j : Fin 8) :
     0 ≤ nodeQ RatInterval.piHi 2048 (binHi j) := by
   fin_cases j <;> norm_num [nodeQ, binHi, RatInterval.piHi]
 
-theorem nodeQ_binHi_le_two (j : Fin 8) :
+theorem nodeQ_binHi_le_two_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     nodeQ RatInterval.piHi 2048 (binHi j) ≤ 2 := by
-  fin_cases j <;> norm_num [nodeQ, binHi, RatInterval.piHi]
+  fin_cases j <;> norm_num [nodeQ, binHi, RatInterval.piHi] at hj ⊢
 
-theorem capQ_binHi_le_endpointUBin (j : Fin 8) :
+theorem capQ_binHi_le_endpointUBin_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     capQ (nodeQ RatInterval.piHi 2048 (binHi j)) ≤
       19 / 50 * max (1 / 2) (min 1
         (sinPoly4 (endpointUBin j) + 1 / ((Nat.factorial 9 : ℕ) : ℚ) +
           2 / ((Nat.factorial 29 : ℕ) : ℚ))) :=
-  capQ_le_sinPoly4_of_u_le _ _ (nodeQ_binHi_nonneg j) (nodeQ_binHi_le_two j)
+  capQ_le_sinPoly4_of_u_le _ _ (nodeQ_binHi_nonneg j)
+    (nodeQ_binHi_le_two_of_lt5 j hj)
     (endpointUBin_nonneg j) (nodeQ_binHi_div_two_le_endpointUBin j)
-    (endpointUBin_le_one j)
+    (endpointUBin_le_one_of_lt5 j hj)
 
 /-- Combine the cap upper bound with the polynomial lower bound. -/
 theorem endpointCheck_of_quartic (j : Fin 8)
@@ -341,27 +343,27 @@ theorem endpointCheck_of_quartic (j : Fin 8)
 
 theorem endpointCheck_0 : EndpointCheck 0 := by
   exact endpointCheck_of_quartic 0
-    ((capQ_binHi_le_endpointUBin 0).trans (by
+    ((capQ_binHi_le_endpointUBin_of_lt5 0 (by decide)).trans (by
       norm_num [sinPoly4, endpointUBin, nodeBinAt]))
 
 theorem endpointCheck_1 : EndpointCheck 1 := by
   exact endpointCheck_of_quartic 1
-    ((capQ_binHi_le_endpointUBin 1).trans (by
+    ((capQ_binHi_le_endpointUBin_of_lt5 1 (by decide)).trans (by
       norm_num [sinPoly4, endpointUBin, nodeBinAt]))
 
 theorem endpointCheck_2 : EndpointCheck 2 := by
   exact endpointCheck_of_quartic 2
-    ((capQ_binHi_le_endpointUBin 2).trans (by
+    ((capQ_binHi_le_endpointUBin_of_lt5 2 (by decide)).trans (by
       norm_num [sinPoly4, endpointUBin, nodeBinAt]))
 
 theorem endpointCheck_3 : EndpointCheck 3 := by
   exact endpointCheck_of_quartic 3
-    ((capQ_binHi_le_endpointUBin 3).trans (by
+    ((capQ_binHi_le_endpointUBin_of_lt5 3 (by decide)).trans (by
       norm_num [sinPoly4, endpointUBin, nodeBinAt]))
 
 theorem endpointCheck_4 : EndpointCheck 4 := by
   exact endpointCheck_of_quartic 4
-    ((capQ_binHi_le_endpointUBin 4).trans (by
+    ((capQ_binHi_le_endpointUBin_of_lt5 4 (by decide)).trans (by
       norm_num [sinPoly4, endpointUBin, nodeBinAt]))
 
 theorem endpointCheck_5 : EndpointCheck 5 := by
