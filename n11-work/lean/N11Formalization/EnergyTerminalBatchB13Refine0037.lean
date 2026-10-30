@@ -222,6 +222,12 @@ private theorem not_next1182 :
     not_next1182_part04, not_next1182_part05, not_next1182_part06,
     not_next1182_part07, not_next1182_part08⟩
 
+private theorem not_next505 :
+    (37 : Fin 5011) ∉ Paid16GeneralNext505.newIDs := by
+  rw [Paid16GeneralNext505.new_mem]
+  push_neg
+  repeat' constructor <;> decide +kernel
+
 theorem not_paid_0037 : (37 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := by
   intro h
   rw [EnergyTerminalBatchB13.paidIDs, Finset.mem_union] at h
@@ -236,8 +242,7 @@ theorem not_paid_0037 : (37 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := by
       · have h210' : (37 : Fin 5011) ∉ Paid16GeneralRemaining210.newIDs := by
           decide +kernel
         exact h210' h210
-    · have hlt := EnergyTerminalBatchB13Next505Bounds.next505_lt (37 : Fin 5011) h505
-      omega
+    · exact not_next505 h505
   · exact not_next1182 h1182
 
 theorem new_disjoint_old :
