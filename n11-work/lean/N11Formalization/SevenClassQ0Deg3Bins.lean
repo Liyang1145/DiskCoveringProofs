@@ -84,9 +84,10 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
       have hnot : min 7 (k.val / 256) ≠ 7 := by
         simpa [binIndex] using h7
       have hmin : min 7 (k.val / 256) = k.val / 256 := by
-        rcases le_or_lt (k.val / 256) 7 with hle | hgt
+        by_cases hle : k.val / 256 ≤ 7
         · exact min_eq_right hle
-        · exact (hnot (min_eq_left hgt.le)).elim
+        · have hlt : 7 < k.val / 256 := by omega
+          exact (hnot (min_eq_left hlt.le)).elim
       have hidx : (binIndex k).val = min 7 (k.val / 256) := rfl
       have hbound : k.val ≤ 256 * (binIndex k).val + 255 := by
         rw [hidx, hmin]

@@ -40,6 +40,15 @@ def sin_poly4(x: Fraction) -> Fraction:
     return x - x**3 / 6 + x**5 / 120 - x**7 / 5040
 
 
+def sin_taylor14(x: Fraction) -> Fraction:
+    return sum((-1) ** n * x ** (2 * n + 1) / factorial(2 * n + 1)
+               for n in range(15))
+
+
+def sin_hi(x: Fraction) -> Fraction:
+    return sin_taylor14(x) + abs(x) ** 29 / factorial(29)
+
+
 def sin_hi_upper_pow(x: Fraction) -> Fraction:
     return (sin_poly4(x) + abs(x) ** 9 / factorial(9) +
             2 * abs(x) ** 29 / factorial(29))
@@ -57,16 +66,17 @@ def main() -> int:
                 Fraction(1, 2), min(Fraction(1), sin_poly4(u) + eps)
             )
         elif j <= 6:
-            branch = "poly4+remainders"
-            y = sin_hi_upper_pow(q / 2)
+            branch = "monotone+concrete-endpoint"
+            y = sin_hi_upper_pow(u)
             upper = Fraction(19, 50) * y
+            branch_ok = (q_le_u and sin_hi(u) <= sin_hi_upper_pow(u))
         else:
             branch = "saturated"
             upper = Fraction(19, 50)
         lower = sin_poly4(a) - eps
         branch_ok = (j == 7) or q_le_u
         if 5 <= j <= 6:
-            branch_ok = branch_ok and sin_hi_upper_pow(q / 2) >= Fraction(1, 2)
+            branch_ok = branch_ok and sin_hi_upper_pow(u) >= Fraction(1, 2)
         ok = branch_ok and upper <= lower
         failures += not ok
         print(
