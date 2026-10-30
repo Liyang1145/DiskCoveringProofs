@@ -30,14 +30,7 @@ theorem weighted_terms_1409 (q : Fin 9) : yW_1409 q * E_1409 q = HW_1409 q := by
 
 theorem strict_gain_1409 : F0_1409 + ∑ q : Fin 9, yW_1409 q *
     endpointLo Dq DQ (G_1409 q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_1409 q * endpointLo Dq DQ (G_1409 q)) =
-      ∑ q : Fin 9, yW_1409 q * E_1409 q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_1409 q]
-  rw [hsum]
-  change F0_1409 + ∑ q : Fin 9, y_1409 q * E_1409 q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_1409
+  simpa only [yW_1409, endpoint_1409] using FrozenCapRationalCore.strict_gain_1409
 
 def yW_2337 : Fin 9 → ℚ := y_2337
 
@@ -58,14 +51,7 @@ theorem weighted_terms_2337 (q : Fin 9) : yW_2337 q * E_2337 q = HW_2337 q := by
 
 theorem strict_gain_2337 : F0_2337 + ∑ q : Fin 9, yW_2337 q *
     endpointLo Dq DQ (G_2337 q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_2337 q * endpointLo Dq DQ (G_2337 q)) =
-      ∑ q : Fin 9, yW_2337 q * E_2337 q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_2337 q]
-  rw [hsum]
-  change F0_2337 + ∑ q : Fin 9, y_2337 q * E_2337 q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_2337
+  simpa only [yW_2337, endpoint_2337] using FrozenCapRationalCore.strict_gain_2337
 
 def yW_2341 : Fin 9 → ℚ := y_2341
 
@@ -86,14 +72,7 @@ theorem weighted_terms_2341 (q : Fin 9) : yW_2341 q * E_2341 q = HW_2341 q := by
 
 theorem strict_gain_2341 : F0_2341 + ∑ q : Fin 9, yW_2341 q *
     endpointLo Dq DQ (G_2341 q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_2341 q * endpointLo Dq DQ (G_2341 q)) =
-      ∑ q : Fin 9, yW_2341 q * E_2341 q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_2341 q]
-  rw [hsum]
-  change F0_2341 + ∑ q : Fin 9, y_2341 q * E_2341 q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_2341
+  simpa only [yW_2341, endpoint_2341] using FrozenCapRationalCore.strict_gain_2341
 
 def yW_2356 : Fin 9 → ℚ := y_2356
 
@@ -114,14 +93,7 @@ theorem weighted_terms_2356 (q : Fin 9) : yW_2356 q * E_2356 q = HW_2356 q := by
 
 theorem strict_gain_2356 : F0_2356 + ∑ q : Fin 9, yW_2356 q *
     endpointLo Dq DQ (G_2356 q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_2356 q * endpointLo Dq DQ (G_2356 q)) =
-      ∑ q : Fin 9, yW_2356 q * E_2356 q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_2356 q]
-  rw [hsum]
-  change F0_2356 + ∑ q : Fin 9, y_2356 q * E_2356 q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_2356
+  simpa only [yW_2356, endpoint_2356] using FrozenCapRationalCore.strict_gain_2356
 
 def yW_2360 : Fin 9 → ℚ := y_2360
 
@@ -142,14 +114,7 @@ theorem weighted_terms_2360 (q : Fin 9) : yW_2360 q * E_2360 q = HW_2360 q := by
 
 theorem strict_gain_2360 : F0_2360 + ∑ q : Fin 9, yW_2360 q *
     endpointLo Dq DQ (G_2360 q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_2360 q * endpointLo Dq DQ (G_2360 q)) =
-      ∑ q : Fin 9, yW_2360 q * E_2360 q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_2360 q]
-  rw [hsum]
-  change F0_2360 + ∑ q : Fin 9, y_2360 q * E_2360 q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_2360
+  simpa only [yW_2360, endpoint_2360] using FrozenCapRationalCore.strict_gain_2360
 
 def yW_2368 : Fin 9 → ℚ := y_2368
 
@@ -170,14 +135,7 @@ theorem weighted_terms_2368 (q : Fin 9) : yW_2368 q * E_2368 q = HW_2368 q := by
 
 theorem strict_gain_2368 : F0_2368 + ∑ q : Fin 9, yW_2368 q *
     endpointLo Dq DQ (G_2368 q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_2368 q * endpointLo Dq DQ (G_2368 q)) =
-      ∑ q : Fin 9, yW_2368 q * E_2368 q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_2368 q]
-  rw [hsum]
-  change F0_2368 + ∑ q : Fin 9, y_2368 q * E_2368 q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_2368
+  simpa only [yW_2368, endpoint_2368] using FrozenCapRationalCore.strict_gain_2368
 
 def yW_2370 : Fin 9 → ℚ := y_2370
 
@@ -198,14 +156,7 @@ theorem weighted_terms_2370 (q : Fin 9) : yW_2370 q * E_2370 q = HW_2370 q := by
 
 theorem strict_gain_2370 : F0_2370 + ∑ q : Fin 9, yW_2370 q *
     endpointLo Dq DQ (G_2370 q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_2370 q * endpointLo Dq DQ (G_2370 q)) =
-      ∑ q : Fin 9, yW_2370 q * E_2370 q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_2370 q]
-  rw [hsum]
-  change F0_2370 + ∑ q : Fin 9, y_2370 q * E_2370 q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_2370
+  simpa only [yW_2370, endpoint_2370] using FrozenCapRationalCore.strict_gain_2370
 
 end
 end N11Formalization.FrozenCapWideFieldWitnesses
