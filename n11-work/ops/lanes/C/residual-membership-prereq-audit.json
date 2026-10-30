@@ -1,0 +1,23 @@
+{
+  "target": "N11Formalization.FrozenCapResidualMembership",
+  "target_sha256": "6ca0351e87976d1e1fc0b6e19a6dcac983883a5b8be6d0d7dc8b0a29f2e498ac",
+  "closure_size": 603,
+  "missing_imports": [],
+  "consumer_ids": [
+    1409,
+    2337,
+    2341,
+    2356,
+    2360,
+    2368,
+    2370
+  ],
+  "checks": {
+    "target_exists": true,
+    "closure_complete": true,
+    "required_modules_in_closure": true,
+    "consumer_ids_exact": true,
+    "no_forbidden_tokens": true
+  },
+  "all_checks_pass": true
+}

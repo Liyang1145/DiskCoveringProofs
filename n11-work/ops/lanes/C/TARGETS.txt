@@ -3,4 +3,4 @@ N11Formalization.FrozenCapRationalCore
 N11Formalization.PaidCellCertificateM
 N11Formalization.PaidCellCertificateMCap
 N11Formalization.FrozenCapWideFieldWitnesses
-N11Formalization.FrozenCapWideFieldRowCaps
+N11Formalization.FrozenCapResidualMembership
