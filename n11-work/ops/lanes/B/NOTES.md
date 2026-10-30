@@ -1,10 +1,12 @@
-EXPERT (2026-10-30 07:19 UTC):
-- The two missing imports are now present; run `41011262474` judged the old descent bytes, so its `B11.paidIDs`/`Next1182.new_mem` errors are stale.
-- B13's architecture and accounting are sound: B12 815 + Next1182 1182 = 1997; `remaining_of_b13` leaves 389, and the separate census proves the 389 equality.
-- No 1997 credit until the in-progress run reports exit 0 in order DescentBounds, B13, B13Main on HEAD `0361ae51`.
-- If `high_not_next` is the first red, split it into eight `high_not_next_part (i : Fin 8) (n : Fin 5011) ... : n ∉ Paid16GeneralNext1182.part i` lemmas; close `high_not_next` via `newIDs = univ.biUnion part` and `Finset.mem_biUnion`.
-- Keep image/`fin_cases` decodes and the 27-ID B09 classification; never restore one-shot `decide +kernel` over unions or raise heartbeats.
-- Only after all three exact exits 0 request supervisor replacement B12Main → B13Main and WIP credit 815→1997.
+EXPERT (2026-10-30 05:44 UTC):
+- No 1997 credit until DescentBounds, B13, and B13Main each exit 0 on matching bytes.
+- Missing imports are fixed and verified reached by CI at `0361ae51`; the next red is
+  descent line 258, where concrete `Fin` equalities survive `norm_num at h`.
+- Worktree fix `F21829F6...` rewrites `Fin.ext_iff` first; it is CI pending.
+- Keep the `mem_image` + `fin_cases` + `norm_num [nodeID]` decodes; never restore one-shot `decide +kernel` over `univ.image`.
+- Highest leverage: supervisor commit, then build only DescentBounds, then B13, then B13Main.
+- If `high_not_next` remains expensive, split per high ID/part into `EnergyTerminalBatchB13HighDisjoint.lean`; do not enlarge heartbeats.
+- Only after three exact exits 0 request root replacement B12Main → B13Main.
 - Until then energy is 815/2386 and residual remains 389, not paid.
 
 # Lane B notes
@@ -173,3 +175,75 @@ EXPERT (2026-10-30 07:19 UTC):
 - Supervisor must commit `5C2B2ED8...` to a lane-B-affecting pushed commit.
   Then bind the new artifact and require exits 0 in order DescentBounds, B13,
   B13Main; only then request root replacement B12Main -> B13Main.
+
+## 2026-10-30 - session part 15: first current-byte Lean failure repaired
+
+### Done
+- Re-read START_HERE, GUIDANCE, LANES, lane notes and LATEST; reran
+  `project_status.py --check` (exit 0; handoff index only).
+- Confirmed supervisor committed the import repair at `8c61ad4f`, merged as
+  `0361ae51`. CI run `41017279843` binds those bytes and is the first semantic
+  verdict on the missing-import fix.
+- The run reaches both repaired imports successfully. `Next505Bounds` exits 0;
+  `DescentBounds` then fails at line 258 with 100 `unsolved goals` of the form
+  `h : (2661 : Fin 5011) = 2565 ∨ ...` and goal `False`. `norm_num at h` does
+  not internally rewrite concrete `Fin` equality to `Nat` equality.
+- Updated `emit_b13_descent_bounds.py` to rewrite `Fin.ext_iff` and then run
+  `norm_num at h` at each literal block leaf, regenerated the module, and reran
+  the static audits. B13/B13Main exits 1 in this run are
+  downstream of the failed descent olean, not separate semantic errors.
+
+### Files (SHA256, uppercase)
+- `EnergyTerminalBatchB13DescentBounds.lean` (uncommitted)
+  `F21829F61604CB1D4D410C3B00551A99B0F8C5379974744E767DA5594268D3FD`.
+- `emit_b13_descent_bounds.py` (uncommitted)
+  `904DE4F8F8556E593CDA0182B8EC87C14FC40829E0B46021E53E7BF8E5EF1CB3`.
+- `audit_b13_descent-report.json` remains
+  `327291853C5450B9F7E4328C9277DC0695F6951C0DAA48567398E27674ED2166`.
+
+### Checks (exact scope)
+- GitHub run `41017279843`, head `0361ae51`: exits
+  `B13Next505Bounds 0`, `B13DescentBounds 1`, `B13 1`, `B13Main 1`.
+  First failure is the line-258 Fin-equality normalization above.
+- `emit_b13_descent_bounds.py` exit 0 and byte-reproduced `F21829F6...`;
+  `audit_b13_descent.py` exit 0 with all 24 static checks true; `git diff
+  --check` exit 0. No local Lean build; project oleans are absent locally.
+
+### Still unproved / unverified
+- The `F21829F6...` repair is **CI pending**, not green. Residual 389,
+  SevenClassExclusions, and the arbitrary-center full-disk theorem remain
+  unpaid.
+
+### Next concrete step
+- Supervisor commits `F21829F6...`, then bind the next run's first descent
+  error. If the Fin leaf still fails, replace the leaf with repeated `rcases`
+  plus `omega`; do not claim B13 credit until DescentBounds, B13, and B13Main
+  each exit 0 on matching bytes.
+
+## 2026-10-30 - session part 16: repair remains unbound; probe scope recorded
+### Done
+- Re-read GUIDANCE, LANES, lane notes and CI LATEST; reran
+  `project_status.py --check` (exit 0; handoff index only).
+- Confirmed `HEAD = 0361ae51`; the `F21829F6...` descent repair and emitter
+  update are still uncommitted. No newer CI result binds these bytes.
+- Attempted two focused Mathlib probes of
+  `simp only [Fin.ext_iff] at h; norm_num at h` for a disjunction of concrete
+  `Fin` equalities. Both hit the local 120s/90s timeouts before elaboration;
+  this is not a Lean verdict and no project build was attempted.
+- Re-ran the static descent audit on the current tree; it rewrote neither the
+  module nor the report.
+### Checks (exact scope)
+- `audit_b13_descent.py` exit 0: all 24 static checks true, 44 local modules
+  in a 594-module closure, 57 x 1182 literals, 27 high ids, emitter byte
+  reproduction, zero kernel decisions.
+- Hashes: descent `F21829F6...`, emitter `904DE4F8...`, targets `4E8E7325...`,
+  audit report `32729185...`; `git diff --check` exit 0. Full hashes are in the
+  preceding entry and are unchanged.
+### Still unproved / unverified
+- DescentBounds, B13 and B13Main remain **CI pending / unpaid** on
+  `F21829F6...`. Residual 389, SevenClassExclusions and the arbitrary-center
+  full-disk theorem remain unpaid.
+### Next concrete step
+- Supervisor commit `F21829F6...`, then fresh CI. If line 258 fails again,
+  replace each leaf with `rcases h with ... <;> omega` and bind that new run;
+  otherwise advance to the next exact descent error.
