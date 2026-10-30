@@ -80,14 +80,10 @@ def split_proof(text: str, node: int, y: list[Fraction],
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {terms} ≤ db {i} {j} := by
   have hleft : {terms} = {lean_rat(lhs)} := by
-    norm_num [y_{node}, rowA]
+    norm_num [y_{node}, rowA, Pi.neg_apply]
   have hright : db {i} {j} = {lean_rat(rhs)} := by
-    have hval : dbmVal {i} {j} = ({raw} : ℤ) := by
-      decide
-    rw [db, hval]
-    norm_num
-  rw [hleft, hright]
-  norm_num''')
+    norm_num [db, dbmVal]
+  rw [hleft, hright]''')
     rows = []
     for i in range(10):
         cases = "\n".join(
