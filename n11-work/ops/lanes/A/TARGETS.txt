@@ -1,6 +1,6 @@
 # Lean targets lane A wants CI to build (one per line)
 # Critical dependency order.  Bins imports Mono (not Cos); EndpointChecks
-# imports Bins.  Cos itself remains the outstanding repaired critical target.
+# imports Bins.  These targets are CI-green at commit 1b2fa7a8.
 N11Formalization.C450ChainCompletionMain
 N11Formalization.C450ChainCompletionAudit
 N11Formalization.SevenClassQ0Deg3Cos
@@ -12,3 +12,10 @@ N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal
 N11Formalization.SevenClassQ0Deg3EdgeSuffixNonpos
 N11Formalization.SevenClassQ0Deg3EdgeSuffixHigh
 N11Formalization.SevenClassQ0Deg3EdgeShape
+
+# Session 55: sector peak/check factorization (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorPeak
+# Session 56: sector adjacent-step factorization (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorShape
+# Session 57: fixed-bin sector derivative and monotonicity bridge (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorCalculus
