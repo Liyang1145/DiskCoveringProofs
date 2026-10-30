@@ -201,8 +201,7 @@ theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
             (show (2048 : ℚ) ≤ ((n : ℕ) : ℚ) from
               Nat.cast_le.mpr (by omega : 2048 ≤ n))
         rw [hs, ht]
-      rw [gridCos, gridCos, h1]
-      exact le_rfl
+      simpa [gridCos, h1]
 
 /-- Adjacent grid monotonicity of `cosHiNLag` on all 2048 steps. -/
 theorem gridCos_antitone : Antitone gridCos := by

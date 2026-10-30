@@ -81,8 +81,25 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
     rw [htop]
     exact (capQ_bounds (nodeQ RatInterval.piHi 2048 k)).2
   · have hkhi : k.val ≤ (binHi (binIndex k)).val := by
-      simp only [binIndex, binHi]
-      split <;> omega
+      have hnot : min 7 (k.val / 256) ≠ 7 := by
+        simpa [binIndex] using h7
+      have hmin : min 7 (k.val / 256) = k.val / 256 := by
+        rcases le_or_lt (k.val / 256) 7 with hle | hgt
+        · exact min_eq_right hle
+        · exact (hnot (min_eq_left hgt.le)).elim
+      have hidx : (binIndex k).val = min 7 (k.val / 256) := rfl
+      have hbound : k.val ≤ 256 * (binIndex k).val + 255 := by
+        rw [hidx, hmin]
+        have hmod : k.val % 256 ≤ 255 :=
+          Nat.le_of_lt (Nat.mod_lt k.val (by norm_num))
+        calc
+          k.val = 256 * (k.val / 256) + k.val % 256 :=
+            (Nat.div_add_mod k.val 256).symm
+          _ ≤ 256 * (k.val / 256) + 255 := Nat.add_le_add_left hmod _
+      have hbin : (binHi (binIndex k)).val =
+          if (binIndex k).val = 7 then 2048 else 256 * (binIndex k).val + 255 := rfl
+      rw [hbin, if_neg h7]
+      exact hbound
     have hqle : nodeQ RatInterval.piHi 2048 k ≤
         nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) := by
       unfold nodeQ
@@ -111,7 +128,9 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
       linarith
     have hb : ((nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 : ℚ) : ℝ) ≤
         Real.pi / 2 := by
-      exact_mod_cast hhalf.trans RatInterval.pi_div_two_lo_lt.le
+      have hhalfR : ((nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) / 2 : ℚ) : ℝ) ≤
+          ((RatInterval.piLo / 2 : ℚ) : ℝ) := Rat.cast_le.mpr hhalf
+      exact hhalfR.trans RatInterval.pi_div_two_lo_lt.le
     have ha : 0 ≤ nodeQ RatInterval.piHi 2048 k / 2 := by
       unfold nodeQ
       have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]

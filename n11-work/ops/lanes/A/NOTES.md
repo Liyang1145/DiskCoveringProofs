@@ -109,30 +109,9 @@ by its explicit `u_j` (from the audit), then run a bounded probe of one endpoint
 
 ## 2026-10-30 (part 8) — polynomial monotonicity added
 
-Added to `SevenClassQ0Deg3EndpointChecks.lean` the real lift `sinPoly4Real`,
-cast lemma, derivative formula, derivative nonnegativity on `[0,1]`, and
-`sinPoly4_mono_Icc01`: for rationals `0 ≤ a ≤ b ≤ 1`, `sinPoly4 a ≤ sinPoly4 b`.
-Proof uses `monotoneOn_of_deriv_nonneg`; derivative is bounded below by
-`1 - 1/2 + 0 - 1/720 > 0`. This is the transfer lemma needed to use the
-low-denominator `u_j` caps from `audit_endpoint_low_denom.py` instead of a large
-exact-`piHi` expansion.
-
-**Files / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
-`d10589caf935c36fb772394d368b8b4ed8da3f34ee9c8756ddbbd733b512968d`.
-EndpointChecks is already in `TARGETS.txt`; no new target.
-
-**Checks (scope).** `git diff --check`, forbidden-token scan. No project
-elaboration: this worktree has zero project `.olean` files, and the Mathlib
-probe cache contains only a stub `Mathlib.olean`. Status: **drafted, CI pending**,
-not paid.
-
-**Still unpaid.** Kernel acceptance of Cos, Bins, EndpointChecks; the eight
-low-denominator endpoint inequalities; `EdgeValid`/`SectorValid` premises; strict
-total; `Q0Degree3AreaInput`; seven exclusions; arbitrary-center theorem.
-
-**Next.** Add `capQ_le_sinPoly4_of_le` using the audit `U_BIN` values and
-`sinPoly4_mono_Icc01`, then instantiate it for bins 0 and 7; keep all eight
-separate for local CI failures.
+Added `sinPoly4Real`, its derivative bound, and `sinPoly4_mono_Icc01` to
+EndpointChecks, enabling low-denominator endpoint caps.  No project oleans were
+available locally; status was **drafted, CI pending**.  (Superseded by part 9.)
 
 ## 2026-10-30 (part 9) — low-denominator endpoint bridge implemented
 
@@ -199,22 +178,71 @@ If the cap line still fails, isolate `sinHiNLag (piHi/2)` in a small Mathlib pro
 and split the 15-term expansion into named partial sums; if Bins is green, read
 the first EndpointChecks diagnostic and repair only that bin.
 
-## 2026-10-30 (part 11) — resumed checkpoint; audits re-run
+## 2026-10-30 (parts 11–12) — cap audit corrected; analytic margin isolated
 
-Re-read the part-10 source state and re-ran the two candidate-data checks.
-`audit_endpoint_low_denom.py` passed all eight exact rational upper caps
-(minimum slack `3.44080645729e-5`); `verify_piHi_cap.py` passed with positive
-exact slack for `sinHiNLag(piHi/2) > 1`. `git diff --check` and the forbidden
-token scan are clean. File hashes are unchanged from part 10: Bins
-`7a5ba5e05aa7f5e96a9dd3991372df1bc1bc70d95b90224281cc4226811fbbf7`,
-EndpointChecks `fddea8134398beab87c846a454dd76f8e6102352edbaead25cf260740ddf53b9`.
+Found and fixed a double-counting defect in `verify_piHi_cap.py`: `sinHiNLag`
+is `sinTQ 14 + x^29/29!`, but the old script summed 15 Taylor terms **and**
+added that remainder.  Corrected the range to 14.  The true exact margin is
+`sinHiNLag(piHi/2) - 1 = 1.4577417234587796e-28`; the previously recorded
+`5.52e-26` was inflated by one extra degree-29 term.  The exact comparison
+still PASSES.
 
-**Scope / status.** These are Python exact-rational checks and static hygiene,
-not Lean kernel evidence. Bins and EndpointChecks remain **drafted, CI pending**.
-No local project elaboration was attempted. Cos is likewise drafted/CI pending;
-`EdgeValid`, `SectorValid`, strict total, `Q0Degree3AreaInput`, all seven
-exclusions, and the arbitrary-center theorem remain unpaid.
+A 90-second bounded Mathlib probe of the old monolithic
+`norm_num [sinTQ, Finset.sum_range_succ, piHi]` proof timed out, so that route
+is not CI-viable.  Added `verify_piHi_cap_analytic.py`, which checks the margin
+for a non-expansion proof via `sinHiNLag = sinT 15`, the Taylor-16 remainder,
+`sin(pi/2+d) = cos d >= 1-d^2/2`, and `d < 1/(2*10^20)`: Taylor-31 lower term
+`3.4636120574858e-29` exceeds the cosine-deficit allowance `1.25e-41` by a
+factor `2.77e12` (PASS).  This is exact-rational candidate data, not kernel
+evidence.
 
-**Next concrete step.** On the next CI result, read Bins first (part-10 cap-line
-diagnostic); if it is green, read EndpointChecks at its first failing bin. Do not
-change the eight endpoint statements; only repair the failed proof step.
+**Files / SHA256.** Cos `fa245b343adbf598b44a14af6cf177f3bb22fcd35e418f951cc2d58d14b22971`;
+Bins `7a5ba5e05aa7f5e96a9dd3991372df1bc1bc70d95b90224281cc4226811fbbf7`;
+`verify_piHi_cap.py` `d77a84e363341c933d95701db3de27c5d4f8768916f0b1edde3b107df66ac372`;
+`verify_piHi_cap_analytic.py` `a7606ff6fd1d603348732ef312a32a2adf7f9a18f17812b3de29a3ed713e7b1e`.
+
+**Checks (scope).** Corrected cap audit PASS; analytic-margin audit PASS;
+`git diff --check` clean.  The local bounded probe re-ran the old expansion and
+timed out at 90 s; no project module was elaborated.  CI `40983359848` predates
+the current Bins/Cos repairs (old Cos `No goals`, old Bins `hjlt` mismatch), so
+those diagnostics are historical.  Cos/Bins/EndpointChecks remain **drafted,
+CI pending**.
+
+**Still unpaid.** Kernel acceptance of Bins/Cos/EndpointChecks; the analytic cap
+lemma; `EdgeValid`/`SectorValid`; strict total; `Q0Degree3AreaInput`; all seven
+exclusions; arbitrary-center full-disk theorem.  C450 root import remains a
+supervisor action.
+
+**Next concrete step.** In Bins, prove `sinHiNLag q = sinT 15 q` (cast), derive
+`sinT 15 x >= Real.sin x - x^33/33! + x^31/31!` from `sin_bound_abs 16`, then
+instantiate the rational bounds checked above.  Keep `piHiCapSaturated` as the
+only consumer and do not change the cap statement.
+
+## 2026-10-30 (part 13) — Bins CI diagnostics repaired
+
+CI `40988698121` gives the first current Bins failures at `SevenClassQ0Deg3Bins.lean:85`
+(`split` found no splittable conditional) and `:114` (over-specified
+`exact_mod_cast`).  Replaced the conditional grid-index proof with an explicit
+`Nat.div_add_mod`/remainder argument, and replaced the cast step by
+`Rat.cast_le.mpr` followed by transitivity with `pi_div_two_lo_lt.le`.  Cos line
+`205` is the historical `exact le_rfl`; the worktree already replaces it by
+`simpa [gridCos, h1]` (drafted, CI pending).
+
+**Files / SHA256.** Bins `ac894d68823b12a083a9b08c079ae7571124c057c66d9694bdf2820d34f14381`;
+Cos `fa245b343adbf598b44a14af6cf177f3bb22fcd35e418f951cc2d58d14b22971`;
+EndpointChecks `fddea8134398beab87c846a454dd76f8e6102352edbaead25cf260740ddf53b9`;
+`verify_piHi_cap.py` `d77a84e363341c933d95701db3de27c5d4f8768916f0b1edde3b107df66ac372`;
+`verify_piHi_cap_analytic.py` `a7606ff6fd1d603348732ef312a32a2adf7f9a18f17812b3de29a3ed713e7b1e`;
+`audit_endpoint_low_denom.py` `c5e41aa104562b949853cd74175e9361b5255e2a856cdb3f05fde13aae4e2157`.
+
+**Checks (scope).** Endpoint audit PASS 8/8, minimum slack `3.44080645729e-5`;
+cap audit PASS with exact positive slack; analytic-margin audit PASS;
+`git diff --check` and forbidden-token scan clean.  A trivial local Lean file
+eventually ran, but no project module was elaborated because project `.olean`
+files are absent.  Bins/Cos/EndpointChecks remain **drafted, CI pending**.
+
+**Still unpaid / next step.** Kernel acceptance of Cos, Bins, EndpointChecks;
+`EdgeValid`/`SectorValid`; strict total; `Q0Degree3AreaInput`; all seven
+exclusions; arbitrary-center full-disk theorem.  On next CI, read Bins first;
+only if Bins is green read the first EndpointChecks diagnostic.  Do not change
+the endpoint statements.
