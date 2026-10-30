@@ -1,11 +1,12 @@
 {
-  "closure_size": 1919,
+  "closure_size": 1920,
   "forbidden": [],
   "missing": [],
   "ok": true,
   "targets": [
     "N11Formalization.Paid16GeneralNext1182",
     "N11Formalization.EnergyTerminalBatchB13Next505Bounds",
+    "N11Formalization.EnergyTerminalBatchB13DescentBounds",
     "N11Formalization.EnergyTerminalBatchB13",
     "N11Formalization.EnergyTerminalBatchB13Main"
   ]

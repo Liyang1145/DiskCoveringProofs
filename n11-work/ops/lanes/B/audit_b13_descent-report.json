@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "b09_single_decode": true,
+    "b13_imports_module": true,
+    "b13_uses_blocked_210": true,
+    "b13_uses_blocked_b10": true,
+    "first42_single_decode": true,
+    "kernel_decisions_12": true,
+    "no_forbidden_tokens": true,
+    "remaining210_no_direct_decode": true,
+    "ten_group_blocks": true
+  },
+  "group_blocks": 10,
+  "kernel_decisions": 12,
+  "largest_claimed_literal_decode": 58,
+  "module": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13DescentBounds.lean",
+  "ok": true,
+  "scope": "static source hierarchy only; Lean elaboration is CI-pending"
+}
