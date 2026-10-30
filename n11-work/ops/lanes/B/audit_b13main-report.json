@@ -1,6 +1,6 @@
 {
-  "census_api_present": true,
-  "direct_imports": 4,
+  "census_dependency_absent": true,
+  "direct_imports": 3,
   "forbidden_main": [],
   "in_targets": true,
   "missing_imports": [],

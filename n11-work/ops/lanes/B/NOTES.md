@@ -203,3 +203,46 @@ EXPERT (2026-10-30 05:44 UTC):
 ### Next concrete step
 - Supervisor commits `F5E3C49D...`, then CI must bind and report DescentBounds
   exit 0 first; only then inspect B13 and B13Main in order.
+
+## 2026-10-30 - session part 22: core B13Main separated from lane-C census
+
+### Done
+- Read the live log of CI run `41027178023`, job `123973247894`, bound to
+  commit `34b14918`. Exact module exits before the edit: Next1182 `0`,
+  Next505Bounds `0`, DescentBounds `0`, B13 `0`, B13Main `1`.
+- B13Main's only failure was its optional literal-census wrapper compiling
+  lane-C `EnergyTerminalResidualCensusC03` (free-variable errors at line 16).
+  Removed that optional import and the two literal-census corollaries. The
+  remaining module is the core three-import wrapper used by the root request.
+- Updated `audit_b13main.py` to require absence of the lane-C census dependency
+  and to audit the two surviving core APIs.
+
+### Files (SHA256, uppercase)
+- `EnergyTerminalBatchB13Main.lean`
+  `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`.
+- `audit_b13main.py`
+  `F5D5D8F01BF3147657A5834611C9A9C165EC5F60037EAFACAD5D30DFAB35E943`.
+- B13 and DescentBounds unchanged: `3DD37313...` and `F5E3C49D...`.
+- `audit_b13_descent.py` and `TARGETS.txt` unchanged.
+
+### Checks (exact scope)
+- Live CI log, current pre-edit bytes: Next1182/T505Bounds/DescentBounds/B13
+  each `=== EXIT ... 0`; B13Main `=== EXIT ... 1` solely on C03. The run was
+  still `in_progress` on the root, so this is not a completed-run verdict.
+- `audit_b13main.py`, `audit_b13_descent.py`, `audit_b13_closure.py`,
+  `audit_next1182_blocks.py`, and `audit_target_imports.py` all exit 0 on the
+  edited worktree. Target closure: 1914 modules, no missing imports/forbidden
+  tokens. Reports are static source audits, not Lean elaboration.
+
+### Still unproved / unverified
+- The edited `521CA436...` B13Main is **drafted / CI pending / unpaid**. B13
+  and DescentBounds are CI green on `34b14918`, but B13Main still needs exit 0
+  on the matching new bytes.
+- The literal 389-id census wrapper is intentionally not in B13Main; its lane-C
+  C03 source remains red. Residual 389, SevenClassExclusions and the full-disk
+  theorem remain unpaid.
+
+### Next concrete step
+- Supervisor commits `521CA436...`; fresh CI must report B13Main exit 0. Then
+  request root replacement of B12Main by B13Main. Keep the literal-census
+  wrapper separate until lane C repairs and builds its module.
