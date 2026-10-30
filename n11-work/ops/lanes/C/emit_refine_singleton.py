@@ -24,8 +24,8 @@ def emit(source: str, target: str) -> None:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("target", choices=(
-        "0037", "2337", "3112", "3440", "3589", "3623", "3633", "3777",
-        "3792", "3853"))
+        "0037", "2337", "3112", "3116", "3431", "3440", "3573", "3589",
+        "3623", "3633", "3777", "3792", "3853"))
     args = parser.parse_args()
     emit("2965", args.target)
 if __name__ == "__main__":
