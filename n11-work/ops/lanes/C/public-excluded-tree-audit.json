@@ -1,0 +1,26 @@
+{
+  "target": "N11Formalization.FrozenCapPublicExcludedTree",
+  "target_sha256": "e5ca5e2a1968d1d50538c0f6917284e9a101931fb44caf1a6f11e4679d9673a3",
+  "closure_size": 460,
+  "missing_imports": [],
+  "forbidden_modules_present": [],
+  "theorem_ids": [
+    1409,
+    2337,
+    2341,
+    2356,
+    2360,
+    2368,
+    2370
+  ],
+  "checks": {
+    "target_exists": true,
+    "closure_complete": true,
+    "required_modules_in_closure": true,
+    "forbidden_modules_absent": true,
+    "seven_theorems_exact": true,
+    "no_forbidden_tokens": true
+  },
+  "all_checks_pass": true,
+  "scope": "static import/source audit only; not a kernel proof"
+}
