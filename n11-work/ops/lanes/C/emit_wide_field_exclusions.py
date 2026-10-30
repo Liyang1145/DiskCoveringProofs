@@ -85,14 +85,7 @@ theorem weighted_terms_{node} (q : Fin 9) : yW_{node} q * E_{node} q = HW_{node}
 
 theorem strict_gain_{node} : F0_{node} + ∑ q : Fin 9, yW_{node} q *
     endpointLo Dq DQ (G_{node} q) < T ^ 2 := by
-  have hsum : (∑ q : Fin 9, yW_{node} q * endpointLo Dq DQ (G_{node} q)) =
-      ∑ q : Fin 9, yW_{node} q * E_{node} q := by
-    apply Finset.sum_congr rfl
-    intro q _
-    rw [endpoint_{node} q]
-  rw [hsum]
-  change F0_{node} + ∑ q : Fin 9, y_{node} q * E_{node} q < T ^ 2
-  exact FrozenCapRationalCore.strict_gain_{node}''')
+  simpa only [yW_{node}, endpoint_{node}] using FrozenCapRationalCore.strict_gain_{node}''')
     src = '''import N11Formalization.FrozenCapRationalCore
 import N11Formalization.ConvexMinorantCore
 
@@ -130,10 +123,59 @@ def emit_row_caps(rows):
 
 def db_{node} (i j : Fin 10) : ℚ := (dbmVal_{node} i j : ℚ) / 4096
 
+theorem row_cap_{node}_0 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 0 j q) ≤ db_{node} 0 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_1 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 1 j q) ≤ db_{node} 1 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_2 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 2 j q) ≤ db_{node} 2 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_3 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 3 j q) ≤ db_{node} 3 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_4 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 4 j q) ≤ db_{node} 4 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_5 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 5 j q) ≤ db_{node} 5 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_6 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 6 j q) ≤ db_{node} 6 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_7 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 7 j q) ≤ db_{node} 7 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_8 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 8 j q) ≤ db_{node} 8 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
+theorem row_cap_{node}_9 (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA 9 j q) ≤ db_{node} 9 j := by
+  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+
 theorem row_cap_{node} (i j : Fin 10) :
     (∑ q : Fin 9, yW_{node} q * rowA i j q) ≤ db_{node} i j := by
-  fin_cases i <;> fin_cases j <;>
-    norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]''')
+  fin_cases i
+  · exact row_cap_{node}_0 j
+  · exact row_cap_{node}_1 j
+  · exact row_cap_{node}_2 j
+  · exact row_cap_{node}_3 j
+  · exact row_cap_{node}_4 j
+  · exact row_cap_{node}_5 j
+  · exact row_cap_{node}_6 j
+  · exact row_cap_{node}_7 j
+  · exact row_cap_{node}_8 j
+  · exact row_cap_{node}_9 j''')
     src = '''import N11Formalization.FrozenCapWideFieldWitnesses
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum
