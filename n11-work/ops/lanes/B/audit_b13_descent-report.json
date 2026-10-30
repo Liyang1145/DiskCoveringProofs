@@ -18,7 +18,8 @@
     "reconstructed_b09_58": true,
     "remaining210_no_direct_decode": true,
     "structural_image_decodes": true,
-    "twelve_group_blocks": true
+    "twelve_group_blocks": true,
+    "twelve_group_norm_num_decodes": true
   },
   "group_blocks": 12,
   "high_ids": 27,

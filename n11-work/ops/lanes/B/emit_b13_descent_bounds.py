@@ -42,7 +42,7 @@ for i in range(1, 13):
         f"private theorem g{i:02d}_lt (n : Fin 5011) (hn : n ∈ {name}.newIDs) :",
         "    n.val < 2565 := by",
         "  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩",
-        f"  fin_cases i <;> simp [{name}.nodeID]",
+        f"  fin_cases i <;> norm_num [{name}.nodeID]",
         "",
     ]
 

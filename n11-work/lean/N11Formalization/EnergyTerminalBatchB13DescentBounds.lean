@@ -24,62 +24,62 @@ noncomputable section
 private theorem g01_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG01.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG01.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG01.nodeID]
 
 private theorem g02_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG02.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG02.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG02.nodeID]
 
 private theorem g03_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG03.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG03.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG03.nodeID]
 
 private theorem g04_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG04.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG04.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG04.nodeID]
 
 private theorem g05_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG05.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG05.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG05.nodeID]
 
 private theorem g06_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG06.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG06.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG06.nodeID]
 
 private theorem g07_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG07.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG07.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG07.nodeID]
 
 private theorem g08_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG08.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG08.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG08.nodeID]
 
 private theorem g09_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG09.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG09.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG09.nodeID]
 
 private theorem g10_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG10.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG10.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG10.nodeID]
 
 private theorem g11_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG11.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG11.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG11.nodeID]
 
 private theorem g12_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG12.newIDs) :
     n.val < 2565 := by
   rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
-  fin_cases i <;> simp [Paid16GeneralG12.nodeID]
+  fin_cases i <;> norm_num [Paid16GeneralG12.nodeID]
 
 /-- B09 is not wholly below 2565: `b09HighIDs` lists its 27 legacy ids at or
 above 2565.  This exhaustive classification replaces the false former `b09_lt`
