@@ -15,13 +15,17 @@ def paidIDs : Finset (Fin 5011) :=
 
 private theorem b10_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB10.paidIDs) :
     n.val < 2565 :=
-  (Finset.all_eq_true.mp (s := EnergyTerminalBatchB10.paidIDs)
-    (p := fun n => n.val < 2565) (by decide +kernel)) n hn
+  (by
+    have h : ∀ m ∈ EnergyTerminalBatchB10.paidIDs, m.val < 2565 := by
+      decide +kernel
+    exact h n hn)
 
 private theorem remaining210_lt (n : Fin 5011)
     (hn : n ∈ Paid16GeneralRemaining210.newIDs) : n.val < 2565 :=
-  (Finset.all_eq_true.mp (s := Paid16GeneralRemaining210.newIDs)
-    (p := fun n => n.val < 2565) (by decide +kernel)) n hn
+  (by
+    have h : ∀ m ∈ Paid16GeneralRemaining210.newIDs, m.val < 2565 := by
+      decide +kernel
+    exact h n hn)
 
 private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
     n.val < 2565 := by

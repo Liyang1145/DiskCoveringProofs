@@ -197,3 +197,35 @@
 ### Next concrete step
 - Poll `40973981403` to completion and read its Build log. Require exit 0 for
   Next1182 first, then B13, then B13Main; only then request root import of B13Main.
+
+## 2026-10-30 - session part 4: run 25 verdict + B13 unknown-constant repair
+
+### Done
+- Re-read GUIDANCE, Lane B, NOTES/CI; `project_status.py --check` exit 0.
+- Downloaded and inspected run `40973981403` (head `76b6835e`) logs. Overall
+  workflow/job conclusion is `success`, but that is not all-target green.
+  Relevant exits: `Paid16GeneralNext1182 0`, `EnergyTerminalBatchB13Next505Bounds 0`,
+  `EnergyTerminalBatchB13 1`, `EnergyTerminalBatchB13Main 1` (the latter from B13).
+- Run 25's only B13 source errors were lines 18 and 23:
+  `Unknown constant Finset.all_eq_true.mp`. The current working tree replaces both
+  with a local `have h : ∀ m ∈ S, m.val < 2565 := by decide +kernel` and applies
+  `h n hn`; no `Finset.all_eq_true` remains in the lane tree.
+- `audit_b13main.py` exit 0 (static source/import/API only); `audit_next1182_blocks.py`
+  exit 0 (1182 ids, 57 blocks, 28 interval-disjoint facts, top SHA `5D941203...`);
+  `git diff --check` exit 0.
+- Tiny Mathlib pattern probe hit the bounded `timeout 90s` (exit 124) waiting on
+  the shared cache; it has no verdict and is not evidence.
+
+### File state
+- Repaired `EnergyTerminalBatchB13.lean` SHA256 `5369119B8B198819788EEDF841ADDB1167228796E8EC8FCB59C840516925445B`.
+- `Paid16GeneralNext1182.lean` stays `5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1`.
+
+### Still unproved / unverified
+- Next1182 and Next505Bounds are **CI green**. The repaired B13 is **CI pending**;
+  B13Main is pending behind it. Residual 389, SevenClassExclusions, and the
+  arbitrary-center full-disk theorem remain unpaid.
+
+### Next concrete step
+- CI must bind `5369119B...`: require B13 exit 0, then B13Main exit 0. Only then
+  issue the root-import request for `EnergyTerminalBatchB13Main`. If red, quote the
+  first full B13 error and inspect `b10_lt`/`remaining210_lt` kernel decodes first.
