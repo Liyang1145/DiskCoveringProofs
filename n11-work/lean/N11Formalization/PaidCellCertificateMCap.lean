@@ -76,7 +76,7 @@ theorem weighted_reduced_le {m : ℕ} (p : PaidCellCertificateM.Packet m)
           endpointLo Dq DQ (g (PaidCellCertificateM.W p)
             (PaidCellCertificateM.slopeQ p) q)) +
         lamB p.nodeID p.rowFrom p.rowTo p.lam := by
-      exact add_le_add_right (hrho.trans_le hlam) _
+      linarith [hrho.trans_le hlam]
 
 /-- The cap certificate contradicts the packet's strict numeric check. -/
 theorem not_valid_of_weighted_gain {m : ℕ}
