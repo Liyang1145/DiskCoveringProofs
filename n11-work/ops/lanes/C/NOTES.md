@@ -31,45 +31,23 @@ EXPERT (2026-10-30 05:44 UTC):
   goals. Parts 82-88 progressively replaced that expansion with core-theorem reuse;
   none of those bridges received a CI verdict.
 
-## 2026-10-30 — part 89 (canonical seven-witness rewrite)
+## 2026-10-30 — parts 89-94 (condensed)
 
-Did:
-- Replaced all seven generated `strict_gain_*` sum-congruence/`change` bridges
-  with one canonical line:
-  `simpa only [yW_node, endpoint_node] using FrozenCapRationalCore.strict_gain_node`.
-  This rewrites the wide witness alias and every endpoint equation directly in
-  the green core theorem, eliminating 56 tactic lines and the unverified
-  intermediate goal shape.
-- Regenerated all three wide outputs. Exact checks: seven probability vectors,
-  700/700 ordered row caps, seven strict negative gain margins, and zero minimum
-  cap slack for each of the seven public IDs.
-- Reconfirmed the 389-cell census: all seven public records already have exact
-  arbitrary-row-cap certificates; 382 residual IDs have no public core payload.
-
-Files / SHA256 (lowercase):
-- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
-  `f2e4acd8223d6106d45b78f2f093e200b5b5c4598f1b881792f3af19a991aac6`.
-- `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
-  `90a5c86e94d99e77bce33775939f8b67cee05f12f2c2530b96093147c81b7cc6`.
-- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
-  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
-- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
-  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
-
-Checks (scope): generator exit 0 with the exact counts/margins above;
-`py_compile`, hard-rule scan (clean), `git diff --check`, and
-`project_status.py --check` exit 0. Two bounded mathlib-probe launches timed out
-at 180 s without output; these are **not** Lean/kernel verdicts. No local project
-build was run.
-
-Still unproved/missing: no CI run has checked part 89; WideFieldWitnesses and
-WideFieldRowCaps remain uncredited; WideFieldExcludedTree is untargeted and
-conditional on `hf0`/`hg`; 382 HOST payloads absent; no energy/class credit.
-
-Next: obtain `=== EXIT 0` for both wide targets. On green, add
-`N11Formalization.FrozenCapWideFieldExcludedTree` to `TARGETS.txt`; on red,
-inspect only the first reported declaration and revert that declaration's bridge
-to an explicitly typed equality proof.
+- Part 89 replaced seven huge `norm_num` witness `strict_gain_*` proofs with
+  `simpa only [yW_node, endpoint_node] using
+  FrozenCapRationalCore.strict_gain_node`. Current witness SHA256 is
+  `90a5c86e94d99e77bce33775939f8b67cee05f12f2c2530b96093147c81b7cc6`;
+  exact checks remain 7 probability vectors, 700 row caps, and 7 negative gains.
+- Parts 90/93 split the 100-row proof into 700 single-pair leaves and 77
+  dispatchers, but CI run `41001693009` still timed out at 200000 heartbeats on
+  the first seven leaves. Part 94 confirmed the dispatcher structure and that a
+  60 s Mathlib probe gave no verdict.
+- Part 91 proved the sign trap: the seven public residuals are genuine
+  arbitrary-row-cap exclusions, not rescue candidates. Part 92 scanned 732 local
+  JSON files (2,222,361 bytes) plus both oversized C450 files and recovered zero
+  of the 382 missing payloads; this is not evidence of external HOST absence.
+- Current census: seven public residual IDs have exact exclusion witnesses; 382
+  residual IDs still lack HOST payloads; no energy/class credit is paid.
 
 ## 2026-10-30 — part 90 (row-cap heartbeat split)
 
@@ -222,23 +200,62 @@ Next: require `=== EXIT 0` for `FrozenCapWideFieldWitnesses` and
 `norm_num` list theorem with an explicitly computed rational equality/inequality
 for that `(i,j)`; do not raise heartbeats.
 
-## 2026-10-30 — part 94 (split structure audit)
+## 2026-10-30 — part 95 (row-cap tactic budget fix)
 
 Did:
-- Inspected the part-93 dispatcher: `row_cap_<id>` has 10 outer branches, each
-  calling a fresh `row_cap_<id>_<i>` declaration with 10 fresh `j` branches;
-  each concrete lemma is a single `norm_num`. No 100-case tactic budget remains.
-- Reran `emit_wide_field_exclusions.py` (exit 0): byte-identical outputs,
-  700 exact rows, zero minimum cap slack for all seven IDs, seven strict
-  negative gain margins. A 60 s Mathlib-probe copy of one leaf timed out with
-  no output; this is not a Lean verdict.
+- Read CI `41001693009`: `FrozenCapWideFieldWitnesses` is exit 0, but
+  `FrozenCapWideFieldRowCaps` still times out at 200000 heartbeats on the first
+  seven single-pair leaves. The failures occur every 21 source lines, so the
+  remaining problem is per-leaf `norm_num` work, not dispatch.
+- Changed generated leaves from one `norm_num [yW, rowA, db,
+  Fin.sum_univ_succ]` call to `simp only [Fin.sum_univ_succ,
+  Fin.sum_univ_one, Finset.sum_empty]`, followed by `norm_num [yW, rowA, db]`. This exposes nine
+  concrete summands before rational normalization and avoids unfolding `rowA`
+  under a variable `q`. Public theorem statements and `TARGETS.txt` are unchanged.
+- Regenerated all three wide outputs. Exact checks: seven probability vectors,
+  700/700 row caps, zero minimum cap slack for all seven IDs, and seven strict
+  negative gain margins.
 
-Checks (scope): deterministic regeneration and exact-arithmetic self-checks
-only. No project build or kernel check.
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `16afedb4663e7a7681ac5532f0ffb04ae39b17f9e8797169c6ce94e728543132`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `2fe8f3f06a6df75994a7d282a156a727449418fd728126849d046383ad6acd92`.
+- Witnesses and tree unchanged: `90a5c86e...b7cc6` and `89f0bc8e...4df37`.
 
-Still unproved/missing: same as part 93; both wide modules remain CI pending,
-WideFieldExcludedTree conditional, 382 HOST payloads absent, no energy credit.
+Checks (scope): emitter exit 0 with the counts above; `py_compile` exit 0;
+hard-rule scan and `git diff --check` clean. No local Lean build or kernel
+verdict was run. This tactic split is **CI pending**.
 
-Next: require CI `=== EXIT 0` for `FrozenCapWideFieldWitnesses` and
-`FrozenCapWideFieldRowCaps`; on the first Leaf timeout, emit that leaf's closed
-rational value instead of unfolding the full witness vector.
+Still unproved/missing: CI exit 0 for RowCaps; ExcludedTree remains conditional
+on packet `hf0`/`hg`; 382 HOST payloads absent; no energy/class credit.
+
+Next: request CI for `FrozenCapWideFieldRowCaps`. If a leaf still times out,
+replace that leaf with a closed rational `have`/`norm_num` using its exact nine
+summands; do not raise heartbeats. If green, target ExcludedTree.
+
+## 2026-10-30 — part 96 (explicit row-cap summands)
+
+Did: changed the 700 per-pair leaves from a symbolic `Finset.sum` followed by
+`norm_num` to nine explicit summands; `norm_num` checks the sum, database entry, and final
+constant inequality in separate `have` steps. Row dispatch uses
+`simpa` with the established `Fin.sum_univ_succ`/`sum_univ_one` chain. A bounded
+core-`Rat` probe showed plain `decide` cannot reduce `Rat`'s comparison
+instance, so no `decide` proof was retained. Local project Lean remains
+unavailable; this tactic change is **CI pending**, not a kernel verdict.
+
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `2a373cacd905b2da72666bc7f232dd532e4dd7106a639cc66c0816c607d1d023`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `c6ef5004d63dfa50ec6f7dfe54a56e62399ff5be715ddc0f433002b8385cc34d`.
+- Witnesses/tree unchanged: `90a5c86e...b7cc6`, `89f0bc8e...4df37`.
+
+Checks: emitter exit 0; 700/700 exact caps, seven minimum slacks 0, seven strict
+negative gains. Hard-rule scan and `git diff --check` clean.
+
+Unproved/missing: CI exit 0 for RowCaps; ExcludedTree conditional on `hf0`/`hg`;
+382 HOST payloads absent; no energy/class credit.
+
+Next: require targeted CI for RowCaps. If red, read the exact failing leaf before
+changing tactics; do not raise heartbeats. If green, target ExcludedTree.
