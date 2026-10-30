@@ -14,6 +14,12 @@ OUTDIR = ROOT / "n11-work/lean/N11Formalization"
 IDS = (1409, 2337, 2341, 2356, 2360, 2368, 2370)
 
 
+def lean_rat(q: Q) -> str:
+    if q.denominator == 1:
+        return f"({q.numerator} : ℚ)"
+    return f"({q.numerator} : ℚ) / {q.denominator}"
+
+
 def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
     y = [Q(v) for v in cert["weights"]]
     if len(y) != 9 or any(v < 0 for v in y) or sum(y) != 1:
@@ -28,6 +34,38 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
             slacks.append(rhs - lhs)
     rows = ",\n    ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
     ns = f"FrozenCapRowCap{node}"
+    leaves = []
+    for i in range(10):
+        for j in range(10):
+            lhs_expr = " + ".join(
+                f"y_{node} ({q} : Fin 9) * rowA ({i} : Fin 10) ({j} : Fin 10) ({q} : Fin 9)" for q in range(9))
+            lhs = sum(y[q] * common.row_a(i, j, q) for q in range(9))
+            rhs = Q(db[i][j], 4096)
+            leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
+    {lhs_expr} ≤ db {i} {j} := by
+  have hleft : {lhs_expr} = {lean_rat(lhs)} := by
+    norm_num [y_{node}, rowA]
+  have hright : db {i} {j} = {lean_rat(rhs)} := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num''')
+    row_lemmas = []
+    for i in range(10):
+        row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
+    (∑ q : Fin 9, y_{node} q * rowA {i} j q) ≤ db {i} j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_{node}_{i}_0
+    | exact row_cap_{node}_{i}_1
+    | exact row_cap_{node}_{i}_2
+    | exact row_cap_{node}_{i}_3
+    | exact row_cap_{node}_{i}_4
+    | exact row_cap_{node}_{i}_5
+    | exact row_cap_{node}_{i}_6
+    | exact row_cap_{node}_{i}_7
+    | exact row_cap_{node}_{i}_8
+    | exact row_cap_{node}_{i}_9''')
     lines = [
         "import N11Formalization.FrozenCapRationalCore",
         "import Mathlib.Tactic.FinCases",
@@ -52,10 +90,14 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
         "",
         "def db (i j : Fin 10) : ℚ := (dbmVal i j : ℚ) / 4096",
         "",
+        "\n\n".join(leaves),
+        "",
+        "\n\n".join(row_lemmas),
+        "",
         "theorem row_cap (i j : Fin 10) :",
         f"    (∑ q : Fin 9, y_{node} q * rowA i j q) ≤ db i j := by",
-        "  fin_cases i <;> fin_cases j <;>",
-        f"    norm_num [y_{node}, rowA, db, dbmVal, Fin.sum_univ_succ]",
+        "  fin_cases i",
+        *[f"  · exact row_cap_{node}_{i} j" for i in range(10)],
         "",
         "end",
         f"end N11Formalization.{ns}",

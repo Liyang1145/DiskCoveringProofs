@@ -1,4 +1,13 @@
 # Lean targets lane C wants CI to build (one per line)
+# Corrected seven row-cap modules first; they are dependencies of the public tree.
+N11Formalization.FrozenCapRowCap1409
+N11Formalization.FrozenCapRowCap2337
+N11Formalization.FrozenCapRowCap2341
+N11Formalization.FrozenCapRowCap2356
+N11Formalization.FrozenCapRowCap2360
+N11Formalization.FrozenCapRowCap2368
+N11Formalization.FrozenCapRowCap2370
+N11Formalization.FrozenCapPublicExcludedTree
 # Unpriced post-fix refinement chain: keep first so the next serial run reaches it.
 N11Formalization.EnergyRefineN3853
 N11Formalization.EnergyRefineN0037
@@ -49,7 +58,6 @@ N11Formalization.EnergyRefineN3589
 N11Formalization.EnergyRefineN3623
 N11Formalization.EnergyRefineN3633
 N11Formalization.FrozenCapWideFieldWitnesses
-N11Formalization.FrozenCapPublicExcludedTree
 N11Formalization.EnergyTerminalBatchB13Refine3040
 # FrozenCapResidualMembership remains withheld: its census C02 closure is CI-red.
 N11Formalization.EnergyTerminalBatchB13Refine3040Main
