@@ -196,29 +196,38 @@ lines += [
     "  · exact b10_bound n hn",
     "  · exact Or.inl (remaining210_lt n hn)",
     "",
-    "/-- Every B09 id above 2565 is absent from the 57 literal Next1182 blocks. -/",
-    "theorem high_not_next (n : Fin 5011) (hn : n ∈ b09HighIDs) :",
-    "    n ∉ Paid16GeneralNext1182.newIDs := by",
-    "  simp only [b09HighIDs, Finset.mem_insert, Finset.mem_singleton] at hn",
-    "  rcases hn with " + " | ".join("rfl" for _ in high_ids),
 ]
 
 group_starts = {1: 0, 2: 8, 3: 16, 4: 24, 5: 32, 6: 40, 7: 48, 8: 56}
-for _ in high_ids:
+for group in range(1, 9):
+    count = 8 if group < 8 else 1
+    names = [f"Paid16GeneralNext1182S{group:02d}.mem_ids{group_starts[group] + j:02d}"
+             for j in range(count)]
+    simp = [f"Paid16GeneralNext1182S{group:02d}.new_mem"] + names
     lines += [
-        "  · rw [Paid16GeneralNext1182.new_mem]",
-        "    rintro (h | h | h | h | h | h | h | h)",
+        f"private theorem high_not_next_s{group:02d} (n : Fin 5011)",
+        f"    (hn : n ∈ b09HighIDs) : n ∉ Paid16GeneralNext1182S{group:02d}.newIDs := by",
+        "  simp only [b09HighIDs, Finset.mem_insert, Finset.mem_singleton] at hn",
+        "  rcases hn with " + " | ".join("rfl" for _ in high_ids),
     ]
-    for group in range(1, 9):
-        count = 8 if group < 8 else 1
-        names = [f"Paid16GeneralNext1182S{group:02d}.mem_ids{group_starts[group] + j:02d}"
-                 for j in range(count)]
-        simp = [f"Paid16GeneralNext1182S{group:02d}.new_mem"] + names
+    for _ in high_ids:
         lines += [
-            "    · simp only [" + ", ".join(simp) + "] at h",
-            "      simp only [Fin.ext_iff] at h",
-            "      omega",
+            "  · intro h",
+            "    simp only [" + ", ".join(simp) + "] at h",
+            "    simp only [Fin.ext_iff] at h",
+            "    omega",
         ]
+    lines.append("")
+
+lines += [
+    "/-- Every B09 id above 2565 is absent from the 57 literal Next1182 blocks.",
+    "The proof is split by part so no one tactic expands more than 168 literals. -/",
+    "theorem high_not_next (n : Fin 5011) (hn : n ∈ b09HighIDs) :",
+    "    n ∉ Paid16GeneralNext1182.newIDs := by",
+    "  rw [Paid16GeneralNext1182.new_mem]",
+    "  rintro (h | h | h | h | h | h | h | h)",
+]
+lines += [f"  · exact high_not_next_s{group:02d} n hn h" for group in range(1, 9)]
 
 lines += [
     "",

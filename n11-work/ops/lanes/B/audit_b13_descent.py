@@ -54,12 +54,15 @@ def main() -> None:
         r"def b09HighIDs : Finset \(Fin 5011\) := \{([0-9,]+)\}", text)
     source_high_ids = set(map(int, high_match.group(1).split(","))) if high_match else set()
     literal_ids: set[int] = set()
+    literal_occurrences = 0
     literal_blocks = 0
     for path in sorted(LEAN.glob("Paid16GeneralNext1182S*.lean")):
         for body in re.findall(
                 r"^def ids\d+ : Finset \(Fin 5011\) := \{([0-9,]+)\}",
                 path.read_text(encoding="utf-8"), re.MULTILINE):
-            literal_ids.update(map(int, body.split(",")))
+            ids = list(map(int, body.split(",")))
+            literal_ids.update(ids)
+            literal_occurrences += len(ids)
             literal_blocks += 1
     packet_ids: set[int] = set()
     for name in ("Lambda0Batch7Packet", "Lambda0TangentChordC01Packet",
@@ -108,7 +111,8 @@ def main() -> None:
     local_module = MODULE.stem
     closure = import_closure(local_module)
     unimported_reference_modules = sorted(referenced_modules - closure)
-    high_section = text.partition("theorem high_not_next")[2]
+    high_section = text.partition("private theorem high_not_next_s01")[2].partition(
+        "\nend\nend N11Formalization")[0]
     checks = {
         "twelve_group_blocks": groups == [f"{i:02d}" for i in range(1, 13)],
         "twelve_group_norm_num_decodes":
@@ -123,14 +127,30 @@ def main() -> None:
             "def b09HighIDs : Finset (Fin 5011) :=" in text,
         "high_ids_excluded": "theorem high_not_next" in text,
         "high_leaves_use_tested_omega":
-            high_section.count("      omega") == 27 * 8 and
+            len(re.findall(r"^\s+omega$", high_section, re.MULTILINE)) == 27 * 8 and
             "norm_num at h" not in high_section,
+        "high_leaves_split_by_part":
+            len(re.findall(
+                r"private theorem high_not_next_s\d{2} \(n : Fin 5011\)",
+                text)) == 8,
+        "high_dispatch_eight_helpers":
+            len(re.findall(r"exact high_not_next_s\d{2} n hn h", high_section)) == 8,
         "high_ids_27": len(source_high_ids) == 27,
         "reconstructed_b09_58": len(b09_ids) == 58,
         "high_ids_match_reconstructed_b09": source_high_ids == b09_high_ids,
         "next1182_literals_57x1182":
             literal_blocks == 57 and len(literal_ids) == 1182,
+        "next1182_literal_ids_unique":
+            literal_occurrences == 1182 and len(literal_ids) == 1182,
+        "next1182_all_at_least_2565":
+            bool(literal_ids) and min(literal_ids) >= 2565,
         "high_ids_absent_from_next1182": not (source_high_ids & literal_ids),
+        "high_ids_all_at_least_2565":
+            bool(source_high_ids) and min(source_high_ids) >= 2565,
+        "high_ids_cover_b09_above_2565":
+            source_high_ids == b09_high_ids,
+        "b09_low_ids_all_below_2565":
+            all(i < 2565 for i in b09_ids - b09_high_ids),
         "emitter_reproduces_module": emitter_matches,
         "first42_two_image_layers": "exact g01_lt n hn" in text and "exact g02_lt n hn" in text,
         "remaining210_no_direct_decode":
@@ -165,6 +185,7 @@ def main() -> None:
         "unimported_reference_modules": unimported_reference_modules,
         "next1182_literal_blocks": literal_blocks,
         "next1182_literal_ids": len(literal_ids),
+        "next1182_literal_occurrences": literal_occurrences,
         "checks": checks,
         "scope": "static source hierarchy only; Lean elaboration is CI-pending",
         "ok": all(checks.values()),
