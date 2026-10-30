@@ -1,0 +1,35 @@
+{
+  "banned_tokens": {
+    "admit": false,
+    "implemented_by": false,
+    "maxHeartbeats 0": false,
+    "maxRecDepth": false,
+    "native_decide": false,
+    "ofReduceBool": false,
+    "sorry": false
+  },
+  "checks": {
+    "consumer_api_present": true,
+    "new_main_in_targets_once": true,
+    "no_banned_tokens": true,
+    "prerequisites_in_targets_once": true,
+    "remaining_of_bridge_present": true,
+    "required_transitive_imports_present": true,
+    "root_has_exactly_one_valid_import": true,
+    "target_order_main_after_prerequisites": true
+  },
+  "failed": [],
+  "new_import": "import N11Formalization.EnergyTerminalBatchB13RefineThirteenMain",
+  "new_import_count": 0,
+  "old_import": "import N11Formalization.EnergyTerminalBatchB12Main",
+  "old_import_count": 1,
+  "ready_for_supervisor_switch": true,
+  "root_import_phase": "pre_handoff",
+  "scope": "static one-line root/import/API preflight only; no Lean elaboration or proof credit",
+  "sha256": {
+    "EnergyTerminalBatchB13RefineThirteen.lean": "1B954B3CF2AF2B24CCD4CC5B67DDD1162ED71543DB3D88C33FD004B54B85AF62",
+    "EnergyTerminalBatchB13RefineThirteenMain.lean": "D46E758CFB3B6997FD5BCE098192FAFC776AC8A388A514F412F7A733D2784375",
+    "N11Formalization.lean": "022075AE1389B94B01F9C7E8D5EE95288A9AAB503349C862D9633DB96B338914",
+    "TARGETS.txt": "BA5035AA6FBD2E8FEB5FAE167CAD753A7F8866F67259949F5C6787481A778F22"
+  }
+}
