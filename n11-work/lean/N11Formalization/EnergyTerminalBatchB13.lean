@@ -1,6 +1,7 @@
 import N11Formalization.EnergyTerminalBatchB12
 import N11Formalization.Paid16GeneralNext1182
 import N11Formalization.EnergyTerminalBatchB13Next505Bounds
+import N11Formalization.EnergyTerminalBatchB13DescentBounds
 
 /-! One thousand nine hundred ninety-seven actual energy terminals on the
 SAME closed truechart: 815 from B12 plus the 1182 `rest1182` packets.
@@ -13,26 +14,12 @@ noncomputable section
 def paidIDs : Finset (Fin 5011) :=
   EnergyTerminalBatchB12.paidIDs ∪ Paid16GeneralNext1182.newIDs
 
-private theorem b10_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB10.paidIDs) :
-    n.val < 2565 :=
-  (by
-    have h : ∀ m ∈ EnergyTerminalBatchB10.paidIDs, m.val < 2565 := by
-      decide +kernel
-    exact h n hn)
-
-private theorem remaining210_lt (n : Fin 5011)
-    (hn : n ∈ Paid16GeneralRemaining210.newIDs) : n.val < 2565 :=
-  (by
-    have h : ∀ m ∈ Paid16GeneralRemaining210.newIDs, m.val < 2565 := by
-      decide +kernel
-    exact h n hn)
-
 private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
     n.val < 2565 := by
   rw [EnergyTerminalBatchB11.paidIDs] at hn
   rcases (Finset.mem_union.mp hn) with hn | hn
-  · exact b10_lt n hn
-  · exact remaining210_lt n hn
+  · exact EnergyTerminalBatchB13DescentBounds.b10_lt n hn
+  · exact EnergyTerminalBatchB13DescentBounds.remaining210_lt n hn
 
 private theorem next505_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralNext505.newIDs) :
     n.val < 2565 := by
