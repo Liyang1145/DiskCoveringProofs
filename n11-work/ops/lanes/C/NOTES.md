@@ -179,3 +179,33 @@ Next: when CI reports, inspect framework exit first and node 2341 second.  If
 both are green, restore only `EnergyRefineN3040` (exact archive bytes), add it
 after node 2341 in `TARGETS.txt`, and request a fresh CI run.  If either current
 target is red, fix only its first compilation error.
+
+## 2026-10-30 - part 110 (N2341 exact tree-data audit)
+
+Did: added an independent exact-integer audit of the restored 3-node refinement
+`EnergyRefineN2341`.  It recomputed the root scale identity against frozen
+`DBMSourceTreeData` and both `DBMTreeKernel.Valid` split inequalities.  Result:
+all 100 root entries satisfy `node0.db = 256 * source2341.db`; all 200 child
+inequalities hold; root metadata is `terminal=false, i=1, j=6, m=589824,
+left=1, right=2`; both children are terminal.  Therefore the tree/split layer
+is exact; any failure in the Lean node is isolated to the framework or MPacket.
+
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/audit_energy_refine_n2341_tree.py`
+  `a050ba28a26b0b11e3104ea9e4346406ae75b4219d4ee8636a8dda222b95e2fe`.
+- `n11-work/ops/lanes/C/energy-refine-n2341-tree-audit.json`
+  `d4a1021cdc968b7d09ef22802e165958365d44ba59f701d2e6d5e48b6851814b`.
+
+Checks (exact scope): audit exits 0; `py_compile` exits 0; `git diff --check`
+exits 0.  GitHub run `41027178023` at commit `34b14918` was still in its Build
+step when checked, so `Paid16MatrixCellCertificate` and `EnergyRefineN2341`
+remain **CI pending**.  This audit is not a Lean/kernel verdict and pays no
+residual ID.
+
+Still unproved/missing: CI exit 0 and axiom report for the framework and node
+2341; the six MPacket `decide +kernel` fields in node 2341; 56 other draft
+modules; 332 absent certificate/data IDs; seven exclusion-to-radius bridges.
+
+Next: read run `41027178023`'s artifact summary.  Require framework exit 0
+before diagnosing node 2341; if red, fix only the first compile error.  If both
+green, restore `EnergyRefineN3040` as the next disjoint payload bundle.
