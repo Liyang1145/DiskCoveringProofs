@@ -127,11 +127,17 @@ theorem sectorValue_zero_dec_of_bin2 {k l : Fin 2049}
 theorem sectorAt_zero_bin2_dec (n : ℕ) (hlo : 543 ≤ n)
     (hn : n < binLast (2 : Fin 8)) :
     sectorAt 0 (n + 1) ≤ sectorAt 0 n := by
+  by_cases h543 : n = 543
+  · subst n
+    norm_num [sectorAt, sectorValue, sectorUpper, areaUpper, nodeBin, nodeBinAt,
+      binIndex, mu, lam, nextSite, nodeQ, sinHiNLag, sinLoNLag, sinTQ,
+      Finset.sum_range_succ, RatInterval.piHi]
+  have hn544 : 544 ≤ n := by omega
   have hn0 : min n 2048 = n := min_eq_left (by omega)
   have hn1 : min (n + 1) 2048 = n + 1 := min_eq_left (by omega)
   have h := sectorValue_zero_dec_of_bin2
     (k := (⟨n, by omega⟩ : Fin 2049))
-    (l := (⟨n + 1, by omega⟩ : Fin 2049)) (by omega) (by omega) (by
+    (l := (⟨n + 1, by omega⟩ : Fin 2049)) hn544 (by omega) (by
       norm_num [binLast, binHi] at hn ⊢
       omega)
   simpa [sectorAt, hn0, hn1] using h

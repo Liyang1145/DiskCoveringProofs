@@ -40,3 +40,17 @@ N11Formalization.SevenClassQ0Deg3SectorBin3
 
 # Session 69: complete row 0 / bin 4 shape (CI pending)
 N11Formalization.SevenClassQ0Deg3SectorBin4
+N11Formalization.SevenClassQ0Deg3SectorBins3AllRows
+
+# Sessions 70+: all-row bins 0--3 and row-0 bins 5--7 (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBins01AllRows
+N11Formalization.SevenClassQ0Deg3SectorBins2AllRows
+N11Formalization.SevenClassQ0Deg3SectorBin5
+N11Formalization.SevenClassQ0Deg3SectorBin6
+N11Formalization.SevenClassQ0Deg3SectorBin7
+
+# Session 72: all-row bin 4 (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBins4AllRows
+
+# Session 73: all-row bin 5 (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBins5AllRows

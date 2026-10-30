@@ -201,9 +201,15 @@ theorem capQ_le_sinPoly4_of_u_le (q u : ℚ) (hq0 : 0 ≤ q) (hq2 : q ≤ 2)
 
 /-- Coarse low-denominator upper caps for `q / 2`, one per endpoint bin.
 Their exact slack is recorded by `audit_endpoint_low_denom.py`. -/
-def endpointUBin (j : Fin 8) : ℚ :=
-  ![1956 / 10000, 3920 / 10000, 5883 / 10000, 7847 / 10000,
-    9810 / 10000, 11774 / 10000, 13737 / 10000, 15708 / 10000] j
+def endpointUBin : Fin 8 → ℚ
+  | 0 => 1956 / 10000
+  | 1 => 3920 / 10000
+  | 2 => 5883 / 10000
+  | 3 => 7847 / 10000
+  | 4 => 9810 / 10000
+  | 5 => 11774 / 10000
+  | 6 => 13737 / 10000
+  | 7 => 15708 / 10000
 
 /-- The upper endpoint bound with both Taylor remainders kept.  Bins 5 and 6
 lie outside the `[0,1]` domain of the monotone degree-seven reduction. -/
@@ -212,23 +218,23 @@ def endpointUpperBin (j : Fin 8) : ℚ :=
       ((Nat.factorial 9 : ℕ) : ℚ) +
     2 * (|endpointUBin j| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ))
 
-@[simp] theorem nodeBinAt_zero : nodeBinAt 0 = 239 / 1250 := by norm_num [nodeBinAt]
-@[simp] theorem nodeBinAt_one : nodeBinAt 1 = 239 / 1250 := by norm_num [nodeBinAt]
-@[simp] theorem nodeBinAt_two : nodeBinAt 2 = 133 / 625 := by norm_num [nodeBinAt]
-@[simp] theorem nodeBinAt_three : nodeBinAt 3 = 2721 / 10000 := by norm_num [nodeBinAt]
-@[simp] theorem nodeBinAt_four : nodeBinAt 4 = 643 / 2000 := by norm_num [nodeBinAt]
-@[simp] theorem nodeBinAt_five : nodeBinAt 5 = 897 / 2500 := by norm_num [nodeBinAt]
-@[simp] theorem nodeBinAt_six : nodeBinAt 6 = 191 / 500 := by norm_num [nodeBinAt]
-@[simp] theorem nodeBinAt_seven : nodeBinAt 7 = 1949 / 5000 := by norm_num [nodeBinAt]
+@[simp] theorem nodeBinAt_zero : nodeBinAt 0 = 239 / 1250 := by rfl
+@[simp] theorem nodeBinAt_one : nodeBinAt 1 = 239 / 1250 := by rfl
+@[simp] theorem nodeBinAt_two : nodeBinAt 2 = 133 / 625 := by rfl
+@[simp] theorem nodeBinAt_three : nodeBinAt 3 = 2721 / 10000 := by rfl
+@[simp] theorem nodeBinAt_four : nodeBinAt 4 = 643 / 2000 := by rfl
+@[simp] theorem nodeBinAt_five : nodeBinAt 5 = 897 / 2500 := by rfl
+@[simp] theorem nodeBinAt_six : nodeBinAt 6 = 191 / 500 := by rfl
+@[simp] theorem nodeBinAt_seven : nodeBinAt 7 = 1949 / 5000 := by rfl
 
-@[simp] theorem endpointUBin_zero : endpointUBin 0 = 1956 / 10000 := by norm_num [endpointUBin]
-@[simp] theorem endpointUBin_one : endpointUBin 1 = 3920 / 10000 := by norm_num [endpointUBin]
-@[simp] theorem endpointUBin_two : endpointUBin 2 = 5883 / 10000 := by norm_num [endpointUBin]
-@[simp] theorem endpointUBin_three : endpointUBin 3 = 7847 / 10000 := by norm_num [endpointUBin]
-@[simp] theorem endpointUBin_four : endpointUBin 4 = 9810 / 10000 := by norm_num [endpointUBin]
-@[simp] theorem endpointUBin_five : endpointUBin 5 = 11774 / 10000 := by norm_num [endpointUBin]
-@[simp] theorem endpointUBin_six : endpointUBin 6 = 13737 / 10000 := by norm_num [endpointUBin]
-@[simp] theorem endpointUBin_seven : endpointUBin 7 = 15708 / 10000 := by norm_num [endpointUBin]
+@[simp] theorem endpointUBin_zero : endpointUBin 0 = 1956 / 10000 := by rfl
+@[simp] theorem endpointUBin_one : endpointUBin 1 = 3920 / 10000 := by rfl
+@[simp] theorem endpointUBin_two : endpointUBin 2 = 5883 / 10000 := by rfl
+@[simp] theorem endpointUBin_three : endpointUBin 3 = 7847 / 10000 := by rfl
+@[simp] theorem endpointUBin_four : endpointUBin 4 = 9810 / 10000 := by rfl
+@[simp] theorem endpointUBin_five : endpointUBin 5 = 11774 / 10000 := by rfl
+@[simp] theorem endpointUBin_six : endpointUBin 6 = 13737 / 10000 := by rfl
+@[simp] theorem endpointUBin_seven : endpointUBin 7 = 15708 / 10000 := by rfl
 
 theorem capQ_le_mul_of_sinHiNLag_le (q y : ℚ) (hy0 : 1 / 2 ≤ y)
     (hy : sinHiNLag (q / 2) ≤ y) : capQ q ≤ 19 / 50 * y := by
@@ -242,7 +248,15 @@ theorem endpointUBin_nonneg (j : Fin 8) : 0 ≤ endpointUBin j := by
 
 theorem endpointUBin_le_one_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     endpointUBin j ≤ 1 := by
-  fin_cases j <;> norm_num [endpointUBin] at hj ⊢
+  fin_cases j
+  · norm_num [endpointUBin]
+  · norm_num [endpointUBin]
+  · norm_num [endpointUBin]
+  · norm_num [endpointUBin]
+  · norm_num [endpointUBin]
+  · omega
+  · omega
+  · omega
 
 theorem nodeQ_binHi_div_two_le_endpointUBin (j : Fin 8) :
     nodeQ RatInterval.piHi 2048 (binHi j) / 2 ≤ endpointUBin j := by
@@ -254,7 +268,15 @@ theorem nodeQ_binHi_nonneg (j : Fin 8) :
 
 theorem nodeQ_binHi_le_two_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     nodeQ RatInterval.piHi 2048 (binHi j) ≤ 2 := by
-  fin_cases j <;> norm_num [nodeQ, binHi, RatInterval.piHi] at hj ⊢
+  fin_cases j
+  · norm_num [nodeQ, binHi, RatInterval.piHi]
+  · norm_num [nodeQ, binHi, RatInterval.piHi]
+  · norm_num [nodeQ, binHi, RatInterval.piHi]
+  · norm_num [nodeQ, binHi, RatInterval.piHi]
+  · norm_num [nodeQ, binHi, RatInterval.piHi]
+  · omega
+  · omega
+  · omega
 
 theorem capQ_binHi_le_endpointUBin_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     capQ (nodeQ RatInterval.piHi 2048 (binHi j)) ≤
