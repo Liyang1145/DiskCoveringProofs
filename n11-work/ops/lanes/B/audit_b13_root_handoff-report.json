@@ -1,0 +1,29 @@
+{
+  "b13main": "/workspace/projects/ae3385e7-f93b-4bd2-a917-5a9561f457b7/repos/wt-B/n11-work/lean/N11Formalization/EnergyTerminalBatchB13Main.lean",
+  "b13main_imports": [
+    "N11Formalization.ActualMetricClassReduction",
+    "N11Formalization.C450ChainCompletionMain",
+    "N11Formalization.EnergyTerminalBatchB13"
+  ],
+  "b13main_sha256": "521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837",
+  "checks": {
+    "b13main_follows_b13": true,
+    "b13main_in_targets_once": true,
+    "no_forbidden_tokens": true,
+    "required_imports_present": true,
+    "required_names_present": true,
+    "root_has_exactly_one_valid_import": true
+  },
+  "forbidden_tokens": [],
+  "missing_required_imports": [],
+  "observed_new_import_count": 0,
+  "observed_old_import_count": 1,
+  "replacement_ready_for_review": true,
+  "requested_new_import": "import N11Formalization.EnergyTerminalBatchB13Main",
+  "requested_old_import": "import N11Formalization.EnergyTerminalBatchB12Main",
+  "root_import_phase": "pre_handoff",
+  "root_module": "/workspace/projects/ae3385e7-f93b-4bd2-a917-5a9561f457b7/repos/wt-B/n11-work/lean/N11Formalization.lean",
+  "root_still_pre_handoff": true,
+  "root_successfully_post_handoff": false,
+  "scope": "static source/import audit only; no Lean elaboration or root CI verdict"
+}

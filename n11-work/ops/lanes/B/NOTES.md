@@ -7,238 +7,172 @@ EXPERT (2026-10-30):
 
 # Lane B notes
 
+## 2026-10-30 - session part 26: current-byte audit rerun
+
+- Re-ran the six lane-B static audits on the current worktree. All exit 0:
+  root handoff (`pre_handoff`, replacement ready), B13Main API/imports, B13
+  descent hierarchy, closure counts, Next1182 literal blocks, and target import
+  closure.
+- Fresh closure output is unchanged: B11 310, B12 815, B13 1997, Next1182 1182,
+  sharp 120, terminals 2506, residual 389. Target closure has 1914 modules,
+  with no missing/forbidden imports; root still has exactly one B12Main import.
+- Exact hashes: root-audit script
+  `985E7C921AA199CE2914A837A627E13C3CE4686BFBA8BE1585DCB93ED7D1E8C7`;
+  its regenerated report
+  `B0CCD386502D44A069C3D6B47BB909C1997641DF6F538E7FBF0BDD64C152CAB5`;
+  CI evidence `EA8506B77F9174972E1F286362AAA13B1724D1AFC5CAB11CDADE4328C1B45227`;
+  B13Main and TARGETS hashes match the green handoff.
+- Scope: static source/manifest checks only. This rerun is not new Lean
+  elaboration or proof credit; the five prior CI module exits remain the kernel
+  evidence. No new Lean target was added.
+- Still unpaid: the explicit 389-ID `B13.RemainingTerminalRadius` premise,
+  SevenClassExclusions, and the arbitrary-center full-disk theorem.
+- Next concrete mathematical step: emit a deterministic hash-bound crosswalk
+  from those 389 B13 terminal IDs to lane C's residual census, identifying
+  whether coverage is 1:1 and listing any unmatched IDs on either side. Root
+  import replacement remains supervisor-only and must be followed by root CI.
+
+## Current handoff (2026-10-30 09:48 UTC)
+
+- **ROOT-IMPORT REQUEST:** after supervisor review, import only
+  `N11Formalization.EnergyTerminalBatchB13Main` instead of
+  `EnergyTerminalBatchB12Main` in the root.
+- CI job `123993863813` on merged head `22719e0d` reports five exact green
+  module exits, in order: Next1182 `0`, Next505Bounds `0`, DescentBounds `0`,
+  B13 `0`, B13Main `0`. This pays B13's 1997-terminal module credit.
+- Energy is still conditional: 389 terminal IDs remain in
+  `B13.RemainingTerminalRadius`. SevenClassExclusions and the arbitrary-center
+  full-disk theorem remain unpaid. Root integration is not yet changed.
+- The run was still `in_progress` on later targets/root when read; do not turn
+  the module exits into a completed-run or root verdict.
+
+## 2026-10-30 09:54 UTC - session part 25: migration-safe root audit
+
+- Upgraded `audit_b13_root_handoff.py` to accept exactly one valid root phase:
+  pre-handoff (one old B12Main import) or post-handoff (one new B13Main
+  import). Mixed and duplicate imports are rejected; B13Main import set,
+  required names, target order, and forbidden-token checks are unchanged.
+- Exact new-byte hashes: script
+  `985E7C921AA199CE2914A837A627E13C3CE4686BFBA8BE1585DCB93ED7D1E8C7`;
+  regenerated pre-handoff report
+  `B0CCD386502D44A069C3D6B47BB909C1997641DF6F538E7FBF0BDD64C152CAB5`.
+- Checks: `py_compile` exits 0; live pre root exits 0 (`pre_handoff`, ready);
+  a temporary replacement root exits 0 (`post_handoff`, ready); mixed
+  old+new root exits 1; duplicate new-import root exits 1. `git diff --check`
+  exits 0. Scope is static source/import inspection only, not Lean
+  elaboration, root CI, or proof credit.
+- No new Lean module or target was added. The five module exits recorded above
+  remain kernel evidence. B13 still has the explicit 389-ID residual premise;
+  SevenClassExclusions and the arbitrary-center full-disk theorem are unpaid.
+- Next: supervisor replaces only the B12Main import with B13Main, runs the
+  audit again expecting `root_import_phase=post_handoff` and exit 0, then fresh
+  CI must kernel-check the root. If supervisor has not acted, do not edit root.
+
+## 2026-10-30 - session part 24: exact root-handoff audit
+
+- Added `audit_b13_root_handoff.py`, a static check that binds the proposed
+  replacement to B13Main hash
+  `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`.
+  It checks the sole old import, absence of the new import, exact three-import
+  wrapper, required declarations, forbidden-token absence, and B13Main target
+  ordering after B13. All seven checks pass; report
+  `audit_b13_root_handoff-report.json` records the root is still pre-handoff.
+- Exact new-byte hashes: audit script
+  `F00761B3DA0C81445E57181B4BD2315742575AF8289F7E231C68FC0AE1631827`;
+  report `80C7F66FB0893D175FEC398F6AF37564E8D290AE25D7C9610FCB55F8C16DF0DE`.
+- Checks: audit exits 0; `py_compile` exits 0; `git diff --check` exits 0.
+  Scope is static source/import inspection only, not Lean elaboration or root
+  CI. Job `123993863813` was still `in_progress` when re-queried.
+- No new Lean target was added because this session added no Lean module. The
+  earlier five module exits remain the only kernel evidence; the 389 residual,
+  SevenClassExclusions, and arbitrary-center full-disk theorem remain unpaid.
+- Next: supervisor applies exactly the audited B13Main import replacement and
+  commits these bytes; fresh CI must then kernel-check the root. Lane-B
+  mathematical work remains the lane-C 389-ID residual linkage.
+
 ## Condensed history
 
-- Next1182 (1182 ids, 57 blocks) and Next505Bounds are CI green. The closure is
-  B11 310 + Next505 505 + Next1182 1182 = 1997 paid; 2506 terminals, 120 sharp,
-  residual 389.
-- Earlier B13 revisions failed at nonexistent `Finset.all_eq_true.mp`, then at
-  large kernel decodes and broad `simp`/`whnf`. The descent module now splits
-  B10/B11/Remaining210 into small image/union layers and a corrected 27-id B09
-  high classification.
-- Shared frozen-dependency OOMs and the root OOM are not lane-B mathematical
+- Next1182 (1182 ids, 57 literal blocks, 8 parts) and Next505Bounds are CI
+  green. Closure is B11 310 + Next505 505 + Next1182 1182 = 1997 paid;
+  2506 terminals, 120 sharp, residual 389.
+- DescentBounds was repaired by split image/union layers and a corrected 27-id
+  B09 high classification. Each `high_not_next_s01..s08` checks only one
+  Next1182 part; the top theorem dispatches eight alternatives.
+- Early failures were nonexistent `Finset.all_eq_true.mp`, large kernel
+  decodes, broad `simp`/`whnf`, and a monolithic high exclusion. Repairs use
+  `mem_image` + `fin_cases` + `norm_num [nodeID]`, with no enlarged heartbeats.
+- B13Main originally compiled an optional lane-C census whose source was red.
+  The core wrapper now has only C450Main, B13, and ActualMetricClassReduction.
+- Shared frozen-dependency OOMs and root OOM are not lane-B mathematical
   verdicts. Source/inventory/byte audits are not Lean proof credit.
 
 ## Retained engineering facts
 
 - `Finset.card_biUnion` takes disjointness explicitly. Pairwise disjointness of
   `Function.onFun` parts needs `change Disjoint (part i) (part j)` first.
-- Part-local Next1182 lower bounds transfer globally through the full
-  conjunctive bound plus `omega`.
-- `Finset.disjoint_left.mp` may need `(a := a)` when the element is implicit.
+- Part-local Next1182 lower bounds transfer globally through the conjunctive
+  bound plus `omega`. `Finset.disjoint_left.mp` may need `(a := a)`.
 - Emitters: `emit_next1182_top.py`, `emit_next505_bounds.py`,
-  `emit_residual_census.py`, `emit_b13_descent_bounds.py`. Audits:
-  `audit_next1182_blocks.py`, `audit_b13_descent.py`, `audit_b13main.py`.
-- **ROOT-IMPORT REQUEST (only after CI green):** import
-  `EnergyTerminalBatchB13Main` instead of `EnergyTerminalBatchB12Main`.
+  `emit_residual_census.py`, `emit_b13_descent_bounds.py`.
+- Audits: `audit_next1182_blocks.py`, `audit_b13_descent.py`,
+  `audit_b13main.py`, `audit_b13_closure.py`, `audit_target_imports.py`.
+- Workflow's trailing `true` makes the top-level Build step non-semantic; only
+  module `=== EXIT ... 0` lines and `summary.json` are verdicts.
 
-## Condensed earlier repair (sessions 11-12)
+## 2026-10-30 - session part 22: B13Main separated from lane-C census
 
-- Replaced the twelve expensive G-block kernel decodes with
-  `fin_cases i <;> norm_num [Gxx.nodeID]`; emitter reproduction is enforced.
-- Added the two missing direct imports (`EnergyTerminalBatchB11`,
-  `Paid16GeneralNext1182`) to the emitter and regenerated the descent module.
-- Final repaired descent hash is `5C2B2ED8...`; B13 is `3DD37313...` and
-  B13Main is `2A6A206F...`. Static audits were green, model-level elaboration
-  remained CI-only. No proof credit was claimed.
+- Pre-edit CI showed Next1182/T505Bounds/DescentBounds/B13 at `0`, B13Main at
+  `1` solely from lane-C `EnergyTerminalResidualCensusC03`.
+- Removed that optional import and two literal-census corollaries. Updated the
+  static audit to require the census dependency's absence.
+- B13Main hash became `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`;
+  `audit_b13main.py` became
+  `F5D5D8F01BF3147657A5834611C9A9C165EC5F60037EAFACAD5D30DFAB35E943`.
 
-## Condensed history (sessions 13-14)
-
-- Added static cross-reference resolution to the descent audit: 44 local
-  modules, zero unresolved names, 594-module import closure. Early stale-byte
-  artifacts were never treated as verdicts on repaired sources.
-- Confirmed the workflow's trailing `true` makes the top-level `Build` step
-  non-semantic; only module `=== EXIT ... 0` lines and `summary.json` count.
-  Stale source `B5C9501F...` failed only on the then-missing imports.
-
-## 2026-10-30 - session part 19: split high exclusion by Next1182 part
+## 2026-10-30 - session part 23: exact merged-byte green binding
 
 ### Done
-- Bound run `41023888165` to committed head `83710e22` and read its live job
-  log. `DescentBounds` exited 1 at lines 713/718/750 on heartbeat exhaustion in
-  the monolithic `high_not_next`; this is a verdict on source `9CC74F80...`,
-  not on the new worktree bytes.
-- Replaced the one 27-by-8-way expansion (up to 1182 literals per tactic) by
-  eight `high_not_next_s01..s08` helpers, each checking only that part's
-  168 (or 6) literals. The top theorem now only dispatches eight membership
-  alternatives. This is a tactic-scope fix, not a larger heartbeat setting.
-- Extended the static audit to require eight part-local helpers, eight dispatch
-  calls, 216 `omega` leaves, and no `norm_num at h` in the high-ID section.
+- Verified merged head `22719e0d7aef585fdf0b179d7b9c4f23b14a2754` contains the
+  audited sources unchanged. Read live job `123993863813` log and extracted all
+  five lane-B target exits in serial order; each is exactly `0`.
+- Re-ran `audit_b13main.py`, `audit_b13_descent.py`, `audit_b13_closure.py`,
+  `audit_next1182_blocks.py`, and `audit_target_imports.py` on these bytes.
+- Added `ci-b13-green-20261030.json` recording run/job/head, timestamped exits,
+  source hashes, and the deliberately limited live-log scope.
 
 ### Files (SHA256, uppercase)
+- `Paid16GeneralNext1182.lean`
+  `5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1`.
+- `EnergyTerminalBatchB13Next505Bounds.lean`
+  `FA5CA6EB9CD75158085EDDD3C0CB464AB7F96CF124FCE40C303EB176D31D46F2`.
 - `EnergyTerminalBatchB13DescentBounds.lean`
   `F5E3C49DC61FC031CBB32C2686BBA721909EC695850A661BD8E789DC59EB8794`.
-- `EnergyTerminalBatchB13.lean` unchanged
+- `EnergyTerminalBatchB13.lean`
   `3DD37313505E0E8D608D50D42D3AFB1F1E08CEBBDF1ACD5DB570F57D9DC8FD03`.
-- `EnergyTerminalBatchB13Main.lean` unchanged
-  `2A6A206FE49CD299FCA69221B12B888B55EF6A3A92E34189B3E48C72761D0F98`.
-- `emit_b13_descent_bounds.py`
-  `EB330B219C95949D35EB33C11D6D0A3E6E95F675CAD735EE65ECB9871CE605C7`.
-- `audit_b13_descent.py`
-  `B4118EB0220E9802229BA7E814B634FB06450479C93C59D8EA4E18914071F32E`.
-- `audit_b13_descent-report.json`
-  `387D35F08E82F89A8E4582FA146D22099FCB647A7F68FF60E27E9FCCFC5A7DCC`.
-- `audit_b13main-report.json`
-  `01379B7F9B709F7E088388E836A44385F18C1EAA0EC0B7CCD124166654ABD60B`.
-- `audit_b13_closure-report.json`
-  `4A02341E0E515F1406FFB0433CEE920B76E04621914B197E0E99EC9DA86142EB`.
-- `TARGETS.txt` unchanged
+- `EnergyTerminalBatchB13Main.lean`
+  `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`.
+- `TARGETS.txt`
   `4E8E73251E43B27E7297C5D6CB21BD04FB93195021A5128C364A09795A476600`.
 
 ### Checks (exact scope)
-- `audit_b13_descent.py` exit 0: all 32 static checks true, including exact
-  emitter reproduction, 57x1182 unique literals, 27 high IDs, 216 omega leaves,
-  eight helpers, 44 resolved modules inside a 594-module import closure, and
-  zero forbidden tokens/kernel decisions.
-- `audit_b13main.py` exit 0 (source/import/API only); `audit_b13_closure.py`
-  exit 0 (13 inventory checks: B11 310, Next1182 1182, B13 1997, residual 389).
-- `py_compile` and `git diff --check` exit 0. No local Lean build: kernel status
-  of `F5E3C49D...` remains CI-only.
+- GitHub job `123993863813` on head `22719e0d`: five `=== EXIT ... 0` lines at
+  09:46:28, 09:46:33, 09:46:38, 09:46:42, and 09:47:00 UTC. These are kernel
+  build results for the five listed module targets on matching source hashes.
+- Static audits exit 0 with scope exactly as their reports state. Closure audit:
+  B11 310, B12 815, B13 1997, sharp 120, terminals 2506, residual 389.
+- `python3 tools/project_status.py --check` exit 0; this checks handoff-index
+  declarations only, not mathematics or full repository integrity.
+- No local full-project Lean build was run. The CI job itself was still
+  `in_progress` on remaining targets/root; this note does not claim run success.
 
 ### Still unproved / unverified
-- New descent bytes are **drafted / CI pending**. B13, B13Main and any root
-  replacement remain unpaid until matching-byte CI exits 0 in order. The 389
-  energy terminals, SevenClassExclusions, and arbitrary-center full-disk
+- `EnergyTerminalBatchB13.RemainingTerminalRadius` over 389 IDs is an explicit
+  unpaid premise. SevenClassExclusions and the arbitrary-center full-disk
   theorem remain unpaid.
+- Root still imports `EnergyTerminalBatchB12Main`; supervisor has not applied
+  the requested B13Main replacement. Current root/module-tree CI is unverified.
 
 ### Next concrete step
-- Supervisor commits `F5E3C49D...`; bind fresh CI, require `DescentBounds`
-  exit 0 first, then B13 and B13Main. If red, localize the next timeout/error
-  by proof block rather than increasing heartbeats.
-
-## Condensed repair history (part 15)
-
-- Run `41017279843` (head `0361ae51`) reached both repaired imports, but the
-  descent Fin-disjunction leaf failed because `norm_num at h` does not turn a
-  concrete `Fin` equality into a `Nat` equality. `F21829F6...` first rewrote
-  `Fin.ext_iff`; a core probe then showed the robust leaf is
-  `simp only [Fin.ext_iff] at h; omega`.
-
-## Condensed repair history (parts 17-18)
-
-- Replaced all 216 `norm_num at h` high-ID leaves with
-  `simp only [Fin.ext_iff] at h; omega`, validated by a Lean-core probe.
-- Extended the descent audit with numeric preconditions: 1182 unique Next1182
-  IDs all >= 2565, with exactly the 27 B09 high IDs >= 2565.
-- Old committed descent `9CC74F80...` exhausted heartbeats in the monolithic
-  high exclusion. The replacement split it into eight part-local helpers.
-
-## 2026-10-30 - session part 20: split module static check and CI poll
-
-### Done
-- Re-read START_HERE, GUIDANCE, LANES, lane notes and LATEST; ran
-  `project_status.py --check` (exit 0; handoff index only).
-- Distinguished committed bytes from the worktree: `HEAD 83710e22` still has
-  descent `9CC74F80...`, while the uncommitted split-high repair is
-  `F5E3C49D...`. Run `41023888165` belongs to the old committed bytes.
-- Polled run `41023888165` through the GitHub API at 08:13 UTC: run and its sole
-  `build` job remain `in_progress`; no conclusion or exit code is available.
-- Reran the descent static audit against the exact split worktree bytes: exit 0,
-  all checks true, including eight part-local high helpers, 216 tested `omega`
-  leaves, 27 high IDs, and no broad `norm_num at h` in that section.
-
-### Files (SHA256, uppercase)
-- `EnergyTerminalBatchB13DescentBounds.lean` (uncommitted)
-  `F5E3C49DC61FC031CBB32C2686BBA721909EC695850A661BD8E789DC59EB8794`.
-- `emit_b13_descent_bounds.py`
-  `EB330B219C95949D35EB33C11D6D0A3E6E95F675CAD735EE65ECB9871CE605C7`.
-- `audit_b13_descent.py`
-  `B4118EB0220E9802229BA7E814B634FB06450479C93C59D8EA4E18914071F32E`.
-- `audit_b13_descent-report.json`
-  `387D35F08E82F89A8E4582FA146D22099FCB647A7F68FF60E27E9FCCFC5A7DCC`.
-
-### Checks (exact scope)
-- `audit_b13_descent.py` exit 0 on the split worktree source: 16 direct imports,
-  44 referenced modules in a 594-module closure, 57 x 1182 literals, 216 omega
-  leaves, zero kernel decisions, exact emitter reproduction.
-- GitHub API poll is a scheduling observation, not a Lean verdict. No local
-  project build was run. Kernel status remains CI-only.
-
-### Still unproved / unverified
-- Both `9CC74F80...` (old CI bytes) and `F5E3C49D...` (split bytes) are
-  **CI pending / unpaid**. DescentBounds, B13 and B13Main still need three exact
-  exit-0 lines on matching bytes. Residual 389 and the full-disk theorem remain
-  unpaid.
-
-### Next concrete step
-- Supervisor commits `F5E3C49D...`, then start fresh CI; read DescentBounds'
-  exact exit first, and only on 0 inspect B13, then B13Main. If DescentBounds is
-  still red, use the first split-helper error line without raising heartbeats.
-
-## 2026-10-30 - session part 21: exact-byte CI gap confirmed
-
-### Done
-- Re-read lane guidance, lane notes and CI summary; recomputed the three module
-  hashes and reran the descent static audit on the current worktree bytes.
-- Queried GitHub runs through the REST API: latest run `41023888165` (head
-  `83710e22`) remains `in_progress`; it contains the old committed descent
-  `9CC74F80...`. No run exists for uncommitted split bytes `F5E3C49D...`.
-- `audit_b13_descent.py` exit 0: all 32 checks true, including eight part-local
-  helpers, 216 omega leaves, 57x1182 literals, 27 high IDs, zero kernel decodes,
-  and exact emitter reproduction.
-
-### Files (SHA256, uppercase)
-- `EnergyTerminalBatchB13DescentBounds.lean` (uncommitted)
-  `F5E3C49DC61FC031CBB32C2686BBA721909EC695850A661BD8E789DC59EB8794`.
-- `EnergyTerminalBatchB13.lean` unchanged
-  `3DD37313505E0E8D608D50D42D3AFB1F1E08CEBBDF1ACD5DB570F57D9DC8FD03`.
-- `EnergyTerminalBatchB13Main.lean` unchanged
-  `2A6A206FE49CD299FCA69221B12B888B55EF6A3A92E34189B3E48C72761D0F98`.
-
-### Checks (exact scope)
-- Static source/emitter/import audit exit 0 on `F5E3C49D...`; GitHub status
-  query is scheduling evidence only. No local project Lean build was run.
-- `python3 tools/project_status.py --check` exit 0 (handoff-index declarations
-  only, not mathematics or full file integrity).
-
-### Still unproved / unverified
-- `F5E3C49D...` is **drafted / CI pending / unpaid**. DescentBounds, B13 and
-  B13Main each need exit 0 on matching bytes. Residual 389,
-  SevenClassExclusions and the arbitrary-center full-disk theorem remain unpaid.
-
-### Next concrete step
-- Supervisor commits `F5E3C49D...`, then CI must bind and report DescentBounds
-  exit 0 first; only then inspect B13 and B13Main in order.
-
-## 2026-10-30 - session part 22: core B13Main separated from lane-C census
-
-### Done
-- Read the live log of CI run `41027178023`, job `123973247894`, bound to
-  commit `34b14918`. Exact module exits before the edit: Next1182 `0`,
-  Next505Bounds `0`, DescentBounds `0`, B13 `0`, B13Main `1`.
-- B13Main's only failure was its optional literal-census wrapper compiling
-  lane-C `EnergyTerminalResidualCensusC03` (free-variable errors at line 16).
-  Removed that optional import and the two literal-census corollaries. The
-  remaining module is the core three-import wrapper used by the root request.
-- Updated `audit_b13main.py` to require absence of the lane-C census dependency
-  and to audit the two surviving core APIs.
-
-### Files (SHA256, uppercase)
-- `EnergyTerminalBatchB13Main.lean`
-  `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`.
-- `audit_b13main.py`
-  `F5D5D8F01BF3147657A5834611C9A9C165EC5F60037EAFACAD5D30DFAB35E943`.
-- B13 and DescentBounds unchanged: `3DD37313...` and `F5E3C49D...`.
-- `audit_b13_descent.py` and `TARGETS.txt` unchanged.
-
-### Checks (exact scope)
-- Live CI log, current pre-edit bytes: Next1182/T505Bounds/DescentBounds/B13
-  each `=== EXIT ... 0`; B13Main `=== EXIT ... 1` solely on C03. The run was
-  still `in_progress` on the root, so this is not a completed-run verdict.
-- `audit_b13main.py`, `audit_b13_descent.py`, `audit_b13_closure.py`,
-  `audit_next1182_blocks.py`, and `audit_target_imports.py` all exit 0 on the
-  edited worktree. Target closure: 1914 modules, no missing imports/forbidden
-  tokens. Reports are static source audits, not Lean elaboration.
-
-### Still unproved / unverified
-- The edited `521CA436...` B13Main is **drafted / CI pending / unpaid**. B13
-  and DescentBounds are CI green on `34b14918`, but B13Main still needs exit 0
-  on the matching new bytes.
-- The literal 389-id census wrapper is intentionally not in B13Main; its lane-C
-  C03 source remains red. Residual 389, SevenClassExclusions and the full-disk
-  theorem remain unpaid.
-
-### Next concrete step
-- Supervisor commits `521CA436...`; fresh CI must report B13Main exit 0. Then
-  request root replacement of B12Main by B13Main. Keep the literal-census
-  wrapper separate until lane C repairs and builds its module.
+- Supervisor imports B13Main instead of B12Main, then fresh CI must prove the
+  root with that import. Mathematical work now returns to lane C's 389 residual
+  and SevenClassExclusions; do not report them as reduced by B13.
