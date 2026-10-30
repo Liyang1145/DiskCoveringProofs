@@ -116,6 +116,28 @@ def emit_row_caps(rows):
     blocks = []
     for node, _, db, _, _, _ in rows:
         mat = ",\n      ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
+        leaf_lemmas = []
+        for i in range(10):
+            for j in range(10):
+                leaf_lemmas.append(f'''theorem row_cap_{node}_{i}_{j} :
+    (∑ q : Fin 9, yW_{node} q * rowA {i} {j} q) ≤ db_{node} {i} {j} := by
+  norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]''')
+        leaf_src = "\n\n".join(leaf_lemmas)
+        row_lemmas = "\n\n".join(
+            f'''theorem row_cap_{node}_{i} (j : Fin 10) :
+    (∑ q : Fin 9, yW_{node} q * rowA {i} j q) ≤ db_{node} {i} j := by
+  fin_cases j <;>
+    first
+    | exact row_cap_{node}_{i}_0
+    | exact row_cap_{node}_{i}_1
+    | exact row_cap_{node}_{i}_2
+    | exact row_cap_{node}_{i}_3
+    | exact row_cap_{node}_{i}_4
+    | exact row_cap_{node}_{i}_5
+    | exact row_cap_{node}_{i}_6
+    | exact row_cap_{node}_{i}_7
+    | exact row_cap_{node}_{i}_8
+    | exact row_cap_{node}_{i}_9''' for i in range(10))
         blocks.append(f'''def dbmVal_{node} : Fin 10 → Fin 10 → ℤ
   | i, j => ![
       {mat}
@@ -123,45 +145,9 @@ def emit_row_caps(rows):
 
 def db_{node} (i j : Fin 10) : ℚ := (dbmVal_{node} i j : ℚ) / 4096
 
-theorem row_cap_{node}_0 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 0 j q) ≤ db_{node} 0 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+{leaf_src}
 
-theorem row_cap_{node}_1 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 1 j q) ≤ db_{node} 1 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_2 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 2 j q) ≤ db_{node} 2 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_3 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 3 j q) ≤ db_{node} 3 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_4 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 4 j q) ≤ db_{node} 4 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_5 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 5 j q) ≤ db_{node} 5 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_6 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 6 j q) ≤ db_{node} 6 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_7 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 7 j q) ≤ db_{node} 7 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_8 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 8 j q) ≤ db_{node} 8 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
-
-theorem row_cap_{node}_9 (j : Fin 10) :
-    (∑ q : Fin 9, yW_{node} q * rowA 9 j q) ≤ db_{node} 9 j := by
-  fin_cases j <;> norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]
+{row_lemmas}
 
 theorem row_cap_{node} (i j : Fin 10) :
     (∑ q : Fin 9, yW_{node} q * rowA i j q) ≤ db_{node} i j := by
