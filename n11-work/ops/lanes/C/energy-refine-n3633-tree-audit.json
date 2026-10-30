@@ -1,0 +1,23 @@
+{
+  "scope": "exact integer tree data only; no MPacket, Lean build or kernel credit",
+  "node": 3633,
+  "refine_sha256": "8192fc0e83d46d600c9380f7d84da35f2b254dd1914de76e5eec12127723c59e",
+  "source_sha256": "bd4e71cb29804a5a3d5953727558f4656d23253a83b69f5c3d6e25eeb4ea8ed5",
+  "root_scale_entries_checked": 100,
+  "root_scale_mismatches": [],
+  "root_metadata": {
+    "terminal": false,
+    "i": 1,
+    "j": 6,
+    "m": 507904,
+    "left": 1,
+    "right": 2
+  },
+  "split_entries_checked": 200,
+  "split_violations": [],
+  "child_terminal": {
+    "1": true,
+    "2": true
+  },
+  "passed": true
+}

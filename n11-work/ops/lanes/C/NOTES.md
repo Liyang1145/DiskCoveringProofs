@@ -85,127 +85,124 @@ credit.  Correct activation order is DescentBounds -> B13 -> B13Main -> consumer
 - Run `41021956701` was cancelled before producing a Lean exit.  Run
   `41023888165` (head `83710e22`) was in progress at this session's close.
 
-## 2026-10-30 - part 107 (archive refinement discovery + restoration)
+## 2026-10-30 - parts 107-110 (archive restoration, condensed)
 
-Did: audited `origin/ci/n11-build` archive
-`ci-n11/drafts/energy/N11Formalization/EnergyRefineN*.lean` against the exact
-389-ID census.  Found **57 distinct residual IDs** represented by refinement
-drafts (14.65% of the residual set): `{3,23,37,38,39,40,2337,2341,2965,3040,
-3112,3116,3149,3431,3432,3440,3490,3496,3517,3520,3522,3550,3564,3569,3573,
-3578,3589,3623,3633,3738,3777,3778,3781,3783,3792,3794,3795,3800,3802,3803,
-3807,3808,3810,3821,3825,3841,3851,3853,3854,3863,3865,3979,4162,4244,4313,
-4650,4684}`; IDs SHA256 `cce8dda2bf536edf11b842966d1cf1e9cc75154b2e4f7b69ba814f4657d34057`.
-All 57 have matching filename/terminal/`newIDs`/`node_radius`/axiom-print ids.
-They total 6,949,370 bytes and 724 `decide +kernel` sites.  All 57 carry the
-archive marker "pre-validated; NOT compiled"; 15 set `maxHeartbeats 0`, so the
-family is not admissible as-is (the other 42 still need bounded kernel audit).
+Audited `origin/ci/n11-build` and found 57 distinct residual refinement drafts
+(6,949,370 B; 15 use forbidden `maxHeartbeats 0`).  Restored exact bytes for the
+CI-green generic `Paid16MatrixCellCertificate` and `EnergyRefineN2341`, then the
+currently pending `EnergyRefineN3040`.  Exact tree audits for 2341 and 3040 pass:
+100 root scale entries, 200 split inequalities, root split `i=1,j=6`, terminal
+children.  A bounded local preflight failed during Lake checkout and is not a
+Lean verdict.  Full historical hashes remain in git history; current artifacts
+are recorded below.
+## 2026-10-30 - part 111 (N2341 green; N3040 restored and audited)
 
-Restored two exact archive bytes as new current-tree modules: the 9,986-byte
-generic `Paid16MatrixCellCertificate` framework and the 28,383-byte smallest
-admissible-format candidate `EnergyRefineN2341` (six kernel checks, no forbidden
-token).  Added both, framework first, to lane C CI targets.  This makes the next
-kernel result decisive without claiming any packet or residual as paid.
+Did: read artifact `12966223963` from run `41027178023` (commit `34b14918`).
+Its `summary.json` records exit 0 for both `Paid16MatrixCellCertificate` and
+`EnergyRefineN2341`; the job conclusion is success and `built_count` is 5.
+These two modules are therefore **CI green**, not merely draft or pending.
+
+Restored exact archive bytes as `EnergyRefineN3040.lean` (git blob object
+`99738366706c00b7032c58086736b9b37b6e8669`, matching
+`origin/ci/n11-build:ci-n11/drafts/energy/N11Formalization/EnergyRefineN3040.lean`;
+SHA256 `7fcd5e3b8d528dfd3602a1f84709ca66c54e78de198116caec28d8b47ac4e057`).
+Added it to `TARGETS.txt` after N2341.  Independent exact-integer audit checks
+all 100 root scale entries and all 200 split inequalities: zero mismatches,
+root metadata `terminal=false, i=1, j=6, m=491520, left=1, right=2`, both
+children terminal.
 
 Files / SHA256 (lowercase):
-- `n11-work/lean/N11Formalization/Paid16MatrixCellCertificate.lean`
-  `a9c8cf1bf6a730809c023ca76f5566ebe6ca4d2a1afe0c1d47d248598a25eae1`.
-- `n11-work/lean/N11Formalization/EnergyRefineN2341.lean`
-  `49a253b6429af4a68c6915678ca00ee4c3a0d7b1ce76664924d22c08a887f23f`.
-- `n11-work/ops/lanes/C/audit_archive_energy_refinements.py`
-  `f865b8a260eebaef71f11833274e1495cae0fd1c7ad0550017cb72238086c074`.
-- `n11-work/ops/lanes/C/archive-energy-refinement-audit.json`
-  `394c23cc22a29e07ed6bd392dd23c05f87d4603a05781276d8277e99c8338d10`.
+- `n11-work/ops/lanes/C/audit_energy_refine_n3040_tree.py`
+  `be05b3803b4e3854655a6d4c8c038233b9eec9d36756f6e5498b88666c440559`.
+- `n11-work/ops/lanes/C/energy-refine-n3040-tree-audit.json`
+  `11a75ec22e4b86be3a2952f5dfdfa1b6173156b73b6029144cb669ba1a5dd0a2`.
 - `n11-work/ops/lanes/C/TARGETS.txt`
-  `06b4bbd8f442215bc8edc6f109dfb13dc7f7d46afc50736344806df2d4e8bfff`.
+  `988bc2e0dd9419640d9160e3bb8ad66367fc9bac83e2457e4d35b3b35d3e6707`.
 
-Checks (exact scope): archive audit exits 0; 57/57 static theorem shapes match;
-57/57 ids are in the 389 census; restored framework bytes exactly equal the
-archive blob hash; framework imports the present `Paid16CellCertificate`; hard-
-rule token scan of both restored modules is clean; new script passes
-`py_compile`; `git diff --check` exits 0.  No Lean build was run locally, so the
-framework and node 2341 are **CI pending**, not green, and pay no residual id.
+Checks (scope): blob hash equality, audit exit 0, `py_compile` exit 0,
+`git diff --check` exit 0, forbidden-token scan clean.  `EnergyRefineN3040` is
+**CI pending**; the six MPacket kernel checks remain unverified.  No local Lean
+build was run.  It pays no residual ID until CI exits 0 and a consumer links it.
 
-Still unproved/missing: CI exit 0 plus axiom report for
-`Paid16MatrixCellCertificate` and `EnergyRefineN2341`; `EnergyRefineN2341`'s six
-kernel decisions and its generated data are unverified; 56 other archive drafts
-need admissibility repair and kernel checks; the other 332 residual ids still
-have no recovered certificate/data; seven exclusions still need `hf0`/`hg` and
-a `RemainingTerminalRadius` bridge; B13/B13Main remain red.
+Still unproved/missing: CI for N3040; 55 other archive drafts; 332 absent
+certificate/data IDs; seven exclusion-to-radius bridges.  Next: require N3040
+exit 0.  If green, restore non-public payload `EnergyRefineN2965` (28,441 B)
+with the same exact-byte and tree audit; if red, fix only its first error.
 
-Next: on the next CI run, require framework exit 0 first.  If green, read
-`EnergyRefineN2341` exit and axiom output exactly; if red, fix only the first
-compilation error (do not weaken the statement or add resource blowups).  If
-both green, restore the remaining smallest bundle incrementally, never as one
-aggregate.
+## 2026-10-30 - part 112 (N2965 restored and tree-audited)
 
-## 2026-10-30 - part 108 (bounded local compile preflight)
-
-Did: inspected the restored framework and node 2341 declarations/imports and ran
-one bounded direct invocation, `timeout 25s lake env lean
-N11Formalization/Paid16MatrixCellCertificate.lean` from `n11-work/lean`.  Lake
-stopped during Mathlib revision checkout (`0df444a...`) because untracked files
-would be overwritten.  It never reached Lean import resolution or parsing, so
-this is neither a Lean error nor a pass.  No file in the project was modified by
-that check; `git status --short` still shows only the part-107 lane files.
-
-Conclusion/scope: local project compilation remains unavailable/unsafe under
-the 2-core sandbox.  CI ordering in `TARGETS.txt` is correct: generic framework
-immediately before node 2341.  Both remain **CI pending** and pay no residual
-ID.  The unresolved mathematical obligations are unchanged (six node-2341
-kernel decisions and packet validity; 56 other drafts; 332 missing
-certificate/data IDs; geometry/remaining-radius linkage).
-
-Next: supervisor commit/push part-107 bytes, then read CI's first Lean error for
-`Paid16MatrixCellCertificate` only.  Do not run another local project build.
-
-## 2026-10-30 - part 109 (restoration order audit)
-
-Did: checked the current worktree and CI index.  The two part-107 modules are
-still untracked, and `TARGETS.txt` orders the framework before node 2341.  The
-latest indexed runs are `41017279843` (in progress) and `41011262474` (success,
-older head); neither reports either new module, so both remain **CI pending**.
-Sorted the 57 archive modules by byte size after excluding any with
-`maxHeartbeats 0` or another forbidden-token hit.  Forty-two have clean static
-token scans.  The first three restoration candidates are `2341` (28,383 B),
-`2337` (28,421 B), and `3040` (28,437 B), each with six kernel `decide` sites.
-The first two are already among the seven public exclusions; `3040` is the
-smallest archive node that supplies previously absent payload material.
-
-Checks (exact scope): `git status --short`, `TARGETS.txt` contents, the
-part-107 static audit JSON, and a sort/filter over its 57 `modules` records.
-No Lean build, CI log, kernel result, or mathematical payment was produced.
-
-Next: when CI reports, inspect framework exit first and node 2341 second.  If
-both are green, restore only `EnergyRefineN3040` (exact archive bytes), add it
-after node 2341 in `TARGETS.txt`, and request a fresh CI run.  If either current
-target is red, fix only its first compilation error.
-
-## 2026-10-30 - part 110 (N2341 exact tree-data audit)
-
-Did: added an independent exact-integer audit of the restored 3-node refinement
-`EnergyRefineN2341`.  It recomputed the root scale identity against frozen
-`DBMSourceTreeData` and both `DBMTreeKernel.Valid` split inequalities.  Result:
-all 100 root entries satisfy `node0.db = 256 * source2341.db`; all 200 child
-inequalities hold; root metadata is `terminal=false, i=1, j=6, m=589824,
-left=1, right=2`; both children are terminal.  Therefore the tree/split layer
-is exact; any failure in the Lean node is isolated to the framework or MPacket.
+Did: restored exact `origin/ci/n11-build` archive bytes as
+`EnergyRefineN2965.lean` (git blob `22b863e9992ff2d3cf99192034a4dbb9b79357e9`,
+SHA256 `fa6abd13bf6a12f0dc3b6fd90af620102c628bb307484866d20752844899306a`).
+Generalized the exact-integer tree auditor to accept a node argument, preserving
+the N3040 report and adding N2965.  N2965 passes all 100 root scale entries and
+all 200 split inequalities; root metadata is `terminal=false, i=1, j=6,
+m=458752, left=1, right=2`, and both children are terminal.  Added N2965 after
+N3040 in CI targets.
 
 Files / SHA256 (lowercase):
-- `n11-work/ops/lanes/C/audit_energy_refine_n2341_tree.py`
-  `a050ba28a26b0b11e3104ea9e4346406ae75b4219d4ee8636a8dda222b95e2fe`.
-- `n11-work/ops/lanes/C/energy-refine-n2341-tree-audit.json`
-  `d4a1021cdc968b7d09ef22802e165958365d44ba59f701d2e6d5e48b6851814b`.
+- `n11-work/ops/lanes/C/audit_energy_refine_n3040_tree.py`
+  `16eec03c370489f10e68157247ea1532a8d2b78ec035584f21ee31a5865d3d1c`.
+- `n11-work/ops/lanes/C/energy-refine-n2965-tree-audit.json`
+  `89a268e968388edacac9b2e9b4ebdb086578ebce694fb1c9506a8fe1fae58786`.
+- `n11-work/ops/lanes/C/TARGETS.txt`
+  `4efdd6fab6e94d87e5ee00f7a91de573181e269a41ebd66138c7ee422bf645b8`.
 
-Checks (exact scope): audit exits 0; `py_compile` exits 0; `git diff --check`
-exits 0.  GitHub run `41027178023` at commit `34b14918` was still in its Build
-step when checked, so `Paid16MatrixCellCertificate` and `EnergyRefineN2341`
-remain **CI pending**.  This audit is not a Lean/kernel verdict and pays no
-residual ID.
+Checks (exact scope): archive byte equality (`cmp` and git blob), both audit
+invocations exit 0, `py_compile` exit 0, forbidden-token scan clean, and
+`git diff --check` exit 0.  No Lean build or kernel check was run.  N3040 and
+N2965 remain **CI pending**; neither pays a residual ID.  Their six MPacket
+`decide +kernel` sites and axiom reports are unverified.  The tree audits prove
+only the integer split/scale layer against frozen `DBMSourceTreeData`.
+GitHub run `41035092539` (`n11-lean-build`, head `22719e0d`) was still
+`in_progress` on job `123993863813` when checked; it includes N3040 but not the
+uncommitted N2965 target.
 
-Still unproved/missing: CI exit 0 and axiom report for the framework and node
-2341; the six MPacket `decide +kernel` fields in node 2341; 56 other draft
-modules; 332 absent certificate/data IDs; seven exclusion-to-radius bridges.
+Still unproved/missing: CI exits and axiom reports for N3040/N2965; 54 other
+archive drafts; 332 absent certificate/data IDs; seven exclusion-to-radius
+bridges; B13/B13Main red.  Next: require N3040 exit 0, then N2965.  If both are
+green, restore non-public `EnergyRefineN2337` only after checking its exact
+payload is not merely one of the seven already-public exclusions; if red, fix
+only the first compilation error.
 
-Next: read run `41027178023`'s artifact summary.  Require framework exit 0
-before diagnosing node 2341; if red, fix only the first compile error.  If both
-green, restore `EnergyRefineN3040` as the next disjoint payload bundle.
+## 2026-10-30 - parts 113-114 (N3440/N3589/N3623 restored, condensed)
+
+Restored exact `origin/ci/n11-build` blobs for three non-public refinements and
+added them to `TARGETS.txt`. Each passed the exact-integer auditor: zero errors
+among 100 root-scale entries and 200 split inequalities; root `(false,1,6,m,1,2)`
+with both children terminal. SHA256: N3440 `6420041457438e3f3a9102f0995eabe64e99a48b74047c2d9391a0319a9e72b1`
+(m=491520), N3589 `02992f0cbc721f3f4ca087b5b28f5430ae8853513ff00e39891759c4a6362e1b`
+(m=491520), N3623 `7b3eca9d0c37c2889ccf4331f7ee69579be43ba9f1dd05696f2a5b5698f326ee`
+(m=507904); audit JSONs `f68dea65...6697ca`, `e8ab1da7...f9159ba`,
+`9246abf2...c6e9bc1` respectively. Additional checks: `py_compile`, forbidden
+token scan, `git diff --check`, all exit 0. These modules are **CI pending**;
+tree audits cover only DBM split/scale, and no residual is paid without green
+CI plus a mathematical consumer.
+
+## 2026-10-30 - part 115 (N3633 restored and tree-audited)
+
+Restored exact archive blob `c5701aa84e6c59a8650d750d695cb023d697dbd3` from
+`ci-n11/drafts/energy/N11Formalization/EnergyRefineN3633.lean` as
+`EnergyRefineN3633.lean`; added `N11Formalization.EnergyRefineN3633` after
+N3623 in CI targets. The exact-integer audit passes all 100 root scale entries
+and all 200 split inequalities. Root metadata is `terminal=false, i=1, j=6,
+m=507904, left=1, right=2`; both children are terminal.
+
+Files / SHA256 (lowercase):
+- `n11-work/lean/N11Formalization/EnergyRefineN3633.lean`
+  `8192fc0e83d46d600c9380f7d84da35f2b254dd1914de76e5eec12127723c59e`.
+- `n11-work/ops/lanes/C/energy-refine-n3633-tree-audit.json`
+  `29120643c7a7baa912ed3a66f00f22788b2f135f5023cc014cd86afd1d5201db`.
+- `n11-work/ops/lanes/C/TARGETS.txt`
+  `6b93a18632296a23dece3fa594be1689b8490aa9cd1c6f78741e198ab4d16bd0`.
+
+Checks (scope): archive blob equality, audit exit 0, `py_compile` exit 0,
+forbidden-token scan clean, `git diff --check` exit 0. No Lean build or kernel
+check was run. N3633 is **CI pending**; MPacket validation, axiom report, and
+residual payment are unverified. The audit covers only DBM split/scale data.
+
+Still unproved/missing: CI exits/axioms for N2965/N3040/N3440/N3589/N3623/N3633;
+50 other archive drafts; 332 absent certificate/data IDs; seven
+exclusion-to-radius bridges; B13/B13Main red. Next: require N3633 CI exit 0;
+if green enumerate the remaining draft inventory and restore the next bounded
+non-public refinement, if red fix only its first compilation error.
