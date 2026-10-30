@@ -15,46 +15,20 @@
   `RemainingTerminalRadius`.
 - Do not replace exact roots/quantifiers with cached verdicts or decimals.
 
-## Condensed history through part 119
+## Condensed history through part 131
 
-- Exact B13 residual census is 389 ids. Public exclusion payloads cover
-  `{1409,2337,2341,2356,2360,2368,2370}`; 382 HOST records remain absent.
-  Seven public exclusions are formally residual and unpaid, not radius proofs.
-- The frozen-cap wide-field family gives exact rational checks for seven
-  probability vectors, 700 ordered row caps, and strict `gain < T^2` margins.
-  Later row-cap splitting remained CI-red from heartbeat limits; stop that family.
-- A scan of 702 public/restored JSON files (51,466,284 B, plus two oversized C450
-  files) found zero payloads for the other 382 ids. This is not proof of external
-  HOST absence.
-- Found 57 distinct residual refinement drafts on `origin/ci/n11-build`
-  (6,949,370 B; 15 use forbidden `maxHeartbeats 0`). Do not mass-import them.
-- Run `41027178023` (commit `34b14918`) is green for
-  `Paid16MatrixCellCertificate`, `EnergyRefineN2341`, all B13 prerequisites,
-  and B13. Its old B13Main was red solely because it imported the broken
-  residual-census path; the current B13Main has that import removed.
-- Restored exact archive bytes for `EnergyRefineN3040`, N2965, N3440, N3589,
-  N3623, and N3633. Each passes 100 root-scale and 200 split checks, with root
-  `(terminal=false, i=1, j=6, m=491520, left=1, right=2)` and terminal children.
-  These are static/data checks only; their Lean modules and packets are CI pending.
-- N3040 SHA256 is
-  `7fcd5e3b8d528dfd3602a1f84709ca66c54e78de198116caec28d8b47ac4e057`.
-
-## Earlier singleton chains, parts 120-124 (condensed)
-
-- Wrapper/main pairs were emitted for N3040, N2965, N3440, and N3589 from the
-  audited N2965 template; `emit_refine_singleton.py` makes 3589/3623/3633
-  reproducible. Their stored tree audits cover integer tree data only:
-  N3440/N3589 report 100/100 root-scale and 200/200 split checks.
-- The membership audit covers 57 Next1182 components (union 1182, largest 21,
-  `S07.ids55`) and finds none of 3040/3440/3589/3623/3633. Absence from
-  B10/remaining-210 still rests on kernel `decide`; Next505 uses the audited
-  bound. All these chains remain **CI pending** unless LATEST proves otherwise.
-- Then-unproved: packet/kernel validity, residual positive-packet/no-cell
-  bridges, exclusion-to-radius bridges, and the energy/seven-class premises.
-
-## Earlier N3623/combined/CI history, parts 125-131 (condensed)
-
-- N3623 wrapper/main emitted with exact data audit; all seven singleton chains and the combined seven-certificate pair remained CI pending. The old residual-census import was removed after a CI type error. These older details are superseded by the later per-node entries below.
+- Exact B13 residual census is 389 ids. Seven public exclusions
+  `{1409,2337,2341,2356,2360,2368,2370}` are residual and unpaid; no public
+  payloads were found for the other 382 (not proof of external HOST absence).
+- The wide-field family has exact checks for seven vectors, 700 row caps and
+  strict `gain < T^2`; later bulk row-cap splitting was CI-red/timed out.
+- Found 57 archive refinement drafts on `origin/ci/n11-build`; 15 are forbidden,
+  so do not mass-import. Earlier N3040/N2965/N3440/N3589/N3623/N3633 singleton
+  chains pass integer tree audits (root 491520, terminal children), not packet
+  validity. Membership covers 57 Next1182 components; B10/remaining-210
+  absence still rests on kernel `decide`. All such chains are CI pending unless
+  LATEST says otherwise. Unproved throughout: packet/kernel validity, positive
+  packet/no-cell and exclusion-to-radius bridges, energy and seven-class premises.
 ## 2026-10-30 - parts 132-136, condensed
 
 - Restored and audited singleton chains N2337/N2341/N3040/N2965/N3440/N3589/
@@ -212,37 +186,38 @@ Next: fresh CI must isolate the first red target after `EnergyRefineN0037`;
 do not extend the paid aggregate until each source and wrapper exits 0.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-30 - part 149 (N3112 drafted)
+## 2026-10-30 - parts 149-151, condensed
+N3112/N3116/N3431/N3573 source trees and conditional wrappers were restored and
+audited (static exact-integer scope); N0037/Twelve/N3112/N3116/N3431/N3573
+kernel exits remain CI pending. Part 150 fixed a stale Eight diagnostic and
+reordered N0037/Twelve before Eleven. Part 151's three refinements each passed
+100/100 root and 400/400 split checks.
 
-Restored/audited N3112 (5 nodes; terminal `{1,3,4}`; 100/100 root, 400/400
-split, data scope only) and emitted conditional `Refine3112`/Main, paid count
-1998. All **CI pending**. Source `1b76594f3d3102f3e5c2902bfd19521bbb185f37cdbf6f278dfb77d6cf00318c`.
+## 2026-10-30 - parts 152-155, condensed
+The old all-pairs row caps and their decomposed 100-leaf versions were CI red;
+explicit `Fin` annotations (part 154) did not cure the failures. Generator
+checked 700/700 exact-rational caps with min slack 0; DBM SHA256 begins
+`BD4E71CB`, and generated module hashes are recorded in git history. Static
+checks passed but exact arithmetic is not kernel credit. Part-154 bytes are
+superseded by the CI result in part 156; no row-cap credit is claimed.
 
-## 2026-10-30 - part 150 (stale Eight diagnosis)
+## 2026-10-30 - part 156 (CI red: first row-cap leaf still unresolved)
+Run `41115384387` (`9445f2b2`) completed **red**. The part-154 rewrites did not
+fix the row caps: 1409/2337/2341/2360/2368/2370 all fail at declaration
+`FrozenCapRowCap*.lean:34:53` (`unsolved goals`), while 2356 hits the 200000
+heartbeat limit at `:33:0`. Thus explicit `Fin` annotations were not the cause.
+CI's captured log gives only the declaration position, not the residual goal.
+Exact source hashes remain those recorded in part 154; I did not regenerate
+under a new unverified tactic. A minimal Mathlib probe reproducing the first
+summand timed out at 90s during imports (exit 124), so it is inconclusive and
+no local Lean claim is made. FrozenCapRationalCore itself is CI green (`0`).
 
-Old CI error `RefineEight.lean:63:50` was already fixed in worktree; no kernel
-claim. Reordered N0037/Twelve before Eleven in `TARGETS.txt`.
-
-## 2026-10-30 - part 152 (row-cap red cause fixed in generator)
-
-Pulled CI run `41098508743` logs. `FrozenCapPublicExcludedTree` exited 1 because
-all seven `FrozenCapRowCap*` dependencies failed at their `row_cap` proof:
-transparent `norm_num` left goals of form `... ≤ ↑(dbmVal 0 ⟨j, _⟩) / 4096`
-unreduced (2356 also hit 200000 heartbeats). Patched
-`n11-work/ops/lanes/C/emit_frozen_cap_row_caps.py` to include `dbmVal` in the
-unfold set, then regenerated the seven modules.
-
-Checks: generator exact-audited 700/700 ordered caps against the frozen DBM
-(`BD4E71CB…A8ED5`), minimum slack 0, exit 0; static exclusion audit exit 0
-(closure 460, seven exact theorem ids, no forbidden imports/tokens);
-`git diff --check` exit 0. This is data/static scope only. The corrected row-cap
-proofs, exclusion theorem and axiom reports remain **CI pending**.
-Row-cap SHA256: 1409 `6778EACA…D2B5`, 2337 `FBBA6318…FDC5`, 2341
-`B445A626…A3C6`, 2356 `2905ACF6…F85D`, 2360 `C9981064…DCB1`, 2368
-`3CF9BDD1…3C60`, 2370 `61ACA6E6…22D6`.
-Still missing: kernel exits for this chain; N0037/Twelve/N3112/N3116/N3431/
-N3573 chains; 373 residual ids conditional on exits; MPacket validity;
-packet/no-cell and exclusion-to-radius bridges; energy and seven-class premises.
-Next: fresh CI must confirm all seven row caps and then
-`FrozenCapPublicExcludedTree`; if green, inspect the first pending singleton
-error rather than extending the paid aggregate. ROOT-IMPORT REQUEST: none.
+Interpretation/next concrete step: isolate a one-leaf module importing
+`FrozenCapRationalCore` plus `Mathlib.Tactic.NormNum`, containing only
+`rowA`, one `y_1409` literal, and the first cap; add only that probe to
+TARGETS. If it is red, test simplification of `Fin.val`/`if` before changing
+all 700 leaves; if green, difference the failing declaration's exact term.
+Do not claim any row-cap/kernel credit or reduce the residual. Other missing
+obligations unchanged: public-tree assembly, residual-chain exits, MPacket
+validity, packet/no-cell and exclusion-to-radius bridges, energy/seven-class.
+ROOT-IMPORT REQUEST: none.

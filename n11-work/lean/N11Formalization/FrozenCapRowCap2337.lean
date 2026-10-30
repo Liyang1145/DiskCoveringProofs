@@ -30,10 +30,1079 @@ def dbmVal : Fin 10 → Fin 10 → ℤ
 
 def db (i j : Fin 10) : ℚ := (dbmVal i j : ℚ) / 4096
 
+theorem row_cap_2337_0_0 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 0 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 0 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_1 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 0 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 1 = (3 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_2 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 0 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 2 = (3 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_3 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 0 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 3 = (3 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_4 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 0 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 4 = (5 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_5 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 0 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 5 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_6 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 0 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 6 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_7 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 0 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 7 = (11 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_8 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 0 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 8 = (11 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0_9 :
+    y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 0 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 0 9 = (1 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_0 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 1 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 0 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_1 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 1 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 1 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_2 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 1 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 2 = (3 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_3 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 1 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 3 = (3 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_4 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 1 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 4 = (5 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_5 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 1 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 5 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_6 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 1 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 6 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_7 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 1 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 7 = (11 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_8 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 1 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 8 = (11 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_1_9 :
+    y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 1 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 1 9 = (1 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_0 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 2 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 0 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_1 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 2 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 1 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_2 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 2 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 2 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_3 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 2 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 3 = (3 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_4 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 2 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 4 = (5 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_5 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 2 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 5 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_6 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 2 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 6 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_7 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 2 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 7 = (11 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_8 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 2 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 8 = (11 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_2_9 :
+    y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 2 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 2 9 = (1 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_0 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 3 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 0 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_1 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 3 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 1 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_2 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 3 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 2 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_3 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 3 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 3 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_4 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 3 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 4 = (5 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_5 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 3 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 5 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_6 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 3 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 6 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_7 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 3 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 7 = (5 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_8 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 3 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 8 = (5 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_3_9 :
+    y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 3 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 3 9 = (1 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_0 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 4 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 0 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_1 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 4 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 1 = (-1 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_2 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 4 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 2 = (-1 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_3 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 4 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 3 = (-1 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_4 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 4 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 4 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_5 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 4 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 5 = (1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_6 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 4 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 6 = (1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_7 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 4 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 7 = (3 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_8 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 4 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 8 = (3 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_4_9 :
+    y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 4 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (3 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 4 9 = (3 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_0 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 5 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (-3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 0 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_1 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 5 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (-3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 1 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_2 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 5 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (-3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 2 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_3 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 5 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (-3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 3 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_4 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 5 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 4 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_5 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 5 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 5 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_6 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 5 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 6 = (1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_7 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 5 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 7 = (1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_8 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 5 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 8 = (1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_5_9 :
+    y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 5 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 5 9 = (3 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_0 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 6 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 0 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_1 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 6 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 1 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_2 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 6 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 2 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_3 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 6 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 3 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_4 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 6 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 4 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_5 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 6 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 5 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_6 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 6 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 6 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_7 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 6 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 7 = (1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_8 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 6 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 8 = (1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_6_9 :
+    y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 6 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 6 9 = (3 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_0 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 7 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 0 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_1 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 7 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 1 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_2 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 7 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 2 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_3 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 7 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 3 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_4 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 7 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 4 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_5 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 7 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 5 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_6 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 7 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 6 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_7 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 7 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 7 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_8 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 7 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 8 = (1 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_7_9 :
+    y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 7 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 7 9 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_0 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 8 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (-5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 0 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_1 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 8 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (-5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 1 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_2 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 8 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (-5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 2 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_3 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 8 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (-5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 3 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_4 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 8 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (-3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 4 = (-1 : ℚ) / 4 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_5 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 8 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 5 = (-1 : ℚ) / 8 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_6 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 8 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 6 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_7 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 8 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 7 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_8 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 8 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 8 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_8_9 :
+    y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 8 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 8 9 = (1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_0 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 9 0 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (8 : Fin 9) = (-1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 0 = (-1 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_1 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 9 1 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (8 : Fin 9) = (-1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 1 = (-13 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_2 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 9 2 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (8 : Fin 9) = (-1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 2 = (-13 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_3 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 9 3 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (8 : Fin 9) = (-1 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 3 = (-13 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_4 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 9 4 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (8 : Fin 9) = (-3 : ℚ) / 4 := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 4 = (-11 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_5 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 9 5 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (8 : Fin 9) = (-5 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 5 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_6 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 9 6 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 6 = (-1 : ℚ) / 2 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_7 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 9 7 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (8 : Fin 9) = (-1 : ℚ) / 2 := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 7 = (-5 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_8 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 9 8 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (8 : Fin 9) = (-3 : ℚ) / 8 := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 8 = (-5 : ℚ) / 16 := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_9_9 :
+    y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 9 9 := by
+  have hleft : y_2337 (0 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2337 (1 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2337 (2 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2337 (3 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2337 (4 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2337 (5 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2337 (6 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2337 (7 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2337 (8 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (8 : Fin 9) = (0 : ℚ) := by
+    norm_num [y_2337, rowA]
+  have hright : db 9 9 = (0 : ℚ) := by
+    norm_num [db, dbmVal]
+  rw [hleft, hright]
+  norm_num
+
+theorem row_cap_2337_0 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 0 j q) ≤ db 0 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_0_0
+    | exact row_cap_2337_0_1
+    | exact row_cap_2337_0_2
+    | exact row_cap_2337_0_3
+    | exact row_cap_2337_0_4
+    | exact row_cap_2337_0_5
+    | exact row_cap_2337_0_6
+    | exact row_cap_2337_0_7
+    | exact row_cap_2337_0_8
+    | exact row_cap_2337_0_9
+
+theorem row_cap_2337_1 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 1 j q) ≤ db 1 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_1_0
+    | exact row_cap_2337_1_1
+    | exact row_cap_2337_1_2
+    | exact row_cap_2337_1_3
+    | exact row_cap_2337_1_4
+    | exact row_cap_2337_1_5
+    | exact row_cap_2337_1_6
+    | exact row_cap_2337_1_7
+    | exact row_cap_2337_1_8
+    | exact row_cap_2337_1_9
+
+theorem row_cap_2337_2 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 2 j q) ≤ db 2 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_2_0
+    | exact row_cap_2337_2_1
+    | exact row_cap_2337_2_2
+    | exact row_cap_2337_2_3
+    | exact row_cap_2337_2_4
+    | exact row_cap_2337_2_5
+    | exact row_cap_2337_2_6
+    | exact row_cap_2337_2_7
+    | exact row_cap_2337_2_8
+    | exact row_cap_2337_2_9
+
+theorem row_cap_2337_3 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 3 j q) ≤ db 3 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_3_0
+    | exact row_cap_2337_3_1
+    | exact row_cap_2337_3_2
+    | exact row_cap_2337_3_3
+    | exact row_cap_2337_3_4
+    | exact row_cap_2337_3_5
+    | exact row_cap_2337_3_6
+    | exact row_cap_2337_3_7
+    | exact row_cap_2337_3_8
+    | exact row_cap_2337_3_9
+
+theorem row_cap_2337_4 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 4 j q) ≤ db 4 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_4_0
+    | exact row_cap_2337_4_1
+    | exact row_cap_2337_4_2
+    | exact row_cap_2337_4_3
+    | exact row_cap_2337_4_4
+    | exact row_cap_2337_4_5
+    | exact row_cap_2337_4_6
+    | exact row_cap_2337_4_7
+    | exact row_cap_2337_4_8
+    | exact row_cap_2337_4_9
+
+theorem row_cap_2337_5 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 5 j q) ≤ db 5 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_5_0
+    | exact row_cap_2337_5_1
+    | exact row_cap_2337_5_2
+    | exact row_cap_2337_5_3
+    | exact row_cap_2337_5_4
+    | exact row_cap_2337_5_5
+    | exact row_cap_2337_5_6
+    | exact row_cap_2337_5_7
+    | exact row_cap_2337_5_8
+    | exact row_cap_2337_5_9
+
+theorem row_cap_2337_6 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 6 j q) ≤ db 6 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_6_0
+    | exact row_cap_2337_6_1
+    | exact row_cap_2337_6_2
+    | exact row_cap_2337_6_3
+    | exact row_cap_2337_6_4
+    | exact row_cap_2337_6_5
+    | exact row_cap_2337_6_6
+    | exact row_cap_2337_6_7
+    | exact row_cap_2337_6_8
+    | exact row_cap_2337_6_9
+
+theorem row_cap_2337_7 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 7 j q) ≤ db 7 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_7_0
+    | exact row_cap_2337_7_1
+    | exact row_cap_2337_7_2
+    | exact row_cap_2337_7_3
+    | exact row_cap_2337_7_4
+    | exact row_cap_2337_7_5
+    | exact row_cap_2337_7_6
+    | exact row_cap_2337_7_7
+    | exact row_cap_2337_7_8
+    | exact row_cap_2337_7_9
+
+theorem row_cap_2337_8 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 8 j q) ≤ db 8 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_8_0
+    | exact row_cap_2337_8_1
+    | exact row_cap_2337_8_2
+    | exact row_cap_2337_8_3
+    | exact row_cap_2337_8_4
+    | exact row_cap_2337_8_5
+    | exact row_cap_2337_8_6
+    | exact row_cap_2337_8_7
+    | exact row_cap_2337_8_8
+    | exact row_cap_2337_8_9
+
+theorem row_cap_2337_9 (j : Fin 10) :
+    (∑ q : Fin 9, y_2337 q * rowA 9 j q) ≤ db 9 j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_2337_9_0
+    | exact row_cap_2337_9_1
+    | exact row_cap_2337_9_2
+    | exact row_cap_2337_9_3
+    | exact row_cap_2337_9_4
+    | exact row_cap_2337_9_5
+    | exact row_cap_2337_9_6
+    | exact row_cap_2337_9_7
+    | exact row_cap_2337_9_8
+    | exact row_cap_2337_9_9
+
 theorem row_cap (i j : Fin 10) :
     (∑ q : Fin 9, y_2337 q * rowA i j q) ≤ db i j := by
-  fin_cases i <;> fin_cases j <;>
-    norm_num [y_2337, rowA, db, dbmVal, Fin.sum_univ_succ]
+  fin_cases i
+  · exact row_cap_2337_0 j
+  · exact row_cap_2337_1 j
+  · exact row_cap_2337_2 j
+  · exact row_cap_2337_3 j
+  · exact row_cap_2337_4 j
+  · exact row_cap_2337_5 j
+  · exact row_cap_2337_6 j
+  · exact row_cap_2337_7 j
+  · exact row_cap_2337_8 j
+  · exact row_cap_2337_9 j
 
 end
 end N11Formalization.FrozenCapRowCap2337
