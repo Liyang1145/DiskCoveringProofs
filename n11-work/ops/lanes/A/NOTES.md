@@ -138,3 +138,50 @@ strict total and the arbitrary-center full-disk theorem.
 **Next concrete step.** Add a rational Taylor-grid lemma covering
 `nodeQ piHi 2048 1490 <= x <= 3*pi/4` with `cosHiReal x <= -2/3`, then combine
 it with this theorem and the exact one-step comparison at witness 1489.
+
+## 2026-10-30 (session 27) — exact Bins CI diagnostic; modulus binder repaired
+
+**Files / SHA256.**
+- `n11-work/lean/N11Formalization/SevenClassQ0Deg3Bins.lean`
+  `dab6f41be4b788f686847f86d1ac8c91ce1b10597ec32ee94f8370dcd2bfc9dc`.
+- `n11-work/ops/lanes/A/audit_q0_degree3_narrow_cos.py`
+  `34b7220dab4ec47c098c24cbc013f8c29e8f1bb7a89861af8dd8765903f20c32`.
+- `n11-work/ops/lanes/A/TARGETS.txt` unchanged,
+  `b532fb08e16550a05b5c8608026f7e8927995a11db2896f3aac9e9114ad88406`.
+
+**CI evidence recovered.** Public job log for run `41017279843`, job
+`123936372524`, gives the precise first Bins failure at line 95:
+`unsolved goals ... |- 0 < ?m.223`, after the relevant hypotheses and before
+any endpoint leaf.  This shows that the previous `(n := 256)` annotation did
+not instantiate `Nat.mod_lt`'s divisor.  Lean core declares the binder as
+`{y : Nat}`, so replaced the annotation by `(y := 256)`.  The same log shows
+Cos and Mono exit 0 at that revision; Bins then causes
+EndpointChecks and UpperReductionUnimodal to exit 1 transitively.
+A newer branch build, run `41023888165`, is in progress at `83710e22`; this
+repair is newer than that revision and has not yet been seen by CI.
+
+**Checks (scope).** `project_status.py --check` passed (manifest/index scope),
+`git diff --check` passed, and the forbidden-token scan over Bins passed.  No
+Lean build was run locally: the project has no local `.lake/build`, and this
+worktree must not start a full build.  The binder repair is **drafted, CI
+pending**.
+
+**Correction to the previous next step.** The proposed bound
+`cosHiReal x <= -2/3` throughout `[nodeQ piHi 2048 1490, 3*pi/4]` is false.
+Exact rational evaluation of the degree-28 upper bracket at node 1490 is
+`-0.6554928529996153`; this is above `-2/3` by about `0.011173813667`.
+The useful sufficient threshold is `-131/200 = -0.655`, which is below both
+edge-9/10 coefficient ratios (about `-0.654606`) and just below the node-1490
+value.  `audit_q0_degree3_narrow_cos.py` verifies all of these comparisons with
+exact `Fraction` arithmetic and asserts that the `-2/3` check fails.  Do not
+state the `-2/3` narrow-interval lemma.
+
+**Still unproved.** Kernel acceptance of the Bins binder repair and every
+downstream target; all 42 edge-shape facts; the narrow cosine-tail bound; all
+seven exclusions; strict total; and the arbitrary-center full-disk theorem.
+
+**Next concrete step.** Read the next CI Bins diagnostic.  If green, read
+EndpointChecks first.  For edge 9/10, prove the narrow `-131/200` tail as a
+split argument: exact node-1490 endpoint, decreasing degree-28 bracket on
+`[pi/2, 3*pi/4]`, and the existing `-2/3` theorem above `3*pi/4`; repair the
+one discrete witness-1489 step separately.
