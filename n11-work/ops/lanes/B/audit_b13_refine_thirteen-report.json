@@ -1,0 +1,64 @@
+{
+  "banned_tokens": {
+    "admit": false,
+    "implemented_by": false,
+    "maxHeartbeats 0": false,
+    "maxRecDepth": false,
+    "native_decide": false,
+    "ofReduceBool": false,
+    "sorry": false
+  },
+  "banned_tokens_main": {
+    "admit": false,
+    "implemented_by": false,
+    "maxHeartbeats 0": false,
+    "maxRecDepth": false,
+    "native_decide": false,
+    "ofReduceBool": false,
+    "sorry": false
+  },
+  "certificate_ids": [
+    37,
+    2337,
+    2341,
+    2965,
+    3040,
+    3112,
+    3440,
+    3589,
+    3623,
+    3633,
+    3777,
+    3792,
+    3853
+  ],
+  "checks": {
+    "all_thirteen_are_residual_ids": true,
+    "base_plus_twelve_plus_one_2010": true,
+    "direct_imports_present": true,
+    "main_api_complete": true,
+    "main_follows_thirteen_in_targets": true,
+    "main_no_banned_tokens": true,
+    "residual_minus_thirteen_376": true,
+    "thirteen_api_complete": true,
+    "thirteen_distinct_singletons": true,
+    "thirteen_in_targets_once": true,
+    "thirteen_main_in_targets_once": true,
+    "thirteen_no_banned_tokens": true
+  },
+  "counts": {
+    "base_paid": 1997,
+    "certificates": 13,
+    "refined_paid": 2010,
+    "refined_residual": 376
+  },
+  "failed": [],
+  "ok": true,
+  "scope": "static source/API/inventory audit only; no Lean elaboration or proof credit",
+  "sha256": {
+    "EnergyTerminalBatchB13RefineThirteen.lean": "1B954B3CF2AF2B24CCD4CC5B67DDD1162ED71543DB3D88C33FD004B54B85AF62",
+    "EnergyTerminalBatchB13RefineThirteenMain.lean": "D46E758CFB3B6997FD5BCE098192FAFC776AC8A388A514F412F7A733D2784375",
+    "TARGETS.txt": "BA5035AA6FBD2E8FEB5FAE167CAD753A7F8866F67259949F5C6787481A778F22",
+    "residual389-census.json": "44166EE869A61F6858F2285A98F96CC3FAA4F59FBB98C01D76B4DC42A28827A8"
+  }
+}
