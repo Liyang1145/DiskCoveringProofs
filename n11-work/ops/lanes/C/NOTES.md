@@ -1,233 +1,245 @@
-EXPERT (2026-10-29):
-- M is green and sound but pays no energy count.
-- Fix MCap line 40 with `simp only [DBMMinorantDual.rho]`; line 71 cascade should resolve.
-- Keep TARGETS to current three; add row caps/bridges/wrappers only after MCap is green.
-- Unify FrozenCapCertificates F0/G/y/E with FrozenCapRationalCore; remove duplicate constants.
-- After MCap, complete one node-pinned wrapper (1409) with hnode/hf0/hg/row_cap/bridge before broad rollout.
-- Max credit is seven residual IDs while 382 HOST records are absent; do not claim class/energy credit until wrappers are green and linked.
-
 # Lane C notes
 
-## Standing guidance
+## Standing constraints
 
-- SUPERVISOR (2026-10-29 12:20 CST): CI cancelled; stop polling Actions.
-  TARGETS stay `FrozenCapRationalCore`, `PaidCellCertificateM`,
-  `PaidCellCertificateMCap`; do not target `FrozenCapCertificates` until the
-  core is green.
-## Condensed history through part 27
+- CI is the only kernel-verdict authority; local Lean startup blocked. Pay no energy/
+  class credit until targeted modules are CI-green, wrappers are linked, and the
+  382 absent HOST records are supplied.
+- TARGETS currently gate Core, M, MCap, WideFieldWitnesses, WideFieldRowCaps.
+  Do not target WideFieldExcludedTree until both wide modules are CI-green.
+- Wrappers remain conditional on packet `hf0`/`hg`. Public residual payloads are
+  exactly seven IDs; 382 HOST records are missing.
 
-- The residual census reconstructs 389 IDs, but only seven have public
-  `g/f0Lo/weights`: `1409,2337,2341,2356,2360,2368,2370`; 382 HOST records
-  are absent. Census SHA256 `747447E2...E07F46`.
-- `recompute_next512_formulas.py` checks 512 public records exactly (505 pass,
-  seven fail). The older `<=4-field` miss was superseded by the corrected
-  signed-row search in part 49.
-  `certify_next512_row_cap.py` proves all 100 ordered-pair caps for arbitrary
-  row count, tightest Python slack `7.39e-7` at 2356 (not kernel evidence).
-- `emit_frozen_cap_row_caps.py` deterministically emits seven 100-cap row-cap
-  modules; exact self-check is 700/700 with minimum slack 0. The tree bridge,
-  seven node-pinned `FrozenCapExcludedTree*` wrappers, and packet `hf0`/`hg`
-  remain **CI pending**. The wrappers are conditional on `hf0`/`hg`.
-- Core emitter exact-checks all seven frozen witnesses. The core is now CI
-  green; M/MCap/row-cap/bridge/wrapper kernel verdicts remain pending. Local
-  Mathlib probing is unavailable (startup timeout), not a Lean error verdict.
+## Condensed history through 2026-10-30 part 82
 
-## Condensed history through part 71
+- Core (`40861839784`), M (`40893868710`), and MCap (`40949277719`) are CI-green;
+  axiom reports are clean. Exact HOST census/arithmetic found seven public residual
+  records and no payload for the other 382 IDs.
+- Earlier four/five-field sign reports were superseded by wide-support exclusion
+  witnesses. Current wide generator rechecks seven probability vectors, 700 ordered
+  row caps, and seven strict `gain < T^2` margins using exact `Fraction` arithmetic.
+- Run `40988698121` at `2fdf1a1c` made both targeted wide modules red: seven
+  `strict_gain_*` declarations left unsolved goals after direct `norm_num` expansion.
+- Part 82 replaced that expansion with reuse of the green core theorem, but the
+  `simp`-then-`simpa` bridge was not itself CI-tested.
 
-- Core (`40861839784`), M (`40893868710`) and MCap (`40949277719`) are
-  CI-green with `=== EXIT 0` and clean axiom reports only.
-- Seven public residuals exist; 382 HOST payloads are absent. Exact
-  four/five-field witnesses and their 700 row caps pass exact checks, but all
-  witness/row-cap modules and conditional wrappers remain **CI pending**.
-- Local Lean startup timeout is not a kernel verdict; only CI exits count.
-
-## 2026-10-30 — parts 66-69 (condensed: wrapper drafts and target gate)
-
-- Drafted four/five-field node wrappers with source-tree bridges; all remain
-  conditional on packet `hf0`/`hg` (not supplied) and are not targeted.
-- Re-ran the emitters: 500/500 four-field and 200/200 five-field caps pass with
-  exact `Fraction` arithmetic, minimum slack 0; these are HOST checks only.
-- Run `40949277719` pays Core/M/MCap only; it did not target either family.
-
-## 2026-10-30 — part 70 (public residual audit and four-field row-cap target)
+## 2026-10-30 — part 83 (canonical wide strict-gain bridge)
 
 Did:
-- Added `audit_residual_public_records.py` and ran it over all JSON/JSONL in
-  `n11-work/evidence-20261014`, `n11-work/evidence-20261028`, and restored
-  `build/n11-wip/assets/evidence`. It checked 702 files / 51,466,284 bytes.
-- Exactly seven core residual records (`id`, `g`, `f0Lo`, mixture data) exist:
-  1409, 2337, 2341, 2356, 2360, 2368, 2370, all only in
-  `paid16-general-next512.json`. The other 382 residual IDs have no public or
-  restored-WIP core payload; this is not evidence about maintainer HOST storage.
-- Added the previously omitted `N11Formalization.FrozenCapFourFieldRowCaps` to
-  `TARGETS.txt` now that MCap is CI-green. Wrapper modules remain untargeted.
-
-Files / SHA256 (lowercase):
-- `n11-work/ops/lanes/C/audit_residual_public_records.py`
-  `b2eb07b723ff97a0a6001b367c334e137b4a78aafb22e91809cfb147ca7b31b4`.
-- `n11-work/ops/lanes/C/residual-public-record-audit.json`
-  `cb7f472e348bd05a7efec0c7dfd3418d3ffae281a5496b26a9128b7365133ec9`.
-- `n11-work/ops/lanes/C/TARGETS.txt`
-  `d1d84878c88065439bd5536741607425213485d5c8c07e74a3c7f63ea8df26ec`.
-
-Checks (scope): audit exit 0 with exact assertions (7 payload records, expected
-ID set, one file) and 382 missing; `py_compile` and `project_status.py --check`
-exit 0 (index declarations only); `git diff --check` exit 0. No local Lean run.
-
-Still unproved/missing: kernel exits for four-field witnesses/row caps and
-five-field witnesses/row caps; then both wrapper families; old seven row
-caps/bridges; packet `hf0`/`hg`; 382 absent HOST payloads. Energy unchanged.
-
-Very next concrete step: inspect the completed run headed by `eb4e3021`; require
-exact 0 for four-field witnesses/row caps before adding
-`FrozenCapFourFieldExcludedTree`, and exact 0 for both five-field modules before
-adding `FrozenCapFiveFieldExcludedTree`. Patch the first diagnostic if red.
-
-## 2026-10-30 — part 71 (four-field emitter and proof-form repair)
-
-Did: added `emit_four_field_witnesses.py`; regenerated all five four-field
-witnesses from `residual-mixture-faces4.json` with exact checks. Unit sums now
-use `norm_num [y4_*, Fin.sum_univ_succ]`, matching the green core. Re-ran the
-four/five emitters: 500/500 and 200/200 caps pass exactly, minimum slack 0.
-
-Files / SHA256 (lowercase):
-- `n11-work/lean/N11Formalization/FrozenCapFourFieldWitnesses.lean`
-  `04fd8ef977904026b6dde1f2e2a7af00a4e4130d1a4908d29f54c6156b51fe48`.
-- `n11-work/ops/lanes/C/emit_four_field_witnesses.py`
-  `08e5aa3111a32c9dcbdd826183c9de0ed64115f68345c1c6cbe5b1bdf7ca2e0e`.
-- `TARGETS.txt` remains the seven-module gate; wrappers stay untargeted.
-
-Checks (scope): emitter exit 0, exact 5-witness/500-cap assertions, second run
-reproduced the Lean hash; `py_compile`, `project_status --check`, and
-`git diff --check` exit 0. No local Lean build: modules remain **CI pending**.
-
-Still unproved: kernel verdicts for four/five witness/row-cap modules; wrapper
-families; packet `hf0`/`hg`; 382 absent HOST payloads. Seven public residuals
-are exclusions, not paid IDs.
-
-Next: require exact `=== EXIT 0` for the four/five targets, then patch the
-first diagnostic before adding either `*ExcludedTree` wrapper.
-
-## 2026-10-30 — part 72 (source cross-check and four-field wrapper repair)
-
-Did:
-- Added `audit_pending_certificate_sources.py`, which parses the emitted
-  four/five-field DBM matrices and compares all 700 integer entries against
-  `DBMSourceTreeData`, then rechecks each witness margin with exact `Fraction`
-  arithmetic. All seven records match; the smallest margin is positive.
-- Repaired `FrozenCapFourFieldExcludedTree.lean`: it had bridged the frozen tree
-  to the old `FrozenCapRowCap<id>` matrices while applying the new
-  `FrozenCapFourFieldRowCaps` caps. It now imports `DBMSourceTreeData` directly
-  and proves five local `db_eq_tree_*` bridges to `db_<id>`, matching the
-  five-field wrapper. Wrappers still require packet `hf0`/`hg` and remain off
-  `TARGETS.txt`.
-
-Files / SHA256 (lowercase):
-- `n11-work/lean/N11Formalization/FrozenCapFourFieldExcludedTree.lean`
-  `86d4880facb6fd98520f0350eda8d043963a8315d27035007bee7f09c82ddda6`.
-- `n11-work/ops/lanes/C/audit_pending_certificate_sources.py`
-  `cd666fb4ad5489172c569d3720bb949c4617ac3e8654caf185187360cf9a794c`.
-- `n11-work/ops/lanes/C/pending-certificate-source-audit.json`
-  `ab59708e14f177edee200468f51361073afbb69977a2b8433429c776d7da07f0`.
-
-Checks (scope): audit rerun exit 0, 700/700 matrix entries equal and seven
-positive exact witness margins; `py_compile`, `project_status.py --check`, and
-`git diff --check` exit 0. HOST source checks only; **no kernel verdict**.
-
-Still unproved/missing: CI exits for the four/five witness and row-cap modules;
-both wrapper families (conditional on `hf0`/`hg`); old seven row caps/bridges;
-packet `hf0`/`hg`; 382 absent HOST payloads. Seven residuals are exclusions,
-not paid IDs; energy count unchanged.
-
-Very next concrete step: require CI `=== EXIT 0` for the four/five modules; if
-green, add `FrozenCapFiveFieldExcludedTree` and
-`FrozenCapFourFieldExcludedTree` to `TARGETS.txt`, otherwise patch the first
-kernel diagnostic.
-
-## 2026-10-30 — parts 76/78 condensed (wide-support exclusions)
-
-- Superseded the false four/five-field sign reports. The deterministic
-  `emit_wide_field_exclusions.py` now emits seven gain-minimising wide-support
-  witnesses, 700 exact row caps, and seven conditional node wrappers.
-- Exact HOST checks: seven probability vectors; 700/700 caps pass; all seven
-  `gain - T^2` margins are negative; minimum cap slack 0. These are algebra
-  checks, not kernel verdicts. Only witnesses and row caps were targeted.
-
-## 2026-10-30 — part 79 condensed (missing `endpointLo` import fixed)
-
-- Added the missing `ConvexMinorantCore` import after auditing the isolated
-  witness module; this removed an immediate kernel blocker. Its check results
-  and bytes are superseded by part 82 below; it paid no kernel verdict.
-
-## 2026-10-30 — parts 80/81 (weighted-term proof repair)
-
-Did:
-- Read the `7d401b42` failure at the declaration level: the four/five-field
-  `strict_gain_*` proofs left unsolved goals after expanding nine products of
-  huge rationals. Replaced that generated proof shape in the four-field,
-  five-field and wide emitters with the green core's tested shape: exact
-  `y*E = H` term table, `Finset.sum_congr`, rewrite, then `norm_num`.
-- Regenerated all three families together. Exact HOST checks remain: five
-  four-field witnesses and 500 caps, two five-field witnesses and 200 caps,
-  seven wide witnesses and 700 caps; all caps pass and every strict margin is
-  negative. Byte-identical rerun achieved for the deterministic outputs.
-
-Files / SHA256 (lowercase):
-- `n11-work/ops/lanes/C/emit_four_field_witnesses.py`
-  `5eb0e47e1061334f1bc84fb2d8ddfe3adceab32326db7e30d5cf3164f88de64a`
-- `n11-work/ops/lanes/C/emit_five_field_certificates.py`
-  `d4fc0959cd692d527f86a3fd83f6bd94464c61512f55e2deb556abb00dd90527`
-- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
-  `6b95a15f24d3818b64b61c72ecffc6297c49de3c05d81714dab6fc50cf798166`
-- `FrozenCapFourFieldWitnesses.lean`
-  `4d8f910d8ae99b9b96aa68494254df0ac81e8f6d0c4c911d882d86a72b508e92`
-- `FrozenCapFiveFieldWitnesses.lean`
-  `7141cb51f0f4980f523ddde7d12a9a84d487db777a5687dd2f5a153375d74fbb`
-- `FrozenCapFiveFieldRowCaps.lean`
-  `5ee01032ffc24fbf615007ae9cd2e961d1bd5bce071a88b94159447506cbc054`
-- `FrozenCapWideFieldWitnesses.lean`
-  `2e86b7de84803d7f3de0941c59277cb58ccdd0e78d7983fe8a94e51ba65c9b8b`
-
-Checks (scope): all three emitters exit 0 with the exact assertions above;
-`py_compile`, hard-rule scan, `project_status.py --check`, and `git diff
---check` exit 0. These are HOST algebra/emission checks, **not kernel verdicts**.
-`TARGETS.txt` still gates only the two wide modules; no local project build.
-
-Still unproved/missing: CI exit for both targeted wide modules; the wide
-wrapper is conditional on packet `hf0`/`hg`; four/five-field modules are not
-currently targeted; 382 HOST payloads absent; no energy/class credit.
-
-Next: inspect the run for these bytes and require `=== EXIT 0` for
-`FrozenCapWideFieldWitnesses` and `FrozenCapWideFieldRowCaps`. If green, add
-`FrozenCapWideFieldExcludedTree` to `TARGETS.txt`; if red, patch only the first
-reported declaration. Re-target four/five witness+row-cap modules only after
-the wide gate.
-
-## 2026-10-30 — part 82 (wide strict-gain proofs reuse green core)
-
-Did:
-- Established exactly that every `yW_<id>` equals `FrozenCapRationalCore.y_<id>`
-  (all seven vectors, exact `Fraction`, zero differences).
-- Replaced each generated wide `strict_gain_*` large-expansion proof with a
-  nine-entry `yW = y` check followed by reuse of the already CI-green
-  `FrozenCapRationalCore.strict_gain_*`; the endpoint bridge remains explicit.
-  This removes the proof shape reported unsolved by run `40988698121`.
+- Replaced each generated wide `strict_gain_*` bridge with a canonical
+  `rw [show yW = y]`, then `simpa only [endpoint] using` the green
+  `FrozenCapRationalCore.strict_gain_*`. This removes the untested `simp` state
+  before the core theorem is applied.
+- Regenerated all three wide outputs deterministically. Exact checks remain:
+  seven vectors are probability vectors; 700/700 row caps pass; all seven
+  `gain - T^2` margins are negative; minimum cap slack is zero.
+- A bounded `/workspace/tools/mathlib-probe` check of the abstract rewrite shape
+  timed out during Lean/Mathlib startup after 120 s with no output. This is not a
+  Lean error verdict or kernel result.
 
 Files / SHA256 (lowercase):
 - `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
-  `4fae8958eaa9cc882130dac4134035f42f0f8b28ee626871e0609af38b4961b2`.
+  `ed7c2ec0c0f04a3dc1f42f5507897f93c625f444796995f3654a4cc32b40794e`.
 - `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
-  `f4c758dd5bd039f24cb1f402e6e3d95f47bfeb2366b25b7ca96ab26d618fcc20`.
-- Row caps `f89348…e19e0c`; excluded-tree wrappers `89f0bc…e4df37`;
-  `TARGETS.txt` remains the two wide modules.
+  `aac6ab2c8cf8ed6fc8d9b4367f5b25fd2f74a3be07bb8f2b9e832955e380c767`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
+  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
 
-Checks (scope): emitter exit 0; 700/700 caps pass with minimum slack 0; all
-seven exact `gain - T^2` margins are negative; rerun bytes identical;
-`py_compile`, `project_status.py --check`, and `git diff --check` exit 0;
-hard-rule scan found no hits. No kernel verdict (local probe startup blocked).
+Checks (scope): wide emitter exit 0 with the exact counts/margins above;
+`py_compile`, hard-rule scan (no hits), `project_status.py --check`, and
+`git diff --check` exit 0. These are HOST/emission checks, **not kernel verdicts**.
+No local project build was run.
 
-Still unproved/missing: CI exits for the two targeted wide modules; wrapper is
-conditional on packet `hf0`/`hg`; 382 HOST payloads absent; no energy credit.
+Still unproved/missing: CI exit for WideFieldWitnesses and WideFieldRowCaps;
+WideFieldExcludedTree is untargeted and conditional on `hf0`/`hg`; 382 HOST
+payloads absent; no energy/class credit.
 
-Next: require CI `=== EXIT 0` for `FrozenCapWideFieldWitnesses` and
-`FrozenCapWideFieldRowCaps`; if green, target the wide excluded-tree wrapper.
+Next: require `=== EXIT 0` for both targeted wide modules. If green, add
+`N11Formalization.FrozenCapWideFieldExcludedTree` to `TARGETS.txt`; if red,
+patch only the first reported declaration.
+
+## 2026-10-30 — part 84 (bridge audit and deterministic regeneration)
+
+Did:
+- Re-read the stale CI failure: the seven `unsolved goals` were the old
+  `strict_gain_*` bodies that expanded `norm_num` directly. Part 83 had already
+  replaced those bodies with the green-core bridge, but no CI run has seen it.
+- Audited the bridge shape, generator, and downstream wrapper interfaces.
+  The bridge rewrites `yW_*` to the core `y_*`, then rewrites the endpoint
+  theorem under the sum and applies `FrozenCapRationalCore.strict_gain_*`.
+  `PaidCellCertificateMCap.not_valid_of_frozen_cap` expects exactly the
+  emitted `hf0`/`hg`/cap/strict-gain arguments used by the tree wrappers.
+- Regenerated all three wide assets from the hash-pinned proposal and DBM
+  source. Exact checks: 700/700 row caps pass; all seven weighted gains are
+  strictly below `T^2`; minimum cap slack is zero. Output bytes match part 83.
+- A dependency-free Lean probe of the abstract rewrite shape did not produce
+  output before its bounded timeout. Lean startup was competing with another
+  lane's local probe, so this is neither a Lean error nor a kernel verdict.
+
+Files / SHA256 (lowercase, unchanged from part 83):
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `ed7c2ec0c0f04a3dc1f42f5507897f93c625f444796995f3654a4cc32b40794e`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
+  `aac6ab2c8cf8ed6fc8d9b4367f5b25fd2f74a3be07bb8f2b9e832955e380c767`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
+  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
+
+Checks (scope): emitter exit 0; `py_compile`, hard-rule scan, `git diff
+--check`, and `project_status.py --check` exit 0. These are HOST/emission
+checks, **not kernel verdicts**. No local project build was run.
+
+Still unproved/missing: CI exit for WideFieldWitnesses and WideFieldRowCaps;
+WideFieldExcludedTree remains untargeted and conditional on `hf0`/`hg`; 382
+HOST payloads absent; no energy/class credit.
+
+Next: obtain `=== EXIT 0` for both targeted wide modules. On green, add
+`N11Formalization.FrozenCapWideFieldExcludedTree` to `TARGETS.txt` as the next
+single CI step; on red, inspect only the first reported declaration, since all
+seven bridges now share one shape.
+
+## 2026-10-30 — part 85 (definitional witness alias)
+
+Did:
+- Removed the seven function-extensionality bridges. The emitter now defines
+  `yW_<node> := y_<node>` (the exact core vector), derives `nonneg_<node>` and
+  `sum_<node>` directly from the CI-green core theorems, and proves
+  `strict_gain_<node>` by `change` to `y_<node>`, then
+  `simpa only [endpoint_<node>]` using the green core strict-gain theorem.
+  This leaves only the exact endpoint equality as generated arithmetic.
+- Regenerated all three wide outputs. Exact emission checks unchanged: seven
+  probability vectors, 700/700 row caps, all seven negative gain margins, and
+  zero minimum cap slack. RowCaps and ExcludedTree bytes are unchanged.
+
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `02bfdbb15106d6aec8a476f8fef7ebb7133283e5fbbeae4e01c5962d7eb05c87`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
+  `5609c7006ed24cde37601570663c832c7b3cc354c58ce22f75937189d7cd0246`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
+  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
+
+Checks (scope): emitter exit 0 with exact counts above; `py_compile`,
+`git diff --check`, hard-rule scan (only `#print axioms`), and
+`project_status.py --check` exit 0. A 90 s mathlib-probe startup timed out with
+no output; this is **not** a Lean/kernel verdict. No local project build.
+
+Still unproved/missing: CI exit for WideFieldWitnesses and WideFieldRowCaps;
+WideFieldExcludedTree untargeted and conditional on packet `hf0`/`hg`; 382 HOST
+payloads absent; no energy/class credit.
+
+Next: obtain `=== EXIT 0` for both current wide targets. If green, add
+`N11Formalization.FrozenCapWideFieldExcludedTree` to `TARGETS.txt`; if red,
+inspect only the first reported declaration, since all seven strict-gain proofs
+now share the definitional-alias shape.
+
+## 2026-10-30 — part 86 (core alias for redundant weighted terms)
+
+Did:
+- Identified the only repeated wide-witness arithmetic outside the strict-gain
+  bridge: each `weighted_terms_*` expanded `yW_* q * E_* q` and a giant `HW_*`
+  numerator. Replaced `HW_*` by the definitional alias `H_*` and proved each
+  `weighted_terms_*` directly with the corresponding CI-green
+  `FrozenCapRationalCore.weighted_terms_*`. This removes seven redundant kernel
+  arithmetic checks without changing the exported interface.
+- Regenerated all three wide outputs. Exact checks remain seven probability
+  vectors, 700/700 row caps, seven strict negative gain margins, and zero
+  minimum cap slack.
+
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `32627fc3d42b30bc0ed52354778f2f4f0df2ed8084db65d132b519ca23e7f780`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
+  `4c3bb2d92d0afe829a3186d85c4d16d6fb6d3cd6d75ecb732c76fa0b8f502af8`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
+  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
+
+Checks (scope): emitter exit 0 with the exact counts above; `py_compile`,
+hard-rule scan (clean), `git diff --check`, and `project_status.py --check`
+exit 0. These are HOST/emission checks, **not kernel verdicts**. No local
+project build was run.
+
+Still unproved/missing: no CI run has checked part 86. WideFieldWitnesses and
+WideFieldRowCaps remain uncredited; WideFieldExcludedTree remains untargeted
+and conditional on packet `hf0`/`hg`; 382 HOST payloads absent; no energy/class
+credit.
+
+Next: require `=== EXIT 0` for both current wide targets. If green, add
+`N11Formalization.FrozenCapWideFieldExcludedTree` to `TARGETS.txt`; if red,
+patch only the first reported declaration.
+
+## 2026-10-30 — part 87 (direct core strict-gain application)
+
+Did:
+- Removed the remaining post-`change` `simpa only [endpoint_*]` from all seven
+  generated `strict_gain_*` witnesses. After the definitional alias `yW_* = y_*`
+  is exposed by `change`, the goal is exactly the CI-green core theorem, so each
+  proof now ends with `exact FrozenCapRationalCore.strict_gain_*`.
+- Regenerated all three wide outputs. RowCaps and ExcludedTree bytes are
+  unchanged; exact checks remain seven probability vectors, 700/700 row caps,
+  seven strict negative gain margins, and zero minimum cap slack.
+
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `507204e8a311a120b2b3f10a66aa7a188b6e689d352b75182a86f59274626fd6`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
+  `799a0e185b534da7d5a88e157ba6c3cc9c548afa41d70b80dcdf8d6f49fc4243`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
+  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
+
+Checks (scope): emitter exit 0 with the exact counts/margins above;
+`py_compile`, seeded hard-rule scan (clean), `git diff --check`, and
+`project_status.py --check` exit 0. These are HOST/emission checks, **not kernel
+verdicts**. No local project build was run.
+
+Still unproved/missing: no CI run has checked part 87; WideFieldWitnesses and
+WideFieldRowCaps remain uncredited; WideFieldExcludedTree remains untargeted and
+conditional on packet `hf0`/`hg`; 382 HOST payloads absent; no energy/class credit.
+
+Next: require `=== EXIT 0` for both wide targets. If green, add
+`N11Formalization.FrozenCapWideFieldExcludedTree` to `TARGETS.txt`; if red,
+patch only the first reported declaration.
+
+## 2026-10-30 — part 88 (explicit endpoint-sum bridge)
+
+Did:
+- Found the mismatch behind the part-87 proof: `FrozenCapRationalCore.strict_gain_*`
+  sums over `E_*`, while the wide theorem sums `endpointLo Dq DQ (G_*)`.
+  Replaced the fragile post-`change` bridge with an explicit pointwise
+  `Finset.sum_congr` rewrite using `endpoint_*`, then `change` and exact core
+  application. This avoids relying on `simpa` unfolding through the sum.
+- Regenerated all three wide outputs. Exact emission checks remain 700/700 row
+  caps, seven probability vectors, seven negative strict-gain margins, and zero
+  minimum cap slack.
+
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `ee036c05c6b9a9396557508e1970702802d0bd4879660f75938d6e0ae1712e13`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
+  `2e0d0358842b702682e71bd2a574b403de88740e6d28b16e9baf52dd74e3ce21`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
+  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
+
+Checks (scope): emitter exit 0 with exact counts/margins above; `py_compile`,
+hard-rule scan (clean), `git diff --check`, and `project_status.py --check`
+exit 0. These are HOST/emission checks, **not kernel verdicts**. No local
+project build was run.
+
+Still unproved/missing: no CI run has checked part 88; both wide targets remain
+uncredited; WideFieldExcludedTree is untargeted and conditional on `hf0`/`hg`;
+382 HOST payloads absent; no energy/class credit.
+
+Next: require `=== EXIT 0` for both wide targets. On green, add
+`N11Formalization.FrozenCapWideFieldExcludedTree` to `TARGETS.txt`; on red,
+inspect only the first reported declaration.

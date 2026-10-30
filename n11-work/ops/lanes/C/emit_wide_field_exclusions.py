@@ -66,31 +66,33 @@ def emit_witnesses(rows):
     blocks = []
     for node, y, _, _, _, ep in rows:
         vec = ", ".join(lean_rat(v) for v in y)
-        weighted = [y[q] * ep[q] for q in range(9)]
-        blocks.append(f'''def yW_{node} : Fin 9 → ℚ := ![{vec}]
+        blocks.append(f'''def yW_{node} : Fin 9 → ℚ := y_{node}
 
-theorem nonneg_{node} : ∀ q, 0 ≤ yW_{node} q := by
-  intro q; fin_cases q <;> norm_num [yW_{node}]
+theorem nonneg_{node} : ∀ q, 0 ≤ yW_{node} q :=
+  FrozenCapRationalCore.weights_nonneg_{node}
 
-theorem sum_{node} : (∑ q : Fin 9, yW_{node} q) = 1 := by
-  norm_num [yW_{node}, Fin.sum_univ_succ]
+theorem sum_{node} : (∑ q : Fin 9, yW_{node} q) = 1 :=
+  FrozenCapRationalCore.weights_sum_{node}
 
 theorem endpoint_{node} (q : Fin 9) :
     endpointLo Dq DQ (G_{node} q) = E_{node} q := by
   fin_cases q <;> norm_num [G_{node}, E_{node}, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_{node} : Fin 9 → ℚ := ![{", ".join(lean_rat(v) for v in weighted)}]
+def HW_{node} : Fin 9 → ℚ := H_{node}
 
 theorem weighted_terms_{node} (q : Fin 9) : yW_{node} q * E_{node} q = HW_{node} q := by
-  fin_cases q <;> norm_num [yW_{node}, E_{node}, HW_{node}]
+  exact FrozenCapRationalCore.weighted_terms_{node} q
 
 theorem strict_gain_{node} : F0_{node} + ∑ q : Fin 9, yW_{node} q *
     endpointLo Dq DQ (G_{node} q) < T ^ 2 := by
-  simp only [endpoint_{node}]
-  have hy : yW_{node} = y_{node} := by
-    funext q
-    fin_cases q <;> norm_num [yW_{node}, y_{node}]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_{node}''')
+  have hsum : (∑ q : Fin 9, yW_{node} q * endpointLo Dq DQ (G_{node} q)) =
+      ∑ q : Fin 9, yW_{node} q * E_{node} q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_{node} q]
+  rw [hsum]
+  change F0_{node} + ∑ q : Fin 9, y_{node} q * E_{node} q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_{node}''')
     src = '''import N11Formalization.FrozenCapRationalCore
 import N11Formalization.ConvexMinorantCore
 

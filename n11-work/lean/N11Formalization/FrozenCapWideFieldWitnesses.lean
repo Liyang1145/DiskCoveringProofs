@@ -11,180 +11,201 @@ open scoped BigOperators
 noncomputable section
 open FrozenCapRationalCore ConvexMinorantCore
 
-def yW_1409 : Fin 9 → ℚ := ![(0 : ℚ), (1 : ℚ) / 8, (0 : ℚ), (1 : ℚ) / 4, (1 : ℚ) / 4, (0 : ℚ), (0 : ℚ), (1 : ℚ) / 8, (1 : ℚ) / 4]
+def yW_1409 : Fin 9 → ℚ := y_1409
 
-theorem nonneg_1409 : ∀ q, 0 ≤ yW_1409 q := by
-  intro q; fin_cases q <;> norm_num [yW_1409]
+theorem nonneg_1409 : ∀ q, 0 ≤ yW_1409 q :=
+  FrozenCapRationalCore.weights_nonneg_1409
 
-theorem sum_1409 : (∑ q : Fin 9, yW_1409 q) = 1 := by
-  norm_num [yW_1409, Fin.sum_univ_succ]
+theorem sum_1409 : (∑ q : Fin 9, yW_1409 q) = 1 :=
+  FrozenCapRationalCore.weights_sum_1409
 
 theorem endpoint_1409 (q : Fin 9) :
     endpointLo Dq DQ (G_1409 q) = E_1409 q := by
   fin_cases q <;> norm_num [G_1409, E_1409, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_1409 : Fin 9 → ℚ := ![(0 : ℚ), (47880626928670345770096598139314770426115467388866182434831816060201 : ℚ) / 180143985094279408044715540480000000000000000000000000000000000000000000, (0 : ℚ), (-58896938098138652449891504241806180111036637621060611029503844541749 : ℚ) / 900719925471397040223577702400000000000000000000000000000000000000000000, (-107540641478150957400791726232540979208772073518185479545339241170247 : ℚ) / 180143985094279408044715540480000000000000000000000000000000000000000000, (0 : ℚ), (0 : ℚ), (-692203215221170672181156649302027301695577270132307852799191372355603 : ℚ) / 1801439850942794080447155404800000000000000000000000000000000000000000000, (0 : ℚ)]
+def HW_1409 : Fin 9 → ℚ := H_1409
 
 theorem weighted_terms_1409 (q : Fin 9) : yW_1409 q * E_1409 q = HW_1409 q := by
-  fin_cases q <;> norm_num [yW_1409, E_1409, HW_1409]
+  exact FrozenCapRationalCore.weighted_terms_1409 q
 
 theorem strict_gain_1409 : F0_1409 + ∑ q : Fin 9, yW_1409 q *
     endpointLo Dq DQ (G_1409 q) < T ^ 2 := by
-  simp only [endpoint_1409]
-  have hy : yW_1409 = y_1409 := by
-    funext q
-    fin_cases q <;> norm_num [yW_1409, y_1409]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_1409
+  have hsum : (∑ q : Fin 9, yW_1409 q * endpointLo Dq DQ (G_1409 q)) =
+      ∑ q : Fin 9, yW_1409 q * E_1409 q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_1409 q]
+  rw [hsum]
+  change F0_1409 + ∑ q : Fin 9, y_1409 q * E_1409 q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_1409
 
-def yW_2337 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (0 : ℚ), (1 : ℚ) / 4, (1 : ℚ) / 8, (1 : ℚ) / 8, (0 : ℚ), (1 : ℚ) / 8, (3 : ℚ) / 8]
+def yW_2337 : Fin 9 → ℚ := y_2337
 
-theorem nonneg_2337 : ∀ q, 0 ≤ yW_2337 q := by
-  intro q; fin_cases q <;> norm_num [yW_2337]
+theorem nonneg_2337 : ∀ q, 0 ≤ yW_2337 q :=
+  FrozenCapRationalCore.weights_nonneg_2337
 
-theorem sum_2337 : (∑ q : Fin 9, yW_2337 q) = 1 := by
-  norm_num [yW_2337, Fin.sum_univ_succ]
+theorem sum_2337 : (∑ q : Fin 9, yW_2337 q) = 1 :=
+  FrozenCapRationalCore.weights_sum_2337
 
 theorem endpoint_2337 (q : Fin 9) :
     endpointLo Dq DQ (G_2337 q) = E_2337 q := by
   fin_cases q <;> norm_num [G_2337, E_2337, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_2337 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (0 : ℚ), (-57119431160942358600594165500292026900366203316969618345488765474087 : ℚ) / 300239975157732826691508633600000000000000000000000000000000000000000000, (3930566107672644616933357358051400530524294466690348806503598359481 : ℚ) / 200159983438488551127672422400000000000000000000000000000000000000000000, (8843773742826049167745542961423327681459515252042224749109303798633 : ℚ) / 450359962736599240037262950400000000000000000000000000000000000000000000, (0 : ℚ), (-29436214888005610768637344838909156470552470544311582539194290200083 : ℚ) / 200159983438488551127672422400000000000000000000000000000000000000000000, (0 : ℚ)]
+def HW_2337 : Fin 9 → ℚ := H_2337
 
 theorem weighted_terms_2337 (q : Fin 9) : yW_2337 q * E_2337 q = HW_2337 q := by
-  fin_cases q <;> norm_num [yW_2337, E_2337, HW_2337]
+  exact FrozenCapRationalCore.weighted_terms_2337 q
 
 theorem strict_gain_2337 : F0_2337 + ∑ q : Fin 9, yW_2337 q *
     endpointLo Dq DQ (G_2337 q) < T ^ 2 := by
-  simp only [endpoint_2337]
-  have hy : yW_2337 = y_2337 := by
-    funext q
-    fin_cases q <;> norm_num [yW_2337, y_2337]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_2337
+  have hsum : (∑ q : Fin 9, yW_2337 q * endpointLo Dq DQ (G_2337 q)) =
+      ∑ q : Fin 9, yW_2337 q * E_2337 q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_2337 q]
+  rw [hsum]
+  change F0_2337 + ∑ q : Fin 9, y_2337 q * E_2337 q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_2337
 
-def yW_2341 : Fin 9 → ℚ := ![(0 : ℚ), (1 : ℚ) / 8, (0 : ℚ), (1 : ℚ) / 4, (1 : ℚ) / 8, (0 : ℚ), (1 : ℚ) / 8, (1 : ℚ) / 8, (1 : ℚ) / 4]
+def yW_2341 : Fin 9 → ℚ := y_2341
 
-theorem nonneg_2341 : ∀ q, 0 ≤ yW_2341 q := by
-  intro q; fin_cases q <;> norm_num [yW_2341]
+theorem nonneg_2341 : ∀ q, 0 ≤ yW_2341 q :=
+  FrozenCapRationalCore.weights_nonneg_2341
 
-theorem sum_2341 : (∑ q : Fin 9, yW_2341 q) = 1 := by
-  norm_num [yW_2341, Fin.sum_univ_succ]
+theorem sum_2341 : (∑ q : Fin 9, yW_2341 q) = 1 :=
+  FrozenCapRationalCore.weights_sum_2341
 
 theorem endpoint_2341 (q : Fin 9) :
     endpointLo Dq DQ (G_2341 q) = E_2341 q := by
   fin_cases q <;> norm_num [G_2341, E_2341, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_2341 : Fin 9 → ℚ := ![(0 : ℚ), (45789602165026853632511089873352437896651859744556503765940881371667 : ℚ) / 450359962736148880074525900800000000000000000000000000000000000000000000, (0 : ℚ), (-222701513357322186201340017087572235779215585129206654757044412620021 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (-12172045188247991367966808415474904765418078876006449486662640225679 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (0 : ℚ), (-207502499029378032046804698492230449180936646258185670828460131946881 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (-405859922016199437407982751196055802344170627442095266748899668025311 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (0 : ℚ)]
+def HW_2341 : Fin 9 → ℚ := H_2341
 
 theorem weighted_terms_2341 (q : Fin 9) : yW_2341 q * E_2341 q = HW_2341 q := by
-  fin_cases q <;> norm_num [yW_2341, E_2341, HW_2341]
+  exact FrozenCapRationalCore.weighted_terms_2341 q
 
 theorem strict_gain_2341 : F0_2341 + ∑ q : Fin 9, yW_2341 q *
     endpointLo Dq DQ (G_2341 q) < T ^ 2 := by
-  simp only [endpoint_2341]
-  have hy : yW_2341 = y_2341 := by
-    funext q
-    fin_cases q <;> norm_num [yW_2341, y_2341]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_2341
+  have hsum : (∑ q : Fin 9, yW_2341 q * endpointLo Dq DQ (G_2341 q)) =
+      ∑ q : Fin 9, yW_2341 q * E_2341 q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_2341 q]
+  rw [hsum]
+  change F0_2341 + ∑ q : Fin 9, y_2341 q * E_2341 q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_2341
 
-def yW_2356 : Fin 9 → ℚ := ![(0 : ℚ), (1 : ℚ) / 16, (0 : ℚ), (1 : ℚ) / 4, (1 : ℚ) / 8, (1 : ℚ) / 8, (0 : ℚ), (1 : ℚ) / 8, (5 : ℚ) / 16]
+def yW_2356 : Fin 9 → ℚ := y_2356
 
-theorem nonneg_2356 : ∀ q, 0 ≤ yW_2356 q := by
-  intro q; fin_cases q <;> norm_num [yW_2356]
+theorem nonneg_2356 : ∀ q, 0 ≤ yW_2356 q :=
+  FrozenCapRationalCore.weights_nonneg_2356
 
-theorem sum_2356 : (∑ q : Fin 9, yW_2356 q) = 1 := by
-  norm_num [yW_2356, Fin.sum_univ_succ]
+theorem sum_2356 : (∑ q : Fin 9, yW_2356 q) = 1 :=
+  FrozenCapRationalCore.weights_sum_2356
 
 theorem endpoint_2356 (q : Fin 9) :
     endpointLo Dq DQ (G_2356 q) = E_2356 q := by
   fin_cases q <;> norm_num [G_2356, E_2356, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_2356 : Fin 9 → ℚ := ![(0 : ℚ), (38236545044229700502011612553289438023461276455202812310870663578471 : ℚ) / 360287970188919104059620720640000000000000000000000000000000000000000000, (0 : ℚ), (-53120303717179569537308234306894519098273468124021292197975772096413 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (-163262210991559728605323918393547003473837333723818775064893045053 : ℚ) / 11258999068403722001863147520000000000000000000000000000000000000000000, (-26121953753067633365363645664125754609329619543419212480524292033159 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (0 : ℚ), (-111695472969636900926415334585319882528470680085504012299 : ℚ) / 72057594037783820811924144128000000000000000000000000000000000000000000, (0 : ℚ)]
+def HW_2356 : Fin 9 → ℚ := H_2356
 
 theorem weighted_terms_2356 (q : Fin 9) : yW_2356 q * E_2356 q = HW_2356 q := by
-  fin_cases q <;> norm_num [yW_2356, E_2356, HW_2356]
+  exact FrozenCapRationalCore.weighted_terms_2356 q
 
 theorem strict_gain_2356 : F0_2356 + ∑ q : Fin 9, yW_2356 q *
     endpointLo Dq DQ (G_2356 q) < T ^ 2 := by
-  simp only [endpoint_2356]
-  have hy : yW_2356 = y_2356 := by
-    funext q
-    fin_cases q <;> norm_num [yW_2356, y_2356]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_2356
+  have hsum : (∑ q : Fin 9, yW_2356 q * endpointLo Dq DQ (G_2356 q)) =
+      ∑ q : Fin 9, yW_2356 q * E_2356 q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_2356 q]
+  rw [hsum]
+  change F0_2356 + ∑ q : Fin 9, y_2356 q * E_2356 q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_2356
 
-def yW_2360 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (1 : ℚ) / 16, (1 : ℚ) / 4, (3 : ℚ) / 16, (1 : ℚ) / 16, (0 : ℚ), (3 : ℚ) / 16, (1 : ℚ) / 4]
+def yW_2360 : Fin 9 → ℚ := y_2360
 
-theorem nonneg_2360 : ∀ q, 0 ≤ yW_2360 q := by
-  intro q; fin_cases q <;> norm_num [yW_2360]
+theorem nonneg_2360 : ∀ q, 0 ≤ yW_2360 q :=
+  FrozenCapRationalCore.weights_nonneg_2360
 
-theorem sum_2360 : (∑ q : Fin 9, yW_2360 q) = 1 := by
-  norm_num [yW_2360, Fin.sum_univ_succ]
+theorem sum_2360 : (∑ q : Fin 9, yW_2360 q) = 1 :=
+  FrozenCapRationalCore.weights_sum_2360
 
 theorem endpoint_2360 (q : Fin 9) :
     endpointLo Dq DQ (G_2360 q) = E_2360 q := by
   fin_cases q <;> norm_num [G_2360, E_2360, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_2360 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (72722861816420333161052524405184242781427463329694759740698104336117 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (96946114523075307827236493317772311180423645624343959009 : ℚ) / 112589990684037220018631475200000000000000000000000000000000000000000000, (183102438653079017684568317285465959774479963339283166620728268092147 : ℚ) / 3602879701889191040596207206400000000000000000000000000000000000000000000, (15258536555089881815969164147091398416132804236850120985186634860019 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (0 : ℚ), (-2433919651083014129243264633889393486781184915996848820913 : ℚ) / 3602879701889191040596207206400000000000000000000000000000000000000000000, (0 : ℚ)]
+def HW_2360 : Fin 9 → ℚ := H_2360
 
 theorem weighted_terms_2360 (q : Fin 9) : yW_2360 q * E_2360 q = HW_2360 q := by
-  fin_cases q <;> norm_num [yW_2360, E_2360, HW_2360]
+  exact FrozenCapRationalCore.weighted_terms_2360 q
 
 theorem strict_gain_2360 : F0_2360 + ∑ q : Fin 9, yW_2360 q *
     endpointLo Dq DQ (G_2360 q) < T ^ 2 := by
-  simp only [endpoint_2360]
-  have hy : yW_2360 = y_2360 := by
-    funext q
-    fin_cases q <;> norm_num [yW_2360, y_2360]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_2360
+  have hsum : (∑ q : Fin 9, yW_2360 q * endpointLo Dq DQ (G_2360 q)) =
+      ∑ q : Fin 9, yW_2360 q * E_2360 q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_2360 q]
+  rw [hsum]
+  change F0_2360 + ∑ q : Fin 9, y_2360 q * E_2360 q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_2360
 
-def yW_2368 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (1 : ℚ) / 8, (1 : ℚ) / 4, (1 : ℚ) / 8, (0 : ℚ), (1 : ℚ) / 8, (1 : ℚ) / 8, (1 : ℚ) / 4]
+def yW_2368 : Fin 9 → ℚ := y_2368
 
-theorem nonneg_2368 : ∀ q, 0 ≤ yW_2368 q := by
-  intro q; fin_cases q <;> norm_num [yW_2368]
+theorem nonneg_2368 : ∀ q, 0 ≤ yW_2368 q :=
+  FrozenCapRationalCore.weights_nonneg_2368
 
-theorem sum_2368 : (∑ q : Fin 9, yW_2368 q) = 1 := by
-  norm_num [yW_2368, Fin.sum_univ_succ]
+theorem sum_2368 : (∑ q : Fin 9, yW_2368 q) = 1 :=
+  FrozenCapRationalCore.weights_sum_2368
 
 theorem endpoint_2368 (q : Fin 9) :
     endpointLo Dq DQ (G_2368 q) = E_2368 q := by
   fin_cases q <;> norm_num [G_2368, E_2368, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_2368 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (-109623095264496296747137091306674418755516426984906103656254783039119 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (-109623095273000900541228768454115957358782091998325194887847921234917 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (-234623699232196302714688080923253864708888589050248626486011487515533 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (0 : ℚ), (11710088974442814577426458147973851740210488361438207607551434023083 : ℚ) / 28147497671009305004657868800000000000000000000000000000000000000000000, (-177461469068390156413751508473798084265736688112654063751363642068449 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (0 : ℚ)]
+def HW_2368 : Fin 9 → ℚ := H_2368
 
 theorem weighted_terms_2368 (q : Fin 9) : yW_2368 q * E_2368 q = HW_2368 q := by
-  fin_cases q <;> norm_num [yW_2368, E_2368, HW_2368]
+  exact FrozenCapRationalCore.weighted_terms_2368 q
 
 theorem strict_gain_2368 : F0_2368 + ∑ q : Fin 9, yW_2368 q *
     endpointLo Dq DQ (G_2368 q) < T ^ 2 := by
-  simp only [endpoint_2368]
-  have hy : yW_2368 = y_2368 := by
-    funext q
-    fin_cases q <;> norm_num [yW_2368, y_2368]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_2368
+  have hsum : (∑ q : Fin 9, yW_2368 q * endpointLo Dq DQ (G_2368 q)) =
+      ∑ q : Fin 9, yW_2368 q * E_2368 q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_2368 q]
+  rw [hsum]
+  change F0_2368 + ∑ q : Fin 9, y_2368 q * E_2368 q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_2368
 
-def yW_2370 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (0 : ℚ), (1 : ℚ) / 4, (1 : ℚ) / 8, (1 : ℚ) / 8, (0 : ℚ), (1 : ℚ) / 8, (3 : ℚ) / 8]
+def yW_2370 : Fin 9 → ℚ := y_2370
 
-theorem nonneg_2370 : ∀ q, 0 ≤ yW_2370 q := by
-  intro q; fin_cases q <;> norm_num [yW_2370]
+theorem nonneg_2370 : ∀ q, 0 ≤ yW_2370 q :=
+  FrozenCapRationalCore.weights_nonneg_2370
 
-theorem sum_2370 : (∑ q : Fin 9, yW_2370 q) = 1 := by
-  norm_num [yW_2370, Fin.sum_univ_succ]
+theorem sum_2370 : (∑ q : Fin 9, yW_2370 q) = 1 :=
+  FrozenCapRationalCore.weights_sum_2370
 
 theorem endpoint_2370 (q : Fin 9) :
     endpointLo Dq DQ (G_2370 q) = E_2370 q := by
   fin_cases q <;> norm_num [G_2370, E_2370, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
-def HW_2370 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (0 : ℚ), (-135811126358392648161780382120252451096092386913271037883371670634701 : ℚ) / 450359962736148880074525900800000000000000000000000000000000000000000000, (-135811126359392562946913168186882085154321465581763669496940544964259 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (495026871942298517319921173713923825259661743329706308573416940452481 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (0 : ℚ), (-381460841296599939974831130681947503830398079821492352184942502065327 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (0 : ℚ)]
+def HW_2370 : Fin 9 → ℚ := H_2370
 
 theorem weighted_terms_2370 (q : Fin 9) : yW_2370 q * E_2370 q = HW_2370 q := by
-  fin_cases q <;> norm_num [yW_2370, E_2370, HW_2370]
+  exact FrozenCapRationalCore.weighted_terms_2370 q
 
 theorem strict_gain_2370 : F0_2370 + ∑ q : Fin 9, yW_2370 q *
     endpointLo Dq DQ (G_2370 q) < T ^ 2 := by
-  simp only [endpoint_2370]
-  have hy : yW_2370 = y_2370 := by
-    funext q
-    fin_cases q <;> norm_num [yW_2370, y_2370]
-  simpa only [hy] using FrozenCapRationalCore.strict_gain_2370
+  have hsum : (∑ q : Fin 9, yW_2370 q * endpointLo Dq DQ (G_2370 q)) =
+      ∑ q : Fin 9, yW_2370 q * E_2370 q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    rw [endpoint_2370 q]
+  rw [hsum]
+  change F0_2370 + ∑ q : Fin 9, y_2370 q * E_2370 q < T ^ 2
+  exact FrozenCapRationalCore.strict_gain_2370
 
 end
 end N11Formalization.FrozenCapWideFieldWitnesses
