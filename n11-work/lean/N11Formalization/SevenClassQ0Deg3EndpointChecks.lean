@@ -74,7 +74,7 @@ theorem sinHiNLag_le_sinPoly4_add (a : ℚ) (ha : 0 ≤ a) (ha1 : a ≤ 1) :
   have hpoly : sinT 4 (a : ℝ) =
       (a : ℝ) - (a : ℝ) ^ 3 / 6 + (a : ℝ) ^ 5 / 120 -
         (a : ℝ) ^ 7 / 5040 := by
-    ring
+    norm_num [sinT, Finset.sum_range_succ]
   have habs : |(a : ℝ)| ≤ 1 := by
     rw [abs_of_nonneg (by exact_mod_cast ha)]
     exact_mod_cast ha1
@@ -101,6 +101,7 @@ theorem sinHiNLag_le_sinPoly4_add (a : ℚ) (ha : 0 ≤ a) (ha1 : a ≤ 1) :
       ((sinPoly4 a + 1 / ((Nat.factorial 9 : ℕ) : ℚ) +
         2 / ((Nat.factorial 29 : ℕ) : ℚ) : ℚ) : ℝ) := by
     rw [hS]
+    unfold sinPoly4
     push_cast
     linarith [h14poly, h9, h29]
   exact_mod_cast hmain
@@ -125,7 +126,12 @@ theorem hasDerivAt_sinPoly4Real (x : ℝ) :
     (hasDerivAt_pow 5 x).div_const 120
   have h7 : HasDerivAt (fun y : ℝ => y ^ 7 / 5040) (7 * x ^ 6 / 5040) x :=
     (hasDerivAt_pow 7 x).div_const 5040
-  convert (h1.sub h3).add h5 |>.sub h7 using 1 <;> ring
+  have h := (h1.sub h3).add h5 |>.sub h7
+  have hderiv : 1 - 3 * x ^ 2 / 6 + 5 * x ^ 4 / 120 - 7 * x ^ 6 / 5040 =
+      1 - x ^ 2 / 2 + x ^ 4 / 24 - x ^ 6 / 720 := by
+    ring
+  rw [hderiv] at h
+  simpa only [sinPoly4Real] using h
 
 theorem sinPoly4_deriv_nonneg {x : ℝ} (hx0 : 0 ≤ x) (hx1 : x ≤ 1) :
     0 ≤ 1 - x ^ 2 / 2 + x ^ 4 / 24 - x ^ 6 / 720 := by
@@ -208,6 +214,24 @@ def endpointUpperBin (j : Fin 8) : ℚ :=
       ((Nat.factorial 9 : ℕ) : ℚ) +
     2 * (|endpointUBin j| ^ 29 / ((Nat.factorial 29 : ℕ) : ℚ))
 
+@[simp] theorem nodeBinAt_zero : nodeBinAt 0 = 239 / 1250 := by decide
+@[simp] theorem nodeBinAt_one : nodeBinAt 1 = 239 / 1250 := by decide
+@[simp] theorem nodeBinAt_two : nodeBinAt 2 = 133 / 625 := by decide
+@[simp] theorem nodeBinAt_three : nodeBinAt 3 = 2721 / 10000 := by decide
+@[simp] theorem nodeBinAt_four : nodeBinAt 4 = 643 / 2000 := by decide
+@[simp] theorem nodeBinAt_five : nodeBinAt 5 = 897 / 2500 := by decide
+@[simp] theorem nodeBinAt_six : nodeBinAt 6 = 191 / 500 := by decide
+@[simp] theorem nodeBinAt_seven : nodeBinAt 7 = 1949 / 5000 := by decide
+
+@[simp] theorem endpointUBin_zero : endpointUBin 0 = 1956 / 10000 := by decide
+@[simp] theorem endpointUBin_one : endpointUBin 1 = 3920 / 10000 := by decide
+@[simp] theorem endpointUBin_two : endpointUBin 2 = 5883 / 10000 := by decide
+@[simp] theorem endpointUBin_three : endpointUBin 3 = 7847 / 10000 := by decide
+@[simp] theorem endpointUBin_four : endpointUBin 4 = 9810 / 10000 := by decide
+@[simp] theorem endpointUBin_five : endpointUBin 5 = 11774 / 10000 := by decide
+@[simp] theorem endpointUBin_six : endpointUBin 6 = 13737 / 10000 := by decide
+@[simp] theorem endpointUBin_seven : endpointUBin 7 = 15708 / 10000 := by decide
+
 theorem capQ_le_mul_of_sinHiNLag_le (q y : ℚ) (hy0 : 1 / 2 ≤ y)
     (hy : sinHiNLag (q / 2) ≤ y) : capQ q ≤ 19 / 50 * y := by
   unfold capQ
@@ -220,7 +244,7 @@ theorem endpointUBin_nonneg (j : Fin 8) : 0 ≤ endpointUBin j := by
 
 theorem endpointUBin_le_one_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     endpointUBin j ≤ 1 := by
-  fin_cases j <;> first | norm_num [endpointUBin] | omega
+  fin_cases j <;> first | omega | norm_num [endpointUBin]
 
 theorem nodeQ_binHi_div_two_le_endpointUBin (j : Fin 8) :
     nodeQ RatInterval.piHi 2048 (binHi j) / 2 ≤ endpointUBin j := by
@@ -232,7 +256,7 @@ theorem nodeQ_binHi_nonneg (j : Fin 8) :
 
 theorem nodeQ_binHi_le_two_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     nodeQ RatInterval.piHi 2048 (binHi j) ≤ 2 := by
-  fin_cases j <;> first | norm_num [nodeQ, binHi, RatInterval.piHi] | omega
+  fin_cases j <;> first | omega | norm_num [nodeQ, binHi, RatInterval.piHi]
 
 theorem capQ_binHi_le_endpointUBin_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     capQ (nodeQ RatInterval.piHi 2048 (binHi j)) ≤
