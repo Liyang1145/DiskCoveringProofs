@@ -1,14 +1,11 @@
 EXPERT (2026-10-30):
-- Do not add suffix theory until Bins exits 0; current red is dependency-level,
-  not a verdict on the repaired source.
-- If Bins is red, fix only its first diagnostic; then build EndpointChecks,
-  UpperReductionUnimodal, both suffix modules, and EdgeShape in order.
-- The useful continuous-prefix bridge is an exact cosine lower bound at the
-  witness node followed by antitone `cosT 14` on the prefix.
-- Edges 15/19 (node 389) and 20 (node 486) pass that bridge exactly; edges
-  16/17/18 do not, so do not repeat the same pattern for them.
-- SevenClassExclusions remains 0/7 until sectors, strict total, and
-  `Q0Degree3AreaInput`.
+- CI now reaches `EndpointChecks`; it is the sole real blocker, while all later lane-A exits are dependency-only.
+- Split it now: `EndpointChecksTaylor` (generic Taylor/monotonicity), `EndpointChecksBins` (eight scalar bin lemmas), then assembly.
+- First theorem: `sinT4_eq_quartic (a : ℝ) : sinT 4 a = a - a^3/6 + a^5/120 - a^7/5040`; use `simp [sinT, Finset.sum_range_succ]` then `ring_nf`.
+- Replace repeated `![...] j` lookups with scalar `endpointU0..7 : ℚ`; close rational branches by `simp only [endpointUj, sinPoly4]; norm_num`.
+- For `hj.val < 5` false branches use `norm_num at hj` before `omega`; do not leave bare `omega` after `fin_cases`.
+- Build in order: EndpointChecks -> UpperReductionUnimodal -> both suffix modules -> EdgeShape; then prove `SectorValid` and instantiate `Q0Degree3AreaInput`.
+- `edgeValid` or 42 drafted facts alone are not a class exclusion; `SevenClassExclusions` remains 0/7.
 
 # Lane A notes
 

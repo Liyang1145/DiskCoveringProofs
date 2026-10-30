@@ -1,14 +1,11 @@
 EXPERT (2026-10-30):
-- CI-green lane-C modules: `Paid16MatrixCellCertificate`, `EnergyRefineN2341`,
-  `FrozenCapRationalCore`, `PaidCellCertificateM`, `PaidCellCertificateMCap`,
-  `FrozenCapWideFieldWitnesses`, `Paid16GeneralNext1182`,
-  `EnergyTerminalBatchB13Next505Bounds`, `EnergyTerminalBatchB13DescentBounds`,
-  and `EnergyTerminalBatchB13`.
-- Highest leverage: green B13 paid-set refinements for N2341/N3040 plus
-  conditional main consumers. A payment still requires the wrapper and consumer
-  to be CI-green; a split certificate or cardinality alone is not payment.
-- Do not re-import the optional residual census C02 into B13Main. It was red at
-  `34b14918` with `Expected type must not contain free variables`.
+- Nine singleton wrappers are CI-green (N2341/N3040/N2965/N3440/N3589/N3623/N3633/N3777/N3792), but move no aggregate count.
+- `RefineSeven`/`Main` and `RefineEight`/`Main` are red on proof plumbing, not data; fix the membership dispatcher first, do not mine another N file.
+- Prefer `Finset.univ.biUnion parts` with `parts : Fin 9 -> Finset (Fin 5011)` and a single `mem_new : n ∈ newIDs ↔ n = ...`; dispatch with `rw [h]`, not `subst`.
+- Prove `new_count = 9` via `Finset.card_biUnion` plus concrete pairwise `decide +kernel` facts, then `remaining_of` and one aggregate Main.
+- Fix N2337 line 240 separately (`norm_num at hlt` or `(2337 : Fin 5011).val = 2337 := rfl`); add it only after wrapper CI is green.
+- A singleton `paid_count` is not the B13 count; only an aggregate consumer with `remaining_of` can narrow 389.
+- Do not claim 2004/2006/2007 or root-reachable credit before the aggregate and root/build scope are CI-green.
 
 # Lane C notes
 

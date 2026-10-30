@@ -1,11 +1,11 @@
 EXPERT (2026-10-30):
-- `B13Main` at `521ca436a8745ef197f76fcadedce2cf232b3b3643b977b997153e463fa41837` is CI-green; stop static/hash/import reruns, which cannot move the ledger.
-- Highest leverage is the supervisor-only import switch at `N11Formalization.lean:1961`: `EnergyTerminalBatchB12Main` -> `EnergyTerminalBatchB13Main`, followed by fresh root CI.
-- No new Lean lemma is required for this step; `remaining_of_b13` already transfers `B13.RemainingTerminalRadius` to the B12 residual.
-- Call 1997/2386 root-reachable and conditional only after that root CI is green; it is not an accepted handoff upgrade by itself.
-- Keep the documented residual at 389: `EnergyTerminalResidualCensus` has not yet established the census/cardinality in kernel CI.
-- Do not add B13/B14 proof content while root integration is pending, and do not hide the known `SharedMomentConcreteSwitchBatch` root OOM as a mathematical failure.
-- SevenClassExclusions remains 0/7 and the arbitrary-center full-disk theorem remains unpaid.
+- All seven `LaneBFrozenCapRowCap*` targets are CI-red; the first errors are vector indexing left as `![...] 2`, not a numerical cap failure.
+- `norm_num [y_..., rowA]` does not unfold enough; use `simp only [y_..., rowA]` then `norm_num`, and remove no-goal trailing tactics. Do not invest another cycle here unless a bridge appears.
+- The row caps still do not force `f0Lo`/`g`, so they cannot pay `RemainingTerminalRadius`; exact Fractions and byte audits are diagnostics, not proof.
+- Highest leverage is the supervisor-only root import switch at `N11Formalization.lean:1961`: B12Main -> B13Main, then fresh root CI.
+- No new B Lean lemma is required for that switch; `remaining_of_b13` already transfers the residual.
+- Keep B13 at 1997 paid / 389 residual conditional. Do not call it root-reachable before root CI, and do not add B14 or row-cap content meanwhile.
+- The root OOM in `SharedMomentConcreteSwitchBatch` is not a B13 mathematical verdict; SevenClassExclusions remains 0/7.
 
 ## 2026-10-30 - session part 38: local Lean probe bounded; bytes still CI pending
 
