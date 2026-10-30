@@ -24,10 +24,12 @@ def load():
     doc = json.loads(REPORT.read_text())
     recs = {r["id"]: r for r in doc["records"] if r["status"] == "PASS"}
     assert set(recs) == set(IDS) and doc["pass_count"] == len(IDS)
+    source = {r["id"]: r for r in json.loads(common.PROPOSAL.read_text(encoding="utf-8-sig"))["records"]}
     text = common.DBM.read_text()
     out = []
     for node in IDS:
         r = recs[node]
+        ep = [common.endpoint_lo(Q(v)) for v in source[node]["g"]]
         y = [Q(0)] * 9
         for k, field in enumerate(r["support"][:3]):
             y[field] = Q(r["coordinates"][k])
@@ -39,15 +41,16 @@ def load():
                 rhs = Q(db[i][j], 4096)
                 lhs = sum(y[q] * common.row_a(i, j, q) for q in range(9))
                 assert lhs <= rhs, (node, i, j, lhs, rhs)
-        out.append((node, y))
+        out.append((node, y, ep))
     return out
 
 
 def main():
     records = load()
     blocks = []
-    for node, y in records:
+    for node, y, ep in records:
         vec = ", ".join(lean_rat(v) for v in y)
+        weighted = [y[q] * ep[q] for q in range(9)]
         blocks.append(f'''def y4_{node} : Fin 9 → ℚ :=
   ![{vec}]
 
@@ -64,11 +67,22 @@ theorem endpoint_{node} (q : Fin 9) :
     N11Formalization.FlashCosine.Lq, N11Formalization.FlashCosine.LQ,
     N11Formalization.RatInterval.piLo, N11Formalization.RatInterval.piHi]
 
+def H4_{node} : Fin 9 → ℚ := ![{", ".join(lean_rat(v) for v in weighted)}]
+
+theorem weighted_terms_{node} (q : Fin 9) : y4_{node} q * E_{node} q = H4_{node} q := by
+  fin_cases q <;> norm_num [y4_{node}, E_{node}, H4_{node}]
+
 theorem strict_gain_{node} : F0_{node} + ∑ q : Fin 9, y4_{node} q *
     endpointLo N11Formalization.FlashCosine.Dq N11Formalization.FlashCosine.DQ (G_{node} q) <
       N11Formalization.FlashCosineLeaf284Bridge.T ^ 2 := by
   simp only [endpoint_{node}]
-  norm_num [F0_{node}, y4_{node}, E_{node}, N11Formalization.FlashCosineLeaf284Bridge.T]''')
+  have hsum : (∑ q : Fin 9, y4_{node} q * E_{node} q) = ∑ q : Fin 9, H4_{node} q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    exact weighted_terms_{node} q
+  rw [hsum]
+  norm_num [F0_{node}, H4_{node}, N11Formalization.FlashCosineLeaf284Bridge.T,
+    Fin.sum_univ_succ]''')
     src = '''import N11Formalization.FrozenCapRationalCore
 import N11Formalization.PaidCellCertificateMCap
 

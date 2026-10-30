@@ -57,14 +57,16 @@ def checked():
                 rhs = Q(db[i][j], 4096)
                 assert lhs <= rhs, (node, i, j, lhs, rhs)
                 slacks.append(rhs - lhs)
-        out.append((node, y, db, min(slacks), gain - common.T2))
+        ep = [common.endpoint_lo(Q(v)) for v in rec["g"]]
+        out.append((node, y, db, min(slacks), gain - common.T2, ep))
     return out
 
 
 def emit_witnesses(rows):
     blocks = []
-    for node, y, _, _, _ in rows:
+    for node, y, _, _, _, ep in rows:
         vec = ", ".join(lean_rat(v) for v in y)
+        weighted = [y[q] * ep[q] for q in range(9)]
         blocks.append(f'''def yW_{node} : Fin 9 → ℚ := ![{vec}]
 
 theorem nonneg_{node} : ∀ q, 0 ≤ yW_{node} q := by
@@ -77,10 +79,18 @@ theorem endpoint_{node} (q : Fin 9) :
     endpointLo Dq DQ (G_{node} q) = E_{node} q := by
   fin_cases q <;> norm_num [G_{node}, E_{node}, endpointLo, Dq, DQ, Lq, LQ, piLo, piHi]
 
+def HW_{node} : Fin 9 → ℚ := ![{", ".join(lean_rat(v) for v in weighted)}]
+
+theorem weighted_terms_{node} (q : Fin 9) : yW_{node} q * E_{node} q = HW_{node} q := by
+  fin_cases q <;> norm_num [yW_{node}, E_{node}, HW_{node}]
+
 theorem strict_gain_{node} : F0_{node} + ∑ q : Fin 9, yW_{node} q *
     endpointLo Dq DQ (G_{node} q) < T ^ 2 := by
   simp only [endpoint_{node}]
-  norm_num [F0_{node}, yW_{node}, E_{node}, T]''')
+  have hy : yW_{node} = y_{node} := by
+    funext q
+    fin_cases q <;> norm_num [yW_{node}, y_{node}]
+  simpa only [hy] using FrozenCapRationalCore.strict_gain_{node}''')
     src = '''import N11Formalization.FrozenCapRationalCore
 import N11Formalization.ConvexMinorantCore
 
@@ -109,7 +119,7 @@ end N11Formalization.FrozenCapWideFieldWitnesses
 
 def emit_row_caps(rows):
     blocks = []
-    for node, _, db, _, _ in rows:
+    for node, _, db, _, _, _ in rows:
         mat = ",\n      ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
         blocks.append(f'''def dbmVal_{node} : Fin 10 → Fin 10 → ℤ
   | i, j => ![
@@ -149,7 +159,7 @@ end N11Formalization.FrozenCapWideFieldRowCaps
 
 def emit_tree(rows):
     bridges, wrappers = [], []
-    for node, _, _, _, _ in rows:
+    for node, _, _, _, _, _ in rows:
         bridges.append(f'''theorem db_eq_tree_{node} : ∀ i j : Fin 10,
     (((N11Formalization.DBMSourceTree.data ({node} : Fin 5011)).db i j : ℚ) / 4096) =
       db_{node} i j := by
@@ -199,8 +209,8 @@ def main():
     emit_tree(rows)
     for path in (WITNESSES, ROW_CAPS, TREE):
         print(path.relative_to(ROOT), hashlib.sha256(path.read_bytes()).hexdigest().upper())
-    print("exact_rows", 100 * len(rows), "minimum_cap_slack", [(n, str(s)) for n, _, _, s, _ in rows])
-    print("strict_gain_margins", [(n, str(m)) for n, _, _, _, m in rows])
+    print("exact_rows", 100 * len(rows), "minimum_cap_slack", [(n, str(s)) for n, _, _, s, _, _ in rows])
+    print("strict_gain_margins", [(n, str(m)) for n, _, _, _, m, _ in rows])
 
 
 if __name__ == "__main__":

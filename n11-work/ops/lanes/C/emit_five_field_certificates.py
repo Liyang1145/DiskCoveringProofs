@@ -25,10 +25,12 @@ def load():
     doc = json.loads(REPORT.read_text())
     recs = {r["id"]: r for r in doc["records"] if r["status"] == "PASS"}
     assert set(recs) == set(IDS) and doc["pass_count"] == len(IDS)
+    source = {r["id"]: r for r in json.loads(common.PROPOSAL.read_text(encoding="utf-8-sig"))["records"]}
     db_text = common.DBM.read_text()
     out = []
     for node in IDS:
         r = recs[node]
+        ep = [common.endpoint_lo(Q(v)) for v in source[node]["g"]]
         support = r["support"]
         coords = [Q(v) for v in r["coordinates"]]
         y = [Q(0)] * 9
@@ -44,14 +46,15 @@ def load():
                 rhs = Q(db[i][j], 4096)
                 assert lhs <= rhs, (node, i, j, lhs, rhs)
                 slacks.append(rhs - lhs)
-        out.append((node, y, db, min(slacks)))
+        out.append((node, y, db, min(slacks), ep))
     return out
 
 
 def emit_witnesses(records):
     blocks = []
-    for node, y, _, _ in records:
+    for node, y, _, _, ep in records:
         vec = ", ".join(lean_rat(v) for v in y)
+        weighted = [y[q] * ep[q] for q in range(9)]
         blocks.append(f'''def y5_{node} : Fin 9 → ℚ := ![{vec}]
 
 theorem nonneg_{node} : ∀ q, 0 ≤ y5_{node} q := by
@@ -67,11 +70,22 @@ theorem endpoint_{node} (q : Fin 9) :
     N11Formalization.FlashCosine.Lq, N11Formalization.FlashCosine.LQ,
     N11Formalization.RatInterval.piLo, N11Formalization.RatInterval.piHi]
 
+def H5_{node} : Fin 9 → ℚ := ![{", ".join(lean_rat(v) for v in weighted)}]
+
+theorem weighted_terms_{node} (q : Fin 9) : y5_{node} q * E_{node} q = H5_{node} q := by
+  fin_cases q <;> norm_num [y5_{node}, E_{node}, H5_{node}]
+
 theorem strict_gain_{node} : F0_{node} + ∑ q : Fin 9, y5_{node} q *
     endpointLo N11Formalization.FlashCosine.Dq N11Formalization.FlashCosine.DQ (G_{node} q) <
       N11Formalization.FlashCosineLeaf284Bridge.T ^ 2 := by
   simp only [endpoint_{node}]
-  norm_num [F0_{node}, y5_{node}, E_{node}, N11Formalization.FlashCosineLeaf284Bridge.T]''')
+  have hsum : (∑ q : Fin 9, y5_{node} q * E_{node} q) = ∑ q : Fin 9, H5_{node} q := by
+    apply Finset.sum_congr rfl
+    intro q _
+    exact weighted_terms_{node} q
+  rw [hsum]
+  norm_num [F0_{node}, H5_{node}, N11Formalization.FlashCosineLeaf284Bridge.T,
+    Fin.sum_univ_succ]''')
     src = '''import N11Formalization.FrozenCapRationalCore
 import N11Formalization.PaidCellCertificateMCap
 
@@ -100,7 +114,7 @@ end N11Formalization.FrozenCapFiveFieldWitnesses
 
 def emit_row_caps(records):
     blocks = []
-    for node, _, db, _ in records:
+    for node, _, db, _, _ in records:
         rows = ",\n      ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
         blocks.append(f'''def dbmVal_{node} : Fin 10 → Fin 10 → ℤ
   | i, j => ![
@@ -145,7 +159,7 @@ def main():
     emit_row_caps(records)
     for path in (WITNESSES, ROW_CAPS):
         print(path.relative_to(ROOT), hashlib.sha256(path.read_bytes()).hexdigest().upper())
-    print("rows", 100 * len(records), "per_node_min_slack", [(n, str(s)) for n, _, _, s in records])
+    print("rows", 100 * len(records), "per_node_min_slack", [(n, str(s)) for n, _, _, s, _ in records])
 
 
 if __name__ == "__main__":
