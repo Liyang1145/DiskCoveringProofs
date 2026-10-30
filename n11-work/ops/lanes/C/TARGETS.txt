@@ -2,6 +2,8 @@
 N11Formalization.FrozenCapRationalCore
 N11Formalization.PaidCellCertificateM
 N11Formalization.PaidCellCertificateMCap
+N11Formalization.Paid16MatrixCellCertificate
+N11Formalization.EnergyRefineN2341
 N11Formalization.FrozenCapWideFieldWitnesses
 N11Formalization.FrozenCapPublicExcludedTree
 # FrozenCapResidualMembership is withheld until Lane B's B13 is CI-green.
