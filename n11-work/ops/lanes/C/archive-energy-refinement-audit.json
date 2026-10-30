@@ -1,0 +1,1272 @@
+{
+  "scope": "static archive-source audit only; no Lean build, source restoration or kernel credit",
+  "source_branch": "origin/ci/n11-build",
+  "source_commit": "8de79f774f8dcb1513855dfd54832bdfcce74e3f",
+  "census_path": "n11-work/ops/lanes/C/residual389-census.json",
+  "census_sha256": "44166ee869a61f6858f2285a98f96cc3faa4f59fbb98c01d76b4dc42a28827a8",
+  "census_residual_count": 389,
+  "candidate_count": 57,
+  "candidate_ids": [
+    3,
+    23,
+    37,
+    38,
+    39,
+    40,
+    2337,
+    2341,
+    2965,
+    3040,
+    3112,
+    3116,
+    3149,
+    3431,
+    3432,
+    3440,
+    3490,
+    3496,
+    3517,
+    3520,
+    3522,
+    3550,
+    3564,
+    3569,
+    3573,
+    3578,
+    3589,
+    3623,
+    3633,
+    3738,
+    3777,
+    3778,
+    3781,
+    3783,
+    3792,
+    3794,
+    3795,
+    3800,
+    3802,
+    3803,
+    3807,
+    3808,
+    3810,
+    3821,
+    3825,
+    3841,
+    3851,
+    3853,
+    3854,
+    3863,
+    3865,
+    3979,
+    4162,
+    4244,
+    4313,
+    4650,
+    4684
+  ],
+  "candidate_ids_sha256": "cce8dda2bf536edf11b842966d1cf1e9cc75154b2e4f7b69ba814f4657d34057",
+  "all_static_shapes_ok": true,
+  "all_candidates_residual": true,
+  "framework_present_in_current_tree": true,
+  "framework_required_by_all": true,
+  "modules_with_forbidden_tokens": [
+    3,
+    23,
+    38,
+    39,
+    3432,
+    3490,
+    3517,
+    3550,
+    3564,
+    3569,
+    3578,
+    3738,
+    3781,
+    3825,
+    3854
+  ],
+  "draft_marker_count": 57,
+  "maxheartbeats_zero_count": 15,
+  "total_bytes": 6949370,
+  "total_kernel_decide_count": 724,
+  "admissible_as_is": false,
+  "blocking_reasons": [
+    "archive modules are marked as exact-rational pre-validated but not compiled",
+    "some archive modules set maxHeartbeats 0",
+    "large decide +kernel checks have not been bounded or kernel-audited here"
+  ],
+  "modules": [
+    {
+      "id": 3,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0003.lean",
+      "bytes": 235738,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 22,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 23,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0023.lean",
+      "bytes": 213076,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 20,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 37,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0037.lean",
+      "bytes": 53958,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 8,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 38,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0038.lean",
+      "bytes": 187383,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 18,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 39,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0039.lean",
+      "bytes": 93696,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 11,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 40,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0040.lean",
+      "bytes": 121474,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 13,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 2337,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN2337.lean",
+      "bytes": 28421,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 2341,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN2341.lean",
+      "bytes": 28383,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 2965,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN2965.lean",
+      "bytes": 28441,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3040,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3040.lean",
+      "bytes": 28437,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3112,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3112.lean",
+      "bytes": 41825,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 7,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3116,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3116.lean",
+      "bytes": 42038,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 7,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3149,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3149.lean",
+      "bytes": 69321,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 9,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3431,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3431.lean",
+      "bytes": 42384,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 7,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3432,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3432.lean",
+      "bytes": 361994,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 30,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3440,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3440.lean",
+      "bytes": 28698,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3490,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3490.lean",
+      "bytes": 488112,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 39,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3496,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3496.lean",
+      "bytes": 69596,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 9,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3517,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3517.lean",
+      "bytes": 206388,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 19,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3520,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3520.lean",
+      "bytes": 97335,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 11,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3522,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3522.lean",
+      "bytes": 179431,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 17,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3550,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3550.lean",
+      "bytes": 292417,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 25,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3564,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3564.lean",
+      "bytes": 165602,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 16,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3569,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3569.lean",
+      "bytes": 207130,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 19,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3573,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3573.lean",
+      "bytes": 42838,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 7,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3578,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3578.lean",
+      "bytes": 236765,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 21,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3589,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3589.lean",
+      "bytes": 28803,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3623,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3623.lean",
+      "bytes": 28776,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3633,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3633.lean",
+      "bytes": 28912,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3738,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3738.lean",
+      "bytes": 341024,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 28,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3777,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3777.lean",
+      "bytes": 28971,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3778,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3778.lean",
+      "bytes": 42630,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 7,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3781,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3781.lean",
+      "bytes": 125924,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 13,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3783,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3783.lean",
+      "bytes": 197480,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 18,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3792,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3792.lean",
+      "bytes": 29399,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3794,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3794.lean",
+      "bytes": 70706,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 9,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3795,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3795.lean",
+      "bytes": 72356,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 9,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3800,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3800.lean",
+      "bytes": 43304,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 7,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3802,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3802.lean",
+      "bytes": 126831,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 13,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3803,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3803.lean",
+      "bytes": 43001,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 7,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3807,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3807.lean",
+      "bytes": 114451,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 12,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3808,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3808.lean",
+      "bytes": 172255,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 16,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3810,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3810.lean",
+      "bytes": 72866,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 9,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3821,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3821.lean",
+      "bytes": 129118,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 13,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3825,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3825.lean",
+      "bytes": 186019,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 17,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3841,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3841.lean",
+      "bytes": 242290,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 21,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3851,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3851.lean",
+      "bytes": 210539,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 19,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3853,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3853.lean",
+      "bytes": 29435,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 6,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3854,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3854.lean",
+      "bytes": 183495,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 17,
+      "draft_marker": true,
+      "forbidden_hits": [
+        "maxHeartbeats 0"
+      ],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3863,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3863.lean",
+      "bytes": 100208,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 11,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3865,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3865.lean",
+      "bytes": 84673,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 10,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 3979,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3979.lean",
+      "bytes": 58418,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 8,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 4162,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4162.lean",
+      "bytes": 189483,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 17,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 4244,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4244.lean",
+      "bytes": 187867,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 17,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 4313,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4313.lean",
+      "bytes": 57727,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 8,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 4650,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4650.lean",
+      "bytes": 73292,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 9,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    },
+    {
+      "id": 4684,
+      "path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4684.lean",
+      "bytes": 58236,
+      "imports": [
+        "N11Formalization.Paid16MatrixCellCertificate"
+      ],
+      "kernel_decide_count": 8,
+      "draft_marker": true,
+      "forbidden_hits": [],
+      "checks": {
+        "filename_id_matches_terminal": true,
+        "radius_id_matches_filename": true,
+        "newIDs_singleton_matches_filename": true,
+        "axiom_print_matches_filename": true,
+        "framework_imported": true,
+        "id_is_current_residual": true
+      },
+      "static_shape_ok": true
+    }
+  ]
+}
