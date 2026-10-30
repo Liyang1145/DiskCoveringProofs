@@ -1,54 +1,131 @@
+#!/usr/bin/env python3
+"""Emit the checked B13 descent-bound source from its finite block layout.
+
+The B09 correction is explicit: 27 legacy ids are at or above the Next1182
+lower bound, so they cannot be discarded by a false `< 2565` theorem.  The
+generated proof excludes each such id from all 57 literal Next1182 blocks.
+"""
 from pathlib import Path
-root = Path('n11-work/lean/N11Formalization')
-lines = []
-lines += [f'import N11Formalization.Paid16GeneralG{i:02d}' for i in range(3,13)]
-lines += ['import N11Formalization.EnergyTerminalBatchB10',
-          'import N11Formalization.Paid16GeneralRemaining210', '', '/-! Bounded descent facts used by B13. Each kernel decision covers at most',
-          '58 literal ids; the 210-id remainder is assembled from ten 21-id blocks. -/',
-          'set_option autoImplicit false',
-          'namespace N11Formalization.EnergyTerminalBatchB13DescentBounds', 'open Finset', 'noncomputable section', '']
-for i in range(3,13):
-    G = f'Paid16GeneralG{i:02d}'
-    lines += [f'private theorem g{i:02d}_lt (n : Fin 5011) (hn : n ∈ {G}.newIDs) :',
-              f'    n.val < 2565 := by',
-              f'  have h : ∀ m ∈ {G}.newIDs, m.val < 2565 := by decide +kernel',
-              f'  exact h n hn', '']
-lines += ['theorem b09_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB09.paidIDs) :',
-          '    n.val < 2565 := by',
-          '  have h : ∀ m ∈ EnergyTerminalBatchB09.paidIDs, m.val < 2565 := by',
-          '    decide +kernel',
-          '  exact h n hn', '',
-          'theorem first42_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralFirst42.newIDs) :',
-          '    n.val < 2565 := by',
-          '  have h : ∀ m ∈ Paid16GeneralFirst42.newIDs, m.val < 2565 := by',
-          '    decide +kernel',
-          '  exact h n hn', '',
-          'theorem b10_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB10.paidIDs) :',
-          '    n.val < 2565 := by',
-          '  rw [EnergyTerminalBatchB10.paidIDs] at hn',
-          '  rcases Finset.mem_union.mp hn with hn | hn',
-          '  · exact b09_lt n hn',
-          '  · exact first42_lt n hn', '',
-          'theorem remaining210_lt (n : Fin 5011)',
-          '    (hn : n ∈ Paid16GeneralRemaining210.newIDs) : n.val < 2565 := by',
-          '  have hm : n ∈ Paid16GeneralG03.newIDs ∨',
-          '      n ∈ Paid16GeneralG04.newIDs ∨',
-          '      n ∈ Paid16GeneralG05.newIDs ∨',
-          '      n ∈ Paid16GeneralG06.newIDs ∨',
-          '      n ∈ Paid16GeneralG07.newIDs ∨',
-          '      n ∈ Paid16GeneralG08.newIDs ∨',
-          '      n ∈ Paid16GeneralG09.newIDs ∨',
-          '      n ∈ Paid16GeneralG10.newIDs ∨',
-          '      n ∈ Paid16GeneralG11.newIDs ∨',
-          '      n ∈ Paid16GeneralG12.newIDs := by',
-          '    simpa only [Paid16GeneralRemaining210.newIDs, Finset.mem_union] using hn',
-          '  rcases hm with hn | hn | hn | hn | hn | hn | hn | hn | hn | hn']
-for i in range(3,13):
-    lines += [f'  · exact g{i:02d}_lt n hn']
-lines += ['', 'end', 'end N11Formalization.EnergyTerminalBatchB13DescentBounds',
-          '#check @N11Formalization.EnergyTerminalBatchB13DescentBounds.b10_lt',
-          '#check @N11Formalization.EnergyTerminalBatchB13DescentBounds.remaining210_lt',
-          '#print axioms N11Formalization.EnergyTerminalBatchB13DescentBounds.b10_lt',
-          '#print axioms N11Formalization.EnergyTerminalBatchB13DescentBounds.remaining210_lt', '']
-(root / 'EnergyTerminalBatchB13DescentBounds.lean').write_text('\n'.join(lines))
-print('wrote', root / 'EnergyTerminalBatchB13DescentBounds.lean')
+
+root = Path("n11-work/lean/N11Formalization")
+high_ids = (2661, 2675, 2880, 2888, 2962, 2971, 2973, 3121, 3134, 3436,
+            3591, 3601, 3619, 3833, 3834, 3842, 3852, 3874, 3950, 3965,
+            4058, 4179, 4265, 4266, 4267, 4348, 4485)
+blocks = [(1, 0), (1, 1), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (1, 7),
+          (2, 8), (2, 9), (2, 10), (2, 11), (2, 12), (2, 13), (2, 14), (2, 15),
+          (3, 16), (3, 17), (3, 18), (3, 19), (3, 20), (3, 21), (3, 22), (3, 23),
+          (4, 24), (4, 25), (4, 26), (4, 27), (4, 28), (4, 29), (4, 30), (4, 31),
+          (5, 32), (5, 33), (5, 34), (5, 35), (5, 36), (5, 37), (5, 38), (5, 39),
+          (6, 40), (6, 41), (6, 42), (6, 43), (6, 44), (6, 45), (6, 46), (6, 47),
+          (7, 48), (7, 49), (7, 50), (7, 51), (7, 52), (7, 53), (7, 54), (7, 55),
+          (8, 56)]
+assert len(high_ids) == 27 and len(set(high_ids)) == 27
+assert len(blocks) == 57 and len({i for _, i in blocks}) == 57
+
+lines = [f"import N11Formalization.Paid16GeneralG{i:02d}" for i in range(3, 13)]
+lines += [
+    "import N11Formalization.EnergyTerminalBatchB10",
+    "import N11Formalization.Paid16GeneralRemaining210",
+    "",
+    "/-! Bounded descent facts used by B13. Each kernel decision covers at most",
+    "58 literal ids; the 210-id remainder is assembled from ten 21-id blocks. -/",
+    "set_option autoImplicit false",
+    "set_option maxRecDepth 10000",
+    "namespace N11Formalization.EnergyTerminalBatchB13DescentBounds",
+    "open Finset",
+    "noncomputable section",
+    "",
+]
+for i in range(3, 13):
+    name = f"Paid16GeneralG{i:02d}"
+    lines += [
+        f"private theorem g{i:02d}_lt (n : Fin 5011) (hn : n ∈ {name}.newIDs) :",
+        "    n.val < 2565 := by",
+        f"  have h : ∀ m ∈ {name}.newIDs, m.val < 2565 := by decide +kernel",
+        "  exact h n hn",
+        "",
+    ]
+
+lines += [
+    "/-- B09 is not wholly below 2565: `b09HighIDs` lists its 27 legacy ids at or",
+    "above 2565.  This exhaustive classification replaces the false former `b09_lt`",
+    "statement. -/",
+    "def b09HighIDs : Finset (Fin 5011) := {" + ",".join(map(str, high_ids)) + "}",
+    "",
+    "theorem b09_bound (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB09.paidIDs) :",
+    "    n.val < 2565 ∨ n ∈ b09HighIDs := by",
+    "  have h : ∀ m ∈ EnergyTerminalBatchB09.paidIDs, m.val < 2565 ∨ m ∈ b09HighIDs := by",
+    "    decide +kernel",
+    "  exact h n hn",
+    "",
+    "theorem first42_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralFirst42.newIDs) :",
+    "    n.val < 2565 := by",
+    "  have h : ∀ m ∈ Paid16GeneralFirst42.newIDs, m.val < 2565 := by",
+    "    decide +kernel",
+    "  exact h n hn",
+    "",
+    "theorem b10_bound (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB10.paidIDs) :",
+    "    n.val < 2565 ∨ n ∈ b09HighIDs := by",
+    "  rw [EnergyTerminalBatchB10.paidIDs] at hn",
+    "  rcases Finset.mem_union.mp hn with hn | hn",
+    "  · exact b09_bound n hn",
+    "  · exact Or.inl (first42_lt n hn)",
+    "",
+    "theorem remaining210_lt (n : Fin 5011)",
+    "    (hn : n ∈ Paid16GeneralRemaining210.newIDs) : n.val < 2565 := by",
+    "  have hm : n ∈ Paid16GeneralG03.newIDs ∨",
+]
+lines += [f"      n ∈ Paid16GeneralG{i:02d}.newIDs ∨" for i in range(4, 12)]
+lines += [
+    "      n ∈ Paid16GeneralG12.newIDs := by",
+    "    simpa only [Paid16GeneralRemaining210.newIDs, Finset.mem_union] using hn",
+    "  rcases hm with hn | hn | hn | hn | hn | hn | hn | hn | hn | hn",
+]
+lines += [f"  · exact g{i:02d}_lt n hn" for i in range(3, 13)]
+lines += [
+    "",
+    "",
+    "theorem b11_bound (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :",
+    "    n.val < 2565 ∨ n ∈ b09HighIDs := by",
+    "  rw [EnergyTerminalBatchB11.paidIDs] at hn",
+    "  rcases Finset.mem_union.mp hn with hn | hn",
+    "  · exact b10_bound n hn",
+    "  · exact Or.inl (remaining210_lt n hn)",
+    "",
+    "/-- Every B09 id above 2565 is absent from the 57 literal Next1182 blocks. -/",
+    "theorem high_not_next (n : Fin 5011) (hn : n ∈ b09HighIDs) :",
+    "    n ∉ Paid16GeneralNext1182.newIDs := by",
+    "  simp only [b09HighIDs, Finset.mem_insert, Finset.mem_singleton] at hn",
+    "  rcases hn with " + " | ".join("rfl" for _ in high_ids),
+]
+
+group_starts = {1: 0, 2: 8, 3: 16, 4: 24, 5: 32, 6: 40, 7: 48, 8: 56}
+for _ in high_ids:
+    lines += [
+        "  · rw [Paid16GeneralNext1182.new_mem]",
+        "    rintro (h | h | h | h | h | h | h | h)",
+    ]
+    for group in range(1, 9):
+        count = 8 if group < 8 else 1
+        names = [f"Paid16GeneralNext1182S{group:02d}.mem_ids{group_starts[group] + j:02d}"
+                 for j in range(count)]
+        simp = [f"Paid16GeneralNext1182S{group:02d}.new_mem"] + names
+        lines += [
+            "    · simp only [" + ", ".join(simp) + "] at h",
+            "      norm_num at h",
+        ]
+
+lines += [
+    "",
+    "end",
+    "end N11Formalization.EnergyTerminalBatchB13DescentBounds",
+    "#check @N11Formalization.EnergyTerminalBatchB13DescentBounds.b09_bound",
+    "#check @N11Formalization.EnergyTerminalBatchB13DescentBounds.b11_bound",
+    "#check @N11Formalization.EnergyTerminalBatchB13DescentBounds.remaining210_lt",
+    "#print axioms N11Formalization.EnergyTerminalBatchB13DescentBounds.b09_bound",
+    "#print axioms N11Formalization.EnergyTerminalBatchB13DescentBounds.b11_bound",
+    "#print axioms N11Formalization.EnergyTerminalBatchB13DescentBounds.remaining210_lt",
+]
+target = root / "EnergyTerminalBatchB13DescentBounds.lean"
+target.write_text("\n".join(lines) + "\n", encoding="utf-8")
+print("wrote", target)
