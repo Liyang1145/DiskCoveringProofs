@@ -1,39 +1,82 @@
 EXPERT (2026-10-30):
 - Core B13 is the real result: `1997/2386`, residual `389`, CI-green at `6937fb90`.
-- `Refine0037` is still red at `6937fb90` (`omega`, line 240); the current literal-block repair is pending, not credit.
-- Highest leverage: after `Refine0037` exits 0, add `EnergyTerminalBatchB13RefineSixteen` combining `Eleven` with `N0037`, `N3112`, `N3116`, `N3431`, `N3573`.
+- `Refine0037`, Twelve and singleton dependencies are CI-green at `cc04268c`; Thirteen line 58 is repaired but CI-pending.
+- Highest leverage: CI-kernel-check the repaired Thirteen and the untracked Fourteen/Sixteen chain before any root switch.
 - Prove `paid_count = 2013`, transfer `remaining_of` to B13, and expose residual `373`; use singleton definitions plus `not_paid_*`, not a giant `decide`.
 - The root switch B12Main -> B13Main is supervisor-only and changes reachability, not the 389 residual count.
 - Row caps remain unpriced without the `f0Lo`/`g` bridge; hashes, audits, and exact Fractions are diagnostics. SevenClassExclusions stays `0/7`.
 
 # Lane B notes
-## 2026-10-30 - session 58: 0037 proof path made an explicit CI target
+## 2026-10-30 - session 63: preflight rerun; bytes still uncommitted
 
-- Added `EnergyTerminalBatchB13Refine0037` and `RefineTwelve` to
-  `n11-work/ops/lanes/B/TARGETS.txt` before Thirteen
-  (SHA256 `4350F29965C8AC815842A64AA02A454818D9DE11BDA7BCA79BD640046F45C762`).
-  This makes the repaired 0037 proof receive its own kernel exit rather than
-  relying on transitive dependency compilation.
-- Strengthened `audit_b13_refine0037.py`
-  (SHA256 `EBA31728A87C596A4868DB93429DF08953A440BE1269A056E203490800287253`)
-  to require exactly one 0037 target, exactly one Twelve target, and 0037 before
-  Twelve. It still parses all 25 Next505 literal blocks and `new_mem` order.
-- Checks: 0037 audit exit 0, `ok:true`, 25 blocks/505 unique ids/37 absent/min
-  1160/ordered parts/target order all pass; thirteen audit exit 0 with all 12
-  checks; root-switch audit exit 0 (8/8, `phase=pre_handoff`);
-  `audit_target_imports.py`, `py_compile`, and `git diff --check` exit 0.
-  Updated reports: thirteen `7AACB58B...C6DA9`, root-switch
-  `7ECBBE83...E1A96`. Scope is static source/inventory only, not Lean
-  elaboration or proof credit.
-- Frozen bytes remain: 0037 `83D464E788D0D014C214EBAC96D2EAF3AC6F29087597F866B572B4F965CEC727`;
-  Thirteen `1B954B3C...B85AF62`; ThirteenMain `D46E758C...D2784375`;
-  root `022075AE...B338914`. Kernel verdict is CI pending.
-- Still unproved: 376 conditional residual radii, the `f0Lo`/`g` bridge,
+- Current tree has modified repaired Thirteen and untracked Fourteen/Sixteen
+  modules; HEAD `94c33439` contains none of those Lean bytes. Therefore no CI
+  run can yet supply their kernel verdict.
+- Reran `audit_b13_refine_thirteen.py` (ok, SHA `FE498E4D...A690E739`),
+  `audit_b13_refine_fourteen.py` (19/19, paid 2011, residual 375),
+  `audit_b13_refine_sixteen.py` (14/14, paid 2013, residual 373), and
+  `audit_target_imports.py` (1965-module closure); `git diff --check` exits 0.
+  Scope is static source/inventory only, not Lean elaboration or proof credit.
+- Latest committed CI index remains run `41123531381` on `cc04268c`; it is green
+  for Refine0037/Twelve/dependencies but predates the repaired Thirteen and the
+  Fourteen/Sixteen files. No local full-project build was attempted.
+- Still unproved: the conditional 373 residual radii, the `f0Lo`/`g` bridge,
   SevenClassExclusions, and the arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits these exact bytes; fresh
-  `n11-lean-build` must show explicit exits `0` for Refine0037, RefineTwelve,
-  Thirteen and ThirteenMain before the single root switch B12Main ->
-  ThirteenMain.
+- Next concrete step: supervisor commit the listed bytes unchanged, then require
+  serial CI exit 0 for Thirteen, ThirteenMain, Fourteen, FourteenMain, Sixteen
+  and SixteenMain; repair only the first failing declaration from its diagnostic.
+- ROOT-IMPORT REQUEST after those exits are 0: replace the B12Main energy import
+  with `EnergyTerminalBatchB13RefineSixteenMain`.
+
+## 2026-10-30 - session 62: post-repair CI state and Fourteen/Sixteen preflight
+
+- Re-read the live GitHub run list. The newest `n11-lean-build` is still
+  `41123531381` on `cc04268c`; newer commits only ran the scoped-math and
+  delivery-byte workflows. Thus the repaired Thirteen still has no fresh n11
+  kernel verdict, and untracked Fourteen/Sixteen have none.
+- `audit_b13_refine_fourteen.py` passes 19/19 (`2010 + 1 = 2011`, residual
+  375). `audit_b13_refine_sixteen.py` passes 14/14 (unique 16-id chain,
+  `2011 + 2 = 2013`, residual 373, target order and banned-token scan).
+- `audit_target_imports.py` passes with a 1965-module import closure;
+  `py_compile` and `git diff --check` exit 0. These remain static
+  source/inventory checks, not Lean proof credit.
+- Source hashes remain Thirteen `FE498E4D...A690E739`, Fourteen
+  `12D107B3...DD0E4`, Sixteen `055F8BA3...C28851`, SixteenMain
+  `A3103831...8FECF`.
+- Still unproved: the conditional 373 residual radii, the `f0Lo`/`g` bridge,
+  SevenClassExclusions, and the arbitrary-center full-disk theorem.
+- Next concrete step: supervisor commit; require serial CI exit 0 for
+  Thirteen, ThirteenMain, Fourteen, FourteenMain, Sixteen and SixteenMain.
+  Repair only the first failing declaration from its exact diagnostic.
+- ROOT-IMPORT REQUEST after those exits are 0: replace the B12Main energy
+  import with `EnergyTerminalBatchB13RefineSixteenMain`.
+
+## 2026-10-30 - session 61 (condensed): Thirteen line-58 repair
+
+- Repaired `twelve_new_count` in `EnergyTerminalBatchB13RefineThirteen.lean` by
+  unfolding Twelve's union, proving the component disjointness with bounded
+  `decide +kernel`, and closing `11 + 1 = 12`; SHA `FE498E4D...A690E739`.
+  Thirteen audit passed 12/12, but no local Lean elaboration; CI pending.
+
+## 2026-10-30 - session 60: corrected duplicate-ID aggregation to Sixteen
+
+- Removed the invalid Fourteen -> TwentyTwo -> TwentyFour chain (it re-added
+  seven IDs already paid through Seven/Eleven). Added Sixteen directly on
+  Fourteen plus `N3431`/`N3573`, and SixteenMain. Unique chain
+  `7+1+3+1+1+1+2 = 16`; `paid_count = 2013`, residual `373`.
+- SHA256: Sixteen `055F8BA3...C28851`, SixteenMain `A3103831...8FECF`,
+  Fourteen `12D107B3...DD0E4`, Targets `69E4E5A5...9F612`.
+- `audit_b13_refine_sixteen.py` passes 14/14 (unique count, arithmetic, target
+  order, duplicate-ID and banned-token scan); Fourteen audit, B13 closure,
+  target-import closure (1965 modules), `py_compile`, and `git diff --check`
+  exit 0. Static source/inventory scope only; no proof credit.
+
+## 2026-10-30 - session 58 (condensed): 0037 repair and targets
+
+- Made 0037/Twelve explicit CI targets; audits passed 25 Next505 blocks/505 ids
+  with id 37 absent, target order, `py_compile`, and `git diff --check`.
+- The repaired 0037 proof and Thirteen chain are now CI-green in run
+  `41123531381`; historical red diagnostic was the `next505_lt` exclusion bug.
 
 ## 2026-10-30 - session 55: committed Thirteen bytes enter live CI
 
@@ -154,29 +197,8 @@ EXPERT (2026-10-30):
   use them as the new strongest B-side conditional handoff; if red, repair only
   the first failing declaration against its recorded diagnostic.
 
-## 2026-10-30 - session 48: thirteen-chain static audit, CI pending
-
-- Added `audit_b13_refine_thirteen.py` and its JSON report. All 12 checks pass:
-  thirteen distinct certificate IDs are residual IDs; arithmetic is
-  `1997+12+1=2010` and `389-13=376`; both modules expose the required
-  terminal/radius/transfer API; no banned tokens; both targets occur once and
-  Main follows Thirteen. Scope is static source/API/inventory only.
-- CI run `41098508743` (`1b2fa7a8`) predates the uncommitted Thirteen bytes and
-  therefore gives them no verdict. It reports exit 0 for the earlier Eleven
-  refinement and core B13/B13Main targets, but the root is red on
-  `SharedMomentConcreteSwitchBatch` OOM. The workflow's top-level success is not
-  a root or Thirteen proof.
-- Checks: `py_compile` exit 0; audit exit 0 (12/12); `git diff --check` exit 0.
-  Audit SHA256 `03A404A737BBBCEDA0DB05DE6012A298EECACFB45472927B7426016B128019B2`;
-  report `114189F8A0BD3589B42300E042BC7B6DA121C61696A71F969B649DE9296B2352`.
-  Thirteen `19BFF5C7...F347471`; ThirteenMain `D46E758C...D2784375`;
-  TARGETS `BA5035AA...A778F22`.
-- Still unproved: the conditional 376 residual radii, the `f0Lo`/`g` bridge,
-  SevenClassExclusions, and the arbitrary-center full-disk theorem. Thirteen is
-  not payment and is not root-imported.
-- Next concrete step: supervisor commits these bytes; CI must kernel-check
-  Thirteen and ThirteenMain. If both are green, use ThirteenMain as the new
-  strongest B-side conditional handoff; repair only the first CI diagnostic.
+## Session 48 (condensed)
+Thirteen audit passed 12/12; CI `41098508743` predated those bytes. Root OOM.
 
 ## Earlier root/crosswalk/row-cap work (condensed)
 
@@ -220,12 +242,6 @@ EXPERT (2026-10-30):
 - Workflow's trailing `true` makes the top-level Build step non-semantic; only
   module `=== EXIT ... 0` lines and `summary.json` are verdicts.
 
-## 2026-10-30 - sessions 22-23 (condensed): B13Main green on merged bytes
-
-- Removed B13Main's optional lane-C census import; hash
-  `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`.
-- Job `123993863813` (`22719e0d`) gave kernel exits `0` for Next1182,
-  Next505Bounds, DescentBounds, B13, B13Main; root was still `in_progress`.
-- Closure: B11 310, B12 815, B13 1997, sharp 120, terminals 2506, residual
-  389. Root still imports B12Main; replacement is supervisor-only.
-- Full evidence: `ci-b13-green-20261030.json` and the static audit reports.
+## Session 22-23 (condensed)
+B13Main was kernel-green at `521CA436...FA41837`; root imports B12Main.
+Full evidence is in `ci-b13-green-20261030.json`.
