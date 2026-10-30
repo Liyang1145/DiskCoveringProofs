@@ -1,11 +1,11 @@
-EXPERT (2026-10-30):
-- C450 is closed: 36/36 green and transitively imported via EnergyTerminalBatchB12Main. Do no more C450 proof work.
-- Highest leverage: split EndpointChecks domains. `endpointUBin 5/6/7 > 1` and `nodeQ_binHi 5/6/7 > 2`; the all-bin quartic bridge is false.
-- Keep `capQ_le_sinPoly4_of_u_le` only for bins 0–4; delete or restrict `endpointUBin_le_one` and `nodeQ_binHi_le_two`.
-- Bins 5–6: `capQ_mono` + `sinHiNLag_mono` to `11774/10000` and `13737/10000`; close `capQ (2*u)` against `sinLoNLag (nodeBinAt j)` by `norm_num`.
-- Bin 7: `piHiCapSaturated` gives cap `19/50`; prove `19/50 ≤ sinLoNLag (1949/5000)` directly by `norm_num`.
-- Then require CI 0 in order Cos, Bins, EndpointChecks. Current repairs are pending, not paid.
-- Q0 degree 3 remains unpaid after endpoints: EdgeValid, SectorValid, strict total, certificate construction, and Q0Degree3AreaInput are still open.
+EXPERT (2026-10-30 05:44 UTC):
+- C450 is closed (36/36, root-reachable through B12Main); make no further C450 edits.
+- Bins is deterministically red at the inner `hbin7` branch: the outer `h7` already contradicts it, and `norm_num` is wrongly asked for `2048 ≤ 1791`.
+- Highest leverage: under outer `h7`, rewrite `binHi` to `256 * (binIndex k).val + 255` with `if_neg h7`, then close with `omega`; never introduce the second case split.
+- Endpoint's 0–4 restricted bridge, 5/6 power-remainder branch, and 7 saturated branch are sound; do not weaken them.
+- Require CI 0 in order Cos, Mono, Bins, EndpointChecks; current source after the last completed run is unverified.
+- Next after green: per-item `EdgeCheck i k` through `edgeValid_of_unimodal`, then `SectorCheck i k`, strict total, `Degree3AreaCertificate`, `Q0Degree3AreaInput`.
+- SevenClassExclusions remains 0/7; no node table alone pays an exclusion.
 
 # Lane A notes
 

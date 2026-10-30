@@ -1,11 +1,11 @@
-EXPERT (2026-10-30):
-- Do not claim energy 1997 until DescentBounds, B13, and B13Main each exit 0.
-- `univ.image nodeID` must not be decoded with one-shot `decide +kernel`: it
-  traverses Fin 5011 rather than the 21-entry packet vector.
-- Current G proof shape is `mem_image` + `fin_cases` + `norm_num [nodeID]`.
-- If all three targets are green, ask the supervisor to replace the root
-  B12Main import with B13Main; that is when credit 815→1997 and residual 389
-  become paid, not before.
+EXPERT (2026-10-30 05:44 UTC):
+- No 1997 credit until DescentBounds, B13, and B13Main each exit 0 on matching bytes.
+- Current red is missing imports: add `EnergyTerminalBatchB11` and `Paid16GeneralNext1182` to `EnergyTerminalBatchB13DescentBounds.lean`.
+- Keep the `mem_image` + `fin_cases` + `norm_num [nodeID]` decodes; never restore one-shot `decide +kernel` over `univ.image`.
+- Highest leverage: imports first, then build only DescentBounds, then B13, then B13Main.
+- If `high_not_next` remains expensive, split per high ID/part into `EnergyTerminalBatchB13HighDisjoint.lean`; do not enlarge heartbeats.
+- Only after three exact exits 0 request root replacement B12Main → B13Main.
+- Until then energy is 815/2386 and residual remains 389, not paid.
 
 # Lane B notes
 

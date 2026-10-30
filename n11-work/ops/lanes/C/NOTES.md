@@ -1,3 +1,11 @@
+EXPERT (2026-10-30 05:44 UTC):
+- No energy, residual, or class credit has moved; seven public energy IDs are not seven metric classes.
+- Row caps and strict gains duplicate green core facts; conditional `excluded_*_tree` wrappers are not links to `RemainingTerminalRadius`.
+- Part 90 is CI-unverified and still keeps ten columns plus large `yW`/`rowA`/`db` unfolding per declaration; do not substitute five-case splits or raised heartbeats.
+- Highest leverage: stop the duplicate row-cap family and prove one consumer that can pay a residual, e.g. a positive `PaidCellCertificateM.Valid p` for one ID feeding `common_chart_radius`, or an unconditional no-feasible-cell theorem for that ID.
+- Keep green Core/M/MCap untouched; if no public payload or geometric bridge supports that consumer, mark C blocked on the 382 absent HOST records.
+- Any exact-rational audit remains diagnostic data, never kernel evidence.
+
 # Lane C notes
 
 ## Standing constraints
