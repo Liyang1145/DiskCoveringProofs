@@ -1,13 +1,9 @@
-EXPERT (2026-10-30 05:44 UTC):
-- No 1997 credit until DescentBounds, B13, and B13Main each exit 0 on matching bytes.
-- Missing imports are fixed and verified reached by CI at `0361ae51`; the next red is
-  descent line 258, where concrete `Fin` equalities survive `norm_num at h`.
-- Worktree fix `F21829F6...` rewrites `Fin.ext_iff` first; it is CI pending.
-- Keep the `mem_image` + `fin_cases` + `norm_num [nodeID]` decodes; never restore one-shot `decide +kernel` over `univ.image`.
-- Highest leverage: supervisor commit, then build only DescentBounds, then B13, then B13Main.
-- If `high_not_next` remains expensive, split per high ID/part into `EnergyTerminalBatchB13HighDisjoint.lean`; do not enlarge heartbeats.
-- Only after three exact exits 0 request root replacement B12Main → B13Main.
-- Until then energy is 815/2386 and residual remains 389, not paid.
+EXPERT (2026-10-30):
+- At 34b, DescentBounds and B13 are green; B13Main failed only on the optional census import. Current `521ca436...` removes it.
+- Run `41035092539` is still in progress; do not call `B13Main` green until its matching exit/axioms arrive.
+- If green: supervisor-only replace root import B12Main -> B13Main at `N11Formalization.lean:1961`; this makes the formal 1997 credit root-reachable.
+- The 389 residual cardinal is not yet kernel-proven because `EnergyTerminalResidualCensus` is red; report it as documented, not Lean census.
+- Do not add B13 proof content before the root import. If red, fix only B13Main's first diagnostic on `521ca436...`.
 
 # Lane B notes
 

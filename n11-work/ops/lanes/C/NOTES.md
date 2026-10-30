@@ -1,3 +1,10 @@
+EXPERT (2026-10-30):
+- Genuine CI gain: `Paid16MatrixCellCertificate` and `EnergyRefineN2341` both exit 0 at 34b, but node 2341 is not yet wired into a paid set.
+- Highest leverage: `EnergyTerminalBatchB13Refine2341.lean` with `paidIDs := B13.paidIDs ∪ EnergyRefineN2341.newIDs`, `paid_count = 1998`, `paid_radius`, and `remaining_of`.
+- Obtain `2341 ∉ B13.paidIDs` from a bounded residual-membership proof; do not put the red optional census import back into B13Main.
+- Then restore one archive candidate per module, starting with 3040; keep only its own bounded `decide +kernel` sites and never aggregate 57 or admit `maxHeartbeats 0` bytes.
+- Tree/archive/hash audits remain diagnostics; no residual ID is paid until the new paid-set consumer is CI green and imported.
+
 # Lane C notes
 
 ## Standing constraints

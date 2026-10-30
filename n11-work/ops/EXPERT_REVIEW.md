@@ -1,136 +1,146 @@
-# EXPERT REVIEW — n=11 Lean lanes
+# EXPERT REVIEW - n=11 Lean lanes
 
-**Date:** 2026-10-30 07:19 UTC
-**Scope:** HEAD `0361ae51`; required state check, lane operations records, latest CI
-artifact, `git log --stat -8`, and the newest Lean/emitter files touched by A/B/C.
-Run `41017279843` is in progress on HEAD. The last completed run `41011262474`
-is on `9f499ca6`, so its A/B/C diagnostics are stale for the just-merged bytes.
-No local full build was run and no Lean/lake/toolchain file was edited.
+**Date:** 2026-10-30 (UTC)
+**Scope:** `n11/work` at `22719e0d`; required state check, lane records, CI
+artifacts, `git log --stat -8`, and current lane Lean/audit bytes. Run
+`41035092539` is in progress at this head. Completed run `41027178023` on
+`34b14918` is the newest full exit summary used below. No local project build,
+Lean edit, or toolchain/lakefile change was made.
 
 ## Overall
 
-- **No accepted or WIP count moved this round.** C450 is integrated 36/36;
-  WIP energy remains 815/2386 with 389 residual IDs, and
-  `SevenClassExclusions` remains 0/7. The older accepted handoff in
-  `PROJECT_STATE.json` still records only 310/2386, so 815 is a WIP CI credit,
-  not a new global acceptance.
-- B13 is the one genuine count-moving construction: its own statements prove
-  `paidIDs.card = 1997`, but it pays nothing until `B13DescentBounds`, `B13`,
-  and `B13Main` all exit 0 on the same committed bytes.
-- The just-merged repairs have not yet received matching CI verdicts. The stale
-  run confirms green `C450ChainCompletionMain`, `Cos`, `Mono`,
-  `Paid16GeneralNext1182`, and `B13Next505Bounds`; it does not judge the new
-  Bins, descent imports, explicit row-cap leaves, or peak module.
-- Exact `Fraction` audits, static import closure, generator reproduction, and
-  hash pins are useful diagnostics only. None raises a mathematical count.
+- **C450 is closed, not open work.** `C450ChainCompletionMain` is CI-green and
+  transitively imported by the current root through `EnergyTerminalBatchB12Main`.
+  The 36-segment telescope, including the vacuous source-36 tail, is assembled.
+- **B13 is now real count progress.** At `34b14918`, `DescentBounds`, `B13`, and
+  `Paid16GeneralNext1182` exit 0. `B13.paid_count = 1997` is a kernel theorem.
+  `B13Main` was red only because it imported the red optional census; current
+  `521ca436...` removes that dependency, but its matching run is still pending.
+- **C produced the first green residual payment theorem.** At `34b14918`,
+  `Paid16MatrixCellCertificate` and `EnergyRefineN2341` both exit 0. The latter
+  proves the strict radius inequality for source node 2341. It is not wired into
+  a paid set, so the residual count has **not** moved yet.
+- **A remains 0/7 classes.** The narrow-cosine argument is genuine mathematics,
+  but the current suffix module is red through the `Bins` dependency and supplies
+  no `EdgeDecFrom` theorem yet. At most edges 9/10 are near credit, i.e. 2/42
+  edge-shape facts, not a metric-class exclusion.
+- **Counts to carry forward:** formal B13 payment 1997/2386; documented residual
+  389, whose cardinal equality is not yet a green kernel theorem; C's node 2341
+  is a green one-ID refinement awaiting integration; class exclusions 0/7; C450
+  36/36. The arbitrary-center full-disk theorem remains conditional.
+- Checks run here: `project_status.py --check` (manifest/index only), the A/B/C
+  static/exact audits, and artifact inspection. These are diagnostics, not Lean
+  proof credit. No `sorry`, new axiom, float LP, or manifest count was accepted.
 
 ## Lane A
 
-- **C450 is closed; stop spending proof time there.** `C450ChainCompletionMain`
-  is CI-green and root-reachable through B12. This still does not make the
-  arbitrary-center full-disk theorem unconditional.
-- The `hbhi` repair in `SevenClassQ0Deg3Bins.lean` correctly uses the outer
-  `h7 : (binIndex k).val ≠ 7`; the impossible `2048 ≤ 1791` branch is gone.
-  Bins is nevertheless still deterministically red at line 95: the old CI goal
-  `⊢ 0 < ?m.223` comes from `Nat.mod_lt k.val (by norm_num)`, whose modulus is
-  not inferred. Use an explicit, typed modulus, e.g.
-  `Nat.le_of_lt (Nat.mod_lt k.val (n := 256) (by norm_num))`.
-- `EndpointChecks` has no independent verdict while its Bins dependency is red.
-  Its restricted 0–4 bridge plus separate 5/6/7 branches remains mathematically
-  necessary and should not be weakened.
-- `SevenClassQ0Deg3UpperReductionUnimodal.lean` is a genuine reduction:
-  `edgeValid_of_monotone` replaces 21×2049 edge checks by 21 exact peak checks
-  plus 42 monotonicity facts. The peaks are actual Lean comparisons, not float
-  LP or manifest-derived credit. The remaining `EdgeMonotone` premise is real;
-  no q0 class is paid yet.
-- The peak leaves avoid one oversized kernel check, but each still asks
-  `norm_num` to reduce huge `edgeMaxAt` rationals and a degree-29 trig bracket.
-  Keep the 21-way split; if a leaf is expensive, split its left value, right
-  value, and final comparison, rather than raise heartbeats.
-- **Highest leverage after Bins/Endpoint are green:** prove the missing
-  full-angle monotonicity ingredient for edge derivatives. The existing
-  `cosHiNLag_grid_antitone` is at the half-angle `nodeQ / 2`, so it does not
-  directly discharge `edgeHiReal` derivative signs, especially witnesses 9/10
-  at `1489 > 1024`. Target
-  `cosHiNLag_nodeQ_antitone {k l : Fin 2049} (hkl : k ≤ l) :
-   cosHiNLag (nodeQ piHi 2048 l) ≤ cosHiNLag (nodeQ piHi 2048 k)`
-  by the same grid scheme as Cos: prove the needed `sinT14` nonnegativity, handle
-  the final grid step by an exact closed comparison, then expose one generic
-  `edgeIncTo_of_deriv_sign` and one `edgeDecFrom_of_deriv_sign` wrapper. Split
-  the 42 leaves into `SevenClassQ0Deg3EdgeShape.lean`; do not use one giant
-  `fin_cases`/`norm_num`.
-- Even after EdgeValid, `SectorValid`, the strict total, and
-  `Q0Degree3AreaInput` remain open. This lane is scoping one of seven classes,
-  not closing the global theorem.
+- The mathematical correction on 2026-10-30 was necessary and sound:
+  for negative coefficient `b`, `cosHiReal x <= 0` does not imply
+  `A*cosHiReal x - b < 0`; the threshold `cosHiReal x <= b/A` is the right
+  sufficient condition. The file now uses that condition.
+- The narrow-arc proof is plausible and internally coherent. `sinT 14` is shown
+  nonnegative on `[2,3*pi/4]` from `sin x >= 2/3` and the degree-29 remainder
+  `3^29/29! <= 1/100`; the exact node-1490 value is then below `-131/200`.
+  The `-2/3` upper tail is retained only above `3*pi/4`.
+- **Critical wiring gap:** `edgeWitness 9 = edgeWitness 10 = 1489`, while the new
+  antitone interval begins at 1490. `edgeDecFrom_of_antitoneOn_from` requires the
+  antitone interval to begin at the witness, so it cannot instantiate the new
+  theorem. This is not a proof failure, but it means the suffix work has not yet
+  produced a single `EdgeDecFrom` fact.
+- `Bins` is still red on the completed run. The current worktree changes
+  `Nat.mod_lt k.val (n := 256)` to `(y := 256)`, which matches Lean's binder name;
+  only a matching exit 0 can settle it. `EndpointChecks` and both suffix modules
+  remain transitive red until then.
+- **Highest leverage:** first get `Bins` green without changing mathematics. Then
+  add a next-node wrapper, e.g.
+  `edgeDecFrom_of_antitoneOn_from_next (i w) (hw : edgeWitness i = w)
+   (hstep : edgeUpper ... (w+1) <= edgeUpper ... w)
+   (hanti : AntitoneOn (edgeHiReal (edgeCoeff i)) (Icc (nodeQ ... (w+1)) piHi)) :
+   EdgeDecFrom i`.
+  Split `k = w` from `w < k`; for edges 9/10 use `w=1489`, one exact 1489
+  comparison, then the new narrow `-131/200` bound from 1490 and the `-2/3` tail.
+  Prove the two ratio comparisons by exact `norm_num`.
+- Do not launch a 42-leaf `fin_cases`/`norm_num` module. Put edges 9/10 in
+  `SevenClassQ0Deg3EdgeShape.lean`, then add sectors in a separate file. Even a
+  green `EdgeValid` is only one field of `Degree3AreaCertificate`; `SectorValid`,
+  the strict total, and `Q0Degree3AreaInput` remain open, so no 1/7 class credit
+  is available yet.
 
 ## Lane B
 
-- The B13 architecture is sound and mechanically matches the owned data:
-  `B12.paidIDs ∪ Next1182.newIDs`, `paid_count = 1997`, and
-  `remaining_of_b13` transfers the premise to 389 residual IDs. The separate
-  residual-census module also proves the 389 equality; this is real Lean
-  accounting, not a manifest count.
-- The current descent file now imports both modules needed by `b11_bound` and
-  `high_not_next`. The completed red run is therefore a stale-byte result.
-  Require the new run to report, in order, exit 0 for
-  `EnergyTerminalBatchB13DescentBounds`, `EnergyTerminalBatchB13`, and
-  `EnergyTerminalBatchB13Main`.
-- Only after those three exact exits 0 should the supervisor replace
-  `EnergyTerminalBatchB12Main` by `EnergyTerminalBatchB13Main` in the root and
-  credit WIP energy 815→1997. Until then the residual stays 389 and no energy
-  credit is paid.
-- **Highest leverage:** read the in-progress run at the first B13 error. If
-  `high_not_next` is expensive, split its 27×8 expansion into eight part lemmas:
-  `high_not_next_part (i : Fin 8) (n : Fin 5011)
-   (hn : n ∈ EnergyTerminalBatchB13DescentBounds.b09HighIDs) :
-   n ∉ Paid16GeneralNext1182.part i`, then discharge `high_not_next` through
-  `newIDs = univ.biUnion part` and `Finset.mem_biUnion`. Keep each leaf near the
-  1182 literal inventory; never restore one-shot `decide +kernel` over unions.
-- A workflow-level green is not a B13 verdict because the workflow currently
-  masks step failure; use `summary.json`/per-target exit lines.
+- The architecture is sound: `B13.paidIDs = B12.paidIDs ∪ Next1182.newIDs`,
+  disjointness is proved by the split `b09HighIDs`/part-local `high_not_next`
+  strategy, and `paid_count = 1997` follows by `card_union_of_disjoint`.
+- `B13.remaining_of_b13` correctly transfers the remaining-radius premise back to
+  B12. Current `B13Main` composes that transfer through
+  `remaining_of_b12` into `C450ChainCompletionMain`; its statement is the useful
+  conditional full-disk theorem with the smaller premise.
+- The previous `B13Main` red was not a B13 mathematics failure: CI attributes it
+  to the optional `EnergyTerminalResidualCensus` import (C02/C03 free-variable
+  errors). Removing that import was the correct isolation. The literal-census
+  module remains red and must stay outside the main chain.
+- **Highest leverage:** wait for `41035092539`; require
+  `EnergyTerminalBatchB13Main` exit 0 on `521ca436...` and an allowed axiom
+  report. Then the supervisor should replace the root import
+  `EnergyTerminalBatchB12Main` with `EnergyTerminalBatchB13Main` at
+  `n11-work/lean/N11Formalization.lean:1961`. That is the actual 1997-credit
+  switch; another proof module before the root import adds no mathematical value.
+- Do not describe 389 residual IDs as kernel-proven yet. `B13` exposes
+  `residualIDs` and proves its equivalence to `RemainingTerminalRadius`, but the
+  389-cardinality theorem is in the red `EnergyTerminalResidualCensus`. The
+  1997 payment is formal; the 389/2386 denominator still needs its census repair.
+- The split high-exclusion proof is preferable to restoring a monolithic
+  `decide +kernel`; preserve the 216 `Fin.ext_iff; omega` leaves and do not raise
+  heartbeats. If the pending run is red, diagnose only `B13Main` first.
 
 ## Lane C
 
-- No energy or class credit has moved. The seven public residual IDs are not the
-  seven metric classes, and row caps plus strict gains duplicate facts already
-  green in `FrozenCapRationalCore`.
-- The latest explicit-summand row-cap leaves address the stale symbolic-sum
-  failures, but no matching CI verdict exists. Even if RowCaps becomes green,
-  it remains infrastructure with no consumer into `RemainingTerminalRadius`.
-- `excluded_*_tree` is conditional on packet equalities `hf0`/`hg` that are not
-  consequences of `PaidCellCertificateM.Valid`; it neither proves that a named
-  packet is valid nor pays a residual. Its `db_eq_tree` proofs also use large
-  `decide +kernel` terms and must not be targeted without a consumer.
-- The seven negative frozen-cap results are mathematically useful obstructions:
-  no packet with those exact frozen `f0Lo`/`g` values can be `Valid`, for any
-  row count. They do not prove the residual radius inequality, which is not an
-  existential-packet statement.
-- **Highest leverage:** stop emitting more row-cap/witness families. Freeze the
-  current bytes and require only the targeted RowCaps verdict. If green, mark
-  this route blocked on a missing *positive consumer*: either a public HOST
-  payload for one of the 382 absent residual IDs, or a supervisor-approved
-  retask to a genuine class exclusion. If a payload is obtained, put its single
-  `PaidCellCertificateM.Valid p` plus `common_chart_radius` in a new bridge
-  module; one such paid ID would reduce 389 to 388. Conditional wrappers and
-  additional hash/reproduction reports are not progress.
+- The restored matrix framework is a sound generic consumer: it ties a scaled DBM
+  refinement's terminal packets to the source node's strict radius inequality.
+  `EnergyRefineN2341` supplies exact tree validity, root scaling, packet validity,
+  and `new_radius` for node 2341. CI exit 0 at `34b14918` makes this genuine Lean
+  evidence, including six kernel decisions.
+- It still pays **zero** residual IDs because it defines a private `newIDs` and no
+  B13 consumer imports it. This is green theorem inventory, not a moved count.
+- **Highest leverage:** create one incremental consumer module, not another
+  archive batch. Start `EnergyTerminalBatchB13Refine2341.lean` with
+  `paidIDs := B13.paidIDs ∪ EnergyRefineN2341.newIDs`, prove the singleton
+  disjointness (equivalently `2341 ∉ B13.paidIDs`), then
+  `paid_count : paidIDs.card = 1998`, dispatch `paid_radius` to B13 or
+  `EnergyRefineN2341.new_radius`, and prove a `remaining_of` transfer to
+  `B13.RemainingTerminalRadius`. Only a CI-green consumer can reduce the open set.
+- Use a bounded residual-membership proof for `2341`. Do not reintroduce
+  `EnergyTerminalResidualCensus` into `B13Main`, and do not treat the red
+  `FrozenCapResidualMembership` import as available until its census closure is
+  repaired.
+- After 2341 is consumed, restore one admissible archive candidate per module;
+  next is 3040. Keep one payload and only its own bounded kernel sites per CI
+  target. The 57 archive drafts as audited total 724 kernel decisions (the other
+  56 consequently hold 718) and include 15 `maxHeartbeats 0` files: aggregate
+  restoration is an OOM/correctness hazard, not progress.
+- The seven public frozen-cap exclusions are negative conditional facts and do
+  not discharge `RemainingTerminalRadius`; the existing row-cap and
+  `FrozenCapPublicExcludedTree` work is still conditional/often red. Do not revive
+  the 700-leaf row-cap family without a positive consumer.
 
 ## Risks
 
-- **Stale-byte verdicts:** `41011262474` predates the merged B and C repairs.
-  Do not carry its B13 or RowCaps failures forward as current diagnostics.
-- **Hidden Lane A failure:** Bins still fails before Endpoint and before the new
-  peak module; fix `Nat.mod_lt` with an explicit modulus first.
-- **Half-angle/full-angle confusion:** the green cosine antitone theorem is for
-  `nodeQ / 2`; edge derivatives require full `nodeQ` and witnesses beyond
-  `π/2`. Reusing the half-angle theorem would be a false proof step.
-- **Resource blowups:** A’s huge rational peak checks, B’s 27×8 high-ID decode,
-  and C’s `db_eq_tree` are all at risk of `whnf`/kernel/OOM cost. Split leaves;
-  never raise heartbeats or use `maxHeartbeats 0`.
-- **Conditional-wrapper false positive:** C’s tree exclusions assume packet
-  identifications not present in `Valid`; they cannot be counted as residual or
-  class payments.
-- **Unpaid premises remain exact:** WIP energy 815/2386, B13 target 1997/2386,
-  residual 389, and class exclusions 0/7. The arbitrary-center full-disk theorem
-  remains conditional.
-- **Root OOM is not a mathematical verdict:** continue serial targeted builds;
-  do not convert shared-dependency OOMs into proof failures or successes.
+- **Count conflation:** 1997 paid, 389 residual, and 0/7 classes are different
+  ledgers. B13's payment does not prove the residual census, and C's green node
+  2341 does not pay it until integrated.
+- **Pending-byte verdicts:** `41035092539` is in progress. `B13Main` and A's
+  current suffix bytes have no completed matching verdict.
+- **Dependency red mistaken for own proof failure:** A's suffix and
+  `EndpointChecks` are red through `Bins`; read the first target-specific error.
+- **False suffix credit:** witness 1489 versus interval start 1490 must be handled
+  explicitly; reusing the existing wrapper would silently omit the peak node.
+- **Resource blowups:** A's rational peak checks, C's giant packet literals and
+  `decide +kernel` terms, and the red row-cap leaves are all OOM/timeout prone.
+  Split leaves and preserve per-target limits; never raise heartbeats or admit
+  `maxHeartbeats 0`.
+- **Audit substitution:** exact Fraction/float-search/tree/hash reports and static
+  closure audits are not kernel proofs. CI exit 0 plus the allowed axiom set is
+  the only payment gate.
+- **Root still conditional:** even after B13Main and the root import, the
+  arbitrary-center full-disk theorem still depends on `SevenClassExclusions` and
+  the remaining energy premise.

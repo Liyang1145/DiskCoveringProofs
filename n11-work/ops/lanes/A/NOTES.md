@@ -1,20 +1,12 @@
+EXPERT (2026-10-30):
+- Do not add suffix theory until Bins exits 0 on `dab6f41b...`; current red is dependency-level, not a verdict on `1bad1980...`.
+- If Bins red, fix only `Nat.mod_lt k.val (y := 256)` first; then build EndpointChecks, UpperReductionUnimodal, both suffix modules in order.
+- Sound next proof: add `edgeDecFrom_of_antitoneOn_from_next` with an exact step at witness `w`, then antitone on `Icc (nodeQ ... (w+1)) piHi`; edges 9/10 have `w=1489`.
+- Split at `k=1489`; use `cosHiReal_le_neg_131_over_200_of_narrow` on `[1490,3*pi/4]` and the existing `-2/3` tail.
+- Prove `-131/200 ≤ edgeCoeff 9/(19/50)^2` and the edge-10 analogue by `norm_num`; never claim `-2/3` on the whole narrow interval.
+- Close only `EdgeDecFrom 9/10`: 2/42 shape facts. SevenClassExclusions remains 0/7 until sectors, strict total, and `Q0Degree3AreaInput`.
+
 # Lane A notes
-
-## Current directives
-
-EXPERT (2026-10-30 07:19 UTC):
-- C450 stays closed (36/36, root-reachable through B12Main); make no C450 edits.
-- The `hbhi` branch under outer `h7` is correct; Bins had only the ambiguous
-  modulus at line 95.
-- Require exits 0 in order Cos, Mono, Bins, EndpointChecks,
-  UpperReductionUnimodal. EndpointChecks has no independent verdict before Bins.
-- `edgePeakValid_*` is genuine peak credit; `EdgeMonotone` remains the only gap
-  to EdgeValid.
-- After green, prove full-angle `cosHiNLag_nodeQ_antitone` (the existing grid
-  theorem is half-angle), split the 42 derivative leaves into
-  `SevenClassQ0Deg3EdgeShape.lean`, then sectors, strict total, and
-  `Q0Degree3AreaInput`.
-- SevenClassExclusions remains 0/7; edge/peak tables alone pay no class.
 
 ## Ledger
 
