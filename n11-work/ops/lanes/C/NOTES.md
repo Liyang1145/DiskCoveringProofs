@@ -1,10 +1,3 @@
-EXPERT (2026-10-30):
-- At `6937fb90`, six `FrozenCapRowCap` modules built as dependencies, but `FrozenCapRowCap2356.lean:33` timed out at 200000 heartbeats, so `FrozenCapPublicExcludedTree` exits 1.
-- Even if green, `excluded_*_tree` only derives `False` from a `Valid` packet with fixed node plus `hf0`/`hg`; it does not pay `RemainingTerminalRadius` or `SevenClassExclusions`.
-- Highest leverage is the missing bridge, not more leaves: prove packet-of-actual-cell plus frozen `F0`/`G` implies contradiction, or report that no bridge exists.
-- If continuing rows, isolate `row_cap_2356_0_0`; replace nested vector lookup with ten scalar row defs and definitional scalar lemmas; get one leaf exit 0 before regenerating 700.
-- Exact rational/byte audits and float-LP search are diagnostics only, never proof.
-
 # Lane C notes
 
 ## Standing constraints
@@ -193,13 +186,6 @@ Next: fresh CI must isolate the first red target after `EnergyRefineN0037`;
 do not extend the paid aggregate until each source and wrapper exits 0.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-30 - parts 149-151, condensed
-N3112/N3116/N3431/N3573 source trees and conditional wrappers were restored and
-audited (static exact-integer scope); N0037/Twelve/N3112/N3116/N3431/N3573
-kernel exits remain CI pending. Part 150 fixed a stale Eight diagnostic and
-reordered N0037/Twelve before Eleven. Part 151's three refinements each passed
-100/100 root and 400/400 split checks.
-
 ## 2026-10-30 - parts 152-155, condensed
 The old all-pairs row caps and their decomposed 100-leaf versions were CI red;
 explicit `Fin` annotations (part 154) did not cure the failures. Generator
@@ -208,23 +194,49 @@ checked 700/700 exact-rational caps with min slack 0; DBM SHA256 begins
 checks passed but exact arithmetic is not kernel credit. Part-154 bytes are
 superseded by the CI result in part 156; no row-cap credit is claimed.
 
-## 2026-10-30 - part 156 (CI red: first row-cap leaf still unresolved)
-Run `41115384387` (`9445f2b2`) completed **red**. The part-154 rewrites did not
-fix the row caps: 1409/2337/2341/2360/2368/2370 all fail at declaration
-`FrozenCapRowCap*.lean:34:53` (`unsolved goals`), while 2356 hits the 200000
-heartbeat limit at `:33:0`. Thus explicit `Fin` annotations were not the cause.
-CI's captured log gives only the declaration position, not the residual goal.
-Exact source hashes remain those recorded in part 154; I did not regenerate
-under a new unverified tactic. A minimal Mathlib probe reproducing the first
-summand timed out at 90s during imports (exit 124), so it is inconclusive and
-no local Lean claim is made. FrozenCapRationalCore itself is CI green (`0`).
+## 2026-10-30 - part 156 (CI red: row-cap leaves unresolved)
+Run `41115384387` (`9445f2b2`) was **red**: six modules fail with `unsolved
+goals`; 2356 hits the 200000 heartbeat limit. Explicit `Fin` annotations were
+not the cause. A minimal Mathlib probe timed out at 90 s during imports, so it
+was inconclusive. `FrozenCapRationalCore` is CI green. Next was to isolate one
+leaf before bulk regeneration. ROOT-IMPORT REQUEST: none.
 
-Interpretation/next concrete step: isolate a one-leaf module importing
-`FrozenCapRationalCore` plus `Mathlib.Tactic.NormNum`, containing only
-`rowA`, one `y_1409` literal, and the first cap; add only that probe to
-TARGETS. If it is red, test simplification of `Fin.val`/`if` before changing
-all 700 leaves; if green, difference the failing declaration's exact term.
-Do not claim any row-cap/kernel credit or reduce the residual. Other missing
-obligations unchanged: public-tree assembly, residual-chain exits, MPacket
-validity, packet/no-cell and exclusion-to-radius bridges, energy/seven-class.
+## 2026-10-30 - parts 157-158, condensed
+Part 157's direct `change` is superseded. Part 158 replaced `dbmVal` by an
+exhaustive scalar `db` with the same exact endpoints (emitter `5f14c43e...`).
+Exact audit 700/700, min slack 0; static checks passed. All seven row caps
+remained **CI pending**; no local Lean claim. Missing: row-cap exits, public-tree
+bridge, both packet/exclusion bridges, 377 ids, packet validity, energy/
+seven-class premises. Next was CI on scalar `db`. ROOT-IMPORT REQUEST: none.
+
+## 2026-10-30 - part 159 (stale CI diagnosis and leaf-tactic correction)
+
+`LATEST` run `41123531381` (`cc04268`) reports the *pre-scalar* row-cap bytes,
+not the current worktree. Its first failure is `1409:40: No goals to be solved`
+(an equality row whose `rw` already closed the goal, followed by redundant
+`norm_num`); other rows fail in `hright`, confirming the old nested-vector
+`dbmVal` lookup is the non-local cause. Current scalar `db` removes that cause.
+
+Changed the emitter leaf proof to one direct `norm_num [y_N, rowA, db]`, with
+no exposed `simp`/redundant follow-up. Regenerated all seven modules (700
+leaves). New SHA256: emitter `1ad2634e08ec56d89b2fad24ac0797db284d11c67bc20da821cf7e047881c137`;
+1409 `1e920405cdfb9d32e3f2262971a90e852456842d7920748ea5be6ac32dd15862`,
+2337 `e41ebe258016a5bc3bdd59509a936efeacecc8585863aeaa4a9ae2fd4891f91d`,
+2341 `97c588f4e6503ac85fbc6ec432a48bd31c5c266e9f69b930166ceefe79fbbd8d`,
+2356 `3f40b33aebb6976beebce7e210a0de204ac0263a5a91930e3c7d0a433c3d0d69`,
+2360 `c525a4820f0536943f3cb8441975ac299110fb5f2c7bcd58c0f998504b82df8a`,
+2368 `b7a075012b56401b48482b25367f4afebe12d3943aa9339aec6a3981ed3f7936`,
+2370 `34c51cabafad3b700d64e80aa0f623141fb5a62cbbd4d873facfb9c8764871c0`.
+
+Checks: emitter exit 0; exact 700/700 cap audit, min slack 0, DBM
+`BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5`;
+`py_compile`, `git diff --check`, forbidden-token scan exit 0. A bounded 75 s
+Mathlib-only reproduction timed out during imports (exit 124), so **no local
+Lean syntax/kernel claim** and all seven remain **CI pending**.
+
+Still unproved/missing: row-cap kernel exits, public-tree bridge, packet/no-cell
+and exclusion-to-radius bridges, 379 residual energy ids and their packet
+validity, energy/seven-class premises. Next: CI must reach 1409 first; if a leaf
+is red, isolate its exact post-`norm_num` goal, otherwise advance to 2356's
+runtime. Do not bulk-change tactics again before one exit 0.
 ROOT-IMPORT REQUEST: none.
