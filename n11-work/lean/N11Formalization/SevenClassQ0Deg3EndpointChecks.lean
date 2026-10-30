@@ -101,6 +101,54 @@ theorem sinHiNLag_le_sinPoly4_add (a : ℚ) (ha : 0 ≤ a) (ha1 : a ≤ 1) :
     linarith [h14poly, h9, h29]
   exact_mod_cast hmain
 
+/-- The real degree-seven polynomial underlying `sinPoly4`. -/
+def sinPoly4Real (x : ℝ) : ℝ :=
+  x - x ^ 3 / 6 + x ^ 5 / 120 - x ^ 7 / 5040
+
+theorem sinPoly4_cast (a : ℚ) :
+    ((sinPoly4 a : ℚ) : ℝ) = sinPoly4Real a := by
+  simp only [sinPoly4, sinPoly4Real]
+  push_cast
+  ring
+
+theorem hasDerivAt_sinPoly4Real (x : ℝ) :
+    HasDerivAt sinPoly4Real (1 - x ^ 2 / 2 + x ^ 4 / 24 - x ^ 6 / 720) x := by
+  unfold sinPoly4Real
+  convert (by fun_prop :
+    HasDerivAt (fun y : ℝ => y - y ^ 3 / 6 + y ^ 5 / 120 - y ^ 7 / 5040)
+      (1 - 3 * x ^ 2 / 6 + 5 * x ^ 4 / 120 - 7 * x ^ 6 / 5040) x) using 1
+  ring
+
+theorem sinPoly4_deriv_nonneg {x : ℝ} (hx0 : 0 ≤ x) (hx1 : x ≤ 1) :
+    0 ≤ 1 - x ^ 2 / 2 + x ^ 4 / 24 - x ^ 6 / 720 := by
+  have hx2 : x ^ 2 ≤ 1 := pow_le_one₀ hx0 hx1 2
+  have hx6 : x ^ 6 ≤ 1 := pow_le_one₀ hx0 hx1 6
+  have hx4 : 0 ≤ x ^ 4 := by positivity
+  nlinarith
+
+theorem sinPoly4Real_monotoneOn : MonotoneOn sinPoly4Real (Set.Icc 0 1) := by
+  refine monotoneOn_of_deriv_nonneg (convex_Icc _ _) ?_ ?_ ?_
+  · intro x _
+    exact (hasDerivAt_sinPoly4Real x).continuousAt.continuousWithinAt
+  · intro x _
+    exact (hasDerivAt_sinPoly4Real x).differentiableAt.differentiableWithinAt
+  · intro x hx
+    rw [interior_Icc] at hx
+    rw [(hasDerivAt_sinPoly4Real x).deriv]
+    exact sinPoly4_deriv_nonneg (le_of_lt hx.1) (le_of_lt hx.2)
+
+/-- `sinPoly4` is monotone on `[0,1]`; this transfers a low-denominator upper
+bound on an endpoint argument to the polynomial cap without a huge expansion. -/
+theorem sinPoly4_mono_Icc01 {a b : ℚ} (ha0 : 0 ≤ a) (hab : a ≤ b) (hb1 : b ≤ 1) :
+    sinPoly4 a ≤ sinPoly4 b := by
+  have hR : ((sinPoly4 a : ℚ) : ℝ) ≤ ((sinPoly4 b : ℚ) : ℝ) := by
+    rw [sinPoly4_cast, sinPoly4_cast]
+    exact sinPoly4Real_monotoneOn
+      ⟨by exact_mod_cast ha0, by exact_mod_cast hab.trans hb1⟩
+      ⟨by exact_mod_cast ha0.trans hab, by exact_mod_cast hb1⟩
+      (by exact_mod_cast hab)
+  exact_mod_cast hR
+
 /-- Endpoint-specific rational cap bound using the degree-seven sine upper
 bound.  This retains the small first-bin cap without unfolding `sinTQ 14`. -/
 theorem capQ_le_sinPoly4 (q : ℚ) (hq0 : 0 ≤ q) (hq2 : q ≤ 2) :

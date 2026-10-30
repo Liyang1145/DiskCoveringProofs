@@ -189,52 +189,75 @@ premises; strict total; `Q0Degree3AreaInput`; seven exclusions; arbitrary-center
 `EdgePeakValid` comparisons plus monotonicity from `cosHiNLag_grid_antitone`); if red,
 repair only the first reported proof line.
 
-## 2026-10-30 (part 4) — target queue aligned with critical path
+## 2026-10-30 (parts 4/6) — portable C450 audit; Cos casts explicit
 
-Audited the current worktree after the part-3 Cos rewrite.  The only lane-A Lean
-diff is `SevenClassQ0Deg3Cos.lean`; the three edited proof sites are the two
-explicit `Rat.cast_le.mpr` witnesses at lines 134 and 196–198.  `TARGETS.txt`
-still enabled `Bins` and `EndpointChecks`, contradicting the standing rule to
-keep only C450/Cos/Mono until both SevenClass modules are green.  Removed those
-two targets; no Lean source changed in this part.
+`audit_c450_telescope_local.py` wraps the frozen Windows-path verifier: 25/25
+transfers S=12..36, both terminal facts, 26/26 drop/count rows, 0 violations.
+All three `min` witnesses in `SevenClassQ0Deg3Cos.lean` now state explicit
+`(2048 : ℚ)` and natural-cast types.  Cos is **drafted, CI pending**; no local
+project elaboration (missing oleans).  Exact-rational pi-cap/area/binmax audits
+pass.  C450 remains historically CI-green; its root-import request is still a
+supervisor action.
+
+## 2026-10-30 (part 7) — endpoint cost measured; low-denominator data emitted
+
+Rechecked the endpoint proof direction: the degree-14 absolute-remainder lower
+half is valid (`sinLoNLag = sinT14-r29`, `sinT14 >= sin-r29`).  A standalone
+Mathlib probe then timed out at 120 s on only two `norm_num` endpoint tables, so
+the exact-`piHi` polynomial expansion is not a practical CI strategy.
+
+Added `audit_endpoint_low_denom.py`: exact `Fraction` checks for eight rational
+upper bounds `u_j` on `q/2` (denominators ≤10000), using
+`sinPoly4(u_j)+1/9!+2/29!` against the existing endpoint lower bound.  All eight
+pass; minimum slack is `3.44080645729e-5` (bins 0/1), next 5.92449461989e-5 (bin
+7).  On `[0,1]`, `sinPoly4' >= 1-1/2-1/720 > 0`, giving the monotonicity needed
+to transfer `q/2 <= u_j` to the polynomial cap.  This is candidate data, not Lean
+evidence.
 
 **Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
-`79cc2b786100ca186e4e457a7386801a0a905e4b2e3dfa2d11aff08b75243715`;
-`TARGETS.txt` `4bc097e662af98279cd57338e5f29d0e4c5864f770a37777bd318a0deea117cc`;
-`NOTES.md` hash is reported by the supervisor after this session.
+`a7bb73c442dad852c6e3423a18e001625f5c682cac4573e61ead901f184293c1`;
+`audit_c450_telescope_local.py`
+`2034e0add2481231b547c73a336c32e04b89eed5cc2a0e02e5ab8067fc34cbee`;
+`audit_endpoint_low_denom.py`
+`c5e41aa104562b949853cd74175e9361b5255e2a856cdb3f05fde13aae4e2157`;
+`TARGETS.txt` `500cc3707072af67a662fb6d14a5636560ccf462ae3a9f990f0e75350e01fbf4`.
 
-**Checks (scope).** `git diff --check` and a forbidden-token scan of the lane and
-edited Cos source pass.  CI `40949277719` remains in progress at the last
-snapshot; the Cos repair is **drafted, CI pending**, not paid.  No local project
-elaboration is possible with the missing oleans.
+**Checks (scope).** `git diff --check`, forbidden-token scan, portable C450 source
+audit, endpoint-polynomial audit, binmax audit, and the new exact low-denominator
+audit.  No project Lean module was elaborated locally.
 
-**Still unpaid.** Cos kernel acceptance (then Bins and EndpointChecks in
-dependency order); EdgeUnimodal/Sector premises; strict total;
-`Q0Degree3AreaInput`; seven exclusions; arbitrary-center theorem.  C450 remains
-historically CI-green.
+**Still unpaid.** Cos kernel acceptance; Bins and EndpointChecks kernel
+acceptance; edge/sector premises; strict total; `Q0Degree3AreaInput`; all seven
+exclusions; arbitrary-center full-disk theorem.  `TARGETS.txt` now queues the full
+dependency order C450Main, Cos, Mono, Bins, EndpointChecks.
 
-**Next.** Re-read the completed `40949277719` summary: if Cos is green, restore
-`Bins` alone as the next target; if red, repair only its first reported proof line.
+**Next.** Add `sinPoly4_mono_Icc01` and `capQ_le_sinPoly4_of_le` to
+`SevenClassQ0Deg3EndpointChecks.lean`, replace each endpoint `norm_num` argument
+by its explicit `u_j` (from the audit), then run a bounded probe of one endpoint.
 
-## 2026-10-30 (part 5) — Cos natural-cast witness repair
+## 2026-10-30 (part 8) — polynomial monotonicity added
 
-Replaced both `Rat.cast_le.mpr` witnesses in `SevenClassQ0Deg3Cos.lean` with
-`Nat.cast_le.mpr`: the comparisons are between natural casts in `ℚ`, not a
-rational-to-rational cast.  Sites: `gridArg_eq_nodeQ` and the two post-grid
-`min` evaluations in `gridCos_succ_le`.  This is a proof-only repair; statements
-are unchanged.
+Added to `SevenClassQ0Deg3EndpointChecks.lean` the real lift `sinPoly4Real`,
+cast lemma, derivative formula, derivative nonnegativity on `[0,1]`, and
+`sinPoly4_mono_Icc01`: for rationals `0 ≤ a ≤ b ≤ 1`, `sinPoly4 a ≤ sinPoly4 b`.
+Proof uses `monotoneOn_of_deriv_nonneg`; derivative is bounded below by
+`1 - 1/2 + 0 - 1/720 > 0`. This is the transfer lemma needed to use the
+low-denominator `u_j` caps from `audit_endpoint_low_denom.py` instead of a large
+exact-`piHi` expansion.
 
-**File / SHA256.** `SevenClassQ0Deg3Cos.lean`
-`ce1a5f252c2b1a2e7fb0dafba94106ebc79f257895070c3df9030a6c90dc7a3b`.
-`TARGETS.txt` remains C450Main/Cos/Mono, so no target change.
+**Files / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
+`d10589caf935c36fb772394d368b8b4ed8da3f34ee9c8756ddbbd733b512968d`.
+EndpointChecks is already in `TARGETS.txt`; no new target.
 
-**Checks (scope).** `git diff --check` and forbidden-token scan pass.  A bounded
-Mathlib probe timed out (45 s) before elaboration; project oleans are absent, so
-this is **drafted, CI pending**, not green or paid.
+**Checks (scope).** `git diff --check`, forbidden-token scan. No project
+elaboration: this worktree has zero project `.olean` files, and the Mathlib
+probe cache contains only a stub `Mathlib.olean`. Status: **drafted, CI pending**,
+not paid.
 
-**Still unpaid.** Cos kernel acceptance; Bins; EndpointChecks; edge/sector
-validity; strict total; `Q0Degree3AreaInput`; seven exclusions; arbitrary-center
-full-disk theorem.  C450 remains historically CI-green.
+**Still unpaid.** Kernel acceptance of Cos, Bins, EndpointChecks; the eight
+low-denominator endpoint inequalities; `EdgeValid`/`SectorValid` premises; strict
+total; `Q0Degree3AreaInput`; seven exclusions; arbitrary-center theorem.
 
-**Next.** Inspect the next lane-A CI summary: if Cos is green, restore `Bins`
-alone in `TARGETS.txt`; if red, repair only the first remaining Cos proof site.
+**Next.** Add `capQ_le_sinPoly4_of_le` using the audit `U_BIN` values and
+`sinPoly4_mono_Icc01`, then instantiate it for bins 0 and 7; keep all eight
+separate for local CI failures.

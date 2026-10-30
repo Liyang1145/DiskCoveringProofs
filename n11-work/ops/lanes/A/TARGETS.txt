@@ -1,6 +1,8 @@
 # Lean targets lane A wants CI to build (one per line)
-# Critical path only until Cos and Mono are green.  Re-enable dependent
-# Bins/endpoint and edge/sector targets in dependency order after that.
+# Critical dependency order.  Bins imports Mono (not Cos); EndpointChecks
+# imports Bins.  Cos itself remains the outstanding repaired critical target.
 N11Formalization.C450ChainCompletionMain
 N11Formalization.SevenClassQ0Deg3Cos
 N11Formalization.SevenClassQ0Deg3Mono
+N11Formalization.SevenClassQ0Deg3Bins
+N11Formalization.SevenClassQ0Deg3EndpointChecks
