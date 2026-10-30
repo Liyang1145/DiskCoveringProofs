@@ -64,183 +64,151 @@ EXPERT (2026-10-30):
 - Then-unproved: packet/kernel validity, residual positive-packet/no-cell
   bridges, exclusion-to-radius bridges, and the energy/seven-class premises.
 
-## 2026-10-30 - part 125 (N3623 conditional refinement chain)
+## Earlier N3623/combined/CI history, parts 125-131 (condensed)
 
-Did: emitted the singleton-3623 B13 wrapper and conditional main consumer with
-`emit_refine_singleton.py 3623` from the audited 2965 component-bounded
-template. The wrapper adds N3623 to the paid set, proves disjointness and paid
-count 1998, and `remaining_of`; the consumer exposes the refined N11-main and
-full-disk interfaces. Appended both targets.
+- N3623 wrapper/main emitted with exact data audit; all seven singleton chains and the combined seven-certificate pair remained CI pending. The old residual-census import was removed after a CI type error. These older details are superseded by the later per-node entries below.
+## 2026-10-30 - part 132 (N2337 archive restoration)
+
+Did: added `restore_archive_energy_refine.py`, restored the smallest clean
+unrecovered archive candidate (`N2337`, 28,421 B, no forbidden token), extended
+`emit_refine_singleton.py`, and generated the singleton B13 wrapper/main pair.
+This is a new residual refinement, not the public frozen-cap exclusion for 2337.
 
 Files / SHA256 (lowercase):
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3623.lean`
-  `5ffc59741a3de3ce546e9311829c7e7c35fa2fa6244b62dfb192d93eab291679`.
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3623Main.lean`
-  `9a6b54bade99a4b94019b2d5b04bdcf0a302c0ec277903d48425dc8a8bd2e611`.
+- `n11-work/lean/N11Formalization/EnergyRefineN2337.lean`
+  `4b65533ffc8e2206f1b9c548b547bd050be4cfdd2fa2d3f624bbb2b5b693117e`.
+- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine2337.lean`
+  `f142268823a18da5f1073fb8d749c71417e760b9fac77ce3b3f5da9461424c84`.
+- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine2337Main.lean`
+  `b28e28cb6215cff67a158fb78b11f9e0b0f5ea4af45726748d7f785ea26a6e0f`.
+- `n11-work/ops/lanes/C/energy-refine-n2337-tree-audit.json`
+  `56be7cacb6e4729b0d726675070ddfe11e9b9812a5b5721f6eebe302da4802fb`.
 - `n11-work/ops/lanes/C/TARGETS.txt`
-  `8c680851bd89c5659ef4c11acfb0abdb5fc151b608b76db6297a7ffd6f6fedae`.
+  `d1a2e959643a78993de48926b370be8ba3f8b64b35e66cb6be47ee8683ece8c7`.
+- `n11-work/ops/lanes/C/restore_archive_energy_refine.py`
+  `3987245dbf4dd53813fc0d1e801e9784e437ba3d108dabf0cc54e097d5449a0b`.
 
-Checks (exact scope): existing N3623 tree audit JSON passed 100/100 root-scale
-entries and 200/200 split inequalities, root
-`(terminal=false,i=1,j=6,m=507904,left=1,right=2)`, both children terminal;
-integer tree data only. Fresh inventory audit: 57 Next1182 components, union
-cardinality 1182, largest 21 (`S07.ids55`), 3623 in none. `py_compile`,
-forbidden-token scan, and `git diff --check` exited 0. No project build or
-kernel check was run; both new modules are **CI pending**, and no theorem is paid.
+Checks (exact scope): exact integer tree audit passed 100/100 root-scale and
+200/200 split checks, root `(false,0,5,393216,1,2)`, both children terminal;
+57-component Next1182 audit has union 1182 and 2337 in no component; forbidden
+token scan, `git diff --check`, and generator execution exited 0. No local Lean
+kernel/axiom result: all three new targets are **CI pending**, so no credit.
 
-Still unproved/missing: CI exits/axioms for the N2341/N3040/N2965/N3440/N3589/
-N3623 chains; packet/kernel validation for 3623; 326 certificate/data ids after
-six candidates; B10/remaining-210 absence rests on kernel `decide`; residual
-positive-packet/no-cell bridges; exclusion-to-radius bridges; refined energy and
+Still unproved/missing: those target exits/axioms and MPacket validity for 2337;
+the five earlier pending targets; 322 residual data ids; packet/no-cell and
+exclusion-to-radius bridges; energy and seven-class premises.
+
+Next: inspect the next artifact beginning with `EnergyRefineN2337`, then its
+wrapper/main; fix only the first kernel error. After green, add 2337 to the
+combined refinement and update the paid/count proofs. ROOT-IMPORT REQUEST: none.
+
+## 2026-10-30 - part 134 (N2337 pre-CI diagnosis)
+
+Did: checked `LATEST.md` and downloaded run `41050329106` logs. That run is at
+`d70898ab`, predating the local N2337/Seven/Eight work, so it cannot diagnose
+those modules. Compared N2337 with CI-green N2341: proof/declaration structure
+is line-for-line equivalent after replacing node data; both use the same
+refinement consumer and packet checks. Rechecked N2337 exact tree audit:
+100/100 root-scale entries and 200/200 split entries, children terminal. The
+forbidden-token scan and `git diff --check` exit 0. This is data/static scope,
+not Lean kernel credit.
+
+Unproved: N2337 `MValid pk*`, all CI exits/axioms for N2337, Seven, Eight and
+their mains; remaining residual packet/data obligations; packet/no-cell and
+exclusion-to-radius bridges; energy and seven-class premises.
+
+Next concrete step: on a run containing `d70898ab`'s successor, read the first
+N2337 kernel error; if none, proceed to the N2337 wrapper then Seven/Eight.
+ROOT-IMPORT REQUEST: none.
+
+## 2026-10-30 - part 135 (CI queue blocked upstream)
+
+Did: checked the refreshed `LATEST.md` (timestamp 13:11 UTC) and confirmed run
+`41050329106` is still the latest in its header, at `d70898ab`; it predates all
+local N2337/Seven/Eight modules. The log shows the run now dies earlier with
+exit 137/OOM in unrelated `SharedMomentConcreteSwitchBatch`
+(`OOM-GUARD`, 863MB available), so no lane-C target receives a kernel verdict.
+Re-ran the N2337 paired emitter successfully and confirmed its exact output
+hashes remain `4b6553…117e` (certificate) and `b28e28…e6e0f` (main). Forbidden
+token scan and `git diff --check` exit 0. Static/emitter scope only.
+
+Unproved: unchanged; all seven singleton chains, N2337, Seven, Eight and mains
+remain **CI pending**. Next: when a run reaches lane-C targets, read the first
+N2337 kernel error; otherwise do not reorder targets around the upstream OOM.
+ROOT-IMPORT REQUEST: none.
+
+## 2026-10-30 - part 136 (N3777 archive restoration)
+
+Did: restored the next-smallest clean unrecovered archive certificate (`N3777`,
+28,971 B), extended the deterministic singleton emitter for 3777, and emitted
+the wrapper/main pair. The exact integer tree audit passes; this is a new
+residual refinement candidate, not a paid theorem.
+
+Files / SHA256 (lowercase):
+- `n11-work/lean/N11Formalization/EnergyRefineN3777.lean`
+  `bc092a78a80b39eb8a01b76a6db6850dcd28ac057497efeda47cfbd8046e4380`.
+- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3777.lean`
+  `e555a979d62fa232dbda250a571be9d928a8d6b767093dafbdde22321fb22e8a`.
+- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3777Main.lean`
+  `fa103630e96716420845441f65cfe9e1f279ba0e2cd69ca9ac4f198ad6d2335c`.
+- `n11-work/ops/lanes/C/energy-refine-n3777-tree-audit.json`
+  `001d0e26771c50cc53a98d42b23cbc9dd12e8585444c4b41a2c6791eb6460a55`.
+- `n11-work/ops/lanes/C/emit_refine_singleton.py`
+  `965268ab772e07b02df3e9a279c443473957727e0bcddde2be18e8c0f059a438`.
+- `n11-work/ops/lanes/C/TARGETS.txt`
+  `9efd4edd6ba2131c2f3f1198c8d3afc8557aadf528ccaa4837a6cd2ca28c3dac`.
+
+Checks (exact scope): audit passed 100/100 root-scale entries and 200/200 split
+inequalities, root `(false,2,6,532480,1,2)`, both children terminal; integer
+tree data only. Forbidden-token scan and `git diff --check` exited 0. Latest CI
+is still blocked upstream by OOM before lane C; the three 3777 targets are
+**CI pending**, so no kernel/axiom credit exists.
+
+Still unproved/missing: CI exits/axioms and MPacket validity for N3777 (and all
+earlier pending chains); 321 residual certificate/data ids after eight
+candidates; packet/no-cell and exclusion-to-radius bridges; energy and
 seven-class premises.
 
-Next: query run `41037794295` and newest CI, then run targeted serial CI for
-`EnergyRefineN3623`, its wrapper, and main consumer; fix only the first kernel
-error. If green, emit N3633 with the checked script.
-ROOT-IMPORT REQUEST: none until a refined main consumer is CI-green.
+Next: inspect the first N3777 kernel error when CI reaches lane C; if green,
+add 3777 to the combined refinement and update to eight ids / 2005 paid.
+ROOT-IMPORT REQUEST: none.
 
-## 2026-10-30 - part 126 (N3633 conditional refinement chain)
+## 2026-10-30 - part 137 (N3792 archive restoration)
 
-Did: emitted the final recovered-residual singleton pair, N3633, with
-`emit_refine_singleton.py 3633` from the audited 2965 template. The wrapper
-adds 3633 to the B13 paid set, proves old-set disjointness and paid count 1998,
-dispatches terminal/radius obligations, and exposes `remaining_of`; the main
-consumer exposes the refined N11-main and full-disk interfaces. Generalized
-`audit_refine3040_membership.py` to accept a target id (default 3040) and
-appended both modules to lane-C targets.
+Did: restored the next-smallest clean unrecovered archive certificate (`N3792`,
+29,399 B), extended the deterministic singleton emitter, and generated the
+conditional B13 wrapper/main pair. This is a new residual refinement candidate,
+not a paid theorem.
 
 Files / SHA256 (lowercase):
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3633.lean`
-  `5f6e51a4f95f08239a8669b51f917fc0ff32ca20539581e233e48823b0301dbf`.
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3633Main.lean`
-  `094265d3996ae5ae0b37c95e784fbe7d648c22f30aab8433c2970e45d8a7abdb`.
+- `n11-work/lean/N11Formalization/EnergyRefineN3792.lean`
+  `66e978317d4c0d7caa4f26402c532de61d7746e34c9a9ac544751cab656f3d6d`.
+- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3792.lean`
+  `fef4da0061a9574bc768a02c5486b3efb60c7d0342c53703fb42ebe81f0d5f92`.
+- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3792Main.lean`
+  `ccd52a7f324f7807c2161d69608a993183bdc07450346a678a0217ab841707e8`.
+- `n11-work/ops/lanes/C/energy-refine-n3792-tree-audit.json`
+  `ae983f075a240c7e63af62344e52153ca2222df2ed1f91d2386eae17b22505cf`.
+- `n11-work/ops/lanes/C/emit_refine_singleton.py`
+  `2b5d86b95efa9f86d814940bdc3a7f593b74ad0d70f9509850c28f72d07f2436`.
 - `n11-work/ops/lanes/C/TARGETS.txt`
-  `b71d7f00f7bf18b104d83b9eec2d729ccbda54869f14d33e5f577937420b0cfe`.
-- `n11-work/ops/lanes/C/audit_refine3040_membership.py`
-  `31d9e5b5f05489e8568e1a63e636a73751bd6ce405c067bdda9430fd3bb0ed4d`.
+  `04c1410751b70de601a3a750c0298e120a8ff5c87143e1b74dbbbfce25948ac5`.
 
-Checks (exact scope): run `41037794295` is green for `EnergyRefineN3633`
-(`dfe0881a`). The stored N3633 tree audit reports 100/100 root-scale entries,
-200/200 split inequalities, zero mismatches/violations, root
-`(terminal=false,i=1,j=6,m=507904,left=1,right=2)`, both children terminal;
-integer tree data only. Fresh literal inventory audit: 57 Next1182 components,
-union cardinality 1182, largest 21 (`S07.ids55`), 3633 in none. `py_compile` on
-both Python scripts, forbidden-token scan over the new Lean files, and
-`git diff --check` exited 0. No local project build or kernel check was run;
-both new modules are **CI pending**, and no theorem is paid.
+Checks (exact scope): the exact integer tree audit passed 100/100 root-scale
+entries and 200/200 split inequalities, root
+`(false,2,6,475136,1,2)`, both children terminal. The 57-component Next1182
+audit has union 1182, largest component 21, and 3792 in no component.
+Forbidden-token scan and `git diff --check` exited 0. No local Lean kernel or
+axiom result exists: all three 3792 targets are **CI pending**, so no credit.
+The emitted wrapper's machine-checked `paid_count = 1998` remains conditional
+on that target building.
 
-Still unproved/missing: CI exits/axioms for N3633 wrapper/main and for the six
-earlier refinement wrapper/main pairs; 326 certificate/data ids after these
-seven recovered candidates; MPacket/kernel validity for each newly added id (the
-EnergyRefine modules already carry their local `pk_ok` checks, but CI is the
-authority); residual positive-packet/no-cell bridges; exclusion-to-radius
-bridges; refined energy and seven-class premises.
+Still unproved/missing: CI exits/axioms and MPacket validity for N3792 (and all
+earlier pending chains); 320 residual certificate/data ids after nine
+candidates; packet/no-cell and exclusion-to-radius bridges; energy and
+seven-class premises.
 
-Next: check newest CI, then build serially
-`EnergyTerminalBatchB13Refine3633`,
-`EnergyTerminalBatchB13Refine3633Main`; fix only the first kernel error. If the
-seven singleton wrappers are green, the next engineering step is a combined
-refinement consumer exposing one paid set of 2004 ids and a single weakened
-energy premise, rather than seven parallel premises.
-ROOT-IMPORT REQUEST: none until the combined refined main consumer is CI-green.
-
-## 2026-10-30 - part 127 (combined seven-certificate refinement)
-
-Did: added one combined B13 refinement consumer over the seven recovered ids
-2341/3040/2965/3440/3589/3623/3633. It imports the seven singleton wrappers,
-defines `newIDs` as their union and `paidIDs = B13.paidIDs ∪ newIDs`, proves
-old/new disjointness by delegating to each wrapper's `not_paid_*`, counts
-`newIDs.card = 7` and `paidIDs.card = 2004`, dispatches terminal/radius proof,
-and exposes `RemainingTerminalRadius` plus `remaining_of` back to B13. The Main
-module derives both conditional N11 interfaces (energy premise now over the
-combined 2004-id paid set; `SevenClassExclusions` remains explicit). Added both
-modules to lane-C targets.
-
-Files / SHA256 (lowercase):
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSeven.lean`
-  `57e5b9caa136f6562f970e4c26703dcb64c4ce72e118e111529259ff69fb6024`.
-- `n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSevenMain.lean`
-  `131e4be62c98f0d95b942252b7fb711c029953d2d98c22efafbe678cf6ff0021`.
-- `n11-work/ops/lanes/C/TARGETS.txt`
-  `03a6687b07f64fe55aa2c4cd3ba1a4d22977e73bdbceb5d01fd4a90a5fbd7e32`.
-
-Checks (exact scope): forbidden-token scan over both new Lean modules and
-`git diff --check` exited 0. A bounded local elaboration attempt failed before
-reading the new module because Lake tried to check out a stale Mathlib cache
-over untracked files; a standalone Mathlib probe timed out at 120 s. Thus no
-local kernel/axiom result exists for these modules. They are **CI pending**;
-no theorem is paid.
-
-Still unproved/missing: CI exits/axioms for seven singleton wrappers/mains and
-the combined pair; MPacket validity for the seven ids; 322 of the 389 residual
-certificate/data ids still lack candidates; residual positive-packet/no-cell
-bridges; exclusion-to-radius bridges; and both energy and seven-class premises
-remain conditional.
-
-Next: read newest CI; if all seven wrapper targets are green, build serially
-`EnergyTerminalBatchB13RefineSeven`, then `...RefineSevenMain`, fixing only the
-first kernel error (most likely proof-pattern or import failure). If the seven
-wrappers are still pending/red, fix those first rather than the combined pair.
-ROOT-IMPORT REQUEST: none until the combined main consumer is CI-green.
-
-## 2026-10-30 - part 128 (N2341 census fix)
-
-CI artifact `41050329106` showed the seven singleton packets and the
-3040/2965/3440/3589/3623 wrapper/main pairs green, but N2341 and its Main red
-from the optional `residualIDs` census section (unsolved goal line 72, then no
-goals line 86). Removed that section and its dangling `#check`; the paid-set,
-disjointness, radius and `remaining_of` proofs are unchanged. Local
-forbidden-token scan, `git diff --check`, and a structural audit exited 0.
-No local kernel result; N2341/N3633/Seven remain CI pending.
-
-## 2026-10-30 - part 129 (post-fix CI scope audit)
-
-Did: audited artifacts for runs `41050208198` (`18c6e03b`) and
-`41050329106` (`d70898ab`). Run `18c6e03b` built all seven
-`EnergyRefineN*` packets with exit 0, but its lane-C `TARGETS.txt` ended at
-`FrozenCapPublicExcludedTree`: it did not include any Refine wrapper/main or
-the combined pair. Run `d70898ab` included only the 3040/2965/3440/3589/3623
-Refine targets; the N2341 failure there is the already-removed census-only
-section (`72:67` unsolved, `86:2` no goals). The current N2341 source ends the
-theorem at lines 85/87 and contains no `residualIDs` block.
-
-Checks (exact scope): unzip plus JSON exit audit for both artifacts; source
-scan confirms all seven singleton packet exits are 0; forbidden-token scan over
-the five current changed/new Lean files returned none; `git diff --check`
-exited 0. Current SHA256 (lowercase):
-- N2341 wrapper `fa379f7e2409c56dd7cee2f26900f68d50b44f5d2c7e44644154e2c6c23e4d97`
-- N3633 wrapper `5f6e51a4f95f08239a8669b51f917fc0ff32ca20539581e233e48823b0301dbf`
-- N3633 Main `094265d3996ae5ae0b37c95e784fbe7d648c22f30aab8433c2970e45d8a7abdb`
-- Seven combined `57e5b9caa136f6562f970e4c26703dcb64c4ce72e118e111529259ff69fb6024`
-- Seven Main `131e4be62c98f0d95b942252b7fb711c029953d2d98c22efafbe678cf6ff0021`
-- lane targets `03a6687b07f64fe55aa2c4cd3ba1a4d22977e73bdbceb5d01fd4a90a5fbd7e32`
-
-No kernel check has run on the current N2341 fix, N3633 pair, or combined pair;
-they are **CI pending**, so no refinement credit is claimed. Still missing:
-those five target exits/axiom reports; 322 residual certificate/data ids;
-packet/no-cell and exclusion-to-radius bridges; energy and seven-class premises.
-
-Next: on a run whose lane-C targets include the five pending modules, fix only
-the first error, starting with `EnergyTerminalBatchB13Refine2341`; do not restore
-its census section. Then require the combined Main to be CI-green before asking
-for root import.
-ROOT-IMPORT REQUEST: none until `RefineSevenMain` is CI-green.
-
-## 2026-10-30 - parts 130-131 (CI queue audit)
-
-Did: inspected `LATEST.md`; newest artifacts remain runs `41050329106` and
-`41050208198`, both predating the N2341 census fix. No artifact covers current
-N2341, N3633, or Seven. Re-ran source forbidden-token scan (none) and
-`git diff --check` (exit 0). Moved the six unpriced refinement targets to the
-front of `TARGETS.txt` so CI checks them before old green targets; removed their
-duplicate entries. Targets SHA256:
-`0a890e69d80ebec96bbff8a849577d71ed130e7bb7c00a74ca14234d0a24c25a`.
-
-Scope: static source/CI-log audit only; no local kernel/axiom result. These six
-remain **CI pending**, so no theorem or refinement credit is claimed. Missing:
-their exits/axiom reports; MPacket validity for seven ids; 322 residual
-certificate/data ids; packet/no-cell and exclusion-to-radius bridges; energy
-and seven-class premises.
-
-Next: on the next run, fix only the first error beginning with Refine2341, then
-require N3633, Seven, and SevenMain green. ROOT-IMPORT REQUEST: none until green.
+Next: when CI reaches lane C, read the first N3792 kernel error; fix only that
+error, then proceed through its wrapper/main. If green, fold 3792 into the
+combined refinement and replace the singleton paid count with the combined
+count. Do not claim payment before CI. ROOT-IMPORT REQUEST: none.
