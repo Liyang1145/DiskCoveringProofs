@@ -132,67 +132,109 @@ lower polynomial theorem; otherwise add a small lemma in a new endpoint module.
 
 ## 2026-10-29 (part 66) — endpoint cost decomposition tested
 
-Replaced the probe's cap expression for endpoint 0 with the cheaper target
-`(19/50 : ℚ) ≤ sinLoNLag (nodeBinAt 0)`.  It still did **not** finish within
-45 s in `/workspace/tools/mathlib-probe` (timeout, no diagnostics), so raw
-14-term rational unfolding is not a viable endpoint strategy either.  No Lean
-project module was built; this is a probe result, not kernel evidence.
-
-For the next attempt, Mathlib's `Real.sin_ge_sub_cube` gives
-`sin a ≥ a - a^3/6` for `a ≥ 0`.  A generic bridge
-`sinLoNLag a ≥ sin a - 2/29!` (from the degree-29 Lagrange bound and
-`sinLoNLag_le_sin`) would reduce every endpoint to
-`19/50 + 2/29! ≤ a - a^3/6`, then a short `norm_num` check per endpoint.
-Endpoint values all lie in `[0,1]`, so the cubic is positive and gives ample
-slack.  The bridge and its use in `SevenClassQ0Deg3EndpointChecks` remain
-undrafted.
-
-**Files / SHA256.** `probe_endpoint_normnum.lean` updated (cheap-target probe;
-SHA to be refreshed on commit); `TARGETS.txt` unchanged.  Still unproved:
-Cos/Bins/EndpointChecks kernel acceptance, then UpperTables premises, strict
-total, `Q0Degree3AreaInput`, seven exclusions, arbitrary-center full-disk.
-
-**Next concrete step.** Add `sinLoNLag_lower` beside the existing sine-bracket
-lemmas (prefer a new lane module if frozen `IntervalsHighLag` cannot be edited),
-prove it via `sin_bound_abs 14` and `sinTQ_cast`, then replace endpoint
-`norm_num` definitions with `Real.sin_ge_sub_cube` plus exact per-endpoint
-rational checks.
+A 45 s probe of the cheaper endpoint target timed out; raw 14-term unfolding is
+not viable.  The planned `sinLoNLag_lower` / `Real.sin_ge_sub_cube` reduction is
+superseded by the part-67 `capQ_le_sinPoly4` draft.  No kernel claim.
 
 ## 2026-10-29 (part 67) — endpoint polynomial reduction drafted
 
-Replaced the eight expensive 14-term `sinTQ`/`sinLoNLag` endpoint expansions by
-two reusable kernel-bound routes in `SevenClassQ0Deg3EndpointChecks.lean`:
-`sin_bound_abs 4` gives the rational degree-seven lower/upper polynomial with
-explicit `1/9!` and `2/29!` losses; `sin_bound_abs 14` converts those into
-`sinLoNLag`/`sinHiNLag` bounds. `capQ_le_sinPoly4` then bounds each endpoint cap
-without unfolding the 29-term series. This is **drafted, CI pending**, not a
-green or paid module. One failed intermediate attempt used the uniform cap
-ceiling `19/50` as a lower bound; it was removed. The cubic-only lower bound was
-also rejected because the last endpoint missed by roughly `7e-5`; the degree-
-seven bound has positive slack there.
+`SevenClassQ0Deg3EndpointChecks.lean` now uses `sin_bound_abs 4` plus
+`sin_bound_abs 14` to bound endpoint caps without expanding the 29-term series
+(`capQ_le_sinPoly4`); **drafted, CI pending**.  SHA256 of the Lean file is
+`5e522766ce46a64f722f1bfa4f4044dce33219c8da02d5695e861eb7dd036656`.  The
+companion verifier passed all 8 exact comparisons (minimum slack about 3.44e-5).
+A 140 s Mathlib-probe attempt timed out and project oleans are absent, so there is
+no Lean elaboration.  Kernel acceptance of Cos, Bins and EndpointChecks remains
+unpaid, followed by UpperTables premises and the global theorem.
 
-**Files / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
-`5e522766ce46a64f722f1bfa4f4044dce33219c8da02d5695e861eb7dd036656`;
-`verify_q0_degree3_endpoint_polynomial.py`
-`0859e3b6ec1a3b5d5cfa456b4605b7a6975a7ffbe1420da571ef91edfc8f8a08`;
-`q0-degree3-endpoint-poly.json`
-`97873a192606db6c150caaf0a5fe406f5475b59406a374a0a1342e790878c8eb`.
-`TARGETS.txt` remains `2935e4bd…` and already lists the endpoint module.
+## 2026-10-30 (session) — offline audit refresh, no Lean edits
 
-**Checks (scope).** The new Python verifier passed all eight exact-rational
-comparisons; minimum slack is `1813339696040923404218003961318003972770323 /
-52701008282540452209375000000000000000000000000` (about `3.44e-5`).
-`git diff --check` and the forbidden-token scan are clean. A narrow
-Mathlib-probe compilation of the lower-bound algebra timed out at 140 s on the
-2-core sandbox, and no project oleans exist locally, so there is **no Lean
-elaboration or kernel evidence yet**. C450 remains CI-green historically.
+`verify_q0_degree3_endpoint_polynomial.py` PASS (8 comparisons, min slack ≈3.44e-5);
+`audit_q0_degree3_area.py` PASS (q0, 11 mu intervals, lambda, upper < pi; canonical
+21-edge graph, hub degrees 3/10); `probe_q0_degree3_binmax.py` PASS (8 bins cover
+all 2049 nodes, min slack ≈3.43e-5). Forbidden-token and `git diff --check` clean;
+no Lean edit or local elaboration (missing project oleans).
 
-**Still unproved / unpaid.** Kernel acceptance of the rewritten Cos, Bins and
-EndpointChecks modules; their CI run is pending. Then UpperTables
-edge/sector premises, strict total, `Q0Degree3AreaInput`, all seven exclusions,
-and the arbitrary-center full-disk theorem remain open.
+**Still unpaid.** Cos (CI pending), Bins, EndpointChecks; UpperTables `EdgeValid`/
+`SectorValid` (21×2049 + 9×2049 premises) undrafted; strict total;
+`Q0Degree3AreaInput`; seven exclusions; arbitrary-center theorem. C450 CI-green.
 
-**Next concrete step.** Supervisor commit this endpoint rewrite and let CI run
-the existing five lane-A targets. If EndpointChecks is red, repair only the
-first reported proof line; if green, promote the UpperTables dependency in
-`TARGETS.txt` and inspect its three explicit premise families.
+**Next.** If Cos green, promote UpperTables after Bins/EndpointChecks and begin
+`EdgeValid` via `edgeValid_of_unimodal`; if red, repair only its first failure.
+
+## 2026-10-30 (part 2) — audit refresh; unimodal peaks confirmed
+
+Exact-rational Cos, edge-derivative, edge-unimodal and endpoint checks all passed;
+no Lean edit or local elaboration.  These are candidate data, not kernel evidence.
+
+## 2026-10-30 (part 3) — Cos minimum-coercion repairs drafted
+
+CI `40935785584` (`cea391a9`) is green for `C450ChainCompletionMain` and red for
+`SevenClassQ0Deg3Cos` at 134/196. Replaced fragile `exact_mod_cast`/chained
+`apply min_eq_right` with explicit `Rat.cast_le.mpr` witnesses to
+`min_eq_left`/`min_eq_right`; this changes coercion normalization, not the statement.
+
+**File / SHA256.** `SevenClassQ0Deg3Cos.lean`
+`79cc2b786100ca186e4e457a7386801a0a905e4b2e3dfa2d11aff08b75243715`; Cos is
+already in `TARGETS.txt`, so no new module/target.
+
+**Checks (scope).** `git diff --check` and forbidden-token scan clean. Minimal
+Mathlib-probe checks timed out (60 s) without elaboration; project oleans are absent,
+so this is **drafted, CI pending**, not green or paid.
+
+**Still unpaid.** Cos kernel acceptance; Bins; EndpointChecks; EdgeUnimodal/Sector
+premises; strict total; `Q0Degree3AreaInput`; seven exclusions; arbitrary-center theorem.
+
+**Next.** If Cos green, draft `SevenClassQ0Deg3EdgeUnimodalValid` (21
+`EdgePeakValid` comparisons plus monotonicity from `cosHiNLag_grid_antitone`); if red,
+repair only the first reported proof line.
+
+## 2026-10-30 (part 4) — target queue aligned with critical path
+
+Audited the current worktree after the part-3 Cos rewrite.  The only lane-A Lean
+diff is `SevenClassQ0Deg3Cos.lean`; the three edited proof sites are the two
+explicit `Rat.cast_le.mpr` witnesses at lines 134 and 196–198.  `TARGETS.txt`
+still enabled `Bins` and `EndpointChecks`, contradicting the standing rule to
+keep only C450/Cos/Mono until both SevenClass modules are green.  Removed those
+two targets; no Lean source changed in this part.
+
+**Files / SHA256.** `SevenClassQ0Deg3Cos.lean`
+`79cc2b786100ca186e4e457a7386801a0a905e4b2e3dfa2d11aff08b75243715`;
+`TARGETS.txt` `4bc097e662af98279cd57338e5f29d0e4c5864f770a37777bd318a0deea117cc`;
+`NOTES.md` hash is reported by the supervisor after this session.
+
+**Checks (scope).** `git diff --check` and a forbidden-token scan of the lane and
+edited Cos source pass.  CI `40949277719` remains in progress at the last
+snapshot; the Cos repair is **drafted, CI pending**, not paid.  No local project
+elaboration is possible with the missing oleans.
+
+**Still unpaid.** Cos kernel acceptance (then Bins and EndpointChecks in
+dependency order); EdgeUnimodal/Sector premises; strict total;
+`Q0Degree3AreaInput`; seven exclusions; arbitrary-center theorem.  C450 remains
+historically CI-green.
+
+**Next.** Re-read the completed `40949277719` summary: if Cos is green, restore
+`Bins` alone as the next target; if red, repair only its first reported proof line.
+
+## 2026-10-30 (part 5) — Cos natural-cast witness repair
+
+Replaced both `Rat.cast_le.mpr` witnesses in `SevenClassQ0Deg3Cos.lean` with
+`Nat.cast_le.mpr`: the comparisons are between natural casts in `ℚ`, not a
+rational-to-rational cast.  Sites: `gridArg_eq_nodeQ` and the two post-grid
+`min` evaluations in `gridCos_succ_le`.  This is a proof-only repair; statements
+are unchanged.
+
+**File / SHA256.** `SevenClassQ0Deg3Cos.lean`
+`ce1a5f252c2b1a2e7fb0dafba94106ebc79f257895070c3df9030a6c90dc7a3b`.
+`TARGETS.txt` remains C450Main/Cos/Mono, so no target change.
+
+**Checks (scope).** `git diff --check` and forbidden-token scan pass.  A bounded
+Mathlib probe timed out (45 s) before elaboration; project oleans are absent, so
+this is **drafted, CI pending**, not green or paid.
+
+**Still unpaid.** Cos kernel acceptance; Bins; EndpointChecks; edge/sector
+validity; strict total; `Q0Degree3AreaInput`; seven exclusions; arbitrary-center
+full-disk theorem.  C450 remains historically CI-green.
+
+**Next.** Inspect the next lane-A CI summary: if Cos is green, restore `Bins`
+alone in `TARGETS.txt`; if red, repair only the first remaining Cos proof site.

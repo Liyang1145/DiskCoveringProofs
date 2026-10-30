@@ -131,7 +131,7 @@ theorem gridArg_eq_nodeQ {n : ℕ} (hn : n ≤ 2048) :
     gridArg n = N11Formalization.MetricAreaRationalCertificate.nodeQ
       RatInterval.piHi 2048 (⟨n, Nat.lt_succ_of_le hn⟩ : Fin 2049) / 2 := by
   have hmin : min (n : ℚ) 2048 = n :=
-    min_eq_left (by exact_mod_cast hn)
+    min_eq_left (Nat.cast_le.mpr hn)
   simp [gridArg, N11Formalization.MetricAreaRationalCertificate.nodeQ, hmin]
 
 /-- The final grid step in the `gridArg` coordinate, matching the last case of
@@ -193,11 +193,9 @@ theorem gridCos_succ_le (n : ℕ) : gridCos (n + 1) ≤ gridCos n := by
       have h1 : gridArg (n + 1) = gridArg n := by
         unfold gridArg
         have hs : min (((n + 1 : ℕ) : ℚ)) 2048 = 2048 := by
-          apply min_eq_right
-          exact_mod_cast (by omega : 2048 ≤ n + 1)
+          exact min_eq_right (Nat.cast_le.mpr (by omega : 2048 ≤ n + 1))
         have ht : min ((n : ℕ) : ℚ) 2048 = 2048 := by
-          apply min_eq_right
-          exact_mod_cast (by omega : 2048 ≤ n)
+          exact min_eq_right (Nat.cast_le.mpr (by omega : 2048 ≤ n))
         rw [hs, ht]
       rw [gridCos, gridCos, h1]
       exact le_rfl
