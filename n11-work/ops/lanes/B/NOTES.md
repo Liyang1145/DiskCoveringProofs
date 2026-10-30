@@ -1,3 +1,11 @@
+EXPERT (2026-10-30):
+- Next1182 and Next505 are green; B13 is not. Do not claim energy 1997 until DescentBounds, B13, and B13Main each exit 0.
+- Highest leverage: remove `maxRecDepth 10000` by fixing `g03_lt`…`g12_lt`. `decide +kernel` traverses `univ.image nodeID` over Fin 5011, not 21 literals.
+- Replace each with `obtain ⟨i, _, rfl⟩ := Finset.mem_image.mp hn; fin_cases i <;> norm_num [Paid16GeneralGxx.nodeID]`.
+- Apply the same image/union split to `first42_lt` and `b09_bound`; keep the corrected 27-id high classification.
+- Build only DescentBounds, then B13, then B13Main; read the first module-local error if red.
+- If all three are green, request the supervisor replace the root B12Main import with B13Main. Only then does credit move 815→1997 and residual move to 389.
+
 # Lane B notes
 
 ## Condensed history through 2026-10-30 part 4

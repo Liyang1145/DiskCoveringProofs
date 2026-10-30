@@ -1,10 +1,12 @@
-EXPERT (2026-10-29):
-- M is green and sound but pays no energy count.
-- Fix MCap line 40 with `simp only [DBMMinorantDual.rho]`; line 71 cascade should resolve.
-- Keep TARGETS to current three; add row caps/bridges/wrappers only after MCap is green.
-- Unify FrozenCapCertificates F0/G/y/E with FrozenCapRationalCore; remove duplicate constants.
-- After MCap, complete one node-pinned wrapper (1409) with hnode/hf0/hg/row_cap/bridge before broad rollout.
-- Max credit is seven residual IDs while 382 HOST records are absent; do not claim class/energy credit until wrappers are green and linked.
+EXPERT (2026-10-30):
+- Core/M/MCap are green; the current wide work adds no paid energy or class count.
+- `yW_* = FrozenCapRationalCore.y_*`; the strict-gain repair is deduplication, not a new exclusion.
+- Wrappers remain conditional on `hf0`/`hg`; no theorem derives these from `Valid`, and none links them to B13 RemainingTerminalRadius.
+- Stop emitting duplicate wide/four/five witness and row-cap families. They are CI waste until the `hf0`/`hg` source premise is closed.
+- Highest leverage: prove one unconditional statement, e.g. `no_valid_1409 : ¬ ∃ m p, Valid p ∧ p.nodeID = 1409`, from a fully specified actual packet.
+- If `hf0`/`hg` cannot be derived or the result cannot enter the 389 census, mark the lane non-counting and change scope.
+- The seven public energy residuals are not the seven metric classes; never report them as SevenClassExclusions credit.
+- Only matching-source CI exit 0 is paid. Python exact checks, hashes, and conditional False theorems are not.
 
 # Lane C notes
 

@@ -1,54 +1,51 @@
 # EXPERT REVIEW — n=11 Lean lanes
 
-**Date:** 2026-10-29 (UTC)
-**Reviewed:** `n11-work/ops/{GUIDANCE,LANES,PROGRESS}.md`, `ops/ci/LATEST.md`, all lane `NOTES.md`/`TARGETS.txt`, `git log --stat -8`, and the newest Lean files touched by each lane. No full `lake build` was run and no Lean/lakefile/toolchain file was edited.
+**Date:** 2026-10-30 (UTC)
+**Scope:** HEAD `88918335`; `ops/{GUIDANCE,LANES,PROGRESS}.md`, `ops/ci/LATEST.md`, lane notes/targets, `git log --stat -8`, and newest lane Lean. Run `40998371772` is in progress; completed run `40988698121` applies to `2fdf1a1c`, not current bytes. No full build was run and no Lean/toolchain/lake file was edited.
 
 ## Overall
 
-- No lane has moved a paid count. Energy remains 815/2386, C450 chain is CI-green in isolation but not root-imported, and `SevenClassExclusions` remains 0/7.
-- The current CI snapshot (`40901508838`) shows C450 completion modules green, `FrozenCapRationalCore` and `PaidCellCertificateM` green, but `PaidCellCertificateMCap`, `Paid16GeneralNext1182`, `EnergyTerminalBatchB13`, all SevenClass targets, and root `N11Formalization` red.
-- Emitter reruns, manifest inventories, hash pins, Python exact-rational audits, and `project_status.py --check` are not proofs. They are being reported correctly as evidence, but they do not reduce open counts.
-- The full root remains OOM-prone: `SharedMomentConcreteSwitchBatch` was killed after 1540s. Root integration must be staged through targeted CI builds, not a full monolithic `lake build`.
-- Highest-value global order: root-import the green C450 chain; fix B's mechanical `Next1182` bound errors; fix C's `MCap` rewrite; then build B13 and its root consumer; only then return to SevenClass.
+- **No paid count moved this round.** Energy is still 815/2386; C450 is 36/36 and transitively root-imported through `EnergyTerminalBatchB12Main`; `SevenClassExclusions` is still 0/7.
+- The old C450 `HARK-MISSING` comments are stale navigation text, not an import gap. `EnergyTerminalBatchB12Main` imports `C450ChainCompletionMain`, so C450 is in the root closure. The root remains conditional and red because energy/classes are unpaid and `SharedMomentConcreteSwitchBatch` OOMs.
+- `Next1182` alone does not move the energy count. B13 must be green to credit 815→1997; its current descent proof is unpaid and uses a recursion workaround rather than eliminating the bad kernel reduction.
+- Lane C’s newest files are sound proof-cost repairs but duplicate already-green core witnesses. Its exclusion wrappers are conditional on `hf0`/`hg`, are not linked to `RemainingTerminalRadius`, and therefore reduce neither 389 residual IDs nor 0/7 class exclusions.
+- Reviewed source hashes: EndpointChecks `fddea813…`, B13DescentBounds `075b663a…`, WideFieldWitnesses `f4c758dd…`.
 
 ## Lane A
 
-- **C450 telescope: sound.** `source36_paid` is discharged, the empty `remainingSegs` obligation is vacuous, and each `sourceN_remaining_of_remaining` prepends the just-paid segment. This correctly reaches `h450`, `SourceObligation`, and `C450Atom`.
-- **But it is not paid globally.** `N11Formalization.lean` still has `HARK-MISSING` comments for both C450 imports and only imports `EnergyTerminalBatchB12Main`. Lane A must make the `ROOT-IMPORT REQUEST` explicit and the supervisor must import `C450ChainCompletionMain`.
-- **SevenClass target list is too noisy.** `A/TARGETS.txt` currently builds invalid/red modules (`UpperReduction`, `Counterexample`, `Unimodal`, `EdgeReal`, `EdgeSuffixHigh`) before the analytic base is green. This wastes CI and hides the real Cos/Mono failures.
-- **Highest-leverage next step:** set `A/TARGETS.txt` to only `N11Formalization.C450ChainCompletionMain`, `N11Formalization.SevenClassQ0Deg3Cos`, and `N11Formalization.SevenClassQ0Deg3Mono`; keep C450 in the list only until the supervisor imports it.
-- For `SevenClassQ0Deg3Cos`, replace the `hasDerivAt_cosHiReal` closing block with explicit nonzero denominators:
-  `field_simp [show (28:ℝ) ≠ 0 by norm_num, show ((Nat.factorial 27:ℕ):ℝ) ≠ 0 by positivity]` then `ring_nf`.
-- For `SevenClassQ0Deg3Mono`, quote the current CI error against the current imported names before patching; do not reuse stale line numbers.
-- Do not emit any further edge/sector proof file until `Cos` and `Mono` are both CI-green.
+- **C450: sound and closed.** `source36_remaining`/vacuous tail and the `sourceN_remaining_of_remaining` composition produce `h450`, `SourceObligation`, and `C450Atom`; CI independently shows `C450ChainCompletionMain` exit 0. Do no more C450 proof work.
+- The current Cos/Bins edits address the old CI lines (`simpa` at Cos 205; explicit div/mod and `Rat.cast_le` in Bins). They are plausible but only current-CI pending. Mono is already green.
+- **EndpointChecks has a real domain error, independent of CI.** The low-denominator bridge requires `u ≤ 1` and `q ≤ 2`; however bins 5–7 have `endpointUBin 5/6/7 = 11774/10000, 13737/10000, 15708/10000 > 1`, and `nodeQ_binHi 5/6/7 > 2`. Thus `endpointUBin_le_one` and `nodeQ_binHi_le_two` are false as universally stated, and `endpointCheck_of_quartic` cannot be used for bins 5–7.
+- **Highest leverage:** split the endpoint proof by domain. Keep `capQ_le_sinPoly4_of_u_le` only as a `Fin 5 →` lemma for bins 0–4.
+- For bins 5–6, use `SevenClassQ0Deg3Mono.capQ_mono` plus `sinHiNLag_mono` with rational upper arguments `11774/10000` and `13737/10000` (both below `RatInterval.piLo/2`), then close each finite comparison by `norm_num [capQ, sinHiNLag, sinTQ, RatInterval.piLo]`.
+- For bin 7, use `piHiCapSaturated` to force `capQ (nodeQ … 2048) = 19/50`; prove `19/50 ≤ sinLoNLag (1949/5000)` directly by `norm_num [sinLoNLag, sinTQ]`. Do not use the monotone quartic bridge past 1.
+- Delete or restrict the two false universal lemmas; do not “fix” them with `maxRecDepth` or a larger heartbeat budget. Then require CI exits 0 for Cos, Bins, EndpointChecks in that order.
+- Even after this, q0 degree 3 is not paid: `EdgeValid`, `SectorValid`, strict total below `piLo`, construction of `Degree3AreaCertificate`, and `Q0Degree3AreaInput` remain open. No exclusion is bought by node tables alone.
 
 ## Lane B
 
-- **Approach is mathematically sound.** `Finset.univ.biUnion` over the eight `S01..S08` parts, `card_biUnion` with pairwise interval-disjointness, and the B13 `paidIDs = B12.paidIDs ∪ Next1182.newIDs` transfer would reduce the explicit energy residual from 1571 to 389 **if built and root-imported**.
-- **Current failure is mechanical, not mathematical.** In `part_s01_bounds` through `part_s07_bounds`, each `exact block_*_bounds n h_*` tries to close a wider part bound with a narrower block bound. This causes the CI type mismatches at lines 276–349 and the dependent errors at 525–531.
-- **Highest-leverage next step:** in each of the first seven `part_s*_bounds`, replace the eight exact-block branches with:
-  `have hb := block_*_bounds n h_*; exact ⟨hb.1, le_trans hb.2 (by norm_num)⟩`.
-- Keep `part_s08_bounds` as the one direct exact block.
-- In `new_count`, remove the trailing `norm_num` after the `simp [Fin.sum_univ_succ, part, ...]`: CI line 546 reports `No goals to be solved`.
-- Build only `N11Formalization.Paid16GeneralNext1182` until it is green, then expose B13's first independent error. Do not add B13Main or claim 1997 until `Next1182` and `EnergyTerminalBatchB13` are both green and the supervisor imports B13Main.
-- Pre-split the two full-set `decide +kernel` proofs `b11_lt` and `next505_lt` in B13 into ≤21-literal blocks; they are the next OOM risk after the dependency is green.
+- `Paid16GeneralNext1182` and Next505 bounds are CI green. B13’s `paidIDs`/`paid_count`/`paid_radius` design is mathematically the right reducer and would credit 1997/2386, but only after B13 and B13Main build and the root consumer is switched from B12Main.
+- The current `maxRecDepth 10000` is a workaround, not progress. The failing decisions `g03_lt`…`g12_lt` quantify over `Paid16GeneralGxx.newIDs := univ.image nodeID`, so `decide +kernel` traverses a 5011-element universe and then hits kernel recursion. The claimed “at most 58 literals” describes the set size, not the computation Lean performs.
+- **Highest leverage:** replace each such decision with image membership and finite cases, for example:
+  `obtain ⟨i, _, rfl⟩ := Finset.mem_image.mp hn; fin_cases i <;> norm_num [Paid16GeneralG03.nodeID]`.
+  Do the same for `first42_lt` after splitting the union, and for `b09_bound` after splitting B08 from `Paid16Batch22Consumer.newIDs`; then remove `set_option maxRecDepth 10000`.
+- The corrected B09 high-id classification is mathematically necessary: the former `b09_lt` was false. Keep it, but do not count the 27×57 `high_not_next` expansion as evidence until it builds. If it remains expensive, add a generic “not in any part” lemma rather than expanding more cases.
+- Build only `EnergyTerminalBatchB13DescentBounds`, then B13, then B13Main, requiring exact exit 0 at each stage. No 1997 credit before B13 is green; no root import request before B13Main is green.
 
 ## Lane C
 
-- **`PaidCellCertificateM` is green and mathematically sound.** It is the intended `Fin 7 → Fin m` transport and preserves `Paid16CellCertificate.Valid`. It pays no energy count by itself.
-- **`PaidCellCertificateMCap` is mathematically sound but red.** The failure is at the definitional rewrite `rw [rho]` (line 40); the later `rw [hrho]` failure (line 71) is a cascade.
-- **Highest-leverage next step:** build only `N11Formalization.PaidCellCertificateMCap` after M, and replace `rw [rho]` with `simp only [DBMMinorantDual.rho]` in `weighted_reduced_le`.
-- Do not add row caps, bridges, or wrappers to `TARGETS.txt` until `MCap` is green.
-- Unify the duplicated frozen constants: `FrozenCapCertificates` defines `F0/G/y/E` separately from `FrozenCapRationalCore`; make `FrozenCapCertificates` import and reuse the core definitions before any wrapper can be trusted.
-- The wrappers are still conditional on `hf0`/`hg` and node identity. The next paid step is one complete node-pinned chain, e.g. for 1409:
-  `theorem excluded_1409_tree` with `hnode : p.nodeID = 1409`, `hf0`, `hg`, `FrozenCapRowCap1409.row_cap`, and `FrozenCapRowCapTreeBridges.db_eq_tree_1409`.
-- C can affect at most the seven public residual IDs while 382 HOST records are absent. Do not claim any energy/class credit until such a wrapper is green and connected to the residual predicate.
+- `FrozenCapRationalCore`, `PaidCellCertificateM`, and `PaidCellCertificateMCap` are green and mathematically sound. Their exact rational checks are useful, but M/MCap are infrastructure and pay no energy ID.
+- The newest `yW_*` witnesses are exactly `FrozenCapRationalCore.y_*`; the subsequent `simpa using strict_gain_*` is a valid proof-cost repair, not a new exclusion. The “wide” row caps therefore duplicate existing caps rather than adding a new field/edge argument.
+- The node wrappers still assume `hf0` and `hg`. No theorem derives those equalities from `Packet.Valid`, and no theorem links `excluded_<id>_tree` to `EnergyTerminalBatchB13.RemainingTerminalRadius` or the 389 census. A green conditional `False` buys no energy or class credit.
+- The seven public energy residual IDs (1409, 2337, 2341, 2356, 2360, 2368, 2370) are not the seven metric-class exclusions. They must never be reported as “1/7 classes”.
+- **Highest leverage:** stop emitting duplicate witness/row-cap families. Prove one unconditional obligation, e.g. `theorem no_valid_1409 : ¬ ∃ (m : ℕ) (p : PaidCellCertificateM.Packet m), PaidCellCertificateM.Valid p ∧ p.nodeID = 1409`, and either derive `hf0`/`hg` from a fully specified actual packet or refute the current wrapper strategy. If that cannot be connected to the energy residual predicate, report the lane as non-counting and stop.
+- Until one such theorem is green and linked, `TARGETS` should contain only modules needed to diagnose that exact theorem; broad wide/four/five regeneration is CI waste.
 
 ## Risks
 
-- **OOM/giant terms:** B13's `b11_lt`/`next505_lt` use full-set `decide +kernel`; the root full build already OOMs on `SharedMomentConcreteSwitchBatch`. Keep every kernel reduction small and hierarchical.
-- **Fake progress:** hash pinning, deterministic regeneration, and Python audits are not CI/paid. `built_count: 1` in a run with many red targets must never be read as progress.
-- **Cross-lane dependency:** `EnergyTerminalBatchB13Main` imports `C450ChainCompletionMain`; lane B's final target cannot be credited before A's root integration choice is made.
-- **C450 isolation:** green split modules are not the same as the root's frozen goal; root import is the only way C450 becomes a paid increment.
-- **SevenClass invalid artifacts:** keep the known counterexample and stale reduction files out of active CI targets so they cannot masquerade as obligations.
-- **Lane C data boundary:** no public HOST data exists for 382/389 residual IDs; any plan that claims closure beyond the seven available records is unfounded.
+- **False endpoint bridge:** the most immediate technical defect is the all-bin `[0,1]`/`q≤2` quartic transfer; bins 5–7 violate both hypotheses.
+- **Kernel blowup:** B13’s `decide +kernel` over `univ.image` is the measured deep-recursion source. Raising `maxRecDepth` masks it and increases OOM risk; it is not a proof strategy.
+- **Conditional-wrapper false positive:** C’s `excluded_*_tree` statements look like exclusions but are conditional on source-payload equalities absent from `Valid`; never count them as paid residuals.
+- **Stale CI:** `LATEST.md` currently leads with an in-progress run. Only `=== EXIT 0` for the matching source hash is credit; completed `40988698121` diagnostics belong to `2fdf1a1c`.
+- **Root monolith:** `SharedMomentConcreteSwitchBatch` still OOMs. Keep serial, targeted CI; do not infer mathematical failure from exit 137.
+- **Unpaid global theorem:** C450, energy, and class exclusions are separate scopes. None of the current lane work establishes the arbitrary-center full-disk theorem.

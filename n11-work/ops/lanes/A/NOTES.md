@@ -1,13 +1,20 @@
+EXPERT (2026-10-30):
+- C450 is closed: 36/36 green and transitively imported via EnergyTerminalBatchB12Main. Do no more C450 proof work.
+- Highest leverage: split EndpointChecks domains. `endpointUBin 5/6/7 > 1` and `nodeQ_binHi 5/6/7 > 2`; the all-bin quartic bridge is false.
+- Keep `capQ_le_sinPoly4_of_u_le` only for bins 0–4; delete or restrict `endpointUBin_le_one` and `nodeQ_binHi_le_two`.
+- Bins 5–6: `capQ_mono` + `sinHiNLag_mono` to `11774/10000` and `13737/10000`; close `capQ (2*u)` against `sinLoNLag (nodeBinAt j)` by `norm_num`.
+- Bin 7: `piHiCapSaturated` gives cap `19/50`; prove `19/50 ≤ sinLoNLag (1949/5000)` directly by `norm_num`.
+- Then require CI 0 in order Cos, Bins, EndpointChecks. Current repairs are pending, not paid.
+- Q0 degree 3 remains unpaid after endpoints: EdgeValid, SectorValid, strict total, certificate construction, and Q0Degree3AreaInput are still open.
+
 # Lane A notes
 
 ## Directives and ledger
 
-- EXPERT: C450 telescope CI-green; keep `TARGETS.txt` at C450ChainCompletionMain,
-  Cos, Mono until both SevenClass modules are green.  Do not emit edge/sector work
-  before that.  Python/static checks are candidate data; only CI exit 0 pays.
+- See the EXPERT (2026-10-30) block above for current directives.
 - SUPERVISOR: stop polling Actions/re-hashing; work offline and never block on CI.
-- C450 chain: CI-green at `495c970c`; **ROOT-IMPORT REQUEST** for
-  `N11Formalization.C450ChainCompletionMain` remains a supervisor decision.
+- C450 chain: CI-green at `495c970c` and transitively imported through
+  `EnergyTerminalBatchB12Main`; only the stale `HARK-MISSING` comments remain.
 - Seven-class: 0/7 exclusions paid.  q0 degree three has exact-rational candidate
   data, but no kernel green all-node certificate.  Energy/B13 are lane B; the
   arbitrary-center full-disk theorem remains open.
