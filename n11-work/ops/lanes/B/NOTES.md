@@ -116,3 +116,90 @@
   DescentBounds, B13, then B13Main. If red, use the first module-local line;
   if green, issue `ROOT-IMPORT REQUEST: import EnergyTerminalBatchB13Main
   instead of EnergyTerminalBatchB12Main`.
+
+## 2026-10-30 - session part 7: B09 counterexample and disjointness repair
+
+### Done
+- Fetched public artifact for run `40988698121` (sha `2fdf1a1c`; merge includes
+  lane-B `a98495ec`). Lane-B exits: Next1182 0, Next505Bounds 0,
+  DescentBounds 1, B13 1, B13Main 1. DescentBounds failed at all 12 former
+  `decide +kernel` sites with kernel deep recursion.
+- Static reconstruction exposed a real false theorem, not merely recursion:
+  `B09.paidIDs` has 27 ids at or above 2565 (including 2661, 3436, 4179,
+  4265, 4266, 4267, 4348, 4485). The prior `b09_lt : ... < 2565` and the
+  B13 lower-bound-only disjointness argument were therefore invalid.
+- Replaced it by exact `b09HighIDs` (27 literals), `b09_bound : n.val < 2565
+  ∨ n ∈ b09HighIDs`, `b11_bound`, and `high_not_next`: every high id is
+  excluded from all 57 literal Next1182 blocks via their public `mem_idsNN`
+  disjunctions. B13 now consumes this classification in `new_disjoint_old`.
+- Added finite `set_option maxRecDepth 10000` for the 58-id B09 exhaustive
+  classification, matching the project's generated packet modules. No
+  `maxHeartbeats 0`, `sorry`, axiom, or native decision was introduced.
+- `audit_b13_descent.py` now checks the high-id classification/exclusion rather
+  than the false `< 2565` claim: exit 0. `audit_b13main.py` exit 0;
+  `audit_next1182_blocks.py` exit 0 (57 blocks, 28 interval pairs);
+  `git diff --check` exit 0. All are static/source audits, not Lean credit.
+
+### Files (SHA256, uppercase)
+- `EnergyTerminalBatchB13DescentBounds.lean` `075B663ABF635B1F2E4584BFC6F18B7833181231B794F0125B033F10EEDED60B`.
+- `EnergyTerminalBatchB13.lean` `3DD37313505E0E8D608D50D42D3AFB1F1E08CEBBDF1ACD5DB570F57D9DC8FD03`.
+- `audit_b13_descent.py` `6E0ECC673A026BFB799F7F6CEEDC2ABB4C2D1B0FE9FCF5FEB68711E46EAE3C2D`.
+- `TARGETS.txt` unchanged `4E8E73251E43B27E7297C5D6CB21BD04FB93195021A5128C364A09795A476600`.
+
+### Still unproved / unverified
+- The corrected DescentBounds and B13 are **CI pending / unpaid**; the
+  409886 verdict is red for the superseded hashes. B13Main and the 389 residual
+  remain unpaid, as do SevenClassExclusions and the full-disk theorem.
+- `emit_b13_descent_bounds.py` still emits the superseded false `b09_lt`
+  source and must not be rerun until ported to the high-id classification.
+
+### Next concrete step
+- On the next CI run binding `2E54EB03...`/`3DD37313...`, read the first
+  DescentBounds error if red; if all three lane-B exits are 0, update the root
+  import request from B12Main to B13Main. Immediately port the emitter's B09
+  section to the checked-in high-id classification.
+
+## 2026-10-30 - session part 8: emitter restored to corrected B09 proof
+
+### Done
+- Reloaded GUIDANCE/LANES/Lane-B NOTES/CI and ran `project_status.py --check`
+  (exit 0; handoff manifest declarations only, not math).
+- Replaced the stale `emit_b13_descent_bounds.py`, which still generated the
+  known-false `b09_lt`, with a deterministic emitter for the corrected source.
+  It now emits all 27 high ids, the 57 literal Next1182 blocks, and all 27 x 57
+  exclusion branches. Regenerating reproduced the corrected Lean byte-for-byte.
+- Extended `audit_b13_descent.py` to execute the emitter, require exact module
+  byte reproduction, parse the 27 high ids and 57 literal block definitions,
+  and require their 1182-id union to be disjoint from the high-id set.
+- No Lean target list change: the corrected DescentBounds, B13, and B13Main were
+  already present in `TARGETS.txt`.
+
+### Files (SHA256, uppercase)
+- `EnergyTerminalBatchB13DescentBounds.lean` `075B663ABF635B1F2E4584BFC6F18B7833181231B794F0125B033F10EEDED60B`.
+- `EnergyTerminalBatchB13.lean` `3DD37313505E0E8D608D50D42D3AFB1F1E08CEBBDF1ACD5DB570F57D9DC8FD03`.
+- `EnergyTerminalBatchB13Main.lean` `2A6A206FE49CD299FCA69221B12B888B55EF6A3A92E34189B3E48C72761D0F98`.
+- `emit_b13_descent_bounds.py` `FBBC8E151204384899F2B8333B955957F3369CB0D142906A9EE4A55CB17B441D`.
+- `audit_b13_descent.py` `7BDE34003EE17CF685B42E3DFF48C15885B981CDEA336D87E86D70633D6D32CF`.
+- `TARGETS.txt` unchanged `4E8E73251E43B27E7297C5D6CB21BD04FB93195021A5128C364A09795A476600`.
+
+### Checks (static/source only)
+- `audit_b13_descent.py` exit 0: 15 checks true, including 12 bounded kernel
+  decisions, max 58-literal decode, 27 high ids, 57 literal blocks / 1182 ids,
+  no high-id intersection, and exact emitter regeneration.
+- `audit_b13main.py` exit 0: imports/API/inventory static checks only.
+- `audit_next1182_blocks.py` exit 0: 57 blocks, 28 intervals, 1182 ids, manifest
+  exactness only.
+- `emit_b13_descent_bounds.py` py_compile exit 0; two consecutive emissions both
+  produced DescentBounds hash `075B663A...`. `git diff --check` exit 0.
+- No local Lean build was run; full-project builds remain CI-only.
+
+### Still unproved / unverified
+- DescentBounds, repaired B13, and B13Main remain **CI pending / unpaid**.
+  Residual 389, SevenClassExclusions, and the arbitrary-center full-disk
+  theorem remain unpaid. Source hashes and audits are not proof credit.
+
+### Next concrete step
+- On the first CI run binding `075B663A...`, `3DD37313...`, and `2A6A206F...`,
+  require exit 0 in the order DescentBounds, B13, B13Main. If red, use the first
+  module-local error; if all green, issue the documented root-import request to
+  replace B12Main with B13Main.

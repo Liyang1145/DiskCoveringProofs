@@ -14,12 +14,9 @@ noncomputable section
 def paidIDs : Finset (Fin 5011) :=
   EnergyTerminalBatchB12.paidIDs ∪ Paid16GeneralNext1182.newIDs
 
-private theorem b11_lt (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
-    n.val < 2565 := by
-  rw [EnergyTerminalBatchB11.paidIDs] at hn
-  rcases (Finset.mem_union.mp hn) with hn | hn
-  · exact EnergyTerminalBatchB13DescentBounds.b10_lt n hn
-  · exact EnergyTerminalBatchB13DescentBounds.remaining210_lt n hn
+private theorem b11_bound (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB11.paidIDs) :
+    n.val < 2565 ∨ n ∈ EnergyTerminalBatchB13DescentBounds.b09HighIDs :=
+  EnergyTerminalBatchB13DescentBounds.b11_bound n hn
 
 private theorem next505_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralNext505.newIDs) :
     n.val < 2565 := by
@@ -31,9 +28,11 @@ theorem new_disjoint_old :
   constructor
   · rw [Finset.disjoint_left]
     intro a ha hb
-    have hlt := b11_lt a ha
+    have hb' := b11_bound a ha
     have hge := Paid16GeneralNext1182.lower_bound a hb
-    omega
+    rcases hb' with hlt | hhigh
+    · omega
+    · exact EnergyTerminalBatchB13DescentBounds.high_not_next a hhigh hb
   · rw [Finset.disjoint_left]
     intro a ha hb
     have hlt := next505_lt a ha
