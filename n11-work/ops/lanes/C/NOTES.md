@@ -32,53 +32,12 @@ EXPERT (2026-10-29):
   green; M/MCap/row-cap/bridge/wrapper kernel verdicts remain pending. Local
   Mathlib probing is unavailable (startup timeout), not a Lean error verdict.
 
-## 2026-10-29 — part 29 (condensed)
-- Launcher masking fixed conceptually; core needed the missing big-operators import.
+## 2026-10-29 — parts 29-35 (condensed)
 
-## 2026-10-29 — sessions 30-33 (condensed history)
-
-- Core is kernel-green in run `40861839784`; M/MCap are not. The seven-record
-  exact emitter checks pass, and the MCap algebra (`lower = f0Lo - lamB + rmin`,
-  `rho = sum_a lam_a * rowA`) is statically sound.
-- Old lane-C run `40818062141` was red despite a green workflow badge; read the
-  `=== EXIT` lines, because the trailing `true` masks failures.
-- Bounded local elaboration is unavailable: Lake tries to clone/checkout Mathlib
-  and exits 124 with no Lean verdict. This is not a red kernel result.
-
-## 2026-10-29 — part 35 (M projection fix after core-green CI)
-
-Did:
-- Read the public log archive for run `40861839784` (head `1a7c95c3`, HTTP 200).
-  Exact target exits: `FrozenCapRationalCore 0`; `PaidCellCertificateM 1`;
-  `PaidCellCertificateMCap 1` only because its M dependency failed. This is the
-  first kernel-green core verdict; M/MCap are still **CI pending**.
-- Diagnosed M's two errors at old lines 69/71 from the full log: `simpa [of7]`
-  unfolded `of7 p` to a structure literal, but left `Paid16CellCertificate.W`
-  versus the generic `W` unreduced under `rho`/`lower`. Expected/actual types
-  differed there, not in the mathematics.
-- Patched only `of7_valid` in `PaidCellCertificateM.lean`: `change` first exposes
-  the common `p.rowFrom`/`p.rowTo`/`p.lam` arguments, then definitional `rfl`
-  equalities `hW`, `hs`, `hi` transport `W`, `slopeQ`, and `interQ`; the final
-  `simpa` closes from the corresponding frozen theorem. MCap source unchanged.
-
-Files / hashes:
-- `n11-work/lean/N11Formalization/PaidCellCertificateM.lean`
-  `7b4115BE6CC89719129C4AE67D027D7F2BDC3E7C23FA7484E977731F9578CAEE`.
-- `PaidCellCertificateMCap.lean` unchanged,
-  `1697C1BE7034D9BB803A297C8105D3234BC536F610D88250687B6F282BB6F6EA`.
-
-Checks (scope stated): full public CI log extraction (run above); `git diff
---check` exit 0; forbidden-token scan clean for both modules. No local Lean
-verdict: direct `lean` startup exceeded a 10 s bound, so the kernel result is
-**CI pending**.
-
-Still unproved / missing: no kernel verdict for the M patch or MCap; row caps,
-tree bridges, seven conditional wrappers, packet `hf0`/`hg`, five-to-nine-field
-rescue, and 382 HOST records all remain unpaid. Energy count unchanged.
-
-Very next concrete step: CI-build only `PaidCellCertificateM`; if green, build
-`PaidCellCertificateMCap`. Only after both are exit 0, add
-`FrozenCapRowCap1409` alone to `TARGETS.txt` and inspect its first diagnostic.
+- Core became kernel-green in run `40861839784`; old lane-C run `40818062141`
+  was red despite a green badge, so read `=== EXIT` lines. M's later transport
+  patch became green in run `40893868710`; local Lake startup timeout is not a
+  Lean verdict. MCap algebra and seven-record exact emitter checks passed.
 
 ## 2026-10-29 — parts 36-39 (condensed: search correction and M transport)
 
@@ -171,53 +130,118 @@ line rather than broadening targets.
 - Exact checks: MCap identity 1000/1000 (m=1,2,5,9,16); four-field row caps
   500/500, minimum slack 0.
 
-## 2026-10-29 — parts 59-61 (MCap kernel diagnostic fixed)
+## 2026-10-29 — parts 59-62 (condensed)
+- MCap identity 1000/1000; four-field row caps 500/500. MCap line-79 failure was
+  repaired through `linarith`. Five-field HOST rescues exist for 2356/2360.
 
-- Re-audited MCap/witnesses: five `endpoint_*` bridges are core `G` to core `E`;
-  witness `strict_gain` uses the exact four-field `y4` weights. MCap identity
-  1000/1000 on m=1,2,5,9,16; four-field row caps 500/500, min slack 0.
-- Retrieved the completed CI log for run `40957920638`, head `a96d4ec1`, job
-  `123742780298`. Exact exits: core `0`, M `0`, MCap `1` at line 79. The full
-  diagnostic showed `add_le_add_left` produced `rhoSum + A ≤ lamB + A`, not
-  the calc goal `A + rhoSum ≤ A + lamB`.
-- Changed only that term to `add_le_add_right (hrho.trans_le hlam) _`. This is
-  the operand-order fix; current MCap is **CI pending**, not paid.
-- Added `search_mixture_faces5_float.py`: float only ranks five-field
-  supports, then `residual_mixture_faces5.face5` recomputes ranked vertices
-  exactly and checks all 100 ordered-pair caps. It found exact five-field
-  rescues for **both** 2356 and 2360, so all seven public residual IDs now have
-  a passing HOST-only mixture.
-  - 2356 support `[1,3,4,6,8]`, weights `(1/8,1/8,1/4,1/4,1/4)`, exact
-    margin `5.1868e-5`.
-  - 2360 support `[1,3,4,6,8]`, weights `(1/8,3/16,3/16,1/4,5/16)`, exact
-    margin `7.3345e-5`.
-  - Report: `residual-mixture-faces5-float-2356-2360.json`, `pass_count=2`.
-    These are exact arithmetic and HOST-only, **not kernel credit**.
+## 2026-10-30 — parts 62-64 (condensed)
+- Run `40949277719` exits core/M/MCap were `0`; MCap axioms were
+  `[propext, Classical.choice, Quot.sound]`. Built MCap hash
+  `d859711a…` matches the current source: **CI green / paid**.
+- Four-field witnesses were added to `TARGETS.txt`; kernel is **CI pending**.
+  Four-field 500 caps remain beyond this target gate.
 
-Files / hashes (SHA256, uppercase):
-- `PaidCellCertificateMCap.lean`
-  `3CA690536D475804CC7367295C59A0C30572CDE7DB4FD56D093BEF95100F4AB9`.
-- `mcap-weighted-identity-check.json`
-  `278A94F0EECA8C58BA790E4603301873D530BB27C226B5298C55358CA94D388B`.
-- `search_mixture_faces5_float.py`
-  `3A804573B06598E3F0168CFAFAAFC46512D9160279D4FA7DD51CD9612C6A8EB4F`.
-- Five-field report `residual-mixture-faces5-float-2356-2360.json`
-  `87A9003277B317DDFBC369B4D3EE31B3E9E9C1A783B3A8C5E637640E74563590`.
-- Earlier partial report `residual-mixture-faces5-2356-2360.json` (47 faces).
+## 2026-10-30 — part 65 (five-field Lean certificates drafted)
 
-Checks (scope): `verify_mcap_weighted_identity.py` exit 0, exact rational
-finite-sum algebra only; forbidden-token scan clean; `git diff --check` exit 0;
-`project_status.py --check` exit 0 (manifest declarations only). The CI log is
-a kernel verdict for the prior MCap bytes, not the patched bytes. No local Lean
-verdict (Mathlib probe startup timed out at 12 s).
+Did:
+- Emitted the previously HOST-only five-field rescues for 2356/2360 as Lean
+  witnesses. Exact supports are both `[1,3,4,6,8]`; weights are respectively
+  `(1/8,1/8,1/4,1/4,1/4)` and `(1/8,3/16,3/16,1/4,1/4)`.
+- Emitted their 200 ordered-pair caps from `DBMSourceTreeData.lean`, with
+  nonnegativity, unit-sum, core endpoint bridges, and strict-gain theorems.
+- Added both new modules to `TARGETS.txt`; kernel verdicts are **CI pending**.
 
-Still unproved/missing: patched MCap kernel; witness/row-cap kernels; packet
-`hf0`/`hg`; Lean five-field witness and 200 row caps for 2356/2360; 382 absent
-HOST records. Energy count unchanged.
+Files / hashes (SHA256, lowercase):
+- `n11-work/lean/N11Formalization/FrozenCapFiveFieldWitnesses.lean`
+  `fad605054dbd5c3316ead05af2076bc6c03bc48a2dc9c99e2f37ae42117e655b`.
+- `n11-work/lean/N11Formalization/FrozenCapFiveFieldRowCaps.lean`
+  `5ee01032ffc24fbf615007ae9cd2e961d1bd5bce071a88b94159447506cbc054`.
+- `n11-work/ops/lanes/C/emit_five_field_certificates.py`
+  `876a3e1e918a9a0b00668e84012b255a6911a01724069f728ffb8495053ba1aa`.
 
-Next: CI-build exactly `FrozenCapRationalCore`, `PaidCellCertificateM`, current
-`PaidCellCertificateMCap`. Require `=== EXIT N11Formalization.PaidCellCertificateMCap 0`;
-if green add only `FrozenCapFourFieldWitnesses` to TARGETS, else patch its first
-new diagnostic. Then emit `FrozenCapFiveFieldWitnesses` for 2356/2360 and a
-two-node, 200-cap row-cap module from the exact report; add both to TARGETS only
-after MCap is green.
+Checks (scope): emitter exited 0 and asserted all 200 caps using `Fraction`
+arithmetic, minimum slack 0; `py_compile` exit 0; forbidden-token scan clean;
+`git diff --check` exit 0. These are generator/HOST checks, **not** a kernel
+verdict.
+
+Still unproved/missing: kernel verdicts for four-field witnesses/500 caps and
+the new five-field witnesses/200 caps; packet `hf0`/`hg`; conditional wrappers;
+382 absent HOST records. Energy count unchanged.
+
+Very next concrete step: supervisor commit, then CI must report exact exits for
+`FrozenCapFourFieldWitnesses`, `FrozenCapFiveFieldWitnesses`, and
+`FrozenCapFiveFieldRowCaps`; patch the first failing diagnostic before adding
+any more targets.
+
+## 2026-10-30 — part 66 (five-field tree wrappers drafted)
+
+Did:
+- Confirmed the imported MCap source is exactly the CI-green hash
+  `d859711a…` and re-ran the deterministic five-field emitter.
+- Added `FrozenCapFiveFieldExcludedTree.lean`: two 100-entry source-tree
+  matrix bridges (`decide +kernel`) and node-pinned `excluded_*_tree` wrappers
+  feeding the five-field mixtures directly to `not_valid_of_frozen_cap`.
+  The wrappers remain conditional on packet `hf0`/`hg`; neither is supplied.
+  Not added to `TARGETS.txt`: its five-field prerequisites are still CI-pending.
+
+Files / hashes (SHA256, lowercase):
+- `n11-work/lean/N11Formalization/FrozenCapFiveFieldExcludedTree.lean`
+  `0731b07e252e91ea307ffba92cbd95102a9c41c6d800830da602929956603b78`.
+
+Checks (scope): emitter exit 0, regenerated bytes unchanged, 200/200 caps pass
+with exact `Fraction` arithmetic and minimum slack 0; `py_compile` exit 0;
+forbidden-token scan clean; `git diff --check` exit 0. No local Lean verdict.
+
+Still unproved/missing: all five-field Lean kernels and wrapper bridge/wrapper
+kernels; packet `hf0`/`hg`; four-field row caps; 382 absent HOST records.
+Energy count unchanged.
+
+Very next concrete step: after supervisor commit, inspect exact CI exits; if
+five-field witnesses/caps are green, add only `FrozenCapFiveFieldExcludedTree`
+and patch its first diagnostic if red.
+
+## 2026-10-30 — part 67 (static audit of five-field draft)
+
+Did:
+- Audited `FrozenCapFiveFieldWitnesses`, `FrozenCapFiveFieldRowCaps`, and
+  `FrozenCapFiveFieldExcludedTree` against the CI-green MCap theorem signature
+  and the established frozen row-cap/wrapper pattern. The two wrappers pass
+  `F0_*`, `G_*`, `y5_*`, nonnegativity, unit sum, row cap, and strict gain in
+  the same order as `not_valid_of_frozen_cap`; source-tree bridges already
+  rewrite the MCap `db` occurrence. No source defect identified statically.
+- Did not widen `TARGETS.txt`: `FrozenCapFiveFieldExcludedTree` still depends on
+  the three already-targeted five-field modules being kernel-green.
+
+Checks (scope): bounded source inspection only; current CI report predates the
+new targets. No kernel verdict for any five-field module. `hf0`/`hg` remain
+unpaid packet hypotheses.
+
+Still unproved/missing: exact CI exits for four-field witnesses, five-field
+witnesses/row caps, and then the tree wrappers; four-field 500 caps; original
+seven row caps/wrappers; 382 absent HOST records. Energy count unchanged.
+
+Very next concrete step: inspect the next refreshed `ops/ci/LATEST.md`; require
+exit 0 for `FrozenCapFourFieldWitnesses`, `FrozenCapFiveFieldWitnesses`, and
+`FrozenCapFiveFieldRowCaps` before adding `FrozenCapFiveFieldExcludedTree` to
+`TARGETS.txt`. Patch the first reported diagnostic if any are red.
+
+## 2026-10-30 — part 68 (reproducibility recheck)
+
+- Re-ran the five-field emitter: exit 0, 200 rows, per-node exact slack 0;
+  all generated bytes unchanged (`fad60505…`, `5ee01032…`, `0731b07e…`).
+  `TARGETS.txt` stays the six-module gate; CI predates the new targets.
+- Still unpaid: all five-field kernel exits, four-field 500 caps, old row
+  caps/wrappers, `hf0`/`hg`, and 382 absent HOST records. Energy unchanged.
+
+## 2026-10-30 — part 69 (four-field tree wrappers drafted)
+
+- Added `FrozenCapFourFieldExcludedTree.lean`: five node-pinned wrappers for
+  1409/2337/2341/2368/2370, all conditional on packet `hf0`/`hg`.
+- Reused `FrozenCapRowCapTreeBridges` after a 5×100-integer audit showed the
+  four-field matrices are byte-for-byte the existing row-cap matrices.
+- SHA256 `c6d10d813c62cbc5d53e15a3d44ee5d86555f8481f631b87d37e9e0d782a756a`.
+  Not in `TARGETS.txt` until its two prerequisites are CI green. No Lean
+  verdict; static/forbidden-token/`git diff --check` checks passed.
+- Unproved: all new kernel exits, `hf0`/`hg`, 382 records; energy unchanged.
+  Next: inspect exact CI exits; if four-field prerequisites are 0, target the
+  wrapper module and patch its first diagnostic.
