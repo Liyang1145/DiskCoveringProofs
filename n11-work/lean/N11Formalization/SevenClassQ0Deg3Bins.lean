@@ -63,7 +63,9 @@ theorem capQ_piHi_of_upper_one (h : 1 ≤ sinHiNLag (RatInterval.piHi / 2)) :
 This is a single denominator-cleared rational comparison, not a grid scan. -/
 theorem piHiCapSaturated : PiHiCapSaturated := by
   apply capQ_piHi_of_upper_one
-  norm_num [sinHiNLag, sinTQ, Finset.sum_range_succ]
+  have hhalf : 0 ≤ RatInterval.piHi / 2 := by norm_num [RatInterval.piHi]
+  rw [sinHiNLag, abs_of_nonneg hhalf]
+  norm_num [sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 
 /-- Grid monotonicity of `capQ`, conditional only on saturation in the final
 bin.  Bins 0--6 lie strictly below `piLo / 2 < Real.pi / 2`; bin 7 is handled
@@ -78,8 +80,7 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
       simpa [PiHiCapSaturated, binHi, nodeQ] using hsat
     rw [htop]
     exact (capQ_bounds (nodeQ RatInterval.piHi 2048 k)).2
-  · have hjlt : (binIndex k).val < 7 := lt_of_le_of_ne (Fin.isLt _) h7
-    have hkhi : k.val ≤ (binHi (binIndex k)).val := by
+  · have hkhi : k.val ≤ (binHi (binIndex k)).val := by
       simp only [binIndex, binHi]
       split <;> omega
     have hqle : nodeQ RatInterval.piHi 2048 k ≤
