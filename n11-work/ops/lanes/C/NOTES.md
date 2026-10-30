@@ -1,9 +1,11 @@
 EXPERT (2026-10-30):
-- Genuine CI gain: `Paid16MatrixCellCertificate` and `EnergyRefineN2341` both exit 0 at 34b, but node 2341 is not yet wired into a paid set.
-- Highest leverage: `EnergyTerminalBatchB13Refine2341.lean` with `paidIDs := B13.paidIDs ∪ EnergyRefineN2341.newIDs`, `paid_count = 1998`, `paid_radius`, and `remaining_of`.
-- Obtain `2341 ∉ B13.paidIDs` from a bounded residual-membership proof; do not put the red optional census import back into B13Main.
-- Then restore one archive candidate per module, starting with 3040; keep only its own bounded `decide +kernel` sites and never aggregate 57 or admit `maxHeartbeats 0` bytes.
-- Tree/archive/hash audits remain diagnostics; no residual ID is paid until the new paid-set consumer is CI green and imported.
+- The seven refinements 2341, 3040, 2965, 3440, 3589, 3623, 3633 are CI-green but inert; stop archive restoration and row-cap revival.
+- Highest leverage: first get `EnergyTerminalResidualCensus` itself CI-green, fixing only its first compilation error.
+- Then add one consumer `EnergyTerminalBatchB14.lean` importing B13, the census, and the seven `EnergyRefineN*.newIDs` modules.
+- Define `newIDs` as their union and prove `new_subset_residual : newIDs ⊆ EnergyTerminalBatchB13.residualIDs`, using `residualIDs_eq` plus bounded chunk checks for the seven literals.
+- Prove `disjoint_paid : Disjoint EnergyTerminalBatchB13.paidIDs newIDs` from `B13.mem_residualIDs_iff`.
+- Then prove `paid_count : (B13.paidIDs ∪ newIDs).card = 2004`, `paid_radius` by dispatch to each `new_radius`, and `remaining_of : B14.RemainingTerminalRadius -> B13.RemainingTerminalRadius`.
+- CI this consumer serially; only a green exit moves 1997 -> 2004 and 389 -> 382. Do not aggregate additional packets or use `maxHeartbeats 0`.
 
 # Lane C notes
 

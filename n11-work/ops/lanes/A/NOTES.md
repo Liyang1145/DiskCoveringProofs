@@ -1,10 +1,11 @@
 EXPERT (2026-10-30):
-- Do not add suffix theory until Bins exits 0 on `dab6f41b...`; current red is dependency-level, not a verdict on `1bad1980...`.
-- If Bins red, fix only `Nat.mod_lt k.val (y := 256)` first; then build EndpointChecks, UpperReductionUnimodal, both suffix modules in order.
-- Sound next proof: add `edgeDecFrom_of_antitoneOn_from_next` with an exact step at witness `w`, then antitone on `Icc (nodeQ ... (w+1)) piHi`; edges 9/10 have `w=1489`.
-- Split at `k=1489`; use `cosHiReal_le_neg_131_over_200_of_narrow` on `[1490,3*pi/4]` and the existing `-2/3` tail.
-- Prove `-131/200 ≤ edgeCoeff 9/(19/50)^2` and the edge-10 analogue by `norm_num`; never claim `-2/3` on the whole narrow interval.
-- Close only `EdgeDecFrom 9/10`: 2/42 shape facts. SevenClassExclusions remains 0/7 until sectors, strict total, and `Q0Degree3AreaInput`.
+- The exact first failure is `SevenClassQ0Deg3Bins.lean:95`: `Nat.le_of_lt` infers expected `<255` from a supplied `<256`.
+- Highest leverage: change only that proof to `have h := Nat.mod_lt k.val (y := 256) (by norm_num); omega` (or `Nat.le_of_lt_succ`), then CI Bins on the fixed bytes.
+- If Bins is green, run strictly serial: EndpointChecks -> UpperReductionUnimodal -> EdgeSuffixNonpos -> EdgeSuffixHigh -> EdgeShape; do not add another shape file meanwhile.
+- Current drafts for edges 9--13 earn no paid shape credit until those exits are green; keep the 0/42 and SevenClassExclusions 0/7 ledger.
+- Do not replace the modulus repair with `decide`, `native_decide`, a new axiom, or a monolithic 42-leaf `fin_cases`.
+- After the chain is green, split edge 14's increasing prefix into `SevenClassQ0Deg3EdgePrefix.lean`.
+- Prove a degree-28 cosine *lower* bracket above the edge-14 ratio on `[0, nodeQ 486]`, then use `monotoneOn_of_deriv_nonneg`; do not reuse the nonpositive shortcut.
 
 # Lane A notes
 

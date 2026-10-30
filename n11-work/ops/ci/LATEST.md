@@ -1,8 +1,8 @@
-# CI latest (run 41027178023)
+# CI latest (run 41037794295)
 
 ```
-41037794295 pending null dfe0881a 2026-10-30T10:02:30Z
-41035092539 in_progress null 22719e0d 2026-10-30T09:40:03Z
+41037794295 completed success dfe0881a 2026-10-30T10:02:30Z
+41035092539 completed success 22719e0d 2026-10-30T09:40:03Z
 41027178023 completed success 34b14918 2026-10-30T08:32:54Z
 41023888165 completed success 83710e22 2026-10-30T08:03:20Z
 41021956701 completed cancelled 430f8902 2026-10-30T07:44:40Z
@@ -11,7 +11,7 @@
 ## summary.json
 ```json
 {
- "sha": "34b14918053c99a1e86e767e87cc3ef4bacae430",
+ "sha": "dfe0881a430864bc705d77551d960ad9a2fdf746",
  "exits": [
   [
    "N11Formalization.FrozenCapRationalCore",
@@ -31,6 +31,30 @@
   ],
   [
    "N11Formalization.EnergyRefineN2341",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyRefineN3040",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyRefineN2965",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyRefineN3440",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyRefineN3589",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyRefineN3623",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyRefineN3633",
    "0"
   ],
   [
@@ -59,7 +83,7 @@
   ],
   [
    "N11Formalization.EnergyTerminalBatchB13Main",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.C450ChainCompletionMain",
@@ -94,126 +118,81 @@
    "1"
   ],
   [
+   "N11Formalization.SevenClassQ0Deg3EdgeShape",
+   "1"
+  ],
+  [
    "N11Formalization",
    "1"
   ]
  ],
- "built_count": 5,
+ "built_count": 6,
  "errors_head": [
-  "✖ [8706/8715] Building N11Formalization.FrozenCapRowCap1409 (32s)",
+  "✖ [8706/8715] Building N11Formalization.FrozenCapRowCap1409 (47s)",
   "error: N11Formalization/FrozenCapRowCap1409.lean:34:53: unsolved goals",
   "error: Lean exited with code 1",
-  "✖ [8708/8717] Building N11Formalization.FrozenCapRowCap2341 (32s)",
+  "✖ [8708/8717] Building N11Formalization.FrozenCapRowCap2341 (47s)",
   "error: N11Formalization/FrozenCapRowCap2341.lean:34:53: unsolved goals",
   "error: Lean exited with code 1",
-  "✖ [8710/8717] Building N11Formalization.FrozenCapRowCap2337 (32s)",
+  "✖ [8709/8717] Building N11Formalization.FrozenCapRowCap2337 (48s)",
   "error: N11Formalization/FrozenCapRowCap2337.lean:34:53: unsolved goals",
   "error: Lean exited with code 1",
-  "✖ [8712/8746] Building N11Formalization.FrozenCapRowCap2356 (33s)",
+  "✖ [8712/8745] Building N11Formalization.FrozenCapRowCap2356 (49s)",
   "error: N11Formalization/FrozenCapRowCap2356.lean:33:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached",
   "error: Lean exited with code 1",
-  "✖ [9161/9165] Building N11Formalization.FrozenCapRowCap2368 (20s)",
-  "error: N11Formalization/FrozenCapRowCap2368.lean:34:53: unsolved goals",
-  "error: Lean exited with code 1",
-  "✖ [9162/9165] Building N11Formalization.FrozenCapRowCap2360 (28s)",
+  "✖ [9161/9165] Building N11Formalization.FrozenCapRowCap2360 (30s)",
   "error: N11Formalization/FrozenCapRowCap2360.lean:34:53: unsolved goals",
   "error: Lean exited with code 1",
-  "✖ [9163/9165] Building N11Formalization.FrozenCapRowCap2370 (27s)",
+  "✖ [9162/9165] Building N11Formalization.FrozenCapRowCap2368 (40s)",
+  "error: N11Formalization/FrozenCapRowCap2368.lean:34:53: unsolved goals",
+  "error: Lean exited with code 1",
+  "✖ [9163/9165] Building N11Formalization.FrozenCapRowCap2370 (39s)",
   "error: N11Formalization/FrozenCapRowCap2370.lean:34:53: unsolved goals",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [10620/10625] Building N11Formalization.EnergyTerminalResidualCensusC02 (8.7s)",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11Formalization/EnergyTerminalResidualCensusC02.lean:16:56: Expected type must not contain free variables",
-  "error: N11For```
+  "✖ [9261/9261] Building N11Formalization.SevenClassQ0Deg3Bins (5.0s)",
+  "error: N11Formalization/SevenClassQ0Deg3Bins.lean:95:23: Application type mismatch: The argument",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9261/9262] Building N11Formalization.SevenClassQ0Deg3Bins (4.8s)",
+  "error: N11Formalization/SevenClassQ0Deg3Bins.lean:95:23: Application type mismatch: The argument",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9261/9264] Building N11Formalization.SevenClassQ0Deg3Bins (4.8s)",
+  "error: N11Formalization/SevenClassQ0Deg3Bins.lean:95:23: Application type mismatch: The argument",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9262/9267] Building N11Formalization.SevenClassQ0Deg3Bins (4.8s)",
+  "error: N11Formalization/SevenClassQ0Deg3Bins.lean:95:23: Application type mismatch: The argument",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9262/9267] Building N11Formalization.SevenClassQ0Deg3Bins (4.7s)",
+  "error: N11Formalization/SevenClassQ0Deg3Bins.lean:95:23: Application type mismatch: The argument",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9262/9268] Building N11Formalization.SevenClassQ0Deg3Bins (4.6s)",
+  "error: N11Formalization/SevenClassQ0Deg3Bins.lean:95:23: Application type mismatch: The argument",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1788s)",
+  "error: Lean exited with code 137",
+  "error: build failed"
+ ]
+}```
 ## build log tail
 ```
-ner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:17:38 avail=2386MB top: 14490884 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:17:58 avail=2061MB top: 14609628 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:18:18 avail=1683MB top: 14544876 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:18:39 avail=1314MB top: 14557992 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:18:59 avail=1093MB top: 14578356 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:19:19 avail=1023MB top: 14614264 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:19:39 avail=1042MB top: 14607808 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:19:59 avail=1088MB top: 14602192 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 09:20:19 avail=849MB top: 14643864 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=848MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1340s)
+nner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:55:19 avail=1521MB top: 14250160 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:55:39 avail=1283MB top: 14280260 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:55:59 avail=1056MB top: 14323104 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:56:19 avail=919MB top: 14426988 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:56:39 avail=1029MB top: 14499584 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:56:59 avail=1036MB top: 14495124 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:57:19 avail=1034MB top: 14493668 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:57:39 avail=1013MB top: 14473560 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 10:57:59 avail=864MB top: 14383724 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=863MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1788s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,

@@ -1,9 +1,11 @@
 EXPERT (2026-10-30):
-- At 34b, DescentBounds and B13 are green; B13Main failed only on the optional census import. Current `521ca436...` removes it.
-- Run `41035092539` is still in progress; do not call `B13Main` green until its matching exit/axioms arrive.
-- If green: supervisor-only replace root import B12Main -> B13Main at `N11Formalization.lean:1961`; this makes the formal 1997 credit root-reachable.
-- The 389 residual cardinal is not yet kernel-proven because `EnergyTerminalResidualCensus` is red; report it as documented, not Lean census.
-- Do not add B13 proof content before the root import. If red, fix only B13Main's first diagnostic on `521ca436...`.
+- `B13Main` at `521ca436a8745ef197f76fcadedce2cf232b3b3643b977b997153e463fa41837` is CI-green; stop static/hash/import reruns, which cannot move the ledger.
+- Highest leverage is the supervisor-only import switch at `N11Formalization.lean:1961`: `EnergyTerminalBatchB12Main` -> `EnergyTerminalBatchB13Main`, followed by fresh root CI.
+- No new Lean lemma is required for this step; `remaining_of_b13` already transfers `B13.RemainingTerminalRadius` to the B12 residual.
+- Call 1997/2386 root-reachable and conditional only after that root CI is green; it is not an accepted handoff upgrade by itself.
+- Keep the documented residual at 389: `EnergyTerminalResidualCensus` has not yet established the census/cardinality in kernel CI.
+- Do not add B13/B14 proof content while root integration is pending, and do not hide the known `SharedMomentConcreteSwitchBatch` root OOM as a mathematical failure.
+- SevenClassExclusions remains 0/7 and the arbitrary-center full-disk theorem remains unpaid.
 
 # Lane B notes
 
