@@ -59,9 +59,7 @@ theorem paid_radius (n : Fin 5011) (hn : n ∈ paidIDs)
     rcases hn with hn | hn
     · exact EnergyTerminalBatchB13RefineSeven.paid_radius n
         (Finset.mem_union_right _ hn) y hy0 hy1 hc C Z r hf
-    · rw [EnergyRefineN2337.newIDs, Finset.mem_singleton] at hn
-      exact EnergyRefineN2337.new_radius 2337 (by simp) y hy0 hy1
-        (by simpa [hn] using hc) C Z r hf
+    · exact EnergyRefineN2337.new_radius n hn y hy0 hy1 hc C Z r hf
 
 def RemainingTerminalRadius : Prop :=
   ∀ n : Fin 5011, (DBMSourceTree.data n).terminal = true →
