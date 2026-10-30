@@ -1,28 +1,60 @@
-# CI latest (run 41098508743)
+# CI latest (run 41115384387)
 
 ```
-41115384387 in_progress null 9445f2b2 2026-10-30T19:27:20Z
+41119359460 in_progress null 6937fb90 2026-10-30T19:56:53Z
+41115384387 completed success 9445f2b2 2026-10-30T19:27:20Z
 41098508743 completed success 1b2fa7a8 2026-10-30T17:24:11Z
 41082175973 completed success 40d03ae5 2026-10-30T15:35:52Z
 41065332260 completed success ede0d1c8 2026-10-30T13:41:40Z
-41059074494 completed success 96ed4912 2026-10-30T12:55:42Z
 ```
 
 ## summary.json
 ```json
 {
- "sha": "1b2fa7a833e191c65615ed136d5799add6fb6009",
+ "sha": "9445f2b25cbcaae48b6145a6288be0f5f84e956e",
  "exits": [
+  [
+   "N11Formalization.EnergyRefineN3853",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyRefineN0037",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13Refine0037",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13Refine0037Main",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13RefineTwelve",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13RefineTwelveMain",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyRefineN3112",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13Refine3112",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13Refine3112Main",
+   "0"
+  ],
   [
    "N11Formalization.EnergyTerminalBatchB13RefineEleven",
    "0"
   ],
   [
    "N11Formalization.EnergyTerminalBatchB13RefineElevenMain",
-   "0"
-  ],
-  [
-   "N11Formalization.EnergyRefineN3853",
    "0"
   ],
   [
@@ -282,35 +314,63 @@
    "1"
   ],
   [
+   "N11Formalization.SevenClassQ0Deg3SectorPeak",
+   "1"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3SectorShape",
+   "1"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3SectorCalculus",
+   "1"
+  ],
+  [
    "N11Formalization",
    "1"
   ]
  ],
- "built_count": 5,
+ "built_count": 4,
  "errors_head": [
-  "✖ [8706/8715] Building N11Formalization.FrozenCapRowCap1409 (46s)",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:34:53: unsolved goals",
-  "error: Lean exited with code 1",
-  "✖ [8708/8717] Building N11Formalization.FrozenCapRowCap2341 (47s)",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:34:53: unsolved goals",
-  "error: Lean exited with code 1",
-  "✖ [8710/8717] Building N11Formalization.FrozenCapRowCap2337 (47s)",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:34:53: unsolved goals",
-  "error: Lean exited with code 1",
-  "✖ [8712/8717] Building N11Formalization.FrozenCapRowCap2356 (48s)",
-  "error: N11Formalization/FrozenCapRowCap2356.lean:33:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached",
-  "error: Lean exited with code 1",
-  "✖ [9161/9165] Building N11Formalization.FrozenCapRowCap2360 (31s)",
-  "error: N11Formalization/FrozenCapRowCap2360.lean:34:53: unsolved goals",
-  "error: Lean exited with code 1",
-  "✖ [9162/9165] Building N11Formalization.FrozenCapRowCap2368 (42s)",
-  "error: N11Formalization/FrozenCapRowCap2368.lean:34:53: unsolved goals",
-  "error: Lean exited with code 1",
-  "✖ [9163/9165] Building N11Formalization.FrozenCapRowCap2370 (41s)",
-  "error: N11Formalization/FrozenCapRowCap2370.lean:34:53: unsolved goals",
+  "✖ [9304/9304] Building N11Formalization.EnergyTerminalBatchB13Refine0037 (8.5s)",
+  "error: N11Formalization/EnergyTerminalBatchB13Refine0037.lean:240:6: omega could not prove the goal:",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [971/971] Building N11Formalization.LaneBFrozenCapRowCap1409 (20s)",
+  "✖ [10622/10623] Building N11Formalization.EnergyTerminalBatchB13Refine0037 (6.8s)",
+  "error: N11Formalization/EnergyTerminalBatchB13Refine0037.lean:240:6: omega could not prove the goal:",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9329/9330] Building N11Formalization.EnergyTerminalBatchB13Refine0037 (7.1s)",
+  "error: N11Formalization/EnergyTerminalBatchB13Refine0037.lean:240:6: omega could not prove the goal:",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [10647/10649] Building N11Formalization.EnergyTerminalBatchB13Refine0037 (6.0s)",
+  "error: N11Formalization/EnergyTerminalBatchB13Refine0037.lean:240:6: omega could not prove the goal:",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [8706/8715] Building N11Formalization.FrozenCapRowCap2337 (26s)",
+  "error: N11Formalization/FrozenCapRowCap2337.lean:34:53: unsolved goals",
+  "error: Lean exited with code 1",
+  "✖ [8708/8717] Building N11Formalization.FrozenCapRowCap1409 (26s)",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:34:53: unsolved goals",
+  "error: Lean exited with code 1",
+  "✖ [8710/8717] Building N11Formalization.FrozenCapRowCap2341 (26s)",
+  "error: N11Formalization/FrozenCapRowCap2341.lean:34:53: unsolved goals",
+  "error: Lean exited with code 1",
+  "✖ [8712/8717] Building N11Formalization.FrozenCapRowCap2356 (27s)",
+  "error: N11Formalization/FrozenCapRowCap2356.lean:33:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached",
+  "error: Lean exited with code 1",
+  "✖ [9161/9165] Building N11Formalization.FrozenCapRowCap2368 (19s)",
+  "error: N11Formalization/FrozenCapRowCap2368.lean:34:53: unsolved goals",
+  "error: Lean exited with code 1",
+  "✖ [9162/9165] Building N11Formalization.FrozenCapRowCap2370 (20s)",
+  "error: N11Formalization/FrozenCapRowCap2370.lean:34:53: unsolved goals",
+  "error: Lean exited with code 1",
+  "✖ [9163/9165] Building N11Formalization.FrozenCapRowCap2360 (23s)",
+  "error: N11Formalization/FrozenCapRowCap2360.lean:34:53: unsolved goals",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [971/971] Building N11Formalization.LaneBFrozenCapRowCap1409 (9.2s)",
   "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:42:230: unsolved goals",
   "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:46:230: unsolved goals",
   "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:50:230: unsolved goals",
@@ -360,42 +420,21 @@
   "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:234:230: unsolved goals",
   "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:238:230: unsolved goals",
   "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:242:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:246:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:250:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:254:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:258:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:262:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:266:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:270:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:274:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:278:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:282:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:286:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:290:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:294:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:298:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:302:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:306:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:310:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:314:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:318:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:322:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:326:230: unsolved goals",
-  "error: N11Formalization/LaneBFrozenCapRowCap1```
+  "er```
 ## build log tail
 ```
-ner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:06:38 avail=1887MB top: 13520040 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:06:58 avail=1720MB top: 13626944 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:07:18 avail=1686MB top: 13778428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:07:38 avail=1779MB top: 13924336 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:07:58 avail=1516MB top: 14093216 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:08:18 avail=1293MB top: 14125724 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:08:38 avail=1078MB top: 14134928 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:08:58 avail=1015MB top: 14270328 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 18:09:18 avail=893MB top: 14323048 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=891MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1823s)
+unner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:55:47 avail=1635MB top: 13598416 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:56:07 avail=1425MB top: 13850916 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:56:27 avail=1234MB top: 14051156 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:56:47 avail=1069MB top: 14367040 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:57:07 avail=1102MB top: 14585436 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:57:27 avail=1125MB top: 14577456 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:57:47 avail=963MB top: 14668156 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:58:07 avail=919MB top: 14669992 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 19:58:27 avail=863MB top: 14589948 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=863MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1025s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
