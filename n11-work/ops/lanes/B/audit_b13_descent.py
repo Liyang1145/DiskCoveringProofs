@@ -43,20 +43,36 @@ def main() -> None:
                 path.read_text(encoding="utf-8"), re.MULTILINE):
             literal_ids.update(map(int, body.split(",")))
             literal_blocks += 1
+    packet_ids: set[int] = set()
+    for name in ("Lambda0Batch7Packet", "Lambda0TangentChordC01Packet",
+                 "CuttingPlaneBatch7Packet", "Paid16Batch22Packet"):
+        packet_text = (LEAN / f"{name}.lean").read_text(encoding="utf-8")
+        body = re.search(
+            r"^def nodeID : Case → Fin 5011 := !\[([0-9,]+)\]",
+            packet_text, re.MULTILINE,
+        )
+        if body:
+            packet_ids.update(map(int, body.group(1).split(",")))
+    b09_ids = packet_ids | {284, 562, 4348, 984, 1112, 2166, 2162,
+                             3436, 4265, 4179, 4267}
+    b09_high_ids = {i for i in b09_ids if i >= 2565}
     checks = {
-        "ten_group_blocks": groups == [f"{i:02d}" for i in range(3, 13)],
-        "kernel_decisions_12": text.count("decide +kernel") == 12,
+        "twelve_group_blocks": groups == [f"{i:02d}" for i in range(1, 13)],
+        "no_kernel_decisions": "decide +kernel" not in text,
+        "structural_image_decodes": text.count("rcases Finset.mem_image.mp hn") == 16,
+        "b09_layered_classification": text.count("private theorem b") == 9,
         "b09_high_classification":
-            "∀ m ∈ EnergyTerminalBatchB09.paidIDs, m.val < 2565 ∨ m ∈ b09HighIDs" in text and
+            "theorem b09_bound (n : Fin 5011)" in text and
             "def b09HighIDs : Finset (Fin 5011) :=" in text,
         "high_ids_excluded": "theorem high_not_next" in text,
         "high_ids_27": len(source_high_ids) == 27,
+        "reconstructed_b09_58": len(b09_ids) == 58,
+        "high_ids_match_reconstructed_b09": source_high_ids == b09_high_ids,
         "next1182_literals_57x1182":
             literal_blocks == 57 and len(literal_ids) == 1182,
         "high_ids_absent_from_next1182": not (source_high_ids & literal_ids),
-        "bounded_rec_depth": text.count("set_option maxRecDepth 10000") == 1,
         "emitter_reproduces_module": emitter_matches,
-        "first42_single_decode": "∀ m ∈ Paid16GeneralFirst42.newIDs, m.val < 2565" in text,
+        "first42_two_image_layers": "exact g01_lt n hn" in text and "exact g02_lt n hn" in text,
         "remaining210_no_direct_decode":
             "∀ m ∈ Paid16GeneralRemaining210.newIDs, m.val < 2565" not in text,
         "b13_imports_module": "import N11Formalization.EnergyTerminalBatchB13DescentBounds" in b13,
@@ -71,8 +87,11 @@ def main() -> None:
         "module": str(MODULE.relative_to(ROOT)),
         "group_blocks": len(groups),
         "kernel_decisions": text.count("decide +kernel"),
-        "largest_claimed_literal_decode": 58,
+        "structural_image_decodes": text.count("rcases Finset.mem_image.mp hn"),
+        "b09_descent_layers": text.count("private theorem b"),
         "high_ids": len(source_high_ids),
+        "reconstructed_b09_ids": len(b09_ids),
+        "reconstructed_b09_high_ids": len(b09_high_ids),
         "next1182_literal_blocks": literal_blocks,
         "next1182_literal_ids": len(literal_ids),
         "checks": checks,

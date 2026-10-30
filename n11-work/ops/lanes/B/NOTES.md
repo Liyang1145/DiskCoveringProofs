@@ -211,3 +211,45 @@ EXPERT (2026-10-30):
   require exit 0 in the order DescentBounds, B13, B13Main. If red, use the first
   module-local error; if all green, issue the documented root-import request to
   replace B12Main with B13Main.
+
+## 2026-10-30 - session part 9: bounded source classification
+
+### Done
+- Reloaded GUIDANCE/LANES/Lane-B NOTES/CI and ran `project_status.py --check`
+  (exit 0; handoff manifest declarations only, not math).
+- Diagnosed the red DescentBounds module as kernel deep recursion from one-shot
+  `decide +kernel` over image/union definitions. Replaced all 12 decisions with
+  structural proofs: the twelve G blocks use `Finset.mem_image.mp` + `fin_cases`;
+  B09 is classified through nine explicit union/insert layers, with the four
+  image-backed consumers decoded the same way. The 27 high ids and all 57 x 1182
+  Next1182 exclusions are byte-preserved in meaning.
+- Updated `emit_b13_descent_bounds.py` and extended `audit_b13_descent.py` to
+  require 12 G layers, 16 image decodes, nine B09 descent layers, zero kernel
+  decisions, exact emitter reproduction, and all previous inventory/exclusion checks.
+
+### Files (SHA256, uppercase)
+- `EnergyTerminalBatchB13DescentBounds.lean` `0908F51C58F3D7B187EDC13525C3A25148A2DDC8972BC1AC9D3FD4089FEE5069`.
+- `emit_b13_descent_bounds.py` `44D0E336CC2ABA337AF28BA8F9E81A814B0D0EED036A8D3CB78D69E099D9B9B7`.
+- `audit_b13_descent.py` `2458A99DE6C4B91CB8A3CB906929CC56EEDE7DA552FF3AB9D52357B86C349FFB`.
+- B13 `3DD37313...`, B13Main `2A6A206F...`, TARGETS unchanged.
+
+### Checks (source/static only)
+- `audit_b13_descent.py` exit 0: 18 checks true, 16 image decodes, nine B09
+  layers, zero `decide +kernel`, 27 high ids, 57 blocks / 1182 Next ids, exact
+  emitter reproduction. It also reconstructs all 58 B09 ids from the four packet
+  vectors plus the eleven singleton/energy ids and matches the high set exactly.
+  `audit_b13main.py` and `audit_next1182_blocks.py` exit 0.
+- `audit_b13_closure.py` exit 0 (all 13 inventory counts/checks);
+  `audit_target_imports.py` exit 0 (1920-module closure, no missing/forbidden);
+  `git diff --check` exit 0.
+- Local Lean elaboration was not possible: the Mathlib probe `.olean` tree is
+  incomplete (`Mathlib.Data.Finset.Image` absent). This is not a Lean verdict.
+
+### Still unproved / unverified
+- DescentBounds, B13, and B13Main remain **CI pending / unpaid**. Residual 389,
+  SevenClassExclusions, and the arbitrary-center full-disk theorem remain unpaid.
+
+### Next concrete step
+- On the first CI run binding `0908F51C...`, inspect the first module-local
+  DescentBounds error (especially any `fin_cases`/`simp` failure) and fix that
+  exact step; if it exits 0, proceed to B13, then B13Main and the root-import request.

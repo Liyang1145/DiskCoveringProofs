@@ -1,28 +1,34 @@
 {
+  "b09_descent_layers": 9,
   "checks": {
     "b09_high_classification": true,
+    "b09_layered_classification": true,
     "b13_imports_module": true,
     "b13_uses_b11_bound": true,
     "b13_uses_high_exclusion": true,
-    "bounded_rec_depth": true,
     "emitter_reproduces_module": true,
-    "first42_single_decode": true,
+    "first42_two_image_layers": true,
     "high_ids_27": true,
     "high_ids_absent_from_next1182": true,
     "high_ids_excluded": true,
-    "kernel_decisions_12": true,
+    "high_ids_match_reconstructed_b09": true,
     "next1182_literals_57x1182": true,
     "no_forbidden_tokens": true,
+    "no_kernel_decisions": true,
+    "reconstructed_b09_58": true,
     "remaining210_no_direct_decode": true,
-    "ten_group_blocks": true
+    "structural_image_decodes": true,
+    "twelve_group_blocks": true
   },
-  "group_blocks": 10,
+  "group_blocks": 12,
   "high_ids": 27,
-  "kernel_decisions": 12,
-  "largest_claimed_literal_decode": 58,
+  "kernel_decisions": 0,
   "module": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13DescentBounds.lean",
   "next1182_literal_blocks": 57,
   "next1182_literal_ids": 1182,
   "ok": true,
-  "scope": "static source hierarchy only; Lean elaboration is CI-pending"
+  "reconstructed_b09_high_ids": 27,
+  "reconstructed_b09_ids": 58,
+  "scope": "static source hierarchy only; Lean elaboration is CI-pending",
+  "structural_image_decodes": 16
 }
