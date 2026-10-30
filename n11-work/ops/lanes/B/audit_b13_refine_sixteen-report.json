@@ -1,0 +1,53 @@
+{
+  "checks": {
+    "all_singleton_ids_reachable": true,
+    "all_sources_exist": true,
+    "final_arithmetic": true,
+    "increment_sum": true,
+    "main_consumers": true,
+    "no_banned_sources": true,
+    "no_duplicate_aggregate": true,
+    "remaining_transfer": true,
+    "sixteen_ids": true,
+    "sixteen_imports": true,
+    "stale_targets_absent": true,
+    "target_order": true,
+    "targets_once": true,
+    "unique_id_count": true
+  },
+  "handoff": {
+    "increments": {
+      "Eight": 1,
+      "Eleven": 3,
+      "Fourteen": 1,
+      "Seven": 7,
+      "Sixteen": 2,
+      "Thirteen": 1,
+      "Twelve": 1
+    },
+    "new_refinements": 16,
+    "paid_after": 2013,
+    "paid_before": 1997,
+    "residual_after": 373,
+    "residual_before": 389
+  },
+  "ok": true,
+  "scope": "static source/inventory and duplicate-ID arithmetic; no Lean elaboration",
+  "sha256": {
+    "eight_main": "7f48d89fb80f9c2899acd3e33bc543e175724b80c266f4993d32bd7f8a456e05",
+    "eight_refine": "3b8f66f009552523d5ff5b17607afe11c807ceb2efcfbdf6bce07fa309f0430c",
+    "eleven_main": "5684672b1dbbe45894f162097d5b149285464d11eac0692dbaea1c9b432319f2",
+    "eleven_refine": "8bc3459f021c6afc4c01ea5ff587cb0c1c9dff77c19118b1474d3a7fea4d4017",
+    "fourteen_main": "9478c19fa149ac0e8721ea03902c2483d001d55cdcd49c393db3663e772c3fe7",
+    "fourteen_refine": "12d107b3879cb014f651aae113b8a8726a6c10a2e7057457924beedf6d3dd0e4",
+    "seven_main": "131e4be62c98f0d95b942252b7fb711c029953d2d98c22efafbe678cf6ff0021",
+    "seven_refine": "2446c7f843a93160e711042532a8ffd1fca5475bd9c8154d3ae0ff4c46e26ff1",
+    "sixteen_main": "a3103831cb770e50a0aba35adc2927011781e16ede529163f729cd695028fecf",
+    "sixteen_refine": "055f8ba3b2f11d53e6c4f20d69adaea90e09d27177120534cf160c9b65c28851",
+    "targets": "69e4e5a52fe6fdd45a5e4482bcecc863a91549e62fd566d2d41f8eafada9f612",
+    "thirteen_main": "d46e758cfb3b6997fd5bce098192fafc776ac8a388a514f412f7a733d2784375",
+    "thirteen_refine": "fe498e4da4fe81f8f149406935306350881061265aee5852f4dff508a690e739",
+    "twelve_main": "665ba8116cc6f756f589f24abdd9aa830651b5ffcd406729d8787b1fd58b0086",
+    "twelve_refine": "1479d68d7db45c6631e0e8b856e9caa9baa3a2e8e8f1e6dbe5c74548173471b8"
+  }
+}

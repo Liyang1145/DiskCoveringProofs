@@ -55,7 +55,14 @@ theorem twelve_disjoint_3112 :
 
 theorem twelve_new_count :
     EnergyTerminalBatchB13RefineTwelve.newIDs.card = 12 := by
-  exact EnergyTerminalBatchB13RefineTwelve.new_count
+  have hdisj : Disjoint EnergyTerminalBatchB13RefineEleven.newIDs
+      EnergyRefineN0037.newIDs := by
+    decide +kernel
+  rw [EnergyTerminalBatchB13RefineTwelve.newIDs,
+    Finset.card_union_of_disjoint hdisj,
+    EnergyTerminalBatchB13RefineEleven.new_count,
+    EnergyTerminalBatchB13RefineTwelve.new_count]
+  norm_num
 
 theorem new_count : newIDs.card = 13 := by
   rw [newIDs, Finset.card_union_of_disjoint twelve_disjoint_3112,

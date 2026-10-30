@@ -1,0 +1,42 @@
+{
+  "checks": {
+    "main_consumer_present": true,
+    "main_exists": true,
+    "main_imports_b13main": true,
+    "main_imports_fourteen": true,
+    "main_target_once": true,
+    "new_count_1": true,
+    "new_ids_is_3116": true,
+    "no_banned_main": true,
+    "no_banned_refine": true,
+    "paid_base_is_thirteen": true,
+    "paid_count_2011": true,
+    "paid_radius_present": true,
+    "refine_exists": true,
+    "refine_imports_3116": true,
+    "refine_imports_thirteen": true,
+    "refine_target_once": true,
+    "remaining_transfer_present": true,
+    "residual_375_documented": true,
+    "target_order": true
+  },
+  "handoff": {
+    "new_ids": [
+      3116
+    ],
+    "paid_after": 2011,
+    "paid_before": 2010,
+    "residual_after": 375,
+    "residual_before": 376
+  },
+  "ok": true,
+  "scope": "static source/inventory only; no Lean elaboration or proof credit",
+  "sha256": {
+    "dependency_3116": "70053e95b07b481d3c08aa02ef9d857c11d896118c773595af87756e5d034421",
+    "dependency_thirteen": "fe498e4da4fe81f8f149406935306350881061265aee5852f4dff508a690e739",
+    "main": "9478c19fa149ac0e8721ea03902c2483d001d55cdcd49c393db3663e772c3fe7",
+    "refine": "12d107b3879cb014f651aae113b8a8726a6c10a2e7057457924beedf6d3dd0e4",
+    "targets": "69e4e5a52fe6fdd45a5e4482bcecc863a91549e62fd566d2d41f8eafada9f612",
+    "wrapper_3116": "20bb1e1f6111fc50e5ea2f4e8ea4ab1b4ea216cc1b186f9d0f8f20255169c672"
+  }
+}
