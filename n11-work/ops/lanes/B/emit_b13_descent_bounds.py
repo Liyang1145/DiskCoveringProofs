@@ -216,6 +216,7 @@ for _ in high_ids:
         simp = [f"Paid16GeneralNext1182S{group:02d}.new_mem"] + names
         lines += [
             "    · simp only [" + ", ".join(simp) + "] at h",
+            "      simp only [Fin.ext_iff] at h",
             "      norm_num at h",
         ]
 
