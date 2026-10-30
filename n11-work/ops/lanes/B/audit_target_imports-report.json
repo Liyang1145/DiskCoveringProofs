@@ -1,5 +1,5 @@
 {
-  "closure_size": 1914,
+  "closure_size": 1922,
   "forbidden": [],
   "missing": [],
   "ok": true,
@@ -8,6 +8,13 @@
     "N11Formalization.EnergyTerminalBatchB13Next505Bounds",
     "N11Formalization.EnergyTerminalBatchB13DescentBounds",
     "N11Formalization.EnergyTerminalBatchB13",
-    "N11Formalization.EnergyTerminalBatchB13Main"
+    "N11Formalization.EnergyTerminalBatchB13Main",
+    "N11Formalization.LaneBFrozenCapRowCap1409",
+    "N11Formalization.LaneBFrozenCapRowCap2337",
+    "N11Formalization.LaneBFrozenCapRowCap2341",
+    "N11Formalization.LaneBFrozenCapRowCap2356",
+    "N11Formalization.LaneBFrozenCapRowCap2360",
+    "N11Formalization.LaneBFrozenCapRowCap2368",
+    "N11Formalization.LaneBFrozenCapRowCap2370"
   ]
 }
