@@ -8,55 +8,39 @@ EXPERT (2026-10-30):
 - The root OOM in `SharedMomentConcreteSwitchBatch` is not a B13 mathematical verdict; SevenClassExclusions remains 0/7.
 
 # Lane B notes
+## 2026-10-30 - session 43: row-cap proof-pattern repair, CI pending
 
-## 2026-10-30 - sessions 39-40 (condensed): row-cap failure diagnosis
+- Replaced each of the 700 pair-leaf proof bodies in the generator with the
+  bounded pattern `simp only [y_<node>, rowA, db, dbmVal, Pi.neg_apply] <;>
+  norm_num`, following the prior vector-index diagnosis. Regenerated
+  `N11Formalization/LaneBFrozenCapRowCap{1409,2337,2341,2356,2360,2368,2370}.lean`.
+  Frozen matrices/statements and the existing seven lane-B targets are unchanged.
+- `split_rowcap_modules.py --check` exit 0: 7/7 matrices, 700/700 ordered pairs,
+  weights sum to 1, zero exact-rational violations, 100 leaves/module, and all
+  seven generated texts reproduce byte-for-byte. Scope is arithmetic + source
+  generation, not Lean elaboration. `py_compile` and `git diff --check` exit 0.
+- Emitter SHA256 `4D1A1B4B0B3F66F935A87B0D86A11545E5BAEADB3206FAFDCA84477817A05066`;
+  report `2C4F501950839CF1BB527BC760088CF61B3B4DFB4BBD5CF1DEA24D0CF0A248A2`.
+  Module SHA256: 1409 `9B275C31885E3E342F9927CB684C7DD1DB0A850B055C99461965ABFD7AE4AB21`;
+  2337 `C768947AC94DEF5F1F6699A2AA316F100F8E7A9381EE3148A5B0E464D0B2EE1F`;
+  2341 `9D1D499B375ED4FBBB0167AE7D153F4DEE13F483375CE7B4D81FE85178BE1C35`;
+  2356 `4D30D27992BC3DD6AFD38AA81D0A84315052571BBBBC8AC72F1EF2E04C9860F3`;
+  2360 `9321C76FB8E745F92272D645CBA73777A534E2AAD90EFB98DE16977E914D332C`;
+  2368 `68E5B18E1A22EA5B8E2439B3ABAEDF63F9B0DB333F72BFF61692513323574AB1`;
+  2370 `480D5D96F856D666048416EC212020083FEB10C8EEEFAA2814974286840271D9`.
+- No local Lean build/probe result is claimed. CI is **pending** for these bytes;
+  all seven row-cap modules remain unpaid. The `f0Lo`/`g` bridge, 389 residual
+  radii, SevenClassExclusions, and arbitrary-center theorem remain unproved.
+- Next concrete step: inspect fresh CI's first error for `LaneBFrozenCapRowCap1409`.
+  If the leaf pattern passes, repair only the row/`fin_cases` wrapper; if it fails,
+  isolate the first pair leaf diagnostic before touching the other six.
 
-- Run `41065332260` at `ede0d1c8` was job-green but all seven row-cap targets
-  exited `1`. Its retained build log shows `hleft` goals containing
-  `-![...] 2`; one-pass `norm_num [y_<node>, rowA, db, dbmVal]` therefore did
-  not reduce negated vector applications. The former `rw`-then-`norm_num`
-  endings also produced `No goals to be solved` when the rewrite closed a cap.
-- Exact `Fraction` checks remained 7/7 nodes and 700/700 pairs with zero
-  violations. These were proof-script failures, not arithmetic failures.
-  `f0Lo`/`g`, 389 radii, SevenClassExclusions, and arbitrary-center remain
-  unpaid.
+## 2026-10-30 - session 42 (condensed): prior row-cap repair, superseded
 
-## 2026-10-30 - session part 41: `Pi.neg_apply` row-cap repair, CI pending
+- Changed final leaf step to `rw [hleft, hright] <;> norm_num` and regenerated
+  the same seven modules; exact arithmetic remained 700/700 with zero violations.
+  CI diagnosed vector indexing in the earlier leaf proofs. No payment claimed.
 
-- Inspected the retained CI build log for `41065332260` rather than inferring
-  from the summary. The failing `hleft` goals reduce to sums such as
-  `-![0, 0, 0, 1/4, ...] 2 + ... = -(3/8)`: `norm_num` had normalized the
-  row difference into a negated function vector but still needed pointwise
-  neg evaluation.
-- Updated `n11-work/ops/lanes/B/split_rowcap_modules.py` so every one of the
-  100 leaves per module has `hleft = <exact Fraction value>` proved by
-  `norm_num [y_<node>, rowA, Pi.neg_apply]`, `hright = <exact Fraction value>`
-  proved by `norm_num [db, dbmVal]`, then only `rw [hleft, hright]`. There is
-  no unconditional trailing tactic. Regenerated
-  `LaneBFrozenCapRowCap{1409,2337,2341,2356,2360,2368,2370}.lean`; frozen
-  matrices and statements are unchanged.
-- `split_rowcap_modules.py --check` exits `0`: 7/7 nodes, 700/700 ordered
-  pairs, every weight sum `1`, zero violations, 100 leaves/module. Scope is
-  exact rational arithmetic and generated-text equality, not Lean elaboration.
-  `py_compile`, `git diff --check`, and the forbidden-token scan are clean.
-- Emitter SHA256 `386B6FF2A133A50FA2737CF129F99696A050659D6049E14463BDC9981755155C`.
-  Report SHA256 `C851EFCA0834334C98CF97173CFA859070CCA1ACA8989DBF90C0789BB1B896D9`.
-  Module SHA256: 1409 `E4A66930C1FCD7739CFDEEA9D2915DF8BCAEE84ACA4586A2D59921401CB61AA2`;
-  2337 `B497300CFAEB6DB3C27F9489964CC7555B68FF8C816BE65316FB9B64A383CB45`;
-  2341 `D6249FB417A2210A4B07F6DB9C048759B3DAEF32F2A21F56CAAC6423EADA6A39`;
-  2356 `A94A1930D74B4F66DA936883DD3CEA46AFB89C2C51977CB6BF2236801436C253`;
-  2360 `D22F2B7305EE7A34F495AEB8C5D1B7EB4347288521BB405A0B395605BA401E65`;
-  2368 `B35041A030B579D65D32E8A1EEFEA5A9F294A9B09B9D926ED30406BEBBCD3BFF`;
-  2370 `B72120A5FEF7A59B747624274DB543F1DED6AD3C5B166F05A01CBE7CA32D7DA2`.
-- A bounded 120 s local Mathlib probe timed out (`124`) under competing lane
-  load; no local Lean verdict is claimed. `project_status.py --check` exits
-  `0`, which is index consistency only.
-- CI is pending for these exact hashes; none of the seven modules is paid.
-  Still unpaid: seven row-cap kernel proofs, the `f0Lo`/`g` bridge, all 389
-  residual radii, SevenClassExclusions, and the arbitrary-center theorem.
-- Very next step: read fresh CI exits for these exact seven target hashes. If
-  red, inspect that leaf's actual residual goal (especially `hright`); do not
-  restore the one-pass or unconditional final `norm_num` ending.
 
 ## 2026-10-30 - session part 27: residual 389 crosswalk
 
