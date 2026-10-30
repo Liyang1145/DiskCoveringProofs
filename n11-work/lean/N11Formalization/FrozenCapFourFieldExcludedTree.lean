@@ -1,5 +1,5 @@
+import N11Formalization.DBMSourceTreeData
 import N11Formalization.FrozenCapFourFieldRowCaps
-import N11Formalization.FrozenCapRowCapTreeBridges
 
 /-! Node-pinned exclusion wrappers for the five corrected four-field mixtures.
 
@@ -13,6 +13,31 @@ open N11Formalization.FrozenCapFourFieldWitnesses
 open N11Formalization.FrozenCapFourFieldRowCaps
 noncomputable section
 
+theorem db_eq_tree_1409 : ∀ i j : Fin 10,
+    (((N11Formalization.DBMSourceTree.data (1409 : Fin 5011)).db i j : ℚ) / 4096) =
+      db_1409 i j := by
+  decide +kernel
+
+theorem db_eq_tree_2337 : ∀ i j : Fin 10,
+    (((N11Formalization.DBMSourceTree.data (2337 : Fin 5011)).db i j : ℚ) / 4096) =
+      db_2337 i j := by
+  decide +kernel
+
+theorem db_eq_tree_2341 : ∀ i j : Fin 10,
+    (((N11Formalization.DBMSourceTree.data (2341 : Fin 5011)).db i j : ℚ) / 4096) =
+      db_2341 i j := by
+  decide +kernel
+
+theorem db_eq_tree_2368 : ∀ i j : Fin 10,
+    (((N11Formalization.DBMSourceTree.data (2368 : Fin 5011)).db i j : ℚ) / 4096) =
+      db_2368 i j := by
+  decide +kernel
+
+theorem db_eq_tree_2370 : ∀ i j : Fin 10,
+    (((N11Formalization.DBMSourceTree.data (2370 : Fin 5011)).db i j : ℚ) / 4096) =
+      db_2370 i j := by
+  decide +kernel
+
 theorem excluded_1409_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p)
     (hnode : p.nodeID = (1409 : Fin 5011))
@@ -24,7 +49,7 @@ theorem excluded_1409_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     hf0 hg nonneg_1409 sum_1409
   · intro a
     have hrow := row_cap_1409 (p.rowFrom a) (p.rowTo a)
-    have hbridge := N11Formalization.FrozenCapRowCapTreeBridges.db_eq_tree_1409
+    have hbridge := db_eq_tree_1409
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, rowA] using hrow
@@ -41,7 +66,7 @@ theorem excluded_2337_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     hf0 hg nonneg_2337 sum_2337
   · intro a
     have hrow := row_cap_2337 (p.rowFrom a) (p.rowTo a)
-    have hbridge := N11Formalization.FrozenCapRowCapTreeBridges.db_eq_tree_2337
+    have hbridge := db_eq_tree_2337
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, rowA] using hrow
@@ -58,7 +83,7 @@ theorem excluded_2341_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     hf0 hg nonneg_2341 sum_2341
   · intro a
     have hrow := row_cap_2341 (p.rowFrom a) (p.rowTo a)
-    have hbridge := N11Formalization.FrozenCapRowCapTreeBridges.db_eq_tree_2341
+    have hbridge := db_eq_tree_2341
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, rowA] using hrow
@@ -75,7 +100,7 @@ theorem excluded_2368_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     hf0 hg nonneg_2368 sum_2368
   · intro a
     have hrow := row_cap_2368 (p.rowFrom a) (p.rowTo a)
-    have hbridge := N11Formalization.FrozenCapRowCapTreeBridges.db_eq_tree_2368
+    have hbridge := db_eq_tree_2368
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, rowA] using hrow
@@ -92,7 +117,7 @@ theorem excluded_2370_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     hf0 hg nonneg_2370 sum_2370
   · intro a
     have hrow := row_cap_2370 (p.rowFrom a) (p.rowTo a)
-    have hbridge := N11Formalization.FrozenCapRowCapTreeBridges.db_eq_tree_2370
+    have hbridge := db_eq_tree_2370
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, rowA] using hrow
@@ -105,3 +130,4 @@ end N11Formalization.FrozenCapFourFieldExcludedTree
 #check @N11Formalization.FrozenCapFourFieldExcludedTree.excluded_2370_tree
 #print axioms N11Formalization.FrozenCapFourFieldExcludedTree.excluded_1409_tree
 #print axioms N11Formalization.FrozenCapFourFieldExcludedTree.excluded_2370_tree
+#print axioms N11Formalization.FrozenCapFourFieldExcludedTree.db_eq_tree_1409
