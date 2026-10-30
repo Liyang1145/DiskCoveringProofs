@@ -10,3 +10,4 @@ N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal
 
 N11Formalization.SevenClassQ0Deg3EdgeSuffixNonpos
 N11Formalization.SevenClassQ0Deg3EdgeSuffixHigh
+N11Formalization.SevenClassQ0Deg3EdgeShape
