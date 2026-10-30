@@ -60,31 +60,6 @@ theorem paid_radius (n : Fin 5011) (hn : n ∈ paidIDs)
   · exact EnergyTerminalBatchB13.paid_radius n hn y hy0 hy1 hc C Z r hf
   · exact EnergyRefineN2341.new_radius n hn y hy0 hy1 hc C Z r hf
 
-def residualIDs : Finset (Fin 5011) :=
-  (Finset.univ.filter fun n => (DBMSourceTree.data n).terminal = true).filter
-    fun n => n ∉ Patch120SharpDispatch.sharpIDs ∧ n ∉ paidIDs
-
-theorem not_sharp_2341 :
-    (2341 : Fin 5011) ∉ Patch120SharpDispatch.sharpIDs := by
-  decide +kernel
-
-theorem residualIDs_eq_b13_erase :
-    residualIDs = EnergyTerminalBatchB13.residualIDs.erase 2341 := by
-  ext n
-  simp [residualIDs, paidIDs, EnergyTerminalBatchB13.residualIDs,
-    and_assoc, and_left_comm, and_comm]
-
-/-- The 389-to-388 census count, conditional on the explicit B13 census.  The
-count itself is not used as a cached proof of any residual radius bound. -/
-theorem residual_card_of_census
-    (hcensus : EnergyTerminalBatchB13.residualIDs.card = 389) :
-    residualIDs.card = 388 := by
-  have hmem : (2341 : Fin 5011) ∈ EnergyTerminalBatchB13.residualIDs := by
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
-    exact ⟨EnergyRefineN2341.terminal, not_sharp_2341, not_paid_2341⟩
-  rw [residualIDs_eq_b13_erase, Finset.card_erase_of_mem hmem, hcensus]
-  norm_num
-
 def RemainingTerminalRadius : Prop :=
   ∀ n : Fin 5011, (DBMSourceTree.data n).terminal = true →
     n ∉ Patch120SharpDispatch.sharpIDs → n ∉ paidIDs →
@@ -114,6 +89,5 @@ end N11Formalization.EnergyTerminalBatchB13Refine2341
 #check @N11Formalization.EnergyTerminalBatchB13Refine2341.paid_count
 #check @N11Formalization.EnergyTerminalBatchB13Refine2341.paid_radius
 #check @N11Formalization.EnergyTerminalBatchB13Refine2341.remaining_of
-#check @N11Formalization.EnergyTerminalBatchB13Refine2341.residual_card_of_census
 #print axioms N11Formalization.EnergyTerminalBatchB13Refine2341.paid_radius
 #print axioms N11Formalization.EnergyTerminalBatchB13Refine2341.remaining_of

@@ -1,4 +1,11 @@
 # Lean targets lane C wants CI to build (one per line)
+# Unpriced post-fix refinement chain: keep first so the next serial run reaches it.
+N11Formalization.EnergyTerminalBatchB13Refine2341
+N11Formalization.EnergyTerminalBatchB13Refine2341Main
+N11Formalization.EnergyTerminalBatchB13Refine3633
+N11Formalization.EnergyTerminalBatchB13Refine3633Main
+N11Formalization.EnergyTerminalBatchB13RefineSeven
+N11Formalization.EnergyTerminalBatchB13RefineSevenMain
 N11Formalization.FrozenCapRationalCore
 N11Formalization.PaidCellCertificateM
 N11Formalization.PaidCellCertificateMCap
@@ -12,10 +19,8 @@ N11Formalization.EnergyRefineN3623
 N11Formalization.EnergyRefineN3633
 N11Formalization.FrozenCapWideFieldWitnesses
 N11Formalization.FrozenCapPublicExcludedTree
-N11Formalization.EnergyTerminalBatchB13Refine2341
 N11Formalization.EnergyTerminalBatchB13Refine3040
 # FrozenCapResidualMembership remains withheld: its census C02 closure is CI-red.
-N11Formalization.EnergyTerminalBatchB13Refine2341Main
 N11Formalization.EnergyTerminalBatchB13Refine3040Main
 N11Formalization.EnergyTerminalBatchB13Refine2965
 N11Formalization.EnergyTerminalBatchB13Refine2965Main

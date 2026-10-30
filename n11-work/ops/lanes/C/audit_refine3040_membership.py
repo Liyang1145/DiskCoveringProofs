@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Audit the literal Next1182 inventory used by the 3040 refinement wrapper."""
+"""Audit a refinement id against the literal Next1182 component inventory."""
 
+import argparse
 import re
 from pathlib import Path
 
@@ -9,6 +10,10 @@ ROOT = Path(__file__).resolve().parents[3] / "lean" / "N11Formalization"
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("target", type=int, nargs="?", default=3040)
+    args = parser.parse_args()
+
     components: dict[str, set[int]] = {}
     for part in range(1, 9):
         path = ROOT / f"Paid16GeneralNext1182S0{part}.lean"
@@ -21,11 +26,11 @@ def main() -> None:
             }
 
     union = set().union(*components.values())
-    containing = [name for name, ids in components.items() if 3040 in ids]
+    containing = [name for name, ids in components.items() if args.target in ids]
     largest = max((len(ids), name) for name, ids in components.items())
 
     print(f"components={len(components)} union_card={len(union)}")
-    print(f"3040_containing={containing}")
+    print(f"target={args.target} containing={containing}")
     print(f"largest_component={largest[0]} ({largest[1]})")
     assert len(components) == 57
     assert len(union) == 1182
