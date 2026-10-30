@@ -26,34 +26,35 @@ def paidIDs : Finset (Fin 5011) :=
 
 theorem new_terminal (n : Fin 5011) (hn : n ∈ newIDs) :
     (DBMSourceTree.data n).terminal = true := by
-  simp only [newIDs, EnergyRefineN2341.newIDs, EnergyRefineN3040.newIDs,
-    EnergyRefineN2965.newIDs, EnergyRefineN3440.newIDs,
-    EnergyRefineN3589.newIDs, EnergyRefineN3623.newIDs,
-    EnergyRefineN3633.newIDs, Finset.mem_union, Finset.mem_singleton] at hn
-  rcases hn with rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  · exact EnergyRefineN2341.terminal
-  · exact EnergyRefineN3040.terminal
-  · exact EnergyRefineN2965.terminal
-  · exact EnergyRefineN3440.terminal
-  · exact EnergyRefineN3589.terminal
-  · exact EnergyRefineN3623.terminal
-  · exact EnergyRefineN3633.terminal
+  simp only [newIDs, Finset.mem_union] at hn
+  rcases hn with (((((hn | hn) | hn) | hn) | hn) | hn) | hn
+  · exact EnergyRefineN2341.new_terminal n hn
+  · exact EnergyRefineN3040.new_terminal n hn
+  · exact EnergyRefineN2965.new_terminal n hn
+  · exact EnergyRefineN3440.new_terminal n hn
+  · exact EnergyRefineN3589.new_terminal n hn
+  · exact EnergyRefineN3623.new_terminal n hn
+  · exact EnergyRefineN3633.new_terminal n hn
 
 theorem new_disjoint_old : Disjoint EnergyTerminalBatchB13.paidIDs newIDs := by
   rw [Finset.disjoint_left]
   intro a ha hb
-  simp only [newIDs, EnergyRefineN2341.newIDs, EnergyRefineN3040.newIDs,
-    EnergyRefineN2965.newIDs, EnergyRefineN3440.newIDs,
-    EnergyRefineN3589.newIDs, EnergyRefineN3623.newIDs,
-    EnergyRefineN3633.newIDs, Finset.mem_union, Finset.mem_singleton] at hb
-  rcases hb with rfl | rfl | rfl | rfl | rfl | rfl | rfl
-  · exact EnergyTerminalBatchB13Refine2341.not_paid_2341 ha
-  · exact EnergyTerminalBatchB13Refine3040.not_paid_3040 ha
-  · exact EnergyTerminalBatchB13Refine2965.not_paid_2965 ha
-  · exact EnergyTerminalBatchB13Refine3440.not_paid_3440 ha
-  · exact EnergyTerminalBatchB13Refine3589.not_paid_3589 ha
-  · exact EnergyTerminalBatchB13Refine3623.not_paid_3623 ha
-  · exact EnergyTerminalBatchB13Refine3633.not_paid_3633 ha
+  simp only [newIDs, Finset.mem_union] at hb
+  rcases hb with (((((hb | hb) | hb) | hb) | hb) | hb) | hb
+  · exact Finset.disjoint_left.mp
+      EnergyTerminalBatchB13Refine2341.new_disjoint_old ha hb
+  · exact Finset.disjoint_left.mp
+      EnergyTerminalBatchB13Refine3040.new_disjoint_old ha hb
+  · exact Finset.disjoint_left.mp
+      EnergyTerminalBatchB13Refine2965.new_disjoint_old ha hb
+  · exact Finset.disjoint_left.mp
+      EnergyTerminalBatchB13Refine3440.new_disjoint_old ha hb
+  · exact Finset.disjoint_left.mp
+      EnergyTerminalBatchB13Refine3589.new_disjoint_old ha hb
+  · exact Finset.disjoint_left.mp
+      EnergyTerminalBatchB13Refine3623.new_disjoint_old ha hb
+  · exact Finset.disjoint_left.mp
+      EnergyTerminalBatchB13Refine3633.new_disjoint_old ha hb
 
 theorem new_count : newIDs.card = 7 := by
   decide +kernel
@@ -61,7 +62,6 @@ theorem new_count : newIDs.card = 7 := by
 theorem paid_count : paidIDs.card = 2004 := by
   rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,
     EnergyTerminalBatchB13.paid_count, new_count]
-  norm_num
 
 theorem paid_terminal (n : Fin 5011) (hn : n ∈ paidIDs) :
     (DBMSourceTree.data n).terminal = true := by
@@ -77,18 +77,15 @@ theorem paid_radius (n : Fin 5011) (hn : n ∈ paidIDs)
     SourceExactRoot.sourceRadius < r := by
   rcases Finset.mem_union.mp hn with hn | hn
   · exact EnergyTerminalBatchB13.paid_radius n hn y hy0 hy1 hc C Z r hf
-  · simp only [newIDs, EnergyRefineN2341.newIDs, EnergyRefineN3040.newIDs,
-      EnergyRefineN2965.newIDs, EnergyRefineN3440.newIDs,
-      EnergyRefineN3589.newIDs, EnergyRefineN3623.newIDs,
-      EnergyRefineN3633.newIDs, Finset.mem_union, Finset.mem_singleton] at hn
-    rcases hn with rfl | rfl | rfl | rfl | rfl | rfl | rfl
-    · exact EnergyRefineN2341.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
-    · exact EnergyRefineN3040.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
-    · exact EnergyRefineN2965.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
-    · exact EnergyRefineN3440.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
-    · exact EnergyRefineN3589.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
-    · exact EnergyRefineN3623.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
-    · exact EnergyRefineN3633.new_radius _ (by simp) y hy0 hy1 hc C Z r hf
+  · simp only [newIDs, Finset.mem_union] at hn
+    rcases hn with (((((hn | hn) | hn) | hn) | hn) | hn) | hn
+    · exact EnergyRefineN2341.new_radius n hn y hy0 hy1 hc C Z r hf
+    · exact EnergyRefineN3040.new_radius n hn y hy0 hy1 hc C Z r hf
+    · exact EnergyRefineN2965.new_radius n hn y hy0 hy1 hc C Z r hf
+    · exact EnergyRefineN3440.new_radius n hn y hy0 hy1 hc C Z r hf
+    · exact EnergyRefineN3589.new_radius n hn y hy0 hy1 hc C Z r hf
+    · exact EnergyRefineN3623.new_radius n hn y hy0 hy1 hc C Z r hf
+    · exact EnergyRefineN3633.new_radius n hn y hy0 hy1 hc C Z r hf
 
 def RemainingTerminalRadius : Prop :=
   ∀ n : Fin 5011, (DBMSourceTree.data n).terminal = true →
