@@ -1,0 +1,23 @@
+{
+  "run_id": 41035092539,
+  "job_id": 123993863813,
+  "head_sha": "22719e0d7aef585fdf0b179d7b9c4f23b14a2754",
+  "job_status_when_read": "in_progress",
+  "source_binding": {
+    "N11Formalization.Paid16GeneralNext1182": "5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1",
+    "N11Formalization.EnergyTerminalBatchB13Next505Bounds": "FA5CA6EB9CD75158085EDDD3C0CB464AB7F96CF124FCE40C303EB176D31D46F2",
+    "N11Formalization.EnergyTerminalBatchB13DescentBounds": "F5E3C49DC61FC031CBB32C2686BBA721909EC695850A661BD8E789DC59EB8794",
+    "N11Formalization.EnergyTerminalBatchB13": "3DD37313505E0E8D608D50D42D3AFB1F1E08CEBBDF1ACD5DB570F57D9DC8FD03",
+    "N11Formalization.EnergyTerminalBatchB13Main": "521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837"
+  },
+  "module_exits": [
+    {"timestamp": "2026-10-30T09:46:28.7050131Z", "module": "N11Formalization.Paid16GeneralNext1182", "exit": 0},
+    {"timestamp": "2026-10-30T09:46:33.3338371Z", "module": "N11Formalization.EnergyTerminalBatchB13Next505Bounds", "exit": 0},
+    {"timestamp": "2026-10-30T09:46:38.1011717Z", "module": "N11Formalization.EnergyTerminalBatchB13DescentBounds", "exit": 0},
+    {"timestamp": "2026-10-30T09:46:42.9082776Z", "module": "N11Formalization.EnergyTerminalBatchB13", "exit": 0},
+    {"timestamp": "2026-10-30T09:47:00.1715649Z", "module": "N11Formalization.EnergyTerminalBatchB13Main", "exit": 0}
+  ],
+  "scope": "Exact live-job module exit lines on merged matching bytes; not a completed-run, root, energy-residual, or SevenClassExclusions proof verdict.",
+  "remaining_energy_ids": 389,
+  "root_import_changed": false
+}
