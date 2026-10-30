@@ -39,6 +39,11 @@ def EdgePeakValid (i : Fin 21) : Prop :=
 def EdgeUnimodal : Prop :=
   ∀ i : Fin 21, EdgeIncTo i ∧ EdgeDecFrom i ∧ EdgePeakValid i
 
+/-- The two analytic shape obligations, with the 21 peak comparisons kept
+separate so they can be discharged by exact rational evaluation. -/
+def EdgeMonotone : Prop :=
+  ∀ i : Fin 21, EdgeIncTo i ∧ EdgeDecFrom i
+
 /-- A single-peak factorization replaces 21 × 2049 edge checks by the
 analytic shape obligations and 21 peak comparisons. -/
 theorem edgeValid_of_unimodal (h : EdgeUnimodal) : EdgeValid := by
@@ -48,6 +53,147 @@ theorem edgeValid_of_unimodal (h : EdgeUnimodal) : EdgeValid := by
   · exact (hinc k hk).trans hpeak
   · exact (hdec k (le_of_lt (lt_of_not_ge hk))).trans hpeak
 
+/-- The 21 peak comparisons recorded by the exact rational audit, split into
+separate kernel checks to keep elaboration bounded. -/
+theorem edgePeakValid_0 : EdgePeakValid 0 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_1 : EdgePeakValid 1 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_2 : EdgePeakValid 2 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_3 : EdgePeakValid 3 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_4 : EdgePeakValid 4 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_5 : EdgePeakValid 5 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_6 : EdgePeakValid 6 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_7 : EdgePeakValid 7 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_8 : EdgePeakValid 8 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_9 : EdgePeakValid 9 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_10 : EdgePeakValid 10 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_11 : EdgePeakValid 11 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_12 : EdgePeakValid 12 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_13 : EdgePeakValid 13 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_14 : EdgePeakValid 14 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_15 : EdgePeakValid 15 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_16 : EdgePeakValid 16 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_17 : EdgePeakValid 17 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_18 : EdgePeakValid 18 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_19 : EdgePeakValid 19 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+theorem edgePeakValid_20 : EdgePeakValid 20 := by
+  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+    edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
+    RatInterval.piHi]
+
+/-- All 21 peaks are exactly the separately checked comparisons above. -/
+theorem edgePeakValid_all : ∀ i : Fin 21, EdgePeakValid i := by
+  intro i
+  fin_cases i <;>
+    first
+    | exact edgePeakValid_0
+    | exact edgePeakValid_1
+    | exact edgePeakValid_2
+    | exact edgePeakValid_3
+    | exact edgePeakValid_4
+    | exact edgePeakValid_5
+    | exact edgePeakValid_6
+    | exact edgePeakValid_7
+    | exact edgePeakValid_8
+    | exact edgePeakValid_9
+    | exact edgePeakValid_10
+    | exact edgePeakValid_11
+    | exact edgePeakValid_12
+    | exact edgePeakValid_13
+    | exact edgePeakValid_14
+    | exact edgePeakValid_15
+    | exact edgePeakValid_16
+    | exact edgePeakValid_17
+    | exact edgePeakValid_18
+    | exact edgePeakValid_19
+    | exact edgePeakValid_20
+
+/-- Once the two monotonicity sides are proved for every edge, the peak checks
+above pay all 21 × 2049 grid inequalities. -/
+theorem edgeValid_of_monotone (h : EdgeMonotone) : EdgeValid :=
+  edgeValid_of_unimodal fun i => ⟨(h i).1, (h i).2, edgePeakValid_all i⟩
+
 end N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal
 #check @N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal.edgeValid_of_unimodal
+#check @N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal.edgeValid_of_monotone
 #print axioms N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal.edgeValid_of_unimodal
+#print axioms N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal.edgePeakValid_all

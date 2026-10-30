@@ -110,17 +110,12 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
       exact div_le_div_of_nonneg_right
         (mul_le_mul_of_nonneg_left hkq hpi) (by norm_num)
     have hbhi : (binHi (binIndex k)).val ≤ 1791 := by
-      by_cases hbin7 : (binIndex k).val = 7
-      · have hval : (binHi (binIndex k)).val = 2048 := by
-          simp [binHi, hbin7]
-        rw [hval]
-        norm_num
-      · have hval : (binHi (binIndex k)).val =
-            256 * (binIndex k).val + 255 := by
-          simp [binHi, hbin7]
-        rw [hval]
-        have hidxlt : (binIndex k).val < 7 := by omega
-        omega
+      have hval : (binHi (binIndex k)).val =
+          256 * (binIndex k).val + 255 := by
+        simp [binHi, h7]
+      rw [hval]
+      have hidxlt : (binIndex k).val < 7 := by omega
+      omega
     have hnode : nodeQ RatInterval.piHi 2048 (binHi (binIndex k)) ≤
         RatInterval.piHi * 1791 / 2048 := by
       unfold nodeQ
