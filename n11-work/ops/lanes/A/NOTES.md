@@ -185,3 +185,44 @@ EndpointChecks first.  For edge 9/10, prove the narrow `-131/200` tail as a
 split argument: exact node-1490 endpoint, decreasing degree-28 bracket on
 `[pi/2, 3*pi/4]`, and the existing `-2/3` theorem above `3*pi/4`; repair the
 one discrete witness-1489 step separately.
+
+## 2026-10-30 (session 28) — narrow cosine tail proof drafted
+
+**File / SHA256.**
+- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeSuffixNonpos.lean`
+  `1bad1980d1d74acaf2db29d8d6255c90b1ed62f87eec38e65617681790c6e02e`.
+- `n11-work/ops/lanes/A/TARGETS.txt` unchanged,
+  `b532fb08e16550a05b5c8608026f7e8927995a11db2896f3aac9e9114ad88406`.
+
+**Mathematical progress.** Added the analytic narrow-arc proof rather than the
+disproved global `-2/3` claim.  `sinT14_nonneg_of_two_le_of_le_three_pi_div_four`
+shows the degree-27 sine bracket is nonnegative on `[2, 3*pi/4]`: use
+`sin x >= sqrt(2)/2 >= 2/3` on this arc and the Lagrange remainder
+`|sin x - sinT 14 x| <= x^29/29! <= 3^29/29! <= 1/100`.  Hence the derivative
+`-sinT 14 x` of `cosHiReal` is nonpositive, giving
+`cosHiReal_antitoneOn_narrow` on
+`[nodeQ piHi 2048 1490, 3*pi/4]`.  The endpoint is isolated as
+`cosHiNLag_nodeQ_1490_le_neg_131_over_200`; casting it through
+`cosHiNLag_cast` yields `cosHiReal_le_neg_131_over_200_of_narrow`.  No C450
+files were edited.
+
+**Checks (scope).** `python tools/project_status.py --check` passed
+(declaration/manifest scope only); `git diff --check` and the forbidden-token
+scan over the edited module passed.  The exact `Fraction` audit passed all five
+assertions, including node-1490 value `-0.6554928529996153 <= -131/200`, both
+edge-9/10 coefficient thresholds, and the intentional failure of `<= -2/3`.
+The cached Mathlib probe exceeded its 180 s import/elaboration budget without a
+diagnostic, so no Lean verdict exists.  This module remains **drafted, CI
+pending**.
+
+**Still unproved.** Kernel acceptance of the modified suffix module and all
+registered targets; the one discrete witness-1489-to-1490 comparison and the
+actual `edgeDecFrom_nine`/`edgeDecFrom_ten` wrappers; all other edge-shape
+facts; all seven exclusions; strict total; and the arbitrary-center full-disk
+theorem.
+
+**Next concrete step.** Read the next CI diagnostic for this module first.  If
+the narrow proof is green, instantiate it for edges 9/10 on
+`[node 1490, 3*pi/4]`, combine with the existing `-2/3` theorem on
+`[3*pi/4, piHi]`, and separately repair the witness-1489 step.  If red, fix
+only the first diagnostic under a bounded command.

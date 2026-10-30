@@ -114,6 +114,85 @@ theorem cosHiReal_le_neg_two_thirds_of_three_pi_div_four_le {x : ℝ}
   unfold cosHiReal
   linarith
 
+/-- The degree-27 Taylor upper bracket for sine is positive on the narrow arc
+from `2` to `3*pi/4`.  This supplies the derivative sign needed to show that
+the degree-28 cosine upper bracket decreases on that arc. -/
+theorem sinT14_nonneg_of_two_le_of_le_three_pi_div_four {x : ℝ}
+    (hx0 : 2 ≤ x) (hx1 : x ≤ 3 * Real.pi / 4) : 0 ≤ sinT 14 x := by
+  have hxnonneg : 0 ≤ x := by linarith
+  have hsinlow : (2 / 3 : ℝ) ≤ Real.sin x := by
+    have hy0 : Real.pi / 4 ≤ Real.pi - x := by linarith
+    have hy1 : Real.pi - x ≤ Real.pi / 2 := by
+      linarith [Real.pi_lt_four]
+    have hmono := Real.sin_le_sin_of_le_of_le_pi_div_two
+      (x := Real.pi / 4) (y := Real.pi - x)
+      (by linarith [Real.pi_pos]) hy1 hy0
+    rw [Real.sin_pi_sub, Real.sin_pi_div_four] at hmono
+    have hs2 : (2 / 3 : ℝ) ≤ Real.sqrt 2 / 2 := by
+      have hsq := Real.sq_sqrt (show (0 : ℝ) ≤ 2 by norm_num)
+      have hs0 := Real.sqrt_nonneg 2
+      nlinarith
+    exact hs2.trans hmono
+  have hx3 : x ≤ 3 := by linarith [Real.pi_lt_four]
+  have hpow : x ^ 29 ≤ (3 : ℝ) ^ 29 :=
+    pow_le_pow_left₀ hxnonneg hx3 29
+  have hrem : x ^ 29 / ((Nat.factorial 29 : ℕ) : ℝ) ≤ (1 / 100 : ℝ) := by
+    refine (div_le_div_of_nonneg_right hpow (by positivity)).trans ?_
+    norm_num [Nat.factorial]
+  have h := (abs_le.mp (sin_bound_abs 14 x)).1
+  rw [abs_of_nonneg hxnonneg] at h
+  linarith
+
+/-- Exact rational endpoint check at grid node 1490. -/
+theorem cosHiNLag_nodeQ_1490_le_neg_131_over_200 :
+    cosHiNLag (nodeQ RatInterval.piHi 2048 1490) ≤ (-131 / 200 : ℚ) := by
+  norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi, Finset.sum_range_succ]
+
+theorem cosHiReal_nodeQ_1490_le_neg_131_over_200 :
+    cosHiReal (nodeQ RatInterval.piHi 2048 1490 : ℚ) ≤ (-131 / 200 : ℝ) := by
+  let q : ℚ := nodeQ RatInterval.piHi 2048 1490
+  have hq0 : (0 : ℚ) ≤ q := by
+    unfold q nodeQ
+    positivity
+  have hcast : ((cosHiNLag q : ℚ) : ℝ) = cosHiReal (q : ℝ) := by
+    rw [cosHiNLag_cast, cosHiReal]
+    have hq0R : (0 : ℝ) ≤ (q : ℝ) := by exact_mod_cast hq0
+    rw [abs_of_nonneg hq0R]
+  have h : cosHiNLag q ≤ (-131 / 200 : ℚ) :=
+    cosHiNLag_nodeQ_1490_le_neg_131_over_200
+  have hR : ((cosHiNLag q : ℚ) : ℝ) ≤ ((-131 / 200 : ℚ) : ℝ) := by
+    exact_mod_cast h
+  rw [hcast] at hR
+  exact hR
+
+/-- The degree-28 cosine upper bracket is antitone on the narrow arc beginning
+at node 1490. -/
+theorem cosHiReal_antitoneOn_narrow :
+    AntitoneOn cosHiReal
+      (Set.Icc (nodeQ RatInterval.piHi 2048 1490 : ℚ) (3 * Real.pi / 4)) := by
+  have hs2 : (2 : ℝ) ≤ (nodeQ RatInterval.piHi 2048 1490 : ℚ) := by
+    norm_num [nodeQ, RatInterval.piHi]
+  refine antitoneOn_of_deriv_nonpos (convex_Icc _ _) ?_ ?_ ?_
+  · exact fun x _ => (hasDerivAt_cosHiReal x).continuousAt.continuousWithinAt
+  · intro x _
+    exact (hasDerivAt_cosHiReal x).differentiableAt.differentiableWithinAt
+  · intro x hx
+    rw [interior_Icc] at hx
+    rw [(hasDerivAt_cosHiReal x).deriv]
+    exact neg_nonpos.mpr
+      (sinT14_nonneg_of_two_le_of_le_three_pi_div_four
+        (hs2.trans hx.1.le) (le_of_lt hx.2))
+
+/-- Narrow-interval cosine-tail estimate used by both negative-coefficient
+edges. -/
+theorem cosHiReal_le_neg_131_over_200_of_narrow {x : ℝ}
+    (hx0 : (nodeQ RatInterval.piHi 2048 1490 : ℚ) ≤ x)
+    (hx1 : x ≤ 3 * Real.pi / 4) : cosHiReal x ≤ (-131 / 200 : ℝ) := by
+  have hs_t : (nodeQ RatInterval.piHi 2048 1490 : ℚ) ≤ 3 * Real.pi / 4 :=
+    hx0.trans hx1
+  have hanti := cosHiReal_antitoneOn_narrow ⟨le_rfl, hs_t⟩ ⟨hx0, hx1⟩ hx0
+  exact hanti.trans cosHiReal_nodeQ_1490_le_neg_131_over_200
+
 theorem edgeHiReal_deriv_neg_of_cos_le_coeff {b : ℚ} {x : ℝ}
     (hcos : cosHiReal x ≤ (b : ℝ) / (19 / 50 : ℝ) ^ 2) :
     (19 / 50 : ℝ) ^ 2 * cosHiReal x - (b : ℝ) < 0 := by
