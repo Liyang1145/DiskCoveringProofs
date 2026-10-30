@@ -66,94 +66,179 @@ otherwise report lane C blocked on the 382 absent records.
 
 ROOT-IMPORT REQUEST: none; this module is a census consumer, not a root theorem.
 
-## 2026-10-30 - part 98 (census-consumer dependency audit)
+## 2026-10-30 - parts 98-100 (census consumer, condensed)
 
-Did: traced `FrozenCapResidualMembership` -> `EnergyTerminalResidualCensus`
--> four C01-C04 parts -> `EnergyTerminalResidualCensusBase` ->
-`EnergyTerminalBatchB13`.  The new module has the correct B13 interface
-(`mem_residualIDs_iff`, `residualIDs_eq`), but CI cannot green it while B13 is
-red: run `41001693009` reports B13 exit 1 from
-`EnergyTerminalBatchB13DescentBounds` unknown identifiers
-`EnergyTerminalBatchB11.paidIDs` and `Paid16GeneralNext1182.newIDs/new_mem`.
-Thus its CI status is dependency-blocked, not merely pending.  The seven
-`decide +kernel` membership leaves are each over the 100-literal `chunk0`;
-no project build was run.  A 90 s standalone Mathlib probe of the proof pattern
-timed out with no output and is diagnostic only.
+Traced and audited `FrozenCapResidualMembership` (SHA
+`6ca0351e...498ac`): its closure is 603 modules with zero missing imports and
+exact seven ids, but B13 is red on missing `B11.paidIDs` /
+`Paid16GeneralNext1182.newIDs/new_mem`.  Static audit exit 0 is not kernel
+credit.  Correct activation order is DescentBounds -> B13 -> B13Main -> consumer.
 
-Still unproved/missing: B13/DescentBounds CI exit 0; then exit 0 for this module;
-382 HOST payloads; any link from exclusion witnesses to
-`RemainingTerminalRadius`; no energy/class credit.
+## 2026-10-30 - part 101 (dependency-clean seven-node exclusions)
 
-Next: wait for Lane B's B13 repair, then rerun targeted CI for
-`FrozenCapResidualMembership` without changing its proof.  If B13 still fails,
-report the dependency on Lane B rather than editing B13 from lane C.
-
-## 2026-10-30 - part 99 (repaired dependency + target hygiene)
-
-Did: re-read GUIDANCE/LANES/NOTES/LATEST and reran `project_status.py --check`
-(exit 0; handoff index only).  Confirmed lane B's missing-import repair is now
-committed at `8c61ad4f`; the current tree carries DescentBounds
-`5c2b2ed8...`, B13 `3dd37313...`, B13Main `2a6a206f...`.  Added
-`audit_residual_membership_prereqs.py`, which statically resolves the consumer's
-local import closure, requires B13/DescentBounds/B11/Next1182, checks the seven
-literal ids, and scans the consumer for forbidden tokens.  Removed the known-red
-duplicate `FrozenCapWideFieldRowCaps` target so CI does not spend another ~84 s
-on a family already disproven as a route to the cap result; Witnesses and the
-seven exclusion payloads remain untouched.
+Did: added `FrozenCapPublicExcludedTree.lean`, a fresh seven-node exclusion
+module that replaces the red bulk `FrozenCapWideFieldRowCaps` dependency with
+the seven small green per-node row-cap modules and
+`FrozenCapRowCapTreeBridges`.  It proves `excluded_<id>_tree : False` for
+`{1409,2337,2341,2356,2360,2368,2370}` from a `PaidCellCertificateM.Valid`
+packet pinned to that node plus the still-explicit `hf0`/`hg` packet
+identifications.  This is a formal exclusion record, not a paid residual id or
+a link to `RemainingTerminalRadius`.
 
 Files / SHA256 (lowercase):
-- `n11-work/ops/lanes/C/audit_residual_membership_prereqs.py`
-  `9340af619e62a4c4a9aaad715beea822324e7414a7cbfd17e88b341f83537c8f`.
-- `n11-work/ops/lanes/C/residual-membership-prereq-audit.json`
-  `fa382046080ff2b365bca5cb65c23675152f3105e8892ce9d054769a200edcaf`.
+- `n11-work/lean/N11Formalization/FrozenCapPublicExcludedTree.lean`
+  `e5ca5e2a1968d1d50538c0f6917284e9a101931fb44caf1a6f11e4679d9673a3`.
+- `n11-work/ops/lanes/C/audit_public_excluded_tree.py`
+  `b18a5d0720c8a0c8506664ec69ad050fed567fa40b2be262e9cacfbe2d7d2515`.
+- `n11-work/ops/lanes/C/public-excluded-tree-audit.json`
+  `e4df1a7d5accb8c0fd138135b62b61a322ba267c27ea7ba9f17d71328de9b06b`.
 - `n11-work/ops/lanes/C/TARGETS.txt`
-  `5c60fd15a12cfd32b2d565ff1ea61be231de00dc2a6ecfe55ff92edb97bd4a76`.
+  `4b9dd015b5a8a39374975f2ffa12791d25aed2bec9453d100009c85babd2b791`.
 
-Checks (exact scope):
-- prerequisite audit exit 0: five checks true, 603 local modules in the
-  transitive closure, zero missing local imports, required B13 modules present,
-  consumer ids exactly `{1409,2337,2341,2356,2360,2368,2370}`, no forbidden
-  tokens in the consumer source.
-- lane B `audit_b13_closure.py` exit 0: all 13 static inventory checks
-  (B11 310, B12 815, B13 1997, Next1182 1182, residual 389, sharp 120).
-- `py_compile` and `git diff --check` exit 0.  No Lean build was run locally.
+Checks (exact scope): static audit exit 0, 460 local modules in the target's
+import closure, zero missing imports, all seven individual row-cap modules plus
+bridges/witnesses/MCap present, and neither `FrozenCapWideFieldRowCaps` nor
+`EnergyTerminalBatchB13` reachable.  Seven theorem ids are exactly the public
+seven; hard-rule token scan clean; all lane Python files pass `py_compile`;
+`git diff --check` exits 0.  The new module is **CI pending**; no local Lean
+build was run, so this static audit is not kernel credit.
 
-Still unproved/missing: `FrozenCapResidualMembership` is **CI pending** on
-current bytes; B13/B13Main likewise need a CI-green run on the repaired hashes.
-No positive `PaidCellCertificateM.Valid` packet, no unconditional
-no-feasible-cell theorem, 382 HOST payloads absent, and no exclusion-to-
-`RemainingTerminalRadius` link.  Static closure success is not a kernel proof.
+Still unproved/missing: CI exit 0 for the new module; the conditional `hf0`/`hg`
+identifications are not supplied; no exclusion-to-`RemainingTerminalRadius`
+bridge; B13/B13Main remain red, so `FrozenCapResidualMembership` remains
+dependency-blocked; 382 HOST payloads remain absent.
 
-Next: after the supervisor commits this worktree, require CI exit 0 in order
-DescentBounds -> B13 -> B13Main -> FrozenCapResidualMembership.  If the consumer
-is green, preserve it as the formal blocker record and seek a genuine geometric
-no-feasible-cell bridge or HOST payloads; do not reopen duplicate row caps.
+Next: kernel-check `FrozenCapPublicExcludedTree` alone in targeted CI.  If green,
+use it as the seven-node exclusion record and do not target the bulk-row-cap
+wrappers again.  Then wait for Lane B's B13 repair before rechecking
+`FrozenCapResidualMembership`; do not edit B13 from lane C.
 
-## 2026-10-30 - part 100 (fresh static recheck)
+ROOT-IMPORT REQUEST: none; conditional exclusions do not pay the root theorem.
 
-Did: on the unchanged consumer bytes, reran
-`audit_residual_membership_prereqs.py` and `project_status.py --check`.  The
-prerequisite audit again exits 0: closure 603, zero missing local imports, all
-five checks true, exact consumer ids
-`{1409,2337,2341,2356,2360,2368,2370}`, no forbidden tokens.  Recomputed
-SHA256 values match part 99:
-- `FrozenCapResidualMembership.lean`
-  `6ca0351e87976d1e1fc0b6e19a6dcac983883a5b8be6d0d7dc8b0a29f2e498ac`.
-- `TARGETS.txt`
-  `5c60fd15a12cfd32b2d565ff1ea61be231de00dc2a6ecfe55ff92edb97bd4a76`.
-- `audit_residual_membership_prereqs.py`
-  `9340af619e62a4c4a9aaad715beea822324e7414a7cbfd17e88b341f83537c8f`.
+## 2026-10-30 - part 102 (consume CI / re-audit pending target)
 
-Checks/scope: status check passes handoff-index/manifest declarations only, not
-math or full file integrity.  No Lean build was run locally.  `LATEST.md` has
-newer run `41008974701` in progress but no result bytes to consume;
-`FrozenCapResidualMembership` remains **CI pending/dependency-blocked**.
+Did: consumed `ops/ci/LATEST.md` and re-ran the static audit on the unchanged
+part-101 bytes.  Latest *completed* run `41011262474` (`9f499ca6`) predates the
+new target: its exits still list `FrozenCapWideFieldRowCaps=1`,
+`EnergyTerminalBatchB13=1`, `EnergyTerminalBatchB13Main=1`, and its root build
+later OOM-killed at `SharedMomentConcreteSwitchBatch`; neither
+`FrozenCapPublicExcludedTree` nor `FrozenCapResidualMembership` appears in that
+run.  Run `41017279843` was still in progress, so the new module remains
+**CI pending**, not green.
 
-Still missing: B13/B13Main green hashes and then the consumer exit 0; 382 HOST
-payloads; an exclusion-to-`RemainingTerminalRadius` bridge; all energy/class
-credit remains unpaid.
+Audit result (exact scope): `audit_public_excluded_tree.py` exit 0; target SHA
+unchanged at `e5ca5e2a1968d1d50538c0f6917284e9a101931fb44caf1a6f11e4679d9673a3`;
+closure 460 modules, zero missing local imports, all seven per-node row caps
+plus bridges/witnesses/MCap present, forbidden bulk/B13 dependencies absent,
+and all seven theorem ids exact.  No Lean build was run locally.
 
-Next: when `LATEST.md` exposes run `41008974701` (or its successor), inspect
-exits in dependency order.  If B13 is still red, report the precise causal
-errors and wait for Lane B rather than editing B13.  If B13/B13Main are green,
-CI-check `FrozenCapResidualMembership` unchanged on the same committed tree.
+Still unproved/missing: targeted CI exit 0 for
+`FrozenCapPublicExcludedTree`; `hf0`/`hg` packet identifications; any
+exclusion-to-`RemainingTerminalRadius` bridge; green B13/B13Main for
+`FrozenCapResidualMembership`; 382 HOST payloads.  No kernel or energy credit.
+
+Next: after the supervisor commits/merges this worktree, require CI exit 0 for
+the unchanged `FrozenCapPublicExcludedTree` target before using it as the
+seven-node exclusion record.  Do not target the bulk row-cap wrapper.  Then
+recheck `FrozenCapResidualMembership` only when Lane B's B13 is green.
+
+## 2026-10-30 - part 103 (withhold dependency-red consumer target)
+
+Did: removed `FrozenCapResidualMembership` from CI `TARGETS.txt` because its
+B13 dependency remains red and it cannot produce kernel credit on this tree.
+Kept its source and static prerequisite audit intact; added an explicit
+comment recording the activation condition.  Condensed stale parts 98-100.
+
+Files / SHA256 (lowercase):
+- `n11-work/ops/lanes/C/TARGETS.txt`
+  `fc90fea6f082e848f5f6e4ba4f80ffc76b0a03aeeea719a76452d0a5c511c74e`.
+- `n11-work/lean/N11Formalization/FrozenCapPublicExcludedTree.lean` unchanged,
+  `e5ca5e2a1968d1d50538c0f6917284e9a101931fb44caf1a6f11e4679d9673a3`.
+
+Checks (exact scope): parsed target list now has five Lean targets, ending in
+`FrozenCapPublicExcludedTree`; `audit_public_excluded_tree.py` exit 0 with 460
+modules, zero missing imports, forbidden bulk/B13 absent, and exact seven ids;
+all lane Python passes `py_compile`; `git diff --check` exit 0.  No Lean build
+was run locally.  The new tree remains **CI pending**, not green.
+
+Still unproved/missing: targeted CI exit 0 for the tree; explicit `hf0`/`hg`
+packet identifications; exclusion-to-`RemainingTerminalRadius` bridge; B13 green
+then consumer exit 0; 382 HOST payloads.  No energy/class credit.
+
+Next: after supervisor commit, inspect CI for
+`FrozenCapPublicExcludedTree` and its axiom report.  Keep the membership consumer
+withheld until Lane B reports B13/B13Main CI-green on recorded hashes.
+
+## 2026-10-30 - part 104 (CI scope check)
+
+Did: queried GitHub Actions run `41017279843` directly; it is completed with
+conclusion `success` at `2026-10-30T07:41:06Z`, head
+`0361ae51f9a877ee782fc8e43c7f08e758f18f7f`.  That head's lane C target list
+still ends in `FrozenCapWideFieldRowCaps` and contains no
+`FrozenCapPublicExcludedTree.lean`, so the success covers only the older tree.
+Re-ran `audit_public_excluded_tree.py` against unchanged target bytes: exit 0,
+460-module closure, zero missing imports/forbidden deps, exact seven ids.
+
+Files/SHA256 (lowercase): target
+`e5ca5e2a1968d1d50538c0f6917284e9a101931fb44caf1a6f11e4679d9673a3`;
+`TARGETS.txt` `fc90fea6f082e848f5f6e4ba4f80ffc76b0a03aeeea719a76452d0a5c511c74e`.
+
+Checks scope: remote run metadata plus static source/import audit only.  No local
+Lean build.  `FrozenCapPublicExcludedTree` remains **CI pending**, not green.
+
+Still missing: CI exit 0 and axiom report for the unchanged tree target; explicit
+`hf0`/`hg` identifications; exclusion-to-`RemainingTerminalRadius` bridge; green
+B13/B13Main; 382 HOST payloads.  No kernel, energy or class credit.
+
+Next: supervisor must commit this worktree, then CI must run on the new head and
+build `FrozenCapPublicExcludedTree`; inspect that new run's exit code and
+`#print axioms` output before calling the seven-node tree green.
+
+## 2026-10-30 - part 105 (post-merge CI dispatch)
+
+Did: checked the newly merged lane-C head through the GitHub API.  Head
+`430f8902ad4a466e4f4d9b1d37b2f993047719ec` has three workflow runs:
+`n11-lean-build` run `41021956701` is still **pending**; the scoped
+`math-checks.yml` run `41021956775` succeeded, while `delivery-bytes.yml` run
+`41021956901` failed.  The math replay success is a fresh-arithmetic check, not
+a Lean build and not kernel credit for lane C.  No source bytes changed in this
+part.
+
+Current hashes: `FrozenCapPublicExcludedTree.lean`
+`e5ca5e2a1968d1d50538c0f6917284e9a101931fb44caf1a6f11e4679d9673a3`;
+`TARGETS.txt` `fc90fea6f082e848f5f6e4ba4f80ffc76b0a03aeeea719a76452d0a5c511c74e`.
+
+Checks (exact scope): remote workflow metadata only; no local Lean build and no
+CI Lean exit yet.  `FrozenCapPublicExcludedTree` remains **CI pending**, not
+green.
+
+Still missing: `n11-lean-build` exit 0 and axiom output for the tree; explicit
+`hf0`/`hg` packet identifications; exclusion-to-`RemainingTerminalRadius`
+bridge; green B13/B13Main; 382 HOST payloads.  No kernel, energy or class
+credit.
+
+Next: poll run `41021956701` after it starts; compile its per-target exits for
+exactly `FrozenCapPublicExcludedTree`, inspect the corresponding log's axiom
+report, and only then record CI green/red.
+
+## 2026-10-30 - part 106 (runner queue check, exact audit)
+
+Did: re-queried workflow run `41021956701` at head
+`430f8902ad4a466e4f4d9b1d37b2f993047719ec`: it remains `pending`, and its jobs
+endpoint is empty, so it has not acquired a runner.  Re-ran the static tree
+audit: exit 0, 460-module closure, zero missing imports, no forbidden
+bulk/B13 dependencies, exact seven ids.  `git diff --check` exits 0.
+
+Hashes (lowercase): tree `e5ca5e2a...9673a3`; targets `fc90fea6...c74e`;
+audit script `b18a5d07...2515`; audit JSON `e4df1a7d...b06b`.  Source bytes
+unchanged from part 105.
+
+Checks scope: remote run/jobs metadata and static import/source audit only; no
+Lean build and no CI exit.  Tree remains **CI pending**, not green.
+
+Still missing: workflow execution and per-target exit 0 with axiom report;
+`hf0`/`hg` identifications; exclusion-to-`RemainingTerminalRadius` bridge;
+green B13/B13Main; 382 HOST payloads.  No kernel, energy or class credit.
+
+Next: when the job starts, read the `FrozenCapPublicExcludedTree` target exit
+and axiom output; if green, record it, otherwise diagnose the first Lean error.
