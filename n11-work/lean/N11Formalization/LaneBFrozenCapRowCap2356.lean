@@ -32,803 +32,403 @@ def db (i j : Fin 10) : ℚ := (dbmVal i j : ℚ) / 4096
 
 theorem row_cap_2356_0_0 :
     y_2356 0 * rowA 0 0 0 + y_2356 1 * rowA 0 0 1 + y_2356 2 * rowA 0 0 2 + y_2356 3 * rowA 0 0 3 + y_2356 4 * rowA 0 0 4 + y_2356 5 * rowA 0 0 5 + y_2356 6 * rowA 0 0 6 + y_2356 7 * rowA 0 0 7 + y_2356 8 * rowA 0 0 8 ≤ db 0 0 := by
-  have hleft : y_2356 0 * rowA 0 0 0 + y_2356 1 * rowA 0 0 1 + y_2356 2 * rowA 0 0 2 + y_2356 3 * rowA 0 0 3 + y_2356 4 * rowA 0 0 4 + y_2356 5 * rowA 0 0 5 + y_2356 6 * rowA 0 0 6 + y_2356 7 * rowA 0 0 7 + y_2356 8 * rowA 0 0 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 0 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_1 :
     y_2356 0 * rowA 0 1 0 + y_2356 1 * rowA 0 1 1 + y_2356 2 * rowA 0 1 2 + y_2356 3 * rowA 0 1 3 + y_2356 4 * rowA 0 1 4 + y_2356 5 * rowA 0 1 5 + y_2356 6 * rowA 0 1 6 + y_2356 7 * rowA 0 1 7 + y_2356 8 * rowA 0 1 8 ≤ db 0 1 := by
-  have hleft : y_2356 0 * rowA 0 1 0 + y_2356 1 * rowA 0 1 1 + y_2356 2 * rowA 0 1 2 + y_2356 3 * rowA 0 1 3 + y_2356 4 * rowA 0 1 4 + y_2356 5 * rowA 0 1 5 + y_2356 6 * rowA 0 1 6 + y_2356 7 * rowA 0 1 7 + y_2356 8 * rowA 0 1 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 1 = (1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_2 :
     y_2356 0 * rowA 0 2 0 + y_2356 1 * rowA 0 2 1 + y_2356 2 * rowA 0 2 2 + y_2356 3 * rowA 0 2 3 + y_2356 4 * rowA 0 2 4 + y_2356 5 * rowA 0 2 5 + y_2356 6 * rowA 0 2 6 + y_2356 7 * rowA 0 2 7 + y_2356 8 * rowA 0 2 8 ≤ db 0 2 := by
-  have hleft : y_2356 0 * rowA 0 2 0 + y_2356 1 * rowA 0 2 1 + y_2356 2 * rowA 0 2 2 + y_2356 3 * rowA 0 2 3 + y_2356 4 * rowA 0 2 4 + y_2356 5 * rowA 0 2 5 + y_2356 6 * rowA 0 2 6 + y_2356 7 * rowA 0 2 7 + y_2356 8 * rowA 0 2 8 = (1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 2 = (1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_3 :
     y_2356 0 * rowA 0 3 0 + y_2356 1 * rowA 0 3 1 + y_2356 2 * rowA 0 3 2 + y_2356 3 * rowA 0 3 3 + y_2356 4 * rowA 0 3 4 + y_2356 5 * rowA 0 3 5 + y_2356 6 * rowA 0 3 6 + y_2356 7 * rowA 0 3 7 + y_2356 8 * rowA 0 3 8 ≤ db 0 3 := by
-  have hleft : y_2356 0 * rowA 0 3 0 + y_2356 1 * rowA 0 3 1 + y_2356 2 * rowA 0 3 2 + y_2356 3 * rowA 0 3 3 + y_2356 4 * rowA 0 3 4 + y_2356 5 * rowA 0 3 5 + y_2356 6 * rowA 0 3 6 + y_2356 7 * rowA 0 3 7 + y_2356 8 * rowA 0 3 8 = (1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 3 = (1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_4 :
     y_2356 0 * rowA 0 4 0 + y_2356 1 * rowA 0 4 1 + y_2356 2 * rowA 0 4 2 + y_2356 3 * rowA 0 4 3 + y_2356 4 * rowA 0 4 4 + y_2356 5 * rowA 0 4 5 + y_2356 6 * rowA 0 4 6 + y_2356 7 * rowA 0 4 7 + y_2356 8 * rowA 0 4 8 ≤ db 0 4 := by
-  have hleft : y_2356 0 * rowA 0 4 0 + y_2356 1 * rowA 0 4 1 + y_2356 2 * rowA 0 4 2 + y_2356 3 * rowA 0 4 3 + y_2356 4 * rowA 0 4 4 + y_2356 5 * rowA 0 4 5 + y_2356 6 * rowA 0 4 6 + y_2356 7 * rowA 0 4 7 + y_2356 8 * rowA 0 4 8 = (5 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 4 = (5 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_5 :
     y_2356 0 * rowA 0 5 0 + y_2356 1 * rowA 0 5 1 + y_2356 2 * rowA 0 5 2 + y_2356 3 * rowA 0 5 3 + y_2356 4 * rowA 0 5 4 + y_2356 5 * rowA 0 5 5 + y_2356 6 * rowA 0 5 6 + y_2356 7 * rowA 0 5 7 + y_2356 8 * rowA 0 5 8 ≤ db 0 5 := by
-  have hleft : y_2356 0 * rowA 0 5 0 + y_2356 1 * rowA 0 5 1 + y_2356 2 * rowA 0 5 2 + y_2356 3 * rowA 0 5 3 + y_2356 4 * rowA 0 5 4 + y_2356 5 * rowA 0 5 5 + y_2356 6 * rowA 0 5 6 + y_2356 7 * rowA 0 5 7 + y_2356 8 * rowA 0 5 8 = (7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 5 = (1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_6 :
     y_2356 0 * rowA 0 6 0 + y_2356 1 * rowA 0 6 1 + y_2356 2 * rowA 0 6 2 + y_2356 3 * rowA 0 6 3 + y_2356 4 * rowA 0 6 4 + y_2356 5 * rowA 0 6 5 + y_2356 6 * rowA 0 6 6 + y_2356 7 * rowA 0 6 7 + y_2356 8 * rowA 0 6 8 ≤ db 0 6 := by
-  have hleft : y_2356 0 * rowA 0 6 0 + y_2356 1 * rowA 0 6 1 + y_2356 2 * rowA 0 6 2 + y_2356 3 * rowA 0 6 3 + y_2356 4 * rowA 0 6 4 + y_2356 5 * rowA 0 6 5 + y_2356 6 * rowA 0 6 6 + y_2356 7 * rowA 0 6 7 + y_2356 8 * rowA 0 6 8 = (9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 6 = (9 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_7 :
     y_2356 0 * rowA 0 7 0 + y_2356 1 * rowA 0 7 1 + y_2356 2 * rowA 0 7 2 + y_2356 3 * rowA 0 7 3 + y_2356 4 * rowA 0 7 4 + y_2356 5 * rowA 0 7 5 + y_2356 6 * rowA 0 7 6 + y_2356 7 * rowA 0 7 7 + y_2356 8 * rowA 0 7 8 ≤ db 0 7 := by
-  have hleft : y_2356 0 * rowA 0 7 0 + y_2356 1 * rowA 0 7 1 + y_2356 2 * rowA 0 7 2 + y_2356 3 * rowA 0 7 3 + y_2356 4 * rowA 0 7 4 + y_2356 5 * rowA 0 7 5 + y_2356 6 * rowA 0 7 6 + y_2356 7 * rowA 0 7 7 + y_2356 8 * rowA 0 7 8 = (9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 7 = (3 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_8 :
     y_2356 0 * rowA 0 8 0 + y_2356 1 * rowA 0 8 1 + y_2356 2 * rowA 0 8 2 + y_2356 3 * rowA 0 8 3 + y_2356 4 * rowA 0 8 4 + y_2356 5 * rowA 0 8 5 + y_2356 6 * rowA 0 8 6 + y_2356 7 * rowA 0 8 7 + y_2356 8 * rowA 0 8 8 ≤ db 0 8 := by
-  have hleft : y_2356 0 * rowA 0 8 0 + y_2356 1 * rowA 0 8 1 + y_2356 2 * rowA 0 8 2 + y_2356 3 * rowA 0 8 3 + y_2356 4 * rowA 0 8 4 + y_2356 5 * rowA 0 8 5 + y_2356 6 * rowA 0 8 6 + y_2356 7 * rowA 0 8 7 + y_2356 8 * rowA 0 8 8 = (11 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 8 = (3 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_0_9 :
     y_2356 0 * rowA 0 9 0 + y_2356 1 * rowA 0 9 1 + y_2356 2 * rowA 0 9 2 + y_2356 3 * rowA 0 9 3 + y_2356 4 * rowA 0 9 4 + y_2356 5 * rowA 0 9 5 + y_2356 6 * rowA 0 9 6 + y_2356 7 * rowA 0 9 7 + y_2356 8 * rowA 0 9 8 ≤ db 0 9 := by
-  have hleft : y_2356 0 * rowA 0 9 0 + y_2356 1 * rowA 0 9 1 + y_2356 2 * rowA 0 9 2 + y_2356 3 * rowA 0 9 3 + y_2356 4 * rowA 0 9 4 + y_2356 5 * rowA 0 9 5 + y_2356 6 * rowA 0 9 6 + y_2356 7 * rowA 0 9 7 + y_2356 8 * rowA 0 9 8 = (1 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 0 9 = (1 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_0 :
     y_2356 0 * rowA 1 0 0 + y_2356 1 * rowA 1 0 1 + y_2356 2 * rowA 1 0 2 + y_2356 3 * rowA 1 0 3 + y_2356 4 * rowA 1 0 4 + y_2356 5 * rowA 1 0 5 + y_2356 6 * rowA 1 0 6 + y_2356 7 * rowA 1 0 7 + y_2356 8 * rowA 1 0 8 ≤ db 1 0 := by
-  have hleft : y_2356 0 * rowA 1 0 0 + y_2356 1 * rowA 1 0 1 + y_2356 2 * rowA 1 0 2 + y_2356 3 * rowA 1 0 3 + y_2356 4 * rowA 1 0 4 + y_2356 5 * rowA 1 0 5 + y_2356 6 * rowA 1 0 6 + y_2356 7 * rowA 1 0 7 + y_2356 8 * rowA 1 0 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 0 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_1 :
     y_2356 0 * rowA 1 1 0 + y_2356 1 * rowA 1 1 1 + y_2356 2 * rowA 1 1 2 + y_2356 3 * rowA 1 1 3 + y_2356 4 * rowA 1 1 4 + y_2356 5 * rowA 1 1 5 + y_2356 6 * rowA 1 1 6 + y_2356 7 * rowA 1 1 7 + y_2356 8 * rowA 1 1 8 ≤ db 1 1 := by
-  have hleft : y_2356 0 * rowA 1 1 0 + y_2356 1 * rowA 1 1 1 + y_2356 2 * rowA 1 1 2 + y_2356 3 * rowA 1 1 3 + y_2356 4 * rowA 1 1 4 + y_2356 5 * rowA 1 1 5 + y_2356 6 * rowA 1 1 6 + y_2356 7 * rowA 1 1 7 + y_2356 8 * rowA 1 1 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 1 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_2 :
     y_2356 0 * rowA 1 2 0 + y_2356 1 * rowA 1 2 1 + y_2356 2 * rowA 1 2 2 + y_2356 3 * rowA 1 2 3 + y_2356 4 * rowA 1 2 4 + y_2356 5 * rowA 1 2 5 + y_2356 6 * rowA 1 2 6 + y_2356 7 * rowA 1 2 7 + y_2356 8 * rowA 1 2 8 ≤ db 1 2 := by
-  have hleft : y_2356 0 * rowA 1 2 0 + y_2356 1 * rowA 1 2 1 + y_2356 2 * rowA 1 2 2 + y_2356 3 * rowA 1 2 3 + y_2356 4 * rowA 1 2 4 + y_2356 5 * rowA 1 2 5 + y_2356 6 * rowA 1 2 6 + y_2356 7 * rowA 1 2 7 + y_2356 8 * rowA 1 2 8 = (1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 2 = (1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_3 :
     y_2356 0 * rowA 1 3 0 + y_2356 1 * rowA 1 3 1 + y_2356 2 * rowA 1 3 2 + y_2356 3 * rowA 1 3 3 + y_2356 4 * rowA 1 3 4 + y_2356 5 * rowA 1 3 5 + y_2356 6 * rowA 1 3 6 + y_2356 7 * rowA 1 3 7 + y_2356 8 * rowA 1 3 8 ≤ db 1 3 := by
-  have hleft : y_2356 0 * rowA 1 3 0 + y_2356 1 * rowA 1 3 1 + y_2356 2 * rowA 1 3 2 + y_2356 3 * rowA 1 3 3 + y_2356 4 * rowA 1 3 4 + y_2356 5 * rowA 1 3 5 + y_2356 6 * rowA 1 3 6 + y_2356 7 * rowA 1 3 7 + y_2356 8 * rowA 1 3 8 = (1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 3 = (1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_4 :
     y_2356 0 * rowA 1 4 0 + y_2356 1 * rowA 1 4 1 + y_2356 2 * rowA 1 4 2 + y_2356 3 * rowA 1 4 3 + y_2356 4 * rowA 1 4 4 + y_2356 5 * rowA 1 4 5 + y_2356 6 * rowA 1 4 6 + y_2356 7 * rowA 1 4 7 + y_2356 8 * rowA 1 4 8 ≤ db 1 4 := by
-  have hleft : y_2356 0 * rowA 1 4 0 + y_2356 1 * rowA 1 4 1 + y_2356 2 * rowA 1 4 2 + y_2356 3 * rowA 1 4 3 + y_2356 4 * rowA 1 4 4 + y_2356 5 * rowA 1 4 5 + y_2356 6 * rowA 1 4 6 + y_2356 7 * rowA 1 4 7 + y_2356 8 * rowA 1 4 8 = (5 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 4 = (5 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_5 :
     y_2356 0 * rowA 1 5 0 + y_2356 1 * rowA 1 5 1 + y_2356 2 * rowA 1 5 2 + y_2356 3 * rowA 1 5 3 + y_2356 4 * rowA 1 5 4 + y_2356 5 * rowA 1 5 5 + y_2356 6 * rowA 1 5 6 + y_2356 7 * rowA 1 5 7 + y_2356 8 * rowA 1 5 8 ≤ db 1 5 := by
-  have hleft : y_2356 0 * rowA 1 5 0 + y_2356 1 * rowA 1 5 1 + y_2356 2 * rowA 1 5 2 + y_2356 3 * rowA 1 5 3 + y_2356 4 * rowA 1 5 4 + y_2356 5 * rowA 1 5 5 + y_2356 6 * rowA 1 5 6 + y_2356 7 * rowA 1 5 7 + y_2356 8 * rowA 1 5 8 = (7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 5 = (1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_6 :
     y_2356 0 * rowA 1 6 0 + y_2356 1 * rowA 1 6 1 + y_2356 2 * rowA 1 6 2 + y_2356 3 * rowA 1 6 3 + y_2356 4 * rowA 1 6 4 + y_2356 5 * rowA 1 6 5 + y_2356 6 * rowA 1 6 6 + y_2356 7 * rowA 1 6 7 + y_2356 8 * rowA 1 6 8 ≤ db 1 6 := by
-  have hleft : y_2356 0 * rowA 1 6 0 + y_2356 1 * rowA 1 6 1 + y_2356 2 * rowA 1 6 2 + y_2356 3 * rowA 1 6 3 + y_2356 4 * rowA 1 6 4 + y_2356 5 * rowA 1 6 5 + y_2356 6 * rowA 1 6 6 + y_2356 7 * rowA 1 6 7 + y_2356 8 * rowA 1 6 8 = (9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 6 = (9 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_7 :
     y_2356 0 * rowA 1 7 0 + y_2356 1 * rowA 1 7 1 + y_2356 2 * rowA 1 7 2 + y_2356 3 * rowA 1 7 3 + y_2356 4 * rowA 1 7 4 + y_2356 5 * rowA 1 7 5 + y_2356 6 * rowA 1 7 6 + y_2356 7 * rowA 1 7 7 + y_2356 8 * rowA 1 7 8 ≤ db 1 7 := by
-  have hleft : y_2356 0 * rowA 1 7 0 + y_2356 1 * rowA 1 7 1 + y_2356 2 * rowA 1 7 2 + y_2356 3 * rowA 1 7 3 + y_2356 4 * rowA 1 7 4 + y_2356 5 * rowA 1 7 5 + y_2356 6 * rowA 1 7 6 + y_2356 7 * rowA 1 7 7 + y_2356 8 * rowA 1 7 8 = (9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 7 = (3 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_8 :
     y_2356 0 * rowA 1 8 0 + y_2356 1 * rowA 1 8 1 + y_2356 2 * rowA 1 8 2 + y_2356 3 * rowA 1 8 3 + y_2356 4 * rowA 1 8 4 + y_2356 5 * rowA 1 8 5 + y_2356 6 * rowA 1 8 6 + y_2356 7 * rowA 1 8 7 + y_2356 8 * rowA 1 8 8 ≤ db 1 8 := by
-  have hleft : y_2356 0 * rowA 1 8 0 + y_2356 1 * rowA 1 8 1 + y_2356 2 * rowA 1 8 2 + y_2356 3 * rowA 1 8 3 + y_2356 4 * rowA 1 8 4 + y_2356 5 * rowA 1 8 5 + y_2356 6 * rowA 1 8 6 + y_2356 7 * rowA 1 8 7 + y_2356 8 * rowA 1 8 8 = (11 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 8 = (3 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_1_9 :
     y_2356 0 * rowA 1 9 0 + y_2356 1 * rowA 1 9 1 + y_2356 2 * rowA 1 9 2 + y_2356 3 * rowA 1 9 3 + y_2356 4 * rowA 1 9 4 + y_2356 5 * rowA 1 9 5 + y_2356 6 * rowA 1 9 6 + y_2356 7 * rowA 1 9 7 + y_2356 8 * rowA 1 9 8 ≤ db 1 9 := by
-  have hleft : y_2356 0 * rowA 1 9 0 + y_2356 1 * rowA 1 9 1 + y_2356 2 * rowA 1 9 2 + y_2356 3 * rowA 1 9 3 + y_2356 4 * rowA 1 9 4 + y_2356 5 * rowA 1 9 5 + y_2356 6 * rowA 1 9 6 + y_2356 7 * rowA 1 9 7 + y_2356 8 * rowA 1 9 8 = (1 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 1 9 = (1 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_0 :
     y_2356 0 * rowA 2 0 0 + y_2356 1 * rowA 2 0 1 + y_2356 2 * rowA 2 0 2 + y_2356 3 * rowA 2 0 3 + y_2356 4 * rowA 2 0 4 + y_2356 5 * rowA 2 0 5 + y_2356 6 * rowA 2 0 6 + y_2356 7 * rowA 2 0 7 + y_2356 8 * rowA 2 0 8 ≤ db 2 0 := by
-  have hleft : y_2356 0 * rowA 2 0 0 + y_2356 1 * rowA 2 0 1 + y_2356 2 * rowA 2 0 2 + y_2356 3 * rowA 2 0 3 + y_2356 4 * rowA 2 0 4 + y_2356 5 * rowA 2 0 5 + y_2356 6 * rowA 2 0 6 + y_2356 7 * rowA 2 0 7 + y_2356 8 * rowA 2 0 8 = (-1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 0 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_1 :
     y_2356 0 * rowA 2 1 0 + y_2356 1 * rowA 2 1 1 + y_2356 2 * rowA 2 1 2 + y_2356 3 * rowA 2 1 3 + y_2356 4 * rowA 2 1 4 + y_2356 5 * rowA 2 1 5 + y_2356 6 * rowA 2 1 6 + y_2356 7 * rowA 2 1 7 + y_2356 8 * rowA 2 1 8 ≤ db 2 1 := by
-  have hleft : y_2356 0 * rowA 2 1 0 + y_2356 1 * rowA 2 1 1 + y_2356 2 * rowA 2 1 2 + y_2356 3 * rowA 2 1 3 + y_2356 4 * rowA 2 1 4 + y_2356 5 * rowA 2 1 5 + y_2356 6 * rowA 2 1 6 + y_2356 7 * rowA 2 1 7 + y_2356 8 * rowA 2 1 8 = (-1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 1 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_2 :
     y_2356 0 * rowA 2 2 0 + y_2356 1 * rowA 2 2 1 + y_2356 2 * rowA 2 2 2 + y_2356 3 * rowA 2 2 3 + y_2356 4 * rowA 2 2 4 + y_2356 5 * rowA 2 2 5 + y_2356 6 * rowA 2 2 6 + y_2356 7 * rowA 2 2 7 + y_2356 8 * rowA 2 2 8 ≤ db 2 2 := by
-  have hleft : y_2356 0 * rowA 2 2 0 + y_2356 1 * rowA 2 2 1 + y_2356 2 * rowA 2 2 2 + y_2356 3 * rowA 2 2 3 + y_2356 4 * rowA 2 2 4 + y_2356 5 * rowA 2 2 5 + y_2356 6 * rowA 2 2 6 + y_2356 7 * rowA 2 2 7 + y_2356 8 * rowA 2 2 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 2 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_3 :
     y_2356 0 * rowA 2 3 0 + y_2356 1 * rowA 2 3 1 + y_2356 2 * rowA 2 3 2 + y_2356 3 * rowA 2 3 3 + y_2356 4 * rowA 2 3 4 + y_2356 5 * rowA 2 3 5 + y_2356 6 * rowA 2 3 6 + y_2356 7 * rowA 2 3 7 + y_2356 8 * rowA 2 3 8 ≤ db 2 3 := by
-  have hleft : y_2356 0 * rowA 2 3 0 + y_2356 1 * rowA 2 3 1 + y_2356 2 * rowA 2 3 2 + y_2356 3 * rowA 2 3 3 + y_2356 4 * rowA 2 3 4 + y_2356 5 * rowA 2 3 5 + y_2356 6 * rowA 2 3 6 + y_2356 7 * rowA 2 3 7 + y_2356 8 * rowA 2 3 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 3 = (1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_4 :
     y_2356 0 * rowA 2 4 0 + y_2356 1 * rowA 2 4 1 + y_2356 2 * rowA 2 4 2 + y_2356 3 * rowA 2 4 3 + y_2356 4 * rowA 2 4 4 + y_2356 5 * rowA 2 4 5 + y_2356 6 * rowA 2 4 6 + y_2356 7 * rowA 2 4 7 + y_2356 8 * rowA 2 4 8 ≤ db 2 4 := by
-  have hleft : y_2356 0 * rowA 2 4 0 + y_2356 1 * rowA 2 4 1 + y_2356 2 * rowA 2 4 2 + y_2356 3 * rowA 2 4 3 + y_2356 4 * rowA 2 4 4 + y_2356 5 * rowA 2 4 5 + y_2356 6 * rowA 2 4 6 + y_2356 7 * rowA 2 4 7 + y_2356 8 * rowA 2 4 8 = (1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 4 = (5 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_5 :
     y_2356 0 * rowA 2 5 0 + y_2356 1 * rowA 2 5 1 + y_2356 2 * rowA 2 5 2 + y_2356 3 * rowA 2 5 3 + y_2356 4 * rowA 2 5 4 + y_2356 5 * rowA 2 5 5 + y_2356 6 * rowA 2 5 6 + y_2356 7 * rowA 2 5 7 + y_2356 8 * rowA 2 5 8 ≤ db 2 5 := by
-  have hleft : y_2356 0 * rowA 2 5 0 + y_2356 1 * rowA 2 5 1 + y_2356 2 * rowA 2 5 2 + y_2356 3 * rowA 2 5 3 + y_2356 4 * rowA 2 5 4 + y_2356 5 * rowA 2 5 5 + y_2356 6 * rowA 2 5 6 + y_2356 7 * rowA 2 5 7 + y_2356 8 * rowA 2 5 8 = (3 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 5 = (1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_6 :
     y_2356 0 * rowA 2 6 0 + y_2356 1 * rowA 2 6 1 + y_2356 2 * rowA 2 6 2 + y_2356 3 * rowA 2 6 3 + y_2356 4 * rowA 2 6 4 + y_2356 5 * rowA 2 6 5 + y_2356 6 * rowA 2 6 6 + y_2356 7 * rowA 2 6 7 + y_2356 8 * rowA 2 6 8 ≤ db 2 6 := by
-  have hleft : y_2356 0 * rowA 2 6 0 + y_2356 1 * rowA 2 6 1 + y_2356 2 * rowA 2 6 2 + y_2356 3 * rowA 2 6 3 + y_2356 4 * rowA 2 6 4 + y_2356 5 * rowA 2 6 5 + y_2356 6 * rowA 2 6 6 + y_2356 7 * rowA 2 6 7 + y_2356 8 * rowA 2 6 8 = (1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 6 = (9 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_7 :
     y_2356 0 * rowA 2 7 0 + y_2356 1 * rowA 2 7 1 + y_2356 2 * rowA 2 7 2 + y_2356 3 * rowA 2 7 3 + y_2356 4 * rowA 2 7 4 + y_2356 5 * rowA 2 7 5 + y_2356 6 * rowA 2 7 6 + y_2356 7 * rowA 2 7 7 + y_2356 8 * rowA 2 7 8 ≤ db 2 7 := by
-  have hleft : y_2356 0 * rowA 2 7 0 + y_2356 1 * rowA 2 7 1 + y_2356 2 * rowA 2 7 2 + y_2356 3 * rowA 2 7 3 + y_2356 4 * rowA 2 7 4 + y_2356 5 * rowA 2 7 5 + y_2356 6 * rowA 2 7 6 + y_2356 7 * rowA 2 7 7 + y_2356 8 * rowA 2 7 8 = (1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 7 = (3 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_8 :
     y_2356 0 * rowA 2 8 0 + y_2356 1 * rowA 2 8 1 + y_2356 2 * rowA 2 8 2 + y_2356 3 * rowA 2 8 3 + y_2356 4 * rowA 2 8 4 + y_2356 5 * rowA 2 8 5 + y_2356 6 * rowA 2 8 6 + y_2356 7 * rowA 2 8 7 + y_2356 8 * rowA 2 8 8 ≤ db 2 8 := by
-  have hleft : y_2356 0 * rowA 2 8 0 + y_2356 1 * rowA 2 8 1 + y_2356 2 * rowA 2 8 2 + y_2356 3 * rowA 2 8 3 + y_2356 4 * rowA 2 8 4 + y_2356 5 * rowA 2 8 5 + y_2356 6 * rowA 2 8 6 + y_2356 7 * rowA 2 8 7 + y_2356 8 * rowA 2 8 8 = (5 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 8 = (3 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_2_9 :
     y_2356 0 * rowA 2 9 0 + y_2356 1 * rowA 2 9 1 + y_2356 2 * rowA 2 9 2 + y_2356 3 * rowA 2 9 3 + y_2356 4 * rowA 2 9 4 + y_2356 5 * rowA 2 9 5 + y_2356 6 * rowA 2 9 6 + y_2356 7 * rowA 2 9 7 + y_2356 8 * rowA 2 9 8 ≤ db 2 9 := by
-  have hleft : y_2356 0 * rowA 2 9 0 + y_2356 1 * rowA 2 9 1 + y_2356 2 * rowA 2 9 2 + y_2356 3 * rowA 2 9 3 + y_2356 4 * rowA 2 9 4 + y_2356 5 * rowA 2 9 5 + y_2356 6 * rowA 2 9 6 + y_2356 7 * rowA 2 9 7 + y_2356 8 * rowA 2 9 8 = (15 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 2 9 = (1 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_0 :
     y_2356 0 * rowA 3 0 0 + y_2356 1 * rowA 3 0 1 + y_2356 2 * rowA 3 0 2 + y_2356 3 * rowA 3 0 3 + y_2356 4 * rowA 3 0 4 + y_2356 5 * rowA 3 0 5 + y_2356 6 * rowA 3 0 6 + y_2356 7 * rowA 3 0 7 + y_2356 8 * rowA 3 0 8 ≤ db 3 0 := by
-  have hleft : y_2356 0 * rowA 3 0 0 + y_2356 1 * rowA 3 0 1 + y_2356 2 * rowA 3 0 2 + y_2356 3 * rowA 3 0 3 + y_2356 4 * rowA 3 0 4 + y_2356 5 * rowA 3 0 5 + y_2356 6 * rowA 3 0 6 + y_2356 7 * rowA 3 0 7 + y_2356 8 * rowA 3 0 8 = (-1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 0 = (-1 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_1 :
     y_2356 0 * rowA 3 1 0 + y_2356 1 * rowA 3 1 1 + y_2356 2 * rowA 3 1 2 + y_2356 3 * rowA 3 1 3 + y_2356 4 * rowA 3 1 4 + y_2356 5 * rowA 3 1 5 + y_2356 6 * rowA 3 1 6 + y_2356 7 * rowA 3 1 7 + y_2356 8 * rowA 3 1 8 ≤ db 3 1 := by
-  have hleft : y_2356 0 * rowA 3 1 0 + y_2356 1 * rowA 3 1 1 + y_2356 2 * rowA 3 1 2 + y_2356 3 * rowA 3 1 3 + y_2356 4 * rowA 3 1 4 + y_2356 5 * rowA 3 1 5 + y_2356 6 * rowA 3 1 6 + y_2356 7 * rowA 3 1 7 + y_2356 8 * rowA 3 1 8 = (-1 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 1 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_2 :
     y_2356 0 * rowA 3 2 0 + y_2356 1 * rowA 3 2 1 + y_2356 2 * rowA 3 2 2 + y_2356 3 * rowA 3 2 3 + y_2356 4 * rowA 3 2 4 + y_2356 5 * rowA 3 2 5 + y_2356 6 * rowA 3 2 6 + y_2356 7 * rowA 3 2 7 + y_2356 8 * rowA 3 2 8 ≤ db 3 2 := by
-  have hleft : y_2356 0 * rowA 3 2 0 + y_2356 1 * rowA 3 2 1 + y_2356 2 * rowA 3 2 2 + y_2356 3 * rowA 3 2 3 + y_2356 4 * rowA 3 2 4 + y_2356 5 * rowA 3 2 5 + y_2356 6 * rowA 3 2 6 + y_2356 7 * rowA 3 2 7 + y_2356 8 * rowA 3 2 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 2 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_3 :
     y_2356 0 * rowA 3 3 0 + y_2356 1 * rowA 3 3 1 + y_2356 2 * rowA 3 3 2 + y_2356 3 * rowA 3 3 3 + y_2356 4 * rowA 3 3 4 + y_2356 5 * rowA 3 3 5 + y_2356 6 * rowA 3 3 6 + y_2356 7 * rowA 3 3 7 + y_2356 8 * rowA 3 3 8 ≤ db 3 3 := by
-  have hleft : y_2356 0 * rowA 3 3 0 + y_2356 1 * rowA 3 3 1 + y_2356 2 * rowA 3 3 2 + y_2356 3 * rowA 3 3 3 + y_2356 4 * rowA 3 3 4 + y_2356 5 * rowA 3 3 5 + y_2356 6 * rowA 3 3 6 + y_2356 7 * rowA 3 3 7 + y_2356 8 * rowA 3 3 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 3 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_4 :
     y_2356 0 * rowA 3 4 0 + y_2356 1 * rowA 3 4 1 + y_2356 2 * rowA 3 4 2 + y_2356 3 * rowA 3 4 3 + y_2356 4 * rowA 3 4 4 + y_2356 5 * rowA 3 4 5 + y_2356 6 * rowA 3 4 6 + y_2356 7 * rowA 3 4 7 + y_2356 8 * rowA 3 4 8 ≤ db 3 4 := by
-  have hleft : y_2356 0 * rowA 3 4 0 + y_2356 1 * rowA 3 4 1 + y_2356 2 * rowA 3 4 2 + y_2356 3 * rowA 3 4 3 + y_2356 4 * rowA 3 4 4 + y_2356 5 * rowA 3 4 5 + y_2356 6 * rowA 3 4 6 + y_2356 7 * rowA 3 4 7 + y_2356 8 * rowA 3 4 8 = (1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 4 = (1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_5 :
     y_2356 0 * rowA 3 5 0 + y_2356 1 * rowA 3 5 1 + y_2356 2 * rowA 3 5 2 + y_2356 3 * rowA 3 5 3 + y_2356 4 * rowA 3 5 4 + y_2356 5 * rowA 3 5 5 + y_2356 6 * rowA 3 5 6 + y_2356 7 * rowA 3 5 7 + y_2356 8 * rowA 3 5 8 ≤ db 3 5 := by
-  have hleft : y_2356 0 * rowA 3 5 0 + y_2356 1 * rowA 3 5 1 + y_2356 2 * rowA 3 5 2 + y_2356 3 * rowA 3 5 3 + y_2356 4 * rowA 3 5 4 + y_2356 5 * rowA 3 5 5 + y_2356 6 * rowA 3 5 6 + y_2356 7 * rowA 3 5 7 + y_2356 8 * rowA 3 5 8 = (3 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 5 = (7 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_6 :
     y_2356 0 * rowA 3 6 0 + y_2356 1 * rowA 3 6 1 + y_2356 2 * rowA 3 6 2 + y_2356 3 * rowA 3 6 3 + y_2356 4 * rowA 3 6 4 + y_2356 5 * rowA 3 6 5 + y_2356 6 * rowA 3 6 6 + y_2356 7 * rowA 3 6 7 + y_2356 8 * rowA 3 6 8 ≤ db 3 6 := by
-  have hleft : y_2356 0 * rowA 3 6 0 + y_2356 1 * rowA 3 6 1 + y_2356 2 * rowA 3 6 2 + y_2356 3 * rowA 3 6 3 + y_2356 4 * rowA 3 6 4 + y_2356 5 * rowA 3 6 5 + y_2356 6 * rowA 3 6 6 + y_2356 7 * rowA 3 6 7 + y_2356 8 * rowA 3 6 8 = (1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 6 = (1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_7 :
     y_2356 0 * rowA 3 7 0 + y_2356 1 * rowA 3 7 1 + y_2356 2 * rowA 3 7 2 + y_2356 3 * rowA 3 7 3 + y_2356 4 * rowA 3 7 4 + y_2356 5 * rowA 3 7 5 + y_2356 6 * rowA 3 7 6 + y_2356 7 * rowA 3 7 7 + y_2356 8 * rowA 3 7 8 ≤ db 3 7 := by
-  have hleft : y_2356 0 * rowA 3 7 0 + y_2356 1 * rowA 3 7 1 + y_2356 2 * rowA 3 7 2 + y_2356 3 * rowA 3 7 3 + y_2356 4 * rowA 3 7 4 + y_2356 5 * rowA 3 7 5 + y_2356 6 * rowA 3 7 6 + y_2356 7 * rowA 3 7 7 + y_2356 8 * rowA 3 7 8 = (1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 7 = (5 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_8 :
     y_2356 0 * rowA 3 8 0 + y_2356 1 * rowA 3 8 1 + y_2356 2 * rowA 3 8 2 + y_2356 3 * rowA 3 8 3 + y_2356 4 * rowA 3 8 4 + y_2356 5 * rowA 3 8 5 + y_2356 6 * rowA 3 8 6 + y_2356 7 * rowA 3 8 7 + y_2356 8 * rowA 3 8 8 ≤ db 3 8 := by
-  have hleft : y_2356 0 * rowA 3 8 0 + y_2356 1 * rowA 3 8 1 + y_2356 2 * rowA 3 8 2 + y_2356 3 * rowA 3 8 3 + y_2356 4 * rowA 3 8 4 + y_2356 5 * rowA 3 8 5 + y_2356 6 * rowA 3 8 6 + y_2356 7 * rowA 3 8 7 + y_2356 8 * rowA 3 8 8 = (5 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 8 = (11 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_3_9 :
     y_2356 0 * rowA 3 9 0 + y_2356 1 * rowA 3 9 1 + y_2356 2 * rowA 3 9 2 + y_2356 3 * rowA 3 9 3 + y_2356 4 * rowA 3 9 4 + y_2356 5 * rowA 3 9 5 + y_2356 6 * rowA 3 9 6 + y_2356 7 * rowA 3 9 7 + y_2356 8 * rowA 3 9 8 ≤ db 3 9 := by
-  have hleft : y_2356 0 * rowA 3 9 0 + y_2356 1 * rowA 3 9 1 + y_2356 2 * rowA 3 9 2 + y_2356 3 * rowA 3 9 3 + y_2356 4 * rowA 3 9 4 + y_2356 5 * rowA 3 9 5 + y_2356 6 * rowA 3 9 6 + y_2356 7 * rowA 3 9 7 + y_2356 8 * rowA 3 9 8 = (15 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 3 9 = (15 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_0 :
     y_2356 0 * rowA 4 0 0 + y_2356 1 * rowA 4 0 1 + y_2356 2 * rowA 4 0 2 + y_2356 3 * rowA 4 0 3 + y_2356 4 * rowA 4 0 4 + y_2356 5 * rowA 4 0 5 + y_2356 6 * rowA 4 0 6 + y_2356 7 * rowA 4 0 7 + y_2356 8 * rowA 4 0 8 ≤ db 4 0 := by
-  have hleft : y_2356 0 * rowA 4 0 0 + y_2356 1 * rowA 4 0 1 + y_2356 2 * rowA 4 0 2 + y_2356 3 * rowA 4 0 3 + y_2356 4 * rowA 4 0 4 + y_2356 5 * rowA 4 0 5 + y_2356 6 * rowA 4 0 6 + y_2356 7 * rowA 4 0 7 + y_2356 8 * rowA 4 0 8 = (-5 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 0 = (-1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_1 :
     y_2356 0 * rowA 4 1 0 + y_2356 1 * rowA 4 1 1 + y_2356 2 * rowA 4 1 2 + y_2356 3 * rowA 4 1 3 + y_2356 4 * rowA 4 1 4 + y_2356 5 * rowA 4 1 5 + y_2356 6 * rowA 4 1 6 + y_2356 7 * rowA 4 1 7 + y_2356 8 * rowA 4 1 8 ≤ db 4 1 := by
-  have hleft : y_2356 0 * rowA 4 1 0 + y_2356 1 * rowA 4 1 1 + y_2356 2 * rowA 4 1 2 + y_2356 3 * rowA 4 1 3 + y_2356 4 * rowA 4 1 4 + y_2356 5 * rowA 4 1 5 + y_2356 6 * rowA 4 1 6 + y_2356 7 * rowA 4 1 7 + y_2356 8 * rowA 4 1 8 = (-5 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 1 = (-1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_2 :
     y_2356 0 * rowA 4 2 0 + y_2356 1 * rowA 4 2 1 + y_2356 2 * rowA 4 2 2 + y_2356 3 * rowA 4 2 3 + y_2356 4 * rowA 4 2 4 + y_2356 5 * rowA 4 2 5 + y_2356 6 * rowA 4 2 6 + y_2356 7 * rowA 4 2 7 + y_2356 8 * rowA 4 2 8 ≤ db 4 2 := by
-  have hleft : y_2356 0 * rowA 4 2 0 + y_2356 1 * rowA 4 2 1 + y_2356 2 * rowA 4 2 2 + y_2356 3 * rowA 4 2 3 + y_2356 4 * rowA 4 2 4 + y_2356 5 * rowA 4 2 5 + y_2356 6 * rowA 4 2 6 + y_2356 7 * rowA 4 2 7 + y_2356 8 * rowA 4 2 8 = (-1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 2 = (-1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_3 :
     y_2356 0 * rowA 4 3 0 + y_2356 1 * rowA 4 3 1 + y_2356 2 * rowA 4 3 2 + y_2356 3 * rowA 4 3 3 + y_2356 4 * rowA 4 3 4 + y_2356 5 * rowA 4 3 5 + y_2356 6 * rowA 4 3 6 + y_2356 7 * rowA 4 3 7 + y_2356 8 * rowA 4 3 8 ≤ db 4 3 := by
-  have hleft : y_2356 0 * rowA 4 3 0 + y_2356 1 * rowA 4 3 1 + y_2356 2 * rowA 4 3 2 + y_2356 3 * rowA 4 3 3 + y_2356 4 * rowA 4 3 4 + y_2356 5 * rowA 4 3 5 + y_2356 6 * rowA 4 3 6 + y_2356 7 * rowA 4 3 7 + y_2356 8 * rowA 4 3 8 = (-1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 3 = (-1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_4 :
     y_2356 0 * rowA 4 4 0 + y_2356 1 * rowA 4 4 1 + y_2356 2 * rowA 4 4 2 + y_2356 3 * rowA 4 4 3 + y_2356 4 * rowA 4 4 4 + y_2356 5 * rowA 4 4 5 + y_2356 6 * rowA 4 4 6 + y_2356 7 * rowA 4 4 7 + y_2356 8 * rowA 4 4 8 ≤ db 4 4 := by
-  have hleft : y_2356 0 * rowA 4 4 0 + y_2356 1 * rowA 4 4 1 + y_2356 2 * rowA 4 4 2 + y_2356 3 * rowA 4 4 3 + y_2356 4 * rowA 4 4 4 + y_2356 5 * rowA 4 4 5 + y_2356 6 * rowA 4 4 6 + y_2356 7 * rowA 4 4 7 + y_2356 8 * rowA 4 4 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 4 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_5 :
     y_2356 0 * rowA 4 5 0 + y_2356 1 * rowA 4 5 1 + y_2356 2 * rowA 4 5 2 + y_2356 3 * rowA 4 5 3 + y_2356 4 * rowA 4 5 4 + y_2356 5 * rowA 4 5 5 + y_2356 6 * rowA 4 5 6 + y_2356 7 * rowA 4 5 7 + y_2356 8 * rowA 4 5 8 ≤ db 4 5 := by
-  have hleft : y_2356 0 * rowA 4 5 0 + y_2356 1 * rowA 4 5 1 + y_2356 2 * rowA 4 5 2 + y_2356 3 * rowA 4 5 3 + y_2356 4 * rowA 4 5 4 + y_2356 5 * rowA 4 5 5 + y_2356 6 * rowA 4 5 6 + y_2356 7 * rowA 4 5 7 + y_2356 8 * rowA 4 5 8 = (1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 5 = (1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_6 :
     y_2356 0 * rowA 4 6 0 + y_2356 1 * rowA 4 6 1 + y_2356 2 * rowA 4 6 2 + y_2356 3 * rowA 4 6 3 + y_2356 4 * rowA 4 6 4 + y_2356 5 * rowA 4 6 5 + y_2356 6 * rowA 4 6 6 + y_2356 7 * rowA 4 6 7 + y_2356 8 * rowA 4 6 8 ≤ db 4 6 := by
-  have hleft : y_2356 0 * rowA 4 6 0 + y_2356 1 * rowA 4 6 1 + y_2356 2 * rowA 4 6 2 + y_2356 3 * rowA 4 6 3 + y_2356 4 * rowA 4 6 4 + y_2356 5 * rowA 4 6 5 + y_2356 6 * rowA 4 6 6 + y_2356 7 * rowA 4 6 7 + y_2356 8 * rowA 4 6 8 = (1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 6 = (5 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_7 :
     y_2356 0 * rowA 4 7 0 + y_2356 1 * rowA 4 7 1 + y_2356 2 * rowA 4 7 2 + y_2356 3 * rowA 4 7 3 + y_2356 4 * rowA 4 7 4 + y_2356 5 * rowA 4 7 5 + y_2356 6 * rowA 4 7 6 + y_2356 7 * rowA 4 7 7 + y_2356 8 * rowA 4 7 8 ≤ db 4 7 := by
-  have hleft : y_2356 0 * rowA 4 7 0 + y_2356 1 * rowA 4 7 1 + y_2356 2 * rowA 4 7 2 + y_2356 3 * rowA 4 7 3 + y_2356 4 * rowA 4 7 4 + y_2356 5 * rowA 4 7 5 + y_2356 6 * rowA 4 7 6 + y_2356 7 * rowA 4 7 7 + y_2356 8 * rowA 4 7 8 = (1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 7 = (1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_8 :
     y_2356 0 * rowA 4 8 0 + y_2356 1 * rowA 4 8 1 + y_2356 2 * rowA 4 8 2 + y_2356 3 * rowA 4 8 3 + y_2356 4 * rowA 4 8 4 + y_2356 5 * rowA 4 8 5 + y_2356 6 * rowA 4 8 6 + y_2356 7 * rowA 4 8 7 + y_2356 8 * rowA 4 8 8 ≤ db 4 8 := by
-  have hleft : y_2356 0 * rowA 4 8 0 + y_2356 1 * rowA 4 8 1 + y_2356 2 * rowA 4 8 2 + y_2356 3 * rowA 4 8 3 + y_2356 4 * rowA 4 8 4 + y_2356 5 * rowA 4 8 5 + y_2356 6 * rowA 4 8 6 + y_2356 7 * rowA 4 8 7 + y_2356 8 * rowA 4 8 8 = (3 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 8 = (1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_4_9 :
     y_2356 0 * rowA 4 9 0 + y_2356 1 * rowA 4 9 1 + y_2356 2 * rowA 4 9 2 + y_2356 3 * rowA 4 9 3 + y_2356 4 * rowA 4 9 4 + y_2356 5 * rowA 4 9 5 + y_2356 6 * rowA 4 9 6 + y_2356 7 * rowA 4 9 7 + y_2356 8 * rowA 4 9 8 ≤ db 4 9 := by
-  have hleft : y_2356 0 * rowA 4 9 0 + y_2356 1 * rowA 4 9 1 + y_2356 2 * rowA 4 9 2 + y_2356 3 * rowA 4 9 3 + y_2356 4 * rowA 4 9 4 + y_2356 5 * rowA 4 9 5 + y_2356 6 * rowA 4 9 6 + y_2356 7 * rowA 4 9 7 + y_2356 8 * rowA 4 9 8 = (11 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 4 9 = (3 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_0 :
     y_2356 0 * rowA 5 0 0 + y_2356 1 * rowA 5 0 1 + y_2356 2 * rowA 5 0 2 + y_2356 3 * rowA 5 0 3 + y_2356 4 * rowA 5 0 4 + y_2356 5 * rowA 5 0 5 + y_2356 6 * rowA 5 0 6 + y_2356 7 * rowA 5 0 7 + y_2356 8 * rowA 5 0 8 ≤ db 5 0 := by
-  have hleft : y_2356 0 * rowA 5 0 0 + y_2356 1 * rowA 5 0 1 + y_2356 2 * rowA 5 0 2 + y_2356 3 * rowA 5 0 3 + y_2356 4 * rowA 5 0 4 + y_2356 5 * rowA 5 0 5 + y_2356 6 * rowA 5 0 6 + y_2356 7 * rowA 5 0 7 + y_2356 8 * rowA 5 0 8 = (-7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 0 = (-7 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_1 :
     y_2356 0 * rowA 5 1 0 + y_2356 1 * rowA 5 1 1 + y_2356 2 * rowA 5 1 2 + y_2356 3 * rowA 5 1 3 + y_2356 4 * rowA 5 1 4 + y_2356 5 * rowA 5 1 5 + y_2356 6 * rowA 5 1 6 + y_2356 7 * rowA 5 1 7 + y_2356 8 * rowA 5 1 8 ≤ db 5 1 := by
-  have hleft : y_2356 0 * rowA 5 1 0 + y_2356 1 * rowA 5 1 1 + y_2356 2 * rowA 5 1 2 + y_2356 3 * rowA 5 1 3 + y_2356 4 * rowA 5 1 4 + y_2356 5 * rowA 5 1 5 + y_2356 6 * rowA 5 1 6 + y_2356 7 * rowA 5 1 7 + y_2356 8 * rowA 5 1 8 = (-7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 1 = (-3 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_2 :
     y_2356 0 * rowA 5 2 0 + y_2356 1 * rowA 5 2 1 + y_2356 2 * rowA 5 2 2 + y_2356 3 * rowA 5 2 3 + y_2356 4 * rowA 5 2 4 + y_2356 5 * rowA 5 2 5 + y_2356 6 * rowA 5 2 6 + y_2356 7 * rowA 5 2 7 + y_2356 8 * rowA 5 2 8 ≤ db 5 2 := by
-  have hleft : y_2356 0 * rowA 5 2 0 + y_2356 1 * rowA 5 2 1 + y_2356 2 * rowA 5 2 2 + y_2356 3 * rowA 5 2 3 + y_2356 4 * rowA 5 2 4 + y_2356 5 * rowA 5 2 5 + y_2356 6 * rowA 5 2 6 + y_2356 7 * rowA 5 2 7 + y_2356 8 * rowA 5 2 8 = (-3 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 2 = (-3 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_3 :
     y_2356 0 * rowA 5 3 0 + y_2356 1 * rowA 5 3 1 + y_2356 2 * rowA 5 3 2 + y_2356 3 * rowA 5 3 3 + y_2356 4 * rowA 5 3 4 + y_2356 5 * rowA 5 3 5 + y_2356 6 * rowA 5 3 6 + y_2356 7 * rowA 5 3 7 + y_2356 8 * rowA 5 3 8 ≤ db 5 3 := by
-  have hleft : y_2356 0 * rowA 5 3 0 + y_2356 1 * rowA 5 3 1 + y_2356 2 * rowA 5 3 2 + y_2356 3 * rowA 5 3 3 + y_2356 4 * rowA 5 3 4 + y_2356 5 * rowA 5 3 5 + y_2356 6 * rowA 5 3 6 + y_2356 7 * rowA 5 3 7 + y_2356 8 * rowA 5 3 8 = (-3 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 3 = (-3 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_4 :
     y_2356 0 * rowA 5 4 0 + y_2356 1 * rowA 5 4 1 + y_2356 2 * rowA 5 4 2 + y_2356 3 * rowA 5 4 3 + y_2356 4 * rowA 5 4 4 + y_2356 5 * rowA 5 4 5 + y_2356 6 * rowA 5 4 6 + y_2356 7 * rowA 5 4 7 + y_2356 8 * rowA 5 4 8 ≤ db 5 4 := by
-  have hleft : y_2356 0 * rowA 5 4 0 + y_2356 1 * rowA 5 4 1 + y_2356 2 * rowA 5 4 2 + y_2356 3 * rowA 5 4 3 + y_2356 4 * rowA 5 4 4 + y_2356 5 * rowA 5 4 5 + y_2356 6 * rowA 5 4 6 + y_2356 7 * rowA 5 4 7 + y_2356 8 * rowA 5 4 8 = (-1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 4 = (-1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_5 :
     y_2356 0 * rowA 5 5 0 + y_2356 1 * rowA 5 5 1 + y_2356 2 * rowA 5 5 2 + y_2356 3 * rowA 5 5 3 + y_2356 4 * rowA 5 5 4 + y_2356 5 * rowA 5 5 5 + y_2356 6 * rowA 5 5 6 + y_2356 7 * rowA 5 5 7 + y_2356 8 * rowA 5 5 8 ≤ db 5 5 := by
-  have hleft : y_2356 0 * rowA 5 5 0 + y_2356 1 * rowA 5 5 1 + y_2356 2 * rowA 5 5 2 + y_2356 3 * rowA 5 5 3 + y_2356 4 * rowA 5 5 4 + y_2356 5 * rowA 5 5 5 + y_2356 6 * rowA 5 5 6 + y_2356 7 * rowA 5 5 7 + y_2356 8 * rowA 5 5 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 5 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_6 :
     y_2356 0 * rowA 5 6 0 + y_2356 1 * rowA 5 6 1 + y_2356 2 * rowA 5 6 2 + y_2356 3 * rowA 5 6 3 + y_2356 4 * rowA 5 6 4 + y_2356 5 * rowA 5 6 5 + y_2356 6 * rowA 5 6 6 + y_2356 7 * rowA 5 6 7 + y_2356 8 * rowA 5 6 8 ≤ db 5 6 := by
-  have hleft : y_2356 0 * rowA 5 6 0 + y_2356 1 * rowA 5 6 1 + y_2356 2 * rowA 5 6 2 + y_2356 3 * rowA 5 6 3 + y_2356 4 * rowA 5 6 4 + y_2356 5 * rowA 5 6 5 + y_2356 6 * rowA 5 6 6 + y_2356 7 * rowA 5 6 7 + y_2356 8 * rowA 5 6 8 = (1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 6 = (1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_7 :
     y_2356 0 * rowA 5 7 0 + y_2356 1 * rowA 5 7 1 + y_2356 2 * rowA 5 7 2 + y_2356 3 * rowA 5 7 3 + y_2356 4 * rowA 5 7 4 + y_2356 5 * rowA 5 7 5 + y_2356 6 * rowA 5 7 6 + y_2356 7 * rowA 5 7 7 + y_2356 8 * rowA 5 7 8 ≤ db 5 7 := by
-  have hleft : y_2356 0 * rowA 5 7 0 + y_2356 1 * rowA 5 7 1 + y_2356 2 * rowA 5 7 2 + y_2356 3 * rowA 5 7 3 + y_2356 4 * rowA 5 7 4 + y_2356 5 * rowA 5 7 5 + y_2356 6 * rowA 5 7 6 + y_2356 7 * rowA 5 7 7 + y_2356 8 * rowA 5 7 8 = (1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 7 = (1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_8 :
     y_2356 0 * rowA 5 8 0 + y_2356 1 * rowA 5 8 1 + y_2356 2 * rowA 5 8 2 + y_2356 3 * rowA 5 8 3 + y_2356 4 * rowA 5 8 4 + y_2356 5 * rowA 5 8 5 + y_2356 6 * rowA 5 8 6 + y_2356 7 * rowA 5 8 7 + y_2356 8 * rowA 5 8 8 ≤ db 5 8 := by
-  have hleft : y_2356 0 * rowA 5 8 0 + y_2356 1 * rowA 5 8 1 + y_2356 2 * rowA 5 8 2 + y_2356 3 * rowA 5 8 3 + y_2356 4 * rowA 5 8 4 + y_2356 5 * rowA 5 8 5 + y_2356 6 * rowA 5 8 6 + y_2356 7 * rowA 5 8 7 + y_2356 8 * rowA 5 8 8 = (1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 8 = (1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_5_9 :
     y_2356 0 * rowA 5 9 0 + y_2356 1 * rowA 5 9 1 + y_2356 2 * rowA 5 9 2 + y_2356 3 * rowA 5 9 3 + y_2356 4 * rowA 5 9 4 + y_2356 5 * rowA 5 9 5 + y_2356 6 * rowA 5 9 6 + y_2356 7 * rowA 5 9 7 + y_2356 8 * rowA 5 9 8 ≤ db 5 9 := by
-  have hleft : y_2356 0 * rowA 5 9 0 + y_2356 1 * rowA 5 9 1 + y_2356 2 * rowA 5 9 2 + y_2356 3 * rowA 5 9 3 + y_2356 4 * rowA 5 9 4 + y_2356 5 * rowA 5 9 5 + y_2356 6 * rowA 5 9 6 + y_2356 7 * rowA 5 9 7 + y_2356 8 * rowA 5 9 8 = (9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 5 9 = (9 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_0 :
     y_2356 0 * rowA 6 0 0 + y_2356 1 * rowA 6 0 1 + y_2356 2 * rowA 6 0 2 + y_2356 3 * rowA 6 0 3 + y_2356 4 * rowA 6 0 4 + y_2356 5 * rowA 6 0 5 + y_2356 6 * rowA 6 0 6 + y_2356 7 * rowA 6 0 7 + y_2356 8 * rowA 6 0 8 ≤ db 6 0 := by
-  have hleft : y_2356 0 * rowA 6 0 0 + y_2356 1 * rowA 6 0 1 + y_2356 2 * rowA 6 0 2 + y_2356 3 * rowA 6 0 3 + y_2356 4 * rowA 6 0 4 + y_2356 5 * rowA 6 0 5 + y_2356 6 * rowA 6 0 6 + y_2356 7 * rowA 6 0 7 + y_2356 8 * rowA 6 0 8 = (-9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 0 = (-7 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_1 :
     y_2356 0 * rowA 6 1 0 + y_2356 1 * rowA 6 1 1 + y_2356 2 * rowA 6 1 2 + y_2356 3 * rowA 6 1 3 + y_2356 4 * rowA 6 1 4 + y_2356 5 * rowA 6 1 5 + y_2356 6 * rowA 6 1 6 + y_2356 7 * rowA 6 1 7 + y_2356 8 * rowA 6 1 8 ≤ db 6 1 := by
-  have hleft : y_2356 0 * rowA 6 1 0 + y_2356 1 * rowA 6 1 1 + y_2356 2 * rowA 6 1 2 + y_2356 3 * rowA 6 1 3 + y_2356 4 * rowA 6 1 4 + y_2356 5 * rowA 6 1 5 + y_2356 6 * rowA 6 1 6 + y_2356 7 * rowA 6 1 7 + y_2356 8 * rowA 6 1 8 = (-9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 1 = (-3 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_2 :
     y_2356 0 * rowA 6 2 0 + y_2356 1 * rowA 6 2 1 + y_2356 2 * rowA 6 2 2 + y_2356 3 * rowA 6 2 3 + y_2356 4 * rowA 6 2 4 + y_2356 5 * rowA 6 2 5 + y_2356 6 * rowA 6 2 6 + y_2356 7 * rowA 6 2 7 + y_2356 8 * rowA 6 2 8 ≤ db 6 2 := by
-  have hleft : y_2356 0 * rowA 6 2 0 + y_2356 1 * rowA 6 2 1 + y_2356 2 * rowA 6 2 2 + y_2356 3 * rowA 6 2 3 + y_2356 4 * rowA 6 2 4 + y_2356 5 * rowA 6 2 5 + y_2356 6 * rowA 6 2 6 + y_2356 7 * rowA 6 2 7 + y_2356 8 * rowA 6 2 8 = (-1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 2 = (-3 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_3 :
     y_2356 0 * rowA 6 3 0 + y_2356 1 * rowA 6 3 1 + y_2356 2 * rowA 6 3 2 + y_2356 3 * rowA 6 3 3 + y_2356 4 * rowA 6 3 4 + y_2356 5 * rowA 6 3 5 + y_2356 6 * rowA 6 3 6 + y_2356 7 * rowA 6 3 7 + y_2356 8 * rowA 6 3 8 ≤ db 6 3 := by
-  have hleft : y_2356 0 * rowA 6 3 0 + y_2356 1 * rowA 6 3 1 + y_2356 2 * rowA 6 3 2 + y_2356 3 * rowA 6 3 3 + y_2356 4 * rowA 6 3 4 + y_2356 5 * rowA 6 3 5 + y_2356 6 * rowA 6 3 6 + y_2356 7 * rowA 6 3 7 + y_2356 8 * rowA 6 3 8 = (-1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 3 = (-3 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_4 :
     y_2356 0 * rowA 6 4 0 + y_2356 1 * rowA 6 4 1 + y_2356 2 * rowA 6 4 2 + y_2356 3 * rowA 6 4 3 + y_2356 4 * rowA 6 4 4 + y_2356 5 * rowA 6 4 5 + y_2356 6 * rowA 6 4 6 + y_2356 7 * rowA 6 4 7 + y_2356 8 * rowA 6 4 8 ≤ db 6 4 := by
-  have hleft : y_2356 0 * rowA 6 4 0 + y_2356 1 * rowA 6 4 1 + y_2356 2 * rowA 6 4 2 + y_2356 3 * rowA 6 4 3 + y_2356 4 * rowA 6 4 4 + y_2356 5 * rowA 6 4 5 + y_2356 6 * rowA 6 4 6 + y_2356 7 * rowA 6 4 7 + y_2356 8 * rowA 6 4 8 = (-1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 4 = (-1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_5 :
     y_2356 0 * rowA 6 5 0 + y_2356 1 * rowA 6 5 1 + y_2356 2 * rowA 6 5 2 + y_2356 3 * rowA 6 5 3 + y_2356 4 * rowA 6 5 4 + y_2356 5 * rowA 6 5 5 + y_2356 6 * rowA 6 5 6 + y_2356 7 * rowA 6 5 7 + y_2356 8 * rowA 6 5 8 ≤ db 6 5 := by
-  have hleft : y_2356 0 * rowA 6 5 0 + y_2356 1 * rowA 6 5 1 + y_2356 2 * rowA 6 5 2 + y_2356 3 * rowA 6 5 3 + y_2356 4 * rowA 6 5 4 + y_2356 5 * rowA 6 5 5 + y_2356 6 * rowA 6 5 6 + y_2356 7 * rowA 6 5 7 + y_2356 8 * rowA 6 5 8 = (-1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 5 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_6 :
     y_2356 0 * rowA 6 6 0 + y_2356 1 * rowA 6 6 1 + y_2356 2 * rowA 6 6 2 + y_2356 3 * rowA 6 6 3 + y_2356 4 * rowA 6 6 4 + y_2356 5 * rowA 6 6 5 + y_2356 6 * rowA 6 6 6 + y_2356 7 * rowA 6 6 7 + y_2356 8 * rowA 6 6 8 ≤ db 6 6 := by
-  have hleft : y_2356 0 * rowA 6 6 0 + y_2356 1 * rowA 6 6 1 + y_2356 2 * rowA 6 6 2 + y_2356 3 * rowA 6 6 3 + y_2356 4 * rowA 6 6 4 + y_2356 5 * rowA 6 6 5 + y_2356 6 * rowA 6 6 6 + y_2356 7 * rowA 6 6 7 + y_2356 8 * rowA 6 6 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 6 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_7 :
     y_2356 0 * rowA 6 7 0 + y_2356 1 * rowA 6 7 1 + y_2356 2 * rowA 6 7 2 + y_2356 3 * rowA 6 7 3 + y_2356 4 * rowA 6 7 4 + y_2356 5 * rowA 6 7 5 + y_2356 6 * rowA 6 7 6 + y_2356 7 * rowA 6 7 7 + y_2356 8 * rowA 6 7 8 ≤ db 6 7 := by
-  have hleft : y_2356 0 * rowA 6 7 0 + y_2356 1 * rowA 6 7 1 + y_2356 2 * rowA 6 7 2 + y_2356 3 * rowA 6 7 3 + y_2356 4 * rowA 6 7 4 + y_2356 5 * rowA 6 7 5 + y_2356 6 * rowA 6 7 6 + y_2356 7 * rowA 6 7 7 + y_2356 8 * rowA 6 7 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 7 = (1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_8 :
     y_2356 0 * rowA 6 8 0 + y_2356 1 * rowA 6 8 1 + y_2356 2 * rowA 6 8 2 + y_2356 3 * rowA 6 8 3 + y_2356 4 * rowA 6 8 4 + y_2356 5 * rowA 6 8 5 + y_2356 6 * rowA 6 8 6 + y_2356 7 * rowA 6 8 7 + y_2356 8 * rowA 6 8 8 ≤ db 6 8 := by
-  have hleft : y_2356 0 * rowA 6 8 0 + y_2356 1 * rowA 6 8 1 + y_2356 2 * rowA 6 8 2 + y_2356 3 * rowA 6 8 3 + y_2356 4 * rowA 6 8 4 + y_2356 5 * rowA 6 8 5 + y_2356 6 * rowA 6 8 6 + y_2356 7 * rowA 6 8 7 + y_2356 8 * rowA 6 8 8 = (1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 8 = (1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_6_9 :
     y_2356 0 * rowA 6 9 0 + y_2356 1 * rowA 6 9 1 + y_2356 2 * rowA 6 9 2 + y_2356 3 * rowA 6 9 3 + y_2356 4 * rowA 6 9 4 + y_2356 5 * rowA 6 9 5 + y_2356 6 * rowA 6 9 6 + y_2356 7 * rowA 6 9 7 + y_2356 8 * rowA 6 9 8 ≤ db 6 9 := by
-  have hleft : y_2356 0 * rowA 6 9 0 + y_2356 1 * rowA 6 9 1 + y_2356 2 * rowA 6 9 2 + y_2356 3 * rowA 6 9 3 + y_2356 4 * rowA 6 9 4 + y_2356 5 * rowA 6 9 5 + y_2356 6 * rowA 6 9 6 + y_2356 7 * rowA 6 9 7 + y_2356 8 * rowA 6 9 8 = (7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 6 9 = (9 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_0 :
     y_2356 0 * rowA 7 0 0 + y_2356 1 * rowA 7 0 1 + y_2356 2 * rowA 7 0 2 + y_2356 3 * rowA 7 0 3 + y_2356 4 * rowA 7 0 4 + y_2356 5 * rowA 7 0 5 + y_2356 6 * rowA 7 0 6 + y_2356 7 * rowA 7 0 7 + y_2356 8 * rowA 7 0 8 ≤ db 7 0 := by
-  have hleft : y_2356 0 * rowA 7 0 0 + y_2356 1 * rowA 7 0 1 + y_2356 2 * rowA 7 0 2 + y_2356 3 * rowA 7 0 3 + y_2356 4 * rowA 7 0 4 + y_2356 5 * rowA 7 0 5 + y_2356 6 * rowA 7 0 6 + y_2356 7 * rowA 7 0 7 + y_2356 8 * rowA 7 0 8 = (-9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 0 = (-9 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_1 :
     y_2356 0 * rowA 7 1 0 + y_2356 1 * rowA 7 1 1 + y_2356 2 * rowA 7 1 2 + y_2356 3 * rowA 7 1 3 + y_2356 4 * rowA 7 1 4 + y_2356 5 * rowA 7 1 5 + y_2356 6 * rowA 7 1 6 + y_2356 7 * rowA 7 1 7 + y_2356 8 * rowA 7 1 8 ≤ db 7 1 := by
-  have hleft : y_2356 0 * rowA 7 1 0 + y_2356 1 * rowA 7 1 1 + y_2356 2 * rowA 7 1 2 + y_2356 3 * rowA 7 1 3 + y_2356 4 * rowA 7 1 4 + y_2356 5 * rowA 7 1 5 + y_2356 6 * rowA 7 1 6 + y_2356 7 * rowA 7 1 7 + y_2356 8 * rowA 7 1 8 = (-9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 1 = (-1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_2 :
     y_2356 0 * rowA 7 2 0 + y_2356 1 * rowA 7 2 1 + y_2356 2 * rowA 7 2 2 + y_2356 3 * rowA 7 2 3 + y_2356 4 * rowA 7 2 4 + y_2356 5 * rowA 7 2 5 + y_2356 6 * rowA 7 2 6 + y_2356 7 * rowA 7 2 7 + y_2356 8 * rowA 7 2 8 ≤ db 7 2 := by
-  have hleft : y_2356 0 * rowA 7 2 0 + y_2356 1 * rowA 7 2 1 + y_2356 2 * rowA 7 2 2 + y_2356 3 * rowA 7 2 3 + y_2356 4 * rowA 7 2 4 + y_2356 5 * rowA 7 2 5 + y_2356 6 * rowA 7 2 6 + y_2356 7 * rowA 7 2 7 + y_2356 8 * rowA 7 2 8 = (-1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 2 = (-1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_3 :
     y_2356 0 * rowA 7 3 0 + y_2356 1 * rowA 7 3 1 + y_2356 2 * rowA 7 3 2 + y_2356 3 * rowA 7 3 3 + y_2356 4 * rowA 7 3 4 + y_2356 5 * rowA 7 3 5 + y_2356 6 * rowA 7 3 6 + y_2356 7 * rowA 7 3 7 + y_2356 8 * rowA 7 3 8 ≤ db 7 3 := by
-  have hleft : y_2356 0 * rowA 7 3 0 + y_2356 1 * rowA 7 3 1 + y_2356 2 * rowA 7 3 2 + y_2356 3 * rowA 7 3 3 + y_2356 4 * rowA 7 3 4 + y_2356 5 * rowA 7 3 5 + y_2356 6 * rowA 7 3 6 + y_2356 7 * rowA 7 3 7 + y_2356 8 * rowA 7 3 8 = (-1 : ℚ) / 2 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 3 = (-1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_4 :
     y_2356 0 * rowA 7 4 0 + y_2356 1 * rowA 7 4 1 + y_2356 2 * rowA 7 4 2 + y_2356 3 * rowA 7 4 3 + y_2356 4 * rowA 7 4 4 + y_2356 5 * rowA 7 4 5 + y_2356 6 * rowA 7 4 6 + y_2356 7 * rowA 7 4 7 + y_2356 8 * rowA 7 4 8 ≤ db 7 4 := by
-  have hleft : y_2356 0 * rowA 7 4 0 + y_2356 1 * rowA 7 4 1 + y_2356 2 * rowA 7 4 2 + y_2356 3 * rowA 7 4 3 + y_2356 4 * rowA 7 4 4 + y_2356 5 * rowA 7 4 5 + y_2356 6 * rowA 7 4 6 + y_2356 7 * rowA 7 4 7 + y_2356 8 * rowA 7 4 8 = (-1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 4 = (-1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_5 :
     y_2356 0 * rowA 7 5 0 + y_2356 1 * rowA 7 5 1 + y_2356 2 * rowA 7 5 2 + y_2356 3 * rowA 7 5 3 + y_2356 4 * rowA 7 5 4 + y_2356 5 * rowA 7 5 5 + y_2356 6 * rowA 7 5 6 + y_2356 7 * rowA 7 5 7 + y_2356 8 * rowA 7 5 8 ≤ db 7 5 := by
-  have hleft : y_2356 0 * rowA 7 5 0 + y_2356 1 * rowA 7 5 1 + y_2356 2 * rowA 7 5 2 + y_2356 3 * rowA 7 5 3 + y_2356 4 * rowA 7 5 4 + y_2356 5 * rowA 7 5 5 + y_2356 6 * rowA 7 5 6 + y_2356 7 * rowA 7 5 7 + y_2356 8 * rowA 7 5 8 = (-1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 5 = (-1 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_6 :
     y_2356 0 * rowA 7 6 0 + y_2356 1 * rowA 7 6 1 + y_2356 2 * rowA 7 6 2 + y_2356 3 * rowA 7 6 3 + y_2356 4 * rowA 7 6 4 + y_2356 5 * rowA 7 6 5 + y_2356 6 * rowA 7 6 6 + y_2356 7 * rowA 7 6 7 + y_2356 8 * rowA 7 6 8 ≤ db 7 6 := by
-  have hleft : y_2356 0 * rowA 7 6 0 + y_2356 1 * rowA 7 6 1 + y_2356 2 * rowA 7 6 2 + y_2356 3 * rowA 7 6 3 + y_2356 4 * rowA 7 6 4 + y_2356 5 * rowA 7 6 5 + y_2356 6 * rowA 7 6 6 + y_2356 7 * rowA 7 6 7 + y_2356 8 * rowA 7 6 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 6 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_7 :
     y_2356 0 * rowA 7 7 0 + y_2356 1 * rowA 7 7 1 + y_2356 2 * rowA 7 7 2 + y_2356 3 * rowA 7 7 3 + y_2356 4 * rowA 7 7 4 + y_2356 5 * rowA 7 7 5 + y_2356 6 * rowA 7 7 6 + y_2356 7 * rowA 7 7 7 + y_2356 8 * rowA 7 7 8 ≤ db 7 7 := by
-  have hleft : y_2356 0 * rowA 7 7 0 + y_2356 1 * rowA 7 7 1 + y_2356 2 * rowA 7 7 2 + y_2356 3 * rowA 7 7 3 + y_2356 4 * rowA 7 7 4 + y_2356 5 * rowA 7 7 5 + y_2356 6 * rowA 7 7 6 + y_2356 7 * rowA 7 7 7 + y_2356 8 * rowA 7 7 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 7 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_8 :
     y_2356 0 * rowA 7 8 0 + y_2356 1 * rowA 7 8 1 + y_2356 2 * rowA 7 8 2 + y_2356 3 * rowA 7 8 3 + y_2356 4 * rowA 7 8 4 + y_2356 5 * rowA 7 8 5 + y_2356 6 * rowA 7 8 6 + y_2356 7 * rowA 7 8 7 + y_2356 8 * rowA 7 8 8 ≤ db 7 8 := by
-  have hleft : y_2356 0 * rowA 7 8 0 + y_2356 1 * rowA 7 8 1 + y_2356 2 * rowA 7 8 2 + y_2356 3 * rowA 7 8 3 + y_2356 4 * rowA 7 8 4 + y_2356 5 * rowA 7 8 5 + y_2356 6 * rowA 7 8 6 + y_2356 7 * rowA 7 8 7 + y_2356 8 * rowA 7 8 8 = (1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 8 = (3 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_7_9 :
     y_2356 0 * rowA 7 9 0 + y_2356 1 * rowA 7 9 1 + y_2356 2 * rowA 7 9 2 + y_2356 3 * rowA 7 9 3 + y_2356 4 * rowA 7 9 4 + y_2356 5 * rowA 7 9 5 + y_2356 6 * rowA 7 9 6 + y_2356 7 * rowA 7 9 7 + y_2356 8 * rowA 7 9 8 ≤ db 7 9 := by
-  have hleft : y_2356 0 * rowA 7 9 0 + y_2356 1 * rowA 7 9 1 + y_2356 2 * rowA 7 9 2 + y_2356 3 * rowA 7 9 3 + y_2356 4 * rowA 7 9 4 + y_2356 5 * rowA 7 9 5 + y_2356 6 * rowA 7 9 6 + y_2356 7 * rowA 7 9 7 + y_2356 8 * rowA 7 9 8 = (7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 7 9 = (7 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_0 :
     y_2356 0 * rowA 8 0 0 + y_2356 1 * rowA 8 0 1 + y_2356 2 * rowA 8 0 2 + y_2356 3 * rowA 8 0 3 + y_2356 4 * rowA 8 0 4 + y_2356 5 * rowA 8 0 5 + y_2356 6 * rowA 8 0 6 + y_2356 7 * rowA 8 0 7 + y_2356 8 * rowA 8 0 8 ≤ db 8 0 := by
-  have hleft : y_2356 0 * rowA 8 0 0 + y_2356 1 * rowA 8 0 1 + y_2356 2 * rowA 8 0 2 + y_2356 3 * rowA 8 0 3 + y_2356 4 * rowA 8 0 4 + y_2356 5 * rowA 8 0 5 + y_2356 6 * rowA 8 0 6 + y_2356 7 * rowA 8 0 7 + y_2356 8 * rowA 8 0 8 = (-11 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 0 = (-11 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_1 :
     y_2356 0 * rowA 8 1 0 + y_2356 1 * rowA 8 1 1 + y_2356 2 * rowA 8 1 2 + y_2356 3 * rowA 8 1 3 + y_2356 4 * rowA 8 1 4 + y_2356 5 * rowA 8 1 5 + y_2356 6 * rowA 8 1 6 + y_2356 7 * rowA 8 1 7 + y_2356 8 * rowA 8 1 8 ≤ db 8 1 := by
-  have hleft : y_2356 0 * rowA 8 1 0 + y_2356 1 * rowA 8 1 1 + y_2356 2 * rowA 8 1 2 + y_2356 3 * rowA 8 1 3 + y_2356 4 * rowA 8 1 4 + y_2356 5 * rowA 8 1 5 + y_2356 6 * rowA 8 1 6 + y_2356 7 * rowA 8 1 7 + y_2356 8 * rowA 8 1 8 = (-11 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 1 = (-5 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_2 :
     y_2356 0 * rowA 8 2 0 + y_2356 1 * rowA 8 2 1 + y_2356 2 * rowA 8 2 2 + y_2356 3 * rowA 8 2 3 + y_2356 4 * rowA 8 2 4 + y_2356 5 * rowA 8 2 5 + y_2356 6 * rowA 8 2 6 + y_2356 7 * rowA 8 2 7 + y_2356 8 * rowA 8 2 8 ≤ db 8 2 := by
-  have hleft : y_2356 0 * rowA 8 2 0 + y_2356 1 * rowA 8 2 1 + y_2356 2 * rowA 8 2 2 + y_2356 3 * rowA 8 2 3 + y_2356 4 * rowA 8 2 4 + y_2356 5 * rowA 8 2 5 + y_2356 6 * rowA 8 2 6 + y_2356 7 * rowA 8 2 7 + y_2356 8 * rowA 8 2 8 = (-5 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 2 = (-5 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_3 :
     y_2356 0 * rowA 8 3 0 + y_2356 1 * rowA 8 3 1 + y_2356 2 * rowA 8 3 2 + y_2356 3 * rowA 8 3 3 + y_2356 4 * rowA 8 3 4 + y_2356 5 * rowA 8 3 5 + y_2356 6 * rowA 8 3 6 + y_2356 7 * rowA 8 3 7 + y_2356 8 * rowA 8 3 8 ≤ db 8 3 := by
-  have hleft : y_2356 0 * rowA 8 3 0 + y_2356 1 * rowA 8 3 1 + y_2356 2 * rowA 8 3 2 + y_2356 3 * rowA 8 3 3 + y_2356 4 * rowA 8 3 4 + y_2356 5 * rowA 8 3 5 + y_2356 6 * rowA 8 3 6 + y_2356 7 * rowA 8 3 7 + y_2356 8 * rowA 8 3 8 = (-5 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 3 = (-5 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_4 :
     y_2356 0 * rowA 8 4 0 + y_2356 1 * rowA 8 4 1 + y_2356 2 * rowA 8 4 2 + y_2356 3 * rowA 8 4 3 + y_2356 4 * rowA 8 4 4 + y_2356 5 * rowA 8 4 5 + y_2356 6 * rowA 8 4 6 + y_2356 7 * rowA 8 4 7 + y_2356 8 * rowA 8 4 8 ≤ db 8 4 := by
-  have hleft : y_2356 0 * rowA 8 4 0 + y_2356 1 * rowA 8 4 1 + y_2356 2 * rowA 8 4 2 + y_2356 3 * rowA 8 4 3 + y_2356 4 * rowA 8 4 4 + y_2356 5 * rowA 8 4 5 + y_2356 6 * rowA 8 4 6 + y_2356 7 * rowA 8 4 7 + y_2356 8 * rowA 8 4 8 = (-3 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 4 = (-3 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_5 :
     y_2356 0 * rowA 8 5 0 + y_2356 1 * rowA 8 5 1 + y_2356 2 * rowA 8 5 2 + y_2356 3 * rowA 8 5 3 + y_2356 4 * rowA 8 5 4 + y_2356 5 * rowA 8 5 5 + y_2356 6 * rowA 8 5 6 + y_2356 7 * rowA 8 5 7 + y_2356 8 * rowA 8 5 8 ≤ db 8 5 := by
-  have hleft : y_2356 0 * rowA 8 5 0 + y_2356 1 * rowA 8 5 1 + y_2356 2 * rowA 8 5 2 + y_2356 3 * rowA 8 5 3 + y_2356 4 * rowA 8 5 4 + y_2356 5 * rowA 8 5 5 + y_2356 6 * rowA 8 5 6 + y_2356 7 * rowA 8 5 7 + y_2356 8 * rowA 8 5 8 = (-1 : ℚ) / 4 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 5 = (-3 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_6 :
     y_2356 0 * rowA 8 6 0 + y_2356 1 * rowA 8 6 1 + y_2356 2 * rowA 8 6 2 + y_2356 3 * rowA 8 6 3 + y_2356 4 * rowA 8 6 4 + y_2356 5 * rowA 8 6 5 + y_2356 6 * rowA 8 6 6 + y_2356 7 * rowA 8 6 7 + y_2356 8 * rowA 8 6 8 ≤ db 8 6 := by
-  have hleft : y_2356 0 * rowA 8 6 0 + y_2356 1 * rowA 8 6 1 + y_2356 2 * rowA 8 6 2 + y_2356 3 * rowA 8 6 3 + y_2356 4 * rowA 8 6 4 + y_2356 5 * rowA 8 6 5 + y_2356 6 * rowA 8 6 6 + y_2356 7 * rowA 8 6 7 + y_2356 8 * rowA 8 6 8 = (-1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 6 = (-1 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_7 :
     y_2356 0 * rowA 8 7 0 + y_2356 1 * rowA 8 7 1 + y_2356 2 * rowA 8 7 2 + y_2356 3 * rowA 8 7 3 + y_2356 4 * rowA 8 7 4 + y_2356 5 * rowA 8 7 5 + y_2356 6 * rowA 8 7 6 + y_2356 7 * rowA 8 7 7 + y_2356 8 * rowA 8 7 8 ≤ db 8 7 := by
-  have hleft : y_2356 0 * rowA 8 7 0 + y_2356 1 * rowA 8 7 1 + y_2356 2 * rowA 8 7 2 + y_2356 3 * rowA 8 7 3 + y_2356 4 * rowA 8 7 4 + y_2356 5 * rowA 8 7 5 + y_2356 6 * rowA 8 7 6 + y_2356 7 * rowA 8 7 7 + y_2356 8 * rowA 8 7 8 = (-1 : ℚ) / 8 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 7 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_8 :
     y_2356 0 * rowA 8 8 0 + y_2356 1 * rowA 8 8 1 + y_2356 2 * rowA 8 8 2 + y_2356 3 * rowA 8 8 3 + y_2356 4 * rowA 8 8 4 + y_2356 5 * rowA 8 8 5 + y_2356 6 * rowA 8 8 6 + y_2356 7 * rowA 8 8 7 + y_2356 8 * rowA 8 8 8 ≤ db 8 8 := by
-  have hleft : y_2356 0 * rowA 8 8 0 + y_2356 1 * rowA 8 8 1 + y_2356 2 * rowA 8 8 2 + y_2356 3 * rowA 8 8 3 + y_2356 4 * rowA 8 8 4 + y_2356 5 * rowA 8 8 5 + y_2356 6 * rowA 8 8 6 + y_2356 7 * rowA 8 8 7 + y_2356 8 * rowA 8 8 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 8 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_8_9 :
     y_2356 0 * rowA 8 9 0 + y_2356 1 * rowA 8 9 1 + y_2356 2 * rowA 8 9 2 + y_2356 3 * rowA 8 9 3 + y_2356 4 * rowA 8 9 4 + y_2356 5 * rowA 8 9 5 + y_2356 6 * rowA 8 9 6 + y_2356 7 * rowA 8 9 7 + y_2356 8 * rowA 8 9 8 ≤ db 8 9 := by
-  have hleft : y_2356 0 * rowA 8 9 0 + y_2356 1 * rowA 8 9 1 + y_2356 2 * rowA 8 9 2 + y_2356 3 * rowA 8 9 3 + y_2356 4 * rowA 8 9 4 + y_2356 5 * rowA 8 9 5 + y_2356 6 * rowA 8 9 6 + y_2356 7 * rowA 8 9 7 + y_2356 8 * rowA 8 9 8 = (5 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 8 9 = (5 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_0 :
     y_2356 0 * rowA 9 0 0 + y_2356 1 * rowA 9 0 1 + y_2356 2 * rowA 9 0 2 + y_2356 3 * rowA 9 0 3 + y_2356 4 * rowA 9 0 4 + y_2356 5 * rowA 9 0 5 + y_2356 6 * rowA 9 0 6 + y_2356 7 * rowA 9 0 7 + y_2356 8 * rowA 9 0 8 ≤ db 9 0 := by
-  have hleft : y_2356 0 * rowA 9 0 0 + y_2356 1 * rowA 9 0 1 + y_2356 2 * rowA 9 0 2 + y_2356 3 * rowA 9 0 3 + y_2356 4 * rowA 9 0 4 + y_2356 5 * rowA 9 0 5 + y_2356 6 * rowA 9 0 6 + y_2356 7 * rowA 9 0 7 + y_2356 8 * rowA 9 0 8 = (-1 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 0 = (-1 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_1 :
     y_2356 0 * rowA 9 1 0 + y_2356 1 * rowA 9 1 1 + y_2356 2 * rowA 9 1 2 + y_2356 3 * rowA 9 1 3 + y_2356 4 * rowA 9 1 4 + y_2356 5 * rowA 9 1 5 + y_2356 6 * rowA 9 1 6 + y_2356 7 * rowA 9 1 7 + y_2356 8 * rowA 9 1 8 ≤ db 9 1 := by
-  have hleft : y_2356 0 * rowA 9 1 0 + y_2356 1 * rowA 9 1 1 + y_2356 2 * rowA 9 1 2 + y_2356 3 * rowA 9 1 3 + y_2356 4 * rowA 9 1 4 + y_2356 5 * rowA 9 1 5 + y_2356 6 * rowA 9 1 6 + y_2356 7 * rowA 9 1 7 + y_2356 8 * rowA 9 1 8 = (-1 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 1 = (-7 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_2 :
     y_2356 0 * rowA 9 2 0 + y_2356 1 * rowA 9 2 1 + y_2356 2 * rowA 9 2 2 + y_2356 3 * rowA 9 2 3 + y_2356 4 * rowA 9 2 4 + y_2356 5 * rowA 9 2 5 + y_2356 6 * rowA 9 2 6 + y_2356 7 * rowA 9 2 7 + y_2356 8 * rowA 9 2 8 ≤ db 9 2 := by
-  have hleft : y_2356 0 * rowA 9 2 0 + y_2356 1 * rowA 9 2 1 + y_2356 2 * rowA 9 2 2 + y_2356 3 * rowA 9 2 3 + y_2356 4 * rowA 9 2 4 + y_2356 5 * rowA 9 2 5 + y_2356 6 * rowA 9 2 6 + y_2356 7 * rowA 9 2 7 + y_2356 8 * rowA 9 2 8 = (-15 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 2 = (-7 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_3 :
     y_2356 0 * rowA 9 3 0 + y_2356 1 * rowA 9 3 1 + y_2356 2 * rowA 9 3 2 + y_2356 3 * rowA 9 3 3 + y_2356 4 * rowA 9 3 4 + y_2356 5 * rowA 9 3 5 + y_2356 6 * rowA 9 3 6 + y_2356 7 * rowA 9 3 7 + y_2356 8 * rowA 9 3 8 ≤ db 9 3 := by
-  have hleft : y_2356 0 * rowA 9 3 0 + y_2356 1 * rowA 9 3 1 + y_2356 2 * rowA 9 3 2 + y_2356 3 * rowA 9 3 3 + y_2356 4 * rowA 9 3 4 + y_2356 5 * rowA 9 3 5 + y_2356 6 * rowA 9 3 6 + y_2356 7 * rowA 9 3 7 + y_2356 8 * rowA 9 3 8 = (-15 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 3 = (-7 : ℚ) / 8 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_4 :
     y_2356 0 * rowA 9 4 0 + y_2356 1 * rowA 9 4 1 + y_2356 2 * rowA 9 4 2 + y_2356 3 * rowA 9 4 3 + y_2356 4 * rowA 9 4 4 + y_2356 5 * rowA 9 4 5 + y_2356 6 * rowA 9 4 6 + y_2356 7 * rowA 9 4 7 + y_2356 8 * rowA 9 4 8 ≤ db 9 4 := by
-  have hleft : y_2356 0 * rowA 9 4 0 + y_2356 1 * rowA 9 4 1 + y_2356 2 * rowA 9 4 2 + y_2356 3 * rowA 9 4 3 + y_2356 4 * rowA 9 4 4 + y_2356 5 * rowA 9 4 5 + y_2356 6 * rowA 9 4 6 + y_2356 7 * rowA 9 4 7 + y_2356 8 * rowA 9 4 8 = (-11 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 4 = (-11 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_5 :
     y_2356 0 * rowA 9 5 0 + y_2356 1 * rowA 9 5 1 + y_2356 2 * rowA 9 5 2 + y_2356 3 * rowA 9 5 3 + y_2356 4 * rowA 9 5 4 + y_2356 5 * rowA 9 5 5 + y_2356 6 * rowA 9 5 6 + y_2356 7 * rowA 9 5 7 + y_2356 8 * rowA 9 5 8 ≤ db 9 5 := by
-  have hleft : y_2356 0 * rowA 9 5 0 + y_2356 1 * rowA 9 5 1 + y_2356 2 * rowA 9 5 2 + y_2356 3 * rowA 9 5 3 + y_2356 4 * rowA 9 5 4 + y_2356 5 * rowA 9 5 5 + y_2356 6 * rowA 9 5 6 + y_2356 7 * rowA 9 5 7 + y_2356 8 * rowA 9 5 8 = (-9 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 5 = (-1 : ℚ) / 2 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_6 :
     y_2356 0 * rowA 9 6 0 + y_2356 1 * rowA 9 6 1 + y_2356 2 * rowA 9 6 2 + y_2356 3 * rowA 9 6 3 + y_2356 4 * rowA 9 6 4 + y_2356 5 * rowA 9 6 5 + y_2356 6 * rowA 9 6 6 + y_2356 7 * rowA 9 6 7 + y_2356 8 * rowA 9 6 8 ≤ db 9 6 := by
-  have hleft : y_2356 0 * rowA 9 6 0 + y_2356 1 * rowA 9 6 1 + y_2356 2 * rowA 9 6 2 + y_2356 3 * rowA 9 6 3 + y_2356 4 * rowA 9 6 4 + y_2356 5 * rowA 9 6 5 + y_2356 6 * rowA 9 6 6 + y_2356 7 * rowA 9 6 7 + y_2356 8 * rowA 9 6 8 = (-7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 6 = (-7 : ℚ) / 16 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_7 :
     y_2356 0 * rowA 9 7 0 + y_2356 1 * rowA 9 7 1 + y_2356 2 * rowA 9 7 2 + y_2356 3 * rowA 9 7 3 + y_2356 4 * rowA 9 7 4 + y_2356 5 * rowA 9 7 5 + y_2356 6 * rowA 9 7 6 + y_2356 7 * rowA 9 7 7 + y_2356 8 * rowA 9 7 8 ≤ db 9 7 := by
-  have hleft : y_2356 0 * rowA 9 7 0 + y_2356 1 * rowA 9 7 1 + y_2356 2 * rowA 9 7 2 + y_2356 3 * rowA 9 7 3 + y_2356 4 * rowA 9 7 4 + y_2356 5 * rowA 9 7 5 + y_2356 6 * rowA 9 7 6 + y_2356 7 * rowA 9 7 7 + y_2356 8 * rowA 9 7 8 = (-7 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 7 = (-1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_8 :
     y_2356 0 * rowA 9 8 0 + y_2356 1 * rowA 9 8 1 + y_2356 2 * rowA 9 8 2 + y_2356 3 * rowA 9 8 3 + y_2356 4 * rowA 9 8 4 + y_2356 5 * rowA 9 8 5 + y_2356 6 * rowA 9 8 6 + y_2356 7 * rowA 9 8 7 + y_2356 8 * rowA 9 8 8 ≤ db 9 8 := by
-  have hleft : y_2356 0 * rowA 9 8 0 + y_2356 1 * rowA 9 8 1 + y_2356 2 * rowA 9 8 2 + y_2356 3 * rowA 9 8 3 + y_2356 4 * rowA 9 8 4 + y_2356 5 * rowA 9 8 5 + y_2356 6 * rowA 9 8 6 + y_2356 7 * rowA 9 8 7 + y_2356 8 * rowA 9 8 8 = (-5 : ℚ) / 16 := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 8 = (-1 : ℚ) / 4 := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_2356_9_9 :
     y_2356 0 * rowA 9 9 0 + y_2356 1 * rowA 9 9 1 + y_2356 2 * rowA 9 9 2 + y_2356 3 * rowA 9 9 3 + y_2356 4 * rowA 9 9 4 + y_2356 5 * rowA 9 9 5 + y_2356 6 * rowA 9 9 6 + y_2356 7 * rowA 9 9 7 + y_2356 8 * rowA 9 9 8 ≤ db 9 9 := by
-  have hleft : y_2356 0 * rowA 9 9 0 + y_2356 1 * rowA 9 9 1 + y_2356 2 * rowA 9 9 2 + y_2356 3 * rowA 9 9 3 + y_2356 4 * rowA 9 9 4 + y_2356 5 * rowA 9 9 5 + y_2356 6 * rowA 9 9 6 + y_2356 7 * rowA 9 9 7 + y_2356 8 * rowA 9 9 8 = (0 : ℚ) := by
-    norm_num [y_2356, rowA, Pi.neg_apply]
-  have hright : db 9 9 = (0 : ℚ) := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
+  simp only [y_2356, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num
 
 theorem row_cap_0 (j : Fin 10) :
     (∑ q : Fin 9, y_2356 q * rowA 0 j q) ≤ db 0 j := by

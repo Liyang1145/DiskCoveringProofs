@@ -74,16 +74,9 @@ def split_proof(text: str, node: int, y: list[Fraction],
         for j in range(10):
             terms = " + ".join(
                 f"y_{node} {q} * rowA {i} {j} {q}" for q in range(9))
-            lhs = sum(y[q] * ((q < j) - (q < i)) for q in range(9))
-            raw = matrix[i][j]
-            rhs = Fraction(matrix[i][j], 4096)
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {terms} ≤ db {i} {j} := by
-  have hleft : {terms} = {lean_rat(lhs)} := by
-    norm_num [y_{node}, rowA, Pi.neg_apply]
-  have hright : db {i} {j} = {lean_rat(rhs)} := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]''')
+  simp only [y_{node}, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num''')
     rows = []
     for i in range(10):
         cases = "\n".join(
