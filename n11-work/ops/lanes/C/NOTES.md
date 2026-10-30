@@ -1,3 +1,10 @@
+EXPERT (2026-10-30):
+- At `6937fb90`, six `FrozenCapRowCap` modules built as dependencies, but `FrozenCapRowCap2356.lean:33` timed out at 200000 heartbeats, so `FrozenCapPublicExcludedTree` exits 1.
+- Even if green, `excluded_*_tree` only derives `False` from a `Valid` packet with fixed node plus `hf0`/`hg`; it does not pay `RemainingTerminalRadius` or `SevenClassExclusions`.
+- Highest leverage is the missing bridge, not more leaves: prove packet-of-actual-cell plus frozen `F0`/`G` implies contradiction, or report that no bridge exists.
+- If continuing rows, isolate `row_cap_2356_0_0`; replace nested vector lookup with ten scalar row defs and definitional scalar lemmas; get one leaf exit 0 before regenerating 700.
+- Exact rational/byte audits and float-LP search are diagnostics only, never proof.
+
 # Lane C notes
 
 ## Standing constraints

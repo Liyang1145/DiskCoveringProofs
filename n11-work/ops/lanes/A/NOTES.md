@@ -1,3 +1,11 @@
+EXPERT (2026-10-30):
+- C450 completion is genuinely CI-green; use it as the only paid Lane A result.
+- Notes overstate endpoint status: at `6937fb90` EndpointChecks exits 1 and all downstream edge/sector targets are dependency-red.
+- First repair EndpointChecks: replace vector tables with scalar defs/lemmas, use `rfl` or `simp only [nodeBinAt]; rfl`, and remove trailing tactics at lines 245/257.
+- Then prove `sectorAt_zero_bin2_step_543 : sectorAt 0 544 ≤ sectorAt 0 543`; the current dec lemma allows `n = 543` but calls a lemma requiring `544 ≤ n`.
+- After these, add one row-0 `SectorBinUnimodal` assembler; emit no more isolated bins until it is exit 0.
+- `SectorValid`, strict total, `Q0Degree3AreaInput`, and all seven class exclusions remain unpaid.
+
 # Lane A notes
 
 ## Ledger

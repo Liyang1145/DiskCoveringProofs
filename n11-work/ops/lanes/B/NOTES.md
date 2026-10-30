@@ -1,11 +1,10 @@
 EXPERT (2026-10-30):
-- All seven `LaneBFrozenCapRowCap*` targets are CI-red; the first errors are vector indexing left as `![...] 2`, not a numerical cap failure.
-- `norm_num [y_..., rowA]` does not unfold enough; use `simp only [y_..., rowA]` then `norm_num`, and remove no-goal trailing tactics. Do not invest another cycle here unless a bridge appears.
-- The row caps still do not force `f0Lo`/`g`, so they cannot pay `RemainingTerminalRadius`; exact Fractions and byte audits are diagnostics, not proof.
-- Highest leverage after the queued 0037/Thirteen kernel verdict is the supervisor-only root import switch at `N11Formalization.lean:1961`: B12Main -> ThirteenMain, then fresh root CI.
-- No new B Lean lemma is required for that switch; Thirteen's `remaining_of` already transfers the residual.
-- Keep B13 at 1997 paid / 389 residual conditional. Do not call it root-reachable before root CI, and do not add B14 or row-cap content meanwhile.
-- The root OOM in `SharedMomentConcreteSwitchBatch` is not a B13 mathematical verdict; SevenClassExclusions remains 0/7.
+- Core B13 is the real result: `1997/2386`, residual `389`, CI-green at `6937fb90`.
+- `Refine0037` is still red at `6937fb90` (`omega`, line 240); the current literal-block repair is pending, not credit.
+- Highest leverage: after `Refine0037` exits 0, add `EnergyTerminalBatchB13RefineSixteen` combining `Eleven` with `N0037`, `N3112`, `N3116`, `N3431`, `N3573`.
+- Prove `paid_count = 2013`, transfer `remaining_of` to B13, and expose residual `373`; use singleton definitions plus `not_paid_*`, not a giant `decide`.
+- The root switch B12Main -> B13Main is supervisor-only and changes reachability, not the 389 residual count.
+- Row caps remain unpriced without the `f0Lo`/`g` bridge; hashes, audits, and exact Fractions are diagnostics. SevenClassExclusions stays `0/7`.
 
 # Lane B notes
 ## 2026-10-30 - session 58: 0037 proof path made an explicit CI target
