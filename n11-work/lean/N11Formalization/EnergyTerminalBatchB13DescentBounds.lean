@@ -1,3 +1,5 @@
+import N11Formalization.Paid16GeneralG01
+import N11Formalization.Paid16GeneralG02
 import N11Formalization.Paid16GeneralG03
 import N11Formalization.Paid16GeneralG04
 import N11Formalization.Paid16GeneralG05
@@ -11,80 +13,198 @@ import N11Formalization.Paid16GeneralG12
 import N11Formalization.EnergyTerminalBatchB10
 import N11Formalization.Paid16GeneralRemaining210
 
-/-! Bounded descent facts used by B13. Each kernel decision covers at most
-58 literal ids; the 210-id remainder is assembled from ten 21-id blocks. -/
+/-! Bounded descent facts used by B13. Image-valued blocks are decoded by
+`mem_image` and `fin_cases`; B09 is classified through its nine union/insert
+layers, and the 210-id remainder is assembled from ten 21-id blocks. -/
 set_option autoImplicit false
-set_option maxRecDepth 10000
 namespace N11Formalization.EnergyTerminalBatchB13DescentBounds
 open Finset
 noncomputable section
 
+private theorem g01_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG01.newIDs) :
+    n.val < 2565 := by
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG01.nodeID]
+
+private theorem g02_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG02.newIDs) :
+    n.val < 2565 := by
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG02.nodeID]
+
 private theorem g03_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG03.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG03.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG03.nodeID]
 
 private theorem g04_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG04.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG04.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG04.nodeID]
 
 private theorem g05_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG05.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG05.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG05.nodeID]
 
 private theorem g06_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG06.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG06.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG06.nodeID]
 
 private theorem g07_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG07.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG07.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG07.nodeID]
 
 private theorem g08_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG08.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG08.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG08.nodeID]
 
 private theorem g09_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG09.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG09.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG09.nodeID]
 
 private theorem g10_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG10.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG10.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG10.nodeID]
 
 private theorem g11_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG11.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG11.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG11.nodeID]
 
 private theorem g12_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralG12.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralG12.newIDs, m.val < 2565 := by decide +kernel
-  exact h n hn
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16GeneralG12.nodeID]
 
 /-- B09 is not wholly below 2565: `b09HighIDs` lists its 27 legacy ids at or
 above 2565.  This exhaustive classification replaces the false former `b09_lt`
 statement. -/
 def b09HighIDs : Finset (Fin 5011) := {2661,2675,2880,2888,2962,2971,2973,3121,3134,3436,3591,3601,3619,3833,3834,3842,3852,3874,3950,3965,4058,4179,4265,4266,4267,4348,4485}
 
+private theorem dispatch_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalDispatch.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalDispatch.paidIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · have h : n = 284 ∨ n = 562 ∨ n = 4348 := by
+      simpa only [EnergyCommonChart.paidEnergyIDs, Finset.mem_insert,
+        Finset.mem_singleton] using hn
+    rcases h with rfl | rfl | rfl <;> simp [b09HighIDs]
+  · simp only [Finset.mem_singleton] at hn
+    rcases hn with rfl
+    simp [b09HighIDs]
+
+private theorem lambda0_bound (n : Fin 5011)
+    (hn : n ∈ Lambda0Batch7Consumer.newIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Lambda0Batch7Packet.nodeID, b09HighIDs]
+
+private theorem chord_bound (n : Fin 5011)
+    (hn : n ∈ Lambda0TangentChordC01Consumer.newIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Lambda0TangentChordC01Packet.nodeID, b09HighIDs]
+
+private theorem cutting_bound (n : Fin 5011)
+    (hn : n ∈ CuttingPlaneBatch7Consumer.newIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [CuttingPlaneBatch7Packet.nodeID, b09HighIDs]
+
+private theorem batch22_bound (n : Fin 5011)
+    (hn : n ∈ Paid16Batch22Consumer.newIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rcases Finset.mem_image.mp hn with ⟨i, _, rfl⟩
+  fin_cases i <;> simp [Paid16Batch22Packet.nodeID, b09HighIDs]
+
+private theorem b01_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB01.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB01.paidIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · exact dispatch_bound n hn
+  · simp only [Finset.mem_insert, Finset.mem_singleton] at hn
+    rcases hn with rfl | rfl <;> simp [b09HighIDs]
+
+private theorem b02_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB02.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB02.paidIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · exact b01_bound n hn
+  · simp only [Finset.mem_singleton] at hn
+    rcases hn with rfl
+    simp [b09HighIDs]
+
+private theorem b03_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB03.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB03.paidIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · exact b02_bound n hn
+  · exact lambda0_bound n hn
+
+private theorem b04_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB04.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB04.paidIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · exact b03_bound n hn
+  · exact chord_bound n hn
+
+private theorem b05_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB05.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB05.paidIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · exact b04_bound n hn
+  · exact cutting_bound n hn
+
+private theorem b06_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB06.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB06.paidIDs] at hn
+  rcases Finset.mem_insert.mp hn with rfl | hn
+  · simp [b09HighIDs]
+  · exact b05_bound n hn
+
+private theorem b07_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB07.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB07.paidIDs] at hn
+  rcases Finset.mem_insert.mp hn with rfl | hn
+  · simp [b09HighIDs]
+  · rcases Finset.mem_insert.mp hn with rfl | hn
+    · simp [b09HighIDs]
+    · exact b06_bound n hn
+
+private theorem b08_bound (n : Fin 5011)
+    (hn : n ∈ EnergyTerminalBatchB08.paidIDs) :
+    n.val < 2565 ∨ n ∈ b09HighIDs := by
+  rw [EnergyTerminalBatchB08.paidIDs] at hn
+  rcases Finset.mem_insert.mp hn with rfl | hn
+  · simp [b09HighIDs]
+  · exact b07_bound n hn
+
 theorem b09_bound (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB09.paidIDs) :
     n.val < 2565 ∨ n ∈ b09HighIDs := by
-  have h : ∀ m ∈ EnergyTerminalBatchB09.paidIDs, m.val < 2565 ∨ m ∈ b09HighIDs := by
-    decide +kernel
-  exact h n hn
+  rw [EnergyTerminalBatchB09.paidIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · exact b08_bound n hn
+  · exact batch22_bound n hn
 
 theorem first42_lt (n : Fin 5011) (hn : n ∈ Paid16GeneralFirst42.newIDs) :
     n.val < 2565 := by
-  have h : ∀ m ∈ Paid16GeneralFirst42.newIDs, m.val < 2565 := by
-    decide +kernel
-  exact h n hn
+  rw [Paid16GeneralFirst42.newIDs] at hn
+  rcases Finset.mem_union.mp hn with hn | hn
+  · exact g01_lt n hn
+  · exact g02_lt n hn
 
 theorem b10_bound (n : Fin 5011) (hn : n ∈ EnergyTerminalBatchB10.paidIDs) :
     n.val < 2565 ∨ n ∈ b09HighIDs := by
