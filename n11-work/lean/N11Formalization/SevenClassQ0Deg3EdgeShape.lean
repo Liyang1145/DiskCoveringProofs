@@ -413,6 +413,36 @@ theorem edgeIncTo_seven : EdgeIncTo 7 := by
   · norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag,
       sinTQ, RatInterval.piHi, Finset.sum_range_succ]
 
+theorem edgeIncTo_nine : EdgeIncTo 9 := by
+  apply edgeIncTo_of_prefix_three_pi_div_four 9 1489 1488
+  · norm_num
+  · norm_num [edgeWitness]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ]
+  · norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag,
+      sinTQ, RatInterval.piHi, Finset.sum_range_succ]
+
+theorem edgeIncTo_ten : EdgeIncTo 10 := by
+  apply edgeIncTo_of_prefix_three_pi_div_four 10 1489 1488
+  · norm_num
+  · norm_num [edgeWitness]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ]
+  · norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag,
+      sinTQ, RatInterval.piHi, Finset.sum_range_succ]
+
+theorem edgeIncTo_eleven : EdgeIncTo 11 := by
+  apply edgeIncTo_of_prefix_three_pi_div_four 11 1118 1117
+  · norm_num
+  · norm_num [edgeWitness]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ]
+  · norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag,
+      sinTQ, RatInterval.piHi, Finset.sum_range_succ]
+
 /-- The upper cosine bracket decreases from node 1118 through `3π/4`. -/
 theorem cosHiReal_antitoneOn_1118_to_three_pi_div_four :
     AntitoneOn cosHiReal
@@ -492,6 +522,103 @@ theorem edgeDecFrom_of_antitoneOn_from_next (i : Fin 21) (w wnext : Fin 2049)
     exact hfin.trans hstep
   · rw [hkw, hw]
     exact le_rfl
+
+/-- The upper cosine bracket is antitone from any nonnegative grid node up to
+`3*pi/4`.  This combines the already-proved signs of the degree-27 sine
+bracket on `[0, pi/2]`, `[pi/2, 2]`, and `[2, 3*pi/4]`. -/
+theorem cosHiReal_antitoneOn_up_to_three_pi_div_four {s : ℚ}
+    (hs0 : 0 ≤ s) (hs : (s : ℝ) ≤ 3 * Real.pi / 4) :
+    AntitoneOn cosHiReal (Set.Icc (s : ℝ) (3 * Real.pi / 4)) := by
+  refine antitoneOn_of_deriv_nonpos (convex_Icc _ _) ?_ ?_ ?_
+  · exact fun x _ => (hasDerivAt_cosHiReal x).continuousAt.continuousWithinAt
+  · intro x _
+    exact (hasDerivAt_cosHiReal x).differentiableAt.differentiableWithinAt
+  · intro x hx
+    rw [interior_Icc] at hx
+    rw [(hasDerivAt_cosHiReal x).deriv]
+    apply neg_nonpos.mpr
+    have hs0R : (0 : ℝ) ≤ (s : ℝ) := by exact_mod_cast hs0
+    by_cases hhalf : x ≤ Real.pi / 2
+    · exact sinT14_nonneg (le_trans hs0R (le_of_lt hx.1)) hhalf
+    · have hhalf' : Real.pi / 2 ≤ x := le_of_lt (lt_of_not_ge hhalf)
+      by_cases htwo : x ≤ 2
+      · exact sinT14_nonneg_of_half_pi_le_of_le_two hhalf' htwo
+      · exact sinT14_nonneg_of_two_le_of_le_three_pi_div_four
+          (le_of_lt (lt_of_not_ge htwo)) (le_of_lt hx.2)
+
+/-- A grid-node comparison with the exact cosine threshold propagates over the
+whole decreasing grid tail.  The final interval is covered by the proved
+`-2/3` cosine bound. -/
+theorem cosHiReal_le_edge_ratio_of_nodeQ_le {i : Fin 21} {s w : Fin 2049}
+    (hs : s = w)
+    (hval : cosHiNLag (nodeQ RatInterval.piHi 2048 w) ≤
+      edgeCoeff i / (19 / 50 : ℚ) ^ 2)
+    (h3 : (nodeQ RatInterval.piHi 2048 w : ℚ) ≤ 3 * Real.pi / 4)
+    (htail : (-(2 / 3) : ℚ) ≤ edgeCoeff i / (19 / 50 : ℚ) ^ 2)
+    {x : ℝ} (hx0 : (nodeQ RatInterval.piHi 2048 s : ℚ) ≤ x)
+    (hx : x ≤ (RatInterval.piHi : ℝ)) :
+    cosHiReal x ≤ (edgeCoeff i : ℝ) / (19 / 50 : ℝ) ^ 2 := by
+  subst hs
+  have hq0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 w := by
+    unfold nodeQ
+    positivity
+  have hcast : ((cosHiNLag (nodeQ RatInterval.piHi 2048 w) : ℚ) : ℝ) =
+      cosHiReal (nodeQ RatInterval.piHi 2048 w : ℚ) := by
+    rw [cosHiNLag_cast, cosHiReal]
+    have hq0R : (0 : ℝ) ≤ (nodeQ RatInterval.piHi 2048 w : ℚ) := by
+      exact_mod_cast hq0
+    rw [abs_of_nonneg hq0R]
+  have hvalR : cosHiReal (nodeQ RatInterval.piHi 2048 w : ℚ) ≤
+      (edgeCoeff i : ℝ) / (19 / 50 : ℝ) ^ 2 := by
+    rw [← hcast]
+    exact_mod_cast hval
+  have htailR : (-(2 / 3) : ℝ) ≤
+      (edgeCoeff i : ℝ) / (19 / 50 : ℝ) ^ 2 := by
+    exact_mod_cast htail
+  by_cases h34 : x ≤ 3 * Real.pi / 4
+  · have hanti := cosHiReal_antitoneOn_up_to_three_pi_div_four hq0 h3
+    exact (hanti ⟨le_rfl, h3⟩ ⟨hx0, h34⟩ hx0).trans hvalR
+  · have h34' : 3 * Real.pi / 4 ≤ x := le_of_lt (lt_of_not_ge h34)
+    exact (cosHiReal_le_neg_two_thirds_of_three_pi_div_four_le h34' hx).trans htailR
+
+/-- The corresponding edge-bracket antitone wrapper on a node tail. -/
+theorem edgeHiReal_antitoneOn_of_nodeQ_cos_le_ratio {i : Fin 21} {w : Fin 2049}
+    (hcos : ∀ x ∈ Set.Icc (nodeQ RatInterval.piHi 2048 w : ℚ)
+      (RatInterval.piHi : ℝ),
+      cosHiReal x ≤ (edgeCoeff i : ℝ) / (19 / 50 : ℝ) ^ 2) :
+    AntitoneOn (edgeHiReal (edgeCoeff i))
+      (Set.Icc (nodeQ RatInterval.piHi 2048 w : ℚ) (RatInterval.piHi : ℝ)) := by
+  apply edgeHiReal_antitoneOn_of_cos_le_coeff (edgeCoeff i)
+    (nodeQ RatInterval.piHi 2048 w)
+  intro x hx
+  exact hcos x ⟨le_of_lt hx.1, hx.2⟩
+
+theorem edgeDecFrom_of_witness_nodeQ_cos_le_ratio (i : Fin 21) (w : Fin 2049)
+    (hw : w = edgeWitness i)
+    (hval : cosHiNLag (nodeQ RatInterval.piHi 2048 w) ≤
+      edgeCoeff i / (19 / 50 : ℚ) ^ 2)
+    (h3 : (nodeQ RatInterval.piHi 2048 w : ℚ) ≤ 3 * Real.pi / 4)
+    (htail : (-(2 / 3) : ℚ) ≤ edgeCoeff i / (19 / 50 : ℚ) ^ 2) :
+    EdgeDecFrom i := by
+  apply edgeDecFrom_of_antitoneOn_from i w hw
+  apply edgeHiReal_antitoneOn_of_nodeQ_cos_le_ratio
+  intro x hx
+  exact cosHiReal_le_edge_ratio_of_nodeQ_le rfl hval h3 htail hx.1 hx.2
+
+theorem edgeDecFrom_of_next_nodeQ_cos_le_ratio (i : Fin 21)
+    (w wnext : Fin 2049) (hw : w = edgeWitness i)
+    (hnext : wnext.val = w.val + 1)
+    (hstep : edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 wnext) ≤
+      edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w))
+    (hval : cosHiNLag (nodeQ RatInterval.piHi 2048 wnext) ≤
+      edgeCoeff i / (19 / 50 : ℚ) ^ 2)
+    (h3 : (nodeQ RatInterval.piHi 2048 wnext : ℚ) ≤ 3 * Real.pi / 4)
+    (htail : (-(2 / 3) : ℚ) ≤ edgeCoeff i / (19 / 50 : ℚ) ^ 2) :
+    EdgeDecFrom i := by
+  apply edgeDecFrom_of_antitoneOn_from_next i w wnext hw hnext hstep
+  apply edgeHiReal_antitoneOn_of_nodeQ_cos_le_ratio
+  intro x hx
+  exact cosHiReal_le_edge_ratio_of_nodeQ_le rfl hval h3 htail hx.1 hx.2
 
 theorem neg_131_over_200_le_edge_ratio_nine :
     (-131 / 200 : ℚ) ≤ edgeCoeff 9 / (19 / 50 : ℚ) ^ 2 := by
@@ -837,6 +964,207 @@ theorem edgeIncTo_thirteen : EdgeIncTo 13 := by
   apply edgeIncTo_of_witness_zero 13
   norm_num [edgeWitness]
 
+theorem edgeDecFrom_one : EdgeDecFrom 1 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 1 878
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_two : EdgeDecFrom 2 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 2 1112
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_three : EdgeDecFrom 3 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 3 1064
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_four : EdgeDecFrom 4 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 4 1073
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_five : EdgeDecFrom 5 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 5 1073
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_six : EdgeDecFrom 6 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 6 1064
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_seven : EdgeDecFrom 7 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 7 1112
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_eight : EdgeDecFrom 8 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 8 878
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_sixteen : EdgeDecFrom 16 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 16 411
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_seventeen : EdgeDecFrom 17 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 17 406
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeDecFrom_eighteen : EdgeDecFrom 18 := by
+  apply edgeDecFrom_of_witness_nodeQ_cos_le_ratio 18 411
+  · norm_num [edgeWitness]
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeStep_zero :
+    edgeUpper (edgeCoeff 0) (nodeQ RatInterval.piHi 2048 544) ≤
+      edgeUpper (edgeCoeff 0) (nodeQ RatInterval.piHi 2048 543) := by
+  norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag, sinTQ,
+    Finset.sum_range_succ, RatInterval.piHi]
+
+theorem edgeDecFrom_zero : EdgeDecFrom 0 := by
+  apply edgeDecFrom_of_next_nodeQ_cos_le_ratio 0 543 544
+  · norm_num [edgeWitness]
+  · norm_num
+  · exact edgeStep_zero
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeStep_fourteen :
+    edgeUpper (edgeCoeff 14) (nodeQ RatInterval.piHi 2048 487) ≤
+      edgeUpper (edgeCoeff 14) (nodeQ RatInterval.piHi 2048 486) := by
+  norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag, sinTQ,
+    Finset.sum_range_succ, RatInterval.piHi]
+
+theorem edgeDecFrom_fourteen : EdgeDecFrom 14 := by
+  apply edgeDecFrom_of_next_nodeQ_cos_le_ratio 14 486 487
+  · norm_num [edgeWitness]
+  · norm_num
+  · exact edgeStep_fourteen
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeStep_fifteen :
+    edgeUpper (edgeCoeff 15) (nodeQ RatInterval.piHi 2048 390) ≤
+      edgeUpper (edgeCoeff 15) (nodeQ RatInterval.piHi 2048 389) := by
+  norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag, sinTQ,
+    Finset.sum_range_succ, RatInterval.piHi]
+
+theorem edgeDecFrom_fifteen : EdgeDecFrom 15 := by
+  apply edgeDecFrom_of_next_nodeQ_cos_le_ratio 15 389 390
+  · norm_num [edgeWitness]
+  · norm_num
+  · exact edgeStep_fifteen
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeStep_nineteen :
+    edgeUpper (edgeCoeff 19) (nodeQ RatInterval.piHi 2048 390) ≤
+      edgeUpper (edgeCoeff 19) (nodeQ RatInterval.piHi 2048 389) := by
+  norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag, sinTQ,
+    Finset.sum_range_succ, RatInterval.piHi]
+
+theorem edgeDecFrom_nineteen : EdgeDecFrom 19 := by
+  apply edgeDecFrom_of_next_nodeQ_cos_le_ratio 19 389 390
+  · norm_num [edgeWitness]
+  · norm_num
+  · exact edgeStep_nineteen
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeStep_twenty :
+    edgeUpper (edgeCoeff 20) (nodeQ RatInterval.piHi 2048 487) ≤
+      edgeUpper (edgeCoeff 20) (nodeQ RatInterval.piHi 2048 486) := by
+  norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag, sinTQ,
+    Finset.sum_range_succ, RatInterval.piHi]
+
+theorem edgeDecFrom_twenty : EdgeDecFrom 20 := by
+  apply edgeDecFrom_of_next_nodeQ_cos_le_ratio 20 486 487
+  · norm_num [edgeWitness]
+  · norm_num
+  · exact edgeStep_twenty
+  · norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+      Finset.sum_range_succ, edgeCoeff, tableEdges, mu]
+  · norm_num [nodeQ, RatInterval.piHi]
+  · norm_num [edgeCoeff, tableEdges, mu]
+
+theorem edgeMonotone : EdgeMonotone := by
+  intro i
+  fin_cases i <;>
+    first
+    | exact ⟨edgeIncTo_zero, edgeDecFrom_zero⟩
+    | exact ⟨edgeIncTo_one, edgeDecFrom_one⟩
+    | exact ⟨edgeIncTo_two, edgeDecFrom_two⟩
+    | exact ⟨edgeIncTo_three, edgeDecFrom_three⟩
+    | exact ⟨edgeIncTo_four, edgeDecFrom_four⟩
+    | exact ⟨edgeIncTo_five, edgeDecFrom_five⟩
+    | exact ⟨edgeIncTo_six, edgeDecFrom_six⟩
+    | exact ⟨edgeIncTo_seven, edgeDecFrom_seven⟩
+    | exact ⟨edgeIncTo_eight, edgeDecFrom_eight⟩
+    | exact ⟨edgeIncTo_nine, edgeDecFrom_nine⟩
+    | exact ⟨edgeIncTo_ten, edgeDecFrom_ten⟩
+    | exact ⟨edgeIncTo_eleven, edgeDecFrom_eleven⟩
+    | exact ⟨edgeIncTo_twelve,
+        SevenClassQ0Deg3EdgeSuffixHigh.edgeDecFrom_twelve⟩
+    | exact ⟨edgeIncTo_thirteen,
+        SevenClassQ0Deg3EdgeSuffixHigh.edgeDecFrom_thirteen⟩
+    | exact ⟨edgeIncTo_fourteen, edgeDecFrom_fourteen⟩
+    | exact ⟨edgeIncTo_fifteen, edgeDecFrom_fifteen⟩
+    | exact ⟨edgeIncTo_sixteen, edgeDecFrom_sixteen⟩
+    | exact ⟨edgeIncTo_seventeen, edgeDecFrom_seventeen⟩
+    | exact ⟨edgeIncTo_eighteen, edgeDecFrom_eighteen⟩
+    | exact ⟨edgeIncTo_nineteen, edgeDecFrom_nineteen⟩
+    | exact ⟨edgeIncTo_twenty, edgeDecFrom_twenty⟩
+
+theorem edgeUnimodal : EdgeUnimodal := fun i =>
+  ⟨(edgeMonotone i).1, (edgeMonotone i).2, edgePeakValid_all i⟩
+
+theorem edgeValid : EdgeValid := edgeValid_of_unimodal edgeUnimodal
+
 end N11Formalization.SevenClassQ0Deg3EdgeShape
 #check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeDecFrom_nine
 #check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeDecFrom_ten
@@ -856,6 +1184,9 @@ end N11Formalization.SevenClassQ0Deg3EdgeShape
 #check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_five
 #check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_six
 #check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_seven
+#check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_nine
+#check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_ten
+#check @N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_eleven
 #print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeDecFrom_nine
 #print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeDecFrom_ten
 #print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeDecFrom_eleven
@@ -874,3 +1205,9 @@ end N11Formalization.SevenClassQ0Deg3EdgeShape
 #print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_five
 #print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_six
 #print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_seven
+#print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_nine
+#print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_ten
+#print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeIncTo_eleven
+#print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeMonotone
+#print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeUnimodal
+#print axioms N11Formalization.SevenClassQ0Deg3EdgeShape.edgeValid

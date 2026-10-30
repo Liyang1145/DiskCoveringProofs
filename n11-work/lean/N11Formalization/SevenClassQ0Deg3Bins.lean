@@ -92,7 +92,7 @@ theorem capMonotoneOnGrid_of_piHiCapSaturated (hsat : PiHiCapSaturated) :
       have hbound : k.val ≤ 256 * (binIndex k).val + 255 := by
         rw [hidx, hmin]
         have hmod : k.val % 256 ≤ 255 := by
-          have := Nat.mod_lt k.val (y := 256) (by norm_num)
+          have := Nat.mod_lt k.val (by norm_num : 0 < 256)
           omega
         calc
           k.val = 256 * (k.val / 256) + k.val % 256 :=
