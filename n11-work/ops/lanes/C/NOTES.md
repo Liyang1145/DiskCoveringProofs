@@ -155,77 +155,44 @@ green, add `FrozenCapFiveFieldExcludedTree` and
 `FrozenCapFourFieldExcludedTree` to `TARGETS.txt`, otherwise patch the first
 kernel diagnostic.
 
-## 2026-10-30 — part 73 (wrapper dependency gate rechecked)
+## 2026-10-30 — parts 76/78 condensed (wide-support exclusions)
+
+- Superseded the false four/five-field sign reports. The deterministic
+  `emit_wide_field_exclusions.py` now emits seven gain-minimising wide-support
+  witnesses, 700 exact row caps, and seven conditional node wrappers.
+- Exact HOST checks: seven probability vectors; 700/700 caps pass; all seven
+  `gain - T^2` margins are negative; minimum cap slack 0. These are algebra
+  checks, not kernel verdicts. Only witnesses and row caps were targeted.
+
+## 2026-10-30 — part 79 (missing `endpointLo` import fixed)
 
 Did:
-- Re-read the wrappers and their dependency interfaces. The four-field wrapper
-  now bridges `DBMSourceTree.data` directly to its five local `db_*` matrices;
-  the five-field wrapper has the same structure. Both still take packet `hf0`
-  and `hg` as explicit hypotheses and remain outside `TARGETS.txt`.
-- Re-ran `project_status.py --check` (exit 0; index/manifest declarations only)
-  and a forbidden-token scan over all six current/new certificate modules
-  (no matches). `git diff --check` exited 0.
-- `TARGETS.txt` is unchanged at seven modules
-  (`sha256 d1d84878c88065439bd5536741607425213485d5c8c07e74a3c7f63ea8df26ec`).
-  Wrapper hashes rechecked: four-field `86d4880f...`; five-field `0731b07e...`.
+- Audited the isolated wide witness module against its dependencies and found
+  the previous isolation removed the only definition of `endpointLo` while
+  retaining its use in `endpoint_*` and `strict_gain_*`. This was an immediate
+  kernel blocker not covered by the HOST arithmetic check.
+- Added `N11Formalization.ConvexMinorantCore` to the witness imports and
+  opened `ConvexMinorantCore`; updated the emitter identically and regenerated
+  all three modules. `TARGETS.txt` remains the two wide modules.
 
-Checks (scope): static dependency/token audit and repository status only. The
-latest available CI summary still ends at run `40949277719` and does not cover
-the four/five-field modules; `ops/ci/LATEST.md` has not refreshed. No kernel
-verdict, so all four/five modules and wrappers remain **CI pending**.
+Files / SHA256 (lowercase):
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldWitnesses.lean`
+  `6882a56604d0a18bd495d97abdce2648542dc132a6fb072cf61109cef3e86667`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldRowCaps.lean`
+  `f893482177b0eeeb2b74bb9f0d38b71a54bd606033e3b7af4acd3c5016d19e0c`.
+- `n11-work/lean/N11Formalization/FrozenCapWideFieldExcludedTree.lean`
+  `89f0bc8eb820b046dada09702e9d939a3b34fd90c212163e21eb8c76e5e4df37`.
+- `n11-work/ops/lanes/C/emit_wide_field_exclusions.py`
+  `e2497852956ff9a5fb72e0b1666c692950c00e83550edcdef52f7c25250681b3`.
 
-Still unproved/missing: exact CI exits for four/five witnesses and row caps;
-both wrapper families; packet `hf0`/`hg`; 382 absent HOST payloads. Seven
-public residual IDs are exclusions, not paid energy IDs.
+Checks (scope): emitter exit 0 with 700/700 exact caps and seven negative
+strict margins; `py_compile`, hard-rule scan, `project_status.py --check`, and
+`git diff --check` exit 0. No Lean kernel verdict; local build not started.
 
-Very next concrete step: inspect the first refreshed CI summary for exact
-`=== EXIT 0` on `FrozenCapFourFieldWitnesses`, `FrozenCapFourFieldRowCaps`,
-`FrozenCapFiveFieldWitnesses`, and `FrozenCapFiveFieldRowCaps`; only then add
-the two wrapper targets, otherwise patch the first reported kernel diagnostic.
+Still unproved/missing: CI exits for both targeted wide modules; the wrapper is
+conditional on packet `hf0`/`hg` and untargeted; 382 HOST payloads absent; no
+energy/class credit.
 
-## 2026-10-30 — part 74 (hypothesis-discharge audit; CI still stale)
-
-Did:
-- Rechecked `ops/ci/LATEST.md` timestamp (`2026-10-29 21:10:43Z`) and targets;
-  no refreshed result covers the four/five-field modules. `TARGETS.txt` remains
-  the seven-module gate, so no wrapper was enabled.
-- Audited the two wrapper hypotheses against `PaidCellCertificateM.Valid` and
-  `FrozenCapFourFieldWitnesses`. `Valid` constrains `p.beta`, `p.line`, rows,
-  `lam`, and `rmin`, but contains no identification of the computed mixture
-  `W p`/`slopeQ p` with the public record, nor of computed `f0Lo`/`g` with the
-  frozen `F0_*`/`G_*`. The witness modules prove only nonnegativity, unit sum,
-  endpoint equality, and strict gain. Hence `hf0`/`hg` cannot be discharged
-  from the current public interfaces; the wrappers must remain conditional.
-- Re-ran `project_status.py --check`: exit 0 (index declarations only).
-  `git diff --check`: exit 0. No Lean build or kernel verdict.
-
-Still unproved/missing: exact CI exits for the four/five witness and row-cap
-modules; wrapper families (conditional on `hf0`/`hg`); old row caps/bridges;
-packet `hf0`/`hg`; 382 absent HOST payloads. No energy/class credit.
-
-Next: inspect the first refreshed CI summary for the four/five targets; if all
-four are exit 0, add both wrapper targets and address their concrete kernel
-diagnostic. Otherwise patch the first reported kernel diagnostic.
-
-## 2026-10-30 — part 75 (pre-CI source-shape recheck)
-
-Did:
-- Rechecked `ops/ci/LATEST.md`: still run `40949277719`, with no exits for any
-  four/five-field target. The target gate remains closed and `TARGETS.txt`
-  remains the same seven modules (`d1d84878…`).
-- Inspected declaration tails/imports for all four pending row-cap/witness
-  modules and reran `audit_pending_certificate_sources.py`: exit 0, 700/700
-  matrix entries match `DBMSourceTreeData`, seven positive exact margins.
-- Rechecked both conditional wrapper hashes: four-field `86d4880f…`, five-field
-  `0731b07e…`; `git diff --check` exit 0.
-
-Checks (scope): HOST source/schema audit only, not a kernel verdict. No new Lean
-module was added and wrappers remain off `TARGETS.txt`.
-
-Still unproved/missing: exact CI exits for the four/five witness/row-cap modules;
-both wrapper families (conditional on `hf0`/`hg`); packet `hf0`/`hg`; old
-row caps/bridges; 382 absent HOST payloads. No energy credit.
-
-Next: inspect the first refreshed CI summary for the four four/five-field target
-exits; if all are 0, add both wrappers to `TARGETS.txt`, otherwise patch the
-first kernel diagnostic.
+Next: require CI `=== EXIT 0` for `FrozenCapWideFieldWitnesses` and
+`FrozenCapWideFieldRowCaps`; if green, add `FrozenCapWideFieldExcludedTree` to
+`TARGETS.txt`, otherwise patch the first kernel diagnostic.
