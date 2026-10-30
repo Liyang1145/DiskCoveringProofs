@@ -114,30 +114,39 @@ end N11Formalization.FrozenCapWideFieldWitnesses
 
 def emit_row_caps(rows):
     blocks = []
-    for node, _, db, _, _, _ in rows:
+    for node, y, db, _, _, _ in rows:
         mat = ",\n      ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
         leaf_lemmas = []
         for i in range(10):
             for j in range(10):
+                explicit_sum = " + ".join(
+                    f"yW_{node} {q} * rowA {i} {j} {q}" for q in range(9))
+                lhs = sum(y[q] * common.row_a(i, j, q) for q in range(9))
+                rhs = Q(db[i][j], 4096)
                 leaf_lemmas.append(f'''theorem row_cap_{node}_{i}_{j} :
-    (∑ q : Fin 9, yW_{node} q * rowA {i} {j} q) ≤ db_{node} {i} {j} := by
-  norm_num [yW_{node}, rowA, db_{node}, Fin.sum_univ_succ]''')
+    {explicit_sum} ≤ db_{node} {i} {j} := by
+  have hleft : {explicit_sum} = {lean_rat(lhs)} := by
+    norm_num [yW_{node}, rowA]
+  have hright : db_{node} {i} {j} = {lean_rat(rhs)} := by
+    norm_num [db_{node}, dbmVal_{node}]
+  rw [hleft, hright]
+  norm_num''')
         leaf_src = "\n\n".join(leaf_lemmas)
         row_lemmas = "\n\n".join(
             f'''theorem row_cap_{node}_{i} (j : Fin 10) :
     (∑ q : Fin 9, yW_{node} q * rowA {i} j q) ≤ db_{node} {i} j := by
   fin_cases j <;>
     first
-    | exact row_cap_{node}_{i}_0
-    | exact row_cap_{node}_{i}_1
-    | exact row_cap_{node}_{i}_2
-    | exact row_cap_{node}_{i}_3
-    | exact row_cap_{node}_{i}_4
-    | exact row_cap_{node}_{i}_5
-    | exact row_cap_{node}_{i}_6
-    | exact row_cap_{node}_{i}_7
-    | exact row_cap_{node}_{i}_8
-    | exact row_cap_{node}_{i}_9''' for i in range(10))
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_0
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_1
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_2
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_3
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_4
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_5
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_6
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_7
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_8
+    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] using row_cap_{node}_{i}_9''' for i in range(10))
         blocks.append(f'''def dbmVal_{node} : Fin 10 → Fin 10 → ℤ
   | i, j => ![
       {mat}
