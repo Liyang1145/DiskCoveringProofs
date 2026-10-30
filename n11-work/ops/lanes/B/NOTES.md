@@ -8,38 +8,66 @@ EXPERT (2026-10-30):
 - The root OOM in `SharedMomentConcreteSwitchBatch` is not a B13 mathematical verdict; SevenClassExclusions remains 0/7.
 
 # Lane B notes
-## 2026-10-30 - session 43: row-cap proof-pattern repair, CI pending
+## 2026-10-30 - session 46: row-cap leaf proof repair, CI pending
 
-- Replaced each of the 700 pair-leaf proof bodies in the generator with the
-  bounded pattern `simp only [y_<node>, rowA, db, dbmVal, Pi.neg_apply] <;>
-  norm_num`, following the prior vector-index diagnosis. Regenerated
+- CI run `41082175973` remains red for all seven
+  `LaneBFrozenCapRowCap*` targets. The recorded failures are unsolved goals and
+  one heartbeat timeout, now attributable to the leaf script rather than the
+  exact cap arithmetic. The same run is green for Next1182/B13/B13Main and for
+  the newer refinement modules, but those are not row-cap payment.
+- Changed `split_rowcap_modules.py` leaf bodies from
+  `simp only [y_<node>, rowA, db, dbmVal, Pi.neg_apply] <;> norm_num` to
+  `norm_num [y_<node>, rowA, db, dbmVal]`, then regenerated all seven
   `N11Formalization/LaneBFrozenCapRowCap{1409,2337,2341,2356,2360,2368,2370}.lean`.
-  Frozen matrices/statements and the existing seven lane-B targets are unchanged.
-- `split_rowcap_modules.py --check` exit 0: 7/7 matrices, 700/700 ordered pairs,
-  weights sum to 1, zero exact-rational violations, 100 leaves/module, and all
-  seven generated texts reproduce byte-for-byte. Scope is arithmetic + source
-  generation, not Lean elaboration. `py_compile` and `git diff --check` exit 0.
-- Emitter SHA256 `4D1A1B4B0B3F66F935A87B0D86A11545E5BAEADB3206FAFDCA84477817A05066`;
-  report `2C4F501950839CF1BB527BC760088CF61B3B4DFB4BBD5CF1DEA24D0CF0A248A2`.
-  Module SHA256: 1409 `9B275C31885E3E342F9927CB684C7DD1DB0A850B055C99461965ABFD7AE4AB21`;
-  2337 `C768947AC94DEF5F1F6699A2AA316F100F8E7A9381EE3148A5B0E464D0B2EE1F`;
-  2341 `9D1D499B375ED4FBBB0167AE7D153F4DEE13F483375CE7B4D81FE85178BE1C35`;
-  2356 `4D30D27992BC3DD6AFD38AA81D0A84315052571BBBBC8AC72F1EF2E04C9860F3`;
-  2360 `9321C76FB8E745F92272D645CBA73777A534E2AAD90EFB98DE16977E914D332C`;
-  2368 `68E5B18E1A22EA5B8E2439B3ABAEDF63F9B0DB333F72BFF61692513323574AB1`;
-  2370 `480D5D96F856D666048416EC212020083FEB10C8EEEFAA2814974286840271D9`.
-- No local Lean build/probe result is claimed. CI is **pending** for these bytes;
-  all seven row-cap modules remain unpaid. The `f0Lo`/`g` bridge, 389 residual
-  radii, SevenClassExclusions, and arbitrary-center theorem remain unproved.
-- Next concrete step: inspect fresh CI's first error for `LaneBFrozenCapRowCap1409`.
-  If the leaf pattern passes, repair only the row/`fin_cases` wrapper; if it fails,
-  isolate the first pair leaf diagnostic before touching the other six.
+  Frozen vectors/matrices/statements and the 100-leaf/10-row structure are unchanged.
+- Removed the unhelpful, now-stale `LaneBFrozenCapRowCap1409Decide` target and
+  generated file from `TARGETS.txt`; the current seven targets are the intended
+  CI batch.
+- Checks: emitter `--check` exit 0 with 7/7 matrices, 700/700 ordered pairs,
+  weight sums all 1, zero exact-rational violations; `py_compile` exit 0;
+  `git diff --check` exit 0. Emitter SHA256
+  `E75DBAF22D694D06406FC6FDEE0EDBEAB38B1BA78ACB3C5BA17503939B81A1E8`;
+  report `2661B0E63CF2B84CB3A18578D1847F322DD20E47121C3BECEC26F2BF52E39D46`.
+  Module SHA256: 1409 `41B667E8...F2EB83`; 2337 `5B64C0F3...0CC34973`;
+  2341 `4387B181...8D7D0F9A`; 2356 `38C519FD...C0E7376`;
+  2360 `04404AB7...2E3F43`; 2368 `6067F76D...2546C6D`;
+  2370 `D0458CBE...DA9D287`.
+- Local Lean probes were not authoritative: `/workspace/tools/mathlib-probe`
+  has no built granular Mathlib oleans and `lake env lean` stalled until the
+  120 s bound; a monolithic 100-case `norm_num` probe reached its 180 s bound.
+  Thus no local elaboration/kernel result is claimed.
+- CI is **pending** for these seven bytes; none of the seven caps is paid. The
+  `f0Lo`/`g` bridge, all 389 residual radii, SevenClassExclusions, and the
+  arbitrary-center full-disk theorem remain unproved.
+- Next concrete step: read the next CI's first row-cap diagnostic. If
+  `norm_num [definitions]` still fails, emit one single-pair standalone probe
+  from the first failing leaf and reduce only that leaf's proof to an explicit
+  exact-fraction inequality; do not alter the frozen statement.
 
-## 2026-10-30 - session 42 (condensed): prior row-cap repair, superseded
+## 2026-10-30 - session 45: stricter B13Main root-switch parity audit
 
-- Changed final leaf step to `rw [hleft, hright] <;> norm_num` and regenerated
-  the same seven modules; exact arithmetic remained 700/700 with zero violations.
-  CI diagnosed vector indexing in the earlier leaf proofs. No payment claimed.
+- Added `audit_b13main_signature_parity.py`; it compares both root-facing
+  theorem blocks in B12Main/B13Main and permits only the batch/namespace rename,
+  the B13 energy premise, and the explicit `remaining_of_b13` transfer.
+- Exit 0, 5/5 checks: identical full-disk quantifier, identical
+  `N11MainStatement SourceExactRoot.sourceRadius`, two theorems per module, and
+  no change beyond that permitted energy substitution. B12Main SHA256
+  `ED46AD0539E34924E202F60443314138BE2713C2247234D127C7F67EC94220C8`;
+  B13Main `521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837`.
+  Script `C270775A337A1C66B9F34E310E75B8CBC84BC62E8C8325A1B3D3D65D7D413972`;
+  report `85EFBDE9947F080A8858042B8CF8860C4499E7AA5C77808B4D9AE01CEE6785B8`.
+- Fresh `audit_b13_root_handoff.py` exit 0: root is `pre_handoff`, one old
+  B12Main import, switch ready. `audit_b13_closure.py` exit 0: B11 310, B12
+  815, B13 1997, Next1182 1182, sharp 120, terminals 2506, residual 389.
+  Scope is static source/import parity plus inventories, not Lean elaboration,
+  root CI, or mathematical payment.
+- Row-cap probes remain unanswered/irrelevant to the residual: current
+  `simp only ... <;> norm_num` bytes and `LaneBFrozenCapRowCap1409Decide` are
+  CI pending. `f0Lo`/`g`, all 389 radii, SevenClassExclusions, and the
+  arbitrary-center theorem remain unproved.
+- Next concrete step: supervisor replaces only root line 1961 with
+  `import N11Formalization.EnergyTerminalBatchB13Main`, reruns the handoff audit
+  expecting `post_handoff`, and starts fresh root CI. Do not edit root here.
 
 
 ## 2026-10-30 - session part 27: residual 389 crosswalk
@@ -216,16 +244,7 @@ EXPERT (2026-10-30):
   any row still fails, isolate its exact `norm_num` diagnostic into ten
   single-pair leaves; do not build wrappers until all seven are green.
 
-## 2026-10-30 - sessions 31-33 (condensed): pair-leaf repair
+## 2026-10-30 - sessions 31-37 (condensed): pair-leaf repair history
 
-- Runs `41037794295` and `41050208198` saw the earlier row-wide split and were
-  red for all seven row-cap modules. Exact Python arithmetic was always 700/700,
-  so these were proof-script failures, not cap violations.
-- Reworked the generator to 100 independent explicit pair leaves per module,
-  then to one-entry `hval : dbmVal i j = n` kernel `decide` leaves. No local
-  Lean build or kernel result is claimed.
-
-## 2026-10-30 - session part 37 (condensed): audit only; no Lean probe
-
-- Reconfirmed 7 modules, 700/700 ordered pairs, weight sums 1, and zero cap
-  violations; static checks were clean but all seven remained CI pending.
+- Earlier row-wide and `hval` pair-leaf layouts were CI-red for proof-script
+  reasons. Exact arithmetic stayed 700/700; no Lean payment was claimed.

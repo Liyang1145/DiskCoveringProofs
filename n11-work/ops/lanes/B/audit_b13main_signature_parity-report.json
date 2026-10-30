@@ -1,0 +1,14 @@
+{
+  "b12main": "/workspace/projects/ae3385e7-f93b-4bd2-a917-5a9561f457b7/repos/wt-B/n11-work/lean/N11Formalization/EnergyTerminalBatchB12Main.lean",
+  "b12main_sha256": "ED46AD0539E34924E202F60443314138BE2713C2247234D127C7F67EC94220C8",
+  "b13main": "/workspace/projects/ae3385e7-f93b-4bd2-a917-5a9561f457b7/repos/wt-B/n11-work/lean/N11Formalization/EnergyTerminalBatchB13Main.lean",
+  "b13main_sha256": "521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837",
+  "checks": {
+    "b13_uses_explicit_residual_transfer": true,
+    "only_energy_premise_changed": true,
+    "same_full_disk_quantifier": true,
+    "same_main_result": true,
+    "two_root_facing_theorems_each": true
+  },
+  "scope": "static source signature parity only; no Lean elaboration or root CI verdict"
+}
