@@ -25,7 +25,9 @@ assert len(blocks) == 57 and len({i for _, i in blocks}) == 57
 lines = [f"import N11Formalization.Paid16GeneralG{i:02d}" for i in range(1, 13)]
 lines += [
     "import N11Formalization.EnergyTerminalBatchB10",
+    "import N11Formalization.EnergyTerminalBatchB11",
     "import N11Formalization.Paid16GeneralRemaining210",
+    "import N11Formalization.Paid16GeneralNext1182",
     "",
     "/-! Bounded descent facts used by B13. Image-valued blocks are decoded by",
     "`mem_image` and `fin_cases`; B09 is classified through its nine union/insert",

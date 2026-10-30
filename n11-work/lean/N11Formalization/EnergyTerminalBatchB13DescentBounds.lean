@@ -11,7 +11,9 @@ import N11Formalization.Paid16GeneralG10
 import N11Formalization.Paid16GeneralG11
 import N11Formalization.Paid16GeneralG12
 import N11Formalization.EnergyTerminalBatchB10
+import N11Formalization.EnergyTerminalBatchB11
 import N11Formalization.Paid16GeneralRemaining210
+import N11Formalization.Paid16GeneralNext1182
 
 /-! Bounded descent facts used by B13. Image-valued blocks are decoded by
 `mem_image` and `fin_cases`; B09 is classified through its nine union/insert
