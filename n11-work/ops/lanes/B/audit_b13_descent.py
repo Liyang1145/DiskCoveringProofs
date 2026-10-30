@@ -22,6 +22,24 @@ BANNED = ("sorry", "admit", "native_decide", "ofReduceBool", "implemented_by",
           "maxHeartbeats 0")
 
 
+def import_closure(module: str) -> set[str]:
+    """Return the transitive local imports of a module, including itself."""
+    seen: set[str] = set()
+    pending = [module]
+    while pending:
+        name = pending.pop()
+        if name in seen:
+            continue
+        seen.add(name)
+        source = LEAN / f"{name.replace('.', '/')}.lean"
+        if source.is_file():
+            pending.extend(re.findall(
+                r"^import N11Formalization\.(\S+)$",
+                source.read_text(encoding="utf-8"), re.MULTILINE,
+            ))
+    return seen
+
+
 def main() -> None:
     text = MODULE.read_text(encoding="utf-8")
     b13 = B13.read_text(encoding="utf-8")
@@ -56,6 +74,40 @@ def main() -> None:
     b09_ids = packet_ids | {284, 562, 4348, 984, 1112, 2166, 2162,
                              3436, 4265, 4179, 4267}
     b09_high_ids = {i for i in b09_ids if i >= 2565}
+    direct_imports = re.findall(
+        r"^import N11Formalization\.(\S+)$", text, re.MULTILINE)
+    missing_import_files = [
+        name for name in direct_imports
+        if not (LEAN / f"{name.replace('.', '/')}.lean").is_file()
+    ]
+    # Resolve every local qualified identifier against the declaration in the
+    # module named by its longest matching namespace prefix.  This catches the
+    # class of failure that stopped the first CI run (a valid symbol whose
+    # defining module was not imported) before spending CI time on elaboration.
+    qualified = set(re.findall(
+        r"\b(?:[A-Z][A-Za-z0-9_]*\.)+[A-Za-z0-9_]+", text))
+    unresolved_cross_references: list[str] = []
+    referenced_modules: set[str] = set()
+    for name in sorted(qualified):
+        parts = name.split(".")
+        for cut in range(len(parts) - 1, 0, -1):
+            module = ".".join(parts[:cut])
+            source = LEAN / f"{module.replace('.', '/')}.lean"
+            if not source.is_file():
+                continue
+            symbol = parts[cut]
+            declaration = re.compile(
+                rf"^\s*(?:private\s+)?(?:noncomputable\s+)?"
+                rf"(?:def|theorem|abbrev|lemma)\s+{re.escape(symbol)}\b",
+                re.MULTILINE,
+            )
+            if not declaration.search(source.read_text(encoding="utf-8")):
+                unresolved_cross_references.append(name)
+            referenced_modules.add(module)
+            break
+    local_module = MODULE.stem
+    closure = import_closure(local_module)
+    unimported_reference_modules = sorted(referenced_modules - closure)
     checks = {
         "twelve_group_blocks": groups == [f"{i:02d}" for i in range(1, 13)],
         "twelve_group_norm_num_decodes":
@@ -80,6 +132,11 @@ def main() -> None:
         "remaining210_no_direct_decode":
             "∀ m ∈ Paid16GeneralRemaining210.newIDs, m.val < 2565" not in text,
         "b13_imports_module": "import N11Formalization.EnergyTerminalBatchB13DescentBounds" in b13,
+        "descent_imports_b11": "import N11Formalization.EnergyTerminalBatchB11" in text,
+        "descent_imports_next1182": "import N11Formalization.Paid16GeneralNext1182" in text,
+        "direct_imports_resolve": not missing_import_files,
+        "cross_references_resolve": not unresolved_cross_references,
+        "cross_reference_modules_imported": not unimported_reference_modules,
         "b13_uses_b11_bound": "EnergyTerminalBatchB13DescentBounds.b11_bound n hn" in b13,
         "b13_uses_high_exclusion": "EnergyTerminalBatchB13DescentBounds.high_not_next a" in b13,
         "no_forbidden_tokens": not any(
@@ -96,6 +153,12 @@ def main() -> None:
         "high_ids": len(source_high_ids),
         "reconstructed_b09_ids": len(b09_ids),
         "reconstructed_b09_high_ids": len(b09_high_ids),
+        "direct_imports": len(direct_imports),
+        "missing_import_files": missing_import_files,
+        "referenced_local_modules": len(referenced_modules),
+        "transitive_import_closure_modules": len(closure),
+        "unresolved_cross_references": unresolved_cross_references,
+        "unimported_reference_modules": unimported_reference_modules,
         "next1182_literal_blocks": literal_blocks,
         "next1182_literal_ids": len(literal_ids),
         "checks": checks,
