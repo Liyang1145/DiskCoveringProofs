@@ -32,7 +32,9 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
             if lhs > rhs:
                 raise AssertionError((node, i, j, lhs, rhs))
             slacks.append(rhs - lhs)
-    rows = ",\n    ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
+    db_cases = "\n  ".join(
+        f"| ⟨{i}, _⟩, ⟨{j}, _⟩ => {lean_rat(Q(db[i][j], 4096))}"
+        for i in range(10) for j in range(10))
     ns = f"FrozenCapRowCap{node}"
     leaves = []
     for i in range(10):
@@ -43,12 +45,7 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
             rhs = Q(db[i][j], 4096)
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {lhs_expr} ≤ db {i} {j} := by
-  have hleft : {lhs_expr} = {lean_rat(lhs)} := by
-    norm_num [y_{node}, rowA]
-  have hright : db {i} {j} = {lean_rat(rhs)} := by
-    norm_num [db, dbmVal]
-  rw [hleft, hright]
-  norm_num''')
+  norm_num [y_{node}, rowA, db]''')
     row_lemmas = []
     for i in range(10):
         row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
@@ -83,12 +80,8 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
         "def rowA (i j : Fin 10) (q : Fin 9) : ℚ :=",
         "  (if q.val < j.val then 1 else 0) - (if q.val < i.val then 1 else 0)",
         "",
-        "def dbmVal : Fin 10 → Fin 10 → ℤ",
-        "  | i, j => ![ ",
-        "    " + rows,
-        "  ] i j",
-        "",
-        "def db (i j : Fin 10) : ℚ := (dbmVal i j : ℚ) / 4096",
+        "def db : Fin 10 → Fin 10 → ℚ",
+        "  " + db_cases,
         "",
         "\n\n".join(leaves),
         "",
