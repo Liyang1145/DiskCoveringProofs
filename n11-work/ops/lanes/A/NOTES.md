@@ -37,107 +37,21 @@ EXPERT (2026-10-30 07:19 UTC):
 - Seven-class exclusions: 0/7 paid. No kernel-green all-node degree-three
   certificate yet.
 
-## 2026-10-30 (session 24) — Bins modulus repair; suffix target registered
+## 2026-10-30 (sessions 24--25, condensed)
 
-**Files / SHA256.**
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3Bins.lean`
-  `0e1fc14a8abef4980f3002b7447bb5090846e77bcbb8e2b8dd15c3989a56b1bb`.
-- `n11-work/ops/lanes/A/TARGETS.txt`
-  `b532fb08e16550a05b5c8608026f7e8927995a11db2896f3aac9e9114ad88406`.
+Bins modulus diagnostics were repaired through `(y := 256)`. The attempted
+edge-9/10 derivative criterion `cosHiReal <= 0` was invalid and was replaced
+by the exact threshold `cosHiReal <= b / (19/50)^2`; unsupported wrappers were
+removed. Cos and Mono were CI-green at `e5875cf8`. Seven exclusions remain 0/7.
 
-**Change.** In `capMonotoneOnGrid_of_piHiCapSaturated`, the leaf
-`Nat.mod_lt k.val (by norm_num)` was made fully explicit as
-`Nat.mod_lt k.val (n := 256) (by norm_num)`. This is the exact first diagnostic
-from the expert handoff. No statement or premise was weakened. Registered
-`SevenClassQ0Deg3EdgeSuffixHigh` as a new C450-independent CI target.
+## 2026-10-30 (session 26, condensed) — upper-tail cosine bound
 
-**Checks (scope).** `project_status.py --check`, `git diff --check`, and the
-source diff pass. Exact `Fraction` audits re-ran: edge unimodality PASS 21/21
-(JSON `2a0a38b150cae0b9d200c90f273084b3bdbd4f51d43f4eca1270d8ea5b2f412f`)
-and derivative signs PASS 21/21 (JSON
-`628a20f6e4758b3a18ccd83215ac23a7e2fabbb11c701bd667a820643b97d726`). These
-audits verify finite rational data, not Lean. A minimal Lean probe and the
-Mathlib probe both timed out during startup/import; no local project build was
-run. Thus Bins, EndpointChecks, UpperReductionUnimodal, and both suffix modules
-remain **drafted, CI pending**.
-
-**Still unproved.** Kernel acceptance of every lane-A target; all 42
-`EdgeIncTo`/`EdgeDecFrom` facts; full-angle cosine monotonicity on the grid;
-all 9 sectors; strict total; `Degree3AreaCertificate`/`Q0Degree3AreaInput`; all
-seven exclusions; and the arbitrary-center full-disk theorem.
-
-**Next concrete step.** On the next CI cycle read Bins first. If green, read
-EndpointChecks then UpperReductionUnimodal; if Bins still fails, fix only its
-first diagnostic. In parallel, begin `SevenClassQ0Deg3EdgeShape.lean` with the
-edge 9 negative-coefficient suffix as a checked template, then add the edge 12
-high-coefficient suffix, before attempting positive-derivative prefixes.
-
-## 2026-10-30 (session 25) — negative-coefficient derivative defect repaired
-
-**Files / SHA256.**
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeSuffixNonpos.lean`
-  `bc1b13e1a148d7f894771c40db4db74758933fe83cae833a8d7f1098405a096f`.
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeSuffixHigh.lean`
-  unchanged, `ab2c023394b3c70781d5e72a316c078b83c5327f8b44f7992557bc4892c10c32`.
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeReal.lean` unchanged,
-  `4ed2c5816272ebcef894fdfd12b6f2e3746de33192693cfb8f1642e6d69ddc4d`.
-
-**Mathematical correction.** The drafted theorem
-`edgeHiReal_deriv_neg_of_coeff_neg` was invalid: for `b < 0` and merely
-`cosHiReal x ≤ 0`, the expression `A * cosHiReal x - b` can be positive.
-Replaced it by `edgeHiReal_deriv_neg_of_cos_le_coeff`, whose exact sufficient
-condition is `cosHiReal x ≤ b / A`, and by
-`edgeHiReal_antitoneOn_of_cos_le_coeff`. Removed the unsupported
-`edgeDecFrom_nine`/`edgeDecFrom_ten` conclusions. The exact coefficient census
-from frozen rational table bytes is: 9 negative edges (2--7, 9, 10, 11),
-10 mid-range positive edges (0, 1, 8, 14--20), and 2 edges above `A` (12, 13).
-The zero-peak high-coefficient suffix proof for 12/13 is unaffected.
-
-**Checks (scope).** `project_status.py --check` passed;
-`git diff --check` passed; forbidden-token scan over the edited module passed.
-No Lean build was run locally, so this correction is **drafted, CI pending**.
-The coefficient census is exact `Fraction` arithmetic over the Lean table bytes,
-not a Lean verification.
-
-**Still unproved.** All 42 shape facts; in particular edges 9/10 need a rational
-cosine upper bound below `b/A` on the suffix (the sign at witness node 1489 is
-not sufficient by itself). Kernel acceptance of Bins, EndpointChecks,
-UpperReductionUnimodal, and both suffix modules remains pending.
-
-**Next concrete step.** Read the new CI Bins diagnostic first. In Lean, prove a
-strict rational Taylor upper bound for `cosHiReal` at/after node 1490 sufficient
-for edges 9/10 (threshold about `-0.65444`), plus the one discrete comparison
-from witness 1489, then instantiate `edgeHiReal_antitoneOn_of_cos_le_coeff`.
-
-## 2026-10-30 (session 26) — upper-tail edge-9/10 cosine bound drafted
-
-**Files / SHA256.**
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeSuffixNonpos.lean`
-  `d0dfd9f9c29a5b94b28e048a490c0cb63f587918baea2406b4622d921581face`.
-- `n11-work/ops/lanes/A/TARGETS.txt` unchanged,
-  `b532fb08e16550a05b5c8608026f7e8927995a11db2896f3aac9e9114ad88406`.
-
-**Change.** Added `cosHiReal_le_neg_two_thirds_of_three_pi_div_four_le`:
-for `3*pi/4 <= x <= piHi`, the degree-28 upper cosine bracket is at most
-`-2/3`. This is stricter than both `edgeCoeff 9 / (19/50)^2` and
-`edgeCoeff 10 / (19/50)^2` (about `-0.654606`), so it supplies the analytic
-upper tail of the split suffix argument. The proof splits at `pi`, uses real
-cosine monotonicity and the exact `cos(3*pi/4) = -sqrt(2)/2`, and controls the
-Taylor remainder by `4^28/28! <= 1/100`.
-
-**Checks (scope).** `project_status.py --check` passed (declaration/manifest
-scope only); `git diff --check` passed; forbidden-token scan over the edited
-module passed. No Lean build was run, so the new lemma is **drafted, CI
-pending**. The arithmetic comparisons are exact rational checks.
-
-**Still unproved.** The narrow interval from the edge-9/10 witness (`node 1489`)
-to `3*pi/4`; the discrete witness-to-next-node comparison; all 42 shape facts;
-kernel acceptance of Bins and the downstream modules; all seven exclusions;
-strict total and the arbitrary-center full-disk theorem.
-
-**Next concrete step.** Add a rational Taylor-grid lemma covering
-`nodeQ piHi 2048 1490 <= x <= 3*pi/4` with `cosHiReal x <= -2/3`, then combine
-it with this theorem and the exact one-step comparison at witness 1489.
+Added `cosHiReal_le_neg_two_thirds_of_three_pi_div_four_le`: on `[3*pi/4, piHi]`
+the degree-28 upper cosine bracket is at most `-2/3`, below both edge-9/10
+thresholds. Exact-rational comparisons and `git diff --check` passed; no Lean
+build, so the lemma remained drafted/CI-pending. Later sessions supplied the
+narrow interval and exact witness step. Still unproved at that point: all 42
+shape facts, seven exclusions, strict total, and the full-disk theorem.
 
 ## 2026-10-30 (session 27) — exact Bins CI diagnostic; modulus binder repaired
 
@@ -226,3 +140,135 @@ the narrow proof is green, instantiate it for edges 9/10 on
 `[node 1490, 3*pi/4]`, combine with the existing `-2/3` theorem on
 `[3*pi/4, piHi]`, and separately repair the witness-1489 step.  If red, fix
 only the first diagnostic under a bounded command.
+
+## 2026-10-30 (session 29) — edge-9/10 suffix bridge drafted
+
+**Files / SHA256.**
+- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeShape.lean`
+  `3063440ec59ca726e336c7b1137daaed7463b0732caf40c64c4bfad54facb177`.
+- `n11-work/ops/lanes/A/TARGETS.txt`
+  `0e014984097afe340efcf6c6b948b1a114af817c7c44b115ed6d1f1847bac1f2`.
+- `n11-work/ops/lanes/A/audit_q0_degree3_narrow_cos.py`
+  `ace4e57bf3e37266eb65b80cc0b31b78a5a1e9caa46ac226558d0848b341f9e6`;
+  report `audit-q0-degree3-narrow-cos-20261030.json`
+  `dc78f86dc2542e1fb848af87267264ec7d784e0f9c2e2c7268ded4ac4091e807`.
+
+**Progress.** Added the missing witness-to-tail bridge for edges 9/10. Their
+witness is 1489 but the proved cosine tail starts at 1490, so the new helper
+takes the exact one-grid-step inequality explicitly. Added threshold comparisons
+for both edges, narrow/tail composition through `-131/200` and `-2/3`, the two
+analytic antitone tails, exact 1489-to-1490 steps, and `edgeDecFrom_nine` /
+`edgeDecFrom_ten`. No frozen module or C450 file was edited.
+
+**Checks (scope).** `project_status.py --check` passed (index/manifest only);
+`git diff --check` and forbidden-token scan passed. Exact `Fraction` audit
+passed: both edge thresholds, node-1490 `-131/200`, and both step differences
+strictly negative (edge 9 `-6.803164649171186e-08`, edge 10
+`-6.8016306683833e-08`). This audit is rational table arithmetic, not Lean.
+No local project build was run, so the new module is **drafted, CI pending**.
+
+**Still unproved.** Kernel acceptance of `SevenClassQ0Deg3EdgeShape`; all edge
+prefix (`EdgeIncTo`) facts; the remaining negative-edge suffixes 2--7/11; all
+other shape credits; nine sectors; strict total; seven exclusions; and the
+arbitrary-center full-disk theorem.
+
+**Next concrete step.** Read the first CI diagnostic for EdgeShape (after its
+imports, especially Bins, are green). If it compiles, extend the same exact
+endpoint/threshold pattern to edge 11 and then a positive-coefficient prefix.
+
+## 2026-10-30 (session 30) — edge-11 suffix proof drafted
+
+**File / SHA256.**
+- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeShape.lean`
+  `a69bccf854c23daa87827583f9aaa747085db6556341fe8a70cccf62f5589899`.
+- `n11-work/ops/lanes/A/TARGETS.txt` unchanged,
+  `0e014984097afe340efcf6c6b948b1a114af817c7c44b115ed6d1f1847bac1f2`.
+
+**Progress.** Edge 11 has coefficient about `-0.0206432`, witness 1118, and
+ratio `b/A` about `-0.1429584`. Added `sinT14_nonneg_of_half_pi_le_of_le_two`
+on the previously missing `[pi/2, 2]` arc, using `sin x >= 1/2` and the
+degree-29 remainder below `1/4`. Combined it with the existing quarter-circle
+and `[2, 3*pi/4]` sine lemmas to prove
+`cosHiReal_antitoneOn_1118_to_three_pi_div_four`. Added the exact endpoint
+bound node-1118 cosine `<= -103/720`, the exact threshold comparisons, the
+split narrow/tail cosine bound, `edgeHiReal_antitoneOn_eleven`, and
+`edgeDecFrom_eleven`. No frozen or C450 file was edited.
+
+**Checks (scope).** `project_status.py --check` passed before editing this
+session (index/manifest only); `git diff --check` and the forbidden-token scan
+over `EdgeShape` passed. The authoritative CI snapshot still has no EdgeShape
+verdict. No project or probe build was run because the local host is weak and
+the cache/import budget is insufficient, so the new proof is **drafted, CI
+pending**, not paid.
+
+**Still unproved.** Kernel acceptance of everything after Bins; all 21
+`EdgeIncTo` prefixes; negative suffixes 2--7; the remaining positive suffix
+and prefix shape facts; nine sectors; strict total; seven exclusions; and the
+arbitrary-center full-disk theorem.
+
+**Next concrete step.** Read the first CI diagnostics in order Bins,
+EndpointChecks, EdgeSuffixNonpos, EdgeShape. Fix only the first red target. If
+EdgeShape is green, start edge 14's positive-coefficient increasing prefix,
+using the witness-486 region and exact endpoint step checks.
+
+## 2026-10-30 (session 31) — bounded local elaboration attempt blocked
+
+**Files / SHA256.** No source change. `SevenClassQ0Deg3EdgeShape.lean`
+`a69bccf854c23daa87827583f9aaa747085db6556341fe8a70cccf62f5589899`;
+`TARGETS.txt` `0e014984097afe340efcf6c6b948b1a114af817c7c44b115ed6d1f1847bac1f2`.
+
+**Checks (scope).** Re-ran `audit_q0_degree3_narrow_cos.py`: all seven exact
+`Fraction` assertions passed (node-1490 value `-0.6554928529996153`; both
+edge 9/10 thresholds; both strict 1489-to-1490 steps). `project_status.py
+--check` and `git diff --check` passed (index/manifest and whitespace only).
+A 45 s bounded `lake env lean .../EdgeShape.lean` attempt did not reach
+elaboration: Lake tried to check out Mathlib revision
+`0df444a360eaa60ab8c11dca51a86af692955474` and aborted because the local
+dependency tree has untracked files. No Lean diagnostic or kernel verdict was
+obtained. Source audit found no forbidden tokens and the new sine-monotonicity
+call matches existing Mathlib API use in this repository.
+
+**Still unproved.** Kernel acceptance of Bins, EndpointChecks,
+UpperReductionUnimodal, EdgeSuffixNonpos, and EdgeShape; negative suffixes
+2--7; all 21 edge prefixes; remaining shape facts; seven exclusions; strict
+total; arbitrary-center full-disk theorem.
+
+**Next concrete step.** On the next authoritative CI run, read the first
+diagnostic in order Bins, EndpointChecks, EdgeSuffixNonpos, EdgeShape. Fix only
+that target first; if EdgeShape is green, draft edge 14's positive-coefficient
+increasing prefix using witness 486 and exact endpoint steps.
+
+## 2026-10-30 (session 32, part 4) — edge-14 shortcut rejected; CI still pending
+
+**Files / SHA256.** No persistent source change. `SevenClassQ0Deg3EdgeShape.lean`
+restored exactly to `a69bccf854c23daa87827583f9aaa747085db6556341fe8a70cccf62f5589899`;
+`TARGETS.txt` `0e014984097afe340efcf6c6b948b1a114af817c7c44b115ed6d1f1847bac1f2`.
+`LATEST.md` was re-read: it still snapshots run `41011262474`; the newer
+`41017279843` / `41023888165` runs have no checked-in diagnostic yet.
+
+**Progress / correction.** Audited the natural "nonpositive coefficient"
+shortcut for edge 14 with exact `Fraction` arithmetic parsed from `mu` and
+`tableEdges`. Edge 14 is `{10,2}` with
+`b = edgeCoeff 14 = 848282000000000000000000000000000000193 / 8000000000000000000000000000000000000000`
+(about `0.10603525`), and `b / (19/50)^2` is about `0.73431614`; therefore
+`b ≤ 0` is false. Witness 486 gives `q ≈ 0.74551466 < 3/2 ≤ π/2`, so the
+sine term is increasing, but the subtracted `b*q` term opposes it. A provisional
+generic lemma was drafted and then fully removed after the exact countercheck;
+the restored source hash matches the prior frozen working hash. Any edge-14
+increasing-prefix proof must instead establish
+`cosHiReal x ≥ b/(19/50)^2` on the prefix (margin at the witness is only about
+`3e-4`), using a rigorous cosine lower bracket.
+
+**Checks (scope).** Exact rational sign/margin audit only, not Lean. Also ran
+`python tools/project_status.py --check` successfully (index/manifest scope),
+`git diff --check`, and the forbidden-token scan over EdgeShape. No Lean build;
+nothing new is CI green.
+
+**Still unproved.** Every item listed in session 31, plus `EdgeIncTo 14` and all
+other edge prefixes.
+
+**Next concrete step.** Implement a rigorous degree-28 cosine *lower* bracket
+and prove it exceeds the exact edge-14 ratio on `[0, nodeQ 486]`; then use
+`edgeHiReal_deriv_nonpos`'s positive analogue plus
+`monotoneOn_of_deriv_nonneg` to obtain `EdgeIncTo 14`. First inspect newer CI
+and fix Bins if its binder repair has a diagnostic.
