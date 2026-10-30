@@ -1,0 +1,39 @@
+{
+ "scope": "all n11-work/build JSON/JSONL outside ops/lanes/C, files <=2MB; not HOST storage and not a proof",
+ "source_sha256": {
+  "residual389-census.json": "44166ee869a61f6858f2285a98f96cc3faa4f59fbb98c01d76b4dc42a28827a8"
+ },
+ "scanned_file_count": 732,
+ "scanned_bytes": 2222361,
+ "oversized_file_count": 3,
+ "oversized_files": [
+  {
+   "file": "build/n11-wip/assets/evidence/codex-handoff/c450-grouped-pilot-packets-host.json",
+   "bytes": 3483291
+  },
+  {
+   "file": "build/n11-wip/assets/evidence/codex-handoff/c450-grouped-remaining8-35-host.json",
+   "bytes": 39165879
+  },
+  {
+   "file": "n11-work/evidence-20261028/inputs/paid16-general-next512.json",
+   "bytes": 7593399
+  }
+ ],
+ "parse_error_count": 2,
+ "parse_errors": [
+  {
+   "file": "n11-work/lean/.lake/packages/mathlib/.devcontainer/devcontainer.json",
+   "error": "Expecting property name enclosed in double quotes: line 24 column 5 (char 394)"
+  },
+  {
+   "file": "n11-work/lean/.lake/packages/mathlib/.vscode/extensions.json",
+   "error": "Expecting property name enclosed in double quotes: line 2 column 2 (char 3)"
+  }
+ ],
+ "residual_object_hit_count": 0,
+ "recovered_payload_count": 0,
+ "recovered_payload_ids": [],
+ "missing_payload_count": 389,
+ "missing_payload_ids_sha256": "747447e233634fbc9d9321824148165ac866105fe0367aed27f6f8d9a2e07f46"
+}
