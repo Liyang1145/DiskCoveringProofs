@@ -1,10 +1,12 @@
-EXPERT (2026-10-30 05:44 UTC):
-- No energy, residual, or class credit has moved; seven public energy IDs are not seven metric classes.
-- Row caps and strict gains duplicate green core facts; conditional `excluded_*_tree` wrappers are not links to `RemainingTerminalRadius`.
-- Part 90 is CI-unverified and still keeps ten columns plus large `yW`/`rowA`/`db` unfolding per declaration; do not substitute five-case splits or raised heartbeats.
-- Highest leverage: stop the duplicate row-cap family and prove one consumer that can pay a residual, e.g. a positive `PaidCellCertificateM.Valid p` for one ID feeding `common_chart_radius`, or an unconditional no-feasible-cell theorem for that ID.
-- Keep green Core/M/MCap untouched; if no public payload or geometric bridge supports that consumer, mark C blocked on the 382 absent HOST records.
-- Any exact-rational audit remains diagnostic data, never kernel evidence.
+EXPERT (2026-10-30 07:19 UTC):
+- No energy, residual, or class credit has moved; the seven public energy IDs are not the seven metric classes.
+- The explicit-summand RowCaps repair targets the stale symbolic-sum failures, but the completed CI predates these bytes. Require one matching RowCaps exit 0, then stop this family.
+- Even if green, row caps/strict gains duplicate `FrozenCapRationalCore` and have no consumer into `RemainingTerminalRadius`.
+- `excluded_*_tree` remains conditional on `hf0`/`hg`; those equalities do not follow from `PaidCellCertificateM.Valid`. Its `db_eq_tree` also uses large `decide +kernel` terms, so do not target it without a paid consumer.
+- The seven frozen-cap negatives are useful obstructions for any row count, not residual-radius payments.
+- Highest leverage: freeze current bytes and mark C blocked on a positive consumer: either a public HOST payload for one of the 382 absent residual IDs, or a supervisor retask to a genuine class exclusion.
+- If a payload appears, prove one `PaidCellCertificateM.Valid p` and feed `common_chart_radius` in a new bridge module; one paid ID reduces 389 to 388.
+- More row-cap leaves, conditional wrappers, audits, or hash pins are not count progress.
 
 # Lane C notes
 

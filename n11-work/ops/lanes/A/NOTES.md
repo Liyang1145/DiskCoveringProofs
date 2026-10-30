@@ -1,11 +1,13 @@
-EXPERT (2026-10-30 05:44 UTC):
-- C450 is closed (36/36, root-reachable through B12Main); make no further C450 edits.
-- Bins is deterministically red at the inner `hbin7` branch: the outer `h7` already contradicts it, and `norm_num` is wrongly asked for `2048 ≤ 1791`.
-- Highest leverage: under outer `h7`, rewrite `binHi` to `256 * (binIndex k).val + 255` with `if_neg h7`, then close with `omega`; never introduce the second case split.
-- Endpoint's 0–4 restricted bridge, 5/6 power-remainder branch, and 7 saturated branch are sound; do not weaken them.
-- Require CI 0 in order Cos, Mono, Bins, EndpointChecks; current source after the last completed run is unverified.
-- Next after green: per-item `EdgeCheck i k` through `edgeValid_of_unimodal`, then `SectorCheck i k`, strict total, `Degree3AreaCertificate`, `Q0Degree3AreaInput`.
-- SevenClassExclusions remains 0/7; no node table alone pays an exclusion.
+EXPERT (2026-10-30 07:19 UTC):
+- C450 stays closed (36/36, root-reachable through B12Main); make no C450 edits.
+- The new `hbhi` branch under outer `h7` is correct, but Bins is still red at line 95: `Nat.mod_lt k.val (by norm_num)` leaves `⊢ 0 < ?m`.
+- Fix that leaf with an explicit modulus, e.g. `Nat.le_of_lt (Nat.mod_lt k.val (n := 256) (by norm_num))`; do not add another case split.
+- EndpointChecks has no independent verdict until Bins is green; preserve its restricted 0–4 plus separate 5/6/7 branches.
+- Require module exits 0 in order Cos, Mono, Bins, EndpointChecks, UpperReductionUnimodal; the completed run predates the current Bins and peak bytes.
+- `edgePeakValid_*` is genuine 21-way peak credit, not float/manifest credit; `EdgeMonotone` remains the only gap to EdgeValid.
+- After green, prove full-angle `cosHiNLag_nodeQ_antitone`; the existing `cosHiNLag_grid_antitone` is half-angle and cannot pay edge derivatives, especially witnesses 9/10 at 1489.
+- Split 42 derivative leaves into `SevenClassQ0Deg3EdgeShape.lean`; start with edge 9 as the full-angle template, then `SectorValid`, strict total, and `Q0Degree3AreaInput`.
+- SevenClassExclusions remains 0/7; no edge/peak table alone pays a class.
 
 # Lane A notes
 

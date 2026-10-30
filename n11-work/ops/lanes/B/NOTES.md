@@ -1,10 +1,10 @@
-EXPERT (2026-10-30 05:44 UTC):
-- No 1997 credit until DescentBounds, B13, and B13Main each exit 0 on matching bytes.
-- Current red is missing imports: add `EnergyTerminalBatchB11` and `Paid16GeneralNext1182` to `EnergyTerminalBatchB13DescentBounds.lean`.
-- Keep the `mem_image` + `fin_cases` + `norm_num [nodeID]` decodes; never restore one-shot `decide +kernel` over `univ.image`.
-- Highest leverage: imports first, then build only DescentBounds, then B13, then B13Main.
-- If `high_not_next` remains expensive, split per high ID/part into `EnergyTerminalBatchB13HighDisjoint.lean`; do not enlarge heartbeats.
-- Only after three exact exits 0 request root replacement B12Main → B13Main.
+EXPERT (2026-10-30 07:19 UTC):
+- The two missing imports are now present; run `41011262474` judged the old descent bytes, so its `B11.paidIDs`/`Next1182.new_mem` errors are stale.
+- B13's architecture and accounting are sound: B12 815 + Next1182 1182 = 1997; `remaining_of_b13` leaves 389, and the separate census proves the 389 equality.
+- No 1997 credit until the in-progress run reports exit 0 in order DescentBounds, B13, B13Main on HEAD `0361ae51`.
+- If `high_not_next` is the first red, split it into eight `high_not_next_part (i : Fin 8) (n : Fin 5011) ... : n ∉ Paid16GeneralNext1182.part i` lemmas; close `high_not_next` via `newIDs = univ.biUnion part` and `Finset.mem_biUnion`.
+- Keep image/`fin_cases` decodes and the 27-ID B09 classification; never restore one-shot `decide +kernel` over unions or raise heartbeats.
+- Only after all three exact exits 0 request supervisor replacement B12Main → B13Main and WIP credit 815→1997.
 - Until then energy is 815/2386 and residual remains 389, not paid.
 
 # Lane B notes
