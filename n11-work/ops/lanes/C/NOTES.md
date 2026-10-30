@@ -186,41 +186,63 @@ Next: fresh CI must pass N0037 first, then the wrapper and Twelve pair; inspect
 their first exact errors and do not claim 377 before all exits are 0.
 ROOT-IMPORT REQUEST: none.
 
+## 2026-10-30 - part 151 (three compact residual refinements restored)
+Latest CI (`1b2fa7a8`, run 41098508743) is green for `RefineEleven` and its
+Main, plus the previously listed energy chain; it contains no N0037/Twelve/
+N3112 exits, so those remain **CI pending**. Restored three additional clean
+archive refinements N3116/N3431/N3573 (no forbidden tokens), each 5 nodes with
+terminal sets `{1,3,4}`, `{1,3,4}`, `{2,3,4}`. Exact integer audits passed
+100/100 root-scale entries and 400/400 split entries each; this is tree-data
+scope only, not MPacket validity or kernel credit.
 
-## 2026-10-30 - part 149 (clean N3112 singleton drafted)
+SHA256 sources: N3116 `70053e95b07b481d3c08aa02ef9d857c11d896118c773595af87756e5d034421`;
+N3431 `3aac08483d7e2bd0978901e36b4a75ef7aeae6fc289e3fd8a5ffead69c85c685`;
+N3573 `37c6090a9985ccf2db1100c42ec941341dbcb7c60c5dc2a207475757bc7b5044`.
+Emitted conditional `Refine3116`, `Refine3431`, `Refine3573` and their Mains
+from the green 2965 template (`paid_count = 1998`, no new aggregate). Six new
+wrapped targets plus three source targets were added, all **CI pending**.
+Checks: forbidden-token scan over all nine files 0; `git diff --check` 0;
+62/62 non-comment TARGETS distinct and resolvable. No Lean build/axiom report
+was run locally.
 
-Restored `EnergyRefineN3112.lean` from `origin/ci/n11-build` (no forbidden
-tokens) and audited exact integer data: 5 nodes, terminal `{1,3,4}`, 100/100
-root-scale, 400/400 split entries, zero mismatches, exit 0. This is data scope
-only. Emitted conditional `Refine3112`/`Refine3112Main` from the validated
-singleton template; `paid_count = 1998`, no new aggregate.
-SHA256: source `1b76594f3d3102f3e5c2902bfd19521bbb185f37cdbf6f278dfb77d6cf00318c`;
-wrapper `4f127d75b46c0f711dd065f2c44e941b261922862c02e3351223a61e140c7c21`;
-Main `c418abf6fc6352317515f7dc3ecd49e6da4decd362f6cd20ffa302a57cb5a8c9`;
-audit `66c470f862baa3125ad25f3c897a53d71b4ff3d43bfdc75efd3b3bab225fd517`.
-
-Static checks: 53/53 non-comment TARGETS distinct/resolvable; forbidden-token
-scan over the three new modules 0; `git diff --check` 0. All N3112 modules are
-**CI pending**. Still missing: kernel exits for N0037/Twelve/N3112 chains;
-N3112 MPacket validity; remaining residual ids; packet/no-cell and
-exclusion-to-radius bridges; energy and seven-class premises.
-Next: fresh CI must isolate the first error among N0037, Refine0037, Twelve,
-then N3112; do not add either singleton to an aggregate before its own exit 0.
+Still unproved/missing: kernel exits for N0037/Twelve/N3112/N3116/N3431/N3573
+chains; 373 residual ids conditional on all exits; MPacket validity; packet/
+no-cell and exclusion-to-radius bridges; energy and seven-class premises.
+Next: fresh CI must isolate the first red target after `EnergyRefineN0037`;
+do not extend the paid aggregate until each source and wrapper exits 0.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-30 - part 150 (stale Eight diagnosis; N0037 first)
+## 2026-10-30 - part 149 (N3112 drafted)
 
-Compared fresh CI (`40d03ae5`) with the worktree. Its
-`EnergyTerminalBatchB13RefineEight.lean:63:50` failure came from the old
-`EnergyRefineN2337.new_radius 2337 (by simp) ...`; current HEAD/worktree already
-uses the explicit rewritten-membership proof and imports
-`EnergyRefineN2337.terminal`. No source edit was needed and no kernel claim is
-made from source inspection. Latest CI run contains no N0037/Twelve/N3112 exits.
-Reordered lane C `TARGETS.txt` so N0037 and its wrapper/Twelve chain precede the
-combined Eleven targets; this only changes CI scheduling, not credit.
-Checks: inspected the exact old/new line pair and `git rev-parse`; no Lean build
-was run in this 4-minute slot. Still missing: kernel exits for Eight/Eleven (at
-the current source), N0037/Twelve/N3112; packet validity; residual bridges and
-energy/seven-class premises. Next: fresh CI must report the current Eight line
-and `EnergyRefineN0037` exits before any count reduction is claimed.
-ROOT-IMPORT REQUEST: none.
+Restored/audited N3112 (5 nodes; terminal `{1,3,4}`; 100/100 root, 400/400
+split, data scope only) and emitted conditional `Refine3112`/Main, paid count
+1998. All **CI pending**. Source `1b76594f3d3102f3e5c2902bfd19521bbb185f37cdbf6f278dfb77d6cf00318c`.
+
+## 2026-10-30 - part 150 (stale Eight diagnosis)
+
+Old CI error `RefineEight.lean:63:50` was already fixed in worktree; no kernel
+claim. Reordered N0037/Twelve before Eleven in `TARGETS.txt`.
+
+## 2026-10-30 - part 152 (row-cap red cause fixed in generator)
+
+Pulled CI run `41098508743` logs. `FrozenCapPublicExcludedTree` exited 1 because
+all seven `FrozenCapRowCap*` dependencies failed at their `row_cap` proof:
+transparent `norm_num` left goals of form `... ≤ ↑(dbmVal 0 ⟨j, _⟩) / 4096`
+unreduced (2356 also hit 200000 heartbeats). Patched
+`n11-work/ops/lanes/C/emit_frozen_cap_row_caps.py` to include `dbmVal` in the
+unfold set, then regenerated the seven modules.
+
+Checks: generator exact-audited 700/700 ordered caps against the frozen DBM
+(`BD4E71CB…A8ED5`), minimum slack 0, exit 0; static exclusion audit exit 0
+(closure 460, seven exact theorem ids, no forbidden imports/tokens);
+`git diff --check` exit 0. This is data/static scope only. The corrected row-cap
+proofs, exclusion theorem and axiom reports remain **CI pending**.
+Row-cap SHA256: 1409 `6778EACA…D2B5`, 2337 `FBBA6318…FDC5`, 2341
+`B445A626…A3C6`, 2356 `2905ACF6…F85D`, 2360 `C9981064…DCB1`, 2368
+`3CF9BDD1…3C60`, 2370 `61ACA6E6…22D6`.
+Still missing: kernel exits for this chain; N0037/Twelve/N3112/N3116/N3431/
+N3573 chains; 373 residual ids conditional on exits; MPacket validity;
+packet/no-cell and exclusion-to-radius bridges; energy and seven-class premises.
+Next: fresh CI must confirm all seven row caps and then
+`FrozenCapPublicExcludedTree`; if green, inspect the first pending singleton
+error rather than extending the paid aggregate. ROOT-IMPORT REQUEST: none.

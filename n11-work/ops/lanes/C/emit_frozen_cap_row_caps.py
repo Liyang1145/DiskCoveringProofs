@@ -55,7 +55,7 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
         "theorem row_cap (i j : Fin 10) :",
         f"    (∑ q : Fin 9, y_{node} q * rowA i j q) ≤ db i j := by",
         "  fin_cases i <;> fin_cases j <;>",
-        f"    norm_num [y_{node}, rowA, db, Fin.sum_univ_succ]",
+        f"    norm_num [y_{node}, rowA, db, dbmVal, Fin.sum_univ_succ]",
         "",
         "end",
         f"end N11Formalization.{ns}",

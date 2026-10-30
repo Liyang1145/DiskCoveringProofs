@@ -33,7 +33,7 @@ def db (i j : Fin 10) : ℚ := (dbmVal i j : ℚ) / 4096
 theorem row_cap (i j : Fin 10) :
     (∑ q : Fin 9, y_2368 q * rowA i j q) ≤ db i j := by
   fin_cases i <;> fin_cases j <;>
-    norm_num [y_2368, rowA, db, Fin.sum_univ_succ]
+    norm_num [y_2368, rowA, db, dbmVal, Fin.sum_univ_succ]
 
 end
 end N11Formalization.FrozenCapRowCap2368
