@@ -52,62 +52,6 @@
   Lean authority; local probes use `/workspace/tools/mathlib-probe`.
 - Do not claim payment for Next1182, B13, or B13Main until CI is green.
 
-## 2026-10-29 - session part 17: stale-run confirmation + local audit
-
-### Done
-- Re-read `GUIDANCE.md`, Lane B, part-16 notes and `ci/LATEST.md`.
-- Queried GitHub API for run `40949277719`: workflow `completed success`, head
-  `f30e46f0ae29a0b11304bddae3e4457ab8d3ba68`, updated `2026-10-29T21:02:39Z`.
-  Its target failures still concern the pre-fix Next1182 bytes, so the workflow
-  conclusion is not evidence for the local `C3BD2A12...` source.
-- Re-ran `audit_next1182_blocks.py` (exit 0): 1182 ids; eight parts
-  `168x7+6`; 57 literal blocks (max 21); 28 interval-disjoint theorems; 8
-  diagonal + 56 off-diagonal dispatch cases; 8 lower-bound transfers; zero
-  whole-set kernel decodes. Source SHA256 remains
-  `C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22`
-  (41,833 bytes), matching part 16.
-- Confirmed B13/B13Main source and prior closure/import audits remain internally
-  consistent (B13 count 815+1182=1997; residual inventory 389). These are static
-  checks only.
-
-### Still unproved / unverified
-- Next1182 `C3BD2A12...` remains **CI pending / unpaid**; B13 and B13Main remain
-  **CI pending / unpaid** and were import-blocked on the tested hash. Residual
-  389, `SevenClassExclusions`, and the arbitrary-center full-disk theorem are
-  unpaid.
-
-### Next concrete step
-- Wait for a CI run whose Next1182 artifact/source hash is `C3BD2A12...`.
-  Require Next1182 exit `0` first, then separate B13 and B13Main exits `0`.
-  Only then issue the root-import request, quoting the run id.
-
-## 2026-10-29 - session part 18: hash/audit recheck; CI access absent
-
-### Done
-- Re-read guidance, lane B, the part-17 notes, and `ci/LATEST.md`; the index
-  status check passed (inventory scope only).
-- Confirmed the working-tree Next1182 still has SHA256
-  `C3BD2A1254EE460D29E63A488CB7B37578DB19ECD78246FCDC7E5747CF831A22`
-  and emitter SHA256
-  `8248CC972485566B2C71EC3695E6AEB60F6F65DF1A2AA6A3837E78CAAB420B24`.
-- Re-ran `audit_next1182_blocks.py` (exit 0) and `git diff --check` (exit 0):
-  1182 ids; parts `168x7+6`; 57 literal blocks (max 21); 28 interval
-  disjointness theorems; 8 diagonal + 56 off-diagonal branches; 8 global
-  lower-bound transfers; 0 whole-set kernel decodes.
-- `gh` is unavailable in this worktree/session, so no post-fix run or artifact
-  was accessible. `ci/LATEST.md` still records run `40949277719` against the
-  stale pre-fix Next1182 bytes.
-
-### Still unproved / unverified
-- Next1182 `C3BD2A12...` is **CI pending / unpaid**. B13 and B13Main are
-  **CI pending / unpaid**. Residual 389, `SevenClassExclusions`, and the
-  arbitrary-center full-disk theorem remain unpaid.
-
-### Next concrete step
-- On the next CI artifact, first require Next1182 `C3BD2A12...` exit `0`.
-  Then require separate B13 and B13Main exits `0`; only then request the root
-  import and quote the successful run id.
-
 ## 2026-10-29 - session part 17 (same slot, part 5): determinism recheck of the `onFun` fix
 
 ### Done
@@ -185,3 +129,71 @@
   then separate B13 exit `0`, then B13Main exit `0`; only then issue the
   root-import request (quote run id). If Next1182 is red, copy the first full
   error block and check whether `change Disjoint S_i S_j` was the failing step.
+
+## 2026-10-30 - session: static recheck + audit (no CI change)
+
+### Done
+- Re-read GUIDANCE/Lanes/NOTES/ci LATEST; ran `python tools/project_status.py --check` (exit 0).
+- Ran `audit_next1182_blocks.py` (exit 0): 1182 ids; parts 168x7+6; 57 literal blocks (max 21); 28 interval-disjoint theorems; 8 diagonal + 56 off-diagonal dispatches; 56 defeq-fallback branches; 0 whole-set decodes. top_sha256 `5D941203...` (49,701 bytes); emitter `5A670144...`.
+- `py_compile` on emitter/audit (exit 0); `git diff --check` (exit 0).
+- Reconfirmed B13 (`paid_count 1997`, residual 389) and B13Main source internally consistent; targets unchanged.
+- CI LATEST still run `40935785584` on older tree (Next1182 red "Type mismatch" lines 582-590); no new run contains `5D941203...`.
+
+### Still unproved / unverified
+- Next1182 `5D941203...`, B13, B13Main: CI pending/unpaid. Residual 389, SevenClassExclusions, arbitrary-center full-disk: unpaid.
+- Suspected Next1182 red site is `lower_bound` omega lifts (parts 2-8); emitter keeps 8 `have hb := (part_s...).1; omega` transfers (audit count 8).
+
+### Next concrete step
+- On first CI run containing `5D941203...`: require Next1182 exit 0, then B13 exit 0, then B13Main exit 0; then ROOT-IMPORT REQUEST for B13Main. If red, quote first full error block and check `change Disjoint` / `lower_bound` step.
+
+## 2026-10-30 - session part 2: repaired source enters CI
+
+### Done
+- Re-read GUIDANCE, Lane B, NOTES and CI index; `project_status.py --check` exit 0.
+- Confirmed HEAD `76b6835e5d6ff2c166cac703a0d55f33dc54303d` contains
+  `Paid16GeneralNext1182.lean` SHA256 `5D941203...` (49,701 bytes) and emitter
+  `5A670144...`. This is the defeq-fallback revision, not the older red source.
+- GitHub Actions run `40973981403` (workflow `n11-lean-build`, head `76b6835e`)
+  is the first run bound to this source. At observation its single `build` job
+  was `in_progress` in step 7 (`Build`); no target verdict or error log exists yet.
+  Run `40973981437` (math) succeeded and `40973981433` (delivery) failed; neither
+  is the lane-B Lean kernel verdict.
+
+### Checks executed (scope)
+- API metadata only: run/head/status binding above; no local Lean build.
+
+### Still unproved / unverified
+- Next1182 `5D941203...`, B13, B13Main remain **CI pending / unpaid**. Residual
+  389, `SevenClassExclusions`, arbitrary-center full-disk theorem remain unpaid.
+
+### Next concrete step
+- Poll run `40973981403` to completion and read the Build log. Require distinct
+  exit-0 evidence for Next1182, then B13, then B13Main before a root-import request.
+
+## 2026-10-30 - session part 3: live CI poll + red-site source audit
+
+### Done
+- Re-read GUIDANCE, Lane B, NOTES and CI index; `project_status.py --check` exit 0.
+- Queried GitHub API run `40973981403` (repo `Liyang1145/DiskCoveringProofs`): head
+  `76b6835e5d6ff2c166cac703a0d55f33dc54303d`; status `in_progress`, conclusion null;
+  build job `123806191726` in step 7 `Build` (started 2026-10-30T00:05:10Z). No Lean
+  target verdict yet; live log download is API `Not Found` while running.
+- Confirmed local Next1182 remains SHA256 `5D941203...` (49,701 bytes), emitter
+  `5A670144...`; no source drift.
+- Traced the prior red site precisely: in `cea391a9`, lines 581-588 of
+  `Paid16GeneralNext1182.lean` were `exact (part_sNN_bounds n h).1`. A conjunction
+  projection does not match the required `2565 ≤ n.val` when the part lower endpoints
+  differ by part; this explains all seven reported type mismatches (old lines 582-588).
+  The current source instead extracts the full conjunctive bound as `hb` and closes
+  each branch with `omega` (current source lines 579-596), so the fallback is exactly
+  at the previous red site. This is source inspection, not elaboration.
+
+### Still unproved / unverified
+- Run `40973981403` has **no verdict yet**; Next1182 `5D941203...`, B13 and B13Main
+  remain CI pending/unpaid. Residual 389, `SevenClassExclusions`, and arbitrary-center
+  full-disk theorem remain unpaid.
+- Prior `cea391a9` red is stale relative to current source and is not the current verdict.
+
+### Next concrete step
+- Poll `40973981403` to completion and read its Build log. Require exit 0 for
+  Next1182 first, then B13, then B13Main; only then request root import of B13Main.
