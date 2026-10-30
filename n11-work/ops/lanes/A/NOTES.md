@@ -68,177 +68,151 @@ facts. Exact `Fraction` node selection passed; smallest crossing margin was
 results were **drafted, CI pending**; the probe timeout was not a Lean verdict.
 EdgeShape hash then: `12869a2a...6ea`.
 
-## 2026-10-30 (session 42) -- all 42 shape facts and endpoint assembled
+## 2026-10-30 (sessions 42--47, condensed)
 
-**Files / SHA256.**
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EdgeShape.lean`
-  `fb48cf172b955c46aab2a969f2f29ee670da4456ff73f17620512da5a99260de`.
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3Bins.lean` unchanged,
-  `a3d8f972205f52d664ecb69073704de6d34bf1a5e15816d9a8ffc8f9f2e25326`.
-- `TARGETS.txt` unchanged,
-  `0e014984097afe340efcf6c6b948b1a114af817c7c44b115ed6d1f1847bac1f2`.
+- Drafted all 42 EdgeShape facts and `edgeValid`; assembled EndpointChecks,
+  endpoint Taylor bounds, 21 UpperReduction peak checks, and both suffix modules.
+- Repair chain for stale CI reds: Bins API `Nat.mod_lt`; EndpointChecks
+  `div_le_div_iff`, sine-remainder sign, explicit power derivative, finite-branch
+  tactic selection, literal endpoint-table reduction, and cast/ring plumbing.
+- Session 47 read run `41065332260`: `ring` did not unfold `sinT 4`; `hmain`
+  retained opaque `↑(sinPoly4 a)`; `convert ... <;> ring` stalled; `norm_num`
+  committed before `omega`; and vector indices such as `![...] 5` survived.
+  Repairs were `norm_num [sinT, Finset.sum_range_succ]`, `unfold sinPoly4`,
+  a named derivative equality, `omega`-first branches, and eight literal
+  `[simp]` table facts. EndpointChecks hash became `ff880fc9...aa65dc`.
+- Exact endpoint audits passed independently; no declaration was kernel-paid.
 
-**Progress.** Closed the final increasing prefixes with the existing
-prefix-plus-one-grid-step wrapper: edges 9/10 use predecessor 1488 and edge 11
-uses predecessor 1117. Added `edgeIncTo_{nine,ten,eleven}`, then assembled
-`edgeMonotone : EdgeMonotone`, `edgeUnimodal : EdgeUnimodal`, and
-`edgeValid : EdgeValid`; edges 12/13 use the existing qualified decreasing
-facts from `SevenClassQ0Deg3EdgeSuffixHigh`. All 42 individual shape facts are
-now drafted.
+## 2026-10-30 (session 48) -- current-run diagnostics mapped; draft unchanged
 
-**Checks (scope).** Exact `Fraction` arithmetic emulating `cosTQ` verified
-`cosTQ 14 (nodeQ ... prev) > edgeCoeff i / (19/50)^2` at (9,1488), (10,1488),
-and (11,1117); the corresponding one-step `edgeUpper` inequalities are encoded
-as separate `norm_num` goals. `git diff --check` and the forbidden-token scan
-passed. `python3 tools/project_status.py --check` previously passed (index /
-manifest consistency only). No local Lean/project build was run. The refreshed
-public `ci/LATEST.md` still reports stale run `41037794295`; newer CI runs are
-pending, so every new statement is **drafted, CI pending**, not paid.
-
-**Still unproved.** Kernel acceptance of Bins, all downstream targets, the 42
-shape facts, and `edgeValid`; nine sectors; strict total;
-`Q0Degree3AreaInput`; seven exclusions; and the arbitrary-centre full-disk
-theorem.
-
-**Next concrete step.** Read the first refreshed CI diagnostic in target order.
-If Bins or EdgeShape is red, fix only that first error; if both are green,
-begin the nine-sector assembly feeding `SevenClassExclusions`.
-
-## 2026-10-30 (session 43, continuation) -- CI refresh and Bins API audit
-
-**Files / SHA256.** No source change beyond session 42:
-`SevenClassQ0Deg3Bins.lean`
-`a3d8f972205f52d664ecb69073704de6d34bf1a5e15816d9a8ffc8f9f2e25326`;
-`SevenClassQ0Deg3EdgeShape.lean`
-`fb48cf172b955c46aab2a969f2f29ee670da4456ff73f17620512da5a99260de`;
-`TARGETS.txt`
+**Files / SHA256.** EndpointChecks remains
+`ff880fc9f255a06305ff0980686d9d1e3f3c21c68adcbddb6a7ad45a00aa65dc`;
+`TARGETS.txt` remains
 `0e014984097afe340efcf6c6b948b1a114af817c7c44b115ed6d1f1847bac1f2`.
+No new source edit: the public artifact for completed run `41065332260` tested
+the pre-repair `ede0d1c8` file, not this hash.
 
-**Progress.** Re-read guidance, lane assignment, CI snapshot, and prior notes.
-The public `ci/LATEST.md` is stale: its newest rows are run `41050329106`
-(pending, `d70898ab`) and `41050208198` (in progress, `18c6e03b`), while its
-detailed report remains run `41037794295`. The only quoted lane-A red in that
-old report is `SevenClassQ0Deg3Bins.lean:95:23`; the local repaired line is the
-known project pattern `Nat.mod_lt k.val (by norm_num : 0 < 256)`, as used by
-`SourceLoop.lean`. No conclusion is drawn for the pending runs.
+**Progress.** Downloaded the public run artifact and full Actions log through
+the GitHub API. Extracted all 18 EndpointChecks diagnostics (lines 76, 105,
+128, 222, 234, 255, 257, 260, 271, 273, 276, 300, 305, 310, 317, 327, 341).
+They reduce to five clusters: sine `sinT 4` normalization; casted `sinPoly4`
+in `hmain`; derivative `ring_nf`; `False` branches for `j = 5..7`; and
+vector-indexed endpoint values. The session-47 draft addresses every cluster.
+The artifact is evidence for the repair mapping, not a verdict on current bytes.
 
-**Checks (scope).** `git log` confirms current HEAD `e2d2cab4` includes the
-supervisor merge cycle; source hashes above were recomputed. A Mathlib-family
-probe for the `mod_lt` goal and a bare pinned-Lean `#check` both hit bounded
-timeouts before producing output, so neither is a Lean verdict. No project
-build was run.
+**Checks (scope).** `verify_q0_degree3_endpoint_polynomial.py`: PASS 8/8,
+minimum slack `1813339696040923404218003961318003972770323 /
+52701008282540452209375000000000000000000000000`.
+`audit_endpoint_low_denom.py`: PASS 8/8, bin-7 slack `6.6940497252e-7`.
+`git diff --check` and the forbidden-token scan passed. A bounded local
+Mathlib probe timed out without a verdict. No local project build was run.
 
-**Still unproved.** Kernel acceptance of Bins, EndpointChecks,
-UpperReductionUnimodal, both suffix modules, EdgeShape and `edgeValid`; all
-nine sectors; strict total; `Q0Degree3AreaInput`; seven exclusions; and the
-arbitrary-centre full-disk theorem. Everything new remains **drafted, CI
-pending**.
+**Still unproved.** Kernel acceptance of EndpointChecks with hash `ff880fc9`;
+then UpperReductionUnimodal, suffixes, EdgeShape/`edgeValid`, nine sectors,
+strict total, `Q0Degree3AreaInput`, seven exclusions, and the
+arbitrary-centre full-disk theorem.
 
-**Next concrete step.** Consume the completed result of run `41050329106` (or
-the first newer completed `n11/work` run). Quote its first lane-A diagnostic
-in target order; if Bins is green, proceed to EndpointChecks, otherwise fix
-only that first error before touching downstream modules.
+**Next concrete step.** After supervisor commit/push, read the first completed
+run at or after current HEAD. Quote its first EndpointChecks diagnostic; fix
+only that site before advancing in `TARGETS.txt`.
 
-## 2026-10-30 (session 44) -- CI consumed; first EndpointChecks red repaired
+## 2026-10-30 (session 49) -- C450 endpoint non-vacuity audit
 
-**Files / SHA256.**
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EndpointChecks.lean`
-  `a52b222ca8bc12167943db42c4784ca478c23147bf89c25221d64867e35154e7`.
-- Bins unchanged and now CI-green:
-  `a3d8f972205f52d664ecb69073704de6d34bf1a5e15816d9a8ffc8f9f2e25326`.
-- EdgeShape unchanged, CI-red:
-  `fb48cf172b955c46aab2a969f2f29ee670da4456ff73f17620512da5a99260de`.
+**Did.** Re-audited the green C450 telescope against the handoff warning that an
+empty `drop 36` base must not be mistaken for payment of segment 36.  Confirmed
+`C450Source36Segment.source35_remaining_of_remaining` explicitly inserts
+`source36_paid`; the empty base is therefore the correct endpoint.  Added
+`C450ChainCompletionAudit.lean`, which proves that `source36` is a member of
+`C450Source11Segment.remainingSegs`, recovers
+`SegmentNormalized source36` directly from `h450`, and proves the consumed tail
+is nonempty.  Added the module to `TARGETS.txt`.
 
-**Progress.** GitHub Actions run `41050329106` completed **success** at
-`d70898ab`, updated 2026-10-30T12:42:05Z. Its job log shows exit 0 for
-`C450ChainCompletionMain`, `Cos`, `Mono`, `Bins`; Bins is therefore CI-green.
-The first new lane-A red is `EndpointChecks` exit 1. Its first diagnostic was
-`SevenClassQ0Deg3EndpointChecks.lean:32:10: Unknown identifier div_le_div_iff`.
-Replaced that obsolete rewrite and its multiplication proof with
-`div_le_div_of_nonneg_left` and the cast factorial comparison. The module still
-has later independent diagnostics at lines 78, 101, 107, 123, 130--131,
-189, 215--216, 231--232, 248, 260, 292, 297, 302, 309, 319, 333; these are
-drafted source fixes pending, not paid. `UpperReductionUnimodal`,
-`EdgeSuffixNonpos`, `EdgeSuffixHigh`, and `EdgeShape` also exited 1, but those
-were dependency failures of red EndpointChecks and are not independent verdicts.
+**Files / SHA256.** `C450ChainCompletionAudit.lean`
+`e6306c1f22d5879a03cb8cea70582d88330a3102edd1251c89ce79761238b488`;
+`TARGETS.txt` `39d32d75080cbd329a3068f8d3b3beaa40f899c3f1c7665b6a71fb2e8d27cc03`.
+The pre-existing `C450ChainCompletionMain.lean` is unchanged at
+`3f6088615e0a88e2a8927562c947c0c685e3e57bb15376ca3467fc7f6a33539c`.
 
-**Checks (scope).** Queried the public Actions API and parsed the complete job
-log (not inferred from stale `ci/LATEST.md`). `git diff --check` passed for the
-edited EndpointChecks file; forbidden-token scan found none. No local Lean or
-project build was run, so the new rewrite is **CI pending** and not a Lean
-verdict. The CI success of `C450ChainCompletionMain` and `Bins` is kernel scope.
+**Checks (scope).** `git diff --check` passed and the forbidden-token scan of
+the new module found none.  A Mathlib-only probe of the `change`/kernel/empty-list
+tactic pattern timed out without a verdict.  The audit is **CI-pending**: no
+local project build ran.
+`EnergyTerminalBatchB12Main` already imports `C450ChainCompletionMain`, so the
+stale root comments at lines 1952--1953 are not evidence of a missing consumer.
+The audit module itself is not requested for root import.
 
-**Still unproved.** Kernel acceptance of the EndpointChecks repair and all later
-targets; the downstream draft declarations in EndpointChecks/UpperReduction/
-EdgeShape; nine sectors; strict total; `Q0Degree3AreaInput`; seven exclusions;
-and the arbitrary-centre full-disk theorem. No mathematical payment is claimed.
+**Still unproved / unpaid.** Kernel acceptance of the new audit; separately,
+the red `EndpointChecks` chain and all seven-class obligations remain unpaid.
+C450's mathematical chain is already CI-green only through its previously
+checked hashes; this session's audit confirms the final-segment plumbing.
 
-**Next concrete step.** Rerun lane-A CI in target order. If line 32 is green,
-quote the first remaining EndpointChecks diagnostic at line 78 and fix only that
-goal before touching later lines.
+**Next concrete step.** Read CI for `C450ChainCompletionAudit` after supervisor
+push.  If green, record C450 as fully audited; if red, quote and repair only its
+first diagnostic without touching the new Fen/`h450` chain.
 
-## 2026-10-30 (session 45) -- EndpointChecks proof-plumbing repair
+## 2026-10-30 (session 50) -- audit hardening + CI state
 
-**Files / SHA256.**
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EndpointChecks.lean`
-  `53daf90db8328eeca312bb6d084d66dbb44d818eb68bd13a13e55ccce06c53fa`
-  (**drafted, CI pending**).
-- Bins `a3d8f972...e25326` is CI-green; EdgeShape `fb48cf17...260de` and
-  `TARGETS.txt` `0e01498...ac1f2` are unchanged.
+**Did.** `ops/ci/LATEST.md` has newest completed run `41059074494` (success
+at `96ed4912`); `41065332260` is still in progress.  `C450ChainCompletionAudit`
+is still untracked in this worktree, so no CI run has tested it.  Static review
+confirmed `C450Source11Segment.remainingSegs` is `def ... := c450Segs.drop 11`
+(line 367), so the audit's `change` is definitionally valid.  Replaced the
+uncertain `exact List.not_mem_nil hmem` with the robust `cases hmem`.
 
-**Progress.** Retrieved and parsed the full run-`41050329106` job log. Beyond
-the already repaired `div_le_div_iff`, fixed the line-67 sine-remainder sign
-(`.2` to `.1`), replaced the unsupported `fun_prop` derivative proof by
-explicit `hasDerivAt_pow`, removed obsolete explicit exponents from
-`pow_le_one₀`, normalized addition order before `max_le_max_left`, moved the
-`nodeQ`/endpoint helper facts before their uses, and strengthened the finite
-rational `norm_num` closers. The later identical diagnostics in that log are
-from the pre-repair source.
+**Files / SHA256.** `C450ChainCompletionAudit.lean` now
+`ea77c2ee45437f4885b0d8061a7c7794fc439d5a87f7d3ce2e505d94fe1a015e`
+(was `e6306c1f...`).  `TARGETS.txt` unchanged at `39d32d75...cc03`;
+`EndpointChecks` unchanged at `ff880fc9...aa65dc`; `NOTES.md`/`TARGETS.txt` are modified
+locally, not committed.
 
-**Checks (scope).** Exact `Fraction` re-audit
-`verify_q0_degree3_endpoint_polynomial.py` passed 8/8; minimum slack is
-`1813339696040923404218003961318003972770323 / 52701008282540452209375000000000000000000000000`
-(about `3.44e-5` in decimal, display only). `git diff --check` and the
-forbidden-token scan passed. A bounded Mathlib probe timed out without output;
-no local Lean/project build verdict. Latest lane-A CI run `41059074494` is
-still in progress, so none of these repairs is paid.
+**Checks (scope).** Forbidden-token scan of the patched audit: clean.
+Mathlib probes of `norm_num [sinT, Finset.sum_range_succ]` timed out at 150 s
+(full import) and 100 s (narrow import); a bare `#check` probe gave no output.
+These are sandbox timeouts, **not** Lean verdicts.  Manual sign audit of
+`sinPoly4_le_sinTQ14`: after unfolding, the difference is
+`(a^9/9! - a^11/11!) + ... + (a^25/25! - a^27/27!)`, each pair nonnegative by
+`sinTaylorPair_le` with `n = 9,13,17,21,25`, so the post-`norm_num`
+`linarith` is mathematically the right closing step.
 
-**Still unproved.** Kernel acceptance of EndpointChecks and every downstream
-target; all 42 EdgeShape facts and `edgeValid`; nine sectors; strict total;
-`Q0Degree3AreaInput`; seven exclusions; arbitrary-centre full-disk theorem.
+**Still unproved.** No kernel verdict on the audit or on the repaired
+EndpointChecks; UpperReductionUnimodal, both suffix modules, EdgeShape/
+`edgeValid`, seven sectors, strict total, `Q0Degree3AreaInput`, and the seven
+exclusions all remain unpaid at this hash.
 
-**Next concrete step.** When run `41059074494` completes, quote its first
-EndpointChecks diagnostic; if EndpointChecks is green, advance to
-UpperReductionUnimodal in target order.
+**Next concrete step.** Read the first CI run at or after the supervisor commit
+containing `ea77c2ee` and `ff880fc9`; quote the first diagnostic of
+`C450ChainCompletionAudit` or `EndpointChecks` and repair only that site.
 
-## 2026-10-30 (session 46) -- Taylor API/finite-branch repairs
+## 2026-10-30 (session 51) -- completed-run provenance checked
 
-**Files / SHA256.**
-- `n11-work/lean/N11Formalization/SevenClassQ0Deg3EndpointChecks.lean`
-  `5b033ddf218f267fda0f17f2b9cc7bcdef7eb3a87d560ad8909d03c3de15cf77`
-  (**drafted, CI pending**).
-- New bounded probe `n11-work/ops/lanes/A/probe_endpoint_taylor_api.lean`
-  `9e0be8e902bdcc50066fad7b2e70318b5f8cf0f9a34fc573984493bcfca0fc37`.
-  `TARGETS.txt` unchanged.
+**Did.** Queried the GitHub Actions API directly because `ops/ci/LATEST.md` was
+stale. Run `41065332260` completed `success` at 14:15:52Z on `ede0d1c8`, but
+that artifact predates the repaired EndpointChecks bytes. Its EndpointChecks
+entry is therefore stale evidence, not a verdict on `ff880fc9`.
 
-**Progress.** Run `41059074494` is still in progress at head `96ed4912`, which
-predates the lane-A edits; its EndpointChecks diagnostics therefore do not test
-this source. Fixed `sinTaylorPair_le` to supply the positive denominator before
-`factorial_le` to `div_le_div_of_nonneg_left`. Replaced both
-`... at hj ⊢` finite proofs (`endpointUBin_le_one_of_lt5`,
-`nodeQ_binHi_le_two_of_lt5`) with `first | norm_num ... | omega`, avoiding the
-recorded "No goals to be solved" failures when `hj` is contradictory.
+Supervisor commit `79e52a68` touched only `ops/PROGRESS.md` and
+`ops/ci/LATEST.md`. Its two runs are `41072186791` (workflow "Scoped
+mathematical replay", success) and `41072186884` (workflow "Delivery bytes, not
+mathematical proof", failure). Neither is a lane-A Lean build verdict. The
+supervisor's `n11-lean-build` for the current lane-A bytes has not run because
+the audit is untracked and the two repaired files are uncommitted.
 
-**Checks (scope).** Exact `Fraction` audits passed: endpoint polynomial 8/8
-(minimum slack `1813339696040923404218003961318003972770323 /
-52701008282540452209375000000000000000000000000`), and low-denominator caps
-8/8 with bin-7 slack `6.6940497252e-7`. `git diff --check`, the forbidden-token
-scan, and `project_status.py --check` passed. A Mathlib probe was stopped after
-120 s with no output; it is **not** a Lean verdict. No project build was run.
+**Files / SHA256.** No source edit this session. EndpointChecks remains
+`ff880fc9f255a06305ff0980686d9d1e3f3c21c68adcbddb6a7ad45a00aa65dc`;
+audit remains `ea77c2ee45437f4885b0d8061a7c7794fc439d5a87f7d3ce2e505d94fe1a015e`;
+TARGETS remains `39d32d75080cbd329a3068f8d3b3beaa40f899c3f1c7665b6a71fb2e8d27cc03`.
 
-**Still unproved.** All new EndpointChecks declarations are kernel-unpaid; then
-UpperReductionUnimodal, suffixes, EdgeShape/`edgeValid`, nine sectors, strict
-total, `Q0Degree3AreaInput`, seven exclusions, and the arbitrary-centre theorem.
+**Checks (scope).** Confirmed HEAD and remote branch at `79e52a68`; confirmed the
+new commit contains no lane-A Lean changes. `git diff --check` and the
+forbidden-token scan over the audit and EndpointChecks pass. Current Git status
+shows the two modified lane-A files and untracked audit. No local project or full
+Lean build was run.
 
-**Next concrete step.** Consume the first completed run containing this file.
-Quote its first EndpointChecks diagnostic; fix only that site before advancing.
+**Still unproved.** Kernel acceptance of the audit and repaired EndpointChecks;
+then UpperReductionUnimodal, suffix modules, EdgeShape/`edgeValid`, seven
+sectors, strict total, `Q0Degree3AreaInput`, seven exclusions, and the
+arbitrary-centre full-disk theorem.
+
+**Next concrete step.** After the supervisor commits this worktree, find the
+new `n11-lean-build` run at or after that commit, quote its first diagnostic for
+`C450ChainCompletionAudit` (TARGETS order), and repair only that line.
