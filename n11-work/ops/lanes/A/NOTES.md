@@ -119,3 +119,116 @@ exclusions; the arbitrary-center theorem.
 **Next concrete step.** Extend `cosHiReal_antitoneOn` to
 `Set.Icc 0 (RatInterval.piHi : ℝ)` by proving `sinT 14 x ≥ 0` on that interval,
 then instantiate the first edge's two derivative-sign checks as templates.
+
+## 2026-10-30 (part 5) — negative-coefficient suffix route for edges 9/10
+
+**Files.** Added `N11Formalization/SevenClassQ0Deg3EdgeSuffixNonpos.lean`
+(SHA256 `81fcc16d461914bea2813efe7a5f5c80e017d711d8746459c342c663610a1ee8`)
+and appended its target to `TARGETS.txt` (SHA256
+`f17769f1b31723b4280df3dd8cff470db3a3060594eb45bae0da12595927fd54`).
+No frozen module was edited.
+
+**Mathematics drafted.** Corrected the part-4 obstruction: forcing
+`cosHiReal_antitoneOn` through all of `piHi` is not required. For edges 9 and
+10 the edge coefficient is negative. On the suffix beginning at grid witness
+1489, `x ≥ 2π/3`; a cosine lower-sign estimate gives `cos x ≤ -1/2`, the
+factorial Taylor remainder gives `cosHiReal x ≤ 0`, and hence
+`A * cosHiReal x - b < 0` because `b < 0`. This proves decreasing suffixes for
+both edges via `edgeHiReal_antitoneOn_of_coeff_neg` and the witness-relative
+dispatcher `edgeDecFrom_of_antitoneOn_from`.
+
+**Checks (scope).** `project_status.py --check`, `git diff --check`, and a
+forbidden-token scan over the new module pass. These are static checks only.
+The new module is **drafted, CI pending**; no local project build was run.
+The exact suffix-threshold audit remains `covered_edges = [12,13]`; this new
+route is separate and its coefficient/witness facts are Lean obligations, not
+inferred from that audit.
+
+**Still unproved.** Kernel acceptance of the new module and all previously
+listed lane-A targets; increments for the remaining 17 increasing prefixes,
+the other 17 decreasing suffixes, all 9 sectors, strict total,
+`Degree3AreaCertificate`/`Q0Degree3AreaInput`, all seven exclusions, and the
+arbitrary-center full-disk theorem.
+
+**Next concrete step.** If CI reports a source error in the new module, fix the
+first diagnostic (likely a library-name mismatch in the `2π/3` cosine sign
+proof). If it is green, use `EdgeIncTo` at edge 0 as the template: prove the
+corresponding positive-derivative prefix from a lower bound on `cosHiReal`,
+then scale the coefficient checks per edge.
+
+## 2026-10-30 (part 6) — repaired suffix cosine sign proof
+
+**File / SHA256.** `SevenClassQ0Deg3EdgeSuffixNonpos.lean`
+`3a2fde9dcd6bc6e72507dc54e19a6d4501ec60ae159bdb376be200ea9c82b6e8`.
+`TARGETS.txt` SHA256 is unchanged at
+`f17769f1b31723b4280df3dd8cff470db3a3060594eb45bae0da12595927fd54`.
+
+**Fix.** In the `x > π` branch of `cos_le_neg_half_of_mem_suffix`, the prior
+draft invoked `Real.cos_le_cos_of_nonneg_of_le_pi` with `x - π ≤ π/3` and
+`0 ≤ x - π`: both are the wrong side of the needed comparison.  The revised
+proof starts from `2π/3 ≤ x`, proves `π/3 ≤ x - π`, and applies the chord
+monotonicity to `π/3 ≤ x - π ≤ π`, yielding `cos (x - π) ≥ 1/2` and hence
+`cos x ≤ -1/2`.  No statement was weakened.
+
+**Checks (scope).** `project_status.py --check`, `git diff --check`, and the
+forbidden-token scan over the revised module pass.  A bounded
+`mathlib-probe` `#check` attempt for the Mathlib lemma signature timed out at
+45 s before producing output.  No Lean project build was run, so the module is
+**drafted, CI pending**; none of its theorems are claimed kernel-green.
+
+**Still unproved.** Kernel acceptance of this module and all prior lane-A
+targets; the 42 `EdgeMonotone` facts; all 9 sectors; strict total;
+`Degree3AreaCertificate`/`Q0Degree3AreaInput`; all seven exclusions; and the
+arbitrary-center full-disk theorem.  The suffix argument currently pays only
+decreasing suffixes for edges 9 and 10, conditional on CI.
+
+**Next concrete step.** On the next CI run, read the first diagnostic in
+`SevenClassQ0Deg3EdgeSuffixNonpos`; if green, prove `EdgeIncTo 0` from a
+positive lower bound on `cosHiReal` on edge 0's increasing prefix, then use the
+same coefficient/sign template across the remaining prefixes.
+
+## 2026-10-30 (part 7) — corrected suffix cosine upper-bound direction
+
+**File / SHA256.** `SevenClassQ0Deg3EdgeSuffixNonpos.lean`
+`3b84d21d02401748a1f6690144ff34c0e5087edb586f788a0f25e9e14e44db8b`.
+`TARGETS.txt` remains `f17769f1b31723b4280df3dd8cff470db3a3060594eb45bae0da12595927fd54`.
+
+**Fix.** The `x > π` branch of `cos_le_neg_half_of_mem_suffix` previously
+proved only `π/3 ≤ x - π`, but the desired `cos(x - π) ≥ 1/2` requires the
+opposite endpoint: `x - π ≤ π/3`. It now derives `x - π ≤ π/3` from
+`x ≤ piHi < 4π/3` and applies cosine antitonicity with `x - π` as the lower
+endpoint. This repairs a genuine sign-direction error; it does not weaken the
+statement.
+
+**Checks (scope).** `git diff --check`, a forbidden-token scan of the module,
+and `project_status.py --check` pass. These are static checks only. No Lean
+build has run; the module remains **drafted, CI pending**. `LATEST.md` still
+shows only the stale in-progress run `41008974701`.
+
+## 2026-10-30 (part 8) — suffix witness domain hardened
+
+**File / SHA256.** `SevenClassQ0Deg3EdgeSuffixNonpos.lean`
+`1f3ac7d56a51da3b0e752c35adad0828d54b9d6563cc8abb14791a1ec675dbeb`.
+`TARGETS.txt` remains `f17769f1b31723b4280df3dd8cff470db3a3060594eb45bae0da12595927fd54`.
+
+Confirmed from the pinned Mathlib source that
+`Real.cos_le_cos_of_nonneg_of_le_pi : 0 ≤ x → y ≤ π → x ≤ y → cos y ≤ cos x`
+has the argument order used by the module. Replaced the witness-angle decimal
+normalization with the exact order argument
+`(2/3) * piLo < (2/3) * π = (2π)/3`, using only `piLo_lt_pi` and ring
+normalization. The 90-second Mathlib probe did not finish importing, so the
+source inspection is the evidence; no project build was attempted.
+
+**Checks (scope).** `git diff --check`, forbidden-token scan, and
+`project_status.py --check` pass. These are static checks only. The module is
+still **drafted, CI pending**; neither suffix theorem is kernel-paid.
+
+**Still unproved.** Kernel acceptance of this module and all prior lane-A
+targets; the 42 `EdgeMonotone` facts; all 9 sectors; strict total;
+`Degree3AreaCertificate`/`Q0Degree3AreaInput`; all seven exclusions; and the
+arbitrary-center full-disk theorem.
+
+**Next concrete step.** Read the first CI diagnostic for this module; if green,
+prove `EdgeIncTo 0` from a positive lower bound on `cosHiReal` on edge 0's
+increasing prefix, then use the same coefficient/sign template for the other
+prefixes.

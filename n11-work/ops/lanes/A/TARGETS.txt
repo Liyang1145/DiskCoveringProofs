@@ -7,3 +7,5 @@ N11Formalization.SevenClassQ0Deg3Mono
 N11Formalization.SevenClassQ0Deg3Bins
 N11Formalization.SevenClassQ0Deg3EndpointChecks
 N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal
+
+N11Formalization.SevenClassQ0Deg3EdgeSuffixNonpos
