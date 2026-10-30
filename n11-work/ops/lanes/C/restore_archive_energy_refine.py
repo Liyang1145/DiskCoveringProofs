@@ -23,10 +23,11 @@ def main() -> None:
         ["git", "show", f"{BRANCH}:{rel}"], text=True, cwd=ROOT)
     if FORBIDDEN.search(source):
         raise SystemExit("refusing archive source with forbidden tokens")
-    expected = f"N11Formalization.EnergyRefineN{args.node}"
+    expected = f"N11Formalization.EnergyRefineN{args.node:04d}"
     if source.count(expected) != 3 or f"{args.node:04d}" not in rel:
         raise SystemExit("archive source has unexpected namespace/count")
-    out = ROOT / "n11-work/lean/N11Formalization" / f"EnergyRefineN{args.node}.lean"
+    out = (ROOT / "n11-work/lean/N11Formalization" /
+           f"EnergyRefineN{args.node:04d}.lean")
     if out.exists():
         raise SystemExit(f"refusing to overwrite {out}")
     out.write_text(source, encoding="utf-8")
