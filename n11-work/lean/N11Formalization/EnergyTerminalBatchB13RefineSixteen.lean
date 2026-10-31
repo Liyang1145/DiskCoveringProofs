@@ -62,8 +62,15 @@ theorem new_disjoint_old :
     subst a
     exact not_paid_3573 ha
 
-theorem new_count : newIDs.card = 2 := by
+theorem new_disjoint_parts :
+    Disjoint EnergyRefineN3431.newIDs EnergyRefineN3573.newIDs := by
+  rw [EnergyRefineN3431.newIDs, EnergyRefineN3573.newIDs]
   decide +kernel
+
+theorem new_count : newIDs.card = 2 := by
+  rw [newIDs, Finset.card_union_of_disjoint new_disjoint_parts,
+    EnergyTerminalBatchB13Refine3431.new_count,
+    EnergyTerminalBatchB13Refine3573.new_count]
 
 theorem paid_count : paidIDs.card = 2013 := by
   rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,

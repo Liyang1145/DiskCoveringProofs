@@ -58,9 +58,12 @@ theorem new_count : newIDs.card = 1 := by
   exact EnergyTerminalBatchB13Refine3116.new_count
 
 theorem paid_count : paidIDs.card = 2011 := by
-  rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,
+  rw [paidIDs]
+  change (EnergyTerminalBatchB13RefineThirteen.paidIDs ∪
+    EnergyRefineN3116.newIDs).card = 2011
+  rw [Finset.card_union_of_disjoint new_disjoint_old,
     EnergyTerminalBatchB13RefineThirteen.paid_count]
-  simpa [newIDs] using EnergyTerminalBatchB13Refine3116.new_count
+  exact EnergyTerminalBatchB13Refine3116.new_count
 
 theorem paid_terminal (n : Fin 5011) (hn : n ∈ paidIDs) :
     (DBMSourceTree.data n).terminal = true := by
