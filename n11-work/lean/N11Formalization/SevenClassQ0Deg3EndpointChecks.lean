@@ -254,9 +254,9 @@ theorem endpointUBin_le_one_of_lt5 (j : Fin 8) (hj : j.val < 5) :
   · norm_num [endpointUBin]
   · norm_num [endpointUBin]
   · norm_num [endpointUBin]
-  · exact absurd hj (by decide)
-  · exact absurd hj (by decide)
-  · exact absurd hj (by decide)
+  · norm_num at hj
+  · norm_num at hj
+  · norm_num at hj
 
 theorem nodeQ_binHi_div_two_le_endpointUBin (j : Fin 8) :
     nodeQ RatInterval.piHi 2048 (binHi j) / 2 ≤ endpointUBin j := by
@@ -274,9 +274,9 @@ theorem nodeQ_binHi_le_two_of_lt5 (j : Fin 8) (hj : j.val < 5) :
   · norm_num [nodeQ, binHi, RatInterval.piHi]
   · norm_num [nodeQ, binHi, RatInterval.piHi]
   · norm_num [nodeQ, binHi, RatInterval.piHi]
-  · exact absurd hj (by decide)
-  · exact absurd hj (by decide)
-  · exact absurd hj (by decide)
+  · norm_num at hj
+  · norm_num at hj
+  · norm_num at hj
 
 theorem capQ_binHi_le_endpointUBin_of_lt5 (j : Fin 8) (hj : j.val < 5) :
     capQ (nodeQ RatInterval.piHi 2048 (binHi j)) ≤

@@ -192,53 +192,45 @@ seven exclusions, and the arbitrary-centre theorem remain unpaid.
 only strict premise is the single canonical `totalUpper ... < piLo`; inspect CI
 before adding downstream dispatch.
 
-## 2026-10-31 (session 83) -- canonical strict-total constructor
+## 2026-10-31 (sessions 83--84, condensed)
 
-**Did.** Refactored `certificate_of_degreeThreeGraph` and its contradiction
-form to take one canonical `totalUpper R mu lam piHi 2048 edgeMax sectorMax <
-piLo` premise.  The constructor still obtains `cut,b,hedges` from
-`degree_three_table_graph`, then derives the relocated strict inequality via
-`strict_relabel_iff`; no quantifier is weakened.
+Added the canonical strict-total constructor and
+`q0Degree3AreaInput_of_strictTotal`: one universal canonical total premise
+over length-one `OrderedData` runs constructs `Q0Degree3AreaInput`, deriving
+`hq`, `hd`, and `NineTies`.  Final source hash
+`3372659dffe845844da5d10c984668f3510f8679ee3de44872636c5a0b650485`.  These
+are **CI pending**.  The canonical strict finite total and all downstream
+exclusions remain unpaid; next is to inspect the first CI error.
 
-**Files / SHA256.** `SevenClassQ0Deg3RelabelledTableCertificate.lean`
-`623a74619288cecd28457c34ac2ed207c3d9bdeab55fa975c47b84dd77713657`;
-`TARGETS.txt` unchanged `2caf12ce886f3de92d0d272a2fdb3b982d7630eb3e1606302a35c4f1988baca6`.
+## 2026-10-31 (sessions 86--87, condensed)
 
-**Checks (scope).** `git diff --check` and forbidden-token scan PASS.  No local
-project oleans or Lean build, so the refactor is **CI pending**, not paid.
+Replaced the six impossible branches at
+`SevenClassQ0Deg3EndpointChecks.lean:257--259,277--279` with `norm_num at hj`.
+File hash `edc83db80cd8e7c2d680716632dd167cf12264c00edb4100fdadad1eb12fe5c9`;
+exact endpoint audit PASS (8/8 rational bins), `git diff --check` and token scan
+PASS.  Run `41150468008` predates this uncommitted repair, so its exit 1 gives
+no verdict.  The probe's `Mathlib.lean` is prelude-only and cannot test the
+pattern.  All later sector/edge targets remain CI pending/unpaid.
 
-**Still unpaid.** Canonical strict inequality for actual covers, the global
-numeric/sector chain, `Q0Degree3AreaInput`, seven exclusions, and the
-arbitrary-centre theorem.
+## 2026-10-31 (session 88) -- CI provenance audit; next-target source audit
 
-**Next step.** Inspect CI's first error in this target; if green, connect the
-canonical strict-total producer to this constructor.
+**Did.** Confirmed the repaired `EndpointChecks` hash above is newer than the
+recorded CI commit (`24e434b4`; run `41150468008` still reports exit 1).
+Audited `SevenClassQ0Deg3UpperReductionUnimodal.lean`: its 21 separated peak
+checks and `edgeValid_of_unimodal` case split are structurally consistent;
+CI, not source inspection, must decide it.  No Lean change was needed.
 
-## 2026-10-31 (session 84) -- Q0 area input from the canonical strict total
+**Checks (scope).** `project_status.py --check` PASS (handoff manifest only);
+`git diff --check` and forbidden-token scan PASS at current worktree.  No
+project Lean build; all sector theorems remain **CI pending**, not green.
 
-**Did.** Added `q0Degree3AreaInput_of_strictTotal` to
-`SevenClassQ0Deg3RelabelledTableCertificate.lean`.  From one universal
-canonical strict-total premise over `OrderedData` runs of length one, it
-constructs `Q0Degree3AreaInput`.  It derives (rather than assumes) `hq` and
-`hd`: `actual_q0_run_degrees` fixes the hub-degree min/max at 3/10; the actual
-q0/q1 census then excludes the q1 branch and yields `ringOnlyTriangles.card=0`.
-`nineTies_of_cover` supplies the certificate's `NineTies`, and
-`certificate_of_degreeThreeGraph` consumes the strict premise.
+**Still unproved / unpaid.** `EdgeMonotone`, strict canonical total,
+`Q0Degree3AreaInput`, all seven exclusions, and arbitrary-centre theorem.
+C450 Main/audit are CI-green but not root-imported.
 
-**Files / SHA256.** `SevenClassQ0Deg3RelabelledTableCertificate.lean`
-`3372659dffe845844da5d10c984668f3510f8679ee3de44872636c5a0b650485`.
-`TARGETS.txt` unchanged; the target is already present.
+**Next concrete step.** After supervisor commits, require CI exit 0 for
+`EndpointChecks`; otherwise repair its first reported error.  Only then inspect
+the first `UpperReductionUnimodal` error, serially.
 
-**Checks (scope).** `git diff --check` and forbidden-token scan PASS.  No
-local project oleans or Lean build, so this producer is **CI pending**, not
-kernel-green.
-
-**Still unproved / unpaid.** The universal canonical strict finite total is
-still an explicit premise and is not proved.  The global numeric/sector chain,
-`Q0Degree3AreaInput` itself, all seven exclusions, and the arbitrary-centre
-theorem remain unpaid.
-
-**Next concrete step.** Inspect CI's first error in this target; if the
-producer elaborates, replace its named strict premise with the exact finite
-rational total computation (or prove the total's value after rewriting the
-21-edge and 9-sector sums).
+ROOT-IMPORT REQUEST: import the CI-green `C450ChainCompletion` and
+`C450ChainCompletionMain` in the stage-1 root (supervisor-only edit).
