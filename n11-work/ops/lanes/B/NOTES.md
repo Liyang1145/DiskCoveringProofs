@@ -1,3 +1,32 @@
+## 2026-10-31 - session 103: bridge source/signature audit; still CI pending
+
+- Re-read the current 373-set bridge and its paid-set consumers. Confirmed
+  `newRefineIDs_eq_late` partitions the 16 ids as `Eleven.newIDs` plus
+  `{37,3112,3116,3431,3573}` (11 + 5), and `b13_subset_paid` follows the
+  literal nested paid-set chain through Sixteen.
+- Checked the pinned Mathlib definition
+  `Finset.card_sdiff_of_subset (h : s ⊆ t) : #(t \ s) = #t - #s` in
+  `Mathlib/Data/Finset/Card.lean:584`; it matches the bridge's use, so the
+  `389 - 16 = 373` rewrite has the intended direction. This is a source-level
+  signature check, not elaboration.
+- Bridge sha remains `5512E637...FAB12`; `TARGETS.txt` remains
+  `B3F81B5C...EF49BA26`. No new Lean files or target-list changes this part.
+- CI run `41201323694` predates these bytes: **CI pending** for both census
+  modules. No local Lean build was started (2-core worker rule).
+- Unproved: all 373 residual radii, `f0Lo`/`g`, SevenClassExclusions (0/7),
+  and the arbitrary-center theorem. The endpoint remains conditional.
+- Next: supervisor commits and triggers serial CI; inspect the first owning
+  error for `EnergyTerminalResidualCensusRefineSixteen` if red. Keep the
+  SixteenMain root-switch request unchanged.
+
+## Earlier sessions 100--102 (condensed)
+
+- Added the 373-set bridge, repaired its unqualified namespace references,
+  and re-ran static audits. `audit_b13_refine_sixteen.py` reports 2013 paid /
+  373 residual, `audit_sixteen_root_switch.py` is `pre_handoff`, and
+  `audit_residual389_crosswalk.py` matches 389/389. These are not Lean
+  verdicts; the bridge remains CI pending.
+
 ## 2026-10-31 - session 98: post-repair CI green; request SixteenMain root switch
 
 - Fresh run `41208161314` (`1616dbe3`) artifact `13046368097`
@@ -19,64 +48,23 @@
 - Next: supervisor-only root switch, then CI on the switched root. Do not
   describe the conditional 2013/373 endpoint as an unconditional theorem.
 
-## Earlier session 97 (condensed)
+## Earlier sessions 95--97 (condensed)
 
-- Run `41201323694` on `3551ab87` (artifact `13044243893`, `64791EDA...79BA63`)
-  is kernel green for Fourteen/FourteenMain. Sixteen/SixteenMain are red only
-  because that artifact predates the repaired Sixteen bytes.
-- Current Sixteen is `094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A`;
-  Fourteen is `0BCDA68789D4DF1FDDE918C418DE1F34D67E0F9D5F15211AFDDE40CEAA80AB4F`;
-  TARGETS is `EB52F2B496FAFDCCA8FFA0281C11751975C00A0BCF094A497A274753AE16DD01`.
-- Added a regression check in `audit_b13_refine_sixteen.py` requiring the
-  four-step `rcases` decomposition, all five leaf dispatches, and no `tauto`.
-  Rerun exits `0`, `ok:true`; this is source/inventory/arithmetic only.
-- `audit_b13_refine_fourteen.py` and `audit_sixteen_root_switch.py` exit `0`
-  (`ready_for_supervisor_switch:true`, phase `pre_handoff`) with the current
-  hashes. `py_compile` and `git diff --check` exit `0`;
-  `audit_target_imports.py` hit `timeout 60`, no verdict.
-- Conditional arithmetic is 2013 paid / 373 residual, **not paid**. Still
-  unproved: 373 residual radii; `f0Lo`/`g` bridge; SevenClassExclusions
-  (`0/7`); arbitrary-center full-disk theorem.
-## Earlier session 96 (condensed)
-
-- Run `41201323694` proved Fourteen green and exposed Sixteen recursion at
-  `EnergyTerminalBatchB13RefineSixteen.lean:31` in `tauto`; replaced it with the
-  bounded five-case decomposition. Evidence: `ci-verdict-41201323694.json`.
-
-## Earlier session 95 (condensed)
-
-- Closed Fourteen `paid_count` (`2010 + 1 = 2011`) and Sixteen `new_count`
-  (`1 + 1 = 2`) plus `paid_count` (`2011 + 2 = 2013`) by exact count rewrites
-  and `omega`, without enlarging generated decisions. Evidence:
+- Run `41201323694` proved Fourteen green. Sixteen recursion in `tauto` was
+  replaced by a bounded five-case decomposition; exact rewrite/`omega` steps
+  closed `2010+1=2011`, `1+1=2`, and `2011+2=2013` without larger decisions.
+- `audit_b13_refine_sixteen.py` and `audit_sixteen_root_switch.py` pass static
+  checks; `audit_target_imports.py` timed out with no verdict. Evidence remains
+  in `ci-verdict-41201323694.json` and
   `ci-repair-20261031-fourteen-sixteen.json`.
 
 
-## 2026-10-31 - session 94: fresh CI isolates and repairs Fourteen arithmetic
+## 2026-10-31 - session 94: Fourteen arithmetic repair (superseded by CI-green 98)
 
-- Downloaded completed run `41195990232` (`cc16dff4`) artifact `13043056783`
-  (`47F36EF9...BFE066`). The workflow says success, but `summary.json` says
-  Thirteen/ThirteenMain exit `0`; Fourteen, FourteenMain, Sixteen, and
-  SixteenMain exit `1`. Exact evidence: `ci-verdict-41195990232.json`.
-- First owning diagnostic (Fourteen import blocks Sixteen): at
-  `EnergyTerminalBatchB13RefineFourteen.lean:66:2`, after both alias/count
-  rewrites the goal is `2010 + #EnergyRefineN3116.newIDs = 2011`, while
-  `EnergyTerminalBatchB13Refine3116.new_count` only proves the cardinality
-  `= 1`. This is an open arithmetic normalization, not a failed disjointness.
-- Appended `norm_num` to Fourteen `paid_count`; static audit now requires that
-  exact closing line. New Fourteen SHA256
-  `722F42C6195325676EB5C8545D0C911A9F87FF40DC39F09A39E0139E03BD9FB3`
-  (pre-repair `36C34D...D33E`). Audit SHA256 `D79666A9...A68C5`; new
-  Fourteen report `7867E7F3...D705A`; Sixteen report `ED27F0FB...48FF1`.
-- Checks: Fourteen audit exit `0`, Sixteen audit exit `0` (both static
-  source/inventory only), `py_compile`, forbidden-token scan, and
-  `git diff --check` exit `0`. `audit_target_imports.py` hit `timeout 60`
-  without output, so no closure-count check this part. No local Lean verdict.
-- Still unproved: fresh exit-0 artifacts for all four Fourteen/Sixteen targets;
-  373 conditional residual radii; `f0Lo`/`g` bridge; SevenClassExclusions
-  (`0/7`); arbitrary-center full-disk theorem. Do not record `2013/373` yet.
-- Next: supervisor commits these bytes, then serial CI. If Fourteen is green,
-  read Sixteen's first diagnostic next; only four exit-0 artifacts permit the
-  `2013/373` handoff and consideration of the SixteenMain root switch.
+- Run `41195990232` exposed a missing `2010 + 1 = 2011` normalization in
+  Fourteen, blocking Fourteen and Sixteen. Appending `norm_num` to the owning
+  `paid_count` fixed it; session 98 then recorded fresh exit-0 CI for both
+  pairs. Evidence remains in `ci-verdict-41195990232.json`.
 
 ## Earlier 2026-10-31 sessions 91--93 (condensed)
 
@@ -169,9 +157,7 @@ Lean verdict. Local Mathlib/project probes timed out before elaboration.
 
 ## 2026-10-31 - session 64: CI artifact exposed and repaired Thirteen
 
-- `python tools/project_status.py --check` passed. Starting tree was clean at
-  merged `HEAD c63cb61e`; the previously "CI-pending" Thirteen/Fourteen/Sixteen
-  bytes are now committed.
+- `project_status.py --check` passed; tree was clean at merged `HEAD c63cb61e`.
 - Fetched GitHub run `41141569628` (`n11-lean-build`, head `c63cb61e`, overall
   success) and inspected artifact `13021186040`
   (`n11-build-41141569628.zip`, 26047 bytes, SHA256 `AAAA0E3D...E54CCE`). The
@@ -187,9 +173,8 @@ Lean verdict. Local Mathlib/project probes timed out before elaboration.
   `norm_num` after the preceding `rw` closed `twelve_new_count`. New SHA256 is
   `F62B93EB0B60B812CB30767A745CCD2D57C197269D1E78A8C2B0CBFCC9E9252E`;
   pre-repair SHA256 was `FE498E4D...A690E739`.
-- Added `ci-verdict-41141569628.json` to preserve the artifact identity, exact
-  six module exits, first diagnostic, and pre/post-repair hashes. Its
-  `post_repair_ci` field is explicitly `pending`.
+- Added `ci-verdict-41141569628.json` with artifact identity, exits, diagnostic,
+  and pre/post-repair hashes; `post_repair_ci` is explicitly `pending`.
 - Checks after the repair: `audit_b13_refine_thirteen.py`,
   `audit_b13_refine_fourteen.py`, and `audit_b13_refine_sixteen.py` all exit 0
   with `ok:true`; `audit_target_imports.py` exits 0 with a 1965-module closure;
@@ -201,9 +186,8 @@ Lean verdict. Local Mathlib/project probes timed out before elaboration.
   (`12D107B3...DD0E4`), `FourteenMain` (`9478C19F...C3FE7`), `Sixteen`
   (`055F8BA3...C28851`), `SixteenMain` (`A3103831...8FECF`), and
   `TARGETS.txt` (`69E4E5A5...9F612`).
-- Still unproved: the conditional 373 residual radii themselves, the `f0Lo`/`g`
-  bridge, SevenClassExclusions (`0/7`), and the arbitrary-center full-disk
-  theorem. Row-cap targets remain CI-red and do not pay a residual radius.
+- Still unproved: 373 residual radii, `f0Lo`/`g`, SevenClassExclusions (`0/7`),
+  arbitrary-center theorem; row-cap CI-red does not pay a radius.
 - Next concrete step: supervisor commits the repaired Thirteen and this evidence
   file unchanged, then requires fresh serial CI module exits `0` for
   Thirteen, ThirteenMain, Fourteen, FourteenMain, Sixteen and SixteenMain. If
