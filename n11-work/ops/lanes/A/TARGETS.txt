@@ -63,3 +63,11 @@ N11Formalization.SevenClassQ0Deg3SectorAssembler
 
 # Session 77: combined 21-edge/9-sector table interface (CI pending)
 N11Formalization.SevenClassQ0Deg3TableBounds
+
+# Session 78: build a Degree3AreaCertificate from TableBounds under an
+# explicit canonical-edge and strict-total hypothesis (CI pending)
+N11Formalization.SevenClassQ0Deg3TableCertificate
+
+# Session 81: discharge the canonical-edge premise through the graph theorem,
+# leaving only the relocated strict finite total (CI pending)
+N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate
