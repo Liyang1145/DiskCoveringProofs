@@ -55,6 +55,14 @@ def main() -> int:
         and "theorem new_count : newIDs.card = 2" in sixteen
         and re.search(r"2011 to 2013,\s+leaving 389 - 16 = 373", sixteen) is not None
     )
+    checks["sixteen_new_count_uses_singleton_counts"] = (
+        "theorem new_disjoint_parts :\n"
+        "    Disjoint EnergyRefineN3431.newIDs EnergyRefineN3573.newIDs" in sixteen
+        and "Finset.card_union_of_disjoint new_disjoint_parts" in sixteen
+        and "EnergyTerminalBatchB13Refine3431.new_count" in sixteen
+        and "EnergyTerminalBatchB13Refine3573.new_count" in sixteen
+        and "theorem new_count : newIDs.card = 2 := by\n  decide +kernel" not in sixteen
+    )
     thirteen = sources["Thirteen"][1]
     fourteen = sources["Fourteen"][1]
     checks["thirteen_close_has_no_redundant_tactic"] = (
