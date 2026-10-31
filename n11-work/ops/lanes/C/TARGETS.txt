@@ -1,4 +1,5 @@
 # Lean targets lane C wants CI to build (one per line)
+N11Formalization.FrozenCapRowCap1409Smoke
 # Corrected seven row-cap modules first; they are dependencies of the public tree.
 N11Formalization.FrozenCapRowCap1409
 N11Formalization.FrozenCapRowCap2337
@@ -7,6 +8,14 @@ N11Formalization.FrozenCapRowCap2356
 N11Formalization.FrozenCapRowCap2360
 N11Formalization.FrozenCapRowCap2368
 N11Formalization.FrozenCapRowCap2370
+# Five four-field rescues: corrected direct-match row caps, then wrappers.
+N11Formalization.FrozenCapFourFieldWitnesses
+N11Formalization.FrozenCapFourFieldRowCaps
+N11Formalization.FrozenCapFourFieldExcludedTree
+# Five-field rescues for the two four-field gaps, 2356 and 2360.
+N11Formalization.FrozenCapFiveFieldWitnesses
+N11Formalization.FrozenCapFiveFieldRowCaps
+N11Formalization.FrozenCapFiveFieldExcludedTree
 N11Formalization.FrozenCapPublicExcludedTree
 # Unpriced post-fix refinement chain: keep first so the next serial run reaches it.
 N11Formalization.EnergyRefineN3853
