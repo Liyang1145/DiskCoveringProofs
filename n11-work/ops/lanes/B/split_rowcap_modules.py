@@ -81,11 +81,12 @@ def split_proof(text: str, node: int) -> str:
 /-! Thin lane-B alias for the CI-green frozen node {node} row cap. -/
 set_option autoImplicit false
 namespace N11Formalization.LaneBFrozenCapRowCap{node}
-open N11Formalization.FrozenCapRowCap{node}
 noncomputable section
 
 theorem row_cap (i j : Fin 10) :
-    (∑ q : Fin 9, y_{node} q * rowA i j q) ≤ db i j :=
+    (∑ q : Fin 9, N11Formalization.FrozenCapRationalCore.y_{node} q *
+      N11Formalization.FrozenCapRowCap{node}.rowA i j q) ≤
+      N11Formalization.FrozenCapRowCap{node}.db i j :=
   N11Formalization.FrozenCapRowCap{node}.row_cap i j
 
 end
@@ -97,14 +98,15 @@ end N11Formalization.LaneBFrozenCapRowCap{node}
 
 def probe_proof() -> str:
     leaves = "\n\n".join(f'''theorem row_{i}_{j} :
-    (∑ q : Fin 9, y_1409 q * rowA {i} {j} q) ≤ db {i} {j} :=
+    (∑ q : Fin 9, N11Formalization.FrozenCapRationalCore.y_1409 q *
+      N11Formalization.FrozenCapRowCap1409.rowA {i} {j} q) ≤
+      N11Formalization.FrozenCapRowCap1409.db {i} {j} :=
   N11Formalization.FrozenCapRowCap1409.row_cap {i} {j}''' for i, j in ((0, 1), (4, 5), (9, 9)))
     return f'''import N11Formalization.FrozenCapRowCap1409
 
 /-! Representative lane-B aliases for the frozen node 1409 row cap. -/
 set_option autoImplicit false
 namespace N11Formalization.LaneBRowCapDecideProbe
-open N11Formalization.FrozenCapRowCap1409
 noncomputable section
 
 {leaves}

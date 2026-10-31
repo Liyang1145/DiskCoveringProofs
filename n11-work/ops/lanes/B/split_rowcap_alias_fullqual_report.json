@@ -1,0 +1,38 @@
+{
+  "schema": "n11-lane-b-rowcap-alias-fullqual-v1",
+  "scope": "deterministic source repair plus exact-rational audit; no local Lean elaboration or kernel proof claim",
+  "supersedes_repair_in": "split_rowcap_alias_namespace_report.json",
+  "red_evidence": {
+    "run_id": 41212560053,
+    "head_sha": "66bf2541b6f2f970172377c2209c2262b66df3b0",
+    "first_error": "Unknown identifier y_1409",
+    "direct_cap_exits": { "1409": "0", "2337": "0", "2341": "0", "2356": "0", "2360": "0", "2368": "0", "2370": "0" },
+    "alias_exits": { "LaneBRowCapDecideProbe": "1", "LaneBFrozenCapRowCap1409": "1", "LaneBFrozenCapRowCap2337": "1", "LaneBFrozenCapRowCap2341": "1", "LaneBFrozenCapRowCap2356": "1", "LaneBFrozenCapRowCap2360": "1", "LaneBFrozenCapRowCap2368": "1", "LaneBFrozenCapRowCap2370": "1" }
+  },
+  "repair": "Removed both namespace `open`s from the emitter and all eight generated aliases. Every occurrence of y_<node>, rowA, and db in an alias statement is now fully qualified. The proof term is still the direct green module's row_cap.",
+  "checks": {
+    "emitter_check_exit": 0,
+    "exact_nodes": 7,
+    "ordered_caps_per_node": 100,
+    "weight_sums": 1,
+    "violations": 0,
+    "py_compile_exit": 0,
+    "git_diff_check_exit": 0,
+    "forbidden_token_scan_matches": 0,
+    "standalone_lean_namespace_probe": "Mathlib probe timed out at 120 s (exit 124); a prelude-only probe timed out at 30 s (exit 124); no Lean verdict"
+  },
+  "sha256": {
+    "split_rowcap_modules.py": "92C6EACB722BD1F1ABEC21BB880C7BB964E7ABB828C161AD6E6C396BF78E1D36",
+    "LaneBRowCapDecideProbe.lean": "8975A4DB4431CEA8C38654C3B7775CB3330F25D31BC93B0CBC49CF55A2A3BC24",
+    "LaneBFrozenCapRowCap1409.lean": "D72CC7C654DFB2A0FBF9480682513707FFDE0BA06D1A73EF91B7B02BD20D4381",
+    "LaneBFrozenCapRowCap2337.lean": "A18E361843C6C68C98869F365CF52E1D5827544001E9791B8CF4F71B85AD9B38",
+    "LaneBFrozenCapRowCap2341.lean": "44194AF0539B28A174AAAF59C954BB99FD701E215BC4301FD32D3DF70F589AFF",
+    "LaneBFrozenCapRowCap2356.lean": "7EB548EAA98E07BCF82C4013DAF6D90AEE216A388AA1EFC73072749B73C60B05",
+    "LaneBFrozenCapRowCap2360.lean": "14BD2FBDE1CACF7BB2CE36ABD2DB29A3BD18F411B0794FA76700068A324CC8F9",
+    "LaneBFrozenCapRowCap2368.lean": "CE62034323E5E2B95594362FE048AD3C85FDA2AC3BAE2097AEB2D65B498A5F74",
+    "LaneBFrozenCapRowCap2370.lean": "C5D066713E31664E1791390EEC4B2E792E363DB83894B0B5833BE7F4A6AE3117",
+    "TARGETS.txt": "B3F81B5CC1CE9E92C13F83D854D2B46D6F5555C15EF8B69E322B55C2EF49BA26"
+  },
+  "ci_status": "pending on bytes after 068914fb; run 41217409382 predates this repair",
+  "mathematical_credit": "none; a green alias only restates the direct node cap and pays no residual radius"
+}
