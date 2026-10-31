@@ -114,21 +114,22 @@ end N11Formalization.FrozenCapFiveFieldWitnesses
 
 def emit_row_caps(records):
     blocks = []
-    for node, _, db, _, _ in records:
+    for node, y, db, _, _ in records:
         db_cases = "\n  ".join(
             f"| ⟨{i}, _⟩, ⟨{j}, _⟩ => {lean_rat(Q(db[i][j], 4096))}"
             for i in range(10) for j in range(10))
         leaves = []
         for i in range(10):
             for j in range(10):
+                lhs_q = sum(y[q] * common.row_a(i, j, q) for q in range(9))
                 lhs = " + ".join(
                     f"y5_{node} ({q} : Fin 9) * rowA ({i} : Fin 10) ({j} : Fin 10) ({q} : Fin 9)"
                     for q in range(9))
                 rhs = Q(db[i][j], 4096)
                 leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {lhs} ≤ db_{node} {i} {j} := by
-  change {lhs} ≤ {lean_rat(rhs)}
-  norm_num [rowA] <;> norm_num [y5_{node}]''')
+  change {lean_rat(lhs_q)} ≤ {lean_rat(rhs)}
+  norm_num''')
         row_lemmas = []
         for i in range(10):
             row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :

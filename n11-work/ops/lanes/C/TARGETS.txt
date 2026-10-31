@@ -17,6 +17,7 @@ N11Formalization.FrozenCapFiveFieldWitnesses
 N11Formalization.FrozenCapFiveFieldRowCaps
 N11Formalization.FrozenCapFiveFieldExcludedTree
 N11Formalization.FrozenCapPublicExcludedTree
+N11Formalization.FrozenCapPublicExcludedAggregate
 # Unpriced post-fix refinement chain: keep first so the next serial run reaches it.
 N11Formalization.EnergyRefineN3853
 N11Formalization.EnergyRefineN0037

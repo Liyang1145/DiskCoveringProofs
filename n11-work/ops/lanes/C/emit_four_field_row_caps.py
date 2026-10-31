@@ -48,13 +48,14 @@ def main():
         leaves = []
         for i in range(10):
             for j in range(10):
+                lhs_q = sum(y[q] * common.row_a(i, j, q) for q in range(9))
                 lhs = " + ".join(
                     f"y4_{node} ({q} : Fin 9) * rowA ({i} : Fin 10) ({j} : Fin 10) ({q} : Fin 9)"
                     for q in range(9))
                 leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {lhs} ≤ db_{node} {i} {j} := by
-  change {lhs} ≤ {lean_rat(Q(db[i][j], 4096))}
-  norm_num [rowA] <;> norm_num [y4_{node}]''')
+  change {lean_rat(lhs_q)} ≤ {lean_rat(Q(db[i][j], 4096))}
+  norm_num''')
         branch = "\n    | ".join(f"exact row_cap_{node}_{i}_{j}"
                                   for i in range(10) for j in range(10))
         blocks.append(f'''def db_{node} : Fin 10 → Fin 10 → ℚ
