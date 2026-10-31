@@ -76,6 +76,30 @@ theorem residual_radius_certificate_of_canonical_packet_producer
     hprod.exists_canonical_packet y hy0 hy1 hc C Z r hf hle
   exact hexcl.not_valid m p hnode hcanon hp
 
+/-- Given the frozen exclusion, canonical packet production is equivalent to
+the residual radius certificate: the exclusion proves the forward implication,
+while a radius certificate makes the counter-radius packet branch vacuous. -/
+theorem canonical_packet_producer_iff_residual_radius_certificate
+    {n : Fin 5011} {canonical : ∀ m : ℕ, PaidCellCertificateM.Packet m → Prop}
+    (hexcl : CanonicalPacketExclusion n canonical) :
+    CanonicalPacketProducer n canonical ↔ ResidualRadiusCertificate n := by
+  constructor
+  · intro hprod
+    exact residual_radius_certificate_of_canonical_packet_producer hprod hexcl
+  · intro h
+    constructor
+    intro y hy0 hy1 hc C Z r hf hr
+    exact False.elim ((not_le_of_gt hr) (h.radius y hy0 hy1 hc C Z r hf))
+
+/-- A radius certificate makes the packet producer vacuous on the
+counter-radius branch.  Consequently packet production cannot be a weaker
+mathematical substitute for the residual radius obligation. -/
+theorem residual_packet_producer_of_residual_radius_certificate {n : Fin 5011}
+    (h : ResidualRadiusCertificate n) : ResidualPacketProducer n := by
+  constructor
+  intro y hy0 hy1 hc C Z r hf hr
+  exact False.elim ((not_le_of_gt hr) (h.radius y hy0 hy1 hc C Z r hf))
+
 theorem residual_radius_certificate_of_packet_producer {n : Fin 5011}
     (h : ResidualPacketProducer n) : ResidualRadiusCertificate n := by
   constructor
@@ -90,6 +114,15 @@ theorem residual_radius_certificate_of_packet_producer {n : Fin 5011}
     simpa only [← hnode] using hc
   have hlt := PaidCellCertificateM.common_chart_radius p hp y hy0 hy1 hnc C Z r hf
   linarith
+
+/-- The explicit packet producer is logically equivalent to the original
+residual radius certificate.  The forward direction uses packet validity; the
+reverse direction uses that no configuration can satisfy both the certificate
+and strict counter-radius bound. -/
+theorem residual_packet_producer_iff_residual_radius_certificate {n : Fin 5011} :
+    ResidualPacketProducer n ↔ ResidualRadiusCertificate n :=
+  ⟨residual_radius_certificate_of_packet_producer,
+    residual_packet_producer_of_residual_radius_certificate⟩
 
 theorem residual_radius_certificate_of_remaining
     (h : RemainingTerminalRadius) (n : Fin 5011) (hn : n ∈ residualIDs) :
@@ -147,7 +180,10 @@ end N11Formalization.EnergyTerminalBatchB13
 #check @N11Formalization.EnergyTerminalBatchB13.residual_radius_certificate_of_remaining
 #check @N11Formalization.EnergyTerminalBatchB13.residual_radius_certificate_of_packet_producer
 #check @N11Formalization.EnergyTerminalBatchB13.residual_packet_producer_of_canonical
+#check @N11Formalization.EnergyTerminalBatchB13.residual_packet_producer_of_residual_radius_certificate
+#check @N11Formalization.EnergyTerminalBatchB13.residual_packet_producer_iff_residual_radius_certificate
 #check @N11Formalization.EnergyTerminalBatchB13.residual_radius_certificate_of_canonical_packet_producer
+#check @N11Formalization.EnergyTerminalBatchB13.canonical_packet_producer_iff_residual_radius_certificate
 #check @N11Formalization.EnergyTerminalBatchB13.remaining_of_canonical_packet_producers
 #check @N11Formalization.EnergyTerminalBatchB13.remaining_of_residual_radius_certificates
 #check @N11Formalization.EnergyTerminalBatchB13.remaining_of_packet_producers
@@ -156,4 +192,6 @@ end N11Formalization.EnergyTerminalBatchB13
 #check @N11Formalization.EnergyTerminalBatchB13.chart_radius_of_packet_producers
 #print axioms N11Formalization.EnergyTerminalBatchB13.remaining_of_residual_radius_certificates
 #print axioms N11Formalization.EnergyTerminalBatchB13.remaining_of_packet_producers
+#print axioms N11Formalization.EnergyTerminalBatchB13.residual_packet_producer_iff_residual_radius_certificate
+#print axioms N11Formalization.EnergyTerminalBatchB13.canonical_packet_producer_iff_residual_radius_certificate
 #print axioms N11Formalization.EnergyTerminalBatchB13.chart_radius_of_residual_radius_certificates
