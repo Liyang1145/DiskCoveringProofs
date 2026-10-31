@@ -1,4 +1,6 @@
 # Lean targets lane C wants CI to build (one per line)
+# Exact residual certificate interface; imports B13 only and asserts no payment.
+N11Formalization.EnergyTerminalBatchB13ResidualCertificates
 N11Formalization.FrozenCapRowCap1409Smoke
 # Corrected seven row-cap modules first; they are dependencies of the public tree.
 N11Formalization.FrozenCapRowCap1409

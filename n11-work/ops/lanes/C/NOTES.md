@@ -105,146 +105,17 @@ not be consumed. The public seven were unaffected because
 `FrozenCapRationalCore.strict_gain_*` and the green per-node row caps already
 use the correct vectors. Parts 180-183 are superseded by parts 186-188.
 
-## 2026-10-31 - part 184 (corrected-witness emitter validation and CI queue)
+## 2026-10-31 - parts 184/186-188 (condensed)
 
-Confirmed the withdrawn five-field artifacts are absent from the worktree and
-`TARGETS.txt`; old parts 180-182 are condensed out because part 183 invalidates
-them. Re-ran the deterministic corrected-witness emitter with a 60 s bound. It
-exited 0, regenerated `FrozenCapFourFieldWitnessesCorrected.lean` byte-for-byte
-(SHA256 `9fb19402705c20e3eed9db278c5a73f4903017c5342bfdc8168502a27698f19c`),
-and rechecked all 300 ordered-pair rational row-cap inequalities for its three
-witnesses. `py_compile` exited 0. Forbidden-token scans over the corrected
-module and fixed `FrozenCapRowCapTreeBridges.lean` found no matches;
-`git diff --check` exited 0.
-
-Added `N11Formalization.FrozenCapFourFieldWitnessesCorrected` to `TARGETS.txt`
-so CI checks it independently. This is **CI pending**, has no row-cap or
-exclusion consumer, and pays no residual id. The fixed tree bridge remains
-**CI pending**. `TARGETS.txt` SHA256 is
-`4bb2c506b96990f7b2c38a36078972ab13df1db34d79453e33dbb961771e4326`.
-
-Still unproved: corrected witnesses -> row caps/exclusions; conditional
-exclusions -> packet payment; packet existence/`Valid`; the
-`RemainingTerminalRadius` bridge; 382 payloads absent from public evidence.
-Very next concrete step: read the next serial CI summary in target order. If the
-tree bridge is green, inspect the aggregate's condition and seek a real
-residual-membership consumer without adding packet hypotheses; if the corrected
-module is red, fix its first local declaration error only.
-
-ROOT-IMPORT REQUEST: none.
-## 2026-10-31 - part 186 (five-field objective corrected; exact sampled misses)
-
-No newer CI than run `41182882564` is present, so the corrected public-tree
-bridge and corrected four-field chain remain **CI pending**. Audited the earlier
-five-field search and found the same objective-direction error as part 183:
-Lean needs `F0 + gain < T^2`, hence minimization, while both five-field tools
-maximized gain and used `>` for PASS. Corrected
-`residual_mixture_faces5.py` (also now uses `common.row_a`) and
-`search_mixture_faces5_float.py` to minimize and test strict `<`. The old
-`residual-mixture-faces5-float-2356-2360.json` report and any claim based on
-it are therefore **INVALID** and must not be emitted or consumed; a new
-`residual-mixture-faces5-float-2356-2360.INVALID.md` marker
-(`5ed619a690dd33eecbe4939403fe73e92fd1460fa2ec1a7eff9a4d59d460f82e`)
-preserves and flags the old artifact without altering it. A SciPy-only
-ranking experiment was made and removed because SciPy is unavailable.
-
-Exact sampled support `(1,3,4,6,8)` still fails all four remaining ids. Margins
-`best_gain - required` (strictly positive = failure) and coordinates on fields
-`[1,3,4]` are:
-- `2356`: `2452157022832856629214948363057287340971042934939379092015434144140021751/56294995342018610009315737600000000000000000000000000000000000000000000000000`, coords `1/16,1/4,3/16`.
-- `2360`: `25180635562823843441482369917593403267929282392500311997724416532172459/879609302219040781395558400000000000000000000000000000000000000000000000000`, coords `1/16,1/4,3/16`.
-- `2368`: `13085136469227573037440775877907821043275952933208451184164663836521253063/28147497671009305004657868800000000000000000000000000000000000000000000000000`, coords `0,3/8,1/8`.
-- `2370`: `3949948107584650949794594595406108128519832987456734595903815867664145297/7036874417752326251164467200000000000000000000000000000000000000000000000000`, coords `0,1/4,1/8`.
-Six further sampled supports had no cap-feasible vertex except
-`(2,3,4,5,8)`; their margins stayed positive. This is not exhaustive.
-
-Checks/scope: `py_compile` exited 0 for both corrected scripts and
-`git diff --check` exited 0. Scope is host-side exact rational evaluation on the
-frozen proposal/tree data; no new Lean module or kernel claim.
-SHA256: corrected exact search `03b9af4554220d936dc1bcd65cda285f1f1aa0436c522e224d21987a7fd2252f`;
-corrected float helper `78ebd7544711d1d23d84de8194f12bcb6ae8114693e796d1280f0961a33c7f72`;
-TARGETS unchanged in content except the prior untracked serial additions
-(`c7d99b42ae2306f0bd111fd3a3a0e18512853763baf7e30d722042cbc7140584`).
-
-Still unproved: exhaustive/faster <=5-field search; supports of size 6--9 for
-these four ids; CI of the corrected chain; all 382 absent payloads; exclusion
-to packet/payment; `RemainingTerminalRadius`. Very next concrete step: replace
-the slow Fraction determinant loop with a dependency-free float vertex rank,
-then exact-recheck its best support for every id; stop minimization as soon as
-an exact strict witness is found, otherwise extend to six fields.
-
-## 2026-10-31 - part 187 (float vertex solver; exact 2368 rescue)
-
-Replaced the false-fast path in `search_mixture_faces5_float.py`: its float
-ranking still called the exact Fraction determinant solver. The new local
-`solve_float` uses pivoted 4x4 Gaussian elimination; `py_compile` exited 0.
-Bounded runs (`--top 12 --time-budget 55`) completed:
-- `2356`: 3 feasible ranked supports, all exact-rechecked; no PASS. Best
-  support `(2,3,4,6,8)`, coords `(1/16,1/4,3/16,3/16)`,
-  margin `19157476739754493142973039011350679204625499725472462890557533412453417/439804651109520390697779200000000000000000000000000000000000000000000000000`
-  (positive = fail).
-- `2360`: 6 ranked, all 6 exact-rechecked; no PASS. Best `(2,3,4,5,8)`,
-  coords `(1/16,1/4,3/16,3/16)`, margin
-  `939393669486427894701652780255435886410543124642692284907989048159959251/56294995342018610009315737600000000000000000000000000000000000000000000000000`
-  (positive = fail).
-- `2368`: **exact PASS** on support `(3,4,6,7,8)`, coords
-  `(3/8,1/8,1/8,1/8)`, margin
-  `-698893979704418866975274794984562881793335589994988084750913546940631281/14073748835504652502328934400000000000000000000000000000000000000000000000000`.
-  The script asserted nonnegativity, sum 1, and all 100 rational caps.
-- `2370`: float timeout before a feasible ranking; **incomplete**, not a miss.
-
-Reports: `residual-mixture-faces5-float-2356.json` and
-`residual-mixture-faces5-float-2360-2368-2370.json`. Scope is host-side exact
-rational verification of a five-field packet candidate; **no Lean module, CI
-credit, residual membership, or kernel theorem**. Script SHA256
-`5255c66d47bf7668c9a757937d166291e0940baf6e6f8718b954d51b28a3654b`;
-`git diff --check` exited 0. Still unproved: Lean row cap/Packet/Valid for the
-2368 witness; 2370 timeout; size 6--9 exhaustive search; exclusion/payment and
-`RemainingTerminalRadius`. Very next concrete step: inspect the existing
-five-field witness schema and emit a standalone 2368 witness module with a
-100-cap exact certificate, then add it alone to `TARGETS.txt`.
-
-ROOT-IMPORT REQUEST: none.
-
-## 2026-10-31 - part 188 (standalone five-field 2368 module, CI pending)
-
-Added a deterministic emitter and two new Lean modules for the exact five-field
-`2368` candidate found in part 187. The witness has support `(3,4,6,7,8)` and
-coordinates `(3/8,1/8,1/8,1/8,1/4)`. The emitter independently re-reads the
-hash-pinned proposal/DBM report, reconstructs the mixture, checks nonnegativity,
-unit sum, all 100 rational row caps, and the strict gain. It exited 0 with
-minimum row slack `0`. Strict endpoint gain is
-`-113066229493722665255760327106163587193194443538040807251819301663477 /
-900719925472297760149051801600000000000000000000000000000000000000000000`;
-`lhs - T^2` is
-`-698893979704418866975274794984562881793335589994988084750913546940631281 /
-14073748835504652502328934400000000000000000000000000000000000000000000000000`.
-
-`FrozenCapFiveField2368.lean` proves the mixture, endpoint identities,
-`strict_gain_2368`, 100 leaf caps, and aggregate `row_cap_2368` against the
-already-green `FrozenCapRowCap2368` frozen matrix.
-`FrozenCapFiveField2368Tree.lean` uses the green `db_eq_tree_2368` bridge and
-`PaidCellCertificateMCap.not_valid_of_frozen_cap` to prove conditional
-`excluded_2368_tree`. Both are **CI pending**; no local kernel claim exists.
-They are additional conditional exclusion paths, not residual payment or a
-`RemainingTerminalRadius` bridge.
-
-Checks/scope: emitter regenerated byte-identically and `py_compile`,
-forbidden-token scan, and `git diff --check` exited 0. A bounded local `lake env
-lean` probe was environment-blocked because Lake attempted the pinned Mathlib
-checkout and aborted on pre-existing untracked files; it produced no Lean
-diagnostic and left the worktree clean. SHA256 (lowercase): witness module
-`6015e4de07a333a687f18241b025769ab2b38b3d9a93ed265a391f2b7f0d6e73`; tree module
-`898b08a7302318ac556d24ea1247095d682a42819598d6526eed8afeafe84391`; emitter
-`f50472c8ebe6249bb7d1470b9a14e8c24c1981342cffcf3bd6d692412776bb2a`; targets
-`6cc09ef93f8d6707c1f41c0dd42fa43e4edab47322a60a8bde82195de17608f5`.
-
-Still unproved: CI for the two modules; `2370` five-field search timeout;
-exclusions/packet existence to `RemainingTerminalRadius`; all 382 absent public
-payloads; seven-class and energy premises. Next concrete step: put the two new
-targets immediately after `FrozenCapRowCapTreeBridges` in the next serial CI
-run, fix only the first failing declaration, then resume `2370` with a bounded
-float rank plus exact recheck (stop on first strict pass).
+Corrected the five-field objective to strict `F0 + gain < T^2`; the old
+maximizing report is flagged `INVALID` and must not be consumed. The corrected
+four-field emitter rechecks 300 exact caps. The float vertex solver found an
+exact five-field `2368` pass on support `(3,4,6,7,8)`, coordinates
+`(3/8,1/8,1/8,1/8,1/4)`; `2356`, `2360`, and `2370` remain unproved (sampled
+misses/timeout, not exhaustive). `FrozenCapFiveField2368.lean` and
+`FrozenCapFiveField2368Tree.lean` encode the 100-cap conditional exclusion
+chain and are **CI pending**. They pay no residual id. All checks in these
+parts were host-side exact arithmetic/static scans, not local kernel claims.
 
 ROOT-IMPORT REQUEST: none.
 
@@ -257,5 +128,106 @@ the public bridge before both consumers. Forbidden-token scan and
 `git diff --check` exited 0. Scope: host-side exact arithmetic and static
 checks; both modules remain **CI pending**, with no packet/payment claim.
 Next: read the serial CI result and fix only the first failing declaration.
+
+ROOT-IMPORT REQUEST: none.
+
+## 2026-10-31 - part 192 (exact residual certificate consumer)
+
+Added `N11Formalization/EnergyTerminalBatchB13ResidualCertificates.lean`
+(SHA256 `111c03f95e63efbbd3b7b495f920103c551a7d4c6b41a955efd22fda97b5a299`).
+It defines `ResidualRadiusCertificate n` for exactly the obligation carried by
+`EnergyTerminalBatchB13.RemainingTerminalRadius`, and proves:
+`residual_radius_certificate_of_remaining`,
+`remaining_of_residual_radius_certificates`,
+`remaining_iff_residual_radius_certificates`, and
+`chart_radius_of_residual_radius_certificates`. The iff is exact, so the
+interface neither weakens the premise nor asserts certificate existence.
+
+Added the module as the first lane-C target; `TARGETS.txt` SHA256 is
+`692f6811aba3c1cb0c07d13ceb192df3340135f89cd57e8e587c33a7c6b5a1d3`.
+The module is **CI pending**; no local kernel claim. Host checks: forbidden-token
+scan had no matches and `git diff --check` exited 0. A generic pattern probe
+under the local Mathlib project timed out with no diagnostic, so it is not
+evidence of kernel acceptance.
+
+Still unproved: a producer turning failed packet `Valid` into
+`ResidualRadiusCertificate n`; packet/canonical-`f0Lo`/`g` existence; 382
+non-public payloads; seven-class and energy premises; root integration.
+Very next concrete step: read serial CI in target order. If this module is
+green, state the producer/canonicality obligation at the packet interface
+without assuming it; if red, fix its first failing declaration only.
+
+ROOT-IMPORT REQUEST: none.
+
+## 2026-10-31 - part 193 (exact counter-radius packet producer interface)
+
+Extended `N11Formalization/EnergyTerminalBatchB13ResidualCertificates.lean`
+with `ResidualPacketProducer n`, the missing producer stated only on the
+counter-radius branch: for a residual node and any feasible chart
+configuration with `r < SourceExactRoot.sourceRadius`, produce a
+`PaidCellCertificateM.Packet m` at that same node whose `Valid` proof holds.
+This formulation matches the geometry rather than demanding a packet on every
+feasible configuration (the latter is ruled out by the public row caps).
+
+Proved the real consumer `residual_radius_certificate_of_packet_producer` by
+contradiction using `PaidCellCertificateM.common_chart_radius`, plus
+`remaining_of_packet_producers` and `chart_radius_of_packet_producers`. Thus
+the only remaining mathematical implication at this interface is the explicit
+producer; no certificate existence is assumed or renamed as `Remaining`.
+
+The latest successful CI run `41193732877` (head `ae211d7a`) **predates this
+module**: its build log contains no `EnergyTerminalBatchB13ResidualCertificates`
+target. It is therefore not kernel credit for either the old certificate
+consumer or this producer bridge. The module and target remain **CI pending**.
+Host checks: forbidden-token scan found only the intentional `#print axioms`
+queries (no declaration), and `git diff --check` exited 0. SHA256 (lowercase):
+module `3372794be75da4b68ac274fb56b2c3cc62bfdd48d9a96ba82a0304861a998ed0`;
+`TARGETS.txt` `692f6811aba3c1cb0c07d13ceb192df3340135f89cd57e8e587c33a7c6b5a1d3`.
+
+Still unproved: `ResidualPacketProducer n` for any residual id, including the
+seven public ids; canonical packet `f0Lo`/`g` identification; 382 absent
+payloads; seven-class and energy premises; root integration. This is the
+mathematical bottleneck, not a Lean plumbing gap. Very next concrete step:
+read CI for this exact target; if green, investigate the producer implication
+from the geometry/dual evidence (not more row caps), and if it is absent mark
+the energy branch blocked pending that producer.
+
+ROOT-IMPORT REQUEST: none.
+
+A bounded local `lake env lean` probe did not reach elaboration: Lake failed
+checking out the pinned Mathlib revision because of untracked Mathlib files.
+This is an environment failure, not a Lean error or kernel result. CI remains
+the only valid kernel check for the new declarations.
+
+## 2026-10-31 - part 194 (canonical producer separated from row-cap exclusion)
+
+Extended `N11Formalization/EnergyTerminalBatchB13ResidualCertificates.lean`
+with `CanonicalPacketExclusion n canonical` and
+`CanonicalPacketProducer n canonical`.  The first is exactly the shape supplied
+by a frozen row-cap exclusion; the second is the still-missing geometric
+novelty, requiring a counter-radius feasible configuration to produce a packet
+at the frozen node with the canonical `f0Lo`/`g` predicate and `Valid` proof.
+Proved `residual_packet_producer_of_canonical`,
+`residual_radius_certificate_of_canonical_packet_producer`, and
+`remaining_of_canonical_packet_producers`.  This is a real consumer for the
+seven conditional exclusions and does not assume certificate existence.
+
+Host checks: forbidden-token scan had no matches; `git diff --check` exited 0.
+SHA256 (lowercase): module
+`8a1843b96b0814764399dfae03bf363b28d1833e4d7b83b773863daf3aa5532d`;
+`TARGETS.txt`
+`692f6811aba3c1cb0c07d13ceb192df3340135f89cd57e8e587c33a7c6b5a1d3`.
+The module remains **CI pending**.  Run `41195990232` was inspected through its
+live log at `cc16dff4`; the remote target file predates this module and the log
+had not reached the lane-C targets, so it is not kernel credit.
+
+Blocked mathematical obligation: neither `CanonicalPacketProducer` nor its
+canonical packet identification is proved for any residual id.  Public row
+caps prove only the corresponding `CanonicalPacketExclusion`, and 382 ids still
+have no public payload.  Do not claim payment or mark `Remaining` as an axiom.
+Very next concrete step: after CI is green for this module, instantiate the
+abstract `canonical` predicate for the seven public ids from
+`FrozenCapPublicExcludedTree.excluded_*_tree`; that still leaves the producer
+and 382 payloads unproved.
 
 ROOT-IMPORT REQUEST: none.
