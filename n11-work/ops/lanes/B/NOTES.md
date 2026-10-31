@@ -1,87 +1,76 @@
-EXPERT (2026-10-31):
-- The singleton/union refinement is mathematically sound and the only current real energy reducer.
-- Serialize only Fourteen, FourteenMain, Sixteen, SixteenMain; require four exit-0 artifacts and clean `#print axioms`.
-- Record 2013/373 only after `paid_count` and `remaining_of` are green; they price sixteen singleton refinements, not 373 radii.
-- Then request the supervisor-only root switch from B13Main to SixteenMain, preserving the explicit SevenClassExclusions premise.
-- If red, inspect the first owning diagnostic. Do not enlarge `decide +kernel`, `maxRecDepth`, or generated decision terms.
+## 2026-10-31 - session 96: Fourteen green; Sixteen recursion repaired
+
+- Downloaded run `41201323694` on `3551ab87`, artifact `13044243893`
+  (`64791EDA...79BA63`), summary `E9F7745E...F33344`. The masked-success run
+  proves `RefineFourteen` and `FourteenMain` exit `0` (kernel green), while
+  `RefineSixteen` and `SixteenMain` exit `1`.
+- First owning diagnostic: `EnergyTerminalBatchB13RefineSixteen.lean:31:2`,
+  `maximum recursion depth has been reached`, from `tauto` over the four
+  unfolded paid-set unions. The later checks and axiom reports in this module
+  are not proof credit for the failed declaration.
+- Replaced `tauto` with an explicit bounded five-case decomposition:
+  Fourteen -> Thirteen -> Twelve -> Eleven, then dispatch base / Eleven-new /
+  0037 / 3112 / 3116. No recursion-limit raise, `decide` enlargement, or new
+  target. New Sixteen SHA256 `094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A`
+  (old `E7C0CBD8...097C5`). Fourteen stays `0BCDA687...0AB4F`;
+  `TARGETS.txt` stays `EB52F2B4...16DD01`.
+- Added `ci-verdict-41201323694.json`. Checks after the repair:
+  `audit_b13_refine_sixteen.py` and `audit_b13_refine_fourteen.py` exit `0`
+  with `ok:true`; `git diff --check` exits `0`. These are static
+  source/inventory and arithmetic checks only, not Lean elaboration.
+- Conditional arithmetic remains 2013 paid / 373 residual, but is **not paid**:
+  fresh exit-0 artifacts for Sixteen and SixteenMain are still required.
+- Still unproved: 373 residual radii; `f0Lo`/`g` bridge; SevenClassExclusions
+  (`0/7`); arbitrary-center full-disk theorem.
+- Next concrete step: supervisor commits the exact Sixteen bytes and evidence,
+  then serial CI must show both Sixteen modules exit `0` with clean
+  `#print axioms`. If green, request the supervisor-only root switch from
+  B13Main to SixteenMain, preserving explicit SevenClassExclusions.
+
+## Earlier session 95 (condensed)
+
+- Closed Fourteen `paid_count` (`2010 + 1 = 2011`) and Sixteen `new_count`
+  (`1 + 1 = 2`) plus `paid_count` (`2011 + 2 = 2013`) by exact count rewrites
+  and `omega`, without enlarging generated decisions. Evidence:
+  `ci-repair-20261031-fourteen-sixteen.json`.
 
 
-## 2026-10-31 - session 93: completed artifact confirms old-byte diagnosis
+## 2026-10-31 - session 94: fresh CI isolates and repairs Fourteen arithmetic
 
-- GitHub API now reports run `41193732877` (`ae211d7a`) completed. Its artifact
-  remains `13041117932` / `C82C5507...BABC19`, matching
-  `ci-verdict-41193732877.json`: seven direct `FrozenCapRowCap*` exits `0`;
-  probe plus seven lane-B wrappers and all four Fourteen/Sixteen targets exit
-  `1`. This is old-byte evidence, not a verdict on the current worktree.
-- Current worktree already has the thin alias wrappers, the Fourteen
-  `paidIDs`/`newIDs` unfolding repair, and pending static audit updates. No Lean
-  bytes were changed this part, so no new proof credit is claimed.
-- Checks this part: GitHub run metadata and existing artifact identity only.
-- Still unproved: fresh exits for eight wrapper/probe targets and Fourteen,
-  FourteenMain, Sixteen, SixteenMain; 373 conditional residual radii;
-  `f0Lo`/`g` bridge; SevenClassExclusions (`0/7`); arbitrary-center theorem.
-- Next: supervisor commits the worktree unchanged, then fresh serial CI. Read
-  the first diagnostic of each new-byte red target; record 2013/373 only after
-  all four Fourteen/Sixteen exits are `0`.
+- Downloaded completed run `41195990232` (`cc16dff4`) artifact `13043056783`
+  (`47F36EF9...BFE066`). The workflow says success, but `summary.json` says
+  Thirteen/ThirteenMain exit `0`; Fourteen, FourteenMain, Sixteen, and
+  SixteenMain exit `1`. Exact evidence: `ci-verdict-41195990232.json`.
+- First owning diagnostic (Fourteen import blocks Sixteen): at
+  `EnergyTerminalBatchB13RefineFourteen.lean:66:2`, after both alias/count
+  rewrites the goal is `2010 + #EnergyRefineN3116.newIDs = 2011`, while
+  `EnergyTerminalBatchB13Refine3116.new_count` only proves the cardinality
+  `= 1`. This is an open arithmetic normalization, not a failed disjointness.
+- Appended `norm_num` to Fourteen `paid_count`; static audit now requires that
+  exact closing line. New Fourteen SHA256
+  `722F42C6195325676EB5C8545D0C911A9F87FF40DC39F09A39E0139E03BD9FB3`
+  (pre-repair `36C34D...D33E`). Audit SHA256 `D79666A9...A68C5`; new
+  Fourteen report `7867E7F3...D705A`; Sixteen report `ED27F0FB...48FF1`.
+- Checks: Fourteen audit exit `0`, Sixteen audit exit `0` (both static
+  source/inventory only), `py_compile`, forbidden-token scan, and
+  `git diff --check` exit `0`. `audit_target_imports.py` hit `timeout 60`
+  without output, so no closure-count check this part. No local Lean verdict.
+- Still unproved: fresh exit-0 artifacts for all four Fourteen/Sixteen targets;
+  373 conditional residual radii; `f0Lo`/`g` bridge; SevenClassExclusions
+  (`0/7`); arbitrary-center full-disk theorem. Do not record `2013/373` yet.
+- Next: supervisor commits these bytes, then serial CI. If Fourteen is green,
+  read Sixteen's first diagnostic next; only four exit-0 artifacts permit the
+  `2013/373` handoff and consideration of the SixteenMain root switch.
 
-## 2026-10-31 - session 92: Fourteen alias-unfolding repair; CI pending
+## Earlier 2026-10-31 sessions 91--93 (condensed)
 
-- Recovered the exact owning diagnostic from run `41193732877` artifact
-  `13041117932`: `EnergyTerminalBatchB13RefineFourteen.lean:61:15`,
-  `rw [paidIDs]` leaves `newIDs` folded, so the disjoint-card rewrite cannot
-  match. Thirteen/ThirteenMain were exit `0`; Fourteen/Sixteen and their Main
-  wrappers were exit `1` at that older sha.
-- Repaired `paid_count` to unfold both aliases in one rewrite:
-  `rw [paidIDs, newIDs, Finset.card_union_of_disjoint new_disjoint_old,
-  ...Thirteen.paid_count, ...Refine3116.new_count]`. Updated the static audit
-  guard to require this exact shape.
-- Current Fourteen sha `36C34D3065C85CD84483813B53EF9D5A6A21BB9540A660E50433FA9A5A66D33E`.
-  Checks: Fourteen audit and Sixteen audit exit `0` (static source/inventory
-  scope only), `py_compile`, forbidden-token scan, and `git diff --check` exit
-  `0`. No local Lean verdict.
-- Fresh run `41195990232` is on supervisor head `cc16dff4`, not these uncommitted
-  bytes, and was still `in_progress`; it cannot pay this repair. The 2013/373
-  arithmetic remains conditional until Fourteen, FourteenMain, Sixteen, and
-  SixteenMain have fresh exit-0 module artifacts.
-- Still unproved: 373 conditional residual radii; `f0Lo`/`g` bridge;
-  SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem. Row-cap
-  wrappers re-export true caps but pay no residual radius.
-- Next: supervisor commit, then serial CI in target order. If Fourteen passes,
-  start from Sixteen's first diagnostic; do not record 2013/373 before all four
-  exits are `0`.
-
-## 2026-10-31 - session 91: row wrappers converted to green-source aliases; CI pending
-
-- Downloaded run `41193732877` (`ae211d7a`) artifact `13041117932`
-  (`C82C5507...BABC19`). All seven direct `FrozenCapRowCap*` modules exit `0`,
-  but the probe and seven lane-B duplicate wrappers exit `1` on `unsolved
-  goals`; Fourteen/FourteenMain/Sixteen/SixteenMain also exit `1` at this sha.
-  Exact evidence is in `ci-verdict-41193732877.json`.
-- Replaced the duplicate 700-leaf proof generation in
-  `split_rowcap_modules.py` with thin type-preserving aliases of the direct
-  modules' final `row_cap`. The probe now aliases three representative pairs.
-  The emitter still parses each source `db` matrix and independently checks all
-  700 rational caps, weight sums `1`, zero violations.
-- Regenerated `LaneBFrozenCapRowCap{1409,2337,2341,2356,2360,2368,2370}.lean`
-  and `LaneBRowCapDecideProbe.lean`; no target/name change. Full hashes are in
-  `split_rowcap_modules-report-session91.json`. Emitter
-  `A3C132F2AFA548BEE6487E4B3D0E55FE0009D75C27F119B0E5B8EDFC76DDC426`;
-  report `80ED3244F30A7A63355BDCDC99193D78F2B63F51F49221C1937AF5AD49F5D03D`;
-  1409 wrapper `651C6D7C2D17A25A57D7E7D68B21F184B7C7FDD308C9C2073EF96039C8B3A89A`;
-  probe `BE3889440FC09162134CBC610780E5778A5547022E4A83EFA20C7D1F75514615`.
-- Checks (static unless stated): emitter `--check` and `py_compile` exit `0`;
-  `audit_target_imports.py` exits `0` with closure `1973`, no missing/forbidden;
-  Fourteen and Sixteen audits exit `0`; `git diff --check` exits `0`;
-  forbidden-token scan has only expected `#print axioms`. Bounded local
-  elaboration of the frozen core and a Mathlib alias-pattern probe both hit
-  `timeout 90` at import (exit `124`), so there is **no local Lean verdict**.
-- Still unproved: fresh CI exits for the eight wrapper/probe bytes and the four
-  Fourteen/Sixteen targets; 373 conditional residual radii; `f0Lo`/`g` bridge;
-  SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem. The wrappers
-  re-export a true row cap but do not pay any residual radius.
-- Next: supervisor commit, then fresh serial CI in target order. If an alias is
-  red, repair that first diagnostic. Only after all four Fourteen/Sixteen exits
-  are `0` may `2013/373` be recorded and the SixteenMain root switch considered.
+- Run `41193732877` artifact was old-byte evidence: direct row caps green, lane-B
+  duplicate wrappers red. They were replaced by thin aliases of the direct
+  modules' `row_cap`; details/hashes remain in
+  `split_rowcap_modules-report-session91.json` and
+  `ci-verdict-41193732877.json`.
+- Session 92 repaired Fourteen alias unfolding; the fresh run in session 94
+  proved that repair still left the `2010 + 1 = 2011` arithmetic step open.
 
 ## 2026-10-31 - session 88 (parts 1-3): Fourteen alias-count repair; CI pending
 

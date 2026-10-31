@@ -1,0 +1,32 @@
+{
+  "schema": "n11-lane-b-ci-repair-v1",
+  "date": "2026-10-31",
+  "supersedes": "ci-verdict-41195990232.json repairs",
+  "scope": "static source repair only; no local Lean elaboration and no proof credit",
+  "repairs": {
+    "Fourteen.paid_count": "rewrite the disjoint union and Thirteen count, then close 2010 + #newIDs = 2011 with new_count and omega",
+    "Sixteen.new_count": "rewrite the disjoint union, then close 1 + 1 = 2 from the two singleton counts with omega",
+    "Sixteen.paid_count": "rewrite the disjoint union and Fourteen count, then close 2011 + #newIDs = 2013 with new_count and omega"
+  },
+  "sha256": {
+    "EnergyTerminalBatchB13RefineFourteen.lean": "0BCDA68789D4DF1FDDE918C418DE1F34D67E0F9D5F15211AFDDE40CEAA80AB4F",
+    "EnergyTerminalBatchB13RefineSixteen.lean": "E7C0CBD83398C6DF73800F28816D24D5129FCA026C52CA2ABE8934335E2097C5",
+    "audit_b13_refine_fourteen.py": "86CE16A794CE371B0413D42D142B82B6E60E59186399916081A82713743C87A7",
+    "TARGETS.txt": "EB52F2B496FAFDCCA8FFA0281C11751975C00A0BCF094A497A274753AE16DD01"
+  },
+  "checks": {
+    "audit_b13_refine_fourteen": "exit 0, ok true (static source/inventory only)",
+    "audit_b13_refine_sixteen": "exit 0, ok true (static source/inventory only)",
+    "py_compile": "exit 0",
+    "git_diff_check": "exit 0",
+    "audit_target_imports": "timeout 60, no output, no verdict"
+  },
+  "post_repair_ci": "pending",
+  "still_unproved": [
+    "fresh exit-0 CI artifacts for Fourteen, FourteenMain, Sixteen, SixteenMain",
+    "373 conditional residual radii",
+    "f0Lo/g bridge",
+    "SevenClassExclusions (0/7)",
+    "arbitrary-center full-disk theorem"
+  ]
+}

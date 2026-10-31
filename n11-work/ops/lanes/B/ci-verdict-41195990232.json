@@ -1,0 +1,41 @@
+{
+  "run": 41195990232,
+  "head_sha": "cc16dff4bb4c57274ff526ce818c155677e18484",
+  "workflow_reported_conclusion": "success",
+  "artifact": {
+    "id": 13043056783,
+    "name": "n11-build-41195990232",
+    "zip_sha256": "47F36EF92EC8B975868CCCEA22B3B55EB599150DD02723E92FD38681D2BFE066",
+    "summary_sha256": "23E907AB96E85544F2B31FA9DA90FBA7392419199D4CB1E4E7FCE37FC2A7812E"
+  },
+  "module_exits": {
+    "N11Formalization.EnergyTerminalBatchB13RefineThirteen": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineThirteenMain": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain": 1
+  },
+  "first_owning_diagnostic": {
+    "module": "N11Formalization.EnergyTerminalBatchB13RefineFourteen",
+    "location": "N11Formalization/EnergyTerminalBatchB13RefineFourteen.lean:66:2",
+    "kind": "Type mismatch",
+    "actual": "EnergyTerminalBatchB13Refine3116.new_count : #EnergyRefineN3116.newIDs = 1",
+    "expected": "2010 + #EnergyRefineN3116.newIDs = 2011"
+  },
+  "repair": {
+    "file": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineFourteen.lean",
+    "pre_repair_sha256": "36C34D3065C85CD84483813B53EF9D5A6A21BB9540A660E50433FA9A5A66D33E",
+    "post_repair_sha256": "722F42C6195325676EB5C8545D0C911A9F87FF40DC39F09A39E0139E03BD9FB3",
+    "change": "append norm_num to paid_count after the disjoint-union rewrites"
+  },
+  "post_repair_ci": "pending",
+  "scope": "Fresh CI artifact inspection and static source repair; no local Lean verdict and no proof credit for the repaired bytes.",
+  "still_unproved": [
+    "fresh exit-0 artifacts for Fourteen, FourteenMain, Sixteen, SixteenMain",
+    "373 conditional residual radii",
+    "f0Lo/g bridge",
+    "SevenClassExclusions (0/7)",
+    "arbitrary-center full-disk theorem"
+  ]
+}

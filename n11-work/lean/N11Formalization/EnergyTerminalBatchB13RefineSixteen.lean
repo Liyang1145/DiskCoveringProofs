@@ -24,11 +24,23 @@ private theorem not_paid_fourteen_of {x : Fin 5011}
     (h3116 : x ∉ EnergyRefineN3116.newIDs) :
     x ∉ EnergyTerminalBatchB13RefineFourteen.paidIDs := by
   intro hx
-  simp only [EnergyTerminalBatchB13RefineFourteen.paidIDs,
-    EnergyTerminalBatchB13RefineThirteen.paidIDs,
-    EnergyTerminalBatchB13RefineTwelve.paidIDs,
-    EnergyTerminalBatchB13RefineEleven.paidIDs, Finset.mem_union] at hx
-  tauto
+  rw [EnergyTerminalBatchB13RefineFourteen.paidIDs,
+    Finset.mem_union] at hx
+  rcases hx with hx | hx
+  · rw [EnergyTerminalBatchB13RefineThirteen.paidIDs,
+      Finset.mem_union] at hx
+    rcases hx with hx | hx
+    · rw [EnergyTerminalBatchB13RefineTwelve.paidIDs,
+        Finset.mem_union] at hx
+      rcases hx with hx | hx
+      · rw [EnergyTerminalBatchB13RefineEleven.paidIDs,
+          Finset.mem_union] at hx
+        rcases hx with hx | hx
+        · exact hbase hx
+        · exact h11 hx
+      · exact h37 hx
+    · exact h3112 hx
+  · exact h3116 hx
 
 private theorem not_paid_3431 :
     (3431 : Fin 5011) ∉ EnergyTerminalBatchB13RefineFourteen.paidIDs :=
@@ -68,13 +80,16 @@ theorem new_disjoint_parts :
   decide +kernel
 
 theorem new_count : newIDs.card = 2 := by
-  rw [newIDs, Finset.card_union_of_disjoint new_disjoint_parts,
-    EnergyTerminalBatchB13Refine3431.new_count,
-    EnergyTerminalBatchB13Refine3573.new_count]
+  rw [newIDs, Finset.card_union_of_disjoint new_disjoint_parts]
+  have h3431 := EnergyTerminalBatchB13Refine3431.new_count
+  have h3573 := EnergyTerminalBatchB13Refine3573.new_count
+  omega
 
 theorem paid_count : paidIDs.card = 2013 := by
   rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,
-    EnergyTerminalBatchB13RefineFourteen.paid_count, new_count]
+    EnergyTerminalBatchB13RefineFourteen.paid_count]
+  have hnew := new_count
+  omega
 
 theorem paid_terminal (n : Fin 5011) (hn : n ∈ paidIDs) :
     (DBMSourceTree.data n).terminal = true := by
