@@ -68,27 +68,21 @@ def split_proof(text: str, node: int, y: list[Fraction],
                 matrix: list[list[int]]) -> str:
     match = re.search(r"\ntheorem row_cap(?:_\d+_\d+|_\d+ | \()", text)
     assert match, node
-    head = text[:match.start() + 1]
+    head = text[:match.start() + 1].replace(
+        "ops/lanes/C/emit_frozen_cap_row_caps.py",
+        "ops/lanes/B/split_rowcap_modules.py")
     leaves = []
     for i in range(10):
         for j in range(10):
-            terms = " + ".join(
-                f"y_{node} {q} * rowA {i} {j} {q}" for q in range(9))
-            lhs = sum(y[q] * ((q < j) - (q < i)) for q in range(9))
-            rhs = Fraction(matrix[i][j], 4096)
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
-    {terms} ≤ db {i} {j} := by
-  norm_num [y_{node}, rowA, db, dbmVal]
-  simp <;> norm_num''')
+    (∑ q : Fin 9, y_{node} q * rowA {i} {j} q) ≤ db {i} {j} := by
+  norm_num [y_{node}, rowA, db, dbmVal, Fin.sum_univ_succ]''')
     rows = []
     for i in range(10):
-        cases = "\n".join(
-            f"    | simpa only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] "
-            f"using row_cap_{node}_{i}_{j}" for j in range(10))
+        cases = "\n".join(f"  · exact row_cap_{node}_{i}_{j}" for j in range(10))
         rows.append(f'''theorem row_cap_{i} (j : Fin 10) :
     (∑ q : Fin 9, y_{node} q * rowA {i} j q) ≤ db {i} j := by
-  fin_cases j <;>
-    first
+  fin_cases j
 {cases}''')
     dispatch = "\n".join(f"  · exact row_cap_{i} j" for i in range(10))
     return head + "\n\n".join(leaves) + "\n\n" + "\n\n".join(rows) + f'''
