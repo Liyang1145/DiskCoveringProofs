@@ -48,7 +48,7 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
     for i in range(10):
         row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
     (∑ q : Fin 9, y_{node} q * rowA {i} j q) ≤ db {i} j := by
-  fin_cases j <;> norm_num [rowA, y_{node}, db]''')
+  fin_cases j <;> norm_num [rowA, y_{node}, db, Fin.sum_univ_succ]''')
     lines = [
         "import N11Formalization.FrozenCapRationalCore",
         "import Mathlib.Tactic.FinCases",
