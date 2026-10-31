@@ -1,4 +1,59 @@
-## 2026-10-31 - session 106: alias names fully qualified; CI pending
+## 2026-10-31 - session 108: CI triage; six-field tree repair already supplied
+
+- Re-read guidance/lane/CI and inspected run `41217409382` plus the newer
+  in-progress run `41222715534` (`8f861bae`).
+- Confirmed the seven `LaneBFrozenCapRowCap*` aliases are **CI green** at
+  `068914fb`; the public excluded tree and corrected four-field tree are also
+  green there. No new Lean bytes were needed.
+- Diagnosed the `FrozenCapFiveField{2368,2370}Tree` red as stale bytes: the old
+  tree used `simpa only [T]`, which left `Dq`/`DQ` bridges open. Lane C commit
+  `1373841d` replaced that with explicit `hDq`, `hDQ`, `hT : ... := rfl`
+  bridges. Those newer bytes are in run `41222715534`; their verdict is
+  **CI pending**, not assumed green.
+- The separate `EnergyTerminalBatchB13RefineSixteenResidualCensus` red at
+  `:41` (`norm_num`, no goals) and `:50` (`decide +kernel +revert`, free
+  variables) is lane-C-owned, so this lane did not edit it.
+- Checks this session: bounded source/diff inspection plus an independent
+  Python parse of the literal sets. It passed `public=7`, `already_refined=2`,
+  `unpaid=5`, and `unpaid disjoint new`; crosswalk SHA256 is
+  `AEF7DD03...60C842`. No Lean build was started (local 2-core rule), hence no
+  new kernel verdict. Session 107's `LaneBPublicResidualCrosswalk` remains
+  **CI pending**. It proves exactly
+  that public ids `{2337,2341}` are already removed and the other five
+  `{1409,2356,2360,2368,2370}` are in the literal 373-set; it pays no radius.
+- Still unproved: all 373 residual radii, `f0Lo`/`g` packet identifications,
+  SevenClassExclusions (`0/7`), and the arbitrary-center full-disk theorem.
+- Next: inspect the completed `41222715534` artifact. If the six-field trees
+  are green, keep the SixteenMain root-switch request; if either is red, use
+  its first owning line. Then have lane C replace the census `norm_num` at
+  `:41` and use plain concrete `decide +kernel` after `interval_cases` (or
+  avoid the whole 5011-index sweep via the 16-id `Finset.card_sdiff` proof).
+
+## 2026-10-31 - session 107: public row-cap/residual crosswalk; CI pending
+
+- Added `n11-work/lean/N11Formalization/LaneBPublicResidualCrosswalk.lean`
+  and appended its target to `TARGETS.txt`.  It defines the seven public
+  row-cap ids, proves they lie in the original 389-id census, proves exactly
+  `{2337,2341}` are in the sixteen-id refinement, and derives the remaining
+  five `{1409,2356,2360,2368,2370}` have cardinality 5 and lie in the literal
+  373-id refined residual set.
+- Checks: `git diff --check` exit `0`; forbidden-token scan no matches
+  (scope: one new Lean file); `audit_b13_refine_sixteen.py` exit `0` with
+  2013 paid / 373 residual; independent exact Python crosswalk verified
+  `7 public`, `2 already refined`, `5 unpaid`.  These are static/source checks,
+  not Lean elaboration.  No local Lean build was started (2-core rule), so the
+  new module is **CI pending**.
+- SHA256: module `AEF7DD03...60C842`; `TARGETS.txt` `885A0E88...5DB555`.
+  The new crosswalk is bookkeeping only and pays no radius.
+- Still unproved: all 373 residual radii, packet `f0Lo`/`g` production,
+  382 absent payloads, SevenClassExclusions (`0/7`), and the arbitrary-center
+  theorem.  The conditional 2013/373 endpoint is not the full-disk theorem.
+- Next: supervisor commits and runs serial CI.  Require kernel exit `0` for
+  `LaneBPublicResidualCrosswalk` and the eight pending row-cap aliases; if red,
+  inspect the first owning source line.  Keep the SixteenMain root-switch
+  request unchanged.
+
+## 2026-10-31 - session 106 (condensed): alias names fully qualified; CI pending
 
 - Hardened the session-104 repair. Removed both namespace `open`s from
   `split_rowcap_modules.py` and regenerated `LaneBRowCapDecideProbe.lean` plus
@@ -24,33 +79,13 @@
   source line rather than the artifact run status. Keep the SixteenMain
   root-switch request and do not claim the conditional 373-endpoint as proved.
 
-## 2026-10-31 - session 104 (condensed): CI exposed missing core names
+## Sessions 103--104 (condensed)
 
-- Artifact `41212560053` showed direct `FrozenCapRowCap*` green but the probe
-  and seven aliases red at `Unknown identifier y_*`; the first repair added
-  `open`s and is superseded by session 106's fully qualified bytes.
-- No radius payment; CI remained pending after the repair.
-
-## 2026-10-31 - session 103: bridge source/signature audit; still CI pending
-
-- Re-read the current 373-set bridge and its paid-set consumers. Confirmed
-  `newRefineIDs_eq_late` partitions the 16 ids as `Eleven.newIDs` plus
-  `{37,3112,3116,3431,3573}` (11 + 5), and `b13_subset_paid` follows the
-  literal nested paid-set chain through Sixteen.
-- Checked the pinned Mathlib definition
-  `Finset.card_sdiff_of_subset (h : s ⊆ t) : #(t \ s) = #t - #s` in
-  `Mathlib/Data/Finset/Card.lean:584`; it matches the bridge's use, so the
-  `389 - 16 = 373` rewrite has the intended direction. This is a source-level
-  signature check, not elaboration.
-- Bridge sha remains `5512E637...FAB12`; `TARGETS.txt` remains
-  `B3F81B5C...EF49BA26`. No new Lean files or target-list changes this part.
-- CI run `41201323694` predates these bytes: **CI pending** for both census
-  modules. No local Lean build was started (2-core worker rule).
-- Unproved: all 373 residual radii, `f0Lo`/`g`, SevenClassExclusions (0/7),
-  and the arbitrary-center theorem. The endpoint remains conditional.
-- Next: supervisor commits and triggers serial CI; inspect the first owning
-  error for `EnergyTerminalResidualCensusRefineSixteen` if red. Keep the
-  SixteenMain root-switch request unchanged.
+- Artifact `41212560053` reddened the probe/aliases at `Unknown identifier
+  y_*`; session 106's fully qualified bytes supersede that repair.  Session 103
+  verified `newRefineIDs_eq_late` (11 + 5 = 16) and the pinned
+  `Finset.card_sdiff_of_subset` signature behind `389 - 16 = 373`.  Both were
+  source checks only; no radius payment.
 
 ## Earlier sessions 100--102 (condensed)
 
@@ -92,56 +127,13 @@
   `ci-repair-20261031-fourteen-sixteen.json`.
 
 
-## 2026-10-31 - session 94: Fourteen arithmetic repair (superseded by CI-green 98)
+## Earlier sessions 79--94 (condensed)
 
-- Run `41195990232` exposed a missing `2010 + 1 = 2011` normalization in
-  Fourteen, blocking Fourteen and Sixteen. Appending `norm_num` to the owning
-  `paid_count` fixed it; session 98 then recorded fresh exit-0 CI for both
-  pairs. Evidence remains in `ci-verdict-41195990232.json`.
-
-## Earlier 2026-10-31 sessions 91--93 (condensed)
-
-- Run `41193732877` artifact was old-byte evidence: direct row caps green, lane-B
-  duplicate wrappers red. They were replaced by thin aliases of the direct
-  modules' `row_cap`; details/hashes remain in
-  `split_rowcap_modules-report-session91.json` and
-  `ci-verdict-41193732877.json`.
-- Session 92 repaired Fourteen alias unfolding; the fresh run in session 94
-  proved that repair still left the `2010 + 1 = 2011` arithmetic step open.
-
-## 2026-10-31 - session 88 (parts 1-3): Fourteen alias-count repair; CI pending
-
-- Repaired `EnergyTerminalBatchB13RefineFourteen.lean::paid_count`: after
-  rewriting the disjoint-union card and Thirteen's count, close with
-  `simpa [newIDs] using EnergyTerminalBatchB13Refine3116.new_count`, avoiding
-  the failed direct rewrite. Audit guards now require the actual Thirteen base
-  and the alias count.
-- Current Fourteen sha `9D1B9D6A706C011CCBF85CA855F66827C4C9707DA6CEAC7CA78DBBFBD84301C7`;
-  Fourteen audit `222608F6...B8B3BB4BA`; report `EE0A9CA2...F922F`;
-  `TARGETS.txt` `EB52F2B4...E16DD01`. Static audits pass; fresh CI is pending.
-
-# Lane B notes
-
-## 2026-10-31 - session 91 diagnosis of sessions 69--85 (condensed)
-
-- Earlier runs established 700/700 exact arithmetic but red leaves kept moving
-  through definitional `change`, vector lookup, dispatch, and symbolic
-  `norm_num`. Session 85 returned to the direct `FrozenCapRowCap*` shape, yet
-  run `41193732877` still showed all eight lane-B duplicates red while all seven
-  direct modules were green. Session 91 therefore removed the duplicate proofs.
-
-## Row-cap history (condensed)
-
-Session 84's full-`simp` attempt was superseded. Older runs established
-700/700 exact arithmetic but failed at definitional `change`, vector lookup,
-then dispatch/probe issues; these are engineering iterations, not proof credit.
-
-## Session 81 and 79 (condensed)
-
-CI `41176805557` first showed the vector-lookup residue but the attempted
-`List.getElem_cons_*` repair was the wrong namespace. Session 79 had confirmed
-700/700 exact arithmetic and weight sums with zero violations, but had no local
-Lean verdict.
+- Run `41193732877` showed direct row caps green but eight lane-B duplicate
+  wrappers red; session 91 replaced the duplicates with thin aliases. Session
+  94 fixed Fourteen's `2010 + 1 = 2011` step, then session 98 confirmed fresh
+  exit-0 CI for Fourteen/Sixteen. Older `change`/vector-lookup failures are
+  superseded engineering history, not proof credit.
 
 ## 2026-10-31 - session 78: remove definitional `change` leaves
 
@@ -233,3 +225,24 @@ Lean verdict. Local Mathlib/project probes timed out before elaboration.
 
 B13Main was kernel-green at `521CA436...FA41837`; root imports B12Main. Evidence
 is in `ci-b13-green-20261030.json`.
+
+## 2026-10-31 - sessions 109--110: unpaid public wrappers
+
+- Added `LaneBUnpaidPublicExcludedWrappers.lean` and queued it plus
+  `LaneBPublicResidualCrosswalk` in `TARGETS.txt`. Session 110 added drop-in
+  aliases under the exact namespaces/names of the two red five-field trees,
+  delegating both to the CI-green wide-field `FrozenCapPublicExcludedTree`
+  conditional exclusions for 2368 and 2370. No frozen bytes were edited and no
+  packet existence or radius is asserted.
+- Checks (scope: new module + target text): `git diff --check` exit `0`;
+  forbidden-token scan clean apart from the four intentional `#print axioms`;
+  deterministic signature comparison matched both public theorem signatures;
+  bounded 444-module import-closure walk found no transitive import of either
+  red five-field tree, so the aliases cannot collide. Module SHA256 is now
+  `587BEAEF...0695C2`; no local Lean build (2-core rule), hence **CI pending**.
+- Still unproved: all 373 refined residual radii, packet `f0Lo`/`g` production,
+  SevenClassExclusions (`0/7`), and the arbitrary-center full-disk theorem.
+- Next: serial CI must kernel-check the wrapper. If green, lane C can point its
+  two red target entries at `LaneBUnpaidPublicExcludedWrappers` (or keep the
+  proven 373 census and remove the red literal recensus). The proven
+  `refinedResidualIDs_card = 373` already supersedes that sweep.
