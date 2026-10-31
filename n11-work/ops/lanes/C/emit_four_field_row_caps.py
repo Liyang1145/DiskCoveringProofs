@@ -48,19 +48,31 @@ def main():
         leaves = []
         for i in range(10):
             for j in range(10):
-                lhs_q = sum(y[q] * common.row_a(i, j, q) for q in range(9))
                 rhs = Q(db[i][j], 4096)
                 leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
-    {lean_rat(lhs_q)} ≤ {lean_rat(rhs)} := by
-  norm_num''')
+    (∑ q : Fin 9, y4_{node} q * rowA {i} {j} q) ≤ db_{node} {i} {j} := by
+  norm_num [y4_{node}, rowA, db_{node}, Fin.sum_univ_succ]''')
+        row_lemmas = []
+        for i in range(10):
+            branches = "\n".join(
+                f"  · exact row_cap_{node}_{i}_{j}" for j in range(10))
+            row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
+    (∑ q : Fin 9, y4_{node} q * rowA {i} j q) ≤ db_{node} {i} j := by
+  fin_cases j
+{branches}''')
+        i_branches = "\n".join(
+            f"  · exact row_cap_{node}_{i} j" for i in range(10))
         blocks.append(f'''def db_{node} : Fin 10 → Fin 10 → ℚ
   {cases}
 
 ''' + "\n\n".join(leaves) + f'''
 
+''' + "\n\n".join(row_lemmas) + f'''
+
 theorem row_cap_{node} (i j : Fin 10) :
     (∑ q : Fin 9, y4_{node} q * rowA i j q) ≤ db_{node} i j := by
-  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_{node}, db_{node}, Fin.sum_univ_succ]''')
+  fin_cases i
+{i_branches}''')
     src = '''import N11Formalization.FrozenCapFourFieldWitnesses
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum

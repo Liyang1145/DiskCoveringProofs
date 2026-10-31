@@ -44,22 +44,11 @@
   packet/no-cell and exclusion-to-radius bridges, 377 residual ids conditional
   on pending wrappers, MPacket validity, energy and seven-class premises.
 
-## Earlier 2026-10-31 work (parts 160--163)
+## Earlier 2026-10-31 parts 160--167 (superseded)
 
-Row-cap proofs were progressively rewritten (narrow `rowA`, then `db` table
-lookups removed). All variants remained CI-red/pending; part 164 has the
-first fresh CI diagnostic. Four-field rescue sources were regenerated and
-exact audits passed, but no row-cap kernel exit was obtained.
-## 2026-10-31 - condensed parts 165--167 (row leaves; CI pending)
-
-Five-field certificates for `2356` and `2360` were emitted, then all public
-row-cap leaves were changed to explicit `Fraction` `change` targets followed
-by bare `norm_num` (700 caps); the four/five-field leaves were aligned later.
-Emitter SHA256 values: public `320577b3c170d17265259f19fd1a50e47e75cc8ae86ead0e7115ba61abd3fc25`,
-five-field `4be2310dd8d3a55122c9b526b939a656fc4f9999f88a4886d9d069abe3ca4bf6`.
-Exact audits pass, but no local Lean syntax/kernel claim follows; bounded
-probes timed out without diagnostics. A stale CI failure at `1409:132:608`
-does not match the current multiline source.
+Row-cap proof variants (`change`, scaled leaves, five-field `2356`/`2360`)
+all remained CI-red/pending; exact rational audits passed but paid no kernel
+credit. Their `change`-based sources are superseded by parts 169 onward.
 
 ## 2026-10-31 - part 168 (seven-way exclusion consumer; CI pending)
 
@@ -94,50 +83,46 @@ preserve it before changing the emitter; do not infer a kernel pass from the
 700/700 exact audit.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-31 - part 175 (`Fin.sum_univ_succ` row-cap repair; CI pending)
+## 2026-10-31 - part 178 (leaf type repair; CI pending)
 
-Current-source run `41176805557` showed `FrozenCapRowCap1409Smoke` exit 0 but
-`FrozenCapRowCap1409.lean:520:53` unsolved: after `fin_cases j`, `norm_num
-[rowA, y_1409, db]` left the `∑ x : Fin 9` unevaluated. Added
-`Fin.sum_univ_succ` to all three row-cap emitters. Theorem names, matrices,
-interfaces, and leaf arithmetic are unchanged.
+Found a concrete defect in part 177: row aggregates `exact`-dispatched to
+closed-rational leaf theorems, but the expected leaf type is the weighted sum
+`∑ q, y q * rowA i j q ≤ db i j`. Restored sum-shaped leaves in all three
+emitters while keeping the `fin_cases j` row dispatch. Fixed leaves use
+`norm_num [y, rowA, db, Fin.sum_univ_succ]`; the prior failing site was the
+variable-`j` row proof, now dispatched before the leaf tactic runs. The smoke
+now exercises two real sum-shaped leaves (`0,2` and `5,4`), not closed numerals.
 
-Emitter SHA256 (lowercase): `emit_frozen_cap_row_caps.py`
-`202aba2a974d2592c830321edb7f0121d7d3fca2f8a093e41c5ebb00070d4b5a`;
-`emit_four_field_row_caps.py`
-`1619bcec1ec6cff60c2dd492449f7538ec7b88e2137039aa58f261e7ae30ce67`;
-`emit_five_field_certificates.py`
-`203c4d84f1690a8f49860f8ec2f9a3aa766adb0ccafd53ad2f562da0377cf842`.
-Modules: `FrozenCapRowCap1409` `9232472a8c13e14a378d86c6a854b8437ca8e654a3c336c8f740c90ba2a34ae4`;
-`FrozenCapRowCap2337` `b860cb24acc465be6ecd51fe1605ddcacdde836dc25ad29ca4a1d627aef04444`;
-`FrozenCapRowCap2341` `ebb042234eb232e9bc4709116cf87891e97dd5a6df63a09074a98ce10c6b3330`;
-`FrozenCapRowCap2356` `d53fc3ee3e11c8355186eea71bd7fe2a4adb02ec97775da5f183c3bd36adae87`;
-`FrozenCapRowCap2360` `cfa89fec59578a971ace93cb0137c0a4712a15f73a7337384c4aeb653578f5d2`;
-`FrozenCapRowCap2368` `340217d21f9d7f04c835c4e77056beb914486d32f1bd76ec1b98940e2138758c`;
-`FrozenCapRowCap2370` `c338a97c3875702d7bac2471925357960853f53f4678d9fe18968e97720c9d72`;
-`FrozenCapFourFieldRowCaps`
-`e08f5fcda499e4cb104750235586f64ebda10f4822db49a96f06558f71ae2b29`;
-`FrozenCapFiveFieldRowCaps`
-`9c8217a844c3d3fb07eaf596484b4aa8f2a0d249d5c4c3eaef6f2e2d8e0d8517`.
+Files/SHA256 (lowercase): smoke
+`0065e3b0c42264155557b414be0b23fa035c930983ec40f614574353e3f3b9cb`;
+emitters `b440f898...` (public), `306b7979...` (four-field),
+`212b0e31...` (five-field). Public caps: 1409 `9652ecf3...`, 2337
+`fea8c1c6...`, 2341 `e87cf4ef...`, 2356 `5448644d...`, 2360 `76eb7183...`,
+2368 `22390e0d...`, 2370 `a58bad28...`; four-field `fbc80eac...`,
+five-field `5ab1d553...`. Five-field witnesses were regenerated unchanged
+(`7141cb51...`). `TARGETS.txt` is unchanged because module names are stable.
 
-Checks/scope: emitters exit 0; exact audits pass 700/700 + 500/500 + 200/200,
-per-node minimum slack 0; `py_compile`, `git diff --check`, and forbidden scan
-pass. This is exact arithmetic plus one CI-derived tactic diagnosis, not a new
-kernel exit; repaired modules are **CI pending**.
+Checks/scope: all three emitters exit 0; exact rechecks pass 700/700 + 500/500
++ 200/200 with per-node minimum slack 0; `py_compile`, `git diff --check`,
+forbidden-token scan, and 120-column scan pass. Run `41181225934` / source
+`69903c35` was still in progress and predates this repair, so it is not a result
+for these hashes. No local Lean syntax or kernel claim (Mathlib probe lacks
+the required project oleans). This revision is **CI pending**.
 
-Still unproved/missing: kernel exits for repaired caps and dependent trees/
-aggregate; exclusion-to-`RemainingTerminalRadius`; packet existence/`Valid`;
-382 payloads; MPacket validity; energy and seven-class premises.
+Still unproved/missing: kernel exits for all caps/trees/aggregate; exclusion
+to `RemainingTerminalRadius`; packet existence/`Valid`; 382 payloads; MPacket
+validity; energy and seven-class premises.
 
-Next: fresh serial CI must rebuild smoke (known exit 0), then `1409`; if green,
-continue through all seven public caps and both aggregate cap modules. If a sum
-remains, capture its full first current-SHA goal before any interface change.
+Next: supervisor commit and fresh serial CI. Read the first diagnostic from
+smoke `0065e3b0...`, then `1409` `9652ecf3...`; if green continue through all
+public caps, then four/five-field caps/trees.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-31 - condensed part 169 (superseded by part 173)
+## 2026-10-31 - condensed parts 169/175 (superseded)
 
-Four/five-field leaves were regenerated with exact audits and minimum slack 0;
-these bytes were superseded by part 173.
+Run `41176805557` reached smoke exit 0 but `FrozenCapRowCap1409:520` left its
+`Fin 9` sum unevaluated after `Fin.sum_univ_succ`; both earlier leaf/emitter
+revisions are superseded by part 177.
 ## 2026-10-31 - part 171 (aggregate signature audit; CI pending)
 
 Re-read part 170 and checked the new public aggregate against all seven tree
@@ -231,4 +216,38 @@ energy and seven-class premises.
 Next: supervisor commit and fresh serial CI. Read the first diagnostic from
 source `9232472a...`; do not act on the stale `change` lines. If `1409` is
 green, proceed to `2337` and the four/five-field caps before tree aggregates.
+ROOT-IMPORT REQUEST: none.
+
+## 2026-10-31 - part 177 (row dispatch to exact leaves; CI pending)
+
+Replaced all abstract-row `norm_num [.., Fin.sum_univ_succ]` proofs in the
+public, four-field, and five-field emitters with `fin_cases j` dispatch to
+the corresponding already-generated closed rational leaf theorem. This
+removes the sum-unfolding site that failed at current-source
+`FrozenCapRowCap1409.lean:520`. Interfaces, matrices, certificates, and leaves
+are unchanged. Regenerated 700 public + 500 four-field + 200 five-field rows;
+all exact audits pass and per-node minimum slack remains 0.
+
+Files/SHA256 (lowercase): frozen emitter
+`eb984e88ed05357686f78100cb62e31aaf0ad4cde6c246d91c7fc68a01ba7edf`;
+four emitter `aff8185962de5a78bfacad5ae6589fe0a1f6bec9ac8accb12dd952b9611f4e21`;
+five emitter `92d43b54286d0a267ee212402565925a630eb70c6edd09d5bdd0b862a5444284`.
+Public caps: 1409 `c27e0d06...`, 2337 `20ca0966...`, 2341 `b93339f7...`,
+2356 `6b0dbb94...`, 2360 `c147be2f...`, 2368 `dfdc1444...`,
+2370 `ed7a4834...`; four-field caps `1e4a25e3...`; five-field caps
+`3502a5a8...`. `TARGETS.txt` is unchanged because all module names are stable.
+
+Checks/scope: all three emitters exit 0; exact rational rechecks pass
+700/700 + 500/500 + 200/200 with minimum slack 0; `py_compile`,
+`git diff --check`, forbidden-token scan, and 120-column scan pass. A 90 s
+Mathlib-probe import check timed out with no diagnostic; there is **no local
+Lean syntax or kernel claim**. All regenerated modules are **CI pending**.
+
+Still unproved/missing: kernel exits for all caps/trees/aggregate; exclusion
+to `RemainingTerminalRadius`; packet existence/`Valid`; 382 payloads; MPacket
+validity; energy and seven-class premises.
+
+Next: fresh serial CI, smoke then `1409`; on red preserve the first current
+source diagnostic. If green, continue through all seven public caps, then
+four/five-field caps and trees.
 ROOT-IMPORT REQUEST: none.
