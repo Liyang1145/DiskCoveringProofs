@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "scope": "exact-rational audit and deterministic alias emission only; no Lean elaboration or proof credit",
+  "checks": [
+    {
+      "node": 1409,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2337,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2341,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2356,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2360,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2368,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    },
+    {
+      "node": 2370,
+      "ordered_pairs": 100,
+      "weight_sum": "1",
+      "violations": []
+    }
+  ],
+  "audited_caps_per_module": 100,
+  "rewritten": true,
+  "sha256": {
+    "LaneBFrozenCapRowCap1409.lean": "651C6D7C2D17A25A57D7E7D68B21F184B7C7FDD308C9C2073EF96039C8B3A89A",
+    "LaneBFrozenCapRowCap2337.lean": "5B804CADCD8646D1B425554762E3286FFB4A2AFC8DA7B9A5744AED1BD838F9C7",
+    "LaneBFrozenCapRowCap2341.lean": "FA2CC8BC37C6117CC85B80CF4788FDCD1A669E9205BEFAFE8BD18C906A649337",
+    "LaneBFrozenCapRowCap2356.lean": "F873700907D74AF4D4165665408DC16DA409EBA00FA12B48AD099A2BD2BA1A8D",
+    "LaneBFrozenCapRowCap2360.lean": "EE58E0D01A92C9512EADADE0AF0132F3555F21E5A436F30837072A065E2A5F4D",
+    "LaneBFrozenCapRowCap2368.lean": "68BB58C292A978997A26FF0984A36AD66414DEAEDCCC3A85202E9B97D77DD604",
+    "LaneBFrozenCapRowCap2370.lean": "FAAB97B8895DCCC575EFAAE08D9F1938A0C5E00004CE4025B6266AC050B14F97",
+    "LaneBRowCapDecideProbe.lean": "BE3889440FC09162134CBC610780E5778A5547022E4A83EFA20C7D1F75514615"
+  }
+}

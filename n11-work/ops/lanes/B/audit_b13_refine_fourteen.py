@@ -65,9 +65,9 @@ def main() -> int:
     checks["paid_count_2011"] = "theorem paid_count : paidIDs.card = 2011" in refine
     checks["new_count_1"] = "theorem new_count : newIDs.card = 1" in refine
     checks["paid_count_uses_alias_count"] = (
-        "change (EnergyTerminalBatchB13RefineThirteen.paidIDs ∪" in refine
-        and "exact EnergyTerminalBatchB13Refine3116.new_count" in refine
-        and "simpa [newIDs] using EnergyTerminalBatchB13Refine3116.new_count" not in refine
+        "rw [paidIDs, newIDs, Finset.card_union_of_disjoint new_disjoint_old," in refine
+        and "EnergyTerminalBatchB13RefineThirteen.paid_count," in refine
+        and "EnergyTerminalBatchB13Refine3116.new_count]" in refine
     )
     checks["residual_375_documented"] = "2011 ids, leaving 376 - 1 = 375" in refine
     checks["paid_radius_present"] = "theorem paid_radius" in refine
