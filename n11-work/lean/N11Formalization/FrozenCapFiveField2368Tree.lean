@@ -29,9 +29,11 @@ theorem excluded_2368_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap2368.rowA,
       FrozenCapFiveField2368.y5_2368] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapFiveField2368.strict_gain_2368
+  · have hDq : FrozenCapRationalCore.Dq = N11Formalization.FlashCosine.Dq := rfl
+    have hDQ : FrozenCapRationalCore.DQ = N11Formalization.FlashCosine.DQ := rfl
+    have hT : FrozenCapRationalCore.T =
+        N11Formalization.FlashCosineLeaf284Bridge.T := rfl
+    simpa only [hDq, hDQ, hT] using FrozenCapFiveField2368.strict_gain_2368
 
 end
 end N11Formalization.FrozenCapFiveField2368Tree

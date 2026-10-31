@@ -100,5 +100,4 @@ N11Formalization.EnergyRefineN3792
 N11Formalization.EnergyTerminalBatchB13Refine3792
 N11Formalization.EnergyTerminalBatchB13Refine3792Main
 N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus
-# Independent structural 373 census via the existing 389 census and exact 16-id sdiff.
-N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff
+# Structural sdiff variant withheld: its imported 389 census C01-C04 is CI-red.
