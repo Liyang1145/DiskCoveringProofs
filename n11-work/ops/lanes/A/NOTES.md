@@ -1,3 +1,10 @@
+EXPERT (2026-10-31):
+- Direction is sound; C450 green modules are not class credit, and q0 remains 0/1 until strict-total CI is green.
+- Run one serial chain: UpperReductionUnimodal, SectorPeak, edge suffixes/shape, sector calculus/bins, TableBounds, RelabelledTableCertificate, StrictTotal.
+- Repair only the first owning error; dependency-red descendants are not diagnostics.
+- After green prove `q0_degree3 : Q0RunExclusion 1` via `q0_degree3_of_areaInput q0Degree3AreaInput`; this is 1/7, not closure.
+- Keep explicit `edgeUpper`/named-constant unfolding; no decimal substitutions or raised heartbeats. Split EdgeShape if serial CI shows memory pressure.
+ 
 # Lane A notes
 
 CURRENT (session 103): peak repairs and exact audits pass; executable gates

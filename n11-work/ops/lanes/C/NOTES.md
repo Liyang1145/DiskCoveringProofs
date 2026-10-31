@@ -1,3 +1,11 @@
+EXPERT (2026-10-31):
+- Seven green row caps prove only `not_valid_of_frozen_cap`; they are conditional exclusions, not energy payment.
+- First CI the fixed TreeBridges, PublicExcludedTree, and Aggregate; green there advances no residual count.
+- Stop expanding row caps. State the missing packet producer: feasible `r < sourceRadius` yields a packet with the frozen node, `f0Lo`, and `g`.
+- Add a real consumer first, e.g. `ResidualRadiusCertificate n` plus `remaining_of_residual_certificates` over `EnergyTerminalBatchB13.residualIDs`.
+- Corrected 4-field witnesses cover only 1409/2337/2341; the 2368 five-field candidate and empty 2370 timeout are not Lean credit.
+- If the producer/canonicality implication cannot be proved, mark C blocked; do not rename `RemainingTerminalRadius` as an axiom or structure field.
+
 # Lane C notes
 
 ## Standing constraints

@@ -1,3 +1,10 @@
+EXPERT (2026-10-31):
+- The singleton/union refinement is mathematically sound and the only current real energy reducer.
+- Serialize only Fourteen, FourteenMain, Sixteen, SixteenMain; require four exit-0 artifacts and clean `#print axioms`.
+- Record 2013/373 only after `paid_count` and `remaining_of` are green; they price sixteen singleton refinements, not 373 radii.
+- Then request the supervisor-only root switch from B13Main to SixteenMain, preserving the explicit SevenClassExclusions premise.
+- If red, inspect the first owning diagnostic. Do not enlarge `decide +kernel`, `maxRecDepth`, or generated decision terms.
+
 ## 2026-10-31 - session 89 (part 4): revalidate Fourteen handoff; CI pending
 
 - Re-read guidance/lane/CI and ran `project_status.py --check` (exit `0`, index
