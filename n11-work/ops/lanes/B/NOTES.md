@@ -1,47 +1,66 @@
 # Lane B notes
 
-## 2026-10-31 - session 81: vector-lookup repair for row-cap leaves
+## 2026-10-31 - session 83: pending-CI verification boundary
 
-- Live CI `41176805557` (head `d141be39`, includes lane commit `f7c72195`)
-  supplied the missing diagnostic: `LaneBRowCapDecideProbe` exits `1` at
-  `46:40`/`54:40`, and `LaneBFrozenCapRowCap1409` exits `1` from `42:230`
-  onward. After `norm_num`, goals retain `![...] 2`-style lookups, so direct
-  `norm_num` alone is insufficient. This is a prior-bytes verdict, not a fault
-  in the new bytes below.
-- Changed every generated leaf to `norm_num [y_<node>, rowA, db, dbmVal]`,
-  then `simp only [List.getElem_cons_zero, List.getElem_cons_succ]`, then
-  `norm_num`. Applied the same three tactics to all three probe leaves and
-  regenerated all seven `LaneBFrozenCapRowCap*.lean` modules with
-  `split_rowcap_modules.py`.
-- Tiny Mathlib probe scope: exact failing shape `1409,0,2` and the previously
-  failing `1409,4,5` both elaborate with the new tactic sequence (Lean 4.33.1,
-  `/workspace/tools/mathlib-probe`). `split_rowcap_modules.py --check`, exact
-  arithmetic `7/7` modules with `100/100` caps and weight sum `1`, zero
-  violations, `py_compile`, forbidden-token scan, and `git diff --check` pass.
-  No project/full-module local Lean verdict was obtained; all new bytes are
+- Re-read `GUIDANCE.md`, `LANES.md`, this note, and `ci/LATEST.md`; ran
+  `project_status.py --check` (exit `0`, manifest scope only). `HEAD` is the
+  supervisor commit `81751c2f`, while the eight repaired row-cap/probe Lean
+  files remain uncommitted in this worktree.
+- `LATEST.md` still reports `41176805557 in_progress` on `d141be39`, which
+  predates the repaired bytes and is not a verdict on them. No `gh` client is
+  installed; unauthenticated GitHub API access returns `404`. There is no
+  accessible newer artifact, so all eight kernel exits remain **CI pending**.
+- Re-ran `split_rowcap_modules.py --check` (exit `0`): seven nodes,
+  700/700 leaves, weight sum `1`, zero exact-rational violations. `py_compile`
+  and `git diff --check` exit `0`; forbidden-token scan is empty. These are
+  static checks, not proof credit.
+- Exact changed-byte hashes: probe `FDF54F7D...71DC`; emitter
+  `EB12A1F8...74A3`; caps 1409 `CA02EBFD...9E5A`, 2337 `DC161894...DB9F`,
+  2341 `770350AE...0658`, 2356 `FC95D529...4FE5`, 2360 `3390A121...6AD9`,
+  2368 `501F5172...9F10`, 2370 `1CA41B48...D6FC`. `TARGETS.txt` is unchanged.
+- Still unproved: probe and seven cap kernel exits; public excluded tree and
+  B13 dependants; 373 residual radii; `f0Lo`/`g` bridge; SevenClassExclusions
+  (`0/7`); arbitrary-center full-disk theorem.
+- Next concrete step: supervisor commits/pushes these exact bytes; fresh serial
+  CI must give `LaneBRowCapDecideProbe` exit `0` before 1409, then the other six.
+  If red, repair the probe's first post-`simp` diagnostic. Do not treat the
+  older in-progress run or static arithmetic as a kernel verdict.
+
+## 2026-10-31 - session 82: correct vector-notation reduction
+
+- Live CI `41176805557` (`d141be39`) exposed the exact prior failure: after
+  `norm_num`, goals retained `![...] 4` / nested matrix lookups. The Python
+  emitter had emitted rewrites for `List.getElem_cons_*`, but Mathlib's
+  `![...]` is `Matrix.vecCons`, so those rewrites could not apply.
+- Changed all generated leaves in `split_rowcap_modules.py` and the three
+  `LaneBRowCapDecideProbe.lean` leaves to
+  `norm_num [y_<node>, rowA, db, dbmVal]` followed by `simp <;> norm_num`.
+  Regenerated all seven `LaneBFrozenCapRowCap*.lean` modules (700 leaves).
+- Checks: emitter `--check` exit `0`, seven nodes, 100/100 ordered pairs,
+  weight sum `1`, zero exact-rational violations; `py_compile` exit `0`;
+  `git diff --check` exit `0`. Forbidden-token scan finds only the intentional
+  `#print axioms` audit lines. `project_status.py --check` had already passed
+  for manifest-declaration scope only. Local Lean checks of the real tactic
+  path timed out at 90 s and a minimal `Fin.VecNotation` probe at 60 s before
+  any diagnostic, so there is **no local kernel verdict**; all new bytes are
   **CI pending**.
-- Hashes: emitter `385B5A6A...FF92`; probe `6AC6FD56...3CEC`; caps 1409
-  `7F3BE0EE...EE81`, 2337 `CCBF4218...FCB9`, 2341 `B7B7C13E...DEE1`, 2356
-  `BC002C8D...91FA`, 2360 `229C6D4F...FAA5`, 2368 `D9C7A11F...CAC7`, 2370
-  `7960518B...0853`.
-- Still unproved: kernel exits for the new probe and seven caps (CI pending);
-  B13 chain/public excluded tree and other prior failures; 373 residual radii;
-  the `f0Lo`/`g` bridge; SevenClassExclusions (`0/7`); arbitrary-center
-  full-disk theorem.
-- Next: supervisor commits this worktree; fresh serial CI must start with
-  `LaneBRowCapDecideProbe` and then 1409. Repair the first exact diagnostic if
-  red; if green, verify the remaining six caps and then the B13 dependants.
+- SHA256: probe `fddf54f7...71dc`; emitter `eb12a1f8...74a3`; caps 1409
+  `ca02ebfd...59e5a`, 2337 `dc161894...db9f`, 2341 `770350ae...0658`, 2356
+  `fc95d529...4fe5`, 2360 `3390a121...e46ad9`, 2368 `501f5172...9f10`, 2370
+  `1ca41b48...d6fc`.
+- Still unproved: kernel exits for the probe and seven caps (CI pending); public
+  excluded tree and B13 dependants; 373 residual radii; `f0Lo`/`g` bridge;
+  SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem.
+- Next: supervisor commits/pushes unchanged. Fresh CI starts with
+  `LaneBRowCapDecideProbe`; if red, use its first post-`simp` diagnostic; if
+  green, inspect 1409 before the remaining six.
 
-## 2026-10-31 - session 79: bounded local verification of row-cap repair
+## Session 81 and 79 (condensed)
 
-- Re-read GUIDANCE, lane B, NOTES and `ci/LATEST.md`. `project_status.py --check`
-  exits `0` (manifest index only, not proof or full-file integrity).
-- Static recheck: seven modules, `700/700` caps, weights `1`, zero violations;
-  check scripts clean. Local Lean was unavailable, so those bytes stayed CI
-  pending. Emitter was `9EF7286A...A706`; probe `D48FFDA1...824D5`.
-- Remaining obligations were unchanged (kernel exits, 373 radii, `f0Lo`/`g`,
-  SevenClassExclusions, arbitrary-center theorem). Next was serial CI from the
-  probe and 1409.
+CI `41176805557` first showed the vector-lookup residue but the attempted
+`List.getElem_cons_*` repair was the wrong namespace. Session 79 had confirmed
+700/700 exact arithmetic and weight sums with zero violations, but had no local
+Lean verdict.
 
 ## 2026-10-31 - session 78: remove definitional `change` leaves
 
@@ -221,25 +240,4 @@ is in `ci-b13-green-20261030.json`.
   bridge; SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem.
 - Next: supervisor commits unchanged, then fresh CI's first rows must be probe,
   1409, 2337. If probe is red, use its first `change`/`norm_num` diagnostic;
-  if green, inspect 1409 before trusting the other six.## 2026-10-31 - session 80: local probe unavailable; exact pending-CI handoff
-
-- Re-read GUIDANCE, LANES, this NOTES and `ci/LATEST.md`. Latest recorded CI
-  `41168580187` is still on `0f022bfb`, so it predates the current repaired
-  row-cap bytes and does not test the `norm_num [y, rowA, db, dbmVal]` leaves.
-- The local Mathlib cache is present, but both `FrozenCapProbe.lean` and a
-  narrower rational/Fin probe exceeded a bounded `90 s`/`60 s` elapsed limit
-  before any Lean diagnostic. No local Lean verdict; do not infer success.
-- Re-ran `split_rowcap_modules.py --check`: exit `0`, seven nodes, 100 leaves
-  each, exact arithmetic and weight sums still valid with zero violations.
-  Forbidden-token scan over probe + seven caps + emitter is empty. These are
-  static checks only, not kernel proof credit.
-- Exact current hashes: probe `D48FFDA1...824D5`, 1409 `41B667E8...EB83`,
-  emitter `9EF7286A...A706`; the other six caps match the session-79 hashes in
-  the `--check` output. This session changed no Lean bytes.
-- Still unproved: all eight row-cap/probe kernel exits (CI pending), 373
-  residual radii, the `f0Lo`/`g` bridge, SevenClassExclusions (`0/7`), and the
-  arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits/pushes these exact bytes unchanged.
-  Fresh CI must report `LaneBRowCapDecideProbe` first; if red, repair its first
-  `norm_num` diagnostic, otherwise inspect `LaneBFrozenCapRowCap1409` before
-  the remaining six. Do not run the full-row-cap set before the probe verdict.
+  if green, inspect 1409 before trusting the other six.
