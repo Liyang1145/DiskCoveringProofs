@@ -1,0 +1,55 @@
+{
+  "scope": "source repair and exact-rational audit only; no local Lean elaboration or kernel proof claim",
+  "red_run": {
+    "run_id": 41212560053,
+    "head_sha": "66bf2541b6f2f970172377c2209c2262b66df3b0",
+    "artifact_id": 13048516227,
+    "artifact_sha256": "27572F04F6841BF28864E81117F95BF61B7B0173A92296394629AD0AFA477214",
+    "summary_sha256": "41CD54D0096C61BA85100E2AEEB369B2C03EDA4852F3F31C681F93A48FB154D3",
+    "direct_cap_exits": {
+      "FrozenCapRowCap1409": "0",
+      "FrozenCapRowCap2337": "0",
+      "FrozenCapRowCap2341": "0",
+      "FrozenCapRowCap2356": "0",
+      "FrozenCapRowCap2360": "0",
+      "FrozenCapRowCap2368": "0",
+      "FrozenCapRowCap2370": "0"
+    },
+    "alias_exits": {
+      "LaneBRowCapDecideProbe": "1",
+      "LaneBFrozenCapRowCap1409": "1",
+      "LaneBFrozenCapRowCap2337": "1",
+      "LaneBFrozenCapRowCap2341": "1",
+      "LaneBFrozenCapRowCap2356": "1",
+      "LaneBFrozenCapRowCap2360": "1",
+      "LaneBFrozenCapRowCap2368": "1",
+      "LaneBFrozenCapRowCap2370": "1"
+    },
+    "first_error": "Unknown identifier y_1409"
+  },
+  "diagnosis": "The aliases opened FrozenCapRowCap<node> but not FrozenCapRationalCore, where y_<node> is defined; the direct row_cap theorems and all exact caps were already green.",
+  "repair": "Added open N11Formalization.FrozenCapRationalCore to the deterministic emitter, probe, and seven generated aliases.",
+  "checks": {
+    "emitter_check_exit": 0,
+    "exact_nodes": 7,
+    "ordered_caps_per_node": 100,
+    "weight_sums": 1,
+    "violations": 0,
+    "py_compile_exit": 0,
+    "git_diff_check_exit": 0,
+    "forbidden_token_scan_matches": 0
+  },
+  "sha256": {
+    "split_rowcap_modules.py": "C44437B97FD07E41DD0BB233C5C171517DB2A0430832E5EFCDBFB29554531BBC",
+    "LaneBRowCapDecideProbe.lean": "E18AEBFCE429CF925C05C3B5759622CADD03EC067EA5C9676F440FA860ADCEFF",
+    "LaneBFrozenCapRowCap1409.lean": "2913A36D4BEC6DD22D41F82E97A513F6DEFDD12EEFAB87F7D350CB015F68A393",
+    "LaneBFrozenCapRowCap2337.lean": "83EA432DBB3B24EEDB7B8348944E402AFE572E0B3FC33B48841A348509D48EEC",
+    "LaneBFrozenCapRowCap2341.lean": "42196D8C3610CE680B2D103B6FF75139D60A0E81F51BD198F4A3E9EF0F75CF1F",
+    "LaneBFrozenCapRowCap2356.lean": "3D9B5AFB4DEC77A6C9D3288BED6D2CB3EE54960D1BEE6772DA3A5B5A979FC4B3",
+    "LaneBFrozenCapRowCap2360.lean": "378272B310A8C892A0808B5FCF84E08851B3CC9D1B64B864C02B15DF7FC69097",
+    "LaneBFrozenCapRowCap2368.lean": "3777B4675B7F5D32424BC593E1DFDE92591CD2D568A5E4DB9E12F9478D4C8949",
+    "LaneBFrozenCapRowCap2370.lean": "824C97519D7136A009019A33FB0BA6713D99B50BAB959EDC52F02487C4AA6B75",
+    "TARGETS.txt": "B3F81B5CC1CE9E92C13F83D854D2B46D6F5555C15EF8B69E322B55C2EF49BA26"
+  },
+  "ci_status": "pending on a run containing these bytes; run 41217409382 is in progress on 068914fb and predates this repair"
+}

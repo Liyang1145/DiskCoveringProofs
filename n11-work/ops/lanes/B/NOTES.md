@@ -1,3 +1,36 @@
+## 2026-10-31 - session 106: alias names fully qualified; CI pending
+
+- Hardened the session-104 repair. Removed both namespace `open`s from
+  `split_rowcap_modules.py` and regenerated `LaneBRowCapDecideProbe.lean` plus
+  `LaneBFrozenCapRowCap{1409,2337,2341,2356,2360,2368,2370}.lean`.
+  Every `y_<node>`, `rowA`, and `db` in each alias statement is now fully
+  qualified; the proof term remains the direct green module's `row_cap`.
+- Session 106 re-ran `split_rowcap_modules.py --check`: exit `0`, 7 nodes,
+  700/700 caps, weight sum `1`, zero violations, and the eight reported hashes
+  exactly match the working files. `py_compile`, `git diff --check`, and the
+  forbidden-token scan are clean. `audit_target_imports.py` did not finish
+  within 45 s, so its previous clean 1973-module closure report is stale for
+  these byte changes. A standalone namespace probe still produced no Lean
+  output and was killed after 10 s, so there is **no local Lean verdict**.
+- Exact new hashes and red-run evidence are in
+  `split_rowcap_alias_fullqual_report.json`; `TARGETS.txt` is unchanged
+  (`B3F81B5C...EF49BA26`). `gh` is absent and the repository API is private,
+  so run `41217409382` could not be inspected from this worker.
+- All eight aliases are **CI pending** on bytes after `068914fb`. Still
+  unproved: all 373 residual radii, `f0Lo`/`g`, SevenClassExclusions (`0/7`),
+  and the arbitrary-center theorem. No green alias pays a radius.
+- Next: supervisor commits these bytes and starts serial CI. Require kernel
+  exit `0` for the probe and all seven aliases; if red, use the first owning
+  source line rather than the artifact run status. Keep the SixteenMain
+  root-switch request and do not claim the conditional 373-endpoint as proved.
+
+## 2026-10-31 - session 104 (condensed): CI exposed missing core names
+
+- Artifact `41212560053` showed direct `FrozenCapRowCap*` green but the probe
+  and seven aliases red at `Unknown identifier y_*`; the first repair added
+  `open`s and is superseded by session 106's fully qualified bytes.
+- No radius payment; CI remained pending after the repair.
+
 ## 2026-10-31 - session 103: bridge source/signature audit; still CI pending
 
 - Re-read the current 373-set bridge and its paid-set consumers. Confirmed
@@ -155,44 +188,13 @@ Lean verdict. Local Mathlib/project probes timed out before elaboration.
 - Fresh CI isolated the Fourteen alias failure; later repairs supersede its
   intermediate tactic attempts. Preserve the final session-92 shape.
 
-## 2026-10-31 - session 64: CI artifact exposed and repaired Thirteen
+## Session 64 (condensed)
 
-- `project_status.py --check` passed; tree was clean at merged `HEAD c63cb61e`.
-- Fetched GitHub run `41141569628` (`n11-lean-build`, head `c63cb61e`, overall
-  success) and inspected artifact `13021186040`
-  (`n11-build-41141569628.zip`, 26047 bytes, SHA256 `AAAA0E3D...E54CCE`). The
-  run-level success is a false green: the workflow's trailing `true` masks
-  module exits.
-- Artifact `summary.json` records exit `1` for `RefineThirteen`,
-  `ThirteenMain`, `RefineFourteen`, `FourteenMain`, `RefineSixteen`, and
-  `SixteenMain`. The first Lean error is
-  `EnergyTerminalBatchB13RefineThirteen.lean:65:2: No goals to be solved`.
-  Therefore none of the 2013-paid / 373-residual chain had kernel proof credit
-  at that commit, despite the green run.
-- Repaired `EnergyTerminalBatchB13RefineThirteen.lean` by removing the redundant
-  `norm_num` after the preceding `rw` closed `twelve_new_count`. New SHA256 is
-  `F62B93EB0B60B812CB30767A745CCD2D57C197269D1E78A8C2B0CBFCC9E9252E`;
-  pre-repair SHA256 was `FE498E4D...A690E739`.
-- Added `ci-verdict-41141569628.json` with artifact identity, exits, diagnostic,
-  and pre/post-repair hashes; `post_repair_ci` is explicitly `pending`.
-- Checks after the repair: `audit_b13_refine_thirteen.py`,
-  `audit_b13_refine_fourteen.py`, and `audit_b13_refine_sixteen.py` all exit 0
-  with `ok:true`; `audit_target_imports.py` exits 0 with a 1965-module closure;
-  `py_compile` and `git diff --check` exit 0. These are static
-  source/inventory checks only, not Lean elaboration or proof credit.
-- The chain arithmetic remains conditionally `2013` paid, `389 - 16 = 373`
-  residual. Files involved are `EnergyTerminalBatchB13RefineThirteen.lean`
-  (`F62B93EB...E9252E`), `ThirteenMain` (`D46E758C...D2784375`), `Fourteen`
-  (`12D107B3...DD0E4`), `FourteenMain` (`9478C19F...C3FE7`), `Sixteen`
-  (`055F8BA3...C28851`), `SixteenMain` (`A3103831...8FECF`), and
-  `TARGETS.txt` (`69E4E5A5...9F612`).
-- Still unproved: 373 residual radii, `f0Lo`/`g`, SevenClassExclusions (`0/7`),
-  arbitrary-center theorem; row-cap CI-red does not pay a radius.
-- Next concrete step: supervisor commits the repaired Thirteen and this evidence
-  file unchanged, then requires fresh serial CI module exits `0` for
-  Thirteen, ThirteenMain, Fourteen, FourteenMain, Sixteen and SixteenMain. If
-  green, the supervisor-only root switch from `B13Main` to `SixteenMain` can be
-  reconsidered; the root is not imported by this lane.
+- Run `41141569628` reported workflow success but its artifact had module exit
+  `1` for the Thirteen-to-Sixteen chain; the first error was a redundant
+  `norm_num` in `RefineThirteen` (`No goals to be solved`). Session 64 removed
+  it; later CI in sessions 94/98 proved the repaired chain green. Run-level
+  success never overrides artifact module exits.
 
 ## Earlier 2026-10-30 work (condensed)
 
