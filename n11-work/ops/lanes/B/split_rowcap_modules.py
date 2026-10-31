@@ -74,9 +74,12 @@ def split_proof(text: str, node: int, y: list[Fraction],
         for j in range(10):
             terms = " + ".join(
                 f"y_{node} {q} * rowA {i} {j} {q}" for q in range(9))
+            lhs = sum(y[q] * ((q < j) - (q < i)) for q in range(9))
+            rhs = Fraction(matrix[i][j], 4096)
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {terms} ≤ db {i} {j} := by
-  decide +kernel''')
+  change {lean_rat(lhs)} ≤ {lean_rat(rhs)}
+  norm_num''')
     rows = []
     for i in range(10):
         cases = "\n".join(
