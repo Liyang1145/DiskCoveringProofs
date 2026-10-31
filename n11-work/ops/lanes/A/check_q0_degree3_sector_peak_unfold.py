@@ -27,6 +27,8 @@ REQUIRED = (
     "sinLoNLag",
     "sinTQ",
     "RatInterval.piHi",
+    "Fin.val_ofNat",
+    "Fin.val_mk",
 )
 
 
@@ -39,14 +41,16 @@ def main() -> int:
         failures.append("missing absolute ActualRingLinkBoundaryData open")
 
     blocks = re.findall(
-        r"theorem sectorPeakValid_(\d+) : SectorPeakValid \1 := by\s+"
-        r"norm_num \[([^\]]*)\]",
+        r"theorem sectorPeakValid_(\d+) : SectorPeakValid \1 := by"
+        r"((?:\n  rw \[[^\n]*\])?)\s+norm_num \[([^\]]*)\]",
         text,
     )
-    indices = [int(i) for i, _ in blocks]
+    indices = [int(i) for i, _, _ in blocks]
     if indices != list(range(9)):
         failures.append(f"expected indices 0..8 once each, got {indices}")
-    for i, names_text in blocks:
+    for i, witness_rw, names_text in blocks:
+        if "decide +kernel" not in witness_rw:
+            failures.append(f"sectorPeakValid_{i}: missing kernel-decided witness equality")
         names = {name.strip() for name in names_text.replace("\n", " ").split(",")}
         missing = [name for name in REQUIRED if name not in names]
         if missing:
