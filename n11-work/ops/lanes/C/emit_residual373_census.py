@@ -3,8 +3,10 @@
 
 The previous emitter duplicated 373 literals and tried to re-evaluate the
 2,013-element paid set in 51 kernel decisions.  CI run 41229638083 (head
-bb9fb0c0) OOMed on that encoding.  The maintained 389-minus-16 census already
-has the exact set and cardinality, so keep one source of truth.
+bb9fb0c0) OOMed on that encoding, and run 41248242451 (head 1a300c5e) failed
+at literal-census lines 49/51 with `Expected type must not contain free
+variables`.  The maintained 389-minus-16 census already has the exact set and
+cardinality, so keep one source of truth.
 """
 import json
 from pathlib import Path

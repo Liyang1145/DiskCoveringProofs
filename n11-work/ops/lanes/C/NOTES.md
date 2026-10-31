@@ -197,3 +197,29 @@ arbitrary-centre theorem. Next concrete step: after the supervisor commits
 parts 221-223, read the fresh census/`CensusMain` exits. If green, mark the
 conditional 373-cardinality interface CI-green; if red, inspect only the new
 54-line alias first and preserve its upstream dependency attribution.
+
+## 2026-10-31 - part 224 (merge regression repaired)
+
+Found a merge regression: lane-B commit `cf185b5b` replaced lane C's 54-line
+structural alias with a 733-line literal census. Downloaded the log for Lean
+run `41248242451` (head `1a300c5e`): `RefineSixteenResidualMain` exited 0, but
+`RefineSixteenResidualCensus` exited 1 at lines 49/51 with `Expected type must
+not contain free variables`; `CensusMain` then exited 1 on the same dependency.
+This is the old literal encoding failure and does not falsify any residual id.
+
+Restored the alias through `n11-work/ops/lanes/C/emit_residual373_census.py`.
+Lean SHA256 is again
+`480a2f78432d6400455f4a84f3dab2c4f838057ac8b05370959070975a8c62df`
+(54 lines); emitter SHA256 is
+`d9fcd1c7bc802e594d1200e75a45c3004beccc344746f913ba8452ae9218288d`.
+The emitter now records both the earlier OOM and the free-variable failure.
+Checks: emitter exit 0; exact JSON has 373 unique ids; regeneration is
+byte-stable; `git diff --check` clean; forbidden-token scan clean except the
+intentional `#print axioms` audit commands. Scope is static source/hash plus
+external CI-log inspection: repaired census and `CensusMain` are **CI pending**.
+
+Still unproved: the 373 residual radius certificates, packet `f0Lo`/`g`, 382
+absent payloads, SevenClassExclusions (0/7), and the arbitrary-centre theorem.
+Next: after the supervisor commit, require both census targets to exit 0; if
+the literal census reappears, reject the merge rather than re-running its 51
+free-variable blocks.
