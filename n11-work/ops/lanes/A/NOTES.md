@@ -7,8 +7,8 @@ EXPERT (2026-10-31):
  
 # Lane A notes
 
-CURRENT (session 118): identified the concrete symbolic `ringSite` defect in all
-nine sector peaks; repair is CI pending.
+CURRENT (session 124): frozen-piHi peak/table repairs are complete in the
+worktree but remain uncommitted; the exact-byte kernel build is CI pending.
 
 ## Ledger
 
@@ -112,69 +112,125 @@ suffixes, `EdgeShape`, sector calculus/bins, table/strict-total, and
 green, take the first independent `SectorBinWitness` goal; do not diagnose
 dependency-red downstream modules.
 
-## 2026-10-31 (session 120) -- reachable sector-bin index rewrite
+## 2026-10-31 (sessions 120--121, condensed) -- reachable bin index
 
-The session-119 bin repair rewrote `nextSite i` before unfolding `sectorAt`, so
-the occurrence remained hidden inside `sectorValue`.  All 72 emitted proofs now
-execute `unfold sectorAt sectorValue` before the kernel-decided `nextSite`
-equality; this exposes the single reachable occurrence and preserves the exact
-boundary label `(i+1) mod 9`.  The nine global-peak proofs retain their prior
-unfold/rewrite order.
+All 72 emitted bin proofs unfold `sectorAt sectorValue` before rewriting
+`nextSite` to `(i+1) mod 9`.  The bin audit passed 72/72 witnesses, 18,369
+within-bin steps, and 63/63 inter-bin jumps; the peak gate passed 9/9.
+A bounded Mathlib probe timed out and is not evidence.  Still **CI pending**.
 
-**Files / SHA256.** `SevenClassQ0Deg3SectorBinWitness.lean`
-`d6578beccb9a06091c29c5328c14ddfa2f0f96f2649c11bc914239fa3591264c`;
+## 2026-10-31 (session 122) -- frozen-piHi maxima and namespace repair
+
+Live CI on `9031cec3` exposed two independent lane-A defects.  `SectorPeak`
+could not elaborate `ringSite`/`nextRing` because their defining namespaces
+were not opened.  More substantively, all edge/sector maxima came from the
+source JSON's upper `piHi`, which is slightly below the frozen Lean
+`RatInterval.piHi`; the 21 edge peaks therefore reduced to `False` rational
+goals, and the sector table also paired `mu i` with Lean's `mu (nextSite i)`.
+The upper-reduction composition additionally omitted `unfold EdgeCheck`.
+
+The upper-table and sector-peak emitters now recompute exact maxima at the
+frozen Lean rational, use `mu ((site+1) mod 9)` for sectors, and emit the
+correct sector witnesses `[1024,1536,1536,1536,1536,1536,1536,1536,1024]`.
+`SectorPeak` opens `ActualRingDirectionOrder` and
+`ActualBoundaryCyclicOrder`; `edgeValid_of_unimodal` unfolds `EdgeCheck`.
+
+**Files / SHA256.** `SevenClassQ0Deg3UpperTables.lean`
+`dcad2b97889dedfca205799add1d0657b4f5239a5f70362d5372da4df69c62bd`;
 `SevenClassQ0Deg3SectorPeak.lean`
-`f004ad499c0926ba924035323cd66c452b7deb2a633994fe35ff2ab480d31ae1`;
-`emit_q0_degree3_sector_bin_witness.py`
-`653364bc8a7b4b81c2b0c3549bea18dbd6595b0673f409283ee1dd856fb37292`;
+`d6afaaee9257d12304107f6708366829ca09f24a810af8a87c071557554b4bda`;
+`SevenClassQ0Deg3UpperReductionUnimodal.lean`
+`0cad77f31891bf9401cba9fdc701f29bb990cc52dd7ef770550522b96780c135`;
+`emit_q0_degree3_upper_tables.py`
+`f016b44b361a1ea3cc0e54744f34e469b4689494f236d8146f8cbd3484693b74`;
 `emit_q0_degree3_sector_peak.py`
-`6f2f9a9a4cfbe2bd90cd7297e37e3ac63e043f9ac4ea08fb74d212bf125fd87e`.
+`badf2f26dee1acdb514ac648375def9d6788c805a49f4eca6918eb7737cab709`.
 
-**Checks (scope).** Deterministic regeneration PASS; 72/72 proofs contain the
-new unfold; sector-peak textual gate PASS 9/9; exact bin audit PASS 72/72
-witnesses, 18,369 within-bin steps (8,724 up / 9,645 down), 63/63 inter-bin
-jumps; bin-shape audit PASS 9/9 false global steps and 72/72 single-peaked
-restrictions; `py_compile` and `git diff --check` PASS.  These are source and
-exact-rational checks only.  No project kernel build ran locally, so both
-repairs remain **CI pending**.
+**Checks (scope).** Exact regeneration PASS for 21 edge maxima/witnesses and
+9 sector maxima; 9/9 six-decimal sector bounds enclose their exact Lean-piHi
+maxima by less than `1e-6`; textual sector gate PASS 9/9; edge gate PASS
+21/21; `py_compile` and `git diff --check` PASS.  These are source and
+exact-rational checks only.  No local project kernel build ran, so the repair
+is **CI pending**, not proof credit.
 
-**Still unproved / unpaid.** Kernel acceptance of global sector peaks and all
-72 bin witnesses; subsequent suffixes/`EdgeShape`, sector calculus/bins,
-table/strict-total, `Q0Degree3AreaInput`; all seven exclusions and the
-arbitrary-centre theorem.
+**Still unproved / unpaid.** Kernel acceptance of edge/sector peaks, their
+shape/calculus/bin descendants, table/strict-total, `Q0Degree3AreaInput`, all
+seven exclusions, and the arbitrary-centre theorem.
 
-**Next concrete step.** On the next committed CI run, inspect first independent
-failures in this order: `SectorPeak`, then `SectorBinWitness`.  For a red bin,
-read its first `sectorBinPeakValid_ij` goal after the new unfold; do not treat
-dependency-red downstream modules as diagnostics.
+**Next concrete step.** On the next committed CI run, inspect
+`UpperReductionUnimodal` first: its peak checks now target exact Lean-piHi
+maxima and its composition unfolds `EdgeCheck`.  Then inspect `SectorPeak`;
+do not diagnose dependency-red suffixes/bins/certificates.
 
-## 2026-10-31 (session 121) -- session-120 gates replayed
+## 2026-10-31 (session 123) -- deterministic regeneration and CI scope
 
-Replayed both non-kernel gates after the reachable-index repair.  The sector
-peak textual gate passed 9/9 declarations; the exact-rational bin audit passed
-72/72 witnesses, 18,369 within-bin steps (8,724 up / 9,645 down), and 63/63
-inter-bin jumps.  `py_compile` for both emitters, the peak checker, and the bin
-audit passed; `git diff --check` passed.  The bin audit JSON was regenerated
-(`60ecd42746aa7fac7bf3010418ebe41fc9169334132293cb55d41cc4f18dbe09`).
+Re-ran both session-122 emitters.  They regenerated byte-identical Lean:
+upper tables `dcad2b97889dedfca205799add1d0657b4f5239a5f70362d5372da4df69c62bd`;
+sector peak
+`d6afaaee9257d12304107f6708366829ca09f24a810af8a87c071557554b4bda`.
+The edge and sector textual unfold gates both PASS (21/21 and 9/9).
 
-An isolated Mathlib-only probe of the exact `unfold sectorAt sectorValue` then
-`rw [show nextSite 0 = 1 ...]` tactic pattern was attempted, but Mathlib import
-exceeded its bounded 120-second local timeout; it produced no Lean result and
-is not evidence.  The source hashes are unchanged from session 120 (peak
-`f004ad49...d31ae1`, bins `d6578bec...1264c`).
+Run `41229638083` (job `124624464765`) started 18:43 UTC and is still
+`in_progress`.  It is on `9031cec3`: `git show` confirms that commit still has
+the pre-repair sector hash `f004ad49...d31ae1` and pre-repair upper-table hash
+`e18374ec...88a9`, so this run **cannot validate the session-122 bytes**.
+No local project kernel build ran; the repair remains **CI pending**.
 
-**Still unproved / unpaid.** Kernel acceptance of the peaks and bins, all later
-sector/edge/table/strict-total obligations, `Q0Degree3AreaInput`, all seven
-exclusions, and the arbitrary-centre theorem.  No CI run exists yet for these
-uncommitted bytes, so status remains **CI pending**.
+**Still unproved / unpaid.** Unchanged: kernel acceptance of peaks and bins,
+then sector shape/calculus/bins, table/strict-total, `Q0Degree3AreaInput`,
+all seven exclusions, and the arbitrary-centre theorem.
 
-Live API inspection at session end found no newer `n11-lean-build` run:
-`41222715534` (head `8f861bae`) still reported `in_progress`; the newer
-`335d6b13` runs were only scoped math replay and delivery checks.  The latter
-delivery failure is manifest/byte auditing, not a lane-A Lean diagnostic.
+**Next concrete step.** Once the supervisor commits the current worktree,
+read the new run's first independent `UpperReductionUnimodal`/`SectorPeak`
+red.  If both build, diagnose the first independent `SectorShape` goal; ignore
+dependency-red downstream modules.
 
-**Next concrete step.** When the supervisor commits these bytes, read the new
-CI job's first independent red: inspect `SectorPeak` first, then the first
-`SectorBinWitness` theorem.  If both are green, continue with the first
-independent `SectorShape`/calculated-bin owner rather than dependency-red
-modules.
+## 2026-10-31 (session 124) -- exact-byte commit/CI scope audit
+
+Confirmed the session-122 repairs are still uncommitted.  Supervisor commit
+`9ce84728` contains the old sector/upper-table bytes
+(`f004ad49...d31ae1`, `e18374ec...88a9`), so CI on it cannot validate them.
+The current worktree hashes remain upper tables
+`dcad2b97889dedfca205799add1d0657b4f5239a5f70362d5372da4df69c62bd`,
+sector peak
+`d6afaaee9257d12304107f6708366829ca09f24a810af8a87c071557554b4bda`,
+and upper reduction
+`0cad77f31891bf9401cba9fdc701f29bb990cc52dd7ef770550522b96780c135`.
+`git diff --check`, `py_compile` of both emitters, and the 9/9 sector textual
+unfold gate pass.  Scope is source/text/arithmetic only; no local kernel build.
+
+**Still unproved / unpaid.** Kernel acceptance of the repaired peaks and bins,
+then suffixes/`EdgeShape`, sector calculus/bins, table/strict-total,
+`Q0Degree3AreaInput`, all seven exclusions, and the arbitrary-centre theorem.
+
+**Next concrete step.** After the supervisor commits the current worktree,
+inspect the new `n11-lean-build` run's first independent
+`UpperReductionUnimodal` and `SectorPeak` errors.  If green, take the first
+independent `SectorBinWitness` error; ignore dependency-red descendants.
+
+## 2026-10-31 (session 125) -- CI scope (condensed)
+
+Run `41229638083` remains in progress on old `9031cec3`; commit `9ce84728`
+also predates the repairs.  API/hash/ancestry checks only, no kernel build.
+
+## 2026-10-31 (session 126) -- emitter/Lean witness mismatch repaired
+
+Static comparison found the session-122 Lean still declared
+`sectorWitness = [1024,1024,1536,...]` while `sectorPeakValid_1` rewrote index
+1 to `1536`; that `decide +kernel` could not succeed.  The emitter now renders
+the computed witness vector instead of hard-coding it, and regeneration gives
+the correct `[1024,1536,1536,1536,1536,1536,1536,1536,1024]`.
+
+**Files / SHA256.** `SevenClassQ0Deg3SectorPeak.lean`
+`2a95b7a34aa8ec11acdf10f83116b586ca6380deef4447ab8033daf02ca5ca11`;
+`emit_q0_degree3_sector_peak.py`
+`a0e32e4a00585e772b39261c0015ec01d2f1294cc3bf11b7f8fd6e0cc7e2036c`.
+Upper tables remain `dcad2b97...c62bd`; upper reduction remains
+`0cad77f3...0c135`.  **Checks (scope):** deterministic emitter regeneration,
+9/9 sector textual unfold gate, `py_compile`, and `git diff --check` PASS.
+No project kernel build ran; **CI pending**.
+
+**Still unproved / unpaid.** Kernel acceptance of peaks/bins, then sector shape,
+calculus and certificates; `Q0Degree3AreaInput`, all seven exclusions, and the
+arbitrary-centre theorem.  **Next:** commit these bytes, then diagnose the first
+independent `UpperReductionUnimodal`/`SectorPeak` error on the new SHA.

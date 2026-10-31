@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import json
 from fractions import Fraction
+from math import factorial
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -19,6 +20,39 @@ def main() -> None:
     assert [row["site"] for row in sectors] == list(range(9))
     assert [row["witnessK"] for row in sectors] == [1024, 1024] + [1536] * 7
 
+    mu = [Fraction(x) for x in data["mu"]]
+    lam = Fraction(data["lambda"])
+    lean_pi_hi = Fraction(314159265358979323847, 10**20)
+    bin_value = [Fraction(239,1250), Fraction(239,1250), Fraction(133,625),
+                 Fraction(2721,10000), Fraction(643,2000), Fraction(897,2500),
+                 Fraction(191,500), Fraction(1949,5000)]
+
+    def sin_t(q: Fraction) -> Fraction:
+        total, power, square = Fraction(0), q, q*q
+        for j in range(14):
+            total += Fraction((-1)**j, factorial(2*j+1)) * power
+            power *= square
+        return total
+
+    def sin_hi(q: Fraction) -> Fraction:
+        return sin_t(q) + abs(q)**29 / factorial(29)
+
+    def sin_lo(q: Fraction) -> Fraction:
+        return sin_t(q) - abs(q)**29 / factorial(29)
+
+    peaks = []
+    witnesses = []
+    for i, row in enumerate(sectors):
+        m = mu[(row["site"] + 1) % 9]
+        values = []
+        for k in range(2049):
+            q = lean_pi_hi*k/2048
+            a = bin_value[min(7, k//256)]
+            values.append(Fraction(19,50)**2*sin_hi(q)/2 +
+                          (2*a-sin_lo(2*a))/2 + lam*(2*a) - m*q)
+        witness = max(range(2049), key=values.__getitem__)
+        witnesses.append(witness)
+        peaks.append(values[witness])
     lines = [
         "import N11Formalization.ActualRingLinkBoundaryData",
         "import N11Formalization.SevenClassQ0Deg3UpperTables",
@@ -37,17 +71,18 @@ def main() -> None:
         "open SevenClassQ0Deg3Bins",
         "open SevenClassQ0Deg3UpperTables",
         "open N11Formalization.ActualRingLinkBoundaryData",
+        "open N11Formalization.ActualRingDirectionOrder",
+        "open N11Formalization.ActualBoundaryCyclicOrder",
         "",
         "/-- Exact sector peaks from `q0-degree3-piecewise-8.json`. -/",
         "def sectorWitness : Fin 9 → Fin 2049 := ![",
-        "  1024, 1024, 1536, 1536, 1536, 1536, 1536, 1536, 1536]",
+        "  " + ", ".join(str(w) for w in witnesses) + "]",
         "",
         "/-- Six-decimal rational upper enclosures of the audited sector maxima. -/",
         "def sectorPeakAt : Fin 9 → ℚ := ![",
     ]
-    for index, row in enumerate(sectors):
+    for index, exact in enumerate(peaks):
         comma = "," if index < 8 else ""
-        exact = Fraction(row["max"])
         denominator = 10**6
         numerator = -((-exact.numerator * denominator) // exact.denominator)
         bound = Fraction(numerator, denominator)
@@ -88,7 +123,7 @@ def main() -> None:
         "",
     ]
     for i in range(9):
-        witness = int(data["sectors"][i]["witnessK"])
+        witness = witnesses[i]
         next_site = (i + 1) % 9
         lines += [
             f"theorem sectorPeakValid_{i} : SectorPeakValid {i} := by",

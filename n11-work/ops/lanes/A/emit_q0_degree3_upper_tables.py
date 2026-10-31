@@ -1,17 +1,70 @@
 #!/usr/bin/env python3
 """Emit exact q0 degree-three edge/sector maxima from the audited JSON."""
 import json
+from fractions import Fraction as F
+from math import factorial
 from pathlib import Path
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 SRC = HERE / 'q0-degree3-piecewise-8.json'
 OUT = ROOT / 'n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperTables.lean'
+N = 2048
+LEAN_PI_HI = F(314159265358979323847, 10**20)
+EDGE_WITNESS = [543, 878, 1112, 1064, 1073, 1073, 1064, 1112, 878,
+                1489, 1489, 1118, 0, 0, 486, 389, 411, 406, 411, 389, 486]
+BIN_VALUE = [F(239,1250), F(239,1250), F(133,625), F(2721,10000),
+             F(643,2000), F(897,2500), F(191,500), F(1949,5000)]
+
+
+def sin_t(q: F) -> F:
+    total, power, square = F(0), q, q*q
+    for j in range(14):
+        total += F((-1)**j, factorial(2*j+1)) * power
+        power *= square
+    return total
+
+
+def sin_hi(q: F) -> F:
+    return sin_t(q) + abs(q)**29 / factorial(29)
+
+
+def sin_lo(q: F) -> F:
+    return sin_t(q) - abs(q)**29 / factorial(29)
+
+
+def lean_values(d):
+    """Recompute exact table extrema using the frozen Lean piHi rational."""
+    mu = [F(x) for x in d['mu']]
+    lam = F(d['lambda'])
+    a2 = F(19, 50)**2
+    edge_values = []
+    for e in d['edges']:
+        b = sum((mu[j] for j in e['edge']), F(0))
+        vals = [a2*sin_hi(LEAN_PI_HI*k/N) - b*(LEAN_PI_HI*k/N)
+                for k in range(N+1)]
+        edge_values.append(vals)
+    sector_values = []
+    for row in d['sectors']:
+        m = mu[(row['site'] + 1) % 9]
+        vals = []
+        for k in range(N+1):
+            q = LEAN_PI_HI*k/N
+            a = BIN_VALUE[min(7, k//256)]
+            vals.append(a2*sin_hi(q)/2 + (2*a-sin_lo(2*a))/2 +
+                        lam*(2*a) - m*q)
+        sector_values.append(vals)
+    return edge_values, sector_values
+
 
 def main():
     d = json.loads(SRC.read_text())
     edges, sectors = d['edges'], d['sectors']
     assert len(edges) == 21 and len(sectors) == 9
     assert d['N'] == 2048 and d['binCount'] == 8 and d['strictBelowPiLo']
+    edge_values, sector_values = lean_values(d)
+    assert [max(range(N+1), key=v.__getitem__) for v in edge_values] == EDGE_WITNESS
+    lean_edge_max = [max(v) for v in edge_values]
+    lean_sector_max = [max(v) for v in sector_values]
     L = [
         'import N11Formalization.ActualRingLinkBoundaryData',
         'import N11Formalization.SevenClassQ0Deg3EndpointChecks', '',
@@ -28,14 +81,16 @@ def main():
     for i, item in enumerate(edges):
         L.append('  ({' + ', '.join(map(str, item['edge'])) + '} : Finset (Fin 11))' + (',' if i < 20 else ''))
     L += [']', '', 'def edgeMaxAt : Fin 21 → ℚ := ![']
-    for i, item in enumerate(edges):
-        L.append('  (' + item['max'] + ')' + (',' if i < 20 else ''))
+    for i, value in enumerate(lean_edge_max):
+        L.append('  (' + f'{value.numerator}/{value.denominator}' + ')' +
+                 (',' if i < 20 else ''))
     L += [']', '',
           'def edgeMax (e : Finset (Fin 11)) : ℚ :=',
           '  if h : ∃ i : Fin 21, tableEdges i = e then edgeMaxAt (Classical.choose h) else 0', '',
           'def sectorMax : Fin 9 → ℚ := ![']
-    for i, item in enumerate(sectors):
-        L.append('  (' + item['max'] + ')' + (',' if i < 8 else ''))
+    for i, value in enumerate(lean_sector_max):
+        L.append('  (' + f'{value.numerator}/{value.denominator}' + ')' +
+                 (',' if i < 8 else ''))
     L += [']', '',
           'def EdgeCheck (i : Fin 21) (k : Fin 2049) : Prop :=',
           '  edgeUpper (∑ j ∈ tableEdges i, mu j) (nodeQ RatInterval.piHi 2048 k) ≤ edgeMaxAt i', '',

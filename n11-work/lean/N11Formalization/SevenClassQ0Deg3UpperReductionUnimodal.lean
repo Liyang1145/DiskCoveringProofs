@@ -74,6 +74,7 @@ def EdgeMonotone : Prop :=
 analytic shape obligations and 21 peak comparisons. -/
 theorem edgeValid_of_unimodal (h : EdgeUnimodal) : EdgeValid := by
   intro i k
+  unfold EdgeCheck
   obtain ⟨hinc, hdec, hpeak⟩ := h i
   by_cases hk : k ≤ edgeWitness i
   · exact (hinc k hk).trans hpeak

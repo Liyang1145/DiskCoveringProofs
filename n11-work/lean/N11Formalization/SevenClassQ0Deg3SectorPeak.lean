@@ -15,14 +15,15 @@ open MetricAreaRationalCertificate
 open SevenClassQ0Deg3Bins
 open SevenClassQ0Deg3UpperTables
 open N11Formalization.ActualRingLinkBoundaryData
+open N11Formalization.ActualRingDirectionOrder
+open N11Formalization.ActualBoundaryCyclicOrder
 
 /-- Exact sector peaks from `q0-degree3-piecewise-8.json`. -/
 def sectorWitness : Fin 9 → Fin 2049 := ![
-  1024, 1024, 1536, 1536, 1536, 1536, 1536, 1536, 1536]
+  1024, 1536, 1536, 1536, 1536, 1536, 1536, 1536, 1024]
 
 /-- Six-decimal rational upper enclosures of the audited sector maxima. -/
 def sectorPeakAt : Fin 9 → ℚ := ![
-  (134128/1000000),
   (134128/1000000),
   (264176/1000000),
   (232711/1000000),
@@ -30,7 +31,8 @@ def sectorPeakAt : Fin 9 → ℚ := ![
   (237515/1000000),
   (239075/1000000),
   (232711/1000000),
-  (264175/1000000)
+  (264175/1000000),
+  (134128/1000000)
 ]
 
 def SectorPeakValid (i : Fin 9) : Prop :=
@@ -74,7 +76,7 @@ theorem sectorPeakValid_0 : SectorPeakValid 0 := by
 
 theorem sectorPeakValid_1 : SectorPeakValid 1 := by
   unfold SectorPeakValid
-  rw [show sectorWitness 1 = (1024 : Fin 2049) by decide +kernel]
+  rw [show sectorWitness 1 = (1536 : Fin 2049) by decide +kernel]
   rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, ringSite, nextRing, nodeQ,
@@ -137,7 +139,7 @@ theorem sectorPeakValid_7 : SectorPeakValid 7 := by
 
 theorem sectorPeakValid_8 : SectorPeakValid 8 := by
   unfold SectorPeakValid
-  rw [show sectorWitness 8 = (1536 : Fin 2049) by decide +kernel]
+  rw [show sectorWitness 8 = (1024 : Fin 2049) by decide +kernel]
   rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, ringSite, nextRing, nodeQ,
