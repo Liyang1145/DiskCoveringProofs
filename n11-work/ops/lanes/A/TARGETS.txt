@@ -54,3 +54,12 @@ N11Formalization.SevenClassQ0Deg3SectorBins4AllRows
 
 # Session 73: all-row bin 5 (CI pending)
 N11Formalization.SevenClassQ0Deg3SectorBins5AllRows
+
+# Session 74: all-row bins 6--7 (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorBins67AllRows
+
+# Session 75: all-row bins 0--7 assembler plus paid SectorValid (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorAssembler
+
+# Session 77: combined 21-edge/9-sector table interface (CI pending)
+N11Formalization.SevenClassQ0Deg3TableBounds

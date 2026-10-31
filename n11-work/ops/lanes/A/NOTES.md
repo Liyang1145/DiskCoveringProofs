@@ -44,124 +44,24 @@ the needed `open SevenClassQ0Deg3Bins`.  None has a kernel-green claim.  The
 key later correction was orientation of the decreasing cosine threshold and
 separation of the sharp `543 -> 544` rational step from the derivative region.
 
-## 2026-10-30 (session 70) -- bins 0--3 all rows, sharp boundary repair
+## 2026-10-30 (sessions 70--72, condensed) -- all-row bins 0--4
 
-**Did.** Found and corrected an orientation error in the untracked all-row
-bin-2 draft: its decreasing lemmas proved `threshold <= cosHiReal` where the
-calculus API requires `cosHiReal <= threshold`.  Also separated the sharp
-step `543 -> 544` from the derivative region: the derivative is not negative
-on all of `[node543,node544]`, so that one-grid-step decrease is proved by an
-exact rational `norm_num` comparison.  The same repair was applied to the
-tracked row-0 `SectorBin2` module.
+Repaired bin-2 threshold orientation and separated the sharp `543 -> 544`
+step from the derivative region.  Drafted all-row bins 0--4.  Bins 0--1 peak
+at their endpoints; bin 3 splits rows 0--1 (`768`) from rows 2--8 (`1023`);
+bin 4 splits rows 0--1 (`1024`) from row-dependent witnesses
+`1173,1051,1076,1070,1076,1051,1173`, using the two steps around each witness.
+Exact audits passed for all 72 row-bin shapes.  Lean remains CI pending.
 
-Added the complete all-row bin-3 assembly.  Rows 0--1 peak at bin start
-`768` (upper cosine crossing through `1023`); rows 2--8 peak at endpoint
-`1023` (lower Taylor prefix from `768`).  Existing untracked all-row bins
-0--1 and row-0 bins 5--7 were audited and are now listed for CI rather than
-being silently omitted from `TARGETS.txt`.
-
-**Files / SHA256.**
-`SevenClassQ0Deg3SectorBin2.lean`
-`a50a0a163476ac78d7d8bb0ab8adee8e3c66128a059cf528b7b72039167f50ca`.
+Files / SHA256:
 `SevenClassQ0Deg3SectorBins01AllRows.lean`
-`ec327b5ed219ef406fe22408bdac55e96535914ed759648fd69b36661478170a`.
+`ec327b5ed219ef406fe22408bdac55e96535914ed759648fd69b36661478170a`;
 `SevenClassQ0Deg3SectorBins2AllRows.lean`
-`828fb2b8cc881a92a04c894f79166ecd70a0e11d9f22e72c5f687cd386673179`.
+`828fb2b8cc881a92a04c894f79166ecd70a0e11d9f22e72c5f687cd386673179`;
 `SevenClassQ0Deg3SectorBins3AllRows.lean`
-`391050dae3a5649012c0de312ac24e7a34d9d5dc053de84461b0709d7775c2e4`.
-`audit_q0_degree3_bins3_thresholds.py`
-`a514d6327d5b2f0aaa8b37f25eb27709dc5d679eff4ff71534c72cc4016d1956`;
-`q0-degree3-bins3-thresholds-audit.json`
-`dc97660e53884ab9508315b3637207835a260e3016f6d3446f752426c0238aaa`.
-`TARGETS.txt`
-`e0134ad4ffbd91a3919dfd814747e76b4674e53a4507b1fcae9868830c6b1bc2`.
-
-**Checks (scope).** `audit_q0_degree3_bins2_thresholds.py` PASS: 9/9 node-543
-prefixes, 2/2 node-544 decreases, 7/7 node-767 endpoint increases.
-`audit_q0_degree3_sector_bins.py` PASS: 72/72 exact-grid row-bin shapes,
-including the discrete `543 -> 544` decrease.
-`audit_q0_degree3_bins3_thresholds.py` PASS: 2/2 node-768 decreasing
-crossings, 7/7 node-1023 increasing prefixes, 9/9 bin-3 argmax patterns.
-`py_compile` and `git diff --check` PASS; forbidden-token scan is clean.  No
-project oleans exist locally and no full Lean build was run, so all Lean
-status is **CI pending**, not kernel-green.
-
-**Still unproved / unpaid.** All-row bins 4--7 (36 obligations) remain,
-as do the combined `SectorBinUnimodal`/`SectorValid` assembler, strict total
-assembly, `Q0Degree3AreaInput`, and all seven class exclusions.  The existing
-row-0 bins 5--7 and all-row bins 0--2 have no kernel-success claim yet.
-
-**Next concrete step.** Let CI check sessions 64--70.  If green, prove bin 4
-per row: rows 0--1 use the node-1024 upper crossing, while rows 2--8 have
-row-dependent interior witnesses (`1173,1051,1076,1070,1076,1051,1173`) and
-need separate exact lower/upper threshold checks on each side of the witness.
-
-## 2026-10-30 (session 71) -- endpoint CI bottleneck repair
-
-**Did.** Replaced the `endpointUBin` vector literal with an equation-compiled
-scalar `Fin 8 → ℚ` definition, changed all eight endpoint scalar facts and all
-eight `nodeBinAt` facts to kernel `rfl`, and made the two `< 5` finite proofs
-explicit so no branch carries a stray `⊢` tactic. This targets the exact
-`![...] 2` lookup and `No goals to be solved` failures reported by the expert
-review; no mathematical table value changed.
-
-**File / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
-`95bb9da1e3bd4f7524fbe929f81ef3dd9e7fa16376465b8a3f8704b4a738006e`.
-`TARGETS.txt` is unchanged; `EndpointChecks` was already listed.
-
-**Checks (scope).** `git diff --check` PASS; forbidden-token scan clean. A bare
-Lean 4 `rfl` probe and the Mathlib probe were attempted, but both exceeded
-their bounded timeouts during startup/import, so they give **no** verdict on
-this file. No project oleans exist locally and no full build was run. Lean
-status is **CI pending**, not kernel-green.
-
-**Still unproved / unpaid.** EndpointChecks has no exit-0 claim yet; all
-downstream edge/sector modules remain dependency-blocked. All-row bins 4--7
-(36 obligations), the combined `SectorBinUnimodal`/`SectorValid` assembler,
-strict total assembly, `Q0Degree3AreaInput`, and all seven exclusions remain.
-
-**Next concrete step.** Let CI build `SevenClassQ0Deg3EndpointChecks`. If exit
-0, immediately add the all-row bin-4 module: rows 0--1 decrease from 1024;
-rows 2--8 increase to `w-1` then one exact step to `w`, and take one exact step
-to `w+1` before the decreasing calculus tail, where `w` is the row-specific
-witness. If red, read the exact failing line first; do not add bin 4.
-
-## 2026-10-30 (session 72) -- all-row bin 4 drafted
-
-**Did.** Added the complete all-row bin-4 module.  Rows 0--1 decrease from
-`1024` using the exact node-1024 cosine threshold.  Rows 2--8 use witnesses
-`1173,1051,1076,1070,1076,1051,1173`; the calculus prefix ends at `w - 1`,
-the steps `w - 1 -> w -> w + 1` are exact rational checks, and the decreasing
-calculus tail starts at `w + 1`.  The exact audit caught that rows 4--6 need
-the two-step treatment; using `w` as the prefix endpoint would be false.
-Also removed a duplicated `SectorBins3AllRows` entry from `TARGETS.txt`.
-
-**Files / SHA256.**
+`391050dae3a5649012c0de312ac24e7a34d9d5dc053de84461b0709d7775c2e4`;
 `SevenClassQ0Deg3SectorBins4AllRows.lean`
 `a53fd01a1c903227481689bff4b15464c4a8fe97a9f67c3620f5156115e0bacf`.
-`audit_q0_degree3_bins4_thresholds.py`
-`5af9c69f71e271fdca67966686e850f1fb1986112b31e2ca00694afef9f9f58f`;
-`q0-degree3-bins4-thresholds-audit.json`
-`9b9d230a86b9df95b87d7aeaa6f5c74c3d31e7e51ef155843960b47edb8bf5c4`.
-`TARGETS.txt`
-`45504bcd6f5e9b90859c0419ad91efc6e682555367b6252bc29be7b53a92eb68`.
-
-**Checks (scope).** `audit_q0_degree3_bins4_thresholds.py` PASS: 2/2
-node-1024 crossings, 7/7 previous-node increasing prefixes, 7/7 next-node
-decreasing tails, 7/7 `-2/3` cutoff comparisons, and 9/9 bin-4 argmax
-patterns.  `py_compile`, `git diff --check`, and forbidden-token scan PASS.
-No project oleans exist locally and no Lean build was run, so the new module
-is **CI pending**, not kernel-green.
-
-**Still unproved / unpaid.** `EndpointChecks` and all prior sector modules
-remain CI pending.  All-row bins 5--7 (27 obligations), the combined
-`SectorBinUnimodal`/`SectorValid` assembler, strict total assembly,
-`Q0Degree3AreaInput`, and all seven exclusions remain unpaid.
-
-**Next concrete step.** Read CI's exact failing line if
-`EndpointChecks` or this module is red.  If dependencies are green, draft
-all-row bin 5; rows 0--1 have witness `1280`, rows 2--8 have witness `1280`
-as well, but the prefix/tail threshold values still require an exact audit.
 
 ## 2026-10-30 (session 73) -- all-row bin 5 drafted
 
@@ -195,3 +95,137 @@ remain CI pending.  All-row bins 6--7 (18 obligations), the combined
 **Next concrete step.** Audit all-row bin 6.  If (as expected from row 0) its
 witness is `1536` in every row, reuse the same first-node decreasing template
 and the `3*pi/4` tail bound, then list the new module in `TARGETS.txt`.
+
+## 2026-10-31 (session 74) -- all-row bins 6--7 drafted
+
+**Did.** Extended the sector-bin shape from bin 5 through the final bin.
+The exact 72-bin table has witness `1536` for every row in bin 6 and `1792`
+for every row in bin 7, so both increasing halves are vacuous.  One new module
+proves the all-row cosine bracket at each node, the `-2/3` tail comparison,
+the generic decreasing value inequality, and both per-row unimodality records
+through the bin endpoints `1791` and `2048`.
+
+**Files / SHA256.**
+`SevenClassQ0Deg3SectorBins67AllRows.lean`
+`49aa8900cc77964cb86c6037ca421a3c1257a1292abb8269274f7892b43582af`.
+`audit_q0_degree3_bins67_thresholds.py`
+`358892cfbf3e39e44e712b396486e658a36982f54a1688f6f293308dccaa1f99`;
+`q0-degree3-bins67-thresholds-audit.json`
+`68d50110f84693c282370f4848c751d90aa51a66f4fe18325f9e5b3b5816e4f8`.
+`TARGETS.txt`
+`800e69589ace71261aa63ff37965fe1d5ccbddeaf0efa2f392df97516e78ba6f`.
+
+**Checks (scope).** `audit_q0_degree3_bins67_thresholds.py` PASS: 18/18
+node-1536/1792 decreasing crossings, 18/18 `-2/3` tail comparisons, and 18/18
+bin-6/7 argmax patterns, all in exact rational arithmetic.  `py_compile`,
+`git diff --check`, and the forbidden-token scan PASS.  No project oleans exist
+locally and no Lean build was run, so the module is **CI pending**, not
+kernel-green.
+
+**Still unproved / unpaid.** All Lean kernel claims remain CI pending.  The
+combined `SectorBinUnimodal`/`SectorValid` assembler, strict total assembly,
+`Q0Degree3AreaInput`, and all seven class exclusions remain unpaid.  An exact
+table is evidence only, not a proof.
+
+**Next concrete step.** Add the all-row `SectorBinUnimodal` assembler by
+combining the proved all-row bin theorems 0--7, then feed it to the existing
+peak/shape reduction.  Do this only after CI confirms this module and its
+dependencies; if red, inspect the first failing line before adding the
+assembler.
+
+## 2026-10-31 (session 75) -- all-row sector assembler drafted
+
+**Did.** Added `sectorBinUnimodal`, assembling the eight all-row bin theorems
+(0--7) at the exact witness table `sectorBinWitness`, and `sectorValid`, which
+combines it with the already emitted 72-bin peak theorem through
+`sectorValid_of_bin_unimodal`.  This removes both explicit shape hypotheses
+from the 72-bin reduction.  No strict-total, area-input, or exclusion claim is
+made.
+
+**Files / SHA256.**
+`SevenClassQ0Deg3SectorAssembler.lean`
+`b3e6c8cb35af9b8d9c6b0a2ae097e70832a068751606f2a0701e9fb30bc2c75c`.
+`TARGETS.txt`
+`69e7da488dc4c2408787188ba48bf42bafb72e421d0b68db2c7d768b5394e7b6`.
+
+**Checks (scope).** `git diff --check`, forbidden-token scan, and `py_compile`
+of the bin-6/7 audit PASS.  A Mathlib probe of the `fin_cases`/`first`
+dispatch pattern exceeded its bounded 90 s startup timeout and produced no
+verdict.  No project oleans exist locally and no Lean build was run, so this
+module is **CI pending**, not kernel-green.
+
+**Still unproved / unpaid.** Every sector Lean result remains CI pending.
+Strict `totalUpper < piLo`, `Q0Degree3AreaInput`, the seven exclusions, and the
+arbitrary-centre theorem remain unpaid.  In particular, `sectorValid` is not
+yet a paid theorem until CI exits 0.
+
+**Next concrete step.** Read CI's first failing line for `EndpointChecks` and
+then this assembler.  If green, supply its `SectorValid` result to the strict
+total assembly and locate the next concrete gap to `Q0Degree3AreaInput`; if
+red, repair the named signature/import/tactic error before adding anything.
+
+## 2026-10-31 (session 76) -- CI red isolated to stale endpoint source
+
+**Did.** Fetched the full failed-job log for CI run `41123531381` (commit
+`cc04268c`) and isolated the first Lane A failure.  It is an old
+`EndpointChecks` source, not an error in the new sector modules: vector-index
+lookups at old lines 217--231 left eight equality goals unsolved, and three
+`omega` branches at each of old lines 245/257 raised `No goals to be solved`.
+Current HEAD `c63cb61e` already contains the session-71 repair (scalar match
+definition plus explicit branches); its file hash is
+`95bb9da1e3bd4f7524fbe929f81ef3dd9e7fa16376465b8a3f8704b4a738006e`.
+The dependent sector reds in that run are therefore dependency reds, not
+independent failures.
+
+**Checks (scope).** `audit_endpoint_low_denom.py` PASS: 8/8 endpoint upper
+slacks positive, with minimum `6.6940497252e-07` at bin 7; this validates only
+the decimal audit arithmetic, not the Lean proof.  The exact CI log retains
+the old failure lines and is outside the repository.  No project olean exists
+locally, so the repaired `EndpointChecks`, `SectorAssembler`, and all sector
+modules remain **CI pending**, not kernel-green.  A bounded core-Lean probe of
+the match/`rfl`/`fin_cases` pattern and the Mathlib probe both timed out at
+startup, giving no Lean verdict.
+
+**Still unproved / unpaid.** C450 Main/audit remain the only Lane A paid Lean
+results (CI green at `cc04268c`).  `sectorValid`, strict total, area input, and
+all seven class exclusions remain unpaid.
+
+**Next concrete step.** CI must build current HEAD: first `EndpointChecks`,
+then `UpperReductionUnimodal`, edge modules, all bin modules, and finally
+`SectorAssembler`.  If `EndpointChecks` still fails, use its first new error
+line; if green, begin the strict-total reduction using `sectorValid`.
+
+## 2026-10-31 (session 77) -- combined table interface drafted
+
+**Did.** Added `SevenClassQ0Deg3TableBounds`, combining the independently
+drafted 21-edge proof, the 9-row sector-bin assembler, and the 2049-node table
+into one `TableBounds` record.  It also proves injectivity of the 21-entry
+`tableEdges` table and that `edgeMax (tableEdges i) = edgeMaxAt i`, removing
+the opaque `Classical.choose` obstruction at the edge-to-table consumer.
+
+**Files / SHA256.**
+`SevenClassQ0Deg3TableBounds.lean`
+`d13a9d9caa98a5923a6b5ed5f64fe0981930b7d7f4eb7e456f27a7ff25cf5dbd`;
+the TARGETS entry adds
+`N11Formalization.SevenClassQ0Deg3TableBounds`;
+`TARGETS.txt` `8b08ccdc7040574a42a4c08d742f0eaed814067181ddf99be3ad4394c04d1730`.
+
+**Checks (scope).** `audit_q0_degree3_sector_grid.py` PASS in exact rational
+arithmetic: 21 edge maxima, all 18,441 sector grid values, and
+`totalUpper < piLo` with decimal slack `0.012092890371`.  `py_compile`,
+`git diff --check`, and forbidden-token scan PASS.  No Lean build was run;
+every Lean claim in this and earlier pending modules remains **CI pending**.
+A core-Lean probe of the choose/injectivity pattern had no Mathlib search path
+and therefore produced no verdict.
+
+**Still unproved / unpaid.** The interface is not yet connected to an actual
+refinement: the canonical-permutation edge identification and the strict
+`totalUpper` inequality for each actual cover remain explicit obligations.
+`Q0Degree3AreaInput`, the seven exclusions, and the arbitrary-centre theorem
+remain unpaid.
+
+**Next concrete step.** Refactor `Degree3AreaCertificate` construction into a
+theorem taking `TableBounds`, a `NineTies` value, edge identification, and the
+strict total; then connect `degree_three_table_graph` and its canonical label
+map to the table-indexed edge bound.  Wait for CI's first failure line before
+claiming any of these modules green.
