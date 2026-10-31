@@ -1,0 +1,48 @@
+{
+  "scope": "inspection of the downloaded GitHub Actions artifact only; not a check of later worktree bytes",
+  "run": {
+    "id": 41193732877,
+    "head_sha": "ae211d7aba3a5f6c12cfaf63266157fd7ed578b5",
+    "conclusion": "success-at-workflow-level"
+  },
+  "artifact": {
+    "id": 13041117932,
+    "name": "n11-build-41193732877",
+    "bytes": 26533,
+    "sha256_zip": "C82C55078B7397E09E7674F22B8E3F615C6F9C71B39DEF92251D233794BABC19"
+  },
+  "observed_exits": {
+    "N11Formalization.FrozenCapRowCap1409": 0,
+    "N11Formalization.FrozenCapRowCap2337": 0,
+    "N11Formalization.FrozenCapRowCap2341": 0,
+    "N11Formalization.FrozenCapRowCap2356": 0,
+    "N11Formalization.FrozenCapRowCap2360": 0,
+    "N11Formalization.FrozenCapRowCap2368": 0,
+    "N11Formalization.FrozenCapRowCap2370": 0,
+    "N11Formalization.LaneBRowCapDecideProbe": 1,
+    "N11Formalization.LaneBFrozenCapRowCap1409": 1,
+    "N11Formalization.LaneBFrozenCapRowCap2337": 1,
+    "N11Formalization.LaneBFrozenCapRowCap2341": 1,
+    "N11Formalization.LaneBFrozenCapRowCap2356": 1,
+    "N11Formalization.LaneBFrozenCapRowCap2360": 1,
+    "N11Formalization.LaneBFrozenCapRowCap2368": 1,
+    "N11Formalization.LaneBFrozenCapRowCap2370": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain": 1,
+    "N11Formalization": 1
+  },
+  "first_row_cap_diagnostics": [
+    "LaneBRowCapDecideProbe.lean:38:53: unsolved goals",
+    "LaneBRowCapDecideProbe.lean:42:53: unsolved goals",
+    "LaneBFrozenCapRowCap1409.lean:42:53: unsolved goals"
+  ],
+  "diagnosis": {
+    "row_caps": "The seven direct frozen row-cap modules are kernel-green. The lane-B duplicate wrappers are red because 700 symbolic norm_num leaves remain unsolved.",
+    "b13_chain": "Thirteen and ThirteenMain are green at this sha; all four Fourteen/Sixteen targets are red. The current worktree has a later Fourteen alias-count repair and is not covered by this verdict.",
+    "root": "The root exits 1 after the process was killed with code 137; this is a resource failure, not a theorem verdict.",
+    "credit": "No proof credit is assigned to the current uncommitted wrapper or Fourteen bytes."
+  },
+  "post_repair_ci": "pending"
+}
