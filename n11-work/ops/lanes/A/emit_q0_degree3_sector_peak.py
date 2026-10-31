@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+from fractions import Fraction
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -41,12 +42,17 @@ def main() -> None:
         "def sectorWitness : Fin 9 → Fin 2049 := ![",
         "  1024, 1024, 1536, 1536, 1536, 1536, 1536, 1536, 1536]",
         "",
-        "/-- Exact sector maxima, copied from the audited source report. -/",
+        "/-- Six-decimal rational upper enclosures of the audited sector maxima. -/",
         "def sectorPeakAt : Fin 9 → ℚ := ![",
     ]
     for index, row in enumerate(sectors):
         comma = "," if index < 8 else ""
-        lines.append(f"  ({row['max']}){comma}")
+        exact = Fraction(row["max"])
+        denominator = 10**6
+        numerator = -((-exact.numerator * denominator) // exact.denominator)
+        bound = Fraction(numerator, denominator)
+        assert exact <= bound < exact + Fraction(1, denominator)
+        lines.append(f"  ({numerator}/{denominator}){comma}")
     lines += [
         "]",
         "",

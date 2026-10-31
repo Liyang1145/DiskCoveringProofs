@@ -14,8 +14,6 @@ namespace N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal
 open MetricAreaRationalCertificate
 open SevenClassQ0Deg3UpperTables
 
-attribute [local simp] edgeUpper nodeQ edgeCoeff tableEdges
-
 /-- Exact grid witnesses from `q0-degree3-piecewise-8.json`. -/
 def edgeWitness : Fin 21 → Fin 2049 := ![
   543, 878, 1112, 1064, 1073, 1073, 1064,
@@ -23,6 +21,8 @@ def edgeWitness : Fin 21 → Fin 2049 := ![
   389, 411, 406, 411, 389, 486]
 
 def edgeCoeff (i : Fin 21) : ℚ := ∑ j ∈ tableEdges i, mu j
+
+attribute [local simp] edgeUpper nodeQ edgeCoeff tableEdges
 
 def EdgeIncTo (i : Fin 21) : Prop :=
   ∀ k : Fin 2049, k ≤ edgeWitness i →
