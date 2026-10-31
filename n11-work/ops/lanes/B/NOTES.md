@@ -1,27 +1,46 @@
-## 2026-10-31 - session 86: local reproduction attempted; no Lean verdict
+## 2026-10-31 - session 89 (part 4): revalidate Fourteen handoff; CI pending
 
-- Resumed session 85's uncommitted bytes. Workspace SHA256 still match its
-  report exactly (probe `E1E61727...F8A`, cap 1409 `E231371B...234A`, emitter
-  `381E3BAD...E24F`). `LATEST.md` has no run on these bytes; HEAD is `7478b45f`.
-- Compared the generated leaf/dispatch shape against kernel-green
-  `FrozenCapRowCap1409.lean`: same actual sum statement,
-  `norm_num [y_node, rowA, db, dbmVal, Fin.sum_univ_succ]` leaf, and
-  `fin_cases`/`exact` dispatch. This is structural evidence, not proof credit.
-- Exact emitter `--check` exit `0`: seven nodes, 700/700 capped pairs, weight
-  sums `1`, zero exact-rational violations; report unchanged at
-  `split_rowcap_modules-report-session85.json`. Forbidden-token scan found no
-  matches. `audit_target_imports.py` timed out at 30 s (exit `124`), no closure
-  verdict.
-- Attempted a minimal Mathlib-only reproduction in
-  `/workspace/tools/mathlib-probe/LaneBRowShapeProbe.lean`; Lean touched the
-  180 s bound with no output (exit `124`). No local elaboration or kernel
-  verdict; this file is diagnostic only and not a lane asset.
-- Still unproved: fresh kernel exits for probe and seven caps; public excluded
-  tree; Fourteen/Sixteen dependants; 373 conditional residual radii; `f0Lo`/`g`
-  bridge; SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits these exact bytes; fresh serial CI must
-  give probe exit `0`, then 1409 and the other six caps. If red, use the first
-  leaf diagnostic; shape match and exact arithmetic remain non-proof evidence.
+- Re-read guidance/lane/CI and ran `project_status.py --check` (exit `0`, index
+  scope only). Fourteen static audit is `ok:true`, 20/20 checks; `git diff
+  --check` exits `0`. No Lean file changed in this part.
+- Retried a minimal exact-pattern `Finset.card_union_of_disjoint` + alias
+  `simpa` probe with cached Mathlib: `timeout 180 lake env lean` exits `124`
+  during import, so there is no local elaboration verdict.
+- Hashes unchanged: Fourteen `D638A5C4...21E7E1BB`, audit
+  `222608F6...B8B3BB4BA`, report `EE0A9CA2...F922F`, targets
+  `EB52F2B4...E16DD01`. Sixteen audit remains its prior static `ok:true`.
+- Still unproved: fresh serial CI exits for Fourteen, FourteenMain, Sixteen,
+  SixteenMain; 373 conditional residual radii; `f0Lo`/`g` bridge;
+  SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem.
+- Next: supervisor commit/push the unchanged alias repair; inspect the real CI
+  artifact in target order and repair only the first diagnostic if red.
+
+## 2026-10-31 - session 88 (parts 1-3): Fourteen alias-count repair; CI pending
+
+- Repaired `EnergyTerminalBatchB13RefineFourteen.lean::paid_count`: after
+  rewriting the disjoint-union card and Thirteen's count, close with
+  `simpa [newIDs] using EnergyTerminalBatchB13Refine3116.new_count`. This
+  avoids the failed direct `new_count` rewrite exposed by alias unfolding.
+- Added `paid_count_uses_alias_count` to
+  `audit_b13_refine_fourteen.py`, requiring the alias-count proof and rejecting
+  the old direct rewrite. Re-raised `paid_base_is_thirteen` to require the
+  actual alias definition (`...Thirteen.paidIDs ∪ newIDs`).
+- Checks (static only): Fourteen audit `ok:true`, 20/20 checks; Sixteen audit
+  `ok:true`, 17/17; `py_compile`, `git diff --check`, and
+  `project_status.py --check` exit `0`; forbidden-token scan empty. A minimal
+  exact-pattern Mathlib probe timed out, so no local Lean verdict exists.
+- Hashes: Fourteen `D638A5C4652B1C11915F23FBA8E1A2296D772F0F8D60EDBA7DF8C5B021E7E1BB`;
+  Fourteen audit `222608F670BCE7240643AB5AEB6AC22FA5C9B63334FF6704CE9D322B8B3BB4BA`;
+  report `EE0A9CA2DC862D81D82224B52B88B612E3B0EB67CEA33B14DB066703089F922F`;
+  `TARGETS.txt` `EB52F2B496FAFDCCA8FFA0281C11751975C00A0BCF094A497A274753AE16DD01`.
+  FourteenMain, Sixteen, and SixteenMain remain byte-unchanged.
+- Still unproved: fresh serial CI exits for Fourteen, FourteenMain, Sixteen,
+  and SixteenMain; 373 conditional residual radii; `f0Lo`/`g` bridge;
+  SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem.
+- Next exact step: supervisor commit, then fresh serial CI in order Fourteen,
+  FourteenMain, Sixteen, SixteenMain. If Fourteen is red, repair only its first
+  diagnostic. Do not record `2013/373` or request the SixteenMain root switch
+  until all four exits are `0`.
 
 # Lane B notes
 
@@ -148,12 +167,6 @@ Lean verdict. Local Mathlib/project probes timed out before elaboration.
   serial CI must report exit `0` separately for all four `Fourteen`/`Sixteen`
   targets before root integration. If another error appears, start from its exact
   first diagnostic.
-
-## 2026-10-31 - session 68: handoff byte/hash recheck (condensed)
-
-- Static six-target gate passed (`2013` paid, `373` residual, import closure
-  `1965`); no new Lean/kernel credit. The old overall-green CI was false at
-  module level; post-repair Thirteen/Fourteen/Sixteen remained CI pending.
 
 ## 2026-10-31 - session 64: CI artifact exposed and repaired Thirteen
 

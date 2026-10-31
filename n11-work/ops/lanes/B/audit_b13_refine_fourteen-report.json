@@ -11,6 +11,7 @@
     "no_banned_refine": true,
     "paid_base_is_thirteen": true,
     "paid_count_2011": true,
+    "paid_count_uses_alias_count": true,
     "paid_radius_present": true,
     "refine_exists": true,
     "refine_imports_3116": true,
@@ -35,8 +36,8 @@
     "dependency_3116": "70053e95b07b481d3c08aa02ef9d857c11d896118c773595af87756e5d034421",
     "dependency_thirteen": "f62b93eb0b60b812cb30767a745ccd2d57c197269d1e78a8c2b0cbfcc9e9252e",
     "main": "9478c19fa149ac0e8721ea03902c2483d001d55cdcd49c393db3663e772c3fe7",
-    "refine": "12d107b3879cb014f651aae113b8a8726a6c10a2e7057457924beedf6d3dd0e4",
-    "targets": "69e4e5a52fe6fdd45a5e4482bcecc863a91549e62fd566d2d41f8eafada9f612",
+    "refine": "d638a5c4652b1c11915f23fba8e1a2296d772f0f8d60edba7df8c5b021e7e1bb",
+    "targets": "eb52f2b496fafdcca8ffa0281c11751975c00a0bcf094a497a274753ae16dd01",
     "wrapper_3116": "20bb1e1f6111fc50e5ea2f4e8ea4ab1b4ea216cc1b186f9d0f8f20255169c672"
   }
 }
