@@ -1,12 +1,36 @@
-CURRENT (2026-10-31, session 94): the `EndpointChecks` regression is repaired;
-require its CI exit 0 first, then serial exits for `UpperReductionUnimodal`,
-both suffixes, `EdgeShape`, all bins, `SectorAssembler`, and `TableBounds`.
-`TableBounds` still needs canonical `edges R` and strict `totalUpper < piLo`
-before `Degree3AreaCertificate`; decimal audits are not proof. C450 completion
-is CI-green but root integration remains a supervisor action.
+CURRENT (session 97): the relabelled bridge now targets the canonical ledger and
+derives `q0Degree3AreaInput`; all touched Lean modules remain CI pending.
+C450 completion is CI-green; root integration remains a supervisor action.
+## 2026-10-31 (session 97) -- repaired relabelled strict-total bridge
 
+Replaced the false `totalUpper_relabel_eq` target (which equated a relabelled
+ledger to the unre-labelled `edgeMax` lookup) with the fixed-grid theorem
+`totalUpper R (renameMu ...) ... piHi 2048 ... = canonicalTableTotal`.  The
+new `canonicalTableTotal` is exactly the 21-edge/9-sector ledger.  Updated
+`strict_relabel_iff`, `certificate_of_degreeThreeGraph`,
+`false_of_degreeThreeGraph`, and `q0Degree3AreaInput_of_strictTotal` to use the
+canonical premise.  Session 96's arithmetic theorem is retained as
+`canonicalLedger_lt_piLo`; `canonicalTableTotal_lt_piLo` transports it through
+the negative coefficient, and `q0Degree3AreaInput` is now derived downstream.
+
+**Files / SHA256.** `SevenClassQ0Deg3RelabelledTableCertificate.lean`
+`db32ef0062d7c87075e5d055cb45ab18957ef7f93d891e7899d57523ec18ea70`;
+`emit_q0_degree3_strict_total.py` `004d4bf5528584496b417acc696fb41cece8a8d0f425f0d697d047aaba194365`;
+`SevenClassQ0Deg3StrictTotal.lean` `c893146bcee1e0b5317628ee920f3a7c89ef061565baaebdccc15db01dfc17aa`;
+`TARGETS.txt` `ce6fe00c282cadd87789f33b07b249708650e4da7082b79ab92d0e94922160ff`.
+
+**Checks (scope).** `git diff --check` PASS; forbidden-token scan found only
+the expected `#print axioms` lines; signatures and fixed-grid arithmetic were
+reviewed manually.  No Lean build ran locally.  Both modules and the payoff are
+**CI pending**, not proof credit.
+**Still unproved / unpaid.** CI kernel acceptance of the bridge and payoff;
+the actual refinement/table construction still relies on its existing named
+premises; all seven exclusions and the arbitrary-centre theorem remain unpaid.
+
+**Next concrete step.** Inspect CI for the first error in
+`SevenClassQ0Deg3RelabelledTableCertificate` or `SevenClassQ0Deg3StrictTotal`;
+if green, replace the next named area premise with `q0Degree3AreaInput`.
 # Lane A notes
-
 ## Ledger
 
 - C450 Main/audit are CI-green (run `41123531381`); this is the only paid Lane A
@@ -32,27 +56,13 @@ Drafted the peak/calculus/shape/witness/bounds chain and all eight all-row bins
 (with row-0 predecessors), using exact 72-bin argmax audits.  These modules and
 their historical hashes are retained in git history; none is kernel-green and
 all remain **CI pending**.
-## 2026-10-31 (session 75, condensed)
+## 2026-10-31 (sessions 75--77, condensed)
 
-Added the all-row sector assembler and `sectorValid` from the eight bin
-theorems and 72-bin peak reduction. Exact audits and static checks passed, but
-no Lean build ran: **CI pending** and no exclusion credit.
-
-## 2026-10-31 (sessions 76--77, condensed)
-
-CI run `41123531381` (`cc04268c`) failed first on stale `EndpointChecks`, not
-the sector additions; current HEAD already has the repaired source.  Session
-77 added `SevenClassQ0Deg3TableBounds`, combining `EdgeValid`, `SectorValid`,
-and all 2049 node checks, plus `tableEdges` injectivity and
-`edgeMax (tableEdges i) = edgeMaxAt i`.
-
-`SevenClassQ0Deg3TableBounds.lean` SHA256
+Added `SectorAssembler`/`sectorValid`, then `TableBounds`, combining
+`EdgeValid`, `SectorValid`, all 2049 node checks, edge-table injectivity, and
+`edgeMax (tableEdges i) = edgeMaxAt i`.  Exact 72-bin and grid audits passed;
+no Lean build ran, so all remain **CI pending**.  `TableBounds` SHA256
 `d13a9d9caa98a5923a6b5ed5f64fe0981930b7d7f4eb7e456f27a7ff25cf5dbd`.
-The exact rational grid audit passes (21 edge maxima, 18,441 sector values,
-strict-total decimal slack `0.012092890371`), but no Lean build was run.
-All sector/table Lean results remain **CI pending**.  Still unpaid: canonical
-relabelling transport, strict total per actual cover, `Q0Degree3AreaInput`,
-the seven exclusions, and the arbitrary-centre theorem.
 
 ## 2026-10-31 (session 78, condensed) -- table-to-certificate bridge
 
@@ -178,55 +188,13 @@ Emitter reproduction, `py_compile`, forbidden-token scan, and exact rational
 audits passed (21 singly peaked edges; 9 x 2049 sectors; slack
 `0.012092890371`). Arithmetic checks only; no theorem was paid.
 
-## 2026-10-31 (session 93) -- exact canonical strict-total audit
+## 2026-10-31 (sessions 93--94, condensed)
 
-**Did.** Added `verify_q0_degree3_strict_total.py`, which parses the emitted
-Lean `mu`, `lam`, `tableEdges`, `edgeMaxAt`, and `sectorMax` and independently
-replays the exact `totalUpper` formula.  It also accounts separately for the
-Lean 20-digit `RatInterval.piLo/piHi` and the 40-digit values in the older
-manifest.  Exact result under the Lean constants: `3.129499763218794...`,
-slack `0.012092890370999...`; the manifest total agrees to `9.02e-22` after
-the intentional pi-precision substitution.  This confirms the strict-total
-premise is numerically credible, but it remains an arithmetic audit, not a
-Lean proof. **Files / SHA256.** `verify_q0_degree3_strict_total.py`
-`4aff53fe1dc7ac55ba05c6df5e060c535ce3a382680ffd2876a631342198b45a`.
-No Lean source or target changed.
-**Checks (scope).** Exact `Fraction` replay and `py_compile` PASS; the audit
-asserts equality to the JSON total, equality of its slack, and strictness
-against the Lean `piLo`.  CI run `41172673380` is green but predates lane-A
-commits and is not evidence for these sources. **Still unproved / unpaid.**
-`canonical_strictTotal` has not been formalized;
-`Q0Degree3AreaInput`, all seven exclusions, and the arbitrary-centre theorem
-remain unpaid.
-**Next concrete step.** Add a deterministic emitter for a new module proving
-`totalUpper R mu lam piHi 2048 edgeMax sectorMax = C` under the canonical table
-edge equality, then prove `C < piLo` by `norm_num`; CI must build it before any
-strict-total credit is claimed.
-
-## 2026-10-31 (session 94) -- reverted `EndpointChecks` strategy regression
-
-**Did.** Session 93's fresh CI diagnosis plus commit history showed `51cdab56`
-regressed six impossible-`Fin 8` branches from the known-good
-`exact absurd hj (by decide)` to `norm_num at hj`. Restored all six branches in
-`endpointUBin_le_one_of_lt5` and `nodeQ_binHi_le_two_of_lt5`.
-
-**File / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
-`926151016043881e69999e6f310b5e4933f06488a6e16518596b40c4bdb30ed7`.
-This is byte-identical to the file at CI-green run `41168580187` commit
-`0f022bfb`; `TARGETS.txt` is unchanged.
-
-**Checks (scope).** `git diff --check` and forbidden-token scan PASS; SHA cross
-check against commit `0f022bfb` PASS. The same source built `EndpointChecks`
-green in run `41168580187`, so no new build was started locally. The current
-regression repair is **CI pending**. No local full-project Lean build.
-
-**Still unproved / unpaid.** No new theorem is paid. `EdgeValid`, `SectorValid`,
-strict canonical total, `Q0Degree3AreaInput`, all seven exclusions, and the
-arbitrary-centre theorem remain unpaid.
-
-**Next concrete step.** After supervisor commit, require CI exit 0 for
-`SevenClassQ0Deg3EndpointChecks`, then `UpperReductionUnimodal`; use the first
-unblocked error.
+Added `verify_q0_degree3_strict_total.py`, whose exact `Fraction` replay gives
+total `3.129499763218794...` and Lean-`piLo` slack `0.012092890370999...`
+(SHA256 `4aff53fe...45a`); this is an arithmetic audit, not proof.  Restored the
+six `Fin 8` endpoint branches to the CI-green `exact absurd hj (by decide)`
+strategy, hash `9261510160...ed7`; the repair remains **CI pending**.
 
 ## 2026-10-31 (session 95) -- explicit CI target for table constants
 
@@ -243,3 +211,39 @@ and the arbitrary-centre theorem.
 
 **Next concrete step.** After supervisor commit, inspect CI in dependency order;
 fix the first error in `EndpointChecks`, then the sector/table chain.
+
+## 2026-10-31 (session 96) -- coarse canonical strict-total arithmetic
+
+**Did.** Added deterministic `emit_q0_degree3_strict_total.py`, which parses the
+emitted `edgeMaxAt`/`sectorMax` tables, rounds each upward to six decimals,
+self-checks the ledger sums, and emits `SevenClassQ0Deg3StrictTotal.lean`.
+The module proves per-index bounds, edge-pair sum bounds, sector/edge increment
+bounds, and `canonicalTableTotal_lt_piLo` for the pure canonical ledger.
+It does not yet identify that ledger with `totalUpper` on an actual refinement.
+
+**Found gap.** In `SevenClassQ0Deg3RelabelledTableCertificate`, the
+`hstrict` premise is canonical `totalUpper R mu ... edgeMax ...` while the graph
+theorem gives `edges R` as a relabelled table.  The residual sum should use
+`renameEdgeMax` on those actual edges; the canonical `edgeMax` may be zero on
+relabelled edges.  Therefore the old `strict_relabel_iff`/consumer should be
+reworked against the pure canonical ledger before claiming the bridge.
+
+**Files / SHA256.** `SevenClassQ0Deg3StrictTotal.lean`
+`55f594a5d28ed1f527dab3e2731e6f7588252afc5f3d33fabcbacb7dce824a52`;
+`emit_q0_degree3_strict_total.py`
+`2521f00e01ace4b317fe73d76146716d871fb55708d1c0727ae3316fbca2097d`;
+`TARGETS.txt` now lists `SevenClassQ0Deg3StrictTotal`.
+
+**Checks (scope).** Emitter reproduction, `py_compile`, ledger assertions,
+`git diff --check`, and forbidden-token scan PASS. No Lean build ran: the new
+module is **CI pending**. A Mathlib-probe startup timed out at 90 s. These are
+static/exact-arithmetic checks only, not Lean proof credit.
+
+**Still unproved / unpaid.** The canonical ledger equality for actual
+relabelled `totalUpper`, the corrected certificate bridge, `Q0Degree3AreaInput`,
+all seven exclusions, and the arbitrary-centre theorem.
+
+**Next concrete step.** Prove `totalUpper` expansion under an edge equality,
+specialize `canonicalTableTotal_lt_piLo` to `totalUpper` with `renameMu` /
+`renameEdgeMax`, and replace the old `hstrict` premise in the degree-three
+certificate consumer.

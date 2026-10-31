@@ -75,3 +75,7 @@ N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate
 # Session 95: ensure the new table constants and relabelled bridge are explicit
 # CI targets, not merely transitive imports (CI pending)
 N11Formalization.SevenClassQ0Deg3UpperTables
+
+# Session 96: coarse exact arithmetic for the canonical strict total (CI pending)
+N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate
+N11Formalization.SevenClassQ0Deg3StrictTotal

@@ -23,6 +23,17 @@ open SevenClassQ0Deg3
 open SevenClassQ0Deg3TableBounds
 open SevenClassQ0Deg3UpperTables
 
+/-- The exact canonical 21-edge/9-sector ledger at the certificate grid. -/
+def canonicalTableTotal : ℚ :=
+  piProductUpper (2 * ((∑ j : Fin 11, mu j) - lam)) +
+    (∑ i : Fin 21,
+      (edgeMaxAt i +
+        ((19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j|) *
+          RatInterval.piHi / 2048)) +
+    (∑ i : Fin 9,
+      (sectorMax i + (1 + lam + |mu (nextSite i)|) *
+        RatInterval.piHi / 2048))
+
 def renameMu (p : Equiv.Perm (Fin 11)) (mu : Fin 11 → ℚ) : Fin 11 → ℚ :=
   fun i => mu (p.symm i)
 
@@ -65,15 +76,15 @@ theorem sector_bound_relabel {c : Fin 11 → Point} {r : ℝ} {R : Refinement c 
     simp only [renameMu,← hnext,Equiv.symm_apply_apply]
   simpa only [hmu,renameSectorMax] using T.sector (i-cut) k
 
-/-- Relabelling the dual vector and both tables leaves the exact finite total
-unchanged, provided the actual edge set is the relabelled canonical table. -/
+/-- Relabelling the dual vector and both tables gives exactly the canonical
+edge/sector ledger, provided the actual edge set is the relabelled table. -/
 theorem totalUpper_relabel_eq {c : Fin 11 → Point} {r : ℝ} {R : Refinement c r}
-    (cut : Fin 9) (b : Bool) (U : ℚ) (N : ℕ)
+    (cut : Fin 9) (b : Bool)
     (hedges : edges R =
       (Finset.univ.image tableEdges).image (labelMap (canonicalPerm cut b))) :
-    totalUpper R (renameMu (canonicalPerm cut b) mu) lam U N
+    totalUpper R (renameMu (canonicalPerm cut b) mu) lam RatInterval.piHi 2048
         (renameEdgeMax (canonicalPerm cut b) edgeMax) (renameSectorMax cut sectorMax) =
-      totalUpper R mu lam U N edgeMax sectorMax := by
+      canonicalTableTotal := by
   have htotal : (∑ j : Fin 11, renameMu (canonicalPerm cut b) mu j) =
       ∑ j : Fin 11, mu j := by
     simpa only [renameMu] using Equiv.sum_comp (canonicalPerm cut b).symm mu
@@ -81,10 +92,11 @@ theorem totalUpper_relabel_eq {c : Fin 11 → Point} {r : ℝ} {R : Refinement c
       (∑ e ∈ edges R,
         (renameEdgeMax (canonicalPerm cut b) edgeMax e +
           ((19/50 : ℚ)^2 + |∑ j ∈ e,
-            renameMu (canonicalPerm cut b) mu j|) * U / N)) =
+            renameMu (canonicalPerm cut b) mu j|) * RatInterval.piHi / 2048)) =
       (∑ i : Fin 21,
         (edgeMaxAt i +
-          ((19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j|) * U / N)) := by
+          ((19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j|) *
+            RatInterval.piHi / 2048)) := by
     rw [hedges, Finset.image_image,
       Finset.sum_image (fun i _ j _ hij =>
         tableEdges_injective (labelMap_injective (canonicalPerm cut b) hij))]
@@ -102,9 +114,11 @@ theorem totalUpper_relabel_eq {c : Fin 11 → Point} {r : ℝ} {R : Refinement c
   have hsector :
       (∑ i : Fin 9,
         (renameSectorMax cut sectorMax i +
-          (1 + lam + |renameMu (canonicalPerm cut b) mu (nextSite i)|) * U / N)) =
+          (1 + lam + |renameMu (canonicalPerm cut b) mu (nextSite i)|) *
+            RatInterval.piHi / 2048)) =
       (∑ i : Fin 9,
-        (sectorMax i + (1 + lam + |mu (nextSite i)|) * U / N)) := by
+        (sectorMax i + (1 + lam + |mu (nextSite i)|) *
+          RatInterval.piHi / 2048)) := by
     have hnext (i : Fin 9) :
         renameMu (canonicalPerm cut b) mu (nextSite i) = mu (nextSite (i-cut)) := by
       have hsite : canonicalPerm cut b (nextSite (i-cut)) = nextSite i := by
@@ -113,21 +127,22 @@ theorem totalUpper_relabel_eq {c : Fin 11 → Point} {r : ℝ} {R : Refinement c
       simp only [renameMu,← hsite,Equiv.symm_apply_apply]
     simpa only [renameSectorMax,hnext] using
       cyclicSum_pullback cut
-        (fun i : Fin 9 => sectorMax i + (1 + lam + |mu (nextSite i)|) * U / N)
-  unfold totalUpper
-  rw [htotal,hedge,hsector]
+        (fun i : Fin 9 => sectorMax i + (1 + lam + |mu (nextSite i)|) *
+          RatInterval.piHi / 2048)
+  unfold totalUpper canonicalTableTotal
+  rw [htotal, hedge, hsector]
 
 /-- The relocated strict finite total is equivalent to the canonical strict
 finite total on a relabelled canonical table. -/
 theorem strict_relabel_iff {c : Fin 11 → Point} {r : ℝ} {R : Refinement c r}
-    (cut : Fin 9) (b : Bool) (U : ℚ) (N : ℕ)
+    (cut : Fin 9) (b : Bool)
     (hedges : edges R =
       (Finset.univ.image tableEdges).image (labelMap (canonicalPerm cut b))) :
-    totalUpper R (renameMu (canonicalPerm cut b) mu) lam U N
+    totalUpper R (renameMu (canonicalPerm cut b) mu) lam RatInterval.piHi 2048
         (renameEdgeMax (canonicalPerm cut b) edgeMax)
         (renameSectorMax cut sectorMax) < RatInterval.piLo ↔
-      totalUpper R mu lam U N edgeMax sectorMax < RatInterval.piLo := by
-  rw [totalUpper_relabel_eq cut b U N hedges]
+      canonicalTableTotal < RatInterval.piLo := by
+  rw [totalUpper_relabel_eq cut b hedges]
 
 /-- The degree-three graph theorem plus the canonical strict total constructs
 the area certificate.  The canonical-edge premise is discharged existentially
@@ -138,8 +153,7 @@ theorem certificate_of_degreeThreeGraph {c : Fin 11 → Point} {r : ℝ}
     (v : NineTies c r) (T : TableBounds)
     (hq : (ringOnlyTriangles R).card = 0)
     (hd : (neighbors R 9).card = 3 ∨ (neighbors R 10).card = 3)
-    (hstrict : totalUpper R mu lam RatInterval.piHi 2048 edgeMax sectorMax <
-      RatInterval.piLo) :
+    (hstrict : canonicalTableTotal < RatInterval.piLo) :
     Degree3AreaCertificate h hr R := by
   rcases degree_three_table_graph h hr R hq hd with ⟨cut, b, hedges⟩
   refine
@@ -157,15 +171,14 @@ theorem certificate_of_degreeThreeGraph {c : Fin 11 → Point} {r : ℝ}
       sectorMax := renameSectorMax cut sectorMax
       edge_bound := edge_bound_relabel T (canonicalPerm cut b) hedges
       sector_bound := sector_bound_relabel T cut b
-      strict := (strict_relabel_iff cut b RatInterval.piHi 2048 hedges).mpr hstrict }
+      strict := (strict_relabel_iff cut b hedges).mpr hstrict }
 
 theorem false_of_degreeThreeGraph {c : Fin 11 → Point} {r : ℝ}
     {h : Representative c r} {hr : r < 19/50} {R : Refinement c r}
     (v : NineTies c r) (T : TableBounds)
     (hq : (ringOnlyTriangles R).card = 0)
     (hd : (neighbors R 9).card = 3 ∨ (neighbors R 10).card = 3)
-    (hstrict : totalUpper R mu lam RatInterval.piHi 2048 edgeMax sectorMax <
-      RatInterval.piLo) : False :=
+    (hstrict : canonicalTableTotal < RatInterval.piLo) : False :=
   false_of_areaCertificate (certificate_of_degreeThreeGraph v T hq hd hstrict)
 
 /-- A single canonical strict-total estimate for every degree-three q0 run
@@ -176,8 +189,7 @@ theorem q0Degree3AreaInput_of_strictTotal
     (hstrict : ∀ {c : Fin 11 → Point} {r : ℝ} {h : Representative c r}
       {hr : r < 19/50} {R : Refinement c r} (O : OrderedData R),
       O.run_length.val = 1 →
-        totalUpper R mu lam RatInterval.piHi 2048 edgeMax sectorMax <
-          RatInterval.piLo) :
+        canonicalTableTotal < RatInterval.piLo) :
     Q0Degree3AreaInput := by
   refine ⟨fun c r h hr R O hrun => ?_⟩
   have hdeg := ActualQ0RunDegrees.actual_q0_run_degrees h hr O
