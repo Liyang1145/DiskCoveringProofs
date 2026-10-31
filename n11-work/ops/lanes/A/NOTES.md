@@ -1,9 +1,10 @@
 # Lane A notes
 
-CURRENT (session 100): `SectorPeak` and `UpperReductionUnimodal` are hardened
-against the first two observed lane errors and their exact data audits pass.
-The Lean repairs remain **CI pending**. C450 completion is CI-green; root
-integration remains a supervisor action.
+CURRENT (session 103): peak repairs and exact audits pass; executable gates
+enforce sector namespace resolution and explicit unfolding in all 21 edge and
+9 sector peaks.
+The Lean repairs are uncommitted and remain **CI pending**. C450 completion is
+CI-green; root integration remains a supervisor action.
 
 ## Ledger
 
@@ -17,6 +18,81 @@ integration remains a supervisor action.
 
 ROOT-IMPORT REQUEST: import the CI-green `C450ChainCompletion` and
 `C450ChainCompletionMain` in the stage-1 root (supervisor-only edit).
+
+## 2026-10-31 (session 102) -- executable gate for explicit peak unfolding
+
+The supervisor has not yet committed the session-101 repair: `HEAD` is
+`66629de7` and `SevenClassQ0Deg3UpperReductionUnimodal.lean` plus this file are
+still modified. The active run `41190760154` therefore tests the older file;
+at 10:24 UTC its live log was still building `C450Source27GroupedC18`, so no
+fresh lane-A exit exists.
+
+Added `check_q0_degree3_edge_peak_unfold.py`, a textual pre-CI gate that parses
+all `edgePeakValid_*` proofs and requires exactly indices 0--20 and an explicit
+`norm_num` list containing `EdgePeakValid`, `edgeUpper`, `edgeCoeff`,
+`tableEdges`, and `nodeQ`. This directly prevents the observed failure where
+the local simp attribute did not override an explicit `norm_num` list.
+
+**Files / SHA256.** `check_q0_degree3_edge_peak_unfold.py`
+`ae8e2cbf43ee3393bedeb83a15a5466596e1e7454d2241dafe89e8509b679029`;
+`SevenClassQ0Deg3UpperReductionUnimodal.lean`
+`55ddf09e9a5bad01cca0a42c4facc4d1c1c8921bc8fb0f2d14d57c7693377576`;
+`SevenClassQ0Deg3SectorPeak.lean`
+`4a7b94f8619c82cca4b632d111f8114f9158c40d15d87e53bdf71454ede34ad0`.
+
+**Checks (scope).** The gate PASSes 21/21 explicit unfoldings; `py_compile`,
+forbidden-token scan over both peak modules, and `git diff --check` PASS. These
+are source/shape checks only. No local Lean build ran. Both peak modules remain
+**CI pending** and are not proof credit.
+
+**Still unproved / unpaid.** Kernel acceptance of both peak modules, all edge
+and sector monotonicity shape obligations, downstream bins/table/strict-total
+targets, `Q0Degree3AreaInput`, the seven exclusions, and the arbitrary-centre
+theorem.
+
+**Next concrete step.** After supervisor commit and the next CI run, require
+exit 0 for `UpperReductionUnimodal` and `SectorPeak`; then diagnose the first
+owning-module failure in `EdgeSuffixNonpos`, not the dependency-red aggregate.
+
+## 2026-10-31 (session 101) -- explicit `edgeUpper` unfolding repair
+
+Downloaded the complete job log for run `41182882564` (job `124490443415`).
+All 21 `edgePeakValid_*` failures still displayed a literal outer `edgeUpper`.
+The explicit `norm_num [...]` list overrides `[local simp]`, so the session-99
+attribute did not unfold `edgeUpper`; it had to be named in each `norm_num`
+list. Added it to all 21 checks in
+`n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionUnimodal.lean`.
+The sector failure in that log was the already-repaired unresolved `nextSite`;
+its file and emitter now reproduce byte-for-byte and need a fresh CI run.
+
+**Files / SHA256.** `SevenClassQ0Deg3UpperReductionUnimodal.lean`
+`55ddf09e9a5bad01cca0a42c4facc4d1c1c8921bc8fb0f2d14d57c7693377576`;
+`SevenClassQ0Deg3SectorPeak.lean`
+`4a7b94f8619c82cca4b632d111f8114f9158c40d15d87e53bdf71454ede34ad0`;
+`emit_q0_degree3_sector_peak.py`
+`bcfd6bc7531af9df98f8387cf74aae7c6e26303efe62c26cdfff09fe41493fd5`.
+
+**Checks (scope).** `audit_q0_degree3_edge_unimodal.py` PASS: exact rational
+replay of 21/21 increasing prefixes, decreasing suffixes, witnesses, and peak
+maxima (`q0-degree3-edge-unimodal.json` SHA256
+`2a0a38b150cae0b9d200c90f273084b3bdbd4f51d43f4eca1270d8ea5b2f412f`). Sector
+grid replay also PASS: 21 edge maxima, all `9 x 2049` sector values, and the
+strict total (slack `0.012092890370999008`; audit JSON SHA256
+`bc0dd05c4dd7a38f08ae98d916a1eff5bbe8b7db98bdd53749278049215669b9`). Sector
+emitter reproduction PASS (identical SHA256). `git diff --check` and
+forbidden-token scan PASS (only `#print axioms` matched `axiom`). No local Lean
+build; the owning target remains **CI pending**. `project_status.py --check`
+also PASSed, but that checks handoff manifest declarations only, not math or
+full file integrity.
+
+**Still unproved / unpaid.** Kernel acceptance of both repaired modules; the
+edge/sector monotonicity shape obligations; downstream bin/table targets;
+`Q0Degree3AreaInput`; all seven exclusions; arbitrary-centre theorem.
+
+**Next concrete step.** After the supervisor commits, read the new run's target
+exits. If both peak modules are green, trace the next red in dependency order
+from `EdgeSuffixNonpos`/`EdgeShape`/`SectorShape`; otherwise use the first new
+owning-module error, not the aggregate exit.
 
 ## 2026-10-31 (session 100) -- exact first-blocker diagnosis from run log
 
@@ -100,12 +176,10 @@ and derives `q0Degree3AreaInput`. All remains **CI pending**, not proof credit.
 
 ## 2026-10-31 (session 98) -- observed first lane-A failures
 
-Run `41182882564` (commit `7f7e6f3b`) finished with overall conclusion
-`success`, but its job log records target exits. This overall marker is not a
-proof or a green-target claim: `UpperReductionUnimodal` and `SectorPeak` exited
-1. The log showed `nextSite` unknown in `SectorPeak` and all 21 edge peak checks
-stopping at an unexpanded `edgeUpper`. Session 98 added a namespace open and
-`attribute [local simp] edgeUpper`; those edits were not in that commit.
+Run `41182882564` (commit `7f7e6f3b`) had overall conclusion `success` but
+target-exit data contradicting it: `UpperReductionUnimodal` and `SectorPeak`
+exited 1 (`nextSite` unresolved; all 21 edge checks left `edgeUpper` unexpanded).
+Those session-98 edits were not in that commit; the marker is not proof credit.
 
 ## 2026-10-31 (session 99) -- hardened repairs and exact-data replay
 
@@ -142,3 +216,35 @@ new run. If `UpperReductionUnimodal`, `EdgeSuffix*`, `EdgeShape`, and
 `SectorShape`/`SectorCalculus`/the bin modules to `TableBounds`,
 `RelabelledTableCertificate`, and `StrictTotal`; otherwise fix the first new
 error from its owning module.
+
+## 2026-10-31 (session 103) -- sector-peak regression gate
+
+CI remained stale at run `41182882564`/commit `7f7e6f3b`; no fresh exits exist
+for the pending repairs. Static review of `EdgeSuffixNonpos` found no safe edit
+without kernel feedback. Added a textual pre-CI gate for the two observed
+`SectorPeak` failure modes: it requires the direct
+`ActualRingLinkBoundaryData` import and absolute open, and all nine
+`sectorPeakValid_*` proof `norm_num` lists to name every needed unfolding
+(including `sectorUpper`, `nodeBin`, `nextSite`, `nodeQ`, and the sine brackets).
+
+**Files / SHA256.** `check_q0_degree3_sector_peak_unfold.py`
+`58fc498dcac3c1fc621268860b31e412243fc8ed024063133e9c1333c7dff22f`;
+`check_q0_degree3_edge_peak_unfold.py`
+`ae8e2cbf43ee3393bedeb83a15a5466596e1e7454d2241dafe89e8509b679029`;
+`SevenClassQ0Deg3UpperReductionUnimodal.lean`
+`55ddf09e9a5bad01cca0a42c4facc4d1c1c8921bc8fb0f2d14d57c7693377576`;
+`SevenClassQ0Deg3SectorPeak.lean`
+`4a7b94f8619c82cca4b632d111f8114f9158c40d15d87e53bdf71454ede34ad0`.
+
+**Checks (scope).** Both gates PASS (21/21 edge and 9/9 sector checks), plus
+`py_compile` on the new gate. These are source-shape checks only; no Lean build
+ran. Both peak modules remain **CI pending** and are not proof credit.
+
+**Still unproved / unpaid.** Kernel acceptance of both peak modules; all edge and
+sector shape obligations; downstream bins/table targets; `Q0Degree3AreaInput`;
+the seven exclusions; and the arbitrary-centre theorem.
+
+**Next concrete step.** After the supervisor commits, require exit 0 for
+`UpperReductionUnimodal` and `SectorPeak` in the new CI run, then diagnose the
+first owning-module error in `EdgeSuffixNonpos` rather than a dependency-red
+aggregate.
