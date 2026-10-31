@@ -122,31 +122,15 @@ def emit_row_caps(records):
         for i in range(10):
             for j in range(10):
                 lhs_q = sum(y[q] * common.row_a(i, j, q) for q in range(9))
-                lhs = " + ".join(
-                    f"y5_{node} ({q} : Fin 9) * rowA ({i} : Fin 10) ({j} : Fin 10) ({q} : Fin 9)"
-                    for q in range(9))
                 rhs = Q(db[i][j], 4096)
                 leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
-    {lhs} ≤ db_{node} {i} {j} := by
-  change {lean_rat(lhs_q)} ≤ {lean_rat(rhs)}
+    {lean_rat(lhs_q)} ≤ {lean_rat(rhs)} := by
   norm_num''')
         row_lemmas = []
         for i in range(10):
             row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
     (∑ q : Fin 9, y5_{node} q * rowA {i} j q) ≤ db_{node} {i} j := by
-  fin_cases j <;>
-    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
-    first
-    | exact row_cap_{node}_{i}_0
-    | exact row_cap_{node}_{i}_1
-    | exact row_cap_{node}_{i}_2
-    | exact row_cap_{node}_{i}_3
-    | exact row_cap_{node}_{i}_4
-    | exact row_cap_{node}_{i}_5
-    | exact row_cap_{node}_{i}_6
-    | exact row_cap_{node}_{i}_7
-    | exact row_cap_{node}_{i}_8
-    | exact row_cap_{node}_{i}_9''')
+  fin_cases j <;> norm_num [rowA, y5_{node}, db_{node}]''')
         blocks.append(f'''def db_{node} : Fin 10 → Fin 10 → ℚ
   {db_cases}
 
