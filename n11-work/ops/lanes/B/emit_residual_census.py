@@ -171,7 +171,7 @@ noncomputable section
         lines.append("    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by")
         lines.append("  rcases n with ⟨k, hk⟩")
         lines.append("  interval_cases k <;>")
-        lines.append("    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel")
+        lines.append("    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert")
         lines.append("")
     lines.append("end")
     lines.append("end N11Formalization.EnergyTerminalResidualCensus")

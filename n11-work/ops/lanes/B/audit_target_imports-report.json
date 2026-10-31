@@ -1,5 +1,5 @@
 {
-  "closure_size": 1973,
+  "closure_size": 1981,
   "forbidden": [],
   "missing": [],
   "ok": true,
@@ -24,6 +24,9 @@
     "N11Formalization.EnergyTerminalBatchB13RefineFourteen",
     "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteen",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain"
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
+    "N11Formalization.EnergyTerminalResidualCensus",
+    "N11Formalization.EnergyTerminalResidualCensusRefineSixteen",
+    "N11Formalization.LaneBPublicResidualCrosswalk"
   ]
 }
