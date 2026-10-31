@@ -15,6 +15,18 @@ namespace N11Formalization.FrozenCapPublicExcludedTree
 open Finset ConvexMinorantCore DBMMinorantDual
 noncomputable section
 
+theorem core_Dq_eq_flash : FrozenCapRationalCore.Dq = FlashCosine.Dq := rfl
+theorem core_DQ_eq_flash : FrozenCapRationalCore.DQ = FlashCosine.DQ := rfl
+theorem core_T_eq_flash : FrozenCapRationalCore.T = FlashCosineLeaf284Bridge.T := rfl
+
+theorem strict_gain_to_flash {F0 : ℚ} {G : Fin 9 → ℚ} (y : Fin 9 → ℚ)
+    (h : F0 + ∑ q, y q * endpointLo FrozenCapRationalCore.Dq
+      FrozenCapRationalCore.DQ (G q) < FrozenCapRationalCore.T ^ 2) :
+    F0 + ∑ q, y q * endpointLo FlashCosine.Dq FlashCosine.DQ (G q) <
+      FlashCosineLeaf284Bridge.T ^ 2 := by
+  rw [← core_Dq_eq_flash, ← core_DQ_eq_flash, ← core_T_eq_flash]
+  exact h
+
 theorem excluded_1409_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p) (hnode : p.nodeID = (1409 : Fin 5011))
     (hf0 : f0Lo (PaidCellCertificateM.W p) (PaidCellCertificateM.slopeQ p)
@@ -32,10 +44,8 @@ theorem excluded_1409_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap1409.rowA,
-      FrozenCapRationalCore.y_1409] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapWideFieldWitnesses.strict_gain_1409
+      FrozenCapWideFieldWitnesses.yW_1409] using hrow
+  · exact strict_gain_to_flash _ FrozenCapWideFieldWitnesses.strict_gain_1409
 
 theorem excluded_2337_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p) (hnode : p.nodeID = (2337 : Fin 5011))
@@ -54,10 +64,8 @@ theorem excluded_2337_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap2337.rowA,
-      FrozenCapRationalCore.y_2337] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapWideFieldWitnesses.strict_gain_2337
+      FrozenCapWideFieldWitnesses.yW_2337] using hrow
+  · exact strict_gain_to_flash _ FrozenCapWideFieldWitnesses.strict_gain_2337
 
 theorem excluded_2341_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p) (hnode : p.nodeID = (2341 : Fin 5011))
@@ -76,10 +84,8 @@ theorem excluded_2341_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap2341.rowA,
-      FrozenCapRationalCore.y_2341] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapWideFieldWitnesses.strict_gain_2341
+      FrozenCapWideFieldWitnesses.yW_2341] using hrow
+  · exact strict_gain_to_flash _ FrozenCapWideFieldWitnesses.strict_gain_2341
 
 theorem excluded_2356_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p) (hnode : p.nodeID = (2356 : Fin 5011))
@@ -98,10 +104,8 @@ theorem excluded_2356_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap2356.rowA,
-      FrozenCapRationalCore.y_2356] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapWideFieldWitnesses.strict_gain_2356
+      FrozenCapWideFieldWitnesses.yW_2356] using hrow
+  · exact strict_gain_to_flash _ FrozenCapWideFieldWitnesses.strict_gain_2356
 
 theorem excluded_2360_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p) (hnode : p.nodeID = (2360 : Fin 5011))
@@ -120,10 +124,8 @@ theorem excluded_2360_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap2360.rowA,
-      FrozenCapRationalCore.y_2360] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapWideFieldWitnesses.strict_gain_2360
+      FrozenCapWideFieldWitnesses.yW_2360] using hrow
+  · exact strict_gain_to_flash _ FrozenCapWideFieldWitnesses.strict_gain_2360
 
 theorem excluded_2368_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p) (hnode : p.nodeID = (2368 : Fin 5011))
@@ -142,10 +144,8 @@ theorem excluded_2368_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap2368.rowA,
-      FrozenCapRationalCore.y_2368] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapWideFieldWitnesses.strict_gain_2368
+      FrozenCapWideFieldWitnesses.yW_2368] using hrow
+  · exact strict_gain_to_flash _ FrozenCapWideFieldWitnesses.strict_gain_2368
 
 theorem excluded_2370_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
     (hp : PaidCellCertificateM.Valid p) (hnode : p.nodeID = (2370 : Fin 5011))
@@ -164,10 +164,8 @@ theorem excluded_2370_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
       (p.rowFrom a) (p.rowTo a)
     simpa only [hnode, DBMMinorantDual.db, hbridge,
       DBMMinorantDual.rowA, FrozenCapRowCap2370.rowA,
-      FrozenCapRationalCore.y_2370] using hrow
-  · simpa only [FrozenCapRationalCore.T,
-      N11Formalization.FlashCosineLeaf284Bridge.T] using
-      FrozenCapWideFieldWitnesses.strict_gain_2370
+      FrozenCapWideFieldWitnesses.yW_2370] using hrow
+  · exact strict_gain_to_flash _ FrozenCapWideFieldWitnesses.strict_gain_2370
 
 end
 end N11Formalization.FrozenCapPublicExcludedTree
