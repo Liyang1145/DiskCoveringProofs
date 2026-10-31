@@ -13,6 +13,12 @@ OUT = ROOT / "n11-work/lean/N11Formalization/FrozenCapFourFieldRowCaps.lean"
 IDS = (1409, 2337, 2341, 2368, 2370)
 
 
+def lean_rat(q: Q) -> str:
+    if q.denominator == 1:
+        return f"({q.numerator} : ℚ)"
+    return f"({q.numerator} : ℚ) / {q.denominator}"
+
+
 def main():
     doc = json.loads((HERE / "residual-mixture-faces4.json").read_text())
     recs = {r["id"]: r for r in doc["records"] if r["status"] == "PASS"}
@@ -36,18 +42,31 @@ def main():
                 assert lhs <= rhs, (node, i, j, lhs, rhs)
                 slacks.append(rhs - lhs)
         checks.append((node, min(slacks)))
-        rows = ",\n      ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
-        blocks.append(f'''def dbmVal_{node} : Fin 10 → Fin 10 → ℤ
-  | i, j => ![
-      {rows}
-    ] i j
+        cases = "\n  ".join(
+            f"| ⟨{i}, _⟩, ⟨{j}, _⟩ => {lean_rat(Q(db[i][j], 4096))}"
+            for i in range(10) for j in range(10))
+        leaves = []
+        for i in range(10):
+            for j in range(10):
+                lhs = " + ".join(
+                    f"y4_{node} ({q} : Fin 9) * rowA ({i} : Fin 10) ({j} : Fin 10) ({q} : Fin 9)"
+                    for q in range(9))
+                leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
+    {lhs} ≤ db_{node} {i} {j} := by
+  change {lhs} ≤ {lean_rat(Q(db[i][j], 4096))}
+  norm_num [rowA] <;> norm_num [y4_{node}]''')
+        branch = "\n    | ".join(f"exact row_cap_{node}_{i}_{j}"
+                                  for i in range(10) for j in range(10))
+        blocks.append(f'''def db_{node} : Fin 10 → Fin 10 → ℚ
+  {cases}
 
-def db_{node} (i j : Fin 10) : ℚ := (dbmVal_{node} i j : ℚ) / 4096
+''' + "\n\n".join(leaves) + f'''
 
 theorem row_cap_{node} (i j : Fin 10) :
     (∑ q : Fin 9, y4_{node} q * rowA i j q) ≤ db_{node} i j := by
   fin_cases i <;> fin_cases j <;>
-    norm_num [y4_{node}, rowA, db_{node}, Fin.sum_univ_succ]''')
+    first
+    | {branch}''')
     src = '''import N11Formalization.FrozenCapFourFieldWitnesses
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum

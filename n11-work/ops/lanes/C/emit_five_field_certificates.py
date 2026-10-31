@@ -115,18 +115,48 @@ end N11Formalization.FrozenCapFiveFieldWitnesses
 def emit_row_caps(records):
     blocks = []
     for node, _, db, _, _ in records:
-        rows = ",\n      ".join("![" + ", ".join(str(v) for v in row) + "]" for row in db)
-        blocks.append(f'''def dbmVal_{node} : Fin 10 → Fin 10 → ℤ
-  | i, j => ![
-      {rows}
-    ] i j
+        db_cases = "\n  ".join(
+            f"| ⟨{i}, _⟩, ⟨{j}, _⟩ => {lean_rat(Q(db[i][j], 4096))}"
+            for i in range(10) for j in range(10))
+        leaves = []
+        for i in range(10):
+            for j in range(10):
+                lhs = " + ".join(
+                    f"y5_{node} ({q} : Fin 9) * rowA ({i} : Fin 10) ({j} : Fin 10) ({q} : Fin 9)"
+                    for q in range(9))
+                rhs = Q(db[i][j], 4096)
+                leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
+    {lhs} ≤ db_{node} {i} {j} := by
+  change {lhs} ≤ {lean_rat(rhs)}
+  norm_num [rowA] <;> norm_num [y5_{node}]''')
+        row_lemmas = []
+        for i in range(10):
+            row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
+    (∑ q : Fin 9, y5_{node} q * rowA {i} j q) ≤ db_{node} {i} j := by
+  fin_cases j <;>
+    simp only [Fin.sum_univ_succ, Fin.sum_univ_one, Finset.sum_empty] <;>
+    first
+    | exact row_cap_{node}_{i}_0
+    | exact row_cap_{node}_{i}_1
+    | exact row_cap_{node}_{i}_2
+    | exact row_cap_{node}_{i}_3
+    | exact row_cap_{node}_{i}_4
+    | exact row_cap_{node}_{i}_5
+    | exact row_cap_{node}_{i}_6
+    | exact row_cap_{node}_{i}_7
+    | exact row_cap_{node}_{i}_8
+    | exact row_cap_{node}_{i}_9''')
+        blocks.append(f'''def db_{node} : Fin 10 → Fin 10 → ℚ
+  {db_cases}
 
-def db_{node} (i j : Fin 10) : ℚ := (dbmVal_{node} i j : ℚ) / 4096
+{chr(10).join(leaves)}
+
+{chr(10).join(row_lemmas)}
 
 theorem row_cap_{node} (i j : Fin 10) :
     (∑ q : Fin 9, y5_{node} q * rowA i j q) ≤ db_{node} i j := by
-  fin_cases i <;> fin_cases j <;>
-    norm_num [y5_{node}, rowA, db_{node}, Fin.sum_univ_succ]''')
+  fin_cases i
+{chr(10).join(f"  · exact row_cap_{node}_{i} j" for i in range(10))}''')
     src = '''import N11Formalization.FrozenCapFiveFieldWitnesses
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum
@@ -149,6 +179,8 @@ end N11Formalization.FrozenCapFiveFieldRowCaps
 
 #check @N11Formalization.FrozenCapFiveFieldRowCaps.row_cap_2356
 #check @N11Formalization.FrozenCapFiveFieldRowCaps.row_cap_2360
+#print axioms N11Formalization.FrozenCapFiveFieldRowCaps.row_cap_2356
+#print axioms N11Formalization.FrozenCapFiveFieldRowCaps.row_cap_2360
 '''
     ROW_CAPS.write_text(src)
 
