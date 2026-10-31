@@ -21,192 +21,150 @@ EXPERT (2026-10-31):
   tree results are conditional on packet `f0Lo`/`g` and pay no residual id.
 - Scan forbidden tokens without relying on `\b` under POSIX `rg`.
 
-## Condensed status through 2026-10-31 part 179
+## Condensed prior history (through part 201)
 
-- Exact residual census remains 389 ids. Seven public exclusions
-  `{1409,2337,2341,2356,2360,2368,2370}` are the only ones with public tree
-  payloads; the other 382 remain absent from public evidence.
-- Live run `41182882564`, source `7f7e6f3b`, proves the public row-cap path is
-  kernel-green: smoke and all seven `FrozenCapRowCap*` modules exited 0. Scope:
-  those module declarations only, not a packet/payment theorem.
-- Same run: `FrozenCapFourFieldWitnesses`, five-field modules, public tree, and
-  aggregate exited 1. Public tree was blocked by the syntax failure in
-  `FrozenCapRowCapTreeBridges.lean:49`, not by its seven row-cap dependencies.
-- Earlier conditional singleton/refinement payloads and B13 aggregates remain
-  CI-green where `ci/LATEST.md` or the fresh run says exit 0. No root import was
-  changed.
-- Missing: exclusion-to-`RemainingTerminalRadius`; packet existence/`Valid`;
-  382 residual payloads; MPacket validity; energy and seven-class premises.
+- The frozen B13 census is terminal - sharp - 1997 paid = 389 ids. Only seven
+  `{1409,2337,2341,2356,2360,2368,2370}` have public tree payloads; the other
+  382 payloads are absent. Public row caps exclude those seven for any row
+  count, so 10/12/16-row LP work cannot rescue them. Five-field payloads for
+  2356/2370 remain conditional and incomplete; no id is paid.
+- CI run `41201323694` is green for `EnergyTerminalBatchB13RefineFourteen`
+  (`paid_count = 2011 = 1997 + 14`) and `RefineFourteenMain`, so the open B13
+  residual is 375. It is also green for the residual certificate interface and
+  its B13 consumers. Those interfaces are equivalences, not payments.
+- The same run reddened `RefineSixteen` at line 31 with elaborator recursion
+  depth, not a failed radius certificate. Part 201 added
+  `EnergyTerminalBatchB13RefineSixteenRepair.lean`, with scoped
+  `maxRecDepth 10000`, disjointness, `paid_count = 2013`, `paid_radius`, and
+  `remaining_of` to B13. It was **CI pending** at the start of this part.
+- Missing throughout: radius certificates for the 375/373 residual ids;
+  canonical/geometric packet production; 382 non-public payloads; MPacket
+  validity; seven-class and energy premises; root integration.
+- No historical host-side audit is kernel credit.
 
-## Condensed history through part 194
+## 2026-10-31 - part 202 (conditional 373-id consumer and exact census)
 
-- Part 185: `FrozenCapFourFieldCorrectedRowCaps.lean` and
-  `FrozenCapFourFieldCorrectedTree.lean` encode conditional exclusions for
-  `1409`, `2337`, `2341`; exact row-cap checks passed, but payout remained open.
-- Parts 189/190/191: exact five-field conditional exclusion chains were emitted
-  for `2368` and `2370` (`FrozenCapFiveField2368*`, `FrozenCapFiveField2370*`),
-  with 100 exact caps each and deterministic regeneration. They remain CI
-  pending and pay no residual id. The old maximizing five-field report is
-  invalid; the accepted criterion is strict `F0 + gain < T^2`.
-- Parts 192-194: added `EnergyTerminalBatchB13ResidualCertificates.lean` with
-  exact `ResidualRadiusCertificate`, `ResidualPacketProducer`, and canonical
-  exclusion/producer interfaces plus real `RemainingTerminalRadius` consumers.
-  Prior run `41193732877` predates this module; later run `41195990232` had not
-  reached the lane-C target. Kernel status is therefore **CI pending**.
-- Missing throughout: any residual radius/packet proof, 382 non-public payloads,
-  canonical `f0Lo`/`g` identification, seven-class/energy premises, and root
-  integration. No historical host-side exact audit is kernel credit.
+Added `EnergyTerminalBatchB13RefineSixteenResidual.lean`. It defines
+`residualIDs` as terminal true, not sharp, and not in
+`RefineSixteenRepair.paidIDs`; proves `mem_residualIDs_iff`, `remaining_iff`,
+certificate extraction, a certificate-to-repair consumer, a direct consumer to
+`EnergyTerminalBatchB13.RemainingTerminalRadius`, and the final chart-radius
+consumer. It asserts no cardinality and no residual certificate. Added this
+module to `TARGETS.txt` after the repair.
 
-## 2026-10-31 - part 195 (producer interfaces are exact radius obligations)
+Added `build_residual_census_sixteen.py` and generated
+`residual373-conditional-census.json`. It verifies the exact 16 refinement ids
+`{37,2337,2341,2965,3040,3112,3116,3431,3440,3573,3589,3623,3633,3777,3792,
+3853}` all lie in the frozen 389 census and outputs the 373-id complement with
+SHA256 `7539D9214C5CAC780F027688D2BFA41D5451A0D13BA7834BBC49E9D2FAE41A6A`.
+This is **conditional** on the repair; it calls no id paid.
 
-Extended `N11Formalization/EnergyTerminalBatchB13ResidualCertificates.lean`
-with `residual_packet_producer_of_residual_radius_certificate`,
-`residual_packet_producer_iff_residual_radius_certificate`, and
-`canonical_packet_producer_iff_residual_radius_certificate`. The last theorem
-takes `CanonicalPacketExclusion`; the forward direction uses that exclusion,
-while the reverse direction uses the fact that a radius certificate makes the
-strict counter-radius branch vacuous. Thus `ResidualPacketProducer n` is
-exactly equivalent to `ResidualRadiusCertificate n`, and canonical production
-under a frozen exclusion is likewise exactly the residual radius obligation.
-This rules out treating packet existence as an independent, weaker shortcut.
+Checks run: census emitter exit 0 with exact count 373;
+`git diff --check` exit 0; forbidden-token scan of the new Lean module found no
+matches. Scope is deterministic host arithmetic and static Lean inspection; no
+local kernel claim. SHA256 (lowercase): consumer module
+`6b34b72736abb8dc67e6d392098241812a18a206470e78fbd171c259cc39b902`;
+emitter `42ee75534f10357e1658941df59f2b4a44eff5a22764a297716b62690d01fd4c`;
+census `13024cf1d1cb3ff791b0fdfa21e83cc99d2117b5e8bd3c00f50c9b30009ae5bc`;
+`TARGETS.txt` `b4a09cbcb10b870318d15a74e9d9af6959a090421d65066c9fd40b54b2888ed9`.
+Both new Lean modules and the 373 reduction are **CI pending**.
 
-Host checks: `git diff --check` exited 0; forbidden-token scan found no matches
-in the module (the intentional `#print axioms` queries remain). Scope is static
-Lean inspection only; the bounded Mathlib pattern probe did not finish before
-the lane deadline. No local kernel claim. SHA256 (lowercase): module
-`6e19343d207165d8f6a0675a09eb508c28524d57412d5299d2ea39b73d5c3e40`;
-`TARGETS.txt` unchanged at
-`692f6811aba3c1cb0c07d13ceb192df3340135f89cd57e8e587c33a7c6b5a1d3`.
-
-Still unproved: the radius/packet obligation for every residual id, including
-the seven public ids; all 382 absent payloads; canonical `f0Lo`/`g`
-identification; seven-class and energy premises; root integration. The lane is
-mathematically blocked on the residual radius theorem itself, not on a Lean
-interface. Very next concrete step: read CI for
-`EnergyTerminalBatchB13ResidualCertificates`; if red, fix its first failing
-declaration, and if green, preserve the equivalences and redirect work to an
-actual residual-radius proof source rather than more packet/row-cap plumbing.
+Still unproved: every one of the 373 residual radius certificates; geometric
+packet/canonical production; the 382 absent payloads; MPacket validity;
+seven-class and energy premises; root integration. The repair is a reduction
+only. Very next concrete step: read the next `n11-lean-build` summary for
+`RefineSixteenRepair` and `RefineSixteenResidual`; fix the first failing
+declaration if red. If green, strengthen the conditional census into a proved
+Lean `residualIDs.card = 373` and preserve the two consumers unchanged.
 
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-31 - part 196 (public exclusions meet the residual consumer)
+## 2026-10-31 - part 203 (conditional 373 Lean census)
 
-Re-ran the exact public residual audit with
-`python n11-work/ops/lanes/C/certify_next512_row_cap.py`. It checked all 100
-ordered DBM pairs for the seven public failures and reported all seven excluded
-with strict margins from `7.39e-7` to `4.97e-5` (exact rationals retained in
-`next512-row-cap-certificates.json`). This confirms that raising the dual row
-cap cannot rescue any of the seven; the old 10/12/16-row experiment is moot for
-the only residual records present publicly. Scope: host-side exact arithmetic
-over public evidence, not kernel credit and not a statement about the 382
-absent records.
+Implemented the next step from part 202. Added the deterministic emitter
+`emit_residual373_census.py` and generated
+`EnergyTerminalBatchB13RefineSixteenResidualCensus.lean`. The module defines
+`residual373` in four literal chunks (`100,100,100,73`, separate card checks),
+proves the repaired-residual set equals it by 51 source-index blocks of at most
+100 symbols, and proves `residualIDs.card = 373` from the chunk cardinalities.
+It is **conditional** on `RefineSixteenRepair`; it asserts no radius certificate.
+Added `N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus` to
+`TARGETS.txt`.
 
-Added `N11Formalization/EnergyTerminalBatchB13PublicResidualCanonical.lean`.
-It instantiates last part's canonical packet exclusion with the existing
-`FrozenCapPublicExcludedAggregate.PublicResidualData`, proves the exclusion for
-every node, and derives
-`canonical_producer_iff_radius_certificate`,
-`radius_certificate_of_canonical_producer`, and
-`canonical_producer_of_radius_certificate`. Thus the public tree supplies the
-canonical-exclusion half of the producer interface, while the producer remains
-exactly the residual radius obligation. Added the module to `TARGETS.txt` after
-the residual certificate target. **CI pending**; no kernel claim.
+Checks run: emitter exit 0 (373 unique ids, chunk sizes exact);
+`git diff --check` exit 0; forbidden-token scan of the generated module found
+no matches. Scope is host-side generation plus static inspection, not a local
+kernel claim; the full project is not built locally. SHA256 (uppercase):
+census module `9717B4E7BA451E2AC3C4B9174893782903760EC92385B127690D2D790B3C4C01`;
+emitter `A2DC4221693F155A3C2D573E776B507DE2122A413174264C095917E00F4BC55D`;
+`TARGETS.txt` `3AEE3E7292DB9650C334B305BEAC71AD4CB8749CFED7DDCC7C4A173B45911CB5`.
+Repair and residual-interface hashes are unchanged from part 202. New census is
+**CI pending**.
 
-Static scope only: `git diff --check` exited 0; forbidden-token scan found no
-matches in the new module. `FrozenCapRowCapTreeBridges.lean:49` is now the
-correct `end` line, unlike the earlier reported syntax failure. No local Lean
-build was attempted. SHA256 (lowercase): new module
-`d55aa9a67864887d1c75d2fd6713627bb88adafbbfd8d85118c423ecd1559c96`;
-residual certificate module unchanged this part at
-`6e19343d207165d8f6a0675a09eb508c28524d57412d5299d2ea39b73d5c3e40`;
-`TARGETS.txt` `774e6c6a0cec518a572d5ef25289d493fbcf6caf3058cc078e53832bdd598099`.
-
-Still unproved: the radius certificate for every residual id, including the
-seven public ids; packet producer/canonicality; all 382 absent payloads;
-seven-class and energy premises; root integration. The lane remains
-mathematically blocked on the residual radius theorem. Very next concrete step:
-read CI for the two lane-C targets; if the new bridge is red, fix its first
-failing declaration, and if green, preserve it and seek geometric evidence for
-the producer rather than any further row-cap search.
+Still unproved: all 373 radius certificates; packet/canonical production; 382
+absent payloads; MPacket validity; seven-class and energy premises; root
+integration. Very next concrete step: read CI for `RefineSixteenRepair`,
+`RefineSixteenResidual`, and `RefineSixteenResidualCensus`; fix the first failing
+declaration if red. If green, apply the residual-certificate interface to the
+372-id census after the next independently certified id (do not invent a payment).
 
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-31 - part 197 (residual interface green; public tree repaired, CI pending)
+## 2026-10-31 - part 204 (independent structural 373 census)
 
-Fetched CI run `41201323694` (source `3551ab87`) and read its build log.
-`EnergyTerminalBatchB13ResidualCertificates` exited 0 with only the expected
-axiom set `[propext, Classical.choice, Quot.sound]`; this is now **CI green**
-for the residual certificate interface and its consumers. No residual id is
-paid by that interface.
+Added `EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff.lean`. It defines
+the exact 16 ids added by the repair chain, proves
+`RefineSixteenRepair.paidIDs = B13.paidIDs ∪ removedIDs`, and obtains the
+repaired residual as `EnergyTerminalResidualCensus.residualIDs \ removedIDs`.
+It then proves `removedIDs.card = 16`, the 16 memberships in the 389 census,
+and `RefineSixteenResidual.residualIDs.card = 373` by `Finset.card_sdiff`.
+This reuses the existing 389 census instead of making 51 fresh 5011-index
+decisions against the whole 2013-element paid set. Added
+`N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff` to
+`TARGETS.txt`. It asserts no radius certificate or mathematical payment.
 
-The same run found `FrozenCapPublicExcludedTree` **CI red** (`exit 1`) at all
-seven branches: the row-cap goals used the core `y_*` vector while packet-cap
-hoped for `yW_*`, and its strict-gain goals used `FlashCosine.Dq/DQ` and
-`FlashCosineLeaf284Bridge.T` while the witness theorem used the corresponding
-`FrozenCapRationalCore` constants. Repaired the file by rewriting each row-cap
-branch with `yW_*` and adding definitional constants
-`core_Dq_eq_flash`, `core_DQ_eq_flash`, `core_T_eq_flash` plus
-`strict_gain_to_flash`; all seven strict-gain branches now use that transport.
-This is a repair of a conditional exclusion tree, not a packet payment. The
-dependent `FrozenCapPublicExcludedAggregate` and new
-`EnergyTerminalBatchB13PublicResidualCanonical` remain **CI pending**.
+Checks run: exact host check that `removedIDs` contains 16 unique ids and every
+id occurs in the source; `python3 -m py_compile` over all lane-C Python files,
+exit 0; `git diff --check`, exit 0; forbidden-token scan of the new module found
+no matches. Scope is static source inspection and exact host arithmetic, not a
+local kernel claim. SHA256 (lowercase): sdiff census
+`e92a1fcc89f71f9ed3f1f2b49186338f9faebde588e10a2a3d5f0211f7125409`;
+`TARGETS.txt` `488a504095e92ce92c8316303695892d470405d9ec872a723a4aedc0e94e6de6`.
+The module is **CI pending**; the earlier generated census is also still
+**CI pending**.
 
-Static scope: `git diff --check` passed; forbidden-token scan of the new
-module passed. No local full Lean build attempted. SHA256 (lowercase):
-`FrozenCapPublicExcludedTree.lean` updated; `TARGETS.txt` unchanged this part;
-new bridge remains `d55aa9a67864887d1c75d2fd6713627bb88adafbbfd8d85118c423ecd1559c96`.
-Exact SHA values for the tree are recorded by the supervisor after commit.
-
-Still unproved: residual radius certificates for all 389 ids; packet/canonical
-production from geometry; 382 non-public payloads; MPacket validity; energy and
-seven-class premises; root integration. The public tree pays no id. Very next
-concrete step: read CI for `FrozenCapPublicExcludedTree`, aggregate, and public
-canonical bridge; if the tree remains red, fix its first new mismatch, and if
-green, seek actual geometric producer evidence rather than more row-cap work.
-
-ROOT-IMPORT REQUEST: none.
-
-## 2026-10-31 - parts 198-199 (five-field namespace chain repaired; CI pending)
-
-Runs `41201323694` and `41208161314` showed the four five-field modules red
-from generator namespace/constant mistakes, not mathematics. Patched
-`emit_five_field_2368.py` (2370 specializes it) and both Tree consumers to use
-`N11Formalization.ConvexMinorantCore`, `FrozenCapRationalCore.{Dq,DQ,Lq,LQ,
-piLo,piHi,T}`. Both emitters pass 100 exact row caps with `min_slack = 0` and
-negative strict-gain gaps; forbidden scans and `git diff --check` are clean.
-Scope is host arithmetic/static inspection only, so all four remain **CI
-pending**. The same run is CI green for the residual-interface, public
-canonical, public tree, and aggregate modules; those pay no residual id.
-Emitter SHA256 `f0edc2c6494af55b650e92f7e001cd0e10e980be1382f829bb69a1073b937421`.
-
-Still unproved: all 389 residual radius certificates; 382 absent payloads;
-canonical/geometric packet production; MPacket validity; seven-class and
-energy premises; root integration. Five-field chains are conditional
-exclusions only. ROOT-IMPORT REQUEST: none.
-
-## 2026-10-31 - part 200 (repair revalidated; no post-repair Lean CI)
-
-Rechecked GitHub run list after part 199. The newest `n11-lean-build` run is
-still `41208161314` at source `1616dbe3`, which predates the part-198/199
-generated-file repair; the newer `283dab2c` runs are only the math/delivery
-workflows. Therefore all four five-field modules remain **CI pending**, not
-green. The prior run's first errors match the repaired namespace/constant
-defects already documented.
-
-Re-ran `emit_five_field_2368.py` under `timeout` (exit 0): regenerated file SHA
-is unchanged at `6211d4ca...d86916`, with 100 row caps, `min_slack = 0`, and
-strict-gain gap `-6988939797...940631281/14073748835...` (< 0). Current tuned
-SHA256 values are: tree2368 `026c1d4e...9285a9f`, 2370
-`e3b35e2f...74190`, tree2370 `3607b9b6...ab2e8`. Forbidden-token scan is clean
-and `git diff --check` exits 0. Scope: deterministic host arithmetic and static
-inspection; no local kernel claim. These remain conditional exclusions and pay
-no residual id.
-
-Still unproved: all 389 residual radius certificates; 382 absent payloads;
-canonical/geometric packet production; MPacket validity; seven-class and energy
-premises; root integration. Very next concrete step: after the supervisor
-commits this worktree, inspect the next `n11-lean-build` summary; fix the first
-new five-field declaration error if red, otherwise stop row-cap work and
-document Lane C blocked on the residual-radius producer (7 public / 382 absent).
+Still unproved: all 373 radius certificates; packet/canonical production; 382
+absent payloads; MPacket validity; seven-class and energy premises; root
+integration. Both census modules are reductions only. Very next concrete step:
+read the next `n11-lean-build` summary for the repair, residual interface, both
+census modules, and the sdiff census; fix the first failing declaration if red.
+If both census proofs are green, keep the structural sdiff proof as primary and
+do not spend more time on cardinality; the remaining work is certificate
+production, not census bookkeeping.
 
 ROOT-IMPORT REQUEST: none.
+
+## 2026-10-31 - part 205 (resume audit; no new payment)
+
+Re-read the part-204 handoff. `ops/ci/LATEST.md` is still run
+`41201323694` (sha `3551ab87`) and predates the repair, residual interface, and
+both census modules, so all four remain **CI pending**; there is no new CI
+verdict to consume. Rechecked that the structural sdiff module already proves
+the required bridge `RefineSixteenResidual.residualIDs =
+EnergyTerminalResidualCensus.residualIDs \ removedIDs`, `removedIDs.card = 16`,
+and `residualIDs.card = 373`; no duplicate bookkeeping module is needed.
+
+Checks run this part: `python3 -m py_compile` on both new lane-C census
+scripts, exit 0 with `PY_COMPILE_OK`; forbidden-token scan over
+`EnergyTerminalBatchB13RefineSixteen*.lean`, no matches; no local `.lake`
+olean tree exists, so no local Lean/kernel claim. Scope is static source and
+host Python only. No file hash changed from part 204.
+
+Still unproved: all 373 radius certificates, canonical/geometric packet
+production, 382 non-public payloads, MPacket validity, seven-class and energy
+premises, root integration. Very next concrete step: on the next refreshed CI,
+check `RefineSixteenRepair`, `RefineSixteenResidual`,
+`RefineSixteenResidualCensus`, and `...CensusSdiff` in order; fix the first red
+declaration. If green, do not add more census modules: either consume a real
+independently certified residual id or mark C mathematically blocked pending
+the missing packet producer/data. No ROOT-IMPORT REQUEST.
