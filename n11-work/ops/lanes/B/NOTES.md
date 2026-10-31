@@ -1,5 +1,55 @@
 # Lane B notes
 
+## 2026-10-31 - session 116: census CI-red repair
+
+- CI run `41235435914` (head `791d80b2`) kernel-checked
+  `EnergyTerminalBatchB13ResidualCertificates`,
+  `...RefineSixteenRepair`, and `...RefineSixteenResidual` at exit 0.
+  `...RefineSixteenResidualCensus` then exited 1.
+- First owning error: all 51 `mem_iff_blockNN` proofs timed out at `whnf`
+  (200000 heartbeats), e.g. line 124 and the whole sequence through 484. The
+  tactic `simp [residual373, chunk0, chunk1, chunk2, chunk3]` expanded the
+  full union per block. Lines 558/565 also used set equality as a membership
+  equality, producing `Eq.mp` type mismatches.
+- Added `n11-work/ops/lanes/B/repair_residual373_census.py` and ran it. It
+  asserts exactly 51 bounded blocks and 2 rewrites, then changes each block to
+  the established `decide +kernel +revert` pattern and each rewrite to a
+  membership `simpa`. Check: script self-checks and `git diff --check` pass;
+  repaired module is **CI pending** (no local Lean build).
+- Still unproved: census/Main kernel success and 373 residual radii; packet
+  `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions (`0/7`); and
+  the arbitrary-centre full-disk theorem.
+- Next: CI the repaired census and `CensusMain`; diagnose the first new error.
+
+## 2026-10-31 - session 115: census partition audit
+
+- Added `n11-work/ops/lanes/B/audit_census_blocks.py` and generated
+  `audit_census_blocks-report.json`. It parses all four emitted census parts and
+  checks the exact 51-block partition of `Fin 5011`: block `i` is
+  `[100*i, min(100*(i+1), 5011))`, there are no gaps or overlaps, every block is
+  called once by the assembly, the maximum width is 100, and the final block has
+  11 indices. It also reconstructs the four literal chunks and checks sizes
+  `100/100/100/89`, pairwise disjointness, and exact equality with lane C's
+  389-id census. All ten checks pass (`ok: true`).
+- Re-ran the census emitter in regenerating mode and the independent revert
+  audit. Counts are still 2506 terminal / 1997 paid / 389 residual; census
+  chunks are `100/100/100/89`; the four parts contain `13+13+13+12 = 51`
+  `decide +kernel +revert` blocks, zero bare kernel decisions, and no forbidden
+  proof escapes. Lean bytes are unchanged from commit `791d80b2`: C01
+  `6E90C8EA...F07F4`, C02 `FC8885BD...C373`, C03 `E1022163...02219`, C04
+  `D40FF05E...F67727`; assembly `84593DBA...24D6B`.
+- Live CI run `41235435914` (head `791d80b2`) reached `Mathlib cache` success and
+  is in the build step as of this handoff; there is no kernel verdict yet. The
+  new partition audit is static source inspection only and pays no radius.
+- Still unproved: kernel success of census C01--C04, assembly and
+  `EnergyTerminalResidualCensusRefineSixteen`; 373 refined residual radii;
+  packet `f0Lo`/`g`; the 382 absent payload records; SevenClassExclusions
+  (`0/7`); and the arbitrary-centre full-disk theorem.
+- Next: when run `41235435914` finishes, record the first lane-B-owned build
+  error (or green exits), and keep the pending ROOT-IMPORT REQUEST to replace
+  `EnergyTerminalBatchB13Main` with `EnergyTerminalBatchB13RefineSixteenMain`
+  only after that complete chain is kernel-green.
+
 ## 2026-10-31 - session 114: census tactic-hygiene audit
 
 - Added `n11-work/ops/lanes/B/audit_census_revert.py` and generated

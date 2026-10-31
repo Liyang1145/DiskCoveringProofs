@@ -1,0 +1,338 @@
+{
+  "blocks": [
+    {
+      "block": 0,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 100,
+      "lo": 0
+    },
+    {
+      "block": 4,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 500,
+      "lo": 400
+    },
+    {
+      "block": 8,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 900,
+      "lo": 800
+    },
+    {
+      "block": 12,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 1300,
+      "lo": 1200
+    },
+    {
+      "block": 16,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 1700,
+      "lo": 1600
+    },
+    {
+      "block": 20,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 2100,
+      "lo": 2000
+    },
+    {
+      "block": 24,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 2500,
+      "lo": 2400
+    },
+    {
+      "block": 28,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 2900,
+      "lo": 2800
+    },
+    {
+      "block": 32,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 3300,
+      "lo": 3200
+    },
+    {
+      "block": 36,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 3700,
+      "lo": 3600
+    },
+    {
+      "block": 40,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 4100,
+      "lo": 4000
+    },
+    {
+      "block": 44,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 4500,
+      "lo": 4400
+    },
+    {
+      "block": 48,
+      "file": "EnergyTerminalResidualCensusC01.lean",
+      "hi": 4900,
+      "lo": 4800
+    },
+    {
+      "block": 1,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 200,
+      "lo": 100
+    },
+    {
+      "block": 5,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 600,
+      "lo": 500
+    },
+    {
+      "block": 9,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 1000,
+      "lo": 900
+    },
+    {
+      "block": 13,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 1400,
+      "lo": 1300
+    },
+    {
+      "block": 17,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 1800,
+      "lo": 1700
+    },
+    {
+      "block": 21,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 2200,
+      "lo": 2100
+    },
+    {
+      "block": 25,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 2600,
+      "lo": 2500
+    },
+    {
+      "block": 29,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 3000,
+      "lo": 2900
+    },
+    {
+      "block": 33,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 3400,
+      "lo": 3300
+    },
+    {
+      "block": 37,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 3800,
+      "lo": 3700
+    },
+    {
+      "block": 41,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 4200,
+      "lo": 4100
+    },
+    {
+      "block": 45,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 4600,
+      "lo": 4500
+    },
+    {
+      "block": 49,
+      "file": "EnergyTerminalResidualCensusC02.lean",
+      "hi": 5000,
+      "lo": 4900
+    },
+    {
+      "block": 2,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 300,
+      "lo": 200
+    },
+    {
+      "block": 6,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 700,
+      "lo": 600
+    },
+    {
+      "block": 10,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 1100,
+      "lo": 1000
+    },
+    {
+      "block": 14,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 1500,
+      "lo": 1400
+    },
+    {
+      "block": 18,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 1900,
+      "lo": 1800
+    },
+    {
+      "block": 22,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 2300,
+      "lo": 2200
+    },
+    {
+      "block": 26,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 2700,
+      "lo": 2600
+    },
+    {
+      "block": 30,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 3100,
+      "lo": 3000
+    },
+    {
+      "block": 34,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 3500,
+      "lo": 3400
+    },
+    {
+      "block": 38,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 3900,
+      "lo": 3800
+    },
+    {
+      "block": 42,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 4300,
+      "lo": 4200
+    },
+    {
+      "block": 46,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 4700,
+      "lo": 4600
+    },
+    {
+      "block": 50,
+      "file": "EnergyTerminalResidualCensusC03.lean",
+      "hi": 5011,
+      "lo": 5000
+    },
+    {
+      "block": 3,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 400,
+      "lo": 300
+    },
+    {
+      "block": 7,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 800,
+      "lo": 700
+    },
+    {
+      "block": 11,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 1200,
+      "lo": 1100
+    },
+    {
+      "block": 15,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 1600,
+      "lo": 1500
+    },
+    {
+      "block": 19,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 2000,
+      "lo": 1900
+    },
+    {
+      "block": 23,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 2400,
+      "lo": 2300
+    },
+    {
+      "block": 27,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 2800,
+      "lo": 2700
+    },
+    {
+      "block": 31,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 3200,
+      "lo": 3100
+    },
+    {
+      "block": 35,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 3600,
+      "lo": 3500
+    },
+    {
+      "block": 39,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 4000,
+      "lo": 3900
+    },
+    {
+      "block": 43,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 4400,
+      "lo": 4300
+    },
+    {
+      "block": 47,
+      "file": "EnergyTerminalResidualCensusC04.lean",
+      "hi": 4800,
+      "lo": 4700
+    }
+  ],
+  "checks": {
+    "assembly_calls_each_block_once": true,
+    "block_ranges_exact": true,
+    "chunk_sizes_100_100_100_89": true,
+    "chunks_match_lane_c_census": true,
+    "chunks_pairwise_disjoint": true,
+    "fifty_one_blocks": true,
+    "four_literal_chunks": true,
+    "max_kernel_width_100": true,
+    "no_gaps_or_overlaps": true,
+    "short_final_block_11": true
+  },
+  "ok": true,
+  "scope": "static source partition audit; not Lean elaboration and not proof credit",
+  "sha256": {
+    "EnergyTerminalResidualCensus.lean": "84593DBA542ED58A3FAFDB9211C8622659FB509773DB1A5251B3C32C3EE24D6B",
+    "EnergyTerminalResidualCensusBase.lean": "642F5A5BC18FD1F4D8DA1889C3D4D5EBDFF1BFE1658CDC5A94DABC25BFD4442D",
+    "EnergyTerminalResidualCensusC01.lean": "6E90C8EA7968DA2E525D1335C1931AC5C13D03541F17F666132B9FFDD7EF07F4",
+    "EnergyTerminalResidualCensusC02.lean": "FC8885BD5D919704F269ED2708F859D8423755A862B2DDC6D735EC1F86BDC373",
+    "EnergyTerminalResidualCensusC03.lean": "E1022163886CC55517864C0E371AD8278CEFF6C0A748E9B336880990F6E02219",
+    "EnergyTerminalResidualCensusC04.lean": "D40FF05E5A088204CA37BF020089100A296C2CB31803403F63152038E2F67727",
+    "residual389-census.json": "44166EE869A61F6858F2285A98F96CC3FAA4F59FBB98C01D76B4DC42A28827A8"
+  },
+  "widths": {
+    "max": 100,
+    "min": 11,
+    "sum": 5011
+  }
+}
