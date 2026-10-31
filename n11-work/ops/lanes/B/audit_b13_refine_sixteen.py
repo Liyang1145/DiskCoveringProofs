@@ -55,6 +55,17 @@ def main() -> int:
         and "theorem new_count : newIDs.card = 2" in sixteen
         and re.search(r"2011 to 2013,\s+leaving 389 - 16 = 373", sixteen) is not None
     )
+    thirteen = sources["Thirteen"][1]
+    checks["thirteen_close_has_no_redundant_tactic"] = (
+        "theorem twelve_new_count :" in thirteen
+        and "EnergyTerminalBatchB13RefineTwelve.new_count]" in thirteen
+        and "EnergyTerminalBatchB13RefineTwelve.new_count]\n    norm_num" not in thirteen
+    )
+    expected_paid = dict(zip(CHAIN, (2004, 2005, 2008, 2009, 2010, 2011, 2013)))
+    checks["all_stage_paid_counts"] = all(
+        f"theorem paid_count : paidIDs.card = {count}" in sources[name][1]
+        for name, count in expected_paid.items()
+    )
     checks["sixteen_imports"] = all(
         f"import N11Formalization.EnergyTerminalBatchB13Refine{i}" in sixteen
         for i in ("Fourteen", "3431", "3573")

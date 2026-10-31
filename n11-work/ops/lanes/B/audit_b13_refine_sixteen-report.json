@@ -2,6 +2,7 @@
   "checks": {
     "all_singleton_ids_reachable": true,
     "all_sources_exist": true,
+    "all_stage_paid_counts": true,
     "final_arithmetic": true,
     "increment_sum": true,
     "main_consumers": true,
@@ -13,6 +14,7 @@
     "stale_targets_absent": true,
     "target_order": true,
     "targets_once": true,
+    "thirteen_close_has_no_redundant_tactic": true,
     "unique_id_count": true
   },
   "handoff": {
@@ -46,7 +48,7 @@
     "sixteen_refine": "055f8ba3b2f11d53e6c4f20d69adaea90e09d27177120534cf160c9b65c28851",
     "targets": "69e4e5a52fe6fdd45a5e4482bcecc863a91549e62fd566d2d41f8eafada9f612",
     "thirteen_main": "d46e758cfb3b6997fd5bce098192fafc776ac8a388a514f412f7a733d2784375",
-    "thirteen_refine": "fe498e4da4fe81f8f149406935306350881061265aee5852f4dff508a690e739",
+    "thirteen_refine": "f62b93eb0b60b812cb30767a745ccd2d57c197269d1e78a8c2b0cbfcc9e9252e",
     "twelve_main": "665ba8116cc6f756f589f24abdd9aa830651b5ffcd406729d8787b1fd58b0086",
     "twelve_refine": "1479d68d7db45c6631e0e8b856e9caa9baa3a2e8e8f1e6dbe5c74548173471b8"
   }
