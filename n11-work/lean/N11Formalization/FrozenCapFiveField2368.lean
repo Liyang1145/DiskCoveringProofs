@@ -1,4 +1,5 @@
 import N11Formalization.FrozenCapRationalCore
+import N11Formalization.ConvexMinorantCore
 import N11Formalization.FrozenCapRowCap2368
 
 /-! Exact five-field rescue witness for residual node 2368, with all 100
@@ -6,7 +7,7 @@ row caps against the frozen `DBMSourceTree` matrix. Generated deterministically
 by `ops/lanes/C/emit_five_field_2368.py`; this does not claim packet existence. -/
 set_option autoImplicit false
 namespace N11Formalization.FrozenCapFiveField2368
-open Finset ConvexMinorantCore DBMMinorantDual
+open Finset N11Formalization.ConvexMinorantCore
 open scoped BigOperators
 noncomputable section
 open FrozenCapRationalCore
@@ -20,11 +21,11 @@ theorem sum_2368 : (∑ q : Fin 9, y5_2368 q) = 1 := by
   norm_num [y5_2368, Fin.sum_univ_succ]
 
 theorem endpoint_2368 (q : Fin 9) :
-    endpointLo N11Formalization.FlashCosine.Dq N11Formalization.FlashCosine.DQ (G_2368 q) = E_2368 q := by
+    endpointLo N11Formalization.FrozenCapRationalCore.Dq N11Formalization.FrozenCapRationalCore.DQ (G_2368 q) = E_2368 q := by
   fin_cases q <;> norm_num [G_2368, E_2368, endpointLo,
-    N11Formalization.FlashCosine.Dq, N11Formalization.FlashCosine.DQ,
-    N11Formalization.FlashCosine.Lq, N11Formalization.FlashCosine.LQ,
-    N11Formalization.RatInterval.piLo, N11Formalization.RatInterval.piHi]
+    N11Formalization.FrozenCapRationalCore.Dq, N11Formalization.FrozenCapRationalCore.DQ,
+    N11Formalization.FrozenCapRationalCore.Lq, N11Formalization.FrozenCapRationalCore.LQ,
+    N11Formalization.FrozenCapRationalCore.piLo, N11Formalization.FrozenCapRationalCore.piHi]
 
 def H5_2368 : Fin 9 → ℚ := ![(0 : ℚ), (0 : ℚ), (0 : ℚ), (-328869285819002701623686305362347872076346275994975584663543763704751 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (-234623699232196302714688080923253864708888589050248626486011487515533 : ℚ) / 900719925472297760149051801600000000000000000000000000000000000000000000, (0 : ℚ), (11710088974442814577426458147973851740210488361438207607551434023083 : ℚ) / 28147497671009305004657868800000000000000000000000000000000000000000000, (-177461469068390156413751508473798084265736688112654063751363642068449 : ℚ) / 1801439850944595520298103603200000000000000000000000000000000000000000000, (0 : ℚ)]
 
@@ -32,15 +33,15 @@ theorem weighted_terms_2368 (q : Fin 9) : y5_2368 q * E_2368 q = H5_2368 q := by
   fin_cases q <;> norm_num [y5_2368, E_2368, H5_2368]
 
 theorem strict_gain_2368 : F0_2368 + ∑ q : Fin 9, y5_2368 q *
-    endpointLo N11Formalization.FlashCosine.Dq N11Formalization.FlashCosine.DQ (G_2368 q) <
-      N11Formalization.FlashCosineLeaf284Bridge.T ^ 2 := by
+    endpointLo N11Formalization.FrozenCapRationalCore.Dq N11Formalization.FrozenCapRationalCore.DQ (G_2368 q) <
+      FrozenCapRationalCore.T ^ 2 := by
   simp only [endpoint_2368]
   have hsum : (∑ q : Fin 9, y5_2368 q * E_2368 q) = ∑ q : Fin 9, H5_2368 q := by
     apply Finset.sum_congr rfl
     intro q _
     exact weighted_terms_2368 q
   rw [hsum]
-  norm_num [F0_2368, H5_2368, N11Formalization.FlashCosineLeaf284Bridge.T,
+  norm_num [F0_2368, H5_2368, FrozenCapRationalCore.T,
     Fin.sum_univ_succ]
 
 theorem row_cap_0_0 :

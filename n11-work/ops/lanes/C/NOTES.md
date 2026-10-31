@@ -165,3 +165,48 @@ canonical bridge; if the tree remains red, fix its first new mismatch, and if
 green, seek actual geometric producer evidence rather than more row-cap work.
 
 ROOT-IMPORT REQUEST: none.
+
+## 2026-10-31 - parts 198-199 (five-field namespace chain repaired; CI pending)
+
+Runs `41201323694` and `41208161314` showed the four five-field modules red
+from generator namespace/constant mistakes, not mathematics. Patched
+`emit_five_field_2368.py` (2370 specializes it) and both Tree consumers to use
+`N11Formalization.ConvexMinorantCore`, `FrozenCapRationalCore.{Dq,DQ,Lq,LQ,
+piLo,piHi,T}`. Both emitters pass 100 exact row caps with `min_slack = 0` and
+negative strict-gain gaps; forbidden scans and `git diff --check` are clean.
+Scope is host arithmetic/static inspection only, so all four remain **CI
+pending**. The same run is CI green for the residual-interface, public
+canonical, public tree, and aggregate modules; those pay no residual id.
+Emitter SHA256 `f0edc2c6494af55b650e92f7e001cd0e10e980be1382f829bb69a1073b937421`.
+
+Still unproved: all 389 residual radius certificates; 382 absent payloads;
+canonical/geometric packet production; MPacket validity; seven-class and
+energy premises; root integration. Five-field chains are conditional
+exclusions only. ROOT-IMPORT REQUEST: none.
+
+## 2026-10-31 - part 200 (repair revalidated; no post-repair Lean CI)
+
+Rechecked GitHub run list after part 199. The newest `n11-lean-build` run is
+still `41208161314` at source `1616dbe3`, which predates the part-198/199
+generated-file repair; the newer `283dab2c` runs are only the math/delivery
+workflows. Therefore all four five-field modules remain **CI pending**, not
+green. The prior run's first errors match the repaired namespace/constant
+defects already documented.
+
+Re-ran `emit_five_field_2368.py` under `timeout` (exit 0): regenerated file SHA
+is unchanged at `6211d4ca...d86916`, with 100 row caps, `min_slack = 0`, and
+strict-gain gap `-6988939797...940631281/14073748835...` (< 0). Current tuned
+SHA256 values are: tree2368 `026c1d4e...9285a9f`, 2370
+`e3b35e2f...74190`, tree2370 `3607b9b6...ab2e8`. Forbidden-token scan is clean
+and `git diff --check` exits 0. Scope: deterministic host arithmetic and static
+inspection; no local kernel claim. These remain conditional exclusions and pay
+no residual id.
+
+Still unproved: all 389 residual radius certificates; 382 absent payloads;
+canonical/geometric packet production; MPacket validity; seven-class and energy
+premises; root integration. Very next concrete step: after the supervisor
+commits this worktree, inspect the next `n11-lean-build` summary; fix the first
+new five-field declaration error if red, otherwise stop row-cap work and
+document Lane C blocked on the residual-radius producer (7 public / 382 absent).
+
+ROOT-IMPORT REQUEST: none.

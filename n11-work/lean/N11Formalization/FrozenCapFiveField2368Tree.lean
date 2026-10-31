@@ -8,7 +8,7 @@ The packet `f0Lo`/`g` identifications remain hypotheses; no packet existence or
 residual payment is claimed. -/
 set_option autoImplicit false
 namespace N11Formalization.FrozenCapFiveField2368Tree
-open ConvexMinorantCore DBMMinorantDual
+open N11Formalization.ConvexMinorantCore DBMMinorantDual
 noncomputable section
 
 theorem excluded_2368_tree {m : ℕ} (p : PaidCellCertificateM.Packet m)
