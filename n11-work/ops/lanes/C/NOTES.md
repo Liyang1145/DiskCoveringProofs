@@ -94,35 +94,50 @@ preserve it before changing the emitter; do not infer a kernel pass from the
 700/700 exact audit.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-31 - condensed part 169 (four/five-field leaves aligned; CI pending)
+## 2026-10-31 - part 175 (`Fin.sum_univ_succ` row-cap repair; CI pending)
 
-Four-field emitter `7a7806f8...` regenerated its 500 leaves and five-field emitter
-`4be2310d...` its 200 leaves; exact audits passed with minimum slack 0. Witnesses
-stayed `7141cb51...`. All remained CI pending; current files were superseded by part 173.
+Current-source run `41176805557` showed `FrozenCapRowCap1409Smoke` exit 0 but
+`FrozenCapRowCap1409.lean:520:53` unsolved: after `fin_cases j`, `norm_num
+[rowA, y_1409, db]` left the `∑ x : Fin 9` unevaluated. Added
+`Fin.sum_univ_succ` to all three row-cap emitters. Theorem names, matrices,
+interfaces, and leaf arithmetic are unchanged.
 
-## 2026-10-31 - part 170 (stale row-cap CI diagnostic isolated)
+Emitter SHA256 (lowercase): `emit_frozen_cap_row_caps.py`
+`202aba2a974d2592c830321edb7f0121d7d3fca2f8a093e41c5ebb00070d4b5a`;
+`emit_four_field_row_caps.py`
+`1619bcec1ec6cff60c2dd492449f7538ec7b88e2137039aa58f261e7ae30ce67`;
+`emit_five_field_certificates.py`
+`203c4d84f1690a8f49860f8ec2f9a3aa766adb0ccafd53ad2f562da0377cf842`.
+Modules: `FrozenCapRowCap1409` `9232472a8c13e14a378d86c6a854b8437ca8e654a3c336c8f740c90ba2a34ae4`;
+`FrozenCapRowCap2337` `b860cb24acc465be6ecd51fe1605ddcacdde836dc25ad29ca4a1d627aef04444`;
+`FrozenCapRowCap2341` `ebb042234eb232e9bc4709116cf87891e97dd5a6df63a09074a98ce10c6b3330`;
+`FrozenCapRowCap2356` `d53fc3ee3e11c8355186eea71bd7fe2a4adb02ec97775da5f183c3bd36adae87`;
+`FrozenCapRowCap2360` `cfa89fec59578a971ace93cb0137c0a4712a15f73a7337384c4aeb653578f5d2`;
+`FrozenCapRowCap2368` `340217d21f9d7f04c835c4e77056beb914486d32f1bd76ec1b98940e2138758c`;
+`FrozenCapRowCap2370` `c338a97c3875702d7bac2471925357960853f53f4678d9fe18968e97720c9d72`;
+`FrozenCapFourFieldRowCaps`
+`e08f5fcda499e4cb104750235586f64ebda10f4822db49a96f06558f71ae2b29`;
+`FrozenCapFiveFieldRowCaps`
+`9c8217a844c3d3fb07eaf596484b4aa8f2a0d249d5c4c3eaef6f2e2d8e0d8517`.
 
-Compared `ops/ci/LATEST.md` (`24e434b4`, 2026-10-31T00:29:48Z) with the
-part-166/169 sources. Its first row-cap failure is
-`FrozenCapRowCap1409.lean:132:608: unsolved goals`, repeated at further
-single-line goal sites. Current `FrozenCapRowCap1409.lean` is multiline at
-that location (`row_cap_1409_0_2`, lines 129--133) and has SHA256
-`a7283d64f504864abb6590e68dab8de7f187d7f6f7d3a7ca1ddf970a43e1a011`;
-therefore this CI error concerns an earlier byte revision and is **not**
-evidence against the current `change`/`norm_num` leaves. The smoke module
-remains SHA256
-`a4b3428e2526f8f488ddacc31e768fa08d0cc14fb50cc2a970ffb6060d8a985c`.
+Checks/scope: emitters exit 0; exact audits pass 700/700 + 500/500 + 200/200,
+per-node minimum slack 0; `py_compile`, `git diff --check`, and forbidden scan
+pass. This is exact arithmetic plus one CI-derived tactic diagnosis, not a new
+kernel exit; repaired modules are **CI pending**.
 
-Scope: source/timestamp/hash comparison only; no new Lean run. Current smoke
-and all row caps remain **CI pending**. Missing obligations are unchanged:
-kernel exits, exclusion-to-radius bridge, 382 residual payloads, packet
-`Valid`, MPacket validity, energy and seven-class premises.
+Still unproved/missing: kernel exits for repaired caps and dependent trees/
+aggregate; exclusion-to-`RemainingTerminalRadius`; packet existence/`Valid`;
+382 payloads; MPacket validity; energy and seven-class premises.
 
-Next: fresh serial CI must start with the smoke leaf and expose the first
-diagnostic from the current SHA. Preserve that exact location before changing
-any emitter; do not treat the stale `:132:608` failure as current.
+Next: fresh serial CI must rebuild smoke (known exit 0), then `1409`; if green,
+continue through all seven public caps and both aggregate cap modules. If a sum
+remains, capture its full first current-SHA goal before any interface change.
 ROOT-IMPORT REQUEST: none.
 
+## 2026-10-31 - condensed part 169 (superseded by part 173)
+
+Four/five-field leaves were regenerated with exact audits and minimum slack 0;
+these bytes were superseded by part 173.
 ## 2026-10-31 - part 171 (aggregate signature audit; CI pending)
 
 Re-read part 170 and checked the new public aggregate against all seven tree
@@ -148,51 +163,6 @@ seven-class premises.
 Next: supervisor commit for fresh serial CI. Require smoke then `1409` exit 0;
 if red, preserve the first current-SHA source diagnostic before changing an
 emitter. Do not treat exact rational audits as kernel payments.
-ROOT-IMPORT REQUEST: none.
-
-## 2026-10-31 - part 172 (row-cap `change` diagnosis and repair; CI pending)
-
-Run `41168580187` gave exit 1 for the smoke and every row-cap module. Its first
-current-source diagnostics are `FrozenCapRowCap1409Smoke.lean:25:2` and `:39:2:
-'change' tactic failed, pattern`; `FrozenCapRowCap1409` then fails at every leaf
-`change`. The smoke also contained a genuine arithmetic error: pair `(5,4)` is
-`-1/4 <= -1/8`, not `1/2 <= 1/2`. The emitted caps themselves were correct.
-
-Repaired all three lane emitters to prove each leaf directly with
-`norm_num [rowA, y<N>, db<N>]` (and no `change`), then regenerated the seven
-public modules (700 caps), the five four-field modules (500 caps), and the two
-five-field modules (200 caps). Corrected the smoke's `(5,4)` bound and made both
-smoke leaves use the same direct tactic. Five-field witness bytes are unchanged.
-
-Files/SHA256 (lowercase): smoke
-`f075d8b29a8410f94f0c8cedd9ff99355595396aa74ec5f6629d0f1470cf5f48`;
-public emitter
-`e9e11e09a2a8fa55c34e71f95594e5f772c24e6dc8be5af612f98f81075d0f6f`;
-four-field emitter
-`de6671ad06314a99c11929394f62a2403c7d76b18df5b3d4c86130aa140ba455`;
-five-field emitter
-`0c8f9aa5ccf835661088b43be083018b55fcf4995f0daa41e952e63f2eb56b89`.
-Public row caps are `d3aed02a...` (1409), `f69d3ec3...` (2337),
-`c2145c43...` (2341), `b5fabdd8...` (2356), `a01ebc50...` (2360),
-`d82ebbcf...` (2368), `a846dbe4...` (2370); four-field row caps
-`367f263b3214bfaaf1e81991d8d9582c757e8fa3856b7b6e3694f06276845767`;
-five-field row caps `6e1706198d5f3385361772991a77551120d32b0675f68930cfd616c856f04ae1`.
-
-Checks: all three emitters exit 0; exact audits pass on 700/700 public,
-500/500 four-field and 200/200 five-field caps with per-node minimum slack 0;
-`py_compile`, `git diff --check`, and forbidden-token scan pass. A bounded local
-Mathlib probe timed out with no diagnostic, so there is **no local Lean syntax
-or kernel claim**. All row-cap/tree targets and the new aggregate remain **CI
-pending**.
-
-Still unproved/missing: kernel exits for smoke, row caps, four/five-field and
-public trees/aggregate; exclusion-to-`RemainingTerminalRadius` bridge; packet
-existence/`Valid`; 382 residual payloads; MPacket validity; energy and
-seven-class premises.
-
-Next: fresh serial CI must rebuild the corrected smoke, then `1409`; if either is
-red, capture the full first `norm_num` diagnostic (including the goal) before
-changing the emitter. Exact cap audits are not kernel payments.
 ROOT-IMPORT REQUEST: none.
 
 ## 2026-10-31 - part 173 (definition-independent row leaves; CI pending)
@@ -236,34 +206,29 @@ the full first diagnostic; if green, proceed through public/four/five-field
 trees before claiming any exclusion payment.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-31 - part 174 (row-cap interface mismatch fixed; CI pending)
+## 2026-10-31 - part 176 (current CI evidence isolated; CI pending)
 
-Part 173's closed-rational leaf statements were not definitionally equal to the
-subgoals in the generic `row_cap` interfaces, so `exact row_cap_<id>_<i>_<j>`
-could not have worked even if each leaf compiled. Repaired all three emitters
-without changing theorem names or cap matrices: public/five-field row lemmas
-and four-field generic lemmas now prove each finite row directly with
-`fin_cases ... <;> norm_num [rowA, y<N>, db<N>]`; closed-rational leaves remain
-as independently checkable arithmetic but are no longer used for those exacts.
-Regenerated seven public (700 leaves), four-field (500), and five-field (200)
-modules. Exact audits pass 1400/1400, min slack 0 per node.
+`LATEST.md` run `41168580187` (source `0f022bfb`) reports `change` failures at
+`FrozenCapRowCap1409Smoke.lean:25,39` and `FrozenCapRowCap1409.lean:121...`.
+Those are stale: the current smoke SHA is `1a0e7220...`, current `1409` was
+replaced by the part-175 `Fin.sum_univ_succ` revision SHA `9232472a...`, and
+`rg 'change'` over all seven public row-cap modules plus both rescue cap
+modules has no hit. A separate run `41172673380` / `7fbff386` was only
+`in_progress`; it is not a result.
 
-Emitter SHA256: public
-`e97a484d0cdf1a61494f82c5321d1854af949a4ec4de7f44f0ac3e10f560c66c`;
-four-field `e91a90b2915a65d78f83600982155ba14ae4c6e441570aca940fbaee6562e30c`;
-five-field `7c1b20861a736563a1e6ecb09706cb4fe19ac482e3bd8045e0f47bbf2170e616`.
-Module SHA256: 1409 `bcd85599c6d721069ca3d34ca8513ef8f8962859899ecd7508597bdcfb337bcf`;
-four-field `7aeacae12ad1da54347768b0f029f5d96e12f89cabb0f854cc1eb189f8df9374`;
-five-field `93d5fe0a24b25857263316221e9cfea0db593f43320eb5edf1fce73ceb2b3a09`.
-Checks/scope: emitters exit 0; `py_compile`, `git diff --check`, forbidden scan
-pass. Local smoke could not start because `FrozenCapRationalCore.olean` is not
-built in this worktree: **no local Lean syntax/kernel claim**. CI pending.
+Current module hashes: `1409` `9232472a...`; `2337` `b860cb24...`; `2341`
+`ebb04223...`; `2356` `d53fc3ee...`; `2360` `cfa89fec...`; `2368`
+`340217d2...`; `2370` `c338a97c...`; four-field caps `e08f5fcd...`;
+five-field caps `9c8217a8...`. Emitter hashes match part 175:
+`202aba2a...`, `1619bcec...`, `203c4d84...`. `git diff --check` exits 0.
 
-Still unproved/missing: kernel exits for smoke/row caps/trees/aggregate;
-exclusion-to-`RemainingTerminalRadius`; packet existence/`Valid`; 382 payloads;
-MPacket validity; energy and seven-class premises.
+A 70 s Mathlib-probe check of `Fin.sum_univ_succ` timed out with no diagnostic;
+this gives **no syntax or kernel claim**. All current modules remain **CI
+pending**. Missing obligations are unchanged: cap/tree kernel exits,
+exclusion-to-radius, packet existence/`Valid`, 382 payloads, MPacket validity,
+energy and seven-class premises.
 
-Next: fresh CI must start at smoke then 1409. If direct `norm_num [rowA,y,db]`
-fails, preserve full first current-SHA goal/diagnostic; do not revert to the
-part-173 mismatched exact interface.
+Next: supervisor commit and fresh serial CI. Read the first diagnostic from
+source `9232472a...`; do not act on the stale `change` lines. If `1409` is
+green, proceed to `2337` and the four/five-field caps before tree aggregates.
 ROOT-IMPORT REQUEST: none.

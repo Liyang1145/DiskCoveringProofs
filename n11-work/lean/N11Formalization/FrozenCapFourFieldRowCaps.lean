@@ -517,7 +517,7 @@ theorem row_cap_1409_9_9 :
 
 theorem row_cap_1409 (i j : Fin 10) :
     (∑ q : Fin 9, y4_1409 q * rowA i j q) ≤ db_1409 i j := by
-  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_1409, db_1409]
+  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_1409, db_1409, Fin.sum_univ_succ]
 
 def db_2337 : Fin 10 → Fin 10 → ℚ
   | ⟨0, _⟩, ⟨0, _⟩ => (0 : ℚ)
@@ -1023,7 +1023,7 @@ theorem row_cap_2337_9_9 :
 
 theorem row_cap_2337 (i j : Fin 10) :
     (∑ q : Fin 9, y4_2337 q * rowA i j q) ≤ db_2337 i j := by
-  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2337, db_2337]
+  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2337, db_2337, Fin.sum_univ_succ]
 
 def db_2341 : Fin 10 → Fin 10 → ℚ
   | ⟨0, _⟩, ⟨0, _⟩ => (0 : ℚ)
@@ -1529,7 +1529,7 @@ theorem row_cap_2341_9_9 :
 
 theorem row_cap_2341 (i j : Fin 10) :
     (∑ q : Fin 9, y4_2341 q * rowA i j q) ≤ db_2341 i j := by
-  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2341, db_2341]
+  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2341, db_2341, Fin.sum_univ_succ]
 
 def db_2368 : Fin 10 → Fin 10 → ℚ
   | ⟨0, _⟩, ⟨0, _⟩ => (0 : ℚ)
@@ -2035,7 +2035,7 @@ theorem row_cap_2368_9_9 :
 
 theorem row_cap_2368 (i j : Fin 10) :
     (∑ q : Fin 9, y4_2368 q * rowA i j q) ≤ db_2368 i j := by
-  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2368, db_2368]
+  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2368, db_2368, Fin.sum_univ_succ]
 
 def db_2370 : Fin 10 → Fin 10 → ℚ
   | ⟨0, _⟩, ⟨0, _⟩ => (0 : ℚ)
@@ -2541,7 +2541,7 @@ theorem row_cap_2370_9_9 :
 
 theorem row_cap_2370 (i j : Fin 10) :
     (∑ q : Fin 9, y4_2370 q * rowA i j q) ≤ db_2370 i j := by
-  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2370, db_2370]
+  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_2370, db_2370, Fin.sum_univ_succ]
 
 end
 end N11Formalization.FrozenCapFourFieldRowCaps

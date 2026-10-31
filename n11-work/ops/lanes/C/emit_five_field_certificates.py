@@ -130,7 +130,7 @@ def emit_row_caps(records):
         for i in range(10):
             row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
     (∑ q : Fin 9, y5_{node} q * rowA {i} j q) ≤ db_{node} {i} j := by
-  fin_cases j <;> norm_num [rowA, y5_{node}, db_{node}]''')
+  fin_cases j <;> norm_num [rowA, y5_{node}, db_{node}, Fin.sum_univ_succ]''')
         blocks.append(f'''def db_{node} : Fin 10 → Fin 10 → ℚ
   {db_cases}
 

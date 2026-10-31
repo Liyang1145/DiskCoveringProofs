@@ -60,7 +60,7 @@ def main():
 
 theorem row_cap_{node} (i j : Fin 10) :
     (∑ q : Fin 9, y4_{node} q * rowA i j q) ≤ db_{node} i j := by
-  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_{node}, db_{node}]''')
+  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_{node}, db_{node}, Fin.sum_univ_succ]''')
     src = '''import N11Formalization.FrozenCapFourFieldWitnesses
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum
