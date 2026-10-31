@@ -1,0 +1,31 @@
+{
+  "schema": "n11-lane-b-ci-artifact-verdict-v1",
+  "run": 41141569628,
+  "workflow": "n11-lean-build",
+  "head_sha": "c63cb61ea625d15842707fa297fdf3fb6542c834",
+  "run_conclusion": "success",
+  "verdict_scope": "module exits in the uploaded runner artifact; the run-level conclusion is not a proof verdict",
+  "artifact": {
+    "id": 13021186040,
+    "name": "n11-build-41141569628.zip",
+    "bytes": 26047,
+    "sha256": "aaaa0e3d61a18486de1b62446823a04324e418012c9023795b89894ee2e54cce"
+  },
+  "module_exits": {
+    "N11Formalization.EnergyTerminalBatchB13RefineThirteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineThirteenMain": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain": 1
+  },
+  "first_error": "EnergyTerminalBatchB13RefineThirteen.lean:65:2: No goals to be solved",
+  "repair": "removed the redundant norm_num after rw closed twelve_new_count",
+  "pre_repair_sha256": {
+    "N11Formalization/EnergyTerminalBatchB13RefineThirteen.lean": "fe498e4da4fe81f8f149406935306350881061265aee5852f4dff508a690e739"
+  },
+  "post_repair_sha256": {
+    "N11Formalization/EnergyTerminalBatchB13RefineThirteen.lean": "f62b93eb0b60b812cb30767a745ccd2d57c197269d1e78a8c2b0cbfcc9e9252e"
+  },
+  "post_repair_ci": "pending; no Lean proof credit for the repair"
+}
