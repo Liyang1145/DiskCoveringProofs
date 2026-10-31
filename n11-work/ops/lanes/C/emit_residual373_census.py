@@ -51,7 +51,6 @@ def main():
         "    rw [Finset.disjoint_union_right]",
         "    exact ⟨disjoint_chunk1_2, disjoint_chunk1_3⟩), chunk1_card]",
         "  rw [Finset.card_union_of_disjoint disjoint_chunk2_3, chunk2_card, chunk3_card]",
-        "  norm_num",
         "",
     ]
     blocks = []
@@ -116,9 +115,25 @@ def main():
               "theorem residualIDs_card :",
               "    EnergyTerminalBatchB13RefineSixteenResidual.residualIDs.card = 373 := by",
               "  rw [residualIDs_eq_residual373, card_chunks]",
+              "",
+              "theorem remaining_of_residual373_radius_certificates",
+              "    (h : ∀ n, n ∈ residual373 →",
+              "      EnergyTerminalBatchB13.ResidualRadiusCertificate n) :",
+              "    EnergyTerminalBatchB13RefineSixteenRepair.RemainingTerminalRadius :=",
+              "  EnergyTerminalBatchB13RefineSixteenResidual.remaining_of_residual_radius_certificates",
+              "    (fun n hn => h n ((residualIDs_eq_residual373).mp hn))",
+              "",
+              "theorem b13_remaining_of_residual373_radius_certificates",
+              "    (h : ∀ n, n ∈ residual373 →",
+              "      EnergyTerminalBatchB13.ResidualRadiusCertificate n) :",
+              "    EnergyTerminalBatchB13.RemainingTerminalRadius :=",
+              "  EnergyTerminalBatchB13RefineSixteenResidual.b13_remaining_of_residual_radius_certificates",
+              "    (fun n hn => h n ((residualIDs_eq_residual373).mp hn))",
               "end", "end N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
               "#check @N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus.residualIDs_card",
-              "#print axioms N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus.residualIDs_card"]
+              "#check @N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus.b13_remaining_of_residual373_radius_certificates",
+              "#print axioms N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus.residualIDs_card",
+              "#print axioms N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus.b13_remaining_of_residual373_radius_certificates"]
     OUT.write_text("\n".join(lines) + "\n")
     print(f"wrote {OUT} ({len(lines)} lines, {len(ids)} ids)")
 

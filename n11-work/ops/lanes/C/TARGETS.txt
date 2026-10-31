@@ -6,6 +6,12 @@ N11Formalization.EnergyTerminalBatchB13ResidualCertificates
 N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair
 # Conditional 373-id residual consumer for the repaired paid set.
 N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
+# Repaired 373-id census (`decide +kernel`) plus literal-373 certificate
+# consumer; keep early so serial CI reaches it before the long target list.
+N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus
+# Direct consumer: literal 373 certificates or packet producers plus the
+# explicit seven-class premise yields the final statement and disk bound.
+N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusMain
 # Public exclusion tree instantiated as the canonical packet exclusion.
 N11Formalization.EnergyTerminalBatchB13PublicResidualCanonical
 N11Formalization.FrozenCapRowCap1409Smoke
@@ -99,5 +105,4 @@ N11Formalization.EnergyTerminalBatchB13Refine3623Main
 N11Formalization.EnergyRefineN3792
 N11Formalization.EnergyTerminalBatchB13Refine3792
 N11Formalization.EnergyTerminalBatchB13Refine3792Main
-N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus
 # Structural sdiff variant withheld: its imported 389 census C01-C04 is CI-red.
