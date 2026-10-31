@@ -19,6 +19,7 @@ def main() -> None:
     assert [row["witnessK"] for row in sectors] == [1024, 1024] + [1536] * 7
 
     lines = [
+        "import N11Formalization.ActualRingLinkBoundaryData",
         "import N11Formalization.SevenClassQ0Deg3UpperTables",
         "",
         "/-! Lane A: exact sector peaks and the sector unimodal reduction.",
@@ -34,6 +35,7 @@ def main() -> None:
         "open MetricAreaRationalCertificate",
         "open SevenClassQ0Deg3Bins",
         "open SevenClassQ0Deg3UpperTables",
+        "open N11Formalization.ActualRingLinkBoundaryData",
         "",
         "/-- Exact sector peaks from `q0-degree3-piecewise-8.json`. -/",
         "def sectorWitness : Fin 9 → Fin 2049 := ![",
