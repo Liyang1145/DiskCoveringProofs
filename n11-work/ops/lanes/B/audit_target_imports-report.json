@@ -1,5 +1,5 @@
 {
-  "closure_size": 1965,
+  "closure_size": 1966,
   "forbidden": [],
   "missing": [],
   "ok": true,
@@ -17,6 +17,7 @@
     "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteen",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
+    "N11Formalization.LaneBRowCapDecideProbe",
     "N11Formalization.LaneBFrozenCapRowCap1409",
     "N11Formalization.LaneBFrozenCapRowCap2337",
     "N11Formalization.LaneBFrozenCapRowCap2341",

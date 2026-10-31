@@ -76,7 +76,7 @@ def split_proof(text: str, node: int, y: list[Fraction],
                 f"y_{node} {q} * rowA {i} {j} {q}" for q in range(9))
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {terms} ≤ db {i} {j} := by
-  norm_num [y_{node}, rowA, db, dbmVal]''')
+  decide +kernel''')
     rows = []
     for i in range(10):
         cases = "\n".join(
