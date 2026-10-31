@@ -1,0 +1,29 @@
+{
+  "session": "2026-10-31-session-84",
+  "scope": "static exact-rational and generated-source audit; not a Lean kernel verdict",
+  "ok": true,
+  "nodes": 7,
+  "ordered_pairs_per_node": 100,
+  "leaf_proofs_per_module": 100,
+  "weight_sum": "1",
+  "violations": [],
+  "sha256": {
+    "split_rowcap_modules.py": "5BE410B27E537638D3D255ED8F587EAB73D7B12ABC627E3EFD483BF10D35F910",
+    "LaneBRowCapDecideProbe.lean": "D48FFDA1CC99B5704D7497E766E7E7D854AB6F229B8714AF77081AB98A7824D5",
+    "LaneBFrozenCapRowCap1409.lean": "7916D9D1CECC57A58E058064AC82A7CB806522EF4325EF607B7051C9049DB4F5",
+    "LaneBFrozenCapRowCap2337.lean": "36B06C2AA00735A8A1D0AFCD9C771EEE61AA464179B5235BCBFC1B16E866072A",
+    "LaneBFrozenCapRowCap2341.lean": "D04873B53930EEDACF75B70A56263E81E97A8EC5517018B8F10A4C1F6004D841",
+    "LaneBFrozenCapRowCap2356.lean": "97FDD0B769F85004627618BF2FFC3C049F448A421B7829A62CFD20924114E038",
+    "LaneBFrozenCapRowCap2360.lean": "28A20ED1AB925E424ADAAAC370277E8EBC99C5C80193C8CF2851AB51C5D68034",
+    "LaneBFrozenCapRowCap2368.lean": "2B1A5F27A2EAE701AAB8A91902E53AD093D78E4D5018CC3F45664544676A112A",
+    "LaneBFrozenCapRowCap2370.lean": "19AC9628B30E3100A68F135FE51AFA2767FE288D88F82DAE6E68547F50C7D5FF"
+  },
+  "checks": {
+    "emitter_check_exit": 0,
+    "py_compile_exit": 0,
+    "git_diff_check_exit": 0,
+    "forbidden_token_scan": "only intentional #print axioms lines"
+  },
+  "kernel_status": "CI pending",
+  "next": "serial CI must pass LaneBRowCapDecideProbe before the seven row-cap modules"
+}
