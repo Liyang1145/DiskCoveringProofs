@@ -91,6 +91,7 @@ def main() -> None:
         witness = int(data["sectors"][i]["witnessK"])
         lines += [
             f"theorem sectorPeakValid_{i} : SectorPeakValid {i} := by",
+            "  unfold SectorPeakValid",
             f"  rw [show sectorWitness {i} = ({witness} : Fin 2049) by decide +kernel]",
             "  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,",
             "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,",

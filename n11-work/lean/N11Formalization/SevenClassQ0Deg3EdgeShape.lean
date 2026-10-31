@@ -206,6 +206,86 @@ theorem edgeHiReal_monotoneOn_of_ratio_le (i : Fin 21) (w : Fin 2049)
     linarith
 
 theorem edge_ratio_fifteen_lt_cosT14_nodeQ_389 :
+/-- A monotone analytic prefix closes an increasing-grid-prefix obligation. -/
+theorem edgeIncTo_of_monotoneOn_to (i : Fin 21) (w : Fin 2049)
+    (hw : w = edgeWitness i)
+    (hmono : MonotoneOn (edgeHiReal (edgeCoeff i))
+      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 w : ℚ))) :
+    EdgeIncTo i := by
+  intro k hk
+  rcases lt_or_eq_of_le hk with hlt | hkw
+  · have hqk0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 k := by
+      unfold nodeQ
+      positivity
+    have hqw0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 w := by
+      unfold nodeQ
+      positivity
+    have hqle : nodeQ RatInterval.piHi 2048 k ≤ nodeQ RatInterval.piHi 2048 w := by
+      unfold nodeQ
+      have hkw' : (k.val : ℚ) ≤ (w.val : ℚ) := by
+        exact_mod_cast (Fin.le_iff_val_le_val.mpr (le_of_lt hlt))
+      have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_left hkw' hp) (by norm_num)
+    have hmono' : edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
+        edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) := by
+      exact hmono ⟨by exact_mod_cast hqk0, hqle⟩
+        ⟨by exact_mod_cast hqw0, le_rfl⟩ hqle
+    have hR : ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) : ℚ) : ℝ) ≤
+        ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) : ℚ) : ℝ) := by
+      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) hqk0]
+      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) hqw0]
+      exact hmono'
+    have hfin : edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
+        edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) := by
+      exact_mod_cast hR
+    simpa [hw] using hfin
+  · rw [hkw, hw]
+    exact le_rfl
+
+/-- A monotone prefix ending at the node immediately before a peak, followed
+by one exact grid step, closes the increasing-prefix obligation. -/
+theorem edgeIncTo_of_monotoneOn_to_prev_and_step (i : Fin 21)
+    (w prev : Fin 2049) (hprev : prev.val + 1 = w.val)
+    (hw : w = edgeWitness i)
+    (hmono : MonotoneOn (edgeHiReal (edgeCoeff i))
+      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 prev : ℚ)))
+    (hstep : edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) ≤
+      edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w)) :
+    EdgeIncTo i := by
+  intro k hk
+  by_cases hkp : k ≤ prev
+  · have hqk0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 k := by
+      unfold nodeQ
+      positivity
+    have hqp0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 prev := by
+      unfold nodeQ
+      positivity
+    have hqle : nodeQ RatInterval.piHi 2048 k ≤
+        nodeQ RatInterval.piHi 2048 prev := by
+      unfold nodeQ
+      have hkv : (k.val : ℚ) ≤ (prev.val : ℚ) := by
+        exact_mod_cast (Fin.le_iff_val_le_val.mp hkp)
+      have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_left hkv hp) (by norm_num)
+    have hmono' : edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
+        edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) := by
+      exact hmono ⟨by exact_mod_cast hqk0, hqle⟩
+        ⟨by exact_mod_cast hqp0, le_rfl⟩ hqle
+    have hR : ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) : ℚ) : ℝ) ≤
+        ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) : ℚ) : ℝ) := by
+      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) hqk0]
+      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) hqp0]
+      exact hmono'
+    have hfin : edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
+        edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) := by
+      exact_mod_cast hR
+    exact hfin.trans hstep
+  · have hlt : prev.val < k.val := by
+      exact Fin.lt_def.mp (lt_of_not_ge hkp)
+    have hkle : k.val ≤ w.val := Fin.le_iff_val_le_val.mp hk
+    have hkeq : k = w := Fin.ext (by omega)
+    rw [hkeq, hw]
+    exact le_rfl
     (edgeCoeff 15 : ℚ) / (19 / 50 : ℚ) ^ 2 <
       cosTQ 14 (nodeQ RatInterval.piHi 2048 389) := by
   norm_num [edgeCoeff, tableEdges, mu, cosTQ, nodeQ, RatInterval.piHi,
@@ -293,49 +373,55 @@ theorem edgeIncTo_zero : EdgeIncTo 0 := by
   · norm_num [edgeWitness]
   · exact edgeHiReal_monotoneOn_zero
 
-theorem edge_ratio_one_lt_cosT14_nodeQ_878 :
+theorem edge_ratio_one_lt_cosT14_nodeQ_877 :
     (edgeCoeff 1 : ℚ) / (19 / 50 : ℚ) ^ 2 <
-      cosTQ 14 (nodeQ RatInterval.piHi 2048 878) := by
+      cosTQ 14 (nodeQ RatInterval.piHi 2048 877) := by
   norm_num [edgeCoeff, tableEdges, mu, cosTQ, nodeQ, RatInterval.piHi,
     Finset.sum_range_succ]
 
 theorem edgeHiReal_monotoneOn_one :
     MonotoneOn (edgeHiReal (edgeCoeff 1))
-      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 878 : ℚ)) := by
-  apply edgeHiReal_monotoneOn_of_ratio_le 1 878
+      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 877 : ℚ)) := by
+  apply edgeHiReal_monotoneOn_of_ratio_le 1 877
   intro x hx
-  apply edge_ratio_le_cosHiReal_of_prefix 1 878
+  apply edge_ratio_le_cosHiReal_of_prefix 1 877
   · norm_num [nodeQ, RatInterval.piHi]
-  · exact edge_ratio_one_lt_cosT14_nodeQ_878
+  · exact edge_ratio_one_lt_cosT14_nodeQ_877
   · exact hx.1
   · exact hx.2
 
 theorem edgeIncTo_one : EdgeIncTo 1 := by
-  apply edgeIncTo_of_monotoneOn_to 1 878
+  apply edgeIncTo_of_monotoneOn_to_prev_and_step 1 878 877
+  · norm_num
   · norm_num [edgeWitness]
   · exact edgeHiReal_monotoneOn_one
+  · norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag,
+      sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 
-theorem edge_ratio_eight_lt_cosT14_nodeQ_878 :
+theorem edge_ratio_eight_lt_cosT14_nodeQ_877 :
     (edgeCoeff 8 : ℚ) / (19 / 50 : ℚ) ^ 2 <
-      cosTQ 14 (nodeQ RatInterval.piHi 2048 878) := by
+      cosTQ 14 (nodeQ RatInterval.piHi 2048 877) := by
   norm_num [edgeCoeff, tableEdges, mu, cosTQ, nodeQ, RatInterval.piHi,
     Finset.sum_range_succ]
 
 theorem edgeHiReal_monotoneOn_eight :
     MonotoneOn (edgeHiReal (edgeCoeff 8))
-      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 878 : ℚ)) := by
-  apply edgeHiReal_monotoneOn_of_ratio_le 8 878
+      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 877 : ℚ)) := by
+  apply edgeHiReal_monotoneOn_of_ratio_le 8 877
   intro x hx
-  apply edge_ratio_le_cosHiReal_of_prefix 8 878
+  apply edge_ratio_le_cosHiReal_of_prefix 8 877
   · norm_num [nodeQ, RatInterval.piHi]
-  · exact edge_ratio_eight_lt_cosT14_nodeQ_878
+  · exact edge_ratio_eight_lt_cosT14_nodeQ_877
   · exact hx.1
   · exact hx.2
 
 theorem edgeIncTo_eight : EdgeIncTo 8 := by
-  apply edgeIncTo_of_monotoneOn_to 8 878
+  apply edgeIncTo_of_monotoneOn_to_prev_and_step 8 878 877
+  · norm_num
   · norm_num [edgeWitness]
   · exact edgeHiReal_monotoneOn_eight
+  · norm_num [edgeUpper, edgeCoeff, tableEdges, mu, nodeQ, sinHiNLag,
+      sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 
 /-- A threshold at the node before a peak, followed by one exact grid step,
 closes an increasing prefix when the peak lies beyond `π/2`. -/
@@ -786,87 +872,6 @@ theorem edgeHiReal_monotoneOn_fourteen :
         _ ≤ (19 / 50 : ℝ) ^ 2 * cosHiReal x :=
           mul_le_mul_of_nonneg_left hcos hA.le
     linarith
-
-/-- A monotone analytic prefix closes an increasing-grid-prefix obligation. -/
-theorem edgeIncTo_of_monotoneOn_to (i : Fin 21) (w : Fin 2049)
-    (hw : w = edgeWitness i)
-    (hmono : MonotoneOn (edgeHiReal (edgeCoeff i))
-      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 w : ℚ))) :
-    EdgeIncTo i := by
-  intro k hk
-  rcases lt_or_eq_of_le hk with hlt | hkw
-  · have hqk0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 k := by
-      unfold nodeQ
-      positivity
-    have hqw0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 w := by
-      unfold nodeQ
-      positivity
-    have hqle : nodeQ RatInterval.piHi 2048 k ≤ nodeQ RatInterval.piHi 2048 w := by
-      unfold nodeQ
-      have hkw' : (k.val : ℚ) ≤ (w.val : ℚ) := by
-        exact_mod_cast (Fin.le_iff_val_le_val.mpr (le_of_lt hlt))
-      have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
-      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_left hkw' hp) (by norm_num)
-    have hmono' : edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
-        edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) := by
-      exact hmono ⟨by exact_mod_cast hqk0, hqle⟩
-        ⟨by exact_mod_cast hqw0, le_rfl⟩ hqle
-    have hR : ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) : ℚ) : ℝ) ≤
-        ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) : ℚ) : ℝ) := by
-      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) hqk0]
-      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) hqw0]
-      exact hmono'
-    have hfin : edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
-        edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w) := by
-      exact_mod_cast hR
-    simpa [hw] using hfin
-  · rw [hkw, hw]
-    exact le_rfl
-
-/-- A monotone prefix ending at the node immediately before a peak, followed
-by one exact grid step, closes the increasing-prefix obligation. -/
-theorem edgeIncTo_of_monotoneOn_to_prev_and_step (i : Fin 21)
-    (w prev : Fin 2049) (hprev : prev.val + 1 = w.val)
-    (hw : w = edgeWitness i)
-    (hmono : MonotoneOn (edgeHiReal (edgeCoeff i))
-      (Set.Icc 0 (nodeQ RatInterval.piHi 2048 prev : ℚ)))
-    (hstep : edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) ≤
-      edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 w)) :
-    EdgeIncTo i := by
-  intro k hk
-  by_cases hkp : k ≤ prev
-  · have hqk0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 k := by
-      unfold nodeQ
-      positivity
-    have hqp0 : (0 : ℚ) ≤ nodeQ RatInterval.piHi 2048 prev := by
-      unfold nodeQ
-      positivity
-    have hqle : nodeQ RatInterval.piHi 2048 k ≤
-        nodeQ RatInterval.piHi 2048 prev := by
-      unfold nodeQ
-      have hkv : (k.val : ℚ) ≤ (prev.val : ℚ) := by
-        exact_mod_cast (Fin.le_iff_val_le_val.mp hkp)
-      have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
-      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_left hkv hp) (by norm_num)
-    have hmono' : edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
-        edgeHiReal (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) := by
-      exact hmono ⟨by exact_mod_cast hqk0, hqle⟩
-        ⟨by exact_mod_cast hqp0, le_rfl⟩ hqle
-    have hR : ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) : ℚ) : ℝ) ≤
-        ((edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) : ℚ) : ℝ) := by
-      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) hqk0]
-      rw [edgeUpper_cast_eq (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) hqp0]
-      exact hmono'
-    have hfin : edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 k) ≤
-        edgeUpper (edgeCoeff i) (nodeQ RatInterval.piHi 2048 prev) := by
-      exact_mod_cast hR
-    exact hfin.trans hstep
-  · have hlt : prev.val < k.val := by
-      exact Fin.lt_def.mp (lt_of_not_ge hkp)
-    have hkle : k.val ≤ w.val := Fin.le_iff_val_le_val.mp hk
-    have hkeq : k = w := Fin.ext (by omega)
-    rw [hkeq, hw]
-    exact le_rfl
 
 theorem edge_ratio_sixteen_lt_cosT14_nodeQ_410 :
     (edgeCoeff 16 : ℚ) / (19 / 50 : ℚ) ^ 2 <

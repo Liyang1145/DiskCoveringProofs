@@ -51,13 +51,15 @@ def main() -> int:
 
     blocks = re.findall(
         r"theorem sectorPeakValid_(\d+) : SectorPeakValid \1 := by"
-        r"((?:\n  rw \[[^\n]*\])?)\s+norm_num \[([^\]]*)\]",
+        r"((?:\n  (?:unfold SectorPeakValid|rw \[[^\n]*\]))*)\s+norm_num \[([^\]]*)\]",
         text,
     )
     indices = [int(i) for i, _, _ in blocks]
     if indices != list(range(9)):
         failures.append(f"expected indices 0..8 once each, got {indices}")
     for i, witness_rw, names_text in blocks:
+        if "unfold SectorPeakValid" not in witness_rw:
+            failures.append(f"sectorPeakValid_{i}: witness rewrite precedes SectorPeakValid unfold")
         if "decide +kernel" not in witness_rw:
             failures.append(f"sectorPeakValid_{i}: missing kernel-decided witness equality")
         names = {name.strip() for name in names_text.replace("\n", " ").split(",")}

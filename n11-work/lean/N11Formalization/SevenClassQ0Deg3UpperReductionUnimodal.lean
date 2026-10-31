@@ -58,126 +58,147 @@ theorem edgeValid_of_unimodal (h : EdgeUnimodal) : EdgeValid := by
 /-- The 21 peak comparisons recorded by the exact rational audit, split into
 separate kernel checks to keep elaboration bounded. -/
 theorem edgePeakValid_0 : EdgePeakValid 0 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 0 = (543 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_1 : EdgePeakValid 1 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 1 = (878 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_2 : EdgePeakValid 2 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 2 = (1112 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_3 : EdgePeakValid 3 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 3 = (1064 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_4 : EdgePeakValid 4 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 4 = (1073 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_5 : EdgePeakValid 5 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 5 = (1073 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_6 : EdgePeakValid 6 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 6 = (1064 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_7 : EdgePeakValid 7 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 7 = (1112 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_8 : EdgePeakValid 8 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 8 = (878 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_9 : EdgePeakValid 9 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 9 = (1489 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_10 : EdgePeakValid 10 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 10 = (1489 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_11 : EdgePeakValid 11 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 11 = (1118 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_12 : EdgePeakValid 12 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 12 = (0 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_13 : EdgePeakValid 13 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 13 = (0 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_14 : EdgePeakValid 14 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 14 = (486 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_15 : EdgePeakValid 15 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 15 = (389 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_16 : EdgePeakValid 16 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 16 = (411 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_17 : EdgePeakValid 17 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 17 = (406 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_18 : EdgePeakValid 18 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 18 = (411 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_19 : EdgePeakValid 19 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 19 = (389 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
 
 theorem edgePeakValid_20 : EdgePeakValid 20 := by
+  unfold EdgePeakValid
   rw [show edgeWitness 20 = (486 : Fin 2049) by decide +kernel]
   norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,

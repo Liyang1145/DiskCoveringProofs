@@ -20,7 +20,7 @@ def main() -> int:
     text = LEAN.read_text(encoding="utf-8")
     blocks = re.findall(
         r"theorem edgePeakValid_(\d+) : EdgePeakValid \1 := by"
-        r"((?:\n  rw \[[^\n]*\])?)\s+norm_num \[([^\]]*)\]",
+        r"((?:\n  (?:unfold EdgePeakValid|rw \[[^\n]*\]))*)\s+norm_num \[([^\]]*)\]",
         text,
     )
     indices = [int(i) for i, _, _ in blocks]
@@ -28,6 +28,8 @@ def main() -> int:
     if indices != list(range(21)):
         failures.append(f"expected indices 0..20 once each, got {indices}")
     for i, witness_rw, names_text in blocks:
+        if "unfold EdgePeakValid" not in witness_rw:
+            failures.append(f"edgePeakValid_{i}: witness rewrite precedes EdgePeakValid unfold")
         if "decide +kernel" not in witness_rw:
             failures.append(f"edgePeakValid_{i}: missing kernel-decided witness equality")
         names = {name.strip() for name in names_text.replace("\n", " ").split(",")}
