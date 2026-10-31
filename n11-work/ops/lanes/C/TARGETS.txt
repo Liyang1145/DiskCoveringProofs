@@ -14,6 +14,9 @@ N11Formalization.FrozenCapPublicExcludedTree
 N11Formalization.FrozenCapPublicExcludedAggregate
 # Independent corrected <=4-field witnesses; no row-cap/tree consumer yet.
 N11Formalization.FrozenCapFourFieldWitnessesCorrected
+# Corrected witnesses -> exact row caps -> conditional tree exclusions.
+N11Formalization.FrozenCapFourFieldCorrectedRowCaps
+N11Formalization.FrozenCapFourFieldCorrectedTree
 # Unpriced post-fix refinement chain: keep first so the next serial run reaches it.
 N11Formalization.EnergyRefineN3853
 N11Formalization.EnergyRefineN0037

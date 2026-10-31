@@ -24,6 +24,27 @@ IDS = [2356, 2360]
 PAIRS = exact5.PAIRS
 
 
+def solve_float(lines):
+    """Solve a small dense float system by pivoted Gaussian elimination."""
+    matrix = [list(line) for line in lines]
+    size = len(matrix)
+    for column in range(size):
+        pivot = max(range(column, size), key=lambda row: abs(matrix[row][column]))
+        if abs(matrix[pivot][column]) < 1e-14:
+            return None
+        matrix[column], matrix[pivot] = matrix[pivot], matrix[column]
+        scale = matrix[column][column]
+        matrix[column] = [value / scale for value in matrix[column]]
+        for row in range(size):
+            if row == column:
+                continue
+            scale = matrix[row][column]
+            if scale:
+                matrix[row] = [matrix[row][k] - scale * matrix[column][k]
+                               for k in range(size + 1)]
+    return tuple(matrix[row][-1] for row in range(size))
+
+
 def float_face5(fields, gains, rhs):
     sub = {}
     for (i, j), cap in rhs.items():
@@ -44,16 +65,16 @@ def float_face5(fields, gains, rhs):
     if feasible((0.0, 0.0, 0.0, 0.0)):
         best = (gain((0.0, 0.0, 0.0, 0.0)),) + (0.0,) * 4
     for tight in combinations(inequalities, 3):
-        point = exact5.solve((simplex,) + tight)
+        point = solve_float((simplex,) + tight)
         if point is not None and feasible(point):
             value = gain(point)
-            if best is None or value > best[0]:
+            if best is None or value < best[0]:
                 best = (value,) + point
     for tight in combinations(inequalities, 4):
-        point = exact5.solve(tight)
+        point = solve_float(tight)
         if point is not None and feasible(point):
             value = gain(point)
-            if best is None or value > best[0]:
+            if best is None or value < best[0]:
                 best = (value,) + point
     return best
 
@@ -86,11 +107,11 @@ def main():
             cand = float_face5(fields, gains_f, rhs)
             if cand is not None:
                 ranked.append((cand[0], fields))
-        ranked.sort(reverse=True)
+        ranked.sort()
         best = None
         for _, fields in ranked[:args.top]:
             cand = exact5.face5(fields, [common.endpoint_lo(Q(s)) for s in rec["g"]], rhs)
-            if cand is not None and (best is None or cand[0] > best[0]):
+            if cand is not None and (best is None or cand[0] < best[0]):
                 best = (cand[0], fields, cand[1:])
         row = {"id": node, "required": str(required),
                "float_faces_checked": len(ranked), "faces_total": len(faces),
@@ -102,7 +123,7 @@ def main():
             row.update(best_gain=str(best[0]), support=list(best[1]),
                        coordinates=[str(v) for v in best[2]],
                        exact_margin=str(best[0] - required),
-                       status="PASS" if best[0] > required else row["status"])
+                       status="PASS" if best[0] < required else row["status"])
             y = [Q(0)] * 9
             for k in range(4): y[best[1][k]] = best[2][k]
             y[best[1][4]] = 1 - sum(best[2])

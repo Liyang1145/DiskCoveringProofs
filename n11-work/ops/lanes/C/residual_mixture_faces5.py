@@ -2,9 +2,10 @@
 """Exact exhaustive <=5-field gain search for the seven public residual records.
 
 For a fixed five-field support, the 100 ordered-pair caps collapse to at most
-31 distinct half-spaces. The cap-feasible piecewise-linear gain is maximised at
-a rational vertex. A PASS is a genuine five-field rescue; failure is evidence
-only for supports of size at most five, not a kernel theorem.
+31 distinct half-spaces. The cap-feasible piecewise-linear gain is minimised at
+a rational vertex. The Lean obligation is `F0 + gain < T^2`, so a low gain is
+the favourable direction. A PASS is a genuine five-field rescue; failure is
+evidence only for supports of size at most five, not a kernel theorem.
 """
 from fractions import Fraction as Q
 from itertools import combinations
@@ -73,7 +74,7 @@ def solve(lines):
 def face5(fields, gains, rhs):
     subset_rhs = {}
     for (i, j), cap in rhs.items():
-        bits = tuple(Q((field < j) - (field < i)) for field in fields)
+        bits = tuple(Q(common.row_a(i, j, field)) for field in fields)
         coeffs = tuple(bits[k] - bits[4] for k in range(4))
         line_rhs = cap - bits[4]
         subset_rhs[coeffs] = min(line_rhs, subset_rhs.get(coeffs, line_rhs))
@@ -108,14 +109,14 @@ def face5(fields, gains, rhs):
         if point is None or not feasible(point):
             continue
         gain = gain_at(point)
-        if best is None or gain > best[0]:
+        if best is None or gain < best[0]:
             best = (gain,) + point
     for tight in combinations(inequalities, 4):
         point = solve(tight)
         if point is None or not feasible(point):
             continue
         gain = gain_at(point)
-        if best is None or gain > best[0]:
+        if best is None or gain < best[0]:
             best = (gain,) + point
     return best
 
@@ -150,10 +151,10 @@ def main():
                 print(node, "time budget hit after", index, "faces")
                 break
             candidate = face5(fields, gains, rhs)
-            if candidate is not None and (best is None or candidate[0] > best[0]):
+            if candidate is not None and (best is None or candidate[0] < best[0]):
                 best = (candidate[0], fields, candidate[1:])
         status = ("timeout-partial" if timed_out else
-                  "PASS" if best is not None and best[0] > required else
+                  "PASS" if best is not None and best[0] < required else
                   "no <=5-field rescue")
         row = {
             "id": node,
