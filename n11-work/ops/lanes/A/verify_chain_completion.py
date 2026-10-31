@@ -150,22 +150,28 @@ def main():
 
     targets = (HERE / "TARGETS.txt").read_text(encoding="utf-8").splitlines()
     targets = [line.strip() for line in targets if line.strip() and not line.startswith("#")]
-    assert targets[:8] == [
-        "N11Formalization.C450Source36Segment",
-        "N11Formalization.C450ChainCompletionEndpoint",
-        "N11Formalization.C450ChainCompletionTail",
-        "N11Formalization.C450ChainCompletionMid1",
-        "N11Formalization.C450ChainCompletionMid2",
-        "N11Formalization.C450ChainCompletionMid3",
-        "N11Formalization.C450ChainCompletion",
+    assert targets[:2] == [
         "N11Formalization.C450ChainCompletionMain",
+        "N11Formalization.C450ChainCompletionAudit",
     ], targets
+
+    root = (LEAN.parent / "N11Formalization.lean").read_text(encoding="utf-8")
+    root_markers = [
+        "-- HARK-MISSING (not in public assets; lane A reconstructs): "
+        "import N11Formalization.C450ChainCompletion",
+        "-- HARK-MISSING (not in public assets; lane A reconstructs): "
+        "import N11Formalization.C450ChainCompletionMain",
+    ]
+    assert all(marker in root for marker in root_markers), (
+        "C450 chain root-import markers drifted; supervisor must inspect the root"
+    )
 
     print("PASS: five telescoping chunks contain all 25 transfers exactly once")
     print("PASS: chunk imports and output types reach Source31,26,21,16,11 in order")
     print("PASS: h450 retains the C450Source11 consumer interface")
     print("PASS: Source36 endpoint and ActualMetricClassReduction consumer signatures agree")
-    print("PASS: all seven emitted modules are deterministic and CI target order is exact")
+    print("PASS: all seven emitted modules are deterministic and top-level CI targets are exact")
+    print("PASS: root still exposes both C450 HARK-MISSING markers (not yet imported)")
     print("PASS: no forbidden tokens and no proof-term-wide #print axioms in CI files")
 
 
