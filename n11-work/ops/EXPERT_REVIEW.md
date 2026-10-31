@@ -1,134 +1,132 @@
-# EXPERT REVIEW - n=11 Lean lanes
+# Expert review — n=11 Lean lanes
 
-**Date:** 2026-10-30 (UTC)
+**Date:** 2026-10-31 (UTC)
 
-**Scope:** `n11/work` HEAD `a8b025f8`; latest Lean-bearing commit `cc04268c`.
-Completed evidence is run `41119359460` on `6937fb90`, with run `41123531381`
-still pending. I read the lane notes/targets, guidance/state, recent commits,
-CI summary and full job log, and the newest A/B/C Lean files. No Lean, lakefile,
-toolchain, or manifest edit; no full build; no commit.
+**Scope:** `n11/work` Lean-bearing HEAD `24e434b4` (ops-only HEAD
+`49f04dd8`); CI artifact `13024663395` from run `41150468008`, plus the full
+job log behind `ops/ci/LATEST.md`. I read the lane notes/targets, guidance,
+status, recent Lean diffs, and current source. No Lean/lakefile/toolchain edit,
+no full build, no commit.
 
 ## Overall
 
-- The genuine gains are C450 completion and the core B13 aggregate. C450
-  `36/36` is imported and CI-green. B13 is CI-green at `1997/2386` paid with
-  `389` conditional residual ids; the root still imports B12, so this is not
-  root-reachable current credit.
-- Seven-class exclusions remain `0/7`. No lane has produced a theorem of the
-  arbitrary-center full-disk statement, and no row-cap or singleton refinement
-  is itself a class exclusion.
-- CI “success” is not a Lean verdict: the workflow ends `true`, while
-  `summary.json` records individual exits. At `6937fb90`, EndpointChecks, all
-  lane-B row caps, Thirteen, and the public excluded tree exit 1; many later
-  Lane A exits are dependency failures.
-- Lane A's claim that EndpointChecks and all 42 edge-shape facts are green at
-  `1b2fa7a8` is factually wrong. That run's summary has EndpointChecks and
-  every downstream edge/sector target at exit 1. The C450 targets are green.
-- No float LP, `sorry`, new axiom, `native_decide`, or `maxHeartbeats 0` was
-  found in the reviewed newest files. Exact Fractions, byte hashes, tree
-  audits, and manifests are diagnostics unless a kernel-green consumer uses
-  them. `decide +kernel` is confined mostly to bounded literal blocks, but
-  large rational tables and repeated `norm_num` remain the main build risk.
+- **Real progress:** the reconstructed C450 telescope (`C450ChainCompletion`
+  and `Main`/`Audit`) is kernel-green, including the source-36 nonempty-tail
+  audit. The root still comments out both imports, so this is not yet
+  root-reachable credit.
+- **Energy:** core B13 is green at `1997/2386` (389 residual). The green
+  `RefineThirteen` chain raises the largest currently kernel-paid aggregate to
+  `2010/2386` (376 residual in its predicate). The claimed `2013/373` is **not**
+  paid: `RefineFourteen` and `RefineSixteen` are red.
+- **Seven classes:** still `0/7`. No `Q0RunExclusion`, `Q1RunExclusion`, or
+  `SevenClassExclusions` is proved. Lane A has a coherent q0-degree-three
+  reduction, but no `Q0Degree3AreaInput` or `Degree3AreaCertificate` instance.
+- **CI verdict:** the workflow says `success`, but artifact `summary.json` has
+  120 target exits and 47 nonzero. The workflow's trailing `true` is a false
+  green. Use the artifact/`=== EXIT ... 0` lines, never the run conclusion.
+- **No source `sorry`/`admit`/new axiom/`native_decide`/`ofReduceBool`/
+  `implemented_by`/`maxHeartbeats 0` found in the reviewed newest modules.**
+  Failed Lean modules can nevertheless print `sorryAx` by error recovery; that
+  is an invalid red module, not a hidden proof.
+- **Fake/pending progress to reject:** B's `2013/373` static audit and hashes;
+  C's 700 exact cap inequalities and hash-pinned tree matches; A's decimal
+  slack audit; any workflow-level green check. These are diagnostics or
+  generators, not kernel payments.
 
 ## Lane A
 
-- **Verdict: sound reduction, currently blocked before any intended count
-  reduction lands.** The q0-degree-three reduction to exact edge/sector
-  maxima, cosine monotonicity, and finite witness checks are mathematically
-  coherent. Only row 0 bins 0--4 are addressed, i.e. `5/72` row-bin
-  obligations. There is no `SectorBinUnimodal` assembler, `SectorValid`,
-  strict total bound, `Q0Degree3AreaInput`, or exclusion proof.
-- **Current CI:** at `1b2fa7a8`, `SevenClassQ0Deg3EndpointChecks` and
-  `UpperReductionUnimodal` are red, as are EdgeSuffix, EdgeShape, SectorPeak,
-  SectorShape, SectorCalculus, BinShape, BinWitness and BinWitnessBounds by
-  dependency. `SectorBin0` is also red. Bins 1--4 were added after that run
-  and are CI pending; none is kernel-green.
-- **Endpoint diagnosis:** at `EndpointChecks.lean:217--231`, the goals retain
-  `![...] 2`, etc.; `norm_num` does not reduce those vector lookups. Lines
-  245/257 then report `No goals to be solved`. This is tactic plumbing, not a
-  numerical counterexample, but it stops the whole q0 chain.
-- **Mathematical bug:** `SevenClassQ0Deg3SectorBin2.lean:127` allows
-  `n = 543`, while the called `sectorValue_zero_dec_of_bin2` requires
-  `544 ≤ k.val`. The claimed exact `543 -> 544` step is absent, so the stated
-  decreasing lemma is not proved.
-- **Highest leverage:** stop emitting isolated bins. First split endpoint
-  scalars out of vector literals and re-green EndpointChecks, then add the
-  `543 -> 544` step, then one row-0 `SectorBinUnimodal` assembler. Concrete
-  forms: `theorem nodeBinAt_two_eq : nodeBinAt 2 = 133/625 := by rfl` (or
-  `simp only [nodeBinAt]; rfl`), and
-  `theorem sectorAt_zero_bin2_step_543 : sectorAt 0 544 ≤ sectorAt 0 543`.
-  For endpoint bins, use scalar `endpointUBin0 : ℚ := ...` definitions and
-  eight `simp only [...] ; norm_num` leaves; do not reuse the vector inside
-  every branch.
-- After that assembler is exit 0, prove `SectorValid`, then the strict total
-  and edge instantiation. Do not call the q0 reduction paid before those.
+- **Verdict: mathematically sound direction, operationally misdiagnosed.**
+  The all-row bin shapes, sector assembler, and edge/sector table interface are
+  a sensible reduction towards q0-degree-three. C450 itself is no longer an
+  open proof-construction problem; root integration is the remaining act.
+- **Fresh blocker:** `EndpointChecks.lean:257--259` and `:277--279` still fail
+  `omega` on the impossible literal branches `j = 5,6,7`. The session-76 note
+  that current HEAD repaired this is false: the latest CI log shows the six
+  errors and every downstream A target dependency-red.
+- **Concrete first fix:** after `fin_cases j`, replace each of the six `omega`
+  lines with `norm_num at hj` (or `exact absurd hj (by norm_num)`). Target only
+  `SevenClassQ0Deg3EndpointChecks` first; do not bulk-edit downstream modules
+  from dependency errors.
+- **Then:** require exit 0 for `EndpointChecks`, `UpperReductionUnimodal`, the
+  two edge suffixes, `EdgeShape`, all bin modules, `SectorAssembler`, and
+  `TableBounds`, in that order.
+- **Mathematical gap after green:** `TableBounds` is only the fixed table
+  interface. It does not identify `edges R` with a canonical rotated table and
+  does not construct `Degree3AreaCertificate`. A useful next signature is
+  `theorem areaCertificate_of_table ... (hedges : edges R = image ... ) :
+  Nonempty (Degree3AreaCertificate h hr R)`, carrying the strict total proof.
+- **No credit:** `sectorValid` does not imply an exclusion until that
+  certificate instance exists. The `18,441`-value decimal audit is not proof of
+  `totalUpper < piLo`.
 
 ## Lane B
 
-- **Verdict: B13 is the strongest real result; the row-cap work is a dead
-  end.** The B13 union/disjointness/radius chain is correct and green. The
-  singleton refinements already give `N3112`, `N3116`, `N3431`, and `N3573`
-  green, but they are not combined, so the ledger remains `1997/2386` with
-  residual `389`.
-- At `6937fb90`, core B13 and the existing Eleven/Eight/Seven wrappers are
-  green, while `Refine0037`, `RefineTwelve`, and `RefineThirteen` are red. The
-  old `0037` error was `omega` at line 240; the current literal-block repair is
-  in the pending `cc04268c` run and is not yet credit.
-- All seven `LaneBFrozenCapRowCap*` targets are red at `6937fb90`, with
-  unresolved `![...] 2` lookups. Even a repaired cap would not supply the
-  missing `f0Lo`/`g` hypotheses needed to pay a radius.
-- **Highest leverage:** after `Refine0037` gets exit 0, create one aggregate
-  `EnergyTerminalBatchB13RefineSixteen.lean` combining
-  `RefineEleven.newIDs` with `N0037`, `N3112`, `N3116`, `N3431`, and `N3573`.
-  Prove `paid_count = 2013`, transfer `remaining_of` to B13, and expose
-  `RemainingTerminalRadius` with residual `373`. Keep the proof hierarchical:
-  `newIDs := RefineEleven.newIDs ∪ N0037.newIDs ∪ ...`; use singleton
-  `rw [EnergyRefineNxxxx.newIDs, Finset.mem_singleton]` and the existing
-  `not_paid_*` lemmas, not a single giant `decide`.
-- The supervisor-only root switch B12Main -> B13Main changes reachability, not
-  the conditional residual count. Do not add row-cap content or B14 while the
-  aggregate is pending.
+- **Verdict: the hierarchical singleton/union approach is sound and is the
+  cleanest real count reducer.** `decide +kernel` is limited to tiny singleton,
+  disjointness, and literal blocks here; no observed blowup. `Remaining` is
+  transferred correctly and the seven-class premise stays explicit.
+- **What is paid:** B13 `1997`, then the green Seven/Eight/Eleven/Twelve/
+  Thirteen chain at `2010` with 376 residual in the refined predicate. The
+  intended sixteen refinements are correct arithmetic (`2013`, `373`), but the
+  last three are not kernel-paid.
+- **Exact diagnostic:** `EnergyTerminalBatchB13RefineFourteen.lean:62` rewrites
+  with `new_count`, whose left side is `newIDs.card`; after the preceding
+  rewrites the goal contains `#EnergyRefineN3116.newIDs`, so the rewrite misses.
+  `Sixteen` and both Mains then fail only through that dependency.
+- **Highest leverage:** repair only `paid_count` with
+  `simpa [newIDs] using EnergyTerminalBatchB13Refine3116.new_count` after the
+  paid-union/card-union rewrite. Do not touch `paidIDs`, `paid_radius`, or
+  `remaining_of`, whose axiom reports are already clean.
+- **Acceptance:** fresh serial exit 0 for `Fourteen`, `FourteenMain`, `Sixteen`,
+  and `SixteenMain`. Only then record `2013/2386`, residual `373`, and request
+  the supervisor-only root switch from `B13Main` to `SixteenMain`.
+- **Scope:** this pays sixteen singleton refinements, not the 373 residual
+  radii, not `f0Lo`/`g` bridges, and not any of the seven class exclusions.
 
 ## Lane C
 
-- **Verdict: diagnostics are improving, but no seven-class or energy count is
-  moving.** The exact row-cap generator is not a proof of `f0Lo`/`g`, and the
-  public excluded-tree theorem only concludes `False` from an already-valid
-  packet with fixed node, `hf0`, and `hg`.
-- At `6937fb90`, `FrozenCapRowCap1409/2337/2341/2360/2368/2370` built as
-  dependencies, but `FrozenCapRowCap2356` timed out at
-  `FrozenCapRowCap2356.lean:33` after 200000 heartbeats; consequently
-  `FrozenCapPublicExcludedTree` exits 1. This is a resource failure in a giant
-  rational table, not a cap counterexample.
-- Even after repairing `2356`, `excluded_*_tree` has no consumer that yields
-  `RemainingTerminalRadius` or `SevenClassExclusions`. The missing bridge is
-  the mathematical bottleneck; a green 700-leaf file would still pay zero.
-- **Highest leverage:** state and prove (or explicitly report absent) the
-  bridge from an actual terminal cell to a `PaidCellCertificateM.Valid` packet
-  with frozen `F0`/`G`, then derive infeasibility via `excluded_*_tree`. A
-  useful target shape is
-  `theorem excluded_1409_of_cell ... : ¬ Feasible ...`, with hypotheses that
-  construct the packet and `hf0`/`hg`; do not regenerate 700 leaves until this
-  endpoint exists.
-- If continuing the row probe, isolate only `row_cap_2356_0_0`. Replace the
-  nested `![...] i j` lookup with ten scalar row definitions and prove scalar
-  `db_...` equalities by `rfl` or `norm_num`; get one leaf exit 0 before
-  touching the full module.
-- Exact rational audits, archive hashes, and float-LP search are generation or
-  diagnosis only. No manifest-derived fact counts as a Lean payment.
+- **Verdict: exact arithmetic is plausible, but the current proof engineering
+  pays nothing and moves neither the energy nor class count.** The seven frozen
+  caps are conditional `PaidCellCertificateM` exclusions, not an actual
+  terminal-to-packet/radius bridge.
+- **Fresh blocker:** all seven `FrozenCapRowCap*` targets are red. In `1409`,
+  the two-pass `norm_num [rowA] <;> norm_num [y_1409, db]` still leaves raw
+  vector lookups such as `![0,1/8,...] 2`; many strict leaves are unsolved.
+  Hash stability and the exact `700/700` audit do not change that.
+- **Highest leverage:** stop regenerating 700 monoliths. Refactor **1409 only**
+  to prefix form. Define cumulative weights `cum_1409 : Fin 10 → ℚ` and prove
+  `weighted_rowA_eq_prefix` for arbitrary `y`:
+  `∑ q, y q * rowA i j q = (∑ q, if q.val < j.val then y q else 0) -
+  (∑ q, if q.val < i.val then y q else 0)`.
+- **Concrete split:** prove ten values with
+  `prefix_1409 (t : Fin 10) : (∑ q, if q.val < t.val then y_1409 q else 0) =
+  cum_1409 t` by `fin_cases t <;> norm_num [y_1409, cum_1409,
+  Fin.sum_univ_succ]`; then `row_cap` by the prefix rewrite plus
+  `fin_cases i <;> fin_cases j <;> norm_num [cum_1409, db]`. This replaces 100
+  giant closed sums with 10 prefix facts and 100 tiny rational comparisons.
+- **Acceptance:** get `FrozenCapRowCap1409` exit 0 before cloning the pattern;
+  do not add heartbeats or native evaluation.
+- **Mathematical gate:** even seven green row caps do not move `x/2386` or
+  `0/7` until an actual packet is constructed, `Valid` is proved, and the
+  residual/exclusion consumer is connected. The `hf0`/`hg` obligations and the
+  absent 382 payloads remain explicit; the seven exact tree facts are not a
+  bridge by themselves.
 
 ## Risks
 
-- Do not read the workflow's green check as a module verdict; use
-  `summary.json` and fresh `=== EXIT target 0` lines.
-- Do not promote the pending `cc04268c` run or the unmerged singleton results
-  into the accepted ledger. The latest completed conditional numbers remain
-  B13 `1997/2386`, residual `389`, exclusions `0/7`.
-- The root's `SharedMomentConcreteSwitchBatch` OOM is an infrastructure/build
-  risk, not a mathematical disproof and not credit for B13.
-- Giant rational literals, repeated `norm_num`, and 72 row-bin comparisons can
-  hit heartbeat or memory limits. Split scalar facts and use definitional
-  reduction; do not hide failures with a heartbeat increase.
-- Preserve frozen certificate bytes and exact quantifiers. Hash pins, decimal
-  displays, cached summaries, and byte audits cannot replace a kernel-checked
-  radius or exclusion.
+- The overall workflow conclusion is unusable; the artifact currently records
+  47 nonzero exits while the job is marked success.
+- `EndpointChecks` error recovery produces a `sorryAx` axiom report. Do not
+  mistake that artifact for a source `sorry`, but do not call the module green.
+- Giant rational tables and repeated closed `norm_num` calls cause long builds
+  and unsolved vector-index goals. Prefix/scalar decomposition is the safe
+  pattern; raising limits hides the problem.
+- B's `373` and C's exclusions are conditional predicates. Neither proves the
+  residual radius inequalities themselves, and C has no general packet bridge.
+- A's decimal slack and C's exact rational checks establish arithmetic inputs
+  only. Kernel inequalities and actual-cover identification remain due.
+- Root `SharedMomentConcreteSwitchBatch` still OOMs (exit 137), and the root
+  imports neither C450 completion nor B13/Sixteen. A root build is still red
+  even after lane repairs until those integration/OOM issues are handled.
+- Preserve frozen bytes and exact roots/quantifiers. Manifests, hashes, cached
+  verdicts, and float LP search data are not proof credit.

@@ -1,3 +1,11 @@
+EXPERT (2026-10-31): Fresh run 41150468008 contradicts the session-76 "fixed" claim.
+- `EndpointChecks.lean:257--259,277--279` still fail `omega`; after `fin_cases j`, replace each with `norm_num at hj` (or `exact absurd hj (by norm_num)`).
+- First build only `SevenClassQ0Deg3EndpointChecks`; treat later reds as dependency-red until that exit is 0.
+- Then serially require exit 0 for `UpperReductionUnimodal`, both suffixes, `EdgeShape`, all bins, `SectorAssembler`, and `TableBounds`.
+- `TableBounds` does not identify `edges R` or construct `Degree3AreaCertificate`; after green target `areaCertificate_of_table ... (hedges : edges R = image ... ) : Nonempty (Degree3AreaCertificate h hr R)` with strict total.
+- The 18,441-value decimal audit is not proof of `totalUpper < piLo`; no exclusion credit before that certificate.
+- C450 completion is green but not root-imported; root integration is a supervisor action, not another C450 proof.
+
 # Lane A notes
 
 ## Ledger

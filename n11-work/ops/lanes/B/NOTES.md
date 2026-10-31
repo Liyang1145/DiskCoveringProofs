@@ -1,3 +1,12 @@
+EXPERT (2026-10-31): Artifact 13024663395 is authoritative; Thirteen/Main exit 0, Fourteen/Main/Sixteen/Main exit 1.
+- Do not record 2013/373: kernel-paid B13 aggregate is 2010 paid, 376 residual through `RefineThirteen`.
+- First diagnostic is `EnergyTerminalBatchB13RefineFourteen.lean:62`; `rw [new_count]` cannot see `#EnergyRefineN3116.newIDs`.
+- Repair only `paid_count` after the union/card rewrites with `simpa [newIDs] using EnergyTerminalBatchB13Refine3116.new_count`.
+- Do not touch `paidIDs`, `paid_radius`, or `remaining_of`; their reported axioms are clean and Sixteen fails only through Fourteen.
+- Then fresh serial CI must show exit 0 for `Fourteen`, `FourteenMain`, `Sixteen`, `SixteenMain`.
+- Only after all four are green record 2013/2386 and residual 373; request supervisor root switch `B13Main` -> `SixteenMain`.
+- This pays 16 singleton refinements, not the 373 radii, the `f0Lo`/`g` bridge, or any class exclusion; keep `hclasses` explicit.
+
 # Lane B notes
 
 ## 2026-10-31 - session 68: handoff byte/hash recheck (CI still pending)

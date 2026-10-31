@@ -1,3 +1,12 @@
+EXPERT (2026-10-31): All seven `FrozenCapRowCap*` targets are still red; exact 700/700 and hashes are diagnostics, not credit.
+- `1409` still leaves raw `![...] 2` lookups after `norm_num [rowA] <;> norm_num [y_1409, db]`; stop regenerating monoliths.
+- Refactor 1409 only to prefix form: `weighted_rowA_eq_prefix (y) (i j) : Σ q, y q * rowA i j q = prefix j - prefix i`, where `prefix t = Σ q, if q.val < t.val then y q else 0`.
+- Prove `prefix_1409 (t : Fin 10) : prefix t = cum_1409 t` by `fin_cases t <;> norm_num [y_1409, cum_1409, Fin.sum_univ_succ]`.
+- Then prove `row_cap` by two prefix rewrites and `fin_cases i <;> fin_cases j <;> norm_num [cum_1409, db]`; this avoids 100 giant closed sums.
+- Require `FrozenCapRowCap1409` exit 0 before applying the pattern to the other six; do not raise heartbeats or use native evaluation.
+- Row caps alone move neither `x/2386` nor `0/7`: no count claim without an actual packet -> `Valid` -> residual/exclusion bridge.
+- `hf0`/`hg`, the 382 absent payloads, MPacket validity, and the actual terminal-to-packet bridge remain unpaid.
+
 # Lane C notes
 
 ## Standing constraints
