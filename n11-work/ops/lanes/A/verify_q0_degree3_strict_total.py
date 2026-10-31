@@ -72,21 +72,32 @@ def main() -> None:
     manifest_pi_lo = rational(manifest["piLo"])
     lean_pi_hi = Fraction(314159265358979323847, 10**20)
     manifest_pi_hi = rational(manifest["piHi"])
-    pi_coefficient = 2 * (sum(mu) - lam)
-    def total_with(pi_lo: Fraction, pi_hi: Fraction) -> Fraction:
+    def total_with(pi_lo: Fraction, pi_hi: Fraction,
+                   edge_maxima: list[Fraction], sector_maxima: list[Fraction],
+                   mu_values: list[Fraction], lam_value: Fraction) -> Fraction:
         width = pi_hi / 2048
+        pi_coefficient = 2 * (sum(mu_values) - lam_value)
         edge_terms = [
-            edge_max[i] + (Fraction(19, 50) ** 2 + abs(sum(mu[j] for j in edge))) * width
+            edge_maxima[i] +
+            (Fraction(19, 50) ** 2 +
+             abs(sum(mu_values[j] for j in edge))) * width
             for i, edge in enumerate(edges)
         ]
         sector_terms = [
-            sector_max[i] + (1 + lam + abs(mu[(i + 1) % 9])) * width
+            sector_maxima[i] +
+            (1 + lam_value + abs(mu_values[(i + 1) % 9])) * width
             for i in range(9)
         ]
         return pi_coefficient * pi_lo + sum(edge_terms) + sum(sector_terms)
 
-    manifest_total = total_with(manifest_pi_lo, manifest_pi_hi)
-    total = total_with(lean_pi_lo, lean_pi_hi)
+    manifest_mu = [rational(x) for x in manifest["mu"]]
+    manifest_lam = rational(manifest["lambda"])
+    manifest_edge_max = [rational(x["max"]) for x in manifest["edges"]]
+    manifest_sector_max = [rational(x["max"]) for x in manifest["sectors"]]
+    manifest_total = total_with(
+        manifest_pi_lo, manifest_pi_hi, manifest_edge_max,
+        manifest_sector_max, manifest_mu, manifest_lam)
+    total = total_with(lean_pi_lo, lean_pi_hi, edge_max, sector_max, mu, lam)
 
     assert manifest_total == rational(manifest["totalUpper"])
     assert manifest_pi_lo - manifest_total == rational(manifest["slack"])
