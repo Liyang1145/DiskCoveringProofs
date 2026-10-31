@@ -72,7 +72,7 @@ def face4(fields, E, rhs):
                for A, B, C, D in lines):
             gain = E[fields[3]] + sum(
                 (E[fields[k]] - E[fields[3]]) * point[k] for k in range(3))
-            if best is None or gain > best[0]:
+            if best is None or gain < best[0]:
                 best = (gain,) + point
     return best
 
@@ -92,9 +92,9 @@ def main():
         best = None
         for fields in combinations(range(9), 4):
             candidate = face4(fields, E, rhs)
-            if candidate is not None and (best is None or candidate[0] > best[0]):
+            if candidate is not None and (best is None or candidate[0] < best[0]):
                 best = (candidate[0], fields, candidate[1:])
-        status = ("PASS" if best is not None and best[0] > req else
+        status = ("PASS" if best is not None and best[0] < req else
                   "no <=4-field rescue")
         row = {
             "id": node,

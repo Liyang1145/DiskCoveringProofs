@@ -8,16 +8,12 @@ N11Formalization.FrozenCapRowCap2356
 N11Formalization.FrozenCapRowCap2360
 N11Formalization.FrozenCapRowCap2368
 N11Formalization.FrozenCapRowCap2370
-# Five four-field rescues: corrected direct-match row caps, then wrappers.
-N11Formalization.FrozenCapFourFieldWitnesses
-N11Formalization.FrozenCapFourFieldRowCaps
-N11Formalization.FrozenCapFourFieldExcludedTree
-# Five-field rescues for the two four-field gaps, 2356 and 2360.
-N11Formalization.FrozenCapFiveFieldWitnesses
-N11Formalization.FrozenCapFiveFieldRowCaps
-N11Formalization.FrozenCapFiveFieldExcludedTree
+N11Formalization.FrozenCapRowCapTreeBridges
+# The seven public nodes already use the green core/row-cap path below.
 N11Formalization.FrozenCapPublicExcludedTree
 N11Formalization.FrozenCapPublicExcludedAggregate
+# Independent corrected <=4-field witnesses; no row-cap/tree consumer yet.
+N11Formalization.FrozenCapFourFieldWitnessesCorrected
 # Unpriced post-fix refinement chain: keep first so the next serial run reaches it.
 N11Formalization.EnergyRefineN3853
 N11Formalization.EnergyRefineN0037

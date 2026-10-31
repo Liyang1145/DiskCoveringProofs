@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Emit the five corrected four-field rescue witnesses exactly and deterministically."""
+"""Emit the corrected minimum-gain four-field rescue witnesses exactly."""
 from fractions import Fraction as Q
 import hashlib
 import json
@@ -11,9 +11,9 @@ ROOT = HERE.parents[3]
 sys.path.insert(0, str(HERE))
 import recheck_next512_rows as common
 
-IDS = (1409, 2337, 2341, 2368, 2370)
+IDS = (1409, 2337, 2341)
 REPORT = HERE / "residual-mixture-faces4.json"
-OUT = ROOT / "n11-work/lean/N11Formalization/FrozenCapFourFieldWitnesses.lean"
+OUT = ROOT / "n11-work/lean/N11Formalization/FrozenCapFourFieldWitnessesCorrected.lean"
 
 
 def lean_rat(q):
@@ -41,6 +41,8 @@ def load():
                 rhs = Q(db[i][j], 4096)
                 lhs = sum(y[q] * common.row_a(i, j, q) for q in range(9))
                 assert lhs <= rhs, (node, i, j, lhs, rhs)
+        gain = sum(y[q] * ep[q] for q in range(9))
+        assert gain < common.T2 - Q(source[node]["f0Lo"]), (node, gain)
         out.append((node, y, ep))
     return out
 
@@ -91,7 +93,7 @@ These reuse the exact `F0`, `G`, and `E` data from the green rational core;
 only the unit-sum mixture `y` changes. Generated deterministically by
 `ops/lanes/C/emit_four_field_witnesses.py`. -/
 set_option autoImplicit false
-namespace N11Formalization.FrozenCapFourFieldWitnesses
+namespace N11Formalization.FrozenCapFourFieldWitnessesCorrected
 open Finset
 open ConvexMinorantCore DBMMinorantDual
 open scoped BigOperators
@@ -101,12 +103,12 @@ open FrozenCapRationalCore
 ''' + "\n\n".join(blocks) + '''
 
 end
-end N11Formalization.FrozenCapFourFieldWitnesses
+end N11Formalization.FrozenCapFourFieldWitnessesCorrected
 
-#check @N11Formalization.FrozenCapFourFieldWitnesses.strict_gain_1409
-#check @N11Formalization.FrozenCapFourFieldWitnesses.strict_gain_2370
-#print axioms N11Formalization.FrozenCapFourFieldWitnesses.strict_gain_1409
-#print axioms N11Formalization.FrozenCapFourFieldWitnesses.strict_gain_2370
+#check @N11Formalization.FrozenCapFourFieldWitnessesCorrected.strict_gain_1409
+#check @N11Formalization.FrozenCapFourFieldWitnessesCorrected.strict_gain_2341
+#print axioms N11Formalization.FrozenCapFourFieldWitnessesCorrected.strict_gain_1409
+#print axioms N11Formalization.FrozenCapFourFieldWitnessesCorrected.strict_gain_2341
 '''
     OUT.write_text(src)
     print("wrote", OUT.relative_to(ROOT))
