@@ -46,7 +46,6 @@ theorem db_eq_tree_2370 : ∀ i j : Fin 10,
       N11Formalization.FrozenCapRowCap2370.db i j := by
   decide +kernel
 
-end
 end N11Formalization.FrozenCapRowCapTreeBridges
 
 #check @N11Formalization.FrozenCapRowCapTreeBridges.db_eq_tree_1409
