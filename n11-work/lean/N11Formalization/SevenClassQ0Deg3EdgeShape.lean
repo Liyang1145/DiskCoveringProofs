@@ -1,4 +1,5 @@
 import N11Formalization.SevenClassQ0Deg3EdgeSuffixNonpos
+import N11Formalization.SevenClassQ0Deg3EdgeSuffixHigh
 
 /-! Lane A: shape assembly for the zero-peak and negative-coefficient edges.
 
