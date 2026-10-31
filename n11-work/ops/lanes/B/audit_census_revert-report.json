@@ -1,0 +1,39 @@
+{
+  "errors": [],
+  "ok": true,
+  "parts": {
+    "EnergyTerminalResidualCensusC01.lean": {
+      "bare_kernel_decides": 0,
+      "bytes": 4179,
+      "forbidden": [],
+      "ok": true,
+      "revert_blocks": 13,
+      "sha256": "6E90C8EA7968DA2E525D1335C1931AC5C13D03541F17F666132B9FFDD7EF07F4"
+    },
+    "EnergyTerminalResidualCensusC02.lean": {
+      "bare_kernel_decides": 0,
+      "bytes": 4182,
+      "forbidden": [],
+      "ok": true,
+      "revert_blocks": 13,
+      "sha256": "FC8885BD5D919704F269ED2708F859D8423755A862B2DDC6D735EC1F86BDC373"
+    },
+    "EnergyTerminalResidualCensusC03.lean": {
+      "bare_kernel_decides": 0,
+      "bytes": 4183,
+      "forbidden": [],
+      "ok": true,
+      "revert_blocks": 13,
+      "sha256": "E1022163886CC55517864C0E371AD8278CEFF6C0A748E9B336880990F6E02219"
+    },
+    "EnergyTerminalResidualCensusC04.lean": {
+      "bare_kernel_decides": 0,
+      "bytes": 3890,
+      "forbidden": [],
+      "ok": true,
+      "revert_blocks": 12,
+      "sha256": "D40FF05E5A088204CA37BF020089100A296C2CB31803403F63152038E2F67727"
+    }
+  },
+  "revert_blocks_total": 51
+}
