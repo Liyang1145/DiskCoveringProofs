@@ -1,5 +1,36 @@
 # Lane B notes
 
+## 2026-10-31 - session 118: census CI diagnosis and kernel split
+
+- Read fresh CI `41248242451` (head `1a300c5e`). Its first owning errors were
+  census line 41 `No goals to be solved` and lines 49/51
+  `Expected type must not contain free variables: k < 5011`. The first was the
+  trailing `norm_num` after cardinality rewrites; the second came from
+  `change` embedding `by decide` proofs that still mention local `k`.
+- Replaced the 51 large membership proofs with 502 separate ten-index (and one
+  singleton) subtheorems using `decide +kernel +revert`, plus 51 bounded
+  dispatch theorems. Removed the redundant `norm_num`; removed every
+  `change`. Generator:
+  `n11-work/ops/lanes/B/split_sixteen_census_blocks.py`.
+- Static checks passed: generator idempotent (same SHA before/after), 502
+  subtheorems, 51 dispatch theorems, 502 bounded `+revert` decisions, no
+  `change`/`norm_num`, no forbidden proof token, and `git diff --check`.
+  Census SHA256:
+  `B3D95477D41F5EC1955BCA3F0E3B9BD294AF4481F3F594405104561E655CE091`;
+  generator SHA256:
+  `A0D542C79C169FEF44EC8EAE5434D5F30ED6C87A57995179A31AE5054D9E6082`.
+- Scope is source generation/static audit only. This census repair is **CI
+  pending**; no local project Lean build was run and no radius is paid.
+- Still unproved: kernel success of the split census/Main; all 373 residual
+  radius certificates; packet `f0Lo`/`g`; 382 absent payload records;
+  SevenClassExclusions (`0/7`); and the arbitrary-centre full-disk theorem.
+  ROOT-IMPORT REQUEST remains: replace `EnergyTerminalBatchB13Main` with
+  `EnergyTerminalBatchB13RefineSixteenMain` only after a complete green chain.
+- Very next step: supervisor commit, then CI for
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus`,
+  `...ResidualCensusMain`, and `...RefineSixteenMain`; inspect the first new
+  owning error before any further source edit.
+
 ## 2026-10-31 - session 117c: pre-CI handoff verification
 
 - Re-read `GUIDANCE.md`, lane B, prior notes, and CI `41229638083`; the repaired
