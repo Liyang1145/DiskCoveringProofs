@@ -12,21 +12,24 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 LEAN = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionUnimodal.lean"
-REQUIRED = ("EdgePeakValid", "edgeUpper", "edgeCoeff", "tableEdges", "nodeQ")
+REQUIRED = ("EdgePeakValid", "edgeUpper", "edgeCoeff", "tableEdges", "nodeQ",
+            "Fin.val_ofNat", "Fin.val_mk")
 
 
 def main() -> int:
     text = LEAN.read_text(encoding="utf-8")
     blocks = re.findall(
-        r"theorem edgePeakValid_(\d+) : EdgePeakValid \1 := by\s+"
-        r"norm_num \[([^\]]*)\]",
+        r"theorem edgePeakValid_(\d+) : EdgePeakValid \1 := by"
+        r"((?:\n  rw \[[^\n]*\])?)\s+norm_num \[([^\]]*)\]",
         text,
     )
-    indices = [int(i) for i, _ in blocks]
+    indices = [int(i) for i, _, _ in blocks]
     failures = []
     if indices != list(range(21)):
         failures.append(f"expected indices 0..20 once each, got {indices}")
-    for i, names_text in blocks:
+    for i, witness_rw, names_text in blocks:
+        if "decide +kernel" not in witness_rw:
+            failures.append(f"edgePeakValid_{i}: missing kernel-decided witness equality")
         names = {name.strip() for name in names_text.replace("\n", " ").split(",")}
         missing = [name for name in REQUIRED if name not in names]
         if missing:

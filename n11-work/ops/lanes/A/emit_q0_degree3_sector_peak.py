@@ -88,11 +88,14 @@ def main() -> None:
         "",
     ]
     for i in range(9):
+        witness = int(data["sectors"][i]["witnessK"])
         lines += [
             f"theorem sectorPeakValid_{i} : SectorPeakValid {i} := by",
+            f"  rw [show sectorWitness {i} = ({witness} : Fin 2049) by decide +kernel]",
             "  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,",
             "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,",
-            "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]",
+            "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,",
+            "    Fin.val_ofNat, Fin.val_mk]",
             "",
         ]
     lines += [
