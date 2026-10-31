@@ -2,7 +2,8 @@
 """Independent exact-rational audit of every q0(3,10) sector grid value.
 
 Recomputes the 21 edge maxima, all nine 2049-point sector maxima, and the
-strict total from the source intervals and the eight-bin node table.  This is
+strict total from the source intervals and the eight-bin node table.  Sector
+rows use the Lean pairing `mu (nextSite i) = mu ((i+1) mod 9)`.  This is
 arithmetic evidence for the next Lean factorization, not a Lean proof.
 """
 from __future__ import annotations
@@ -56,27 +57,33 @@ def main() -> None:
 
     segment = [(2 * a - probe.sinLo(2 * a)) / 2 for a in node8]
     sector_max = []
-    for expected in report["sectors"]:
-        i = expected["site"]
-        value = max(segment[min(7, 8 * k // probe.N)] +
-                    probe.R2 * sh[k] / 2 + 2 * lam * nodes[k] - mu[i] * qs[k]
-                    for k in range(probe.N + 1))
+    sector_witness = []
+    for i in range(9):
+        values = [segment[min(7, 8 * k // probe.N)] +
+                  probe.R2 * sh[k] / 2 + 2 * lam * nodes[k] -
+                  mu[(i + 1) % 9] * qs[k]
+                  for k in range(probe.N + 1)]
+        witness = max(range(probe.N + 1), key=values.__getitem__)
+        value = values[witness]
+        # The source report indexes rows by `mu i`; Lean uses `mu (i+1)`.
+        expected = report["sectors"][(i + 1) % 9]
         require(value == F(expected["max"]), f"sector {i} max mismatch")
         sector_max.append(value)
+        sector_witness.append(witness)
 
     total = 2 * (sum(mu) - lam) * piLo
     for expected, value in zip(report["edges"], edge_max):
         b = sum(mu[i] for i in expected["edge"])
         total += value + (probe.R2 + abs(b)) * width
     for i, value in enumerate(sector_max):
-        total += value + (1 + lam + abs(mu[i])) * width
+        total += value + (1 + lam + abs(mu[(i + 1) % 9])) * width
 
     require(total == F(report["totalUpper"]), "totalUpper mismatch")
     require(total < piLo, "totalUpper is not strict")
     print("PASS: 21 edge maxima reproduce")
     print("PASS: 9 x 2049 sector values reproduce all sector maxima")
     print("PASS: totalUpper reproduces and is strictly below piLo")
-    print("sector witnesses:", [item["witnessK"] for item in report["sectors"]])
+    print("sector witnesses:", sector_witness)
     result = {
         "scope": "exact-rational grid audit only; no Lean claim",
         "source_sha256": hashlib.sha256(raw).hexdigest(),
@@ -84,7 +91,9 @@ def main() -> None:
         "edge_count": len(edge_max),
         "sector_count": len(sector_max),
         "sector_grid_points": len(sector_max) * (probe.N + 1),
-        "sector_witnessK": [item["witnessK"] for item in report["sectors"]],
+        "sector_pairing": "mu (nextSite i) = mu ((i+1) mod 9)",
+        "sector_site_to_mu_index": [(i + 1) % 9 for i in range(9)],
+        "sector_witnessK": sector_witness,
         "totalUpper": str(total),
         "piLo": str(piLo),
         "strictBelowPiLo": total < piLo,
