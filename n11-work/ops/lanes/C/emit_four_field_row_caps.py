@@ -49,15 +49,10 @@ def main():
         for i in range(10):
             for j in range(10):
                 lhs_q = sum(y[q] * common.row_a(i, j, q) for q in range(9))
-                lhs = " + ".join(
-                    f"y4_{node} ({q} : Fin 9) * rowA ({i} : Fin 10) ({j} : Fin 10) ({q} : Fin 9)"
-                    for q in range(9))
+                rhs = Q(db[i][j], 4096)
                 leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
-    {lhs} ≤ db_{node} {i} {j} := by
-  change {lean_rat(lhs_q)} ≤ {lean_rat(Q(db[i][j], 4096))}
+    {lean_rat(lhs_q)} ≤ {lean_rat(rhs)} := by
   norm_num''')
-        branch = "\n    | ".join(f"exact row_cap_{node}_{i}_{j}"
-                                  for i in range(10) for j in range(10))
         blocks.append(f'''def db_{node} : Fin 10 → Fin 10 → ℚ
   {cases}
 
@@ -65,9 +60,7 @@ def main():
 
 theorem row_cap_{node} (i j : Fin 10) :
     (∑ q : Fin 9, y4_{node} q * rowA i j q) ≤ db_{node} i j := by
-  fin_cases i <;> fin_cases j <;>
-    first
-    | {branch}''')
+  fin_cases i <;> fin_cases j <;> norm_num [rowA, y4_{node}, db_{node}]''')
     src = '''import N11Formalization.FrozenCapFourFieldWitnesses
 import Mathlib.Tactic.FinCases
 import Mathlib.Tactic.NormNum
