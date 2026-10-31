@@ -9,6 +9,12 @@ N11Formalization.FrozenCapRowCap2360
 N11Formalization.FrozenCapRowCap2368
 N11Formalization.FrozenCapRowCap2370
 N11Formalization.FrozenCapRowCapTreeBridges
+# Sparse five-field 2368 witness, 100 frozen-db caps, and conditional tree consumer.
+N11Formalization.FrozenCapFiveField2368
+N11Formalization.FrozenCapFiveField2368Tree
+# Exact five-field 2370 witness and its conditional tree consumer.
+N11Formalization.FrozenCapFiveField2370
+N11Formalization.FrozenCapFiveField2370Tree
 # The seven public nodes already use the green core/row-cap path below.
 N11Formalization.FrozenCapPublicExcludedTree
 N11Formalization.FrozenCapPublicExcludedAggregate
