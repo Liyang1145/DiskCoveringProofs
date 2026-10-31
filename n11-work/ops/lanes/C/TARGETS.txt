@@ -1,6 +1,11 @@
 # Lean targets lane C wants CI to build (one per line)
 # Exact residual certificate interface; imports B13 only and asserts no payment.
 N11Formalization.EnergyTerminalBatchB13ResidualCertificates
+# Repaired sixteen-refinement aggregate; the original module is CI-red only
+# from elaborator recursion depth, not from a failed radius certificate.
+N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair
+# Conditional 373-id residual consumer for the repaired paid set.
+N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
 # Public exclusion tree instantiated as the canonical packet exclusion.
 N11Formalization.EnergyTerminalBatchB13PublicResidualCanonical
 N11Formalization.FrozenCapRowCap1409Smoke
@@ -94,3 +99,6 @@ N11Formalization.EnergyTerminalBatchB13Refine3623Main
 N11Formalization.EnergyRefineN3792
 N11Formalization.EnergyTerminalBatchB13Refine3792
 N11Formalization.EnergyTerminalBatchB13Refine3792Main
+N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus
+# Independent structural 373 census via the existing 389 census and exact 16-id sdiff.
+N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff
