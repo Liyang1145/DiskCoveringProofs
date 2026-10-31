@@ -13,6 +13,7 @@
     "sixteen_ids": true,
     "sixteen_imports": true,
     "sixteen_new_count_uses_singleton_counts": true,
+    "sixteen_not_paid_uses_bounded_decomposition": true,
     "stale_targets_absent": true,
     "target_order": true,
     "targets_once": true,

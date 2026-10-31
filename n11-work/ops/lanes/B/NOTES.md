@@ -1,31 +1,47 @@
-## 2026-10-31 - session 96: Fourteen green; Sixteen recursion repaired
+## 2026-10-31 - session 98: post-repair CI green; request SixteenMain root switch
 
-- Downloaded run `41201323694` on `3551ab87`, artifact `13044243893`
-  (`64791EDA...79BA63`), summary `E9F7745E...F33344`. The masked-success run
-  proves `RefineFourteen` and `FourteenMain` exit `0` (kernel green), while
-  `RefineSixteen` and `SixteenMain` exit `1`.
-- First owning diagnostic: `EnergyTerminalBatchB13RefineSixteen.lean:31:2`,
-  `maximum recursion depth has been reached`, from `tauto` over the four
-  unfolded paid-set unions. The later checks and axiom reports in this module
-  are not proof credit for the failed declaration.
-- Replaced `tauto` with an explicit bounded five-case decomposition:
-  Fourteen -> Thirteen -> Twelve -> Eleven, then dispatch base / Eleven-new /
-  0037 / 3112 / 3116. No recursion-limit raise, `decide` enlargement, or new
-  target. New Sixteen SHA256 `094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A`
-  (old `E7C0CBD8...097C5`). Fourteen stays `0BCDA687...0AB4F`;
-  `TARGETS.txt` stays `EB52F2B4...16DD01`.
-- Added `ci-verdict-41201323694.json`. Checks after the repair:
-  `audit_b13_refine_sixteen.py` and `audit_b13_refine_fourteen.py` exit `0`
-  with `ok:true`; `git diff --check` exits `0`. These are static
-  source/inventory and arithmetic checks only, not Lean elaboration.
-- Conditional arithmetic remains 2013 paid / 373 residual, but is **not paid**:
-  fresh exit-0 artifacts for Sixteen and SixteenMain are still required.
-- Still unproved: 373 residual radii; `f0Lo`/`g` bridge; SevenClassExclusions
+- Fresh run `41208161314` (`1616dbe3`) artifact `13046368097`
+  (`14035752...BE90`) has kernel exits `0` for Fourteen, FourteenMain,
+  Sixteen, and SixteenMain. The four built files' fetched bytes match the local
+  hashes in `ci-verdict-41208161314.json`.
+- Axiom lines in job `124557408979` are `[propext, Classical.choice,
+  Quot.sound]` for `paid_radius`, `remaining_of`, and both Main consumers.
+  Sixteen reports `paidIDs.card = 2013`; residual arithmetic is `373`.
+- `audit_b13_refine_sixteen.py` and `audit_sixteen_root_switch.py` both exit
+  `0`; the latter is `ready_for_supervisor_switch:true`, phase `pre_handoff`.
+  `python tools/project_status.py --check` also passes.
+- ROOT-IMPORT REQUEST: replace
+  `import N11Formalization.EnergyTerminalBatchB12Main` with
+  `import N11Formalization.EnergyTerminalBatchB13RefineSixteenMain`.
+  Preserve the explicit `SevenClassExclusions` premise.
+- Still unproved: the 373 residual radii themselves, `f0Lo`/`g` bridge,
+  SevenClassExclusions (`0/7`), and the arbitrary-center full-disk theorem.
+- Next: supervisor-only root switch, then CI on the switched root. Do not
+  describe the conditional 2013/373 endpoint as an unconditional theorem.
+
+## Earlier session 97 (condensed)
+
+- Run `41201323694` on `3551ab87` (artifact `13044243893`, `64791EDA...79BA63`)
+  is kernel green for Fourteen/FourteenMain. Sixteen/SixteenMain are red only
+  because that artifact predates the repaired Sixteen bytes.
+- Current Sixteen is `094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A`;
+  Fourteen is `0BCDA68789D4DF1FDDE918C418DE1F34D67E0F9D5F15211AFDDE40CEAA80AB4F`;
+  TARGETS is `EB52F2B496FAFDCCA8FFA0281C11751975C00A0BCF094A497A274753AE16DD01`.
+- Added a regression check in `audit_b13_refine_sixteen.py` requiring the
+  four-step `rcases` decomposition, all five leaf dispatches, and no `tauto`.
+  Rerun exits `0`, `ok:true`; this is source/inventory/arithmetic only.
+- `audit_b13_refine_fourteen.py` and `audit_sixteen_root_switch.py` exit `0`
+  (`ready_for_supervisor_switch:true`, phase `pre_handoff`) with the current
+  hashes. `py_compile` and `git diff --check` exit `0`;
+  `audit_target_imports.py` hit `timeout 60`, no verdict.
+- Conditional arithmetic is 2013 paid / 373 residual, **not paid**. Still
+  unproved: 373 residual radii; `f0Lo`/`g` bridge; SevenClassExclusions
   (`0/7`); arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits the exact Sixteen bytes and evidence,
-  then serial CI must show both Sixteen modules exit `0` with clean
-  `#print axioms`. If green, request the supervisor-only root switch from
-  B13Main to SixteenMain, preserving explicit SevenClassExclusions.
+## Earlier session 96 (condensed)
+
+- Run `41201323694` proved Fourteen green and exposed Sixteen recursion at
+  `EnergyTerminalBatchB13RefineSixteen.lean:31` in `tauto`; replaced it with the
+  bounded five-case decomposition. Evidence: `ci-verdict-41201323694.json`.
 
 ## Earlier session 95 (condensed)
 

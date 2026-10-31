@@ -1,0 +1,45 @@
+{
+  "run": 41208161314,
+  "head_sha": "1616dbe3cbe71e348b4e634dd5742ece5dc03a71",
+  "workflow": "n11-lean-build",
+  "job_id": 124557408979,
+  "artifact": {
+    "id": 13046368097,
+    "name": "n11-build-41208161314",
+    "size_bytes": 25886,
+    "sha256": "14035752db44c8fd674126d2096ee0cdbf7b4998a530383b21a37942b32abe90"
+  },
+  "source_sha256": {
+    "N11Formalization/EnergyTerminalBatchB13RefineFourteen.lean": "0BCDA68789D4DF1FDDE918C418DE1F34D67E0F9D5F15211AFDDE40CEAA80AB4F",
+    "N11Formalization/EnergyTerminalBatchB13RefineFourteenMain.lean": "9478C19FA149AC0E8721EA03902C2483D001D55CDCD49C393DB3663E772C3FE7",
+    "N11Formalization/EnergyTerminalBatchB13RefineSixteen.lean": "094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A",
+    "N11Formalization/EnergyTerminalBatchB13RefineSixteenMain.lean": "A3103831CB770E50A0ABA35ADC2927011781E16EDE529163F729CD695028FECF",
+    "TARGETS.txt": "EB52F2B496FAFDCCA8FFA0281C11751975C00A0BCF094A497A274753AE16DD01"
+  },
+  "module_exits": {
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteen": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain": 0
+  },
+  "axiom_reports": {
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen.paid_radius": ["propext", "Classical.choice", "Quot.sound"],
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen.remaining_of": ["propext", "Classical.choice", "Quot.sound"],
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain.main_of_energy_refineSixteen_and_seven_classes": ["propext", "Classical.choice", "Quot.sound"],
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain.full_disk_bound_of_energy_refineSixteen_and_seven_classes": ["propext", "Classical.choice", "Quot.sound"],
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteen.paid_radius": ["propext", "Classical.choice", "Quot.sound"],
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteen.remaining_of": ["propext", "Classical.choice", "Quot.sound"],
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain.main_of_energy_refineFourteen_and_seven_classes": ["propext", "Classical.choice", "Quot.sound"],
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain.full_disk_bound_of_energy_refineFourteen_and_seven_classes": ["propext", "Classical.choice", "Quot.sound"]
+  },
+  "verified_claims": {
+    "sixteen_paid_count": 2013,
+    "sixteen_residual_count": 373,
+    "scope": "kernel exit 0 for the four listed modules plus clean axiom output; residual radii, f0Lo/g bridge, SevenClassExclusions, and the arbitrary-center theorem remain unproved"
+  },
+  "root_switch_preflight": {
+    "report": "audit_sixteen_root_switch-report.json",
+    "ready_for_supervisor_switch": true,
+    "phase": "pre_handoff"
+  }
+}

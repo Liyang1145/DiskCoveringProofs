@@ -1,0 +1,43 @@
+{
+  "schema": "n11-lane-b-preflight-v1",
+  "date": "2026-10-31",
+  "scope": "static source/hash checks and an abstract Mathlib tactic probe; no project Lean elaboration and no proof credit",
+  "source_sha256": {
+    "EnergyTerminalBatchB13RefineSixteen.lean": "094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A",
+    "EnergyTerminalBatchB13RefineFourteen.lean": "0BCDA68789D4DF1FDDE918C418DE1F34D67E0F9D5F15211AFDDE40CEAA80AB4F",
+    "EnergyTerminalBatchB13RefineSixteenMain.lean": "A3103831CB770E50A0ABA35ADC2927011781E16EDE529163F729CD695028FECF",
+    "TARGETS.txt": "EB52F2B496FAFDCCA8FFA0281C11751975C00A0BCF094A497A274753AE16DD01"
+  },
+  "checks": {
+    "audit_b13_refine_sixteen": {
+      "exit": 0,
+      "ok": true,
+      "scope": "static source/inventory and duplicate-ID arithmetic",
+      "bounded_decomposition_guard": true
+    },
+    "audit_sixteen_root_switch": {
+      "exit": 0,
+      "ready_for_supervisor_switch": true,
+      "root_import_phase": "pre_handoff",
+      "scope": "static root/import/API preflight only"
+    },
+    "abstract_mathlib_probe": {
+      "command": "timeout 120 lake env lean LaneBSixteenProbe.lean",
+      "exit": 124,
+      "verdict": "inconclusive timeout with no Lean output",
+      "scope": "abstract mirror only; not a substitute for CI and not proof credit"
+    }
+  },
+  "kernel_status": {
+    "EnergyTerminalBatchB13RefineFourteen": "CI green at run 41201323694",
+    "EnergyTerminalBatchB13RefineFourteenMain": "CI green at run 41201323694",
+    "EnergyTerminalBatchB13RefineSixteen": "post-repair CI pending",
+    "EnergyTerminalBatchB13RefineSixteenMain": "post-repair CI pending"
+  },
+  "conditional_arithmetic": {
+    "paid": 2013,
+    "residual": 373,
+    "paid_claim": false
+  },
+  "next": "Commit the exact Sixteen bytes, then require serial CI exit 0 and clean #print axioms for both Sixteen targets before the supervisor-only root switch."
+}

@@ -63,6 +63,16 @@ def main() -> int:
         and "EnergyTerminalBatchB13Refine3573.new_count" in sixteen
         and "theorem new_count : newIDs.card = 2 := by\n  decide +kernel" not in sixteen
     )
+    checks["sixteen_not_paid_uses_bounded_decomposition"] = (
+        "theorem not_paid_fourteen_of" in sixteen
+        and "tauto" not in sixteen
+        and sixteen.count("rcases hx with hx | hx") == 4
+        and "exact hbase hx" in sixteen
+        and "exact h11 hx" in sixteen
+        and "exact h37 hx" in sixteen
+        and "exact h3112 hx" in sixteen
+        and "exact h3116 hx" in sixteen
+    )
     thirteen = sources["Thirteen"][1]
     fourteen = sources["Fourteen"][1]
     checks["thirteen_close_has_no_redundant_tactic"] = (
