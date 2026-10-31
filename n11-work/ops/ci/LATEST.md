@@ -1,17 +1,17 @@
-# CI latest (run 41168580187)
+# CI latest (run 41172673380)
 
 ```
-41172673380 in_progress null 7fbff386 2026-10-31T05:27:34Z
+41176805557 in_progress null d141be39 2026-10-31T06:29:21Z
+41172673380 completed success 7fbff386 2026-10-31T05:27:34Z
 41168580187 completed success 0f022bfb 2026-10-31T04:26:31Z
 41150468008 completed success 24e434b4 2026-10-31T00:29:48Z
 41141569628 completed success c63cb61e 2026-10-30T22:58:36Z
-41123531381 completed success cc04268c 2026-10-30T20:28:51Z
 ```
 
 ## summary.json
 ```json
 {
- "sha": "0f022bfb762388f6032e3a519cc5671fc1ed30f6",
+ "sha": "7fbff38678d20b0b8db41280b8c04c58bee9a3a9",
  "exits": [
   [
    "N11Formalization.FrozenCapRowCap1409Smoke",
@@ -71,6 +71,10 @@
   ],
   [
    "N11Formalization.FrozenCapPublicExcludedTree",
+   "1"
+  ],
+  [
+   "N11Formalization.FrozenCapPublicExcludedAggregate",
    "1"
   ],
   [
@@ -318,6 +322,38 @@
    "0"
   ],
   [
+   "N11Formalization.LaneBRowCapDecideProbe",
+   "1"
+  ],
+  [
+   "N11Formalization.LaneBFrozenCapRowCap1409",
+   "1"
+  ],
+  [
+   "N11Formalization.LaneBFrozenCapRowCap2337",
+   "1"
+  ],
+  [
+   "N11Formalization.LaneBFrozenCapRowCap2341",
+   "1"
+  ],
+  [
+   "N11Formalization.LaneBFrozenCapRowCap2356",
+   "1"
+  ],
+  [
+   "N11Formalization.LaneBFrozenCapRowCap2360",
+   "1"
+  ],
+  [
+   "N11Formalization.LaneBFrozenCapRowCap2368",
+   "1"
+  ],
+  [
+   "N11Formalization.LaneBFrozenCapRowCap2370",
+   "1"
+  ],
+  [
    "N11Formalization.Paid16GeneralNext1182",
    "0"
   ],
@@ -359,38 +395,6 @@
   ],
   [
    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
-   "1"
-  ],
-  [
-   "N11Formalization.LaneBRowCapDecideProbe",
-   "0"
-  ],
-  [
-   "N11Formalization.LaneBFrozenCapRowCap1409",
-   "1"
-  ],
-  [
-   "N11Formalization.LaneBFrozenCapRowCap2337",
-   "1"
-  ],
-  [
-   "N11Formalization.LaneBFrozenCapRowCap2341",
-   "1"
-  ],
-  [
-   "N11Formalization.LaneBFrozenCapRowCap2356",
-   "1"
-  ],
-  [
-   "N11Formalization.LaneBFrozenCapRowCap2360",
-   "1"
-  ],
-  [
-   "N11Formalization.LaneBFrozenCapRowCap2368",
-   "1"
-  ],
-  [
-   "N11Formalization.LaneBFrozenCapRowCap2370",
    "1"
   ],
   [
@@ -534,14 +538,14 @@
    "1"
   ]
  ],
- "built_count": 2,
+ "built_count": 1,
  "errors_head": [
-  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409Smoke (7.8s)",
+  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409Smoke (2.1s)",
   "error: N11Formalization/FrozenCapRowCap1409Smoke.lean:25:2: 'change' tactic failed, pattern",
   "error: N11Formalization/FrozenCapRowCap1409Smoke.lean:39:2: 'change' tactic failed, pattern",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409 (6.7s)",
+  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409 (8.4s)",
   "error: N11Formalization/FrozenCapRowCap1409.lean:121:2: 'change' tactic failed, pattern",
   "error: N11Formalization/FrozenCapRowCap1409.lean:126:2: 'change' tactic failed, pattern",
   "error: N11Formalization/FrozenCapRowCap1409.lean:131:2: 'change' tactic failed, pattern",
@@ -569,22 +573,21 @@
   "error: N11Formalization/FrozenCapRowCap1409.lean:241:2: 'change' tactic failed, pattern",
   "error: N11Formalization/FrozenCapRowCap1409.lean:246:2: 'change' tactic failed, pattern",
   "error: N11Formalization/FrozenCapRowCap1409.lean:251:2: 'change' tactic failed, pattern",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:256:2: 'change' tactic failed, pattern",
-  "error: N11Formalization/Froze```
+  "error: N11Formalization/FrozenCapRowCap1409.lean:2```
 ## build log tail
 ```
-nner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:04:58 avail=1617MB top: 13866816 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:05:18 avail=1421MB top: 13899716 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:05:38 avail=1055MB top: 14012984 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:05:58 avail=1042MB top: 14243036 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:06:18 avail=977MB top: 14507196 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:06:38 avail=1043MB top: 14580580 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:06:58 avail=1039MB top: 14579240 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:07:18 avail=1065MB top: 14602756 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 05:07:38 avail=807MB top: 14641728 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=808MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1338s)
+unner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:16:50 avail=1320MB top: 13995844 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:17:10 avail=1238MB top: 14125260 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:17:30 avail=964MB top: 14151524 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:17:50 avail=1034MB top: 14328696 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:18:10 avail=1000MB top: 14467612 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:18:30 avail=1003MB top: 14471748 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:18:50 avail=1015MB top: 14468048 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:19:10 avail=933MB top: 14557220 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 06:19:30 avail=730MB top: 14410996 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=730MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1790s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
