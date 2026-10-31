@@ -78,8 +78,7 @@ def split_proof(text: str, node: int, y: list[Fraction],
             rhs = Fraction(matrix[i][j], 4096)
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {terms} ≤ db {i} {j} := by
-  change {lean_rat(lhs)} ≤ {lean_rat(rhs)}
-  norm_num''')
+  norm_num [y_{node}, rowA, db, dbmVal]''')
     rows = []
     for i in range(10):
         cases = "\n".join(
