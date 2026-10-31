@@ -37,6 +37,8 @@ theorem row_0_1 :
       y_1409 6 * rowA 0 1 6 + y_1409 7 * rowA 0 1 7 +
       y_1409 8 * rowA 0 1 8 ≤ db 0 1 := by
   norm_num [y_1409, rowA, db, dbmVal]
+  simp only [List.getElem_cons_zero, List.getElem_cons_succ]
+  norm_num
 
 theorem row_4_5 :
     y_1409 0 * rowA 4 5 0 + y_1409 1 * rowA 4 5 1 +
@@ -45,6 +47,8 @@ theorem row_4_5 :
       y_1409 6 * rowA 4 5 6 + y_1409 7 * rowA 4 5 7 +
       y_1409 8 * rowA 4 5 8 ≤ db 4 5 := by
   norm_num [y_1409, rowA, db, dbmVal]
+  simp only [List.getElem_cons_zero, List.getElem_cons_succ]
+  norm_num
 
 theorem row_9_9 :
     y_1409 0 * rowA 9 9 0 + y_1409 1 * rowA 9 9 1 +
@@ -53,6 +57,8 @@ theorem row_9_9 :
       y_1409 6 * rowA 9 9 6 + y_1409 7 * rowA 9 9 7 +
       y_1409 8 * rowA 9 9 8 ≤ db 9 9 := by
   norm_num [y_1409, rowA, db, dbmVal]
+  simp only [List.getElem_cons_zero, List.getElem_cons_succ]
+  norm_num
 
 end
 end N11Formalization.LaneBRowCapDecideProbe

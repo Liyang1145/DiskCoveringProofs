@@ -1,26 +1,47 @@
 # Lane B notes
 
+## 2026-10-31 - session 81: vector-lookup repair for row-cap leaves
+
+- Live CI `41176805557` (head `d141be39`, includes lane commit `f7c72195`)
+  supplied the missing diagnostic: `LaneBRowCapDecideProbe` exits `1` at
+  `46:40`/`54:40`, and `LaneBFrozenCapRowCap1409` exits `1` from `42:230`
+  onward. After `norm_num`, goals retain `![...] 2`-style lookups, so direct
+  `norm_num` alone is insufficient. This is a prior-bytes verdict, not a fault
+  in the new bytes below.
+- Changed every generated leaf to `norm_num [y_<node>, rowA, db, dbmVal]`,
+  then `simp only [List.getElem_cons_zero, List.getElem_cons_succ]`, then
+  `norm_num`. Applied the same three tactics to all three probe leaves and
+  regenerated all seven `LaneBFrozenCapRowCap*.lean` modules with
+  `split_rowcap_modules.py`.
+- Tiny Mathlib probe scope: exact failing shape `1409,0,2` and the previously
+  failing `1409,4,5` both elaborate with the new tactic sequence (Lean 4.33.1,
+  `/workspace/tools/mathlib-probe`). `split_rowcap_modules.py --check`, exact
+  arithmetic `7/7` modules with `100/100` caps and weight sum `1`, zero
+  violations, `py_compile`, forbidden-token scan, and `git diff --check` pass.
+  No project/full-module local Lean verdict was obtained; all new bytes are
+  **CI pending**.
+- Hashes: emitter `385B5A6A...FF92`; probe `6AC6FD56...3CEC`; caps 1409
+  `7F3BE0EE...EE81`, 2337 `CCBF4218...FCB9`, 2341 `B7B7C13E...DEE1`, 2356
+  `BC002C8D...91FA`, 2360 `229C6D4F...FAA5`, 2368 `D9C7A11F...CAC7`, 2370
+  `7960518B...0853`.
+- Still unproved: kernel exits for the new probe and seven caps (CI pending);
+  B13 chain/public excluded tree and other prior failures; 373 residual radii;
+  the `f0Lo`/`g` bridge; SevenClassExclusions (`0/7`); arbitrary-center
+  full-disk theorem.
+- Next: supervisor commits this worktree; fresh serial CI must start with
+  `LaneBRowCapDecideProbe` and then 1409. Repair the first exact diagnostic if
+  red; if green, verify the remaining six caps and then the B13 dependants.
+
 ## 2026-10-31 - session 79: bounded local verification of row-cap repair
 
 - Re-read GUIDANCE, lane B, NOTES and `ci/LATEST.md`. `project_status.py --check`
   exits `0` (manifest index only, not proof or full-file integrity).
-- Confirmed the current repair shape in all seven row-cap modules: `100` leaf
-  declarations and `100` direct `norm_num [y_<node>, rowA, db, dbmVal]` proofs
-  per module, with zero `change` steps. `split_rowcap_modules.py --check`,
-  `py_compile`, `git diff --check` and the forbidden-token scan all exit clean;
-  exact arithmetic remains `700/700`, weight sums `1`, zero violations.
-- Local Lean is still unavailable: `lake env lean` tries to check out Mathlib
-  revision `0df444a3` and aborts because the package tree is incomplete; the
-  Mathlib probe also timed out (`30 s`). Therefore there is **no local Lean
-  verdict** and all seven caps plus probe remain **CI pending**.
-- Exact hashes: emitter `9EF7286A...A706`; probe `D48FFDA1...824D5`.
-  This session changed no Lean bytes; it only strengthens the static verdict.
-- Still unproved: kernel exits for probe, seven row caps and public excluded
-  tree; 373 residual radii; `f0Lo`/`g` bridge; SevenClassExclusions (`0/7`);
-  arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits/pushes these exact bytes. Fresh serial
-  CI must report `LaneBRowCapDecideProbe` first; repair only the first new Lean
-  diagnostic there, then inspect `LaneBFrozenCapRowCap1409` before the other six.
+- Static recheck: seven modules, `700/700` caps, weights `1`, zero violations;
+  check scripts clean. Local Lean was unavailable, so those bytes stayed CI
+  pending. Emitter was `9EF7286A...A706`; probe `D48FFDA1...824D5`.
+- Remaining obligations were unchanged (kernel exits, 373 radii, `f0Lo`/`g`,
+  SevenClassExclusions, arbitrary-center theorem). Next was serial CI from the
+  probe and 1409.
 
 ## 2026-10-31 - session 78: remove definitional `change` leaves
 
