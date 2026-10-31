@@ -117,444 +117,544 @@ def db : Fin 10 → Fin 10 → ℚ
   | ⟨9, _⟩, ⟨9, _⟩ => (0 : ℚ)
 
 theorem row_cap_2370_0_0 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 0 q) ≤ db 0 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_1 :
-    (0 : ℚ) ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 1 q) ≤ db 0 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_2 :
-    (0 : ℚ) ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 2 q) ≤ db 0 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_3 :
-    (0 : ℚ) ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 3 q) ≤ db 0 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_4 :
-    (1 : ℚ) / 4 ≤ (3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 4 q) ≤ db 0 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_5 :
-    (3 : ℚ) / 8 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 5 q) ≤ db 0 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_6 :
-    (1 : ℚ) / 2 ≤ (5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 6 q) ≤ db 0 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_7 :
-    (1 : ℚ) / 2 ≤ (7 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 7 q) ≤ db 0 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_8 :
-    (5 : ℚ) / 8 ≤ (7 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 8 q) ≤ db 0 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0_9 :
-    (1 : ℚ) ≤ (1 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 0 9 q) ≤ db 0 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_0 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 0 q) ≤ db 1 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_1 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 1 q) ≤ db 1 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_2 :
-    (0 : ℚ) ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 2 q) ≤ db 1 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_3 :
-    (0 : ℚ) ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 3 q) ≤ db 1 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_4 :
-    (1 : ℚ) / 4 ≤ (3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 4 q) ≤ db 1 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_5 :
-    (3 : ℚ) / 8 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 5 q) ≤ db 1 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_6 :
-    (1 : ℚ) / 2 ≤ (5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 6 q) ≤ db 1 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_7 :
-    (1 : ℚ) / 2 ≤ (7 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 7 q) ≤ db 1 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_8 :
-    (5 : ℚ) / 8 ≤ (7 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 8 q) ≤ db 1 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_1_9 :
-    (1 : ℚ) ≤ (1 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 1 9 q) ≤ db 1 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_0 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 0 q) ≤ db 2 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_1 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 1 q) ≤ db 2 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_2 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 2 q) ≤ db 2 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_3 :
-    (0 : ℚ) ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 3 q) ≤ db 2 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_4 :
-    (1 : ℚ) / 4 ≤ (3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 4 q) ≤ db 2 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_5 :
-    (3 : ℚ) / 8 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 5 q) ≤ db 2 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_6 :
-    (1 : ℚ) / 2 ≤ (5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 6 q) ≤ db 2 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_7 :
-    (1 : ℚ) / 2 ≤ (7 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 7 q) ≤ db 2 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_8 :
-    (5 : ℚ) / 8 ≤ (7 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 8 q) ≤ db 2 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_2_9 :
-    (1 : ℚ) ≤ (1 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 2 9 q) ≤ db 2 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_0 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 0 q) ≤ db 3 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_1 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 1 q) ≤ db 3 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_2 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 2 q) ≤ db 3 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_3 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 3 q) ≤ db 3 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_4 :
-    (1 : ℚ) / 4 ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 4 q) ≤ db 3 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_5 :
-    (3 : ℚ) / 8 ≤ (3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 5 q) ≤ db 3 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_6 :
-    (1 : ℚ) / 2 ≤ (5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 6 q) ≤ db 3 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_7 :
-    (1 : ℚ) / 2 ≤ (5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 7 q) ≤ db 3 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_8 :
-    (5 : ℚ) / 8 ≤ (5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 8 q) ≤ db 3 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_3_9 :
-    (1 : ℚ) ≤ (1 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 3 9 q) ≤ db 3 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_0 :
-    (-1 : ℚ) / 4 ≤ (-1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 0 q) ≤ db 4 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_1 :
-    (-1 : ℚ) / 4 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 1 q) ≤ db 4 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_2 :
-    (-1 : ℚ) / 4 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 2 q) ≤ db 4 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_3 :
-    (-1 : ℚ) / 4 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 3 q) ≤ db 4 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_4 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 4 q) ≤ db 4 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_5 :
-    (1 : ℚ) / 8 ≤ (1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 5 q) ≤ db 4 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_6 :
-    (1 : ℚ) / 4 ≤ (3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 6 q) ≤ db 4 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_7 :
-    (1 : ℚ) / 4 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 7 q) ≤ db 4 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_8 :
-    (3 : ℚ) / 8 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 8 q) ≤ db 4 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_4_9 :
-    (3 : ℚ) / 4 ≤ (3 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 4 9 q) ≤ db 4 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_0 :
-    (-3 : ℚ) / 8 ≤ (-1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 0 q) ≤ db 5 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_1 :
-    (-3 : ℚ) / 8 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 1 q) ≤ db 5 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_2 :
-    (-3 : ℚ) / 8 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 2 q) ≤ db 5 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_3 :
-    (-3 : ℚ) / 8 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 3 q) ≤ db 5 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_4 :
-    (-1 : ℚ) / 8 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 4 q) ≤ db 5 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_5 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 5 q) ≤ db 5 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_6 :
-    (1 : ℚ) / 8 ≤ (3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 6 q) ≤ db 5 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_7 :
-    (1 : ℚ) / 8 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 7 q) ≤ db 5 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_8 :
-    (1 : ℚ) / 4 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 8 q) ≤ db 5 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_5_9 :
-    (5 : ℚ) / 8 ≤ (3 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 5 9 q) ≤ db 5 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_0 :
-    (-1 : ℚ) / 2 ≤ (-5 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 0 q) ≤ db 6 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_1 :
-    (-1 : ℚ) / 2 ≤ (-5 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 1 q) ≤ db 6 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_2 :
-    (-1 : ℚ) / 2 ≤ (-5 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 2 q) ≤ db 6 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_3 :
-    (-1 : ℚ) / 2 ≤ (-5 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 3 q) ≤ db 6 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_4 :
-    (-1 : ℚ) / 4 ≤ (-1 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 4 q) ≤ db 6 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_5 :
-    (-1 : ℚ) / 8 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 5 q) ≤ db 6 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_6 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 6 q) ≤ db 6 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_7 :
-    (0 : ℚ) ≤ (5 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 7 q) ≤ db 6 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_8 :
-    (1 : ℚ) / 8 ≤ (5 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 8 q) ≤ db 6 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_6_9 :
-    (1 : ℚ) / 2 ≤ (11 : ℚ) / 16 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 6 9 q) ≤ db 6 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_0 :
-    (-1 : ℚ) / 2 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 0 q) ≤ db 7 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_1 :
-    (-1 : ℚ) / 2 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 1 q) ≤ db 7 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_2 :
-    (-1 : ℚ) / 2 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 2 q) ≤ db 7 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_3 :
-    (-1 : ℚ) / 2 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 3 q) ≤ db 7 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_4 :
-    (-1 : ℚ) / 4 ≤ (-1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 4 q) ≤ db 7 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_5 :
-    (-1 : ℚ) / 8 ≤ (-1 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 5 q) ≤ db 7 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_6 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 6 q) ≤ db 7 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_7 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 7 q) ≤ db 7 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_8 :
-    (1 : ℚ) / 8 ≤ (1 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 8 q) ≤ db 7 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_7_9 :
-    (1 : ℚ) / 2 ≤ (1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 7 9 q) ≤ db 7 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_0 :
-    (-5 : ℚ) / 8 ≤ (-5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 0 q) ≤ db 8 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_1 :
-    (-5 : ℚ) / 8 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 1 q) ≤ db 8 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_2 :
-    (-5 : ℚ) / 8 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 2 q) ≤ db 8 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_3 :
-    (-5 : ℚ) / 8 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 3 q) ≤ db 8 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_4 :
-    (-3 : ℚ) / 8 ≤ (-3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 4 q) ≤ db 8 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_5 :
-    (-1 : ℚ) / 4 ≤ (-1 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 5 q) ≤ db 8 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_6 :
-    (-1 : ℚ) / 8 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 6 q) ≤ db 8 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_7 :
-    (-1 : ℚ) / 8 ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 7 q) ≤ db 8 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_8 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 8 q) ≤ db 8 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_8_9 :
-    (3 : ℚ) / 8 ≤ (3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 8 9 q) ≤ db 8 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_0 :
-    (-1 : ℚ) ≤ (-1 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 0 q) ≤ db 9 0 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_1 :
-    (-1 : ℚ) ≤ (-3 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 1 q) ≤ db 9 1 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_2 :
-    (-1 : ℚ) ≤ (-3 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 2 q) ≤ db 9 2 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_3 :
-    (-1 : ℚ) ≤ (-3 : ℚ) / 4 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 3 q) ≤ db 9 3 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_4 :
-    (-3 : ℚ) / 4 ≤ (-5 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 4 q) ≤ db 9 4 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_5 :
-    (-5 : ℚ) / 8 ≤ (-1 : ℚ) / 2 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 5 q) ≤ db 9 5 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_6 :
-    (-1 : ℚ) / 2 ≤ (-3 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 6 q) ≤ db 9 6 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_7 :
-    (-1 : ℚ) / 2 ≤ (-1 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 7 q) ≤ db 9 7 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_8 :
-    (-3 : ℚ) / 8 ≤ (-1 : ℚ) / 8 := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 8 q) ≤ db 9 8 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_9_9 :
-    (0 : ℚ) ≤ (0 : ℚ) := by
-  norm_num
+    (∑ q : Fin 9, y_2370 q * rowA 9 9 q) ≤ db 9 9 := by
+  norm_num [y_2370, rowA, db, Fin.sum_univ_succ]
 
 theorem row_cap_2370_0 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 0 j q) ≤ db 0 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_0_0
+  · exact row_cap_2370_0_1
+  · exact row_cap_2370_0_2
+  · exact row_cap_2370_0_3
+  · exact row_cap_2370_0_4
+  · exact row_cap_2370_0_5
+  · exact row_cap_2370_0_6
+  · exact row_cap_2370_0_7
+  · exact row_cap_2370_0_8
+  · exact row_cap_2370_0_9
 
 theorem row_cap_2370_1 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 1 j q) ≤ db 1 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_1_0
+  · exact row_cap_2370_1_1
+  · exact row_cap_2370_1_2
+  · exact row_cap_2370_1_3
+  · exact row_cap_2370_1_4
+  · exact row_cap_2370_1_5
+  · exact row_cap_2370_1_6
+  · exact row_cap_2370_1_7
+  · exact row_cap_2370_1_8
+  · exact row_cap_2370_1_9
 
 theorem row_cap_2370_2 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 2 j q) ≤ db 2 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_2_0
+  · exact row_cap_2370_2_1
+  · exact row_cap_2370_2_2
+  · exact row_cap_2370_2_3
+  · exact row_cap_2370_2_4
+  · exact row_cap_2370_2_5
+  · exact row_cap_2370_2_6
+  · exact row_cap_2370_2_7
+  · exact row_cap_2370_2_8
+  · exact row_cap_2370_2_9
 
 theorem row_cap_2370_3 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 3 j q) ≤ db 3 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_3_0
+  · exact row_cap_2370_3_1
+  · exact row_cap_2370_3_2
+  · exact row_cap_2370_3_3
+  · exact row_cap_2370_3_4
+  · exact row_cap_2370_3_5
+  · exact row_cap_2370_3_6
+  · exact row_cap_2370_3_7
+  · exact row_cap_2370_3_8
+  · exact row_cap_2370_3_9
 
 theorem row_cap_2370_4 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 4 j q) ≤ db 4 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_4_0
+  · exact row_cap_2370_4_1
+  · exact row_cap_2370_4_2
+  · exact row_cap_2370_4_3
+  · exact row_cap_2370_4_4
+  · exact row_cap_2370_4_5
+  · exact row_cap_2370_4_6
+  · exact row_cap_2370_4_7
+  · exact row_cap_2370_4_8
+  · exact row_cap_2370_4_9
 
 theorem row_cap_2370_5 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 5 j q) ≤ db 5 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_5_0
+  · exact row_cap_2370_5_1
+  · exact row_cap_2370_5_2
+  · exact row_cap_2370_5_3
+  · exact row_cap_2370_5_4
+  · exact row_cap_2370_5_5
+  · exact row_cap_2370_5_6
+  · exact row_cap_2370_5_7
+  · exact row_cap_2370_5_8
+  · exact row_cap_2370_5_9
 
 theorem row_cap_2370_6 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 6 j q) ≤ db 6 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_6_0
+  · exact row_cap_2370_6_1
+  · exact row_cap_2370_6_2
+  · exact row_cap_2370_6_3
+  · exact row_cap_2370_6_4
+  · exact row_cap_2370_6_5
+  · exact row_cap_2370_6_6
+  · exact row_cap_2370_6_7
+  · exact row_cap_2370_6_8
+  · exact row_cap_2370_6_9
 
 theorem row_cap_2370_7 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 7 j q) ≤ db 7 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_7_0
+  · exact row_cap_2370_7_1
+  · exact row_cap_2370_7_2
+  · exact row_cap_2370_7_3
+  · exact row_cap_2370_7_4
+  · exact row_cap_2370_7_5
+  · exact row_cap_2370_7_6
+  · exact row_cap_2370_7_7
+  · exact row_cap_2370_7_8
+  · exact row_cap_2370_7_9
 
 theorem row_cap_2370_8 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 8 j q) ≤ db 8 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_8_0
+  · exact row_cap_2370_8_1
+  · exact row_cap_2370_8_2
+  · exact row_cap_2370_8_3
+  · exact row_cap_2370_8_4
+  · exact row_cap_2370_8_5
+  · exact row_cap_2370_8_6
+  · exact row_cap_2370_8_7
+  · exact row_cap_2370_8_8
+  · exact row_cap_2370_8_9
 
 theorem row_cap_2370_9 (j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA 9 j q) ≤ db 9 j := by
-  fin_cases j <;> norm_num [rowA, y_2370, db, Fin.sum_univ_succ]
+  fin_cases j
+  · exact row_cap_2370_9_0
+  · exact row_cap_2370_9_1
+  · exact row_cap_2370_9_2
+  · exact row_cap_2370_9_3
+  · exact row_cap_2370_9_4
+  · exact row_cap_2370_9_5
+  · exact row_cap_2370_9_6
+  · exact row_cap_2370_9_7
+  · exact row_cap_2370_9_8
+  · exact row_cap_2370_9_9
 
 theorem row_cap (i j : Fin 10) :
     (∑ q : Fin 9, y_2370 q * rowA i j q) ≤ db i j := by

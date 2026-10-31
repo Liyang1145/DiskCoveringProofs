@@ -39,16 +39,18 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
     leaves = []
     for i in range(10):
         for j in range(10):
-            lhs = sum(y[q] * common.row_a(i, j, q) for q in range(9))
             rhs = Q(db[i][j], 4096)
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
-    {lean_rat(lhs)} ≤ {lean_rat(rhs)} := by
-  norm_num''')
+    (∑ q : Fin 9, y_{node} q * rowA {i} {j} q) ≤ db {i} {j} := by
+  norm_num [y_{node}, rowA, db, Fin.sum_univ_succ]''')
     row_lemmas = []
     for i in range(10):
+        branches = "\n".join(
+            f"  · exact row_cap_{node}_{i}_{j}" for j in range(10))
         row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :
     (∑ q : Fin 9, y_{node} q * rowA {i} j q) ≤ db {i} j := by
-  fin_cases j <;> norm_num [rowA, y_{node}, db, Fin.sum_univ_succ]''')
+  fin_cases j
+{branches}''')
     lines = [
         "import N11Formalization.FrozenCapRationalCore",
         "import Mathlib.Tactic.FinCases",
