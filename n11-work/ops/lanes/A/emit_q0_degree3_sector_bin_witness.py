@@ -27,11 +27,14 @@ vec = ",\n".join("  ![" + ", ".join(map(str, row)) + "]" for row in w)
 thm_lines = []
 refs = []
 for i in range(9):
+    next_site = (i + 1) % 9
     for j in range(8):
         name = f"sectorBinPeakValid_{i}{j}"
         refs.append(name)
         thm_lines.append(f'''theorem {name} :
     sectorAt {i} (sectorBinWitness {i} {j}).val ≤ sectorPeakAt {i} := by
+  unfold sectorAt sectorValue
+  rw [show nextSite {i} = ({next_site} : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]

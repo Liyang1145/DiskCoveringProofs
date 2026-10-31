@@ -7,8 +7,8 @@ EXPERT (2026-10-31):
  
 # Lane A notes
 
-CURRENT (session 116, part 3): repaired an `EdgeShape` declaration-order defect;
-the peak-unfold and endpoint repairs remain CI pending.
+CURRENT (session 118): identified the concrete symbolic `ringSite` defect in all
+nine sector peaks; repair is CI pending.
 
 ## Ledger
 
@@ -23,227 +23,158 @@ the peak-unfold and endpoint repairs remain CI pending.
 ROOT-IMPORT REQUEST: import the CI-green `C450ChainCompletion` and
 `C450ChainCompletionMain` in the stage-1 root (supervisor-only edit).
 
-## Sessions 98--104 (condensed) -- peak chain repair and import gate
+## Earlier sessions (24--104, condensed)
 
-Repaired missing unfolds/imports and the hidden `EdgeShape` dependency; the
-47-reference import gate passed. These were source checks, not kernel credit.
+Repaired the C450 chain, Cos/Mono/Bins, endpoint checks, edge peaks/suffixes,
+sector calculus/bins/assembler, table and relabelled-certificate chain. Exact
+72-bin/grid audits passed, but no Lean target was credited by arithmetic.
 
-## 2026-10-30 (sessions 24--74, condensed)
+## 2026-10-31 (sessions 86--114, condensed)
 
-Repaired the C450 chain, Cos/Mono/Bins, EndpointChecks, 21 edge peaks, both
-negative-edge suffixes, and all 42 edge-shape facts. Drafted the peak/calculus/
-shape/witness/bounds chain and all eight all-row sector bins from exact 72-bin
-argmax audits. Exact audits (not proofs) passed: 8/8 endpoint bins, 2048 cosine
-steps, 21 edge shapes, and the `9 x 2049` sector grid. Historical hashes are in
-git history; downstream modules remain CI pending.
+Repaired endpoint branches/imports, added the strict-total emitter/module
+(total `3.129499763218794...`, slack `0.012092890370999...`), replaced the
+global sector-step premise with certified fixed-bin maxima, and normalized both
+peak wrappers. Exact audits passed but none of these outputs is proof credit;
+all remain **CI pending**.
 
-## 2026-10-31 (sessions 75--84, condensed)
+## 2026-10-31 (sessions 115--117, condensed)
 
-Added `SectorAssembler`/`sectorValid` and `TableBounds`, combining `EdgeValid`,
-`SectorValid`, node checks, edge-table injectivity, and canonical edge maxima.
-Added `TableCertificate` and the relabelled bridge, proving that the actual
-cover supplies the canonical permuted table; the bridge reduced the strict
-premise to one canonical finite total. Exact 72-bin and grid audits passed.
-All Lean results remain **CI pending**; no theorem was paid by arithmetic.
+Replayed the exact edge derivative/unimodal and sector grid audits (21 edge peaks,
+21 discrete peaks, 18,441 sector points; strict-total slack
+`0.012092890370999008`). Repaired edge 1/8 endpoint comparisons at node 877;
+all 10 literal checks, two endpoint steps, and helper declaration order pass.
+Added folds/unfolds required by CI and corrected the maintained CI interpretation.
+These remain source/arithmetic checks, not kernel credit; `degree_three_table_graph`
+still has a `sorryAx` dependency.
 
-## 2026-10-31 (sessions 86--92, condensed)
+## 2026-10-31 (session 118) -- sector peak symbolic-site owner
 
-Repaired six impossible `Fin 8` endpoint branches and `UpperTables` imports;
-exact audits confirmed 21 peaks, the `9 x 2049` sector grid, and slack
-`0.012092890371`. These are arithmetic checks only; hashes are in git history.
+Run `41217409382` completed on `068914fb`. Its first independent lane-A owners
+were all 21 edge peaks and all 9 sector peaks (`unsolved goals`), not rational
+falsehoods. In the sector goals `norm_num` left
+`ActualRingDirectionOrder.ringSite (ActualBoundaryCyclicOrder.nextRing i)`
+symbolic; the green bin modules already included `ringSite, nextRing` for this
+reason. Added both names to every sector peak simp set and its emitter; extended
+the textual gate to require them. The committed edge-prefix fix replaces the
+opaque `Finset.sum` `edgeCoeff` with exact literals and is included in the later
+`8f861bae` build, but that build predates this sector edit.
 
-## 2026-10-31 (sessions 93--97, condensed)
+**Files / SHA256.** `SevenClassQ0Deg3SectorPeak.lean`
+`901e59b7ef79eabf9a69735696d49ff7876d0eac3df86b02dc9ffffdb5760cb3`;
+`emit_q0_degree3_sector_peak.py`
+`98fa8678145e3f6a6401a7097989295617d4e9e829928a7e3baa1ca47e5a613e`;
+`check_q0_degree3_sector_peak_unfold.py`
+`886123c4cbac09adf37ad31cfc6497af69add8a7b7964cf2a9c4e155157105bd`.
 
-Added `verify_q0_degree3_strict_total.py` (total `3.129499763218794...`, Lean-
-`piLo` slack `0.012092890370999...`). Added `SevenClassQ0Deg3StrictTotal.lean`
-and its emitter, rounding the canonical 21-edge/9-sector ledger upward and
-proving `canonicalTableTotal_lt_piLo`. Session 97 replaced the false relabelled
-total equality with a fixed-grid equality to `canonicalTableTotal`, so
-`q0Degree3AreaInput_of_strictTotal` now has the single canonical strict premise
-and derives `q0Degree3AreaInput`. All remains **CI pending**, not proof credit.
-
-## 2026-10-31 (sessions 105--106, condensed)
-
-Refuted the proposed global adjacent-step sector premise; replaced it with
-per-bin certified maxima and fixed-bin witnesses. Exact 72-bin audits and Lean
-witness binding passed. These are arithmetic/source checks, not kernel credit.
-
-## 2026-10-31 (session 107, condensed) -- first-owner peak repairs
-
-Run `41193732877` exposed the pre-move `edgeCoeff` attribute and unsolved
-sector peaks from oversized exact fractions. The attribute was moved after the
-definition; the sector emitter switched to certified six-decimal upward bounds.
-Files/hashes are in git history. Bound audit PASS 9/9; `py_compile` and
-`git diff --check` PASS. These are source/arithmetic checks, and the repairs
-remained **CI pending**.
-
-## 2026-10-31 (sessions 110--112, condensed) -- peak normalization
-
-Peak proofs were diagnostic-red at their witness rewrite: the
-`EdgePeakValid`/`SectorPeakValid` wrappers were still folded. Earlier repairs
-normalized `Fin` coercions, removed the re-unfolding `edgeWitness` from simp
-sets, and retargeted sector peaks from rounded `sectorPeakAt` to `sectorMax`.
-Historical hashes are in git history.
-
-## 2026-10-31 (session 114, condensed)
-
-The maintained artifact was still the pre-session-112 tree, so its peak exits
-were not a verdict on the dirty repairs.  No Lean or arithmetic check ran.
-
-## 2026-10-31 (session 115) -- exact CI peak-error repair
-
-Fetched run `41212560053` job `124570425838` at committed HEAD `66bf2541`. It
-is the first run on session-112's peak repairs. Both peak modules fail at their
-first proof line, not in rational evaluation: `rw [show edgeWitness i = ...]`
-and `rw [show sectorWitness i = ...]` cannot see the witness because
-`EdgePeakValid i` / `SectorPeakValid i` is still folded. CI reports this at all
-21 and all 9 proofs respectively. C450 completion is unaffected.
-
-Inserted `unfold EdgePeakValid` / `unfold SectorPeakValid` before every witness
-`rw`. Synced the sector Python emitter and strengthened both textual gates to
-reject a witness rewrite that precedes the unfold.
-
-**Files / SHA256.** `SevenClassQ0Deg3UpperReductionUnimodal.lean`
-`9eaeed71f2a47c76d68933e43a975603eaa36c4e6078df5f0dd3199ba8a89a44`;
-`SevenClassQ0Deg3SectorPeak.lean`
-`be48fee6330a2be99bab6a9008786860bcd1d313fd2335dfed0fc2925eaf4328`;
-sector emitter `b0cca7364e6f06a5777a8e3d717f7f3725262ed9c7b6ae2ab73aa20ca29128ed`;
-edge gate `af4434a75c38f0f2ef146f9d0cde5aabf3bc00eb7ef0e4eb8b2927782e5e40f2`;
-sector gate `93fe300e7ca76b8308ecca02097d3268a173dc07047e5d023e25230d0135db7a`.
-
-**Checks (scope).** CI log diagnosis above; updated edge/sector gates PASS
-21/21 and 9/9; emitter `py_compile`, deterministic regeneration (identical
-SHA256), and `git diff --check` PASS. A tiny standalone Lean tactic-order probe
-timed out under host load and proves nothing. No project kernel build ran
-locally, so this repair remains **CI pending**.
-
-**Still unproved / unpaid.** Kernel acceptance of both peaks; edge/sector shape;
-bins/assembler/table/strict-total; `Q0Degree3AreaInput`; seven exclusions; and the
-arbitrary-centre theorem.
-
-**Next concrete step.** After supervisor commit, inspect the next run's exits.
-If either peak still fails, use the new first goal; otherwise take the first
-owner error in `EdgeSuffixNonpos`/`SectorShape` from a serial lane build.
-
-## 2026-10-31 (session 116) -- false edge-prefix endpoints repaired
-
-The live instance of run `41212560053` still shows only the pre-unfold peak
-errors already diagnosed in session 115; it is not a new regression.  An exact
-audit of every `edge_ratio_*_lt_cosT14_nodeQ_*` literal in `EdgeShape` found that
-edges 1 and 8 were false at peak node 878: ratios `0.2226682825...` and
-`0.2226718144...` versus `cosTQ14 = 0.2220936210...`.  At node 877 both are
-strict (`0.2235890292...`), so `edgeIncTo_one`/`_eight` now use
-`edgeIncTo_of_monotoneOn_to_prev_and_step 1/8 878 877`, a monotone endpoint at
-877, and an explicit exact 877->878 step.  The other eight literal comparisons
-were already true.
-
-**Files / SHA256.** `SevenClassQ0Deg3EdgeShape.lean`
-`dfe4948bd211cb035dbcd98ceaadef55f0539f7eacdb2815c77fd0babbc9e81c`;
-`audit_q0_degree3_edge_literals.py`
-`4b7cd62cfc2f9e39acedf68c0a8308a3047d76fad34f38abfd4c0d0264b2c686`;
-`q0-degree3-edge-literals-audit.json`
-`21fc913121dc77bc67cf875a19ee77dfcdeab4eb9eae85b4399ac027c0e5d8f5`.
-
-**Checks (scope).** Exact source-bound audit PASS 10/10; edge/sector peak-order
-gates PASS 21/21 and 9/9; `py_compile` and `git diff --check` PASS.  A 90-second
-Mathlib probe of the tactic order timed out and proves nothing.  No project
-Lean build ran locally, so `EdgeShape` is **CI pending**.
-
-**Still unproved / unpaid.** Kernel acceptance of both peaks and `EdgeShape`;
-`EdgeSuffixNonpos`/sector shape/calculus/bins; table/strict-total;
-`Q0Degree3AreaInput`; seven exclusions; arbitrary-centre theorem.
-
-**Next concrete step.** After the next commit/run, check `EdgeShape`'s first
-owner.  Also exact-check the new 877->878 steps against the term structure if the
-sole error is in either `norm_num` step.
-
-## 2026-10-31 (session 116, part 2) -- endpoint-step audit
-
-CI run `41212560053` was before the dirty repairs. Its first independent
-owners were the folded peak witness rewrites; later edge targets were dependency-red.
-The audit now evaluates the exact 877->878 `edgeUpper` steps for edges 1 and 8
-(gaps `3.833978588912...e-8`, `3.755745568730...e-8`) as well as all literals.
-
-**Files / SHA256.** `audit_q0_degree3_edge_literals.py`
-`6f2a52bd4c75c39841ba6b5917b5b4da05cc43815e60b2e3db244f55f7d2a638`;
-`q0-degree3-edge-literals-audit.json`
-`70179d07f80ed0fd30a1dac418a37eedef5e80b6c02d314d7824d90429ea0d62`.
-The dirty peak/edge Lean hashes are unchanged from the session-115/116 entries.
-
-**Checks (scope).** Exact source-bound audit PASS 10/10 literals and 2/2 steps;
-edge/sector peak-order gates PASS 21/21 and 9/9; `py_compile` and
-`git diff --check` PASS.  No local project Lean build ran, so the dirty repairs
-remain **CI pending**.
-
-**Still unproved / unpaid.** Kernel acceptance of the peaks and `EdgeShape`;
-`EdgeSuffixNonpos`/`EdgeSuffixHigh`, sector shape/calculus/bins, table and
-strict-total chain; `Q0Degree3AreaInput`; seven exclusions; arbitrary-centre
-theorem.
-
-**Next concrete step.** After the supervisor commits the dirty peak/edge fixes,
-inspect the next run's separate peak exits first.  If both peaks are green,
-take the first owner in `EdgeSuffixNonpos`/`EdgeSuffixHigh`; do not diagnose
-dependency-red descendants.
-
-## 2026-10-31 (session 116, part 3) -- EdgeShape declaration order
-
-Found a concrete owner-level defect: `EdgeShape` used
-`edgeIncTo_of_monotoneOn_to` at line 226 and the new
-`edgeIncTo_of_monotoneOn_to_prev_and_step` at line 314, but declared them only
-at lines 797/834. Lean has no forward theorem references. Moved both generic
-helpers once, before their first use; no mathematical statement changed.
-
-**Files / SHA256.** `SevenClassQ0Deg3EdgeShape.lean`
-`74a6f4293943e15d2fe6ecd997070b24fe5e3ddb372b3213a4cd666c2f348713`;
-`audit_q0_degree3_edge_literals.py`
-`8063b5e8fc9755dfdd4af7cb33f613432c04cb1e5a3889bd966563601bf66714`;
-`q0-degree3-edge-literals-audit.json`
-`c19b505ca420450e017be4a07dbd513b11054e4ce3aace71ef13c298489a5f5b`.
-
-**Checks (scope).** Exact source audit PASS 10/10 literals, 2/2 endpoint steps,
-and 2/2 helpers declared before all uses; edge/sector peak gates PASS 21/21 and
-9/9; `py_compile` and `git diff --check` PASS. No project Lean build ran locally,
-so all dirty Lean repairs remain **CI pending**; this is not proof credit.
-
-**Still unproved / unpaid.** Same as the preceding entry: kernel acceptance of
-the peaks/`EdgeShape`; suffix/shape/calculus/bins/table/strict-total chain;
-`Q0Degree3AreaInput`; seven exclusions; arbitrary-centre theorem.
-
-**Next concrete step.** After commit, inspect separate peak exits, then the first
-owner error in `EdgeShape`. The new helper-order audit is the regression guard.
-
-## 2026-10-31 (session 117) -- corrected CI state and exact replay
-
-The maintained `ops/ci/LATEST.md` was stale. GitHub API shows run
-`41212560053` completed at 15:48 on `66bf2541`; the job conclusion is success,
-but its summary exits contain the expected folded-wrapper peak reds and all
-downstream lane-A targets are dependency-red. It is not Lane-A credit. A new
-build `41217409382` is in progress on `068914fb`, which includes the committed
-`unfold` and `EdgeShape` repairs.
-
-**Files / SHA256.** No Lean source changed this session. Replayed reports:
-`q0-degree3-edge-derivative.json`
-`628a20f6e4758b3a18ccd83215ac23a7e2fabbb11c701bd667a820643b97d726`;
-`q0-degree3-edge-unimodal.json`
-`2a0a38b150cae0b9d200c90f273084b3bdbd4f51d43f4eca1270d8ea5b2f412f`;
-`q0-degree3-sector-grid-audit.json`
-`bc0dd05c4dd7a38f08ae98d916a1eff5bbe8b7db98bdd53749278049215669b9`.
-
-**Checks (scope).** Exact-rational replay PASS: 21/21 edge derivative signs;
-21/21 exact discrete single peaks; 21 edge maxima; all `9 x 2049 = 18,441`
-sector points; strict `totalUpper < piLo` with slack
-`0.012092890370999008`. Source gates PASS 10/10 edge literals, 2/2 endpoint
-steps, 2/2 helper declarations before uses, 47 references across 38 modules,
-and 21/21 plus 9/9 peak unfolds. These are arithmetic/source checks, not kernel
-credit.
+**Checks (scope).** CI log owner diagnosis at `068914fb`; deterministic emitter
+regeneration produced the listed Lean hash; sector gate PASS 9/9;
+`py_compile` and `git diff --check` PASS. No local project kernel build, so the
+repair is **CI pending**. Run `41222715534` was still in progress on `8f861bae`.
 
 **Still unproved / unpaid.** Kernel acceptance of both peaks, suffixes,
 `EdgeShape`, sector shape/calculus/bins, table/strict-total, and
-`Q0Degree3AreaInput`; all seven exclusions; arbitrary-centre theorem. The
-existing `degree_three_table_graph` axiom report contains `sorryAx`, so it is
-also unpaid and must not be treated as class credit.
+`Q0Degree3AreaInput`; all seven exclusions; arbitrary-centre theorem.
 
-**Next concrete step.** When `41217409382` finishes, take its first independent
-owner among `UpperReductionUnimodal`, `SectorPeak`, then `EdgeShape`; do not
-diagnose dependency-red descendants. Do not edit frozen modules to chase the
-`sorryAx` dependency.
+**Next concrete step.** On the next committed build, inspect the separate
+`UpperReductionUnimodal`, `SectorPeak`, then `EdgeSuffixNonpos`/`EdgeShape`
+exits. If sector peaks are green, take the first independent `EdgeShape` error;
+do not diagnose dependency-red bins/table targets.
+
+## 2026-10-31 (session 119) -- explicit sector boundary label
+
+Live run `41222715534`, job `124600429120`, at `8f861bae` built
+`SevenClassQ0Deg3SectorPeak` and exposed all nine first goals.  The prior
+`unfold`/simp-list repair was insufficient: each goal retained the opaque index
+`ringSite (nextRing i)`.  The emitter now rewrites `nextSite i` to the exact
+boundary label `(i+1) mod 9` before `norm_num`.  The same rewrite was propagated
+to all 72 `sectorBinPeakValid_*` checks, which would otherwise inherit the defect.
+
+**Files / SHA256.** `SevenClassQ0Deg3SectorPeak.lean`
+`f004ad499c0926ba924035323cd66c452b7deb2a633994fe35ff2ab480d31ae1`;
+`SevenClassQ0Deg3SectorBinWitness.lean`
+`d38aeb93cb7e98613221be6faea23060af6e16fdbc81c3893ed004bbb4401549`;
+`emit_q0_degree3_sector_peak.py`
+`6f2f9a9a4cfbe2bd90cd7297e37e3ac63e043f9ac4ea08fb74d212bf125fd87e`;
+`emit_q0_degree3_sector_bin_witness.py`
+`45cc76782b330a6d56906947eedde3719002d9fdea335f561a2a2c7bc4db4566`.
+
+**Checks (scope).** CI first-goal diagnosis at `8f861bae`; deterministic emitter
+regeneration PASS; sector/edge textual gates PASS 9/9 and 21/21; all 72 bin
+witnesses contain the explicit label rewrite; edge-literal audit PASS 10/10 + 2/2;
+`py_compile` and `git diff --check` PASS.  No project Lean kernel build ran
+locally, so this repair is **CI pending**, not proof credit.
+
+**Still unproved / unpaid.** Kernel acceptance of peaks and bin witnesses;
+suffixes, `EdgeShape`, sector calculus/bins, table/strict-total, and
+`Q0Degree3AreaInput`; all seven exclusions; arbitrary-centre theorem.
+
+**Next concrete step.** On the committed run, inspect `SectorPeak` first.  If
+green, take the first independent `SectorBinWitness` goal; do not diagnose
+dependency-red downstream modules.
+
+## 2026-10-31 (session 120) -- reachable sector-bin index rewrite
+
+The session-119 bin repair rewrote `nextSite i` before unfolding `sectorAt`, so
+the occurrence remained hidden inside `sectorValue`.  All 72 emitted proofs now
+execute `unfold sectorAt sectorValue` before the kernel-decided `nextSite`
+equality; this exposes the single reachable occurrence and preserves the exact
+boundary label `(i+1) mod 9`.  The nine global-peak proofs retain their prior
+unfold/rewrite order.
+
+**Files / SHA256.** `SevenClassQ0Deg3SectorBinWitness.lean`
+`d6578beccb9a06091c29c5328c14ddfa2f0f96f2649c11bc914239fa3591264c`;
+`SevenClassQ0Deg3SectorPeak.lean`
+`f004ad499c0926ba924035323cd66c452b7deb2a633994fe35ff2ab480d31ae1`;
+`emit_q0_degree3_sector_bin_witness.py`
+`653364bc8a7b4b81c2b0c3549bea18dbd6595b0673f409283ee1dd856fb37292`;
+`emit_q0_degree3_sector_peak.py`
+`6f2f9a9a4cfbe2bd90cd7297e37e3ac63e043f9ac4ea08fb74d212bf125fd87e`.
+
+**Checks (scope).** Deterministic regeneration PASS; 72/72 proofs contain the
+new unfold; sector-peak textual gate PASS 9/9; exact bin audit PASS 72/72
+witnesses, 18,369 within-bin steps (8,724 up / 9,645 down), 63/63 inter-bin
+jumps; bin-shape audit PASS 9/9 false global steps and 72/72 single-peaked
+restrictions; `py_compile` and `git diff --check` PASS.  These are source and
+exact-rational checks only.  No project kernel build ran locally, so both
+repairs remain **CI pending**.
+
+**Still unproved / unpaid.** Kernel acceptance of global sector peaks and all
+72 bin witnesses; subsequent suffixes/`EdgeShape`, sector calculus/bins,
+table/strict-total, `Q0Degree3AreaInput`; all seven exclusions and the
+arbitrary-centre theorem.
+
+**Next concrete step.** On the next committed CI run, inspect first independent
+failures in this order: `SectorPeak`, then `SectorBinWitness`.  For a red bin,
+read its first `sectorBinPeakValid_ij` goal after the new unfold; do not treat
+dependency-red downstream modules as diagnostics.
+
+## 2026-10-31 (session 121) -- session-120 gates replayed
+
+Replayed both non-kernel gates after the reachable-index repair.  The sector
+peak textual gate passed 9/9 declarations; the exact-rational bin audit passed
+72/72 witnesses, 18,369 within-bin steps (8,724 up / 9,645 down), and 63/63
+inter-bin jumps.  `py_compile` for both emitters, the peak checker, and the bin
+audit passed; `git diff --check` passed.  The bin audit JSON was regenerated
+(`60ecd42746aa7fac7bf3010418ebe41fc9169334132293cb55d41cc4f18dbe09`).
+
+An isolated Mathlib-only probe of the exact `unfold sectorAt sectorValue` then
+`rw [show nextSite 0 = 1 ...]` tactic pattern was attempted, but Mathlib import
+exceeded its bounded 120-second local timeout; it produced no Lean result and
+is not evidence.  The source hashes are unchanged from session 120 (peak
+`f004ad49...d31ae1`, bins `d6578bec...1264c`).
+
+**Still unproved / unpaid.** Kernel acceptance of the peaks and bins, all later
+sector/edge/table/strict-total obligations, `Q0Degree3AreaInput`, all seven
+exclusions, and the arbitrary-centre theorem.  No CI run exists yet for these
+uncommitted bytes, so status remains **CI pending**.
+
+Live API inspection at session end found no newer `n11-lean-build` run:
+`41222715534` (head `8f861bae`) still reported `in_progress`; the newer
+`335d6b13` runs were only scoped math replay and delivery checks.  The latter
+delivery failure is manifest/byte auditing, not a lane-A Lean diagnostic.
+
+**Next concrete step.** When the supervisor commits these bytes, read the new
+CI job's first independent red: inspect `SectorPeak` first, then the first
+`SectorBinWitness` theorem.  If both are green, continue with the first
+independent `SectorShape`/calculated-bin owner rather than dependency-red
+modules.

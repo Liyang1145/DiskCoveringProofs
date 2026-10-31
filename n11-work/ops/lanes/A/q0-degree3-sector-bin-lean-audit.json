@@ -2,7 +2,7 @@
   "scope": "exact-rational replay and Lean-table binding; no Lean claim",
   "source_sha256": "fe73e1f3e78b7041d563de4fde94b235226ab460210949f59888fb623d89ceb2",
   "report_sha256": "22e49d9dc6962602100f47668ebaaf3d7b3defd3fc126567fbdd7b9084cb6996",
-  "lean_sha256": "3fb1b9520746a564057b3b4dcfb168d60129939eccd9568e135af5a5b84b0195",
+  "lean_sha256": "d6578beccb9a06091c29c5328c14ddfa2f0f96f2649c11bc914239fa3591264c",
   "withinBinAdjacentSteps": 18369,
   "increasingSteps": 8724,
   "decreasingSteps": 9645,

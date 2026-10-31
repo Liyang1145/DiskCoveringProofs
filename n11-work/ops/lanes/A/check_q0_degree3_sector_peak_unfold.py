@@ -23,6 +23,8 @@ REQUIRED = (
     "mu",
     "lam",
     "nextSite",
+    "ringSite",
+    "nextRing",
     "nodeQ",
     "sinHiNLag",
     "sinLoNLag",

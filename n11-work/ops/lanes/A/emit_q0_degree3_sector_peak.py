@@ -89,12 +89,14 @@ def main() -> None:
     ]
     for i in range(9):
         witness = int(data["sectors"][i]["witnessK"])
+        next_site = (i + 1) % 9
         lines += [
             f"theorem sectorPeakValid_{i} : SectorPeakValid {i} := by",
             "  unfold SectorPeakValid",
             f"  rw [show sectorWitness {i} = ({witness} : Fin 2049) by decide +kernel]",
+            f"  rw [show nextSite {i} = ({next_site} : Fin 11) by decide +kernel]",
             "  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,",
-            "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,",
+            "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, ringSite, nextRing, nodeQ,",
             "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,",
             "    Fin.val_ofNat, Fin.val_mk]",
             "",

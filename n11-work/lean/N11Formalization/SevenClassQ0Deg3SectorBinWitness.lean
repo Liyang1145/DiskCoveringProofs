@@ -29,361 +29,505 @@ def sectorBinWitness : Fin 9 → Fin 8 → Fin 2049 := ![
 
 theorem sectorBinPeakValid_00 :
     sectorAt 0 (sectorBinWitness 0 0).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_01 :
     sectorAt 0 (sectorBinWitness 0 1).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_02 :
     sectorAt 0 (sectorBinWitness 0 2).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_03 :
     sectorAt 0 (sectorBinWitness 0 3).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_04 :
     sectorAt 0 (sectorBinWitness 0 4).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_05 :
     sectorAt 0 (sectorBinWitness 0 5).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_06 :
     sectorAt 0 (sectorBinWitness 0 6).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_07 :
     sectorAt 0 (sectorBinWitness 0 7).val ≤ sectorPeakAt 0 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 0 = (1 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_10 :
     sectorAt 1 (sectorBinWitness 1 0).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_11 :
     sectorAt 1 (sectorBinWitness 1 1).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_12 :
     sectorAt 1 (sectorBinWitness 1 2).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_13 :
     sectorAt 1 (sectorBinWitness 1 3).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_14 :
     sectorAt 1 (sectorBinWitness 1 4).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_15 :
     sectorAt 1 (sectorBinWitness 1 5).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_16 :
     sectorAt 1 (sectorBinWitness 1 6).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_17 :
     sectorAt 1 (sectorBinWitness 1 7).val ≤ sectorPeakAt 1 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 1 = (2 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_20 :
     sectorAt 2 (sectorBinWitness 2 0).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_21 :
     sectorAt 2 (sectorBinWitness 2 1).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_22 :
     sectorAt 2 (sectorBinWitness 2 2).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_23 :
     sectorAt 2 (sectorBinWitness 2 3).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_24 :
     sectorAt 2 (sectorBinWitness 2 4).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_25 :
     sectorAt 2 (sectorBinWitness 2 5).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_26 :
     sectorAt 2 (sectorBinWitness 2 6).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_27 :
     sectorAt 2 (sectorBinWitness 2 7).val ≤ sectorPeakAt 2 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 2 = (3 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_30 :
     sectorAt 3 (sectorBinWitness 3 0).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_31 :
     sectorAt 3 (sectorBinWitness 3 1).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_32 :
     sectorAt 3 (sectorBinWitness 3 2).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_33 :
     sectorAt 3 (sectorBinWitness 3 3).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_34 :
     sectorAt 3 (sectorBinWitness 3 4).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_35 :
     sectorAt 3 (sectorBinWitness 3 5).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_36 :
     sectorAt 3 (sectorBinWitness 3 6).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_37 :
     sectorAt 3 (sectorBinWitness 3 7).val ≤ sectorPeakAt 3 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 3 = (4 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_40 :
     sectorAt 4 (sectorBinWitness 4 0).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_41 :
     sectorAt 4 (sectorBinWitness 4 1).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_42 :
     sectorAt 4 (sectorBinWitness 4 2).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_43 :
     sectorAt 4 (sectorBinWitness 4 3).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_44 :
     sectorAt 4 (sectorBinWitness 4 4).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_45 :
     sectorAt 4 (sectorBinWitness 4 5).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_46 :
     sectorAt 4 (sectorBinWitness 4 6).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_47 :
     sectorAt 4 (sectorBinWitness 4 7).val ≤ sectorPeakAt 4 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 4 = (5 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_50 :
     sectorAt 5 (sectorBinWitness 5 0).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_51 :
     sectorAt 5 (sectorBinWitness 5 1).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_52 :
     sectorAt 5 (sectorBinWitness 5 2).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_53 :
     sectorAt 5 (sectorBinWitness 5 3).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_54 :
     sectorAt 5 (sectorBinWitness 5 4).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_55 :
     sectorAt 5 (sectorBinWitness 5 5).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_56 :
     sectorAt 5 (sectorBinWitness 5 6).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_57 :
     sectorAt 5 (sectorBinWitness 5 7).val ≤ sectorPeakAt 5 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 5 = (6 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_60 :
     sectorAt 6 (sectorBinWitness 6 0).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_61 :
     sectorAt 6 (sectorBinWitness 6 1).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_62 :
     sectorAt 6 (sectorBinWitness 6 2).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_63 :
     sectorAt 6 (sectorBinWitness 6 3).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_64 :
     sectorAt 6 (sectorBinWitness 6 4).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_65 :
     sectorAt 6 (sectorBinWitness 6 5).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_66 :
     sectorAt 6 (sectorBinWitness 6 6).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_67 :
     sectorAt 6 (sectorBinWitness 6 7).val ≤ sectorPeakAt 6 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 6 = (7 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_70 :
     sectorAt 7 (sectorBinWitness 7 0).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_71 :
     sectorAt 7 (sectorBinWitness 7 1).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_72 :
     sectorAt 7 (sectorBinWitness 7 2).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_73 :
     sectorAt 7 (sectorBinWitness 7 3).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_74 :
     sectorAt 7 (sectorBinWitness 7 4).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_75 :
     sectorAt 7 (sectorBinWitness 7 5).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_76 :
     sectorAt 7 (sectorBinWitness 7 6).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_77 :
     sectorAt 7 (sectorBinWitness 7 7).val ≤ sectorPeakAt 7 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 7 = (8 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_80 :
     sectorAt 8 (sectorBinWitness 8 0).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_81 :
     sectorAt 8 (sectorBinWitness 8 1).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_82 :
     sectorAt 8 (sectorBinWitness 8 2).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_83 :
     sectorAt 8 (sectorBinWitness 8 3).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_84 :
     sectorAt 8 (sectorBinWitness 8 4).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_85 :
     sectorAt 8 (sectorBinWitness 8 5).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_86 :
     sectorAt 8 (sectorBinWitness 8 6).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
 theorem sectorBinPeakValid_87 :
     sectorAt 8 (sectorBinWitness 8 7).val ≤ sectorPeakAt 8 := by
+  unfold sectorAt sectorValue
+  rw [show nextSite 8 = (0 : Fin 11) by decide +kernel]
   norm_num [sectorBinWitness, sectorAt, sectorValue, sectorPeakAt, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi]
