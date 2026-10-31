@@ -125,11 +125,14 @@ def main() -> None:
     for i in range(9):
         witness = witnesses[i]
         next_site = (i + 1) % 9
+        peak = peaks[i]
+        peak_literal = f"({peak.numerator}/{peak.denominator})"
         lines += [
             f"theorem sectorPeakValid_{i} : SectorPeakValid {i} := by",
             "  unfold SectorPeakValid",
             f"  rw [show sectorWitness {i} = ({witness} : Fin 2049) by decide +kernel]",
             f"  rw [show nextSite {i} = ({next_site} : Fin 11) by decide +kernel]",
+            "  rw [show sectorMax " + str(i) + " = " + peak_literal + " by decide +kernel]",
             "  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,",
             "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, ringSite, nextRing, nodeQ,",
             "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,",
