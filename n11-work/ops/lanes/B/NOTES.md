@@ -1,5 +1,72 @@
 # Lane B notes
 
+## 2026-10-31 - session 117c: pre-CI handoff verification
+
+- Re-read `GUIDANCE.md`, lane B, prior notes, and CI `41229638083`; the repaired
+  373-item census remains **CI pending**.
+- Re-ran `repair_census_free_vars.py --check`: 51 blocks, 51 closed-term
+  `change`s, 0 `+revert`. Rechecked current source SHA256
+  `91F7F7ED65FDADD45CA6057F567C61831B2BE12D4F865B02276573478C7EF658`
+  and `...ResidualCensusMain` SHA256
+  `569FB93EDF013085D33CAF10981A012A1C8C2C0EB8DE9AFB76F9B3D73E68B268`.
+- Scope is Python/source audit only; no local Lean check or radius payment.
+  Still unproved: kernel success of census/Main; 373 residual radii; packet
+  `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions (`0/7`); and the
+  arbitrary-centre full-disk theorem.
+- Very next step: supervisor commit, then CI census and CensusMain; diagnose
+  the first owning error before any further source edit.
+
+## 2026-10-31 - session 117b: repair-partition verification
+
+- Re-read CI `41229638083`: `RefineSixteenResidualCensus` and its `Main`
+  remain red at that SHA; the source repair from session 117 is newer and
+  **CI pending**, so it is not claimed green.
+- Re-ran `repair_census_free_vars.py --check`: 51 closed-term `change`s, no
+  `+revert`. `audit_census_blocks.py` passes its 51-block range/no-gap checks;
+  its `89` chunk check belongs to the older 389 census, not this 373 source.
+  The 373 source declares chunks of sizes `100/100/100/73`; an independent
+  source parse confirms blocks `0..50` are exactly
+  `[0,100),...,[4900,5000),[5000,5011)`.
+- A core-only `Mathlib.Data.Finset.Basic` free-variable probe timed out at
+  25 s under worker contention; it is not a Lean check and is not counted.
+  Scope remains Python/source audit only; no radius is paid.
+- Current census SHA256 is
+  `91F7F7ED65FDADD45CA6057F567C61831B2BE12D4F865B02276573478C7EF658`.
+- Still unproved: kernel success of the repaired census and `Main`; 373
+  residual radii; packet `f0Lo`/`g`; 382 absent payload records;
+  SevenClassExclusions (`0/7`); the arbitrary-centre full-disk theorem.
+- Very next step: supervisor commit, then CI of the repaired census and
+  `...CensusMain`; inspect the first owning error before further edits.
+
+## 2026-10-31 - session 117: census free-variable repair
+
+- CI run `41229638083` gave the owning error for
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus` at line 49:
+  `Expected type must not contain free variables`, repeated for every member
+  of the first 100-index block. The cause is the proof field `hk` retained in
+  `⟨k, hk⟩` after `rcases`, not a false residual membership.
+- Added `n11-work/ops/lanes/B/repair_census_free_vars.py` and repaired all 51
+  blocks in `EnergyTerminalBatchB13RefineSixteenResidualCensus.lean`: each
+  case now `change`s to the propositionally equal closed term
+  `⟨k, by decide⟩`, then rewrites the residual-census equivalence and runs
+  `decide +kernel`. Removed all 51 `+revert` modifiers.
+- Checks: `repair_census_free_vars.py --check` confirms 51 blocks, 102 closed
+  `Fin.mk` occurrences, zero `+revert`; the static forbidden-token scan finds
+  no `sorry`, `admit`, declaration `axiom`, `native_decide`, `ofReduceBool`, or
+  `implemented_by`; `py_compile` and `git diff --check` pass. Scope is source
+  shape only: **CI pending**, no Lean elaboration locally. A core-only
+  proof-irrelevance probe was attempted but timed out under worker contention
+  and is not counted.
+- Census source SHA256:
+  `91F7F7ED65FDADD45CA6057F567C61831B2BE12D4F865B02276573478C7EF658`;
+  repair script SHA256:
+  `1334B6D61B8D5284BC15F1361E601081C846CA1ED649A4ECBB42089E8E1D52E9`.
+- Still unproved: kernel success of the 373 census/assembly/Main; 373 residual
+  radii; packet `f0Lo`/`g`; 382 absent payload records;
+  SevenClassExclusions (`0/7`); the arbitrary-centre full-disk theorem.
+- Next: CI `RefineSixteenResidualCensus` and `...CensusMain`; if still red,
+  read the first new error before changing the mathematical census.
+
 ## 2026-10-31 - session 116: census CI-red repair
 
 - CI run `41235435914` (head `791d80b2`) kernel-checked
