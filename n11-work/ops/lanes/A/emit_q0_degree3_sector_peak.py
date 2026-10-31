@@ -59,7 +59,7 @@ def main() -> None:
         "def SectorPeakValid (i : Fin 9) : Prop :=",
         "  sectorUpper (mu (nextSite i)) lam",
         "    (nodeQ RatInterval.piHi 2048 (sectorWitness i)) (nodeBin (sectorWitness i)) ≤",
-        "      sectorPeakAt i",
+        "      sectorMax i",
         "",
         "/-- A single-peak factorization of a sector row. -/",
         "def SectorIncTo (i : Fin 9) : Prop :=",
@@ -92,7 +92,7 @@ def main() -> None:
         lines += [
             f"theorem sectorPeakValid_{i} : SectorPeakValid {i} := by",
             f"  rw [show sectorWitness {i} = ({witness} : Fin 2049) by decide +kernel]",
-            "  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,",
+            "  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,",
             "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,",
             "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,",
             "    Fin.val_ofNat, Fin.val_mk]",

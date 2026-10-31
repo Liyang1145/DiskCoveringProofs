@@ -14,6 +14,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[4]
 LEAN = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeak.lean"
 REQUIRED = (
+    "sectorMax",
     "sectorUpper",
     "areaUpper",
     "nodeBin",
@@ -39,6 +40,14 @@ def main() -> int:
         failures.append("missing direct ActualRingLinkBoundaryData import")
     if "open N11Formalization.ActualRingLinkBoundaryData" not in text:
         failures.append("missing absolute ActualRingLinkBoundaryData open")
+    if not re.search(
+        r"def SectorPeakValid \(i : Fin 9\) : Prop :=\n"
+        r"  sectorUpper [^\n]*\n"
+        r"    [^\n]*\n"
+        r"      sectorMax i\n",
+        text,
+    ):
+        failures.append("SectorPeakValid must target downstream sectorMax i")
 
     blocks = re.findall(
         r"theorem sectorPeakValid_(\d+) : SectorPeakValid \1 := by"

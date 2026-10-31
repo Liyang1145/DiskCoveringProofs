@@ -36,7 +36,7 @@ def sectorPeakAt : Fin 9 → ℚ := ![
 def SectorPeakValid (i : Fin 9) : Prop :=
   sectorUpper (mu (nextSite i)) lam
     (nodeQ RatInterval.piHi 2048 (sectorWitness i)) (nodeBin (sectorWitness i)) ≤
-      sectorPeakAt i
+      sectorMax i
 
 /-- A single-peak factorization of a sector row. -/
 def SectorIncTo (i : Fin 9) : Prop :=
@@ -65,63 +65,63 @@ theorem sectorValid_of_unimodal (hshape : SectorUnimodal)
 
 theorem sectorPeakValid_0 : SectorPeakValid 0 := by
   rw [show sectorWitness 0 = (1024 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_1 : SectorPeakValid 1 := by
   rw [show sectorWitness 1 = (1024 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_2 : SectorPeakValid 2 := by
   rw [show sectorWitness 2 = (1536 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_3 : SectorPeakValid 3 := by
   rw [show sectorWitness 3 = (1536 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_4 : SectorPeakValid 4 := by
   rw [show sectorWitness 4 = (1536 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_5 : SectorPeakValid 5 := by
   rw [show sectorWitness 5 = (1536 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_6 : SectorPeakValid 6 := by
   rw [show sectorWitness 6 = (1536 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_7 : SectorPeakValid 7 := by
   rw [show sectorWitness 7 = (1536 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
 
 theorem sectorPeakValid_8 : SectorPeakValid 8 := by
   rw [show sectorWitness 8 = (1536 : Fin 2049) by decide +kernel]
-  norm_num [SectorPeakValid, sectorPeakAt, sectorWitness, sectorUpper,
+  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
     Fin.val_ofNat, Fin.val_mk]
