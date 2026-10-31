@@ -41,8 +41,17 @@ def main():
         for j in range(i + 1, 4):
             lines.append(f"private theorem disjoint_chunk{i}_{j} : Disjoint chunk{i} chunk{j} := by decide +kernel")
     lines += [
+        "private theorem disjoint_chunk1_23 : Disjoint chunk1 (chunk2 ∪ chunk3) :=",
+        "  disjoint_union_right.mpr ⟨disjoint_chunk1_2, disjoint_chunk1_3⟩",
+        "private theorem disjoint_chunk0_123 :",
+        "    Disjoint chunk0 (chunk1 ∪ (chunk2 ∪ chunk3)) :=",
+        "  disjoint_union_right.mpr ⟨disjoint_chunk0_1, disjoint_union_right.mpr",
+        "    ⟨disjoint_chunk0_2, disjoint_chunk0_3⟩⟩",
         "private theorem card_chunks : residual373.card = 373 := by",
-        "  decide +kernel",
+        "  rw [residual373, card_union_of_disjoint disjoint_chunk0_123,",
+        "    card_union_of_disjoint disjoint_chunk1_23, card_union_of_disjoint disjoint_chunk2_3,",
+        "    chunk0_card, chunk1_card, chunk2_card, chunk3_card]",
+        "  norm_num",
         "",
     ]
     blocks = []

@@ -6,6 +6,9 @@ N11Formalization.EnergyTerminalBatchB13ResidualCertificates
 N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair
 # Conditional 373-id residual consumer for the repaired paid set.
 N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
+# Direct main consumer over that actual residual set, independent of the
+# literal census encoding.  Conditional only; it asserts no payment.
+N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain
 # Repaired 373-id census (`decide +kernel`) plus literal-373 certificate
 # consumer; keep early so serial CI reaches it before the long target list.
 N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus
