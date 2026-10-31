@@ -58,107 +58,107 @@ theorem edgeValid_of_unimodal (h : EdgeUnimodal) : EdgeValid := by
 /-- The 21 peak comparisons recorded by the exact rational audit, split into
 separate kernel checks to keep elaboration bounded. -/
 theorem edgePeakValid_0 : EdgePeakValid 0 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_1 : EdgePeakValid 1 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_2 : EdgePeakValid 2 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_3 : EdgePeakValid 3 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_4 : EdgePeakValid 4 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_5 : EdgePeakValid 5 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_6 : EdgePeakValid 6 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_7 : EdgePeakValid 7 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_8 : EdgePeakValid 8 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_9 : EdgePeakValid 9 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_10 : EdgePeakValid 10 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_11 : EdgePeakValid 11 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_12 : EdgePeakValid 12 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_13 : EdgePeakValid 13 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_14 : EdgePeakValid 14 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_15 : EdgePeakValid 15 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_16 : EdgePeakValid 16 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_17 : EdgePeakValid 17 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_18 : EdgePeakValid 18 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_19 : EdgePeakValid 19 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
 theorem edgePeakValid_20 : EdgePeakValid 20 := by
-  norm_num [EdgePeakValid, edgeCoeff, tableEdges, mu, edgeMaxAt,
+  norm_num [EdgePeakValid, edgeUpper, edgeCoeff, tableEdges, mu, edgeMaxAt,
     edgeWitness, nodeQ, sinHiNLag, sinTQ, Finset.sum_range_succ,
     RatInterval.piHi]
 
