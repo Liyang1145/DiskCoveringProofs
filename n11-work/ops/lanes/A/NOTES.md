@@ -77,48 +77,13 @@ Files/hashes are in git history. Bound audit PASS 9/9; `py_compile` and
 `git diff --check` PASS. These are source/arithmetic checks, and the repairs
 remained **CI pending**.
 
-## 2026-10-31 (sessions 110--111, condensed) -- peak owner diagnosis
+## 2026-10-31 (sessions 110--112, condensed) -- peak normalization
 
-Runs on `cc16dff4` left `UpperReductionUnimodal` and `SectorPeak` red, with
-finite-vector coercions unreduced and an early stale `edgeCoeff`.  The repair
-added normalized `Fin.val_ofNat`/`Fin.val_mk`, then one explicit
-`decide +kernel` witness equality per peak.  Static gates passed 21/21 and 9/9;
-no local Lean build ran, so those repairs were CI pending.  Hashes remain in git
-history.
-## 2026-10-31 (session 112) -- owner-level peak fixes
-
-Fetched run `41201323694` logs. `UpperReductionUnimodal` failed all 21 peaks
-because `norm_num` re-unfolded `edgeWitness` after the explicit witness `rw`,
-leaving `↑↑(![...] i)`; removed `edgeWitness` from those simp sets. The sector
-module also targeted `sectorPeakAt` (nine rounded six-decimal upper bounds) rather
-than `SectorValid`'s `sectorMax`; exact comparison shows `sectorPeakAt > sectorMax`
-in all nine rows, with maximum excess `9.928e-7`, so the old peak theorem could not
-discharge `SectorValid`. `SectorPeakValid` now compares directly to `sectorMax`.
-
-**Files / SHA256.** `SevenClassQ0Deg3UpperReductionUnimodal.lean`
-`ab0c7e865c0745a83540a1c80fdbb3eababc5867d341249bc6974818d2a7faee`;
-`SevenClassQ0Deg3SectorPeak.lean`
-`f2f3f3824bee0ff95999557d4483fd6762eee5ca485add83305de751078ff068`;
-sector emitter `3b89619ab57fe5647358e9c3e05d42f86a85e22e85b54a24e073cd6ea9cfc6fb`.
-sector gate `8afd1198b04e09d00eee8f69b2fcc6c059a688189225d23c544750682f68ea80`.
-
-**Checks (scope).** CI log diagnosis above; edge/sector textual unfold gates PASS
-21/21 and 9/9; emitter `py_compile` and `git diff --check` PASS. Independent exact
-replay PASS: 21 edge maxima, all 18,441 sector points, strict slack
-`0.012092890370999008`, and `sectorPeakAt > sectorMax` in 9/9 rows. The sector gate
-now enforces `SectorPeakValid ≤ sectorMax`
-(SHA256 `8afd1198b04e09d00eee8f69b2fcc6c059a688189225d23c544750682f68ea80`).
-No project Lean build ran locally; Mathlib probe timed out under load. Both
-repairs are CI pending.
-
-**Still unproved / unpaid.** Kernel acceptance of both peaks; edge/sector shape;
-bins/assembler/table/strict-total; `Q0Degree3AreaInput`; seven exclusions; and the
-arbitrary-centre theorem.
-
-**Next concrete step.** After supervisor commit, inspect the next CI exits. If a
-peak remains red, reproduce its first goal in a tiny module and test the witness
-normalization independently; otherwise take the first owner error in
-`EdgeSuffixNonpos`/`SectorShape`.
+Peak proofs were diagnostic-red at their witness rewrite: the
+`EdgePeakValid`/`SectorPeakValid` wrappers were still folded. Earlier repairs
+normalized `Fin` coercions, removed the re-unfolding `edgeWitness` from simp
+sets, and retargeted sector peaks from rounded `sectorPeakAt` to `sectorMax`.
+Historical hashes are in git history.
 
 ## 2026-10-31 (session 114, condensed)
 
@@ -246,3 +211,39 @@ the peaks/`EdgeShape`; suffix/shape/calculus/bins/table/strict-total chain;
 
 **Next concrete step.** After commit, inspect separate peak exits, then the first
 owner error in `EdgeShape`. The new helper-order audit is the regression guard.
+
+## 2026-10-31 (session 117) -- corrected CI state and exact replay
+
+The maintained `ops/ci/LATEST.md` was stale. GitHub API shows run
+`41212560053` completed at 15:48 on `66bf2541`; the job conclusion is success,
+but its summary exits contain the expected folded-wrapper peak reds and all
+downstream lane-A targets are dependency-red. It is not Lane-A credit. A new
+build `41217409382` is in progress on `068914fb`, which includes the committed
+`unfold` and `EdgeShape` repairs.
+
+**Files / SHA256.** No Lean source changed this session. Replayed reports:
+`q0-degree3-edge-derivative.json`
+`628a20f6e4758b3a18ccd83215ac23a7e2fabbb11c701bd667a820643b97d726`;
+`q0-degree3-edge-unimodal.json`
+`2a0a38b150cae0b9d200c90f273084b3bdbd4f51d43f4eca1270d8ea5b2f412f`;
+`q0-degree3-sector-grid-audit.json`
+`bc0dd05c4dd7a38f08ae98d916a1eff5bbe8b7db98bdd53749278049215669b9`.
+
+**Checks (scope).** Exact-rational replay PASS: 21/21 edge derivative signs;
+21/21 exact discrete single peaks; 21 edge maxima; all `9 x 2049 = 18,441`
+sector points; strict `totalUpper < piLo` with slack
+`0.012092890370999008`. Source gates PASS 10/10 edge literals, 2/2 endpoint
+steps, 2/2 helper declarations before uses, 47 references across 38 modules,
+and 21/21 plus 9/9 peak unfolds. These are arithmetic/source checks, not kernel
+credit.
+
+**Still unproved / unpaid.** Kernel acceptance of both peaks, suffixes,
+`EdgeShape`, sector shape/calculus/bins, table/strict-total, and
+`Q0Degree3AreaInput`; all seven exclusions; arbitrary-centre theorem. The
+existing `degree_three_table_graph` axiom report contains `sorryAx`, so it is
+also unpaid and must not be treated as class credit.
+
+**Next concrete step.** When `41217409382` finishes, take its first independent
+owner among `UpperReductionUnimodal`, `SectorPeak`, then `EdgeShape`; do not
+diagnose dependency-red descendants. Do not edit frozen modules to chase the
+`sorryAx` dependency.

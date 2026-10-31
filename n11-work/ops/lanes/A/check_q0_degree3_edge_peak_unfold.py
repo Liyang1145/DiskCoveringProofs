@@ -12,7 +12,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[4]
 LEAN = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionUnimodal.lean"
-REQUIRED = ("EdgePeakValid", "edgeUpper", "edgeCoeff", "tableEdges", "nodeQ",
+REQUIRED = ("EdgePeakValid", "edgeUpper", "edgeCoeff", "edgeMaxAt", "nodeQ",
             "Fin.val_ofNat", "Fin.val_mk")
 
 

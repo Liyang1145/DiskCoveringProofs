@@ -1,5 +1,5 @@
 {
- "scope": "exact discrete unimodality and peak values; not a Lean proof",
+ "scope": "exact discrete unimodality, peak values, and Lean edgeCoeff vector; not a Lean proof",
  "source": "q0-degree3-piecewise-8.json",
  "source_sha256": "22e49d9dc6962602100f47668ebaaf3d7b3defd3fc126567fbdd7b9084cb6996",
  "N": 2048,

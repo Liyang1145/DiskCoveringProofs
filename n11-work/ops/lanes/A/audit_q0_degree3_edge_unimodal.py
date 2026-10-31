@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from fractions import Fraction as F
 from math import factorial
 from pathlib import Path
@@ -16,6 +17,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 SRC = HERE / "q0-degree3-piecewise-8.json"
 OUT = HERE / "q0-degree3-edge-unimodal.json"
+LEAN = HERE.parents[3] / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionUnimodal.lean"
 N = 2048
 A = F(19, 50) ** 2
 FACT = [factorial(i) for i in range(30)]
@@ -50,8 +52,17 @@ def main() -> None:
         rows.append({"edge": edge["edge"], "witnessK": witness,
                      "peak": str(peak), "increasingPrefix": True,
                      "decreasingSuffix": True})
+    lean = LEAN.read_text(encoding="utf-8")
+    block = lean.split("def edgeCoeff : Fin 21 → ℚ := ![", 1)[1].split("]", 1)[0]
+    lean_coeffs = [
+        F(int(num), int(den))
+        for num, den in re.findall(r"\(\s*(-?\d+)\s*/\s*(\d+)\s*\)", block)
+    ]
+    expected = [sum(mu[j] for j in edge["edge"]) for edge in data["edges"]]
+    assert lean_coeffs == expected, (len(lean_coeffs), len(expected))
+
     report = {
-        "scope": "exact discrete unimodality and peak values; not a Lean proof",
+        "scope": "exact discrete unimodality, peak values, and Lean edgeCoeff vector; not a Lean proof",
         "source": SRC.name,
         "source_sha256": hashlib.sha256(raw).hexdigest(),
         "N": N,
@@ -59,7 +70,7 @@ def main() -> None:
         "allUnimodal": True,
     }
     OUT.write_text(json.dumps(report, indent=1) + "\n")
-    print(f"PASS: {len(rows)} edges are exactly single-peaked; witnesses and maxima agree")
+    print(f"PASS: {len(rows)} edges are exactly single-peaked; witnesses, maxima, and Lean coefficients agree")
     print("sha256 json:", hashlib.sha256(OUT.read_bytes()).hexdigest())
 
 
