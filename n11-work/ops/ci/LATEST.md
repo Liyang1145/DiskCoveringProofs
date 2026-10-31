@@ -1,18 +1,22 @@
-# CI latest (run 41150468008)
+# CI latest (run 41168580187)
 
 ```
+41168580187 completed success 0f022bfb 2026-10-31T04:26:31Z
 41150468008 completed success 24e434b4 2026-10-31T00:29:48Z
 41141569628 completed success c63cb61e 2026-10-30T22:58:36Z
 41123531381 completed success cc04268c 2026-10-30T20:28:51Z
 41119359460 completed success 6937fb90 2026-10-30T19:56:53Z
-41115384387 completed success 9445f2b2 2026-10-30T19:27:20Z
 ```
 
 ## summary.json
 ```json
 {
- "sha": "24e434b486811b28bcabbbc9ce21a45120307aca",
+ "sha": "0f022bfb762388f6032e3a519cc5671fc1ed30f6",
  "exits": [
+  [
+   "N11Formalization.FrozenCapRowCap1409Smoke",
+   "1"
+  ],
   [
    "N11Formalization.FrozenCapRowCap1409",
    "1"
@@ -39,6 +43,30 @@
   ],
   [
    "N11Formalization.FrozenCapRowCap2370",
+   "1"
+  ],
+  [
+   "N11Formalization.FrozenCapFourFieldWitnesses",
+   "1"
+  ],
+  [
+   "N11Formalization.FrozenCapFourFieldRowCaps",
+   "1"
+  ],
+  [
+   "N11Formalization.FrozenCapFourFieldExcludedTree",
+   "1"
+  ],
+  [
+   "N11Formalization.FrozenCapFiveFieldWitnesses",
+   "1"
+  ],
+  [
+   "N11Formalization.FrozenCapFiveFieldRowCaps",
+   "1"
+  ],
+  [
+   "N11Formalization.FrozenCapFiveFieldExcludedTree",
    "1"
   ],
   [
@@ -334,6 +362,10 @@
    "1"
   ],
   [
+   "N11Formalization.LaneBRowCapDecideProbe",
+   "0"
+  ],
+  [
    "N11Formalization.LaneBFrozenCapRowCap1409",
    "1"
   ],
@@ -383,7 +415,7 @@
   ],
   [
    "N11Formalization.SevenClassQ0Deg3EndpointChecks",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.SevenClassQ0Deg3UpperReductionUnimodal",
@@ -490,74 +522,69 @@
    "1"
   ],
   [
+   "N11Formalization.SevenClassQ0Deg3TableCertificate",
+   "1"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate",
+   "1"
+  ],
+  [
    "N11Formalization",
    "1"
   ]
  ],
  "built_count": 2,
  "errors_head": [
-  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409 (32s)",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:132:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:136:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:140:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:144:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:148:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:152:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:156:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:172:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:176:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:180:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:184:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:188:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:192:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:196:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:212:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:216:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:220:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:224:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:228:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:232:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:236:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:240:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:244:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:248:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:256:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:260:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:264:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:268:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:272:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:276:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:280:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:284:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:288:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:292:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:300:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:304:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:308:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:312:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:316:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:320:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:324:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:328:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:332:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:336:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:344:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:348:608: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:352:608: unso```
+  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409Smoke (7.8s)",
+  "error: N11Formalization/FrozenCapRowCap1409Smoke.lean:25:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409Smoke.lean:39:2: 'change' tactic failed, pattern",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409 (6.7s)",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:121:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:126:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:131:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:136:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:141:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:146:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:151:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:156:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:161:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:166:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:171:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:176:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:181:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:186:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:191:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:196:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:201:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:206:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:211:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:216:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:221:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:226:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:231:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:236:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:241:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:246:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:251:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/FrozenCapRowCap1409.lean:256:2: 'change' tactic failed, pattern",
+  "error: N11Formalization/Froze```
 ## build log tail
 ```
-unner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:21:10 avail=1628MB top: 13884084 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:21:30 avail=1372MB top: 13863540 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:21:50 avail=1135MB top: 13930500 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:22:10 avail=1177MB top: 14080864 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:22:30 avail=1126MB top: 14260368 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:22:51 avail=998MB top: 14527916 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:23:11 avail=1000MB top: 14520784 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:23:31 avail=999MB top: 14513428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 01:23:51 avail=898MB top: 14498592 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=897MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1679s)
+nner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:04:58 avail=1617MB top: 13866816 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:05:18 avail=1421MB top: 13899716 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:05:38 avail=1055MB top: 14012984 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:05:58 avail=1042MB top: 14243036 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:06:18 avail=977MB top: 14507196 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:06:38 avail=1043MB top: 14580580 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:06:58 avail=1039MB top: 14579240 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:07:18 avail=1065MB top: 14602756 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:07:38 avail=807MB top: 14641728 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=808MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1338s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
