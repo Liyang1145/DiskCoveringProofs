@@ -1,10 +1,9 @@
-EXPERT (2026-10-31): Fresh run 41150468008 contradicts the session-76 "fixed" claim.
-- `EndpointChecks.lean:257--259,277--279` still fail `omega`; after `fin_cases j`, replace each with `norm_num at hj` (or `exact absurd hj (by norm_num)`).
-- First build only `SevenClassQ0Deg3EndpointChecks`; treat later reds as dependency-red until that exit is 0.
-- Then serially require exit 0 for `UpperReductionUnimodal`, both suffixes, `EdgeShape`, all bins, `SectorAssembler`, and `TableBounds`.
-- `TableBounds` does not identify `edges R` or construct `Degree3AreaCertificate`; after green target `areaCertificate_of_table ... (hedges : edges R = image ... ) : Nonempty (Degree3AreaCertificate h hr R)` with strict total.
-- The 18,441-value decimal audit is not proof of `totalUpper < piLo`; no exclusion credit before that certificate.
-- C450 completion is green but not root-imported; root integration is a supervisor action, not another C450 proof.
+CURRENT (2026-10-31, session 94): the `EndpointChecks` regression is repaired;
+require its CI exit 0 first, then serial exits for `UpperReductionUnimodal`,
+both suffixes, `EdgeShape`, all bins, `SectorAssembler`, and `TableBounds`.
+`TableBounds` still needs canonical `edges R` and strict `totalUpper < piLo`
+before `Degree3AreaCertificate`; decimal audits are not proof. C450 completion
+is CI-green but root integration remains a supervisor action.
 
 # Lane A notes
 
@@ -165,63 +164,82 @@ pattern.  All later sector/edge targets remain CI pending/unpaid.
 ROOT-IMPORT REQUEST: import the CI-green `C450ChainCompletion` and
 `C450ChainCompletionMain` in the stage-1 root (supervisor-only edit).
 
-## 2026-10-31 (session 89) -- repaired `UpperTables` dependency failure
+## 2026-10-31 (sessions 89--92, condensed) -- `UpperTables` dependency repair
 
-**Did.** Retrieved run `41168580187`'s hosted build log and found the first real
-lane-A red: `SevenClassQ0Deg3UpperTables.lean:83` used `nextSite` without a
-direct import. Added `import N11Formalization.ActualRingLinkBoundaryData` to the
-Lean module and to its deterministic emitter, then regenerated the module.
-
-**Files / SHA256.** `SevenClassQ0Deg3UpperTables.lean`
-`8239692129f29f13afc4f3c7f14b74c7c8179fe4bd817c026f418c1dbaf8b119`;
+Run `41168580187` found `UpperTables:83` using `nextSite` without its namespace;
+`EndpointChecks` was green and later exits were dependency-red. Added
+`import N11Formalization.ActualRingLinkBoundaryData` and
+`open ActualRingLinkBoundaryData` to both Lean and emitter. Final SHAs:
+`SevenClassQ0Deg3UpperTables.lean`
+`e18374eca3ac8923739850d66a826cf1cc84c58758bfce963f7aa467e24788a9`;
 `emit_q0_degree3_upper_tables.py`
-`2fb1b9e78a5beb68734731fac97ca5a5c6444fb056ba00905d0e35d97f00003d`.
-`TARGETS.txt` unchanged.
+`99f2ca079a19c4b1997aa7243d5dab6cf2f019b978500f2dfaa751d63bdffca7`.
+Emitter reproduction, `py_compile`, forbidden-token scan, and exact rational
+audits passed (21 singly peaked edges; 9 x 2049 sectors; slack
+`0.012092890371`). Arithmetic checks only; no theorem was paid.
 
-**Checks (scope).** `project_status.py --check` PASS (manifest only); emitter
-rerun, `git diff --check`, `py_compile`, and forbidden-token scan PASS. The diff
-is exactly the two import additions. Exact rational audits PASS: 21 edges are
-single-peaked with witnesses/maxima agreeing; 9 x 2049 sectors reproduce and
-totalUpper is below piLo (slack `0.012092890371`). These are arithmetic checks,
-not Lean proofs. No local Lean build/olean: **CI pending**.
-EndpointChecks is CI-green in this run; all later exits 1 are dependency-red.
+## 2026-10-31 (session 93) -- exact canonical strict-total audit
+
+**Did.** Added `verify_q0_degree3_strict_total.py`, which parses the emitted
+Lean `mu`, `lam`, `tableEdges`, `edgeMaxAt`, and `sectorMax` and independently
+replays the exact `totalUpper` formula.  It also accounts separately for the
+Lean 20-digit `RatInterval.piLo/piHi` and the 40-digit values in the older
+manifest.  Exact result under the Lean constants: `3.129499763218794...`,
+slack `0.012092890370999...`; the manifest total agrees to `9.02e-22` after
+the intentional pi-precision substitution.  This confirms the strict-total
+premise is numerically credible, but it remains an arithmetic audit, not a
+Lean proof. **Files / SHA256.** `verify_q0_degree3_strict_total.py`
+`4aff53fe1dc7ac55ba05c6df5e060c535ce3a382680ffd2876a631342198b45a`.
+No Lean source or target changed.
+**Checks (scope).** Exact `Fraction` replay and `py_compile` PASS; the audit
+asserts equality to the JSON total, equality of its slack, and strictness
+against the Lean `piLo`.  CI run `41172673380` is green but predates lane-A
+commits and is not evidence for these sources. **Still unproved / unpaid.**
+`canonical_strictTotal` has not been formalized;
+`Q0Degree3AreaInput`, all seven exclusions, and the arbitrary-centre theorem
+remain unpaid.
+**Next concrete step.** Add a deterministic emitter for a new module proving
+`totalUpper R mu lam piHi 2048 edgeMax sectorMax = C` under the canonical table
+edge equality, then prove `C < piLo` by `norm_num`; CI must build it before any
+strict-total credit is claimed.
+
+## 2026-10-31 (session 94) -- reverted `EndpointChecks` strategy regression
+
+**Did.** Session 93's fresh CI diagnosis plus commit history showed `51cdab56`
+regressed six impossible-`Fin 8` branches from the known-good
+`exact absurd hj (by decide)` to `norm_num at hj`. Restored all six branches in
+`endpointUBin_le_one_of_lt5` and `nodeQ_binHi_le_two_of_lt5`.
+
+**File / SHA256.** `SevenClassQ0Deg3EndpointChecks.lean`
+`926151016043881e69999e6f310b5e4933f06488a6e16518596b40c4bdb30ed7`.
+This is byte-identical to the file at CI-green run `41168580187` commit
+`0f022bfb`; `TARGETS.txt` is unchanged.
+
+**Checks (scope).** `git diff --check` and forbidden-token scan PASS; SHA cross
+check against commit `0f022bfb` PASS. The same source built `EndpointChecks`
+green in run `41168580187`, so no new build was started locally. The current
+regression repair is **CI pending**. No local full-project Lean build.
 
 **Still unproved / unpaid.** No new theorem is paid. `EdgeValid`, `SectorValid`,
 strict canonical total, `Q0Degree3AreaInput`, all seven exclusions, and the
 arbitrary-centre theorem remain unpaid.
 
 **Next concrete step.** After supervisor commit, require CI exit 0 for
-`UpperReductionUnimodal`; if red, use its now-unblocked first error.
+`SevenClassQ0Deg3EndpointChecks`, then `UpperReductionUnimodal`; use the first
+unblocked error.
 
-## 2026-10-31 (session 90, condensed) -- CI provenance
+## 2026-10-31 (session 95) -- explicit CI target for table constants
 
-Run `41168580187` isolated `UpperTables:83` unknown `nextSite` as the first
-real lane-A red; `EndpointChecks` was green. Later exits were dependency-red.
+**Did.** Added `SevenClassQ0Deg3UpperTables` directly to lane-A `TARGETS.txt`;
+it previously entered CI only transitively.  The Session 81 relabelled bridge
+was already listed and was left unchanged.
 
-## 2026-10-31 (session 91, condensed) -- witness/peak audit
+**Checks (scope).** Target-list inspection only; no Lean build was run locally.
+No source bytes changed and no theorem became paid.
 
-All 21 `edgeWitness` literals match JSON `witnessK`; exact `Fraction` audit
-passes 21/21 global maxima and the cells reported in session 91. Both Lean
-modules remain **CI pending**. Discrete audit is not a kernel proof of
-`EdgeIncTo`/`EdgeDecFrom`; strict total and downstream proof remain unpaid.
+**Still unpaid.** Endpoint repair, `EdgeValid`/`SectorValid`, canonical strict
+finite total, relabelled certificate, `Q0Degree3AreaInput`, all seven exclusions,
+and the arbitrary-centre theorem.
 
-## 2026-10-31 (session 92) -- completed `nextSite` namespace repair
-
-**Did.** Found that session 89's direct import was insufficient: `nextSite` is
-in namespace `N11Formalization.ActualRingLinkBoundaryData`, while
-`SevenClassQ0Deg3UpperTables` only opened `MetricAreaRationalCertificate` and
-`SevenClassQ0Deg3Bins`. Added `open ActualRingLinkBoundaryData` to the emitted
-module and its deterministic emitter, then regenerated the module.
-
-**Files / SHA256.** `SevenClassQ0Deg3UpperTables.lean`
-`e18374eca3ac8923739850d66a826cf1cc84c58758bfce963f7aa467e24788a9`;
-`emit_q0_degree3_upper_tables.py`
-`99f2ca079a19c4b1997aa7243d5dab6cf2f019b978500f2dfaa751d63bdffca7`.
-
-**Checks (scope).** Emitter rerun reproduced the module byte-for-byte;
-`py_compile`, `git diff --check`, and forbidden-token scan PASS. No Lean build:
-still **CI pending**. `ops/ci/LATEST.md` is run `41168580187`, predating the
-session-89/92 repairs, so its `UpperReductionUnimodal` exit 1 is stale.
-
-**Next concrete step.** After supervisor commit, require CI exit 0 for
-`UpperTables`, then `UpperReductionUnimodal`; use the first unblocked error.
+**Next concrete step.** After supervisor commit, inspect CI in dependency order;
+fix the first error in `EndpointChecks`, then the sector/table chain.

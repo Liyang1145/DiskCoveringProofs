@@ -71,3 +71,7 @@ N11Formalization.SevenClassQ0Deg3TableCertificate
 # Session 81: discharge the canonical-edge premise through the graph theorem,
 # leaving only the relocated strict finite total (CI pending)
 N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate
+
+# Session 95: ensure the new table constants and relabelled bridge are explicit
+# CI targets, not merely transitive imports (CI pending)
+N11Formalization.SevenClassQ0Deg3UpperTables
