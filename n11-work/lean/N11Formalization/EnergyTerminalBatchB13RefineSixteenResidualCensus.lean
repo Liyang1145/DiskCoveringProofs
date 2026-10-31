@@ -5,6 +5,7 @@ terminal ids remain.  The four literal chunks keep kernel decisions below
 the measured size guard; the equality proof is split into 100-index
 source blocks.  This module proves cardinality only, not radius payment. -/
 set_option autoImplicit false
+set_option maxRecDepth 10000
 namespace N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus
 open Finset
 noncomputable section
@@ -28,16 +29,7 @@ private theorem disjoint_chunk1_2 : Disjoint chunk1 chunk2 := by decide +kernel
 private theorem disjoint_chunk1_3 : Disjoint chunk1 chunk3 := by decide +kernel
 private theorem disjoint_chunk2_3 : Disjoint chunk2 chunk3 := by decide +kernel
 private theorem card_chunks : residual373.card = 373 := by
-  rw [residual373]
-  rw [Finset.card_union_of_disjoint (by
-    rw [Finset.disjoint_union_right]
-    exact ⟨disjoint_chunk0_1, by
-      rw [Finset.disjoint_union_right]
-      exact ⟨disjoint_chunk0_2, disjoint_chunk0_3⟩⟩), chunk0_card]
-  rw [Finset.card_union_of_disjoint (by
-    rw [Finset.disjoint_union_right]
-    exact ⟨disjoint_chunk1_2, disjoint_chunk1_3⟩), chunk1_card]
-  rw [Finset.card_union_of_disjoint disjoint_chunk2_3, chunk2_card, chunk3_card]
+  decide +kernel
 
 theorem mem_iff_block00 (n : Fin 5011)
     (hlo : 0 ≤ n.val) (hhi : n.val < 100) :
@@ -46,7 +38,7 @@ theorem mem_iff_block00 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block01 (n : Fin 5011)
     (hlo : 100 ≤ n.val) (hhi : n.val < 200) :
@@ -55,7 +47,7 @@ theorem mem_iff_block01 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block02 (n : Fin 5011)
     (hlo : 200 ≤ n.val) (hhi : n.val < 300) :
@@ -64,7 +56,7 @@ theorem mem_iff_block02 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block03 (n : Fin 5011)
     (hlo : 300 ≤ n.val) (hhi : n.val < 400) :
@@ -73,7 +65,7 @@ theorem mem_iff_block03 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block04 (n : Fin 5011)
     (hlo : 400 ≤ n.val) (hhi : n.val < 500) :
@@ -82,7 +74,7 @@ theorem mem_iff_block04 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block05 (n : Fin 5011)
     (hlo : 500 ≤ n.val) (hhi : n.val < 600) :
@@ -91,7 +83,7 @@ theorem mem_iff_block05 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block06 (n : Fin 5011)
     (hlo : 600 ≤ n.val) (hhi : n.val < 700) :
@@ -100,7 +92,7 @@ theorem mem_iff_block06 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block07 (n : Fin 5011)
     (hlo : 700 ≤ n.val) (hhi : n.val < 800) :
@@ -109,7 +101,7 @@ theorem mem_iff_block07 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block08 (n : Fin 5011)
     (hlo : 800 ≤ n.val) (hhi : n.val < 900) :
@@ -118,7 +110,7 @@ theorem mem_iff_block08 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block09 (n : Fin 5011)
     (hlo : 900 ≤ n.val) (hhi : n.val < 1000) :
@@ -127,7 +119,7 @@ theorem mem_iff_block09 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block10 (n : Fin 5011)
     (hlo : 1000 ≤ n.val) (hhi : n.val < 1100) :
@@ -136,7 +128,7 @@ theorem mem_iff_block10 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block11 (n : Fin 5011)
     (hlo : 1100 ≤ n.val) (hhi : n.val < 1200) :
@@ -145,7 +137,7 @@ theorem mem_iff_block11 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block12 (n : Fin 5011)
     (hlo : 1200 ≤ n.val) (hhi : n.val < 1300) :
@@ -154,7 +146,7 @@ theorem mem_iff_block12 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block13 (n : Fin 5011)
     (hlo : 1300 ≤ n.val) (hhi : n.val < 1400) :
@@ -163,7 +155,7 @@ theorem mem_iff_block13 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block14 (n : Fin 5011)
     (hlo : 1400 ≤ n.val) (hhi : n.val < 1500) :
@@ -172,7 +164,7 @@ theorem mem_iff_block14 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block15 (n : Fin 5011)
     (hlo : 1500 ≤ n.val) (hhi : n.val < 1600) :
@@ -181,7 +173,7 @@ theorem mem_iff_block15 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block16 (n : Fin 5011)
     (hlo : 1600 ≤ n.val) (hhi : n.val < 1700) :
@@ -190,7 +182,7 @@ theorem mem_iff_block16 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block17 (n : Fin 5011)
     (hlo : 1700 ≤ n.val) (hhi : n.val < 1800) :
@@ -199,7 +191,7 @@ theorem mem_iff_block17 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block18 (n : Fin 5011)
     (hlo : 1800 ≤ n.val) (hhi : n.val < 1900) :
@@ -208,7 +200,7 @@ theorem mem_iff_block18 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block19 (n : Fin 5011)
     (hlo : 1900 ≤ n.val) (hhi : n.val < 2000) :
@@ -217,7 +209,7 @@ theorem mem_iff_block19 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block20 (n : Fin 5011)
     (hlo : 2000 ≤ n.val) (hhi : n.val < 2100) :
@@ -226,7 +218,7 @@ theorem mem_iff_block20 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block21 (n : Fin 5011)
     (hlo : 2100 ≤ n.val) (hhi : n.val < 2200) :
@@ -235,7 +227,7 @@ theorem mem_iff_block21 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block22 (n : Fin 5011)
     (hlo : 2200 ≤ n.val) (hhi : n.val < 2300) :
@@ -244,7 +236,7 @@ theorem mem_iff_block22 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block23 (n : Fin 5011)
     (hlo : 2300 ≤ n.val) (hhi : n.val < 2400) :
@@ -253,7 +245,7 @@ theorem mem_iff_block23 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block24 (n : Fin 5011)
     (hlo : 2400 ≤ n.val) (hhi : n.val < 2500) :
@@ -262,7 +254,7 @@ theorem mem_iff_block24 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block25 (n : Fin 5011)
     (hlo : 2500 ≤ n.val) (hhi : n.val < 2600) :
@@ -271,7 +263,7 @@ theorem mem_iff_block25 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block26 (n : Fin 5011)
     (hlo : 2600 ≤ n.val) (hhi : n.val < 2700) :
@@ -280,7 +272,7 @@ theorem mem_iff_block26 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block27 (n : Fin 5011)
     (hlo : 2700 ≤ n.val) (hhi : n.val < 2800) :
@@ -289,7 +281,7 @@ theorem mem_iff_block27 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block28 (n : Fin 5011)
     (hlo : 2800 ≤ n.val) (hhi : n.val < 2900) :
@@ -298,7 +290,7 @@ theorem mem_iff_block28 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block29 (n : Fin 5011)
     (hlo : 2900 ≤ n.val) (hhi : n.val < 3000) :
@@ -307,7 +299,7 @@ theorem mem_iff_block29 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block30 (n : Fin 5011)
     (hlo : 3000 ≤ n.val) (hhi : n.val < 3100) :
@@ -316,7 +308,7 @@ theorem mem_iff_block30 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block31 (n : Fin 5011)
     (hlo : 3100 ≤ n.val) (hhi : n.val < 3200) :
@@ -325,7 +317,7 @@ theorem mem_iff_block31 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block32 (n : Fin 5011)
     (hlo : 3200 ≤ n.val) (hhi : n.val < 3300) :
@@ -334,7 +326,7 @@ theorem mem_iff_block32 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block33 (n : Fin 5011)
     (hlo : 3300 ≤ n.val) (hhi : n.val < 3400) :
@@ -343,7 +335,7 @@ theorem mem_iff_block33 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block34 (n : Fin 5011)
     (hlo : 3400 ≤ n.val) (hhi : n.val < 3500) :
@@ -352,7 +344,7 @@ theorem mem_iff_block34 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block35 (n : Fin 5011)
     (hlo : 3500 ≤ n.val) (hhi : n.val < 3600) :
@@ -361,7 +353,7 @@ theorem mem_iff_block35 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block36 (n : Fin 5011)
     (hlo : 3600 ≤ n.val) (hhi : n.val < 3700) :
@@ -370,7 +362,7 @@ theorem mem_iff_block36 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block37 (n : Fin 5011)
     (hlo : 3700 ≤ n.val) (hhi : n.val < 3800) :
@@ -379,7 +371,7 @@ theorem mem_iff_block37 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block38 (n : Fin 5011)
     (hlo : 3800 ≤ n.val) (hhi : n.val < 3900) :
@@ -388,7 +380,7 @@ theorem mem_iff_block38 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block39 (n : Fin 5011)
     (hlo : 3900 ≤ n.val) (hhi : n.val < 4000) :
@@ -397,7 +389,7 @@ theorem mem_iff_block39 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block40 (n : Fin 5011)
     (hlo : 4000 ≤ n.val) (hhi : n.val < 4100) :
@@ -406,7 +398,7 @@ theorem mem_iff_block40 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block41 (n : Fin 5011)
     (hlo : 4100 ≤ n.val) (hhi : n.val < 4200) :
@@ -415,7 +407,7 @@ theorem mem_iff_block41 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block42 (n : Fin 5011)
     (hlo : 4200 ≤ n.val) (hhi : n.val < 4300) :
@@ -424,7 +416,7 @@ theorem mem_iff_block42 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block43 (n : Fin 5011)
     (hlo : 4300 ≤ n.val) (hhi : n.val < 4400) :
@@ -433,7 +425,7 @@ theorem mem_iff_block43 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block44 (n : Fin 5011)
     (hlo : 4400 ≤ n.val) (hhi : n.val < 4500) :
@@ -442,7 +434,7 @@ theorem mem_iff_block44 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block45 (n : Fin 5011)
     (hlo : 4500 ≤ n.val) (hhi : n.val < 4600) :
@@ -451,7 +443,7 @@ theorem mem_iff_block45 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block46 (n : Fin 5011)
     (hlo : 4600 ≤ n.val) (hhi : n.val < 4700) :
@@ -460,7 +452,7 @@ theorem mem_iff_block46 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block47 (n : Fin 5011)
     (hlo : 4700 ≤ n.val) (hhi : n.val < 4800) :
@@ -469,7 +461,7 @@ theorem mem_iff_block47 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block48 (n : Fin 5011)
     (hlo : 4800 ≤ n.val) (hhi : n.val < 4900) :
@@ -478,7 +470,7 @@ theorem mem_iff_block48 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block49 (n : Fin 5011)
     (hlo : 4900 ≤ n.val) (hhi : n.val < 5000) :
@@ -487,7 +479,7 @@ theorem mem_iff_block49 (n : Fin 5011)
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem mem_iff_block50 (n : Fin 5011) (hlo : 5000 ≤ n.val) :
     n ∈ EnergyTerminalBatchB13RefineSixteenResidual.residualIDs ↔
@@ -495,7 +487,7 @@ theorem mem_iff_block50 (n : Fin 5011) (hlo : 5000 ≤ n.val) :
   rcases n with ⟨k, hk⟩
   interval_cases k <;>
     rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>
-      decide +kernel
+      simp [residual373, chunk0, chunk1, chunk2, chunk3]
 
 theorem residualIDs_eq_residual373 :
     EnergyTerminalBatchB13RefineSixteenResidual.residualIDs = residual373 := by
