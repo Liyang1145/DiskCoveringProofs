@@ -1,0 +1,52 @@
+{
+  "schema": "n11-lane-b-ci-verdict-v1",
+  "date": "2026-10-31",
+  "run": {
+    "id": 41201323694,
+    "workflow": "n11-lean-build",
+    "head_sha": "3551ab879027d9497f865a839d4c9b26f8c0fd6b",
+    "conclusion": "success",
+    "artifact_id": 13044243893,
+    "artifact_name": "n11-build-41201323694.zip",
+    "artifact_sha256": "64791EDA0A97BC8FEB1BBBD4B60B3183EB6F37B341C62627B638F2E7B179BA63",
+    "summary_sha256": "E9F7745EDC046C951B51BFFC1D227F3C959246B77848D39BB368DA2FEEF33344",
+    "scope_warning": "workflow success is masked by a trailing true; only artifact module exits count"
+  },
+  "lane_b_exits": {
+    "EnergyTerminalBatchB13RefineThirteen": 0,
+    "EnergyTerminalBatchB13RefineThirteenMain": 0,
+    "EnergyTerminalBatchB13RefineFourteen": 0,
+    "EnergyTerminalBatchB13RefineFourteenMain": 0,
+    "EnergyTerminalBatchB13RefineSixteen": 1,
+    "EnergyTerminalBatchB13RefineSixteenMain": 1
+  },
+  "first_lane_b_diagnostic": {
+    "file": "N11Formalization/EnergyTerminalBatchB13RefineSixteen.lean",
+    "line": 31,
+    "column": 2,
+    "message": "maximum recursion depth has been reached",
+    "owning_tactic": "tauto"
+  },
+  "repair": {
+    "summary": "replace recursion-heavy tauto search over four unfolded paid-set unions with a bounded five-case rcases decomposition",
+    "pre_repair_sha256": "E7C0CBD83398C6DF73800F28816D24D5129FCA026C52CA2ABE8934335E2097C5",
+    "post_repair_sha256": "094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A"
+  },
+  "checks": {
+    "audit_b13_refine_fourteen": "exit 0, ok true (static source/inventory only)",
+    "audit_b13_refine_sixteen": "exit 0, ok true (static source/inventory and arithmetic only)",
+    "git_diff_check": "exit 0",
+    "post_repair_ci": "pending"
+  },
+  "kernel_green_after_run": [
+    "EnergyTerminalBatchB13RefineFourteen",
+    "EnergyTerminalBatchB13RefineFourteenMain"
+  ],
+  "still_unproved": [
+    "fresh exit-0 CI for EnergyTerminalBatchB13RefineSixteen and SixteenMain",
+    "373 conditional residual radii",
+    "f0Lo/g bridge",
+    "SevenClassExclusions (0/7)",
+    "arbitrary-center full-disk theorem"
+  ]
+}

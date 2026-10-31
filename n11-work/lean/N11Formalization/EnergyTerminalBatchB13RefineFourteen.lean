@@ -59,8 +59,9 @@ theorem new_count : newIDs.card = 1 := by
 
 theorem paid_count : paidIDs.card = 2011 := by
   rw [paidIDs, newIDs, Finset.card_union_of_disjoint new_disjoint_old,
-    EnergyTerminalBatchB13RefineThirteen.paid_count,
-    EnergyTerminalBatchB13Refine3116.new_count]
+    EnergyTerminalBatchB13RefineThirteen.paid_count]
+  have hnew := EnergyTerminalBatchB13Refine3116.new_count
+  omega
 
 theorem paid_terminal (n : Fin 5011) (hn : n ∈ paidIDs) :
     (DBMSourceTree.data n).terminal = true := by
