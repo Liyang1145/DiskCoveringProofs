@@ -4,6 +4,14 @@
   "missing": [],
   "ok": true,
   "targets": [
+    "N11Formalization.LaneBRowCapDecideProbe",
+    "N11Formalization.LaneBFrozenCapRowCap1409",
+    "N11Formalization.LaneBFrozenCapRowCap2337",
+    "N11Formalization.LaneBFrozenCapRowCap2341",
+    "N11Formalization.LaneBFrozenCapRowCap2356",
+    "N11Formalization.LaneBFrozenCapRowCap2360",
+    "N11Formalization.LaneBFrozenCapRowCap2368",
+    "N11Formalization.LaneBFrozenCapRowCap2370",
     "N11Formalization.Paid16GeneralNext1182",
     "N11Formalization.EnergyTerminalBatchB13Next505Bounds",
     "N11Formalization.EnergyTerminalBatchB13DescentBounds",
@@ -16,14 +24,6 @@
     "N11Formalization.EnergyTerminalBatchB13RefineFourteen",
     "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteen",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
-    "N11Formalization.LaneBRowCapDecideProbe",
-    "N11Formalization.LaneBFrozenCapRowCap1409",
-    "N11Formalization.LaneBFrozenCapRowCap2337",
-    "N11Formalization.LaneBFrozenCapRowCap2341",
-    "N11Formalization.LaneBFrozenCapRowCap2356",
-    "N11Formalization.LaneBFrozenCapRowCap2360",
-    "N11Formalization.LaneBFrozenCapRowCap2368",
-    "N11Formalization.LaneBFrozenCapRowCap2370"
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain"
   ]
 }
