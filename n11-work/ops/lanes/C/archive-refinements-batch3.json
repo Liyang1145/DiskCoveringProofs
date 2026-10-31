@@ -1,0 +1,72 @@
+{
+  "scope": "static restoration only; no Lean build or kernel credit",
+  "source_branch": "origin/ci/n11-build",
+  "source_commit": "8de79f774f8dcb1513855dfd54832bdfcce74e3f",
+  "ids": [
+    3778,
+    4313,
+    3810,
+    4650,
+    3520,
+    3863,
+    3807,
+    40,
+    3802
+  ],
+  "modules": [
+    {
+      "id": 3778,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN3778.lean",
+      "bytes": 42630,
+      "sha256": "8b07ae5bba9a6eb749019555abb65b7dc2834a148a4b3ac3e60adf6506a896cf"
+    },
+    {
+      "id": 4313,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN4313.lean",
+      "bytes": 57727,
+      "sha256": "c5ce2fefde5eea14c2098807e4c6f2533938687d309377f303381e1c959c006c"
+    },
+    {
+      "id": 3810,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN3810.lean",
+      "bytes": 72866,
+      "sha256": "135990494d4d403d2ae9bd95ca1657a425323516a91d8244adc0d602507a7785"
+    },
+    {
+      "id": 4650,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN4650.lean",
+      "bytes": 73292,
+      "sha256": "bb31ca432a3cac588e16cab7e1779bb36cf8d63281af0c1ded0473ad209c10c3"
+    },
+    {
+      "id": 3520,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN3520.lean",
+      "bytes": 97335,
+      "sha256": "36f844cc60a4d2fcc69dfa827df876e5c94bfba3ffe3b7c854e59001235dbab5"
+    },
+    {
+      "id": 3863,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN3863.lean",
+      "bytes": 100208,
+      "sha256": "7c69880c79a3cb5fb05a56218dba907c233063612f3c78afb4cd417777d62e24"
+    },
+    {
+      "id": 3807,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN3807.lean",
+      "bytes": 114451,
+      "sha256": "496377de7090bd70ad007d91f3b2585bc9a5154a2db9aff31cc3a7e8c22a7141"
+    },
+    {
+      "id": 40,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN40.lean",
+      "bytes": 121474,
+      "sha256": "bbb5ebf192558976f1685bf6966e2360e8f0fa9b15217af1e1c49d9f53ce1f00"
+    },
+    {
+      "id": 3802,
+      "path": "n11-work/lean/N11Formalization/EnergyRefineN3802.lean",
+      "bytes": 126831,
+      "sha256": "193c1afdb9faee7ba42393a6cc73cebe1153b27a28bcdbf58826cca60866746a"
+    }
+  ]
+}

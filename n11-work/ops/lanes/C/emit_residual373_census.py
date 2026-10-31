@@ -25,6 +25,7 @@ def main():
         "the measured size guard; the equality proof is split into 100-index",
         "source blocks.  This module proves cardinality only, not radius payment. -/",
         "set_option autoImplicit false",
+        "set_option maxRecDepth 10000",
         "namespace N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
         "open Finset",
         "noncomputable section",
@@ -41,16 +42,7 @@ def main():
             lines.append(f"private theorem disjoint_chunk{i}_{j} : Disjoint chunk{i} chunk{j} := by decide +kernel")
     lines += [
         "private theorem card_chunks : residual373.card = 373 := by",
-        "  rw [residual373]",
-        "  rw [Finset.card_union_of_disjoint (by",
-        "    rw [Finset.disjoint_union_right]",
-        "    exact ⟨disjoint_chunk0_1, by",
-        "      rw [Finset.disjoint_union_right]",
-        "      exact ⟨disjoint_chunk0_2, disjoint_chunk0_3⟩⟩), chunk0_card]",
-        "  rw [Finset.card_union_of_disjoint (by",
-        "    rw [Finset.disjoint_union_right]",
-        "    exact ⟨disjoint_chunk1_2, disjoint_chunk1_3⟩), chunk1_card]",
-        "  rw [Finset.card_union_of_disjoint disjoint_chunk2_3, chunk2_card, chunk3_card]",
+        "  decide +kernel",
         "",
     ]
     blocks = []
@@ -65,14 +57,14 @@ def main():
                   "  rcases n with ⟨k, hk⟩",
                   "  interval_cases k <;>",
                   "    rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>",
-                  "      decide +kernel", ""]
+                  "      simp [residual373, chunk0, chunk1, chunk2, chunk3]", ""]
     lines += [f"theorem mem_iff_block50 (n : Fin 5011) (hlo : 5000 ≤ n.val) :",
               "    n ∈ EnergyTerminalBatchB13RefineSixteenResidual.residualIDs ↔",
               "      n ∈ residual373 := by",
               "  rcases n with ⟨k, hk⟩",
               "  interval_cases k <;>",
               "    rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff] <;>",
-              "      decide +kernel", ""]
+              "      simp [residual373, chunk0, chunk1, chunk2, chunk3]", ""]
     lines += ["theorem residualIDs_eq_residual373 :",
               "    EnergyTerminalBatchB13RefineSixteenResidual.residualIDs = residual373 := by",
               "  ext n",
