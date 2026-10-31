@@ -118,403 +118,403 @@ def db : Fin 10 → Fin 10 → ℚ
 
 theorem row_cap_2356_0_0 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 0 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_1 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 0 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_2 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 0 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_3 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 0 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_4 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 0 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_5 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 0 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_6 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 0 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_7 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 0 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_8 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 0 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0_9 :
     y_2356 (0 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (0 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 0 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_0 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 1 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_1 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 1 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_2 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 1 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_3 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 1 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_4 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 1 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_5 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 1 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_6 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 1 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_7 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 1 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_8 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 1 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_1_9 :
     y_2356 (0 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (1 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 1 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_0 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 2 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_1 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 2 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_2 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 2 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_3 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 2 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_4 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 2 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_5 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 2 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_6 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 2 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_7 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 2 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_8 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 2 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_2_9 :
     y_2356 (0 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (2 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 2 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_0 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 3 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_1 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 3 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_2 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 3 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_3 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 3 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_4 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 3 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_5 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 3 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_6 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 3 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_7 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 3 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_8 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 3 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_3_9 :
     y_2356 (0 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (3 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 3 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_0 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 4 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_1 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 4 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_2 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 4 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_3 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 4 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_4 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 4 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_5 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 4 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_6 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 4 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_7 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 4 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_8 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 4 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_4_9 :
     y_2356 (0 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (4 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 4 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_0 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 5 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_1 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 5 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_2 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 5 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_3 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 5 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_4 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 5 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_5 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 5 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_6 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 5 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_7 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 5 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_8 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 5 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_5_9 :
     y_2356 (0 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (5 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 5 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_0 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 6 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_1 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 6 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_2 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 6 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_3 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 6 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_4 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 6 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_5 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 6 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_6 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 6 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_7 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 6 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_8 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 6 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_6_9 :
     y_2356 (0 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (6 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 6 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_0 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 7 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_1 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 7 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_2 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 7 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_3 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 7 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_4 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 7 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_5 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 7 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_6 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 7 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_7 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 7 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_8 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 7 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_7_9 :
     y_2356 (0 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (7 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 7 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_0 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 8 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_1 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 8 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_2 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 8 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_3 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 8 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_4 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 8 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_5 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 8 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_6 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 8 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_7 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 8 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_8 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 8 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_8_9 :
     y_2356 (0 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (8 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 8 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_0 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (0 : Fin 10) (8 : Fin 9) ≤ db 9 0 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_1 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (1 : Fin 10) (8 : Fin 9) ≤ db 9 1 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_2 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (2 : Fin 10) (8 : Fin 9) ≤ db 9 2 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_3 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (3 : Fin 10) (8 : Fin 9) ≤ db 9 3 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_4 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (4 : Fin 10) (8 : Fin 9) ≤ db 9 4 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_5 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (5 : Fin 10) (8 : Fin 9) ≤ db 9 5 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_6 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (6 : Fin 10) (8 : Fin 9) ≤ db 9 6 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_7 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (7 : Fin 10) (8 : Fin 9) ≤ db 9 7 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_8 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (8 : Fin 10) (8 : Fin 9) ≤ db 9 8 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_9_9 :
     y_2356 (0 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (0 : Fin 9) + y_2356 (1 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (1 : Fin 9) + y_2356 (2 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (2 : Fin 9) + y_2356 (3 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (3 : Fin 9) + y_2356 (4 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (4 : Fin 9) + y_2356 (5 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (5 : Fin 9) + y_2356 (6 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (6 : Fin 9) + y_2356 (7 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (7 : Fin 9) + y_2356 (8 : Fin 9) * rowA (9 : Fin 10) (9 : Fin 10) (8 : Fin 9) ≤ db 9 9 := by
-  norm_num [y_2356, rowA, db]
+  norm_num [rowA] <;> norm_num [y_2356, db]
 
 theorem row_cap_2356_0 (j : Fin 10) :
     (∑ q : Fin 9, y_2356 q * rowA 0 j q) ≤ db 0 j := by

@@ -45,7 +45,7 @@ def emit(node: int, db, cert: dict, dbm_sha: str) -> tuple[Path, int, Q]:
             rhs = Q(db[i][j], 4096)
             leaves.append(f'''theorem row_cap_{node}_{i}_{j} :
     {lhs_expr} ≤ db {i} {j} := by
-  norm_num [y_{node}, rowA, db]''')
+  norm_num [rowA] <;> norm_num [y_{node}, db]''')
     row_lemmas = []
     for i in range(10):
         row_lemmas.append(f'''theorem row_cap_{node}_{i} (j : Fin 10) :

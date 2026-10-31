@@ -14,229 +14,130 @@
   CI-red or timed out and pay no credit. `ExcludedTree` is not a bridge to
   `RemainingTerminalRadius`.
 - Do not replace exact roots/quantifiers with cached verdicts or decimals.
+- POSIX `\b` in `rg` does not treat `_` as a word character: scan forbidden
+  tokens without `\b` or independently inspect hits.
 
-## Condensed history through part 131
+## Condensed status through 2026-10-30 part 159
 
 - Exact B13 residual census is 389 ids. Seven public exclusions
   `{1409,2337,2341,2356,2360,2368,2370}` are residual and unpaid; no public
   payloads were found for the other 382 (not proof of external HOST absence).
 - The wide-field family has exact checks for seven vectors, 700 row caps and
-  strict `gain < T^2`; later bulk row-cap splitting was CI-red/timed out.
-- Found 57 archive refinement drafts on `origin/ci/n11-build`; 15 are forbidden,
-  so do not mass-import. Earlier N3040/N2965/N3440/N3589/N3623/N3633 singleton
-  chains pass integer tree audits (root 491520, terminal children), not packet
-  validity. Membership covers 57 Next1182 components; B10/remaining-210
-  absence still rests on kernel `decide`. All such chains are CI pending unless
-  LATEST says otherwise. Unproved throughout: packet/kernel validity, positive
-  packet/no-cell and exclusion-to-radius bridges, energy and seven-class premises.
-## 2026-10-30 - parts 132-136, condensed
+  strict `gain < T^2`. All row-cap arithmetic is diagnostics, not credit.
+- Fifty-seven archive refinement drafts were found; 15 are forbidden, so no
+  mass import. Restored source refinements include N0037, N2337, N2341,
+  N3040, N2965, N3112, N3116, N3431, N3440, N3573, N3589, N3623, N3633,
+  N3777, N3792, N3853. Their exact integer tree audits cover roots, terminals
+  and split counts only, never MPacket validity or kernel exits.
+- Conditional singleton wrappers/Mains and the RefineSeven/Eight/Eleven
+  aggregates are CI green, including `paid_count` theorems with the refined
+  premise and `remaining_of`. N0037/Twelve, N3112/N3116/N3431/N3573 and newer
+  wrappers remain CI pending unless LATEST explicitly records exit 0. No root
+  import was changed.
+- `FrozenCapRationalCore` and `PaidCellCertificateM{,Cap}` are CI green.
+  Seven public-tree exclusions and their row caps remained CI pending/red.
+  Old row-cap failures included redundant follow-up tactics and nested-vector
+  `dbmVal` lookups; part 159 replaced the latter by scalar `db` and one
+  `norm_num [y, rowA, db]` per leaf, but that exact six-hash version was never
+  successfully kernel-checked in CI.
+- Missing throughout: row-cap kernel exits, public-tree bridge,
+  packet/no-cell and exclusion-to-radius bridges, 377 residual ids conditional
+  on pending wrappers, MPacket validity, energy and seven-class premises.
 
-- Restored and audited singleton chains N2337/N2341/N3040/N2965/N3440/N3589/
-  N3623/N3633; seven-certificate aggregate and Main were subsequently CI green.
-- N2337 uses a bounded 25-block Next505 absence check. Static tree audits cover
-  exact integers only, never MPacket validity or kernel credit.
-- Remaining obligations stayed: 378 ids, packet/no-cell and exclusion-to-radius
-  bridges, energy and seven-class premises.
+## 2026-10-31 - part 160 (row-cap proof reduced to signed intervals)
 
-## Parts 137-139, condensed (N3792/N3853/Eleven)
+Kept the seven public target names but shortened each of the 700 leaf proofs.
+For fixed `i j`, `rowA i j q` is `1` on `i ≤ q < j`, `-1` on `j ≤ q < i`,
+and `0` elsewhere. Each leaf now gets a first `norm_num [rowA]` pass followed
+by the narrow `norm_num [y_N, db]` pass, so `rowA` and its 90 conditional
+tests do not enter the rational normalizer. This is a proof
+engineering change only: theorem statements and `row_cap` consumers are
+unchanged.
 
-- N3792 and N3853 were restored from clean archive bytes; each has a singleton
-  `EnergyRefine`, B13 wrapper, and conditional Main. Exact tree audits passed
-  100/100 root and 200/200 splits, with roots `(false,2,6,475136,1,2)` and
-  `(false,1,6,516096,1,2)`, terminal children, forbidden-token/diff checks 0,
-  and both ids absent from Next1182. Module SHA256: N3792
-  `66e978317d4c0d7caa4f26402c532de61d7746e34c9a9ac544751cab656f3d6d`;
-  N3853 `d2cc6ec701832c657d5be545e25eb7158fd083ef9bb90b47d491581ea4390e7e`.
-- `EnergyTerminalBatchB13RefineEleven` composes Eight plus 3777/3792/3853 and
-  declares conditional `paid_count = 2008`; module SHA256
-  `5121a39cdf36a06c853233256934224f70476e640f4778c316ff803f2d46da39`.
-  These static results are not kernel credit: all 3792/3853/Eleven targets are
-  **CI pending**. Missing: 378 residual ids, MPacket validity, packet/no-cell
-  and exclusion-to-radius bridges, energy and seven-class premises.
+Files: `n11-work/ops/lanes/C/emit_frozen_cap_row_caps.py` SHA256
+`b5ee747f343457548ac1d45a33a7e865a391606ca9b3b35104b8933661b752f6`;
+row-cap SHA256:
+`1409` `7f7341a56cc937656efc703defc6204e69c9919dc6f2a9dcc17d8e61c58e5536`,
+`2337` `2f0fd8b8ac86f85346cd863a85e8fcd14a9d412cf5a4f256fef25dbe7e160ede`,
+`2341` `f17ef0d19f75c3165c0ae45d6e1298dd8c8c70b23b19517ad4286e03f1e9776b`,
+`2356` `6f7afa6856f7dc66e662f822b68bbac69d09a70594125959011ffa93c4c88bfc`,
+`2360` `9cf7a20417f643a3826d9796968be07e6152f96d7d852ea96f4433ac07f5998f`,
+`2368` `497abc879eb731b102990f4ea951fef56080d9c0c33b1c26b4aa1bd6b9429e3d`,
+`2370` `85f82f22ce8a7d675e337b27737f293643b01999bc925c8f2ffa89fa10187695`.
 
-## Parts 140-144, condensed
+Checks: emitter exit 0; 700/700 exact caps pass with global minimum slack
+0; DBM SHA256 `BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5`;
+`py_compile`, `git diff --check` exit 0; forbidden-construct scan had no
+matches (`rg` exit 1, expected). A direct core
+Lean syntax probe was inconclusive because the shared 2-core sandbox timed out
+even on a deliberately failing one-line file; therefore **no local Lean
+syntax/kernel claim**. All seven are **CI pending** at the new hashes.
 
-- Runs before `41098508743` proved the seven singleton wrappers plus Seven
-  green. Eight failed at `simp made no progress`; the fix calls
-  `EnergyRefineN2337.new_radius` directly without substitution. Seven/Eight/
-  Eleven were also corrected for redundant `norm_num`. Run `41098508743` later
-  proved Eight, Eleven, and their Mains green.
+Still unproved/missing: kernel exits for all seven row-cap modules and the
+public excluded tree; bridge to `RemainingTerminalRadius`; packet/no-cell and
+exclusion-to-radius bridges; 382/377 residual energy ids depending on pending
+wrapper accounting; MPacket validity; energy and seven-class premises.
 
-## 2026-10-30 - part 146 (N37 restored as source-only CI target)
-
-Re-fetched the archive N37 source with `git show`; SHA256 is
-`7a0137826c2ea9c5975ee9d3b19952e409e86551b93262778933c3752240d0ac`, matching
-the audited candidate. Re-ran `audit_archive_refine_tree.py`: 7 nodes, terminal
-`{2,4,5,6}`, 100/100 root-scale entries, 600/600 split entries, zero
-mismatches, exit 0. Scope is exact integer tree data only, not MPacket,
-module-compilation, axiom, or kernel credit.
-
-Preserved those exact bytes as new
-`n11-work/lean/N11Formalization/EnergyRefineN0037.lean`; added only
-`N11Formalization.EnergyRefineN0037` to TARGETS (46 distinct non-comment
-targets). No wrapper, paid count, or residual reduction was added. The generic
-restore helper had used unpadded `N37` for both its namespace guard and output
-path even though the archive module is `N0037`; both now use `{node:04d}`. A
-rerun reproduces SHA256 `7a013782...40d0ac` and then correctly refuses to
-overwrite the preserved module.
-
-The Eight patch from part 144 is still **CI pending**, not green. A local
-Mathlib union-pattern probe timed out at 90/120 seconds (exit 124), so it gives
-no evidence and is not cited. `git diff --check` passes; forbidden-token scan
-over N37 has zero hits.
-
-Still missing: Eight/Eleven kernel exits; N37 module/axiom exit and MPacket
-validity; N37 wrapper/aggregate integration; 378 residual ids; packet/no-cell
-and exclusion-to-radius bridges; energy and seven-class premises. Next: read
-fresh CI's first Eight error (if any), then N0037's first error; do not emit the
-N37 wrapper until Eight/EightMain are exit 0 and N0037 passes. ROOT-IMPORT
-REQUEST: none.
-
-## 2026-10-30 - part 147 (Eight/Eleven CI green; N0037 still pending)
-
-Downloaded CI run `41098508743` for commit
-`1b2fa7a833e191c65615ed136d5799add6fb6009`. It supersedes the stale
-`ops/ci/LATEST.md` run `41082175973` for this lane:
-`EnergyTerminalBatchB13RefineEight`, `RefineEightMain`,
-`EnergyTerminalBatchB13RefineEleven`, and `RefineElevenMain` all exit 0.
-The logs show `RefineEleven.remaining_of` and `RefineElevenMain`'s main theorem
-depend only on `[propext, Classical.choice, Quot.sound]`. Thus the conditional
-11-certificate aggregate and its `paid_count = 2008` theorem are CI green.
-This is not root-reachable credit: no root import was changed, and the
-`RemainingTerminalRadius` premise remains unpaid.
-
-`EnergyRefineN0037` was added to lane C TARGETS only after that run, so it was
-not built there. It remains **CI pending**, not green. Its preserved source
-SHA256 is `7a0137826c2ea9c5975ee9d3b19952e409e86551b93262778933c3752240d0ac`;
-the exact-integer tree audit covers 7 nodes, terminal `{2,4,5,6}`, 100/100
-root-scale and 600/600 split entries, with zero mismatches. That audit is data
-scope only; it does not establish MPacket validity, compilation, or kernel
-credit. A final audit replay at that hash again passed. No N0037 wrapper was
-emitted. Final static checks: 46/46 TARGETS distinct and resolvable;
-forbidden-token scan over N0037 empty; `git diff --check` exit 0.
-
-Still unproved/missing: N0037 module/axiom check and wrapper integration; 378
-residual ids after the 11 conditional aggregate plus N0037 if it proves valid;
-MPacket validity for N0037; packet/no-cell and exclusion-to-radius bridges;
-energy and seven-class premises. Next: fresh CI must show
-`N11Formalization.EnergyRefineN0037` exit 0 at the preserved hash. Only then
-emit its singleton wrapper/Main from the 3853 template and request the next
-kernel check. ROOT-IMPORT REQUEST: none.
-
-## 2026-10-30 - part 148 (N0037 wrapper and twelve-certificate aggregate drafted)
-
-Updated `emit_refine_singleton.py` so padded module stems (`0037`) map to
-unpadded Lean ids (`37`), then generated `EnergyTerminalBatchB13Refine0037` and
-its Main from the CI-green 2965 template. Added
-`EnergyTerminalBatchB13RefineTwelve`/`Main`: paid set =
-`RefineEleven.paidIDs ∪ EnergyRefineN0037.newIDs`, conditional
-`paid_count = 2009`, and `remaining_of` (`Twelve.Remaining -> B13.Remaining`),
-dispatching N0037 and all eleven prior additions before the refined premise.
-This aggregates rather than duplicating the base singleton count.
-
-SHA256: N0037 source `7a0137826c2ea9c5975ee9d3b19952e409e86551b93262778933c3752240d0ac`;
-Refine0037 `934096ba33053676f1f9e4e5a3f78f6a464c25bc3e037e4e5c24ec945d6137f2`;
-Main `4ebbe1ff62b2b6a12fa5afab0813e3ff604dd8e201839e66ef2ab9cd2f90ad55`;
-Twelve `1479d68d7db45c6631e0e8b856e9caa9baa3a2e8e8f1e6dbe5c74548173471b8`;
-TwelveMain `665ba8116cc6f756f589f24abdd9aa830651b5ffcd406729d8787b1fd58b0086`.
-
-Checks executed: tree audit on N0037 exit 0 (7 nodes, terminal `{2,4,5,6}`,
-100/100 root-scale, 600/600 split, zero mismatches; integer data only);
-rerun report byte-identical to `energy-refine-n0037-tree-audit.json` SHA256
-`85822ecbafac3cd9a87632e72f55764b30bd1b864663b13aaf7ed81aa292d1e9`;
-`git diff --check` 0; forbidden-token scan over the five modules 0; 50/50
-non-comment TARGETS distinct and resolvable. No Lean build or axiom report was
-run locally; a 60-second generic Mathlib singleton-card probe timed out (exit
-124), so the aggregate uses the proven template `simp` singleton lemma instead.
-A source census found 12 distinct ids (37 plus the prior 11), with no overlap;
-this is text/data scope only.
-All five new targets are **CI pending**; no residual reduction or
-credit is claimed yet.
-
-Still unproved/missing: kernel/axiom exits for N0037, Refine0037/Main, and
-Twelve/Main; 377 residual ids conditional on those exits; N0037 MPacket validity;
-packet/no-cell and exclusion-to-radius bridges; energy and seven-class premises.
-Next: fresh CI must pass N0037 first, then the wrapper and Twelve pair; inspect
-their first exact errors and do not claim 377 before all exits are 0.
+Next: run CI with 1409 first. If the first pass is rejected, replace only that
+line by `simp only [rowA]` and retain the narrow `norm_num [y_N, db]`; if 1409 exits
+0, proceed to 2356 and check whether its heartbeat failure is gone. Do not
+bulk-rewrite tactics before one new-hash row-cap exit 0.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-30 - part 151 (three compact residual refinements restored)
-Latest CI (`1b2fa7a8`, run 41098508743) is green for `RefineEleven` and its
-Main, plus the previously listed energy chain; it contains no N0037/Twelve/
-N3112 exits, so those remain **CI pending**. Restored three additional clean
-archive refinements N3116/N3431/N3573 (no forbidden tokens), each 5 nodes with
-terminal sets `{1,3,4}`, `{1,3,4}`, `{2,3,4}`. Exact integer audits passed
-100/100 root-scale entries and 400/400 split entries each; this is tree-data
-scope only, not MPacket validity or kernel credit.
+## 2026-10-31 - part 161 (sequenced leaf normalization; CI pending)
 
-SHA256 sources: N3116 `70053e95b07b481d3c08aa02ef9d857c11d896118c773595af87756e5d034421`;
-N3431 `3aac08483d7e2bd0978901e36b4a75ef7aeae6fc289e3fd8a5ffead69c85c685`;
-N3573 `37c6090a9985ccf2db1100c42ec941341dbcb7c60c5dc2a207475757bc7b5044`.
-Emitted conditional `Refine3116`, `Refine3431`, `Refine3573` and their Mains
-from the green 2965 template (`paid_count = 1998`, no new aggregate). Six new
-wrapped targets plus three source targets were added, all **CI pending**.
-Checks: forbidden-token scan over all nine files 0; `git diff --check` 0;
-62/62 non-comment TARGETS distinct and resolvable. No Lean build/axiom report
-was run locally.
+Replaced each leaf's unconditional two-line normalizer with
+`norm_num [rowA] <;> norm_num [y_N, db]`. If the first pass closes a zero-slack
+leaf, `<;>` runs nothing on the absent goal; otherwise the narrow scalar second
+pass runs. This directly addresses the prior `No goals to be solved` failure
+without merging `rowA`'s conditional tests into the large rational normalizer.
+Regenerated all seven modules. Emitter SHA256
+`af5c43c5f7c6c239146198307c4f4e6eff526108ea4f564f9a9c1e6da4805d08`.
+Module SHA256 (all CI pending):
+`1409` `9ec002a1387f3f5356c8ae366ab9aa429bc364baad4e5d2b78f9fb2d86cd6f0a`,
+`2337` `f67446369d4653925aabfaa199d4f700978049234da8210e0af2f160fc9eb8f3`,
+`2341` `988f674973750fc721afc3922e132f7b7dd6597e15dd6cecf998c6a50925cfc6`,
+`2356` `25ea125f8acfb1c835ed99bb979487f359ec1bb0d38ff354d6b6cc43c4cb567d`,
+`2360` `f6830a2a97d6a0e242cb8904c7647cab580e35c5209f3e1d2324eba62237cd6a`,
+`2368` `90db2e7160c4cdfaa36f2cbb9e6ac2114128f84be63a6e6a6a8863c52a951b23`,
+`2370` `09aa0b601ba8d2f5f425645e73d415bf734a506a5b7d68be35765062dda82a3f`.
 
-Still unproved/missing: kernel exits for N0037/Twelve/N3112/N3116/N3431/N3573
-chains; 373 residual ids conditional on all exits; MPacket validity; packet/
-no-cell and exclusion-to-radius bridges; energy and seven-class premises.
-Next: fresh CI must isolate the first red target after `EnergyRefineN0037`;
-do not extend the paid aggregate until each source and wrapper exits 0.
+Checks: emitter exit 0; 700/700 exact caps pass, global minimum slack 0; DBM
+SHA256 `BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5`;
+`py_compile` and `git diff --check` exit 0; forbidden-token scan found no
+matches. A Mathlib-probe tactic file was drafted, but the probe timed out at
+120 s before Lean returned, so there is **no local kernel/syntax claim**.
+
+Still unproved/missing: kernel exits for all seven row caps and the public
+excluded tree; row caps to `RemainingTerminalRadius`/public-tree bridge;
+packet/no-cell and exclusion-to-radius bridges; remaining residual ids;
+MPacket validity; energy and seven-class premises.
+
+Next: CI 1409 alone first. A fresh CI trace is authoritative: if 1409 is green,
+check 2356 next; if red, use its first actual source line (not the stale
+run-41123531381 trace) to choose the next narrow tactic change.
 ROOT-IMPORT REQUEST: none.
 
-## 2026-10-30 - parts 152-155, condensed
-The old all-pairs row caps and their decomposed 100-leaf versions were CI red;
-explicit `Fin` annotations (part 154) did not cure the failures. Generator
-checked 700/700 exact-rational caps with min slack 0; DBM SHA256 begins
-`BD4E71CB`, and generated module hashes are recorded in git history. Static
-checks passed but exact arithmetic is not kernel credit. Part-154 bytes are
-superseded by the CI result in part 156; no row-cap credit is claimed.
+## 2026-10-31 - part 162 (bounded leaf probe; no new credit)
 
-## 2026-10-30 - part 156 (CI red: row-cap leaves unresolved)
-Run `41115384387` (`9445f2b2`) was **red**: six modules fail with `unsolved
-goals`; 2356 hits the 200000 heartbeat limit. Explicit `Fin` annotations were
-not the cause. A minimal Mathlib probe timed out at 90 s during imports, so it
-was inconclusive. `FrozenCapRationalCore` is CI green. Next was to isolate one
-leaf before bulk regeneration. ROOT-IMPORT REQUEST: none.
+Re-verified the part-161 emitted proof shape in
+`FrozenCapRowCap1409.lean`: every leaf uses
+`norm_num [rowA] <;> norm_num [y_1409, db]`. Built a Mathlib-only probe from
+the exact `y_1409` definition, the 100-case `db`, and the first emitted leaf
+(`row_cap_1409_0_0`). `timeout 60 lake env lean RowCap1409Probe.lean` exited
+124 with no diagnostics. This is an infrastructure/probe timeout, **not** a
+syntax or kernel verdict, and no source hash changed from part 161.
 
-## 2026-10-30 - parts 157-158, condensed
-Part 157's direct `change` is superseded. Part 158 replaced `dbmVal` by an
-exhaustive scalar `db` with the same exact endpoints (emitter `5f14c43e...`).
-Exact audit 700/700, min slack 0; static checks passed. All seven row caps
-remained **CI pending**; no local Lean claim. Missing: row-cap exits, public-tree
-bridge, both packet/exclusion bridges, 377 ids, packet validity, energy/
-seven-class premises. Next was CI on scalar `db`. ROOT-IMPORT REQUEST: none.
+Checks: probe only, scope bounded to one leaf in `/workspace/tools/mathlib-probe`;
+60 s timeout, exit 124. No project module was built locally. No new exact-arithmetic
+audit was needed because the target and emitted bytes are unchanged.
 
-## 2026-10-30 - part 159 (stale CI diagnosis and leaf-tactic correction)
+Still unproved/missing: kernel exits for the seven row caps and public excluded
+tree; public-tree/radius bridges; residual energy ids; MPacket validity; energy
+and seven-class premises.
 
-`LATEST` run `41123531381` (`cc04268`) reports the *pre-scalar* row-cap bytes,
-not the current worktree. Its first failure is `1409:40: No goals to be solved`
-(an equality row whose `rw` already closed the goal, followed by redundant
-`norm_num`); other rows fail in `hright`, confirming the old nested-vector
-`dbmVal` lookup is the non-local cause. Current scalar `db` removes that cause.
-
-Changed the emitter leaf proof to one direct `norm_num [y_N, rowA, db]`, with
-no exposed `simp`/redundant follow-up. Regenerated all seven modules (700
-leaves). New SHA256: emitter `1ad2634e08ec56d89b2fad24ac0797db284d11c67bc20da821cf7e047881c137`;
-1409 `1e920405cdfb9d32e3f2262971a90e852456842d7920748ea5be6ac32dd15862`,
-2337 `e41ebe258016a5bc3bdd59509a936efeacecc8585863aeaa4a9ae2fd4891f91d`,
-2341 `97c588f4e6503ac85fbc6ec432a48bd31c5c266e9f69b930166ceefe79fbbd8d`,
-2356 `3f40b33aebb6976beebce7e210a0de204ac0263a5a91930e3c7d0a433c3d0d69`,
-2360 `c525a4820f0536943f3cb8441975ac299110fb5f2c7bcd58c0f998504b82df8a`,
-2368 `b7a075012b56401b48482b25367f4afebe12d3943aa9339aec6a3981ed3f7936`,
-2370 `34c51cabafad3b700d64e80aa0f623141fb5a62cbbd4d873facfb9c8764871c0`.
-
-Checks: emitter exit 0; exact 700/700 cap audit, min slack 0, DBM
-`BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5`;
-`py_compile`, `git diff --check`, forbidden-token scan exit 0. A bounded 75 s
-Mathlib-only reproduction timed out during imports (exit 124), so **no local
-Lean syntax/kernel claim** and all seven remain **CI pending**.
-
-Still unproved/missing: row-cap kernel exits, public-tree bridge, packet/no-cell
-and exclusion-to-radius bridges, 379 residual energy ids and their packet
-validity, energy/seven-class premises. Next: CI must reach 1409 first; if a leaf
-is red, isolate its exact post-`norm_num` goal, otherwise advance to 2356's
-runtime. Do not bulk-change tactics again before one exit 0.
+Next: trigger CI with only `N11Formalization.FrozenCapRowCap1409` in the active
+serial target region (keep the dependency tree out of that first trial), then read
+the first fresh source-level diagnostic. Do not bulk-rewrite the other six before
+1409 has a fresh exit.
 ROOT-IMPORT REQUEST: none.
