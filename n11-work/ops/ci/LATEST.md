@@ -1,8 +1,8 @@
-# CI latest (run 41176805557)
+# CI latest (run 41182882564)
 
 ```
-41182882564 pending null 7f7e6f3b 2026-10-31T08:01:23Z
-41181225934 in_progress null 69903c35 2026-10-31T07:35:39Z
+41182882564 completed success 7f7e6f3b 2026-10-31T08:01:23Z
+41181225934 completed success 69903c35 2026-10-31T07:35:39Z
 41176805557 completed success d141be39 2026-10-31T06:29:21Z
 41172673380 completed success 7fbff386 2026-10-31T05:27:34Z
 41168580187 completed success 0f022bfb 2026-10-31T04:26:31Z
@@ -11,7 +11,7 @@
 ## summary.json
 ```json
 {
- "sha": "d141be396560b863a1c2ac541f7650f35db611f0",
+ "sha": "7f7e6f3b85634174888962fa43a0133a65df21cc",
  "exits": [
   [
    "N11Formalization.FrozenCapRowCap1409Smoke",
@@ -19,31 +19,31 @@
   ],
   [
    "N11Formalization.FrozenCapRowCap1409",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.FrozenCapRowCap2337",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.FrozenCapRowCap2341",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.FrozenCapRowCap2356",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.FrozenCapRowCap2360",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.FrozenCapRowCap2368",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.FrozenCapRowCap2370",
-   "1"
+   "0"
   ],
   [
    "N11Formalization.FrozenCapFourFieldWitnesses",
@@ -534,69 +534,75 @@
    "1"
   ],
   [
+   "N11Formalization.SevenClassQ0Deg3UpperTables",
+   "0"
+  ],
+  [
+   "N11Formalization.SevenClassQ0Deg3StrictTotal",
+   "1"
+  ],
+  [
    "N11Formalization",
    "1"
   ]
  ],
- "built_count": 2,
+ "built_count": 8,
  "errors_head": [
-  "✖ [971/971] Building N11Formalization.FrozenCapRowCap1409 (7.5s)",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:520:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:524:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:528:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:532:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:536:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:540:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:544:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:548:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:552:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap1409.lean:556:53: unsolved goals",
+  "✖ [9156/9156] Building N11Formalization.FrozenCapFourFieldWitnesses (9.5s)",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:39:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:72:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:105:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:138:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:171:57: unsolved goals",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [971/971] Building N11Formalization.FrozenCapRowCap2337 (7.0s)",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:520:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:524:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:528:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:532:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:536:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:540:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:544:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:548:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:552:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2337.lean:556:53: unsolved goals",
+  "✖ [9156/9157] Building N11Formalization.FrozenCapFourFieldWitnesses (6.4s)",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:39:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:72:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:105:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:138:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:171:57: unsolved goals",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [971/971] Building N11Formalization.FrozenCapRowCap2341 (7.2s)",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:520:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:524:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:528:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:532:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:536:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:540:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:544:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:548:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:552:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2341.lean:556:53: unsolved goals",
+  "✖ [9156/9158] Building N11Formalization.FrozenCapFourFieldWitnesses (6.0s)",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:39:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:72:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:105:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:138:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFourFieldWitnesses.lean:171:57: unsolved goals",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [971/971] Building N11Formalization.FrozenCapRowCap2356 (7.8s)",
-  "error: N11Formalization/FrozenCapRowCap2356.lean:520:53: unsolved goals",
-  "error: N11Formalization/FrozenCapRowCap2356.lean:524:53: unsolved goals",
-  "error: N11Formalization/Frozen```
+  "✖ [9156/9156] Building N11Formalization.FrozenCapFiveFieldWitnesses (4.5s)",
+  "error: N11Formalization/FrozenCapFiveFieldWitnesses.lean:36:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFiveFieldWitnesses.lean:68:57: unsolved goals",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9156/9157] Building N11Formalization.FrozenCapFiveFieldWitnesses (4.4s)",
+  "error: N11Formalization/FrozenCapFiveFieldWitnesses.lean:36:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFiveFieldWitnesses.lean:68:57: unsolved goals",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9156/9158] Building N11Formalization.FrozenCapFiveFieldWitnesses (4.4s)",
+  "error: N11Formalization/FrozenCapFiveFieldWitnesses.lean:36:57: unsolved goals",
+  "error: N11Formalization/FrozenCapFiveFieldWitnesses.lean:68:57: unsolved goals",
+  "error: Lean exited with code 1",
+  "error: build failed",
+  "✖ [9164/9165] Building N11Formalization.FrozenCapRowCapTreeBridges (4.3s)",
+  "error: N11Formalization/FrozenCapRowCapTreeBridges.lean:49:0: Missing name after `end`: Expected the current scope name```
 ## build log tail
 ```
-runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:23:48 avail=1383MB top: 13914608 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:24:08 avail=1274MB top: 14071660 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:24:28 avail=1099MB top: 14143572 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:24:49 avail=1042MB top: 14246148 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:25:09 avail=958MB top: 14495448 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:25:29 avail=975MB top: 14466908 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:25:49 avail=982MB top: 14454476 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:26:09 avail=1096MB top: 14465004 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 07:26:29 avail=703MB top: 14560924 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=702MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1796s)
+/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:24:40 avail=1837MB top: 13883352 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:25:00 avail=1480MB top: 13933452 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:25:20 avail=1327MB top: 14072420 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:25:40 avail=1170MB top: 14176148 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:26:00 avail=968MB top: 14408696 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:26:20 avail=959MB top: 14544236 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:26:40 avail=967MB top: 14531972 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:27:00 avail=911MB top: 14493528 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 09:27:20 avail=889MB top: 14475316 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=887MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1316s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
