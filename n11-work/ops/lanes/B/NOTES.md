@@ -9,96 +9,100 @@ EXPERT (2026-10-31): Artifact 13024663395 is authoritative; Thirteen/Main exit 0
 
 # Lane B notes
 
-## 2026-10-31 - session 68: handoff byte/hash recheck (CI still pending)
+## 2026-10-31 - session 71: row-cap leaves switched to kernel decision (CI pending)
 
-- Re-ran the six-target static gate in the current worktree. `audit_b13_refine_sixteen.py`
-  exits 0 with all 16 checks true (`2013` paid, `373` residual), the Thirteen audit exits
-  0, and `audit_target_imports.py` exits 0 with a 1965-module closure and no missing or
-  forbidden imports. `git diff --check` exits 0. Scope is source/inventory arithmetic and
-  import resolution only, not Lean elaboration or kernel proof credit.
-- Reconfirmed the exact handoff hashes: Thirteen `F62B93EB...E9252E`, ThirteenMain
-  `D46E758C...D2784375`, Fourteen `12D107B3...DD0E4`, FourteenMain `9478C19F...C3FE7`,
-  Sixteen `055F8BA3...C28851`, SixteenMain `A3103831...8FECF`, TARGETS
-  `69E4E5A5...9F612`, and CI verdict evidence `63B92837...74C407`.
-- The latest indexed CI remains run `41123531381` on `cc04268c`; run `41141569628`
-  was overall green but its artifact records exit `1` for all six handoff modules, with
-  the redundant Thirteen tactic now repaired. No fresh post-repair artifact exists, so
-  all six remain **CI pending** and none is proof credit.
-- Still unproved: the conditional 373 residual radii, the `f0Lo`/`g` bridge,
-  SevenClassExclusions (`0/7`), and the arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits these exact bytes unchanged; fresh serial CI
-  must report exit `0` separately for all six targets before the root-import request is
-  considered. Repair only the first failing declaration from its exact diagnostic.
+- Session 70's bounded Mathlib probe could not be reproduced locally: `lake
+  env lean` hung under the shared 2-core workload and was killed at 240 s with
+  no diagnostic. This is an infrastructure timeout, not a syntax/kernel result.
+- Updated `n11-work/ops/lanes/B/split_rowcap_modules.py` SHA256
+  `4808F603...B0543B` to emit exact leaf proof `decide +kernel`; theorem
+  statements, `dbmVal`, and aggregate `row_cap` dispatch are unchanged.
+- Regenerated all seven `LaneBFrozenCapRowCap*.lean` modules: 700 leaves total,
+  exact `Fraction` caps all pass (`7 x 100` pairs, each `y` sum `1`, zero
+  violations). Module SHA256: `1409 4F1D8B5D...8F12`, `2337
+  73E0B6EF...29A4`, `2341 FB652D1D...52DD`, `2356 16BB8063...B9F7`, `2360
+  C25D85D4...2B58`, `2368 5C8272EE...80D7`, `2370 84AB5449...4777`.
+- New exact-arithmetic/regeneration report:
+  `split_rowcap_modules-report-new.json` SHA256 `49828C87...9130C`.
+  `split_rowcap_modules.py --check` exits `0`; `py_compile` and
+  `git diff --check` exit `0`; forbidden-construct scan has no matches.
+  Scope is source/inventory/rational arithmetic only. Every changed cap module
+  remains **CI pending**; none is kernel proof credit until its own exit `0`.
+- TARGETS order puts `LaneBRowCapDecideProbe` immediately before the seven cap
+  modules, so fresh CI isolates representative `decide +kernel` leaves first.
+- Still unproved: kernel exits for the probe, all seven 100-row modules and
+  public excluded tree; all 373 residual radii; the `f0Lo`/`g` bridge;
+  SevenClassExclusions (`0/7`); arbitrary-center full-disk theorem.
+- Next: supervisor commits these exact bytes unchanged, then CI must report the
+  probe and `LaneBFrozenCapRowCap1409` exits separately. If green, audit 2356;
+  if red, use the first probe/1409 source diagnostic to select the next leaf
+  shape before touching the already regenerated other modules.
 
-## 2026-10-31 - session 67: post-repair static chain gate
+## 2026-10-31 - session 70: row-cap tactic regression isolated; kernel probe queued
 
-- Re-ran the post-repair checks on the exact six modules CI must kernel-check:
-  `EnergyTerminalBatchB13RefineThirteen`, `...ThirteenMain`, `...Fourteen`,
-  `...FourteenMain`, `...Sixteen`, and `...SixteenMain`.
-- Results: `audit_b13_refine_sixteen.py` exits 0 with all 16 checks true and
-  arithmetic `1997 + 16 = 2013` paid / `389 - 16 = 373` residual;
-  `audit_b13_refine_thirteen.py` exits 0 with no failures and confirms removal
-  of the redundant Thirteen tactic; `audit_target_imports.py` exits 0 with
-  closure 1965, no missing and no forbidden imports; `git diff --check` exits 0.
-  Scope is static source/inventory/arithmetic and import resolution only, not
-  Lean elaboration or kernel proof credit.
-- Exact source hashes: Thirteen `F62B93EB...E9252E`, ThirteenMain
-  `D46E758C...D2784375`, Fourteen `12D107B3...DD0E4`, FourteenMain
-  `9478C19F...C3FE7`, Sixteen `055F8BA3...C28851`, SixteenMain
-  `A3103831...8FECF`; TARGETS `69E4E5A5...9F612`.
+- Re-ran `python tools/project_status.py --check`: PASS (handoff declarations only).
+  Banked the uncommitted Fourteen alias repair (`d1b84824...aba58dc`), whose
+  static successor hash now matches the fresh CI diagnosis.
+- Fresh run `41150468008` confirms `RefineThirteen` and `ThirteenMain` exit `0`;
+  the first repair failure is Fourteen's local-`newIDs` rewrite, now fixed on
+  disk. Fourteen/FourteenMain/Sixteen/SixteenMain remain **CI pending**.
+- Diagnosed the seven `LaneBFrozenCapRowCap*` red targets from that same artifact.
+  `FrozenCapRowCap1409` emits `unsolved goals` at each cap theorem declaration.
+  Exact Python/Q rational recomputation checks all `100` node-1409 rows,
+  `y` sum `1`, minimum slack `0`; the caps are true, so this is a tactic failure.
+- The lane-B split emitter still emits the old
+  `norm_num [y_1409, rowA, db, dbmVal]`; lane C changed the emitter but its own
+  modules are still CI-red with `norm_num [rowA] <;> norm_num [y_1409, db]`.
+  Reproducing lane C's change is therefore not a repair.
+- Added `LaneBRowCapDecideProbe.lean` (SHA256 `268043a2...40687b`) with three
+  representative caps (`0,1`, `4,5`, `9,9`) proved by `decide +kernel`, plus
+  `LaneBRowCapDecideProbe` in `TARGETS.txt` (SHA256 `05e2a0dc...b9d3`).
+  This is **drafted, CI pending**, not proof credit and not a 100-row certificate.
+- Checks: `audit_b13_refine_sixteen.py` exit `0` (all static checks pass, 2013
+  paid / 373 residual); `audit_target_imports.py` exit `0` (closure `1966`, no
+  missing/forbidden imports, probe resolved); `git diff --check` exit `0`.
+  Scope is static source/inventory/rational arithmetic and import resolution.
+- Still unproved: all 373 residual radii, the `f0Lo`/`g` bridge,
+  SevenClassExclusions (`0/7`), all seven 100-row cap modules, and the
+  arbitrary-center full-disk theorem.
+- Next concrete step: fresh CI must separately report exit `0` for the probe,
+  Fourteen, FourteenMain, Sixteen and SixteenMain. If the probe is green, change
+  `split_rowcap_modules.py` to emit kernel-decision leaves (or the smallest
+  green proof shape), regenerate all seven modules, and rerun exact 700/700
+  rational checks; if red, inspect the first probe diagnostic and use it to
+  choose the next proof shape. Never infer success from the run-level status.
+
+## 2026-10-31 - session 69: fresh CI isolates Fourteen alias failure and repair
+
+- Read fresh run `41150468008` on `24e434b4` (artifact `13024663395`, SHA256
+  `93bd13b7...c1b98`). It proves the previous repair: `RefineThirteen` and
+  `RefineThirteenMain` both exit `0`.
+- The next real diagnostic is `RefineFourteen.lean:62:53`: `paid_count` rewrites
+  `new_count`, but `paidIDs` unfolded to `EnergyRefineN3116.newIDs`, leaving
+  `2010 + #EnergyRefineN3116.newIDs = 2011`. Fixed the definition to
+  `RefineThirteen.paidIDs ∪ newIDs`. The four `FourteenMain`, `Sixteen`, and
+  `SixteenMain` exits are dependency cascades with no independent errors.
+- Re-ran `audit_b13_refine_sixteen.py`: exit `0`, all checks including the new
+  `fourteen_paid_ids_use_alias` guard; `audit_b13_refine_thirteen.py`: exit `0`.
+  `git diff --check`: exit `0`. A first 90s `audit_target_imports.py` attempt
+  timed out; the bounded 180s rerun exits `0` with closure `1965`, no missing or
+  forbidden imports. This remains static import-resolution scope.
+- Exact repaired Fourteen SHA256 `d1b84824...ba58dc`; audit script
+  `5c54c82e...25f3b2`; audit report `d83093fb...39acb4`. Fresh CI evidence is in
+  `ci-verdict-41150468008.json`. All readings are static/artifact scope; none is
+  Lean proof credit for the new bytes.
 - Still unproved: all 373 residual radii, the `f0Lo`/`g` bridge,
   SevenClassExclusions (`0/7`), and the arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits these exact bytes unchanged; fresh
-  serial CI must record exit `0` separately for all six targets above before
-  any proof credit or root-import switch is claimed.
+- Next concrete step: supervisor commits/pushes the alias repair unchanged; fresh
+  serial CI must report exit `0` separately for all four `Fourteen`/`Sixteen`
+  targets before root integration. If another error appears, start from its exact
+  first diagnostic.
 
-## 2026-10-31 - session 66: chain-level regression audit
+## 2026-10-31 - session 68: handoff byte/hash recheck (condensed)
 
-- Re-read session 65 and confirmed the repaired Thirteen close is
-  `rw [... EnergyTerminalBatchB13RefineTwelve.new_count]` with no trailing
-  tactic; the goal closes by reduction of `11 + 1 = 12`.
-- Extended `audit_b13_refine_sixteen.py` to pin the repaired close against
-  reintroduction of a redundant `norm_num`, and to check the complete stage
-  arithmetic `Seven=2004, Eight=2005, Eleven=2008, Twelve=2009,
-  Thirteen=2010, Fourteen=2011, Sixteen=2013` from the actual chain sources.
-- Checks: `audit_b13_refine_sixteen.py` exits 0 with `ok:true`; its report was
-  refreshed. Scope is static source/inventory arithmetic only, not Lean
-  elaboration. The local Mathlib singleton-union probe timed out under the
-  two-core limit, so no unverified Lean source rewrite was made.
-- Still unproved: all 373 residual radii, the `f0Lo`/`g` bridge,
-  SevenClassExclusions (`0/7`), and the arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits the repaired Thirteen, updated audit,
-  and report unchanged; then fresh serial CI must record exit `0` for the six
-  chain targets from `RefineThirteen` through `RefineSixteenMain`.
-
-## 2026-10-31 - session 65: post-repair static revalidation
-
-- Re-read session 64 and checked GitHub Actions before editing. The newest
-  `n11/work` runs are still `41141569628/581/692` at `c63cb61e`; no run exists
-  for the repaired working tree. The repair and evidence remain uncommitted in
-  this worktree, so there is still no post-repair Lean proof credit.
-- Verified the six chain source hashes: Thirteen `F62B93EB...E9252E`, ThirteenMain
-  `D46E758C...D2784375`, Fourteen `12D107B3...DD0E4`, FourteenMain
-  `9478C19F...C3FE7`, Sixteen `055F8BA3...C28851`, SixteenMain
-  `A3103831...8FECF`. The repaired Thirteen removes only the redundant
-  `norm_num`; the surrounding `rw` already closes `twelve_new_count`.
-- Rechecked the count decomposition around the former failure. Despite its name,
-  `EnergyTerminalBatchB13RefineTwelve.new_count` states the singleton
-  `EnergyRefineN0037.newIDs.card = 1`; Thirteen combines that with
-  `EnergyTerminalBatchB13RefineEleven.new_count = 11` to obtain 12. This is
-  intentional but naming-sensitive and should not be "simplified" without a
-  replacement total-count theorem.
-- Checks run this session: all three
-  `audit_b13_refine_{thirteen,fourteen,sixteen}.py` scripts exit 0 with
-  `ok:true`; `audit_target_imports.py` exits 0 with a 1965-module closure and no
-  missing/forbidden imports; `py_compile` and `git diff --check` exit 0. Scope is
-  static source/inventory/arithmetic only, not Lean elaboration.
-- Still unproved: all 373 residual radii, the `f0Lo`/`g` bridge,
-  SevenClassExclusions (`0/7`), and the arbitrary-center full-disk theorem.
-- Next concrete step: supervisor commits the Sixteen chain and CI evidence
-  unchanged, then a fresh serial run must report module exits `0` for all six
-  targets. If green, request the supervisor-only root import switch; lane B does
-  not edit the root.
+- Static six-target gate passed (`2013` paid, `373` residual, import closure
+  `1965`); no new Lean/kernel credit. The old overall-green CI was false at
+  module level; post-repair Thirteen/Fourteen/Sixteen remained CI pending.
 
 ## 2026-10-31 - session 64: CI artifact exposed and repaired Thirteen
 
@@ -180,3 +184,55 @@ EXPERT (2026-10-31): Artifact 13024663395 is authoritative; Thirteen/Main exit 0
 
 B13Main was kernel-green at `521CA436...FA41837`; root imports B12Main. Evidence
 is in `ci-b13-green-20261030.json`.
+
+## 2026-10-31 - session 72: local probe infrastructure blocked; CI gate unchanged
+
+- Re-ran `python tools/project_status.py --check`: PASS (handoff declarations
+  only). Working tree still contains session-71 exact regenerated cap modules,
+  probe, Fourteen alias repair, and pending target/notes changes.
+- Re-ran `split_rowcap_modules.py --check` and `py_compile`: exit `0`; exact
+  check again covers all `7 x 100` ordered pairs, `y` sums `1`, zero violations.
+  This remains rational-arithmetic/source scope, not Lean elaboration.
+- Local project probe attempt (`lake env lean LaneBRowCapDecideProbe.lean`) was
+  killed at 100 s while `lake` was still cloning Mathlib; no Lean diagnostic.
+  A second bounded Mathlib-only probe attempt hit the same 90 s timeout before
+  elaboration. These are infrastructure timeouts, not success or tactic failure.
+- `git diff --check` exits `0`; forbidden-construct scan finds only the intended
+  `decide +kernel` leaves in the probe/cap modules. No frozen module was edited.
+- Cap module SHA256 unchanged from session 71 (`1409 4F1D8B5D...8F12`, `2337
+  73E0B6EF...29A4`, `2341 FB652D1D...52DD`, `2356 16BB8063...B9F7`, `2360
+  C25D85D4...2B58`, `2368 5C8272EE...80D7`, `2370 84AB5449...4777`).
+- All seven cap modules and probe remain **CI pending**. The exact 700-row
+  arithmetic does not pay the `f0Lo`/`g` bridge or any residual radius.
+- Next: supervisor commit unchanged; fresh CI must first report the probe and
+  1409 separately. Do not regenerate other modules until that diagnostic exists.
+
+## 2026-10-31 - session 73: static gates fresh; tactic probe still infrastructure-blocked
+
+- Re-ran `python tools/project_status.py --check`: PASS (handoff declarations
+  only). Working-tree inventory is unchanged from session 72: probe, seven
+  exact regenerated row-cap modules, Fourteen alias repair, and pending
+  target/report updates are present.
+- `split_rowcap_modules.py --check` exits `0` and independently reports all
+  `7 x 100` ordered pairs, `y` sum `1`, zero violations. Regenerated module
+  hashes remain `1409 4F1D8B5D...8F12`, `2337 73E0B6EF...29A4`, `2341
+  FB652D1D...52DD`, `2356 16BB8063...B9F7`, `2360 C25D85D4...2B58`, `2368
+  5C8272EE...80D7`, `2370 84AB5449...4777`.
+- `audit_b13_refine_sixteen.py` exits `0`: final arithmetic is `2013` paid /
+  `373` residual, with all static source/inventory checks true. Scope is static
+  arithmetic only, not Lean proof credit.
+- `audit_target_imports.py` was bounded at `25 s` and timed out with no output;
+  the last completed static closure remains the session-72 hash-bound report.
+- A minimal Mathlib-only `decide +kernel` rational probe
+  (`/workspace/tools/mathlib-probe/RatDecideKernelProbe.lean`) timed out at `45 s`
+  before elaboration. No success, failure, or tactic verdict is inferred.
+- Probe SHA256 remains `268043a2...40687b`; `TARGETS.txt` SHA256 remains
+  `05e2a0dc...b9d3`, with the probe immediately before the seven cap modules.
+  All probe/cap targets remain **CI pending**.
+- Still unproved: kernel exits for the probe and seven cap modules; the `f0Lo`/`g`
+  bridge; all `373` residual radii; SevenClassExclusions (`0/7`); the
+  arbitrary-center full-disk theorem.
+- Next concrete step: supervisor commits these exact bytes unchanged. Fresh CI
+  must first report `LaneBRowCapDecideProbe` and `LaneBFrozenCapRowCap1409`
+  exits separately; if probe is `0` and 1409 is `1`, use its first source
+  diagnostic to redesign only 1409's leaves, not the other six modules.

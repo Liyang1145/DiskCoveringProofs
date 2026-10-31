@@ -12,7 +12,7 @@ noncomputable section
 def newIDs : Finset (Fin 5011) := EnergyRefineN3116.newIDs
 
 def paidIDs : Finset (Fin 5011) :=
-  EnergyTerminalBatchB13RefineThirteen.paidIDs ∪ EnergyRefineN3116.newIDs
+  EnergyTerminalBatchB13RefineThirteen.paidIDs ∪ newIDs
 
 theorem new_terminal (n : Fin 5011) (hn : n ∈ newIDs) :
     (DBMSourceTree.data n).terminal = true := by

@@ -1,0 +1,32 @@
+{
+  "schema": "n11-lane-b-ci-artifact-verdict-v1",
+  "run": 41150468008,
+  "workflow": "n11-lean-build",
+  "head_sha": "24e434b486811b28bcabbbc9ce21a45120307aca",
+  "run_conclusion": "success",
+  "artifact": {
+    "id": 13024663395,
+    "name": "n11-build-41150468008.zip",
+    "bytes": 25981,
+    "sha256": "93bd13b7fdc7e054fb24d985afd02c123d6229d608df0809dbeea9b7b69c1b98"
+  },
+  "verdict_scope": "module exits in the uploaded runner artifact; the run-level conclusion is not a proof verdict",
+  "module_exits": {
+    "N11Formalization.EnergyTerminalBatchB13RefineThirteen": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineThirteenMain": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain": 1
+  },
+  "first_error": "EnergyTerminalBatchB13RefineFourteen.lean:62:53: rewrite failed to find #newIDs in 2010 + #EnergyRefineN3116.newIDs = 2011",
+  "diagnosis": "paidIDs unfolded to the imported set while new_count referred to the local alias; the other four exits are dependency cascades with no independent diagnostics",
+  "repair": "define RefineFourteen.paidIDs using the local newIDs alias",
+  "pre_repair_sha256": {
+    "N11Formalization/EnergyTerminalBatchB13RefineFourteen.lean": "12d107b3879cb014f651aae113b8a8726a6c10a2e7057457924beedf6d3dd0e4"
+  },
+  "post_repair_sha256": {
+    "N11Formalization/EnergyTerminalBatchB13RefineFourteen.lean": "d1b84824ef0c8784e19b9c9c86caa1eb64ddcb6eb8b1614e8f6fe7d48aba58dc"
+  },
+  "post_repair_ci": "pending; no Lean proof credit for the repair"
+}
