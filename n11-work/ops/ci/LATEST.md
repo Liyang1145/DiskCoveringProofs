@@ -1,20 +1,28 @@
-# CI latest (run 41212560053)
+# CI latest (run 41217409382)
 
 ```
-41217409382 in_progress null 068914fb 2026-10-31T15:58:49Z
+41222715534 in_progress null 8f861bae 2026-10-31T17:04:21Z
+41217409382 completed success 068914fb 2026-10-31T15:58:49Z
 41212560053 completed success 66bf2541 2026-10-31T14:58:01Z
 41208161314 completed success 1616dbe3 2026-10-31T14:01:04Z
 41201323694 completed success 3551ab87 2026-10-31T12:29:21Z
-41195990232 completed success cc16dff4 2026-10-31T11:13:53Z
 ```
 
 ## summary.json
 ```json
 {
- "sha": "66bf2541b6f2f970172377c2209c2262b66df3b0",
+ "sha": "068914fb6c87b42a5b726bbf71432007d1230f89",
  "exits": [
   [
    "N11Formalization.EnergyTerminalBatchB13ResidualCertificates",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual",
    "0"
   ],
   [
@@ -338,6 +346,14 @@
    "0"
   ],
   [
+   "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff",
+   "1"
+  ],
+  [
    "N11Formalization.LaneBRowCapDecideProbe",
    "1"
   ],
@@ -412,6 +428,14 @@
   [
    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
    "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensus",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusRefineSixteen",
+   "1"
   ],
   [
    "N11Formalization.C450ChainCompletionMain",
@@ -564,62 +588,40 @@
  ],
  "built_count": 2,
  "errors_head": [
-  "✖ [9165/9165] Building N11Formalization.FrozenCapFiveField2368Tree (3.9s)",
+  "✖ [9165/9165] Building N11Formalization.FrozenCapFiveField2368Tree (3.8s)",
   "error: N11Formalization/FrozenCapFiveField2368Tree.lean:32:4: Type mismatch: After simplification, term",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [9165/9165] Building N11Formalization.FrozenCapFiveField2370Tree (3.6s)",
+  "✖ [9165/9165] Building N11Formalization.FrozenCapFiveField2370Tree (3.7s)",
   "error: N11Formalization/FrozenCapFiveField2370Tree.lean:32:4: Type mismatch: After simplification, term",
   "error: Lean exited with code 1",
   "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBRowCapDecideProbe (1.1s)",
-  "error: N11Formalization/LaneBRowCapDecideProbe.lean:10:18: Unknown identifier `y_1409`",
-  "error: N11Formalization/LaneBRowCapDecideProbe.lean:14:18: Unknown identifier `y_1409`",
-  "error: N11Formalization/LaneBRowCapDecideProbe.lean:18:18: Unknown identifier `y_1409`",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBFrozenCapRowCap1409 (1.1s)",
-  "error: N11Formalization/LaneBFrozenCapRowCap1409.lean:10:18: Unknown identifier `y_1409`",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBFrozenCapRowCap2337 (1.1s)",
-  "error: N11Formalization/LaneBFrozenCapRowCap2337.lean:10:18: Unknown identifier `y_2337`",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBFrozenCapRowCap2341 (1.1s)",
-  "error: N11Formalization/LaneBFrozenCapRowCap2341.lean:10:18: Unknown identifier `y_2341`",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBFrozenCapRowCap2356 (1.1s)",
-  "error: N11Formalization/LaneBFrozenCapRowCap2356.lean:10:18: Unknown identifier `y_2356`",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBFrozenCapRowCap2360 (1.1s)",
-  "error: N11Formalization/LaneBFrozenCapRowCap2360.lean:10:18: Unknown identifier `y_2360`",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBFrozenCapRowCap2368 (1.1s)",
-  "error: N11Formalization/LaneBFrozenCapRowCap2368.lean:10:18: Unknown identifier `y_2368`",
-  "error: Lean exited with code 1",
-  "error: build failed",
-  "✖ [972/972] Building N11Formalization.LaneBFrozenCapRowCap2370 (1.1s)",
-  "error: N11Formalization/LaneBFrozenCapRowCap2370.lean:10:18: Unknown identifier `y_2370`",
-  "error: Lean exited with code 1",
-  "error: build```
+  "✖ [9345/9345] Building N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus (19s)",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:41:2: No goals to be solved",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Expected type must not contain free variables",
+  "error: N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean:50:6: Exp```
 ## build log tail
 ```
-runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:43:50 avail=1710MB top: 14265748 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:44:10 avail=1580MB top: 14207168 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:44:30 avail=1289MB top: 14315732 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:44:50 avail=1039MB top: 14365604 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:45:11 avail=935MB top: 14419948 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:45:31 avail=976MB top: 14566316 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:45:51 avail=987MB top: 14560084 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:46:11 avail=1137MB top: 14553276 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 15:46:31 avail=872MB top: 14655136 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=870MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1699s)
+unner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:48:56 avail=1382MB top: 13933120 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:49:16 avail=1170MB top: 13949568 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:49:36 avail=1063MB top: 14072864 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:49:56 avail=930MB top: 14210184 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:50:16 avail=1025MB top: 14441348 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:50:36 avail=1061MB top: 14592032 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:50:56 avail=1078MB top: 14590428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:51:16 avail=990MB top: 14608116 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 16:51:36 avail=832MB top: 14578808 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=831MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1759s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
