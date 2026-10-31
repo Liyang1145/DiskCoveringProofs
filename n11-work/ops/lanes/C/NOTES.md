@@ -109,3 +109,91 @@ Very next concrete step: read the next lane-C artifact for
 still times out, replace each 100-id block with ten 10-id subtheorems and prove
 their union without unfolding the 2013-element paid set; retain the direct
 residual-set consumer regardless.
+
+## 2026-10-31 - part 221 (literal census de-duplicated)
+
+Diagnosed the census red path from the CI job log for head `bb9fb0c0`: the
+51 `decide +kernel +revert` blocks spent 142s and were OOM-guarded at
+14,816,320 KB. The earlier run `41229638083` had failed at line 49 with
+`Expected type must not contain free variables`. This was a proof-encoding
+blowup, not a census discrepancy.
+
+Replaced the duplicated 373-literal census in
+`n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean`
+with a 49-line structural alias of
+`EnergyTerminalResidualCensusRefineSixteen.refinedResidualIDs` (389 census
+minus the literal 16 refinements). It retains `residualIDs_eq_residual373`,
+`residual373_card = 373`, `residualIDs_card = 373`, and both conditional
+radius-certificate consumers. No kernel decision over the paid set remains.
+SHA256: Lean `3308DADD...DFB0C1D`; emitter `B36087FE...1178E53`.
+
+Regenerated with `n11-work/ops/lanes/C/emit_residual373_census.py` from the
+committed exact JSON (373 unique ids). Checks run: emitter exit 0; forbidden
+token scan clean; regeneration byte-stable; `git diff --check` exit 0. Exact
+source comparison confirms the `paidIDs` definitions in `RefineSixteen` and
+`RefineSixteenRepair` have identical bodies, so the alias's `rfl` is a
+definitional-unfolding step. Scope is static source/byte inspection only:
+**CI pending**, no radius paid and no kernel claim.
+
+Still unproved: the 373 residual radius certificates, packet `f0Lo`/`g`, the
+382 absent payloads, SevenClassExclusions (0/7), and arbitrary-centre
+full-disk theorem. The new target also depends on the upstream lane-B
+`EnergyTerminalResidualCensus`/`RefineSixteen` targets, currently CI red.
+
+Next: after supervisor commit, require `RefineSixteenResidualCensus` and
+`RefineSixteenResidualCensusMain` to exit 0 and record whether any failure is
+in this alias or its upstream structural census. Do not restore literal
+per-index kernel enumeration.
+
+## 2026-10-31 - part 222 (alias dependency made explicit)
+
+Checked the two paid-set definition bodies directly:
+`EnergyTerminalBatchB13RefineSixteenRepair.paidIDs` and
+`EnergyTerminalBatchB13RefineSixteen.paidIDs` are identical. Added
+`repair_paidIDs_eq_refineSixteen_paidIDs` to the generated census alias and
+used that equality explicitly in `residualIDs_eq_residual373`, rather than
+depending on an unstated definitional unfolding. Regenerated with
+`n11-work/ops/lanes/C/emit_residual373_census.py`; file stays 54 lines.
+
+SHA256: Lean `480a2f78432d6400455f4a84f3dab2c4f838057ac8b05370959070975a8c62df`;
+emitter `b048873b43dea935314a9cc273026576a54fce7251c0f807a00da631c25ca52e`.
+Checks (static only): regeneration exit 0 and byte-stable; forbidden-token scan
+clean; `git diff --check` exit 0. A 45s isolated `/workspace/tools/mathlib-probe`
+pattern probe timed out with no output, so no kernel claim is made from it.
+`RefineSixteenResidualCensus`/`CensusMain` remain **CI pending**.
+
+Still unproved is unchanged: 373 residual radius certificates, packet
+`f0Lo`/`g`, 382 absent payloads, SevenClassExclusions (0/7), and the
+arbitrary-centre full-disk theorem. Next: read CI for these two targets after
+the supervisor commit; attribute any red result to this alias or its upstream
+structural census, and do not reintroduce literal per-index enumeration.
+
+## 2026-10-31 - part 223 (CI attribution and alias revalidation)
+
+Read `ops/ci/LATEST.md`: run `41229638083` reports
+`RefineSixteenResidualCensus`/`CensusMain` exit 1, but its recorded error is
+at line 49 of the **committed** 573-line literal version (`decide +kernel
++revert`), not the 54-line structural alias now in this worktree. That run
+therefore supplies no verdict on parts 221-222. The same artifact also shows
+the unrelated `SharedMomentConcreteSwitchBatch` target OOM-guarded by the
+memory watch; do not attribute that failure to lane C.
+
+Rechecked all alias dependencies against source: `refinedResidualIDs`,
+`refinedResidualIDs_card`, `mem_refinedResidualIDs_iff`,
+`RefineSixteenResidual.mem_residualIDs_iff`, and both residual-certificate
+consumers exist with the referenced types. The non-repaired and repaired
+`paidIDs` bodies are still byte-identical in their defining expressions.
+Regeneration via `emit_residual373_census.py` exited 0, produced 54 lines and
+373 ids structurally, gave Lean SHA256
+`480a2f78432d6400455f4a84f3dab2c4f838057ac8b05370959070975a8c62df` and
+emitter SHA256
+`b048873b43dea935314a9cc273026576a54fce7251c0f807a00da631c25ca52e`.
+Forbidden-token scan and `git diff --check` are clean. Scope remains static
+source/byte validation: **CI pending**, no kernel or payment claim.
+
+Unproved obligations remain the 373 residual radius certificates, packet
+`f0Lo`/`g`, 382 absent payloads, seven-class exclusions (0/7), and the
+arbitrary-centre theorem. Next concrete step: after the supervisor commits
+parts 221-223, read the fresh census/`CensusMain` exits. If green, mark the
+conditional 373-cardinality interface CI-green; if red, inspect only the new
+54-line alias first and preserve its upstream dependency attribution.
