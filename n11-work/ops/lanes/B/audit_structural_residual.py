@@ -36,7 +36,27 @@ cl=closure(S)
 if BADMOD in cl: fails.append('wrapper closure imports conflicted literal census')
 if set(IMPORT.findall(texts[S]))!={'N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual',D}: fails.append('unexpected Structural direct imports')
 if set(IMPORT.findall(texts[M]))!={S,'N11Formalization.EnergyTerminalBatchB13Main'}: fails.append('unexpected StructuralMain direct imports')
-result={'scope':'source/import audit only; not a Lean kernel check and pays no radius','ok':not fails,'failures':fails,'closure_size':len(cl),'conflicted_module_absent':BADMOD not in cl,'sha256':{str(path(m).relative_to(ROOT)):digest(path(m)) for m in (S,M)},'targets_sha256':digest(TARGETS)}
+
+# The generated census pays cardinality through four literal chunks and pays
+# equality through 502 ten-index subtheorems dispatched by 51 contiguous blocks.
+# Check that the checked-in source still has exactly that cover; a missing or
+# duplicated block would otherwise look like harmless generated code.
+chunks={int(i):{int(x) for x in re.findall(r'\d+',body)} for i,body in re.findall(
+    r'^def chunk(\d+) : Finset \(Fin 5011\) := \{([^}]*)\}',texts[D],re.M)}
+card_lines={int(i):int(n) for i,n in re.findall(
+    r'^theorem chunk(\d+)_card : chunk\d+\.card = (\d+) := by decide \+kernel$',texts[D],re.M)}
+subs=[int(i) for i in re.findall(r'^private theorem mem_sub_(\d{3}) ',texts[D],re.M)]
+blocks=[int(i) for i in re.findall(r'^private theorem mem_iff_block(\d{2}) ',texts[D],re.M)]
+expected=[100,100,100,73]
+if sorted(chunks)!=list(range(4)): fails.append('literal chunks are not 0..3')
+if [len(chunks.get(i,set())) for i in range(4)]!=expected: fails.append('literal chunk cardinalities differ from [100,100,100,73]')
+if any(not 0<=x<5011 for c in chunks.values() for x in c): fails.append('literal chunk has out-of-range Fin 5011 id')
+if any(chunks[i]&chunks[j] for i in range(4) for j in range(i+1,4)): fails.append('literal chunks overlap')
+if card_lines!={0:100,1:100,2:100,3:73}: fails.append('kernel cardinality theorem coverage differs')
+if subs!=list(range(502)): fails.append('ten-index subtheorem cover is not exactly 000..501')
+if blocks!=list(range(51)): fails.append('hundred-index dispatch cover is not exactly 00..50')
+if len(re.findall(r'\.symm$',texts[D],re.M))<51: fails.append('root equality dispatch has fewer than 51 branches')
+result={'scope':'source/import/cover audit only; not a Lean kernel check and pays no radius','ok':not fails,'failures':fails,'closure_size':len(cl),'conflicted_module_absent':BADMOD not in cl,'census_shape':{'chunks':[len(chunks.get(i,set())) for i in range(4)],'subtheorems':len(subs),'blocks':len(blocks)},'sha256':{str(path(m).relative_to(ROOT)):digest(path(m)) for m in (S,M)},'targets_sha256':digest(TARGETS)}
 REPORT.write_text(json.dumps(result,indent=2,sort_keys=True)+'\n')
 print(json.dumps(result,sort_keys=True))
 raise SystemExit(0 if result['ok'] else 1)

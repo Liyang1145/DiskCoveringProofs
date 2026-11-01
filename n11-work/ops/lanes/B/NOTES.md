@@ -1,5 +1,52 @@
 # Lane B notes
 
+## 2026-11-01 - session 135: structural import isolation audit
+
+- Added `audit_structural_dependency_isolation.py` and report
+  `audit_structural_dependency_isolation-report.json`. The recursive source
+  audit resolves 1,960 imports/reachable modules with no missing imports and
+  proves that the structural trio's closure does not contain lane C's conflicted
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus`. Audit `ok=true`; this is a
+  source/import audit, not a Lean kernel check.
+- The closure still contains 38 modules also listed only in lane C (certificate
+  and refinement dependencies), so this isolates the named OOM/order blocker but
+  does not show all lane-C-listed dependencies are green. Audit SHA-256 is
+  `A8A08B88...648B41`; report SHA-256 is `F837BBBB...6C25D6`.
+- No Lean source or `TARGETS.txt` entry changed. The structural trio remains
+  **CI pending**; 373 residual radii, packet `f0Lo`/`g`, 382 payload records,
+  SevenClassExclusions (`0/7`), and the arbitrary-centre theorem remain unpaid.
+- Next concrete step: supervisor runs the B structural targets ahead of lane C's
+  conflicted literal census (or moves/withdraws that C target once), then record
+  the first lane-B Lean error from CI. ROOT-IMPORT REQUEST remains
+  `...ResidualStructuralMain` only after its closure is CI green.
+
+## 2026-11-01 - session 134: census coverage invariant
+
+- Extended `audit_structural_residual.py` to enforce the generated equality
+  cover: exactly 4 disjoint literal chunks with cardinalities 100/100/100/73,
+  502 indexed `mem_sub_*` lemmas, and 51 contiguous dispatch blocks. It also
+  rejects out-of-range ids and card-theorem drift. Audit result `ok=true`,
+  closure 5, conflicted census absent; report is
+  `audit_structural_residual-report.json`. Scope is source/import/cover audit,
+  not a Lean kernel check.
+- Structural source hashes remain `A9EF7A7E...CA0C` and `7CE25F5D...34A7`;
+  TARGETS remain `1D27F4B7...9B0E`. The trio is still **CI pending** and pays
+  no radius. All 373 residual radii, packet `f0Lo`/`g`, 382 absent payload
+  records, SevenClassExclusions (`0/7`), and the arbitrary-centre theorem are
+  unpaid.
+- Next concrete step: after the supervisor restores/withdraws lane C's literal
+  census, inspect only the first real Lean error from the structural trio; then
+  CI the full B13 aggregate. ROOT-IMPORT REQUEST remains unchanged.
+
+## 2026-11-01 - session 133: CI attribution; structural targets promoted
+
+- Run `41293387736` reached four green B13 residual dependencies, then lane C's
+  literal census/CensusMain was OOM-killed without Lean diagnostics; no lane-B
+  target ran. `audit_ci_memory.py` now separates wrappers from real errors.
+- Structural trio moved to the front of `B/TARGETS.txt`; lane-C's global
+  position-4 blocker still precedes it. Static audit was green, but local
+  Mathlib probing was inconclusive. Structural trio remained **CI pending**.
+
 ## 2026-11-01 - sessions 125--126: hash-pinned census restoration utility
 
 - `restore_census_from_green.py` pins C01--C04 at green `6937fb90` and refuses
@@ -10,40 +57,11 @@
 
 ## 2026-11-01 - session 124: CI log attribution and census regression audit
 
-- Downloaded and extracted the full job log for run `41271050741` (job
-  `124743726683`, head `5c053c07`). Exit 143 was a runner shutdown, not a Lean
-  result. Green exits before shutdown: `EnergyTerminalBatchB13ResidualCertificates`,
-  `EnergyTerminalBatchB13RefineSixteenRepair`,
-  `EnergyTerminalBatchB13RefineSixteenResidual`, and
-  `EnergyTerminalBatchB13RefineSixteenResidualMain` all exited 0.
-- The run then started lane C's literal
-  `EnergyTerminalBatchB13RefineSixteenResidualCensus`; its dependency build reached
-  `EnergyTerminalResidualCensusBase` and then held an approximately 8 GB Lean
-  process until runner shutdown. No Lean diagnostic was emitted for that target.
-  The lane-B structural consumer was not reached, so it remains **CI pending**.
-- Added `audit_census_revert_regression.py` and its JSON report. It compares the
-  live four census parts with green commit `6937fb90`. Result `ok=true`, scope
-  source/byte audit only: green had 51 bare `decide +kernel` and 0 `+revert`;
-  live has 0 bare and 51 `+revert` (13/13/13/12). Live hashes:
-  C01 `6E90C8EA...F07F4`, C02 `FC8885BD...C373`, C03 `E1022163...02219`,
-  C04 `D40FF05E...F67727`. This is the strongest identified regression blocking
-  the census build, but it is not itself a Lean kernel diagnosis.
-- Re-ran `audit_structural_residual.py`: `ok=true`, closure 8, no failures.
-  Structural SHA256 `6F585404...68B`; StructuralMain `7CE25F5D...4A7`;
-  TARGETS `7AE31169...AB`. Both structural modules remain **CI pending** and pay
-  no radius.
-- Still unproved: kernel success of the structural pair; all 373 residual radii;
-  packet `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions (`0/7`);
-  arbitrary-centre full-disk theorem.
-- Next concrete step: supervisor should not build lane C's literal census first.
-  Restore C01--C04 from green `6937fb90` (removing all 51 `+revert`), or withdraw
-  that target in favour of the structurally equivalent lane-B wrapper. Then CI
-  the four restored census parts, `EnergyTerminalResidualCensus`, lane-B
-  `...ResidualStructural`, and `...ResidualStructuralMain` serially. Inspect the
-  first owning Lean error; do not infer green from hash or byte checks.
-- ROOT-IMPORT REQUEST remains: replace `EnergyTerminalBatchB13Main` with the
-  complete green sixteen-refinement main chain only after the structural pair is
-  kernel-green.
+- Run `41271050741` (head `5c053c07`) shut down without a lane-B Lean result;
+  four checked B13 residual dependencies were green. `audit_census_revert_regression.py`
+  found the live C01--C04 bytes differ from green `6937fb90` with 51 `+revert`
+  markers (13/13/13/12). This is a byte-level regression audit, not a kernel
+  diagnosis. Structural targets remained CI pending and paid no radius.
 
 ## Earlier state (condensed)
 
@@ -223,22 +241,3 @@
   owned by the structural census. ROOT-IMPORT REQUEST remains
   `...ResidualStructuralMain` only after that dependency chain is CI green.
 
-## 2026-11-01 - session 132: census alternate-route audit
-
-- Rechecked the lane-C alias route: `EnergyTerminalResidualCensusRefineSixteen`
-  counts 373 by subtracting a literal sixteen from the 389 census, while
-  `EnergyTerminalResidualCensusBase` is only the 19-line shared chunk source.
-  The subtraction cannot replace lane B's census by itself because connecting
-  either set to `RefineSixteenResidual.residualIDs` still requires the same
-  all-5011 source-index equality; `...ResidualCensusBase` has no such theorem.
-- Measured sources: B structural census is 5,982 lines / 314,874 bytes, SHA-256
-  `415C4121...B73A`; lane-C alias is 54 lines, SHA-256 `480A2F78...62DF`; base
-  SHA-256 `642F5A5B...442D`. This is a static footprint audit, not a kernel test.
-- No Lean file, TARGETS entry, or radius changed. Structural trio remains **CI
-  pending**; all 373 residual radii, packet `f0Lo`/`g`, 382 records, seven-class
-  exclusions, and the arbitrary-centre theorem remain unpaid.
-- Next concrete step: supervisor restores C01--C04 from green (or directly
-  builds the lane-B structural target), then CI the structural trio serially
-  and inspect the first owning Lean error. Do not split the base-census route
-  further without first proving `ResidualCensusBase.residualIDs =
-  RefineSixteenResidual.residualIDs`.

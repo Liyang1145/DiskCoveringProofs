@@ -1,12 +1,22 @@
 {
+  "census_shape": {
+    "blocks": 51,
+    "chunks": [
+      100,
+      100,
+      100,
+      73
+    ],
+    "subtheorems": 502
+  },
   "closure_size": 5,
   "conflicted_module_absent": true,
   "failures": [],
   "ok": true,
-  "scope": "source/import audit only; not a Lean kernel check and pays no radius",
+  "scope": "source/import/cover audit only; not a Lean kernel check and pays no radius",
   "sha256": {
     "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructural.lean": "A9EF7A7EC0BF192A82AAEE1A625519211C76943ED577919B384014BDCE08CA0C",
     "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructuralMain.lean": "7CE25F5DF035E68DE463561E589A674B793386369FDCF81FA0378BB995FC34A7"
   },
-  "targets_sha256": "31F5A8761EBF0179C4C7FF0C36AB71C7C2946F776DCD4E2609C4D49B8AC99280"
+  "targets_sha256": "1D27F4B71563F87F075661BA3D5BB4D0A131A62B28B138C87025A908985B9B0E"
 }

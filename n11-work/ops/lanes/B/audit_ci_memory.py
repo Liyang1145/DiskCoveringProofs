@@ -45,7 +45,20 @@ def main() -> None:
         (int(a), int(t))
         for a, t in re.findall(r"^MEM \S+ avail=(\d+)MB top: (\d+)", log, re.M)
     ]
-    errors = [line for line in log.splitlines() if "error:" in line and "##[error]" not in line]
+    process_errors = [
+        line for line in log.splitlines()
+        if "error:" in line and not line.lstrip().startswith("##[error]")
+    ]
+    # `lake` wraps killed processes as `error: Lean exited with code 137`, and
+    # its final `error: build failed` is a consequence of those exits. Neither
+    # is a Lean diagnostic about a theorem. Keep them separate from real
+    # elaboration/kernel errors so an OOM guard cannot be misreported as a
+    # mathematical rejection.
+    errors = [
+        line for line in process_errors
+        if "error: Lean exited with code " not in line
+        and line.strip() != "error: build failed"
+    ]
     runner_shutdown = "The runner has received a shutdown signal" in log
     oom_guard = "OOM-GUARD" in log
     result = {
@@ -63,8 +76,12 @@ def main() -> None:
         "oom_guard_triggered": oom_guard,
         "runner_shutdown": runner_shutdown,
         "lean_errors": errors[-20:],
+        "process_errors": process_errors[-20:],
         "attribution": (
-            "runner shutdown with no Lean diagnostic" if runner_shutdown and not errors
+            "OOM guard killed Lean with no Lean diagnostic"
+            if oom_guard and not errors
+            else "runner shutdown with no Lean diagnostic"
+            if runner_shutdown and not errors
             else "Lean diagnostic present" if errors
             else "inconclusive"
         ),
