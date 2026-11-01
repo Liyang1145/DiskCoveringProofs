@@ -1,5 +1,38 @@
 # Lane B notes
 
+## 2026-11-01 - session 140: fixed terminal-census pairwise dispatch
+
+- Fixed a concrete emitter defect in `emit_terminal_census_blocks.py` (SHA-256
+  `B476DEFDA1F5DC48EA2CF54AC733D4C2483195332C502A52732CD11A35721FCA`). The
+  old `blockIDs_pairwiseDisjoint` proof supplied only one branch per unordered
+  pair, but `fin_cases i <;> fin_cases j` visits all 400 ordered cases; cases
+  with `i > j` could not match. Regenerated
+  `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean` (3,000 lines,
+  SHA-256 `9FE6D2CA1E396F52A45BE6C7B2BDD722C5A03BFC9C75BA44BC664818DDBD2031`)
+  with a row-major branch for every ordered case and `.symm` for `i > j`.
+- Moved the census target immediately before its consumer,
+  `EnergyTerminalBatchB13RefineSixteenResidualCard`, in `TARGETS.txt`.
+  `ResidualCard.lean` remains unchanged (SHA-256
+  `5B6C7656FB3B71AE047498AE2DD45D235C57BA5467EA95DFD9EF8E4E7F55A340`).
+- Checks: generated branch map verified exhaustively in Python (400 cases: 20
+  reflexivity contradictions, 380 symmetry-aligned exact lemmas); independent
+  `audit_terminal_census.py` returned `ok=true` with terminal 2,506, sharp 120,
+  B13 paid 1,997, residual 373 and an exact sharp/paid/residual partition;
+  `audit_target_imports.py` returned closure 1,991, no missing imports and no
+  forbidden tokens. These are source/generation/import audits only, **not** Lean
+  elaboration or kernel checks. A bounded `lake env lean --parse-only` attempt
+  stopped before Lean on the pre-existing Mathlib revision checkout conflict;
+  scope was setup failure with no Lean diagnostic. A generic Mathlib 3-block
+  dispatch probe also timed out at 120 s with no diagnostic.
+- The repaired census and Card bridge are **CI pending**. Still unproved: kernel
+  acceptance of all twenty block checks and the Card chain; the structural trio;
+  all 373 residual radii; packet `f0Lo`/`g`; 382 absent payload records;
+  SevenClassExclusions (`0/7`); the arbitrary-centre full-disk theorem. No radius
+  is paid by this census cardinality.
+- Next: inspect CI's first diagnostic for `TerminalCensus`; if elaboration is
+  green, address `ResidualCard`/the structural trio, otherwise fix only the
+  emitter and regenerate.
+
 ## 2026-11-01 - session 138: terminal census and repaired paid/sharp disjointness
 
 - Extended `EnergyTerminalBatchB13RefineSixteenResidualCard.lean` (112 lines,
@@ -110,3 +143,32 @@
 - Next: inspect the first CI diagnostic in the terminal-census module. If the `first`
   dispatch or `card_biUnion` side-goal order is wrong, fix only the emitter and regenerate;
   then confirm `terminalIDs_card` removes the literal residual-card dependency.
+
+## 2026-11-01 - session 141: replace OOM structural census with terminal-census interface
+
+- Downloaded the public Actions log for run `41301935749` via the job-log API and
+  attributed the failure precisely: after replaying dependency 9344/9351, the
+  active `lake build N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain`
+  child grew to ~8.37 GB and the runner received shutdown/OOM (exit 143). This is
+  an execution-memory failure, not a Lean diagnostic and not a kernel refutation.
+- The high-memory dependency was the 5,982-line literal
+  `EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.lean`, whose 501
+  ten-index sub-blocks each decided full `residualIDs` membership. Replaced it
+  with a 26-line interface (SHA-256
+  `42B6582D690E02CC8B204E5D7028E258A77A9A8B8312AB7B3551830C4974E7E4`) importing
+  the generated terminal census through `ResidualCard`; `residual373` is now the
+  refined residual definition and its cardinality is
+  `ResidualCard.residualIDs_card`. The old bytes remain in git history.
+- Checks: `audit_target_imports.py` returned `ok=true`, closure 1,991, zero
+  missing imports and zero forbidden tokens. `audit_terminal_census.py` returned
+  `ok=true`, exact partition with terminal 2,506, B13 paid 1,997, refined
+  residual 373. These are static/source and exact finite-set audits only, **not**
+  Lean elaboration or kernel checks. The replacement and the underlying terminal
+  census/Card bridge are **CI pending**.
+- Still unproved: kernel acceptance of the terminal-census and Card chain; the
+  structural trio; all 373 residual radii; packet `f0Lo`/`g`; 382 absent payload
+  records; SevenClassExclusions (`0/7`); arbitrary-centre full-disk theorem. No
+  radius is paid.
+- Next: inspect CI for `EnergyTerminalBatchB13RefineSixteenTerminalCensus` first.
+  If its block decision is still too large, halve the current 256-index blocks
+  in the emitter (bounded regeneration) and relink `ResidualCard`.

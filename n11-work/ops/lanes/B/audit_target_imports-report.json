@@ -7,6 +7,7 @@
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralMain",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCard",
     "N11Formalization.LaneBRowCapDecideProbe",
     "N11Formalization.LaneBFrozenCapRowCap1409",
@@ -31,7 +32,6 @@
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
     "N11Formalization.EnergyTerminalResidualCensus",
     "N11Formalization.EnergyTerminalResidualCensusRefineSixteen",
-    "N11Formalization.LaneBPublicResidualCrosswalk",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus"
+    "N11Formalization.LaneBPublicResidualCrosswalk"
   ]
 }
