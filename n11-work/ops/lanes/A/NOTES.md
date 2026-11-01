@@ -180,3 +180,69 @@ owners; all bin-wise sector shape/calculus targets; table/strict-total;
 
 **Next concrete step.** Have CI run lane A before or without the memory-heavy
 lane-C census; then inspect `SevenClassQ0Deg3SectorStepCounterexample` first.
+
+## 2026-11-01 (session 136) -- CI cancellation and small-denominator step route
+
+Read the latest failed CI run `41271050741` (job `124743726683`, head
+`5c053c07`).  It again never reached lane A: the last completed target was
+lane C's `EnergyTerminalBatchB13RefineSixteenResidualMain` (exit 0), then the
+runner was killed while building `EnergyTerminalBatchB13RefineSixteenResidualCensus`
+(exit 143, 04:02:13Z, available memory down to 1935 MB).  Thus there is **no
+new kernel verdict** on the peaks or the sector-step counterexample.
+
+A dependency-free Lean probe of the direct 1233/1236-digit rational literals
+using `decide +kernel` hit the 120 s timeout (`EXIT=124`), so that reduction
+must not replace the existing `norm_num` leaf.  Added and ran an exact-rational
+coarse proof audit instead: row 0, indices 1022 -> 1023, has
+`3*midpoint > piHi > pi`, twice the Taylor remainder below `1e-6`, and positive separation margin.  This
+avoids the giant numerator in favour of `cos(midpoint) <= 1/2`,
+`sin(q2)-sin(q1) <= (q2-q1)/2`, and the degree-29 remainder.
+
+**Files / SHA256.** `audit_q0_degree3_sector_step_analytic.py`
+`9dfccf6e88dbe5277e272e962886e7e3bd4decc2872205f2da6d07c48a23f36f`;
+`q0-degree3-sector-step-analytic-audit.json`
+`1c512402ae39be280fc68593385c11a0cda787f4026f630960858ea5b4a56faf`.
+The existing Lean counterexample remains
+`644bb07a2a50597b8184a855277c1641e2ac21f9bb40f5fac738a85176b8bc9b`.
+
+**Checks (scope).** Exact-rational replay PASS: both endpoint values reproduce,
+the audited drop matches, `3*midpoint-piHi` is positive, and the
+coarse separation margin is
+`486935587610604583557900755126695636845993261842506292975140048830676990641809/256000...`
+(positive, 78 digits).  `py_compile` PASS; source/arithmetic only, not kernel
+or proof credit.
+
+**Still unproved / unpaid.** Kernel acceptance of both peaks and all descendants;
+the counterexample's `norm_num` proof remains CI pending; bin-wise sector shape,
+table/strict-total, `Q0Degree3AreaInput`, seven exclusions, and the arbitrary-centre
+theorem remain unpaid.
+
+**Next concrete step.** Emit a new `SevenClassQ0Deg3SectorStepAnalytic` (or replace
+the counterexample proof body) using the audited inequalities, then add it to
+lane-A `TARGETS.txt`; inspect that target as soon as CI runs lane A before lane C.
+
+## 2026-11-01 (session 137) -- analytic step proof interface audited
+
+Re-read the handoff and inspected `SectorStepCounterexample`, `SectorShape`, and
+`SectorCalculus`.  The existing `sectorValue_le_of_cos_ge/le` wrappers only
+transfer a fixed-bin monotonicity result; they cannot prove this decreasing
+step because the cosine crossing is precisely what fails.  Confirmed the
+next proof must be a direct analytic sine-difference comparison using
+`mu1*(q2-q1) - (r2/2)*(q_step/2 + 1e-6) > 0` from
+`q0-degree3-sector-step-analytic-audit.json`.
+
+**Files.** No new files this session; audited
+`SevenClassQ0Deg3SectorStepCounterexample.lean`,
+`SevenClassQ0Deg3SectorShape.lean`,
+`SevenClassQ0Deg3SectorCalculus.lean`, and the analytic audit above.
+**Checks (scope).** Source inspection only; no local Lean build and no new
+kernel verdict.  The direct `norm_num` counterexample remains CI pending.
+
+**Still unproved / unpaid.** Kernel acceptance of the peaks and counterexample;
+bin-wise sector shape; table/strict-total; `Q0Degree3AreaInput`; seven
+exclusions; arbitrary-centre theorem.
+
+**Next concrete step.** Add a true sine-difference lemma for the node endpoints
+(lower/upper Taylor remainders on `[0,2]`, cos midpoint `<= 1/2`) and emit
+`SevenClassQ0Deg3SectorStepAnalytic` proving the 1022->1023 drop, then append
+that target to `TARGETS.txt` and let CI kernel-check it.
