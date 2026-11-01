@@ -180,39 +180,66 @@ inspect `SevenClassQ0Deg3UpperReductionUnimodal` first; if green, inspect
 `SectorPeak`, then the analytic step target.  Do not diagnose dependency-red
 descendants.
 
-## 2026-11-01 (session 139, continuation) -- direct step evaluation ruled out locally
+## 2026-11-01 (session 139, condensed) -- direct step evaluation ruled out
 
-Re-read the current CI evidence and fetched job `124743726683` (run
-`41271050741`, head `5c053c07`) from the public Actions API.  The log confirms
-again that lane A was never reached: the run died with exit 143 while building
-lane C's residual census, after available memory fell to 1935 MB.  There is no
-new kernel verdict on the peaks or step counterexample.
+Job `124743726683` (run `41271050741`) died at lane C with exit 143 after
+memory fell to 1935 MB, before lane A.  A dependency-free Mathlib probe
+`probe_q0_degree3_sector_step_normnum.lean` (`60292677...dfb6a`) timed out at
+120 s, so direct `norm_num` over the 1237-digit step comparison is not viable.
+The exact analytic audit still gives a separation margin; the intended route
+is a `sinHiNLag`-step lemma.  No proof credit followed from the probe.
 
-To isolate the existing counterexample proof, copied its exact quarter-grid
-rationals and local definitions (`sinTQ`, `sinHiNLag`, `val`) into a
-dependency-free Mathlib probe.  `lake env lean` under a hard 120 s timeout
-returned exit 124 with no diagnostics.  This is negative performance evidence
-only: direct `norm_num` over the 1237-digit rational comparison is not the
-route to retain.  The prior exact analytic audit already gives the small
-separation margin for the sine-difference proof.
+## 2026-11-01 (session 140) -- peak projections made definitional
 
-**Files / SHA256.** New reproducible probe
-`probe_q0_degree3_sector_step_normnum.lean`
-`60292677e86417bfbb440873fdbb106060364513f04043b100d603ef401dfb6a`.
-Unchanged emitter/counterexample inputs:
-`emit_q0_degree3_sector_step_counterexample.py`
-`360a51e0a6b815cb1a40b85c0b1f0507a91ee414928d7edfdec48dbcfde090c2`;
-`q0-degree3-sector-step-analytic-audit.json`
-`1c512402ae39be280fc68593385c11a0cda787f4026f630960858ea5b4a56faf`.
-Probe check: Mathlib-only `lake env lean`, timeout 120, exit 124; `git diff
---check` PASS.  No project kernel build and no proof credit.
+Pulled job `124796224410` (run `41289029262`, head `3cb5d30e`).  It replayed
+all 9345 dependencies, then died by exit 143 as available memory fell to
+1150 MB.  It reported no Lean error and no lane-A kernel verdict; the next
+uncached lane-A target was `UpperReductionUnimodal`.
 
-**Still unproved / unpaid.** Kernel acceptance of both peaks and the
-counterexample; analytic sine-step proof; eight-bin sector calculus/shape;
-table/strict-total; `Q0Degree3AreaInput`; seven exclusions; arbitrary-centre
-theorem.  The false `SectorAdjacentUnimodal` remains unusable.
+All 30 maximum literals repeated in the peak proofs are byte-identical to
+`edgeMaxAt i` / `sectorMax i` in `SevenClassQ0Deg3UpperTables`.  Replaced the
+21 edge and 9 sector `show ... = literal by decide +kernel` rewrites with
+`by rfl`, avoiding kernel comparison of giant rationals.  The witness/`nextSite`
+rewrites still use bounded kernel decisions.  Updated the sector emitter and
+added a checker for exact-literal/rfl agreement.
 
-**Next concrete step.** Replace the timed-out direct evaluation with a
-`sinHiNLag`-step lemma using `Real.abs_sin_sub_sin_le`, the midpoint cosine
-bound `cos(midpoint) <= 1/2`, and the degree-29 remainder; target the audited
-margin `mu1*q_step - (r2/2)*(q_step/2 + 1e-6) > 0` for indices 1022 -> 1023.
+**Files / SHA256.** `SevenClassQ0Deg3UpperReductionUnimodal.lean`
+`69e6eabf59a15a034a8c3bb8b53b665a85f785a7191227960b8d2533ab92c367`;
+`SevenClassQ0Deg3SectorPeak.lean`
+`e124cce598be3ccc38916150bab052d6373b4e62e0e06ae2ad64868070c98bea`;
+`emit_q0_degree3_sector_peak.py`
+`dd7e8ddd60fa5a2863b3bfd1dc3939abd5f442e314cdc5c566424ba667546db3`;
+`check_q0_degree3_peak_max_projection.py`
+`fcb17abaaa2fe19f30b5e37833deeb183f989a263e1b423899a7dbfbabb5bb8b`.
+
+**Checks (scope).** New exact-literal checker PASS 21/21 edge + 9/9 sector;
+both pre-existing peak-unfold checkers PASS; sector emitter is deterministic
+over two runs (`e124cce5...`); `py_compile` and `git diff --check` PASS.
+These are textual/generator checks, not kernel evidence; no local project
+olean build is available.
+
+**Still unproved / unpaid.** Kernel acceptance of both peak modules, the
+sector-step counterexample, bin-wise sector shape, strict total,
+`Q0Degree3AreaInput`, all seven exclusions, and the arbitrary-centre theorem.
+Root import of the CI-green C450 modules remains supervisor-only.
+
+**Next concrete step.** Rerun lane A before lane B/C memory work; inspect
+`UpperReductionUnimodal` first.  If it still exits 143, split its 21 peak
+comparisons into small sibling modules rather than raising heartbeats.
+
+## 2026-11-01 (session 141) -- resumed current peak artifacts
+
+Re-ran the entry checks and the three fast peak-source gates.  `project_status.py
+--check` PASSed its handoff-index scope.  The projection, edge-unfold and
+sector-unfold checkers all PASS (21/21 edge and 9/9 sector).  Current peak hashes
+remain edge `69e6eabf...c367`, sector `e124cce5...bea`, counterexample
+`644bb07a...bc9b`; no CI run has produced a lane-A kernel verdict since run
+`41289029262`.
+
+**Still unpaid.** Kernel acceptance of both peak owners and the step
+counterexample, all downstream sector-bin/shape/calculus targets, strict total,
+`Q0Degree3AreaInput`, seven exclusions, and the arbitrary-centre theorem.
+
+**Next concrete step.** Split the edge peak proofs into a definition-only base
+plus three 7-row proof modules, then make the existing module a thin assembler;
+this preserves theorem names while bounding each target's elaboration memory.

@@ -132,7 +132,7 @@ def main() -> None:
             "  unfold SectorPeakValid",
             f"  rw [show sectorWitness {i} = ({witness} : Fin 2049) by decide +kernel]",
             f"  rw [show nextSite {i} = ({next_site} : Fin 11) by decide +kernel]",
-            "  rw [show sectorMax " + str(i) + " = " + peak_literal + " by decide +kernel]",
+            "  rw [show sectorMax " + str(i) + " = " + peak_literal + " by rfl]",
             "  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,",
             "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, ringSite, nextRing, nodeQ,",
             "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,",
