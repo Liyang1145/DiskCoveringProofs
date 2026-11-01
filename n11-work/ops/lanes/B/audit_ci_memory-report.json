@@ -11,6 +11,12 @@
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain": 0,
     "N11Formalization.EnergyTerminalBatchB13ResidualCertificates": 0
   },
+  "failed_builds": [
+    "N11Formalization.EnergyTerminalResidualCensusC01",
+    "N11Formalization.EnergyTerminalResidualCensusC02",
+    "N11Formalization.EnergyTerminalResidualCensusC03",
+    "N11Formalization.EnergyTerminalResidualCensusC04"
+  ],
   "head_sha": "a90d1ee0dfff1ea7fa8dcc90440224235ef16ae3",
   "lean_errors": [],
   "memory_samples": 13,
