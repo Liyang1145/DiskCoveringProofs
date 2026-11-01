@@ -1,0 +1,19 @@
+{
+  "counts": {
+    "b12_paid": 815,
+    "b13_paid": 1997,
+    "refined_residual373": 373,
+    "residual389": 389,
+    "rest1182": 1182,
+    "sharp": 120,
+    "terminal": 2506
+  },
+  "ok": true,
+  "partition_exact": true,
+  "scope": "independent source parsing and exact finite-set arithmetic; not a Lean kernel check",
+  "sha256": {
+    "DBMSourceTreeData.lean": "BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5",
+    "audit": "2C7B7694F15FD68C25870FF7B3F924C37539F4730C60DD39AD99301F3F082C80",
+    "rest1182-manifest": "D0588829A1C74F17328D61AF5AE3D9D3004333946A47E42D26BD6BBB4B8A6BBD"
+  }
+}
