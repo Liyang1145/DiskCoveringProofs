@@ -1,0 +1,13 @@
+{
+ "scope": "exact rational location/repair of one spurious float-active LP row; no infeasibility proof and no kernel credit",
+ "id": 2356,
+ "mask": 71,
+ "tol": 2e-07,
+ "selected_rows": 107,
+ "exact_rank": 107,
+ "inconsistent_reduced_row": null,
+ "certificate_support": [],
+ "certificate": [],
+ "removal_trials": [],
+ "status": "exact-consistent-no-repair-needed"
+}
