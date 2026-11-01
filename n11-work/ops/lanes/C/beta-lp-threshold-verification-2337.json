@@ -1,0 +1,13 @@
+{
+ "records": [
+  {
+   "id": 2337,
+   "certificates": 512,
+   "masks": "0..511",
+   "complete": true,
+   "xor_certificate_digest": "0000000000000000",
+   "report_sha256": "D12DB47EC73D0907C5966C40600EE2CEAE8CF102F5978BE83E8CF47F169AD504",
+   "status": "all-512-exact-rechecks-pass"
+  }
+ ]
+}
