@@ -17,6 +17,10 @@ import sys
 from pathlib import Path
 
 import numpy as np
+try:
+    import flint
+except ImportError:
+    flint = None
 from scipy.optimize import linprog
 
 HERE = Path(__file__).resolve().parent
@@ -89,6 +93,21 @@ def rank(rows):
 
 
 def solve_square(a, b):
+    if flint is not None and len(a) == len(a[0]) == len(b):
+        try:
+            system = flint.fmpq_mat(
+                len(a), len(a),
+                [flint.fmpq(value.numerator, value.denominator)
+                 for row in a for value in row])
+            target = flint.fmpq_mat(
+                len(b), 1,
+                [flint.fmpq(value.numerator, value.denominator)
+                 for value in b])
+            solved = system.solve(target)
+            return [Q(int(value.p), int(value.q))
+                    for value in solved.entries()]
+        except (ImportError, ValueError, ZeroDivisionError):
+            pass
     a = [list(row) + [rhs] for row, rhs in zip(a, b)]
     n = len(a)
     for col in range(n):
