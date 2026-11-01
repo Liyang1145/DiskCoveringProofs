@@ -30,11 +30,19 @@ def main() -> None:
     q768 = pi_hi * F(768, probe.N)
     q1023 = pi_hi * F(1023, probe.N)
     taylor = F(4**28, factorial(28))
+    cos_taylor = sum(
+        (-1) ** k * q768 ** (2 * k) / factorial(2 * k)
+        for k in range(14)
+    )
+    cos_hi_768 = cos_taylor + q768 ** 28 / factorial(28)
+    row_zero_ratio = 2 * mu1 / F(19, 50) ** 2
     coefficient = F(19, 50) ** 2 / 4 - mu1
 
     assert pi_lo <= pi_hi
     assert q768 <= pi_hi / 2, "q768 is not in the monotone cosine half"
     assert q768 <= q1023 <= pi_hi, "bin-3 nodes leave the Taylor interval"
+    assert cos_hi_768 <= F(1, 2), "the literal half-bound at node 768 is false"
+    assert cos_hi_768 <= row_zero_ratio, "the literal row-0 ratio at node 768 is false"
     # `hct` and the definition of `cosHiReal` each contribute one tail error.
     assert taylor <= F(1, 4), "the doubled degree-28 tail does not give 1/2"
     assert coefficient < 0, "the strict bin-3 coefficient is not negative"
@@ -51,12 +59,18 @@ def main() -> None:
         "pi_hi_over_2_minus_q768": str(pi_hi / 2 - q768),
         "four_pow_28_over_28_factorial": str(taylor),
         "one_quarter_minus_taylor": str(F(1, 4) - taylor),
+        "cosHiNLag_q768": str(cos_hi_768),
+        "one_half_minus_cosHiNLag_q768": str(F(1, 2) - cos_hi_768),
+        "row_zero_ratio": str(row_zero_ratio),
+        "row_zero_ratio_minus_cosHiNLag_q768": str(row_zero_ratio - cos_hi_768),
         "A_squared_over_4_minus_mu_nextSite0": str(coefficient),
         "conclusion": "all scalar side conditions used by the bin-3 proof hold",
     }
     OUT.write_text(json.dumps(report, indent=2) + "\n")
     print("PASS: q768 <= piHi/2")
     print("PASS: q768 <= q1023 <= piHi")
+    print("PASS: cosHiNLag(q768) <= 1/2")
+    print("PASS: cosHiNLag(q768) <= 2*mu(nextSite 0)/(19/50)^2")
     print("PASS: 4^28/28! <= 1/4")
     print("PASS: (19/50)^2/4 - mu(nextSite 0) < 0")
     print("wrote", OUT.relative_to(HERE.parents[3]),
