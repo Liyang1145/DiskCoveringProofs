@@ -1,23 +1,31 @@
 {
   "active_targets_at_end": [
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus"
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusMain"
   ],
-  "attribution": "runner shutdown with no Lean diagnostic",
+  "attribution": "OOM guard killed Lean with no Lean diagnostic",
   "conclusion": "failure",
   "exits": {
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair": 0,
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus": 1,
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain": 0,
     "N11Formalization.EnergyTerminalBatchB13ResidualCertificates": 0
   },
-  "head_sha": "3cb5d30ed51320efad08c34481bb1fa9aa855afd",
+  "head_sha": "a90d1ee0dfff1ea7fa8dcc90440224235ef16ae3",
   "lean_errors": [],
-  "memory_samples": 6,
-  "minimum_available_mb": 1150,
+  "memory_samples": 13,
+  "minimum_available_mb": 387,
   "oom_guard_triggered": true,
-  "peak_top_rss_kib": 8627376,
-  "peak_top_rss_mib": 8425,
-  "run_id": "41289029262",
+  "peak_top_rss_kib": 8965960,
+  "peak_top_rss_mib": 8755,
+  "process_errors": [
+    "error: Lean exited with code 137",
+    "error: Lean exited with code 137",
+    "error: Lean exited with code 137",
+    "error: Lean exited with code 137",
+    "error: build failed"
+  ],
+  "run_id": "41293387736",
   "runner_shutdown": true,
   "scope": "CI job-log audit only; not a Lean kernel check"
 }
