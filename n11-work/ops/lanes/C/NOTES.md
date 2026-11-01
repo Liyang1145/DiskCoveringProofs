@@ -33,52 +33,18 @@
   validity; seven-class and energy premises; root integration.
 - No historical host-side audit or byte check is kernel credit.
 
-## 2026-10-31 to 2026-11-01 - parts 202-226 (condensed)
+## 2026-10-31 to 2026-11-01 - parts 202-234 (condensed)
 
-Added the conditional 373-id interface and several censuses. CI `41217409382`
-and `41222715534` were green for repaired residual modules; literal census
-targets stayed red from free variables or proof encoding (`No goals`, kernel
-recursion, heartbeat limits), not false ids. Five-field Tree bridges use
-definitional `rfl`, and producer/residual radius certificates are equivalent.
-The structural 54-line census alias (`480a2F78...62DF`) was restored twice;
-run `41266567914` exited 143 with no Lean diagnostic. All such targets remain
-**CI pending** and pay no id; the seven public records have no arbitrary-row rescue.
-
-## 2026-11-01 - parts 227-229 (condensed certificate/inventory audits)
-
-Part 227 added `audit_anyrow_certificate_bridge.py`; its seven-id exact audit
-matched 63 Lean weights, 700 DBM entries, 700 ordered-pair caps, and every
-strict gain (report `CC88D851...AC9CE`, certificate `0B50B075...027024B`).
-Part 228 exposed the bounded 7.6 MB residual proposal that the inventory had
-silently skipped: exactly seven known payload ids and 382 missing. Part 229
-raised the parse bound to 64 MB and parsed the 39,165,879-byte C450 archive;
-its grouped segment tables have no `id`/`f0Lo`/`g` schema, so it yields no new
-payload. Final inventory: 773 files / 53,178,301 bytes, seven known ids, 382
-missing (missing-set SHA256 `f09a5bc4...5e90`).
-
-All checks were exit 0, byte-stable reruns, `py_compile`, forbidden-token scan,
-and `git diff --check`. Scope is repository-local exact audit/inventory only:
-**not HOST storage, CI/kernel credit, or payment**. Still unproved: 373 radius
-packets, 382 absent payloads, SevenClassExclusions, and the theorem.
-## 2026-11-01 - parts 230-232 (mixture and corrected sign-region LPs)
-
-`PaidCellCertificateMCap` fixes the proposal mixture through `hf0`/`hg`, not
-all `beta : Fin 16`. For all seven public records, `cl/f0Lo/g` were exactly
-recovered from the 36 packet lines (zero Fraction error). `search_beta_row_lp`
-initially omitted the piecewise `endpoint_lo(g)` factors; after correction,
-all seven float optima are negative and all exact rounded candidates fail.
-Closest is 2356 at `-7.388363184302248e-7`; no rescue, infeasibility proof,
-kernel credit, or paid id. Files and full hashes are in parts 231-235 reports
-and `beta-row-lp-scaled-results.json`.
-
-## 2026-11-01 - parts 233-234 (2356 active branch, condensed)
-
-Part 233's singular exact active set was a real encoding bug, not merely
-rounding: the equality row used `beta_8 = 1` instead of `sum beta = 1`.
-After repair, id 2356 mask 71 has exact rank 107, no free columns, and exact
-vertex gap `-7.388363184123934e-07`; the old part-233 failure report is
-superseded. This is one-region arithmetic only, not infeasibility, CI credit,
-or payment.
+Repaired residual modules and censuses were CI-green, but literal census aliases
+and the structural 54-line variant remain **CI pending** and pay no id. Exact
+inventory: 773 files / 53,178,301 bytes, seven known payload ids, 382 missing
+(missing-set SHA256 `f09a5bc4...5e90`); the C450 archive has no packet schema.
+`PaidCellCertificateMCap` fixes the mixture through `hf0`/`hg`, not all `beta`.
+After repairing the `sum beta = 1` row and omitted `endpoint_lo(g)` factors, the
+seven public ids' best float regions have exact-negative vertex gaps (closest
+2356, `-7.388363184123934e-07`); this is region-local arithmetic, not payment.
+Checks were exit 0 with exact rechecks, `py_compile`, token scans, and
+`git diff --check`. No host-storage/kernel credit or residual id is claimed.
 
 ## 2026-11-01 - part 235 (exact vertices for remaining six public ids)
 
@@ -105,98 +71,20 @@ Condensed: `audit_beta_lp_all_regions.py` checked all 512 regions of 2356 and
 `merge_beta_lp_region_reports.py` combined them: 448 exact-negative vertices,
 64 float-infeasible, zero PASS. See `beta-lp-all-regions-combined.json`.
 
-## 2026-11-01 - part 238 (exact Farkas certificates for 2356)
+## 2026-11-01 - parts 238-241 (2356 threshold coverage, condensed)
 
-Added `audit_beta_lp_farkas.py`: normalized alternative `y>=0`, z free,
-`[A Aeq]^T(y,z)=0`, `[b beq]^T(y,z)=-1`; exact Fraction Gaussian rebuild of
-the float support, then exact sign/residual/normalization checks. Full 512-mask
-run produced 64 `exact-normalized-Farkas` certificates, exactly the same mask
-set as the prior 64 float-infeasible regions (set equality checked); the other
-448 alternatives are float-infeasible (primal feasible, not yet bounded below
-`T2`). Script SHA256 `05112041...04BE3BC`; report
-`beta-lp-farkas-all.json` SHA256 `A6B2359D...D30B23F`.
-Checks: `py_compile` exit 0; full run exit 0 in about 54 s; `git diff --check`
-clean; forbidden-token scan clean. Scope: one id's sign-region LP infeasibility,
-not a global infeasibility result, kernel credit, or residual payment.
+Established the exact normalized-Farkas pattern and independent replay. The
+generator appends `lower >= T2`, chooses an L1-vertex support by pivoted QR,
+solves exactly over Q (FLINT fast path plus pure-Python fallback), and rechecks
+signs/residuals/normalization. `verify_beta_lp_threshold_reports.py`
+reconstructs rows from proposal/DBM and checks hashes, threshold, every
+multiplier, 107 zero-residual columns, normalization, mask ordering, and
+completeness without calling the constructor.
 
-Still unproved: threshold bounds for the 448 feasible regions, 373 packets,
-382 absent payloads, SevenClassExclusions (0/7), arbitrary-centre theorem.
-
-## 2026-11-01 - part 239 (threshold-Farkas audit; 8 exact regions)
-
-Added `audit_beta_lp_threshold_farkas.py`. It appends the exact row
-`lower >= T2` (equivalently `-objective.x <= -T2`) to each sign region and
-searches the normalized alternative `y>=0`, z free,
-`[A Aeq]^T(y,z)=0`, `[b beq]^T(y,z)=-1`. An exact certificate proves that
-this region has no point with `lower >= T2`. The ordinary dual reconstruction
-failed on near-tight degenerate supports, so the fallback chooses an L1-vertex
-support, selects equations by one pivoted QR, and solves that square system
-over Q before rechecking signs/residual/normalization exactly.
-
-Smoke report covers the first eight exact-negative masks
-`{4,6,12,14,16,18,20,22}` of id 2356; all eight are
-`exact-l1-normalized-Farkas` (82/82/82/82/86/86/82/82 nonzero inequality
-multipliers). Script SHA256 `C4D57638...01FD06`; report
-`beta-lp-threshold-smoke.json` SHA256 `74A387B6...3B6370`.
-Checks: `py_compile` exit 0; smoke run exit 0; forbidden-token scan and
-`git diff --check` clean. The earlier 64 region-infeasibility certificates
-remain in `beta-lp-farkas-all.json`. Scope: 8/448 negative regions and one id;
-**no full 512-region proof, kernel credit, or payment**.
-
-The planned 448-mask run was stopped because exact L1 reconstruction costs about
-5-6 seconds per near-tight mask (the first parallel attempt processed only
-17 before the session budget). Still unproved: the remaining 440 negative
-regions, all 373 packets, 382 absent payloads, SevenClassExclusions (0/7), and
-the arbitrary-centre theorem. Next: replace Fraction Gauss-Jordan on the
-~100x100 square system with a stable high-precision solve plus exact rational
-lifting/recheck (or batch the regions in CI), then merge threshold certificates
-for the 448 masks with the existing 64 infeasibility certificates and assert
-512/512 exact coverage.
-
-## 2026-11-01 - part 240 (all 512 threshold-Farkas regions for 2356)
-
-Added an optional FLINT exact-rational fast path to `solve_square` in
-`audit_beta_lp_farkas.py` and to the L1 solve in
-`audit_beta_lp_threshold_farkas.py`, retaining the pure-Python fallback and the
-same exact sign/residual/normalization recheck. Reordered the threshold audit
-to try the robust L1 reconstruction before the 1.5 s failing primary heuristic.
-Full run: all 512 masks returned `exact-l1-normalized-Farkas`, each stored
-`y` has 127 entries, and all float LPs succeeded. Report:
-`beta-lp-threshold-all.json` (17,049,097 bytes) SHA256
-`E4EFBB9B702F50A85BD4900C482AAE09F529416E11D71BEDE32AE7F0E46BA8A5`.
-Scripts: threshold SHA256 `52F646CE...676B31D`; shared audit
-`DF474472...CF801D`.
-Checks: full 512-mask run and `py_compile` exited 0; exact checks are internal.
-Scope: each id-2356 sign region cannot attain `lower > T2` in this LP model;
-this is not kernel credit, payment of id 2356, or the arbitrary-centre theorem.
-Still unproved: six public ids' threshold coverage, 373 radius packets, 382
-absent payloads, SevenClassExclusions (0/7), and the arbitrary-centre theorem.
-Next: sweep the six remaining public ids, then independently verify every stored
-certificate against reconstructed exact rows.
-
-## 2026-11-01 - part 241 (independent 2356 certificate replay)
-
-Added `verify_beta_lp_threshold_reports.py`: it reconstructs each exact LP row
-from the proposal/DBM, parses the stored rational multiplier vector, checks all
-nonnegative inequality multipliers, all 107 zero-residual columns, exact
-normalization `-1`, nonzero counts, source hashes, threshold, mask ordering, and
-optional 512-mask completeness. It reuses neither the certificate constructor
-nor its solver.
-
-Replayed the complete id-2356 report: all 512 certificates passed exact checks;
-report SHA256 `E4EFBB9B702F50A85BD4900C482AAE09F529416E11D71BEDE32AE7F0E46BA8A5`.
-Verifier SHA256 `09C653ED...9386DD`; verification report
-`beta-lp-threshold-verification-2356.json` SHA256 `A071B85B...CF8F4D`.
-Checks: `py_compile` exit 0; full 512 replay exit 0 (about 50 s); forbidden-token
-scan and `git diff --check` clean. Scope: exact region-local LP certificates for
-one id only, **not kernel credit, a residual payment, or the theorem**.
-
-Six-id sweeps were started but their per-mask cost prevented a saved full run;
-the interrupted logs (`threshold-logs/*.log`) are diagnostics only. Still
-unproved: threshold coverage for all six remaining public ids, 373 radius
-packets, 382 absent payloads, SevenClassExclusions (0/7), arbitrary-centre theorem.
-Next: run each six-id report in CI-sized contiguous slices with checkpointing,
-then replay all stored certificates with the new verifier.
+Id 2356: 512/512 `exact-l1-normalized-Farkas`; report SHA256
+`E4EFBB9B...E46BA8A5`; independent replay passed, verification SHA256
+`A071B85B...CF8F4D`. This proves only region-local LP infeasibility, **not
+kernel credit, payment of id 2356, or the arbitrary-centre theorem**.
 
 ## 2026-11-01 - part 242 (checkpointed audit; full 1409 coverage)
 
@@ -227,3 +115,77 @@ or TARGET was added.
 Next concrete step: run the identical checkpointed 2337 sweep (observed cost
 about 133 s generation plus 54 s replay), then replay with
 `--require-complete` and record both SHA256 values.
+
+## 2026-11-01 - part 243 (complete threshold coverage for three more ids)
+
+Installed the missing local wheels (`numpy`, `scipy`, `python-flint`) after the
+documented commands failed with `ModuleNotFoundError`. Ran the unchanged
+checkpointed generator and independent verifier over all 512 sign regions for
+ids 2337, 2341, and 2360. Every generated record is
+`exact-l1-normalized-Farkas`; each `--require-complete` replay reports
+`all-512-exact-rechecks-pass`, `complete: true`, masks `0..511`.
+
+- 2337: generator `beta-lp-threshold-all-2337.json` (26,401,875 bytes) SHA256
+  `D12DB47EC73D0907C5966C40600EE2CEAE8CF102F5978BE83E8CF47F169AD504`;
+  verification `beta-lp-threshold-verification-2337.json` SHA256
+  `5B5A1100D2E8ADEBDEF06AEF7936D62AA9F2029CBCC79FD97F4E4A399C2563EB`.
+- 2341: generator `beta-lp-threshold-all-2341.json` (27,321,049 bytes) SHA256
+  `60AE37A1296BA2370256FCDFB25D7F6C592CD74CA864640B3D6D4B195D2056EE`;
+  verification `beta-lp-threshold-verification-2341.json` SHA256
+  `41CC8531103E6A940F10A4D48E0917CD085CF6CF2B544F6C725BFF7FAC76BDD6`.
+- 2360: generator `beta-lp-threshold-all-2360.json` (20,131,673 bytes) SHA256
+  `2A4C37E49AE30DF26D5D6FB37F62B7F8A0BA135AE87710384134343D8F1B2D99`;
+  verification `beta-lp-threshold-verification-2360.json` SHA256
+  `A987420D5A27CAD96EAB67C70F364CE75CE7731B0747C51544589C2B0C39EAA0`.
+
+Generator and verifier are unchanged: SHA256 `F0A47F5A...ABAFFB3D` and
+`09C653ED...9386DD`. Checks: all three generation runs exited 0; all three
+independent complete replays exited 0; `py_compile`, forbidden-token scan, and
+`git diff --check` were clean. With prior reports, threshold-region coverage is
+now 5/7 public ids (1409, 2337, 2341, 2356, 2360), all independently replayed.
+Scope remains exact region-local LP infeasibility only: **not kernel credit,
+residual payment, global infeasibility, or the arbitrary-centre theorem**.
+Still unproved: ids 2368/2370 threshold coverage; all 373 radius packets; 382
+absent payloads; SevenClassExclusions (0/7); arbitrary-centre theorem. No Lean
+module/TARGET added.
+
+Next concrete step: run the identical generator + complete replay for 2368,
+then 2370, and hash both pairs. Do not describe 7/7 as a global theorem.
+
+## 2026-11-01 - part 244 (complete 7/7 public-id threshold coverage)
+
+Restored the missing session-local NumPy/SciPy/python-flint wheels, then ran the
+unchanged checkpointed generator for the final two public ids. Each full report
+has 512/512 records with status `exact-l1-normalized-Farkas`, masks exactly
+`0..511`, and the same proposal SHA256
+`F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16`.
+
+- 2368 report `beta-lp-threshold-all-2368.json` (15 MB) SHA256
+  `D8BD564CD6BE3DC0F2DEB53E2C5B00D0E93D587B6102ED1746C852D81EF8ED05`;
+  verification `beta-lp-threshold-verification-2368.json` SHA256
+  `230DE27290FA8A0E4DD2E552AC5021D4F2BD56FB911502AA7C56478E3F700688`.
+- 2370 report `beta-lp-threshold-all-2370.json` (21 MB) SHA256
+  `A423EEF78168128EEBB514567A3E343DAB7A727E5A688113ECC57BA4CE0E029D`;
+  verification `beta-lp-threshold-verification-2370.json` SHA256
+  `D8C69803D9B757355C08120641F7543BD76CAFF8D15268FA0D2CCD3E8DD837CA`.
+
+Both independent `--require-complete` replays exited 0 with
+`all-512-exact-rechecks-pass`, `complete: true`, certificates 512, masks
+`0..511`. Generator SHA256 is unchanged
+`F0A47F5AC6FD623FEBFDD5D1DCF0B4E93E1E092E8A4858F554900833ABAFFB3D`;
+verifier SHA256 is unchanged
+`09C653ED7EB38E18284F62B130741062E0529DE8EDD317897D0B9080CB9386DD`.
+`py_compile` for both scripts exited 0 and `git diff --check` is clean.
+
+Combined with parts 242-243, all seven public residual ids now have exact
+512-region threshold-Farkas coverage, independently replayed. Scope: each sign
+region has no LP point with `lower > T2` in this fixed model. This is **not
+kernel credit, a residual-id payment, global infeasibility, or the
+arbitrary-centre theorem**.
+
+Still unproved: all 373 radius packets, the 382 absent payloads,
+SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next concrete
+step: no further threshold sweep of these seven is informative; inspect the 354
+non-public method-failure records for any complete proposal/DBM row set (versus
+the 382 absent payloads), and if one exists run this same exact audit before
+attempting a Lean consumer.
