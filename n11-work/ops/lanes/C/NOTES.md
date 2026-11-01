@@ -62,119 +62,12 @@ not false residual ids. Part 219 split cardinality; part 220 added
 `EnergyTerminalBatchB13RefineSixteenResidualMain.lean`, the direct consumer of
 the actual residual set. All remained **CI pending** and paid no id.
 
-## 2026-10-31 - part 221 (literal census de-duplicated)
+## 2026-10-31 - parts 221-224 (condensed)
 
-Diagnosed the census red path from the CI job log for head `bb9fb0c0`: the
-51 `decide +kernel +revert` blocks spent 142s and were OOM-guarded at
-14,816,320 KB. The earlier run `41229638083` had failed at line 49 with
-`Expected type must not contain free variables`. This was a proof-encoding
-blowup, not a census discrepancy.
-
-Replaced the duplicated 373-literal census in
-`n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCensus.lean`
-with a 49-line structural alias of
-`EnergyTerminalResidualCensusRefineSixteen.refinedResidualIDs` (389 census
-minus the literal 16 refinements). It retains `residualIDs_eq_residual373`,
-`residual373_card = 373`, `residualIDs_card = 373`, and both conditional
-radius-certificate consumers. No kernel decision over the paid set remains.
-SHA256: Lean `3308DADD...DFB0C1D`; emitter `B36087FE...1178E53`.
-
-Regenerated with `n11-work/ops/lanes/C/emit_residual373_census.py` from the
-committed exact JSON (373 unique ids). Checks run: emitter exit 0; forbidden
-token scan clean; regeneration byte-stable; `git diff --check` exit 0. Exact
-source comparison confirms the `paidIDs` definitions in `RefineSixteen` and
-`RefineSixteenRepair` have identical bodies, so the alias's `rfl` is a
-definitional-unfolding step. Scope is static source/byte inspection only:
-**CI pending**, no radius paid and no kernel claim.
-
-Still unproved: the 373 residual radius certificates, packet `f0Lo`/`g`, the
-382 absent payloads, SevenClassExclusions (0/7), and arbitrary-centre
-full-disk theorem. The new target also depends on the upstream lane-B
-`EnergyTerminalResidualCensus`/`RefineSixteen` targets, currently CI red.
-
-Next: after supervisor commit, require `RefineSixteenResidualCensus` and
-`RefineSixteenResidualCensusMain` to exit 0 and record whether any failure is
-in this alias or its upstream structural census. Do not restore literal
-per-index kernel enumeration.
-
-## 2026-10-31 - part 222 (alias dependency made explicit)
-
-Checked the two paid-set definition bodies directly:
-`EnergyTerminalBatchB13RefineSixteenRepair.paidIDs` and
-`EnergyTerminalBatchB13RefineSixteen.paidIDs` are identical. Added
-`repair_paidIDs_eq_refineSixteen_paidIDs` to the generated census alias and
-used that equality explicitly in `residualIDs_eq_residual373`, rather than
-depending on an unstated definitional unfolding. Regenerated with
-`n11-work/ops/lanes/C/emit_residual373_census.py`; file stays 54 lines.
-
-SHA256: Lean `480a2f78432d6400455f4a84f3dab2c4f838057ac8b05370959070975a8c62df`;
-emitter `b048873b43dea935314a9cc273026576a54fce7251c0f807a00da631c25ca52e`.
-Checks (static only): regeneration exit 0 and byte-stable; forbidden-token scan
-clean; `git diff --check` exit 0. A 45s isolated `/workspace/tools/mathlib-probe`
-pattern probe timed out with no output, so no kernel claim is made from it.
-`RefineSixteenResidualCensus`/`CensusMain` remain **CI pending**.
-
-Still unproved is unchanged: 373 residual radius certificates, packet
-`f0Lo`/`g`, 382 absent payloads, SevenClassExclusions (0/7), and the
-arbitrary-centre full-disk theorem. Next: read CI for these two targets after
-the supervisor commit; attribute any red result to this alias or its upstream
-structural census, and do not reintroduce literal per-index enumeration.
-
-## 2026-10-31 - part 223 (CI attribution and alias revalidation)
-
-Read `ops/ci/LATEST.md`: run `41229638083` reports
-`RefineSixteenResidualCensus`/`CensusMain` exit 1, but its recorded error is
-at line 49 of the **committed** 573-line literal version (`decide +kernel
-+revert`), not the 54-line structural alias now in this worktree. That run
-therefore supplies no verdict on parts 221-222. The same artifact also shows
-the unrelated `SharedMomentConcreteSwitchBatch` target OOM-guarded by the
-memory watch; do not attribute that failure to lane C.
-
-Rechecked all alias dependencies against source: `refinedResidualIDs`,
-`refinedResidualIDs_card`, `mem_refinedResidualIDs_iff`,
-`RefineSixteenResidual.mem_residualIDs_iff`, and both residual-certificate
-consumers exist with the referenced types. The non-repaired and repaired
-`paidIDs` bodies are still byte-identical in their defining expressions.
-Regeneration via `emit_residual373_census.py` exited 0, produced 54 lines and
-373 ids structurally, gave Lean SHA256
-`480a2f78432d6400455f4a84f3dab2c4f838057ac8b05370959070975a8c62df` and
-emitter SHA256
-`b048873b43dea935314a9cc273026576a54fce7251c0f807a00da631c25ca52e`.
-Forbidden-token scan and `git diff --check` are clean. Scope remains static
-source/byte validation: **CI pending**, no kernel or payment claim.
-
-Unproved obligations remain the 373 residual radius certificates, packet
-`f0Lo`/`g`, 382 absent payloads, seven-class exclusions (0/7), and the
-arbitrary-centre theorem. Next concrete step: after the supervisor commits
-parts 221-223, read the fresh census/`CensusMain` exits. If green, mark the
-conditional 373-cardinality interface CI-green; if red, inspect only the new
-54-line alias first and preserve its upstream dependency attribution.
-
-## 2026-10-31 - part 224 (merge regression repaired)
-
-Found a merge regression: lane-B commit `cf185b5b` replaced lane C's 54-line
-structural alias with a 733-line literal census. Downloaded the log for Lean
-run `41248242451` (head `1a300c5e`): `RefineSixteenResidualMain` exited 0, but
-`RefineSixteenResidualCensus` exited 1 at lines 49/51 with `Expected type must
-not contain free variables`; `CensusMain` then exited 1 on the same dependency.
-This is the old literal encoding failure and does not falsify any residual id.
-
-Restored the alias through `n11-work/ops/lanes/C/emit_residual373_census.py`.
-Lean SHA256 is again
-`480a2f78432d6400455f4a84f3dab2c4f838057ac8b05370959070975a8c62df`
-(54 lines); emitter SHA256 is
-`d9fcd1c7bc802e594d1200e75a45c3004beccc344746f913ba8452ae9218288d`.
-The emitter now records both the earlier OOM and the free-variable failure.
-Checks: emitter exit 0; exact JSON has 373 unique ids; regeneration is
-byte-stable; `git diff --check` clean; forbidden-token scan clean except the
-intentional `#print axioms` audit commands. Scope is static source/hash plus
-external CI-log inspection: repaired census and `CensusMain` are **CI pending**.
-
-Still unproved: the 373 residual radius certificates, packet `f0Lo`/`g`, 382
-absent payloads, SevenClassExclusions (0/7), and the arbitrary-centre theorem.
-Next: after the supervisor commit, require both census targets to exit 0; if
-the literal census reappears, reject the merge rather than re-running its 51
-free-variable blocks.
+The literal 373-id census repeatedly OOMed/free-variable-failed; restored the
+54-line structural alias (`480a2F78...62DF`) with explicit paid-set equality.
+Run `41248242451` was red only in that literal encoding, not in
+`RefineSixteenResidualMain`. These targets remain **CI pending** and pay no id.
 
 ## 2026-11-01 - parts 225-226 (condensed)
 
@@ -247,3 +140,56 @@ Still unproved: the 373 residual radius certificates (including `f0Lo`/`g`),
 382 absent payloads, SevenClassExclusions (0/7), and the arbitrary-centre
 theorem. Next concrete step: derive a packet directly for one residual id from
 the archived source proof data, since no local payload export exists.
+
+## 2026-11-01 - part 230 (mixture-space audit begun)
+
+New distinction found: `PaidCellCertificateMCap` exclusions fix the proposal
+mixture through `hf0`/`hg`; they are not exclusions over all `beta : Fin 16`.
+For all seven public records I recomputed `W_k = sum_f beta_f*weight_fk/10^12`
+and exactly recovered the stored `cl`, `f0Lo`, and all nine `g_q` from the
+record's 36 packet slopes/intercepts (7/7 records, zero Fraction error). This
+confirms `beta` is the only untested packet coordinate when lines are frozen.
+Committed as `audit_mixture_coordinates.py` plus
+`mixture-coordinate-audit.json`; script SHA256 `A20E2AE4...ED22D`, report
+SHA256 `8A151A6C...D395B`. Nonzero beta supports are respectively 4,4,5,5,6,4,4.
+
+A bounded scipy/HiGHS formulation (beta simplex, 90 dual rows, rmin, all
+`cl`/`g` sign regions) was attempted, but the first run selected rows with
+negative DBM entries and returned an invalid "lower" around 1310, far outside
+`f0Lo+[-lamB]+rmin` bounds. It is a formulation/search diagnostic only, **not
+a rescue or exact certificate**. No new Lean module or TARGET was added.
+
+Checks: auditor exit 0 twice with byte-identical report, `py_compile` exit 0,
+and `git diff --check` clean; exact `Fraction` reproduction of `cl/f0Lo/g` on
+all seven; DBM rows contain negative entries; local `numpy/scipy` was used for
+search only.
+Scope is exploratory arithmetic, not kernel credit. Still unproved: all 373
+radius packets, 382 absent payloads, seven-class exclusions, and the theorem.
+Next: restrict the beta LP to cell-valid dual rows (or add a proof-safe bound
+per row), enumerate the sign regions, then exactly recheck any positive gap
+with `Fraction` before emitting Lean.
+
+## 2026-11-01 - part 231 (beta/row sign-region LP)
+
+Added `search_beta_row_lp.py` and `beta-row-lp-results.json`. For each of the
+seven public residual ids the script enumerates all 512 `cl`/nine-`g` sign
+regions and solves a bounded SciPy/HiGHS LP over 16-simplex `beta`, 90
+nonnegative ordered-pair dual rows, and `rmin`. It then reconstructs `rmin` as
+the exact minimum reduced-row RHS and exactly rechecks `f0Lo`, all `g`,
+reduced rows, and `T^2` with `Fraction`.
+
+Result: 0 exact PASS. The float optimum is positive for ids
+`{2337,2341,2356,2360}` by `6.74e-5`, `1.68e-5`, `1.86e-4`, `1.39e-4`,
+but rational reconstruction from `float.limit_denominator` loses every one;
+exact gaps are respectively `-4.99e-4`, `-2.69e-4`, `-4.39e-4`, `-3.30e-4`.
+For `{1409,2368,2370}` even the float optima are negative. All seven exact
+candidates satisfy reduced rows. This is a search diagnostic, not an
+infeasibility proof and not kernel credit.
+
+Script SHA256 `7B324F1C...CC600E`; report SHA256 `FF37163F...AEF4D`.
+Checks: all 512 branches/record, `py_compile` exit 0, forbidden-token scan
+clean. Scope is exact recheck of one rationalized optimum per sign region.
+Still unproved: all 373 packets, 382 payloads, seven classes, and theorem.
+Next: solve the active-set LP exactly over `Fraction` for the four positive
+float regions, rather than rationalizing the full 107-vector, then emit a
+packet only if every reduced row and the strict numeric gap survive.

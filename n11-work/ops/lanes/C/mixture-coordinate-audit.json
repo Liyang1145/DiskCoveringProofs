@@ -1,0 +1,56 @@
+{
+  "scope": "exact beta-coordinate reconstruction; not a kernel or payment claim",
+  "proposal_sha256": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
+  "records_checked": 7,
+  "records": [
+    {
+      "id": 1409,
+      "beta_nonzero": 4,
+      "cl_exact": true,
+      "f0Lo_exact": true,
+      "g_exact": true
+    },
+    {
+      "id": 2337,
+      "beta_nonzero": 4,
+      "cl_exact": true,
+      "f0Lo_exact": true,
+      "g_exact": true
+    },
+    {
+      "id": 2341,
+      "beta_nonzero": 5,
+      "cl_exact": true,
+      "f0Lo_exact": true,
+      "g_exact": true
+    },
+    {
+      "id": 2356,
+      "beta_nonzero": 5,
+      "cl_exact": true,
+      "f0Lo_exact": true,
+      "g_exact": true
+    },
+    {
+      "id": 2360,
+      "beta_nonzero": 6,
+      "cl_exact": true,
+      "f0Lo_exact": true,
+      "g_exact": true
+    },
+    {
+      "id": 2368,
+      "beta_nonzero": 4,
+      "cl_exact": true,
+      "f0Lo_exact": true,
+      "g_exact": true
+    },
+    {
+      "id": 2370,
+      "beta_nonzero": 4,
+      "cl_exact": true,
+      "f0Lo_exact": true,
+      "g_exact": true
+    }
+  ]
+}
