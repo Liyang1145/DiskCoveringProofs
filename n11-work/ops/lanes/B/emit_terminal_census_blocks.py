@@ -166,8 +166,19 @@ def main() -> None:
     lines += ["", "theorem censusIDs_card : censusIDs.card = 2506 := by", "  rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]", "  simp [blockIDs," + ", ".join(f"blockIDs{i}_card" for i in range(len(blocks))) + "]", "  norm_num", "", "theorem terminalIDs_card : terminalIDs.card = 2506 := by", "  rw [terminalIDs_eq_censusIDs, censusIDs_card]", "", "end", "end N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual", ""]
     rendered = "\n".join(lines)
     assert all(len(chunk) <= BLOCK for chunk in blocks)
-    assert all(f"def census{b} " in rendered for b in range(len(blocks)))
-    assert all(f"  simp only [census{b}," in rendered for b in range(len(blocks)))
+    assert all(
+        f"def census{b} : Finset (Fin {min(BLOCK, 5011 - b * BLOCK)}) :=\n"
+        f"  Finset.univ.filter fun n => "
+        f"(DBMSourceTree.data (embed{b} n)).terminal = true" in rendered
+        for b in range(len(blocks))
+    )
+    assert all(
+        f"theorem census{b}_spec (n : Fin {min(BLOCK, 5011 - b * BLOCK)}) :\n"
+        f"    (DBMSourceTree.data (embed{b} n)).terminal = true ↔ n ∈ census{b} := by\n"
+        f"  simp only [census{b}, Finset.mem_filter, Finset.mem_univ, true_and]"
+        in rendered
+        for b in range(len(blocks))
+    )
     assert rendered.count("  decide +kernel") == len(blocks)
     assert not any(tok in rendered for tok in
                    ("sorry", "admit", "native_decide", "implemented_by", "maxHeartbeats 0"))

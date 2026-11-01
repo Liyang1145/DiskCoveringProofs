@@ -1,0 +1,41 @@
+{
+  "block_widths": [
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    256,
+    147
+  ],
+  "checks": {
+    "all_190_disjointness_facts": true,
+    "all_190_facts_dispatched_both_orders": true,
+    "block_bounds_contiguous": true,
+    "census_card_is_2506": true,
+    "literal_cards_equal_block_cards": true,
+    "literal_cards_sum_2506": true,
+    "terminal_card_is_2506": true,
+    "twenty_embed_blocks": true,
+    "twenty_filtered_census_definitions": true,
+    "twenty_literal_census_cards": true,
+    "twenty_structural_census_specs": true
+  },
+  "literal_cardinality_sum": 2506,
+  "ok": true,
+  "scope": "static generated-source audit; not Lean elaboration or kernel proof credit",
+  "sha256": "A94B42CC22AF9A04029368EC31026E1C5C05172F022375C4C2D1F7231B6A0797"
+}
