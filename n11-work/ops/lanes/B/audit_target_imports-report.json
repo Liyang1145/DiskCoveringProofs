@@ -1,9 +1,13 @@
 {
-  "closure_size": 1988,
+  "closure_size": 1991,
   "forbidden": [],
   "missing": [],
   "ok": true,
   "targets": [
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralMain",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCard",
     "N11Formalization.LaneBRowCapDecideProbe",
     "N11Formalization.LaneBFrozenCapRowCap1409",
     "N11Formalization.LaneBFrozenCapRowCap2337",
@@ -25,11 +29,9 @@
     "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteen",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralMain",
     "N11Formalization.EnergyTerminalResidualCensus",
     "N11Formalization.EnergyTerminalResidualCensusRefineSixteen",
-    "N11Formalization.LaneBPublicResidualCrosswalk"
+    "N11Formalization.LaneBPublicResidualCrosswalk",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus"
   ]
 }
