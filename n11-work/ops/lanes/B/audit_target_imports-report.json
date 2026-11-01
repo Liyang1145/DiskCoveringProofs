@@ -4,11 +4,11 @@
   "missing": [],
   "ok": true,
   "targets": [
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCard",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural",
     "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralMain",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus",
-    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCard",
     "N11Formalization.LaneBRowCapDecideProbe",
     "N11Formalization.LaneBFrozenCapRowCap1409",
     "N11Formalization.LaneBFrozenCapRowCap2337",
