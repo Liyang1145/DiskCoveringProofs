@@ -1,68 +1,78 @@
 # Lane B notes
 
-## 2026-10-31 - session 118: census CI diagnosis and kernel split
+## 2026-11-01 - session 123: bridge source recheck; CI remains sole gate
 
-- Read fresh CI `41248242451` (head `1a300c5e`). Its first owning errors were
-  census line 41 `No goals to be solved` and lines 49/51
-  `Expected type must not contain free variables: k < 5011`. The first was the
-  trailing `norm_num` after cardinality rewrites; the second came from
-  `change` embedding `by decide` proofs that still mention local `k`.
-- Replaced the 51 large membership proofs with 502 separate ten-index (and one
-  singleton) subtheorems using `decide +kernel +revert`, plus 51 bounded
-  dispatch theorems. Removed the redundant `norm_num`; removed every
-  `change`. Generator:
-  `n11-work/ops/lanes/B/split_sixteen_census_blocks.py`.
-- Static checks passed: generator idempotent (same SHA before/after), 502
-  subtheorems, 51 dispatch theorems, 502 bounded `+revert` decisions, no
-  `change`/`norm_num`, no forbidden proof token, and `git diff --check`.
-  Census SHA256:
-  `B3D95477D41F5EC1955BCA3F0E3B9BD294AF4481F3F594405104561E655CE091`;
-  generator SHA256:
-  `A0D542C79C169FEF44EC8EAE5434D5F30ED6C87A57995179A31AE5054D9E6082`.
-- Scope is source generation/static audit only. This census repair is **CI
-  pending**; no local project Lean build was run and no radius is paid.
-- Still unproved: kernel success of the split census/Main; all 373 residual
-  radius certificates; packet `f0Lo`/`g`; 382 absent payload records;
-  SevenClassExclusions (`0/7`); and the arbitrary-centre full-disk theorem.
-  ROOT-IMPORT REQUEST remains: replace `EnergyTerminalBatchB13Main` with
-  `EnergyTerminalBatchB13RefineSixteenMain` only after a complete green chain.
-- Very next step: supervisor commit, then CI for
-  `EnergyTerminalBatchB13RefineSixteenResidualCensus`,
-  `...ResidualCensusMain`, and `...RefineSixteenMain`; inspect the first new
-  owning error before any further source edit.
+- Re-ran `audit_structural_residual.py`: `ok=true`, depth-2 closure of 8
+  modules, no failures; hashes unchanged at Structural
+  `6F585404...68B`, StructuralMain `7CE25F5D...4A7`, TARGETS
+  `7AE31169...AB`. `git diff --check` was clean in session 122.
+- Directly compared both paid-set definitions again: `Repair.paidIDs` and
+  `RefineSixteen.paidIDs` each elaborate to
+  `RefineFourteen.paidIDs ∪ newIDs`, with the same two-element `newIDs`.
+  The residual filters are identical. This supports the `rfl` bridge but is
+  source evidence only.
+- Scope: static source inspection plus bounded Python audit. No Lean build was
+  run locally; neither structural target has kernel credit. CI `41266567914`
+  ended in runner shutdown (143), not a Lean diagnosis.
+- Still unproved: kernel success of the structural pair; all 373 residual
+  radii; packet `f0Lo`/`g`; 382 absent payload records;
+  SevenClassExclusions (`0/7`); arbitrary-centre full-disk theorem.
+- Next: supervisor commit, then serial CI of
+  `EnergyTerminalBatchB13RefineSixteenResidualStructural` followed by its
+  `...Main`. If red, inspect the first owning Lean error before changing the
+  definitional bridge; if green, retire the conflicted literal census target.
 
-## 2026-10-31 - session 117c: pre-CI handoff verification
 
-- Re-read `GUIDANCE.md`, lane B, prior notes, and CI `41229638083`; the repaired
-  373-item census remains **CI pending**.
-- Re-ran `repair_census_free_vars.py --check`: 51 blocks, 51 closed-term
-  `change`s, 0 `+revert`. Rechecked current source SHA256
-  `91F7F7ED65FDADD45CA6057F567C61831B2BE12D4F865B02276573478C7EF658`
-  and `...ResidualCensusMain` SHA256
-  `569FB93EDF013085D33CAF10981A012A1C8C2C0EB8DE9AFB76F9B3D73E68B268`.
-- Scope is Python/source audit only; no local Lean check or radius payment.
-  Still unproved: kernel success of census/Main; 373 residual radii; packet
-  `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions (`0/7`); and the
-  arbitrary-centre full-disk theorem.
-- Very next step: supervisor commit, then CI census and CensusMain; diagnose
-  the first owning error before any further source edit.
+## 2026-11-01 - session 120: structural wrapper wiring audit
+
+- Added `audit_structural_residual.py` and report; pass covers imports,
+  endpoints, banned tokens and exact hashes. Structural source hash
+  `6F5854043CE50E40DD8E9448ADD703A7BDA095DCA56BF97D17CA8BF9D87CE68B`; main `7CE25F5DF035E68DE463561E589A674B793386369FDCF81FA0378BB995FC34A7`; targets `7AE311698D0910990C9F68C15CC0BBF37C46B156AA24322487FD8236A4E8D5AB`.
+- Both structural modules are **CI pending**; no Lean build and no radius paid.
+
+## 2026-11-01 - session 119: structural census isolates merge regression
+
+- Inspected `HEAD da346970` after CI `41266567914` (runner shutdown, exit 143,
+  no Lean error). The merge left
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus.lean` uncompilable: it
+  has duplicate `residual373` declarations and references undefined
+  `chunk0`--`chunk3`. The earlier red run `41248242451` confirms the old
+  literal-census failure, while `RefineSixteenResidualMain` was green there.
+- Left lane C's contested file untouched. Added lane-B-owned
+  `EnergyTerminalBatchB13RefineSixteenResidualStructural.lean` and
+  `...ResidualStructuralMain.lean`. They use the 389-census-minus-16 structural
+  alias, prove `residualIDs_card = 373`, and expose four conditional
+  certificate/producer to arbitrary-centre endpoints with seven classes and all
+  373 radii still explicit.
+- Added both modules to `n11-work/ops/lanes/B/TARGETS.txt` after their upstream
+  imports. Checks passed (scope: static/source only): 2 unique targets, all
+  imports resolve, no `sorry`/`admit`/`native_decide`/`ofReduceBool`/
+  `implemented_by`, no literal `chunk*` or `decide +kernel`, four main endpoints,
+  and `git diff --check` clean.
+- SHA256: Structural `6F5854043CE50E40DD8E9448ADD703A7BDA095DCA56BF97D17CA8BF9D87CE68B`;
+  StructuralMain `7CE25F5DF035E68DE463561E589A674B793386369FDCF81FA0378BB995FC34A7`;
+  TARGETS `7AE311698D0910990C9F68C15CC0BBF37C46B156AA24322487FD8236A4E8D5AB`.
+- Scope is engineering only: **CI pending**, no Lean build run locally, no
+  radius paid. Still unproved: 373 radius certificates; packet `f0Lo`/`g`;
+  382 absent payloads; SevenClassExclusions (`0/7`); arbitrary-centre theorem.
+- ROOT-IMPORT REQUEST unchanged: switch to `RefineSixteenMain` only after a
+  complete green chain. Very next step: supervisor commit, then CI the two
+  Structural targets first; if they pass, retire the conflicted literal target
+  rather than restoring its per-index kernel enumeration.
+
+## 2026-10-31 - session 118 (condensed)
+
+- Literal 373-census repair remains **CI pending**; the later merge conflicted
+  that module. Use the structural replacement rather than re-enumerating it.
 
 ## 2026-10-31 - session 117b: repair-partition verification
 
 - Re-read CI `41229638083`: `RefineSixteenResidualCensus` and its `Main`
   remain red at that SHA; the source repair from session 117 is newer and
   **CI pending**, so it is not claimed green.
-- Re-ran `repair_census_free_vars.py --check`: 51 closed-term `change`s, no
-  `+revert`. `audit_census_blocks.py` passes its 51-block range/no-gap checks;
-  its `89` chunk check belongs to the older 389 census, not this 373 source.
-  The 373 source declares chunks of sizes `100/100/100/73`; an independent
-  source parse confirms blocks `0..50` are exactly
-  `[0,100),...,[4900,5000),[5000,5011)`.
-- A core-only `Mathlib.Data.Finset.Basic` free-variable probe timed out at
-  25 s under worker contention; it is not a Lean check and is not counted.
-  Scope remains Python/source audit only; no radius is paid.
-- Current census SHA256 is
-  `91F7F7ED65FDADD45CA6057F567C61831B2BE12D4F865B02276573478C7EF658`.
+- Re-ran the partition audit: 51 closed-term `change`s, exact
+  `100/100/100/73` range/no-gap partition; source SHA `91F7F7ED...EF658`.
+  No Lean check; the literal census is superseded by the structural wrapper.
 - Still unproved: kernel success of the repaired census and `Main`; 373
   residual radii; packet `f0Lo`/`g`; 382 absent payload records;
   SevenClassExclusions (`0/7`); the arbitrary-centre full-disk theorem.
@@ -189,18 +199,6 @@
 - Next: supervisor commit and serial CI of C01--C04, assembly, then
   `EnergyTerminalResidualCensusRefineSixteen`; diagnose the first owning error.
   Keep the SixteenMain root-switch request.
-
-## 2026-10-31 - session 112 (condensed)
-
-- Confirmed run `41222715534` completed successfully and both
-  `FrozenCapFiveField{2368,2370}Tree` aliases are kernel-green there.
-- Removed consumer-free `LaneBUnpaidPublicExcludedWrappers.lean` and its target.
-- Repaired the lane-B 389 census emitter to emit `decide +kernel +revert`,
-  preventing free subtype `hk` in interval-case blocks. Output remains CI pending.
-- `LaneBPublicResidualCrosswalk` records that exactly seven public row-cap ids
-  occur among the 389 residual ids; exactly `{2337,2341}` occur among the 16
-  refinements, so five `{1409,2356,2360,2368,2370}` remain in the literal 373.
-  Bookkeeping only; **CI pending**; pays no radius.
 
 ## Earlier state (condensed)
 
