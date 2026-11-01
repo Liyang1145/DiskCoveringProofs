@@ -18,6 +18,10 @@ import sys
 from pathlib import Path
 
 import numpy as np
+try:
+    import flint
+except ImportError:
+    flint = None
 from scipy.optimize import linprog
 from scipy.linalg import qr
 
@@ -81,9 +85,26 @@ def exact_l1_certificate(rows, tol=1e-10):
     selected = sorted(int(equation) for equation in pivots[:len(support)])
     if len(selected) != len(support):
         return None, "underdetermined-l1-support"
-    values = farkas.solve_square(
-        [[columns[j][i] for j in support] for i in selected],
-        [Q(-1) if i == 107 else Q(0) for i in selected])
+    values = None
+    if flint is not None:
+        try:
+            system = flint.fmpq_mat(
+                len(support), len(support),
+                [flint.fmpq(columns[j][i].numerator,
+                            columns[j][i].denominator)
+                 for i in selected for j in support])
+            target = flint.fmpq_mat(
+                len(support), 1,
+                [flint.fmpq(-1 if i == 107 else 0) for i in selected])
+            solved = system.solve(target)
+            values = [Q(int(value.p), int(value.q))
+                      for value in solved.entries()]
+        except (ImportError, ValueError, ZeroDivisionError):
+            values = None
+    if values is None:
+        values = farkas.solve_square(
+            [[columns[j][i] for j in support] for i in selected],
+            [Q(-1) if i == 107 else Q(0) for i in selected])
     if values is None:
         return None, "singular-l1-support"
     u = [Q(0)] * (nr + 1)
@@ -119,9 +140,9 @@ def main():
         item = {"mask": mask, "float_success": bool(lp.success),
                 "status": "float-infeasible-of-alternative"}
         if lp.success:
-            y, why = farkas.exact_support_certificate(rows, lp.x)
+            y, why = exact_l1_certificate(rows)
             if y is None:
-                y, why = exact_l1_certificate(rows)
+                y, why = farkas.exact_support_certificate(rows, lp.x)
             ok = y is not None
             item.update(status=why,
                         nonzero_inequalities=(sum(v != 0 for v in y[:-1])

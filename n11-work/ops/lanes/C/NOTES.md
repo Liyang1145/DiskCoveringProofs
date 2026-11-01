@@ -33,48 +33,16 @@
   validity; seven-class and energy premises; root integration.
 - No historical host-side audit or byte check is kernel credit.
 
-## 2026-10-31 - parts 202-208 (condensed)
+## 2026-10-31 to 2026-11-01 - parts 202-226 (condensed)
 
-Parts 202-204 added the conditional 373-id interface, exact/51-block/sdiff
-censuses. Run `41217409382` was green for repaired modules, but the generated
-census was red ("Expected type must not contain free variables"); sdiff was
-withheld due to the same lane-B C01-C04 `decide` shape. Part 206 re-ran the
-five-field byte audit (702 files, 51,466,284 bytes) and both emitters
-byte-identically; host arithmetic only.
-
-## 2026-10-31 - parts 209-214 (condensed)
-
-Five-field Tree bridges switched to definitional `rfl`; repaired 373 census
-removed an erroneous `+revert` and trailing `norm_num`. Added literal-373
-consumers and `RefineSixteenResidualCensusMain` with four endpoints. These
-compose premises and pay no id. Exact <5-field host search found no rescue for
-the seven public records. Producer and residual radius certificates are proved
-equivalent, so the geometric producer remains the real analytic obligation.
-
-## 2026-10-31 - parts 217-220 (condensed)
-
-Batch 4 restored eight archived split certificates from `8de79f77`; run
-`41222715534` was green for `RefineSixteenRepair`/`Residual`/`Sixteen`/`Main`
-but the literal census was red. Artifact inspection attributed that red to
-proof encoding (`No goals`, kernel recursion, and 200000-heartbeat timeouts),
-not false residual ids. Part 219 split cardinality; part 220 added
-`EnergyTerminalBatchB13RefineSixteenResidualMain.lean`, the direct consumer of
-the actual residual set. All remained **CI pending** and paid no id.
-
-## 2026-10-31 - parts 221-224 (condensed)
-
-The literal 373-id census repeatedly OOMed/free-variable-failed; restored the
-54-line structural alias (`480a2F78...62DF`) with explicit paid-set equality.
-Run `41248242451` was red only in that literal encoding, not in
-`RefineSixteenResidualMain`. These targets remain **CI pending** and pay no id.
-
-## 2026-11-01 - parts 225-226 (condensed)
-
-Commit `a30e76db` again replaced the 54-line structural census; it was
-regenerated (SHA256 `480a2F78...62DF`). Run `41266567914` exited 143 after a
-runner shutdown, 77 s into the census target and with no Lean diagnostic, so it
-is neither a pass nor a failure. `ResidualCensus`/`CensusMain` remain **CI
-pending**; the seven public records still have no arbitrary-row rescue.
+Added the conditional 373-id interface and several censuses. CI `41217409382`
+and `41222715534` were green for repaired residual modules; literal census
+targets stayed red from free variables or proof encoding (`No goals`, kernel
+recursion, heartbeat limits), not false ids. Five-field Tree bridges use
+definitional `rfl`, and producer/residual radius certificates are equivalent.
+The structural 54-line census alias (`480a2F78...62DF`) was restored twice;
+run `41266567914` exited 143 with no Lean diagnostic. All such targets remain
+**CI pending** and pay no id; the seven public records have no arbitrary-row rescue.
 
 ## 2026-11-01 - parts 227-229 (condensed certificate/inventory audits)
 
@@ -229,3 +197,48 @@ the arbitrary-centre theorem. Next: replace Fraction Gauss-Jordan on the
 lifting/recheck (or batch the regions in CI), then merge threshold certificates
 for the 448 masks with the existing 64 infeasibility certificates and assert
 512/512 exact coverage.
+
+## 2026-11-01 - part 240 (all 512 threshold-Farkas regions for 2356)
+
+Added an optional FLINT exact-rational fast path to `solve_square` in
+`audit_beta_lp_farkas.py` and to the L1 solve in
+`audit_beta_lp_threshold_farkas.py`, retaining the pure-Python fallback and the
+same exact sign/residual/normalization recheck. Reordered the threshold audit
+to try the robust L1 reconstruction before the 1.5 s failing primary heuristic.
+Full run: all 512 masks returned `exact-l1-normalized-Farkas`, each stored
+`y` has 127 entries, and all float LPs succeeded. Report:
+`beta-lp-threshold-all.json` (17,049,097 bytes) SHA256
+`E4EFBB9B702F50A85BD4900C482AAE09F529416E11D71BEDE32AE7F0E46BA8A5`.
+Scripts: threshold SHA256 `52F646CE...676B31D`; shared audit
+`DF474472...CF801D`.
+Checks: full 512-mask run and `py_compile` exited 0; exact checks are internal.
+Scope: each id-2356 sign region cannot attain `lower > T2` in this LP model;
+this is not kernel credit, payment of id 2356, or the arbitrary-centre theorem.
+Still unproved: six public ids' threshold coverage, 373 radius packets, 382
+absent payloads, SevenClassExclusions (0/7), and the arbitrary-centre theorem.
+Next: sweep the six remaining public ids, then independently verify every stored
+certificate against reconstructed exact rows.
+
+## 2026-11-01 - part 241 (independent 2356 certificate replay)
+
+Added `verify_beta_lp_threshold_reports.py`: it reconstructs each exact LP row
+from the proposal/DBM, parses the stored rational multiplier vector, checks all
+nonnegative inequality multipliers, all 107 zero-residual columns, exact
+normalization `-1`, nonzero counts, source hashes, threshold, mask ordering, and
+optional 512-mask completeness. It reuses neither the certificate constructor
+nor its solver.
+
+Replayed the complete id-2356 report: all 512 certificates passed exact checks;
+report SHA256 `E4EFBB9B702F50A85BD4900C482AAE09F529416E11D71BEDE32AE7F0E46BA8A5`.
+Verifier SHA256 `09C653ED...9386DD`; verification report
+`beta-lp-threshold-verification-2356.json` SHA256 `A071B85B...CF8F4D`.
+Checks: `py_compile` exit 0; full 512 replay exit 0 (about 50 s); forbidden-token
+scan and `git diff --check` clean. Scope: exact region-local LP certificates for
+one id only, **not kernel credit, a residual payment, or the theorem**.
+
+Six-id sweeps were started but their per-mask cost prevented a saved full run;
+the interrupted logs (`threshold-logs/*.log`) are diagnostics only. Still
+unproved: threshold coverage for all six remaining public ids, 373 radius
+packets, 382 absent payloads, SevenClassExclusions (0/7), arbitrary-centre theorem.
+Next: run each six-id report in CI-sized contiguous slices with checkpointing,
+then replay all stored certificates with the new verifier.
