@@ -1,51 +1,31 @@
 # Lane B notes
 
-## 2026-11-01 - session 135: structural import isolation audit
+## 2026-11-01 - session 136: exact CI blocker attribution
 
-- Added `audit_structural_dependency_isolation.py` and report
-  `audit_structural_dependency_isolation-report.json`. The recursive source
-  audit resolves 1,960 imports/reachable modules with no missing imports and
-  proves that the structural trio's closure does not contain lane C's conflicted
-  `EnergyTerminalBatchB13RefineSixteenResidualCensus`. Audit `ok=true`; this is a
-  source/import audit, not a Lean kernel check.
-- The closure still contains 38 modules also listed only in lane C (certificate
-  and refinement dependencies), so this isolates the named OOM/order blocker but
-  does not show all lane-C-listed dependencies are green. Audit SHA-256 is
-  `A8A08B88...648B41`; report SHA-256 is `F837BBBB...6C25D6`.
-- No Lean source or `TARGETS.txt` entry changed. The structural trio remains
-  **CI pending**; 373 residual radii, packet `f0Lo`/`g`, 382 payload records,
-  SevenClassExclusions (`0/7`), and the arbitrary-centre theorem remain unpaid.
-- Next concrete step: supervisor runs the B structural targets ahead of lane C's
-  conflicted literal census (or moves/withdraws that C target once), then record
-  the first lane-B Lean error from CI. ROOT-IMPORT REQUEST remains
-  `...ResidualStructuralMain` only after its closure is CI green.
+- Extended `audit_ci_memory.py` to record per-module `✖ ... Building` failures.
+  Replaying the downloaded job log for run `41293387736` (head `a90d1ee0`) now
+  attributes the failure to exactly C01--C04: all four are killed after 93 s
+  with exit 137, while the 13 memory samples peak at 8,755 MiB and the guard
+  fires at 387 MiB available. There are zero Lean `error:` diagnostics.
+- The log ends with lane C's `...RefineSixteenResidualCensus` exit 1 and then
+  attempts its CensusMain; no lane-B structural target is reached. The script
+  SHA-256 is `338328E1...752B5`; report SHA-256 is `E0BCB945...BF2F`.
+  Scope is CI-log audit only, not a Lean kernel check.
+- No Lean source or target list changed. The structural trio remains **CI
+  pending** and pays no radius. Still unproved: all 373 residual radii, packet
+  `f0Lo`/`g`, 382 absent payload records, SevenClassExclusions (`0/7`), and the
+  arbitrary-centre full-disk theorem.
+- Next concrete step: replace the structural census's 5,020 direct branch
+  decisions (each unfolds the 373/2,013/120-id sets) with a compositional
+  terminal-census/cardinality proof, then CI the three targets once C01--C04 are
+  restored or withdrawn. ROOT-IMPORT REQUEST remains unchanged until then.
 
-## 2026-11-01 - session 134: census coverage invariant
+## 2026-11-01 - sessions 133--135 (condensed)
 
-- Extended `audit_structural_residual.py` to enforce the generated equality
-  cover: exactly 4 disjoint literal chunks with cardinalities 100/100/100/73,
-  502 indexed `mem_sub_*` lemmas, and 51 contiguous dispatch blocks. It also
-  rejects out-of-range ids and card-theorem drift. Audit result `ok=true`,
-  closure 5, conflicted census absent; report is
-  `audit_structural_residual-report.json`. Scope is source/import/cover audit,
-  not a Lean kernel check.
-- Structural source hashes remain `A9EF7A7E...CA0C` and `7CE25F5D...34A7`;
-  TARGETS remain `1D27F4B7...9B0E`. The trio is still **CI pending** and pays
-  no radius. All 373 residual radii, packet `f0Lo`/`g`, 382 absent payload
-  records, SevenClassExclusions (`0/7`), and the arbitrary-centre theorem are
-  unpaid.
-- Next concrete step: after the supervisor restores/withdraws lane C's literal
-  census, inspect only the first real Lean error from the structural trio; then
-  CI the full B13 aggregate. ROOT-IMPORT REQUEST remains unchanged.
-
-## 2026-11-01 - session 133: CI attribution; structural targets promoted
-
-- Run `41293387736` reached four green B13 residual dependencies, then lane C's
-  literal census/CensusMain was OOM-killed without Lean diagnostics; no lane-B
-  target ran. `audit_ci_memory.py` now separates wrappers from real errors.
-- Structural trio moved to the front of `B/TARGETS.txt`; lane-C's global
-  position-4 blocker still precedes it. Static audit was green, but local
-  Mathlib probing was inconclusive. Structural trio remained **CI pending**.
+- Import isolation and census-cover audits were green (`ok=true`): the structural
+  trio avoids the named lane-C census, but 38 dependencies are shared. Static
+  audits are not kernel checks. The trio was moved to the front of
+  `B/TARGETS.txt`, yet the global C-first order still blocks it.
 
 ## 2026-11-01 - sessions 125--126: hash-pinned census restoration utility
 
@@ -241,3 +221,28 @@
   owned by the structural census. ROOT-IMPORT REQUEST remains
   `...ResidualStructuralMain` only after that dependency chain is CI green.
 
+
+## 2026-11-01 - session 137: residual cardinality bridge extracted
+
+- Added `EnergyTerminalBatchB13RefineSixteenResidualCard.lean` (49 lines) with
+  `terminalIDs := univ.filter terminal`, the extensional identity
+  `residualIDs = terminalIDs \ (sharpIDs ∪ paidIDs)`, subset of `sharp ∪ paid`
+  in `terminalIDs`, and `residualIDs_card_of_terminal_census`.  The latter
+  derives `residualIDs.card = 373` from exactly two remaining premises:
+  `terminalIDs.card = 2506` and disjointness of sharp/refined-paid.  This is a
+  structural bridge, not a census proof and not a radius payment.
+- Registered `N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCard`
+  in `ops/lanes/B/TARGETS.txt` immediately after the structural trio.  Status
+  is **CI pending**; no kernel claim is made.
+- Local check attempt: `lake env lean` from `n11-work/lean` did not reach Lean;
+  Lake tried to check out Mathlib revision `0df444a...` over untracked probe
+  files and aborted.  Scope was setup failure only, with no Lean diagnostic.
+- Still unproved: `terminalIDs.card = 2506`, sharp/refined-paid disjointness,
+  kernel success of this bridge and the structural trio, all 373 residual
+  radii, packet `f0Lo`/`g`, 382 absent payload records, SevenClassExclusions
+  (`0/7`), and the arbitrary-centre full-disk theorem.
+- Next concrete step: prove `terminalIDs.card = 2506` from the checked-in
+  source-tree structure (or a lane-B-owned hierarchical terminal census), and
+  derive sharp/refined-paid disjointness stage-by-stage from
+  `EnergyTerminalBatchB13.paid_not_sharp` plus the 16 small refinement deltas;
+  then let CI kernel-check the bridge.

@@ -49,6 +49,10 @@ def main() -> None:
         line for line in log.splitlines()
         if "error:" in line and not line.lstrip().startswith("##[error]")
     ]
+    failed_builds = [
+        name for name, code in re.findall(r"^✖ \[\d+/\d+\] Building (\S+) \((\d+)s\)$", log, re.M)
+        if int(code) >= 0
+    ]
     # `lake` wraps killed processes as `error: Lean exited with code 137`, and
     # its final `error: build failed` is a consequence of those exits. Neither
     # is a Lean diagnostic about a theorem. Keep them separate from real
@@ -68,6 +72,7 @@ def main() -> None:
         "conclusion": job["conclusion"],
         "active_targets_at_end": active,
         "exits": exits,
+        "failed_builds": failed_builds,
         "memory_samples": len(mem),
         "peak_top_rss_kib": max((t for _, t in mem), default=None),
         "peak_top_rss_mib": max((t for _, t in mem), default=None) // 1024
