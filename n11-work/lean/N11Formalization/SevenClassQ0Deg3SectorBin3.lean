@@ -78,7 +78,7 @@ theorem cosHiReal_le_one_half_of_pi_div_two_le {x : ℝ}
       norm_num at hp
       linarith)
   have hpow : x ^ 28 ≤ 4 ^ 28 := pow_le_pow_left₀ hxnonneg hx4 28
-  have hsmall : 4 ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) ≤ (1 / 2 : ℝ) := by
+  have hsmall : 4 ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) ≤ (1 / 4 : ℝ) := by
     norm_num [Nat.factorial]
   have hdiv : x ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) ≤
       4 ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) :=

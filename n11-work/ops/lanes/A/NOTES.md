@@ -42,33 +42,12 @@ projections for 21 `edgeMaxAt` / 9 `sectorMax`; textual gates were 21/21 and
 9/9. This repair was CI pending, not proof credit; all peaks and descendants
 remained unpaid.
 
-## 2026-11-01 (session 133) -- false global sector-step premise quantified
+## 2026-11-01 (session 133, condensed) -- false global sector-step premise
 
-Ran the exact rational sector-step audit on the current tree.  It confirms that
-the global adjacent-step premise `SectorAdjacentUnimodal` in
-`SevenClassQ0Deg3SectorShape` is false for every one of the nine rows; the
-correct paid route remains the eight-bin reduction in `SectorBinShape` /
-`SectorAssembler`.  I found no source consumer of the false theorem outside its
-own defining module.
-
-Extended `audit_q0_degree3_sector_steps.py` to record each row's strongest
-exact failure; row 0 is index 1022, drop `7.421500301204...e-5`. Files:
-`audit_q0_degree3_sector_steps.py` `47293a57...bac266`;
-`q0-degree3-sector-steps-audit.json` `3b6d4c38...0cd3c7b7e`.
-
-**Checks (scope).** Exact-rational replay PASS: all nine maxima reproduce and
-all nine rows refute both global adjacent-step directions; strongest row-0
-increasing drop `7.421500301204045e-5`.  `py_compile` and `git diff --check`
-PASS.  This is arithmetic/source evidence, not kernel or proof credit.
-
-**Still unproved / unpaid.** Kernel acceptance of the peaks and the entire
-bin-wise sector chain; sector/edge shape kernel checks; table/strict-total;
-`Q0Degree3AreaInput`; seven exclusions; arbitrary-centre theorem.  The false
-`SectorAdjacentUnimodal` interface must not be used as a premise.
-
-**Next concrete step.** Add `SevenClassQ0Deg3SectorStepCounterexample` with a
-kernel proof of `¬ SectorAdjacentUnimodal` using index 1022 (row 0), after the
-peak owners are green; add it to lane-A `TARGETS.txt` only when written.
+Exact arithmetic refutes `SectorAdjacentUnimodal` on all nine rows; row 0
+fails at 1022 -> 1023 by `7.421500301204045e-5`. The bin-wise reduction is the
+valid route. Audit script `47293a57...bac266`, JSON `3b6d4c38...0cd3c7b7e`.
+Checks were exact-rational/source only.
 
 ## 2026-11-01 (sessions 134--137, condensed) -- sector-step counterexample, CI blocked
 
@@ -189,35 +168,14 @@ Drafted the 1-Lipschitz/SectorBin3 strict-step route.  Exact audit and source
 checks passed, but session 149 found its coefficient premise false and replaced
 it; do not use the session-148 coefficient.  Counterexample remains CI pending.
 
-## 2026-11-01 (session 149) -- false strict coefficient caught and repaired
+## 2026-11-01 (session 149, condensed) -- strict bin-3 repair
 
-The preceding strict bin-3 draft was invalid: it used the global 1-Lipschitz
-sine bound and asserted `(19/50)^2/2 - mu < 0`, but exact arithmetic gives a
-positive value (about `0.02365`).  Replaced that route with a local cosine
-bound.  `SectorCalculus.sinHiNLag_sub_le_of_cos_le` turns a pointwise
-`cosHiReal x <= c` bound into `sinHiNLag b - sinHiNLag a <= c * (b-a)`.
-`SectorBin3.cosHiReal_le_one_half_of_nodeQ_768_le` proves `c = 1/2` on the
-whole bin (Taylor tail above `pi/2`, monotonicity below); the resulting
-coefficient `(19/50)^2/4 - mu` is exactly negative.
-
-**Files / SHA256.** `SectorCalculus` `98ce6dd8...6ee6`; `SectorBin3`
-`65ea1f17...472b`; counterexample unchanged `f7ec67ed...2f68`; audit script
-`b6e951a8...6363`.  Refreshed evidence JSON
-`q0-degree3-sector-step-analytic-audit.json`
-`5f8f5aaf48ebd91ce26cebb927ad258ee58bcb4aa29cd27d41d710b45ef86bdb`.
-
-**Checks (scope).** Exact-rational audit PASS: step 1022 -> 1023 drops, old
-margin positive, and new coefficient `A^2/4 - mu < 0`; `py_compile` and
-`git diff --check` PASS.  No local Lean kernel check was run.
-
-**Still unproved / unpaid.** The new cosine-half and Lipschitz lemmas, strict
-bin-3 theorem, counterexample, peaks, remaining bins, strict total,
-`Q0Degree3AreaInput`, seven exclusions, and arbitrary-centre theorem are all
-CI pending/unpaid.
-
-**Next concrete step.** CI lane A must build `SectorCalculus`, `SectorBin3`,
-then `SectorStepCounterexample`; inspect the first owned kernel error.  Lane A
-remains unreachable while global lane order is `C B A`.
+Replaced a false global-Lipschitz coefficient with the local bound
+`cosHiReal x <= 1/2` on bin 3. `sinHiNLag_sub_le_of_cos_le` then makes the
+strict coefficient `(19/50)^2/4 - mu(nextSite 0)` exactly negative. Files:
+`SectorCalculus` `98ce6dd8...6ee6`, `SectorBin3` `65ea1f17...472b`, audit
+script `b6e951a8...6363`, evidence `5f8f5aaf...86bdb`. Arithmetic/source only;
+all Lean targets remain CI pending.
 
 ## 2026-11-01 (session 150) -- first seven-class consumer
 
@@ -247,3 +205,33 @@ remaining sector/edge binary targets, and arbitrary-centre theorem stay unpaid.
 **Next concrete step.** Supervisor must isolate lane A from the lane-C census
 (e.g. a separate workflow job or A-first dispatch); then CI should build
 `StrictTotal`, `Q0Exclusion`, and audit the new axiom report.
+
+## 2026-11-01 (sessions 151--153) -- bin-3 half bound repaired, kernel pending
+
+Found a source proof defect in `cosHiReal_le_one_half_of_pi_div_two_le`:
+`cos_bound_abs` and the definition of `cosHiReal` each contribute the tail
+term, so `4^28/28! <= 1/2` only yielded `cosHiReal <= 1`.  Tightened it to
+`4^28/28! <= 1/4`; `cos <= 0` plus the two error contributions then yield
+`cosHiReal <= 1/2`.  Session 153 replayed the exact-rational audit after the
+repair: all four scalar inequalities PASS, including the quarter bound.
+
+**Files / SHA256.** `SevenClassQ0Deg3SectorBin3.lean`
+`1f082d0ad68579543fb45910ed703292d447b015f9a473a895767b3500536673`;
+`audit_q0_degree3_bin3_local_cos.py`
+`dee794233502a3b94c6d81aa7616456efbf54571bf49b30b3398b37a67198124`;
+`q0-degree3-bin3-local-cos-audit.json`
+`5e2a34af5145e8b516cef7eb94cc91fefb7697dd05f45b7415f616bffac4dcc9`.
+
+**Checks (scope).** Session 153 reran the exact audit PASS and confirmed source
+and evidence hashes unchanged.  Two bounded standalone Mathlib probes (full
+`Mathlib`, then minimal Real/Linarith/NormNum imports) timed out at 120 s and
+100 s while importing, so no local Lean kernel check exists; `SectorBin3`
+remains CI pending.  These checks do not cover the theorem's elaboration.
+
+**Still unproved / unpaid.** `SectorBin3` repair, strict total,
+`Q0Degree3AreaInput`, `Q0Exclusion`, the other six exclusions, and the
+arbitrary-centre theorem are not paid. `TARGETS.txt` is unchanged.
+
+**Next concrete step.** A-first CI must build `SectorCalculus`, the repaired
+`SectorBin3`, and then `SectorStepCounterexample`; inspect the first red owner
+before changing downstream modules.
