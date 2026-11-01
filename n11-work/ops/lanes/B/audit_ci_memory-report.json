@@ -1,0 +1,23 @@
+{
+  "active_targets_at_end": [
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus"
+  ],
+  "attribution": "runner shutdown with no Lean diagnostic",
+  "conclusion": "failure",
+  "exits": {
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain": 0,
+    "N11Formalization.EnergyTerminalBatchB13ResidualCertificates": 0
+  },
+  "head_sha": "3cb5d30ed51320efad08c34481bb1fa9aa855afd",
+  "lean_errors": [],
+  "memory_samples": 6,
+  "minimum_available_mb": 1150,
+  "oom_guard_triggered": true,
+  "peak_top_rss_kib": 8627376,
+  "peak_top_rss_mib": 8425,
+  "run_id": "41289029262",
+  "runner_shutdown": true,
+  "scope": "CI job-log audit only; not a Lean kernel check"
+}

@@ -1,0 +1,20 @@
+{
+  "blocked_before_structural": true,
+  "conclusion": "CI reaches lane C's conflicted literal census before lane B's structural census; reordering inside B/TARGETS.txt cannot avoid it",
+  "conflicted_position": 4,
+  "conflicted_target": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
+  "ok": true,
+  "scope": "static CI target-order audit only; not a Lean kernel check",
+  "sha256": {
+    ".github/workflows/n11-lean-build.yml": "0EEA35515DD4CBA4478FDBB8056ABC5909815F2FBB504CC9A14E1EE9CA62B4F1",
+    "n11-work/ops/lanes/B/TARGETS.txt": "31F5A8761EBF0179C4C7FF0C36AB71C7C2946F776DCD4E2609C4D49B8AC99280",
+    "n11-work/ops/lanes/C/TARGETS.txt": "36E86E1D5721EAC1898790E870FA851DDD10B93DE8622FEF2E86865E08426F83"
+  },
+  "structural_position": 183,
+  "structural_target": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
+  "workflow_lane_order": [
+    "C",
+    "B",
+    "A"
+  ]
+}
