@@ -57,6 +57,59 @@ theorem cosHiReal_le_row_zero_ratio_of_nodeQ_768_le {x : ℝ}
   · exact (cosHiReal_le_neg_two_thirds_of_three_pi_div_four_le
       (le_of_lt (lt_of_not_ge h34)) hx).trans htail
 
+theorem cosHiNLag_nodeQ_768_le_one_half :
+    cosHiNLag (nodeQ RatInterval.piHi 2048 768) ≤ (1 / 2 : ℚ) := by
+  norm_num [cosHiNLag, cosTQ, nodeQ, RatInterval.piHi,
+    Finset.sum_range_succ]
+
+theorem cosHiReal_le_one_half_of_pi_div_two_le {x : ℝ}
+    (hx0 : Real.pi / 2 ≤ x) (hx : x ≤ (RatInterval.piHi : ℝ)) :
+    cosHiReal x ≤ (1 / 2 : ℝ) := by
+  have hxnonneg : 0 ≤ x := by linarith [Real.pi_pos]
+  have hx4 : x ≤ 4 := hx.trans (by norm_num [RatInterval.piHi])
+  have hb := cos_bound_abs 14 x
+  rw [abs_of_nonneg hxnonneg] at hb
+  have hct : cosT 14 x ≤ Real.cos x + x ^ 28 /
+      ((Nat.factorial 28 : ℕ) : ℝ) := by
+    linarith [(abs_le.mp hb).1]
+  have hcos : Real.cos x ≤ 0 :=
+    Real.cos_nonpos_of_pi_div_two_le_of_le hx0 (by
+      have hp := Real.pi_gt_d20
+      norm_num at hp
+      linarith)
+  have hpow : x ^ 28 ≤ 4 ^ 28 := pow_le_pow_left₀ hxnonneg hx4 28
+  have hsmall : 4 ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) ≤ (1 / 2 : ℝ) := by
+    norm_num [Nat.factorial]
+  have hdiv : x ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) ≤
+      4 ^ 28 / ((Nat.factorial 28 : ℕ) : ℝ) :=
+    div_le_div_of_nonneg_right hpow (by positivity)
+  unfold cosHiReal
+  linarith
+
+theorem cosHiReal_le_one_half_of_nodeQ_768_le {x : ℝ}
+    (hx0 : (nodeQ RatInterval.piHi 2048 768 : ℚ) ≤ x)
+    (hx : x ≤ (RatInterval.piHi : ℝ)) :
+    cosHiReal x ≤ (1 / 2 : ℝ) := by
+  let q : ℚ := nodeQ RatInterval.piHi 2048 768
+  have hq0 : (0 : ℚ) ≤ q := by unfold q nodeQ; positivity
+  have hqhalf : (q : ℝ) ≤ Real.pi / 2 := by
+    dsimp [q]
+    norm_num [nodeQ, RatInterval.piHi]
+  have hcast : ((cosHiNLag q : ℚ) : ℝ) = cosHiReal (q : ℝ) := by
+    rw [cosHiNLag_cast, cosHiReal]
+    have hq0R : (0 : ℝ) ≤ (q : ℝ) := by exact_mod_cast hq0
+    rw [abs_of_nonneg hq0R]
+  have hval : cosHiReal (q : ℝ) ≤ (1 / 2 : ℝ) := by
+    rw [← hcast]
+    exact_mod_cast cosHiNLag_nodeQ_768_le_one_half
+  by_cases hhalf : x ≤ Real.pi / 2
+  · have hanti := cosHiReal_antitoneOn
+      (show (q : ℝ) ∈ Set.Icc 0 (Real.pi / 2) from ⟨by exact_mod_cast hq0, hqhalf⟩)
+      (show x ∈ Set.Icc 0 (Real.pi / 2) from ⟨le_trans (by exact_mod_cast hq0) hx0, hhalf⟩)
+      hx0
+    exact hanti.trans hval
+  · exact cosHiReal_le_one_half_of_pi_div_two_le (le_of_lt (lt_of_not_ge hhalf)) hx
+
 theorem sectorValue_zero_dec_of_bin3 {k l : Fin 2049}
     (hklo : 768 ≤ k.val) (hkl : k.val ≤ l.val) (hll : l.val ≤ 1023) :
     sectorValue 0 l ≤ sectorValue 0 k := by
@@ -85,6 +138,68 @@ theorem sectorValue_zero_dec_of_bin3 {k l : Fin 2049}
         unfold nodeQ
         norm_num [RatInterval.piHi]
       exact hx.2.trans hhi)
+
+/-- The same bin-3 comparison is strict for distinct grid nodes.  The sine
+upper bracket grows by at most the grid increment, while row 0's `-mu*q`
+term has coefficient larger than `(19/50)^2/2`. -/
+theorem sectorValue_zero_strict_dec_of_bin3 {k l : Fin 2049}
+    (hklo : 768 ≤ k.val) (hkl : k.val < l.val) (hll : l.val ≤ 1023) :
+    sectorValue 0 l < sectorValue 0 k := by
+  let qk : ℚ := nodeQ RatInterval.piHi 2048 k
+  let ql : ℚ := nodeQ RatInterval.piHi 2048 l
+  have hnod : nodeBin k = nodeBin l := by
+    rw [nodeBin_eq_three_of_mem_bin3 (by omega) (by omega),
+      nodeBin_eq_three_of_mem_bin3 (by omega) (by omega)]
+  have hqk0 : 0 ≤ qk := by dsimp [qk]; unfold nodeQ; positivity
+  have hqkl : qk ≤ ql := by
+    dsimp [qk, ql]
+    unfold nodeQ
+    have hklq : (k.val : ℚ) ≤ (l.val : ℚ) := by exact_mod_cast hkl.le
+    have hp : 0 ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+    exact div_le_div_of_nonneg_right
+      (mul_le_mul_of_nonneg_left hklq hp) (by norm_num)
+  have hqlt : qk < ql := by
+    dsimp [qk, ql]
+    unfold nodeQ
+    have hklq : (k.val : ℚ) < (l.val : ℚ) := by exact_mod_cast hkl
+    have hp : 0 < RatInterval.piHi := by norm_num [RatInterval.piHi]
+    exact div_lt_div_of_pos_right (mul_lt_mul_of_pos_left hklq hp) (by norm_num)
+  have hqlhi : (ql : ℝ) ≤ (RatInterval.piHi : ℝ) := by
+    dsimp [ql]
+    unfold nodeQ
+    have hlR : (l.val : ℝ) ≤ 2048 := by exact_mod_cast l.isLt.le
+    have hp : (0 : ℝ) ≤ (RatInterval.piHi : ℝ) := by norm_num [RatInterval.piHi]
+    push_cast
+    nlinarith
+  have hcos : ∀ x ∈ Set.Ioc (qk : ℝ) (ql : ℝ), cosHiReal x ≤ (1 / 2 : ℝ) := by
+    intro x hx
+    apply cosHiReal_le_one_half_of_nodeQ_768_le
+    · dsimp [qk]
+      unfold nodeQ
+      have hkq : ((768 : Fin 2049).val : ℝ) ≤ (k.val : ℝ) := by exact_mod_cast hklo
+      have hp : (0 : ℝ) ≤ (RatInterval.piHi : ℝ) := by norm_num [RatInterval.piHi]
+      push_cast
+      exact (div_le_div_of_nonneg_right
+        (mul_le_mul_of_nonneg_left hkq hp) (by norm_num)).trans hx.1.le
+    · exact hx.2.le.trans hqlhi
+  have hsin := sinHiNLag_sub_le_of_cos_le hqk0 hqkl hqlhi hcos
+  have hdiff : sectorValue 0 l - sectorValue 0 k =
+      (19 / 50 : ℚ) ^ 2 / 2 * (sinHiNLag ql - sinHiNLag qk) -
+        mu (nextSite 0) * (ql - qk) := by
+    simp only [sectorValue, sectorUpper, areaUpper]
+    rw [hnod]
+    dsimp [qk, ql]
+    ring
+  have hcoef : (19 / 50 : ℚ) ^ 2 * (1 / 2) / 2 - mu (nextSite 0) < 0 := by
+    norm_num [mu, nextSite, ringSite, nextRing]
+  have hupper : sectorValue 0 l - sectorValue 0 k ≤
+      ((19 / 50 : ℚ) ^ 2 * (1 / 2) / 2 - mu (nextSite 0)) * (ql - qk) := by
+    rw [hdiff]
+    have hm := mul_le_mul_of_nonneg_left hsin (by norm_num : (0 : ℚ) ≤ (19 / 50 : ℚ) ^ 2 / 2)
+    nlinarith
+  have hneg : ((19 / 50 : ℚ) ^ 2 * (1 / 2) / 2 - mu (nextSite 0)) * (ql - qk) < 0 :=
+    mul_neg_of_neg_of_pos hcoef (sub_pos.mpr hqlt)
+  linarith
 
 theorem sectorAt_zero_bin3_inc (n : ℕ) (hlo : binFirst (3 : Fin 8) ≤ n)
     (hn : n < (sectorBinWitness 0 3).val) :
@@ -122,6 +237,7 @@ theorem sectorAt_zero_bin3_unimodal :
 
 end N11Formalization.SevenClassQ0Deg3SectorBin3
 #check @N11Formalization.SevenClassQ0Deg3SectorBin3.sectorAt_zero_bin3_dec
+#check @N11Formalization.SevenClassQ0Deg3SectorBin3.sectorValue_zero_strict_dec_of_bin3
 #check @N11Formalization.SevenClassQ0Deg3SectorBin3.sectorAt_zero_bin3_unimodal
 #print axioms N11Formalization.SevenClassQ0Deg3SectorBin3.sectorAt_zero_bin3_dec
 #print axioms N11Formalization.SevenClassQ0Deg3SectorBin3.sectorAt_zero_bin3_unimodal

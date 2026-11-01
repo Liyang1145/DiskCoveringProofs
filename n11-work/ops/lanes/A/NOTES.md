@@ -82,47 +82,15 @@ probes timed out and are not evidence.  CI runs `41266567914` and
 with exit 143, so both peaks and the counterexample remain CI pending.  The
 false `SectorAdjacentUnimodal` must remain unused.
 
-## 2026-11-01 (session 138) -- C450 telescope independently re-audited
+## 2026-11-01 (session 138, condensed) -- C450 telescope re-audited
 
-Re-read the entry/state guidance and ran `project_status.py --check` (PASS).
-The restored `C450ChainCompletion` modules are present and CI-green; the root
-still has both HARK markers and the supervisor-only import request remains.
-Fresh local audits found no soundness shortcut at the empty tail: `source36`
-is a member of `C450Source11Segment.remainingSegs`, hence paid by `h450`.
-
-**Files / SHA256.** `C450ChainCompletion.lean` `d04b9dcf...eaf2a`;
-`C450ChainCompletionMain.lean` `3f608861...539c`;
-`C450ChainCompletionAudit.lean` `21abc908...3dfd`;
-`C450ChainCompletionEndpoint/Tail/Mid1/Mid2/Mid3` hashes
-`a9af5617...9f1`, `05d8bf4b...bc1`, `522f2c60...dce`,
-`ebdcd8e9...766`, `f95882a7...229`.  Auditors:
-`audit_c450_telescope_local.py` `2034e0ad...cbee`,
-`verify_chain_completion.py` `e8496815...8bdb`.
-
-**Checks (scope).** `audit_c450_telescope_local.py`: 25/25 transfers, 26/26
-source/arithmetic rows, 26 source modules, terminal facts all true, zero
-violations.  `verify_chain_completion.py`: all seven modules deterministic;
-all five telescoping chunks exact; `Source31,26,21,16,11` types in order;
-`h450` retains the `C450Source11` consumer type; no forbidden tokens.
-`check_q0_degree3_edge_peak_unfold.py` PASS 21/21 and the sector analogue PASS
-9/9; the import checker PASSes 48 references across 39 modules.  Emitter
-replay reproduced identical bytes.  Fresh exact-rational replay also PASSed:
-21/21 edges are single-peaked with witnesses, maxima and Lean coefficients in
-agreement (`q0-degree3-edge-unimodal.json` `a35265eb...75bf`), and all 9x2049
-sector values reproduce, including strict total slack `0.012092890370999008`
-(`q0-degree3-sector-grid-audit.json` `f5a2b82d...f43`).  These are
-source/arithmetic audits, not a new kernel verdict.
-
-**Still unproved / unpaid.** The q0 peak owners and descendants remain CI
-pending (no lane-A verdict after the lane-C OOM cancellations); sector
-counterexample kernel acceptance, bin-wise sector shape, strict total,
-`Q0Degree3AreaInput`, all seven exclusions, and the arbitrary-centre theorem
-remain unpaid.  Root import of C450 is not yet done.
-
-**Next concrete step.** On CI, run lane A before the lane-C residual census and
-inspect `SevenClassQ0Deg3UpperReductionUnimodal` first; if green, inspect
-`SectorPeak`, then the analytic step target.  Do not diagnose dependency-red
-descendants.
+`project_status.py --check` PASS.  C450/Main/Audit and all five telescoping
+chunks are CI-green; root still has both HARK markers, so the supervisor-only
+ROOT-IMPORT REQUEST remains.  Fresh local audit: 25/25 transfers, 26/26
+source/arithmetic rows, `Source31,26,21,16,11` in order, no empty-tail
+shortcut (`source36` is in `Source11.remainingSegs`).  Exact edge/sector
+replay PASSed (21 edges; 9x2049 sectors; strict slack `0.012092890370999008`).
+These were source/arithmetic checks, not kernel credit.
 
 ## 2026-11-01 (session 139, condensed) -- direct step evaluation ruled out
 
@@ -215,33 +183,67 @@ unpaid. Root import of C450 stays supervisor-only.
 **Next concrete step.** CI lane A builds Base then rows 00..08 then assembler;
 inspect the first red row and split no further unless a one-row target exits.
 
-## 2026-11-01 (sessions 145--146, condensed)
-Split provenance checker PASS 9/9 against frozen `11f649b3`; textual only.
-`audit_ci_lane_a_reachability.py` still reports `C B A` (`lane A position: 3`),
-explaining why run `41293387736` died in B/C before any lane-A verdict.
+## 2026-11-01 (session 148) -- strict step from analytic Lipschitz bound
 
-## 2026-11-01 (session 147) -- direct step proof and strictness boundary
-Probed the existing `sectorValue_row0_step_down` normalization in
-`probe_q0_degree3_sector_step_normnum.lean`: bounded `lake env lean` timed out
-after 180 s (exit 124, no diagnostic), so the emitted direct proof is not
-CI-safe evidence.  I then tested reuse of
-`sectorAt_bin3_dec_of_le_one 0 ... 1022`; it only yields a non-strict decrease,
-which cannot refute the non-strict `SectorIncSteps` premise.  I reverted that
-candidate proof rather than leave an invalid claim.
+Replaced the counterexample's direct 1237-digit `norm_num` with a strict
+bin-3 theorem.  `SectorCalculus.sinHiNLag_sub_le_of_grid` proves the upper
+sine bracket is 1-Lipschitz on the grid range by showing
+`sinHiReal x - x` is antitone (its derivative is `cosHiReal x - 1`, and
+`cosHiReal x ≤ 1`).  `SectorBin3.sectorValue_zero_strict_dec_of_bin3` then
+combines that bound with row 0's exact coefficient
+`(19/50)^2/2 - mu (nextSite 0) < 0`.  The counterexample now applies the
+1022 < 1023 instance directly.
 
-**Files / SHA256.** Emitter unchanged after revert
-`360a51e0a6b815cb1a40b85c0b1f0507a91ee414928d7edfdec48dbcfde090c2`;
-counterexample unchanged `644bb07a2a50597b8184a855277c1641e2ac21f9bb40f5fac738a85176b8bc9b`.
-Re-ran the emitter (PASS), analytic audit (PASS, 78-digit positive margin),
-`py_compile`, and `git diff --check`.
+**Files / SHA256.** `SectorCalculus`
+`14894ced8af03b20f23367baf95cebebee3d905b391be86be45371e1541778e9`;
+`SectorBin3` `6dc01fa698f4da55b014eaea12fb3a1157de3377fa5bdfad10041e6e6110d5c4`;
+counterexample `f7ec67ed19953b15e8b3f8f25156f14ffe391df531acbea3c825386317132f68`;
+emitter `03a8a961fb294290dc72b46f78c9639e1d88bf32c0566bb1ef99fe4ff7e73ba0`.
+`TARGETS.txt` now lists the counterexample immediately after bin 3.
 
-**Still unproved / unpaid.** No kernel verdict for the strict row-0 drop or
-counterexample.  The direct 1237-digit rational normalization times out; the
-bin-3 antitone theorem is insufficient without strictness.  All downstream
-shape/bins/strict-total/exclusions/arbitrary-centre obligations remain unpaid.
+**Checks (scope).** Re-ran the exact-rational analytic audit: positive
+separation margin, PASS (`q0-degree3-sector-step-analytic-audit.json`
+`1c512402ae39be280fc68593385c11a0cda787f4026f630960858ea5b4a56faf`).
+Sector/edge split provenance PASS, import closure PASS (114 references/74
+modules), emitter deterministic, `py_compile`, forbidden-token scan and
+`git diff --check` PASS.  These are source/arithmetic checks only; no local
+project olean or kernel verdict exists.
 
-**Next concrete step.** Add a strict-anti transfer theorem in
-`SevenClassQ0Deg3SectorCalculus` using `strictAntiOn_of_deriv_neg`, prove the
-derivative is negative on `(nodeQ 1022, nodeQ 1023)` from the exact
-`cosHiNLag (nodeQ 1022) < 1/2` bound, then replace the counterexample's
-normalization with that theorem.  Keep CI ordering blocker separate.
+**Still unproved / unpaid.** The new Lipschitz lemma, strict bin-3 theorem and
+counterexample are CI pending.  Peak owners, the remaining bin-wise sector
+chain, strict total, `Q0Degree3AreaInput`, seven exclusions and the
+arbitrary-centre theorem remain unpaid.
+
+**Next concrete step.** CI must build `SectorCalculus`, then bin 3, then the
+counterexample in that dependency order.  Inspect the first owned kernel error;
+do not diagnose dependency-red bin 4--7 descendants.
+
+## 2026-11-01 (session 149) -- false strict coefficient caught and repaired
+
+The preceding strict bin-3 draft was invalid: it used the global 1-Lipschitz
+sine bound and asserted `(19/50)^2/2 - mu < 0`, but exact arithmetic gives a
+positive value (about `0.02365`).  Replaced that route with a local cosine
+bound.  `SectorCalculus.sinHiNLag_sub_le_of_cos_le` turns a pointwise
+`cosHiReal x <= c` bound into `sinHiNLag b - sinHiNLag a <= c * (b-a)`.
+`SectorBin3.cosHiReal_le_one_half_of_nodeQ_768_le` proves `c = 1/2` on the
+whole bin (Taylor tail above `pi/2`, monotonicity below); the resulting
+coefficient `(19/50)^2/4 - mu` is exactly negative.
+
+**Files / SHA256.** `SectorCalculus` `98ce6dd8...6ee6`; `SectorBin3`
+`65ea1f17...472b`; counterexample unchanged `f7ec67ed...2f68`; audit script
+`b6e951a8...6363`.  Refreshed evidence JSON
+`q0-degree3-sector-step-analytic-audit.json`
+`5f8f5aaf48ebd91ce26cebb927ad258ee58bcb4aa29cd27d41d710b45ef86bdb`.
+
+**Checks (scope).** Exact-rational audit PASS: step 1022 -> 1023 drops, old
+margin positive, and new coefficient `A^2/4 - mu < 0`; `py_compile` and
+`git diff --check` PASS.  No local Lean kernel check was run.
+
+**Still unproved / unpaid.** The new cosine-half and Lipschitz lemmas, strict
+bin-3 theorem, counterexample, peaks, remaining bins, strict total,
+`Q0Degree3AreaInput`, seven exclusions, and arbitrary-centre theorem are all
+CI pending/unpaid.
+
+**Next concrete step.** CI lane A must build `SectorCalculus`, `SectorBin3`,
+then `SectorStepCounterexample`; inspect the first owned kernel error.  Lane A
+remains unreachable while global lane order is `C B A`.

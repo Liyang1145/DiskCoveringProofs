@@ -74,6 +74,9 @@ N11Formalization.SevenClassQ0Deg3SectorBin2
 # Session 68: complete row 0 / bin 3 shape (CI pending)
 N11Formalization.SevenClassQ0Deg3SectorBin3
 
+# Session 148: strict bin-3 drop used by the sector-step counterexample (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorStepCounterexample
+
 # Session 69: complete row 0 / bin 4 shape (CI pending)
 N11Formalization.SevenClassQ0Deg3SectorBin4
 N11Formalization.SevenClassQ0Deg3SectorBins3AllRows
@@ -115,6 +118,3 @@ N11Formalization.SevenClassQ0Deg3UpperTables
 # Session 96: coarse exact arithmetic for the canonical strict total (CI pending)
 N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate
 N11Formalization.SevenClassQ0Deg3StrictTotal
-
-# Session 133: exact row-0 adjacent-step counterexample (CI pending)
-N11Formalization.SevenClassQ0Deg3SectorStepCounterexample

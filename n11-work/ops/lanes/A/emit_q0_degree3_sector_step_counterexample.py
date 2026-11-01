@@ -31,7 +31,7 @@ def main():
     assert row["largestIncFailureK"] == 1022
     assert values[1023] < values[1022]
     assert values[1022] - values[1023] == F(row["largestIncDrop"])
-    source = '''import N11Formalization.SevenClassQ0Deg3SectorShape
+    source = '''import N11Formalization.SevenClassQ0Deg3SectorBin3
 
 /-! Lane A: the global adjacent-step sector premise is false.
 
@@ -56,9 +56,9 @@ open SevenClassQ0Deg3SectorShape
 /-- Row 0 decreases between the audited indices 1022 and 1023. -/
 theorem sectorValue_row0_step_down :
     sectorValue 0 ⟨1023, by decide⟩ < sectorValue 0 ⟨1022, by decide⟩ := by
-  norm_num [sectorValue, sectorUpper, areaUpper, nodeBin, nodeBinAt, binIndex,
-    mu, lam, nextSite, ringSite, nextRing, nodeQ, sinHiNLag, sinLoNLag, sinTQ,
-    Finset.sum_range_succ, RatInterval.piHi, Fin.val_ofNat, Fin.val_mk]
+  exact SevenClassQ0Deg3SectorBin3.sectorValue_zero_strict_dec_of_bin3
+    (k := ⟨1022, by decide⟩) (l := ⟨1023, by decide⟩)
+    (by decide) (by decide) (by decide)
 
 /-- The global adjacent-step premise is false already on row 0. -/
 theorem not_sectorAdjacentUnimodal : ¬ SectorAdjacentUnimodal := by

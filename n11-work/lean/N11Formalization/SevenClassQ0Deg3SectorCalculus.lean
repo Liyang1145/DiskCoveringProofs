@@ -155,6 +155,91 @@ theorem sectorValue_le_of_cos_le (i : Fin 9) (k l : Fin 2049)
   have hm := mul_le_mul_of_nonneg_left (hcos x hx) hA.le
   nlinarith
 
+/-- The factorial upper sine bracket grows no faster than the identity on the
+grid range.  Its derivative is `cosHiReal x`; the derivative of `x` is one,
+and `cosHiReal ≤ 1` on `[0, piHi]`. -/
+theorem sinHiNLag_sub_le_of_grid {a b : ℚ}
+    (ha0 : 0 ≤ a) (hab : a ≤ b)
+    (hb : (b : ℝ) ≤ (RatInterval.piHi : ℝ)) :
+    sinHiNLag b - sinHiNLag a ≤ b - a := by
+  let f : ℝ → ℝ := fun x => sinHiReal x - x
+  have hanti : AntitoneOn f (Set.Icc 0 (RatInterval.piHi : ℝ)) := by
+    refine antitoneOn_of_deriv_nonpos (convex_Icc 0 _) ?_ ?_ ?_
+    · intro x _
+      exact ((hasDerivAt_sinHiReal x).sub (hasDerivAt_id x)).continuousAt.continuousWithinAt
+    · intro x _
+      exact ((hasDerivAt_sinHiReal x).sub (hasDerivAt_id x)).differentiableAt.differentiableWithinAt
+    · intro x hx
+      rw [interior_Icc] at hx
+      have hderiv : HasDerivAt f (cosHiReal x - 1) x := by
+        simpa [f, cosHiReal, Pi.sub_apply] using
+          (hasDerivAt_sinHiReal x).sub (hasDerivAt_id x)
+      rw [hderiv.deriv]
+      have hcos := SevenClassQ0Deg3EdgeSuffixHigh.cosHiReal_le_one
+        (le_of_lt hx.1) (le_of_lt hx.2)
+      linarith
+  have haR : (0 : ℝ) ≤ (a : ℝ) := by exact_mod_cast ha0
+  have habR : (a : ℝ) ≤ (b : ℝ) := by exact_mod_cast hab
+  have hbR : (b : ℝ) ∈ Set.Icc 0 (RatInterval.piHi : ℝ) :=
+    ⟨haR.trans habR, hb⟩
+  have haR' : (a : ℝ) ∈ Set.Icc 0 (RatInterval.piHi : ℝ) :=
+    ⟨haR, habR.trans hb⟩
+  have hantiab := hanti haR' hbR habR
+  have hcast (q : ℚ) (hq : 0 ≤ q) :
+      ((sinHiNLag q : ℚ) : ℝ) = sinHiReal (q : ℝ) := by
+    rw [sinHiNLag_cast]
+    unfold sinHiReal
+    have hqR : (0 : ℝ) ≤ (q : ℝ) := by exact_mod_cast hq
+    rw [abs_of_nonneg hqR]
+  have hR : ((sinHiNLag b - sinHiNLag a : ℚ) : ℝ) ≤ ((b - a : ℚ) : ℝ) := by
+    push_cast
+    rw [hcast b (ha0.trans hab), hcast a ha0]
+    linarith
+  exact_mod_cast hR
+
+/-- A pointwise upper bound `c` for the cosine bracket bounds the growth of the
+upper sine bracket by `c` times the grid increment.  This is the strict-step
+form of the preceding Lipschitz estimate. -/
+theorem sinHiNLag_sub_le_of_cos_le {a b c : ℚ}
+    (ha0 : 0 ≤ a) (hab : a ≤ b)
+    (hb : (b : ℝ) ≤ (RatInterval.piHi : ℝ))
+    (hcos : ∀ x ∈ Set.Ioc (a : ℝ) (b : ℝ), cosHiReal x ≤ (c : ℝ)) :
+    sinHiNLag b - sinHiNLag a ≤ c * (b - a) := by
+  let f : ℝ → ℝ := fun x => sinHiReal x - (c : ℝ) * x
+  have hanti : AntitoneOn f (Set.Icc (a : ℝ) (b : ℝ)) := by
+    refine antitoneOn_of_deriv_nonpos (convex_Icc _ _) ?_ ?_ ?_
+    · intro x _
+      exact ((hasDerivAt_sinHiReal x).sub
+        (hasDerivAt_id x |>.const_mul (c : ℝ))).continuousAt.continuousWithinAt
+    · intro x _
+      exact ((hasDerivAt_sinHiReal x).sub
+        (hasDerivAt_id x |>.const_mul (c : ℝ))).differentiableAt.differentiableWithinAt
+    · intro x hx
+      rw [interior_Icc] at hx
+      have hderiv : HasDerivAt f (cosHiReal x - (c : ℝ)) x := by
+        simpa [f, Pi.sub_apply] using
+          (hasDerivAt_sinHiReal x).sub (hasDerivAt_id x |>.const_mul (c : ℝ))
+      rw [hderiv.deriv]
+      linarith [hcos x hx]
+  have haR : (0 : ℝ) ≤ (a : ℝ) := by exact_mod_cast ha0
+  have habR : (a : ℝ) ≤ (b : ℝ) := by exact_mod_cast hab
+  have hbR : (b : ℝ) ∈ Set.Icc (a : ℝ) (b : ℝ) := ⟨habR, le_rfl⟩
+  have haR' : (a : ℝ) ∈ Set.Icc (a : ℝ) (b : ℝ) := ⟨le_rfl, habR⟩
+  have hantiab := hanti haR' hbR habR
+  have hcast (q : ℚ) (hq : 0 ≤ q) :
+      ((sinHiNLag q : ℚ) : ℝ) = sinHiReal (q : ℝ) := by
+    rw [sinHiNLag_cast]
+    unfold sinHiReal
+    have hqR : (0 : ℝ) ≤ (q : ℝ) := by exact_mod_cast hq
+    rw [abs_of_nonneg hqR]
+  have hR : ((sinHiNLag b - sinHiNLag a : ℚ) : ℝ) ≤
+      ((c * (b - a) : ℚ) : ℝ) := by
+    dsimp [f] at hantiab
+    push_cast
+    rw [hcast b (ha0.trans hab), hcast a ha0]
+    linarith
+  exact_mod_cast hR
+
 end N11Formalization.SevenClassQ0Deg3SectorCalculus
 #check @N11Formalization.SevenClassQ0Deg3SectorCalculus.sectorUpper_cast_eq
 #check @N11Formalization.SevenClassQ0Deg3SectorCalculus.sectorValue_cast_eq_sectorHiReal
@@ -165,4 +250,6 @@ end N11Formalization.SevenClassQ0Deg3SectorCalculus
 #check @N11Formalization.SevenClassQ0Deg3SectorCalculus.sectorValue_le_of_antitoneOn
 #check @N11Formalization.SevenClassQ0Deg3SectorCalculus.sectorValue_le_of_cos_ge
 #check @N11Formalization.SevenClassQ0Deg3SectorCalculus.sectorValue_le_of_cos_le
+#check @N11Formalization.SevenClassQ0Deg3SectorCalculus.sinHiNLag_sub_le_of_grid
+#check @N11Formalization.SevenClassQ0Deg3SectorCalculus.sinHiNLag_sub_le_of_cos_le
 #print axioms N11Formalization.SevenClassQ0Deg3SectorCalculus.sectorHiReal_monotoneOn_of_deriv_nonneg

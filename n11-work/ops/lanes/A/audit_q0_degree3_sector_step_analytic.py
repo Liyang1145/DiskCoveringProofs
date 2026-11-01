@@ -1,15 +1,15 @@
 #!/usr/bin/env python3
-"""Exact-rational feasibility check for a coarse row-0 sector-step proof.
+"""Exact-rational feasibility check for the row-0 sector-step proof.
 
 The direct kernel comparison of the two evaluated sector values involves a
-1237-digit numerator.  This audit checks the alternative proof route:
+1237-digit numerator.  The current Lean route uses the local bound
 
-    sin(q2) - sin(q1) <= (q2 - q1) / 2
-    sinHiNLag(q2) - sinHiNLag(q1) <= (q2 - q1) / 2 + 1/10^6
+    cosHiReal(x) <= 1/2  on [q(1022), q(1023)],
 
-on the specific interval q1 < q2 near pi/2.  The cosine bound follows from
-3*midpoint(q1,q2) > piHi > pi and monotonicity of cosine.  This is source-level
-arithmetic evidence for a future Lean proof, not kernel credit.
+so the sine bracket grows by at most half the grid increment.  The exact
+coefficient `A^2/4 - mu` is then negative.  This script independently checks
+that coefficient and the endpoint decrease; it is source-level arithmetic
+evidence, not kernel credit.
 """
 from __future__ import annotations
 
@@ -53,13 +53,17 @@ def main() -> None:
     margin = mu1 * (q2 - q1) - (r2 / 2) * (half_step + remainder_bound)
     assert margin > 0, "coarse analytic bound does not separate the step"
 
+    A = F(19, 50)
+    strict_coefficient = A * A * F(1, 2) / 2 - mu1
+    assert strict_coefficient < 0, "local cosine bound does not beat mu"
+
     audit = json.loads(AUDIT.read_text())
     audited = next(r for r in audit["rows"] if r["site"] == 0)
     exact_drop = values[1022] - values[1023]
     assert exact_drop == F(audited["largestIncDrop"])
 
     report = {
-        "scope": "exact-rational feasibility of a small-denominator analytic proof; no Lean claim",
+        "scope": "exact-rational feasibility of the local cosine-bound proof; no Lean claim",
         "indices": [1022, 1023],
         "q1": str(q1),
         "q2": str(q2),
@@ -69,14 +73,17 @@ def main() -> None:
         "sinHi_step_bound": "(q2-q1)/2 + 1/10^6",
         "two_taylor_remainder_bound": str(remainder_bound),
         "separation_margin": str(margin),
+        "lean_cosine_bound": "cosHiReal x <= 1/2 on [q(1022), q(1023)]",
+        "lean_strict_coefficient": str(strict_coefficient),
         "exact_drop": str(exact_drop),
         "audit_sha256": hashlib.sha256(AUDIT.read_bytes()).hexdigest(),
-        "conclusion": "coarse analytic bounds leave a positive exact separation margin",
+        "conclusion": "the local cosine bound gives a negative strict coefficient",
     }
     OUT.write_text(json.dumps(report, indent=2) + "\n")
     print("PASS: 3*midpoint > piHi > pi, hence cos midpoint <= 1/2")
     print("PASS: sine step <= q_step/2 + 1e-6")
     print("PASS: separation margin is positive")
+    print("PASS: A^2/4 - mu < 0 for the local cosine bound")
     print("margin numerator digits:", len(str(margin.numerator)))
     print("wrote", OUT.relative_to(HERE.parents[3]),
           "sha256", hashlib.sha256(OUT.read_bytes()).hexdigest())
