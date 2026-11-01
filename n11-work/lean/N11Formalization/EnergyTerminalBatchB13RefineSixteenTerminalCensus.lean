@@ -2607,384 +2607,404 @@ theorem blockIDs_pairwiseDisjoint :
   fin_cases i <;> fin_cases j <;> first
       | contradiction
       | exact blockIDs_0_1_disjoint
-      | contradiction
       | exact blockIDs_0_2_disjoint
-      | contradiction
       | exact blockIDs_0_3_disjoint
-      | contradiction
       | exact blockIDs_0_4_disjoint
-      | contradiction
       | exact blockIDs_0_5_disjoint
-      | contradiction
       | exact blockIDs_0_6_disjoint
-      | contradiction
       | exact blockIDs_0_7_disjoint
-      | contradiction
       | exact blockIDs_0_8_disjoint
-      | contradiction
       | exact blockIDs_0_9_disjoint
-      | contradiction
       | exact blockIDs_0_10_disjoint
-      | contradiction
       | exact blockIDs_0_11_disjoint
-      | contradiction
       | exact blockIDs_0_12_disjoint
-      | contradiction
       | exact blockIDs_0_13_disjoint
-      | contradiction
       | exact blockIDs_0_14_disjoint
-      | contradiction
       | exact blockIDs_0_15_disjoint
-      | contradiction
       | exact blockIDs_0_16_disjoint
-      | contradiction
       | exact blockIDs_0_17_disjoint
-      | contradiction
       | exact blockIDs_0_18_disjoint
-      | contradiction
       | exact blockIDs_0_19_disjoint
+      | exact blockIDs_0_1_disjoint.symm
       | contradiction
       | exact blockIDs_1_2_disjoint
-      | contradiction
       | exact blockIDs_1_3_disjoint
-      | contradiction
       | exact blockIDs_1_4_disjoint
-      | contradiction
       | exact blockIDs_1_5_disjoint
-      | contradiction
       | exact blockIDs_1_6_disjoint
-      | contradiction
       | exact blockIDs_1_7_disjoint
-      | contradiction
       | exact blockIDs_1_8_disjoint
-      | contradiction
       | exact blockIDs_1_9_disjoint
-      | contradiction
       | exact blockIDs_1_10_disjoint
-      | contradiction
       | exact blockIDs_1_11_disjoint
-      | contradiction
       | exact blockIDs_1_12_disjoint
-      | contradiction
       | exact blockIDs_1_13_disjoint
-      | contradiction
       | exact blockIDs_1_14_disjoint
-      | contradiction
       | exact blockIDs_1_15_disjoint
-      | contradiction
       | exact blockIDs_1_16_disjoint
-      | contradiction
       | exact blockIDs_1_17_disjoint
-      | contradiction
       | exact blockIDs_1_18_disjoint
-      | contradiction
       | exact blockIDs_1_19_disjoint
+      | exact blockIDs_0_2_disjoint.symm
+      | exact blockIDs_1_2_disjoint.symm
       | contradiction
       | exact blockIDs_2_3_disjoint
-      | contradiction
       | exact blockIDs_2_4_disjoint
-      | contradiction
       | exact blockIDs_2_5_disjoint
-      | contradiction
       | exact blockIDs_2_6_disjoint
-      | contradiction
       | exact blockIDs_2_7_disjoint
-      | contradiction
       | exact blockIDs_2_8_disjoint
-      | contradiction
       | exact blockIDs_2_9_disjoint
-      | contradiction
       | exact blockIDs_2_10_disjoint
-      | contradiction
       | exact blockIDs_2_11_disjoint
-      | contradiction
       | exact blockIDs_2_12_disjoint
-      | contradiction
       | exact blockIDs_2_13_disjoint
-      | contradiction
       | exact blockIDs_2_14_disjoint
-      | contradiction
       | exact blockIDs_2_15_disjoint
-      | contradiction
       | exact blockIDs_2_16_disjoint
-      | contradiction
       | exact blockIDs_2_17_disjoint
-      | contradiction
       | exact blockIDs_2_18_disjoint
-      | contradiction
       | exact blockIDs_2_19_disjoint
+      | exact blockIDs_0_3_disjoint.symm
+      | exact blockIDs_1_3_disjoint.symm
+      | exact blockIDs_2_3_disjoint.symm
       | contradiction
       | exact blockIDs_3_4_disjoint
-      | contradiction
       | exact blockIDs_3_5_disjoint
-      | contradiction
       | exact blockIDs_3_6_disjoint
-      | contradiction
       | exact blockIDs_3_7_disjoint
-      | contradiction
       | exact blockIDs_3_8_disjoint
-      | contradiction
       | exact blockIDs_3_9_disjoint
-      | contradiction
       | exact blockIDs_3_10_disjoint
-      | contradiction
       | exact blockIDs_3_11_disjoint
-      | contradiction
       | exact blockIDs_3_12_disjoint
-      | contradiction
       | exact blockIDs_3_13_disjoint
-      | contradiction
       | exact blockIDs_3_14_disjoint
-      | contradiction
       | exact blockIDs_3_15_disjoint
-      | contradiction
       | exact blockIDs_3_16_disjoint
-      | contradiction
       | exact blockIDs_3_17_disjoint
-      | contradiction
       | exact blockIDs_3_18_disjoint
-      | contradiction
       | exact blockIDs_3_19_disjoint
+      | exact blockIDs_0_4_disjoint.symm
+      | exact blockIDs_1_4_disjoint.symm
+      | exact blockIDs_2_4_disjoint.symm
+      | exact blockIDs_3_4_disjoint.symm
       | contradiction
       | exact blockIDs_4_5_disjoint
-      | contradiction
       | exact blockIDs_4_6_disjoint
-      | contradiction
       | exact blockIDs_4_7_disjoint
-      | contradiction
       | exact blockIDs_4_8_disjoint
-      | contradiction
       | exact blockIDs_4_9_disjoint
-      | contradiction
       | exact blockIDs_4_10_disjoint
-      | contradiction
       | exact blockIDs_4_11_disjoint
-      | contradiction
       | exact blockIDs_4_12_disjoint
-      | contradiction
       | exact blockIDs_4_13_disjoint
-      | contradiction
       | exact blockIDs_4_14_disjoint
-      | contradiction
       | exact blockIDs_4_15_disjoint
-      | contradiction
       | exact blockIDs_4_16_disjoint
-      | contradiction
       | exact blockIDs_4_17_disjoint
-      | contradiction
       | exact blockIDs_4_18_disjoint
-      | contradiction
       | exact blockIDs_4_19_disjoint
+      | exact blockIDs_0_5_disjoint.symm
+      | exact blockIDs_1_5_disjoint.symm
+      | exact blockIDs_2_5_disjoint.symm
+      | exact blockIDs_3_5_disjoint.symm
+      | exact blockIDs_4_5_disjoint.symm
       | contradiction
       | exact blockIDs_5_6_disjoint
-      | contradiction
       | exact blockIDs_5_7_disjoint
-      | contradiction
       | exact blockIDs_5_8_disjoint
-      | contradiction
       | exact blockIDs_5_9_disjoint
-      | contradiction
       | exact blockIDs_5_10_disjoint
-      | contradiction
       | exact blockIDs_5_11_disjoint
-      | contradiction
       | exact blockIDs_5_12_disjoint
-      | contradiction
       | exact blockIDs_5_13_disjoint
-      | contradiction
       | exact blockIDs_5_14_disjoint
-      | contradiction
       | exact blockIDs_5_15_disjoint
-      | contradiction
       | exact blockIDs_5_16_disjoint
-      | contradiction
       | exact blockIDs_5_17_disjoint
-      | contradiction
       | exact blockIDs_5_18_disjoint
-      | contradiction
       | exact blockIDs_5_19_disjoint
+      | exact blockIDs_0_6_disjoint.symm
+      | exact blockIDs_1_6_disjoint.symm
+      | exact blockIDs_2_6_disjoint.symm
+      | exact blockIDs_3_6_disjoint.symm
+      | exact blockIDs_4_6_disjoint.symm
+      | exact blockIDs_5_6_disjoint.symm
       | contradiction
       | exact blockIDs_6_7_disjoint
-      | contradiction
       | exact blockIDs_6_8_disjoint
-      | contradiction
       | exact blockIDs_6_9_disjoint
-      | contradiction
       | exact blockIDs_6_10_disjoint
-      | contradiction
       | exact blockIDs_6_11_disjoint
-      | contradiction
       | exact blockIDs_6_12_disjoint
-      | contradiction
       | exact blockIDs_6_13_disjoint
-      | contradiction
       | exact blockIDs_6_14_disjoint
-      | contradiction
       | exact blockIDs_6_15_disjoint
-      | contradiction
       | exact blockIDs_6_16_disjoint
-      | contradiction
       | exact blockIDs_6_17_disjoint
-      | contradiction
       | exact blockIDs_6_18_disjoint
-      | contradiction
       | exact blockIDs_6_19_disjoint
+      | exact blockIDs_0_7_disjoint.symm
+      | exact blockIDs_1_7_disjoint.symm
+      | exact blockIDs_2_7_disjoint.symm
+      | exact blockIDs_3_7_disjoint.symm
+      | exact blockIDs_4_7_disjoint.symm
+      | exact blockIDs_5_7_disjoint.symm
+      | exact blockIDs_6_7_disjoint.symm
       | contradiction
       | exact blockIDs_7_8_disjoint
-      | contradiction
       | exact blockIDs_7_9_disjoint
-      | contradiction
       | exact blockIDs_7_10_disjoint
-      | contradiction
       | exact blockIDs_7_11_disjoint
-      | contradiction
       | exact blockIDs_7_12_disjoint
-      | contradiction
       | exact blockIDs_7_13_disjoint
-      | contradiction
       | exact blockIDs_7_14_disjoint
-      | contradiction
       | exact blockIDs_7_15_disjoint
-      | contradiction
       | exact blockIDs_7_16_disjoint
-      | contradiction
       | exact blockIDs_7_17_disjoint
-      | contradiction
       | exact blockIDs_7_18_disjoint
-      | contradiction
       | exact blockIDs_7_19_disjoint
+      | exact blockIDs_0_8_disjoint.symm
+      | exact blockIDs_1_8_disjoint.symm
+      | exact blockIDs_2_8_disjoint.symm
+      | exact blockIDs_3_8_disjoint.symm
+      | exact blockIDs_4_8_disjoint.symm
+      | exact blockIDs_5_8_disjoint.symm
+      | exact blockIDs_6_8_disjoint.symm
+      | exact blockIDs_7_8_disjoint.symm
       | contradiction
       | exact blockIDs_8_9_disjoint
-      | contradiction
       | exact blockIDs_8_10_disjoint
-      | contradiction
       | exact blockIDs_8_11_disjoint
-      | contradiction
       | exact blockIDs_8_12_disjoint
-      | contradiction
       | exact blockIDs_8_13_disjoint
-      | contradiction
       | exact blockIDs_8_14_disjoint
-      | contradiction
       | exact blockIDs_8_15_disjoint
-      | contradiction
       | exact blockIDs_8_16_disjoint
-      | contradiction
       | exact blockIDs_8_17_disjoint
-      | contradiction
       | exact blockIDs_8_18_disjoint
-      | contradiction
       | exact blockIDs_8_19_disjoint
+      | exact blockIDs_0_9_disjoint.symm
+      | exact blockIDs_1_9_disjoint.symm
+      | exact blockIDs_2_9_disjoint.symm
+      | exact blockIDs_3_9_disjoint.symm
+      | exact blockIDs_4_9_disjoint.symm
+      | exact blockIDs_5_9_disjoint.symm
+      | exact blockIDs_6_9_disjoint.symm
+      | exact blockIDs_7_9_disjoint.symm
+      | exact blockIDs_8_9_disjoint.symm
       | contradiction
       | exact blockIDs_9_10_disjoint
-      | contradiction
       | exact blockIDs_9_11_disjoint
-      | contradiction
       | exact blockIDs_9_12_disjoint
-      | contradiction
       | exact blockIDs_9_13_disjoint
-      | contradiction
       | exact blockIDs_9_14_disjoint
-      | contradiction
       | exact blockIDs_9_15_disjoint
-      | contradiction
       | exact blockIDs_9_16_disjoint
-      | contradiction
       | exact blockIDs_9_17_disjoint
-      | contradiction
       | exact blockIDs_9_18_disjoint
-      | contradiction
       | exact blockIDs_9_19_disjoint
+      | exact blockIDs_0_10_disjoint.symm
+      | exact blockIDs_1_10_disjoint.symm
+      | exact blockIDs_2_10_disjoint.symm
+      | exact blockIDs_3_10_disjoint.symm
+      | exact blockIDs_4_10_disjoint.symm
+      | exact blockIDs_5_10_disjoint.symm
+      | exact blockIDs_6_10_disjoint.symm
+      | exact blockIDs_7_10_disjoint.symm
+      | exact blockIDs_8_10_disjoint.symm
+      | exact blockIDs_9_10_disjoint.symm
       | contradiction
       | exact blockIDs_10_11_disjoint
-      | contradiction
       | exact blockIDs_10_12_disjoint
-      | contradiction
       | exact blockIDs_10_13_disjoint
-      | contradiction
       | exact blockIDs_10_14_disjoint
-      | contradiction
       | exact blockIDs_10_15_disjoint
-      | contradiction
       | exact blockIDs_10_16_disjoint
-      | contradiction
       | exact blockIDs_10_17_disjoint
-      | contradiction
       | exact blockIDs_10_18_disjoint
-      | contradiction
       | exact blockIDs_10_19_disjoint
+      | exact blockIDs_0_11_disjoint.symm
+      | exact blockIDs_1_11_disjoint.symm
+      | exact blockIDs_2_11_disjoint.symm
+      | exact blockIDs_3_11_disjoint.symm
+      | exact blockIDs_4_11_disjoint.symm
+      | exact blockIDs_5_11_disjoint.symm
+      | exact blockIDs_6_11_disjoint.symm
+      | exact blockIDs_7_11_disjoint.symm
+      | exact blockIDs_8_11_disjoint.symm
+      | exact blockIDs_9_11_disjoint.symm
+      | exact blockIDs_10_11_disjoint.symm
       | contradiction
       | exact blockIDs_11_12_disjoint
-      | contradiction
       | exact blockIDs_11_13_disjoint
-      | contradiction
       | exact blockIDs_11_14_disjoint
-      | contradiction
       | exact blockIDs_11_15_disjoint
-      | contradiction
       | exact blockIDs_11_16_disjoint
-      | contradiction
       | exact blockIDs_11_17_disjoint
-      | contradiction
       | exact blockIDs_11_18_disjoint
-      | contradiction
       | exact blockIDs_11_19_disjoint
+      | exact blockIDs_0_12_disjoint.symm
+      | exact blockIDs_1_12_disjoint.symm
+      | exact blockIDs_2_12_disjoint.symm
+      | exact blockIDs_3_12_disjoint.symm
+      | exact blockIDs_4_12_disjoint.symm
+      | exact blockIDs_5_12_disjoint.symm
+      | exact blockIDs_6_12_disjoint.symm
+      | exact blockIDs_7_12_disjoint.symm
+      | exact blockIDs_8_12_disjoint.symm
+      | exact blockIDs_9_12_disjoint.symm
+      | exact blockIDs_10_12_disjoint.symm
+      | exact blockIDs_11_12_disjoint.symm
       | contradiction
       | exact blockIDs_12_13_disjoint
-      | contradiction
       | exact blockIDs_12_14_disjoint
-      | contradiction
       | exact blockIDs_12_15_disjoint
-      | contradiction
       | exact blockIDs_12_16_disjoint
-      | contradiction
       | exact blockIDs_12_17_disjoint
-      | contradiction
       | exact blockIDs_12_18_disjoint
-      | contradiction
       | exact blockIDs_12_19_disjoint
+      | exact blockIDs_0_13_disjoint.symm
+      | exact blockIDs_1_13_disjoint.symm
+      | exact blockIDs_2_13_disjoint.symm
+      | exact blockIDs_3_13_disjoint.symm
+      | exact blockIDs_4_13_disjoint.symm
+      | exact blockIDs_5_13_disjoint.symm
+      | exact blockIDs_6_13_disjoint.symm
+      | exact blockIDs_7_13_disjoint.symm
+      | exact blockIDs_8_13_disjoint.symm
+      | exact blockIDs_9_13_disjoint.symm
+      | exact blockIDs_10_13_disjoint.symm
+      | exact blockIDs_11_13_disjoint.symm
+      | exact blockIDs_12_13_disjoint.symm
       | contradiction
       | exact blockIDs_13_14_disjoint
-      | contradiction
       | exact blockIDs_13_15_disjoint
-      | contradiction
       | exact blockIDs_13_16_disjoint
-      | contradiction
       | exact blockIDs_13_17_disjoint
-      | contradiction
       | exact blockIDs_13_18_disjoint
-      | contradiction
       | exact blockIDs_13_19_disjoint
+      | exact blockIDs_0_14_disjoint.symm
+      | exact blockIDs_1_14_disjoint.symm
+      | exact blockIDs_2_14_disjoint.symm
+      | exact blockIDs_3_14_disjoint.symm
+      | exact blockIDs_4_14_disjoint.symm
+      | exact blockIDs_5_14_disjoint.symm
+      | exact blockIDs_6_14_disjoint.symm
+      | exact blockIDs_7_14_disjoint.symm
+      | exact blockIDs_8_14_disjoint.symm
+      | exact blockIDs_9_14_disjoint.symm
+      | exact blockIDs_10_14_disjoint.symm
+      | exact blockIDs_11_14_disjoint.symm
+      | exact blockIDs_12_14_disjoint.symm
+      | exact blockIDs_13_14_disjoint.symm
       | contradiction
       | exact blockIDs_14_15_disjoint
-      | contradiction
       | exact blockIDs_14_16_disjoint
-      | contradiction
       | exact blockIDs_14_17_disjoint
-      | contradiction
       | exact blockIDs_14_18_disjoint
-      | contradiction
       | exact blockIDs_14_19_disjoint
+      | exact blockIDs_0_15_disjoint.symm
+      | exact blockIDs_1_15_disjoint.symm
+      | exact blockIDs_2_15_disjoint.symm
+      | exact blockIDs_3_15_disjoint.symm
+      | exact blockIDs_4_15_disjoint.symm
+      | exact blockIDs_5_15_disjoint.symm
+      | exact blockIDs_6_15_disjoint.symm
+      | exact blockIDs_7_15_disjoint.symm
+      | exact blockIDs_8_15_disjoint.symm
+      | exact blockIDs_9_15_disjoint.symm
+      | exact blockIDs_10_15_disjoint.symm
+      | exact blockIDs_11_15_disjoint.symm
+      | exact blockIDs_12_15_disjoint.symm
+      | exact blockIDs_13_15_disjoint.symm
+      | exact blockIDs_14_15_disjoint.symm
       | contradiction
       | exact blockIDs_15_16_disjoint
-      | contradiction
       | exact blockIDs_15_17_disjoint
-      | contradiction
       | exact blockIDs_15_18_disjoint
-      | contradiction
       | exact blockIDs_15_19_disjoint
+      | exact blockIDs_0_16_disjoint.symm
+      | exact blockIDs_1_16_disjoint.symm
+      | exact blockIDs_2_16_disjoint.symm
+      | exact blockIDs_3_16_disjoint.symm
+      | exact blockIDs_4_16_disjoint.symm
+      | exact blockIDs_5_16_disjoint.symm
+      | exact blockIDs_6_16_disjoint.symm
+      | exact blockIDs_7_16_disjoint.symm
+      | exact blockIDs_8_16_disjoint.symm
+      | exact blockIDs_9_16_disjoint.symm
+      | exact blockIDs_10_16_disjoint.symm
+      | exact blockIDs_11_16_disjoint.symm
+      | exact blockIDs_12_16_disjoint.symm
+      | exact blockIDs_13_16_disjoint.symm
+      | exact blockIDs_14_16_disjoint.symm
+      | exact blockIDs_15_16_disjoint.symm
       | contradiction
       | exact blockIDs_16_17_disjoint
-      | contradiction
       | exact blockIDs_16_18_disjoint
-      | contradiction
       | exact blockIDs_16_19_disjoint
+      | exact blockIDs_0_17_disjoint.symm
+      | exact blockIDs_1_17_disjoint.symm
+      | exact blockIDs_2_17_disjoint.symm
+      | exact blockIDs_3_17_disjoint.symm
+      | exact blockIDs_4_17_disjoint.symm
+      | exact blockIDs_5_17_disjoint.symm
+      | exact blockIDs_6_17_disjoint.symm
+      | exact blockIDs_7_17_disjoint.symm
+      | exact blockIDs_8_17_disjoint.symm
+      | exact blockIDs_9_17_disjoint.symm
+      | exact blockIDs_10_17_disjoint.symm
+      | exact blockIDs_11_17_disjoint.symm
+      | exact blockIDs_12_17_disjoint.symm
+      | exact blockIDs_13_17_disjoint.symm
+      | exact blockIDs_14_17_disjoint.symm
+      | exact blockIDs_15_17_disjoint.symm
+      | exact blockIDs_16_17_disjoint.symm
       | contradiction
       | exact blockIDs_17_18_disjoint
-      | contradiction
       | exact blockIDs_17_19_disjoint
+      | exact blockIDs_0_18_disjoint.symm
+      | exact blockIDs_1_18_disjoint.symm
+      | exact blockIDs_2_18_disjoint.symm
+      | exact blockIDs_3_18_disjoint.symm
+      | exact blockIDs_4_18_disjoint.symm
+      | exact blockIDs_5_18_disjoint.symm
+      | exact blockIDs_6_18_disjoint.symm
+      | exact blockIDs_7_18_disjoint.symm
+      | exact blockIDs_8_18_disjoint.symm
+      | exact blockIDs_9_18_disjoint.symm
+      | exact blockIDs_10_18_disjoint.symm
+      | exact blockIDs_11_18_disjoint.symm
+      | exact blockIDs_12_18_disjoint.symm
+      | exact blockIDs_13_18_disjoint.symm
+      | exact blockIDs_14_18_disjoint.symm
+      | exact blockIDs_15_18_disjoint.symm
+      | exact blockIDs_16_18_disjoint.symm
+      | exact blockIDs_17_18_disjoint.symm
       | contradiction
       | exact blockIDs_18_19_disjoint
+      | exact blockIDs_0_19_disjoint.symm
+      | exact blockIDs_1_19_disjoint.symm
+      | exact blockIDs_2_19_disjoint.symm
+      | exact blockIDs_3_19_disjoint.symm
+      | exact blockIDs_4_19_disjoint.symm
+      | exact blockIDs_5_19_disjoint.symm
+      | exact blockIDs_6_19_disjoint.symm
+      | exact blockIDs_7_19_disjoint.symm
+      | exact blockIDs_8_19_disjoint.symm
+      | exact blockIDs_9_19_disjoint.symm
+      | exact blockIDs_10_19_disjoint.symm
+      | exact blockIDs_11_19_disjoint.symm
+      | exact blockIDs_12_19_disjoint.symm
+      | exact blockIDs_13_19_disjoint.symm
+      | exact blockIDs_14_19_disjoint.symm
+      | exact blockIDs_15_19_disjoint.symm
+      | exact blockIDs_16_19_disjoint.symm
+      | exact blockIDs_17_19_disjoint.symm
+      | exact blockIDs_18_19_disjoint.symm
+      | contradiction
 
 theorem censusIDs_card : censusIDs.card = 2506 := by
   rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]

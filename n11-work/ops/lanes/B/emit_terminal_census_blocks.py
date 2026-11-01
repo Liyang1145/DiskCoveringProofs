@@ -154,10 +154,16 @@ def main() -> None:
                 "  omega",
             ]
     lines += ["", "theorem blockIDs_pairwiseDisjoint :", "    ∀ i ∈ Finset.univ, ∀ j ∈ Finset.univ, i ≠ j → Disjoint (blockIDs i) (blockIDs j) := by", "  intro i _ j _ hij", "  fin_cases i <;> fin_cases j <;> first"]
+    # `fin_cases` visits the product in row-major order.  Emit one branch per
+    # visited case; reverse pairs use the symmetry of `Disjoint`.
     for i in range(len(blocks)):
-        for j in range(i + 1, len(blocks)):
-            lines.append(f"      | contradiction")
-            lines.append(f"      | exact blockIDs_{i}_{j}_disjoint")
+        for j in range(len(blocks)):
+            if i == j:
+                lines.append("      | contradiction")
+            elif i < j:
+                lines.append(f"      | exact blockIDs_{i}_{j}_disjoint")
+            else:
+                lines.append(f"      | exact blockIDs_{j}_{i}_disjoint.symm")
     lines += ["", "theorem censusIDs_card : censusIDs.card = 2506 := by", "  rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]", "  simp [blockIDs," + ", ".join(f"blockIDs{i}_card" for i in range(len(blocks))) + "]", "  norm_num", "", "theorem terminalIDs_card : terminalIDs.card = 2506 := by", "  rw [terminalIDs_eq_censusIDs, censusIDs_card]", "", "end", "end N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual", ""]
     OUT.write_text("\n".join(lines), encoding="utf-8")
     print(OUT)
