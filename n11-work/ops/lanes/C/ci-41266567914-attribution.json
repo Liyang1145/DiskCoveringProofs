@@ -1,0 +1,17 @@
+{
+  "scope": "external CI log attribution only; no Lean kernel verdict",
+  "repository": "Liyang1145/DiskCoveringProofs",
+  "run_id": 41266567914,
+  "job_id": 124730488529,
+  "head_sha": "a30e76db5647816973a3501cb7794a896e7455e7",
+  "workflow": "n11-lean-build",
+  "conclusion": "failure",
+  "job_exit_code": 143,
+  "downloaded_log_sha256": "6179a1a130bacab278f4df9e828a9e30c562c4ec8a720090efbe9edf521fc1fb",
+  "downloaded_log_bytes": 19604852,
+  "last_target_started": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
+  "last_target_started_utc": "2026-11-01T02:53:15.1823930Z",
+  "shutdown_utc": "2026-11-01T02:54:32.0074926Z",
+  "lean_diagnostics_found": false,
+  "observation": "The runner was shut down while the census target was still compiling. Exit 143 is not a Lean elaboration or kernel result, so both census targets remain unvalidated by this run."
+}
