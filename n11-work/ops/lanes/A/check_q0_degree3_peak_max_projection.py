@@ -15,8 +15,13 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
 TABLES = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperTables.lean"
-EDGE = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionUnimodal.lean"
-SECTOR = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeak.lean"
+EDGE_DIR = ROOT / "n11-work/lean/N11Formalization"
+EDGE_MODULES = tuple(
+    f"SevenClassQ0Deg3UpperReductionUnimodalPeak{i:02d}.lean" for i in range(21)
+)
+SECTOR_MODULES = tuple(
+    f"SevenClassQ0Deg3SectorPeak{i:02d}.lean" for i in range(9)
+)
 
 
 def array_literals(text: str, declaration: str, count: int) -> list[str]:
@@ -55,13 +60,13 @@ def check(
 def main() -> int:
     tables = TABLES.read_text(encoding="utf-8")
     failures = check(
-        EDGE.read_text(encoding="utf-8"),
+        "\n".join((EDGE_DIR / name).read_text(encoding="utf-8") for name in EDGE_MODULES),
         "edgeMaxAt",
         "edgeMaxAt",
         array_literals(tables, "edgeMaxAt", 21),
     )
     failures += check(
-        SECTOR.read_text(encoding="utf-8"),
+        "\n".join((EDGE_DIR / name).read_text(encoding="utf-8") for name in SECTOR_MODULES),
         "sectorMax",
         "sectorMax",
         array_literals(tables, "sectorMax", 9),

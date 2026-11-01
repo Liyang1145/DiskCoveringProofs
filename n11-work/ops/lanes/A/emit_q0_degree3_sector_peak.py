@@ -11,6 +11,8 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 SRC = HERE / "q0-degree3-piecewise-8.json"
 OUT = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeak.lean"
+OUT_BASE = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeakBase.lean"
+OUT_ROW = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeak{index:02d}.lean"
 
 
 def main() -> None:
@@ -122,12 +124,34 @@ def main() -> None:
         "  · exact ((hshape i).2 k (le_of_lt (lt_of_not_ge hk))).trans (hpeak i)",
         "",
     ]
+    base_lines = lines
+    base_lines += [
+        "end N11Formalization.SevenClassQ0Deg3SectorPeak",
+        "#check @sectorValid_of_unimodal",
+    ]
+    OUT_BASE.write_text("\n".join(base_lines) + "\n")
+    print(f"wrote {OUT_BASE.relative_to(ROOT)} ({OUT_BASE.stat().st_size} bytes)")
+
     for i in range(9):
         witness = witnesses[i]
         next_site = (i + 1) % 9
         peak = peaks[i]
         peak_literal = f"({peak.numerator}/{peak.denominator})"
-        lines += [
+        row_lines = [
+            "import N11Formalization.SevenClassQ0Deg3SectorPeakBase",
+            "",
+            f"/-! Bounded sector-peak check {i}. -/",
+            "set_option autoImplicit false",
+            "noncomputable section",
+            "namespace N11Formalization.SevenClassQ0Deg3SectorPeak",
+            "",
+            "open MetricAreaRationalCertificate",
+            "open SevenClassQ0Deg3Bins",
+            "open SevenClassQ0Deg3UpperTables",
+            "open N11Formalization.ActualRingLinkBoundaryData",
+            "open N11Formalization.ActualRingDirectionOrder",
+            "open N11Formalization.ActualBoundaryCyclicOrder",
+            "",
             f"theorem sectorPeakValid_{i} : SectorPeakValid {i} := by",
             "  unfold SectorPeakValid",
             f"  rw [show sectorWitness {i} = ({witness} : Fin 2049) by decide +kernel]",
@@ -138,8 +162,27 @@ def main() -> None:
             "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,",
             "    Fin.val_ofNat, Fin.val_mk]",
             "",
+            "end N11Formalization.SevenClassQ0Deg3SectorPeak",
         ]
+        row_path = Path(str(OUT_ROW).format(index=i))
+        row_path.write_text("\n".join(row_lines) + "\n")
+        print(f"wrote {row_path.relative_to(ROOT)} ({row_path.stat().st_size} bytes)")
+
+    lines = [
+        "import N11Formalization.SevenClassQ0Deg3SectorPeakBase",
+    ]
     lines += [
+        f"import N11Formalization.SevenClassQ0Deg3SectorPeak{i:02d}" for i in range(9)
+    ]
+    lines += [
+        "",
+        "/-! Lane A: thin assembler for the bounded sector-peak modules. -/",
+        "set_option autoImplicit false",
+        "noncomputable section",
+        "namespace N11Formalization.SevenClassQ0Deg3SectorPeak",
+        "",
+        "open SevenClassQ0Deg3Bins",
+        "",
         "theorem sectorPeakValid_all : ∀ i : Fin 9, SectorPeakValid i := by",
         "  intro i",
         "  fin_cases i <;>",

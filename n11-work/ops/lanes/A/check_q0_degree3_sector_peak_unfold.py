@@ -12,7 +12,10 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-LEAN = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeak.lean"
+LEAN_DIR = ROOT / "n11-work/lean/N11Formalization"
+BASE = LEAN_DIR / "SevenClassQ0Deg3SectorPeakBase.lean"
+ROWS = [LEAN_DIR / f"SevenClassQ0Deg3SectorPeak{i:02d}.lean" for i in range(9)]
+ASSEMBLER = LEAN_DIR / "SevenClassQ0Deg3SectorPeak.lean"
 REQUIRED = (
     "sectorMax",
     "sectorUpper",
@@ -36,7 +39,9 @@ REQUIRED = (
 
 
 def main() -> int:
-    text = LEAN.read_text(encoding="utf-8")
+    base_text = BASE.read_text(encoding="utf-8")
+    row_text = "\n".join(path.read_text(encoding="utf-8") for path in ROWS)
+    text = base_text + "\n" + row_text + "\n" + ASSEMBLER.read_text(encoding="utf-8")
     failures = []
     if "import N11Formalization.ActualRingLinkBoundaryData" not in text:
         failures.append("missing direct ActualRingLinkBoundaryData import")
@@ -47,14 +52,14 @@ def main() -> int:
         r"  sectorUpper [^\n]*\n"
         r"    [^\n]*\n"
         r"      sectorMax i\n",
-        text,
+        base_text,
     ):
         failures.append("SectorPeakValid must target downstream sectorMax i")
 
     blocks = re.findall(
         r"theorem sectorPeakValid_(\d+) : SectorPeakValid \1 := by"
         r"((?:\n  (?:unfold SectorPeakValid|rw \[[^\n]*\]))*)\s+norm_num \[([^\]]*)\]",
-        text,
+        row_text,
     )
     indices = [int(i) for i, _, _ in blocks]
     if indices != list(range(9)):

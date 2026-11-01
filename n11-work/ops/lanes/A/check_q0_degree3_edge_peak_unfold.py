@@ -11,13 +11,16 @@ import re
 import sys
 
 ROOT = Path(__file__).resolve().parents[4]
-LEAN = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperReductionUnimodal.lean"
+LEAN_DIR = ROOT / "n11-work/lean/N11Formalization"
+EDGE_MODULES = tuple(
+    f"SevenClassQ0Deg3UpperReductionUnimodalPeak{i:02d}.lean" for i in range(21)
+)
 REQUIRED = ("EdgePeakValid", "edgeUpper", "edgeCoeff", "edgeMaxAt", "nodeQ",
             "Fin.val_ofNat", "Fin.val_mk")
 
 
 def main() -> int:
-    text = LEAN.read_text(encoding="utf-8")
+    text = "\n".join((LEAN_DIR / name).read_text(encoding="utf-8") for name in EDGE_MODULES)
     blocks = re.findall(
         r"theorem edgePeakValid_(\d+) : EdgePeakValid \1 := by"
         r"((?:\n  (?:unfold EdgePeakValid|rw \[[^\n]*\]))*)\s+norm_num \[([^\]]*)\]",

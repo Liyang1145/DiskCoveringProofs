@@ -1,0 +1,9 @@
+import N11Formalization.SevenClassQ0Deg3UpperReductionUnimodalPeak14
+import N11Formalization.SevenClassQ0Deg3UpperReductionUnimodalPeak15
+import N11Formalization.SevenClassQ0Deg3UpperReductionUnimodalPeak16
+import N11Formalization.SevenClassQ0Deg3UpperReductionUnimodalPeak17
+import N11Formalization.SevenClassQ0Deg3UpperReductionUnimodalPeak18
+import N11Formalization.SevenClassQ0Deg3UpperReductionUnimodalPeak19
+import N11Formalization.SevenClassQ0Deg3UpperReductionUnimodalPeak20
+
+/-! Assembler for bounded edge-peak checks 14--20. -/

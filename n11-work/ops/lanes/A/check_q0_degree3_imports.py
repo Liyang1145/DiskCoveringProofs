@@ -21,7 +21,8 @@ Q0_PREFIX = "SevenClassQ0Deg3"
 
 def strip_comments(source: str) -> str:
     source = re.sub(r"/-.*?-/", "", source, flags=re.DOTALL)
-    return re.sub(r"--[^\n]*", "", source)
+    source = re.sub(r"--[^\n]*", "", source)
+    return re.sub(r"^(?:namespace|end)\s+N11Formalization\.[^\n]*", "", source, flags=re.MULTILINE)
 
 
 def module_imports(path: Path) -> tuple[str, set[str]]:
