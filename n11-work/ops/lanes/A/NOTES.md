@@ -183,40 +183,11 @@ unpaid. Root import of C450 stays supervisor-only.
 **Next concrete step.** CI lane A builds Base then rows 00..08 then assembler;
 inspect the first red row and split no further unless a one-row target exits.
 
-## 2026-11-01 (session 148) -- strict step from analytic Lipschitz bound
+## 2026-11-01 (session 148, condensed) -- analytic strict-step draft
 
-Replaced the counterexample's direct 1237-digit `norm_num` with a strict
-bin-3 theorem.  `SectorCalculus.sinHiNLag_sub_le_of_grid` proves the upper
-sine bracket is 1-Lipschitz on the grid range by showing
-`sinHiReal x - x` is antitone (its derivative is `cosHiReal x - 1`, and
-`cosHiReal x ≤ 1`).  `SectorBin3.sectorValue_zero_strict_dec_of_bin3` then
-combines that bound with row 0's exact coefficient
-`(19/50)^2/2 - mu (nextSite 0) < 0`.  The counterexample now applies the
-1022 < 1023 instance directly.
-
-**Files / SHA256.** `SectorCalculus`
-`14894ced8af03b20f23367baf95cebebee3d905b391be86be45371e1541778e9`;
-`SectorBin3` `6dc01fa698f4da55b014eaea12fb3a1157de3377fa5bdfad10041e6e6110d5c4`;
-counterexample `f7ec67ed19953b15e8b3f8f25156f14ffe391df531acbea3c825386317132f68`;
-emitter `03a8a961fb294290dc72b46f78c9639e1d88bf32c0566bb1ef99fe4ff7e73ba0`.
-`TARGETS.txt` now lists the counterexample immediately after bin 3.
-
-**Checks (scope).** Re-ran the exact-rational analytic audit: positive
-separation margin, PASS (`q0-degree3-sector-step-analytic-audit.json`
-`1c512402ae39be280fc68593385c11a0cda787f4026f630960858ea5b4a56faf`).
-Sector/edge split provenance PASS, import closure PASS (114 references/74
-modules), emitter deterministic, `py_compile`, forbidden-token scan and
-`git diff --check` PASS.  These are source/arithmetic checks only; no local
-project olean or kernel verdict exists.
-
-**Still unproved / unpaid.** The new Lipschitz lemma, strict bin-3 theorem and
-counterexample are CI pending.  Peak owners, the remaining bin-wise sector
-chain, strict total, `Q0Degree3AreaInput`, seven exclusions and the
-arbitrary-centre theorem remain unpaid.
-
-**Next concrete step.** CI must build `SectorCalculus`, then bin 3, then the
-counterexample in that dependency order.  Inspect the first owned kernel error;
-do not diagnose dependency-red bin 4--7 descendants.
+Drafted the 1-Lipschitz/SectorBin3 strict-step route.  Exact audit and source
+checks passed, but session 149 found its coefficient premise false and replaced
+it; do not use the session-148 coefficient.  Counterexample remains CI pending.
 
 ## 2026-11-01 (session 149) -- false strict coefficient caught and repaired
 
@@ -247,3 +218,32 @@ CI pending/unpaid.
 **Next concrete step.** CI lane A must build `SectorCalculus`, `SectorBin3`,
 then `SectorStepCounterexample`; inspect the first owned kernel error.  Lane A
 remains unreachable while global lane order is `C B A`.
+
+## 2026-11-01 (session 150) -- first seven-class consumer
+
+Added `SevenClassQ0Deg3Q0Exclusion` as the thin, exact consequence
+`q0_degree3_of_areaInput SevenClassQ0Deg3StrictTotal.q0Degree3AreaInput`; it
+creates no new premise.  Added it after `StrictTotal` in `TARGETS.txt`.
+
+**Files / SHA256.** `SevenClassQ0Deg3Q0Exclusion.lean`
+`2a0fa29804461a8e3965b37f370b6c0ed81ee730602e28fdd0209d66767e8875`;
+`TARGETS.txt` `5a0f9daab67054c83fee14099afdf188ab5a5442bb516dd586f30a7e0085aee0`.
+
+**Checks (scope).** Source gate PASS: exact import, one ordered target after
+`StrictTotal`, forbidden-token scan, `py_compile`, and `git diff --check`.
+Exact-rational sector-step replay PASS (positive separation; refreshed JSON
+`5f8f5aaf...86bdb`).  These are source/arithmetic checks only; no Lean kernel
+check ran.  Current CI run
+`41309394801` (sha `35a51aef`) never reached lane A: lane C's
+`EnergyTerminalBatchB13RefineSixteenResidualCensus` drove available memory from
+11.9 GB to 1.7 GB in 80 s and the runner exited 143.  The previous run
+`41301935749` was killed at the same target.  Thus no current lane-A source has
+a kernel verdict.
+
+**Still unproved / unpaid.** `StrictTotal.q0Degree3AreaInput` is CI pending, so
+the new `q0_degree3` is CI pending rather than paid.  All other six exclusions,
+remaining sector/edge binary targets, and arbitrary-centre theorem stay unpaid.
+
+**Next concrete step.** Supervisor must isolate lane A from the lane-C census
+(e.g. a separate workflow job or A-first dispatch); then CI should build
+`StrictTotal`, `Q0Exclusion`, and audit the new axiom report.
