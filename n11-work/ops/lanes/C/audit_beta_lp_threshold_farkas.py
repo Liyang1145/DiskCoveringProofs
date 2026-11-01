@@ -120,6 +120,29 @@ def exact_l1_certificate(rows, tol=1e-10):
     return y, "exact-l1-normalized-Farkas"
 
 
+def make_report(args, records):
+    counts = {}
+    for item in records:
+        counts[item["status"]] = counts.get(item["status"], 0) + 1
+    return {
+        "scope": ("exact threshold-Farkas audit for one residual id's sign "
+                  "regions; certificates are region-local and are not kernel "
+                  "credit or a global arbitrary-centre proof"),
+        "proposal_sha256": hashlib.sha256(
+            common.PROPOSAL.read_bytes()).hexdigest().upper(),
+        "id": args.id,
+        "threshold_T2": str(common.T2),
+        "status_counts": counts,
+        "records": records,
+    }
+
+
+def write_report(path, report):
+    temporary = path.with_name(path.name + ".tmp")
+    temporary.write_text(json.dumps(report, indent=1) + "\n")
+    temporary.replace(path)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--id", type=int, default=2356)
@@ -127,15 +150,39 @@ def main():
     ap.add_argument("--start-mask", type=int, default=0)
     ap.add_argument("--stop-mask", type=int, default=512)
     ap.add_argument("--out", type=Path, default=OUT)
+    ap.add_argument("--resume", action="store_true",
+                    help="preserve already checked masks in --out")
+    ap.add_argument("--checkpoint-every", type=int, default=8,
+                    help="atomically save after this many newly checked masks")
     args = ap.parse_args()
+    if args.checkpoint_every < 1:
+        raise SystemExit("--checkpoint-every must be positive")
     doc = json.loads(common.PROPOSAL.read_text(encoding="utf-8-sig"))
     weights = doc["weights"]
     rec = next(r for r in doc["records"] if r["id"] == args.id)
     db = common.parse_db(common.DBM.read_text(), args.id)
     masks = ([int(x) for x in args.masks.split(",") if x]
              if args.masks else range(args.start_mask, min(args.stop_mask, 512)))
-    records = []
+    by_mask = {}
+    if args.resume and args.out.exists():
+        previous = json.loads(args.out.read_text())
+        expected = {
+            "id": args.id,
+            "proposal_sha256": hashlib.sha256(
+                common.PROPOSAL.read_bytes()).hexdigest().upper(),
+            "threshold_T2": str(common.T2),
+        }
+        for key, value in expected.items():
+            if previous.get(key) != value:
+                raise SystemExit(f"cannot resume: {key} mismatch")
+        by_mask = {item["mask"]: item for item in previous["records"]}
+    processed = 0
     for mask in masks:
+        if mask in by_mask:
+            print(mask, "already-checked", flush=True)
+            continue
+        if mask < 0 or mask >= 512:
+            raise SystemExit(f"mask out of range: {mask}")
         lp, rows = threshold_alternative(rec, weights, db, mask)
         item = {"mask": mask, "float_success": bool(lp.success),
                 "status": "float-infeasible-of-alternative"}
@@ -150,23 +197,15 @@ def main():
                         equality_multiplier=(str(y[-1]) if ok else None))
             if ok:
                 item["y"] = [str(v) for v in y]
-        records.append(item)
+        by_mask[mask] = item
+        processed += 1
         print(item["mask"], item["status"], flush=True)
-    counts = {}
-    for item in records:
-        counts[item["status"]] = counts.get(item["status"], 0) + 1
-    report = {
-        "scope": ("exact threshold-Farkas audit for one residual id's sign "
-                  "regions; certificates are region-local and are not kernel "
-                  "credit or a global arbitrary-centre proof"),
-        "proposal_sha256": hashlib.sha256(
-            common.PROPOSAL.read_bytes()).hexdigest().upper(),
-        "id": args.id,
-        "threshold_T2": str(common.T2),
-        "status_counts": counts,
-        "records": records,
-    }
-    args.out.write_text(json.dumps(report, indent=1) + "\n")
+        if processed % args.checkpoint_every == 0:
+            write_report(args.out, make_report(
+                args, [by_mask[key] for key in sorted(by_mask)]))
+    records = [by_mask[key] for key in sorted(by_mask)]
+    report = make_report(args, records)
+    write_report(args.out, report)
     print(json.dumps({k: report[k] for k in
                       ("id", "threshold_T2", "status_counts")}, indent=1))
 

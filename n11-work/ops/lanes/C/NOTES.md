@@ -71,59 +71,14 @@ Closest is 2356 at `-7.388363184302248e-7`; no rescue, infeasibility proof,
 kernel credit, or paid id. Files and full hashes are in parts 231-235 reports
 and `beta-row-lp-scaled-results.json`.
 
-## 2026-11-01 - part 233 (2356 active-branch identification)
+## 2026-11-01 - parts 233-234 (2356 active branch, condensed)
 
-Added `audit_beta_lp_active_vertex.py` and ran all 512 corrected sign regions
-for id 2356. HiGHS selects mask 71 with float optimum `-0.14438698979548076`.
-The numerical active-equality selection has 107 rows, but exact `Decimal`
-elimination using the original `Fraction` coefficients is singular at column
-106. The reconstruction therefore **failed** and produced no beta/lambda/rmin,
-no gap claim, and no rescue. This distinguishes a genuinely dependent active
-set from the earlier coordinate-rounding failure.
-
-Report `beta-lp-active-vertex.json` records the branch and the exact failure.
-Checks: full 512-branch sweep within 65 s, `py_compile` exit 0, forbidden-token
-scan clean, `git diff --check` clean. Scope is arithmetic/search only: **not an
-infeasibility proof, kernel credit, or payment**. No Lean module or TARGET was
-added. Still unproved: all 373 radius packets, 382 absent payloads,
-SevenClassExclusions (0/7), and the arbitrary-centre theorem.
-
-Next concrete step: compute an exact `Fraction` RREF of the mask-71 active
-rows, add equations for its free variables from the float vertex, and re-solve
-the resulting consistent square system; then recheck every reduced row and the
-strict gap with `Fraction` before considering the other six ids.
-
-## 2026-11-01 - part 234 (exact LP vertex bug found and repaired)
-
-Found the root cause of part 233's singular active set: the exact equality row
-in `audit_beta_lp_active_vertex.py` encoded `beta_8 = 1` (an unbound leaked
-`j`) while the float LP correctly used `sum beta = 1`. Corrected that exact row.
-Added `audit_beta_lp_exact_rank.py`, which performs Fraction Gauss-Jordan and
-reports rank, free columns, augmented inconsistency, and an exact solution.
-Added `locate_beta_lp_inconsistent_row.py` as the certificate diagnostic.
-
-For id 2356, mask 71, the corrected active set now has exact rank 107,
-is consistent, has no free columns, and is reduced-feasible. Its exact vertex
-gap is `-7.388363184123934e-07` (full Fraction in
-`beta-lp-exact-rank.json`): **exact negative, no PASS, no residual id paid**.
-The old `beta-lp-active-vertex.json` failure is superseded; this session's
-exact-rank report is authoritative for the vertex calculation.
-
-Files/SHA256: `audit_beta_lp_active_vertex.py` `0F6D0512...9BB85`;
-`audit_beta_lp_exact_rank.py` `8475CD20...F15824`; locator
-`47839E61...070C3`; report `19480A03...09F74`; locator report
-`EFEB5F77...56C19`. Checks: `py_compile` exit 0 for all edited scripts;
-Fraction Gauss-Jordan at tolerances 2e-7 through 1e-12, all rank 107,
-consistent, exact-negative; fixed-mask LP and all exact evaluations ran exit 0;
-`git diff --check` clean. Scope: exact arithmetic at one float-selected sign
-region only, **not an infeasibility proof, CI/kernel credit, or payment**.
-
-Still unproved: all 373 residual radius packets, 382 absent payloads,
-SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next concrete
-step: use the repaired exact evaluator to reconstruct the best vertices of the
-remaining six public ids (optimization in one selected mask per id), checking
-whether any exact gap is positive; do not sweep all 512 masks until a positive
-float candidate appears.
+Part 233's singular exact active set was a real encoding bug, not merely
+rounding: the equality row used `beta_8 = 1` instead of `sum beta = 1`.
+After repair, id 2356 mask 71 has exact rank 107, no free columns, and exact
+vertex gap `-7.388363184123934e-07`; the old part-233 failure report is
+superseded. This is one-region arithmetic only, not infeasibility, CI credit,
+or payment.
 
 ## 2026-11-01 - part 235 (exact vertices for remaining six public ids)
 
@@ -242,3 +197,33 @@ unproved: threshold coverage for all six remaining public ids, 373 radius
 packets, 382 absent payloads, SevenClassExclusions (0/7), arbitrary-centre theorem.
 Next: run each six-id report in CI-sized contiguous slices with checkpointing,
 then replay all stored certificates with the new verifier.
+
+## 2026-11-01 - part 242 (checkpointed audit; full 1409 coverage)
+
+Added atomic `--checkpoint-every` and exact `--resume` handling to
+`audit_beta_lp_threshold_farkas.py`. A checkpoint validates the proposal hash,
+id, and threshold before merging, skips already checked masks, preserves sorted
+order, and replaces the report via a temporary file. Resume replay on the final
+report skipped masks 0/1 and left its SHA256 byte-identical.
+
+Completed and independently replayed all 512 sign regions for public id 1409:
+every record is `exact-l1-normalized-Farkas`. Generator exit 0 in 133 s;
+verifier exit 0 in 54 s with `--require-complete`. Report
+`beta-lp-threshold-all-1409.json` SHA256
+`D4DC22D79DF9EC555AE4243C746AAC59123B4E18309D0F11791AA8B563D902F7`;
+verification `beta-lp-threshold-verification-1409.json` SHA256
+`D6FC3DB0639D74DC1DAC884CE9BED1F811C4C7595BA932DBF6967409ECDE2037`.
+Audit script SHA256 `F0A47F5AC6FD623FEBFDD5D1DCF0B4E93E1E092E8A4858F554900833ABAFFB3D`;
+unchanged verifier SHA256 `09C653ED...9386DD`.
+
+Checks: `py_compile` exit 0 for both scripts; resume/checkpoint test exit 0;
+forbidden-token scan clean for the Python files; `git diff --check` clean.
+Scope: exact region-local LP certificates for two ids (2356 and 1409), **not
+kernel credit, payment, or a global infeasibility theorem**. Still unproved:
+threshold coverage for five public ids, 373 radius packets, 382 absent
+payloads, SevenClassExclusions (0/7), arbitrary-centre theorem. No Lean module
+or TARGET was added.
+
+Next concrete step: run the identical checkpointed 2337 sweep (observed cost
+about 133 s generation plus 54 s replay), then replay with
+`--require-complete` and record both SHA256 values.
