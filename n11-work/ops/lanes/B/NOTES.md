@@ -1,5 +1,47 @@
 # Lane B notes
 
+## 2026-11-01 - session 142: CI blocker is lane C, not the lane-B census
+
+- Downloaded the full `n11-lean-build` log for run `41312076357` at commit
+  `20fd194b2c81d5c840adc335dfb6cee90fcfe06f` (log SHA-256
+  `9B90588024D98BC43C304F11F301E6AFB21DCAC4E42FC786974C1BDA956EFADF`).
+  Added `audit_ci_log_progress.py` (SHA-256
+  `479C3BD1A0A9EE766B4AF614C71B75EBBAE1908C7BF94E151326008D126D52C2`)
+  and its machine-readable report (SHA-256
+  `23119205EC22D7E5EF4C556239C77E52D0AB1051A2A4489F9A17F9E10B24BB60`).
+- Exact finding: the first four targets exited 0, all from lane C's
+  `TARGETS.txt`. The fifth target,
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus`, started after replaying
+  9,344 dependencies and never exited; the runner then shut down with exit 143.
+  No lane-B target started. Session 141's attribution to lane B's
+  `...ResidualMain` was therefore imprecise: that target had already exited 0
+  as the fourth lane-C target.
+- Re-ran static checks: `audit_target_imports.py` is green with closure 1,991,
+  no missing imports and no forbidden tokens; `audit_terminal_census.py` is green
+  with terminal 2,506, B13 paid 1,997, refined residual 373 and an exact
+  partition; `audit_structural_dependency_isolation.py` is green with 1,969
+  modules and no path to lane C's conflicted module. Refreshed the two generated
+  audit reports. Scope remains static/source and exact finite-set arithmetic,
+  **not Lean elaboration or kernel checks**.
+- The lane-B replacement files remain unchanged and CI pending:
+  `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean` SHA-256
+  `9FE6D2CA1E396F52A45BE6C7B2BDD722C5A03BFC9C75BA44BC664818DDBD2031`,
+  `EnergyTerminalBatchB13RefineSixteenResidualCard.lean` SHA-256
+  `5B6C7656FB3B71AE047498AE2DD45D235C57BA5467EA95DFD9EF8E4E7F55A340`, and
+  `EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.lean` SHA-256
+  `42B6582D690E02CC8B204E5D7028E258A77A9A8B8312AB7B3551830C4974E7E4`.
+- Still unproved: kernel acceptance of the terminal census/Card/structural
+  chain; the structural trio; all 373 residual radii; packet `f0Lo`/`g`; 382
+  absent payload records; SevenClassExclusions (`0/7`); arbitrary-centre
+  full-disk theorem. No radius is paid. ROOT-IMPORT REQUEST remains: replace
+  `EnergyTerminalBatchB12Main` with `EnergyTerminalBatchB13Main` after the lane
+  chain is green.
+- Next: supervisor must remove or repair lane C's blocking
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus` target (outside lane-B
+  write authority). Then rerun `audit_ci_log_progress.py` on the new log and
+  inspect `EnergyTerminalBatchB13RefineSixteenTerminalCensus` as the first
+  lane-B kernel target.
+
 ## 2026-11-01 - session 140: fixed terminal-census pairwise dispatch
 
 - Fixed a concrete emitter defect in `emit_terminal_census_blocks.py` (SHA-256
@@ -172,3 +214,36 @@
 - Next: inspect CI for `EnergyTerminalBatchB13RefineSixteenTerminalCensus` first.
   If its block decision is still too large, halve the current 256-index blocks
   in the emitter (bounded regeneration) and relink `ResidualCard`.
+
+## 2026-11-01 - session 143: fix symbolic kernel decision in terminal census
+
+- Found a concrete defect in the terminal-census emitter: each `census*_spec`
+  ranged over symbolic `n : Fin 256` and used `decide +kernel`.  A symbolic
+  `Fin` cannot be kernel-reduced, so those twenty proofs are not valid evidence.
+- Changed `emit_terminal_census_blocks.py` SHA-256
+  `C9E27D22D96A985A65636FC73769B88D3093162CE16AC11227540434732BE862`: each
+  block census is now `Finset.univ.filter` of its terminal predicate, so
+  `census*_spec` is structural `simp only` over filter membership.  Only the concrete
+  `census*_card` remains `decide +kernel`, at most 256 indices per check.  The
+  emitter now self-checks block widths, 20 filtered specs/card checks and forbidden tokens.
+- Regenerated `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean`
+  (2,980 lines, SHA-256
+  `A94B42CC22AF9A04029368EC31026E1C5C05172F022375C4C2D1F7231B6A0797`):
+  20 filtered definitions, 20 `simp only` specs, 20 concrete cardinality decisions,
+  no forbidden tokens.
+- Static checks: `audit_terminal_census.py` `ok=true` (terminal 2,506, sharp
+  120, B13 paid 1,997, refined residual 373, exact partition);
+  `audit_target_imports.py` `ok=true` (closure 1,991, no missing/forbidden);
+  `audit_structural_dependency_isolation.py` `ok=true` (1,969 modules, no path
+  to lane C's conflicted census).  `lean --parse-only` stopped at the pre-existing
+  Mathlib checkout conflict, and a Mathlib probe timed out at 180 s; neither gave
+  a Lean diagnostic.  Scope is source/static auditing, not elaboration.
+- Still unproved/CI pending: the 20 concrete census cards, biUnion/card bridge,
+  ResidualCard and structural trio; all 373 residual radii; packet `f0Lo`/`g`;
+  382 absent payload records; SevenClassExclusions (`0/7`); arbitrary-centre
+  full-disk theorem.  No radius is paid.  Lane C's early `...ResidualCensus`
+  target still prevents lane-B CI from being reached.  ROOT-IMPORT REQUEST:
+  replace `EnergyTerminalBatchB12Main` with `EnergyTerminalBatchB13Main` only
+  after the lane chain is green.
+- Next: unblock/repair lane C ordering, then read CI's first diagnostic for
+  `...TerminalCensus`; if a 256-point card is too large, halve `BLOCK`.

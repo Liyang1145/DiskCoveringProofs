@@ -52,13 +52,12 @@ def main() -> None:
         size = min(BLOCK, 5011 - off)
         lines += [
             f"def embed{b} (n : Fin {size}) : Fin 5011 := ⟨n.val + {off}, by omega⟩",
-            f"def census{b} : Finset (Fin {size}) := {{",
-            "  " + ", ".join(f"⟨{i - off}, by decide⟩" for i in chunk),
-            "}",
+            f"def census{b} : Finset (Fin {size}) :=",
+            f"  Finset.univ.filter fun n => (DBMSourceTree.data (embed{b} n)).terminal = true",
             "",
             f"theorem census{b}_spec (n : Fin {size}) :",
             f"    (DBMSourceTree.data (embed{b} n)).terminal = true ↔ n ∈ census{b} := by",
-            "  decide +kernel",
+            f"  simp only [census{b}, Finset.mem_filter, Finset.mem_univ, true_and]",
             "",
             f"theorem census{b}_card : census{b}.card = {len(chunk)} := by",
             "  decide +kernel",
@@ -165,7 +164,14 @@ def main() -> None:
             else:
                 lines.append(f"      | exact blockIDs_{j}_{i}_disjoint.symm")
     lines += ["", "theorem censusIDs_card : censusIDs.card = 2506 := by", "  rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]", "  simp [blockIDs," + ", ".join(f"blockIDs{i}_card" for i in range(len(blocks))) + "]", "  norm_num", "", "theorem terminalIDs_card : terminalIDs.card = 2506 := by", "  rw [terminalIDs_eq_censusIDs, censusIDs_card]", "", "end", "end N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual", ""]
-    OUT.write_text("\n".join(lines), encoding="utf-8")
+    rendered = "\n".join(lines)
+    assert all(len(chunk) <= BLOCK for chunk in blocks)
+    assert all(f"def census{b} " in rendered for b in range(len(blocks)))
+    assert all(f"  simp only [census{b}," in rendered for b in range(len(blocks)))
+    assert rendered.count("  decide +kernel") == len(blocks)
+    assert not any(tok in rendered for tok in
+                   ("sorry", "admit", "native_decide", "implemented_by", "maxHeartbeats 0"))
+    OUT.write_text(rendered, encoding="utf-8")
     print(OUT)
     print(len(lines), "lines", len(ids), "terminals", "sha256", hashlib.sha256(OUT.read_bytes()).hexdigest().upper())
 
