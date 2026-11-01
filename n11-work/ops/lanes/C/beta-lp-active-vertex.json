@@ -1,0 +1,12 @@
+{
+ "scope": "exact rational active-set reconstruction of one corrected beta/row sign-region LP vertex; no infeasibility proof and no kernel credit",
+ "proposal_sha256": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
+ "result": {
+  "id": 2356,
+  "best_mask": 71,
+  "best_float_fun": "-0.14438698979548076",
+  "active_rank": 107,
+  "status": "reconstruction-failed",
+  "error": "ValueError: singular exact active system at column 106"
+ }
+}
