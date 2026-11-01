@@ -46,6 +46,11 @@ N11Formalization.EnergyRefineN3853
 N11Formalization.EnergyRefineN0037
 N11Formalization.EnergyTerminalBatchB13Refine0037
 N11Formalization.EnergyTerminalBatchB13Refine0037Main
+# Restored clean archive certificate for id 39 (unbounded heartbeat directive
+# removed) and its conditional paid-set/main consumers. CI pending.
+N11Formalization.EnergyRefineN0039
+N11Formalization.EnergyTerminalBatchB13Refine0039
+N11Formalization.EnergyTerminalBatchB13Refine0039Main
 N11Formalization.EnergyTerminalBatchB13RefineTwelve
 N11Formalization.EnergyTerminalBatchB13RefineTwelveMain
 N11Formalization.EnergyRefineN3112

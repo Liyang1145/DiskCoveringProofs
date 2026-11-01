@@ -1,8 +1,8 @@
-import N11Formalization.EnergyTerminalResidualCensusBase
+import N11Formalization.EnergyTerminalResidualCensusC03
 
 /-! Census part 4/4: source-index equivalence blocks congruent to
 3 modulo 4.  Every kernel decision below covers at most 100 source
-indices. -/
+indices.  Importing part 3 serializes the four memory-heavy parts in CI. -/
 set_option autoImplicit false
 namespace N11Formalization.EnergyTerminalResidualCensus
 open Finset

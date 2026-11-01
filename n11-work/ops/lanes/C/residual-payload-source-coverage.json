@@ -1,0 +1,3205 @@
+{
+ "scope": "static source coverage for the 389-id residual census; not arithmetic validation, Lean credit, or payment",
+ "source_sha256": {
+  "residual389-census.json": "44166EE869A61F6858F2285A98F96CC3FAA4F59FBB98C01D76B4DC42A28827A8",
+  "paid16-general-next512.json": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
+  "DBMSourceTreeData.lean": "BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5"
+ },
+ "archive_branch": "origin/ci/n11-build",
+ "historical_354_35_taxonomy_available_in_tree": false,
+ "counts": {
+  "residual": 389,
+  "proposal_complete": 7,
+  "dbm_complete": 389,
+  "archive_static_shape_complete": 57,
+  "archive_clean_static_shape": 42,
+  "any_complete_source": 62,
+  "no_complete_source": 327
+ },
+ "proposal_ids": [
+  1409,
+  2337,
+  2341,
+  2356,
+  2360,
+  2368,
+  2370
+ ],
+ "archive_ids": [
+  3,
+  23,
+  37,
+  38,
+  39,
+  40,
+  2337,
+  2341,
+  2965,
+  3040,
+  3112,
+  3116,
+  3149,
+  3431,
+  3432,
+  3440,
+  3490,
+  3496,
+  3517,
+  3520,
+  3522,
+  3550,
+  3564,
+  3569,
+  3573,
+  3578,
+  3589,
+  3623,
+  3633,
+  3738,
+  3777,
+  3778,
+  3781,
+  3783,
+  3792,
+  3794,
+  3795,
+  3800,
+  3802,
+  3803,
+  3807,
+  3808,
+  3810,
+  3821,
+  3825,
+  3841,
+  3851,
+  3853,
+  3854,
+  3863,
+  3865,
+  3979,
+  4162,
+  4244,
+  4313,
+  4650,
+  4684
+ ],
+ "archive_taxonomy_overlap": [
+  2337,
+  2341
+ ],
+ "rows": [
+  {
+   "id": 3,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0003.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 23,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0023.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 37,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0037.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 38,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0038.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 39,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0039.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 40,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN0040.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 41,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 65,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 66,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 79,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 230,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 411,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 534,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 715,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 1409,
+   "proposal_complete": true,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2337,
+   "proposal_complete": true,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN2337.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2341,
+   "proposal_complete": true,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN2341.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2356,
+   "proposal_complete": true,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2360,
+   "proposal_complete": true,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2368,
+   "proposal_complete": true,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2370,
+   "proposal_complete": true,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2957,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2965,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN2965.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2967,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 2988,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3040,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3040.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3045,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3047,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3108,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3112,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3112.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3116,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3116.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3126,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3145,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3149,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3149.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3150,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3182,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3420,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3422,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3431,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3431.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3432,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3432.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3440,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3440.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3442,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3480,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3489,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3490,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3490.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3491,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3496,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3496.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3497,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3501,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3503,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3511,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3515,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3517,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3517.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3519,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3520,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3520.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3521,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3522,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3522.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3529,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3531,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3533,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3535,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3545,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3549,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3550,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3550.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3557,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3558,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3564,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3564.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3569,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3569.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3573,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3573.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3578,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3578.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3589,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3589.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3593,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3606,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3613,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3615,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3621,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3623,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3623.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3629,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3633,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3633.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3637,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3639,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3643,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3653,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3657,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3664,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3674,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3683,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3738,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3738.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3739,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3762,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3765,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3771,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3773,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3777,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3777.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3778,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3778.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3780,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3781,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3781.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3783,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3783.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3785,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3789,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3792,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3792.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3794,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3794.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3795,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3795.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3800,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3800.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3802,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3802.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3803,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3803.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3807,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3807.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3808,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3808.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3809,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3810,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3810.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3811,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3812,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3814,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3818,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3821,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3821.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3824,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3825,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3825.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3827,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3836,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3837,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3838,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3839,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3840,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3841,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3841.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3851,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3851.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3853,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3853.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3854,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3854.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": true
+  },
+  {
+   "id": 3855,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3856,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3857,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3858,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3859,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3861,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3862,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3863,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3863.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3865,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3865.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3866,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3875,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3888,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3889,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3890,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3891,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3892,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3893,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3894,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3896,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3897,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3898,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3900,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3903,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3904,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3914,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3923,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3926,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3930,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3931,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3932,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3937,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3944,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3945,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3948,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3964,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 3979,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN3979.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4011,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4015,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4024,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4051,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4076,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4086,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4094,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4096,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4100,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4104,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4107,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4108,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4112,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4138,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4139,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4150,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4152,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4154,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4156,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4158,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4160,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4162,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4162.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4202,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4204,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4208,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4212,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4215,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4216,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4227,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4230,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4232,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4233,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4236,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4237,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4238,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4243,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4244,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4244.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4246,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4286,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4291,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4292,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4293,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4294,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4296,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4304,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4305,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4306,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4308,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4309,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4311,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4312,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4313,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4313.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4317,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4319,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4320,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4321,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4322,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4323,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4324,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4325,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4327,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4329,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4330,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4331,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4333,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4335,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4336,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4337,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4340,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4341,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4344,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4347,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4351,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4365,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4371,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4385,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4397,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4399,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4401,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4403,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4406,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4419,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4421,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4422,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4423,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4424,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4425,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4426,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4427,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4428,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4431,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4433,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4435,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4447,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4449,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4451,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4453,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4459,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4461,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4465,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4467,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4468,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4473,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4475,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4477,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4479,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4489,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4491,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4517,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4518,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4523,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4528,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4543,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4547,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4548,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4551,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4557,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4560,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4561,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4562,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4566,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4567,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4568,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4570,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4575,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4577,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4579,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4581,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4587,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4590,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4591,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4597,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4599,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4602,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4608,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4612,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4618,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4620,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4622,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4633,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4634,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4639,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4641,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4643,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4645,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4646,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4650,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4650.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4654,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4656,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4660,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4663,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4671,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4672,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4673,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4674,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4678,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4682,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4683,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4684,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": "ci-n11/drafts/energy/N11Formalization/EnergyRefineN4684.lean",
+   "archive_static_shape_complete": true,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4685,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4688,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4692,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4704,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4706,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4708,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4710,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4712,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4714,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4716,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4717,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4721,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4723,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4726,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4727,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4730,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4735,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4737,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4744,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4745,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4747,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4753,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4755,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4757,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4761,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4765,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4770,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4773,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4775,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4783,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4785,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4786,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4787,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4789,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4792,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4793,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4794,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4797,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4801,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4825,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4829,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4831,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4843,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4844,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4879,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4905,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4921,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4922,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4923,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4924,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4926,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4936,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4937,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4938,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4939,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4940,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4941,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4947,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4954,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4962,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4963,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4965,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4966,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4967,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4971,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4982,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  },
+  {
+   "id": 4992,
+   "proposal_complete": false,
+   "dbm_complete": true,
+   "archive_path": null,
+   "archive_static_shape_complete": false,
+   "archive_has_forbidden_tokens": false
+  }
+ ]
+}
