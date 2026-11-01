@@ -1,31 +1,27 @@
 import N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
-import N11Formalization.EnergyTerminalResidualCensusRefineSixteen
+import N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus
 
 /-! Structural, lane-B-owned replacement for the conflicted 373-id census.
-The count is obtained by removing the literal sixteen certificate ids from the
-already kernel-counted 389-id census.  This proves cardinality only; it pays no
+The count is obtained from a lane-B-owned 373-id literal census reconstructed
+from the terminal/packet sources; the sixteen certified ids are removed.  This proves cardinality only; it pays no
 residual radius and keeps the analytic obligations explicit. -/
 set_option autoImplicit false
 namespace N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural
 noncomputable section
 
 abbrev residual373 : Finset (Fin 5011) :=
-  EnergyTerminalResidualCensusRefineSixteen.refinedResidualIDs
+  EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.residual373
 
 theorem repair_paidIDs_eq_refineSixteen_paidIDs :
     EnergyTerminalBatchB13RefineSixteenRepair.paidIDs =
       EnergyTerminalBatchB13RefineSixteen.paidIDs := rfl
 
 theorem residualIDs_eq_residual373 :
-    EnergyTerminalBatchB13RefineSixteenResidual.residualIDs = residual373 := by
-  ext n
-  rw [EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff,
-    EnergyTerminalResidualCensusRefineSixteen.mem_refinedResidualIDs_iff,
-    repair_paidIDs_eq_refineSixteen_paidIDs]
-  rfl
+    EnergyTerminalBatchB13RefineSixteenResidual.residualIDs = residual373 :=
+  EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.residualIDs_eq_residual373
 
 theorem residual373_card : residual373.card = 373 :=
-  EnergyTerminalResidualCensusRefineSixteen.refinedResidualIDs_card
+  EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.residual373_card
 
 theorem residualIDs_card :
     EnergyTerminalBatchB13RefineSixteenResidual.residualIDs.card = 373 := by

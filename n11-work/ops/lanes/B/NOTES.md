@@ -105,3 +105,86 @@
 - Workflow success is not a theorem verdict. Only artifact `summary.json` module
   exits or `=== EXIT ... 0` lines count as kernel checks.
 - Source/inventory/byte audits and hash matches are not Lean proof credit.
+
+## 2026-11-01 - session 127: independent 373-id census; lane-C dependency removed
+
+- Added deterministic emitter `emit_structural_census.py` and report
+  `emit_structural_census-report.json`. It reconstructs the 2506 terminal ids,
+  120 sharp ids and 1997 paid ids from checked-in Lean tables plus
+  `rest1182-emission-manifest.json`, asserts 389 unconditional residual ids,
+  removes the 16 RefineSixteen ids, and asserts four chunks of 100/100/100/73.
+- Generated
+  `N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.lean`
+  (SHA-256 `8EC33EAE...BDB5B`): literal 373-id set, chunk cardinalities,
+  pairwise disjointness, `residual373_card = 373`, 51 block-local
+  `decide +kernel` set equalities, and `residualIDs_card = 373`. It imports
+  only `EnergyTerminalBatchB13RefineSixteenResidual`, not the lane-C census.
+- Rewired `EnergyTerminalBatchB13RefineSixteenResidualStructural.lean`
+  (SHA-256 `A9EF7A7E...CA0C`) to the new census and placed the new census,
+  structural wrapper and structural main ahead of the lane-C census targets in
+  `TARGETS.txt` (SHA-256 `31F5A876...C99280`). StructuralMain is unchanged
+  (`7CE25F5D...34A7`).
+- Checks run: emitter source reconstruction/assertions passed; both
+  `audit_structural_residual.py` (`ok=true`, closure 5, lane-C census absent)
+  and `audit_target_imports.py` (`ok=true`, closure 1988, no missing/forbidden)
+  passed. Scope is source/import/byte audit only; **no Lean kernel check was run**
+  and no radius is paid. All three structural modules are **CI pending**.
+- Still unproved: kernel success of the three target modules; all 373 residual
+  radii; packet `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions
+  (`0/7`); arbitrary-centre full-disk theorem.
+- Next concrete step: supervisor commits this worktree, then CI runs the
+  reordered lane-B targets. Inspect the first Lean error in
+  `EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus`; do not claim
+  cardinality or structural composition green until CI exit 0. ROOT-IMPORT
+  REQUEST remains `...ResidualStructuralMain` only after that.
+
+## 2026-11-01 - session 128: ten-index kernel split; frozen-census cross-check
+
+- Replaced the structural census generator's 100-index `interval_cases`/kernel
+  decisions with 502 ten-index `mem_sub_*` facts plus 51 bounded
+  `mem_iff_block*` dispatches. Each kernel term now covers at most ten source
+  indices and uses closed `Fin 5011` terms after `rcases`, addressing the two
+  previously observed failure modes (kernel scale and free-variable `+revert`).
+- Added an independent static cross-check: reconstructed 373 ids must equal the
+  frozen checked-in 389 chunk union in `EnergyTerminalResidualCensusBase` minus
+  the literal 16-id refinement set. This passed, along with 2506 terminal,
+  120 sharp, 389 unconditional residual and 373 refined residual counts.
+- Regenerated
+  `N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.lean`
+  (SHA-256 `415C4121...B73A`); emitter SHA-256 `8539B006...8772`. The emitters
+  also caught and fixed an intermediate block-cover bug before CI.
+- Checks run: deterministic emitter twice with identical output and all
+  cross-check assertions; `audit_structural_residual.py` (`ok=true`, closure 5,
+  conflicted census absent); `audit_target_imports.py` (`ok=true`, closure 1988,
+  no missing/forbidden). Scope is source/import/count audit only: **no Lean
+  kernel check**, so all three structural modules remain **CI pending** and no
+  radius is paid.
+- Still unproved: kernel success of the three target modules; all 373 residual
+  radii; packet `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions
+  (`0/7`); arbitrary-centre full-disk theorem.
+- Next concrete step: supervisor commits this worktree and CI builds the
+  structural census first. Inspect the first Lean error in
+  `EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus`; only CI exit 0
+  can pay cardinality. ROOT-IMPORT REQUEST remains
+  `...ResidualStructuralMain` only after the structural pair is kernel-green.
+
+## 2026-11-01 - session 129: regeneration and kernel-risk recheck
+
+- Re-ran `emit_structural_census.py` under a 90 s timeout. It reproduced the
+  census byte-for-byte (`415C4121...B73A`) with `count=373`, chunks
+  `[100,100,100,73]`, and `base389_crosscheck=true`.
+- Re-ran `audit_structural_residual.py` (`ok=true`, closure 5, conflicted
+  lane-C census absent) and `audit_target_imports.py` (`ok=true`, closure 1988,
+  no missing/forbidden imports). Scope is source/import/byte audit only.
+- Static census scan: 5,982 lines, 512 `decide +kernel`, 502 `interval_cases`,
+  zero `sorry`/`admit`/`native_decide`/`OfReduceBool`/`implemented_by`/
+  `maxHeartbeats 0`; longest generated line 1,903 bytes. These counts do not
+  establish kernel success.
+- No source changed from session 128; all three structural modules remain
+  **CI pending**, and no radius is paid. Still unproved: kernel build of the
+  structural census/pair/main; all 373 residual radii; packet `f0Lo`/`g`;
+  382 absent payload records; SevenClassExclusions (`0/7`); arbitrary-centre
+  full-disk theorem.
+- Next concrete step: CI the three structural targets in current order and
+  inspect the first owned Lean error. ROOT-IMPORT REQUEST remains
+  `...ResidualStructuralMain` only after the structural pair is CI green.

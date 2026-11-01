@@ -1,0 +1,21 @@
+{
+  "chunks": [
+    100,
+    100,
+    100,
+    73
+  ],
+  "counts": {
+    "refined_residual": 373,
+    "removed_certified": 16,
+    "sharp": 120,
+    "terminal": 2506,
+    "unconditional_residual": 389
+  },
+  "scope": "deterministic source reconstruction, frozen-census cross-check, and static target audit only; not a Lean kernel check and pays no radius",
+  "sha256": {
+    "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructural.lean": "A9EF7A7EC0BF192A82AAEE1A625519211C76943ED577919B384014BDCE08CA0C",
+    "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.lean": "415C4121F2659400C40A395FDD136E38C396B311D4B667AD588ABA2688D9B73A",
+    "n11-work/ops/lanes/B/emit_structural_census.py": "8539B006EBF66E217C8A8121E9A54C17319B83E2AFE51B8AAF4712C7DB938772"
+  }
+}

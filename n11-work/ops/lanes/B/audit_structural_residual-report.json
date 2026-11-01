@@ -1,12 +1,12 @@
 {
-  "closure_size": 8,
+  "closure_size": 5,
   "conflicted_module_absent": true,
   "failures": [],
   "ok": true,
   "scope": "source/import audit only; not a Lean kernel check and pays no radius",
   "sha256": {
-    "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructural.lean": "6F5854043CE50E40DD8E9448ADD703A7BDA095DCA56BF97D17CA8BF9D87CE68B",
+    "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructural.lean": "A9EF7A7EC0BF192A82AAEE1A625519211C76943ED577919B384014BDCE08CA0C",
     "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructuralMain.lean": "7CE25F5DF035E68DE463561E589A674B793386369FDCF81FA0378BB995FC34A7"
   },
-  "targets_sha256": "7AE311698D0910990C9F68C15CC0BBF37C46B156AA24322487FD8236A4E8D5AB"
+  "targets_sha256": "31F5A8761EBF0179C4C7FF0C36AB71C7C2946F776DCD4E2609C4D49B8AC99280"
 }
