@@ -1,36 +1,12 @@
 # Lane B notes
 
-## 2026-11-01 - session 125: hash-pinned census restoration utility
+## 2026-11-01 - sessions 125--126: hash-pinned census restoration utility
 
-- Added `restore_census_from_green.py` and its dry-run report. It pins the four
-  C01--C04 blobs at green `6937fb90` (SHA-256 `d629d5bc...70499`,
-  `ffc9ff2c...a94`, `bc4a9bf4...e697`, `70d5ffd5...ef66b`) and refuses
-  `--apply` if any green blob or live `+revert` precondition differs.
-- Ran the default read-only mode: `ok=true`, all four green pins match, all
-  live files differ from green, and the live `+revert` counts are 13/13/13/12.
-  Scope is byte restoration only; it is not a Lean kernel check and pays no
-  radius. No lane-C file was changed.
-- Next concrete step: supervisor runs
-  `python3 n11-work/ops/lanes/B/restore_census_from_green.py --apply`, then CI
-  builds lane C/FIRST so the restored census and lane-B structural pair are
-  reached before any later heavy target. Inspect the first Lean error.
-
-## 2026-11-01 - session 126: restoration preflight rechecked
-
-- Re-ran `timeout 60s python3 n11-work/ops/lanes/B/restore_census_from_green.py`
-  in its default read-only mode. Result `ok=true`, no failures. The pinned green
-  commit is `6937fb90`; all four expected SHA-256 values still match the green
-  blobs. Live C01--C04 still differ from green and contain 13/13/13/12
-  `+revert` markers.
-- Scope is byte preflight only, not a Lean kernel check. I did not run
-  `--apply`: C01--C04 are lane-C files, outside this lane's write authority.
-- No Lean source or target list changed in this session. The `TARGETS.txt`
-  structural pair still transitively imports `EnergyTerminalResidualCensus`, so
-  reordering targets cannot bypass the conflicted census dependency.
-- Next concrete step: supervisor runs
-  `python3 n11-work/ops/lanes/B/restore_census_from_green.py --apply`, then
-  serially CI `EnergyTerminalResidualCensus`, the lane-B structural pair, and
-  inspect the first owning Lean error. Kernel acceptance remains CI pending.
+- `restore_census_from_green.py` pins C01--C04 at green `6937fb90` and refuses
+  `--apply` on any byte mismatch. Two read-only runs: `ok=true`, all pins match,
+  live C01--C04 differ with 13/13/13/12 `+revert` markers. Scope is byte
+  preflight only, not Lean; no lane-C bytes changed. `--apply` remains a
+  supervisor action.
 
 ## 2026-11-01 - session 124: CI log attribution and census regression audit
 
@@ -188,3 +164,81 @@
 - Next concrete step: CI the three structural targets in current order and
   inspect the first owned Lean error. ROOT-IMPORT REQUEST remains
   `...ResidualStructuralMain` only after the structural pair is CI green.
+
+## 2026-11-01 - session 130: CI memory failure attribution
+
+- Added `audit_ci_memory.py` (SHA-256 `3C50C8D9...37C36`) and its JSON report
+  `audit_ci_memory-report.json` (SHA-256 `90A6A841...D1E`). It resolves a run's
+  job from the GitHub API, parses `BUILD`/`EXIT`, memory-sampler and shutdown
+  lines, and records whether a Lean diagnostic exists. Scope is CI-log audit
+  only, not a Lean kernel check.
+- Audited run `41289029262`, head `3cb5d30ed51320efad08c34481bb1fa9aa855afd`.
+  Green exits were `EnergyTerminalBatchB13ResidualCertificates`,
+  `...RefineSixteenRepair`, `...RefineSixteenResidual`, and
+  `...RefineSixteenResidualMain` (all 0). The active target at shutdown was
+  lane C's literal `EnergyTerminalBatchB13RefineSixteenResidualCensus`.
+- The job's sampler reached 8,627,376 KiB top RSS (Python audit converts this
+  to 8,425 MiB) with 1,150 MiB available; then the
+  OOM guard fired and the runner shut down (exit 143). There are zero Lean
+  `error:` lines. This attributes the failure to memory/shutdown, not a kernel
+  rejection of that target.
+- Re-ran `restore_census_from_green.py` read-only: `ok=true`; all green blobs
+  match commit `6937fb90`, while live C01--C04 remain changed and contain
+  13/13/13/12 `+revert` markers. Exact green/live SHA-256 values are in its JSON
+  report. I did not run `--apply` because C01--C04 are outside lane-B write
+  authority.
+- No Lean source or target list changed this session. The lane-B structural
+  modules remain **CI pending** and no radius is paid. Still unproved: kernel
+  success of the structural census/pair/main; all 373 residual radii; packet
+  `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions (`0/7`); the
+  arbitrary-centre full-disk theorem.
+- Next concrete step: supervisor applies
+  `python3 n11-work/ops/lanes/B/restore_census_from_green.py --apply`, confirms
+  zero `+revert`, and restarts CI. Inspect the first real Lean error only after
+  the restored lane-C dependencies replay/build. ROOT-IMPORT REQUEST remains
+  `...ResidualStructuralMain` only after its dependency chain is CI green.
+
+## 2026-11-01 - session 131: CI ordering blocker made executable
+
+- Added `audit_ci_target_order.py` (SHA-256 `821FD134...0916`) and report
+  `audit_ci_target_order-report.json` (`AF56DE0C...8241`). It parses the
+  workflow's `cat` order and all lane target files. Result `ok=true` for the
+  audit and `blocked_before_structural=true`: lane-C's literal
+  `...RefineSixteenResidualCensus` is global position 4, while lane-B's
+  `...ResidualStructuralCensus` is position 183. The workflow order is C, B, A.
+- Re-ran `audit_structural_residual.py`: `ok=true`, closure 5, conflicted
+  literal census absent. Structural census/Structural/StructuralMain SHA-256
+  are `415C4121...B73A`, `A9EF7A7E...CA0C`, `7CE25F5D...34A7`; no banned token
+  occurs in those sources. Scope is static source/import/order audit only.
+- This identifies why changing order inside `B/TARGETS.txt` cannot expose the
+  new lane-B census: serial CI encounters C's heavy target first. No Lean source
+  or target list changed, all three structural modules remain **CI pending**,
+  and no radius is paid.
+- Still unproved: kernel success of the structural trio; all 373 residual
+  radii; packet `f0Lo`/`g`; 382 absent payload records; SevenClassExclusions
+  (`0/7`); arbitrary-centre full-disk theorem.
+- Next concrete step: supervisor either restores C01--C04 and builds the
+  literal census once to completion, or temporarily removes/withdraws that
+  lane-C target so CI reaches B position 183. Then inspect the first Lean error
+  owned by the structural census. ROOT-IMPORT REQUEST remains
+  `...ResidualStructuralMain` only after that dependency chain is CI green.
+
+## 2026-11-01 - session 132: census alternate-route audit
+
+- Rechecked the lane-C alias route: `EnergyTerminalResidualCensusRefineSixteen`
+  counts 373 by subtracting a literal sixteen from the 389 census, while
+  `EnergyTerminalResidualCensusBase` is only the 19-line shared chunk source.
+  The subtraction cannot replace lane B's census by itself because connecting
+  either set to `RefineSixteenResidual.residualIDs` still requires the same
+  all-5011 source-index equality; `...ResidualCensusBase` has no such theorem.
+- Measured sources: B structural census is 5,982 lines / 314,874 bytes, SHA-256
+  `415C4121...B73A`; lane-C alias is 54 lines, SHA-256 `480A2F78...62DF`; base
+  SHA-256 `642F5A5B...442D`. This is a static footprint audit, not a kernel test.
+- No Lean file, TARGETS entry, or radius changed. Structural trio remains **CI
+  pending**; all 373 residual radii, packet `f0Lo`/`g`, 382 records, seven-class
+  exclusions, and the arbitrary-centre theorem remain unpaid.
+- Next concrete step: supervisor restores C01--C04 from green (or directly
+  builds the lane-B structural target), then CI the structural trio serially
+  and inspect the first owning Lean error. Do not split the base-census route
+  further without first proving `ResidualCensusBase.residualIDs =
+  RefineSixteenResidual.residualIDs`.
