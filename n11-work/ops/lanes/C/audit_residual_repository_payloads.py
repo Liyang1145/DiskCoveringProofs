@@ -1,9 +1,13 @@
 #!/usr/bin/env python3
-"""Search every local JSON/JSONL document for the 382 missing energy payloads.
+"""Search every bounded local JSON/JSONL document for residual energy payloads.
 
 This is a repository-local inventory check, not a HOST export and not a proof.
 It excludes this lane's generated reports so a prior failure listing cannot
-masquerade as a recovered payload.
+masquerade as a recovered payload.  Both the 7.6 MB next512 input and the
+39 MB restored C450 grouped-segment archive are deliberately parsed: the former
+contains the seven public residual records, while the latter has grouped packet
+tables but no residual record identifiers, so the remaining 382 payloads are
+absent from the repository-local inputs.
 """
 import hashlib
 import json
@@ -13,6 +17,7 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 CENSUS = HERE / "residual389-census.json"
 OUT = HERE / "residual-repository-payload-audit.json"
+KNOWN_PAYLOAD_IDS = {1409, 2337, 2341, 2356, 2360, 2368, 2370}
 
 
 def sha256(path):
@@ -50,7 +55,10 @@ def main():
     residual = set(census["residual_ids"])
     files = []
     oversized = []
-    max_bytes = 2_000_000
+    # Parse every bounded input, including the 7.6 MB next512 record file and
+    # the 39 MB restored C450 grouped-segment archive.  Only genuinely huge
+    # documents are listed rather than silently skipped.
+    max_bytes = 64_000_000
     search_roots = [ROOT / "n11-work", ROOT / "build"]
     for path in (p for base in search_roots for p in base.rglob("*")):
         if not path.is_file() or path.suffix not in {".json", ".jsonl"}:
@@ -88,11 +96,11 @@ def main():
             })
 
     payload_ids = sorted({hit["id"] for hit in hits if hit["payload"]})
-    if payload_ids:
+    if not set(payload_ids).issubset(KNOWN_PAYLOAD_IDS):
         raise AssertionError(f"unexpected repository payload ids: {payload_ids}")
 
     result = {
-        "scope": ("all n11-work/build JSON/JSONL outside ops/lanes/C, files <=2MB; "
+        "scope": ("all n11-work/build JSON/JSONL outside ops/lanes/C, files <=64MB; "
                   "not HOST storage and not a proof"),
         "source_sha256": {"residual389-census.json": sha256(CENSUS)},
         "scanned_file_count": len(files),
@@ -104,9 +112,10 @@ def main():
         "residual_object_hit_count": len(hits),
         "recovered_payload_count": len(payload_ids),
         "recovered_payload_ids": payload_ids,
-        "missing_payload_count": len(residual),
+        "known_payload_count": len(payload_ids),
+        "missing_payload_count": len(residual - set(payload_ids)),
         "missing_payload_ids_sha256": hashlib.sha256(
-            ",".join(map(str, sorted(residual))).encode()).hexdigest(),
+            ",".join(map(str, sorted(residual - set(payload_ids)))).encode()).hexdigest(),
     }
     OUT.write_text(json.dumps(result, indent=1) + "\n")
     print(json.dumps(result, indent=1))
