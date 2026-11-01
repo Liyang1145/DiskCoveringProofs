@@ -35,13 +35,12 @@
 
 ## 2026-10-31 - parts 202-208 (condensed)
 
-Part 202 added the conditional 373-id residual interface and exact census;
-part 203 generated the 51-block Lean census; part 204 added a structural sdiff
-census. Part 207's run `41217409382` was green for the repaired modules. The
-generated census was red at "Expected type must not contain free variables";
-the sdiff census was withheld because imported lane-B C01-C04 had the same red
-`decide` shape. Part 206 re-ran the five-field byte audit (702 files,
-51,466,284 bytes) and both emitters byte-identically; host arithmetic only.
+Parts 202-204 added the conditional 373-id interface, exact/51-block/sdiff
+censuses. Run `41217409382` was green for repaired modules, but the generated
+census was red ("Expected type must not contain free variables"); sdiff was
+withheld due to the same lane-B C01-C04 `decide` shape. Part 206 re-ran the
+five-field byte audit (702 files, 51,466,284 bytes) and both emitters
+byte-identically; host arithmetic only.
 
 ## 2026-10-31 - parts 209-214 (condensed)
 
@@ -93,89 +92,16 @@ All checks were exit 0, byte-stable reruns, `py_compile`, forbidden-token scan,
 and `git diff --check`. Scope is repository-local exact audit/inventory only:
 **not HOST storage, CI/kernel credit, or payment**. Still unproved: 373 radius
 packets, 382 absent payloads, SevenClassExclusions, and the theorem.
-## 2026-11-01 - part 230 (mixture-space audit begun)
+## 2026-11-01 - parts 230-232 (mixture and corrected sign-region LPs)
 
-New distinction found: `PaidCellCertificateMCap` exclusions fix the proposal
-mixture through `hf0`/`hg`; they are not exclusions over all `beta : Fin 16`.
-For all seven public records I recomputed `W_k = sum_f beta_f*weight_fk/10^12`
-and exactly recovered the stored `cl`, `f0Lo`, and all nine `g_q` from the
-record's 36 packet slopes/intercepts (7/7 records, zero Fraction error). This
-confirms `beta` is the only untested packet coordinate when lines are frozen.
-Committed as `audit_mixture_coordinates.py` plus
-`mixture-coordinate-audit.json`; script SHA256 `A20E2AE4...ED22D`, report
-SHA256 `8A151A6C...D395B`. Nonzero beta supports are respectively 4,4,5,5,6,4,4.
-
-A bounded scipy/HiGHS formulation (beta simplex, 90 dual rows, rmin, all
-`cl`/`g` sign regions) was attempted, but the first run selected rows with
-negative DBM entries and returned an invalid "lower" around 1310, far outside
-`f0Lo+[-lamB]+rmin` bounds. It is a formulation/search diagnostic only, **not
-a rescue or exact certificate**. No new Lean module or TARGET was added.
-
-Checks: auditor exit 0 twice with byte-identical report, `py_compile` exit 0,
-and `git diff --check` clean; exact `Fraction` reproduction of `cl/f0Lo/g` on
-all seven; DBM rows contain negative entries; local `numpy/scipy` was used for
-search only.
-Scope is exploratory arithmetic, not kernel credit. Still unproved: all 373
-radius packets, 382 absent payloads, seven-class exclusions, and the theorem.
-Next: restrict the beta LP to cell-valid dual rows (or add a proof-safe bound
-per row), enumerate the sign regions, then exactly recheck any positive gap
-with `Fraction` before emitting Lean.
-
-## 2026-11-01 - part 232 (corrected endpoint scale: no public rescue)
-
-Found and corrected a formulation error in `search_beta_row_lp.py`: its reduced
-rows used `rmin <= g + rho`, omitting the piecewise `endpoint_lo(g)` factors
-`Dq`/`DQ`. The four previously reported positive float gaps were therefore
-spurious. Added `search_beta_row_lp_scaled.py`, which enumerates the same 512
-`cl`/`g` sign regions but uses `endpoint_lo(g)*beta + rho` exactly, then
-rationalizes the winning float candidate and rechecks all nine reduced rows,
-`f0Lo`, `cl`, and `T^2` with `Fraction`.
-
-All seven public records have negative corrected float optima. Exact rounded
-candidates remain reduced-feasible but all fail the strict gap (decimal gaps):
-`1409 -3.121634442889686e-5`, `2337 -1.036542769494521e-5`,
-`2341 -2.678143522094817e-5`, `2356 -7.388363184302248e-7`,
-`2360 -1.719377351373577e-5`, `2368 -4.965940403283213e-5`,
-`2370 -3.736604830672129e-5`. The closest record is still negative; this is a
-float-candidate plus exact-recheck diagnostic, not an infeasibility proof or
-kernel credit.
-
-Files: `search_beta_row_lp_scaled.py` SHA256
-`8091D5EC...A316`; `beta-row-lp-scaled-results.json` SHA256
-`E449A3DE...01BC`. Checks: 512 branches for each of seven ids, `py_compile`
-exit 0, `git diff --check` clean, forbidden-token scan clean. No Lean module or
-TARGET added; paid ids remain 0.
-
-Still unproved: all 373 residual radius packets, the 382 absent payloads,
-SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next: solve the
-active set of the corrected 2356 LP over `Fraction` (support zeros plus tight
-scaled rows) to confirm the exact vertex gap; generalize this exact-vertex
-recovery to all 512 regions before drawing any infeasibility conclusion.
-
-## 2026-11-01 - part 231 (beta/row sign-region LP)
-
-Added `search_beta_row_lp.py` and `beta-row-lp-results.json`. For each of the
-seven public residual ids the script enumerates all 512 `cl`/nine-`g` sign
-regions and solves a bounded SciPy/HiGHS LP over 16-simplex `beta`, 90
-nonnegative ordered-pair dual rows, and `rmin`. It then reconstructs `rmin` as
-the exact minimum reduced-row RHS and exactly rechecks `f0Lo`, all `g`,
-reduced rows, and `T^2` with `Fraction`.
-
-Result: 0 exact PASS. The float optimum is positive for ids
-`{2337,2341,2356,2360}` by `6.74e-5`, `1.68e-5`, `1.86e-4`, `1.39e-4`,
-but rational reconstruction from `float.limit_denominator` loses every one;
-exact gaps are respectively `-4.99e-4`, `-2.69e-4`, `-4.39e-4`, `-3.30e-4`.
-For `{1409,2368,2370}` even the float optima are negative. All seven exact
-candidates satisfy reduced rows. This is a search diagnostic, not an
-infeasibility proof and not kernel credit.
-
-Script SHA256 `7B324F1C...CC600E`; report SHA256 `FF37163F...AEF4D`.
-Checks: all 512 branches/record, `py_compile` exit 0, forbidden-token scan
-clean. Scope is exact recheck of one rationalized optimum per sign region.
-Still unproved: all 373 packets, 382 payloads, seven classes, and theorem.
-Next: solve the active-set LP exactly over `Fraction` for the four positive
-float regions, rather than rationalizing the full 107-vector, then emit a
-packet only if every reduced row and the strict numeric gap survive.
+`PaidCellCertificateMCap` fixes the proposal mixture through `hf0`/`hg`, not
+all `beta : Fin 16`. For all seven public records, `cl/f0Lo/g` were exactly
+recovered from the 36 packet lines (zero Fraction error). `search_beta_row_lp`
+initially omitted the piecewise `endpoint_lo(g)` factors; after correction,
+all seven float optima are negative and all exact rounded candidates fail.
+Closest is 2356 at `-7.388363184302248e-7`; no rescue, infeasibility proof,
+kernel credit, or paid id. Files and full hashes are in parts 231-235 reports
+and `beta-row-lp-scaled-results.json`.
 
 ## 2026-11-01 - part 233 (2356 active-branch identification)
 
@@ -230,3 +156,46 @@ step: use the repaired exact evaluator to reconstruct the best vertices of the
 remaining six public ids (optimization in one selected mask per id), checking
 whether any exact gap is positive; do not sweep all 512 masks until a positive
 float candidate appears.
+
+## 2026-11-01 - part 235 (exact vertices for remaining six public ids)
+
+Added `audit_beta_lp_exact_sweep.py` and ran one best-sign-region LP sweep plus
+exact Fraction Gauss-Jordan/recheck for each remaining public record. All six
+mask-selected active sets have rank 107, no free columns, exact reduced rows,
+and exact-negative gaps: 1409 mask 15 `-3.121634442889577e-05`; 2337 mask 114
+`-1.0365427694943543e-05`; 2341 mask 55 `-2.678143522094676e-05`; 2360 mask
+247 `-1.7193773513727577e-05`; 2368 mask 98 `-4.965940403282977e-05`; 2370
+mask 99 `-3.7366048306710155e-05`. With corrected 2356 this is 7/7 exact
+negative at each id's best float sign region; no id is paid. This does not prove
+infeasibility over all 512 regions. Files: `audit_beta_lp_exact_sweep.py`
+SHA256 `c24bc4190302d488790878de77b78f5269b56a6625e9590768948777edb85536`;
+`beta-lp-exact-sweep.json` SHA256
+`b25b5f3e0c8d18731f8d10e5851bcd15fcc546ed7dd95201c172219b44b6da61`. Checks:
+`py_compile` exit 0; full 512 masks/id and exact rechecks exit 0 (175 s); scans
+and `git diff --check` clean. No Lean module/TARGET added.
+Still unproved: 373 radius packets, 382 absent payloads, SevenClassExclusions
+(0/7), arbitrary-centre theorem. Next: derive a region-independent exact
+duality/Farkas certificate, or use the exact evaluator to test all masks for
+one representative id rather than treating one negative region as decisive.
+
+## 2026-11-01 - part 236 (exact all-region sweep begun on 2356)
+
+Added `audit_beta_lp_all_regions.py`, which solves the float LP in each sign
+region, reconstructs its active system, performs exact Fraction Gauss-Jordan,
+and exactly rechecks any full-rank candidate. It supports bounded resumable
+`--start-mask/--stop-mask` runs and `--out` checkpoints.
+
+A 180 s run on id 2356 tested masks 0-103 (30 float-infeasible, 74 exact
+negative, 0 PASS); only mask 104 hit the time budget. Thus no positive exact
+candidate was found in 104/512 regions, but this is **not** a global
+infeasibility proof, kernel credit, or payment. Script SHA256
+`2b6e9b1b8a0101ce3c35e2afc8aa719b37106d6cc977875cfa355fa98ae60c8c`;
+report `beta-lp-all-regions.json` SHA256
+`6339cbbeaf44f678c03e9e98f2a0c101cc5555b3bc702f4843a5a9be7a57530d`.
+Checks: `py_compile` exit 0, forbidden-token scan clean, `git diff --check`
+clean, exact arithmetic throughout the reported regions.
+
+Still unproved: 373 radius packets, 382 absent payloads, SevenClassExclusions
+(0/7), and the arbitrary-centre theorem. Next: resume 2356 at
+`--start-mask 96 --out beta-lp-all-regions-96.json` (overlap validates
+determinism), then cover the remaining ranges and combine counts.

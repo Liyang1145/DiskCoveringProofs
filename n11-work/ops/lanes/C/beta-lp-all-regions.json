@@ -1,0 +1,1014 @@
+{
+ "scope": "exact Fraction active-vertex audit over tested sign regions for one public residual id; not an infeasibility proof and not kernel credit",
+ "proposal_sha256": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
+ "id": 2356,
+ "requested_masks": 512,
+ "tested_masks": 104,
+ "status_counts": {
+  "float-infeasible": 30,
+  "exact-negative": 74,
+  "time-budget": 1
+ },
+ "pass_count": 0,
+ "elapsed_seconds": 180.831,
+ "records": [
+  {
+   "mask": 0,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 1,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 2,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 3,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 4,
+   "float_fun": "-0.1443413601943392",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.636843745995098e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 5,
+   "float_fun": "-0.1443413601943392",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.636843745995098e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 6,
+   "float_fun": "-0.14434136019433924",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.636843745995098e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 7,
+   "float_fun": "-0.14438383519865267",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.893433146513858e-06,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 8,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 9,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 10,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 11,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 12,
+   "float_fun": "-0.1443255288055552",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.219982624400254e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 13,
+   "float_fun": "-0.14432552880555516",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.219982624400254e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 14,
+   "float_fun": "-0.1443255288055552",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.219982624400254e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 15,
+   "float_fun": "-0.14438212977211493",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.598859684230902e-06,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 16,
+   "float_fun": "-0.14433945829172048",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.827034007866267e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 17,
+   "float_fun": "-0.14433945829172046",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.827034007866267e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 18,
+   "float_fun": "-0.1443394582917205",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.827034007866267e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 19,
+   "float_fun": "-0.14433945829172048",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.827034007866267e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 20,
+   "float_fun": "-0.1443411738030969",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.655482870228533e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 21,
+   "float_fun": "-0.1443411738030969",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.655482870228533e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 22,
+   "float_fun": "-0.14434117380309688",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.655482870228533e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 23,
+   "float_fun": "-0.14438235158725768",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.377044541518038e-06,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 24,
+   "float_fun": "-0.14433438292784795",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.334570395124326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 25,
+   "float_fun": "-0.14433438292784795",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.334570395124326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 26,
+   "float_fun": "-0.14433438292784792",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.334570395124326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 27,
+   "float_fun": "-0.14433438292784795",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.334570395124326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 28,
+   "float_fun": "-0.14433438292784792",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.334570395124326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 29,
+   "float_fun": "-0.14433438292784792",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.334570395124326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 30,
+   "float_fun": "-0.14433438292784795",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.334570395124326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 31,
+   "float_fun": "-0.14438212977211493",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.598859684230902e-06,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 32,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 33,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 34,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 35,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 36,
+   "float_fun": "-0.14433427376776645",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.3454864032721036e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 37,
+   "float_fun": "-0.14433427376776645",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.3454864032721036e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 38,
+   "float_fun": "-0.14433427376776647",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.3454864032721036e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 39,
+   "float_fun": "-0.1443712950552334",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -1.6433576565717858e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 40,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 41,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 42,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 43,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 44,
+   "float_fun": "-0.14432552880555516",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.219982624400254e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 45,
+   "float_fun": "-0.14432552880555516",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.219982624400254e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 46,
+   "float_fun": "-0.1443255288055552",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.219982624400254e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 47,
+   "float_fun": "-0.14437356665699358",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -1.4161974805570549e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 48,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 49,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 50,
+   "float_fun": "-0.14425253704448474",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -0.00013519158731441664,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 51,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 52,
+   "float_fun": "-0.14433427376776645",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.3454864032721036e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 53,
+   "float_fun": "-0.14433427376776645",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.3454864032721036e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 54,
+   "float_fun": "-0.14433427376776645",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.3454864032721036e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 55,
+   "float_fun": "-0.14437129505523344",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -1.6433576565717858e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 56,
+   "float_fun": "-0.14431159561610166",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -7.613301569753107e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 57,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 58,
+   "float_fun": "-0.14430053762805836",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -8.71910037407839e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 59,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 60,
+   "float_fun": "-0.14433258396063456",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.5144671164573326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 61,
+   "float_fun": "-0.1443325839606346",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.5144671164573326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 62,
+   "float_fun": "-0.14433258396063461",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.5144671164573326e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 63,
+   "float_fun": "-0.144380733598353",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.995033446142204e-06,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 64,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 65,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 66,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 67,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 68,
+   "float_fun": "-0.14434493133039183",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.279730140731199e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 69,
+   "float_fun": "-0.14434493133039186",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.279730140731199e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 70,
+   "float_fun": "-0.1443465898565184",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.1138775280752375e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 71,
+   "float_fun": "-0.14438698979548076",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -7.388363184123934e-07,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 72,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 73,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 74,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 75,
+   "float_fun": "-0.14425847239544753",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -0.00012925623635161667,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 76,
+   "float_fun": "-0.14432831514497138",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.941348682777282e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 77,
+   "float_fun": "-0.1443283151449714",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.941348682777282e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 78,
+   "float_fun": "-0.1443283151449714",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -5.941348682777282e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 79,
+   "float_fun": "-0.1443844238892784",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.3047425207696285e-06,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 80,
+   "float_fun": "-0.14434782896017542",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.989967162372871e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 81,
+   "float_fun": "-0.14434782896017542",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.989967162372871e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 82,
+   "float_fun": "-0.1443478289601754",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.989967162372871e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 83,
+   "float_fun": "-0.14434782896017542",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.989967162372871e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 84,
+   "float_fun": "-0.14434782896017542",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.989967162372871e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 85,
+   "float_fun": "-0.14434782896017542",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.989967162372871e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 86,
+   "float_fun": "-0.14434782896017542",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.989967162372871e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 87,
+   "float_fun": "-0.14438688956102919",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -8.39070770018142e-07,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 88,
+   "float_fun": "-0.14434181042442593",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.591820737325676e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 89,
+   "float_fun": "-0.14434181042442595",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.591820737325676e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 90,
+   "float_fun": "-0.1443418104244259",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.591820737325676e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 91,
+   "float_fun": "-0.14434181042442595",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.591820737325676e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 92,
+   "float_fun": "-0.1443418104244259",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.591820737325676e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 93,
+   "float_fun": "-0.14434181042442587",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.591820737325676e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 94,
+   "float_fun": "-0.1443418104244259",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.591820737325676e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 95,
+   "float_fun": "-0.1443844238892784",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -3.3047425207696285e-06,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 96,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 97,
+   "float_fun": "None",
+   "float_success": false,
+   "status": "float-infeasible"
+  },
+  {
+   "mask": 98,
+   "float_fun": "-0.1443240092793663",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.371935243284424e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 99,
+   "float_fun": "-0.1443240092793663",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -6.371935243284424e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 100,
+   "float_fun": "-0.14434437904130157",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.334959049760842e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 101,
+   "float_fun": "-0.14434437904130157",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.334959049760842e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 102,
+   "float_fun": "-0.1443465898565184",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -4.1138775280752375e-05,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 103,
+   "float_fun": "-0.14438688956102916",
+   "float_success": true,
+   "selected_rows": 107,
+   "exact_rank": 107,
+   "free_columns": [],
+   "augmented_inconsistent": false,
+   "exact_gap_float": -8.39070770018142e-07,
+   "status": "exact-negative"
+  },
+  {
+   "mask": 104,
+   "status": "time-budget"
+  }
+ ]
+}
