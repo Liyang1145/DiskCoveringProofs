@@ -118,3 +118,5 @@ N11Formalization.SevenClassQ0Deg3UpperTables
 # Session 96: coarse exact arithmetic for the canonical strict total (CI pending)
 N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate
 N11Formalization.SevenClassQ0Deg3StrictTotal
+# Session 150: first seven-class exclusion consumer (CI pending)
+N11Formalization.SevenClassQ0Deg3Q0Exclusion
