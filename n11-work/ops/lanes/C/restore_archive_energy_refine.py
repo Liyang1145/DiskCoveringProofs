@@ -17,10 +17,18 @@ FORBIDDEN = re.compile(
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("node", type=int)
+    ap.add_argument(
+        "--drop-unbounded-heartbeats", action="store_true",
+        help="drop exactly one 'set_option maxHeartbeats 0' before validation")
     args = ap.parse_args()
     rel = f"ci-n11/drafts/energy/N11Formalization/EnergyRefineN{args.node:04d}.lean"
     source = subprocess.check_output(
         ["git", "show", f"{BRANCH}:{rel}"], text=True, cwd=ROOT)
+    if args.drop_unbounded_heartbeats:
+        directive = "set_option maxHeartbeats 0\n"
+        if source.count(directive) != 1:
+            raise SystemExit("expected exactly one unbounded heartbeat directive")
+        source = source.replace(directive, "", 1)
     if FORBIDDEN.search(source):
         raise SystemExit("refusing archive source with forbidden tokens")
     expected = f"N11Formalization.EnergyRefineN{args.node:04d}"

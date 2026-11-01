@@ -46,146 +46,99 @@ seven public ids' best float regions have exact-negative vertex gaps (closest
 Checks were exit 0 with exact rechecks, `py_compile`, token scans, and
 `git diff --check`. No host-storage/kernel credit or residual id is claimed.
 
-## 2026-11-01 - part 235 (exact vertices for remaining six public ids)
+## 2026-11-01 - parts 235-244 (public seven thresholds, condensed)
 
-Added `audit_beta_lp_exact_sweep.py` and ran one best-sign-region LP sweep plus
-exact Fraction Gauss-Jordan/recheck for each remaining public record. All six
-mask-selected active sets have rank 107, no free columns, exact reduced rows,
-and exact-negative gaps: 1409 mask 15 `-3.121634442889577e-05`; 2337 mask 114
-`-1.0365427694943543e-05`; 2341 mask 55 `-2.678143522094676e-05`; 2360 mask
-247 `-1.7193773513727577e-05`; 2368 mask 98 `-4.965940403282977e-05`; 2370
-mask 99 `-3.7366048306710155e-05`. With corrected 2356 this is 7/7 exact
-negative at each id's best float sign region; no id is paid. This does not prove
-infeasibility over all 512 regions. Files: `audit_beta_lp_exact_sweep.py`
-SHA256 `c24bc4190302d488790878de77b78f5269b56a6625e9590768948777edb85536`;
-`beta-lp-exact-sweep.json` SHA256
-`b25b5f3e0c8d18731f8d10e5851bcd15fcc546ed7dd95201c172219b44b6da61`. Checks:
-`py_compile` exit 0; full 512 masks/id and exact rechecks exit 0 (175 s); scans
-and `git diff --check` clean. No Lean module/TARGET added.
-Still unproved: 373 radius packets, 382 absent payloads, SevenClassExclusions
-(0/7), arbitrary-centre theorem. Next: derive a region-independent exact
-duality/Farkas certificate, or use the exact evaluator to test all masks for
-one representative id rather than treating one negative region as decisive.
+All seven public residual proposal records now have exact 512/512-region
+normalized-Farkas threshold coverage, independently replayed from proposal/DBM
+rows. Each region excludes this fixed model's `lower > T2`; this is not global
+infeasibility, kernel credit, a residual-id payment, or the arbitrary-centre
+theorem. Reports and replay hashes remain in this directory; part 242 also
+repaired an omitted weighted-sum row and endpoint factors. No new Lean target.
 
-Condensed: `audit_beta_lp_all_regions.py` checked all 512 regions of 2356 and
-`merge_beta_lp_region_reports.py` combined them: 448 exact-negative vertices,
-64 float-infeasible, zero PASS. See `beta-lp-all-regions-combined.json`.
+## 2026-11-01 - part 245 (residual source coverage, not the unavailable HOST taxonomy)
 
-## 2026-11-01 - parts 238-241 (2356 threshold coverage, condensed)
+Added `audit_residual_payload_sources.py` and ran it over all 389 residual ids.
+It classifies static source completeness from the exact census, the public
+seven-record proposal, `DBMSourceTreeData`, and `origin/ci/n11-build` archive
+modules. Result: 7 proposal-complete, 389 DBM-complete, 57 archive modules with
+the full terminal/new_radius/newIDs/pk_ok shape, 42 of those 57 also free of
+forbidden tokens, and 62 ids with any complete source (proposal ∩ archive = 2).
+Thus 327 residual ids have neither a complete public proposal nor an archive
+module; this supersedes the looser "382 absent payloads" wording for source
+coverage. The historical 354-method-failure/35-zero-dual taxonomy is **not in
+the public tree**, so no id was retroactively assigned to it.
 
-Established the exact normalized-Farkas pattern and independent replay. The
-generator appends `lower >= T2`, chooses an L1-vertex support by pivoted QR,
-solves exactly over Q (FLINT fast path plus pure-Python fallback), and rechecks
-signs/residuals/normalization. `verify_beta_lp_threshold_reports.py`
-reconstructs rows from proposal/DBM and checks hashes, threshold, every
-multiplier, 107 zero-residual columns, normalization, mask ordering, and
-completeness without calling the constructor.
+The seven proposal ids already have 512/512 exact region-local threshold-Farkas
+reports. The archive modules remain static drafts: no arithmetic replay or
+kernel credit here. Existing `EnergyRefineN0037` is unchanged, hash
+`7a0137826c2ea9c5975ee9d3b19952e409e86551b93262778933c3752240d0ac`, and was
+already in `TARGETS.txt`; no new Lean target was added this part.
 
-Id 2356: 512/512 `exact-l1-normalized-Farkas`; report SHA256
-`E4EFBB9B...E46BA8A5`; independent replay passed, verification SHA256
-`A071B85B...CF8F4D`. This proves only region-local LP infeasibility, **not
-kernel credit, payment of id 2356, or the arbitrary-centre theorem**.
+Files/hashes: audit script SHA256
+`834d5a7850d398fe2fc1872e5c79a00b96cd7de98a8cd7ae1ad6776fc8407fe1`;
+report `residual-payload-source-coverage.json` SHA256
+`ddee740bd077e20c9b8879277991567301ce2c3e7eb3fe3dd5be4b602995e03f`.
+Checks: `py_compile` exit 0; bounded audit exit 0; `git diff --check` clean.
+The detector source necessarily contains the forbidden-token regex literals;
+the generated report contains none.
 
-## 2026-11-01 - part 242 (checkpointed audit; full 1409 coverage)
+Still unproved: arithmetic validity/kernel credit for all 57 archive drafts,
+327 source-missing ids, SevenClassExclusions (0/7), and the arbitrary-centre
+theorem. Next concrete step: obtain the first failing target from CI run
+`41301935749` and repair the earliest clean archive module (`0037` is already
+queued); do not batch more uncompiled drafts before identifying that failure.
 
-Added atomic `--checkpoint-every` and exact `--resume` handling to
-`audit_beta_lp_threshold_farkas.py`. A checkpoint validates the proposal hash,
-id, and threshold before merging, skips already checked masks, preserves sorted
-order, and replaces the report via a temporary file. Resume replay on the final
-report skipped masks 0/1 and left its SHA256 byte-identical.
+## 2026-11-01 - part 246 (serialize residual census; CI OOM diagnosis)
 
-Completed and independently replayed all 512 sign regions for public id 1409:
-every record is `exact-l1-normalized-Farkas`. Generator exit 0 in 133 s;
-verifier exit 0 in 54 s with `--require-complete`. Report
-`beta-lp-threshold-all-1409.json` SHA256
-`D4DC22D79DF9EC555AE4243C746AAC59123B4E18309D0F11791AA8B563D902F7`;
-verification `beta-lp-threshold-verification-1409.json` SHA256
-`D6FC3DB0639D74DC1DAC884CE9BED1F811C4C7595BA932DBF6967409ECDE2037`.
-Audit script SHA256 `F0A47F5AC6FD623FEBFDD5D1DCF0B4E93E1E092E8A4858F554900833ABAFFB3D`;
-unchanged verifier SHA256 `09C653ED...9386DD`.
+Downloaded complete job log `124884637589` from CI run `41318867156`; the first
+four lane targets were green (including `Refine0037`). `RefineSixteenResidualCensus` then launched
+`EnergyTerminalResidualCensusC01` through `C04` concurrently; each reached
+roughly 7.3-8.6 GB RSS and the OOM guard killed all four at 866 MB available
+(exit 137). This is a resource failure, not a disproved census theorem.
 
-Checks: `py_compile` exit 0 for both scripts; resume/checkpoint test exit 0;
-forbidden-token scan clean for the Python files; `git diff --check` clean.
-Scope: exact region-local LP certificates for two ids (2356 and 1409), **not
-kernel credit, payment, or a global infeasibility theorem**. Still unproved:
-threshold coverage for five public ids, 373 radius packets, 382 absent
-payloads, SevenClassExclusions (0/7), arbitrary-centre theorem. No Lean module
-or TARGET was added.
+Changed only the imports of the three formerly independent parts so the DAG is
+`C01 -> C02 -> C03 -> C04`: `EnergyTerminalResidualCensusC02.lean` now imports
+`C01`, `C03` imports `C02`, and `C04` imports `C03`; header comments state why.
+C01 and all proof bodies are byte-unchanged. New hashes: C02
+`abb36c8059a7d82cf57902854d88b820eb5c373cec43283796f6abd47ec46c49`, C03
+`4e53cd56dd018820dd80baabcff81ecb5be4d6184b496d96a653879a2c712af7`, C04
+`2981d3c2bc2d4b8c5687691013a758174f19091114ff15355a506a9f211ddd64`.
 
-Next concrete step: run the identical checkpointed 2337 sweep (observed cost
-about 133 s generation plus 54 s replay), then replay with
-`--require-complete` and record both SHA256 values.
+The prior uncommitted source audit is retained with its recorded hashes. Checks:
+import DAG is the exact four-link chain; forbidden-token scan of C02-C04 and
+`git diff --check` were clean. Scope is static scheduling repair only: **CI
+pending**, no Lean module was kernel-checked locally and no residual id is paid.
 
-## 2026-11-01 - part 243 (complete threshold coverage for three more ids)
+Still unproved: census CI success, 373 radius certificates, 327 source-missing
+ids, SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next: CI-run
+the queued census target; if memory is still excessive, split each 100-index
+equivalence theorem again rather than adding targets.
 
-Installed the missing local wheels (`numpy`, `scipy`, `python-flint`) after the
-documented commands failed with `ModuleNotFoundError`. Ran the unchanged
-checkpointed generator and independent verifier over all 512 sign regions for
-ids 2337, 2341, and 2360. Every generated record is
-`exact-l1-normalized-Farkas`; each `--require-complete` replay reports
-`all-512-exact-rechecks-pass`, `complete: true`, masks `0..511`.
+## 2026-11-01 - part 247 (first formerly blocked archive refinement: id 39)
 
-- 2337: generator `beta-lp-threshold-all-2337.json` (26,401,875 bytes) SHA256
-  `D12DB47EC73D0907C5966C40600EE2CEAE8CF102F5978BE83E8CF47F169AD504`;
-  verification `beta-lp-threshold-verification-2337.json` SHA256
-  `5B5A1100D2E8ADEBDEF06AEF7936D62AA9F2029CBCC79FD97F4E4A399C2563EB`.
-- 2341: generator `beta-lp-threshold-all-2341.json` (27,321,049 bytes) SHA256
-  `60AE37A1296BA2370256FCDFB25D7F6C592CD74CA864640B3D6D4B195D2056EE`;
-  verification `beta-lp-threshold-verification-2341.json` SHA256
-  `41CC8531103E6A940F10A4D48E0917CD085CF6CF2B544F6C725BFF7FAC76BDD6`.
-- 2360: generator `beta-lp-threshold-all-2360.json` (20,131,673 bytes) SHA256
-  `2A4C37E49AE30DF26D5D6FB37F62B7F8A0BA135AE87710384134343D8F1B2D99`;
-  verification `beta-lp-threshold-verification-2360.json` SHA256
-  `A987420D5A27CAD96EAB67C70F364CE75CE7731B0747C51544589C2B0C39EAA0`.
+The source audit's 15 "forbidden" archive modules are not axiomatized drafts:
+the detector matched `#print axioms` (plural is harmless) and an unbounded
+`set_option maxHeartbeats 0`. Restored the smallest complete draft, id 39
+(K=13), after removing exactly that one directive. Archive source SHA256
+`959ec36e08213c58569167a4f6cca528e2e3c8ab4ff2bc4b0f58bf60a8cb5ae2`;
+new `EnergyRefineN0039.lean` SHA256
+`5bbe2fdb17bff213685e3eab77e0ee35267aa2b54a8e0a8fc914599f45f29a3d`.
+Extended `restore_archive_energy_refine.py` with an explicit, count-checked
+`--drop-unbounded-heartbeats` mode; SHA256
+`66fb6792f82865ce13a6f6510f849818336fb849e1e46b8347255e3c6fbab948`.
 
-Generator and verifier are unchanged: SHA256 `F0A47F5A...ABAFFB3D` and
-`09C653ED...9386DD`. Checks: all three generation runs exited 0; all three
-independent complete replays exited 0; `py_compile`, forbidden-token scan, and
-`git diff --check` were clean. With prior reports, threshold-region coverage is
-now 5/7 public ids (1409, 2337, 2341, 2356, 2360), all independently replayed.
-Scope remains exact region-local LP infeasibility only: **not kernel credit,
-residual payment, global infeasibility, or the arbitrary-centre theorem**.
-Still unproved: ids 2368/2370 threshold coverage; all 373 radius packets; 382
-absent payloads; SevenClassExclusions (0/7); arbitrary-centre theorem. No Lean
-module/TARGET added.
+Emitted conditional singleton consumers from the CI-green 2965 wrapper
+template, changing only the id/namespaces: `EnergyTerminalBatchB13Refine0039`
+extends B13 to 1998 ids, and `...Refine0039Main` weakens the existing seven-class
+main consumer. Hashes `407b62f6...a6090` and `cfb72df3...f8f1b`; emitter
+`emit_refine_singleton.py` is `4bbecb99...9e32`. Added all three module targets.
 
-Next concrete step: run the identical generator + complete replay for 2368,
-then 2370, and hash both pairs. Do not describe 7/7 as a global theorem.
-
-## 2026-11-01 - part 244 (complete 7/7 public-id threshold coverage)
-
-Restored the missing session-local NumPy/SciPy/python-flint wheels, then ran the
-unchanged checkpointed generator for the final two public ids. Each full report
-has 512/512 records with status `exact-l1-normalized-Farkas`, masks exactly
-`0..511`, and the same proposal SHA256
-`F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16`.
-
-- 2368 report `beta-lp-threshold-all-2368.json` (15 MB) SHA256
-  `D8BD564CD6BE3DC0F2DEB53E2C5B00D0E93D587B6102ED1746C852D81EF8ED05`;
-  verification `beta-lp-threshold-verification-2368.json` SHA256
-  `230DE27290FA8A0E4DD2E552AC5021D4F2BD56FB911502AA7C56478E3F700688`.
-- 2370 report `beta-lp-threshold-all-2370.json` (21 MB) SHA256
-  `A423EEF78168128EEBB514567A3E343DAB7A727E5A688113ECC57BA4CE0E029D`;
-  verification `beta-lp-threshold-verification-2370.json` SHA256
-  `D8C69803D9B757355C08120641F7543BD76CAFF8D15268FA0D2CCD3E8DD837CA`.
-
-Both independent `--require-complete` replays exited 0 with
-`all-512-exact-rechecks-pass`, `complete: true`, certificates 512, masks
-`0..511`. Generator SHA256 is unchanged
-`F0A47F5AC6FD623FEBFDD5D1DCF0B4E93E1E092E8A4858F554900833ABAFFB3D`;
-verifier SHA256 is unchanged
-`09C653ED7EB38E18284F62B130741062E0529DE8EDD317897D0B9080CB9386DD`.
-`py_compile` for both scripts exited 0 and `git diff --check` is clean.
-
-Combined with parts 242-243, all seven public residual ids now have exact
-512-region threshold-Farkas coverage, independently replayed. Scope: each sign
-region has no LP point with `lower > T2` in this fixed model. This is **not
-kernel credit, a residual-id payment, global infeasibility, or the
-arbitrary-centre theorem**.
-
-Still unproved: all 373 radius packets, the 382 absent payloads,
-SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next concrete
-step: no further threshold sweep of these seven is informative; inspect the 354
-non-public method-failure records for any complete proposal/DBM row set (versus
-the 382 absent payloads), and if one exists run this same exact audit before
-attempting a Lean consumer.
+Checks: `py_compile` exit 0 for both lane emitters; generated-source key-shape
+and stale-template scans clean; forbidden-token scan and `git diff --check`
+clean. Scope is static generation only: **CI pending**, no local Lean build, no
+new id is paid, and the 389-id census/main path is not yet rewired to N39.
+Still unproved: N39 kernel success, arithmetic independence of its archived
+packet, 327 source-missing ids, seven-class exclusions (0/7), and the
+arbitrary-centre theorem. Next: obtain the CI verdict for the first N39 target;
+if green, rebuild a 388-id census consumer excluding 39; if red, repair its
+first exact elaboration failure rather than adding more drafts.
