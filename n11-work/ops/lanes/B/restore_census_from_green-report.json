@@ -1,0 +1,33 @@
+{
+  "failures": [],
+  "green_commit": "6937fb90",
+  "mode": "check",
+  "ok": true,
+  "parts": {
+    "EnergyTerminalResidualCensusC01.lean": {
+      "changed": true,
+      "green_sha256": "d629d5bcd466dfa66c82352d2d214432bac2b8fa33bb884b83f759725b470499",
+      "live_sha256": "6e90c8ea7968da2e525d1335c1931ac5c13d03541f17f666132b9ffdd7ef07f4",
+      "revert_markers": 13
+    },
+    "EnergyTerminalResidualCensusC02.lean": {
+      "changed": true,
+      "green_sha256": "ffc9ff2cd42538fdb5f76766a22514393ba9c1d93bf9ee42026099a808ce4a94",
+      "live_sha256": "fc8885bd5d919704f269ed2708f859d8423755a862b2ddc6d735ec1f86bdc373",
+      "revert_markers": 13
+    },
+    "EnergyTerminalResidualCensusC03.lean": {
+      "changed": true,
+      "green_sha256": "bc4a9bf45c5dcc9c9c762e1066999565914473561cbc20f286600b1e35b8e697",
+      "live_sha256": "e1022163886cc55517864c0e371ad8278ceff6c0a748e9b336880990f6e02219",
+      "revert_markers": 13
+    },
+    "EnergyTerminalResidualCensusC04.lean": {
+      "changed": true,
+      "green_sha256": "70d5ffd57515b97b88e25f48377ef196a9953cbe7c399c7cb089ebda49aef66b",
+      "live_sha256": "d40ff05e5a088204ca37bf020089100a296c2cb31803403f63152038e2f67727",
+      "revert_markers": 12
+    }
+  },
+  "scope": "byte restoration only; does not prove Lean kernel acceptance"
+}

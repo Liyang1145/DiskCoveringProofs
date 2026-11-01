@@ -1,0 +1,64 @@
+{
+  "failures": [],
+  "green_commit": "6937fb90",
+  "green_totals": {
+    "bare": 51,
+    "revert": 0
+  },
+  "live_totals": {
+    "bare": 0,
+    "revert": 51
+  },
+  "ok": true,
+  "parts": {
+    "EnergyTerminalResidualCensusC01.lean": {
+      "green": {
+        "bare": 13,
+        "revert": 0
+      },
+      "live": {
+        "bare": 0,
+        "revert": 13
+      },
+      "sha256": "6E90C8EA7968DA2E525D1335C1931AC5C13D03541F17F666132B9FFDD7EF07F4",
+      "source_identical_to_green": false
+    },
+    "EnergyTerminalResidualCensusC02.lean": {
+      "green": {
+        "bare": 13,
+        "revert": 0
+      },
+      "live": {
+        "bare": 0,
+        "revert": 13
+      },
+      "sha256": "FC8885BD5D919704F269ED2708F859D8423755A862B2DDC6D735EC1F86BDC373",
+      "source_identical_to_green": false
+    },
+    "EnergyTerminalResidualCensusC03.lean": {
+      "green": {
+        "bare": 13,
+        "revert": 0
+      },
+      "live": {
+        "bare": 0,
+        "revert": 13
+      },
+      "sha256": "E1022163886CC55517864C0E371AD8278CEFF6C0A748E9B336880990F6E02219",
+      "source_identical_to_green": false
+    },
+    "EnergyTerminalResidualCensusC04.lean": {
+      "green": {
+        "bare": 12,
+        "revert": 0
+      },
+      "live": {
+        "bare": 0,
+        "revert": 12
+      },
+      "sha256": "D40FF05E5A088204CA37BF020089100A296C2CB31803403F63152038E2F67727",
+      "source_identical_to_green": false
+    }
+  },
+  "scope": "source/byte regression audit only; not a Lean kernel check"
+}
