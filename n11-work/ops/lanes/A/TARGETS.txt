@@ -79,3 +79,6 @@ N11Formalization.SevenClassQ0Deg3UpperTables
 # Session 96: coarse exact arithmetic for the canonical strict total (CI pending)
 N11Formalization.SevenClassQ0Deg3RelabelledTableCertificate
 N11Formalization.SevenClassQ0Deg3StrictTotal
+
+# Session 133: exact row-0 adjacent-step counterexample (CI pending)
+N11Formalization.SevenClassQ0Deg3SectorStepCounterexample

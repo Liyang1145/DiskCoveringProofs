@@ -45,6 +45,8 @@ def main() -> None:
         dec = [k for k in range(witness, probe.N) if values[k] < values[k + 1]]
         assert inc and dec, f"sector {i}: expected counterexamples missing"
         k = inc[0]
+        kinc = max(inc, key=lambda n: values[n] - values[n + 1])
+        kdec = max(dec, key=lambda n: values[n + 1] - values[n])
         rows.append({
             "site": i,
             "witnessK": witness,
@@ -52,6 +54,10 @@ def main() -> None:
             "decFailures": len(dec),
             "firstIncFailureK": k,
             "firstIncDelta": str(values[k + 1] - values[k]),
+            "largestIncFailureK": kinc,
+            "largestIncDrop": str(values[kinc] - values[kinc + 1]),
+            "largestDecFailureK": kdec,
+            "largestDecRise": str(values[kdec + 1] - values[kdec]),
         })
 
     result = {
@@ -65,6 +71,9 @@ def main() -> None:
     print("PASS: every row refutes both global adjacent-step premises")
     print("first increasing-step counterexamples:",
           [(row["site"], row["firstIncFailureK"]) for row in rows])
+    print("largest increasing-step drops:",
+          [(row["site"], row["largestIncFailureK"],
+            float(F(row["largestIncDrop"]))) for row in rows])
     print("wrote", OUT.name)
 
 

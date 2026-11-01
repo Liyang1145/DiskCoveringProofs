@@ -40,175 +40,20 @@ The emitters/Lean now unfold `ringSite`/`nextRing` and rewrite `nextSite i` to
 witnesses, 18,369 within-bin steps, and 63/63 jumps.  A bounded Mathlib probe
 timed out and is not evidence; kernel credit remained pending.
 
-## 2026-10-31 (session 122) -- frozen-piHi maxima and namespace repair
+## 2026-10-31 (sessions 122--127, condensed)
 
-Live CI on `9031cec3` exposed two independent lane-A defects.  `SectorPeak`
-could not elaborate `ringSite`/`nextRing` because their defining namespaces
-were not opened.  More substantively, all edge/sector maxima came from the
-source JSON's upper `piHi`, which is slightly below the frozen Lean
-`RatInterval.piHi`; the 21 edge peaks therefore reduced to `False` rational
-goals, and the sector table also paired `mu i` with Lean's `mu (nextSite i)`.
-The upper-reduction composition additionally omitted `unfold EdgeCheck`.
+Repaired frozen-`piHi` maxima, sector pairing `mu (nextSite i)`, namespace
+opens, `unfold EdgeCheck`, and the emitter/Lean witness mismatch.  Exact
+regeneration, 21 edge gates, 9 sector gates, and the strict-total ledger pass
+(slack `0.012092890370999008`).  These remain source/arithmetic checks only.
 
-The upper-table and sector-peak emitters now recompute exact maxima at the
-frozen Lean rational, use `mu ((site+1) mod 9)` for sectors, and emit the
-correct sector witnesses `[1024,1536,1536,1536,1536,1536,1536,1536,1024]`.
-`SectorPeak` opens `ActualRingDirectionOrder` and
-`ActualBoundaryCyclicOrder`; `edgeValid_of_unimodal` unfolds `EdgeCheck`.
+## 2026-10-31 (sessions 129--131, condensed)
 
-**Files / SHA256.** `SevenClassQ0Deg3UpperTables.lean`
-`dcad2b97889dedfca205799add1d0657b4f5239a5f70362d5372da4df69c62bd`;
-`SevenClassQ0Deg3SectorPeak.lean`
-`d6afaaee9257d12304107f6708366829ca09f24a810af8a87c071557554b4bda`;
-`SevenClassQ0Deg3UpperReductionUnimodal.lean`
-`0cad77f31891bf9401cba9fdc701f29bb990cc52dd7ef770550522b96780c135`;
-`emit_q0_degree3_upper_tables.py`
-`f016b44b361a1ea3cc0e54744f34e469b4689494f236d8146f8cbd3484693b74`;
-`emit_q0_degree3_sector_peak.py`
-`badf2f26dee1acdb514ac648375def9d6788c805a49f4eca6918eb7737cab709`.
-
-**Checks (scope).** Exact regeneration PASS for 21 edge maxima/witnesses and
-9 sector maxima; 9/9 six-decimal sector bounds enclose their exact Lean-piHi
-maxima by less than `1e-6`; textual sector gate PASS 9/9; edge gate PASS
-21/21; `py_compile` and `git diff --check` PASS.  These are source and
-exact-rational checks only.  No local project kernel build ran, so the repair
-is **CI pending**, not proof credit.
-
-**Still unproved / unpaid.** Kernel acceptance of edge/sector peaks, their
-shape/calculus/bin descendants, table/strict-total, `Q0Degree3AreaInput`, all
-seven exclusions, and the arbitrary-centre theorem.
-
-**Next concrete step.** On the next committed CI run, inspect
-`UpperReductionUnimodal` first: its peak checks now target exact Lean-piHi
-maxima and its composition unfolds `EdgeCheck`.  Then inspect `SectorPeak`;
-do not diagnose dependency-red suffixes/bins/certificates.
-
-## 2026-10-31 (session 126) -- emitter/Lean witness mismatch repaired
-
-Static comparison found the session-122 Lean still declared
-`sectorWitness = [1024,1024,1536,...]` while `sectorPeakValid_1` rewrote index
-1 to `1536`; that `decide +kernel` could not succeed.  The emitter now renders
-the computed witness vector instead of hard-coding it, and regeneration gives
-the correct `[1024,1536,1536,1536,1536,1536,1536,1536,1024]`.
-
-**Files / SHA256.** `SevenClassQ0Deg3SectorPeak.lean`
-`2a95b7a34aa8ec11acdf10f83116b586ca6380deef4447ab8033daf02ca5ca11`;
-`emit_q0_degree3_sector_peak.py`
-`a0e32e4a00585e772b39261c0015ec01d2f1294cc3bf11b7f8fd6e0cc7e2036c`.
-Upper tables remain `dcad2b97...c62bd`; upper reduction remains
-`0cad77f3...0c135`.  **Checks (scope):** deterministic emitter regeneration,
-9/9 sector textual unfold gate, `py_compile`, and `git diff --check` PASS.
-No project kernel build ran; **CI pending**.
-
-**Still unproved / unpaid.** Kernel acceptance of peaks/bins, then sector shape,
-calculus and certificates; `Q0Degree3AreaInput`, all seven exclusions, and the
-arbitrary-centre theorem.  **Next:** commit these bytes, then diagnose the first
-independent `UpperReductionUnimodal`/`SectorPeak` error on the new SHA.
-
-## 2026-10-31 (session 127) -- strict-total ledger repaired
-
-Repaired `verify_q0_degree3_strict_total.py` (SHA256
-`a355027601f45612f3fbf64d1265d34a21c20808567ec0b53d954c01e40f493f`).
-It had compared Lean's shifted, Lean-`piHi` sector table against the 40-digit
-manifest table.  Each ledger now uses its own maxima, `mu`, `lam`, and `pi` pair.
-
-**Checks (scope):** verifier PASS: Lean total `3.129499763218794`, slack
-`0.012092890370999`; manifest delta `5.506e-21`; exact edge audit PASS 21/21;
-edge/sector textual unfold gates PASS; `py_compile` and `git diff --check` PASS.
-These are arithmetic/text checks, not kernel credit.  CI run `41235435914` was
-still in its Lean build step at 19:55 UTC; a local probe of the two generic
-adjacent-step lemmas exceeded the 90 s import cap, so no local kernel result.
-
-**Unpaid:** unchanged: kernel peaks/edge/sector shape, `Q0Degree3AreaInput`,
-seven exclusions, arbitrary-centre theorem.  **Next:** on the completed job,
-diagnose the first independent `UpperReductionUnimodal`/`SectorPeak` error.
-
-## 2026-10-31 (session 129) -- stale-owner diagnosis and byte verification
-
-Downloaded the live log for `41237352391` and the completed log for
-`41229638083` (`9031cec3`).  The latter is the first build that reached lane A:
-C450/Main/Audit, Cos, Mono, Bins, EndpointChecks and UpperTables were green;
-UpperReductionUnimodal and SectorPeak were red, with all descendants
-dependency-red.  Its two owning defects were (a) `edgeValid_of_unimodal`
-returned the unfolded bound instead of `EdgeCheck i k`, and (b) sector peak
-proofs referenced `ringSite`/`nextRing` without the two defining namespaces,
-leaving each rewritten goal unsolved.  It also predates the corrected
-`edgeMaxAt` table.  The current `d8893a1b` bytes already repair (a) with
-`unfold EdgeCheck`, (b) with both namespace opens, and the table bytes.
-
-**Files / SHA256.** `SevenClassQ0Deg3SectorPeak.lean`
-`2a95b7a34aa8ec11acdf10f83116b586ca6380deef4447ab8033daf02ca5ca11`;
-`SevenClassQ0Deg3UpperReductionUnimodal.lean`
-`0cad77f31891bf9401cba9fdc701f29bb990cc52dd7ef770550522b96780c135`;
-`SevenClassQ0Deg3UpperTables.lean`
-`dcad2b97889dedfca205799add1d0657b4f5239a5f70362d5372da4df69c62bd`.
-
-**Checks (scope).** Read-only live/completed CI log extraction; textual unfold
-gates PASS 9/9 and 21/21; exact edge-literal audit PASS 10/10 + 2/2; the two
-peak emitters `py_compile` PASS; `git diff --check` PASS.  These establish only
-that the stale owners are addressed in source, not kernel acceptance.  Run
-`41237352391` remains **in progress in lane B**; peaks are **CI pending**.
-
-**Still unproved / unpaid.** Kernel acceptance of both peaks, edge/sector shape
-and bins, table/strict-total, `Q0Degree3AreaInput`, all seven exclusions, and
-the arbitrary-centre theorem.
-
-**Next concrete step.** When `41237352391` reaches lane A, parse its
-`=== EXIT` lines and read the first independent UpperReductionUnimodal or
-SectorPeak error; do not diagnose dependency-red suffix/bin targets.
-
-## 2026-10-31 (session 130) -- Lean sector pairing audited
-
-Run `41237352391` (`bb9fb0c0`) remained `in_progress` in lane B at 20:41 UTC;
-no lane-A kernel verdict is available.  Independent exact-rational recomputation
-confirmed all nine emitted sector witnesses under the actual Lean pairing
-`mu (nextSite i) = mu ((i+1) mod 9)`: witnesses
-`[1024,1536,1536,1536,1536,1536,1536,1536,1024]`, each attaining its row maximum
-exactly.  The old grid audit still uses report row `mu i`; its reported maxima
-and strict total agree as a multiset/sum, but its row witnesses are stale.  No
-Lean source needed changing.
-
-**Checks (scope).** Independent Python `Fraction` replay of 9 x 2049 sector
-values at frozen Lean `piHi`; exact witness-to-max equality 9/9.  Existing
-sector/edge textual gates PASS 9/9 and 21/21; strict-total verifier PASS (slack
-`0.012092890370999`); 21-edge + 9-sector grid arithmetic PASS; `py_compile` and
-`git diff --check` PASS.  These are arithmetic/text checks, not kernel credit.
-
-**Still unproved / unpaid.** Kernel acceptance of both peaks and all descendants;
-shape/calculus/bins, `Q0Degree3AreaInput`, seven exclusions, arbitrary-centre
-theorem.
-
-**Next concrete step.** When `41237352391` reaches lane A, inspect the first
-independent `UpperReductionUnimodal`/`SectorPeak` error.  Separately update
-`audit_q0_degree3_sector_grid.py` to compute `mu ((site+1) mod 9)` rows and emit
-the recomputed witnesses.
-
-## 2026-10-31 (session 131) -- audit aligned with Lean sector pairing
-
-Updated `audit_q0_degree3_sector_grid.py` to compute each sector at
-`mu ((i+1) mod 9)`, select each row's exact maximizer, and use that Lean-site
-index in the total's `abs(mu ...)` term.  The old report is indexed by `mu i`;
-the script explicitly maps source row `(i+1) mod 9` to Lean site `i`.  The
-recomputed witnesses are `[1024,1536,1536,1536,1536,1536,1536,1536,1024]`.
-
-**Files / SHA256.** `audit_q0_degree3_sector_grid.py`
-`9c6dd64e6ec328e94e7c4b1e028ff05581060820e248d7375fba0e1c10fbc02a`;
-`q0-degree3-sector-grid-audit.json`
-`f5a2b82dc75d18af5c322b488f43384217b5c11f6a238d7c962bfe8a4a898f43`.
-Peak emitter and Lean remain `a0e32e4a...2036c` and `2a95b7a3...ca11`.
-
-**Checks (scope).** Exact-rational audit PASS: 21/21 edge maxima, 9/9 x 2049
-sector rows, unchanged strict total `3.129499763218794...`, slack
-`0.012092890370999008`; `py_compile` and `git diff --check` PASS.  This is
-arithmetic/text evidence, not kernel credit.
-
-**Still unproved / unpaid.** Peak and descendant kernel acceptance, sector
-shape/calculus/bins, `Q0Degree3AreaInput`, seven exclusions, and the
-arbitrary-centre theorem.
-
-**Next concrete step.** On the next completed lane-A CI job, inspect the first
-independent `UpperReductionUnimodal`/`SectorPeak` error; do not diagnose
-dependency-red descendants.
+Diagnosed stale peak owners and aligned the sector-grid audit with Lean's
+`mu (nextSite i)` pairing.  Recomputed witnesses are
+`[1024,1536,1536,1536,1536,1536,1536,1536,1024]`; exact maxima and strict-total
+slack `0.012092890370999008` reproduce.  These were source/arithmetic checks,
+not kernel credit.
 
 ## 2026-10-31 (session 132) -- CI owner diagnosis and projection repair
 
@@ -246,3 +91,92 @@ all seven exclusions; arbitrary-centre theorem.
 **Next concrete step.** Submit these hashes and inspect the next lane-A CI
 `UpperReductionUnimodal` exit first.  If green, inspect `SectorPeak`; do not
 diagnose dependency-red descendants.
+
+## 2026-11-01 (session 133) -- false global sector-step premise quantified
+
+Ran the exact rational sector-step audit on the current tree.  It confirms that
+the global adjacent-step premise `SectorAdjacentUnimodal` in
+`SevenClassQ0Deg3SectorShape` is false for every one of the nine rows; the
+correct paid route remains the eight-bin reduction in `SectorBinShape` /
+`SectorAssembler`.  I found no source consumer of the false theorem outside its
+own defining module.
+
+Extended `audit_q0_degree3_sector_steps.py` to record the strongest exact
+failure per row, not just the first.  The first increasing-step failure at row 0
+is index 543 with drop `4.236721208286...e-8`, while the strongest increasing
+failure is index 1022 with drop `7.421500301204...e-5`.  These are much safer
+candidates for a future kernel refutation.
+
+**Files / SHA256.** `audit_q0_degree3_sector_steps.py`
+`47293a578a5f1357ce6050438645cf61e9514a1437ce2c77c1c5c34614bac266`;
+`q0-degree3-sector-steps-audit.json`
+`3b6d4c38dff344f4ddc6484e69a011eedc4d72a03d3c516f4bf813a0cd3c7b7e`.
+
+**Checks (scope).** Exact-rational replay PASS: all nine maxima reproduce and
+all nine rows refute both global adjacent-step directions; strongest row-0
+increasing drop `7.421500301204045e-5`.  `py_compile` and `git diff --check`
+PASS.  This is arithmetic/source evidence, not kernel or proof credit.
+
+**Still unproved / unpaid.** Kernel acceptance of the peaks and the entire
+bin-wise sector chain; sector/edge shape kernel checks; table/strict-total;
+`Q0Degree3AreaInput`; seven exclusions; arbitrary-centre theorem.  The false
+`SectorAdjacentUnimodal` interface must not be used as a premise.
+
+**Next concrete step.** Add `SevenClassQ0Deg3SectorStepCounterexample` with a
+kernel proof of `¬ SectorAdjacentUnimodal` using index 1022 (row 0), after the
+peak owners are green; add it to lane-A `TARGETS.txt` only when written.
+
+## 2026-11-01 (session 134) -- row-0 sector-step counterexample drafted
+
+Emitted `SevenClassQ0Deg3SectorStepCounterexample.lean` from the exact audit's
+strongest row-0 increasing-step failure, indices 1022 -> 1023 (below witness
+1024).  The module proves the concrete decrease
+`sectorValue 0 1023 < sectorValue 0 1022`, then derives
+`¬ SectorAdjacentUnimodal` from `SectorIncSteps 0`.  This refutes the false
+global interface; it does not pay the bin-wise sector chain.
+
+**Files / SHA256.** `SevenClassQ0Deg3SectorStepCounterexample.lean`
+`644bb07a2a50597b8184a855277c1641e2ac21f9bb40f5fac738a85176b8bc9b`;
+`emit_q0_degree3_sector_step_counterexample.py`
+`360a51e0a6b815cb1a40b85c0b1f0507a91ee414928d7edfdec48dbcfde090c2`.
+
+**Checks (scope).** Exact-rational regeneration PASS: the 1022 -> 1023 drop
+matches `largestIncDrop` and has a 1237-digit numerator; deterministic emit
+and `py_compile` PASS.  No local project kernel build is available, so the
+Lean target is **CI pending**, not proof credit.
+
+**Still unproved / unpaid.** Kernel acceptance of the counterexample and peak
+owners; all eight-bin sector shape/calculus targets; table/strict-total;
+`Q0Degree3AreaInput`; seven exclusions; arbitrary-centre theorem.  The false
+`SectorAdjacentUnimodal` must not be used as a premise.
+
+**Next concrete step.** Inspect CI for
+`SevenClassQ0Deg3SectorStepCounterexample`: if the normalization or the
+`decide +kernel` premise fails, repair only that first owning error; if green,
+continue with the bin-wise sector targets.
+
+## 2026-11-01 (session 135) -- CI blocker isolated outside lane A
+
+Read job `124730488529` (run `41266567914`, head `a30e76db`) from the public
+Actions log.  It never reached lane A: the last completed target was
+`EnergyTerminalBatchB13RefineSixteenResidualMain` (exit 0); the runner then hit
+its shutdown/memory limit while building lane C's
+`EnergyTerminalBatchB13RefineSixteenResidualCensus` and exited 143.  Thus the
+latest run gives **no verdict** on the counterexample or peaks.  This is a CI
+ordering/resource blocker, not a lane-A Lean error.
+
+Regenerated the counterexample deterministically: exact drop
+`sectorValue 0 1022 - sectorValue 0 1023` is positive with a 1237-digit
+numerator; output bytes and emitter hash reproduce
+`644bb07a...bc9b` and `360a51e0...090c2`.  `git diff --check` passes.  Scope:
+source/exact-rational check only; no project kernel build ran.  Two bounded
+Mathlib-probe attempts (literal-rational `norm_num` and `decide +kernel`) hit
+the 75 s cap with near-zero CPU, so they are inconclusive and are not evidence.
+
+**Still unproved / unpaid.** Kernel acceptance of the counterexample and peak
+owners; all bin-wise sector shape/calculus targets; table/strict-total;
+`Q0Degree3AreaInput`; seven exclusions; arbitrary-centre theorem.  The false
+`SectorAdjacentUnimodal` must not be used as a premise.
+
+**Next concrete step.** Have CI run lane A before or without the memory-heavy
+lane-C census; then inspect `SevenClassQ0Deg3SectorStepCounterexample` first.
