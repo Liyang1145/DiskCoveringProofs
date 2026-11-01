@@ -199,3 +199,51 @@ Still unproved: 373 radius packets, 382 absent payloads, SevenClassExclusions
 (0/7), and the arbitrary-centre theorem. Next: resume 2356 at
 `--start-mask 96 --out beta-lp-all-regions-96.json` (overlap validates
 determinism), then cover the remaining ranges and combine counts.
+
+## 2026-11-01 - part 237 (2356 all 512 regions tested)
+
+Completed the exact sign-region audit for id 2356. The resumed ranges tested
+masks 96-239 and 240-511; together with part 236's masks 0-103 they cover all
+512 regions. Added `merge_beta_lp_region_reports.py`, which rejects conflicting
+duplicate masks and incomplete coverage, drops only explicit time-budget
+records, and records source-report hashes. The eight-region overlap (96-103)
+matched byte-for-byte as parsed JSON. Combined result: 448 exact-negative
+active vertices, 64 float-infeasible regions, **0 PASS**, no missing masks.
+The nearest exact-negative gap is `-7.388363184123934e-07`; the most negative
+is `-2.3169086659397076e-04`. No residual id is paid.
+
+Files/SHA256: `audit_beta_lp_all_regions.py` `2B6E9B1B...E60C8C`;
+`merge_beta_lp_region_reports.py` `13B855F5...EF4D1`;
+`beta-lp-all-regions-96.json` `47E50B3E...99000`;
+`beta-lp-all-regions-240.json` `9B5ED5F5...E0283`;
+`beta-lp-all-regions-combined.json` `293BFA15...4A2C`.
+Checks: `py_compile` exit 0 for both scripts; the merge exit 0 and reports
+512/512 covered, eight overlaps checked, zero conflicts; `git diff --check`
+clean. Scope: exact Fraction evaluation of float-selected vertices across all
+regions of **one id only**. The 64 float-infeasible cases have no exact
+infeasibility certificate, and a negative active vertex is not yet a
+region-independent Farkas proof. This is **not** kernel credit or payment.
+
+Still unproved: all 373 radius packets, 382 absent payloads,
+SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next concrete
+step: emit exact Farkas certificates for the 64 float-infeasible regions of
+2356 and an exact optimality/duality check for the 448 negative vertices; a
+failure there must be resolved before extending all-region coverage to 1409.
+
+## 2026-11-01 - part 238 (exact Farkas certificates for 2356)
+
+Added `audit_beta_lp_farkas.py`: normalized alternative `y>=0`, z free,
+`[A Aeq]^T(y,z)=0`, `[b beq]^T(y,z)=-1`; exact Fraction Gaussian rebuild of
+the float support, then exact sign/residual/normalization checks. Full 512-mask
+run produced 64 `exact-normalized-Farkas` certificates, exactly the same mask
+set as the prior 64 float-infeasible regions (set equality checked); the other
+448 alternatives are float-infeasible (primal feasible, not yet bounded below
+`T2`). Script SHA256 `05112041...04BE3BC`; report
+`beta-lp-farkas-all.json` SHA256 `A6B2359D...D30B23F`.
+Checks: `py_compile` exit 0; full run exit 0 in about 54 s; `git diff --check`
+clean; forbidden-token scan clean. Scope: one id's sign-region LP infeasibility,
+not a global infeasibility result, kernel credit, or residual payment.
+
+Still unproved: threshold bounds for the 448 feasible regions, 373 packets,
+382 absent payloads, SevenClassExclusions (0/7), arbitrary-centre theorem.
+Next: add `lower <= T2` to the alternative and exact-certify all 448 regions.
