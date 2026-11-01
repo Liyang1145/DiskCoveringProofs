@@ -64,3 +64,4 @@ LAST-REPORT: 2026-10-29 23:35 CST
 2026-11-01 06:40 workers ran, merged. LAST-REPORT: 2026-11-01 06:40 CST
 2026-11-01 07:20 merged lane C w/ conflict resolved (kept B census); latest CI fail on 1a300c5e (B merge), prior success bb9fb0c0. LAST-REPORT: 2026-11-01 06:40 CST
 2026-11-01 07:55 workers ran, merged A/B (C skipped: forbidden pattern in census .lean). LAST-REPORT: 2026-11-01 07:55 CST
+2026-11-01 08:45 merge: lane C conflict on B13 census (skipped); CI fail 621c657c. LAST-REPORT: 2026-11-01 07:55 CST
