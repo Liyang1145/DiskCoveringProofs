@@ -14,13 +14,12 @@ def terminalIDs : Finset (Fin 5011) :=
   Finset.univ.filter fun n => (DBMSourceTree.data n).terminal = true
 
 def embed0 (n : Fin 256) : Fin 5011 := ⟨n.val + 0, by omega⟩
-def census0 : Finset (Fin 256) := {
-  ⟨3, by decide⟩, ⟨5, by decide⟩, ⟨9, by decide⟩, ⟨23, by decide⟩, ⟨32, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨39, by decide⟩, ⟨40, by decide⟩, ⟨41, by decide⟩, ⟨44, by decide⟩, ⟨46, by decide⟩, ⟨48, by decide⟩, ⟨50, by decide⟩, ⟨63, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨68, by decide⟩, ⟨70, by decide⟩, ⟨72, by decide⟩, ⟨74, by decide⟩, ⟨79, by decide⟩, ⟨82, by decide⟩, ⟨83, by decide⟩, ⟨85, by decide⟩, ⟨91, by decide⟩, ⟨101, by decide⟩, ⟨104, by decide⟩, ⟨106, by decide⟩, ⟨109, by decide⟩, ⟨111, by decide⟩, ⟨115, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨142, by decide⟩, ⟨150, by decide⟩, ⟨152, by decide⟩, ⟨154, by decide⟩, ⟨155, by decide⟩, ⟨158, by decide⟩, ⟨160, by decide⟩, ⟨165, by decide⟩, ⟨167, by decide⟩, ⟨170, by decide⟩, ⟨182, by decide⟩, ⟨189, by decide⟩, ⟨191, by decide⟩, ⟨198, by decide⟩, ⟨213, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨230, by decide⟩, ⟨231, by decide⟩, ⟨233, by decide⟩, ⟨236, by decide⟩, ⟨238, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨246, by decide⟩, ⟨249, by decide⟩, ⟨252, by decide⟩
-}
+def census0 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed0 n)).terminal = true
 
 theorem census0_spec (n : Fin 256) :
     (DBMSourceTree.data (embed0 n)).terminal = true ↔ n ∈ census0 := by
-  decide +kernel
+  simp only [census0, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census0_card : census0.card = 61 := by
   decide +kernel
@@ -62,13 +61,12 @@ theorem block_terminal0 {n : Fin 5011} (hn : n ∈ blockIDs0) :
   exact (census0_spec m).mpr hm
 
 def embed1 (n : Fin 256) : Fin 5011 := ⟨n.val + 256, by omega⟩
-def census1 : Finset (Fin 256) := {
-  ⟨1, by decide⟩, ⟨14, by decide⟩, ⟨15, by decide⟩, ⟨17, by decide⟩, ⟨24, by decide⟩, ⟨26, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨33, by decide⟩, ⟨35, by decide⟩, ⟨38, by decide⟩, ⟨39, by decide⟩, ⟨41, by decide⟩, ⟨44, by decide⟩, ⟨46, by decide⟩, ⟨50, by decide⟩, ⟨62, by decide⟩, ⟨64, by decide⟩, ⟨66, by decide⟩, ⟨70, by decide⟩, ⟨73, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨80, by decide⟩, ⟨83, by decide⟩, ⟨85, by decide⟩, ⟨91, by decide⟩, ⟨100, by decide⟩, ⟨103, by decide⟩, ⟨105, by decide⟩, ⟨107, by decide⟩, ⟨109, by decide⟩, ⟨112, by decide⟩, ⟨115, by decide⟩, ⟨117, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨123, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨132, by decide⟩, ⟨136, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨155, by decide⟩, ⟨160, by decide⟩, ⟨162, by decide⟩, ⟨164, by decide⟩, ⟨166, by decide⟩, ⟨168, by decide⟩, ⟨177, by decide⟩, ⟨181, by decide⟩, ⟨183, by decide⟩, ⟨188, by decide⟩, ⟨190, by decide⟩, ⟨191, by decide⟩, ⟨194, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨200, by decide⟩, ⟨201, by decide⟩, ⟨204, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨227, by decide⟩, ⟨229, by decide⟩, ⟨232, by decide⟩, ⟨234, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨243, by decide⟩, ⟨246, by decide⟩, ⟨248, by decide⟩, ⟨254, by decide⟩
-}
+def census1 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed1 n)).terminal = true
 
 theorem census1_spec (n : Fin 256) :
     (DBMSourceTree.data (embed1 n)).terminal = true ↔ n ∈ census1 := by
-  decide +kernel
+  simp only [census1, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census1_card : census1.card = 75 := by
   decide +kernel
@@ -110,13 +108,12 @@ theorem block_terminal1 {n : Fin 5011} (hn : n ∈ blockIDs1) :
   exact (census1_spec m).mpr hm
 
 def embed2 (n : Fin 256) : Fin 5011 := ⟨n.val + 512, by omega⟩
-def census2 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨7, by decide⟩, ⟨9, by decide⟩, ⟨22, by decide⟩, ⟨32, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨37, by decide⟩, ⟨50, by decide⟩, ⟨53, by decide⟩, ⟨56, by decide⟩, ⟨60, by decide⟩, ⟨65, by decide⟩, ⟨75, by decide⟩, ⟨79, by decide⟩, ⟨94, by decide⟩, ⟨96, by decide⟩, ⟨103, by decide⟩, ⟨106, by decide⟩, ⟨110, by decide⟩, ⟨112, by decide⟩, ⟨113, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨134, by decide⟩, ⟨135, by decide⟩, ⟨138, by decide⟩, ⟨139, by decide⟩, ⟨141, by decide⟩, ⟨144, by decide⟩, ⟨146, by decide⟩, ⟨148, by decide⟩, ⟨152, by decide⟩, ⟨154, by decide⟩, ⟨158, by decide⟩, ⟨159, by decide⟩, ⟨165, by decide⟩, ⟨167, by decide⟩, ⟨172, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨181, by decide⟩, ⟨189, by decide⟩, ⟨192, by decide⟩, ⟨194, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨200, by decide⟩, ⟨203, by decide⟩, ⟨204, by decide⟩, ⟨206, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨213, by decide⟩, ⟨215, by decide⟩, ⟨217, by decide⟩, ⟨219, by decide⟩, ⟨221, by decide⟩, ⟨224, by decide⟩, ⟨225, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨232, by decide⟩, ⟨234, by decide⟩, ⟨236, by decide⟩, ⟨238, by decide⟩, ⟨243, by decide⟩, ⟨249, by decide⟩, ⟨253, by decide⟩
-}
+def census2 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed2 n)).terminal = true
 
 theorem census2_spec (n : Fin 256) :
     (DBMSourceTree.data (embed2 n)).terminal = true ↔ n ∈ census2 := by
-  decide +kernel
+  simp only [census2, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census2_card : census2.card = 69 := by
   decide +kernel
@@ -158,13 +155,12 @@ theorem block_terminal2 {n : Fin 5011} (hn : n ∈ blockIDs2) :
   exact (census2_spec m).mpr hm
 
 def embed3 (n : Fin 256) : Fin 5011 := ⟨n.val + 768, by omega⟩
-def census3 : Finset (Fin 256) := {
-  ⟨13, by decide⟩, ⟨16, by decide⟩, ⟨23, by decide⟩, ⟨37, by decide⟩, ⟨41, by decide⟩, ⟨44, by decide⟩, ⟨45, by decide⟩, ⟨46, by decide⟩, ⟨49, by decide⟩, ⟨52, by decide⟩, ⟨54, by decide⟩, ⟨61, by decide⟩, ⟨71, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨79, by decide⟩, ⟨82, by decide⟩, ⟨87, by decide⟩, ⟨93, by decide⟩, ⟨96, by decide⟩, ⟨97, by decide⟩, ⟨104, by decide⟩, ⟨107, by decide⟩, ⟨111, by decide⟩, ⟨114, by decide⟩, ⟨118, by decide⟩, ⟨120, by decide⟩, ⟨128, by decide⟩, ⟨133, by decide⟩, ⟨135, by decide⟩, ⟨142, by decide⟩, ⟨146, by decide⟩, ⟨159, by decide⟩, ⟨164, by decide⟩, ⟨166, by decide⟩, ⟨168, by decide⟩, ⟨171, by decide⟩, ⟨174, by decide⟩, ⟨178, by decide⟩, ⟨180, by decide⟩, ⟨182, by decide⟩, ⟨186, by decide⟩, ⟨190, by decide⟩, ⟨192, by decide⟩, ⟨194, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨201, by decide⟩, ⟨204, by decide⟩, ⟨205, by decide⟩, ⟨211, by decide⟩, ⟨216, by decide⟩, ⟨221, by decide⟩, ⟨232, by decide⟩, ⟨236, by decide⟩, ⟨239, by decide⟩, ⟨242, by decide⟩, ⟨247, by decide⟩, ⟨248, by decide⟩, ⟨250, by decide⟩, ⟨252, by decide⟩
-}
+def census3 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed3 n)).terminal = true
 
 theorem census3_spec (n : Fin 256) :
     (DBMSourceTree.data (embed3 n)).terminal = true ↔ n ∈ census3 := by
-  decide +kernel
+  simp only [census3, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census3_card : census3.card = 62 := by
   decide +kernel
@@ -206,13 +202,12 @@ theorem block_terminal3 {n : Fin 5011} (hn : n ∈ blockIDs3) :
   exact (census3_spec m).mpr hm
 
 def embed4 (n : Fin 256) : Fin 5011 := ⟨n.val + 1024, by omega⟩
-def census4 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨9, by decide⟩, ⟨19, by decide⟩, ⟨30, by decide⟩, ⟨40, by decide⟩, ⟨42, by decide⟩, ⟨44, by decide⟩, ⟨46, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨55, by decide⟩, ⟨57, by decide⟩, ⟨60, by decide⟩, ⟨61, by decide⟩, ⟨63, by decide⟩, ⟨67, by decide⟩, ⟨70, by decide⟩, ⟨72, by decide⟩, ⟨88, by decide⟩, ⟨93, by decide⟩, ⟨95, by decide⟩, ⟨99, by decide⟩, ⟨104, by decide⟩, ⟨114, by decide⟩, ⟨115, by decide⟩, ⟨120, by decide⟩, ⟨136, by decide⟩, ⟨141, by decide⟩, ⟨144, by decide⟩, ⟨146, by decide⟩, ⟨147, by decide⟩, ⟨148, by decide⟩, ⟨153, by decide⟩, ⟨160, by decide⟩, ⟨164, by decide⟩, ⟨165, by decide⟩, ⟨167, by decide⟩, ⟨169, by decide⟩, ⟨171, by decide⟩, ⟨177, by decide⟩, ⟨181, by decide⟩, ⟨183, by decide⟩, ⟨185, by decide⟩, ⟨190, by decide⟩, ⟨191, by decide⟩, ⟨199, by decide⟩, ⟨203, by decide⟩, ⟨205, by decide⟩, ⟨208, by decide⟩, ⟨210, by decide⟩, ⟨211, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨220, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨233, by decide⟩, ⟨237, by decide⟩, ⟨242, by decide⟩, ⟨244, by decide⟩, ⟨253, by decide⟩, ⟨255, by decide⟩
-}
+def census4 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed4 n)).terminal = true
 
 theorem census4_spec (n : Fin 256) :
     (DBMSourceTree.data (embed4 n)).terminal = true ↔ n ∈ census4 := by
-  decide +kernel
+  simp only [census4, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census4_card : census4.card = 62 := by
   decide +kernel
@@ -254,13 +249,12 @@ theorem block_terminal4 {n : Fin 5011} (hn : n ∈ blockIDs4) :
   exact (census4_spec m).mpr hm
 
 def embed5 (n : Fin 256) : Fin 5011 := ⟨n.val + 1280, by omega⟩
-def census5 : Finset (Fin 256) := {
-  ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨13, by decide⟩, ⟨25, by decide⟩, ⟨31, by decide⟩, ⟨33, by decide⟩, ⟨35, by decide⟩, ⟨37, by decide⟩, ⟨39, by decide⟩, ⟨42, by decide⟩, ⟨47, by decide⟩, ⟨58, by decide⟩, ⟨60, by decide⟩, ⟨79, by decide⟩, ⟨92, by decide⟩, ⟨96, by decide⟩, ⟨98, by decide⟩, ⟨100, by decide⟩, ⟨102, by decide⟩, ⟨108, by decide⟩, ⟨112, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨122, by decide⟩, ⟨124, by decide⟩, ⟨126, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨138, by decide⟩, ⟨140, by decide⟩, ⟨142, by decide⟩, ⟨144, by decide⟩, ⟨146, by decide⟩, ⟨152, by decide⟩, ⟨154, by decide⟩, ⟨157, by decide⟩, ⟨159, by decide⟩, ⟨168, by decide⟩, ⟨170, by decide⟩, ⟨172, by decide⟩, ⟨175, by decide⟩, ⟨177, by decide⟩, ⟨179, by decide⟩, ⟨185, by decide⟩, ⟨188, by decide⟩, ⟨190, by decide⟩, ⟨193, by decide⟩, ⟨195, by decide⟩, ⟨210, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨218, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨230, by decide⟩, ⟨232, by decide⟩, ⟨234, by decide⟩, ⟨248, by decide⟩, ⟨252, by decide⟩
-}
+def census5 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed5 n)).terminal = true
 
 theorem census5_spec (n : Fin 256) :
     (DBMSourceTree.data (embed5 n)).terminal = true ↔ n ∈ census5 := by
-  decide +kernel
+  simp only [census5, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census5_card : census5.card = 61 := by
   decide +kernel
@@ -302,13 +296,12 @@ theorem block_terminal5 {n : Fin 5011} (hn : n ∈ blockIDs5) :
   exact (census5_spec m).mpr hm
 
 def embed6 (n : Fin 256) : Fin 5011 := ⟨n.val + 1536, by omega⟩
-def census6 : Finset (Fin 256) := {
-  ⟨4, by decide⟩, ⟨15, by decide⟩, ⟨17, by decide⟩, ⟨19, by decide⟩, ⟨22, by decide⟩, ⟨25, by decide⟩, ⟨44, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨51, by decide⟩, ⟨53, by decide⟩, ⟨54, by decide⟩, ⟨59, by decide⟩, ⟨61, by decide⟩, ⟨63, by decide⟩, ⟨65, by decide⟩, ⟨70, by decide⟩, ⟨73, by decide⟩, ⟨80, by decide⟩, ⟨84, by decide⟩, ⟨86, by decide⟩, ⟨88, by decide⟩, ⟨90, by decide⟩, ⟨92, by decide⟩, ⟨112, by decide⟩, ⟨120, by decide⟩, ⟨122, by decide⟩, ⟨134, by decide⟩, ⟨135, by decide⟩, ⟨137, by decide⟩, ⟨139, by decide⟩, ⟨141, by decide⟩, ⟨156, by decide⟩, ⟨160, by decide⟩, ⟨162, by decide⟩, ⟨186, by decide⟩, ⟨188, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨204, by decide⟩, ⟨206, by decide⟩, ⟨209, by decide⟩, ⟨212, by decide⟩, ⟨214, by decide⟩, ⟨216, by decide⟩, ⟨233, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨243, by decide⟩, ⟨245, by decide⟩, ⟨247, by decide⟩, ⟨252, by decide⟩, ⟨253, by decide⟩
-}
+def census6 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed6 n)).terminal = true
 
 theorem census6_spec (n : Fin 256) :
     (DBMSourceTree.data (embed6 n)).terminal = true ↔ n ∈ census6 := by
-  decide +kernel
+  simp only [census6, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census6_card : census6.card = 55 := by
   decide +kernel
@@ -350,13 +343,12 @@ theorem block_terminal6 {n : Fin 5011} (hn : n ∈ blockIDs6) :
   exact (census6_spec m).mpr hm
 
 def embed7 (n : Fin 256) : Fin 5011 := ⟨n.val + 1792, by omega⟩
-def census7 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨3, by decide⟩, ⟨10, by decide⟩, ⟨12, by decide⟩, ⟨13, by decide⟩, ⟨15, by decide⟩, ⟨20, by decide⟩, ⟨23, by decide⟩, ⟨28, by decide⟩, ⟨31, by decide⟩, ⟨33, by decide⟩, ⟨37, by decide⟩, ⟨40, by decide⟩, ⟨42, by decide⟩, ⟨43, by decide⟩, ⟨46, by decide⟩, ⟨57, by decide⟩, ⟨59, by decide⟩, ⟨61, by decide⟩, ⟨69, by decide⟩, ⟨77, by decide⟩, ⟨83, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨105, by decide⟩, ⟨111, by decide⟩, ⟨113, by decide⟩, ⟨115, by decide⟩, ⟨117, by decide⟩, ⟨119, by decide⟩, ⟨121, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨129, by decide⟩, ⟨133, by decide⟩, ⟨136, by decide⟩, ⟨140, by decide⟩, ⟨142, by decide⟩, ⟨151, by decide⟩, ⟨153, by decide⟩, ⟨155, by decide⟩, ⟨158, by decide⟩, ⟨162, by decide⟩, ⟨164, by decide⟩, ⟨166, by decide⟩, ⟨167, by decide⟩, ⟨170, by decide⟩, ⟨172, by decide⟩, ⟨176, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨205, by decide⟩, ⟨224, by decide⟩, ⟨230, by decide⟩, ⟨232, by decide⟩, ⟨233, by decide⟩
-}
+def census7 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed7 n)).terminal = true
 
 theorem census7_spec (n : Fin 256) :
     (DBMSourceTree.data (embed7 n)).terminal = true ↔ n ∈ census7 := by
-  decide +kernel
+  simp only [census7, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census7_card : census7.card = 56 := by
   decide +kernel
@@ -398,13 +390,12 @@ theorem block_terminal7 {n : Fin 5011} (hn : n ∈ blockIDs7) :
   exact (census7_spec m).mpr hm
 
 def embed8 (n : Fin 256) : Fin 5011 := ⟨n.val + 2048, by omega⟩
-def census8 : Finset (Fin 256) := {
-  ⟨11, by decide⟩, ⟨17, by decide⟩, ⟨21, by decide⟩, ⟨24, by decide⟩, ⟨26, by decide⟩, ⟨34, by decide⟩, ⟨36, by decide⟩, ⟨38, by decide⟩, ⟨39, by decide⟩, ⟨41, by decide⟩, ⟨50, by decide⟩, ⟨55, by decide⟩, ⟨58, by decide⟩, ⟨60, by decide⟩, ⟨74, by decide⟩, ⟨78, by decide⟩, ⟨79, by decide⟩, ⟨81, by decide⟩, ⟨86, by decide⟩, ⟨87, by decide⟩, ⟨91, by decide⟩, ⟨93, by decide⟩, ⟨95, by decide⟩, ⟨97, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨105, by decide⟩, ⟨114, by decide⟩, ⟨115, by decide⟩, ⟨118, by decide⟩, ⟨120, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨131, by decide⟩, ⟨135, by decide⟩, ⟨140, by decide⟩, ⟨148, by decide⟩, ⟨149, by decide⟩, ⟨158, by decide⟩, ⟨160, by decide⟩, ⟨166, by decide⟩, ⟨168, by decide⟩, ⟨170, by decide⟩, ⟨172, by decide⟩, ⟨173, by decide⟩, ⟨176, by decide⟩, ⟨186, by decide⟩, ⟨188, by decide⟩, ⟨190, by decide⟩, ⟨194, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨201, by decide⟩, ⟨204, by decide⟩, ⟨205, by decide⟩, ⟨210, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨219, by decide⟩, ⟨238, by decide⟩, ⟨240, by decide⟩, ⟨242, by decide⟩, ⟨244, by decide⟩, ⟨248, by decide⟩, ⟨254, by decide⟩, ⟨255, by decide⟩
-}
+def census8 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed8 n)).terminal = true
 
 theorem census8_spec (n : Fin 256) :
     (DBMSourceTree.data (embed8 n)).terminal = true ↔ n ∈ census8 := by
-  decide +kernel
+  simp only [census8, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census8_card : census8.card = 66 := by
   decide +kernel
@@ -446,13 +437,12 @@ theorem block_terminal8 {n : Fin 5011} (hn : n ∈ blockIDs8) :
   exact (census8_spec m).mpr hm
 
 def embed9 (n : Fin 256) : Fin 5011 := ⟨n.val + 2304, by omega⟩
-def census9 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨2, by decide⟩, ⟨3, by decide⟩, ⟨4, by decide⟩, ⟨5, by decide⟩, ⟨7, by decide⟩, ⟨9, by decide⟩, ⟨11, by decide⟩, ⟨14, by decide⟩, ⟨16, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨23, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨27, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨30, by decide⟩, ⟨31, by decide⟩, ⟨32, by decide⟩, ⟨33, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨36, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨40, by decide⟩, ⟨43, by decide⟩, ⟨44, by decide⟩, ⟨45, by decide⟩, ⟨46, by decide⟩, ⟨47, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨50, by decide⟩, ⟨52, by decide⟩, ⟨53, by decide⟩, ⟨54, by decide⟩, ⟨56, by decide⟩, ⟨58, by decide⟩, ⟨59, by decide⟩, ⟨60, by decide⟩, ⟨61, by decide⟩, ⟨62, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨68, by decide⟩, ⟨69, by decide⟩, ⟨70, by decide⟩, ⟨71, by decide⟩, ⟨72, by decide⟩, ⟨73, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨78, by decide⟩, ⟨79, by decide⟩, ⟨80, by decide⟩, ⟨81, by decide⟩, ⟨82, by decide⟩, ⟨83, by decide⟩, ⟨84, by decide⟩, ⟨85, by decide⟩, ⟨86, by decide⟩, ⟨87, by decide⟩, ⟨88, by decide⟩, ⟨89, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨92, by decide⟩, ⟨93, by decide⟩, ⟨94, by decide⟩, ⟨95, by decide⟩, ⟨96, by decide⟩, ⟨97, by decide⟩, ⟨98, by decide⟩, ⟨99, by decide⟩, ⟨100, by decide⟩, ⟨101, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨104, by decide⟩, ⟨105, by decide⟩, ⟨106, by decide⟩, ⟨107, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨110, by decide⟩, ⟨111, by decide⟩, ⟨112, by decide⟩, ⟨113, by decide⟩, ⟨114, by decide⟩, ⟨115, by decide⟩, ⟨116, by decide⟩, ⟨117, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨121, by decide⟩, ⟨122, by decide⟩, ⟨123, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨130, by decide⟩, ⟨131, by decide⟩, ⟨132, by decide⟩, ⟨133, by decide⟩, ⟨134, by decide⟩, ⟨135, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨138, by decide⟩, ⟨139, by decide⟩, ⟨140, by decide⟩, ⟨141, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨144, by decide⟩, ⟨145, by decide⟩, ⟨146, by decide⟩, ⟨147, by decide⟩, ⟨148, by decide⟩, ⟨149, by decide⟩, ⟨150, by decide⟩, ⟨151, by decide⟩, ⟨152, by decide⟩, ⟨153, by decide⟩, ⟨154, by decide⟩, ⟨155, by decide⟩, ⟨156, by decide⟩, ⟨157, by decide⟩, ⟨158, by decide⟩, ⟨159, by decide⟩, ⟨160, by decide⟩, ⟨161, by decide⟩, ⟨162, by decide⟩, ⟨163, by decide⟩, ⟨164, by decide⟩, ⟨165, by decide⟩, ⟨166, by decide⟩, ⟨167, by decide⟩, ⟨168, by decide⟩, ⟨169, by decide⟩, ⟨170, by decide⟩, ⟨171, by decide⟩, ⟨172, by decide⟩, ⟨173, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨176, by decide⟩, ⟨177, by decide⟩, ⟨178, by decide⟩, ⟨179, by decide⟩, ⟨180, by decide⟩, ⟨181, by decide⟩, ⟨182, by decide⟩, ⟨183, by decide⟩, ⟨184, by decide⟩, ⟨185, by decide⟩, ⟨186, by decide⟩, ⟨187, by decide⟩, ⟨188, by decide⟩, ⟨189, by decide⟩, ⟨190, by decide⟩, ⟨191, by decide⟩, ⟨192, by decide⟩, ⟨193, by decide⟩, ⟨194, by decide⟩, ⟨195, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨200, by decide⟩, ⟨201, by decide⟩, ⟨202, by decide⟩, ⟨203, by decide⟩, ⟨204, by decide⟩, ⟨205, by decide⟩, ⟨206, by decide⟩, ⟨207, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨211, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨218, by decide⟩, ⟨219, by decide⟩, ⟨220, by decide⟩, ⟨221, by decide⟩, ⟨222, by decide⟩, ⟨223, by decide⟩, ⟨224, by decide⟩, ⟨225, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨231, by decide⟩, ⟨232, by decide⟩, ⟨234, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨238, by decide⟩, ⟨239, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨242, by decide⟩, ⟨243, by decide⟩, ⟨244, by decide⟩, ⟨245, by decide⟩, ⟨246, by decide⟩, ⟨247, by decide⟩, ⟨248, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨252, by decide⟩, ⟨253, by decide⟩, ⟨254, by decide⟩, ⟨255, by decide⟩
-}
+def census9 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed9 n)).terminal = true
 
 theorem census9_spec (n : Fin 256) :
     (DBMSourceTree.data (embed9 n)).terminal = true ↔ n ∈ census9 := by
-  decide +kernel
+  simp only [census9, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census9_card : census9.card = 237 := by
   decide +kernel
@@ -494,13 +484,12 @@ theorem block_terminal9 {n : Fin 5011} (hn : n ∈ blockIDs9) :
   exact (census9_spec m).mpr hm
 
 def embed10 (n : Fin 256) : Fin 5011 := ⟨n.val + 2560, by omega⟩
-def census10 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨1, by decide⟩, ⟨2, by decide⟩, ⟨3, by decide⟩, ⟨4, by decide⟩, ⟨5, by decide⟩, ⟨6, by decide⟩, ⟨7, by decide⟩, ⟨8, by decide⟩, ⟨9, by decide⟩, ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨12, by decide⟩, ⟨13, by decide⟩, ⟨14, by decide⟩, ⟨15, by decide⟩, ⟨16, by decide⟩, ⟨17, by decide⟩, ⟨18, by decide⟩, ⟨19, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨23, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨27, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨30, by decide⟩, ⟨31, by decide⟩, ⟨32, by decide⟩, ⟨33, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨36, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨39, by decide⟩, ⟨40, by decide⟩, ⟨41, by decide⟩, ⟨42, by decide⟩, ⟨43, by decide⟩, ⟨44, by decide⟩, ⟨45, by decide⟩, ⟨46, by decide⟩, ⟨47, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨50, by decide⟩, ⟨51, by decide⟩, ⟨52, by decide⟩, ⟨53, by decide⟩, ⟨55, by decide⟩, ⟨56, by decide⟩, ⟨57, by decide⟩, ⟨58, by decide⟩, ⟨59, by decide⟩, ⟨60, by decide⟩, ⟨61, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨67, by decide⟩, ⟨68, by decide⟩, ⟨69, by decide⟩, ⟨70, by decide⟩, ⟨71, by decide⟩, ⟨72, by decide⟩, ⟨73, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨78, by decide⟩, ⟨79, by decide⟩, ⟨80, by decide⟩, ⟨81, by decide⟩, ⟨82, by decide⟩, ⟨83, by decide⟩, ⟨84, by decide⟩, ⟨85, by decide⟩, ⟨86, by decide⟩, ⟨87, by decide⟩, ⟨88, by decide⟩, ⟨89, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨92, by decide⟩, ⟨93, by decide⟩, ⟨94, by decide⟩, ⟨95, by decide⟩, ⟨96, by decide⟩, ⟨97, by decide⟩, ⟨98, by decide⟩, ⟨99, by decide⟩, ⟨100, by decide⟩, ⟨101, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨104, by decide⟩, ⟨105, by decide⟩, ⟨106, by decide⟩, ⟨107, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨110, by decide⟩, ⟨111, by decide⟩, ⟨112, by decide⟩, ⟨113, by decide⟩, ⟨114, by decide⟩, ⟨115, by decide⟩, ⟨116, by decide⟩, ⟨117, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨121, by decide⟩, ⟨122, by decide⟩, ⟨123, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨130, by decide⟩, ⟨131, by decide⟩, ⟨132, by decide⟩, ⟨133, by decide⟩, ⟨134, by decide⟩, ⟨135, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨138, by decide⟩, ⟨139, by decide⟩, ⟨140, by decide⟩, ⟨141, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨144, by decide⟩, ⟨145, by decide⟩, ⟨146, by decide⟩, ⟨147, by decide⟩, ⟨148, by decide⟩, ⟨149, by decide⟩, ⟨150, by decide⟩, ⟨151, by decide⟩, ⟨152, by decide⟩, ⟨153, by decide⟩, ⟨154, by decide⟩, ⟨155, by decide⟩, ⟨156, by decide⟩, ⟨157, by decide⟩, ⟨158, by decide⟩, ⟨159, by decide⟩, ⟨160, by decide⟩, ⟨161, by decide⟩, ⟨162, by decide⟩, ⟨163, by decide⟩, ⟨164, by decide⟩, ⟨165, by decide⟩, ⟨166, by decide⟩, ⟨167, by decide⟩, ⟨168, by decide⟩, ⟨169, by decide⟩, ⟨170, by decide⟩, ⟨171, by decide⟩, ⟨172, by decide⟩, ⟨173, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨176, by decide⟩, ⟨177, by decide⟩, ⟨178, by decide⟩, ⟨179, by decide⟩, ⟨180, by decide⟩, ⟨181, by decide⟩, ⟨182, by decide⟩, ⟨183, by decide⟩, ⟨184, by decide⟩, ⟨185, by decide⟩, ⟨186, by decide⟩, ⟨187, by decide⟩, ⟨188, by decide⟩, ⟨189, by decide⟩, ⟨190, by decide⟩, ⟨191, by decide⟩, ⟨192, by decide⟩, ⟨193, by decide⟩, ⟨194, by decide⟩, ⟨195, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨200, by decide⟩, ⟨201, by decide⟩, ⟨202, by decide⟩, ⟨203, by decide⟩, ⟨204, by decide⟩, ⟨205, by decide⟩, ⟨206, by decide⟩, ⟨207, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨211, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨218, by decide⟩, ⟨219, by decide⟩, ⟨220, by decide⟩, ⟨221, by decide⟩, ⟨222, by decide⟩, ⟨223, by decide⟩, ⟨224, by decide⟩, ⟨225, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨231, by decide⟩, ⟨232, by decide⟩, ⟨233, by decide⟩, ⟨234, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨238, by decide⟩, ⟨239, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨242, by decide⟩, ⟨243, by decide⟩, ⟨244, by decide⟩, ⟨245, by decide⟩, ⟨246, by decide⟩, ⟨247, by decide⟩, ⟨248, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨251, by decide⟩, ⟨252, by decide⟩, ⟨253, by decide⟩, ⟨254, by decide⟩, ⟨255, by decide⟩
-}
+def census10 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed10 n)).terminal = true
 
 theorem census10_spec (n : Fin 256) :
     (DBMSourceTree.data (embed10 n)).terminal = true ↔ n ∈ census10 := by
-  decide +kernel
+  simp only [census10, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census10_card : census10.card = 254 := by
   decide +kernel
@@ -542,13 +531,12 @@ theorem block_terminal10 {n : Fin 5011} (hn : n ∈ blockIDs10) :
   exact (census10_spec m).mpr hm
 
 def embed11 (n : Fin 256) : Fin 5011 := ⟨n.val + 2816, by omega⟩
-def census11 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨1, by decide⟩, ⟨2, by decide⟩, ⟨3, by decide⟩, ⟨4, by decide⟩, ⟨5, by decide⟩, ⟨6, by decide⟩, ⟨7, by decide⟩, ⟨8, by decide⟩, ⟨9, by decide⟩, ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨12, by decide⟩, ⟨13, by decide⟩, ⟨14, by decide⟩, ⟨15, by decide⟩, ⟨16, by decide⟩, ⟨17, by decide⟩, ⟨18, by decide⟩, ⟨19, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨23, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨27, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨30, by decide⟩, ⟨31, by decide⟩, ⟨32, by decide⟩, ⟨33, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨36, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨39, by decide⟩, ⟨40, by decide⟩, ⟨41, by decide⟩, ⟨42, by decide⟩, ⟨43, by decide⟩, ⟨44, by decide⟩, ⟨45, by decide⟩, ⟨46, by decide⟩, ⟨47, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨50, by decide⟩, ⟨51, by decide⟩, ⟨52, by decide⟩, ⟨53, by decide⟩, ⟨54, by decide⟩, ⟨55, by decide⟩, ⟨56, by decide⟩, ⟨57, by decide⟩, ⟨58, by decide⟩, ⟨59, by decide⟩, ⟨60, by decide⟩, ⟨61, by decide⟩, ⟨62, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨67, by decide⟩, ⟨68, by decide⟩, ⟨69, by decide⟩, ⟨70, by decide⟩, ⟨71, by decide⟩, ⟨72, by decide⟩, ⟨73, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨78, by decide⟩, ⟨79, by decide⟩, ⟨80, by decide⟩, ⟨81, by decide⟩, ⟨82, by decide⟩, ⟨83, by decide⟩, ⟨84, by decide⟩, ⟨85, by decide⟩, ⟨86, by decide⟩, ⟨87, by decide⟩, ⟨88, by decide⟩, ⟨89, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨92, by decide⟩, ⟨93, by decide⟩, ⟨94, by decide⟩, ⟨95, by decide⟩, ⟨96, by decide⟩, ⟨97, by decide⟩, ⟨98, by decide⟩, ⟨99, by decide⟩, ⟨100, by decide⟩, ⟨101, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨104, by decide⟩, ⟨105, by decide⟩, ⟨106, by decide⟩, ⟨107, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨110, by decide⟩, ⟨111, by decide⟩, ⟨112, by decide⟩, ⟨113, by decide⟩, ⟨114, by decide⟩, ⟨115, by decide⟩, ⟨116, by decide⟩, ⟨117, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨121, by decide⟩, ⟨122, by decide⟩, ⟨123, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨130, by decide⟩, ⟨131, by decide⟩, ⟨132, by decide⟩, ⟨133, by decide⟩, ⟨134, by decide⟩, ⟨135, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨138, by decide⟩, ⟨139, by decide⟩, ⟨140, by decide⟩, ⟨141, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨144, by decide⟩, ⟨145, by decide⟩, ⟨146, by decide⟩, ⟨147, by decide⟩, ⟨148, by decide⟩, ⟨149, by decide⟩, ⟨151, by decide⟩, ⟨152, by decide⟩, ⟨153, by decide⟩, ⟨154, by decide⟩, ⟨155, by decide⟩, ⟨156, by decide⟩, ⟨157, by decide⟩, ⟨158, by decide⟩, ⟨159, by decide⟩, ⟨160, by decide⟩, ⟨161, by decide⟩, ⟨162, by decide⟩, ⟨163, by decide⟩, ⟨164, by decide⟩, ⟨165, by decide⟩, ⟨166, by decide⟩, ⟨169, by decide⟩, ⟨170, by decide⟩, ⟨171, by decide⟩, ⟨172, by decide⟩, ⟨173, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨176, by decide⟩, ⟨177, by decide⟩, ⟨178, by decide⟩, ⟨179, by decide⟩, ⟨180, by decide⟩, ⟨181, by decide⟩, ⟨182, by decide⟩, ⟨183, by decide⟩, ⟨184, by decide⟩, ⟨185, by decide⟩, ⟨186, by decide⟩, ⟨187, by decide⟩, ⟨188, by decide⟩, ⟨189, by decide⟩, ⟨190, by decide⟩, ⟨191, by decide⟩, ⟨192, by decide⟩, ⟨193, by decide⟩, ⟨194, by decide⟩, ⟨195, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨200, by decide⟩, ⟨201, by decide⟩, ⟨202, by decide⟩, ⟨203, by decide⟩, ⟨204, by decide⟩, ⟨205, by decide⟩, ⟨206, by decide⟩, ⟨207, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨211, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨218, by decide⟩, ⟨219, by decide⟩, ⟨220, by decide⟩, ⟨221, by decide⟩, ⟨222, by decide⟩, ⟨223, by decide⟩, ⟨224, by decide⟩, ⟨225, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨231, by decide⟩, ⟨232, by decide⟩, ⟨233, by decide⟩, ⟨234, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨238, by decide⟩, ⟨239, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨242, by decide⟩, ⟨243, by decide⟩, ⟨244, by decide⟩, ⟨245, by decide⟩, ⟨246, by decide⟩, ⟨247, by decide⟩, ⟨248, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨251, by decide⟩, ⟨252, by decide⟩, ⟨253, by decide⟩, ⟨254, by decide⟩, ⟨255, by decide⟩
-}
+def census11 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed11 n)).terminal = true
 
 theorem census11_spec (n : Fin 256) :
     (DBMSourceTree.data (embed11 n)).terminal = true ↔ n ∈ census11 := by
-  decide +kernel
+  simp only [census11, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census11_card : census11.card = 253 := by
   decide +kernel
@@ -590,13 +578,12 @@ theorem block_terminal11 {n : Fin 5011} (hn : n ∈ blockIDs11) :
   exact (census11_spec m).mpr hm
 
 def embed12 (n : Fin 256) : Fin 5011 := ⟨n.val + 3072, by omega⟩
-def census12 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨1, by decide⟩, ⟨2, by decide⟩, ⟨3, by decide⟩, ⟨4, by decide⟩, ⟨5, by decide⟩, ⟨6, by decide⟩, ⟨7, by decide⟩, ⟨8, by decide⟩, ⟨9, by decide⟩, ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨12, by decide⟩, ⟨13, by decide⟩, ⟨14, by decide⟩, ⟨15, by decide⟩, ⟨16, by decide⟩, ⟨17, by decide⟩, ⟨18, by decide⟩, ⟨19, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨23, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨27, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨30, by decide⟩, ⟨31, by decide⟩, ⟨32, by decide⟩, ⟨33, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨36, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨39, by decide⟩, ⟨40, by decide⟩, ⟨41, by decide⟩, ⟨42, by decide⟩, ⟨43, by decide⟩, ⟨44, by decide⟩, ⟨45, by decide⟩, ⟨46, by decide⟩, ⟨47, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨51, by decide⟩, ⟨52, by decide⟩, ⟨53, by decide⟩, ⟨54, by decide⟩, ⟨55, by decide⟩, ⟨56, by decide⟩, ⟨57, by decide⟩, ⟨58, by decide⟩, ⟨59, by decide⟩, ⟨60, by decide⟩, ⟨61, by decide⟩, ⟨62, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨67, by decide⟩, ⟨68, by decide⟩, ⟨69, by decide⟩, ⟨70, by decide⟩, ⟨71, by decide⟩, ⟨72, by decide⟩, ⟨73, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨78, by decide⟩, ⟨79, by decide⟩, ⟨80, by decide⟩, ⟨81, by decide⟩, ⟨82, by decide⟩, ⟨83, by decide⟩, ⟨84, by decide⟩, ⟨85, by decide⟩, ⟨86, by decide⟩, ⟨87, by decide⟩, ⟨88, by decide⟩, ⟨89, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨92, by decide⟩, ⟨93, by decide⟩, ⟨94, by decide⟩, ⟨95, by decide⟩, ⟨96, by decide⟩, ⟨97, by decide⟩, ⟨98, by decide⟩, ⟨99, by decide⟩, ⟨100, by decide⟩, ⟨101, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨104, by decide⟩, ⟨105, by decide⟩, ⟨106, by decide⟩, ⟨107, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨110, by decide⟩, ⟨111, by decide⟩, ⟨112, by decide⟩, ⟨113, by decide⟩, ⟨114, by decide⟩, ⟨115, by decide⟩, ⟨116, by decide⟩, ⟨117, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨121, by decide⟩, ⟨122, by decide⟩, ⟨123, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨130, by decide⟩, ⟨131, by decide⟩, ⟨132, by decide⟩, ⟨133, by decide⟩, ⟨134, by decide⟩, ⟨135, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨138, by decide⟩, ⟨139, by decide⟩, ⟨140, by decide⟩, ⟨141, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨144, by decide⟩, ⟨145, by decide⟩, ⟨146, by decide⟩, ⟨147, by decide⟩, ⟨148, by decide⟩, ⟨149, by decide⟩, ⟨150, by decide⟩, ⟨151, by decide⟩, ⟨152, by decide⟩, ⟨153, by decide⟩, ⟨154, by decide⟩, ⟨155, by decide⟩, ⟨156, by decide⟩, ⟨157, by decide⟩, ⟨158, by decide⟩, ⟨159, by decide⟩, ⟨160, by decide⟩, ⟨161, by decide⟩, ⟨162, by decide⟩, ⟨163, by decide⟩, ⟨164, by decide⟩, ⟨165, by decide⟩, ⟨166, by decide⟩, ⟨167, by decide⟩, ⟨168, by decide⟩, ⟨169, by decide⟩, ⟨170, by decide⟩, ⟨171, by decide⟩, ⟨172, by decide⟩, ⟨173, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨176, by decide⟩, ⟨177, by decide⟩, ⟨178, by decide⟩, ⟨179, by decide⟩, ⟨180, by decide⟩, ⟨181, by decide⟩, ⟨182, by decide⟩, ⟨183, by decide⟩, ⟨184, by decide⟩, ⟨185, by decide⟩, ⟨186, by decide⟩, ⟨187, by decide⟩, ⟨188, by decide⟩, ⟨189, by decide⟩, ⟨190, by decide⟩, ⟨191, by decide⟩, ⟨192, by decide⟩, ⟨193, by decide⟩, ⟨194, by decide⟩, ⟨195, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨200, by decide⟩, ⟨201, by decide⟩, ⟨202, by decide⟩, ⟨203, by decide⟩, ⟨204, by decide⟩, ⟨205, by decide⟩, ⟨206, by decide⟩, ⟨207, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨211, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨218, by decide⟩, ⟨219, by decide⟩, ⟨220, by decide⟩, ⟨221, by decide⟩, ⟨222, by decide⟩, ⟨223, by decide⟩, ⟨224, by decide⟩, ⟨225, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨231, by decide⟩, ⟨232, by decide⟩, ⟨233, by decide⟩, ⟨234, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨238, by decide⟩, ⟨239, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨242, by decide⟩, ⟨243, by decide⟩, ⟨244, by decide⟩, ⟨245, by decide⟩, ⟨246, by decide⟩, ⟨247, by decide⟩, ⟨248, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨251, by decide⟩, ⟨252, by decide⟩, ⟨253, by decide⟩, ⟨254, by decide⟩, ⟨255, by decide⟩
-}
+def census12 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed12 n)).terminal = true
 
 theorem census12_spec (n : Fin 256) :
     (DBMSourceTree.data (embed12 n)).terminal = true ↔ n ∈ census12 := by
-  decide +kernel
+  simp only [census12, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census12_card : census12.card = 255 := by
   decide +kernel
@@ -638,13 +625,12 @@ theorem block_terminal12 {n : Fin 5011} (hn : n ∈ blockIDs12) :
   exact (census12_spec m).mpr hm
 
 def embed13 (n : Fin 256) : Fin 5011 := ⟨n.val + 3328, by omega⟩
-def census13 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨1, by decide⟩, ⟨2, by decide⟩, ⟨3, by decide⟩, ⟨4, by decide⟩, ⟨5, by decide⟩, ⟨6, by decide⟩, ⟨7, by decide⟩, ⟨8, by decide⟩, ⟨9, by decide⟩, ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨12, by decide⟩, ⟨13, by decide⟩, ⟨14, by decide⟩, ⟨15, by decide⟩, ⟨16, by decide⟩, ⟨17, by decide⟩, ⟨18, by decide⟩, ⟨19, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨23, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨27, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨30, by decide⟩, ⟨31, by decide⟩, ⟨32, by decide⟩, ⟨33, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨36, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨39, by decide⟩, ⟨40, by decide⟩, ⟨41, by decide⟩, ⟨42, by decide⟩, ⟨43, by decide⟩, ⟨44, by decide⟩, ⟨45, by decide⟩, ⟨46, by decide⟩, ⟨47, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨50, by decide⟩, ⟨51, by decide⟩, ⟨52, by decide⟩, ⟨53, by decide⟩, ⟨54, by decide⟩, ⟨55, by decide⟩, ⟨56, by decide⟩, ⟨57, by decide⟩, ⟨58, by decide⟩, ⟨59, by decide⟩, ⟨60, by decide⟩, ⟨61, by decide⟩, ⟨62, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨67, by decide⟩, ⟨68, by decide⟩, ⟨69, by decide⟩, ⟨70, by decide⟩, ⟨71, by decide⟩, ⟨72, by decide⟩, ⟨73, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨78, by decide⟩, ⟨79, by decide⟩, ⟨80, by decide⟩, ⟨81, by decide⟩, ⟨82, by decide⟩, ⟨83, by decide⟩, ⟨84, by decide⟩, ⟨85, by decide⟩, ⟨86, by decide⟩, ⟨87, by decide⟩, ⟨88, by decide⟩, ⟨89, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨92, by decide⟩, ⟨93, by decide⟩, ⟨94, by decide⟩, ⟨95, by decide⟩, ⟨96, by decide⟩, ⟨97, by decide⟩, ⟨98, by decide⟩, ⟨99, by decide⟩, ⟨100, by decide⟩, ⟨101, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨104, by decide⟩, ⟨107, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨110, by decide⟩, ⟨111, by decide⟩, ⟨112, by decide⟩, ⟨113, by decide⟩, ⟨114, by decide⟩, ⟨117, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨121, by decide⟩, ⟨122, by decide⟩, ⟨123, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨126, by decide⟩, ⟨127, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨130, by decide⟩, ⟨131, by decide⟩, ⟨132, by decide⟩, ⟨133, by decide⟩, ⟨134, by decide⟩, ⟨135, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨138, by decide⟩, ⟨139, by decide⟩, ⟨140, by decide⟩, ⟨141, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨144, by decide⟩, ⟨145, by decide⟩, ⟨146, by decide⟩, ⟨147, by decide⟩, ⟨148, by decide⟩, ⟨149, by decide⟩, ⟨150, by decide⟩, ⟨151, by decide⟩, ⟨152, by decide⟩, ⟨153, by decide⟩, ⟨154, by decide⟩, ⟨155, by decide⟩, ⟨156, by decide⟩, ⟨157, by decide⟩, ⟨158, by decide⟩, ⟨159, by decide⟩, ⟨160, by decide⟩, ⟨161, by decide⟩, ⟨162, by decide⟩, ⟨163, by decide⟩, ⟨164, by decide⟩, ⟨165, by decide⟩, ⟨166, by decide⟩, ⟨167, by decide⟩, ⟨168, by decide⟩, ⟨169, by decide⟩, ⟨170, by decide⟩, ⟨171, by decide⟩, ⟨172, by decide⟩, ⟨173, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨176, by decide⟩, ⟨177, by decide⟩, ⟨178, by decide⟩, ⟨179, by decide⟩, ⟨182, by decide⟩, ⟨183, by decide⟩, ⟨184, by decide⟩, ⟨185, by decide⟩, ⟨186, by decide⟩, ⟨187, by decide⟩, ⟨188, by decide⟩, ⟨189, by decide⟩, ⟨190, by decide⟩, ⟨191, by decide⟩, ⟨192, by decide⟩, ⟨193, by decide⟩, ⟨194, by decide⟩, ⟨195, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨200, by decide⟩, ⟨201, by decide⟩, ⟨203, by decide⟩, ⟨205, by decide⟩, ⟨206, by decide⟩, ⟨207, by decide⟩, ⟨208, by decide⟩, ⟨210, by decide⟩, ⟨212, by decide⟩, ⟨214, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨219, by decide⟩, ⟨221, by decide⟩, ⟨222, by decide⟩, ⟨223, by decide⟩, ⟨227, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨239, by decide⟩, ⟨241, by decide⟩, ⟨243, by decide⟩, ⟨245, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨251, by decide⟩
-}
+def census13 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed13 n)).terminal = true
 
 theorem census13_spec (n : Fin 256) :
     (DBMSourceTree.data (embed13 n)).terminal = true ↔ n ∈ census13 := by
-  decide +kernel
+  simp only [census13, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census13_card : census13.card = 221 := by
   decide +kernel
@@ -686,13 +672,12 @@ theorem block_terminal13 {n : Fin 5011} (hn : n ∈ blockIDs13) :
   exact (census13_spec m).mpr hm
 
 def embed14 (n : Fin 256) : Fin 5011 := ⟨n.val + 3584, by omega⟩
-def census14 : Finset (Fin 256) := {
-  ⟨5, by decide⟩, ⟨7, by decide⟩, ⟨9, by decide⟩, ⟨11, by decide⟩, ⟨13, by decide⟩, ⟨15, by decide⟩, ⟨17, by decide⟩, ⟨19, by decide⟩, ⟨22, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨27, by decide⟩, ⟨29, by decide⟩, ⟨31, by decide⟩, ⟨33, by decide⟩, ⟨35, by decide⟩, ⟨37, by decide⟩, ⟨39, by decide⟩, ⟨45, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨51, by decide⟩, ⟨53, by decide⟩, ⟨55, by decide⟩, ⟨59, by decide⟩, ⟨69, by decide⟩, ⟨71, by decide⟩, ⟨73, by decide⟩, ⟨78, by decide⟩, ⟨80, by decide⟩, ⟨83, by decide⟩, ⟨85, by decide⟩, ⟨90, by decide⟩, ⟨92, by decide⟩, ⟨94, by decide⟩, ⟨96, by decide⟩, ⟨98, by decide⟩, ⟨99, by decide⟩, ⟨112, by decide⟩, ⟨114, by decide⟩, ⟨116, by decide⟩, ⟨120, by decide⟩, ⟨124, by decide⟩, ⟨126, by decide⟩, ⟨128, by decide⟩, ⟨137, by decide⟩, ⟨139, by decide⟩, ⟨154, by decide⟩, ⟨155, by decide⟩, ⟨157, by decide⟩, ⟨163, by decide⟩, ⟨166, by decide⟩, ⟨168, by decide⟩, ⟨169, by decide⟩, ⟨172, by decide⟩, ⟨175, by decide⟩, ⟨178, by decide⟩, ⟨180, by decide⟩, ⟨181, by decide⟩, ⟨182, by decide⟩, ⟨186, by decide⟩, ⟨187, by decide⟩, ⟨189, by decide⟩, ⟨190, by decide⟩, ⟨193, by decide⟩, ⟨194, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨201, by decide⟩, ⟨203, by decide⟩, ⟨205, by decide⟩, ⟨207, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨211, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨218, by decide⟩, ⟨219, by decide⟩, ⟨220, by decide⟩, ⟨221, by decide⟩, ⟨223, by decide⟩, ⟨224, by decide⟩, ⟨225, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨232, by decide⟩, ⟨233, by decide⟩, ⟨234, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨238, by decide⟩, ⟨239, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨243, by decide⟩, ⟨245, by decide⟩, ⟨246, by decide⟩, ⟨247, by decide⟩, ⟨248, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨252, by decide⟩, ⟨253, by decide⟩, ⟨254, by decide⟩, ⟨255, by decide⟩
-}
+def census14 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed14 n)).terminal = true
 
 theorem census14_spec (n : Fin 256) :
     (DBMSourceTree.data (embed14 n)).terminal = true ↔ n ∈ census14 := by
-  decide +kernel
+  simp only [census14, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census14_card : census14.card = 115 := by
   decide +kernel
@@ -734,13 +719,12 @@ theorem block_terminal14 {n : Fin 5011} (hn : n ∈ blockIDs14) :
   exact (census14_spec m).mpr hm
 
 def embed15 (n : Fin 256) : Fin 5011 := ⟨n.val + 3840, by omega⟩
-def census15 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨1, by decide⟩, ⟨2, by decide⟩, ⟨3, by decide⟩, ⟨4, by decide⟩, ⟨5, by decide⟩, ⟨6, by decide⟩, ⟨8, by decide⟩, ⟨9, by decide⟩, ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨12, by decide⟩, ⟨13, by decide⟩, ⟨14, by decide⟩, ⟨15, by decide⟩, ⟨16, by decide⟩, ⟨17, by decide⟩, ⟨18, by decide⟩, ⟨19, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨23, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨32, by decide⟩, ⟨33, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨37, by decide⟩, ⟨39, by decide⟩, ⟨42, by decide⟩, ⟨43, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨50, by decide⟩, ⟨51, by decide⟩, ⟨52, by decide⟩, ⟨53, by decide⟩, ⟨54, by decide⟩, ⟨56, by decide⟩, ⟨57, by decide⟩, ⟨58, by decide⟩, ⟨60, by decide⟩, ⟨62, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨74, by decide⟩, ⟨77, by decide⟩, ⟨79, by decide⟩, ⟨81, by decide⟩, ⟨83, by decide⟩, ⟨86, by decide⟩, ⟨87, by decide⟩, ⟨89, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨92, by decide⟩, ⟨96, by decide⟩, ⟨97, by decide⟩, ⟨98, by decide⟩, ⟨100, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨104, by decide⟩, ⟨105, by decide⟩, ⟨108, by decide⟩, ⟨110, by decide⟩, ⟨112, by decide⟩, ⟨114, by decide⟩, ⟨115, by decide⟩, ⟨117, by decide⟩, ⟨119, by decide⟩, ⟨122, by decide⟩, ⟨123, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨127, by decide⟩, ⟨139, by decide⟩, ⟨141, by decide⟩, ⟨154, by decide⟩, ⟨156, by decide⟩, ⟨158, by decide⟩, ⟨160, by decide⟩, ⟨162, by decide⟩, ⟨168, by decide⟩, ⟨171, by decide⟩, ⟨173, by decide⟩, ⟨175, by decide⟩, ⟨178, by decide⟩, ⟨180, by decide⟩, ⟨182, by decide⟩, ⟨184, by decide⟩, ⟨187, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨200, by decide⟩, ⟨202, by decide⟩, ⟨203, by decide⟩, ⟨211, by decide⟩, ⟨212, by decide⟩, ⟨214, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨218, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨239, by decide⟩, ⟨242, by decide⟩, ⟨244, by decide⟩, ⟨246, by decide⟩, ⟨248, by decide⟩, ⟨250, by decide⟩, ⟨252, by decide⟩, ⟨254, by decide⟩
-}
+def census15 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed15 n)).terminal = true
 
 theorem census15_spec (n : Fin 256) :
     (DBMSourceTree.data (embed15 n)).terminal = true ↔ n ∈ census15 := by
-  decide +kernel
+  simp only [census15, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census15_card : census15.card = 120 := by
   decide +kernel
@@ -782,13 +766,12 @@ theorem block_terminal15 {n : Fin 5011} (hn : n ∈ blockIDs15) :
   exact (census15_spec m).mpr hm
 
 def embed16 (n : Fin 256) : Fin 5011 := ⟨n.val + 4096, by omega⟩
-def census16 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨4, by decide⟩, ⟨8, by decide⟩, ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨12, by decide⟩, ⟨16, by decide⟩, ⟨35, by decide⟩, ⟨42, by decide⟩, ⟨43, by decide⟩, ⟨44, by decide⟩, ⟨48, by decide⟩, ⟨52, by decide⟩, ⟨54, by decide⟩, ⟨56, by decide⟩, ⟨58, by decide⟩, ⟨60, by decide⟩, ⟨62, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨68, by decide⟩, ⟨70, by decide⟩, ⟨71, by decide⟩, ⟨81, by decide⟩, ⟨82, by decide⟩, ⟨83, by decide⟩, ⟨98, by decide⟩, ⟨105, by decide⟩, ⟨106, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨112, by decide⟩, ⟨114, by decide⟩, ⟨116, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨124, by decide⟩, ⟨131, by decide⟩, ⟨134, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨140, by decide⟩, ⟨141, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨146, by decide⟩, ⟨147, by decide⟩, ⟨148, by decide⟩, ⟨150, by decide⟩, ⟨155, by decide⟩, ⟨162, by decide⟩, ⟨167, by decide⟩, ⟨169, by decide⟩, ⟨170, by decide⟩, ⟨171, by decide⟩, ⟨172, by decide⟩, ⟨174, by decide⟩, ⟨176, by decide⟩, ⟨181, by decide⟩, ⟨190, by decide⟩, ⟨193, by decide⟩, ⟨194, by decide⟩, ⟨195, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨198, by decide⟩, ⟨200, by decide⟩, ⟨201, by decide⟩, ⟨204, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨218, by decide⟩, ⟨221, by decide⟩, ⟨222, by decide⟩, ⟨223, by decide⟩, ⟨224, by decide⟩, ⟨225, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨231, by decide⟩, ⟨232, by decide⟩, ⟨233, by decide⟩, ⟨234, by decide⟩, ⟨235, by decide⟩, ⟨237, by decide⟩, ⟨239, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨244, by decide⟩, ⟨245, by decide⟩, ⟨248, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨251, by decide⟩, ⟨252, by decide⟩, ⟨255, by decide⟩
-}
+def census16 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed16 n)).terminal = true
 
 theorem census16_spec (n : Fin 256) :
     (DBMSourceTree.data (embed16 n)).terminal = true ↔ n ∈ census16 := by
-  decide +kernel
+  simp only [census16, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census16_card : census16.card = 108 := by
   decide +kernel
@@ -830,13 +813,12 @@ theorem block_terminal16 {n : Fin 5011} (hn : n ∈ blockIDs16) :
   exact (census16_spec m).mpr hm
 
 def embed17 (n : Fin 256) : Fin 5011 := ⟨n.val + 4352, by omega⟩
-def census17 : Finset (Fin 256) := {
-  ⟨5, by decide⟩, ⟨7, by decide⟩, ⟨8, by decide⟩, ⟨9, by decide⟩, ⟨13, by decide⟩, ⟨15, by decide⟩, ⟨16, by decide⟩, ⟨17, by decide⟩, ⟨18, by decide⟩, ⟨19, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨24, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨27, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨30, by decide⟩, ⟨33, by decide⟩, ⟨39, by decide⟩, ⟨45, by decide⟩, ⟨47, by decide⟩, ⟨49, by decide⟩, ⟨51, by decide⟩, ⟨54, by decide⟩, ⟨59, by decide⟩, ⟨60, by decide⟩, ⟨61, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨67, by decide⟩, ⟨69, by decide⟩, ⟨70, by decide⟩, ⟨71, by decide⟩, ⟨72, by decide⟩, ⟨73, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨79, by decide⟩, ⟨80, by decide⟩, ⟨81, by decide⟩, ⟨83, by decide⟩, ⟨84, by decide⟩, ⟨95, by decide⟩, ⟨97, by decide⟩, ⟨99, by decide⟩, ⟨101, by decide⟩, ⟨105, by decide⟩, ⟨107, by decide⟩, ⟨109, by decide⟩, ⟨113, by decide⟩, ⟨115, by decide⟩, ⟨116, by decide⟩, ⟨121, by decide⟩, ⟨123, by decide⟩, ⟨125, by decide⟩, ⟨127, by decide⟩, ⟨131, by decide⟩, ⟨133, by decide⟩, ⟨135, by decide⟩, ⟨137, by decide⟩, ⟨139, by decide⟩, ⟨142, by decide⟩, ⟨144, by decide⟩, ⟨147, by decide⟩, ⟨149, by decide⟩, ⟨151, by decide⟩, ⟨153, by decide⟩, ⟨165, by decide⟩, ⟨166, by decide⟩, ⟨168, by decide⟩, ⟨170, by decide⟩, ⟨171, by decide⟩, ⟨172, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨176, by decide⟩, ⟨177, by decide⟩, ⟨178, by decide⟩, ⟨191, by decide⟩, ⟨193, by decide⟩, ⟨195, by decide⟩, ⟨196, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨204, by decide⟩, ⟨205, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨212, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨218, by decide⟩, ⟨223, by decide⟩, ⟨225, by decide⟩, ⟨227, by decide⟩, ⟨229, by decide⟩, ⟨235, by decide⟩, ⟨237, by decide⟩, ⟨238, by decide⟩, ⟨239, by decide⟩, ⟨244, by decide⟩, ⟨245, by decide⟩, ⟨247, by decide⟩, ⟨250, by decide⟩, ⟨253, by decide⟩
-}
+def census17 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed17 n)).terminal = true
 
 theorem census17_spec (n : Fin 256) :
     (DBMSourceTree.data (embed17 n)).terminal = true ↔ n ∈ census17 := by
-  decide +kernel
+  simp only [census17, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census17_card : census17.card = 111 := by
   decide +kernel
@@ -878,13 +860,12 @@ theorem block_terminal17 {n : Fin 5011} (hn : n ∈ blockIDs17) :
   exact (census17_spec m).mpr hm
 
 def embed18 (n : Fin 256) : Fin 5011 := ⟨n.val + 4608, by omega⟩
-def census18 : Finset (Fin 256) := {
-  ⟨0, by decide⟩, ⟨4, by decide⟩, ⟨10, by decide⟩, ⟨12, by decide⟩, ⟨14, by decide⟩, ⟨25, by decide⟩, ⟨26, by decide⟩, ⟨31, by decide⟩, ⟨33, by decide⟩, ⟨35, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨40, by decide⟩, ⟨42, by decide⟩, ⟨44, by decide⟩, ⟨46, by decide⟩, ⟨48, by decide⟩, ⟨50, by decide⟩, ⟨52, by decide⟩, ⟨54, by decide⟩, ⟨55, by decide⟩, ⟨58, by decide⟩, ⟨60, by decide⟩, ⟨62, by decide⟩, ⟨63, by decide⟩, ⟨64, by decide⟩, ⟨65, by decide⟩, ⟨66, by decide⟩, ⟨67, by decide⟩, ⟨70, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨80, by decide⟩, ⟨82, by decide⟩, ⟨84, by decide⟩, ⟨86, by decide⟩, ⟨88, by decide⟩, ⟨90, by decide⟩, ⟨92, by decide⟩, ⟨94, by decide⟩, ⟨96, by decide⟩, ⟨98, by decide⟩, ⟨100, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨104, by decide⟩, ⟨105, by decide⟩, ⟨106, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨113, by decide⟩, ⟨115, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨122, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨127, by decide⟩, ⟨129, by decide⟩, ⟨131, by decide⟩, ⟨133, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨139, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨145, by decide⟩, ⟨147, by decide⟩, ⟨149, by decide⟩, ⟨152, by decide⟩, ⟨153, by decide⟩, ⟨156, by decide⟩, ⟨157, by decide⟩, ⟨160, by decide⟩, ⟨162, by decide⟩, ⟨164, by decide⟩, ⟨165, by decide⟩, ⟨167, by decide⟩, ⟨170, by decide⟩, ⟨172, by decide⟩, ⟨174, by decide⟩, ⟨175, by decide⟩, ⟨176, by decide⟩, ⟨177, by decide⟩, ⟨178, by decide⟩, ⟨179, by decide⟩, ⟨180, by decide⟩, ⟨181, by decide⟩, ⟨184, by decide⟩, ⟨185, by decide⟩, ⟨186, by decide⟩, ⟨187, by decide⟩, ⟨188, by decide⟩, ⟨189, by decide⟩, ⟨191, by decide⟩, ⟨193, by decide⟩, ⟨196, by decide⟩, ⟨197, by decide⟩, ⟨198, by decide⟩, ⟨199, by decide⟩, ⟨201, by decide⟩, ⟨203, by decide⟩, ⟨205, by decide⟩, ⟨206, by decide⟩, ⟨207, by decide⟩, ⟨208, by decide⟩, ⟨209, by decide⟩, ⟨210, by decide⟩, ⟨211, by decide⟩, ⟨212, by decide⟩, ⟨213, by decide⟩, ⟨214, by decide⟩, ⟨215, by decide⟩, ⟨216, by decide⟩, ⟨217, by decide⟩, ⟨220, by decide⟩, ⟨221, by decide⟩, ⟨223, by decide⟩, ⟨225, by decide⟩, ⟨226, by decide⟩, ⟨227, by decide⟩, ⟨228, by decide⟩, ⟨229, by decide⟩, ⟨230, by decide⟩, ⟨231, by decide⟩, ⟨232, by decide⟩, ⟨233, by decide⟩, ⟨234, by decide⟩, ⟨235, by decide⟩, ⟨236, by decide⟩, ⟨237, by decide⟩, ⟨238, by decide⟩, ⟨239, by decide⟩, ⟨240, by decide⟩, ⟨241, by decide⟩, ⟨243, by decide⟩, ⟨244, by decide⟩, ⟨245, by decide⟩, ⟨246, by decide⟩, ⟨247, by decide⟩, ⟨248, by decide⟩, ⟨249, by decide⟩, ⟨250, by decide⟩, ⟨251, by decide⟩, ⟨252, by decide⟩, ⟨253, by decide⟩, ⟨254, by decide⟩, ⟨255, by decide⟩
-}
+def census18 : Finset (Fin 256) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed18 n)).terminal = true
 
 theorem census18_spec (n : Fin 256) :
     (DBMSourceTree.data (embed18 n)).terminal = true ↔ n ∈ census18 := by
-  decide +kernel
+  simp only [census18, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census18_card : census18.card = 150 := by
   decide +kernel
@@ -926,13 +907,12 @@ theorem block_terminal18 {n : Fin 5011} (hn : n ∈ blockIDs18) :
   exact (census18_spec m).mpr hm
 
 def embed19 (n : Fin 147) : Fin 5011 := ⟨n.val + 4864, by omega⟩
-def census19 : Finset (Fin 147) := {
-  ⟨0, by decide⟩, ⟨1, by decide⟩, ⟨2, by decide⟩, ⟨5, by decide⟩, ⟨6, by decide⟩, ⟨7, by decide⟩, ⟨8, by decide⟩, ⟨9, by decide⟩, ⟨10, by decide⟩, ⟨11, by decide⟩, ⟨12, by decide⟩, ⟨13, by decide⟩, ⟨15, by decide⟩, ⟨17, by decide⟩, ⟨18, by decide⟩, ⟨19, by decide⟩, ⟨20, by decide⟩, ⟨21, by decide⟩, ⟨22, by decide⟩, ⟨23, by decide⟩, ⟨24, by decide⟩, ⟨26, by decide⟩, ⟨27, by decide⟩, ⟨28, by decide⟩, ⟨29, by decide⟩, ⟨30, by decide⟩, ⟨31, by decide⟩, ⟨32, by decide⟩, ⟨34, by decide⟩, ⟨35, by decide⟩, ⟨36, by decide⟩, ⟨37, by decide⟩, ⟨38, by decide⟩, ⟨40, by decide⟩, ⟨41, by decide⟩, ⟨43, by decide⟩, ⟨44, by decide⟩, ⟨45, by decide⟩, ⟨46, by decide⟩, ⟨47, by decide⟩, ⟨48, by decide⟩, ⟨49, by decide⟩, ⟨50, by decide⟩, ⟨51, by decide⟩, ⟨52, by decide⟩, ⟨53, by decide⟩, ⟨54, by decide⟩, ⟨56, by decide⟩, ⟨57, by decide⟩, ⟨58, by decide⟩, ⟨59, by decide⟩, ⟨60, by decide⟩, ⟨62, by decide⟩, ⟨63, by decide⟩, ⟨65, by decide⟩, ⟨67, by decide⟩, ⟨68, by decide⟩, ⟨69, by decide⟩, ⟨71, by decide⟩, ⟨72, by decide⟩, ⟨73, by decide⟩, ⟨74, by decide⟩, ⟨75, by decide⟩, ⟨76, by decide⟩, ⟨77, by decide⟩, ⟨80, by decide⟩, ⟨83, by decide⟩, ⟨86, by decide⟩, ⟨88, by decide⟩, ⟨90, by decide⟩, ⟨91, by decide⟩, ⟨92, by decide⟩, ⟨93, by decide⟩, ⟨94, by decide⟩, ⟨95, by decide⟩, ⟨96, by decide⟩, ⟨98, by decide⟩, ⟨99, by decide⟩, ⟨100, by decide⟩, ⟨101, by decide⟩, ⟨102, by decide⟩, ⟨103, by decide⟩, ⟨106, by decide⟩, ⟨107, by decide⟩, ⟨108, by decide⟩, ⟨109, by decide⟩, ⟨110, by decide⟩, ⟨111, by decide⟩, ⟨113, by decide⟩, ⟨116, by decide⟩, ⟨117, by decide⟩, ⟨118, by decide⟩, ⟨119, by decide⟩, ⟨120, by decide⟩, ⟨121, by decide⟩, ⟨122, by decide⟩, ⟨124, by decide⟩, ⟨125, by decide⟩, ⟨126, by decide⟩, ⟨128, by decide⟩, ⟨129, by decide⟩, ⟨131, by decide⟩, ⟨132, by decide⟩, ⟨133, by decide⟩, ⟨135, by decide⟩, ⟨136, by decide⟩, ⟨137, by decide⟩, ⟨138, by decide⟩, ⟨139, by decide⟩, ⟨141, by decide⟩, ⟨142, by decide⟩, ⟨143, by decide⟩, ⟨144, by decide⟩, ⟨145, by decide⟩, ⟨146, by decide⟩
-}
+def census19 : Finset (Fin 147) :=
+  Finset.univ.filter fun n => (DBMSourceTree.data (embed19 n)).terminal = true
 
 theorem census19_spec (n : Fin 147) :
     (DBMSourceTree.data (embed19 n)).terminal = true ↔ n ∈ census19 := by
-  decide +kernel
+  simp only [census19, Finset.mem_filter, Finset.mem_univ, true_and]
 
 theorem census19_card : census19.card = 115 := by
   decide +kernel

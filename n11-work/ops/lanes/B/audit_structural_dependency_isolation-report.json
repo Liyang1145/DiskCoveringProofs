@@ -4,7 +4,7 @@
   "conflicted_lane_c_module_reachable": false,
   "lane_c_only_target_count": 162,
   "missing_imports": [],
-  "module_count": 1960,
+  "module_count": 1969,
   "ok": true,
   "reachable_lane_c_only_targets": [
     "N11Formalization.EnergyRefineN0037",
@@ -51,7 +51,7 @@
   "scope": "recursive source/import audit only; not a Lean kernel check",
   "sha256": {
     "audit": "A8A08B88A49293DB9976B75DBCCF10F14F0E6167AC7649F676C040B262648B41",
-    "lanes/B/TARGETS.txt": "1D27F4B71563F87F075661BA3D5BB4D0A131A62B28B138C87025A908985B9B0E",
+    "lanes/B/TARGETS.txt": "769960B51F8A0D2A5CA44332E28047B7FE6A9B615EEF30B8D4671F2CC43BC48B",
     "lanes/C/TARGETS.txt": "36E86E1D5721EAC1898790E870FA851DDD10B93DE8622FEF2E86865E08426F83"
   },
   "structural_targets": [

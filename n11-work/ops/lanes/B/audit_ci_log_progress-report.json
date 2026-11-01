@@ -1,0 +1,55 @@
+{
+  "build_count": 5,
+  "build_targets": [
+    "N11Formalization.EnergyTerminalBatchB13ResidualCertificates",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain",
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus"
+  ],
+  "diagnosis": "Lane-B targets were not reached before the runner stopped.",
+  "exit_143": true,
+  "exit_records": [
+    {
+      "exit": 0,
+      "target": "N11Formalization.EnergyTerminalBatchB13ResidualCertificates"
+    },
+    {
+      "exit": 0,
+      "target": "N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair"
+    },
+    {
+      "exit": 0,
+      "target": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual"
+    },
+    {
+      "exit": 0,
+      "target": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain"
+    }
+  ],
+  "first_lane": "C",
+  "head_sha": "20fd194b2c81d5c840adc335dfb6cee90fcfe06f",
+  "lane_b_target_reached": false,
+  "last_replayed": "N11Formalization.EnergyTerminalResidualCensusBase",
+  "last_started_without_exit": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
+  "log_sha256": "9B90588024D98BC43C304F11F301E6AFB21DCAC4E42FC786974C1BDA956EFADF",
+  "oom_guard_triggered": false,
+  "replayed_count": 3896,
+  "run": "41312076357",
+  "runner_shutdown": true,
+  "scope": "CI execution-log audit only; not a Lean kernel check or proof",
+  "started_without_exit": [
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus"
+  ],
+  "targets_reached_by_lane": {
+    "A": [],
+    "B": [],
+    "C": [
+      "N11Formalization.EnergyTerminalBatchB13ResidualCertificates",
+      "N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair",
+      "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual",
+      "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain",
+      "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus"
+    ]
+  }
+}
