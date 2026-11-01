@@ -215,37 +215,33 @@ unpaid. Root import of C450 stays supervisor-only.
 **Next concrete step.** CI lane A builds Base then rows 00..08 then assembler;
 inspect the first red row and split no further unless a one-row target exits.
 
-## 2026-11-01 (session 145) -- sector split provenance audit
+## 2026-11-01 (sessions 145--146, condensed)
+Split provenance checker PASS 9/9 against frozen `11f649b3`; textual only.
+`audit_ci_lane_a_reachability.py` still reports `C B A` (`lane A position: 3`),
+explaining why run `41293387736` died in B/C before any lane-A verdict.
 
-Added `check_q0_degree3_sector_peak_split.py`
-(`8116335b536744368ab67825e5cc005d7df0c9691eea0d0eeed8409ac84ff4f0`).
-It pins frozen source `11f649b3` at
-`e124cce598be3ccc38916150bab052d6373b4e62e0e06ae2ad64868070c98bea`,
-compares all nine proof bodies byte-for-byte, requires one declaration each,
-rejects leftover bodies in the base/assembler, and checks all eleven targets.
+## 2026-11-01 (session 147) -- direct step proof and strictness boundary
+Probed the existing `sectorValue_row0_step_down` normalization in
+`probe_q0_degree3_sector_step_normnum.lean`: bounded `lake env lean` timed out
+after 180 s (exit 124, no diagnostic), so the emitted direct proof is not
+CI-safe evidence.  I then tested reuse of
+`sectorAt_bin3_dec_of_le_one 0 ... 1022`; it only yields a non-strict decrease,
+which cannot refute the non-strict `SectorIncSteps` premise.  I reverted that
+candidate proof rather than leave an invalid claim.
 
-**Checks (scope).** Split provenance PASS 9/9; `py_compile`, `git diff --check`
-and `project_status.py --check` PASS (latter is handoff-index scope only).
-Existing projection/unfold/import checks still PASS. This is textual evidence,
-not kernel proof. All split modules and sector-step owner remain CI pending;
-shape, bins, strict total, `Q0Degree3AreaInput`, seven exclusions and the
-arbitrary-centre theorem remain unpaid.
+**Files / SHA256.** Emitter unchanged after revert
+`360a51e0a6b815cb1a40b85c0b1f0507a91ee414928d7edfdec48dbcfde090c2`;
+counterexample unchanged `644bb07a2a50597b8184a855277c1641e2ac21f9bb40f5fac738a85176b8bc9b`.
+Re-ran the emitter (PASS), analytic audit (PASS, 78-digit positive margin),
+`py_compile`, and `git diff --check`.
 
-**Next concrete step.** Once CI reaches lane A, inspect the first red owner
-(Base, rows 00..08, assembler order); do not diagnose dependency-red descendants.
+**Still unproved / unpaid.** No kernel verdict for the strict row-0 drop or
+counterexample.  The direct 1237-digit rational normalization times out; the
+bin-3 antitone theorem is insufficient without strictness.  All downstream
+shape/bins/strict-total/exclusions/arbitrary-centre obligations remain unpaid.
 
-## 2026-11-01 (session 146) -- CI lane-order blocker made executable
-Added `audit_ci_lane_a_reachability.py`.  It parses the workflow's target
-concatenation and fails unless no lane target precedes A.  Current result is
-the expected blocker: order `C B A`, with both C and B before A.  This explains
-why run `41293387736` exhausted memory in lane B and never produced a lane-A
-verdict.  File SHA256 to be supplied by the supervisor's manifest.
-**Checks (scope).** Audit reports `lane A position: 3`, `lanes before A: C B`
-and exits 1; `py_compile` and `git diff --check` PASS.  Workflow/source ordering
-only, not kernel evidence.
-**Still unproved / unpaid.** Unchanged: split peak/sector targets and the step
-counterexample are CI pending; downstream shape/bins/strict total,
-`Q0Degree3AreaInput`, seven exclusions, and arbitrary-centre theorem remain
-unpaid.
-**Next concrete step.** Supervisor moves lane A before C/B (or gives it a
-separate job), then inspect the first red lane-A owner in target order.
+**Next concrete step.** Add a strict-anti transfer theorem in
+`SevenClassQ0Deg3SectorCalculus` using `strictAntiOn_of_deriv_neg`, prove the
+derivative is negative on `(nodeQ 1022, nodeQ 1023)` from the exact
+`cosHiNLag (nodeQ 1022) < 1/2` bound, then replace the counterexample's
+normalization with that theorem.  Keep CI ordering blocker separate.
