@@ -144,3 +144,78 @@ Durable summary through session 143:
 - Next concrete step: CI on the new hashes, inspecting `TerminalCensus` first.
   If it is green, inspect `ResidualCard`; if red, fix only the first generated
   proof and keep the literal terminal data frozen.
+
+## 2026-11-02 - session 151: cardinality no-goal repair
+
+- Live CI run `41378003343` at merge head `016484e6` has build job
+  `125062414500` still in progress.  Its command concatenates all 200 lane-C
+  targets before the 31 lane-B targets, so the first four exits are lane-C
+  failures (`EnergyRefineN0039Repair` and its three consumers); lane B has not
+  yet been reached.  Log snapshot SHA-256 scope is current partial job log only,
+  not a target verdict for B.
+- Found a latent `No goals to be solved` defect in the generated
+  `censusIDs_card`: `simp` can reduce the 20 literal cardinals to true, after
+  which the separate `norm_num` has no goal.  Replaced the two-step proof in
+  `emit_terminal_census_blocks.py` with one
+  `norm_num [Fin.sum_univ_succ, ...]` call and regenerated the census.
+- New `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean` is 1,273 lines,
+  SHA-256 `2FC5650F32D662D5105489214F5A09E7956C64066A55A9D1C98FC484372AFB83`;
+  emitter SHA-256
+  `FF1DFC56166268A4C2FD6AB1C2D18941A8238B1609D0C741B4043372F24AE3B0`.
+  `audit_terminal_census_blocks.py` now also rejects the two-step form;
+  audit SHA-256 `BEF1B079D07B300402121C6826CA9236C873CF3D5F1AA86C247F384373F6721A`
+  and report `ok=true` (20 blocks, cards sum 2,506).  Scope is static source
+  auditing, **not Lean elaboration or kernel checking**.
+- A 210-second Mathlib-probe attempt to elaborate the transformed census timed
+  out during import, yielding no Lean verdict.  `TerminalCensus` and
+  `ResidualCard` remain **CI pending**.
+- Unpaid unchanged: all 373 residual radii, packet payloads, seven class
+  exclusions (`0/7`), and the arbitrary-centre full-disk theorem.  No radius is
+  paid.
+- Next: run `TerminalCensus` at SHA `2FC5650F...FB83` before the lane-C queue;
+  if green run `ResidualCard`, otherwise fix only the first generated proof.
+  Supervisor action needed: CI target order must prioritize lane B or the 200
+  lane-C targets consume the whole interval before B is attempted.
+
+## 2026-11-02 - session 152: post-repair static verification
+
+- Re-ran `audit_terminal_census_blocks.py`: `ok=true`; twenty blocks
+  (19 x 256 + 147), padded final interval `[4864,5120)`, and literal
+  cardinality sum 2,506.  The single-`norm_num` repair is present and the
+  audited census SHA-256 is
+  `2FC5650F32D662D5105489214F5A09E7956C64066A55A9D1C98FC484372AFB83`;
+  emitter SHA-256
+  `FF1DFC56166268A4C2FD6AB1C2D18941A8238B1609D0C741B4043372F24AE3B0`
+  and audit SHA-256
+  `BEF1B079D07B300402121C6826CA9236C873CF3D5F1AA86C247F384373F6721A`.
+- Re-ran `audit_terminal_census.py`: `ok=true`, partition exact at
+  terminal/sharp/B12/rest/B13/residual =
+  `2506/120/815/1182/1997/389`, refined residual 373.  This is independent
+  source parsing and finite-set arithmetic, **not Lean elaboration or kernel
+  checking**.
+- `TARGETS.txt` remains ordered census -> `ResidualCard` -> structural trio;
+  `TerminalCensus` and `ResidualCard` remain **CI pending**.  No local project
+  build was run, and no radius is paid.
+- Next: CI `TerminalCensus` at the SHA above, then `ResidualCard`; use the first
+  Lean diagnostic to repair only the emitter-generated proof.
+
+## 2026-11-02 - session 153: refreshed static audits
+
+- Re-ran `audit_terminal_census_blocks.py` with a 60 s bound: `ok=true`,
+  twenty blocks (19 x 256 + 147), literal cardinality sum 2,506, source SHA-256
+  `2FC5650F32D662D5105489214F5A09E7956C64066A55A9D1C98FC484372AFB83`.
+  Scope: generated-source structure only, not Lean elaboration or kernel credit.
+- Re-ran `audit_residualcard_decoupling.py` with a 60 s bound: `ok=true`,
+  16 removed ids, disjoint from 120 sharp ids, terminal census present, old
+  residual census absent, import closure 625.  `ResidualCard.lean` SHA-256 is
+  `E0415B0EBD46DB0BA9B3A5A792EA506EBAAA2C91BEFAAB8DD119EB5667FB6F40`.
+  Scope: source/import and literal-id auditing only.
+- The newest recorded CI (`41352871085`) still reports exit 1 for
+  `TerminalCensus` and downstream targets, but predates the current census SHA;
+  that run is not a verdict on this revision.  No newer lane-B target verdict is
+  available, and no local full-project build was run.
+- Still unpaid: kernel acceptance of `TerminalCensus` and `ResidualCard`; the
+  structural trio; all 373 residual radii; packet `f0Lo`/`g`; 382 absent payload
+  records; SevenClassExclusions (`0/7`); arbitrary-centre full-disk theorem.
+- Next concrete step: CI must run `TerminalCensus` at SHA `2FC5650F...FB83`
+  first, then `ResidualCard`; if red, repair only the first emitted proof.

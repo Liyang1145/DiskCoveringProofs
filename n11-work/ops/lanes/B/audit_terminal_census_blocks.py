@@ -83,6 +83,7 @@ def main() -> None:
         i: (expected[i][1], expected[i][1] + 256) for i in range(20)
     }
     dispatcher = text[text.index("theorem blockIDs_pairwiseDisjoint") : text.index("theorem censusIDs_card")]
+    cardinality = text[text.index("theorem censusIDs_card") : text.index("theorem terminalIDs_card")]
     interval_cases = re.findall(
         r"· simpa \[blockIDs\] using blockIDs(\d+)_interval", text
     )
@@ -119,6 +120,8 @@ def main() -> None:
         "census_card_is_2506": bool(
             re.search(r"theorem censusIDs_card : censusIDs\.card = 2506 := by", text)
         ),
+        "cardinality_uses_one_norm_num": "  norm_num [Fin.sum_univ_succ" in cardinality
+        and "\n  norm_num\n" not in cardinality,
     }
     result = {
         "scope": "static generated-source audit; not Lean elaboration or kernel proof credit",
