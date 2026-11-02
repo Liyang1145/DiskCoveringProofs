@@ -62,14 +62,38 @@ def edgeBoundAt : Fin 21 → ℚ := ![
 
 def sectorBoundAt : Fin 9 → ℚ := ![
   (134128/1000000 : ℚ),
-  (134128/1000000 : ℚ),
   (264176/1000000 : ℚ),
   (232711/1000000 : ℚ),
   (239076/1000000 : ℚ),
   (237515/1000000 : ℚ),
   (239075/1000000 : ℚ),
   (232711/1000000 : ℚ),
-  (264175/1000000 : ℚ)
+  (264175/1000000 : ℚ),
+  (134128/1000000 : ℚ)
+]
+
+def edgePairAbsBoundAt : Fin 21 → ℚ := ![
+  (971/10000 : ℚ),
+  (322/10000 : ℚ),
+  (195/10000 : ℚ),
+  (88/10000 : ℚ),
+  (109/10000 : ℚ),
+  (109/10000 : ℚ),
+  (88/10000 : ℚ),
+  (195/10000 : ℚ),
+  (322/10000 : ℚ),
+  (946/10000 : ℚ),
+  (946/10000 : ℚ),
+  (207/10000 : ℚ),
+  (1710/10000 : ℚ),
+  (1710/10000 : ℚ),
+  (1061/10000 : ℚ),
+  (1194/10000 : ℚ),
+  (1167/10000 : ℚ),
+  (1174/10000 : ℚ),
+  (1167/10000 : ℚ),
+  (1194/10000 : ℚ),
+  (1061/10000 : ℚ)
 ]
 
 theorem totalCoeff_lt_neg : totalCoeff ≤ -(319/1000) := by
@@ -79,21 +103,27 @@ theorem totalCoeff_lt_neg : totalCoeff ≤ -(319/1000) := by
 theorem lam_lt_fifth : lam ≤ 1/5 := by
   norm_num [lam]
 
-theorem mu_abs_lt_twentieth (j : Fin 11) : |mu j| ≤ 1/20 := by
-  fin_cases j <;> norm_num [mu]
+theorem sectorMu_abs_lt_twentieth (i : Fin 9) : |mu (nextSite i)| ≤ 1/20 := by
+  fin_cases i <;>
+    first
+    | rw [show nextSite 0 = (1 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 1 = (2 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 2 = (3 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 3 = (4 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 4 = (5 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 5 = (6 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 6 = (7 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 7 = (8 : Fin 11) by decide +kernel] <;> norm_num [mu]
+    | rw [show nextSite 8 = (0 : Fin 11) by decide +kernel] <;> norm_num [mu]
 
 theorem tableEdges_card (i : Fin 21) : (tableEdges i).card = 2 := by
   fin_cases i <;> decide
 
-theorem tableEdge_sum_abs (i : Fin 21) :
-    |∑ j ∈ tableEdges i, mu j| ≤ 1/10 := by
-  calc
-    |∑ j ∈ tableEdges i, mu j| ≤ ∑ j ∈ tableEdges i, |mu j| :=
-      Finset.abs_sum_le_sum_abs _ _
-    _ ≤ ∑ _j ∈ tableEdges i, (1/20 : ℚ) :=
-      Finset.sum_le_sum fun j _ => mu_abs_lt_twentieth j
-    _ = (tableEdges i).card * (1/20 : ℚ) := by simp
-    _ = 1/10 := by rw [tableEdges_card]; norm_num
+theorem tableEdge_sum_abs_le_bound (i : Fin 21) :
+    |∑ j ∈ tableEdges i, mu j| ≤ edgePairAbsBoundAt i := by
+  fin_cases i <;>
+    norm_num [edgePairAbsBoundAt, tableEdges, mu, Finset.sum_insert,
+      Finset.sum_singleton, Finset.mem_insert, Finset.mem_singleton]
 
 theorem edgeMaxAt_le (i : Fin 21) : edgeMaxAt i ≤ edgeBoundAt i := by
   fin_cases i <;> norm_num [edgeMaxAt, edgeBoundAt]
@@ -119,14 +149,17 @@ theorem edge_increment_sum_le :
   calc
     (∑ i : Fin 21,
       ((19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j|) * RatInterval.piHi / 2048) ≤
-        ∑ _i : Fin 21, ((611/2500 : ℚ) * RatInterval.piHi / 2048) := by
+        ∑ i : Fin 21, (((19/50 : ℚ)^2 + edgePairAbsBoundAt i) *
+          RatInterval.piHi / 2048) := by
       apply Finset.sum_le_sum
       intro i _
-      have hi := tableEdge_sum_abs i
-      have h : (19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j| ≤ 611/2500 := by
+      have hi := tableEdge_sum_abs_le_bound i
+      have h : (19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j| ≤
+          (19/50 : ℚ)^2 + edgePairAbsBoundAt i := by
         linarith
-      exact mul_le_mul_of_nonneg_right h (by norm_num [RatInterval.piHi])
-    _ ≤ 8/1000 := by norm_num [RatInterval.piHi]
+      have hp : (0 : ℚ) ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_right h hp) (by norm_num)
+    _ ≤ 8/1000 := by norm_num [edgePairAbsBoundAt, RatInterval.piHi]
 
 theorem sector_increment_sum_le :
     (∑ i : Fin 9, (1 + lam + |mu (nextSite i)|) * RatInterval.piHi / 2048) ≤ 18/1000 := by
@@ -135,10 +168,11 @@ theorem sector_increment_sum_le :
         ∑ _i : Fin 9, ((5/4 : ℚ) * RatInterval.piHi / 2048) := by
       apply Finset.sum_le_sum
       intro i _
-      have hm := mu_abs_lt_twentieth (nextSite i)
+      have hm := sectorMu_abs_lt_twentieth i
       have hl := lam_lt_fifth
       have h : 1 + lam + |mu (nextSite i)| ≤ 5/4 := by linarith
-      exact mul_le_mul_of_nonneg_right h (by norm_num [RatInterval.piHi])
+      have hp : (0 : ℚ) ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]
+      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_right h hp) (by norm_num)
     _ ≤ 18/1000 := by norm_num [RatInterval.piHi]
 
 /-- Pure arithmetic comparison of the explicit coefficient ledger with `piLo`. -/

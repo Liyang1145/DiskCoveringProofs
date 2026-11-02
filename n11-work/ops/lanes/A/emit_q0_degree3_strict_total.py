@@ -16,6 +16,7 @@ ROOT = HERE.parents[3]
 SRC = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperTables.lean"
 OUT = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3StrictTotal.lean"
 SCALE = 10**6
+PAIR_SCALE = 10**4
 
 
 def lean_array(source: str, name: str) -> list[str]:
@@ -50,27 +51,37 @@ def rational(text: str) -> Fraction:
     return Fraction(text)
 
 
-def ceil_scaled(value: Fraction) -> int:
-    return (value.numerator * SCALE + value.denominator - 1) // value.denominator
+def ceil_scaled(value: Fraction, scale: int = SCALE) -> int:
+    return (value.numerator * scale + value.denominator - 1) // value.denominator
 
 
 def main() -> None:
     source = SRC.read_text()
     edge_values = [rational(x) for x in lean_array(source, "edgeMaxAt")]
     sector_values = [rational(x) for x in lean_array(source, "sectorMax")]
+    mu_values = [rational(x) for x in lean_array(source, "mu")]
+    edges = []
+    for field in lean_array(source, "tableEdges"):
+        text = field.strip().lstrip("(")
+        text = text[:text.index("}")].replace("{", "")
+        edges.append(tuple(int(x) for x in text.split(",")))
     assert len(edge_values) == 21 and len(sector_values) == 9
+    assert len(mu_values) == 11 and len(edges) == 21
+    assert all(len(edge) == 2 for edge in edges)
     edge_bounds = [ceil_scaled(x) for x in edge_values]
     sector_bounds = [ceil_scaled(x) for x in sector_values]
+    edge_pair_bounds = [ceil_scaled(abs(sum(mu_values[j] for j in edge)), PAIR_SCALE)
+                        for edge in edges]
     # Exact coarse ledger: -1 + 2.134315 + 1.977695 + .008 + .018 = 3.13801.
     assert sum(edge_bounds) == 2_134_315
     assert sum(sector_bounds) == 1_977_695
     assert Fraction(3_138_010, SCALE) < Fraction(314159265358979323846, 10**20)
 
-    def vector(name: str, values: list[int], length: int) -> list[str]:
+    def vector(name: str, values: list[int], length: int, scale: int = SCALE) -> list[str]:
         lines = [f"def {name} : Fin {length} → ℚ := !["]
         for i, value in enumerate(values):
             suffix = "," if i + 1 < length else ""
-            lines.append(f"  ({value}/{SCALE} : ℚ){suffix}")
+            lines.append(f"  ({value}/{scale} : ℚ){suffix}")
         lines.append("]")
         return lines
 
@@ -110,22 +121,31 @@ def main() -> None:
     lines += vector("edgeBoundAt", edge_bounds, 21)
     lines.append("")
     lines += vector("sectorBoundAt", sector_bounds, 9)
+    lines.append("")
+    lines += vector("edgePairAbsBoundAt", edge_pair_bounds, 21, PAIR_SCALE)
     lines += [
         "", "theorem totalCoeff_lt_neg : totalCoeff ≤ -(319/1000) := by",
         "  unfold totalCoeff", "  norm_num [mu, lam]", "",
         "theorem lam_lt_fifth : lam ≤ 1/5 := by", "  norm_num [lam]", "",
-        "theorem mu_abs_lt_twentieth (j : Fin 11) : |mu j| ≤ 1/20 := by",
-        "  fin_cases j <;> norm_num [mu]", "",
+        "theorem sectorMu_abs_lt_twentieth (i : Fin 9) : |mu (nextSite i)| ≤ 1/20 := by",
+        "  fin_cases i <;>",
+        "    first",
+        "    | rw [show nextSite 0 = (1 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 1 = (2 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 2 = (3 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 3 = (4 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 4 = (5 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 5 = (6 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 6 = (7 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 7 = (8 : Fin 11) by decide +kernel] <;> norm_num [mu]",
+        "    | rw [show nextSite 8 = (0 : Fin 11) by decide +kernel] <;> norm_num [mu]", "",
         "theorem tableEdges_card (i : Fin 21) : (tableEdges i).card = 2 := by",
         "  fin_cases i <;> decide", "",
-        "theorem tableEdge_sum_abs (i : Fin 21) :",
-        "    |∑ j ∈ tableEdges i, mu j| ≤ 1/10 := by",
-        "  calc", "    |∑ j ∈ tableEdges i, mu j| ≤ ∑ j ∈ tableEdges i, |mu j| :=",
-        "      Finset.abs_sum_le_sum_abs _ _",
-        "    _ ≤ ∑ _j ∈ tableEdges i, (1/20 : ℚ) :=",
-        "      Finset.sum_le_sum fun j _ => mu_abs_lt_twentieth j",
-        "    _ = (tableEdges i).card * (1/20 : ℚ) := by simp",
-        "    _ = 1/10 := by rw [tableEdges_card]; norm_num", "",
+        "theorem tableEdge_sum_abs_le_bound (i : Fin 21) :",
+        "    |∑ j ∈ tableEdges i, mu j| ≤ edgePairAbsBoundAt i := by",
+        "  fin_cases i <;>",
+        "    norm_num [edgePairAbsBoundAt, tableEdges, mu, Finset.sum_insert,",
+        "      Finset.sum_singleton, Finset.mem_insert, Finset.mem_singleton]", "",
         "theorem edgeMaxAt_le (i : Fin 21) : edgeMaxAt i ≤ edgeBoundAt i := by",
         "  fin_cases i <;> norm_num [edgeMaxAt, edgeBoundAt]", "",
         "theorem sectorMax_le (i : Fin 9) : sectorMax i ≤ sectorBoundAt i := by",
@@ -143,22 +163,26 @@ def main() -> None:
         "      ((19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j|) * RatInterval.piHi / 2048) ≤ 8/1000 := by",
         "  calc", "    (∑ i : Fin 21,",
         "      ((19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j|) * RatInterval.piHi / 2048) ≤",
-        "        ∑ _i : Fin 21, ((611/2500 : ℚ) * RatInterval.piHi / 2048) := by",
+        "        ∑ i : Fin 21, (((19/50 : ℚ)^2 + edgePairAbsBoundAt i) *",
+        "          RatInterval.piHi / 2048) := by",
         "      apply Finset.sum_le_sum", "      intro i _",
-        "      have hi := tableEdge_sum_abs i",
-        "      have h : (19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j| ≤ 611/2500 := by",
+        "      have hi := tableEdge_sum_abs_le_bound i",
+        "      have h : (19/50 : ℚ)^2 + |∑ j ∈ tableEdges i, mu j| ≤",
+        "          (19/50 : ℚ)^2 + edgePairAbsBoundAt i := by",
         "        linarith",
-        "      exact mul_le_mul_of_nonneg_right h (by norm_num [RatInterval.piHi])",
-        "    _ ≤ 8/1000 := by norm_num [RatInterval.piHi]", "",
+        "      have hp : (0 : ℚ) ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]",
+        "      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_right h hp) (by norm_num)",
+        "    _ ≤ 8/1000 := by norm_num [edgePairAbsBoundAt, RatInterval.piHi]", "",
         "theorem sector_increment_sum_le :",
         "    (∑ i : Fin 9, (1 + lam + |mu (nextSite i)|) * RatInterval.piHi / 2048) ≤ 18/1000 := by",
         "  calc", "    (∑ i : Fin 9, (1 + lam + |mu (nextSite i)|) * RatInterval.piHi / 2048) ≤",
         "        ∑ _i : Fin 9, ((5/4 : ℚ) * RatInterval.piHi / 2048) := by",
         "      apply Finset.sum_le_sum", "      intro i _",
-        "      have hm := mu_abs_lt_twentieth (nextSite i)",
+        "      have hm := sectorMu_abs_lt_twentieth i",
         "      have hl := lam_lt_fifth",
         "      have h : 1 + lam + |mu (nextSite i)| ≤ 5/4 := by linarith",
-        "      exact mul_le_mul_of_nonneg_right h (by norm_num [RatInterval.piHi])",
+        "      have hp : (0 : ℚ) ≤ RatInterval.piHi := by norm_num [RatInterval.piHi]",
+        "      exact div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_right h hp) (by norm_num)",
         "    _ ≤ 18/1000 := by norm_num [RatInterval.piHi]", "",
         "/-- Pure arithmetic comparison of the explicit coefficient ledger with `piLo`. -/",
         "theorem canonicalLedger_lt_piLo :",
