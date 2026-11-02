@@ -1,0 +1,30 @@
+{
+  "run_id": 41387011078,
+  "head_sha": "66c263fd6473b94494f8e7d0ab78e0083bafa394",
+  "workflow": "default push checks",
+  "conclusion": "failure",
+  "scope": "repository delivery checks only; no Lean target was run",
+  "jobs": [
+    {
+      "id": 125089957776,
+      "name": "delivery",
+      "conclusion": "failure",
+      "first_failure": "FAIL: Size mismatch cover11/README.md"
+    }
+  ],
+  "paired_run": {
+    "id": 41387011103,
+    "job": "math",
+    "conclusion": "success"
+  },
+  "n11_lean_build": {
+    "run_id": 41380560959,
+    "status_at_check": "pending",
+    "head_sha": "a29e4ee1",
+    "verdict_for_head_66c263fd": "not run"
+  },
+  "lane_b_source_sha256": {
+    "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean": "2fc5650f32d662d5105489214f5a09e7956c64066a55a9d1c98fc484372afb83",
+    "n11-work/ops/lanes/B/emit_terminal_census_blocks.py": "ff1dfc56166268a4c2fd6ab1c2d18941a8238b1609d0c741b4043372f24ae3b0"
+  }
+}
