@@ -1,0 +1,66 @@
+{
+  "status": "BLOCKED_CANONICAL_INTERFACE_MISSING_CLOSURE_FIELD",
+  "claim_boundary": "Exact source/interface arithmetic only; no factor bound, strict total, exclusion, or Lean kernel claim.",
+  "source": "n11-work/ops/lanes/A/q0-degree5-exact-source.json",
+  "source_sha256": "900d2186b5321acc8dc522f44f483c483355a3a7cbef4ea7c7d9817ad717f41d",
+  "canonical_map": "n11-work/ops/lanes/A/q0-degree5-canonical-map.json",
+  "canonical_map_sha256": "55a2ecce715c88195b12e66186010ff8ded691cfba85b3dff2eee8733ffae126",
+  "canonical_lean": "n11-work/lean/N11Formalization/ActualCanonicalMomentTransport.lean",
+  "canonical_lean_sha256": "773157858788f685c6e67da34153effb354319ffd60346ac3ffcfeb82a6818fb",
+  "source_emitter": "cover11/proof_bundle/research-2026/team-current/lead/q0_closure_dual.py",
+  "source_emitter_sha256": "13079b446342dc036cc7be60e9a7b57f20a3b2ac2f6c07fc0f7e5b1f21b5253b",
+  "checks": {
+    "group_count_121": true,
+    "closure_count_9": true,
+    "closure_strictly_positive": true,
+    "eta_zero": true,
+    "width_zero": true,
+    "emitter_sha_matches_source_record": true,
+    "emitter_has_switch_closure_term": true,
+    "emitter_has_sector_closure_terms": true,
+    "emitter_has_negative_pi_closure_constant": true
+  },
+  "mapped_values": {
+    "station_coefficient": [
+      -645018353867024003,
+      250000000000000000
+    ],
+    "kap_sum": [
+      0,
+      1
+    ],
+    "width": [
+      0,
+      1
+    ],
+    "eta": [
+      0,
+      1
+    ],
+    "closure_sum": [
+      195718067274616349,
+      100000000000000000
+    ]
+  },
+  "constants": {
+    "source_pi_coefficient": [
+      -2268627044107129751,
+      500000000000000000
+    ],
+    "canonical_from_existing_map_pi_coefficient": [
+      -645018353867024003,
+      250000000000000000
+    ],
+    "canonical_minus_source": [
+      195718067274616349,
+      100000000000000000
+    ],
+    "identity": "canonical_minus_source = closure_sum - 2*eta"
+  },
+  "obstruction": {
+    "field_count": "closure has 9 entries; CanonicalCoeffQ has no closure field",
+    "term_shape": "the source adds closure[i-1]*(left+w/2)+closure[i]*(right+w/2) to sector i and closure[j]*2*b to switch j",
+    "consequence": "the scalar eta can at best repair the pi-constant, not the nine sector- and switch-dependent factor terms; do not emit Q0FiniteTable 3 from the current mapping"
+  },
+  "next_required_interface": "Define and prove a closure-extended canonical certificate carrying a Fin 9 closure vector, nonnegativity, the -pi*sum closure constant, and closure-augmented sector/switch objectives."
+}
