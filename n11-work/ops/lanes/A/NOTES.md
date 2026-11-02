@@ -149,3 +149,67 @@ first lane-A failure.  If `SevenClassQ0Deg3Repaired` and
 `SevenClassQ0Deg3SectorPeak00` are green, proceed to peak rows 01--08 and then
 `UpperReductionUnimodalBase`; if a suffix is red, replace only the owning closed
 rational goal with an explicit normalized comparison.
+
+## 2026-11-02 (session 171) -- live CI boundary isolated; no new verdict
+
+Checked GitHub Actions directly rather than relying on the stale `LATEST.md`.
+The q0 repair commit `00ac8c14` produced two non-Lean runs:
+`41395436373` (delivery bytes, red only because `cover11/README.md` size does
+not match its manifest) and `41395436408` (fresh n=12 arithmetic, green).
+Neither ran Lean.  The Lean workflow run for `68d172d9` is `41394181326` and
+is still `pending` with no job, so it has not tested lane A.
+
+The newest downloadable Lean job is still `125062414500`, run `41378003343`
+(HEAD `016484e6`, before the q0 repairs).  Its Actions log is capped at
+281,186,304 bytes and ends during a `Patch120DomainPacket` warning before lane
+A starts; therefore it cannot provide a lane-A verdict.  In that log, the
+edge/sector q0 failure text is visible only in the pre-cap section already
+recorded in session 168.
+
+**Checks (scope).** Reran `audit_q0_degree3_kernel_repairs.py`: PASS (source
+preflight only).  Reran `check_q0_degree3_sector_peak_split.py`: PASS 9/9.
+Reran `check_q0_degree3_edge_peak_split.py`: PASS 21/21 byte-preserved edge
+proofs and one declared terminal suffix.  A bounded `lake env lean --version`
+probe in `/workspace/tools/mathlib-probe` timed out at 100 s, so no new local
+Lean result.  `python tools/project_status.py --check` PASSed its handoff-index
+scope.  No files in the frozen tree changed this session.
+
+**Still unproved / unpaid.**  `decide +kernel` elaboration and all q0
+peak/edge/assembler modules remain CI pending.  `StrictTotal`, `Q0Exclusion`,
+`Q0Degree3AreaInput`, the other six exclusions, and the arbitrary-centre
+theorem remain unpaid.
+
+**Next concrete step.** The supervisor must make a Lean-path push (or rerun
+`41394181326`) so CI emits a new job after the cached energy targets.  Inspect
+the first lane-A `=== EXIT`/`error:` for `SevenClassQ0Deg3Repaired`; do not use
+the delivery or n=12 success as Lean evidence.
+
+## 2026-11-02 (session 172) -- repaired HEAD has no Lean run; probe inconclusive
+
+Queried the public GitHub Actions API directly for `Liyang1145/DiskCoveringProofs`.
+For repaired HEAD `00ac8c14`, only runs `41395436373` (delivery, failure) and
+`41395436408` (fresh n=12 arithmetic, success) exist.  The newest Lean run is
+still `41394181350` at `68d172d9`; it contains only a successful `math` job and
+no n=11 Lean job.  Therefore there is still **no CI verdict** on any q0 repair.
+
+Re-ran the three source preflights: `audit_q0_degree3_kernel_repairs.py` PASS
+(no kernel verdict), sector peak split PASS 9/9, edge peak split PASS 21/21.
+`python tools/project_status.py --check` PASS (handoff-index scope only).
+A bounded core/Mathlib probe of peak row 0 reduced to a missing cached olean
+`Mathlib/Data/Rat/Defs.olean`, not a Lean error in the proof; it is no evidence.
+The prior whole-`Mathlib` giant-Rat probe timed out at 120 s and is also no
+evidence.
+
+**Files / hashes.** No Lean or generated table changed this session.  Existing
+repaired-module SHA256 values remain as recorded in session 168.  This entry
+changes only `n11-work/ops/lanes/A/NOTES.md`.
+
+**Still unproved / unpaid.** `decide +kernel` elaboration and every repaired q0
+peak/edge/assembler module remain CI pending.  `StrictTotal`, `Q0Exclusion`,
+`Q0Degree3AreaInput`, six other exclusions, and the arbitrary-centre theorem
+remain unpaid.
+
+**Next concrete step.** Supervisor must push a path that launches the n=11 Lean
+workflow on `00ac8c14` (or rerun the workflow with that SHA).  Inspect the first
+lane-A `error:` after `SevenClassQ0Deg3Repaired`; do not use the n=12 or
+delivery runs as Lean evidence.
