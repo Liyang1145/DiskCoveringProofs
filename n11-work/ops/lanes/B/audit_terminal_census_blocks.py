@@ -71,12 +71,21 @@ def main() -> None:
 
     expected = {index: (256, index * 256) for index in range(19)}
     expected[19] = (147, 4864)
-    facts = set(re.findall(r"^theorem (blockIDs_\d+_\d+_disjoint) ", text, re.M))
-    expected_facts = {f"blockIDs_{i}_{j}_disjoint" for i in range(20) for j in range(i + 1, 20)}
+    intervals = {
+        int(index): (int(lo), int(hi))
+        for index, lo, hi in re.findall(
+            r"theorem blockIDs(\d+)_interval : blockIDs\1 ⊆\s+"
+            r"Finset\.univ\.filter \(fun n : Fin 5011 => (\d+) ≤ n\.val ∧ n\.val < (\d+)\)",
+            text,
+        )
+    }
+    expected_intervals = {
+        i: (expected[i][1], expected[i][1] + 256) for i in range(20)
+    }
     dispatcher = text[text.index("theorem blockIDs_pairwiseDisjoint") : text.index("theorem censusIDs_card")]
-    dispatched = [
-        name for name in re.findall(r"exact (blockIDs_\d+_\d+_disjoint)(?:\.symm)?", dispatcher)
-    ]
+    interval_cases = re.findall(
+        r"· simpa \[blockIDs\] using blockIDs(\d+)_interval", text
+    )
     checks = {
         "twenty_embed_blocks": embeds == expected,
         "twenty_filtered_census_definitions": filtered_census == {
@@ -90,9 +99,20 @@ def main() -> None:
         "literal_cards_sum_2506": sum(census_cards.values()) == 2506,
         "block_bounds_contiguous": all(lower.get(i) == expected[i][1] for i in range(20))
         and all(upper.get(i) == expected[i][1] + expected[i][0] for i in range(19)),
-        "all_190_disjointness_facts": facts == expected_facts,
-        "all_190_facts_dispatched_both_orders": set(dispatched) == expected_facts
-        and len(dispatched) == 380,
+        "twenty_padded_interval_facts": intervals == expected_intervals,
+        "final_interval_padded_for_generic_dispatcher": intervals.get(19) == (4864, 5120),
+        "generic_interval_dispatches_twenty_cases": interval_cases == [
+            str(i) for i in range(20)
+        ],
+        "pairwise_uses_interval_order": all(
+            needle in dispatcher
+            for needle in (
+                "blockIDs_interval i hi",
+                "blockIDs_interval j hj",
+                "i.val < j.val ∨ j.val < i.val",
+                "exact hij (Fin.ext h)",
+            )
+        ) and "fin_cases i <;> fin_cases j" not in dispatcher,
         "terminal_card_is_2506": bool(
             re.search(r"theorem terminalIDs_card : terminalIDs\.card = 2506 := by", text)
         ),

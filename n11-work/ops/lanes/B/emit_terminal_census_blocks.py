@@ -80,7 +80,7 @@ def main() -> None:
                 f"  intro n hn",
                 f"  rw [blockIDs{b}, Finset.mem_image] at hn",
                 "  rcases hn with ⟨m, _, rfl⟩",
-                f"  simp [embed{b}]",
+                f"  simp [embed{b}] <;> omega",
             ]
         lines += [
             f"theorem blockIDs{b}_lower : blockIDs{b} ⊆",
@@ -88,15 +88,15 @@ def main() -> None:
             f"  intro n hn",
             f"  rw [blockIDs{b}, Finset.mem_image] at hn",
             "  rcases hn with ⟨m, _, rfl⟩",
-            f"  simp [embed{b}]",
+            f"  simp [embed{b}] <;> omega",
             "",
             f"theorem block_mem{b} {{n : Fin 5011}} (ht : (DBMSourceTree.data n).terminal = true)",
             f"    (hlo : {off} ≤ n.val) (hhi : n.val < {off + size}) : n ∈ blockIDs{b} := by",
             f"  refine Finset.mem_image.mpr ⟨⟨n.val - {off}, by omega⟩, ?_, ?_⟩",
             f"  · exact (census{b}_spec _).mp (by",
-            f"      have he : embed{b} ⟨n.val - {off}, by omega⟩ = n := by ext; simp [embed{b}]; omega",
+            f"      have he : embed{b} ⟨n.val - {off}, by omega⟩ = n := by ext; simp [embed{b}] <;> omega",
             "      simpa [he] using ht)",
-            f"  · ext; simp [embed{b}]; omega",
+            f"  · ext; simp [embed{b}] <;> omega",
             "",
             f"theorem block_terminal{b} {{n : Fin 5011}} (hn : n ∈ blockIDs{b}) :",
             "    (DBMSourceTree.data n).terminal = true := by",
@@ -104,9 +104,38 @@ def main() -> None:
             f"  exact (census{b}_spec m).mpr hm",
             "",
         ]
+        if b < len(blocks) - 1:
+            lines += [
+                f"theorem blockIDs{b}_interval : blockIDs{b} ⊆",
+                f"    Finset.univ.filter (fun n : Fin 5011 => {off} ≤ n.val ∧ n.val < {off + size}) := by",
+                "  intro n hn",
+                f"  have hu := blockIDs{b}_upper hn",
+                f"  have hl := blockIDs{b}_lower hn",
+                "  simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hu hl ⊢",
+                "  exact ⟨hl, hu⟩",
+                "",
+            ]
+        else:
+            lines += [
+                f"theorem blockIDs{b}_interval : blockIDs{b} ⊆",
+                f"    Finset.univ.filter (fun n : Fin 5011 => {off} ≤ n.val ∧ n.val < {off + BLOCK}) := by",
+                "  intro n hn",
+                f"  have hl := blockIDs{b}_lower hn",
+                "  simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hl ⊢",
+                "  exact ⟨hl, by omega⟩",
+                "",
+            ]
     part = ",\n    ".join(f"blockIDs{i}" for i in range(len(blocks)))
     lines += [
         f"def blockIDs : Fin {len(blocks)} → Finset (Fin 5011) := ![{part}]",
+        "",
+        f"theorem blockIDs_interval (i : Fin {len(blocks)}) :",
+        "    blockIDs i ⊆ Finset.univ.filter",
+        "      (fun n : Fin 5011 => i.val * 256 ≤ n.val ∧ n.val < i.val * 256 + 256) := by",
+        "  fin_cases i",
+    ]
+    lines += [f"  · simpa [blockIDs] using blockIDs{b}_interval" for b in range(len(blocks))]
+    lines += [
         "",
         "def censusIDs : Finset (Fin 5011) := Finset.univ.biUnion blockIDs",
         "",
@@ -124,12 +153,14 @@ def main() -> None:
         if b == 0:
             lines += [
                 "    · rw [censusIDs, Finset.mem_biUnion]",
-                f"      exact ⟨⟨0, by decide⟩, Finset.mem_univ _, block_mem0 hn (by omega) h0⟩",
+                "      refine ⟨⟨0, by decide⟩, Finset.mem_univ _, ?_⟩",
+                "      simpa [blockIDs] using block_mem0 hn (by omega) h0",
             ]
         else:
             lines += [
                 "    · rw [censusIDs, Finset.mem_biUnion]",
-                f"      exact ⟨⟨{b}, by decide⟩, Finset.mem_univ _, block_mem{b} hn (by omega) h{b}⟩",
+                f"      refine ⟨⟨{b}, by decide⟩, Finset.mem_univ _, ?_⟩",
+                f"      simpa [blockIDs] using block_mem{b} hn (by omega) h{b}",
             ]
     lines += [
         "    · omega",
@@ -139,31 +170,35 @@ def main() -> None:
         "    fin_cases i",
     ]
     lines += [f"    · exact block_terminal{b} hi" for b in range(len(blocks))]
-    for i in range(len(blocks)):
-        for j in range(i + 1, len(blocks)):
-            name = f"blockIDs_{i}_{j}_disjoint"
-            lines += [
-                "",
-                f"theorem {name} : Disjoint blockIDs{i} blockIDs{j} := by",
-                "  rw [Finset.disjoint_left]",
-                "  intro n hi hj",
-                f"  have hi' := blockIDs{i}_upper hi",
-                f"  have hj' := blockIDs{j}_lower hj",
-                "  simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hi' hj'",
-                "  omega",
-            ]
-    lines += ["", "theorem blockIDs_pairwiseDisjoint :", "    ∀ i ∈ Finset.univ, ∀ j ∈ Finset.univ, i ≠ j → Disjoint (blockIDs i) (blockIDs j) := by", "  intro i _ j _ hij", "  fin_cases i <;> fin_cases j <;> first"]
-    # `fin_cases` visits the product in row-major order.  Emit one branch per
-    # visited case; reverse pairs use the symmetry of `Disjoint`.
-    for i in range(len(blocks)):
-        for j in range(len(blocks)):
-            if i == j:
-                lines.append("      | contradiction")
-            elif i < j:
-                lines.append(f"      | exact blockIDs_{i}_{j}_disjoint")
-            else:
-                lines.append(f"      | exact blockIDs_{j}_{i}_disjoint.symm")
-    lines += ["", "theorem censusIDs_card : censusIDs.card = 2506 := by", "  rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]", "  simp [blockIDs," + ", ".join(f"blockIDs{i}_card" for i in range(len(blocks))) + "]", "  norm_num", "", "theorem terminalIDs_card : terminalIDs.card = 2506 := by", "  rw [terminalIDs_eq_censusIDs, censusIDs_card]", "", "end", "end N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual", ""]
+    lines += [
+        "",
+        "theorem blockIDs_pairwiseDisjoint :",
+        "    ∀ i ∈ Finset.univ, ∀ j ∈ Finset.univ, i ≠ j → Disjoint (blockIDs i) (blockIDs j) := by",
+        "  intro i _ j _ hij",
+        "  rw [Finset.disjoint_left]",
+        "  intro n hi hj",
+        "  have hi' := blockIDs_interval i hi",
+        "  have hj' := blockIDs_interval j hj",
+        "  simp only [Finset.mem_filter, Finset.mem_univ, true_and] at hi' hj'",
+        "  have hvals : i.val < j.val ∨ j.val < i.val := by",
+        "    have hne : i.val ≠ j.val := by",
+        "      intro h",
+        "      exact hij (Fin.ext h)",
+        "    exact Nat.lt_or_gt_of_ne hne",
+        "  omega",
+        "",
+        "theorem censusIDs_card : censusIDs.card = 2506 := by",
+        "  rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]",
+        "  simp [Fin.sum_univ_succ, Fin.sum_univ_zero, blockIDs," + ", ".join(f"blockIDs{i}_card" for i in range(len(blocks))) + "]",
+        "  norm_num",
+        "",
+        "theorem terminalIDs_card : terminalIDs.card = 2506 := by",
+        "  rw [terminalIDs_eq_censusIDs, censusIDs_card]",
+        "",
+        "end",
+        "end N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual",
+        "",
+    ]
     rendered = "\n".join(lines)
     assert all(len(chunk) <= BLOCK for chunk in blocks)
     assert all(

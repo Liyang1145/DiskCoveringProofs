@@ -22,20 +22,22 @@
     147
   ],
   "checks": {
-    "all_190_disjointness_facts": true,
-    "all_190_facts_dispatched_both_orders": true,
     "block_bounds_contiguous": true,
     "census_card_is_2506": true,
+    "final_interval_padded_for_generic_dispatcher": true,
+    "generic_interval_dispatches_twenty_cases": true,
     "literal_cards_equal_block_cards": true,
     "literal_cards_sum_2506": true,
+    "pairwise_uses_interval_order": true,
     "terminal_card_is_2506": true,
     "twenty_embed_blocks": true,
     "twenty_filtered_census_definitions": true,
     "twenty_literal_census_cards": true,
+    "twenty_padded_interval_facts": true,
     "twenty_structural_census_specs": true
   },
   "literal_cardinality_sum": 2506,
   "ok": true,
   "scope": "static generated-source audit; not Lean elaboration or kernel proof credit",
-  "sha256": "A94B42CC22AF9A04029368EC31026E1C5C05172F022375C4C2D1F7231B6A0797"
+  "sha256": "A06CE2E053F9D1243D2A11B943102A5462409DA63B406AD39CDC9BCE24F5A540"
 }

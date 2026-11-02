@@ -1,0 +1,42 @@
+{
+  "scope": "CI execution evidence for head b1e15e83; target exit codes are authoritative, the workflow job conclusion is masked by the build script's trailing true",
+  "run_id": 41352871085,
+  "job_id": 124986627384,
+  "head_sha": "b1e15e83286333ae6079ddc29cbac72dc6300831",
+  "job_conclusion": "success",
+  "job_started_at": "2026-11-01T21:36:25Z",
+  "job_completed_at": "2026-11-02T00:42:13Z",
+  "artifact_sha256": {
+    "summary.json": "3333A2DF3FAABFFD0D655608E4E4647DD0930292CE60BF01256704A18F2859F1",
+    "build-tail.log": "B6B3449228B88DFD8F2727A876031B7005F8E81615B14ACF51473C2003EE7B91",
+    "github-logs.zip": "D3DE15793AFADC12029C46E6B91DB8B60251DA5E4629E00AB35AEE9CE08DA453"
+  },
+  "first_red_chain": {
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCard": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural": 1,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralMain": 1
+  },
+  "green_prerequisites": {
+    "N11Formalization.Paid16GeneralNext1182": 0,
+    "N11Formalization.EnergyTerminalBatchB13Next505Bounds": 0,
+    "N11Formalization.EnergyTerminalBatchB13DescentBounds": 0,
+    "N11Formalization.EnergyTerminalBatchB13": 0,
+    "N11Formalization.EnergyTerminalBatchB13Main": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteen": 0,
+    "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain": 0
+  },
+  "terminal_census_diagnostics": [
+    "upper-bound simp left linear arithmetic goals in all 20 blocks",
+    "block_mem0 ended with spurious omega goals after simp closed the equality",
+    "all 20 membership witnesses compared blockIDs0..19 with opaque blockIDs <i>",
+    "20-element vector index applications timed out at lines 1028 and 1030",
+    "400-alternative first dispatcher exceeded recursion depth",
+    "normalization of the Fin 20 block-cardinality sum was missing"
+  ],
+  "unrelated_stale_red_path": {
+    "N11Formalization.LaneBPublicResidualCrosswalk": 1,
+    "cause": "imports the superseded EnergyTerminalResidualCensusC01 kernel timeout/deep-recursion path; not a diagnostic on the terminal-census rewrite"
+  }
+}

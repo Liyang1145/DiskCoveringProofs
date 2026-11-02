@@ -1,0 +1,19 @@
+{
+  "checks": {
+    "census_sdiff_import_absent": true,
+    "forbidden_tokens_absent": true,
+    "old_census_absent_from_closure": true,
+    "removed_ids_disjoint_from_120_sharp_ids": true,
+    "sixteen_removed_ids": true,
+    "terminal_census_present": true
+  },
+  "closure_size": 625,
+  "ok": true,
+  "removed_count": 16,
+  "scope": "source/import and literal-id audit only; not Lean elaboration or kernel checking",
+  "sha256": {
+    "Patch120DomainPacket.lean": "521713A418FDCD859A517D5895FF0CFFAD7BABE1A17E85448B30AE8FE79E3156",
+    "ResidualCard.lean": "E0415B0EBD46DB0BA9B3A5A792EA506EBAAA2C91BEFAAB8DD119EB5667FB6F40"
+  },
+  "sharp_count": 120
+}
