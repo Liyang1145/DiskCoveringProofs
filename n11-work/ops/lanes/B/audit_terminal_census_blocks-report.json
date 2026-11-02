@@ -23,10 +23,11 @@
   ],
   "checks": {
     "block_bounds_contiguous": true,
-    "cardinality_uses_simp_then_norm_num": true,
+    "cardinality_uses_case_checks_and_kernel_sum": true,
     "census_card_is_2506": true,
     "final_interval_padded_for_generic_dispatcher": true,
     "generic_interval_dispatches_twenty_cases": true,
+    "literal_block_sizes_match_source": true,
     "literal_cards_equal_block_cards": true,
     "literal_cards_match_source_terminal_ids": true,
     "literal_cards_sum_2506": true,
@@ -42,7 +43,7 @@
   "literal_cardinality_sum": 2506,
   "ok": true,
   "scope": "static generated-source audit; not Lean elaboration or kernel proof credit",
-  "sha256": "B9E98D204B7BF5D8AC5DF94913822F4B3A708BEB98BA26E6CEFD9CB080165608",
+  "sha256": "943A296CAFB75ECABB01A80D993016FF91D9758CF6F4CF5ADFAF0884259EFDBB",
   "source_terminal_block_cards": [
     61,
     75,

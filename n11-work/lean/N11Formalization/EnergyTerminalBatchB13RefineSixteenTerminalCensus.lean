@@ -1280,10 +1280,45 @@ theorem blockIDs_pairwiseDisjoint :
     exact Nat.lt_or_gt_of_ne hne
   omega
 
+def blockSizes : Fin 20 → Nat := ![61, 75, 69, 62, 62, 61, 55, 56, 66, 237, 254, 253, 255, 221, 115, 120, 108, 111, 150, 115]
+
+theorem blockIDs_card_eq (i : Fin 20) : (blockIDs i).card = blockSizes i := by
+  fin_cases i
+  · simpa [blockIDs, blockSizes] using blockIDs0_card
+  · simpa [blockIDs, blockSizes] using blockIDs1_card
+  · simpa [blockIDs, blockSizes] using blockIDs2_card
+  · simpa [blockIDs, blockSizes] using blockIDs3_card
+  · simpa [blockIDs, blockSizes] using blockIDs4_card
+  · simpa [blockIDs, blockSizes] using blockIDs5_card
+  · simpa [blockIDs, blockSizes] using blockIDs6_card
+  · simpa [blockIDs, blockSizes] using blockIDs7_card
+  · simpa [blockIDs, blockSizes] using blockIDs8_card
+  · simpa [blockIDs, blockSizes] using blockIDs9_card
+  · simpa [blockIDs, blockSizes] using blockIDs10_card
+  · simpa [blockIDs, blockSizes] using blockIDs11_card
+  · simpa [blockIDs, blockSizes] using blockIDs12_card
+  · simpa [blockIDs, blockSizes] using blockIDs13_card
+  · simpa [blockIDs, blockSizes] using blockIDs14_card
+  · simpa [blockIDs, blockSizes] using blockIDs15_card
+  · simpa [blockIDs, blockSizes] using blockIDs16_card
+  · simpa [blockIDs, blockSizes] using blockIDs17_card
+  · simpa [blockIDs, blockSizes] using blockIDs18_card
+  · simpa [blockIDs, blockSizes] using blockIDs19_card
+
+theorem blockSizes_sum : (∑ i : Fin 20, blockSizes i) = 2506 := by
+  decide +kernel
+
+theorem censusIDs_card_aux : (∑ i : Fin 20, (blockIDs i).card) = 2506 := by
+  calc
+    (∑ i : Fin 20, (blockIDs i).card) = ∑ i : Fin 20, blockSizes i := by
+      apply Finset.sum_congr rfl
+      intro i _
+      exact blockIDs_card_eq i
+    _ = 2506 := blockSizes_sum
+
 theorem censusIDs_card : censusIDs.card = 2506 := by
   rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]
-  simp [Fin.sum_univ_succ, Fin.sum_univ_zero, blockIDs,blockIDs0_card, blockIDs1_card, blockIDs2_card, blockIDs3_card, blockIDs4_card, blockIDs5_card, blockIDs6_card, blockIDs7_card, blockIDs8_card, blockIDs9_card, blockIDs10_card, blockIDs11_card, blockIDs12_card, blockIDs13_card, blockIDs14_card, blockIDs15_card, blockIDs16_card, blockIDs17_card, blockIDs18_card, blockIDs19_card]
-  norm_num
+  simpa using censusIDs_card_aux
 
 theorem terminalIDs_card : terminalIDs.card = 2506 := by
   rw [terminalIDs_eq_censusIDs, censusIDs_card]

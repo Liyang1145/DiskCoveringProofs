@@ -1,0 +1,54 @@
+{
+  "checks": {
+    "old_census_all_terminal": true,
+    "old_census_count_389": true,
+    "refined_all_terminal": true,
+    "refined_card_claimed_373": true,
+    "refined_count_373": true,
+    "refined_exact_difference": true,
+    "refined_none_sharp": true,
+    "removed_all_subset_old_census": true,
+    "removed_all_terminal": true,
+    "removed_count_16": true,
+    "removed_none_sharp": true,
+    "sharp_count_120": true,
+    "source_terminal_count_2506": true,
+    "terminal_census_claimed_2506": true
+  },
+  "counts": {
+    "old_residual": 389,
+    "refined_residual": 373,
+    "removed": 16,
+    "sharp": 120,
+    "source_terminals": 2506
+  },
+  "ok": true,
+  "refined_ids_sha256": "7539D9214C5CAC780F027688D2BFA41D5451A0D13BA7834BBC49E9D2FAE41A6A",
+  "removed_ids": [
+    37,
+    2337,
+    2341,
+    2965,
+    3040,
+    3112,
+    3116,
+    3431,
+    3440,
+    3573,
+    3589,
+    3623,
+    3633,
+    3777,
+    3792,
+    3853
+  ],
+  "residual_list_file": "residual373-ids.txt",
+  "residual_list_sha256": "ECF924976536FFCB228E56394B4D39CF776648E8AD42617E1AF8A38E26C0D4FE",
+  "scope": "exact source-ID set/cardinality audit; not Lean elaboration or kernel proof credit",
+  "source_sha256": {
+    "DBMSourceTreeData.lean": "BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5",
+    "EnergyTerminalBatchB13RefineSixteenResidualCard.lean": "E0415B0EBD46DB0BA9B3A5A792EA506EBAAA2C91BEFAAB8DD119EB5667FB6F40",
+    "EnergyTerminalResidualCensusBase.lean": "642F5A5BC18FD1F4D8DA1889C3D4D5EBDFF1BFE1658CDC5A94DABC25BFD4442D",
+    "Patch120DomainPacket.lean": "521713A418FDCD859A517D5895FF0CFFAD7BABE1A17E85448B30AE8FE79E3156"
+  }
+}
