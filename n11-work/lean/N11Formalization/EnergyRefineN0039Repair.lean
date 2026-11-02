@@ -48,15 +48,15 @@ def pk : Fin K → MPacket := ![pk3,pk3,pk3,pk3,pk4,pk5,pk3,pk3,pk3,pk9,pk10,pk1
 theorem pk_ok : ∀ l, (sub l).terminal = true → MValid (pk l) ∧ (pk l).D = (sub l).db ∧ (pk l).S = 1048576 := by
   intro l hl
   fin_cases l
-  · exact Bool.false_ne_true hl
-  · exact Bool.false_ne_true hl
-  · exact Bool.false_ne_true hl
+  · exact False.elim (Bool.false_ne_true hl)
+  · exact False.elim (Bool.false_ne_true hl)
+  · exact False.elim (Bool.false_ne_true hl)
   · exact ⟨valid3, rfl, rfl⟩
   · exact ⟨valid4, rfl, rfl⟩
   · exact ⟨valid5, rfl, rfl⟩
-  · exact Bool.false_ne_true hl
-  · exact Bool.false_ne_true hl
-  · exact Bool.false_ne_true hl
+  · exact False.elim (Bool.false_ne_true hl)
+  · exact False.elim (Bool.false_ne_true hl)
+  · exact False.elim (Bool.false_ne_true hl)
   · exact ⟨valid9, rfl, rfl⟩
   · exact ⟨valid10, rfl, rfl⟩
   · exact ⟨valid11, rfl, rfl⟩

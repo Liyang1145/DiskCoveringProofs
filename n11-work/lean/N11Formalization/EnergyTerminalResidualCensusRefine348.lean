@@ -35,7 +35,15 @@ private theorem not_sharp_3863 : (3863 : Fin 5011) ∉ Patch120SharpDispatch.sha
 
 private theorem mem_350_3810 :
     (3810 : Fin 5011) ∈ EnergyTerminalResidualCensusRefine350.refinedResidualIDs := by
-  rw [EnergyTerminalResidualCensusRefine350.mem_refinedResidualIDs_iff,
+  rw [
+    EnergyTerminalResidualCensusRefine350.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine352.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine354.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine356.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine358.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine360.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine362.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine364.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine366.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine368.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine371.mem_refinedResidualIDs_iff,
@@ -55,7 +63,15 @@ private theorem mem_350_3810 :
 
 private theorem mem_350_3863 :
     (3863 : Fin 5011) ∈ EnergyTerminalResidualCensusRefine350.refinedResidualIDs := by
-  rw [EnergyTerminalResidualCensusRefine350.mem_refinedResidualIDs_iff,
+  rw [
+    EnergyTerminalResidualCensusRefine350.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine352.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine354.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine356.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine358.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine360.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine362.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine364.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine366.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine368.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine371.mem_refinedResidualIDs_iff,
