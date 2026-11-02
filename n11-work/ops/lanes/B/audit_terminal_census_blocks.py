@@ -14,7 +14,23 @@ from pathlib import Path
 LANE = Path(__file__).resolve().parent
 ROOT = LANE.parents[3]
 MODULE = ROOT / "n11-work/lean/N11Formalization/EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean"
+SOURCE = ROOT / "n11-work/lean/N11Formalization/DBMSourceTreeData.lean"
 REPORT = LANE / "audit_terminal_census_blocks-report.json"
+
+
+def source_terminal_ids() -> set[int]:
+    """Independently recover terminal node ids from the frozen source data."""
+    text = SOURCE.read_text(encoding="utf-8")
+    nodes = re.compile(
+        r"def node(\d+) : Node 5011 where(.*?)"
+        r"(?=\ndef node\d+ : Node 5011 where|\ndef data)",
+        re.S,
+    )
+    return {
+        int(match.group(1))
+        for match in nodes.finditer(text)
+        if "terminal := true" in match.group(2)
+    }
 
 
 def main() -> None:
@@ -82,6 +98,10 @@ def main() -> None:
     expected_intervals = {
         i: (expected[i][1], expected[i][1] + 256) for i in range(20)
     }
+    source_ids = source_terminal_ids()
+    source_block_cards = {
+        i: sum(1 for node in source_ids if node // 256 == i) for i in range(20)
+    }
     dispatcher = text[text.index("theorem blockIDs_pairwiseDisjoint") : text.index("theorem censusIDs_card")]
     cardinality = text[text.index("theorem censusIDs_card") : text.index("theorem terminalIDs_card")]
     interval_cases = re.findall(
@@ -97,6 +117,8 @@ def main() -> None:
         },
         "twenty_literal_census_cards": len(census_cards) == 20,
         "literal_cards_equal_block_cards": census_cards == block_cards,
+        "source_parse_recovers_2506_terminals": len(source_ids) == 2506,
+        "literal_cards_match_source_terminal_ids": census_cards == source_block_cards,
         "literal_cards_sum_2506": sum(census_cards.values()) == 2506,
         "block_bounds_contiguous": all(lower.get(i) == expected[i][1] for i in range(20))
         and all(upper.get(i) == expected[i][1] + expected[i][0] for i in range(19)),
@@ -120,8 +142,8 @@ def main() -> None:
         "census_card_is_2506": bool(
             re.search(r"theorem censusIDs_card : censusIDs\.card = 2506 := by", text)
         ),
-        "cardinality_uses_one_norm_num": "  norm_num [Fin.sum_univ_succ" in cardinality
-        and "\n  norm_num\n" not in cardinality,
+        "cardinality_uses_simp_then_norm_num": "  simp [Fin.sum_univ_succ" in cardinality
+        and "\n  norm_num\n" in cardinality,
     }
     result = {
         "scope": "static generated-source audit; not Lean elaboration or kernel proof credit",
@@ -129,6 +151,8 @@ def main() -> None:
         "checks": checks,
         "block_widths": [expected[i][0] for i in range(20)],
         "literal_cardinality_sum": sum(census_cards.values()),
+        "source_terminal_cardinality": len(source_ids),
+        "source_terminal_block_cards": [source_block_cards[i] for i in range(20)],
         "sha256": hashlib.sha256(MODULE.read_bytes()).hexdigest().upper(),
     }
     REPORT.write_text(json.dumps(result, indent=2, sort_keys=True) + "\n", encoding="utf-8")

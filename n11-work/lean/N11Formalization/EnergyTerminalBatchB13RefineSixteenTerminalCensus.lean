@@ -1282,7 +1282,8 @@ theorem blockIDs_pairwiseDisjoint :
 
 theorem censusIDs_card : censusIDs.card = 2506 := by
   rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]
-  norm_num [Fin.sum_univ_succ, Fin.sum_univ_zero, blockIDs,blockIDs0_card, blockIDs1_card, blockIDs2_card, blockIDs3_card, blockIDs4_card, blockIDs5_card, blockIDs6_card, blockIDs7_card, blockIDs8_card, blockIDs9_card, blockIDs10_card, blockIDs11_card, blockIDs12_card, blockIDs13_card, blockIDs14_card, blockIDs15_card, blockIDs16_card, blockIDs17_card, blockIDs18_card, blockIDs19_card]
+  simp [Fin.sum_univ_succ, Fin.sum_univ_zero, blockIDs,blockIDs0_card, blockIDs1_card, blockIDs2_card, blockIDs3_card, blockIDs4_card, blockIDs5_card, blockIDs6_card, blockIDs7_card, blockIDs8_card, blockIDs9_card, blockIDs10_card, blockIDs11_card, blockIDs12_card, blockIDs13_card, blockIDs14_card, blockIDs15_card, blockIDs16_card, blockIDs17_card, blockIDs18_card, blockIDs19_card]
+  norm_num
 
 theorem terminalIDs_card : terminalIDs.card = 2506 := by
   rw [terminalIDs_eq_censusIDs, censusIDs_card]
