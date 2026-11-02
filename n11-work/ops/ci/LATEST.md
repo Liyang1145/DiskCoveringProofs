@@ -1,8 +1,8 @@
-# CI latest (run 41352871085)
+# CI latest (run 41378003343)
 
 ```
-41380560959 pending null a29e4ee1 2026-11-02T02:59:00Z
-41378003343 in_progress null 016484e6 2026-11-02T02:29:26Z
+41380560959 in_progress null a29e4ee1 2026-11-02T02:59:00Z
+41378003343 completed success 016484e6 2026-11-02T02:29:26Z
 41352871085 completed success b1e15e83 2026-11-01T21:36:22Z
 41318867156 completed failure 5dc953ab 2026-11-01T14:59:04Z
 41312076357 completed failure 20fd194b 2026-11-01T13:36:25Z
@@ -11,8 +11,28 @@
 ## summary.json
 ```json
 {
- "sha": "b1e15e83286333ae6079ddc29cbac72dc6300831",
+ "sha": "016484e6875609da68d793a48a5ced10710f482b",
  "exits": [
+  [
+   "N11Formalization.EnergyRefineN0039Repair",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13Refine0039",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalBatchB13Refine0039Main",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusRefine0039",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusRefine0039Refine3149",
+   "1"
+  ],
   [
    "N11Formalization.EnergyTerminalBatchB13ResidualCertificates",
    "0"
@@ -128,18 +148,6 @@
   [
    "N11Formalization.EnergyTerminalBatchB13Refine0037Main",
    "0"
-  ],
-  [
-   "N11Formalization.EnergyRefineN0039",
-   "1"
-  ],
-  [
-   "N11Formalization.EnergyTerminalBatchB13Refine0039",
-   "1"
-  ],
-  [
-   "N11Formalization.EnergyTerminalBatchB13Refine0039Main",
-   "1"
   ],
   [
    "N11Formalization.EnergyTerminalBatchB13RefineTwelve",
@@ -692,27 +700,21 @@
   [
    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
    "1"
-  ],
-  [
-   "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural",
-   "1"
-  ],
-  [
-   "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructur```
+  ```
 ## build log tail
 ```
-unner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:37:45 avail=2581MB top: 12431112 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:38:05 avail=2266MB top: 12319324 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:38:25 avail=1926MB top: 12213164 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:38:45 avail=1611MB top: 12051976 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:39:05 avail=1355MB top: 12220296 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:39:25 avail=1098MB top: 12468584 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:39:45 avail=975MB top: 12603032 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:40:05 avail=987MB top: 12594980 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 00:40:25 avail=882MB top: 12726052 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-OOM-GUARD killing lean (avail=879MB)
-✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1454s)
+ner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:04:00 avail=2807MB top: 11992420 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:04:20 avail=2806MB top: 11980476 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:04:40 avail=2561MB top: 11962300 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:05:00 avail=2228MB top: 11858800 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:05:20 avail=1902MB top: 11735048 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:05:41 avail=1588MB top: 11605944 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:06:01 avail=1355MB top: 11849684 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:06:21 avail=1115MB top: 12095872 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 05:06:41 avail=882MB top: 12339852 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+OOM-GUARD killing lean (avail=880MB)
+✖ [10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch (1412s)
 trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/SharedMomentConcreteSwitchBatch.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/SharedMomentConcreteSwitchBatch.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/SharedMomentConcreteSwitchBatch.setup.json --json
 info: N11Formalization/SharedMomentConcreteSwitchBatch.lean:3853:0: 'N11Formalization.SharedMomentConcreteSwitchBatch.start0_switch0_full_angle_upper' depends on axioms: [propext,
  Classical.choice,
