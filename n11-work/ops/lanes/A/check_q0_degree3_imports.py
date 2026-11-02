@@ -25,6 +25,18 @@ def strip_comments(source: str) -> str:
     return re.sub(r"^(?:namespace|end)\s+N11Formalization\.[^\n]*", "", source, flags=re.MULTILINE)
 
 
+def declared_namespaces(source: str) -> set[str]:
+    """Namespaces declared by this file are local, not module dependencies."""
+    return {
+        match.group(1)
+        for match in re.finditer(
+            r"^namespace\s+N11Formalization\.([A-Za-z0-9_.]+)",
+            source,
+            flags=re.MULTILINE,
+        )
+    }
+
+
 def module_imports(path: Path) -> tuple[str, set[str]]:
     source = strip_comments(path.read_text())
     module = MODULE_PREFIX + path.stem
@@ -54,7 +66,9 @@ def main() -> int:
     checked = 0
     for path in paths:
         module = MODULE_PREFIX + path.stem
-        source = strip_comments(path.read_text())
+        raw_source = path.read_text()
+        local_namespaces = declared_namespaces(raw_source)
+        source = strip_comments(raw_source)
         names = set(
             re.findall(rf"N11Formalization\.({Q0_PREFIX}[A-Za-z0-9_]*)", source)
         )
@@ -63,6 +77,8 @@ def main() -> int:
         )
         reachable = closure(module)
         for name in sorted(names):
+            if name in local_namespaces:
+                continue
             dependency = MODULE_PREFIX + name
             if dependency == module or dependency not in graph:
                 continue

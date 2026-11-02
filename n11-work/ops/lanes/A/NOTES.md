@@ -107,109 +107,142 @@ lane A and build `SevenClassQ0Deg3Repaired`, the nine `SectorPeak` rows, and
 `SevenClassQ0Deg3Repaired`; if a kernel suffix fails, replace only that closed
 goal with an explicitly rewritten rational comparison.
 
-## 2026-11-02 (session 169) -- live CI boundary rechecked
 
-Run `41380560959` remains **in_progress** at `a29e4ee1`; its single `build`
-job `125106045871` started `2026-11-02T05:08:31Z` and has no conclusion.  This
-commit does not contain the current uncommitted q0 repairs, so it cannot provide
-a verdict on them.  No kernel credit is claimed.
+## 2026-11-02 (sessions 169--174, condensed) -- CI boundary and repair audits
 
-Re-ran `audit_q0_degree3_kernel_repairs.py` (PASS: repaired-module import
-placement, both terminal kernel suffixes, banned-token scan, TARGETS
-registration; no kernel verdict) and
-`check_q0_degree3_sector_peak_split.py` (PASS 9/9: split proof bodies preserved
-up to the declared suffix).  `git diff --check` PASS.  A cached-Mathlib probe of
-the giant exact `Rat` reflexivity equality was started, but it had not produced
-a verdict when this session ended; it is not evidence.
-
-**Next concrete step.** Supervisor must commit this worktree (including
-`audit_q0_degree3_kernel_repairs.py`).  Then inspect the first lane-A target
-result in CI.  If `SevenClassQ0Deg3Repaired` passes, inspect
-`SevenClassQ0Deg3SectorPeak00`; on a red `decide +kernel`, replace only that
-closed rational goal with an explicit rewritten comparison.  Do not treat the
-currently in-progress `a29e4ee1` run as testing these files.
-
-## 2026-11-02 (session 170) -- repair preflight repeated; local Lean unavailable
-
-Re-ran `audit_q0_degree3_kernel_repairs.py`: PASS for import placement, both
-terminal suffix shapes, banned-token scan, and all 11 repaired modules being
-present in `TARGETS.txt`.  Re-ran
-`check_q0_degree3_sector_peak_split.py`: PASS 9/9 split-body preservation.
-`git diff --check` PASS.  The q0 repairs remain **drafted / source-preflight
-PASS / CI pending**; no kernel credit is claimed.
-
-Two bounded local syntax probes were attempted: a Mathlib `Rat`/reflexivity probe
-under `mathlib-probe` timed out at 90 s, and a core-only `Nat` reflexivity probe
-using `decide +kernel` timed out at 20 s while loading the toolchain.  Neither is
-a verdict, so `decide +kernel` syntax/elaboration remains CI-pending.  No source
-was changed on the basis of an inconclusive probe.
-
-**Next concrete step.** After the supervisor commits this worktree, inspect CI's
-first lane-A failure.  If `SevenClassQ0Deg3Repaired` and
-`SevenClassQ0Deg3SectorPeak00` are green, proceed to peak rows 01--08 and then
-`UpperReductionUnimodalBase`; if a suffix is red, replace only the owning closed
-rational goal with an explicit normalized comparison.
-
-## 2026-11-02 (session 171) -- live CI boundary isolated; no new verdict
-
-Checked GitHub Actions directly rather than relying on the stale `LATEST.md`.
-The q0 repair commit `00ac8c14` produced two non-Lean runs:
-`41395436373` (delivery bytes, red only because `cover11/README.md` size does
-not match its manifest) and `41395436408` (fresh n=12 arithmetic, green).
-Neither ran Lean.  The Lean workflow run for `68d172d9` is `41394181326` and
-is still `pending` with no job, so it has not tested lane A.
-
-The newest downloadable Lean job is still `125062414500`, run `41378003343`
-(HEAD `016484e6`, before the q0 repairs).  Its Actions log is capped at
-281,186,304 bytes and ends during a `Patch120DomainPacket` warning before lane
-A starts; therefore it cannot provide a lane-A verdict.  In that log, the
-edge/sector q0 failure text is visible only in the pre-cap section already
-recorded in session 168.
-
-**Checks (scope).** Reran `audit_q0_degree3_kernel_repairs.py`: PASS (source
-preflight only).  Reran `check_q0_degree3_sector_peak_split.py`: PASS 9/9.
-Reran `check_q0_degree3_edge_peak_split.py`: PASS 21/21 byte-preserved edge
-proofs and one declared terminal suffix.  A bounded `lake env lean --version`
-probe in `/workspace/tools/mathlib-probe` timed out at 100 s, so no new local
-Lean result.  `python tools/project_status.py --check` PASSed its handoff-index
-scope.  No files in the frozen tree changed this session.
-
-**Still unproved / unpaid.**  `decide +kernel` elaboration and all q0
-peak/edge/assembler modules remain CI pending.  `StrictTotal`, `Q0Exclusion`,
-`Q0Degree3AreaInput`, the other six exclusions, and the arbitrary-centre
+No n=11 Lean job has existed for the repaired tree: runs `41380560959` and
+`41399703011` are pending with no jobs; older runs predate the repairs.  Six
+sessions therefore produced source/arithmetic evidence only, never a kernel
+verdict.  Useful results: the q0 import-closure checker was corrected (skip a
+file's own namespaces) and `SevenClassQ0Deg3Q0Exclusion` was found not to import
+`SevenClassQ0Deg3`; adding that direct import moved the closure audit to PASS
+(115 references across 76 q0 modules).  `audit_q0_degree3_kernel_cost.py`
+records literal sizes sent to terminal `decide +kernel`: sector peaks 00--08
+have 2071--2099-bit largest literals, the edge module 141-bit.  A core-only
+363-bit Rat probe timed out at 50 s and is inconclusive, not a rejection.
+Strict-ledger exact arithmetic PASS with total `3.135646999268476` and slack
+`0.005945654321317` (Python rationals, not Lean).  Other rerun preflights
+(sector split 9/9, edge split 21/21, q0 repair, unfold/max projection) PASS in
+their source-check scopes.  All q0 Lean modules remain CI pending; the other
+six exclusions, `Q0Degree3AreaInput`, strict total, and the arbitrary-centre
 theorem remain unpaid.
 
-**Next concrete step.** The supervisor must make a Lean-path push (or rerun
-`41394181326`) so CI emits a new job after the cached energy targets.  Inspect
-the first lane-A `=== EXIT`/`error:` for `SevenClassQ0Deg3Repaired`; do not use
-the delivery or n=12 success as Lean evidence.
+## 2026-11-02 (session 175) -- q0(5,8) graph matched; source coefficients not exact
 
-## 2026-11-02 (session 172) -- repaired HEAD has no Lean run; probe inconclusive
+Extended the seven-class graph audit from the q0(4,9) pilot to the q0(5,8)
+closure case.  New script `audit_q0_degree5_graph.py` verifies that
+`q0_closure_dual_0_3.json` declares `start=0, span=3`, 11 faces and 21 edges and
+that its labelled face set and edge set equal `ActualOrderedMetricGraphs.q0Faces 3`
+(reconstructed independently from `q0Fan`/`centralFace`).  It also checks the
+certificate header (`strict=true`, same span), 121 coefficients, 121 `z` slots,
+and the 11+9+9 factor-label order.  Result: **PASS_SOURCE_GRAPH_AND_LAYOUT_ONLY**,
+`q0-degree5-graph-match.json`, sha256
+`8daf9efdd67f7349de92533ceb750f633cebd16f006b1dcb88566dae99285c00`;
+script sha256 `9dca117fd1904fbdaf1656f343a8757dde0fb59cdfa991119a544bd44db32bdb`.
 
-Queried the public GitHub Actions API directly for `Liyang1145/DiskCoveringProofs`.
-For repaired HEAD `00ac8c14`, only runs `41395436373` (delivery, failure) and
-`41395436408` (fresh n=12 arithmetic, success) exist.  The newest Lean run is
-still `41394181350` at `68d172d9`; it contains only a successful `math` job and
-no n=11 Lean job.  Therefore there is still **no CI verdict** on any q0 repair.
+Material finding: unlike the q0(4,9) pilot, the q0(5,8) certificate stores all
+121 coefficients as **decimal strings** and `z` as binary floats, not exact
+rational pairs.  This file therefore cannot be a Lean coefficient source; an
+exact-rational certificate must be regenerated by the source emitter before a
+`Q0Degree5FiniteTable` can be written.  No factor bound, balance, or exclusion
+is proved by this audit.
 
-Re-ran the three source preflights: `audit_q0_degree3_kernel_repairs.py` PASS
-(no kernel verdict), sector peak split PASS 9/9, edge peak split PASS 21/21.
-`python tools/project_status.py --check` PASS (handoff-index scope only).
-A bounded core/Mathlib probe of peak row 0 reduced to a missing cached olean
-`Mathlib/Data/Rat/Defs.olean`, not a Lean error in the proof; it is no evidence.
-The prior whole-`Mathlib` giant-Rat probe timed out at 120 s and is also no
-evidence.
+**Checks run (scope).** The new graph/layout audit above; `python
+tools/project_status.py --check` PASS (handoff index only).  No Lean build; CI
+still shows run `41399703011` pending with no job, so every q0 module and the
+new audit's (nonexistent) kernel claims remain CI pending/unpaid.
 
-**Files / hashes.** No Lean or generated table changed this session.  Existing
-repaired-module SHA256 values remain as recorded in session 168.  This entry
-changes only `n11-work/ops/lanes/A/NOTES.md`.
+**Files.** Added `audit_q0_degree5_graph.py` and `q0-degree5-graph-match.json`.
+No Lean, TARGETS, frozen, root, or toolchain file changed.
 
-**Still unproved / unpaid.** `decide +kernel` elaboration and every repaired q0
-peak/edge/assembler module remain CI pending.  `StrictTotal`, `Q0Exclusion`,
-`Q0Degree3AreaInput`, six other exclusions, and the arbitrary-centre theorem
-remain unpaid.
+**Still unproved / unpaid.** q0(4,9)/q0(5,8)/q1(3,9)/q1(4,8)/q1(5,7)/q1(6,6)
+tables, all exact factor bounds, the seven exclusions, energy, and the
+arbitrary-centre theorem.  q0(5,8) additionally lacks exact rational
+coefficients.
 
-**Next concrete step.** Supervisor must push a path that launches the n=11 Lean
-workflow on `00ac8c14` (or rerun the workflow with that SHA).  Inspect the first
-lane-A `error:` after `SevenClassQ0Deg3Repaired`; do not use the n=12 or
-delivery runs as Lean evidence.
+**Next concrete step.** Regenerate q0(5,8) coefficients from the committed
+source emitter in exact `Fraction` form and extend the audit to compare the
+emitter's graph/field order; only then emit `Q0Degree5FiniteTable.lean`.
+
+## 2026-11-02 (session 176) -- q0(5,8) exact-decimal source reconstructed
+
+Added `reconstruct_q0_degree5_exact.py`, which parses
+`q0_closure_dual_0_3.json` with `parse_float=Fraction` (so the stored decimal
+literals, not their binary-float images, are authoritative), verifies the
+SciPy emitter's 121-slot layout (`mu` 9, `hub` 2, `side` 21, `radius` 18,
+`angle_slack` 21, `lambda` 1, `eta` 1, `linear` 39, `closure` 9), checks all
+21 angle slacks are nonnegative and `eta = 0`, and checks that the 121
+9-place certificate coefficients equal the rounded source vector in order.
+It writes `q0-degree5-exact-source.json` with numerator/denominator pairs and
+the Lean-reconstructed 11-face/21-edge graph.
+
+**Files/shas.** emitter above `456217278a0cde9c4cdd2beaa0893031fdc0f2e4cfea6b27599d292240d3a12e`;
+exact source `900d2186b5321acc8dc522f44f483c483355a3a7cbef4ea7c7d9817ad717f41d`;
+prior graph audit `9dca117fd1904fbdaf1656f343a8757dde0fb59cdfa991119a544bd44db32bdb`;
+graph report `8daf9efdd67f7349de92533ceb750f633cebd16f006b1dcb88566dae99285c00`.
+
+**Checks (scope).** Exact reconstruction PASS (121 rational coefficients:
+45 negative, 49 positive, 27 zero; max denominator `10^18`; 21/21 angle
+slacks nonnegative; certificate copy/order check 121/121); graph/layout audit
+PASS; `py_compile` PASS; banned-token scan of the new Python PASS;
+`git diff --check` PASS. No Lean file was emitted and no kernel claim is made.
+
+**Still unproved / unpaid.** The q0(5,8) factor upper bounds, exact strict
+total, `Q0FiniteTable 3`, the other six finite tables, and the arbitrary-centre
+theorem remain unpaid. Exact decimal coefficients alone prove no factor bound.
+
+**Next concrete step.** Emit `Q0Degree5FiniteTable.lean` data definitions from
+the rational pairs plus the reconstructed graph, using the existing
+`FiniteCanonicalCertificate` interface; then add its target and request CI to
+kernel-check the first owning elaboration error before attempting factor
+certificate terms.
+
+## 2026-11-02 (session 177) -- q0(5,8) Lean source data emitted
+
+Added deterministic `emit_q0_degree5_source_data.py`, which reads the
+hash-bound `q0-degree5-exact-source.json` and emits
+`Q0Degree5SourceData.lean`.  The module contains all 121 exact rational
+coefficients grouped as `mu`(9), `hub`(2), `side`(21), `radius`(18),
+`angle_slack`(21), `lambda`(1), `eta`(1), `linear`(39), `closure`(9), plus
+the canonical sorted 11-face and 21-edge arrays.  It states graph identities
+to `q0Faces 3` / `q0Edges 3` by bounded `decide +kernel`; TARGETS now includes
+`N11Formalization.Q0Degree5SourceData`.
+
+**Files/shas.** Lean module `f2f18661b1ad85b10e95d1f00443ac48cc07d9c436b5a6ad2817e8e8b0a660c8`;
+emitter `ad089df5be8571eba8f832d27c6d63798dba9102072815ad3266b8775bae0819`;
+input exact source `900d2186b5321acc8dc522f44f483c483355a3a7cbef4ea7c7d9817ad717f41d`.
+
+**Checks (scope).** Emitter run PASS; `py_compile` PASS; TARGETS registration
+PASS; source counts/groups inherited from the PASS exact reconstruction.  A
+stripped-import syntax probe in `mathlib-probe` timed out at 90 s with no
+output, so it is **inconclusive**, not a Lean verdict.  No project build was
+run; module is CI pending and no kernel claim is made.
+
+**Still unproved / unpaid.** The semantic slot map from source groups to
+`CanonicalCoeffQ` (`faceMask`, side/left/right first/second, switchMask,
+width), `kap`, balance, all face/switch/sector bounds, strict total,
+`Q0FiniteTable 3`, and the remaining six finite tables.
+
+**Next concrete step.** Inspect the q0 degree-four pilot or source emitter to
+map `side`/`radius`/`linear` slots to `CanonicalCoeffQ`, then generate the `D`
+definition and let CI report the first owning elaboration error.
+
+## 2026-11-02 (session 178) -- q0(5,8) canonical slot map checked
+
+Added `map_q0_degree5_canonical_data.py`, which reads the hash-bound exact
+source and records the direct `CanonicalCoeffQ` map: `mu=z[0:11]`,
+`sideFirst=z[11:32]`, `sideSecond=z[73:94]`, radius/linear copy pairs at
+`z[32+2i]`/`z[33+2i]` and `z[94+2i]`/`z[95+2i]`, `width=z[71]`, `eta=z[72]`,
+`switchMask=-1`, and face masks by first/second opposite-edge ownership. It
+checks 11 triangular faces, all 21 opposite edges, and the group cardinalities.
+
+**Files/shas.** script `166b5aa414d592726c75f5f5b9217702224052070c33efd116ffc7a89dfc70e4`;
+map `q0-degree5-canonical-map.json` `55a2ecce715c88195b12e66186010ff8ded691cfba85b3dff2eee8733ffae126`.
+
+**Checks (scope).** Mapping audit PASS; `py_compile` PASS. No Lean build.
+The 21 `angle_slack` slots are likely `kap`, but the nine `closure` LP slots
+have no direct `CanonicalCoeffQ` field, so do not emit `D` as complete yet.
+
+**Next concrete step.** In `q0_closure_dual.py`, eliminate/absorb the nine
+closure multipliers and verify the remaining coefficient signs against
+`canonicalFaceB`/`canonicalSwitchB`; then emit the Lean `D`/`kap` definitions.

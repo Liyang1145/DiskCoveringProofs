@@ -1,3 +1,4 @@
+import N11Formalization.SevenClassQ0Deg3
 import N11Formalization.SevenClassQ0Deg3StrictTotal
 
 /-! Lane A: the first seven-class exclusion, conditional only on the exact

@@ -1,0 +1,82 @@
+{
+  "status": "PASS_GRAPH_AND_LAYOUT_FLOATS_ONLY",
+  "claim_boundary": "No Lean kernel check, factor bound, balance proof, or exclusion proved.",
+  "class": "q0_degree5",
+  "start": 0,
+  "span": 3,
+  "source_graph": "cover11/proof_bundle/research-2026/team-current/lead/q0_closure_dual_0_3.json",
+  "source_graph_sha256": "49bf84b5dd67a5b556571caca4923d4dca75135d40b944669a4d107587ca7077",
+  "source_certificate": "cover11/proof_bundle/research-2026/team-current/lead/q0_closure_dual_certificate_0_3.json",
+  "source_certificate_sha256": "d765b2abcf957edf3f33d16659f456b12015f6807d98653c2e4c70522c62d9ba",
+  "lean_graph_source": "n11-work/lean/N11Formalization/ActualOrderedMetricGraphs.lean",
+  "lean_graph_source_sha256": "d52466d67f0a52473a44f0c2386cdacac7f6cc2830140217b8aab4dea1b75079",
+  "faces": [
+    [
+      0,
+      1,
+      9
+    ],
+    [
+      0,
+      8,
+      10
+    ],
+    [
+      0,
+      9,
+      10
+    ],
+    [
+      1,
+      2,
+      9
+    ],
+    [
+      2,
+      3,
+      9
+    ],
+    [
+      3,
+      4,
+      10
+    ],
+    [
+      3,
+      9,
+      10
+    ],
+    [
+      4,
+      5,
+      10
+    ],
+    [
+      5,
+      6,
+      10
+    ],
+    [
+      6,
+      7,
+      10
+    ],
+    [
+      7,
+      8,
+      10
+    ]
+  ],
+  "face_count": 11,
+  "edge_count": 21,
+  "coefficient_count": 121,
+  "z_slot_count": 121,
+  "factor_count": 29,
+  "factor_layout": {
+    "face": 11,
+    "switch": 9,
+    "ring": 9
+  },
+  "coefficient_encoding": "decimal strings; exact rational certificates must be regenerated from the source emitter",
+  "z_encoding": "decimal floats"
+}

@@ -1,0 +1,105 @@
+{
+  "status": "PASS_SOURCE_SLOT_MAP_WITH_OPEN_CLOSURE_GROUP",
+  "claim_boundary": "Field map only; no balance, bound, total, exclusion, or Lean kernel claim.",
+  "source": "n11-work/ops/lanes/A/q0-degree5-exact-source.json",
+  "source_sha256": "900d2186b5321acc8dc522f44f483c483355a3a7cbef4ea7c7d9817ad717f41d",
+  "mu": [
+    "z[0:9] ring sites",
+    "z[9:11] hub sites"
+  ],
+  "faceMask": "sgn(+1 first source owner, -1 second) of opposite edge in each face",
+  "faceMask_rows": [
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      -1
+    ],
+    [
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1
+    ],
+    [
+      1,
+      -1,
+      1
+    ],
+    [
+      -1,
+      -1,
+      1
+    ]
+  ],
+  "switchMask": "-1 on all Fin 9 (LP switch side and linear coefficients are -1)",
+  "sideFirst": "z[11:32] in canonical source edge order",
+  "sideSecond": "z[73:94] in canonical source edge order",
+  "leftSecond": "z[32+2i]",
+  "rightSecond": "z[33+2i]",
+  "leftFirst": "z[94+2i]",
+  "rightFirst": "z[95+2i]",
+  "width": "z[71] (lambda; LP constant is -2*pi*lambda)",
+  "eta": "z[72] (checked zero in exact-source reconstruction)",
+  "unmapped_groups": {
+    "angle_slack": {
+      "slice": "z[50:71]",
+      "reason": "likely certificate `kap`, not a CanonicalCoeffQ field"
+    },
+    "closure": {
+      "slice": "z[112:121]",
+      "reason": "nine LP closure/angle-slack slots have no direct CanonicalCoeffQ field"
+    }
+  },
+  "counts": {
+    "mu": 11,
+    "faceMask": 33,
+    "switchMask": 9,
+    "side": 21,
+    "radius": 18,
+    "linear": 39,
+    "closure": 9
+  },
+  "checks": {
+    "face_triangle_count": true,
+    "all_opposite_edges_in_edges": true,
+    "edge_order_matches_side_group": true,
+    "radius_pairs_complete": true,
+    "linear_copy_pairs_complete": true,
+    "closure_count": true,
+    "eta_zero": true
+  }
+}
