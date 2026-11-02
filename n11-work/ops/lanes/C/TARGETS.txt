@@ -7,6 +7,8 @@ N11Formalization.EnergyTerminalBatchB13Refine0039
 N11Formalization.EnergyTerminalBatchB13Refine0039Main
 N11Formalization.EnergyTerminalResidualCensusRefine0039
 N11Formalization.EnergyTerminalResidualCensusRefine0039Refine3149
+# Green-dependency alternative: remove 37 and 3149 without the red N39 chain.
+N11Formalization.EnergyTerminalResidualCensusRefine0037Refine3149
 # Exact residual certificate interface; imports B13 only and asserts no payment.
 N11Formalization.EnergyTerminalBatchB13ResidualCertificates
 # Repaired sixteen-refinement aggregate; the original module is CI-red only
@@ -198,3 +200,8 @@ N11Formalization.EnergyTerminalBatchB13Refine4162Main
 N11Formalization.EnergyRefineN4244
 N11Formalization.EnergyTerminalBatchB13Refine4244
 N11Formalization.EnergyTerminalBatchB13Refine4244Main
+N11Formalization.EnergyTerminalResidualCensusRefineTriple
+N11Formalization.EnergyTerminalResidualCensusRefine385
+N11Formalization.EnergyTerminalResidualCensusRefine378
+N11Formalization.EnergyTerminalResidualCensusRefine377
+N11Formalization.EnergyTerminalResidualCensusRefine376
