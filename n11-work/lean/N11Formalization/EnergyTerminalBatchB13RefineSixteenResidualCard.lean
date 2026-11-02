@@ -1,5 +1,4 @@
 import N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
-import N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff
 import N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus
 
 /-! Compositional cardinality bridge for the 373-id refined residual.
@@ -12,6 +11,46 @@ set_option autoImplicit false
 namespace N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
 open Finset
 noncomputable section
+
+/-- The sixteen ids added by the repair, kept literal so this bridge does not
+import the old 389-element residual census. -/
+def removedIDs : Finset (Fin 5011) :=
+  {37, 2337, 2341, 2965, 3040, 3112, 3116, 3431,
+   3440, 3573, 3589, 3623, 3633, 3777, 3792, 3853}
+
+theorem paidIDs_eq_base_union_removed :
+    EnergyTerminalBatchB13RefineSixteenRepair.paidIDs =
+      EnergyTerminalBatchB13.paidIDs ∪ removedIDs := by
+  ext n
+  simp only [EnergyTerminalBatchB13RefineSixteenRepair.paidIDs,
+    EnergyTerminalBatchB13RefineSixteenRepair.newIDs,
+    EnergyTerminalBatchB13RefineFourteen.paidIDs,
+    EnergyTerminalBatchB13RefineFourteen.newIDs,
+    EnergyTerminalBatchB13RefineThirteen.paidIDs,
+    EnergyTerminalBatchB13RefineTwelve.paidIDs,
+    EnergyTerminalBatchB13RefineEleven.paidIDs,
+    EnergyTerminalBatchB13RefineEleven.newIDs,
+    EnergyTerminalBatchB13RefineEight.newIDs,
+    EnergyTerminalBatchB13RefineSeven.newIDs,
+    EnergyRefineN3431.newIDs, EnergyRefineN3573.newIDs,
+    EnergyRefineN3116.newIDs, EnergyRefineN3112.newIDs,
+    EnergyRefineN0037.newIDs, EnergyRefineN3853.newIDs,
+    EnergyRefineN3792.newIDs, EnergyRefineN3777.newIDs,
+    EnergyRefineN2337.newIDs, EnergyRefineN2341.newIDs,
+    EnergyRefineN3040.newIDs, EnergyRefineN2965.newIDs,
+    EnergyRefineN3440.newIDs, EnergyRefineN3589.newIDs,
+    EnergyRefineN3623.newIDs, EnergyRefineN3633.newIDs,
+    removedIDs, Finset.mem_union, Finset.mem_insert, Finset.mem_singleton]
+  tauto
+
+theorem removed_not_sharp :
+    Disjoint Patch120SharpDispatch.sharpIDs removedIDs := by
+  rw [Finset.disjoint_left]
+  intro n hn hs
+  simp only [removedIDs, Finset.mem_insert, Finset.mem_singleton] at hs
+  rcases hs with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl |
+    rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl
+  all_goals exact (by decide +kernel : _ ∉ Patch120SharpDispatch.sharpIDs) hn
 
 theorem residualIDs_eq_sdiff :
     residualIDs = terminalIDs \
@@ -33,16 +72,8 @@ theorem sharp_union_paid_subset_terminal :
 theorem repaired_paid_not_sharp :
     Disjoint Patch120SharpDispatch.sharpIDs
       EnergyTerminalBatchB13RefineSixteenRepair.paidIDs := by
-  rw [EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff.paidIDs_eq_base_union_removed,
-    Finset.disjoint_union_right]
-  constructor
-  · exact EnergyTerminalBatchB13.paid_not_sharp.symm
-  · rw [Finset.disjoint_left]
-    intro n hn hs
-    have hr := EnergyTerminalBatchB13RefineSixteenResidualCensusSdiff.removedIDs_subset hn
-    rw [EnergyTerminalResidualCensus.residualIDs_eq,
-      EnergyTerminalBatchB13.mem_residualIDs_iff] at hr
-    exact hr.2.1 hs
+  rw [paidIDs_eq_base_union_removed, Finset.disjoint_union_right]
+  exact ⟨EnergyTerminalBatchB13.paid_not_sharp.symm, removed_not_sharp⟩
 
 theorem terminalIDs_eq_sharp_union_paid_union_residual :
     terminalIDs =

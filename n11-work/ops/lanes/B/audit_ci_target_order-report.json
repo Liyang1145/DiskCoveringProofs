@@ -7,10 +7,10 @@
   "scope": "static CI target-order audit only; not a Lean kernel check",
   "sha256": {
     ".github/workflows/n11-lean-build.yml": "0EEA35515DD4CBA4478FDBB8056ABC5909815F2FBB504CC9A14E1EE9CA62B4F1",
-    "n11-work/ops/lanes/B/TARGETS.txt": "769960B51F8A0D2A5CA44332E28047B7FE6A9B615EEF30B8D4671F2CC43BC48B",
-    "n11-work/ops/lanes/C/TARGETS.txt": "36E86E1D5721EAC1898790E870FA851DDD10B93DE8622FEF2E86865E08426F83"
+    "n11-work/ops/lanes/B/TARGETS.txt": "CFDDDFDFAC1889E4670F0703213B44EE157C86C8BD7B97876240AF1EB8DBB0C8",
+    "n11-work/ops/lanes/C/TARGETS.txt": "E68378CBCBCED32D276FF710A4EE5C423811228B03C817EC8A94E5FA61A3BC26"
   },
-  "structural_position": 164,
+  "structural_position": 169,
   "structural_target": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
   "workflow_lane_order": [
     "C",
