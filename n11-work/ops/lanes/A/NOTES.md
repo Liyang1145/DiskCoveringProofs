@@ -1,10 +1,9 @@
 # Lane A notes
 
-CURRENT (session 168): the q0 first-owner repairs are **drafted / source
-preflight PASS / CI pending**.  The latest completed lane-A log was from run
-`41378003343` (job `125062414500`, HEAD `016484e6`); it confirms the old
-failures, not the repaired files.  Run `41380560959` at `a29e4ee1` was still in
-progress and its log was not yet downloadable.  No kernel credit is claimed.
+CURRENT (session 184): `Q0Degree5ClosureExtension` instantiates the exact
+source box coordinates and proves nonnegativity plus the full `[0, pi]` ranges
+for both base angles and the sector width.  Concrete factor maxima and strict
+source total remain missing.  Module **CI pending**; no exclusion is claimed.
 
 ## Ledger
 
@@ -48,64 +47,14 @@ ROOT-IMPORT REQUEST: import the CI-green `C450ChainCompletion` and
   terminal `decide +kernel` to those bounded closed rational goals.  No frozen
   module, arithmetic table, or theorem statement changed.
 
-## 2026-11-02 (session 168) -- old log confirmed; repaired tree audited
+## 2026-11-02 (session 168, condensed) -- repaired q0(3) tree audited
 
-Re-downloaded run `41378003343` and inspected the exact goals: sector peak 01
-reduces to an exact fraction inequality, while the edge `hcoeff` case «1»
-reduces to `643066…1523 / 200…0000 = ∑ x ∈ {1,2}, …`.  This confirms that the
-declared terminal kernel suffix targets the actual residual shapes rather than
-an unrelated simplification step.  Regenerated all repaired modules
-deterministically and reran the sector split-preservation checker.  Added
-`audit_q0_degree3_kernel_repairs.py`, which checks import placement, both kernel
-suffixes, banned tokens in all 11 repaired modules, and `TARGETS.txt`
-registration.
-
-The exact-rational emitter independently recomputed all nine sector maxima and
-they equal `SevenClassQ0Deg3UpperTables.sectorMax`.  The older
-`q0-degree3-piecewise-8.json` metadata is stale at sector rows 0--8 and witness
-rows 1/8; the emitter already binds to recomputed exact values and prints the
-drift, so this is not substituted by a cached maximum.
-
-**Files / SHA256.**
-`SevenClassQ0Deg3Repaired.lean` `37317833f1bc1d1066edc0f3cb866069657d27f39826bf4f6c93bd014517d3d3`;
-`SevenClassQ0Deg3UpperReductionUnimodalBase.lean`
-`3e38d206b45fe1bb6bf7c2f020d862ea37294862085b93cf71849e5c5585519b`;
-`emit_q0_degree3_repaired.py`
-`94674838008d6d3a1a0d65dc48b5614a444e815565e9f8694b0bd54211c2233f`;
-`emit_q0_degree3_sector_peak.py`
-`84ae09862ea1001a9cdc1216a1d1bfb2ac9abc4d43705ab07fd2110922bc6736`;
-`split_q0_degree3_edge_peak.py`
-`4cc9cb0bf28ef780df2e125269667b40d0de3d3afa05522bd47810278e9b6765`;
-`audit_q0_degree3_kernel_repairs.py`
-`10b7ff7f3e03d708295098f91619efa26d99981cb0366bb2bdaf447d2cf5ca45`.
-Sector rows 00--08 SHA256:
-`0762019a6f0b612e0ecf67f1c27f1e210a2bd352153ea759ef5e9fa5102a5755`,
-`e4445823acf3dfcb0f79098c6c70356e021d715b9d3181f08b3399f541562f23`,
-`a8bad4c1df79ba728a0bc6203dac3334d3db9082e8871aed41b78f8ade5dcc51`,
-`880dff4aff0e88fa27950028456eb042900a12fb19440c6f78ba5d9a1b2f0af3`,
-`42a849e914cec8c0c5eefdb2487fbc7530256ba55f0a95c6e895187e4ef202b3`,
-`4214989487644b4d491cfa4a898ceac785dd64c8ba225e01932edd9f6fd18d9d`,
-`c4d5a4ac6a91e311d52b559947dd51482d64cc849e0fcf825f03cbce7a33742e`,
-`228cf7cf4cc1a59c1fb7d812c8eb9b6c786046ed1426fb08f7fb8d148b91752a`,
-`1a57e4243c23f7b4ebee11dfd406200ab9a3c1f12ce82df581bf42c1b32eff13`.
-
-**Checks (scope).** Deterministic emitter reruns PASS; sector split preservation
-9/9 PASS; new source preflight PASS; `py_compile`, targeted banned-token scan,
-and `git diff --check` PASS.  Exact Python recomputation matches all nine table
-maxima.  A tiny local Lean probe (`Rat` inequality plus reflexivity) timed out
-at 30 s, so there is **no local kernel verdict**; `decide +kernel` syntax and
-elaboration remain CI-pending.
-
-**Still unproved / unpaid.** `StrictTotal`, `Q0Exclusion`, all peak/shape/bin
-assemblers, `Q0Degree3AreaInput`, the other six exclusions, and the
-arbitrary-centre theorem remain CI pending/unpaid.  The in-progress run is not
-evidence for this repaired worktree.
-
-**Next concrete step.** Supervisor commits this worktree, then CI must reach
-lane A and build `SevenClassQ0Deg3Repaired`, the nine `SectorPeak` rows, and
-`UpperReductionUnimodalBase`.  Inspect the first owning error after
-`SevenClassQ0Deg3Repaired`; if a kernel suffix fails, replace only that closed
-goal with an explicitly rewritten rational comparison.
+Run `41378003343`'s first residual goals were exact closed rational shapes, so
+terminal kernel suffixes were targeting the right comparisons.  Deterministic
+regeneration, 9/9 sector split-preservation, exact recomputation of all nine
+maxima, banned-token/import/TARGETS audits, and `git diff --check` passed.  No
+local kernel verdict was obtained.  Any failed CI suffix must be repaired in
+that single closed goal, not by changing arithmetic tables.
 
 
 ## 2026-11-02 (sessions 169--174, condensed) -- CI boundary and repair audits
@@ -164,85 +113,138 @@ coefficients.
 source emitter in exact `Fraction` form and extend the audit to compare the
 emitter's graph/field order; only then emit `Q0Degree5FiniteTable.lean`.
 
-## 2026-11-02 (session 176) -- q0(5,8) exact-decimal source reconstructed
+## 2026-11-02 (sessions 176--178, condensed) -- q0(5,8) source reconstruction
 
-Added `reconstruct_q0_degree5_exact.py`, which parses
-`q0_closure_dual_0_3.json` with `parse_float=Fraction` (so the stored decimal
-literals, not their binary-float images, are authoritative), verifies the
-SciPy emitter's 121-slot layout (`mu` 9, `hub` 2, `side` 21, `radius` 18,
-`angle_slack` 21, `lambda` 1, `eta` 1, `linear` 39, `closure` 9), checks all
-21 angle slacks are nonnegative and `eta = 0`, and checks that the 121
-9-place certificate coefficients equal the rounded source vector in order.
-It writes `q0-degree5-exact-source.json` with numerator/denominator pairs and
-the Lean-reconstructed 11-face/21-edge graph.
+`reconstruct_q0_degree5_exact.py` parsed the stored decimal literals as
+`Fraction`, verified the 121-slot layout and certificate copy/order, and wrote
+`q0-degree5-exact-source.json` (SHA `900d2186...f41d`).  The emitter
+`emit_q0_degree5_source_data.py` then wrote `Q0Degree5SourceData.lean` with all
+121 exact rationals and graph identities to `q0Faces 3`/`q0Edges 3`; TARGETS
+registers it.  A stripped-import syntax probe timed out, so its Lean status is
+CI pending, not green.  `map_q0_degree5_canonical_data.py` mapped the direct
+`CanonicalCoeffQ` groups but left the nine closure slots open.
 
-**Files/shas.** emitter above `456217278a0cde9c4cdd2beaa0893031fdc0f2e4cfea6b27599d292240d3a12e`;
-exact source `900d2186b5321acc8dc522f44f483c483355a3a7cbef4ea7c7d9817ad717f41d`;
-prior graph audit `9dca117fd1904fbdaf1656f343a8757dde0fb59cdfa991119a544bd44db32bdb`;
-graph report `8daf9efdd67f7349de92533ceb750f633cebd16f006b1dcb88566dae99285c00`.
+## 2026-11-02 (session 179) -- q0(5,8) closure interface obstruction identified
 
-**Checks (scope).** Exact reconstruction PASS (121 rational coefficients:
-45 negative, 49 positive, 27 zero; max denominator `10^18`; 21/21 angle
-slacks nonnegative; certificate copy/order check 121/121); graph/layout audit
-PASS; `py_compile` PASS; banned-token scan of the new Python PASS;
-`git diff --check` PASS. No Lean file was emitted and no kernel claim is made.
+Added `audit_q0_degree5_closure_interface.py`.  It checks all 121 exact source
+coefficients, the recorded source-emitter SHA, the emitter's exact closure
+term/constant formulas, 9/9 strictly positive closure multipliers, zero `eta`
+and zero `width`, and compares the source and canonical pi-coefficients exactly.
+The source coefficient is `station + kap - 2*lambda - sum(closure)`; the current
+canonical formula is `station + kap - 2*width - 2*eta`.  With the existing map
+the exact `canonical_minus_source` is
+`195718067274616349/100000000000000000`.
 
-**Still unproved / unpaid.** The q0(5,8) factor upper bounds, exact strict
-total, `Q0FiniteTable 3`, the other six finite tables, and the arbitrary-centre
-theorem remain unpaid. Exact decimal coefficients alone prove no factor bound.
+The mismatch is stronger than a scalar offset: closure enters each sector as
+`closure[i-1]*(left+w/2)+closure[i]*(right+w/2)` and each switch as
+`2*b*closure[j]`.  `CanonicalCoeffQ` has no `Fin 9` closure field, and scalar
+`eta` cannot repair those sector/switch-dependent objective terms.  Therefore
+emitting `Q0FiniteTable 3` through the current interface would be unsound.
 
-**Next concrete step.** Emit `Q0Degree5FiniteTable.lean` data definitions from
-the rational pairs plus the reconstructed graph, using the existing
-`FiniteCanonicalCertificate` interface; then add its target and request CI to
-kernel-check the first owning elaboration error before attempting factor
-certificate terms.
+**Files/shas.** audit script
+`1d9d257f9fafc3fb58637583521feba1b74f1e5dc7d1650951823789e8ce289a`;
+report `q0-degree5-closure-interface-audit.json`
+`7c21573011960c0f7fee9a06c779619420ee26a9c318b2ef6bb8550510e7f8c2`.
 
-## 2026-11-02 (session 177) -- q0(5,8) Lean source data emitted
+**Checks (scope).** `py_compile` PASS; exact audit PASS; `git diff --check`
+PASS.  This is source/interface arithmetic only, with no Lean build and no
+kernel claim.  All q0(5,8) bounds and strict total remain unpaid.
 
-Added deterministic `emit_q0_degree5_source_data.py`, which reads the
-hash-bound `q0-degree5-exact-source.json` and emits
-`Q0Degree5SourceData.lean`.  The module contains all 121 exact rational
-coefficients grouped as `mu`(9), `hub`(2), `side`(21), `radius`(18),
-`angle_slack`(21), `lambda`(1), `eta`(1), `linear`(39), `closure`(9), plus
-the canonical sorted 11-face and 21-edge arrays.  It states graph identities
-to `q0Faces 3` / `q0Edges 3` by bounded `decide +kernel`; TARGETS now includes
-`N11Formalization.Q0Degree5SourceData`.
+**Next concrete step.** Add a new closure-extended certificate module carrying
+`closure : Fin 9 → ℚ`, closure nonnegativity, the `-π*sum(closure)` constant,
+and closure-augmented sector/switch objectives with sound consumers; then
+instantiate it from the hash-bound source data.  Do not edit frozen modules.
 
-**Files/shas.** Lean module `f2f18661b1ad85b10e95d1f00443ac48cc07d9c436b5a6ad2817e8e8b0a660c8`;
-emitter `ad089df5be8571eba8f832d27c6d63798dba9102072815ad3266b8775bae0819`;
-input exact source `900d2186b5321acc8dc522f44f483c483355a3a7cbef4ea7c7d9817ad717f41d`.
+## 2026-11-02 (session 181) -- closure nonnegativity and sound bound lifting
 
-**Checks (scope).** Emitter run PASS; `py_compile` PASS; TARGETS registration
-PASS; source counts/groups inherited from the PASS exact reconstruction.  A
-stripped-import syntax probe in `mathlib-probe` timed out at 90 s with no
-output, so it is **inconclusive**, not a Lean verdict.  No project build was
-run; module is CI pending and no kernel claim is made.
+Added actual base angles, their nonnegativity, nonnegative switch/sector closure
+terms, and lifting lemmas from augmented to base objectives.  No bounds instance
+was asserted.  Module `32dfdde8...`, audit `ec8fd42b...`, report `2e0fbc14...`.
+Checks: `py_compile`, exact audit, and `git diff --check` PASS; Lean **CI
+pending**, not paid.  Unproved then: all closure-aware bounds, strict total,
+q0(5,8) exclusion, six classes, energy, and arbitrary-centre theorem.
 
-**Still unproved / unpaid.** The semantic slot map from source groups to
-`CanonicalCoeffQ` (`faceMask`, side/left/right first/second, switchMask,
-width), `kap`, balance, all face/switch/sector bounds, strict total,
-`Q0FiniteTable 3`, and the remaining six finite tables.
+## 2026-11-02 (session 182) -- closure-aware bounds recover the canonical interface
 
-**Next concrete step.** Inspect the q0 degree-four pilot or source emitter to
-map `side`/`radius`/`linear` slots to `CanonicalCoeffQ`, then generate the `D`
-definition and let CI report the first owning elaboration error.
+Added `ClosureSectorCoordinates` for the source's box-dependent base angles and
+width, `ClosureFactorBounds` with exact nine-multiplier switch/sector additions,
+and `ClosureCertificate`.  Proved the coordinate-nonnegativity lifting to
+`CanonicalFactorBounds`, `ClosureCertificate.toCanonical`, and `total_lt_pi`;
+also defined `closureTotalUpperQ`/`closureTotalUpper`, proved
+`constantTerm_nonpositive`.  No concrete factor bound or certificate instance
+is asserted.  Initial fixed-realized-tie version was corrected before handoff:
+source sector closure terms vary over the generic box.
 
-## 2026-11-02 (session 178) -- q0(5,8) canonical slot map checked
+**Files/shas.** `Q0Degree5ClosureExtension.lean`
+`163e75dd2a219a32ad578f50f725351fcf934561a4d8275a0c92a23264d5c8e3`;
+audit `audit_q0_degree5_closure_extension.py`
+`c0360b6f41f4609c4334acdce28d15d27ca0dcdf5114f351f87dd4bf022bb52c`;
+report `q0-degree5-closure-extension-audit.json`
+`3204a7ea6a9bdf0d3f6d1e085336067c66e5b9077a307f8011be27531204b41c`.
 
-Added `map_q0_degree5_canonical_data.py`, which reads the hash-bound exact
-source and records the direct `CanonicalCoeffQ` map: `mu=z[0:11]`,
-`sideFirst=z[11:32]`, `sideSecond=z[73:94]`, radius/linear copy pairs at
-`z[32+2i]`/`z[33+2i]` and `z[94+2i]`/`z[95+2i]`, `width=z[71]`, `eta=z[72]`,
-`switchMask=-1`, and face masks by first/second opposite-edge ownership. It
-checks 11 triangular faces, all 21 opposite edges, and the group cardinalities.
+**Checks (scope).** `py_compile` PASS; exact source/interface audit PASS
+(including the four new declarations); `git diff --check` PASS.  No local Lean
+build and no CI verdict, so the new Lean declarations are **CI pending**, not
+paid.  Still unproved: 11 face bounds, 9 switch bounds, 9 closure-aware sector
+bounds, concrete strict-source total, q0(5,8) exclusion, six other classes,
+energy, and the arbitrary-centre theorem.
 
-**Files/shas.** script `166b5aa414d592726c75f5f5b9217702224052070c33efd116ffc7a89dfc70e4`;
-map `q0-degree5-canonical-map.json` `55a2ecce715c88195b12e66186010ff8ded691cfba85b3dff2eee8733ffae126`.
+**Next concrete step.** Define the exact box-coordinate source functions for
+`ClosureSectorCoordinates` (or prove the realized-angle bridge), then emit exact
+finite face/switch/sector maxima, recheck the strict total, and only then
+instantiate `ClosureCertificate`.
 
-**Checks (scope).** Mapping audit PASS; `py_compile` PASS. No Lean build.
-The 21 `angle_slack` slots are likely `kap`, but the nine `closure` LP slots
-have no direct `CanonicalCoeffQ` field, so do not emit `D` as complete yet.
+## 2026-11-02 (session 183) -- exact source box coordinates instantiated
 
-**Next concrete step.** In `q0_closure_dual.py`, eliminate/absorb the nine
-closure multipliers and verify the remaining coefficient signs against
-`canonicalFaceB`/`canonicalSwitchB`; then emit the Lean `D`/`kap` definitions.
+Transcribed the normalized coordinate formulas from the hash-bound source
+emitter `q0_closure_dual.py`: chord
+`sqrt(u^2+v^2-2uv cos a)`, width
+`2 asin((19/50) chord/2)`, and the two `atan2` base angles as `Complex.arg`.
+Added `sourceSectorChordLength`, `sourceSectorWidth`,
+`sourceLeftBaseAngle`, `sourceRightBaseAngle`, `sourceSectorCoordinates`, and
+proved all three box-domain nonnegativity fields required by
+`ClosureFactorBounds`.
+
+**Files/shas.** `Q0Degree5ClosureExtension.lean`
+`239a7498c6fd77d42f0db35a7bdaddf9becb5e5f491d52e24c5630afc616aa26`;
+audit `audit_q0_degree5_closure_extension.py`
+`3315f7d31a9ca29fb99217e65dbd0bf87699f162ee5921a7ab7ba914983a0730`;
+report `q0-degree5-closure-extension-audit.json`
+`68f8ace1f4bd94e367505a6259f6a354e6d994c7c632454bcacdd0a4f04b599b`.
+
+**Checks (scope).** `py_compile` PASS; exact source/interface audit PASS,
+including all eight new coordinate-transcription checks; `git diff --check`
+PASS.  A Mathlib-only probe of the `Complex.arg` nonnegativity pattern timed
+out at 120 s with no output, so there is **no local Lean verdict**.  The module
+is CI pending, not paid.
+
+**Still unproved.** All 11 face, 9 switch, and 9 closure-aware sector maxima;
+the concrete strict source total (`canonicalTotalUpperQ < piLo`); q0(5,8)
+exclusion; six other classes; energy; arbitrary-centre theorem.
+
+**Next concrete step.** Build exact-rational interval/grid maxima for the
+coordinate-dependent closure term in each sector on `a∈[0,π]`, `u,v∈[0,1]`,
+then emit the concrete `ClosureFactorBounds` instance and check the strict
+total.  First ask CI to kernel-check the new coordinate definitions in
+`Q0Degree5ClosureExtension`.
+
+
+## 2026-11-02 (session 184) -- source closure coordinate ranges
+
+Verified the Lean coordinate transcription against `q0_closure_dual.py`: its
+`ch=R*sqrt(...)`, `w=2*asin(ch/2)` is exactly our unnormalized chord followed
+by `2*asin((19/50)*chord/2)`, and `R` cancels from both `atan2` angles.  Added
+`sourceLeftBaseAngle_le_pi`, `sourceRightBaseAngle_le_pi`, and
+`sourceSectorWidth_le_pi`; together with the prior nonnegativity lemmas these
+give the box-domain range `[0,pi]` needed for finite maxima.
+
+**Files/shas.** Lean `f0949ed18d6814d26e2413475ea00e0df8971d9457720145b157f64bfec32577`;
+audit `5c6146219b14a8a0ce8cee25d61a7a4da4031ef801a84d0113a1971b17ce2e9a`.
+Exact audit, `py_compile`, `git diff --check` PASS.  No Lean build/CI verdict:
+new range declarations **CI pending**, not paid.  Still unproved: all 11 face,
+9 switch and 9 closure-aware sector maxima; strict total; q0(5,8) exclusion;
+six classes; energy; arbitrary-centre theorem.
+
+**Next concrete step.** CI-check the ranges while emitting rational interval
+bounds for the coordinate-dependent sector term, then compute the concrete
+`ClosureFactorBounds` maxima and strict total.

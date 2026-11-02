@@ -123,3 +123,5 @@ N11Formalization.SevenClassQ0Deg3StrictTotal
 N11Formalization.SevenClassQ0Deg3Q0Exclusion
 
 N11Formalization.Q0Degree5SourceData
+# Session 180: exact q0(5,8) closure vector and additive source terms (CI pending)
+N11Formalization.Q0Degree5ClosureExtension
