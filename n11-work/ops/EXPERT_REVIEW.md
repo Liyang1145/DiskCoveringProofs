@@ -1,151 +1,150 @@
-# Expert review — n=11 Lean lanes
-
-**Date:** 2026-10-31 (UTC)
-
-**Scope:** source HEAD `ae211d7a`; latest complete CI evidence is run
-`41182882564` on `7f7e6f3b`. The working-tree `ops/ci/LATEST.md` points to a
-cancelled run with empty summary/log and is not evidence. I read the guidance,
-lanes, progress, targets and current Lean; I did not edit Lean, lakefile or
-toolchain, run a full build, or use the status manifest as proof.
+# Expert review - n=11 Lean lanes
+**Date:** 2026-11-02 (UTC)
+**Scope:** worktree HEAD `418a765d` (Lean content unchanged since `f6f73fc8`).
+Read `GUIDANCE`, `LANES`, `PROGRESS`, `ci/LATEST`, all three lane notes/targets,
+recent history, and the newest Lean files. `project_status.py --check` passes
+only as a manifest-index check. I did not edit Lean, lakefile, toolchain, or run
+a full Lake build.
 
 ## Overall
 
-- **Verdict:** Lane B is the only lane currently converting a sound argument
-  into kernel-paid count reduction. Lane A has a sound finite-table reduction
-  but no fresh kernel evidence. Lane C is generating conditional arithmetic
-  and has not moved either open count.
-- **Paid energy:** B13 is kernel-paid at `1997/2386` (389 residual). The green
-  Seven/Eight/Eleven/Twelve/Thirteen chain raises the green aggregate to
-  `2010/2386` (376 residual in its predicate). `2013/373` is arithmetic waiting
-  on Fourteen/Sixteen CI, not a paid count.
-- **C450:** `C450ChainCompletion`, `Main` and `Audit` were kernel-green, but
-  both completion imports remain commented in `N11Formalization.lean`. The
-  reconstruction is therefore not root-reachable.
-- **Seven classes:** still `0/7`. No `Q0RunExclusion`, `Q1RunExclusion`, or
-  `SevenClassExclusions` instance is proved. A's degree-three path would be
-  one of seven, not a full closure.
-- **Evidence rule:** workflow-level `success` on `41182882564` is a false green;
-  the artifact contains many nonzero per-target exits. Only `=== EXIT ... 0`
-  artifact lines for the exact source commit count. A cancelled/blank run,
-  static audit, hash, manifest, decimal/float search or textual gate counts zero.
-- **No hidden proof shortcut found in the newest reviewed modules:** no source
-  `sorry`/`admit`, new axiom, `native_decide`, `ofReduceBool`, `implemented_by`,
-  or `maxHeartbeats 0`. `decide +kernel` appears only on small literal/card
-  facts in the reviewed B modules; that is valid but must not be broadened.
+- **Verdict:** there is real prior kernel payment but no fresh current-tree
+  verdict. The credible energy total remains `2013/2386` with 373 residual
+  terminal radii. `C334` and `B344` are conditional premise rewrites, not paid
+  energy. Seven classes remain `0/7`.
+- **CI boundary:** `ci/LATEST` records `41449154413` pending on `f6f73fc8`,
+  `41449062259` cancelled on `6b9c9f05`, and `41418145317` in progress on the
+  older `43c30dbf`. None verifies the current q0(5,8), 3/23, or 334 modules.
+  The last useful energy-green artifact is `41352871085` at `b1e15e83`.
+- **C450:** the assembled telescope, endpoint audit, and main consumer exist
+  and were reported green, but both completion imports remain commented in
+  `N11Formalization.lean`. The chain is not root-reachable.
+- **Energy root boundary:** the live root still imports
+  `EnergyTerminalBatchB12Main` (815 paid), not `RefineSixteenMain` (2013 paid).
+  Therefore module credit and root-level credit differ sharply.
+- **Evidence discipline:** no reviewed new file contains `sorry`, `admit`, a new
+  axiom, `native_decide`, `ofReduceBool`, `implemented_by`, or
+  `maxHeartbeats 0`. That is necessary, not sufficient. Multi-kilobyte
+  `decide +kernel` terms and `maxRecDepth 100000` remain resource risks.
 
 ## Lane A
 
-- **Verdict: mathematically sound, operationally promising, currently unpaid.**
-  The q0 degree-three argument reduces the arbitrary chart to 21 edge and 9
-  sector shapes, factors each by unimodal/endpoint checks, and supplies an exact
-  canonical strict-total bound. This is a coherent route from finite table data
-  to `Q0Degree3AreaInput`; it is not merely a hash-pinned claim.
-- **Credit today:** C450 modules are green (but not root-imported). The last
-  complete run has `EndpointChecks` and upstream targets green, then first owns
-  errors in `UpperReductionUnimodal` and `SectorPeak`; later A targets were
-  dependency-red. Those downstream reds are not independent evidence.
-- **Current repair:** HEAD adds explicit `edgeUpper` unfolding to all 21 edge
-  peaks and fixes sector namespace/open resolution. The source gates pass, but
-  no CI at `ae211d7a` has checked the resulting terms. Treat every A target from
-  the two peaks onward as CI-pending.
-- **Highest leverage:** one fresh **serial** run, in dependency order, for
-  `UpperReductionUnimodal`, `SectorPeak`, `EdgeSuffixNonpos`, `EdgeSuffixHigh`,
-  `EdgeShape`, `SectorShape`, `SectorCalculus`, the bin modules,
-  `TableBounds`, `RelabelledTableCertificate`, and `StrictTotal`. Repair only
-  the first owning diagnostic; do not patch dependency-red descendants.
-- **Acceptance lemma after green:** prove the consumer in a separate small file
+- **Verdict: C450 is complete pending supervisor root integration; q0(3) is a
+  credible 1/7 candidate but unpaid; q0(5,8) is exploratory and not proof data.**
+- `C450ChainCompletion.h450` telescopes Source12..36 and the audit correctly
+  checks that `source36` is a member, so the empty tail is not mistaken for the
+  last segment. No more chain work is needed; only the root import is missing.
+- `SevenClassQ0Deg3StrictTotal.q0Degree3AreaInput` and
+  `SevenClassQ0Deg3Q0Exclusion.q0_degree3 : Q0RunExclusion 1` form the right
+  consumer. They remain CI-pending. A green `q0_degree3` would be exactly one
+  class, not a reduction of `SevenClassExclusions`.
+- The q0(3) proof still has nine sector-peak leaves and 21 edge-peak leaves
+  with terminal kernel checks over roughly 2,000-bit rationals. Large target
+  lists make failures hard to localize; repair only the first owner.
+- **q0(5,8) concern:** `q0_closure_dual.py` is a SciPy float LP search. The
+  committed "exact" source parses nine-decimal output as `Fraction`; rounding
+  does not create an exact dual certificate. The strict source evidence is an
+  external mpmath interval branch-and-bound run, not a Lean factor-bound
+  theorem. The closure algebra in `Q0Degree5ClosureExtension` is sound as an
+  interface, but no concrete `ClosureFactorBounds` instance (11 face, 9 switch,
+  9 sector) or strict source total exists. No q0(5,8) exclusion is earned.
+- **Highest leverage:** put `SevenClassQ0Deg3Q0Exclusion` first in the A target
+  list and CI-build only its q0(3) dependency frontier. Required endpoints:
   ```
-  theorem q0_degree3 : ActualMetricClassReduction.Q0RunExclusion 1 :=
-    SevenClassQ0Deg3.q0_degree3_of_areaInput
-      SevenClassQ0Deg3StrictTotal.q0Degree3AreaInput
+  theorem q0Degree3AreaInput : SevenClassQ0Deg3.Q0Degree3AreaInput
+  theorem q0_degree3 : ActualMetricClassReduction.Q0RunExclusion 1
   ```
-  It is valid only if both imported modules exit 0. This would record 1 of 7
-  classes; the other six remain entirely unpaid.
-- **Tactic/file guidance:** keep exact rational leaves as `norm_num` on named
-  constants with explicit unfolding; never replace them by decimal comparison.
-  `EdgeShape` is already 1213 lines, so split generated peak blocks if serial CI
-  shows memory/time pressure, not by hiding failures with heartbeats.
+  Require both exits `0` and axioms `[propext, Classical.choice, Quot.sound]`.
+- **Repair strategy:** split any red `sectorPeakValid_i` or `edgePeakValid_i`
+  into its own file and prove `sectorUpper ... ≤ sectorMax i` by explicit
+  `sectorUpper`/`edgeUpper` unfolding plus exact rational comparison. Replace a
+  failed 2,000-bit `decide +kernel` leaf with denominator-normalized `norm_num`
+  lemmas; do not raise heartbeats or introduce decimals. Freeze q0(5,8) until a
+  genuinely exact rational closure certificate and Lean bounds exist.
 
 ## Lane B
 
-- **Verdict: sound and the highest-confidence real reducer.** The hierarchical
-  singleton/union refinement correctly enlarges `paidIDs`, proves disjointness,
-  transfers `RemainingTerminalRadius`, and keeps the seven-class premise
-  explicit. The arithmetic from 2010 to 2013 via sixteen singleton IDs checks.
-- **Credit today:** B13 `1997`, then the green chain through Thirteen at `2010`.
-  Fourteen's repaired count and both Fourteen/Sixteen Mains are CI-pending, so
-  `2013/373` must not be recorded yet. The 373 radii themselves remain open.
-- **Current repair:** `EnergyTerminalBatchB13RefineFourteen.lean:60-63` now
-  rewrites the disjoint union/card and closes with
-  `simpa [newIDs] using EnergyTerminalBatchB13Refine3116.new_count`. This
-  addresses the prior alias mismatch without changing certified fields.
-- **Highest leverage:** serialize only `EnergyTerminalBatchB13RefineFourteen`,
-  `RefineFourteenMain`, `RefineSixteen`, and `RefineSixteenMain`. Require all
-  four exits `0` and check `#print axioms` for `paid_radius` and `remaining_of`.
-  Then the supervisor may switch the root from `B13Main` to `SixteenMain`.
-- **Acceptance obligations:** `paid_count : paidIDs.card = 2013` and
-  `remaining_of : RefineSixteen.RemainingTerminalRadius →
-  EnergyTerminalBatchB13.RemainingTerminalRadius` must both be green before any
-  count is quoted. This pays only sixteen singleton refinements; it does not
-  price the remaining 373 radii or any class exclusion.
-- **Risk control:** do not expand `decide +kernel` or `maxRecDepth` to larger
-  blocks. The generated refinement files are large; if one module becomes slow,
-  split singleton facts into separate imported modules rather than creating one
-  giant decision term.
+- **Verdict: the B13/sixteen argument is sound and is the only recent paid
+  energy reduction. Current residual-bridge work adds no certificate.**
+- `EnergyTerminalBatchB13RefineSixteen` and `RefineSixteenMain` are green in
+  `41352871085`: `paid_count = 2013`, 373 residual. The incremental/1409/346
+  interfaces are logically valid but only restate obligations.
+- `EnergyRefineN0003Restored` and `EnergyRefineN0023Restored` are 235 KB and
+  213 KB archive drafts with 12 KB lines, `maxRecDepth 100000`, and many
+  `constructor <;> decide +kernel` validity proofs. Removing only the banned
+  unbounded-heartbeat directive does not establish they compile under the
+  default 200,000-heartbeat budget. They currently pay zero.
+- The `373 -> 346 -> 344` story is stale relative to C's 334 frontier and
+  duplicates lane C. C334 still contains ids `3` and `23`; the coherent
+  combined conditional frontier is 332, not a separate 344. Conditional
+  frontiers must not be reported as paid counts.
+- **Highest leverage:** make id 3 the first genuinely paid post-2013 module.
+  Build `EnergyRefineN0003Restored`, its wrapper, then
+  `LaneBArchiveRefine3And23.residualCertificate3`. Required endpoints:
+  ```
+  theorem new_radius ... : SourceExactRoot.sourceRadius < r
+  theorem residualCertificate3 :
+    EnergyTerminalBatchB13.ResidualRadiusCertificate 3
+  theorem b13_remaining_of_residual346_omitting_3_23 ... :
+    EnergyTerminalBatchB13.RemainingTerminalRadius
+  ```
+- **Repair strategy:** split `MValid pkN` into one lemma per field
+  (`S_pos`, `beta_nonneg`, `beta_sum`, `lines`, `endpoints`, `lam_nonneg`,
+  `reduced`, `numeric`) and split packet literals leaf-by-leaf. Use `fin_cases`
+  only over `Fin 16/36/9/7`; use exact `norm_num` on each closed field. If that
+  still times out, abandon the archive singleton and return to packet production
+  for a source-complete residual id instead of adding another wrapper.
+- Also request the supervisor switch the root energy import from `B12Main` to
+  the CI-green `RefineSixteenMain`; without it the 2013 credit is not in the
+  root theorem. The lane note's manifest claim is stale: live `FILES.jsonl` has
+  14,547 entries and no `n11-work` entries, not 14,562.
 
 ## Lane C
 
-- **Verdict: the arithmetic may be correct, but the proof route is incomplete
-  and currently pays nothing.** The seven row-cap modules were kernel-green in
-  `41182882564`, yet each proves only `not_valid_of_frozen_cap`: given a packet
-  with the exact frozen node, `f0Lo` and `g`, a fixed rational weight contradicts
-  `Valid`. That is a conditional exclusion, not a residual radius theorem.
-- **Missing mathematical bridge:** there is no theorem producing such a
-  `PaidCellCertificateM.Packet` from a feasible chart at `r < sourceRadius`, nor
-  proving the packet's `f0Lo`/`g` equal the frozen vectors. Without both, the
-  row caps cannot contradict a feasible counterexample. Treat the seven caps as
-  inapplicable until this producer/canonicality obligation is stated and proved.
-- **Coverage:** the exact census is 389 IDs, but only seven public payloads
-  `{1409,2337,2341,2356,2360,2368,2370}` exist; 382 IDs have no public payload.
-  Even seven unconditional exclusions would leave 382 radii untouched.
-- **Current CI:** the fixed `FrozenCapRowCapTreeBridges` byte and the public
-  tree/aggregate are pending. First serialize the fixed bridge, tree, and
-  aggregate. Green there only fixes the conditional chaining; it is not payment.
-- **Corrected arithmetic:** only `1409`, `2337`, `2341` currently have corrected
-  four-field witnesses under `F0 + gain < T^2`. The exact five-field `2368`
-  candidate is host-side only, `2370` timed out, and `2356`/`2360` have no
-  sampled pass. The old five-record report is invalid and must not be consumed.
-- **Highest leverage:** stop adding row caps. In a new Lean bridge module define
-  a genuine residual consumer first, for example
+- **Verdict: the 389 -> 334 chain is valid conditional set algebra and presently
+  pays nothing. It does not reduce energy below the prior 373 open radii.**
+- `EnergyTerminalResidualCensusRefine334` correctly subtracts `{3578,3738}` and
+  maps 334 certificates to B13. But its imported refinement modules are marked
+  `DRAFT ... NOT compiled`, and every removed id depends on one compiling. A
+  premise count over an unbuilt module is not a paid id.
+- The restored archive files contain 12-13 KB rational literals and 13-36
+  giant `decide +kernel` checks each. Deleting `maxHeartbeats 0` while retaining
+  `maxRecDepth 100000` is not a proof repair and is a likely timeout/OOM source.
+  The `3578` and `3738` files are especially poor first targets.
+- The latest C note claims a static PASS for 334, but unlike 344 there is no
+  committed `verify_census_334.py` or audit JSON. The emitter checks only a few
+  substrings. Do not treat that prose as an independent complement audit.
+- **Highest leverage:** make one small archive refinement real, not another
+  bridge. Use `EnergyRefineN0038` (108 lines, 13 validity checks), then its B13
+  wrapper and
   ```
-  structure ResidualRadiusCertificate (n : Fin 5011) where
-    radius : ∀ y hy0 hy1 hc C Z r, Feasible (chartAnchors y) C Z r →
-      SourceExactRoot.sourceRadius ≤ r
-
-  theorem remaining_of_residual_certificates
-    (h : ∀ n ∈ EnergyTerminalBatchB13.residualIDs, ResidualRadiusCertificate n) :
-    EnergyTerminalBatchB13.RemainingTerminalRadius := ...
+  theorem residualCertificate38 :
+    EnergyTerminalBatchB13.ResidualRadiusCertificate 38
   ```
-  Then prove the missing packet-producer/canonicality implication that turns a
-  failed `Valid` into `ResidualRadiusCertificate`. If that implication is not
-  available, report C as blocked instead of manufacturing another cap.
-- **Do not count:** exact 700/700 cap checks, `FrozenCapResidualMembership`
-  membership/not-paid facts, corrected witness modules, float minimization, or
-  a future `2368` emitter. None is a kernel radius proof until consumed above.
+  Require `EnergyRefineN0038.new_radius` and the wrapper's `paid_radius` to
+  exit `0` with clean axioms before touching 3432 or 3578.
+- **Repair strategy:** split each `validN : MValid pkN` by `MValid` field and
+  packet leaf; discharge `lines` by `fin_cases` over `Fin 36`, `beta` over
+  `Fin 16`, `reduced` over `Fin 9`, and `lam` over `Fin 7`; close each rational
+  leaf with `norm_num`. Add the missing independent complement verifier.
+- **Queue control:** 232 serial C targets cannot reliably reach the tail within
+  the 5-hour CI budget. Put only `0038`, its wrapper, and the census stage needed
+  for id 38 at the front; park later 334 links until that block is green.
 
 ## Risks
 
-- The blank working-tree `ci/LATEST.md` can erase the distinction between a
-  repaired pending tree and a green tree. Cite the exact commit and artifact.
-- Root integration is still absent: C450 imports are comments and the live
-  energy import is only `EnergyTerminalBatchB12Main`. A lane-green module is not
-  a root theorem.
-- Giant generated Edge/sector and C row-cap files risk elaboration time and OOM;
-  `SharedMomentConcreteSwitchBatch` has already exited 137 in earlier CI.
-- Do not turn conditional predicates into counts: B's 373 and C's exclusions
-  are obligations over residual data, not paid terminal radii.
-- Manifests, byte hashes, float LP searches and `project_status.py --check`
-  establish inventory/scope only. They cannot replace the required exact roots,
-  quantifiers and kernel inequalities.
-- Preserve frozen bytes and add wrappers/reports separately. The seven-class
-  target remains `0/7`; no lane has earned a class exclusion yet.
+- **False count risk:** `2013/2386` is kernel-backed on an older green commit;
+  334, 344, and 332 are conditional frontiers. Do not quote the latter as paid.
+- **False green risk:** workflow success can hide nonzero per-target exits, and
+  `ci/LATEST` currently has no summary or log for the newest run. Cite exact
+  target exits and commit, never job status alone.
+- **Root risk:** C450 completion imports are comments and the root energy import
+  is still B12. A lane-green module is not a root theorem.
+- **Resource risk:** q0 peak decisions, archive `MValid` decisions, and
+  `maxRecDepth 100000` can time out or OOM. Split terms; do not raise budgets or
+  substitute decimals.
+- **Source risk:** the q0(5,8) dual is rounded numerical LP output with an
+  external interval certificate. It must not be promoted to exact proof data.
+- **Evidence risk:** hashes, manifests, set complements, Python `Fraction`
+  checks, float LP output, and `decide` counts are diagnostics only. The delivery
+  manifest is not a proof and is currently stale for `n11-work`.

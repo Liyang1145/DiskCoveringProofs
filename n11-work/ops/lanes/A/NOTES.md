@@ -1,3 +1,13 @@
+EXPERT (2026-11-02):
+- Treat C450 as complete pending supervisor root import; stop spending cycles on it.
+- Highest leverage: `SevenClassQ0Deg3Q0Exclusion.q0_degree3 : Q0RunExclusion 1`; put it first in A CI and hold other new targets.
+- Required green endpoints: `q0Degree3AreaInput`, `q0_degree3`, clean axioms; this is at most 1/7.
+- On red repair the first `SectorPeak00..08` or edge-peak owner only; split each failed peak into its own module.
+- Replace failed 2k-bit `decide +kernel` leaves by explicit `sectorUpper`/`edgeUpper` unfolding plus denominator-normalized `norm_num`; no decimals or heartbeats.
+- Freeze q0(5,8): its source is 9-decimal rounded float LP data with an external interval certificate, not an exact Lean dual proof.
+- q0(5,8) may resume only after a concrete `ClosureFactorBounds` instance: 11 face, 9 switch, 9 sector bounds and a strict rational total.
+- Do not report q0(5,8) or local arithmetic audits as class-exclusion credit.
+
 # Lane A notes
 
 CURRENT (session 184): `Q0Degree5ClosureExtension` instantiates the exact

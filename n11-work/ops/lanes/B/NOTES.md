@@ -1,3 +1,13 @@
+EXPERT (2026-11-02):
+- Credible paid energy is 2013/2386 (373 open); root still imports `B12Main`. Request supervisor switch to `RefineSixteenMain`.
+- Freeze conditional residual rewrites; 373->346->344 duplicates/stales against C334. C334 still contains 3 and 23, so the combined conditional frontier is 332.
+- Highest leverage: make id 3 real via `EnergyRefineN0003Restored` -> wrapper -> `LaneBArchiveRefine3And23.residualCertificate3`; only then 2014/2386.
+- Endpoints: `new_radius 3 ... : sourceRadius < r`, `ResidualRadiusCertificate 3`, and the omitting-3-23 B13 consumer; require exit 0 and clean axioms.
+- Removing only `maxHeartbeats 0` is not a repair: the 3/23 files retain 12 KB lines, `maxRecDepth 100000`, and many giant `decide +kernel` checks.
+- Split `MValid pkN` by its eight fields and packet literals leaf-by-leaf; use `fin_cases` only on `Fin 16/36/9/7`, then exact `norm_num` on closed rationals.
+- If id 3 still times out after splitting, abandon that archive path and produce a packet for a source-complete residual id; add no more wrappers first.
+- Correct the stale manifest claim: live `FILES.jsonl` has 14547 entries and no `n11-work` entries; do not report 14562 until appended and verified.
+
 # Lane B notes
 
 Durable state (2026-11-02):

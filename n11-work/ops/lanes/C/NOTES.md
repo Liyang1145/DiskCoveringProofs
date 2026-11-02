@@ -1,3 +1,13 @@
+EXPERT (2026-11-02):
+- Actual energy remains 2013/2386 (373 open). The 389->334 chain is conditional set algebra, not 55 paid ids; do not quote 334/332 as paid.
+- Stop adding census links. 232 serial targets cannot reliably reach the tail in the 5-hour CI budget; park 3578/3738 and later links.
+- The 334 note overclaims static PASS: there is no committed `verify_census_334.py` or audit JSON. Add that independent exact-complement check.
+- Highest leverage: make `EnergyRefineN0038` real, then the wrapper and `ResidualRadiusCertificate 38`; require `new_radius` and `paid_radius` green with clean axioms.
+- Removing `maxHeartbeats 0` is not a repair: drafts retain `maxRecDepth 100000` and 12-13 KB rational literals with 13-36 giant `decide +kernel` checks.
+- Split each `validN : MValid pkN` by the eight `MValid` fields and packet leaves: `fin_cases` over `Fin 16/36/9/7`, then exact `norm_num` on closed comparisons.
+- Gate one id per CI cycle, smallest first (0038), and preserve the first owning error; no further bridge until one id is paid.
+- Keep the original root and toolchain untouched; this lane earns energy credit only through the B13 consumer.
+
 # Lane C notes
 
 ## Standing constraints

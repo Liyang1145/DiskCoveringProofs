@@ -14545,3 +14545,7 @@
 {"path": "verification/reproducibility/n26-public-content-audit-20261014.json", "bytes": 563328, "sha256": "8bce8d1f014ab5f4a4e2e31a46ce554a3d6ba0d42ffed96ddd6c3666324390b9", "encoding": "identity", "category": "public-global-agent-handoff-20261014"}
 {"path": "verification/reproducibility/n26-root-map.example.json", "bytes": 412, "sha256": "fc2460e8d9662b193abf1c6175250e3a46376363e5f4511c5c919a2a8d52e366", "encoding": "identity", "category": "public-global-agent-handoff-20261014"}
 {"path": "verification/reproducibility/orders21-26-handoff.json", "bytes": 45840, "sha256": "fc61d5af808b22539b19cb45c03f0a9f5ace962973d6333d6d596967378fa0fa", "encoding": "identity", "category": "public-global-agent-handoff-20261014"}
+{"path": "n11-work/ops/EXPERT_REVIEW.md", "bytes": 9192, "sha256": "61ed6d859fb8bd8c2dc956ea0771dd11a908ac5c38399a5eacaa628c8485bd96", "encoding": "identity", "category": "maintained-n11-ops-handoff-20261102"}
+{"path": "n11-work/ops/lanes/A/NOTES.md", "bytes": 15128, "sha256": "8c153984bfaf9c534e444a10c26a9dc87aa453688ab2493f3670f72cc79cb88a", "encoding": "identity", "category": "maintained-n11-ops-handoff-20261102"}
+{"path": "n11-work/ops/lanes/B/NOTES.md", "bytes": 14062, "sha256": "d36cceb5f277ffa3a900b497ee11bdcd4dcdc4653d4770a0f6b090262377b1ee", "encoding": "identity", "category": "maintained-n11-ops-handoff-20261102"}
+{"path": "n11-work/ops/lanes/C/NOTES.md", "bytes": 15583, "sha256": "1bfdf68bf30c3f5707a734db843018e427e5d4161a691a29abd741296896d2d3", "encoding": "identity", "category": "maintained-n11-ops-handoff-20261102"}
