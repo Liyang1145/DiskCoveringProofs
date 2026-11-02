@@ -39,21 +39,21 @@ theorem blockIDs0_upper : blockIDs0 ⊆
   intro n hn
   rw [blockIDs0, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed0] <;> omega
+  simp [embed0]; all_goals omega
 theorem blockIDs0_lower : blockIDs0 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 0 ≤ n.val) := by
   intro n hn
   rw [blockIDs0, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed0] <;> omega
+  simp [embed0]; all_goals omega
 
 theorem block_mem0 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 0 ≤ n.val) (hhi : n.val < 256) : n ∈ blockIDs0 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 0, by omega⟩, ?_, ?_⟩
   · exact (census0_spec _).mp (by
-      have he : embed0 ⟨n.val - 0, by omega⟩ = n := by ext; simp [embed0] <;> omega
+      have he : embed0 ⟨n.val - 0, by omega⟩ = n := by ext; simp [embed0]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed0] <;> omega
+  · ext; simp [embed0]; all_goals omega
 
 theorem block_terminal0 {n : Fin 5011} (hn : n ∈ blockIDs0) :
     (DBMSourceTree.data n).terminal = true := by
@@ -94,21 +94,21 @@ theorem blockIDs1_upper : blockIDs1 ⊆
   intro n hn
   rw [blockIDs1, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed1] <;> omega
+  simp [embed1]; all_goals omega
 theorem blockIDs1_lower : blockIDs1 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 256 ≤ n.val) := by
   intro n hn
   rw [blockIDs1, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed1] <;> omega
+  simp [embed1]; all_goals omega
 
 theorem block_mem1 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 256 ≤ n.val) (hhi : n.val < 512) : n ∈ blockIDs1 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 256, by omega⟩, ?_, ?_⟩
   · exact (census1_spec _).mp (by
-      have he : embed1 ⟨n.val - 256, by omega⟩ = n := by ext; simp [embed1] <;> omega
+      have he : embed1 ⟨n.val - 256, by omega⟩ = n := by ext; simp [embed1]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed1] <;> omega
+  · ext; simp [embed1]; all_goals omega
 
 theorem block_terminal1 {n : Fin 5011} (hn : n ∈ blockIDs1) :
     (DBMSourceTree.data n).terminal = true := by
@@ -149,21 +149,21 @@ theorem blockIDs2_upper : blockIDs2 ⊆
   intro n hn
   rw [blockIDs2, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed2] <;> omega
+  simp [embed2]; all_goals omega
 theorem blockIDs2_lower : blockIDs2 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 512 ≤ n.val) := by
   intro n hn
   rw [blockIDs2, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed2] <;> omega
+  simp [embed2]; all_goals omega
 
 theorem block_mem2 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 512 ≤ n.val) (hhi : n.val < 768) : n ∈ blockIDs2 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 512, by omega⟩, ?_, ?_⟩
   · exact (census2_spec _).mp (by
-      have he : embed2 ⟨n.val - 512, by omega⟩ = n := by ext; simp [embed2] <;> omega
+      have he : embed2 ⟨n.val - 512, by omega⟩ = n := by ext; simp [embed2]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed2] <;> omega
+  · ext; simp [embed2]; all_goals omega
 
 theorem block_terminal2 {n : Fin 5011} (hn : n ∈ blockIDs2) :
     (DBMSourceTree.data n).terminal = true := by
@@ -204,21 +204,21 @@ theorem blockIDs3_upper : blockIDs3 ⊆
   intro n hn
   rw [blockIDs3, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed3] <;> omega
+  simp [embed3]; all_goals omega
 theorem blockIDs3_lower : blockIDs3 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 768 ≤ n.val) := by
   intro n hn
   rw [blockIDs3, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed3] <;> omega
+  simp [embed3]; all_goals omega
 
 theorem block_mem3 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 768 ≤ n.val) (hhi : n.val < 1024) : n ∈ blockIDs3 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 768, by omega⟩, ?_, ?_⟩
   · exact (census3_spec _).mp (by
-      have he : embed3 ⟨n.val - 768, by omega⟩ = n := by ext; simp [embed3] <;> omega
+      have he : embed3 ⟨n.val - 768, by omega⟩ = n := by ext; simp [embed3]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed3] <;> omega
+  · ext; simp [embed3]; all_goals omega
 
 theorem block_terminal3 {n : Fin 5011} (hn : n ∈ blockIDs3) :
     (DBMSourceTree.data n).terminal = true := by
@@ -259,21 +259,21 @@ theorem blockIDs4_upper : blockIDs4 ⊆
   intro n hn
   rw [blockIDs4, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed4] <;> omega
+  simp [embed4]; all_goals omega
 theorem blockIDs4_lower : blockIDs4 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 1024 ≤ n.val) := by
   intro n hn
   rw [blockIDs4, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed4] <;> omega
+  simp [embed4]; all_goals omega
 
 theorem block_mem4 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 1024 ≤ n.val) (hhi : n.val < 1280) : n ∈ blockIDs4 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 1024, by omega⟩, ?_, ?_⟩
   · exact (census4_spec _).mp (by
-      have he : embed4 ⟨n.val - 1024, by omega⟩ = n := by ext; simp [embed4] <;> omega
+      have he : embed4 ⟨n.val - 1024, by omega⟩ = n := by ext; simp [embed4]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed4] <;> omega
+  · ext; simp [embed4]; all_goals omega
 
 theorem block_terminal4 {n : Fin 5011} (hn : n ∈ blockIDs4) :
     (DBMSourceTree.data n).terminal = true := by
@@ -314,21 +314,21 @@ theorem blockIDs5_upper : blockIDs5 ⊆
   intro n hn
   rw [blockIDs5, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed5] <;> omega
+  simp [embed5]; all_goals omega
 theorem blockIDs5_lower : blockIDs5 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 1280 ≤ n.val) := by
   intro n hn
   rw [blockIDs5, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed5] <;> omega
+  simp [embed5]; all_goals omega
 
 theorem block_mem5 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 1280 ≤ n.val) (hhi : n.val < 1536) : n ∈ blockIDs5 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 1280, by omega⟩, ?_, ?_⟩
   · exact (census5_spec _).mp (by
-      have he : embed5 ⟨n.val - 1280, by omega⟩ = n := by ext; simp [embed5] <;> omega
+      have he : embed5 ⟨n.val - 1280, by omega⟩ = n := by ext; simp [embed5]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed5] <;> omega
+  · ext; simp [embed5]; all_goals omega
 
 theorem block_terminal5 {n : Fin 5011} (hn : n ∈ blockIDs5) :
     (DBMSourceTree.data n).terminal = true := by
@@ -369,21 +369,21 @@ theorem blockIDs6_upper : blockIDs6 ⊆
   intro n hn
   rw [blockIDs6, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed6] <;> omega
+  simp [embed6]; all_goals omega
 theorem blockIDs6_lower : blockIDs6 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 1536 ≤ n.val) := by
   intro n hn
   rw [blockIDs6, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed6] <;> omega
+  simp [embed6]; all_goals omega
 
 theorem block_mem6 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 1536 ≤ n.val) (hhi : n.val < 1792) : n ∈ blockIDs6 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 1536, by omega⟩, ?_, ?_⟩
   · exact (census6_spec _).mp (by
-      have he : embed6 ⟨n.val - 1536, by omega⟩ = n := by ext; simp [embed6] <;> omega
+      have he : embed6 ⟨n.val - 1536, by omega⟩ = n := by ext; simp [embed6]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed6] <;> omega
+  · ext; simp [embed6]; all_goals omega
 
 theorem block_terminal6 {n : Fin 5011} (hn : n ∈ blockIDs6) :
     (DBMSourceTree.data n).terminal = true := by
@@ -424,21 +424,21 @@ theorem blockIDs7_upper : blockIDs7 ⊆
   intro n hn
   rw [blockIDs7, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed7] <;> omega
+  simp [embed7]; all_goals omega
 theorem blockIDs7_lower : blockIDs7 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 1792 ≤ n.val) := by
   intro n hn
   rw [blockIDs7, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed7] <;> omega
+  simp [embed7]; all_goals omega
 
 theorem block_mem7 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 1792 ≤ n.val) (hhi : n.val < 2048) : n ∈ blockIDs7 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 1792, by omega⟩, ?_, ?_⟩
   · exact (census7_spec _).mp (by
-      have he : embed7 ⟨n.val - 1792, by omega⟩ = n := by ext; simp [embed7] <;> omega
+      have he : embed7 ⟨n.val - 1792, by omega⟩ = n := by ext; simp [embed7]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed7] <;> omega
+  · ext; simp [embed7]; all_goals omega
 
 theorem block_terminal7 {n : Fin 5011} (hn : n ∈ blockIDs7) :
     (DBMSourceTree.data n).terminal = true := by
@@ -479,21 +479,21 @@ theorem blockIDs8_upper : blockIDs8 ⊆
   intro n hn
   rw [blockIDs8, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed8] <;> omega
+  simp [embed8]; all_goals omega
 theorem blockIDs8_lower : blockIDs8 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 2048 ≤ n.val) := by
   intro n hn
   rw [blockIDs8, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed8] <;> omega
+  simp [embed8]; all_goals omega
 
 theorem block_mem8 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 2048 ≤ n.val) (hhi : n.val < 2304) : n ∈ blockIDs8 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 2048, by omega⟩, ?_, ?_⟩
   · exact (census8_spec _).mp (by
-      have he : embed8 ⟨n.val - 2048, by omega⟩ = n := by ext; simp [embed8] <;> omega
+      have he : embed8 ⟨n.val - 2048, by omega⟩ = n := by ext; simp [embed8]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed8] <;> omega
+  · ext; simp [embed8]; all_goals omega
 
 theorem block_terminal8 {n : Fin 5011} (hn : n ∈ blockIDs8) :
     (DBMSourceTree.data n).terminal = true := by
@@ -534,21 +534,21 @@ theorem blockIDs9_upper : blockIDs9 ⊆
   intro n hn
   rw [blockIDs9, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed9] <;> omega
+  simp [embed9]; all_goals omega
 theorem blockIDs9_lower : blockIDs9 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 2304 ≤ n.val) := by
   intro n hn
   rw [blockIDs9, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed9] <;> omega
+  simp [embed9]; all_goals omega
 
 theorem block_mem9 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 2304 ≤ n.val) (hhi : n.val < 2560) : n ∈ blockIDs9 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 2304, by omega⟩, ?_, ?_⟩
   · exact (census9_spec _).mp (by
-      have he : embed9 ⟨n.val - 2304, by omega⟩ = n := by ext; simp [embed9] <;> omega
+      have he : embed9 ⟨n.val - 2304, by omega⟩ = n := by ext; simp [embed9]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed9] <;> omega
+  · ext; simp [embed9]; all_goals omega
 
 theorem block_terminal9 {n : Fin 5011} (hn : n ∈ blockIDs9) :
     (DBMSourceTree.data n).terminal = true := by
@@ -589,21 +589,21 @@ theorem blockIDs10_upper : blockIDs10 ⊆
   intro n hn
   rw [blockIDs10, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed10] <;> omega
+  simp [embed10]; all_goals omega
 theorem blockIDs10_lower : blockIDs10 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 2560 ≤ n.val) := by
   intro n hn
   rw [blockIDs10, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed10] <;> omega
+  simp [embed10]; all_goals omega
 
 theorem block_mem10 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 2560 ≤ n.val) (hhi : n.val < 2816) : n ∈ blockIDs10 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 2560, by omega⟩, ?_, ?_⟩
   · exact (census10_spec _).mp (by
-      have he : embed10 ⟨n.val - 2560, by omega⟩ = n := by ext; simp [embed10] <;> omega
+      have he : embed10 ⟨n.val - 2560, by omega⟩ = n := by ext; simp [embed10]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed10] <;> omega
+  · ext; simp [embed10]; all_goals omega
 
 theorem block_terminal10 {n : Fin 5011} (hn : n ∈ blockIDs10) :
     (DBMSourceTree.data n).terminal = true := by
@@ -644,21 +644,21 @@ theorem blockIDs11_upper : blockIDs11 ⊆
   intro n hn
   rw [blockIDs11, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed11] <;> omega
+  simp [embed11]; all_goals omega
 theorem blockIDs11_lower : blockIDs11 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 2816 ≤ n.val) := by
   intro n hn
   rw [blockIDs11, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed11] <;> omega
+  simp [embed11]; all_goals omega
 
 theorem block_mem11 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 2816 ≤ n.val) (hhi : n.val < 3072) : n ∈ blockIDs11 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 2816, by omega⟩, ?_, ?_⟩
   · exact (census11_spec _).mp (by
-      have he : embed11 ⟨n.val - 2816, by omega⟩ = n := by ext; simp [embed11] <;> omega
+      have he : embed11 ⟨n.val - 2816, by omega⟩ = n := by ext; simp [embed11]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed11] <;> omega
+  · ext; simp [embed11]; all_goals omega
 
 theorem block_terminal11 {n : Fin 5011} (hn : n ∈ blockIDs11) :
     (DBMSourceTree.data n).terminal = true := by
@@ -699,21 +699,21 @@ theorem blockIDs12_upper : blockIDs12 ⊆
   intro n hn
   rw [blockIDs12, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed12] <;> omega
+  simp [embed12]; all_goals omega
 theorem blockIDs12_lower : blockIDs12 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 3072 ≤ n.val) := by
   intro n hn
   rw [blockIDs12, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed12] <;> omega
+  simp [embed12]; all_goals omega
 
 theorem block_mem12 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 3072 ≤ n.val) (hhi : n.val < 3328) : n ∈ blockIDs12 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 3072, by omega⟩, ?_, ?_⟩
   · exact (census12_spec _).mp (by
-      have he : embed12 ⟨n.val - 3072, by omega⟩ = n := by ext; simp [embed12] <;> omega
+      have he : embed12 ⟨n.val - 3072, by omega⟩ = n := by ext; simp [embed12]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed12] <;> omega
+  · ext; simp [embed12]; all_goals omega
 
 theorem block_terminal12 {n : Fin 5011} (hn : n ∈ blockIDs12) :
     (DBMSourceTree.data n).terminal = true := by
@@ -754,21 +754,21 @@ theorem blockIDs13_upper : blockIDs13 ⊆
   intro n hn
   rw [blockIDs13, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed13] <;> omega
+  simp [embed13]; all_goals omega
 theorem blockIDs13_lower : blockIDs13 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 3328 ≤ n.val) := by
   intro n hn
   rw [blockIDs13, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed13] <;> omega
+  simp [embed13]; all_goals omega
 
 theorem block_mem13 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 3328 ≤ n.val) (hhi : n.val < 3584) : n ∈ blockIDs13 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 3328, by omega⟩, ?_, ?_⟩
   · exact (census13_spec _).mp (by
-      have he : embed13 ⟨n.val - 3328, by omega⟩ = n := by ext; simp [embed13] <;> omega
+      have he : embed13 ⟨n.val - 3328, by omega⟩ = n := by ext; simp [embed13]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed13] <;> omega
+  · ext; simp [embed13]; all_goals omega
 
 theorem block_terminal13 {n : Fin 5011} (hn : n ∈ blockIDs13) :
     (DBMSourceTree.data n).terminal = true := by
@@ -809,21 +809,21 @@ theorem blockIDs14_upper : blockIDs14 ⊆
   intro n hn
   rw [blockIDs14, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed14] <;> omega
+  simp [embed14]; all_goals omega
 theorem blockIDs14_lower : blockIDs14 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 3584 ≤ n.val) := by
   intro n hn
   rw [blockIDs14, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed14] <;> omega
+  simp [embed14]; all_goals omega
 
 theorem block_mem14 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 3584 ≤ n.val) (hhi : n.val < 3840) : n ∈ blockIDs14 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 3584, by omega⟩, ?_, ?_⟩
   · exact (census14_spec _).mp (by
-      have he : embed14 ⟨n.val - 3584, by omega⟩ = n := by ext; simp [embed14] <;> omega
+      have he : embed14 ⟨n.val - 3584, by omega⟩ = n := by ext; simp [embed14]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed14] <;> omega
+  · ext; simp [embed14]; all_goals omega
 
 theorem block_terminal14 {n : Fin 5011} (hn : n ∈ blockIDs14) :
     (DBMSourceTree.data n).terminal = true := by
@@ -864,21 +864,21 @@ theorem blockIDs15_upper : blockIDs15 ⊆
   intro n hn
   rw [blockIDs15, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed15] <;> omega
+  simp [embed15]; all_goals omega
 theorem blockIDs15_lower : blockIDs15 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 3840 ≤ n.val) := by
   intro n hn
   rw [blockIDs15, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed15] <;> omega
+  simp [embed15]; all_goals omega
 
 theorem block_mem15 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 3840 ≤ n.val) (hhi : n.val < 4096) : n ∈ blockIDs15 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 3840, by omega⟩, ?_, ?_⟩
   · exact (census15_spec _).mp (by
-      have he : embed15 ⟨n.val - 3840, by omega⟩ = n := by ext; simp [embed15] <;> omega
+      have he : embed15 ⟨n.val - 3840, by omega⟩ = n := by ext; simp [embed15]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed15] <;> omega
+  · ext; simp [embed15]; all_goals omega
 
 theorem block_terminal15 {n : Fin 5011} (hn : n ∈ blockIDs15) :
     (DBMSourceTree.data n).terminal = true := by
@@ -919,21 +919,21 @@ theorem blockIDs16_upper : blockIDs16 ⊆
   intro n hn
   rw [blockIDs16, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed16] <;> omega
+  simp [embed16]; all_goals omega
 theorem blockIDs16_lower : blockIDs16 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 4096 ≤ n.val) := by
   intro n hn
   rw [blockIDs16, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed16] <;> omega
+  simp [embed16]; all_goals omega
 
 theorem block_mem16 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 4096 ≤ n.val) (hhi : n.val < 4352) : n ∈ blockIDs16 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 4096, by omega⟩, ?_, ?_⟩
   · exact (census16_spec _).mp (by
-      have he : embed16 ⟨n.val - 4096, by omega⟩ = n := by ext; simp [embed16] <;> omega
+      have he : embed16 ⟨n.val - 4096, by omega⟩ = n := by ext; simp [embed16]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed16] <;> omega
+  · ext; simp [embed16]; all_goals omega
 
 theorem block_terminal16 {n : Fin 5011} (hn : n ∈ blockIDs16) :
     (DBMSourceTree.data n).terminal = true := by
@@ -974,21 +974,21 @@ theorem blockIDs17_upper : blockIDs17 ⊆
   intro n hn
   rw [blockIDs17, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed17] <;> omega
+  simp [embed17]; all_goals omega
 theorem blockIDs17_lower : blockIDs17 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 4352 ≤ n.val) := by
   intro n hn
   rw [blockIDs17, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed17] <;> omega
+  simp [embed17]; all_goals omega
 
 theorem block_mem17 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 4352 ≤ n.val) (hhi : n.val < 4608) : n ∈ blockIDs17 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 4352, by omega⟩, ?_, ?_⟩
   · exact (census17_spec _).mp (by
-      have he : embed17 ⟨n.val - 4352, by omega⟩ = n := by ext; simp [embed17] <;> omega
+      have he : embed17 ⟨n.val - 4352, by omega⟩ = n := by ext; simp [embed17]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed17] <;> omega
+  · ext; simp [embed17]; all_goals omega
 
 theorem block_terminal17 {n : Fin 5011} (hn : n ∈ blockIDs17) :
     (DBMSourceTree.data n).terminal = true := by
@@ -1029,21 +1029,21 @@ theorem blockIDs18_upper : blockIDs18 ⊆
   intro n hn
   rw [blockIDs18, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed18] <;> omega
+  simp [embed18]; all_goals omega
 theorem blockIDs18_lower : blockIDs18 ⊆
     Finset.univ.filter (fun n : Fin 5011 => 4608 ≤ n.val) := by
   intro n hn
   rw [blockIDs18, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed18] <;> omega
+  simp [embed18]; all_goals omega
 
 theorem block_mem18 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 4608 ≤ n.val) (hhi : n.val < 4864) : n ∈ blockIDs18 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 4608, by omega⟩, ?_, ?_⟩
   · exact (census18_spec _).mp (by
-      have he : embed18 ⟨n.val - 4608, by omega⟩ = n := by ext; simp [embed18] <;> omega
+      have he : embed18 ⟨n.val - 4608, by omega⟩ = n := by ext; simp [embed18]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed18] <;> omega
+  · ext; simp [embed18]; all_goals omega
 
 theorem block_terminal18 {n : Fin 5011} (hn : n ∈ blockIDs18) :
     (DBMSourceTree.data n).terminal = true := by
@@ -1084,15 +1084,15 @@ theorem blockIDs19_lower : blockIDs19 ⊆
   intro n hn
   rw [blockIDs19, Finset.mem_image] at hn
   rcases hn with ⟨m, _, rfl⟩
-  simp [embed19] <;> omega
+  simp [embed19]; all_goals omega
 
 theorem block_mem19 {n : Fin 5011} (ht : (DBMSourceTree.data n).terminal = true)
     (hlo : 4864 ≤ n.val) (hhi : n.val < 5011) : n ∈ blockIDs19 := by
   refine Finset.mem_image.mpr ⟨⟨n.val - 4864, by omega⟩, ?_, ?_⟩
   · exact (census19_spec _).mp (by
-      have he : embed19 ⟨n.val - 4864, by omega⟩ = n := by ext; simp [embed19] <;> omega
+      have he : embed19 ⟨n.val - 4864, by omega⟩ = n := by ext; simp [embed19]; all_goals omega
       simpa [he] using ht)
-  · ext; simp [embed19] <;> omega
+  · ext; simp [embed19]; all_goals omega
 
 theorem block_terminal19 {n : Fin 5011} (hn : n ∈ blockIDs19) :
     (DBMSourceTree.data n).terminal = true := by

@@ -42,7 +42,7 @@
   "literal_cardinality_sum": 2506,
   "ok": true,
   "scope": "static generated-source audit; not Lean elaboration or kernel proof credit",
-  "sha256": "A06CE2E053F9D1243D2A11B943102A5462409DA63B406AD39CDC9BCE24F5A540",
+  "sha256": "B9E98D204B7BF5D8AC5DF94913822F4B3A708BEB98BA26E6CEFD9CB080165608",
   "source_terminal_block_cards": [
     61,
     75,

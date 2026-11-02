@@ -113,3 +113,60 @@ Durable state through session 155 (2026-11-02):
   verdict on `N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus`
   at SHA `A06CE2E0...A540`; expect the first remaining risk to be the
   `blockIDs` disjointness/interval `omega` step, then run `ResidualCard`.
+
+## 2026-11-02 - session 159: exact old CI diagnostic and generated-tactic repair
+
+- Downloaded the `41352871085` build artifact and inspected its retained
+  `errors_head`.  It confirms the old census source failed in elaboration, not
+  only by OOM: offset-zero `block_mem` membership proofs produced `No goals to
+  be solved`, followed by `Type mismatch: After simplification`, and later
+  `unsolved goals` in block-image injectivity proofs.  This diagnostic is for
+  the older source, not the current tree.
+- Updated `n11-work/ops/lanes/B/emit_terminal_census_blocks.py` (SHA-256
+  `3BF8F363BFCF3472BBB183B1E59E60438326EDD782E35101D09BC2D75E16CB3C`) so
+  subset and embed-equality proofs use `simp [embed…]; all_goals omega`.
+  `all_goals` is deliberately safe when simplification closes every goal,
+  including the offset-zero block, while still discharging nonzero-offset
+  arithmetic goals.
+- Regenerated `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean`
+  (SHA-256 `B9E98D204B7BF5D8AC5DF94913822F4B3A708BEB98BA26E6CEFD9CB080165608`,
+  1,274 lines, 79 `all_goals omega` tactic occurrences, no remaining
+  `<;> omega`).  The auditor
+  `audit_terminal_census_blocks.py` SHA-256
+  `142C6BF9F8FFEA36B9715C656FF8F7865377C754E8C7E280EA0CFD086B043FDA`
+  still passes all 16 static checks; report SHA-256
+  `51A9ED497D04D8500D2EE4BC4A1BC367730C9D51125C4EC6659C60BF79D815EB`.
+  Scope is source parsing and generated-text structure only, not Lean
+  elaboration or kernel proof credit.
+- `TerminalCensus`/`ResidualCard` remain **CI pending** at the new census SHA.
+  No local full-project build was run.  All 373 residual radii, packet payloads,
+  382 absent payload records, SevenClassExclusions (0/7), and the
+  arbitrary-centre full-disk theorem remain unproved/unpaid.
+- Next concrete step: run lane-B-first CI on the updated census SHA; if the
+  offset-zero/embed goals are cleared, capture the next first Lean diagnostic
+  (currently most likely the `Fin.sum_univ_succ` cardinality normalization),
+  then run `ResidualCard`.
+
+## 2026-11-02 - session 160: CI routing and bounded top-card probe
+
+- Confirmed the actual repository API path is
+  `Liyang1145/DiskCoveringProofs`.  Run `41394181326` is **pending** on head
+  `68d172d9adc4997225fb729efec40c34e8ddf825` (created 05:27:59Z); it has not
+  started, so it gives no Lean verdict.  Run `41380560959` is still
+  `in_progress` on the older head `a29e4ee1...`, so it cannot test the repaired
+  census SHA `B9E98D20...5608`.
+- Rechecked current artifacts: census Lean SHA `B9E98D20...5608`, emitter SHA
+  `3BF8F363...CB3C`, auditor SHA `142C6BF9...3FDA`.  `TARGETS.txt` already puts
+  `EnergyTerminalBatchB13RefineSixteenTerminalCensus` first; no edit needed.
+- Ran `python tools/project_status.py --check`: handoff-index check passed.  Its
+  stated scope is manifest declarations only, not math or full byte integrity.
+- Added a Mathlib-only probe outside the repo for the exact
+  `Finset.card_biUnion` statement used at `censusIDs_card`.  A 150 s bounded
+  `lake env lean` run timed out while loading `Mathlib` with no elaboration
+  output; therefore the rewrite pattern remains unverified, not passed.
+- `TerminalCensus`/`ResidualCard` remain **CI pending**.  All 373 residual
+  radii, packet payloads, 382 absent payload records, SevenClassExclusions
+  (0/7), and the arbitrary-centre full-disk theorem remain unpaid.
+- Next concrete step: poll run `41394181326`; once it starts, download its
+  first lane-B diagnostic for the census target.  Repair only that diagnostic,
+  rerun the static census auditor, then proceed to `ResidualCard`.
