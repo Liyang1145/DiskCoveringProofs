@@ -1,0 +1,126 @@
+{
+  "audit": "c450_root_import_safety",
+  "session": 188,
+  "verdict": "PASS_C450_ROOT_IMPORT_SAFETY",
+  "checks_passed": 26,
+  "checks_total": 26,
+  "checks": [
+    {
+      "ok": true,
+      "label": "exactly one commented marker for N11Formalization.C450ChainCompletion"
+    },
+    {
+      "ok": true,
+      "label": "no already-live `import N11Formalization.C450ChainCompletion` in the root"
+    },
+    {
+      "ok": true,
+      "label": "the only occurrence of `import N11Formalization.C450ChainCompletion` is the commented marker"
+    },
+    {
+      "ok": true,
+      "label": "exactly one commented marker for N11Formalization.C450ChainCompletionMain"
+    },
+    {
+      "ok": true,
+      "label": "no already-live `import N11Formalization.C450ChainCompletionMain` in the root"
+    },
+    {
+      "ok": true,
+      "label": "the only occurrence of `import N11Formalization.C450ChainCompletionMain` is the commented marker"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletionEndpoint declared only in the chain modules (owners=['C450ChainCompletionEndpoint'])"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletionTail declared only in the chain modules (owners=['C450ChainCompletionTail'])"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletionMid1 declared only in the chain modules (owners=['C450ChainCompletionMid1'])"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletionMid2 declared only in the chain modules (owners=['C450ChainCompletionMid2'])"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletionMid3 declared only in the chain modules (owners=['C450ChainCompletionMid3'])"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletion declared only in the chain modules (owners=['C450ChainCompletion'])"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletionMain declared only in the chain modules (owners=['C450ChainCompletionMain'])"
+    },
+    {
+      "ok": true,
+      "label": "namespace N11Formalization.C450ChainCompletionAudit declared only in the chain modules (owners=['C450ChainCompletionAudit'])"
+    },
+    {
+      "ok": true,
+      "label": "exported name `chain_step_count` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
+    },
+    {
+      "ok": true,
+      "label": "exported name `h450` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
+    },
+    {
+      "ok": true,
+      "label": "exported name `c450_atom` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
+    },
+    {
+      "ok": true,
+      "label": "exported name `source_obligation` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletionEndpoint.lean has no forbidden token ([])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletionTail.lean has no forbidden token ([])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletionMid1.lean has no forbidden token ([])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletionMid2.lean has no forbidden token ([])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletionMid3.lean has no forbidden token ([])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletion.lean has no forbidden token ([])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletionMain.lean has no forbidden token ([])"
+    },
+    {
+      "ok": true,
+      "label": "C450ChainCompletionAudit.lean has no forbidden token ([])"
+    }
+  ],
+  "modules_scanned": 2481,
+  "source_hashes": {
+    "N11Formalization.lean": "022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914",
+    "C450ChainCompletionEndpoint.lean": "a9af56174578f04b9b1bae5f05784473edea11c83cd2bffa6e4094f176b2d9f1",
+    "C450ChainCompletionTail.lean": "05d8bf4b24589eef70aeb2eff6fa37a40ab1a5b442d56e5c9fba4adee8304bc1",
+    "C450ChainCompletionMid1.lean": "522f2c609aab4c43da7b0189a6c05b42cab426251eaa5c84675c94673cdaedce",
+    "C450ChainCompletionMid2.lean": "ebdcd8e92235d2774af2ba6d80b0223259fc13d6f3328ff69fd2213c76b4c766",
+    "C450ChainCompletionMid3.lean": "f95882a7d411d158e209d7a3a5fd8cdefa7065f2fb82ed6b71e9b950f9ee4229",
+    "C450ChainCompletion.lean": "d04b9dcfcb0a06ce84ff0412de48faa00af53627f643352a033af68aa81eaf2a",
+    "C450ChainCompletionMain.lean": "3f6088615e0a88e2a8927562c947c0c685e3e57bb15376ca3467fc7f6a33539c",
+    "C450ChainCompletionAudit.lean": "21abc9089fbe611c26e4b5b59eeeea6253eb88287f4ac338f167d18dafcb3dfd"
+  },
+  "scope": "static root-import / name-clash audit; NOT a kernel verdict and NOT a build"
+}

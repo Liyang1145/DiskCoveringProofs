@@ -1,0 +1,70 @@
+{
+  "audit": "c450_consumer_signatures",
+  "session": 187,
+  "verdict": "PASS_C450_CONSUMER_SIGNATURES",
+  "checks_passed": 13,
+  "checks_total": 13,
+  "checks": [
+    {
+      "ok": true,
+      "label": "C450Source11Segment.source_of_remaining : RemainingSourceObligation -> SourceObligation"
+    },
+    {
+      "ok": true,
+      "label": "C450Source11Segment.atom_of_remaining : RemainingSourceObligation -> C450Atom"
+    },
+    {
+      "ok": true,
+      "label": "C450NormalizedInterface.nine_of_source : SourceObligation -> r < sourceRadius -> Covers -> card BoundaryIdx = 9"
+    },
+    {
+      "ok": true,
+      "label": "C450NormalizedInterface.ringLabels_of_source : SourceObligation -> ... RingLabels"
+    },
+    {
+      "ok": true,
+      "label": "ActualMetricClassReduction.main_of_seven_class_certificates : h450 -> energy -> seven classes -> N11MainStatement"
+    },
+    {
+      "ok": true,
+      "label": "chain applies nine_of_source source_obligation hr hc (arg order/source match)"
+    },
+    {
+      "ok": true,
+      "label": "chain applies ringLabels_of_source source_obligation hr hc"
+    },
+    {
+      "ok": true,
+      "label": "Main feeds C450ChainCompletion.h450 henergy hclasses in declared order"
+    },
+    {
+      "ok": true,
+      "label": "Source11 RemainingSourceObligation := forall s in remainingSegs, SegmentNormalized s"
+    },
+    {
+      "ok": true,
+      "label": "Source11 remainingSegs.length = 25 (non-vacuous middle)"
+    },
+    {
+      "ok": true,
+      "label": "Source36 remainingSegs.length = 0 (vacuous endpoint)"
+    },
+    {
+      "ok": true,
+      "label": "Mid3 exports source16_remaining"
+    },
+    {
+      "ok": true,
+      "label": "h450 target type is Source11 RemainingSourceObligation"
+    }
+  ],
+  "source_hashes": {
+    "C450Source11Segment.lean": "f1075b4e06a77f1282ebd5099d0171fe0294d29ac9537dd761599dccfbb84e28",
+    "C450Source36Segment.lean": "85c9d33fb9eb275720a5af73adfc9824dfb73cc37fe2a9492e1f25514662dfbb",
+    "C450NormalizedInterface.lean": "56990750e9557d61036864bee4806299f02771949227a46e7506597964a60650",
+    "ActualMetricClassReduction.lean": "4c6b872adbd37a812898a80c39decf1cb500937a6e79a695d06f6fc3320c8936",
+    "C450ChainCompletion.lean": "d04b9dcfcb0a06ce84ff0412de48faa00af53627f643352a033af68aa81eaf2a",
+    "C450ChainCompletionMain.lean": "3f6088615e0a88e2a8927562c947c0c685e3e57bb15376ca3467fc7f6a33539c"
+  },
+  "scope": "static signature/usage audit; NOT a kernel verdict and NOT a build"
+}

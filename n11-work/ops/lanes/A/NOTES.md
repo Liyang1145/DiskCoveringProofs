@@ -1,6 +1,6 @@
 EXPERT (2026-11-02):
 - Treat C450 as complete pending supervisor root import; stop spending cycles on it.
-- Highest leverage: `SevenClassQ0Deg3Q0Exclusion.q0_degree3 : Q0RunExclusion 1`; put it first in A CI and hold other new targets.
+- Highest leverage (once FOCUS lifts the q0 pause): `SevenClassQ0Deg3Q0Exclusion.q0_degree3 : Q0RunExclusion 1`; put it first in A CI and hold other new targets.
 - Required green endpoints: `q0Degree3AreaInput`, `q0_degree3`, clean axioms; this is at most 1/7.
 - On red repair the first `SectorPeak00..08` or edge-peak owner only; split each failed peak into its own module.
 - Replace failed 2k-bit `decide +kernel` leaves by explicit `sectorUpper`/`edgeUpper` unfolding plus denominator-normalized `norm_num`; no decimals or heartbeats.
@@ -10,251 +10,170 @@ EXPERT (2026-11-02):
 
 # Lane A notes
 
-CURRENT (session 184): `Q0Degree5ClosureExtension` instantiates the exact
-source box coordinates and proves nonnegativity plus the full `[0, pi]` ranges
-for both base angles and the sector width.  Concrete factor maxima and strict
-source total remain missing.  Module **CI pending**; no exclusion is claimed.
+CURRENT (session 185): **TARGET-DONE for the FOCUS-mode target** (restore
+`C450ChainCompletion` + `C450ChainCompletionMain`).  Both modules are present,
+are the two root `HARK-MISSING` lines 1952--1953, and pass the source telescope
+audit plus a full static import-closure check.  Remaining action is
+supervisor-only: uncomment the two root imports.  q0 stays PAUSED per FOCUS.
 
 ## Ledger
 
-- CI-green paid Lane A targets: `C450ChainCompletionMain`,
-  `C450ChainCompletionAudit`, `Cos`, `Mono`, `Bins`, `EndpointChecks`, and
-  `UpperTables`.
+- CI-green paid Lane A targets (per prior supervisor report):
+  `C450ChainCompletionMain`, `C450ChainCompletionAudit`, `Cos`, `Mono`,
+  `Bins`, `EndpointChecks`, `UpperTables`.
+- Fresh CI in this window: `ops/ci/LATEST.md` shows only cancelled runs
+  (41449062259 cancelled, 41449154413 in_progress with no jobs), so there is
+  **no new kernel verdict**; the source audits below are the only evidence.
 - Repair only the first owning error; dependency-red descendants are not
-  diagnostics.  A green q0 chain would prove `q0_degree3 : Q0RunExclusion 1`
-  (1/7).
+  diagnostics.  A green q0 chain would prove `q0_degree3 : Q0RunExclusion 1`.
 - Keep explicit `edgeUpper`/named-constant unfolding; no decimal substitutions
   or raised heartbeats.
 - `SectorValid`, strict `totalUpper < piLo`, `Q0Degree3AreaInput`, all seven
   exclusions, and the arbitrary-centre theorem remain unpaid.
 
 ROOT-IMPORT REQUEST: import the CI-green `C450ChainCompletion` and
-`C450ChainCompletionMain` in the stage-1 root (supervisor-only edit).
+`C450ChainCompletionMain` in the stage-1 root (supervisor-only edit).  This is
+the ONLY step left to close the lane-A FOCUS target; nothing else in lane A is
+pending on it.
 
-## Condensed history
+## Condensed history (pre-session-175)
 
 - Sessions 115--153 exactly audited 21 edge peaks, 21 discrete peaks, 18,441
-  sector points, 72/72 bins, 18,369 within-bin steps, 63/63 jumps, and bin-3
+  sector points, 72/72 bins, 18,369 within-bin steps, 63/63 jumps, bin-3
   (256 nodes / 32,640 pairs).  Global sector unimodality was refuted; the valid
-  route is bin-wise.  These are source/arithmetic checks, not kernel credit.
+  route is bin-wise.  Source/arithmetic checks, not kernel credit.
 - Sessions 142--153 split 21 edge and 9 sector peaks and repaired the bin-3
-  half bound.  All split/calculus/bin/table modules remain CI pending.
-- C450/Main/Audit, `Cos`, `Mono`, `Bins`, `EndpointChecks`, and `UpperTables`
-  are CI-green.  Root still carries both HARK markers.
-- Sessions 158--162 found and repaired earlier base errors, then identified CI
-  lane routing as the reachability blocker.  Session 159 introduced
-  `SevenClassQ0Deg3Repaired.lean`, a generated copy of frozen SHA
-  `48d41f5d3a71c41adc3ff0af26f86740b2f4ed82383a037d182aac0f16075b61`
-  adding only the missing census import and ear-count open.
-- Sessions 165--166 made the strict-total division bounds goal-shaped with
-  `div_le_div_of_nonneg_right`; exact ledger checks passed, but no Lean verdict
-  was obtained.
-- Session 167 read the live log of run `41378003343`.  First owners were the
-  repaired-copy import placement, nine sector peak rational comparisons, and
-  the 21 edge coefficient equalities.  The log's peak goal reduces to a huge
-  fraction-to-fraction inequality; the edge goal reduces to a literal rational
-  versus a two-term `Finset.sum`.  Fixes: move provenance below imports and add
-  terminal `decide +kernel` to those bounded closed rational goals.  No frozen
-  module, arithmetic table, or theorem statement changed.
+  half bound.  C450/Main/Audit, `Cos`, `Mono`, `Bins`, `EndpointChecks`,
+  `UpperTables` are CI-green; root still carries both HARK markers.
+- Sessions 158--167: `SevenClassQ0Deg3Repaired.lean` is a generated copy of
+  frozen SHA `48d41f5d...5b61` adding only the census import and ear-count
+  open; q0 import-closure audit corrected (skip own namespaces);
+  `SevenClassQ0Deg3Q0Exclusion` did not import `SevenClassQ0Deg3` (direct
+  import moved closure audit to PASS, 115 refs / 76 modules).
+- Sessions 168--174: no n=11 Lean job existed (runs pending, no jobs), so six
+  sessions produced source/arithmetic evidence only.
+  `audit_q0_degree3_kernel_cost.py`: sector peaks 00--08 have 2071--2099-bit
+  largest literals, edge 141-bit; a 363-bit Rat probe timed out at 50 s
+  (inconclusive, not a rejection).  Strict ledger PASS, total
+  `3.135646999268476`, slack `0.005945654321317` (Python rationals, not Lean).
 
-## 2026-11-02 (session 168, condensed) -- repaired q0(3) tree audited
+## 2026-11-02 (sessions 175--184, condensed) -- q0(5,8) closure work
 
-Run `41378003343`'s first residual goals were exact closed rational shapes, so
-terminal kernel suffixes were targeting the right comparisons.  Deterministic
-regeneration, 9/9 sector split-preservation, exact recomputation of all nine
-maxima, banned-token/import/TARGETS audits, and `git diff --check` passed.  No
-local kernel verdict was obtained.  Any failed CI suffix must be repaired in
-that single closed goal, not by changing arithmetic tables.
+- 175: `audit_q0_degree5_graph.py` PASS_SOURCE_GRAPH_AND_LAYOUT_ONLY; the
+  q0(5,8) certificate stores 121 coefficients as **decimal strings** and `z`
+  as floats, so it cannot be a Lean coefficient source.
+- 176--178: `reconstruct_q0_degree5_exact.py` -> `q0-degree5-exact-source.json`
+  (SHA `900d2186...f41d`); `emit_q0_degree5_source_data.py` ->
+  `Q0Degree5SourceData.lean` (121 exact rationals, graph = `q0Faces 3`/
+  `q0Edges 3`).  Lean status CI pending.
+- 179: `audit_q0_degree5_closure_interface.py` found the interface
+  obstruction: canonical formula lacks the `Fin 9` closure field; scalar `eta`
+  cannot repair sector/switch-dependent closure terms; exact
+  `canonical_minus_source = 195718067274616349/100000000000000000`.
+- 181--184: `Q0Degree5ClosureExtension.lean` adds `ClosureSectorCoordinates`,
+  `ClosureFactorBounds`, `ClosureCertificate`, lifting to `CanonicalFactorBounds`,
+  `total_lt_pi`; then transcribes the source box coordinates
+  (chord `sqrt(u^2+v^2-2uv cos a)`, width `2 asin((19/50) chord/2)`, base angles
+  via `Complex.arg`) and proves nonnegativity plus full `[0,pi]` ranges.
+  All these Lean declarations are **CI pending**, never kernel-checked locally.
 
+## 2026-11-02 (sessions 185--187, condensed) -- C450 target re-verified, TARGET-DONE
 
-## 2026-11-02 (sessions 169--174, condensed) -- CI boundary and repair audits
+Lane-A FOCUS target = restore `C450ChainCompletion` + `C450ChainCompletionMain`
+(root HARK-MISSING lines 1952--1953); q0 PAUSED.  Both files exist, are in
+`ops/lanes/A/TARGETS.txt`, and are source-complete.  New read-only audits:
 
-No n=11 Lean job has existed for the repaired tree: runs `41380560959` and
-`41399703011` are pending with no jobs; older runs predate the repairs.  Six
-sessions therefore produced source/arithmetic evidence only, never a kernel
-verdict.  Useful results: the q0 import-closure checker was corrected (skip a
-file's own namespaces) and `SevenClassQ0Deg3Q0Exclusion` was found not to import
-`SevenClassQ0Deg3`; adding that direct import moved the closure audit to PASS
-(115 references across 76 q0 modules).  `audit_q0_degree3_kernel_cost.py`
-records literal sizes sent to terminal `decide +kernel`: sector peaks 00--08
-have 2071--2099-bit largest literals, the edge module 141-bit.  A core-only
-363-bit Rat probe timed out at 50 s and is inconclusive, not a rejection.
-Strict-ledger exact arithmetic PASS with total `3.135646999268476` and slack
-`0.005945654321317` (Python rationals, not Lean).  Other rerun preflights
-(sector split 9/9, edge split 21/21, q0 repair, unfold/max projection) PASS in
-their source-check scopes.  All q0 Lean modules remain CI pending; the other
-six exclusions, `Q0Degree3AreaInput`, strict total, and the arbitrary-centre
-theorem remain unpaid.
+- 185 `verify_chain_completion.py` PASS: five telescoping chunks carry all 25
+transfers once; chunk output types reach Source31,26,21,16,11 in order; `h450`
+keeps the `C450Source11` interface; Source36/`ActualMetricClassReduction`
+consumer signatures agree; emitters deterministic; no forbidden tokens.
+- 185 NEW `audit_c450_import_closure.py` PASS (closure 1769, missing `[]`;
+report sha `1fd9aff3...842e`).  Static import graph only, NOT a kernel verdict.
+- 186 `audit_c450_transfer_shapes.py` PASS: all transfer/consumer signatures
+shape-checked.  187 `audit_c450_consumer_signatures.py` PASS: every consumed
+name matches its producer.  All SOURCE/static, no build.
 
-## 2026-11-02 (session 175) -- q0(5,8) graph matched; source coefficients not exact
+**Still unproved / unpaid.** No kernel verdict; C450 is source-complete but not
+*paid* until CI builds the target (exit 0) and the supervisor imports the two
+modules.  q0(5,8) `ClosureFactorBounds` (11 face, 9 switch, 9 sector + strict
+total), q0(3)/q1 tables and `q0Degree3AreaInput`, seven class exclusions, energy
+residual, arbitrary-centre theorem all remain open.
 
-Extended the seven-class graph audit from the q0(4,9) pilot to the q0(5,8)
-closure case.  New script `audit_q0_degree5_graph.py` verifies that
-`q0_closure_dual_0_3.json` declares `start=0, span=3`, 11 faces and 21 edges and
-that its labelled face set and edge set equal `ActualOrderedMetricGraphs.q0Faces 3`
-(reconstructed independently from `q0Fan`/`centralFace`).  It also checks the
-certificate header (`strict=true`, same span), 121 coefficients, 121 `z` slots,
-and the 11+9+9 factor-label order.  Result: **PASS_SOURCE_GRAPH_AND_LAYOUT_ONLY**,
-`q0-degree5-graph-match.json`, sha256
-`8daf9efdd67f7349de92533ceb750f633cebd16f006b1dcb88566dae99285c00`;
-script sha256 `9dca117fd1904fbdaf1656f343a8757dde0fb59cdfa991119a544bd44db32bdb`.
+## 2026-11-02 (session 188) -- C450 root-import safety audit (new), TARGET-DONE stands
 
-Material finding: unlike the q0(4,9) pilot, the q0(5,8) certificate stores all
-121 coefficients as **decimal strings** and `z` as binary floats, not exact
-rational pairs.  This file therefore cannot be a Lean coefficient source; an
-exact-rational certificate must be regenerated by the source emitter before a
-`Q0Degree5FiniteTable` can be written.  No factor bound, balance, or exclusion
-is proved by this audit.
+Lane-A FOCUS target unchanged: `C450ChainCompletion` + `C450ChainCompletionMain`
+restored, are root HARK-MISSING lines 1952--1953, pass the source telescope
+audit + import-closure + transfer-shape + consumer-signature audits.  q0 PAUSED.
 
-**Checks run (scope).** The new graph/layout audit above; `python
-tools/project_status.py --check` PASS (handoff index only).  No Lean build; CI
-still shows run `41399703011` pending with no job, so every q0 module and the
-new audit's (nonexistent) kernel claims remain CI pending/unpaid.
+This session closed the last cheap CI-red mode the previous four audits did NOT
+cover: what happens to the stage-1 root *the moment the supervisor uncomments
+the two HARK-MISSING import lines*.  Two failure modes are checked, both purely
+static: (1) the root edit itself (exactly one commented marker per module, no
+already-live duplicate import), and (2) a declaration clash -- uncommenting
+introduces the chain's namespaces and top-level names (`h450`,
+`source_obligation`, `c450_atom`, `chain_step_count`) into the root scope for
+the first time, so no other module may already declare them.
 
-**Files.** Added `audit_q0_degree5_graph.py` and `q0-degree5-graph-match.json`.
-No Lean, TARGETS, frozen, root, or toolchain file changed.
+New file: `n11-work/ops/lanes/A/audit_c450_root_import_safety.py`; report
+`n11-work/ops/lanes/A/c450-root-import-safety.json`, file sha256
+`f05ea6a9bb3fa11a89956339d10f5465b304f9debfffde298b494ae3a6adde33`, root
+`N11Formalization.lean` hash
+`022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914`.
+Result: **PASS_C450_ROOT_IMPORT_SAFETY**, 26/26 checks, 2481 modules scanned:
+all eight `N11Formalization.C450ChainCompletion*` namespaces appear only in the
+chain files; each exported name declared exactly once; both markers exact;
+no already-live duplicate import; no forbidden token in the chain modules.
+Scope: SOURCE static root-import/name-clash audit only -- **not** a kernel
+verdict and not a build.
 
-**Still unproved / unpaid.** q0(4,9)/q0(5,8)/q1(3,9)/q1(4,8)/q1(5,7)/q1(6,6)
-tables, all exact factor bounds, the seven exclusions, energy, and the
-arbitrary-centre theorem.  q0(5,8) additionally lacks exact rational
-coefficients.
+Method note (own-check bug found+fixed): the first draft used
+`root.count(commented) == 1`; that false-FAILed because the shorter marker
+`...C450ChainCompletion` is a prefix substring of the
+`...C450ChainCompletionMain` marker line (count 2).  Fixed to a line-anchored
+count `re.findall(rf"(?m)^{re.escape(commented)}\s*$", root)`; the root was
+never wrong.  Minor: the report sha varies run-to-run because exported-name
+check order derives from a set; verdict is stable (sort to pin the hash).
 
-**Next concrete step.** Regenerate q0(5,8) coefficients from the committed
-source emitter in exact `Fraction` form and extend the audit to compare the
-emitter's graph/field order; only then emit `Q0Degree5FiniteTable.lean`.
+**Still unproved / unpaid.** Unchanged: no kernel verdict exists and the root
+still carries both `-- HARK-MISSING` lines.  q0(5,8) `ClosureFactorBounds`
+instance (11 face, 9 switch, 9 sector bounds + strict total), q0(3)/q1 tables
+and `q0Degree3AreaInput`, the seven class exclusions, energy residual, and the
+arbitrary-centre full-disk theorem all remain open.
 
-## 2026-11-02 (sessions 176--178, condensed) -- q0(5,8) source reconstruction
+**Very next concrete step.** Supervisor-only: uncomment root lines 1952--1953
+(`import N11Formalization.C450ChainCompletion` / `...Main`), push, let
+`n11-lean-build` run to completion.  If green, lift the q0 pause and resume lane
+A at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.  If CI goes red inside a C450
+chain module, read only the first owning error.
 
-`reconstruct_q0_degree5_exact.py` parsed the stored decimal literals as
-`Fraction`, verified the 121-slot layout and certificate copy/order, and wrote
-`q0-degree5-exact-source.json` (SHA `900d2186...f41d`).  The emitter
-`emit_q0_degree5_source_data.py` then wrote `Q0Degree5SourceData.lean` with all
-121 exact rationals and graph identities to `q0Faces 3`/`q0Edges 3`; TARGETS
-registers it.  A stripped-import syntax probe timed out, so its Lean status is
-CI pending, not green.  `map_q0_degree5_canonical_data.py` mapped the direct
-`CanonicalCoeffQ` groups but left the nine closure slots open.
+## 2026-11-02 (session 189) -- live re-verify of C450 root-import state
 
-## 2026-11-02 (session 179) -- q0(5,8) closure interface obstruction identified
+No new mathematics; lane-A FOCUS target still TARGET-DONE and blocked on the
+supervisor-only root edit.  This session re-ran the two cheap STATIC audits on
+the live tree (the root-import safety audit is slow under the 2-core sandbox and
+timed out at 100 s, so only its committed report was re-hashed, not recomputed):
 
-Added `audit_q0_degree5_closure_interface.py`.  It checks all 121 exact source
-coefficients, the recorded source-emitter SHA, the emitter's exact closure
-term/constant formulas, 9/9 strictly positive closure multipliers, zero `eta`
-and zero `width`, and compares the source and canonical pi-coefficients exactly.
-The source coefficient is `station + kap - 2*lambda - sum(closure)`; the current
-canonical formula is `station + kap - 2*width - 2*eta`.  With the existing map
-the exact `canonical_minus_source` is
-`195718067274616349/100000000000000000`.
+- `audit_c450_import_closure.py` (run from repo root): **PASS**, closure_size
+  1769, `missing: []`, roots `C450ChainCompletion`, `C450ChainCompletionMain`,
+  `C450ChainCompletionAudit`; report sha256
+  `1fd9aff3ea39137df9bd88a82a5aeeebb0ab1303eb0d7519de4eaeac6296842e`.
+- Live byte checks: both chain modules present
+  (`N11Formalization/C450ChainCompletion.lean` 2185 B,
+  `...Main.lean` 939 B); root still carries exactly the two
+  `-- HARK-MISSING` lines 1952--1953; root sha
+  `022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914` (unchanged);
+  committed `c450-root-import-safety.json` sha
+  `f05ea6a9bb3fa11a89956339d10f5465b304f9debfffde298b494ae3a6adde33` (matches
+  session-188 record).
 
-The mismatch is stronger than a scalar offset: closure enters each sector as
-`closure[i-1]*(left+w/2)+closure[i]*(right+w/2)` and each switch as
-`2*b*closure[j]`.  `CanonicalCoeffQ` has no `Fin 9` closure field, and scalar
-`eta` cannot repair those sector/switch-dependent objective terms.  Therefore
-emitting `Q0FiniteTable 3` through the current interface would be unsound.
+Scope: static import-closure + byte/hash checks only -- **not** a kernel verdict
+and not a build.  Duplicate session-188 block removed from this file.
 
-**Files/shas.** audit script
-`1d9d257f9fafc3fb58637583521feba1b74f1e5dc7d1650951823789e8ce289a`;
-report `q0-degree5-closure-interface-audit.json`
-`7c21573011960c0f7fee9a06c779619420ee26a9c318b2ef6bb8550510e7f8c2`.
+**Still unproved / unpaid.** Unchanged: no kernel verdict, root still has both
+HARK-MISSING lines; q0(5,8) `ClosureFactorBounds`, q0(3)/q1 tables and
+`q0Degree3AreaInput`, the seven class exclusions, energy residual, and the
+arbitrary-centre full-disk theorem all remain open.
 
-**Checks (scope).** `py_compile` PASS; exact audit PASS; `git diff --check`
-PASS.  This is source/interface arithmetic only, with no Lean build and no
-kernel claim.  All q0(5,8) bounds and strict total remain unpaid.
-
-**Next concrete step.** Add a new closure-extended certificate module carrying
-`closure : Fin 9 → ℚ`, closure nonnegativity, the `-π*sum(closure)` constant,
-and closure-augmented sector/switch objectives with sound consumers; then
-instantiate it from the hash-bound source data.  Do not edit frozen modules.
-
-## 2026-11-02 (session 181) -- closure nonnegativity and sound bound lifting
-
-Added actual base angles, their nonnegativity, nonnegative switch/sector closure
-terms, and lifting lemmas from augmented to base objectives.  No bounds instance
-was asserted.  Module `32dfdde8...`, audit `ec8fd42b...`, report `2e0fbc14...`.
-Checks: `py_compile`, exact audit, and `git diff --check` PASS; Lean **CI
-pending**, not paid.  Unproved then: all closure-aware bounds, strict total,
-q0(5,8) exclusion, six classes, energy, and arbitrary-centre theorem.
-
-## 2026-11-02 (session 182) -- closure-aware bounds recover the canonical interface
-
-Added `ClosureSectorCoordinates` for the source's box-dependent base angles and
-width, `ClosureFactorBounds` with exact nine-multiplier switch/sector additions,
-and `ClosureCertificate`.  Proved the coordinate-nonnegativity lifting to
-`CanonicalFactorBounds`, `ClosureCertificate.toCanonical`, and `total_lt_pi`;
-also defined `closureTotalUpperQ`/`closureTotalUpper`, proved
-`constantTerm_nonpositive`.  No concrete factor bound or certificate instance
-is asserted.  Initial fixed-realized-tie version was corrected before handoff:
-source sector closure terms vary over the generic box.
-
-**Files/shas.** `Q0Degree5ClosureExtension.lean`
-`163e75dd2a219a32ad578f50f725351fcf934561a4d8275a0c92a23264d5c8e3`;
-audit `audit_q0_degree5_closure_extension.py`
-`c0360b6f41f4609c4334acdce28d15d27ca0dcdf5114f351f87dd4bf022bb52c`;
-report `q0-degree5-closure-extension-audit.json`
-`3204a7ea6a9bdf0d3f6d1e085336067c66e5b9077a307f8011be27531204b41c`.
-
-**Checks (scope).** `py_compile` PASS; exact source/interface audit PASS
-(including the four new declarations); `git diff --check` PASS.  No local Lean
-build and no CI verdict, so the new Lean declarations are **CI pending**, not
-paid.  Still unproved: 11 face bounds, 9 switch bounds, 9 closure-aware sector
-bounds, concrete strict-source total, q0(5,8) exclusion, six other classes,
-energy, and the arbitrary-centre theorem.
-
-**Next concrete step.** Define the exact box-coordinate source functions for
-`ClosureSectorCoordinates` (or prove the realized-angle bridge), then emit exact
-finite face/switch/sector maxima, recheck the strict total, and only then
-instantiate `ClosureCertificate`.
-
-## 2026-11-02 (session 183) -- exact source box coordinates instantiated
-
-Transcribed the normalized coordinate formulas from the hash-bound source
-emitter `q0_closure_dual.py`: chord
-`sqrt(u^2+v^2-2uv cos a)`, width
-`2 asin((19/50) chord/2)`, and the two `atan2` base angles as `Complex.arg`.
-Added `sourceSectorChordLength`, `sourceSectorWidth`,
-`sourceLeftBaseAngle`, `sourceRightBaseAngle`, `sourceSectorCoordinates`, and
-proved all three box-domain nonnegativity fields required by
-`ClosureFactorBounds`.
-
-**Files/shas.** `Q0Degree5ClosureExtension.lean`
-`239a7498c6fd77d42f0db35a7bdaddf9becb5e5f491d52e24c5630afc616aa26`;
-audit `audit_q0_degree5_closure_extension.py`
-`3315f7d31a9ca29fb99217e65dbd0bf87699f162ee5921a7ab7ba914983a0730`;
-report `q0-degree5-closure-extension-audit.json`
-`68f8ace1f4bd94e367505a6259f6a354e6d994c7c632454bcacdd0a4f04b599b`.
-
-**Checks (scope).** `py_compile` PASS; exact source/interface audit PASS,
-including all eight new coordinate-transcription checks; `git diff --check`
-PASS.  A Mathlib-only probe of the `Complex.arg` nonnegativity pattern timed
-out at 120 s with no output, so there is **no local Lean verdict**.  The module
-is CI pending, not paid.
-
-**Still unproved.** All 11 face, 9 switch, and 9 closure-aware sector maxima;
-the concrete strict source total (`canonicalTotalUpperQ < piLo`); q0(5,8)
-exclusion; six other classes; energy; arbitrary-centre theorem.
-
-**Next concrete step.** Build exact-rational interval/grid maxima for the
-coordinate-dependent closure term in each sector on `a∈[0,π]`, `u,v∈[0,1]`,
-then emit the concrete `ClosureFactorBounds` instance and check the strict
-total.  First ask CI to kernel-check the new coordinate definitions in
-`Q0Degree5ClosureExtension`.
-
-
-## 2026-11-02 (session 184) -- source closure coordinate ranges
-
-Verified the Lean coordinate transcription against `q0_closure_dual.py`: its
-`ch=R*sqrt(...)`, `w=2*asin(ch/2)` is exactly our unnormalized chord followed
-by `2*asin((19/50)*chord/2)`, and `R` cancels from both `atan2` angles.  Added
-`sourceLeftBaseAngle_le_pi`, `sourceRightBaseAngle_le_pi`, and
-`sourceSectorWidth_le_pi`; together with the prior nonnegativity lemmas these
-give the box-domain range `[0,pi]` needed for finite maxima.
-
-**Files/shas.** Lean `f0949ed18d6814d26e2413475ea00e0df8971d9457720145b157f64bfec32577`;
-audit `5c6146219b14a8a0ce8cee25d61a7a4da4031ef801a84d0113a1971b17ce2e9a`.
-Exact audit, `py_compile`, `git diff --check` PASS.  No Lean build/CI verdict:
-new range declarations **CI pending**, not paid.  Still unproved: all 11 face,
-9 switch and 9 closure-aware sector maxima; strict total; q0(5,8) exclusion;
-six classes; energy; arbitrary-centre theorem.
-
-**Next concrete step.** CI-check the ranges while emitting rational interval
-bounds for the coordinate-dependent sector term, then compute the concrete
-`ClosureFactorBounds` maxima and strict total.
+**Very next concrete step.** Supervisor-only: uncomment root lines 1952--1953,
+push, let `n11-lean-build` run to completion; if green lift the q0 pause and
+resume at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.

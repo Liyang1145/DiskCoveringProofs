@@ -1,0 +1,11 @@
+{
+  "closure_size": 1769,
+  "missing": [],
+  "roots": [
+    "C450ChainCompletion",
+    "C450ChainCompletionMain",
+    "C450ChainCompletionAudit"
+  ],
+  "scope": "static N11Formalization import closure; NOT a kernel verdict",
+  "verdict": "PASS"
+}
