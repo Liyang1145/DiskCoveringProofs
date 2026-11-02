@@ -76,9 +76,7 @@ theorem edgeValid_of_unimodal (h : EdgeUnimodal) : EdgeValid := by
   intro i k
   unfold EdgeCheck
   have hcoeff : edgeCoeff i = ∑ j ∈ tableEdges i, mu j := by
-    fin_cases i <;>
-      norm_num [edgeCoeff, tableEdges, mu, Finset.sum_insert, Finset.sum_singleton,
-        Finset.mem_insert, Finset.mem_singleton]
+    fin_cases i <;> norm_num [edgeCoeff, tableEdges, mu] <;> decide +kernel
   rw [← hcoeff]
   obtain ⟨hinc, hdec, hpeak⟩ := h i
   by_cases hk : k ≤ edgeWitness i

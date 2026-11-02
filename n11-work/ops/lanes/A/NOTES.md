@@ -1,7 +1,10 @@
 # Lane A notes
 
-CURRENT (session 162): lane A still has no kernel verdict; the sole blocker is
-CI ordering/routing.  Supervisor action is required.
+CURRENT (session 168): the q0 first-owner repairs are **drafted / source
+preflight PASS / CI pending**.  The latest completed lane-A log was from run
+`41378003343` (job `125062414500`, HEAD `016484e6`); it confirms the old
+failures, not the repaired files.  Run `41380560959` at `a29e4ee1` was still in
+progress and its log was not yet downloadable.  No kernel credit is claimed.
 
 ## Ledger
 
@@ -9,7 +12,8 @@ CI ordering/routing.  Supervisor action is required.
   `C450ChainCompletionAudit`, `Cos`, `Mono`, `Bins`, `EndpointChecks`, and
   `UpperTables`.
 - Repair only the first owning error; dependency-red descendants are not
-  diagnostics.  After green prove `q0_degree3 : Q0RunExclusion 1`; this is 1/7.
+  diagnostics.  A green q0 chain would prove `q0_degree3 : Q0RunExclusion 1`
+  (1/7).
 - Keep explicit `edgeUpper`/named-constant unfolding; no decimal substitutions
   or raised heartbeats.
 - `SectorValid`, strict `totalUpper < piLo`, `Q0Degree3AreaInput`, all seven
@@ -28,179 +32,120 @@ ROOT-IMPORT REQUEST: import the CI-green `C450ChainCompletion` and
   half bound.  All split/calculus/bin/table modules remain CI pending.
 - C450/Main/Audit, `Cos`, `Mono`, `Bins`, `EndpointChecks`, and `UpperTables`
   are CI-green.  Root still carries both HARK markers.
+- Sessions 158--162 found and repaired earlier base errors, then identified CI
+  lane routing as the reachability blocker.  Session 159 introduced
+  `SevenClassQ0Deg3Repaired.lean`, a generated copy of frozen SHA
+  `48d41f5d3a71c41adc3ff0af26f86740b2f4ed82383a037d182aac0f16075b61`
+  adding only the missing census import and ear-count open.
+- Sessions 165--166 made the strict-total division bounds goal-shaped with
+  `div_le_div_of_nonneg_right`; exact ledger checks passed, but no Lean verdict
+  was obtained.
+- Session 167 read the live log of run `41378003343`.  First owners were the
+  repaired-copy import placement, nine sector peak rational comparisons, and
+  the 21 edge coefficient equalities.  The log's peak goal reduces to a huge
+  fraction-to-fraction inequality; the edge goal reduces to a literal rational
+  versus a two-term `Finset.sum`.  Fixes: move provenance below imports and add
+  terminal `decide +kernel` to those bounded closed rational goals.  No frozen
+  module, arithmetic table, or theorem statement changed.
 
-## 2026-11-02 (session 158) -- first owning CI errors fixed; Q0 source blocker
-Retrieved the public failure log for run `41352871085` at `b1e15e83`.  The
-aggregate job says success, but individual target exits are red: lane A's
-`UpperReductionUnimodalPeak00` and `SectorPeak00` both exited 1, as did
-`StrictTotal` and `Q0Exclusion`.  The first owning error for the sector chain
-was `SevenClassQ0Deg3SectorPeakBase.lean:69:8: Unknown identifier
-sectorValid_of_unimodal` (an unqualified `#check` after the namespace closed).
-The first owning edge error was `SevenClassQ0Deg3UpperReductionUnimodalBase.lean:78`
-`hcoeff`: all 21 cases left the literal rational equal to an unreduced
-two-element `Finset.sum`.
-Fixed both owners: qualified the sector `#check`, and made the 21 coefficient
-equalities explicitly reduce `Finset.sum_insert`/`Finset.sum_singleton` before
-`norm_num`.  No arithmetic value, peak, or frozen module was changed.  These
-are **drafted / CI pending**, not kernel credit.  Local kernel probes were not
-usable: the probe Mathlib oleans are absent and even `example : (1:Nat)=1 := by
-rfl` timed out in this contended sandbox.
+## 2026-11-02 (session 168) -- old log confirmed; repaired tree audited
 
-`StrictTotal`/`Q0Exclusion` are blocked upstream by frozen
-`SevenClassQ0Deg3.lean`: line 77 uses unknown `ringOnlyTriangles` (its import
-closure lacks `ActualHubTriangleCensus`), and its axiom report contains
-`sorryAx`.  Fixing that requires a supervisor decision because the file is
-frozen and must not be edited in place.
+Re-downloaded run `41378003343` and inspected the exact goals: sector peak 01
+reduces to an exact fraction inequality, while the edge `hcoeff` case «1»
+reduces to `643066…1523 / 200…0000 = ∑ x ∈ {1,2}, …`.  This confirms that the
+declared terminal kernel suffix targets the actual residual shapes rather than
+an unrelated simplification step.  Regenerated all repaired modules
+deterministically and reran the sector split-preservation checker.  Added
+`audit_q0_degree3_kernel_repairs.py`, which checks import placement, both kernel
+suffixes, banned tokens in all 11 repaired modules, and `TARGETS.txt`
+registration.
 
-**Files / SHA256.** `SevenClassQ0Deg3SectorPeakBase.lean`
-`77c4f6fa8f3ea3d81357239cb578241c2796a275360f58395107f58fc38fe5ec`;
+The exact-rational emitter independently recomputed all nine sector maxima and
+they equal `SevenClassQ0Deg3UpperTables.sectorMax`.  The older
+`q0-degree3-piecewise-8.json` metadata is stale at sector rows 0--8 and witness
+rows 1/8; the emitter already binds to recomputed exact values and prints the
+drift, so this is not substituted by a cached maximum.
+
+**Files / SHA256.**
+`SevenClassQ0Deg3Repaired.lean` `37317833f1bc1d1066edc0f3cb866069657d27f39826bf4f6c93bd014517d3d3`;
 `SevenClassQ0Deg3UpperReductionUnimodalBase.lean`
-`f2cfc5e863df59e2b4b6251be4210d58d8c882cab1955e745608b3b52ff1f5c4`.
-`TARGETS.txt` unchanged (both files are imported by existing targets).
+`3e38d206b45fe1bb6bf7c2f020d862ea37294862085b93cf71849e5c5585519b`;
+`emit_q0_degree3_repaired.py`
+`94674838008d6d3a1a0d65dc48b5614a444e815565e9f8694b0bd54211c2233f`;
+`emit_q0_degree3_sector_peak.py`
+`84ae09862ea1001a9cdc1216a1d1bfb2ac9abc4d43705ab07fd2110922bc6736`;
+`split_q0_degree3_edge_peak.py`
+`4cc9cb0bf28ef780df2e125269667b40d0de3d3afa05522bd47810278e9b6765`;
+`audit_q0_degree3_kernel_repairs.py`
+`10b7ff7f3e03d708295098f91619efa26d99981cb0366bb2bdaf447d2cf5ca45`.
+Sector rows 00--08 SHA256:
+`0762019a6f0b612e0ecf67f1c27f1e210a2bd352153ea759ef5e9fa5102a5755`,
+`e4445823acf3dfcb0f79098c6c70356e021d715b9d3181f08b3399f541562f23`,
+`a8bad4c1df79ba728a0bc6203dac3334d3db9082e8871aed41b78f8ade5dcc51`,
+`880dff4aff0e88fa27950028456eb042900a12fb19440c6f78ba5d9a1b2f0af3`,
+`42a849e914cec8c0c5eefdb2487fbc7530256ba55f0a95c6e895187e4ef202b3`,
+`4214989487644b4d491cfa4a898ceac785dd64c8ba225e01932edd9f6fd18d9d`,
+`c4d5a4ac6a91e311d52b559947dd51482d64cc849e0fcf825f03cbce7a33742e`,
+`228cf7cf4cc1a59c1fb7d812c8eb9b6c786046ed1426fb08f7fb8d148b91752a`,
+`1a57e4243c23f7b4ebee11dfd406200ab9a3c1f12ce82df581bf42c1b32eff13`.
 
-**Checks (scope).** Log extraction and exact error attribution only; emitter
-and notes checks PASS.  No Lean elaboration verdict exists locally.
-
-**Still unproved / unpaid.** Peak/module assembling, edge shape, all 72 sector
-bins, strict total, `Q0Degree3AreaInput`, all seven exclusions, and the
-arbitrary-centre theorem remain unproved.  `C450ChainCompletionMain` replayed
-with exit 0 in this run.
-
-**Next concrete step.** CI rerun of lane A; inspect `Peak00` and `SectorPeak00`
-for the next owning error (the earlier reports only exposed the base failures).
-
-## 2026-11-02 (sessions 159--161) -- repaired q0 base; no CI reach
-
-`SevenClassQ0Deg3Repaired.lean` (SHA256
-`40ada549c3ac5e6f8a002be2c423336e366901eafec9c3c0f82e412e72f0b04c`) is
-generated by `emit_q0_degree3_repaired.py` from frozen SHA
-`48d41f5d…75b61`, adding only `ActualHubTriangleCensus` and
-`open ActualRefinementEarCount`; `TableCertificate` imports it.  Emitter,
-byte-transform, frozen-SHA, 960-module closure, targeted banned-token, and
-`git diff --check` checks PASS (source only, no kernel verdict).  Run
-`41352871085` never reached lane A: lane B OOMed (exit 137).  Thus
-`Repaired` through `Q0Exclusion` remain CI pending and unpaid.
-
-## 2026-11-02 (session 162) -- CI routing blocker
-
-The Lean workflow serializes lanes **C, B, A**, so lane A is unreachable when
-B stalls/OOMs; `audit_ci_lane_a_reachability.py` reports `lane A position: 3`.
-No lane-A kernel verdict followed.  Audit SHA256
-`78fb25e63f7209c33f00eabb1a110f61c9ffbe099770c548289c1e17a65d053d`;
-workflow SHA256
-`0eea35515dd4cba4478fdbb8056abc5909815f2fbb504cc9a14e1ee9ca62b4f1`.
-Supervisor must isolate/reorder lane A; worker then reads the first owning
-error at `SevenClassQ0Deg3Repaired`.
-
-## 2026-11-02 (session 163) -- fixed false strict-total arithmetic
-
-Independent exact audit found two false claims in `StrictTotal`:
-`|mu 9|=0.14307193` and `|mu 10|=0.12242873` exceed `1/20`, and 9/21
-edge-pair sums exceed `1/10` (maximum `0.17097552`).  The old proof route
-therefore could not elaborate.  `mu_abs_lt_twentieth` is replaced by the true
-used-site bound `sectorMu_abs_lt_twentieth` (`nextSite i` are only 1..8,0);
-per-edge six-/four-decimal caps now prove the edge increment sum
-`0.0070961951 < 8/1000` without the false uniform pair bound.  The emitted
-`sectorBoundAt` was also stale in its first/last entries; the emitter now
-derives it directly from `sectorMax`.  The emitted `StrictTotal` total is
-unchanged: `3.129499763218794`, slack `0.012092890371`.
-
-**Files / SHA256.** `SevenClassQ0Deg3StrictTotal.lean`
-`d332e011b34d3419d06b4625b58ec3ccab82afb981d1cc014a87853b9389c546`;
-`emit_q0_degree3_strict_total.py`
-`5cdfd925353cc914ef515d1ca348d90435326241f8ed517f36e8d66695e0843f`;
-new `verify_q0_degree3_strict_ledger.py`
-`ce3dc660368b1b74b3f230b90bae6c35132a87a643440e508fd2fd2eee6a2472`.
-
-**Checks (scope).** Emitter regenerated the Lean file; `verify_q0_degree3_strict_total.py`
-PASS; new ledger audit PASS (11/11 named coarse bounds, upper `3.1356469993`,
-slack `0.0059456543`); `py_compile` and `git diff --check` PASS.  Exact source
-arithmetic only, no kernel verdict.  Live run `41378003343` replayed
-`C450ChainCompletion` and `C450ChainCompletionMain`, then stalled in lane-B
-`EnergyTerminalResidualCensusRefine0039` before lane A.
-
-**Still unproved / unpaid.** `StrictTotal`, `Q0Exclusion`, all peak/shape/bin
-assemblers, `Q0Degree3AreaInput`, the other six exclusions, and the arbitrary-
-centre theorem remain without a current lane-A kernel verdict.
-
-**Next concrete step.** CI build `SevenClassQ0Deg3StrictTotal` first (isolated
-from C/B); inspect the first error there, then `Q0Exclusion`.
-
-## 2026-11-02 (session 164) -- reproducible repaired ledger; consumer audited
-
-Re-ran the strict-total emitter after the session-163 repair.  It reproduced
-`SevenClassQ0Deg3StrictTotal.lean` byte-for-byte (SHA unchanged) and the
-independent exact ledger audit passed 11/11 named bounds: coefficient
-`-0.3202614`, upper `3.135646999268476`, `piLo` slack
-`0.005945654321317`.  Audited `SevenClassQ0Deg3Q0Exclusion`: it is a thin
-`q0_degree3_of_areaInput` consumer with no additional premise.  Its
-`hstrict` lambda matches the relabelled certificate's explicit
-`OrderedData`/run-length argument order by inspection only.
-
-**Checks (scope).** Emitter exit 0; deterministic reproduction confirmed;
-`verify_q0_degree3_strict_ledger.py` PASS; `py_compile` and
-`git diff --check` PASS.  Exact source arithmetic and source inspection, no
-Lean kernel verdict.
+**Checks (scope).** Deterministic emitter reruns PASS; sector split preservation
+9/9 PASS; new source preflight PASS; `py_compile`, targeted banned-token scan,
+and `git diff --check` PASS.  Exact Python recomputation matches all nine table
+maxima.  A tiny local Lean probe (`Rat` inequality plus reflexivity) timed out
+at 30 s, so there is **no local kernel verdict**; `decide +kernel` syntax and
+elaboration remain CI-pending.
 
 **Still unproved / unpaid.** `StrictTotal`, `Q0Exclusion`, all peak/shape/bin
 assemblers, `Q0Degree3AreaInput`, the other six exclusions, and the
-arbitrary-centre theorem remain without an isolated lane-A CI verdict.
+arbitrary-centre theorem remain CI pending/unpaid.  The in-progress run is not
+evidence for this repaired worktree.
 
-**Next concrete step.** CI must build lane A first (or isolated), beginning at
-`SevenClassQ0Deg3Repaired`, then `StrictTotal` and `Q0Exclusion`; inspect and
-repair the first owning error.  No further local arithmetic rewrite is needed.
+**Next concrete step.** Supervisor commits this worktree, then CI must reach
+lane A and build `SevenClassQ0Deg3Repaired`, the nine `SectorPeak` rows, and
+`UpperReductionUnimodalBase`.  Inspect the first owning error after
+`SevenClassQ0Deg3Repaired`; if a kernel suffix fails, replace only that closed
+goal with an explicitly rewritten rational comparison.
 
-## 2026-11-02 (session 165) -- repaired divided-increment elaboration shape
+## 2026-11-02 (session 169) -- live CI boundary rechecked
 
-Static proof audit found a likely elaboration blocker in both increment-sum
-lemmas: the goal multiplies by `piHi / 2048`, but the code passed only `piHi`
-to `mul_le_mul_of_nonneg_right` and used `exact`.  The emitter now records
-`hp : 0 ≤ piHi`, applies the product lemma, and lets `linarith` account for
-the fixed division by `2048`.  This changes proof shape only; all ledger
-bounds, exact totals and the `piLo` comparison are unchanged.
+Run `41380560959` remains **in_progress** at `a29e4ee1`; its single `build`
+job `125106045871` started `2026-11-02T05:08:31Z` and has no conclusion.  This
+commit does not contain the current uncommitted q0 repairs, so it cannot provide
+a verdict on them.  No kernel credit is claimed.
 
-**Files / SHA256.** `SevenClassQ0Deg3StrictTotal.lean`
-`bc8471a98eb00c74499d337850e247b9aacde7aaa237ca9d18487e3b19ec04b7`;
-`emit_q0_degree3_strict_total.py`
-`f0e8c0a81dc58aebca789b4a31ff0db1f97958d95d7e027ebc60331c5afa23d0`.
+Re-ran `audit_q0_degree3_kernel_repairs.py` (PASS: repaired-module import
+placement, both terminal kernel suffixes, banned-token scan, TARGETS
+registration; no kernel verdict) and
+`check_q0_degree3_sector_peak_split.py` (PASS 9/9: split proof bodies preserved
+up to the declared suffix).  `git diff --check` PASS.  A cached-Mathlib probe of
+the giant exact `Rat` reflexivity equality was started, but it had not produced
+a verdict when this session ended; it is not evidence.
 
-**Checks (scope).** Emitter exit 0 (8991-byte regeneration); ledger audit
-PASS 11/11, exact upper `3.135646999268476`, `piLo` slack
-`0.005945654321317`; `py_compile` and `git diff --check` PASS.  A full-Mathlib
-probe hit a 90 s timeout; a reduced-import probe could not load because its
-`Mathlib.Tactic.Linarith` olean is absent.  No kernel verdict ran.
+**Next concrete step.** Supervisor must commit this worktree (including
+`audit_q0_degree3_kernel_repairs.py`).  Then inspect the first lane-A target
+result in CI.  If `SevenClassQ0Deg3Repaired` passes, inspect
+`SevenClassQ0Deg3SectorPeak00`; on a red `decide +kernel`, replace only that
+closed rational goal with an explicit rewritten comparison.  Do not treat the
+currently in-progress `a29e4ee1` run as testing these files.
 
-**Still unproved / unpaid.** `StrictTotal`, `Q0Exclusion`, all peak/shape/bin
-assemblers, `Q0Degree3AreaInput`, the other six exclusions, and the arbitrary-
-centre theorem remain without an isolated lane-A kernel verdict.
+## 2026-11-02 (session 170) -- repair preflight repeated; local Lean unavailable
 
-**Next concrete step.** Isolated CI from `SevenClassQ0Deg3Repaired` through
-`Q0Exclusion`; inspect the first owning error.  If the increment step still
-fails, use an explicit `div_le_div_of_nonneg_right`/`calc` elaboration.
+Re-ran `audit_q0_degree3_kernel_repairs.py`: PASS for import placement, both
+terminal suffix shapes, banned-token scan, and all 11 repaired modules being
+present in `TARGETS.txt`.  Re-ran
+`check_q0_degree3_sector_peak_split.py`: PASS 9/9 split-body preservation.
+`git diff --check` PASS.  The q0 repairs remain **drafted / source-preflight
+PASS / CI pending**; no kernel credit is claimed.
 
-## 2026-11-02 (session 166) -- exact division shape in increment bounds
+Two bounded local syntax probes were attempted: a Mathlib `Rat`/reflexivity probe
+under `mathlib-probe` timed out at 90 s, and a core-only `Nat` reflexivity probe
+using `decide +kernel` timed out at 20 s while loading the toolchain.  Neither is
+a verdict, so `decide +kernel` syntax/elaboration remains CI-pending.  No source
+was changed on the basis of an inconclusive probe.
 
-Replaced both increment-sum `linarith [mul_le_mul_of_nonneg_right ...]` steps
-with the goal-shaped `div_le_div_of_nonneg_right (mul_le_mul_of_nonneg_right h hp)
-(by norm_num)`.  This removes reliance on `linarith` normalising the displayed
-`/ 2048`; no ledger value or theorem statement changed.  Emitter regenerated
-the module deterministically.
-
-**Files / SHA256.** `SevenClassQ0Deg3StrictTotal.lean`
-`ed3919b7ef55ba57599b70bef94ce31026f7648bd730a8143ed93c561d61c01a`;
-`emit_q0_degree3_strict_total.py`
-`fbe8bc23ef942261c6579c255b4b3ae2759fc0992b56821e665ecd5a4bfdafc2`.
-
-**Checks (scope).** Emitter exit 0 (9067 bytes); ledger audit PASS 11/11,
-upper `3.135646999268476`, `piLo` slack `0.005945654321317`; `py_compile`
-and `git diff --check` PASS.  Exact source arithmetic only; no Lean kernel
-verdict and no CI run this session.
-
-**Still unproved / unpaid.** `StrictTotal`, `Q0Exclusion`, all peak/shape/bin
-assemblers, `Q0Degree3AreaInput`, the other six exclusions, and the arbitrary-
-centre theorem remain unproved/CI pending.
-
-**Next concrete step.** Isolated lane-A CI from `SevenClassQ0Deg3Repaired`
-through `StrictTotal` and `Q0Exclusion`; repair the first owning elaboration
-error.  If `div_le_div_of_nonneg_right` is absent/renamed in this Mathlib,
-inspect the exact name rather than reverting to generic `linarith`.
+**Next concrete step.** After the supervisor commits this worktree, inspect CI's
+first lane-A failure.  If `SevenClassQ0Deg3Repaired` and
+`SevenClassQ0Deg3SectorPeak00` are green, proceed to peak rows 01--08 and then
+`UpperReductionUnimodalBase`; if a suffix is red, replace only the owning closed
+rational goal with an explicit normalized comparison.

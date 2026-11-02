@@ -158,7 +158,7 @@ def main() -> None:
     base_lines = lines
     base_lines += [
         "end N11Formalization.SevenClassQ0Deg3SectorPeak",
-        "#check @sectorValid_of_unimodal",
+        "#check @N11Formalization.SevenClassQ0Deg3SectorPeak.sectorValid_of_unimodal",
     ]
     OUT_BASE.write_text("\n".join(base_lines) + "\n")
     print(f"wrote {OUT_BASE.relative_to(ROOT)} ({OUT_BASE.stat().st_size} bytes)")
@@ -191,7 +191,7 @@ def main() -> None:
             "  norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,",
             "    areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, ringSite, nextRing, nodeQ,",
             "    sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,",
-            "    Fin.val_ofNat, Fin.val_mk]",
+            "    Fin.val_ofNat, Fin.val_mk] <;> decide +kernel",
             "",
             "end N11Formalization.SevenClassQ0Deg3SectorPeak",
         ]

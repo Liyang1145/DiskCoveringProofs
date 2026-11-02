@@ -58,6 +58,11 @@ def emit() -> None:
     source = read_source(args.source_rev, args.source_file)
     marker = "\n/-- The 21 peak comparisons recorded by the exact rational audit"
     base = source[: source.index(marker)].rstrip("\n") + "\n"
+    old_coeff = "    fin_cases i <;> norm_num [edgeCoeff, tableEdges, mu]\n"
+    new_coeff = "    fin_cases i <;> norm_num [edgeCoeff, tableEdges, mu] <;> decide +kernel\n"
+    if base.count(old_coeff) != 1:
+        raise ValueError("expected one exact edge-coefficient proof block")
+    base = base.replace(old_coeff, new_coeff, 1)
     base += f"\nend {NS}\n"
     lean = ROOT / "n11-work/lean/N11Formalization"
     (lean / "SevenClassQ0Deg3UpperReductionUnimodalBase.lean").write_text(base, encoding="utf-8")

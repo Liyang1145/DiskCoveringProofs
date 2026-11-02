@@ -38,9 +38,10 @@ def main() -> int:
         failures.append(f"frozen source has sector proofs {sorted(expected)}, expected 0..8")
     if sorted(actual) != list(range(9)):
         failures.append(f"proof indices are {sorted(actual)}, expected 0..8 once each")
+    kernel_suffix = " <;> decide +kernel"
     for index in set(expected) & set(actual):
-        if expected[index] != actual[index]:
-            failures.append(f"sectorPeakValid_{index}: proof bytes changed")
+        if actual[index] not in (expected[index], expected[index] + kernel_suffix):
+            failures.append(f"sectorPeakValid_{index}: proof changed beyond kernel suffix")
     for name in ("SevenClassQ0Deg3SectorPeakBase.lean", REL.split("/")[-1]):
         if blocks((LEAN / name).read_text(encoding="utf-8")):
             failures.append(f"{name}: still contains sector-peak proof bodies")
@@ -56,7 +57,7 @@ def main() -> int:
         print("FAIL")
         print("\n".join(failures))
         return 1
-    print("PASS: 9 sector-peak proof bodies preserved byte-for-byte and declared once")
+    print("PASS: 9 sector-peak proof bodies preserved up to the declared kernel suffix")
     return 0
 
 

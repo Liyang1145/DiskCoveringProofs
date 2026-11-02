@@ -20,6 +20,6 @@ theorem sectorPeakValid_3 : SectorPeakValid 3 := by
   norm_num [SectorPeakValid, sectorPeakAt, sectorMax, sectorUpper,
     areaUpper, nodeBin, nodeBinAt, binIndex, mu, lam, nextSite, ringSite, nextRing, nodeQ,
     sinHiNLag, sinLoNLag, sinTQ, Finset.sum_range_succ, RatInterval.piHi,
-    Fin.val_ofNat, Fin.val_mk]
+    Fin.val_ofNat, Fin.val_mk] <;> decide +kernel
 
 end N11Formalization.SevenClassQ0Deg3SectorPeak
