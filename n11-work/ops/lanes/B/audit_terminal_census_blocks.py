@@ -70,6 +70,14 @@ def main() -> None:
             r"theorem blockIDs(\d+)_card : blockIDs\1\.card = (\d+) := by", text
         )
     }
+    block_sizes_match = re.search(
+        r"def blockSizes : Fin 20 → Nat := !\[([^\]]+)\]", text
+    )
+    block_sizes = (
+        [int(value.strip()) for value in block_sizes_match.group(1).split(",")]
+        if block_sizes_match
+        else []
+    )
     lower = {
         int(index): int(bound)
         for index, bound in re.findall(
@@ -142,8 +150,18 @@ def main() -> None:
         "census_card_is_2506": bool(
             re.search(r"theorem censusIDs_card : censusIDs\.card = 2506 := by", text)
         ),
-        "cardinality_uses_simp_then_norm_num": "  simp [Fin.sum_univ_succ" in cardinality
-        and "\n  norm_num\n" in cardinality,
+        "literal_block_sizes_match_source": block_sizes
+        == [source_block_cards[i] for i in range(20)],
+        "cardinality_uses_case_checks_and_kernel_sum": all(
+            needle in text
+            for needle in (
+                "theorem blockSizes_sum : (∑ i : Fin 20, blockSizes i) = 2506 := by",
+                "  decide +kernel",
+                "exact blockIDs_card_eq i",
+                "simpa using censusIDs_card_aux",
+            )
+        ) and "simpa using censusIDs_card_aux" in cardinality
+        and "Fin.sum_univ_succ" not in text,
     }
     result = {
         "scope": "static generated-source audit; not Lean elaboration or kernel proof credit",

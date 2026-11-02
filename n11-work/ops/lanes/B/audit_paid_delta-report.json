@@ -1,0 +1,45 @@
+{
+  "checks": {
+    "base_plus_delta_2013": true,
+    "chain_delta_count_16": true,
+    "chain_delta_equals_literal": true,
+    "equality_theorem_present": true,
+    "forbidden_tokens_absent": true,
+    "repair_paid_count_2013": true,
+    "sixteen_literal_ids": true
+  },
+  "delta_by_module": {
+    "EnergyTerminalBatchB13RefineEight": 1,
+    "EnergyTerminalBatchB13RefineEleven": 3,
+    "EnergyTerminalBatchB13RefineFourteen": 1,
+    "EnergyTerminalBatchB13RefineSeven": 7,
+    "EnergyTerminalBatchB13RefineSixteenRepair": 2,
+    "EnergyTerminalBatchB13RefineThirteen": 1,
+    "EnergyTerminalBatchB13RefineTwelve": 1
+  },
+  "delta_ids": [
+    37,
+    2337,
+    2341,
+    2965,
+    3040,
+    3112,
+    3116,
+    3431,
+    3440,
+    3573,
+    3589,
+    3623,
+    3633,
+    3777,
+    3792,
+    3853
+  ],
+  "ok": true,
+  "scope": "static reconstruction from Lean source definitions; not Lean elaboration or kernel checking",
+  "sha256": {
+    "EnergyTerminalBatchB13RefineSixteenRepair.lean": "47A05CA2B725BDE9465B67507D5DECE4A3BA3BEC0B762694634C0DC87B06FDB6",
+    "EnergyTerminalBatchB13RefineSixteenResidualCard.lean": "E0415B0EBD46DB0BA9B3A5A792EA506EBAAA2C91BEFAAB8DD119EB5667FB6F40",
+    "EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean": "943A296CAFB75ECABB01A80D993016FF91D9758CF6F4CF5ADFAF0884259EFDBB"
+  }
+}

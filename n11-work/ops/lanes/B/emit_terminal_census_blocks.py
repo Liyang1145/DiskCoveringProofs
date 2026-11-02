@@ -187,10 +187,31 @@ def main() -> None:
         "    exact Nat.lt_or_gt_of_ne hne",
         "  omega",
         "",
+        f"def blockSizes : Fin {len(blocks)} → Nat := ![{', '.join(str(len(chunk)) for chunk in blocks)}]",
+        "",
+        f"theorem blockIDs_card_eq (i : Fin {len(blocks)}) : (blockIDs i).card = blockSizes i := by",
+        "  fin_cases i",
+    ]
+    lines += [
+        f"  · simpa [blockIDs, blockSizes] using blockIDs{b}_card"
+        for b in range(len(blocks))
+    ]
+    lines += [
+        "",
+        f"theorem blockSizes_sum : (∑ i : Fin {len(blocks)}, blockSizes i) = 2506 := by",
+        "  decide +kernel",
+        "",
+        f"theorem censusIDs_card_aux : (∑ i : Fin {len(blocks)}, (blockIDs i).card) = 2506 := by",
+        "  calc",
+        f"    (∑ i : Fin {len(blocks)}, (blockIDs i).card) = ∑ i : Fin {len(blocks)}, blockSizes i := by",
+        "      apply Finset.sum_congr rfl",
+        "      intro i _",
+        "      exact blockIDs_card_eq i",
+        "    _ = 2506 := blockSizes_sum",
+        "",
         "theorem censusIDs_card : censusIDs.card = 2506 := by",
         "  rw [censusIDs, Finset.card_biUnion blockIDs_pairwiseDisjoint]",
-        "  simp [Fin.sum_univ_succ, Fin.sum_univ_zero, blockIDs," + ", ".join(f"blockIDs{i}_card" for i in range(len(blocks))) + "]",
-        "  norm_num",
+        "  simpa using censusIDs_card_aux",
         "",
         "theorem terminalIDs_card : terminalIDs.card = 2506 := by",
         "  rw [terminalIDs_eq_censusIDs, censusIDs_card]",
@@ -214,7 +235,7 @@ def main() -> None:
         in rendered
         for b in range(len(blocks))
     )
-    assert rendered.count("  decide +kernel") == len(blocks)
+    assert rendered.count("  decide +kernel") == len(blocks) + 1
     assert not any(tok in rendered for tok in
                    ("sorry", "admit", "native_decide", "implemented_by", "maxHeartbeats 0"))
     OUT.write_text(rendered, encoding="utf-8")

@@ -15,104 +15,18 @@ Durable state through session 155 (2026-11-02):
   radii, packet payloads, 382 absent payload records, SevenClassExclusions
   (0/7), and the arbitrary-centre full-disk theorem remain unproved/unpaid.
 
-## 2026-11-02 - session 155: independent source-to-census audit
+## 2026-11-02 - sessions 155-158: census audits and proof hardening (condensed)
 
-- Strengthened `audit_terminal_census_blocks.py` (SHA-256
-  `0CFAC3BA01C03F743480184136F7797798B23298492D4A72CB860A12B87A8AE8`).
-  It now independently parses the frozen `DBMSourceTreeData.lean`, recovers all
-  5,011 node declarations and 2,506 with `terminal := true`, and compares the
-  source terminal cardinality in every one of the twenty blocks to the literal
-  `census*_card` values.  It also cross-checks these against `blockIDs*_card`.
-- Ran the audit at 60 s scope: `ok=true`.  The exact per-block source counts are
-  `61,75,69,62,62,61,55,56,66,237,254,253,255,221,115,120,108,111,150,115`;
-  their sum and the literal sum are both 2,506.  Report
-  `audit_terminal_census_blocks-report.json` SHA-256
-  `D41FD946A61B810DB7CCB6B508CDE9917657DD59A3796B7A79565837B0C27CC4`.
-  Scope is static source parsing and finite arithmetic, **not Lean elaboration
-  or kernel proof credit**.
-- The audited Lean census is unchanged at SHA `2FC5650F...FB83`.  CI run
-  `41380560959` (head `a29e4ee1`) remained in progress at the Mathlib/build
-  stage and gives no verdict on this source.  No local full-project build was
-  run.
-- Operational issue: `.github/workflows/n11-lean-build.yml` still concatenates
-  lane C targets before lane B.  The ~200 lane-C targets can exhaust the build
-  window before `TerminalCensus`; the supervisor should prioritize lane B for
-  the next diagnostic run.  This worktree did not edit the workflow.
-- Unpaid unchanged: kernel acceptance of `TerminalCensus` and `ResidualCard`;
-  structural trio; all 373 residual radii; packet `f0Lo`/`g`; 382 absent payload
-  records; SevenClassExclusions (0/7); arbitrary-centre full-disk theorem.
-- Next concrete step: obtain a CI verdict for
-  `EnergyTerminalBatchB13RefineSixteenTerminalCensus` at SHA
-  `2FC5650F...FB83`, with lane-B targets scheduled first; repair only the first
-  emitted Lean diagnostic, then run `ResidualCard`.
-
-## 2026-11-02 - session 156: census cardinality tactic split
-
-- Repaired the emitted `censusIDs_card` proof to use the previously probed
-  two-step pattern: `simp [Fin.sum_univ_succ, ..., blockIDs, blockIDs*_card]`
-  followed by `norm_num`.  The prior single `norm_num [rewrites]` line had no
-  independent successful probe.
-- Regenerated `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean`
-  (SHA-256 `A06CE2E053F9D1243D2A11B943102A5462409DA63B406AD39CDC9BCE24F5A540`)
-  with `emit_terminal_census_blocks.py` (SHA-256
-  `D5317C546A4EF7C9EF5A9C6CF41D22A9CF87DC8019CF2CD53B861FEC1AF567A2`).
-- Updated `audit_terminal_census_blocks.py` (SHA-256
-  `142C6BF9F8FFEA36B9715C656FF8F7865377C754E8C7E280EA0CFD086B043FDA`)
-  and ran it at 60 s scope: `ok=true`, 2,506 source terminals, twenty block
-  cards summing to 2,506.  Report SHA-256
-  `5E35F67CE01AAAA56F17B360F9C1108CA9FDBE49FDCF6FE12DC5D47BD615241D`.
-  Scope remains static source parsing/arithmetic, not Lean elaboration.
-- A 120 s Mathlib probe attempt timed out while loading imports; no probe
-  verdict was obtained and no full-project build was run.
-- `TerminalCensus`/`ResidualCard` remain **CI pending**.  Still unpaid: all 373
-  residual radii, packet payloads, 382 absent records, SevenClassExclusions
-  (0/7), and the arbitrary-centre full-disk theorem.
-- Next concrete step: CI-kernel-check
-  `N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus` at SHA
-  `A06CE2E0...A540` as the first lane-B target; repair the first emitted Lean
-  diagnostic, then run `ResidualCard`.
-
-## 2026-11-02 - session 157: live CI and bounded probe retry
-
-- Re-ran `audit_terminal_census_blocks.py` at 60 s scope against census SHA
-  `A06CE2E053F9D1243D2A11B943102A5462409DA63B406AD39CDC9BCE24F5A540`:
-  `ok=true`, 2,506 source terminals, block cards
-  `61,75,69,62,62,61,55,56,66,237,254,253,255,221,115,120,108,111,150,115`,
-  sum 2,506. Report SHA-256
-  `5E35F67CE01AAAA56F17B360F9C1108CA9FDBE49FDCF6FE12DC5D47BD615241D`.
-  Scope is static parsing/arithmetic, not Lean elaboration.
-- Queried GitHub run `41380560959`: still `in_progress`, head `a29e4ee1`,
-  updated `2026-11-02T05:08:32Z`. It predates the current census SHA, so it
-  cannot provide a verdict for the repaired proof.
-- Retried a 90 s Mathlib-only probe of the `Fin.sum_univ_succ` +
-  `norm_num` cardinality pattern. `lake env lean` timed out during import
-  loading with no elaboration output; no tactic verdict. No full-project
-  build was run.
-- `TerminalCensus`/`ResidualCard` remain **CI pending** at census SHA
-  `A06CE2E0...A540`. All 373 residual radii, packet payloads, 382 absent
-  records, SevenClassExclusions (0/7), and the full-disk theorem remain
-  unproved/unpaid.
-- Next concrete step: request lane-B-first CI on the committed census SHA,
-  capture the first Lean diagnostic, and repair only that line before running
-  `ResidualCard`.
-
-## 2026-11-02 - session 158 (part 4): Lemma-name audit of census card proof
-
-- Concrete check against the pinned Mathlib source in
-  `/workspace/tools/mathlib-probe/.lake/packages/mathlib`:
-  `Fin.sum_univ_succ` is used/declared (e.g. `Geometry/Euclidean/Angle/Oriented/Rotation.lean:101`)
-  and `Fin.sum_univ_zero` is referenced at `Data/Fin/Tuple/Reflection.lean:203`.
-  So the two lemma names in `censusIDs_card`'s `simp` list are valid in this
-  toolchain; they are not the source of a red module.
-- Scope: static source grep of pinned Mathlib only. No Lean elaboration, no
-  kernel credit, no build. Census SHA remains `A06CE2E0...A540`.
-- `TerminalCensus`/`ResidualCard` remain CI pending; all 373 residual radii,
-  packet payloads, 382 absent records, SevenClassExclusions (0/7), and the
-  arbitrary-centre full-disk theorem remain unpaid.
-- Next concrete step: with the lemma names cleared, get the lane-B-first CI
-  verdict on `N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus`
-  at SHA `A06CE2E0...A540`; expect the first remaining risk to be the
-  `blockIDs` disjointness/interval `omega` step, then run `ResidualCard`.
+- Strengthened the static census auditors: they recover 5,011 declarations,
+  2,506 terminal flags, and block counts
+  `61,75,69,62,62,61,55,56,66,237,254,253,255,221,115,120,108,111,150,115`.
+  All arithmetic audits passed, but none is Lean elaboration or kernel credit.
+- Replaced the fragile recursive-sum census proof with explicit per-block
+  cardinalities and `Finset.card_biUnion`; the current census source is
+  `943A296C...FDBB`.  Bounded Mathlib probes timed out during import loading.
+- No local full-project build was run.  `TerminalCensus`/`ResidualCard` stayed
+  CI pending, as did the 373 residual radii, payloads, SevenClassExclusions
+  (0/7), and the arbitrary-centre theorem.
 
 ## 2026-11-02 - session 159: exact old CI diagnostic and generated-tactic repair
 
@@ -170,3 +84,123 @@ Durable state through session 155 (2026-11-02):
 - Next concrete step: poll run `41394181326`; once it starts, download its
   first lane-B diagnostic for the census target.  Repair only that diagnostic,
   rerun the static census auditor, then proceed to `ResidualCard`.
+
+## 2026-11-02 - session 161: independent 389 -> 373 bridge audit
+
+- Added `audit_refined_373_bridge.py` (SHA-256
+  `7A6C0D19DF56052C4CA29599E3F392D68EBEAE1B87E1617DF68C5989F44D1CA0`).
+  It independently parses the frozen terminal flags, the old 389-id literal
+  census, the sixteen `removedIDs`, and the 120-element `patchID`, then checks
+  the exact set identity `refined = old389 \ removed16` plus membership.
+- Ran it at 60 s scope: `ok=true` for all 14 checks. Counts: 2,506 source
+  terminals, 120 sharp, 389 old residual, 16 removed, 373 refined residual;
+  every old/removed/refined id is terminal, removed and refined ids are
+  sharp-disjoint, and the exact difference and claimed Lean cardinalities
+  match. Refined-id digest is
+  `7539D9214C5CAC780F027688D2BFA41D5451A0D13BA7834BBC49E9D2FAE41A6A`.
+  Report `audit_refined_373_bridge-report.json` SHA-256
+  `BC4064E7E1B846A6AFF010ABA864E51ABF37599033AB8054E7A6E24D2DBEFE4F`.
+  Scope is static source parsing and finite set/cardinality arithmetic, **not**
+  Lean elaboration or kernel proof credit.
+- Re-ran `audit_terminal_census_blocks.py`: `ok=true`, census SHA remains
+  `B9E98D204B7BF5D8AC5DF94913822F4B3A708BEB98BA26E6CEFD9CB080165608`.
+  A 120 s Mathlib probe timed out during import loading; no tactic verdict.
+  No full-project local build was run.
+- n11 CI run `41399703011` is still **pending** on old head `ceb39493`; its job
+  has not started, so `TerminalCensus`/`ResidualCard` remain **CI pending**.
+  The earlier `41394181326` was cancelled without a Lean verdict.
+- Still unpaid: all 373 residual radii, packet payload records, 382 absent
+  payload records, SevenClassExclusions (0/7), and the arbitrary-centre
+  full-disk theorem.
+- Next concrete step: get a lane-B-first n11 CI verdict on census SHA
+  `B9E98D20...5608`; repair the first Lean diagnostic, then run
+  `EnergyTerminalBatchB13RefineSixteenResidualCard`.
+
+## 2026-11-02 - session 162: census cardinality proof hardening
+
+- Replaced the census top-card proof's dependence on recursive
+  `Fin.sum_univ_succ`/`norm_num` normalization with: a literal `blockSizes`
+  vector, twenty explicit `blockIDs_card_eq` cases, a small kernel-checked
+  `blockSizes_sum`, and `censusIDs_card_aux` by `Finset.sum_congr`.  The public
+  `censusIDs_card` is now `simpa using censusIDs_card_aux`.
+- Regenerated `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean` (1,309
+  lines, SHA-256 `943A296CAFB75ECABB01A80D993016FF91D9758CF6F4CF5ADFAF0884259EFDBB`).
+  Updated emitter SHA-256
+  `529F1A8A8DD62627441AE1D6F63D89AD1805084D5D984F195FF38345C85EDA6A` and
+  auditor SHA-256
+  `30FB1AA21BF5228061F56D997BBCE46F244607BF0D1994C4D1D94EF6DB4E13F6`.
+- Ran the static auditor at 60 s scope: `ok=true` for all 17 checks, including
+  source-derived block sizes `61,75,69,62,62,61,55,56,66,237,254,253,255,221,115,120,108,111,150,115`,
+  sum 2,506, and absence of the old sum-normalization tactic.  Report SHA-256
+  `F3A731401059F9AD2F76D02A0FE6D88FC8B4498599F36B2272C0031CFC478A53`.
+  Scope is generated-source/static arithmetic only, **not Lean elaboration or
+  kernel proof credit**.
+- Re-ran `audit_refined_373_bridge.py`: `ok=true` for all 14 checks, 2,506
+  source terminals and exact 389 -> 373 difference.  Scope remains source-ID
+  parsing/arithmetic only.  No local full-project build was run; the cached
+  Mathlib probe still cannot load enough compiled dependencies for a useful
+  local tactic verdict.
+- CI run `41399703011` remains **pending** on old head `ceb39493` with zero
+  jobs, so it does not test the new census SHA.  `TerminalCensus` and
+  `ResidualCard` remain **CI pending**.  Unpaid: all 373 residual radii, packet
+  payloads, 382 absent payload records, SevenClassExclusions (0/7), and the
+  arbitrary-centre full-disk theorem.
+- Next concrete step: run lane-B-first CI on census SHA `943A296C...FDBB`; if
+  green, run `EnergyTerminalBatchB13RefineSixteenResidualCard`; otherwise repair
+  the first Lean diagnostic only.
+
+## 2026-11-02 - session 163: paid-set delta audit
+
+- Added `audit_paid_delta.py` (SHA-256
+  `095DC04EE51EF7FC74F5BDF5B8CF9232CEAA5DEA56C8E77AE6A4314788C70EE`).  It
+  reconstructs the seven-step B13 refinement chain from Lean source, checks the
+  cited singleton modules, computes the actual delta from `B13.paidIDs`, and
+  compares it with the sixteen literals in `ResidualCard.removedIDs`.
+- Ran it at 30 s scope: `ok=true` for all seven checks.  The exact delta is
+  `{37,2337,2341,2965,3040,3112,3116,3431,3440,3573,3589,3623,3633,3777,3792,3853}`,
+  matching `removedIDs`; per-module additions are `7,1,3,1,1,1,2`, and
+  `1997 + 16 = 2013` matches `Repair.paid_count`.  Report SHA-256
+  `80817CE8CE632F36D2E62540C8FC98EF2B677669FF12DFDF600F7E78CAB5106`.
+  Scope is static Lean-source reconstruction, **not** elaboration or kernel
+  proof credit.
+- Checked GitHub runs by API (no `gh` installed): recent n11 `math-checks` are
+  green, while the only n11 Lean run `41399703011` remains pending on old head
+  `ceb39493` with no job allocated.  `TerminalCensus` and `ResidualCard` remain
+  **CI pending**; no local project build was attempted.
+- Still unpaid: all 373 residual radii, packet payloads, 382 absent payload
+  records, SevenClassExclusions (0/7), and the arbitrary-centre theorem.
+- Next concrete step: when a lane-B-first CI job starts, fix the first Lean
+  diagnostic at census SHA `943A296C...FDBB`; if green, kernel-check
+  `EnergyTerminalBatchB13RefineSixteenResidualCard` next.
+
+## 2026-11-02 - session 164: exact residual target inventory
+
+- Extended `audit_refined_373_bridge.py` to emit `residual373-ids.txt`, the
+  exact sorted complement `old389 \ removed16`.  Re-ran the audit: `ok=true`;
+  counts are 2,506 terminals, 120 sharp, 389 old residual, 16 removed, and 373
+  refined residual; the list has exactly 373 lines.
+- New artifact SHA-256: `residual373-ids.txt` =
+  `ECF924976536FFCB228E56394B4D39CF776648E8AD42617E1AF8A38E26C0D4FE`.
+  Updated audit source SHA-256 =
+  `CB3FDA08BD5BAC12042DEE7CC4182EF4DB2C6BF2FC1701C4913B683FE3EAF2CA`;
+  report SHA-256 =
+  `B40434E36C1DC12352244520E9600027AEBDFDB983D221AAAF573E3A6604F256`.
+  Scope is exact source-ID/arithmetic audit, not Lean elaboration or kernel
+  proof credit.
+- Re-ran `audit_terminal_census_blocks.py`: `ok=true` for all 17 static checks;
+  census source remains `943A296CAFB75ECABB01A80D993016FF91D9758CF6F4CF5ADFAF0884259EFDBB`.
+  `audit_paid_delta.py` also remains `ok=true`, with the same sixteen-id delta.
+- A 90 s Mathlib-only `Finset.card_biUnion` API probe again timed out during
+  import loading, so it produced no tactic verdict.  No local project build
+  was run.
+- CI run `41399703011` is still pending on old head `ceb39493` with no job;
+  `TerminalCensus` and `ResidualCard` remain **CI pending**.  All 373 residual
+  radii, packet payloads, 382 absent payload records, SevenClassExclusions
+  (0/7), and the arbitrary-centre full-disk theorem remain unpaid.
+- Next concrete step: use `residual373-ids.txt` to pick the first residual id
+  with an existing frozen row-cap payload and emit one honest singleton radius
+  wrapper; in parallel, if CI starts, repair the first census diagnostic.
+- Quick inventory: residual ids with existing whole-row frozen cap modules are
+  `{1409, 2356, 2360, 2368, 2370}`.  These caps alone are not radius
+  certificates; the next wrapper must still derive the full packet/radius
+  obligation rather than treating the cap as payment.
