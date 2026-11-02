@@ -105,6 +105,7 @@ N11Formalization.SevenClassQ0Deg3TableBounds
 
 # Session 78: build a Degree3AreaCertificate from TableBounds under an
 # explicit canonical-edge and strict-total hypothesis (CI pending)
+N11Formalization.SevenClassQ0Deg3Repaired
 N11Formalization.SevenClassQ0Deg3TableCertificate
 
 # Session 81: discharge the canonical-edge premise through the graph theorem,

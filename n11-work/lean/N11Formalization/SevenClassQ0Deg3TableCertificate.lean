@@ -1,4 +1,4 @@
-import N11Formalization.SevenClassQ0Deg3
+import N11Formalization.SevenClassQ0Deg3Repaired
 import N11Formalization.SevenClassQ0Deg3TableBounds
 
 /-! Lane A: assemble the proved q0 degree-three tables into the existing

@@ -66,4 +66,4 @@ theorem sectorValid_of_unimodal (hshape : SectorUnimodal)
   · exact ((hshape i).2 k (le_of_lt (lt_of_not_ge hk))).trans (hpeak i)
 
 end N11Formalization.SevenClassQ0Deg3SectorPeak
-#check @sectorValid_of_unimodal
+#check @N11Formalization.SevenClassQ0Deg3SectorPeak.sectorValid_of_unimodal

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import re
 from fractions import Fraction
 from math import factorial
 from pathlib import Path
@@ -13,6 +14,19 @@ SRC = HERE / "q0-degree3-piecewise-8.json"
 OUT = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeak.lean"
 OUT_BASE = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeakBase.lean"
 OUT_ROW = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3SectorPeak{index:02d}.lean"
+TABLES = ROOT / "n11-work/lean/N11Formalization/SevenClassQ0Deg3UpperTables.lean"
+
+
+def lean_rational_array(name: str, count: int) -> list[Fraction]:
+    text = TABLES.read_text(encoding="utf-8")
+    match = re.search(rf"def {name} : Fin {count} → ℚ := !\[(.*?)\n\]", text, re.S)
+    if match is None:
+        raise ValueError(f"missing {name} in {TABLES}")
+    values = [Fraction(value.strip().strip("()"))
+              for value in match.group(1).strip().split(",")]
+    if len(values) != count:
+        raise ValueError(f"{name}: expected {count} values, got {len(values)}")
+    return values
 
 
 def main() -> None:
@@ -20,7 +34,6 @@ def main() -> None:
     sectors = data["sectors"]
     assert len(sectors) == 9
     assert [row["site"] for row in sectors] == list(range(9))
-    assert [row["witnessK"] for row in sectors] == [1024, 1024] + [1536] * 7
 
     mu = [Fraction(x) for x in data["mu"]]
     lam = Fraction(data["lambda"])
@@ -55,6 +68,24 @@ def main() -> None:
         witness = max(range(2049), key=values.__getitem__)
         witnesses.append(witness)
         peaks.append(values[witness])
+
+    table_peaks = lean_rational_array("sectorMax", 9)
+    assert peaks == table_peaks, "recomputed sector maxima disagree with SevenClassQ0Deg3UpperTables"
+    declared_witnesses = [row["witnessK"] for row in sectors]
+    witness_drift = [(i, declared, actual)
+                     for i, (declared, actual) in enumerate(zip(declared_witnesses, witnesses))
+                     if declared != actual]
+    if witness_drift:
+        drift_text = ", ".join(f"{i}: JSON {declared} -> exact {actual}"
+                               for i, declared, actual in witness_drift)
+        print(f"NOTE: stale JSON witnessK metadata ({drift_text}); using recomputed global maxima")
+    max_drift = [i for i, row in enumerate(sectors)
+                 if Fraction(row["max"]) != peaks[i]]
+    if max_drift:
+        rotated = all(Fraction(sectors[i]["max"]) == peaks[(i - 1) % 9] for i in max_drift)
+        detail = "one-position rotation of exact maxima" if rotated else "non-rotation mismatch"
+        print(f"NOTE: stale JSON sector max metadata at rows {max_drift} ({detail}); "
+              "SevenClassQ0Deg3UpperTables binds to recomputed exact maxima")
     lines = [
         "import N11Formalization.ActualRingLinkBoundaryData",
         "import N11Formalization.SevenClassQ0Deg3UpperTables",
