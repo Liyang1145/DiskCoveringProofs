@@ -17,10 +17,11 @@ HERE = Path(__file__).resolve().parent
 LEAN = HERE.parents[2] / "lean" / "N11Formalization"
 
 ORDER = [
-    "346", "348", "350", "352", "354", "356", "358", "360", "362", "364",
-    "366", "368", "371", "373", "375", "376", "377", "378", "385", "Triple",
+    "336", "338", "340", "342", "344", "346", "348", "350", "352", "354", "356",
+    "358", "360", "362", "364", "366", "368", "371", "373", "375", "376",
+    "377", "378", "385", "Triple",
 ]
-MODULES = ORDER[:9]
+MODULES = ["336", "346", "348", "350", "352", "354", "356", "358", "360", "362"]
 CHAIN_RE = re.compile(
     r"rw \[\s*(?P<chain>EnergyTerminalResidualCensusRefine(?:\d+|Triple)"
     r"\.mem_refinedResidualIDs_iff(?:,\s*EnergyTerminalResidualCensusRefine"
