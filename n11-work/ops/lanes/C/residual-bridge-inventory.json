@@ -1,0 +1,11 @@
+{
+ "scope": "exact membership/filesystem inventory only; no Lean elaboration, kernel check, or mathematical payment",
+ "census_count": 389,
+ "cumulative_removed_count": 49,
+ "residual_count": 340,
+ "restored_refinement_count": 49,
+ "unconsumed_restored_ids": [],
+ "bridge_candidates_from_restored_modules": 0,
+ "census_sha256": "44166ee869a61f6858f2285a98f96cc3faa4f59fbb98c01d76b4dc42a28827a8",
+ "frontier_module_sha256": "2660f53833bb09c3d7734c49b5094297f199cda78fc1fdd73a98fcd1404312b3"
+}
