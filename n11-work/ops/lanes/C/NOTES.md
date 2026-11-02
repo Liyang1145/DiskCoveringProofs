@@ -37,20 +37,14 @@ exact-negative best float gaps. Source audit: 62/389 ids have complete source,
 
 ## 2026-11-01 - part 246 (serialize residual census; CI OOM diagnosis)
 
-CI run `41318867156` OOM-killed the four independent census parts at 7.3-8.6 GB
-RSS each. They were made a serial `C01 -> C02 -> C03 -> C04` import chain with
-proof bodies byte-unchanged; this was a resource repair, not a census theorem.
-Scope was static scheduling only (**CI pending**), with no local kernel check.
+CI `41318867156` OOM-killed four census parts; they became serial
+`C01 -> C02 -> C03 -> C04` (resource repair, not a theorem), **CI pending**.
 
 ## 2026-11-01 - parts 247-248 (N39 restoration and scheduling)
 
-Restored archive id 39 (K=13), dropping only its unbounded heartbeat directive;
-archive hash `959ec36e...5ae2`, restored `EnergyRefineN0039` hash
-`5bbe2fdb17bff213685e3eab77e0ee35267aa2b54a8e0a8fc914599f45f29a3d`.
-Conditional singleton wrapper/main hashes are `407b62f6...a6090` and
-`cfb72df3...f8f1b`. Static checks were clean; target ordering placed this tuple
-first, but this paid no id. Scope was **CI pending**, with archive validity,
-327 source-missing ids, exclusions, and the arbitrary-centre theorem unproved.
+Restored archive id 39 (K=13; archive `959ec36e...5ae2`, restored
+`5bbe2fdb...a3d`), dropping only its unbounded heartbeat directive. Wrapper/main
+were conditional and **CI pending**; no id paid.
 
 ## 2026-11-02 - parts 249-252 (N39 repair; structural census start, condensed)
 
@@ -58,37 +52,14 @@ Generated `EnergyRefineN0039Repair.lean` (`42cf57bf...fe472d`), replacing only t
 timing-out `pk_ok` tactic. Census work moved to structural membership/cardinality
 proofs. No id paid; checks were static/exact-set only and **CI pending**.
 
-## 2026-11-02 - parts 253-258 (389 -> 377 exact interfaces, condensed)
+## 2026-11-02 - parts 253-264 (389 -> 368, condensed)
 
-Added structural bridges `RefineTriple` (387), `Refine385`, `Refine378`, and
-`Refine377`. They remove, respectively, ids `{37,3149}`, `{37,3112,3149,3853}`,
-`{3116,3431,3573,3777,2337,2341,3633}`, and `{3841}` from the kernel-counted
-389 census, preserving an exact membership iff, exact cardinality, and a
-conditional map from residual radius certificates to `EnergyTerminalBatchB13`.
-Sources hashes: 378 `5b119359...61bd4`; 377 `50df6236...76102`.
-Each parent target remains CI-unchecked. `verify_census_378.py` passes its exact
-389->378 complement and static-token/unique-target audit. No certificate or id
-was added or paid.
-
-## 2026-11-02 - parts 259-264 (389 -> 368, condensed)
-
-Serial structural bridges reduce the 389 census through 376, 375, 373, 371,
-and 368 by removing green singleton ids `{3792}`, `{3496}`, `{3794,3795}`,
-`{3800,3803}`, and `{3979,3865,4684}`. Each preserves exact membership iff,
-exact cardinality, and a conditional radius map to B13. Source hashes: 376
-`489bc408...31bc0b`, 375 `b3d1a776...b6a14d`, 373 `bd298881...32657`, 371
-`00090f96...5f3a5`, 368 `24af95e5...f524e`. No certificate or id was paid.
-All corresponding verifier and static checks pass; the chain remains **CI
-pending** with no local Lean elaboration/olean.
-
-## 2026-11-02 - parts 260-264 (387 -> 368, condensed)
-
-Added the 387 bridge for `{37,3149}` (`97c1bbf2...14c34`), then `Refine375`
-(`c2b0c5be...b877`), `Refine373` (`bd298881...32657`), `Refine371`
-(`00090f96...5f3a5`), and `Refine368` (`24af95e5...f524e`). The removals were
-`{3496}`, `{3794,3795}`, `{3800,3803}`, and `{3979,3865,4684}`. Each exact
-membership/cardinality interface maps residual certificates to B13. Verifiers
-and static checks pass; all remain **CI pending**, with no id paid.
+Structural bridges through `RefineTriple` (387), 385, 378, 377, 376, 375, 373,
+371, and 368 remove ids `{37,3149}`, `{3112,3853}`, `{3116,3431,3573,3777,
+2337,2341,3633}`, `{3841}`, `{3792}`, `{3496}`, `{3794,3795}`, `{3800,3803}`,
+and `{3979,3865,4684}`. Each preserves exact membership iff, cardinality, and a
+conditional radius map to B13. Verifiers/static checks pass; **CI pending**, no
+id paid.
 
 ## 2026-11-02 - parts 265-266 (368 -> 366 -> 364, condensed)
 
@@ -98,13 +69,6 @@ membership/cardinality interfaces map residual radius certificates to B13.
 Audits `verify_census_366.py` and `verify_census_364.py` pass exact complement,
 ordering, forbidden-token, `py_compile`, and `git diff --check` checks. Scope is
 static/exact-set only, **CI pending**, and pays no id.
-
-## 2026-11-02 - part 267 (364 -> 362 via green 3522/3783)
-
-Added `Refine362` (`d8f6135b...11a5885`), removing CI-green `{3522,3783}` from
-364 with exact membership iff/cardinality and a conditional radius map to B13.
-`verify_census_362.py` (`c7cd2a2d...77cf0ac`) passes exact complement, ordering,
-and static checks; 182 unique targets. **CI pending**, no payment.
 
 ## 2026-11-02 - part 268 (362 -> 360 via green 3808/3821)
 
@@ -125,26 +89,6 @@ project elaboration/olean or kernel credit. Still unproved: elaboration of the
 360 chain, 360 radius certificates, 327 source-missing ids, SevenClassExclusions,
 and the arbitrary-centre theorem. Next: CI-build 360 after 362; if green, bridge
 360 -> 358 with unused green `3851`/`4162`; if red repair the first error.
-
-## 2026-11-02 - part 270 (358 -> 356 via green 2965/3040)
-
-Added deterministic `emit_census_356.py` (SHA256 `e8798ee5...9b1d`) and emitted
-`EnergyTerminalResidualCensusRefine356.lean` (SHA256
-`c6c487b274e5be7b2d4847e618ee342e0c5c41bf99c66a92160632ccaac90810`).
-It imports pending `Refine358` plus CI-green `EnergyTerminalBatchB13Refine2965`
-and `Refine3040` (batch and Main exits are both 0 in run `41378003343`). It
-proves both ids are in the 358 set, removes them exactly, gives cardinality 356,
-and maps 356 residual certificates to
-`EnergyTerminalBatchB13.RemainingTerminalRadius`. No id is paid.
-`verify_census_356.py` (SHA256 `6cd79e68...5dc0`) passes exact membership and
-389 -> 356 complement (33 removals), dependency/target ordering, `py_compile`,
-forbidden-declaration scan, and `git diff --check`; 185 unique targets.
-
-Scope is static/exact-set only: **CI pending**, with no project elaboration/olean
-or kernel credit. Still unproved: elaboration of the 356 chain, 356 radius
-certificates, 327 source-missing ids, SevenClassExclusions, and the
-arbitrary-centre theorem. Next: CI-build 358 then 356; if green, 356 -> 354 with
-unused green `3440`/`3520`; if red repair the first error.
 
 ## 2026-11-02 - part 269 (360 -> 358 via green 3851/4162)
 
@@ -230,21 +174,77 @@ the first Lean error and preserve its log.
 
 ## 2026-11-02 - part 274 (350 -> 348 via green 3810/3863)
 
-Added `emit_census_348.py` (SHA256 `c03c8da2788df78d2a5dd0e66de8161f1a9d190c73bef06b761420d217ae04c9`)
-and emitted `EnergyTerminalResidualCensusRefine348.lean` (SHA256
-`f9b4c0d06a8dbdbea2cea5c4176a9f61af2a30592424e47491a82d57260d69d5`).
-It imports pending `Refine350` plus CI-green `EnergyTerminalBatchB13Refine3810`
-and `Refine3863`, proves both ids are present, removes them exactly, proves
-cardinality 348, and maps 348 residual certificates to B13. No id is paid.
-`verify_census_348.py` (SHA256 `b615bc6fdf28dc2ee3c95ac36bc5908ac15758e829469b62e452a421fc395cba`)
-passes the exact 389 -> 348 complement audit (41 removals), membership and
-cardinality assertions, dependency/unique-target ordering, `py_compile`,
-forbidden-declaration scan, and `git diff --check`; 188 unique targets.
-Scope is static/exact-set only: **CI pending**, with no project elaboration/olean
-or kernel credit. Still unproved: elaboration of the 348 chain, all 348 radius
-certificates, 327 source-missing ids, SevenClassExclusions, and the
-arbitrary-centre theorem. Next: CI-build 350 then 348. No unused fully-green
-numeric `EnergyTerminalBatchB13RefineNNNN` pair remains in run `41378003343`
-(the only unmatched numeric names are `0039`/`0040`, whose builds are red), so if
-green the next step is to inspect residual certified-source modules rather than
-draft another set-reduction bridge; if red repair the first Lean error.
+`emit_census_348.py` and `EnergyTerminalResidualCensusRefine348.lean` remove the
+green 3810/3863 ids exactly (card 348, conditional B13 map, no payment).
+`verify_census_348.py` passed the 389 -> 348 complement and ordering checks.
+Scope: static only, **CI pending**.
+
+## 2026-11-02 - parts 275-277 (low-id repair; 348 -> 346; chain audit)
+
+CI job `125106045871` exposed the original 39 repair errors at
+`EnergyRefineN0039Repair.lean:51-53,57-59` (`False` returned for conjunction
+goals, hence `sorryAx`). `EnergyRefineN40` itself was green, but its batch used
+the module name `EnergyRefineN40` instead of namespace `EnergyRefineN0040` and
+misused upper bound `next505_lt` for low ids 39/40.
+
+`repair_refine_0039_40.py` (`ef1dfa56...8ac76`) regenerated
+`EnergyRefineN0039Repair.lean` (`d36d4491...cb5a`), `Refine0039`
+(`914fe9bd...f158`), and `Refine40` (`86bcbe3c...dfd5`): `False.elim` covers the
+six false leaves, both batches prove Next505 nonmembership by 25 literal blocks,
+and N40 uses namespace `N0040`. `emit_census_346.py` (`9c88d3d8...08c1`) emitted
+`EnergyTerminalResidualCensusRefine346.lean` (`ea12788b...4545a`), removing 39/40
+with exact membership iff, card 346, and the conditional B13 map. No id paid.
+
+`repair_census_membership_chains.py` (`9e504abf...942f`) found skipped parent
+subtractions in every pending `Refine348..362` membership proof and normalised
+the two blocks in each to the contiguous `RefineTriple` suffix. `verify_census_346.py`
+(`bfa2fba8...3536`) now checks exact 389 -> 346 complement, forbidden tokens in
+all nine pending modules, TARGETS ordering, `py_compile`, and all nine rewrite
+chains. Run result: `{"census_count":389,"membership_chains":"9 checked",
+"refined_count":346,"removed_count":43,"static_checks":"PASS"}`; `git diff
+--check` passes. Scope is source/static/exact-set only, not elaboration or
+kernel credit. CI run `41380560959` remains in progress; later runs used only
+scoped replay, not `n11-lean-build`.
+
+Still unproved: CI elaboration of repaired 39/40 and the 346 chain, all 346
+radius certificates, 327 source-missing ids, canonical packet production,
+SevenClassExclusions, and the arbitrary-centre full-disk theorem. Next: when CI
+reaches `EnergyRefineN0039Repair`, require zero errors/`sorryAx`; then build 346
+serially and repair the first reported declaration. If green, consume the 346
+B13 map and resume exact residual radius work.
+
+## 2026-11-02 - parts 278-279 (chain/exception audits; CI inaccessible)
+
+Re-ran `verify_census_346.py`: PASS, exact module SHA
+`ea12788b26a0a6552c9f2f1007b8a70fa56b1755e7e2af2df1faddbe5a24545a`,
+389 census / 43 removed / 346 refined / nine chains. Manually audited the two
+exceptional branches of `b13_remaining_of_residual346` against
+`EnergyRefineN0039.new_radius` and `EnergyRefineN0040.new_radius`: both produce
+`sourceRadius < r`, and their `.le` conversion satisfies the `≤` goal. The
+`newIDs` singleton membership arguments and the N40 namespace also match.
+
+`gh` is absent and no local project oleans exist, so CI job `125106045871` and
+run `41380560959` could not be inspected; scope remains source/static only, no
+elaboration, kernel credit, or paid id. Still unproved: all 346 radius
+certificates and the external premises. Next: with CI access, read the earliest
+failure in `EnergyRefineN0039Repair` first; if green, build `Refine346` and run
+its axiom checks.
+
+## 2026-11-02 - part 280 (live CI log retrieval; still in progress)
+
+Re-ran `verify_census_346.py`: PASS (`389` census, `43` removed, `346`
+refined, nine repaired chains); module SHA remains
+`ea12788b26a0a6552c9f2f1007b8a70fa56b1755e7e2af2df1faddbe5a24545a`.
+GitHub API confirms run `41380560959`, job `125106045871`, remains
+`in_progress` at its `Build` step (started 05:15 UTC); run `41399703011` has no
+jobs. The live job log is 729,520,472 bytes; an 8-second ranged fetch returned
+152,231,287 bytes but Azure ignored the requested suffix range, reaching only
+06:35 UTC (`ActualNearestRingTriangles` / `ActualLocalSurfaceData` replay, all
+shown axiom reports clean). No error line near the current build frontier was
+available, so no repair is justified. Scope: exact-set verifier PASS and partial
+CI-log retrieval only; no elaboration result or id paid.
+
+Next: fetch the log's true suffix (or wait for completion), locate the earliest
+`error:` after the 346 target, repair that declaration, then rerun
+`verify_census_346.py`. Missing: elaboration/all 346 radius certificates, the
+327 source-missing ids, SevenClassExclusions, and the arbitrary-centre theorem.

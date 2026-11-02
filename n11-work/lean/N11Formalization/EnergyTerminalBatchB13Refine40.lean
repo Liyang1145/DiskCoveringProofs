@@ -1,5 +1,5 @@
 import N11Formalization.EnergyTerminalBatchB13
-import N11Formalization.EnergyRefineN40
+import N11Formalization.EnergyRefineN0040
 
 /-! Refine the B13 paid set by the archived split certificate for source
 terminal 40.  The archive bytes are restored verbatim and remain CI
@@ -10,7 +10,7 @@ open Finset
 noncomputable section
 
 def paidIDs : Finset (Fin 5011) :=
-  EnergyTerminalBatchB13.paidIDs ∪ EnergyRefineN40.newIDs
+  EnergyTerminalBatchB13.paidIDs ∪ EnergyRefineN0040.newIDs
 
 private theorem not_next1182_part01_ids00 :
     (40 : Fin 5011) ∉ Paid16GeneralNext1182S01.ids00 := by
@@ -221,6 +221,111 @@ private theorem not_next1182 :
     not_next1182_part04, not_next1182_part05, not_next1182_part06,
     not_next1182_part07, not_next1182_part08⟩
 
+private theorem not_next505_part00 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids00 := by
+  decide +kernel
+private theorem not_next505_part01 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids01 := by
+  decide +kernel
+private theorem not_next505_part02 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids02 := by
+  decide +kernel
+private theorem not_next505_part03 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids03 := by
+  decide +kernel
+private theorem not_next505_part04 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids04 := by
+  decide +kernel
+private theorem not_next505_part05 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids05 := by
+  decide +kernel
+private theorem not_next505_part06 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids06 := by
+  decide +kernel
+private theorem not_next505_part07 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids07 := by
+  decide +kernel
+private theorem not_next505_part08 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids08 := by
+  decide +kernel
+private theorem not_next505_part09 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids09 := by
+  decide +kernel
+private theorem not_next505_part10 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids10 := by
+  decide +kernel
+private theorem not_next505_part11 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids11 := by
+  decide +kernel
+private theorem not_next505_part12 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids12 := by
+  decide +kernel
+private theorem not_next505_part13 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids13 := by
+  decide +kernel
+private theorem not_next505_part14 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids14 := by
+  decide +kernel
+private theorem not_next505_part15 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids15 := by
+  decide +kernel
+private theorem not_next505_part16 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids16 := by
+  decide +kernel
+private theorem not_next505_part17 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids17 := by
+  decide +kernel
+private theorem not_next505_part18 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids18 := by
+  decide +kernel
+private theorem not_next505_part19 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids19 := by
+  decide +kernel
+private theorem not_next505_part20 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids20 := by
+  decide +kernel
+private theorem not_next505_part21 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids21 := by
+  decide +kernel
+private theorem not_next505_part22 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids22 := by
+  decide +kernel
+private theorem not_next505_part23 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids23 := by
+  decide +kernel
+private theorem not_next505_part24 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.ids24 := by
+  decide +kernel
+private theorem not_next505 :
+    (40 : Fin 5011) ∉ Paid16GeneralNext505.newIDs := by
+  rw [Paid16GeneralNext505.new_mem]
+  push_neg
+  exact ⟨not_next505_part00,
+    not_next505_part01,
+    not_next505_part02,
+    not_next505_part03,
+    not_next505_part04,
+    not_next505_part05,
+    not_next505_part06,
+    not_next505_part07,
+    not_next505_part08,
+    not_next505_part09,
+    not_next505_part10,
+    not_next505_part11,
+    not_next505_part12,
+    not_next505_part13,
+    not_next505_part14,
+    not_next505_part15,
+    not_next505_part16,
+    not_next505_part17,
+    not_next505_part18,
+    not_next505_part19,
+    not_next505_part20,
+    not_next505_part21,
+    not_next505_part22,
+    not_next505_part23,
+    not_next505_part24⟩
+
 theorem not_paid_40 : (40 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := by
   intro h
   rw [EnergyTerminalBatchB13.paidIDs, Finset.mem_union] at h
@@ -235,20 +340,19 @@ theorem not_paid_40 : (40 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := by
       · have h210' : (40 : Fin 5011) ∉ Paid16GeneralRemaining210.newIDs := by
           decide +kernel
         exact h210' h210
-    · have hlt := EnergyTerminalBatchB13Next505Bounds.next505_lt (40 : Fin 5011) h505
-      omega
+    · exact not_next505 h505
   · exact not_next1182 h1182
 
 theorem new_disjoint_old :
-    Disjoint EnergyTerminalBatchB13.paidIDs EnergyRefineN40.newIDs := by
-  rw [EnergyRefineN40.newIDs, Finset.disjoint_left]
+    Disjoint EnergyTerminalBatchB13.paidIDs EnergyRefineN0040.newIDs := by
+  rw [EnergyRefineN0040.newIDs, Finset.disjoint_left]
   intro a ha hb
   have ha' : a = 40 := by simpa using hb
   subst a
   exact not_paid_40 ha
 
-theorem new_count : EnergyRefineN40.newIDs.card = 1 := by
-  simp [EnergyRefineN40.newIDs]
+theorem new_count : EnergyRefineN0040.newIDs.card = 1 := by
+  simp [EnergyRefineN0040.newIDs]
 
 theorem paid_count : paidIDs.card = 1998 := by
   rw [paidIDs, Finset.card_union_of_disjoint new_disjoint_old,
@@ -258,7 +362,7 @@ theorem paid_terminal (n : Fin 5011) (hn : n ∈ paidIDs) :
     (DBMSourceTree.data n).terminal = true := by
   rcases Finset.mem_union.mp hn with hn | hn
   · exact EnergyTerminalBatchB13.paid_terminal n hn
-  · exact EnergyRefineN40.new_terminal n hn
+  · exact EnergyRefineN0040.new_terminal n hn
 
 theorem paid_radius (n : Fin 5011) (hn : n ∈ paidIDs)
     (y : Fin 9 → ℝ) (hy0 : ∀ q, 0 ≤ y q) (hy1 : ∑ q, y q = 1)
@@ -268,7 +372,7 @@ theorem paid_radius (n : Fin 5011) (hn : n ∈ paidIDs)
     SourceExactRoot.sourceRadius < r := by
   rcases Finset.mem_union.mp hn with hn | hn
   · exact EnergyTerminalBatchB13.paid_radius n hn y hy0 hy1 hc C Z r hf
-  · exact EnergyRefineN40.new_radius n hn y hy0 hy1 hc C Z r hf
+  · exact EnergyRefineN0040.new_radius n hn y hy0 hy1 hc C Z r hf
 
 def RemainingTerminalRadius : Prop :=
   ∀ n : Fin 5011, (DBMSourceTree.data n).terminal = true →
@@ -283,8 +387,8 @@ def RemainingTerminalRadius : Prop :=
 theorem remaining_of (h : RemainingTerminalRadius) :
     EnergyTerminalBatchB13.RemainingTerminalRadius := by
   intro n ht hs hp y hy0 hy1 hc C Z r hf
-  by_cases hn : n ∈ EnergyRefineN40.newIDs
-  · exact (EnergyRefineN40.new_radius n hn y hy0 hy1 hc C Z r hf).le
+  by_cases hn : n ∈ EnergyRefineN0040.newIDs
+  · exact (EnergyRefineN0040.new_radius n hn y hy0 hy1 hc C Z r hf).le
   · have hrest := h n ht hs (by
       intro hpn
       rcases Finset.mem_union.mp hpn with hpb | hpn

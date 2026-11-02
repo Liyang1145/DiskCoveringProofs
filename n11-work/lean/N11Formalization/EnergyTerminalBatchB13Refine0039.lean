@@ -222,6 +222,111 @@ private theorem not_next1182 :
     not_next1182_part04, not_next1182_part05, not_next1182_part06,
     not_next1182_part07, not_next1182_part08⟩
 
+private theorem not_next505_part00 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids00 := by
+  decide +kernel
+private theorem not_next505_part01 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids01 := by
+  decide +kernel
+private theorem not_next505_part02 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids02 := by
+  decide +kernel
+private theorem not_next505_part03 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids03 := by
+  decide +kernel
+private theorem not_next505_part04 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids04 := by
+  decide +kernel
+private theorem not_next505_part05 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids05 := by
+  decide +kernel
+private theorem not_next505_part06 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids06 := by
+  decide +kernel
+private theorem not_next505_part07 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids07 := by
+  decide +kernel
+private theorem not_next505_part08 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids08 := by
+  decide +kernel
+private theorem not_next505_part09 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids09 := by
+  decide +kernel
+private theorem not_next505_part10 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids10 := by
+  decide +kernel
+private theorem not_next505_part11 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids11 := by
+  decide +kernel
+private theorem not_next505_part12 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids12 := by
+  decide +kernel
+private theorem not_next505_part13 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids13 := by
+  decide +kernel
+private theorem not_next505_part14 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids14 := by
+  decide +kernel
+private theorem not_next505_part15 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids15 := by
+  decide +kernel
+private theorem not_next505_part16 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids16 := by
+  decide +kernel
+private theorem not_next505_part17 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids17 := by
+  decide +kernel
+private theorem not_next505_part18 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids18 := by
+  decide +kernel
+private theorem not_next505_part19 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids19 := by
+  decide +kernel
+private theorem not_next505_part20 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids20 := by
+  decide +kernel
+private theorem not_next505_part21 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids21 := by
+  decide +kernel
+private theorem not_next505_part22 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids22 := by
+  decide +kernel
+private theorem not_next505_part23 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids23 := by
+  decide +kernel
+private theorem not_next505_part24 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.ids24 := by
+  decide +kernel
+private theorem not_next505 :
+    (39 : Fin 5011) ∉ Paid16GeneralNext505.newIDs := by
+  rw [Paid16GeneralNext505.new_mem]
+  push_neg
+  exact ⟨not_next505_part00,
+    not_next505_part01,
+    not_next505_part02,
+    not_next505_part03,
+    not_next505_part04,
+    not_next505_part05,
+    not_next505_part06,
+    not_next505_part07,
+    not_next505_part08,
+    not_next505_part09,
+    not_next505_part10,
+    not_next505_part11,
+    not_next505_part12,
+    not_next505_part13,
+    not_next505_part14,
+    not_next505_part15,
+    not_next505_part16,
+    not_next505_part17,
+    not_next505_part18,
+    not_next505_part19,
+    not_next505_part20,
+    not_next505_part21,
+    not_next505_part22,
+    not_next505_part23,
+    not_next505_part24⟩
+
 theorem not_paid_0039 : (39 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := by
   intro h
   rw [EnergyTerminalBatchB13.paidIDs, Finset.mem_union] at h
@@ -236,8 +341,7 @@ theorem not_paid_0039 : (39 : Fin 5011) ∉ EnergyTerminalBatchB13.paidIDs := by
       · have h210' : (39 : Fin 5011) ∉ Paid16GeneralRemaining210.newIDs := by
           decide +kernel
         exact h210' h210
-    · have hlt := EnergyTerminalBatchB13Next505Bounds.next505_lt (39 : Fin 5011) h505
-      omega
+    · exact not_next505 h505
   · exact not_next1182 h1182
 
 theorem new_disjoint_old :

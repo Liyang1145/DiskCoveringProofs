@@ -35,7 +35,9 @@ private theorem not_sharp_3821 : (3821 : Fin 5011) ∉ Patch120SharpDispatch.sha
 
 private theorem mem_362_3808 :
     (3808 : Fin 5011) ∈ EnergyTerminalResidualCensusRefine362.refinedResidualIDs := by
-  rw [EnergyTerminalResidualCensusRefine362.mem_refinedResidualIDs_iff,
+  rw [
+    EnergyTerminalResidualCensusRefine362.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine364.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine366.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine368.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine371.mem_refinedResidualIDs_iff,
@@ -55,7 +57,9 @@ private theorem mem_362_3808 :
 
 private theorem mem_362_3821 :
     (3821 : Fin 5011) ∈ EnergyTerminalResidualCensusRefine362.refinedResidualIDs := by
-  rw [EnergyTerminalResidualCensusRefine362.mem_refinedResidualIDs_iff,
+  rw [
+    EnergyTerminalResidualCensusRefine362.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine364.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine366.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine368.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine371.mem_refinedResidualIDs_iff,
