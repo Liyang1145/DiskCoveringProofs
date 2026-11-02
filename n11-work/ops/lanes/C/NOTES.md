@@ -55,38 +55,17 @@ infeasibility, kernel credit, a residual-id payment, or the arbitrary-centre
 theorem. Reports and replay hashes remain in this directory; part 242 also
 repaired an omitted weighted-sum row and endpoint factors. No new Lean target.
 
-## 2026-11-01 - part 245 (residual source coverage, not the unavailable HOST taxonomy)
+## 2026-11-01 - part 245 (residual source coverage)
 
-Added `audit_residual_payload_sources.py` and ran it over all 389 residual ids.
-It classifies static source completeness from the exact census, the public
-seven-record proposal, `DBMSourceTreeData`, and `origin/ci/n11-build` archive
-modules. Result: 7 proposal-complete, 389 DBM-complete, 57 archive modules with
-the full terminal/new_radius/newIDs/pk_ok shape, 42 of those 57 also free of
-forbidden tokens, and 62 ids with any complete source (proposal ∩ archive = 2).
-Thus 327 residual ids have neither a complete public proposal nor an archive
-module; this supersedes the looser "382 absent payloads" wording for source
-coverage. The historical 354-method-failure/35-zero-dual taxonomy is **not in
-the public tree**, so no id was retroactively assigned to it.
-
+`audit_residual_payload_sources.py` classifies all 389 ids from the census,
+proposal, DBM data, and archive drafts: 7 proposal-complete, 57 archive modules
+with the full refinement shape, 42 token-clean, and 62 with any complete source.
+Thus 327 ids have neither a complete public proposal nor archive module. The
+historical 354/35 taxonomy is unavailable, so no id was retroactively assigned.
 The seven proposal ids already have 512/512 exact region-local threshold-Farkas
-reports. The archive modules remain static drafts: no arithmetic replay or
-kernel credit here. Existing `EnergyRefineN0037` is unchanged, hash
-`7a0137826c2ea9c5975ee9d3b19952e409e86551b93262778933c3752240d0ac`, and was
-already in `TARGETS.txt`; no new Lean target was added this part.
-
-Files/hashes: audit script SHA256
-`834d5a7850d398fe2fc1872e5c79a00b96cd7de98a8cd7ae1ad6776fc8407fe1`;
-report `residual-payload-source-coverage.json` SHA256
-`ddee740bd077e20c9b8879277991567301ce2c3e7eb3fe3dd5be4b602995e03f`.
-Checks: `py_compile` exit 0; bounded audit exit 0; `git diff --check` clean.
-The detector source necessarily contains the forbidden-token regex literals;
-the generated report contains none.
-
-Still unproved: arithmetic validity/kernel credit for all 57 archive drafts,
-327 source-missing ids, SevenClassExclusions (0/7), and the arbitrary-centre
-theorem. Next concrete step: obtain the first failing target from CI run
-`41301935749` and repair the earliest clean archive module (`0037` is already
-queued); do not batch more uncompiled drafts before identifying that failure.
+reports; archive drafts have no arithmetic replay or kernel credit. Hash of the
+report is `ddee740b...e03f`; checks were clean. Still unproved: archive validity,
+327 source-missing ids, SevenClassExclusions, and the arbitrary-centre theorem.
 
 ## 2026-11-01 - part 246 (serialize residual census; CI OOM diagnosis)
 
@@ -114,31 +93,154 @@ ids, SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next: CI-run
 the queued census target; if memory is still excessive, split each 100-index
 equivalence theorem again rather than adding targets.
 
-## 2026-11-01 - part 247 (first formerly blocked archive refinement: id 39)
+## 2026-11-01 - parts 247-248 (N39 restoration and scheduling)
 
-The source audit's 15 "forbidden" archive modules are not axiomatized drafts:
-the detector matched `#print axioms` (plural is harmless) and an unbounded
-`set_option maxHeartbeats 0`. Restored the smallest complete draft, id 39
-(K=13), after removing exactly that one directive. Archive source SHA256
-`959ec36e08213c58569167a4f6cca528e2e3c8ab4ff2bc4b0f58bf60a8cb5ae2`;
-new `EnergyRefineN0039.lean` SHA256
+Restored archive id 39 (K=13), dropping only its unbounded heartbeat directive;
+archive hash `959ec36e...5ae2`, restored `EnergyRefineN0039` hash
 `5bbe2fdb17bff213685e3eab77e0ee35267aa2b54a8e0a8fc914599f45f29a3d`.
-Extended `restore_archive_energy_refine.py` with an explicit, count-checked
-`--drop-unbounded-heartbeats` mode; SHA256
-`66fb6792f82865ce13a6f6510f849818336fb849e1e46b8347255e3c6fbab948`.
+Conditional singleton wrapper/main hashes are `407b62f6...a6090` and
+`cfb72df3...f8f1b`. Static checks were clean; target ordering placed this tuple
+first, but this paid no id. Scope was **CI pending**, with archive validity,
+327 source-missing ids, exclusions, and the arbitrary-centre theorem unproved.
 
-Emitted conditional singleton consumers from the CI-green 2965 wrapper
-template, changing only the id/namespaces: `EnergyTerminalBatchB13Refine0039`
-extends B13 to 1998 ids, and `...Refine0039Main` weakens the existing seven-class
-main consumer. Hashes `407b62f6...a6090` and `cfb72df3...f8f1b`; emitter
-`emit_refine_singleton.py` is `4bbecb99...9e32`. Added all three module targets.
+## 2026-11-02 - part 249 (N39 CI-red diagnosis and structural repair)
 
-Checks: `py_compile` exit 0 for both lane emitters; generated-source key-shape
-and stale-template scans clean; forbidden-token scan and `git diff --check`
-clean. Scope is static generation only: **CI pending**, no local Lean build, no
-new id is paid, and the 389-id census/main path is not yet rewired to N39.
-Still unproved: N39 kernel success, arithmetic independence of its archived
-packet, 327 source-missing ids, seven-class exclusions (0/7), and the
-arbitrary-centre theorem. Next: obtain the CI verdict for the first N39 target;
-if green, rebuild a 388-id census consumer excluding 39; if red, repair its
-first exact elaboration failure rather than adding more drafts.
+Downloaded run `41352871085` job `124986627384` (artifact summary plus full log).
+The run-level conclusion says success, but its summary has `built_count = 0` and
+exit `1` for all three N39 targets, so it is **CI red** for this lane. The first
+error is `EnergyRefineN0039.lean:48:0`, a deterministic whnf heartbeat timeout
+in the monolithic `pk_ok` proof; line 52's unknown `pk_ok` is downstream fallout.
+
+Preserved the restored source byte-for-byte at SHA256
+`5bbe2fdb17bff213685e3eab77e0ee35267aa2b54a8e0a8fc914599f45f29a3d`.
+Added deterministic emitter `emit_refine_n0039_repair.py` (SHA256
+`1c89926b6be880d683835b64f7c6928a9c6cda3ac423f246522b182251787b9d`),
+which requires that exact source hash and replaces only the backtracking `first`
+tactic with 13 explicit `fin_cases` branches. Generated
+`EnergyRefineN0039Repair.lean` SHA256
+`42cf57bfac90d2c68f5b618fa68caa08c7c77965bfcb2e7eb7a8d4def7fe472d`;
+all nodes and packet bytes are inherited unchanged. The existing conditional
+singleton consumer now imports the repair (SHA256
+`62307f1634931f86d456db76375f9e3b35aac35cc918930b725c0bcae12518b2`);
+its main consumer is unchanged. `TARGETS.txt` swaps only
+`EnergyRefineN0039` for the repair, still first in the serial order.
+
+Checks: `py_compile` and emitter exit 0; a source diff shows only the `pk_ok`
+body; exact integer tree audit passes 100 root-scale and 1,200 split entries
+(report SHA256 `cd18673676318547cd0d85e103db8a2c6bd7e4826ba8228040548995ae7390fc`);
+forbidden-token scan and `git diff --check` are clean; target inventory is
+167/167 unique. Scope is static repair plus exact integer tree data only:
+**CI pending**, no local Lean build, packet validity, kernel credit or residual
+id payment claimed. The earlier uncommitted fresh audit remains at
+`energy-refine-n0039-fresh-tree-audit.json`, SHA256
+`76d7de906e96abe61baa675851449681966755583f75cd1598e292b3a86c7bdc`.
+
+Still unproved: repaired N39 elaboration/kernel validity, MPacket validity,
+373 radius certificates, 327 source-missing ids, SevenClassExclusions (0/7),
+and the arbitrary-centre theorem. Next: obtain the CI exit and axiom report for
+`N11Formalization.EnergyRefineN0039Repair`; if green, check the two singleton
+consumers, otherwise repair the new first exact error rather than raising the
+heartbeat cap.
+
+## 2026-11-02 - part 250 (N39 proof made definitional at the timeout)
+
+Strengthened the deterministic N39 repair: the five false-terminal branches of
+`pk_ok` now close by definitional reduction through core
+`Bool.false_ne_true hl`, instead of invoking `decide +kernel`. The remaining
+eight branches use the already-declared `valid3/4/5/9/10/11/12` theorems and
+rfl equalities. This removes every decision procedure from the theorem that
+timed out in CI. Updated only emitter `emit_refine_n0039_repair.py` and
+regenerated `EnergyRefineN0039Repair.lean`; the archived source remains exactly
+`5bbe2fdb17bff213685e3eab77e0ee35267aa2b54a8e0a8fc914599f45f29a3d`.
+
+New emitter SHA256 `fe6b124ec040cdaaed3cd8455581594ced9de09e0cc2beffd15f935c6224d872`;
+repaired source SHA256
+`77dde91f17e1f686a0576587592893eee2669e4af8b1f2ff13eb4185b5c61290`.
+The singleton consumer still imports the repair and is unchanged at
+`62307f1634931f86d456db76375f9e3b35aac35cc918930b725c0bcae12518b2`.
+
+Checks: emitter run and `py_compile` exit 0; target inventory 167/167 unique
+with the N39 tuple first; forbidden-token scan clean; `git diff --check` clean.
+A bounded local `Bool.false_ne_true` probe did not return under shared sandbox
+load and has no verdict. Scope is static source repair only: **CI pending**;
+no local Lean build, kernel credit, MPacket validity, or id-39 payment claimed.
+
+Still unproved: repair elaboration/kernel validity and axiom report, MPacket
+validity, 373 residual radius certificates, 327 source-missing ids,
+SevenClassExclusions (0/7), and the arbitrary-centre theorem. Next: obtain CI
+for `EnergyRefineN0039Repair`; if green, verify both singleton consumers and
+then rebuild a 388-id residual census excluding 39; if red, repair the first
+exact new failure without raising or removing the heartbeat cap.
+
+## 2026-11-02 - part 251 (structural 388-id census interface)
+
+Added `EnergyTerminalResidualCensusRefine0039.lean` (SHA256
+`2914412baa79f28b243a48de27ba6740e10d62e3125a1ec2af5cb92fbec172eb`).
+It defines the kernel-counted 389 census minus `{39}`, proves `39` lies in the
+census from the repaired terminal fact, `not_paid_0039`, and a bounded
+`decide +kernel` sharpness check, then proves the complement has cardinality
+388. Its radius premise is connected by proof (not a new certificate) to
+`EnergyTerminalBatchB13Refine0039.RemainingTerminalRadius` and hence B13. Source
+39 is paid only conditionally on the still-unchecked N39 repair. Appended this
+module as the fourth target; inventory is 168 entries / 168 unique.
+
+Checks: Python emitter compile exit 0, target inventory and ordering assertion
+exit 0, no forbidden declaration tokens in the new module (its two final lines
+are allowed `#print axioms` diagnostics), `git diff --check` clean.
+Scope: static Lean source plus structural census only; **CI pending**, no local
+Lean build, kernel credit, radius certificate, or residual-id payment claimed.
+
+Still unproved: N39 repair and 388-census elaboration/kernel validity, 388
+radius certificates, 327 source-missing ids, SevenClassExclusions (0/7), and the
+arbitrary-centre theorem. Next: obtain CI for the first four targets; if green,
+replace the sixteen-based 373 interface with this 388 set and continue with the
+next archive draft; if red, repair the first exact error without changing any
+frozen bytes or heartbeat cap.
+
+## 2026-11-02 - part 252 (structural N39 sharpness proof)
+
+Replaced the 5011-literal `decide +kernel` proof that source `39` is absent
+from `Patch120SharpDispatch.sharpIDs` with a structural argument in
+`EnergyTerminalResidualCensusRefine0039.lean`: prove every explicit
+`Patch120DomainPacket.patchID` value is at least 4436 by 120 bounded
+`fin_cases`/`decide` branches, then contradict membership of `39`. Module
+SHA256 is now
+`a4a54083c2cf32066ae6d03829b0fa907b308cf043115d9cbf434dbb7df3851e`;
+`TARGETS.txt` already lists it as the fourth target.
+
+Checks: forbidden-declaration-token scan and `git diff --check` clean. A
+bounded Mathlib probe of the membership/contradiction proof shape timed out
+after 60 seconds under sandbox load and has no verdict. Scope is static source
+hardening only: **CI pending**; no local Lean build, kernel credit, radius
+certificate, or residual-id payment is claimed.
+
+Still unproved: N39 repair and 388-census elaboration/kernel validity, 388
+radius certificates, 327 source-missing ids, SevenClassExclusions (0/7), and
+the arbitrary-centre theorem. Next: obtain CI for the first four targets,
+starting with `EnergyRefineN0039Repair`; if green, wire the first valid
+388-residual archive certificate into this census, otherwise fix the first
+exact error without changing frozen bytes or the heartbeat cap.
+
+## 2026-11-02 - part 253 (combined 387-id census interface)
+
+Added `EnergyTerminalResidualCensusRefine0039Refine3149.lean` (SHA256
+`870d5930b6349e4d7e0a7632143790afce64831cdf31ae8c94c42704290bfa57`).
+It removes `{39,3149}` from the 389-id B13 census, proves a structural
+120-row sharpness exclusion for 3149, gives the exact 387 cardinality and
+membership characterization, and bridges 387 residual radius certificates to
+B13 using the existing 39/3149 refinement radius witnesses. Added the module
+as target 5 in `TARGETS.txt`. This supersedes the single-removal census as a
+composable interface; the 388 module remains for diagnosis.
+
+Checks: target inventory/inclusion, Python `py_compile`, forbidden-token scan,
+and `git diff --check` exited 0. Scope is static Lean source only: **CI
+pending**; no local build, kernel credit, MPacket validity, or payment of
+39/3149 is claimed. Exact JSON membership recheck found both ids in the
+389-element frozen census (count 389); the seven-class premise and all 387
+radius certificates remain unpaid.
+
+Still unproved: both census modules and N39 repair in CI, 387 residual radius
+certificates, 327 source-missing ids, SevenClassExclusions (0/7), and the
+arbitrary-centre theorem. Next: obtain CI for targets 1-5, especially
+`EnergyRefineN0039Repair`; if green, wire a token-clean archive singleton into
+the 387 census and extend to 386, otherwise repair the first exact error.
