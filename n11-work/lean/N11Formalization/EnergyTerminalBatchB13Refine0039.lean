@@ -1,5 +1,5 @@
 import N11Formalization.EnergyTerminalBatchB13
-import N11Formalization.EnergyRefineN0039
+import N11Formalization.EnergyRefineN0039Repair
 
 /-! Refine the B13 paid set by the validated split certificate for source
 terminal 39.  The membership proof stays hierarchical: B10 has 100 paid
