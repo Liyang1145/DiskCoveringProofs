@@ -1,0 +1,229 @@
+{
+  "scope": "exact source-ID reduction audit; no Lean elaboration or kernel credit",
+  "source_sha256": {
+    "residual373-conditional-census.json": "13024CF1D1CB3FF791B0FDFA21E83CC99D2117B5E8BD3C00F50C9B30009AE5BC",
+    "residual389-census.json": "44166EE869A61F6858F2285A98F96CC3FAA4F59FBB98C01D76B4DC42A28827A8",
+    "verify_census_346.py": "BFA2FBA8380DC96992741CB12DAC371E4CC8E412ED11A19BDA4A46DAB7EB3536",
+    "LaneBResidual346Bridge.lean": "6F108923BAC7304F8D599ED2E00522C449E62991B1A6F62C3538F66F22CB09B6",
+    "TARGETS.txt": "67B3B861352D21C6CBD119294CFC6D65FBA173283FC22E99D022BED64BCAE1A6"
+  },
+  "counts": {
+    "b373": 373,
+    "c346": 346,
+    "extra_green_refinements": 27
+  },
+  "extra27": [
+    39,
+    40,
+    3149,
+    3496,
+    3520,
+    3522,
+    3778,
+    3783,
+    3794,
+    3795,
+    3800,
+    3802,
+    3803,
+    3807,
+    3808,
+    3810,
+    3821,
+    3841,
+    3851,
+    3863,
+    3865,
+    3979,
+    4162,
+    4244,
+    4313,
+    4650,
+    4684
+  ],
+  "c346_ids_sha256": "D8DEE36B85200AF89A36B68DA9E7BF731443DC2A5D4835967631B7992A2A75A4",
+  "checks": {
+    "old_census_389": true,
+    "b16_subset_old": true,
+    "b373_exact_old_minus_16": true,
+    "b373_count_373": true,
+    "c43_count_43": true,
+    "b16_subset_c43": true,
+    "extra27_count_27": true,
+    "c346_exact": true,
+    "c346_equals_b373_minus_extra27": true,
+    "all_27_modules_present": true,
+    "all_27_have_new_radius": true,
+    "all_27_module_sources_clean": true,
+    "bridge_imports_c346": true,
+    "bridge_has_main_consumer": true,
+    "bridge_has_full_disk_consumer": true,
+    "bridge_source_clean": true,
+    "bridge_target_once": true
+  },
+  "modules": {
+    "39": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine0039.lean",
+      "sha256": "914FE9BDC3E49C846AEAE05FB573E2A6E0F003B5423AC082BBDE54923591F158",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "40": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine40.lean",
+      "sha256": "86BCBE3C2BF0A2C639F034B2409A32B0FE6894164D7E55C1B2FB44C1716BDFD5",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3149": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3149.lean",
+      "sha256": "C3D35B5561F73215CD80B4D38190D54910A8B55B9F24445903DAF628C2F159CB",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3496": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3496.lean",
+      "sha256": "F27064C1AE840F7EAB22E60E2589D77C963F0745D7EB6617334D1D273FE6D528",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3520": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3520.lean",
+      "sha256": "B9087AC929D44F274EFBC15BD754C5E9BD50C4B0D9E21D7E3F3A3CBC2E140E83",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3522": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3522.lean",
+      "sha256": "EAED80D61C72C420C0AF8E60D4FB9B3F36BD117B0AB1F8B7208A58DC1FFB0EC1",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3778": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3778.lean",
+      "sha256": "1DB335E51E8284E30B95F46F5A2BAC44DEFE72E6E7F9097251F2595164F70B38",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3783": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3783.lean",
+      "sha256": "6E4BA3914395A75D03E87069AB1935F591B2A38939A5B0C17C249AC4F9AD351D",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3794": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3794.lean",
+      "sha256": "6F44AFFAE8499BBD4D7DB90931C569366924D30CDD2C0738104DFC13FA953D51",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3795": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3795.lean",
+      "sha256": "3C817A6DC607BF24B60BD4CB7FD6C4072A26E74611E3089B0828AB8CAE9C7216",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3800": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3800.lean",
+      "sha256": "AA8646AF831D86ED4F5FCD5DD6F074310289AB5CC2174A7625EB38A068DD52F0",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3802": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3802.lean",
+      "sha256": "38ACCD0DE4A18DEB23BDFC66C880DF254D6309DBAF76425881E301CBCB239D32",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3803": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3803.lean",
+      "sha256": "91E14DC1EC92EA4AFA71E544D2078E44AABAE421D58EA516C2C77E1633ABEE40",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3807": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3807.lean",
+      "sha256": "92989709C972B10CD31638AB9D0C2E51FAA802B1F12CD52E28ED84A527B5B7ED",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3808": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3808.lean",
+      "sha256": "02A99D32E6444A80BEFCE756C74485458A060104DB63449C8229DA3D5A3E708D",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3810": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3810.lean",
+      "sha256": "716A139E753F7F1570643AC400F61E1DDF8142920299E82075ECE256F214D0D8",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3821": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3821.lean",
+      "sha256": "58BDFDC9A4278C93009144C98B08FAB2E27630726C439ED89FD45186F352A511",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3841": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3841.lean",
+      "sha256": "4264E08D65986C86D49C3389406A86EDC8170DC8AE3E9280BADEC7C48882DA38",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3851": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3851.lean",
+      "sha256": "490B11C7DBCF71306B1F73ED89077068BDB01C202BFEE27D985FEDE0EAA6D796",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3863": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3863.lean",
+      "sha256": "B71840BE3B46D15A4BF4C2353F90356BBD6E3A719AE8415ADFFF78250C27CFC2",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3865": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3865.lean",
+      "sha256": "733C65519CBAF5DCFEF41D0065D8A3C89E46D493B2498DD0E61FCC956E61ECEB",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "3979": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine3979.lean",
+      "sha256": "1830D254F3D90C92DF958D066DCAA78FD0CB7427767EDA1CCD00CB29F02F1875",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "4162": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine4162.lean",
+      "sha256": "1E7BAA3742AF5221A4EFC1B004BF75B810ED9BEBBAA31C048A15B8FDAD928EAA",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "4244": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine4244.lean",
+      "sha256": "98CA9E317D048BD3804F1A36125C535269A450B665F71640FE5851DC7E2B7EA9",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "4313": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine4313.lean",
+      "sha256": "08DC196EE732D92DB1523908D5D6D2D3854785FCEB43CF66C6A95CB51F0C946C",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "4650": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine4650.lean",
+      "sha256": "53E2E99197DDDFCA1C4EF8CA3294A90A766832744F0F3B3217CC33B67B059975",
+      "has_new_radius": true,
+      "forbidden": false
+    },
+    "4684": {
+      "path": "n11-work/lean/N11Formalization/EnergyTerminalBatchB13Refine4684.lean",
+      "sha256": "3D4CEB3699AADA03300832D9EFA8719040F4C4A293E9E1CAB4ACDF1A73AC260A",
+      "has_new_radius": true,
+      "forbidden": false
+    }
+  },
+  "ok": true
+}

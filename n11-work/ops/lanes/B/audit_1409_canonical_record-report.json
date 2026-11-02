@@ -1,0 +1,90 @@
+{
+  "scope": "exact Python source audit; not Lean elaboration or kernel credit",
+  "survey_sha256": "F49F06FC57A818E464D8DCBDAACE2E4D57A3C2E84CEA27FE86C4551363F3DD16",
+  "core_sha256": "3ED6BB5026D4EEB00C6BC8CC3F350FB8D522C0414C592370FD3A91F36FC4E7C4",
+  "survey_records": 512,
+  "survey_failure_ids": [
+    1409,
+    2337,
+    2341,
+    2356,
+    2360,
+    2368,
+    2370
+  ],
+  "public_ids": [
+    1409,
+    2337,
+    2341,
+    2356,
+    2360,
+    2368,
+    2370
+  ],
+  "all_failures_are_public_and_canonical": true,
+  "records": [
+    {
+      "id": 1409,
+      "survey_pass": false,
+      "f0_matches_public_canonical": true,
+      "g_matches_public_canonical": true,
+      "lower_identity_holds": true,
+      "lower_minus_T_squared": "-1524626184179771790078863060557330687628528253489640610530427678507703/109951162777270146511667200000000000000000000000000000000000000000000000000",
+      "lower_minus_T_squared_negative": true
+    },
+    {
+      "id": 2337,
+      "survey_pass": false,
+      "f0_matches_public_canonical": true,
+      "g_matches_public_canonical": true,
+      "lower_identity_holds": true,
+      "lower_minus_T_squared": "-36470108879997025032471479913232298960902518751974331726859875299264457/3518437208879681562791116800000000000000000000000000000000000000000000000000",
+      "lower_minus_T_squared_negative": true
+    },
+    {
+      "id": 2341,
+      "survey_pass": false,
+      "f0_matches_public_canonical": true,
+      "g_matches_public_canonical": true,
+      "lower_identity_holds": true,
+      "lower_minus_T_squared": "-69816888407996471915232190453486553588159471326306145466784215198138289/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+      "lower_minus_T_squared_negative": true
+    },
+    {
+      "id": 2356,
+      "survey_pass": false,
+      "f0_matches_public_canonical": true,
+      "g_matches_public_canonical": true,
+      "lower_identity_holds": true,
+      "lower_minus_T_squared": "-2599552760631975217679830716878855148739459315314057152365697131732039/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+      "lower_minus_T_squared_negative": true
+    },
+    {
+      "id": 2360,
+      "survey_pass": false,
+      "f0_matches_public_canonical": true,
+      "g_matches_public_canonical": true,
+      "lower_identity_holds": true,
+      "lower_minus_T_squared": "-60495216764567764822367325742408922411794356914946199054324229846575789/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+      "lower_minus_T_squared_negative": true
+    },
+    {
+      "id": 2368,
+      "survey_pass": false,
+      "f0_matches_public_canonical": true,
+      "g_matches_public_canonical": true,
+      "lower_identity_holds": true,
+      "lower_minus_T_squared": "-174723500936531666644162592105718007974918102428275117860309239612200789/3518437208876163125582233600000000000000000000000000000000000000000000000000",
+      "lower_minus_T_squared_negative": true
+    },
+    {
+      "id": 2370,
+      "survey_pass": false,
+      "f0_matches_public_canonical": true,
+      "g_matches_public_canonical": true,
+      "lower_identity_holds": true,
+      "lower_minus_T_squared": "-65735050112919375998747031097701455208124261610159842859622908990670707/1759218604438081562791116800000000000000000000000000000000000000000000000000",
+      "lower_minus_T_squared_negative": true
+    }
+  ]
+}
