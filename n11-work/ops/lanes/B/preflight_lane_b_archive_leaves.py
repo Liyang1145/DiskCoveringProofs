@@ -8,7 +8,7 @@ Static source only; NOT a build and NOT a proof.
 import json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-LEAN = os.path.abspath(os.path.join(HERE, '..', '..', 'lean', 'N11Formalization'))
+LEAN = os.path.abspath(os.path.join(HERE, '..', '..', '..', 'lean', 'N11Formalization'))
 
 LEAVES = [('EnergyRefineN0003Restored', 3), ('EnergyRefineN0023Restored', 23),
           ('EnergyRefineN0038', 38), ('EnergyRefineN3432', 3432),

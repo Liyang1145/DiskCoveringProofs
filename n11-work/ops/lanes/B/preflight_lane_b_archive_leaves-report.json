@@ -6,99 +6,225 @@
    "module": "EnergyRefineN0003Restored",
    "id": 3,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 235711,
+   "lines": 128,
+   "K": 35,
+   "nodes": 35,
+   "pk_defs": 18,
+   "valids": 18,
+   "pk_vector_len": 35,
+   "newIDs": 3
   },
   {
    "module": "EnergyRefineN0023Restored",
    "id": 23,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 213049,
+   "lines": 118,
+   "K": 31,
+   "nodes": 31,
+   "pk_defs": 16,
+   "valids": 16,
+   "pk_vector_len": 31,
+   "newIDs": 23
   },
   {
    "module": "EnergyRefineN0038",
    "id": 38,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 187356,
+   "lines": 108,
+   "K": 27,
+   "nodes": 27,
+   "pk_defs": 14,
+   "valids": 14,
+   "pk_vector_len": 27,
+   "newIDs": 38
   },
   {
    "module": "EnergyRefineN3432",
    "id": 3432,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 361967,
+   "lines": 168,
+   "K": 51,
+   "nodes": 51,
+   "pk_defs": 26,
+   "valids": 26,
+   "pk_vector_len": 51,
+   "newIDs": 3432
   },
   {
    "module": "EnergyRefineN3490",
    "id": 3490,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 488085,
+   "lines": 213,
+   "K": 69,
+   "nodes": 69,
+   "pk_defs": 35,
+   "valids": 35,
+   "pk_vector_len": 69,
+   "newIDs": 3490
   },
   {
    "module": "EnergyRefineN3517",
    "id": 3517,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 206361,
+   "lines": 113,
+   "K": 29,
+   "nodes": 29,
+   "pk_defs": 15,
+   "valids": 15,
+   "pk_vector_len": 29,
+   "newIDs": 3517
   },
   {
    "module": "EnergyRefineN3550",
    "id": 3550,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 292390,
+   "lines": 143,
+   "K": 41,
+   "nodes": 41,
+   "pk_defs": 21,
+   "valids": 21,
+   "pk_vector_len": 41,
+   "newIDs": 3550
   },
   {
    "module": "EnergyRefineN3564",
    "id": 3564,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 165575,
+   "lines": 98,
+   "K": 23,
+   "nodes": 23,
+   "pk_defs": 12,
+   "valids": 12,
+   "pk_vector_len": 23,
+   "newIDs": 3564
   },
   {
    "module": "EnergyRefineN3569",
    "id": 3569,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 207103,
+   "lines": 113,
+   "K": 29,
+   "nodes": 29,
+   "pk_defs": 15,
+   "valids": 15,
+   "pk_vector_len": 29,
+   "newIDs": 3569
   },
   {
    "module": "EnergyRefineN3578",
    "id": 3578,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 236738,
+   "lines": 123,
+   "K": 33,
+   "nodes": 33,
+   "pk_defs": 17,
+   "valids": 17,
+   "pk_vector_len": 33,
+   "newIDs": 3578
   },
   {
    "module": "EnergyRefineN3738",
    "id": 3738,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 340997,
+   "lines": 158,
+   "K": 47,
+   "nodes": 47,
+   "pk_defs": 24,
+   "valids": 24,
+   "pk_vector_len": 47,
+   "newIDs": 3738
   },
   {
    "module": "EnergyRefineN3781",
    "id": 3781,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 125897,
+   "lines": 83,
+   "K": 17,
+   "nodes": 17,
+   "pk_defs": 9,
+   "valids": 9,
+   "pk_vector_len": 17,
+   "newIDs": 3781
   },
   {
    "module": "EnergyRefineN3825",
    "id": 3825,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 185992,
+   "lines": 103,
+   "K": 25,
+   "nodes": 25,
+   "pk_defs": 13,
+   "valids": 13,
+   "pk_vector_len": 25,
+   "newIDs": 3825
   },
   {
    "module": "EnergyRefineN3854",
    "id": 3854,
    "problems": [
-    "missing file"
-   ]
+    "pk idx != 0..K-1",
+    "valid idx != 0..K-1"
+   ],
+   "bytes": 183468,
+   "lines": 103,
+   "K": 25,
+   "nodes": 25,
+   "pk_defs": 13,
+   "valids": 13,
+   "pk_vector_len": 25,
+   "newIDs": 3854
   }
  ]
 }
