@@ -1,0 +1,104 @@
+{
+ "ok": false,
+ "scope": "static preflight; not a build",
+ "leaves": [
+  {
+   "module": "EnergyRefineN0003Restored",
+   "id": 3,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN0023Restored",
+   "id": 23,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN0038",
+   "id": 38,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3432",
+   "id": 3432,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3490",
+   "id": 3490,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3517",
+   "id": 3517,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3550",
+   "id": 3550,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3564",
+   "id": 3564,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3569",
+   "id": 3569,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3578",
+   "id": 3578,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3738",
+   "id": 3738,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3781",
+   "id": 3781,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3825",
+   "id": 3825,
+   "problems": [
+    "missing file"
+   ]
+  },
+  {
+   "module": "EnergyRefineN3854",
+   "id": 3854,
+   "problems": [
+    "missing file"
+   ]
+  }
+ ]
+}
