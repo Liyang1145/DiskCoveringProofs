@@ -1,0 +1,37 @@
+{
+ "expected": [
+  [
+   1952,
+   "N11Formalization.C450ChainCompletion"
+  ],
+  [
+   1953,
+   "N11Formalization.C450ChainCompletionMain"
+  ]
+ ],
+ "git_apply_check_forward_err": "",
+ "git_apply_check_forward_rc": 0,
+ "hark_lines": [
+  [
+   1952,
+   "N11Formalization.C450ChainCompletion"
+  ],
+  [
+   1953,
+   "N11Formalization.C450ChainCompletionMain"
+  ]
+ ],
+ "hark_matches_expected": true,
+ "import_count_after": 815,
+ "import_count_before": 813,
+ "patch": "n11-work/ops/lanes/A/root-import-c450.patch",
+ "patch_sha256": "80d4c1fe69d4d186a6cf2e07aafc15dfd8d15bde3fa4e8d69f0740dc0f6a1b3d",
+ "patched_has_crlf": false,
+ "patched_imports_live": true,
+ "patched_matches_newline_style": true,
+ "patched_no_hark": true,
+ "root": "n11-work/lean/N11Formalization.lean",
+ "root_sha256": "022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914",
+ "scope": "STATIC patch-applicability audit; NOT a kernel verdict",
+ "verdict": "PASS_PATCH_READY"
+}

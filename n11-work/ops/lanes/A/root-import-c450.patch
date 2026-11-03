@@ -1,0 +1,13 @@
+--- a/n11-work/lean/N11Formalization.lean
++++ b/n11-work/lean/N11Formalization.lean
+@@ -1949,8 +1949,8 @@
+ -- Consequences: card_boundaryIdx_eq_nine, exists_covers_ringLabels, and a main
+ -- consumer whose only explicit inputs are the energy terminal radius and the
+ -- seven Q0/Q1 metric class exclusions.
+--- HARK-MISSING (not in public assets; lane A reconstructs): import N11Formalization.C450ChainCompletion
+--- HARK-MISSING (not in public assets; lane A reconstructs): import N11Formalization.C450ChainCompletionMain
++import N11Formalization.C450ChainCompletion
++import N11Formalization.C450ChainCompletionMain
+ 
+ -- Energy stage 1 (2026-10-28, Asia/Shanghai): 505 HOST `next512` own-cell
+ -- packets emitted into Paid16GeneralH01..H25, each `Valid` paid row-by-row by
