@@ -88,3 +88,41 @@ Durable state (2026-11-02):
   `LaneBArchiveRefineAll14` to exit 0 with clean axioms; if `3490/3432/3738/3550`
   time out, split `MValid pkN` by its eight fields with `fin_cases` on
   `Fin 16/36/9/7` plus per-leaf `norm_num`, in those four modules only.
+
+## 2026-11-03 - session 172: live CI log + independent terminal-census arithmetic
+
+- **Live CI evidence (new).** Run `41706645384` (head `bd5573e5`, job
+  `126192939954`, still `in_progress`) was fetched from the public GitHub API and
+  the live job log (29.6 MB) was parsed.  The job is **deadlocked behind
+  C-lane `EnergyTerminalResidualCensusC01`**: the log shows that module failing
+  **7 times**, at 21:04, 21:17, 21:29, 21:42, 21:54, 22:07, 22:20 (~12.5 min per
+  attempt, ~85 min total).  The failure is the known one:
+  `EnergyTerminalResidualCensusC01.lean:16:56: (kernel) deep recursion detected`
+  plus `(deterministic) timeout at whnf` at lines 11, 18, 25.
+- **Consequence for lane B:** in this run *no* lane-B target was reached.  The
+  log contains zero `Building N11Formalization.LaneB*` / `EnergyRefineN0040` /
+  `EnergyTerminalBatchB13RefineSixteen*` verdict lines (only the single
+  `targets:` echo).  So the pending lane-B modules (TerminalCensus rewrite,
+  `ResidualCard`, `LaneBResidual373Incremental`, `LaneBResidual373Seed1409`,
+  `EnergyRefineN0040`, `LaneBResidual346Bridge`, `LaneBArchiveRefineAll14`)
+  still have **no CI verdict**; they are not red, they are unreached.
+- **Supervisor action needed (not a lane-B edit):** the serial CI build order is
+  C then B then A; a single hanging C module starves every other lane.  Either
+  drop/repair `EnergyTerminalResidualCensusC01` from `lanes/C/TARGETS.txt` or
+  build lane B before lane C.  I did not edit C's targets (out of lane scope).
+- **Independent arithmetic re-check (scope: static parse of the frozen source,
+  not Lean).** Fresh parse of `DBMSourceTreeData.lean`: 5011 `def node<i>` in
+  order 0..5010, exactly **2506** `terminal := true`, and the 20 per-256 block
+  counts are `[61,75,69,62,62,61,55,56,66,237,254,253,255,221,115,120,108,111,150,115]`
+  -- byte-for-byte equal to `blockSizes` in `EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean`
+  and summing to 2506.  This agrees with the committed
+  `audit_terminal_census_blocks.py` report (`ok=true`).
+- Checks run: GitHub API `200` for run/job; log parse (`grep -c` counts above);
+  `audit_terminal_census_blocks.py` exit 0.  No Lean build attempted locally.
+- Still unproved/unpaid: all of the 373/332 residual radius certificates, 327
+  source-missing payloads, `SevenClassExclusions` (0/7), the arbitrary-centre
+  full-disk theorem, and now kernel acceptance of every lane-B target (blocked).
+- Very next concrete step: if the supervisor re-orders/repairs the build, read
+  the fresh lane-B verdict for `EnergyTerminalBatchB13RefineSixteenTerminalCensus`
+  and `LaneBArchiveRefineAll14` from the next completed run; if C01 is still in
+  the target list, re-report the stall rather than assuming a lane-B red.
