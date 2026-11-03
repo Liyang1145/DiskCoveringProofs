@@ -5,6 +5,16 @@
 N11Formalization.EnergyRefineN0039Repair
 N11Formalization.EnergyTerminalBatchB13Refine0039
 N11Formalization.EnergyTerminalBatchB13Refine0039Main
+# Owning-error localization: the shared 389-census base and its four chunks
+# are imported by every red Refine0039/RefineSixteen/Refine385 module but were
+# not lane-C targets, so CI never reported their own exit codes.  Build them
+# first so the next serial run pins the first failing module.
+N11Formalization.EnergyTerminalResidualCensusBase
+N11Formalization.EnergyTerminalResidualCensusC01
+N11Formalization.EnergyTerminalResidualCensusC02
+N11Formalization.EnergyTerminalResidualCensusC03
+N11Formalization.EnergyTerminalResidualCensusC04
+N11Formalization.EnergyTerminalResidualCensus
 N11Formalization.EnergyTerminalResidualCensusRefine0039
 N11Formalization.EnergyTerminalResidualCensusRefine0039Refine3149
 # Green-dependency alternative: remove 37 and 3149 without the red N39 chain.
@@ -21,6 +31,10 @@ N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
 N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain
 # Repaired 373-id census (`decide +kernel`) plus literal-373 certificate
 # consumer; keep early so serial CI reaches it before the long target list.
+# Its second import, the 373-id literal census, was never a lane-C target and
+# itself imports the elaborator-recursion-red original RefineSixteenMain; build
+# it first so CI pins whether the recursion red is inherited or intrinsic.
+N11Formalization.EnergyTerminalResidualCensusRefineSixteen
 N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus
 # Direct consumer: literal 373 certificates or packet producers plus the
 # explicit seven-class premise yields the final statement and disk bound.
