@@ -1,0 +1,84 @@
+{
+ "closure_size": 1799,
+ "flagged_modules": [
+  "N11Formalization.DrowBallBox_compIvBoxBox",
+  "N11Formalization.GridBridge",
+  "N11Formalization.Ladder49_jt_kkt_z"
+ ],
+ "missing_module_files": [
+  "N11Formalization.Assembly.BoundaryCount",
+  "N11Formalization.Assembly.G1Final",
+  "N11Formalization.Assembly.G1Interval",
+  "N11Formalization.Assembly.G2Unified",
+  "N11Formalization.Assembly.InnerRootReplace",
+  "N11Formalization.Assembly.TCKrawczyk",
+  "N11Formalization.Conditional.RootSpec",
+  "N11Formalization.F1.BallD35C10",
+  "N11Formalization.F1.BallD35C11",
+  "N11Formalization.F1.BallD35C13",
+  "N11Formalization.F1.BallD35C14",
+  "N11Formalization.F1.BallD35C2",
+  "N11Formalization.F1.BallD35C4",
+  "N11Formalization.F1.BallD35C7",
+  "N11Formalization.F1.BallD35C9",
+  "N11Formalization.F1.BallD35Hrad",
+  "N11Formalization.Geometry.ArcCovering",
+  "N11Formalization.Geometry.DiskToArc",
+  "N11Formalization.Interval.ArcsinBracket",
+  "N11Formalization.Interval.Core",
+  "N11Formalization.Interval.Eval",
+  "N11Formalization.Interval.IndexIf",
+  "N11Formalization.Interval.Phase",
+  "N11Formalization.Interval.Range",
+  "N11Formalization.Interval.Shift",
+  "N11Formalization.Interval.Sqrt",
+  "N11Formalization.Interval.Taylor19",
+  "N11Formalization.Interval.Taylor19B",
+  "N11Formalization.Interval.Taylor19C",
+  "N11Formalization.Interval.Trig",
+  "N11Formalization.Interval.Vector"
+ ],
+ "namespace_opened": {},
+ "qualified_use_outside_definer": {
+  "DrowBallBox": [
+   "N11Formalization.RootRangeBoxFull"
+  ],
+  "GridBridge": [
+   "N11Formalization.FlashAttainmentSpecifiedRoot",
+   "N11Formalization.FlashSlackRoot",
+   "N11Formalization.ResumeNewton",
+   "N11Formalization.ResumeNewtonData",
+   "N11Formalization.ResumeRootRefine2",
+   "N11Formalization.RootRangeBoxFull",
+   "N11Formalization.SourceExactRoot",
+   "N11Formalization.TcRootHook"
+  ],
+  "Ladder49": []
+ },
+ "qualified_use_total": {
+  "DrowBallBox": [
+   "N11Formalization.GridBridge",
+   "N11Formalization.Ladder49_jt_kkt_z",
+   "N11Formalization.RootRangeBoxFull"
+  ],
+  "GridBridge": [
+   "N11Formalization.FlashAttainmentSpecifiedRoot",
+   "N11Formalization.FlashSlackRoot",
+   "N11Formalization.ResumeNewton",
+   "N11Formalization.ResumeNewtonData",
+   "N11Formalization.ResumeRootRefine2",
+   "N11Formalization.RootRangeBoxFull",
+   "N11Formalization.SourceExactRoot",
+   "N11Formalization.TcRootHook"
+  ],
+  "Ladder49": [
+   "N11Formalization.GridBridge"
+  ]
+ },
+ "root_sha256": "022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914",
+ "roots": [
+  "N11Formalization.C450ChainCompletion",
+  "N11Formalization.C450ChainCompletionMain"
+ ],
+ "scope": "comment/string-stripped namespace-reference scan of the C450 chain import closure; STATIC lower bound, NOT a kernel verdict"
+}
