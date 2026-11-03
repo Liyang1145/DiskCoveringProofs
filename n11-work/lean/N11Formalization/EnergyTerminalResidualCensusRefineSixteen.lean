@@ -1,6 +1,7 @@
 import N11Formalization.EnergyTerminalResidualCensus
-import N11Formalization.EnergyTerminalBatchB13RefineSixteen
-import N11Formalization.EnergyTerminalBatchB13RefineSixteenMain
+import N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair
+import N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual
+import N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain
 
 /-! The sixteen individually certified B13 refinements remove a literal
 sixteen-element subset of the kernel-counted 389-element residual census.
@@ -74,19 +75,19 @@ theorem newRefineIDs_subset_census : newRefineIDs ⊆ EnergyTerminalResidualCens
   · exact census_3853
 
 theorem newRefineIDs_subset_paid : newRefineIDs ⊆
-    EnergyTerminalBatchB13RefineSixteen.paidIDs := by
+    EnergyTerminalBatchB13RefineSixteenRepair.paidIDs := by
   intro n hn
   simp only [newRefineIDs, Finset.mem_insert, Finset.mem_singleton] at hn
   rcases hn with rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl |
     rfl | rfl | rfl | rfl | rfl | rfl | rfl | rfl <;>
-    simp [EnergyTerminalBatchB13RefineSixteen.paidIDs,
+    simp [EnergyTerminalBatchB13RefineSixteenRepair.paidIDs,
       EnergyTerminalBatchB13RefineFourteen.paidIDs,
       EnergyTerminalBatchB13RefineThirteen.paidIDs,
       EnergyTerminalBatchB13RefineTwelve.paidIDs,
       EnergyTerminalBatchB13RefineEleven.paidIDs,
       EnergyTerminalBatchB13RefineEight.paidIDs,
       EnergyTerminalBatchB13RefineSeven.paidIDs,
-      EnergyTerminalBatchB13RefineSixteen.newIDs,
+      EnergyTerminalBatchB13RefineSixteenRepair.newIDs,
       EnergyTerminalBatchB13RefineFourteen.newIDs,
       EnergyTerminalBatchB13RefineThirteen.newIDs,
       EnergyTerminalBatchB13RefineTwelve.newIDs,
@@ -120,7 +121,7 @@ theorem newRefineIDs_eq_late :
 
 theorem b13_subset_paid :
     EnergyTerminalBatchB13.paidIDs ⊆
-      EnergyTerminalBatchB13RefineSixteen.paidIDs := by
+      EnergyTerminalBatchB13RefineSixteenRepair.paidIDs := by
   intro n hn
   have h11 : n ∈ EnergyTerminalBatchB13RefineEleven.paidIDs :=
     Finset.mem_union_left _ hn
@@ -133,11 +134,11 @@ theorem b13_subset_paid :
   exact Finset.mem_union_left _ h14
 
 theorem paid_subset_b13_union_new :
-    EnergyTerminalBatchB13RefineSixteen.paidIDs ⊆
+    EnergyTerminalBatchB13RefineSixteenRepair.paidIDs ⊆
       EnergyTerminalBatchB13.paidIDs ∪ newRefineIDs := by
   rw [newRefineIDs_eq_late]
   intro n hn
-  simp only [EnergyTerminalBatchB13RefineSixteen.paidIDs,
+  simp only [EnergyTerminalBatchB13RefineSixteenRepair.paidIDs,
     EnergyTerminalBatchB13RefineFourteen.paidIDs,
     EnergyTerminalBatchB13RefineThirteen.paidIDs,
     EnergyTerminalBatchB13RefineTwelve.paidIDs,
@@ -148,7 +149,7 @@ theorem paid_subset_b13_union_new :
 theorem mem_refinedResidualIDs_iff (n : Fin 5011) :
     n ∈ refinedResidualIDs ↔ (DBMSourceTree.data n).terminal = true ∧
       n ∉ Patch120SharpDispatch.sharpIDs ∧
-      n ∉ EnergyTerminalBatchB13RefineSixteen.paidIDs := by
+      n ∉ EnergyTerminalBatchB13RefineSixteenRepair.paidIDs := by
   rw [refinedResidualIDs, Finset.mem_sdiff,
     EnergyTerminalResidualCensus.residualIDs_eq,
     EnergyTerminalBatchB13.mem_residualIDs_iff]
@@ -176,7 +177,7 @@ def RemainingTerminalRadius : Prop :=
 
 theorem remaining_iff_refineSixteen :
     RemainingTerminalRadius ↔
-      EnergyTerminalBatchB13RefineSixteen.RemainingTerminalRadius := by
+      EnergyTerminalBatchB13RefineSixteenRepair.RemainingTerminalRadius := by
   constructor
   · intro h n ht hs hp y hy0 hy1 hc C Z r hf
     exact h n ((mem_refinedResidualIDs_iff n).mpr ⟨ht, hs, hp⟩)
@@ -185,12 +186,22 @@ theorem remaining_iff_refineSixteen :
     obtain ⟨ht, hs, hp⟩ := (mem_refinedResidualIDs_iff n).mp hn
     exact h n ht hs hp y hy0 hy1 hc C Z r hf
 
+/-- Bridge: the repaired paid set's residual obligation has the same shape
+as the literal 373-census obligation (definitionally equal `RemainingTerminalRadius`). -/
+theorem remaining_iff_repair :
+    RemainingTerminalRadius ↔
+      EnergyTerminalBatchB13RefineSixteenRepair.RemainingTerminalRadius :=
+  remaining_iff_refineSixteen
+
 theorem main_of_energy_refined_census_and_seven_classes
     (henergy : RemainingTerminalRadius)
     (hclasses : ActualMetricClassReduction.SevenClassExclusions) :
     N11MainStatement SourceExactRoot.sourceRadius :=
-  EnergyTerminalBatchB13RefineSixteenMain.main_of_energy_refineSixteen_and_seven_classes
-    (remaining_iff_refineSixteen.mp henergy) hclasses
+  EnergyTerminalBatchB13RefineSixteenResidualMain.main_of_residual_radius_certificates_and_seven_classes
+    (fun n hn =>
+      EnergyTerminalBatchB13RefineSixteenResidual.residual_radius_certificate_of_remaining
+        (remaining_iff_repair.mp henergy) n hn)
+    hclasses
 
 end
 end N11Formalization.EnergyTerminalResidualCensusRefineSixteen
