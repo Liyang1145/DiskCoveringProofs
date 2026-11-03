@@ -1,17 +1,17 @@
-# CI latest (run 41600479881)
+# CI latest (run 41656715257)
 
 ```
-41656715257 in_progress null 7ea37808 2026-11-03T14:44:47Z
+41706645384 in_progress null bd5573e5 2026-11-03T19:48:10Z
+41656715257 completed cancelled 7ea37808 2026-11-03T14:44:47Z
 41600479881 completed cancelled 55890d94 2026-11-03T08:03:35Z
 41449154413 completed cancelled f6f73fc8 2026-11-02T12:59:31Z
 41449062259 completed cancelled 6b9c9f05 2026-11-02T12:58:48Z
-41418145317 completed cancelled 43c30dbf 2026-11-02T09:07:47Z
 ```
 
 ## summary.json
 ```json
 {
- "sha": "55890d94ea263b58ae90e1a72b6fa680b3734121",
+ "sha": "7ea3780898d7c5be8844a2bb23725506d0be0bfa",
  "exits": [
   [
    "N11Formalization.EnergyRefineN0039Repair",
@@ -705,37 +705,36 @@
    "N11Formalization.En```
 ## build log tail
 ```
-build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/EnergyRefineN3490.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/EnergyRefineN3490.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/EnergyRefineN3490.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/EnergyRefineN3490.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/EnergyRefineN3490.setup.json --json
-error: N11Formalization/EnergyRefineN3490.lean:188:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
-
-Note: Use `set_option maxHeartbeats <num>` to set the limit.
-
-Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
-error: N11Formalization/EnergyRefineN3490.lean:192:8: (kernel) unknown constant 'N11Formalization.EnergyRefineN3490.pk_ok'
-info: N11Formalization/EnergyRefineN3490.lean:213:0: 'N11Formalization.EnergyRefineN3490.new_radius' depends on axioms: [propext,
- Classical.choice,
- Quot.sound,
- N11Formalization.EnergyRefineN3490.node_radius]
-error: Lean exited with code 1
-MEM 13:58:32 avail=8325MB top: 11025056 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-✖ [9401/9430] Building N11Formalization.EnergyRefineN3825 (101s)
-trace: .> LEAN_PATH=/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Cli/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/batteries/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/Qq/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/aesop/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/proofwidgets/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/importGraph/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/LeanSearchClient/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/plausible/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/packages/mathlib/.lake/build/lib/lean:/home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalization/EnergyRefineN3825.lean -o /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/EnergyRefineN3825.olean -i /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/lib/lean/N11Formalization/EnergyRefineN3825.ilean -c /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/EnergyRefineN3825.c --setup /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/.lake/build/ir/N11Formalization/EnergyRefineN3825.setup.json --json
-error: N11Formalization/EnergyRefineN3825.lean:78:0: (deterministic) timeout at `whnf`, maximum number of heartbeats (200000) has been reached
-
-Note: Use `set_option maxHeartbeats <num>` to set the limit.
-
-Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
-error: N11Formalization/EnergyRefineN3825.lean:82:8: (kernel) unknown constant 'N11Formalization.EnergyRefineN3825.pk_ok'
-info: N11Formalization/EnergyRefineN3825.lean:103:0: 'N11Formalization.EnergyRefineN3825.new_radius' depends on axioms: [propext,
- Classical.choice,
- Quot.sound,
- N11Formalization.EnergyRefineN3825.node_radius]
-error: Lean exited with code 1
-MEM 13:58:52 avail=7033MB top: 14234896 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 13:59:12 avail=6581MB top: 14662904 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 13:59:32 avail=8174MB top: 10768904 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 13:59:52 avail=8252MB top: 10731292 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 14:00:12 avail=8344MB top: 10620656 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 14:00:32 avail=8271MB top: 10676492 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 14:00:52 avail=7790MB top: 11155428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+tion.EnergyTerminalResidualCensusRefine346
+MEM 20:32:45 avail=13830MB top: 7093700 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:33:05 avail=12176MB top: 8688448 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:33:25 avail=10173MB top: 10709652 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:33:45 avail=8526MB top: 13161088 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:34:05 avail=6702MB top: 13888568 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:34:25 avail=8437MB top: 10188816 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:34:45 avail=8360MB top: 10159588 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:35:05 avail=8344MB top: 10139536 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:35:25 avail=8299MB top: 10172416 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:35:45 avail=8338MB top: 10140552 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:36:05 avail=6944MB top: 11593576 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:36:25 avail=5053MB top: 12523148 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:36:45 avail=8168MB top: 7936840 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:37:05 avail=6972MB top: 9178144 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:37:25 avail=4924MB top: 11453108 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:37:46 avail=3796MB top: 12132356 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:38:06 avail=8242MB top: 7216892 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:38:26 avail=8289MB top: 7261428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:38:46 avail=6956MB top: 8623724 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:39:06 avail=4414MB top: 11240368 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:39:26 avail=5801MB top: 9214948 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:39:46 avail=5885MB top: 8871736 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:40:06 avail=3775MB top: 11352428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:40:26 avail=8322MB top: 6882128 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:40:46 avail=6246MB top: 9234272 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:41:06 avail=3933MB top: 11670580 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
+MEM 20:41:26 avail=11965MB top: 1922492 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:41:46 avail=11117MB top: 3226744 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:42:06 avail=8506MB top: 5876192 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:42:26 avail=6280MB top: 8264860 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 20:42:46 avail=4230MB top: 7111448 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
 ```
