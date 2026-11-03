@@ -209,3 +209,87 @@ Durable state (2026-11-02):
   `python tools/verify_delivery.py` stopped immediately on the unrelated
   pre-existing `cover11/README.md` size mismatch, so it did not provide a
   whole-tree byte verdict; this is neither a lane-B nor a mathematical result.
+
+## 2026-11-02 - session 170: discharge all 14 archive refinements (CI pending)
+
+- Part-1 of this slot emitted `n11-work/lean/N11Formalization/LaneBArchiveRefineAll14.lean`
+  (SHA-256 `de4c1c4db7622c0e47cef6fe04de0cef3cff5a432a00b0cc892eb99775d8783a`,
+  7661 bytes) from `n11-work/ops/lanes/B/emit_archive_refine_all14.py` (SHA-256
+  `46c86f43dd79d3b3f03ee76e23c7d672853b645cb4c812af4643931780993b1e`).  It
+  discharges the 14 ids `3,23,38,3432,3490,3517,3550,3564,3569,3578,3738,3781,3825,3854`
+  as `ResidualRadiusCertificate`s and reduces the conditional interface from 346
+  to exactly 332 ids (`b13_remaining_of_residual332_radius_certificates`, the
+  matching `main_...` and `full_disk_bound_...`).  It supplies no residual packet.
+- Byte audit: re-running the emitter is deterministic (regenerated the consumer
+  byte-identical) and asserts each of the 12 canonical modules equals the archived
+  source minus exactly one `set_option maxHeartbeats 0`.  Archive/current SHA-256
+  recorded, e.g. 0038 archive `2954471C...8AE1` / current `AA4049EC...DF95`
+  (187356 B); 3490 archive `FC0E3472...4335C` / current `515B48FE...877B` (488085 B).
+- Set audit: `archiveIDs ⊆ EnergyTerminalResidualCensusRefine346.refinedResidualIDs`
+  holds exactly (`residual373-ids.txt` minus the 27 `extra27` ids = 346; none of the
+  14 is in the 27), and 346 - 14 = 332.
+- Shape evidence for the "remove `maxHeartbeats 0`" repair: old run `41449154413`
+  (head `f6f73fc8`) already had archive-shaped modules green with no `maxHeartbeats`:
+  `3783` (K=27, 14 packets), `3841` (K=33, 17), `3851` (K=29, 15),
+  `3522/4162/4244` (K=25, 13), `3807` (K=15), `3802/3821` (K=17).  The 14 here are
+  larger: K=17..69, 9..35 packets (`3490` K=69/35, `3432` K=51/26, `3738` K=47/24,
+  `3550` K=41/21).  Small ones match a known-green shape; the four largest exceed
+  any module CI has built green so far and are the real timeout risk.
+- Added `N11Formalization.LaneBArchiveRefineAll14` to `TARGETS.txt` after
+  `LaneBArchiveRefine3And23` (TARGETS SHA-256
+  `2a3d9560d3b7b8a12b926b5513f1c63e89988c1e00b604e5c5505c3ca57f759e`).
+- Checks: emitter exit 0 in 2.3 s; `audit_target_imports.py` exit 0, closure 2,090,
+  no missing imports, no forbidden tokens (report SHA-256
+  `9db5ecb15d165f874fcd92d11dccfe72704cd3b64b58e40ad8737f005d72ac7c`);
+  `git diff --check` exit 0.  Scope: static source/import/byte and exact-rational
+  audit only, **not** elaboration, kernel credit, or CI green.  No full build run.
+- Still unproved: kernel acceptance of `LaneBArchiveRefineAll14` and its 14 leaves;
+  the 332 remaining residual radius certificates; 327 source-missing ids;
+  `SevenClassExclusions` (0/7); and the arbitrary-centre full-disk theorem.
+- Very next step: on the lane-B-first CI run require `LaneBArchiveRefineAll14`
+  (hence the 14 leaves) to build with clean axioms.  If the four largest
+  (`3490,3432,3738,3550`) time out, split `MValid pkN` by its eight fields with
+  `fin_cases` on `Fin 16/36/9/7` plus `norm_num` per leaf in those modules only;
+  add no more wrappers first.
+
+## 2026-11-02 - session 170: discharge all 14 archive refinements (CI pending)
+
+- Emitted `n11-work/lean/N11Formalization/LaneBArchiveRefineAll14.lean` (SHA-256
+  `de4c1c4db7622c0e47cef6fe04de0cef3cff5a432a00b0cc892eb99775d8783a`, 7661 bytes)
+  from `n11-work/ops/lanes/B/emit_archive_refine_all14.py` (SHA-256
+  `46c86f43dd79d3b3f03ee76e23c7d672853b645cb4c812af4643931780993b1e`).  It
+  discharges the 14 ids `3,23,38,3432,3490,3517,3550,3564,3569,3578,3738,3781,3825,3854`
+  as `ResidualRadiusCertificate`s and reduces the conditional interface from 346
+  to exactly 332 ids (`b13_remaining_of_residual332_radius_certificates`, the
+  matching `main_...` and `full_disk_bound_...`).  It supplies no residual packet.
+- Byte audit: re-running the emitter is deterministic (regenerated the consumer
+  byte-identical) and asserts each of the 12 canonical modules equals the archived
+  source minus exactly one `set_option maxHeartbeats 0`.  Archive/current SHA-256
+  recorded, e.g. 0038 archive `2954471C...8AE1` / current `AA4049EC...DF95`
+  (187356 B); 3490 archive `FC0E3472...4335C` / current `515B48FE...877B` (488085 B).
+- Set audit: `archiveIDs ⊆ EnergyTerminalResidualCensusRefine346.refinedResidualIDs`
+  holds exactly (`residual373-ids.txt` minus the 27 `extra27` ids = 346; none of the
+  14 is in the 27), and 346 − 14 = 332.
+- Shape evidence for the "remove `maxHeartbeats 0`" repair: old run `41449154413`
+  (head `f6f73fc8`) already had archive-shaped modules green with no `maxHeartbeats`:
+  `3783` (K=27, 14 packets), `3841` (K=33, 17), `3851` (K=29, 15),
+  `3522/4162/4244` (K=25, 13), `3807` (K=15), `3802/3821` (K=17).  The 14 here are
+  larger: K=17..69, 9..35 packets (`3490` K=69/35, `3432` K=51/26, `3738` K=47/24,
+  `3550` K=41/21).  Small ones match a known-green shape; the four largest exceed
+  any module CI has built green so far and are the real timeout risk.
+- Added `N11Formalization.LaneBArchiveRefineAll14` to `TARGETS.txt` after
+  `LaneBArchiveRefine3And23` (TARGETS SHA-256
+  `2a3d9560d3b7b8a12b926b5513f1c63e89988c1e00b604e5c5505c3ca57f759e`).
+- Checks: emitter exit 0 in 2.3 s; `audit_target_imports.py` exit 0, closure 2,090,
+  no missing imports, no forbidden tokens (report SHA-256
+  `9db5ecb15d165f874fcd92d11dccfe72704cd3b64b58e40ad8737f005d72ac7c`);
+  `git diff --check` exit 0.  Scope: static source/import/byte and exact-rational
+  audit only, **not** elaboration, kernel credit, or CI green.  No full build run.
+- Still unproved: kernel acceptance of `LaneBArchiveRefineAll14` and its 14 leaves;
+  the 332 remaining residual radius certificates; 327 source-missing ids;
+  `SevenClassExclusions` (0/7); and the arbitrary-centre full-disk theorem.
+- Very next step: on the lane-B-first CI run require `LaneBArchiveRefineAll14`
+  (hence the 14 leaves) to build with clean axioms.  If the four largest
+  (`3490,3432,3738,3550`) time out, split `MValid pkN` by its eight fields with
+  `fin_cases` on `Fin 16/36/9/7` plus `norm_num` per leaf in those modules only;
+  add no more wrappers first.
