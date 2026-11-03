@@ -1,0 +1,42 @@
+{
+ "closure_size": 1816,
+ "missing_module_files": [],
+ "roots": [
+  "N11Formalization.C450ChainCompletion",
+  "N11Formalization.C450ChainCompletionMain"
+ ],
+ "targets": {
+  "N11Formalization.DrowBallBox_compIvBoxBox": {
+   "reachable": true,
+   "shortest_import_path": [
+    "N11Formalization.C450ChainCompletion",
+    "N11Formalization.C450NormalizedInterface",
+    "N11Formalization.DSHCanonicalRelabel",
+    "N11Formalization.SourceExactRoot",
+    "N11Formalization.GridBridge",
+    "N11Formalization.DrowBallBox_compIvBoxBox"
+   ]
+  },
+  "N11Formalization.GridBridge": {
+   "reachable": true,
+   "shortest_import_path": [
+    "N11Formalization.C450ChainCompletion",
+    "N11Formalization.C450NormalizedInterface",
+    "N11Formalization.DSHCanonicalRelabel",
+    "N11Formalization.SourceExactRoot",
+    "N11Formalization.GridBridge"
+   ]
+  },
+  "N11Formalization.Ladder49_jt_kkt_z": {
+   "reachable": true,
+   "shortest_import_path": [
+    "N11Formalization.C450ChainCompletion",
+    "N11Formalization.C450NormalizedInterface",
+    "N11Formalization.DSHCanonicalRelabel",
+    "N11Formalization.SourceExactRoot",
+    "N11Formalization.GridBridge",
+    "N11Formalization.Ladder49_jt_kkt_z"
+   ]
+  }
+ }
+}
