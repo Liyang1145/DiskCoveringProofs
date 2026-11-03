@@ -126,3 +126,54 @@ Durable state (2026-11-02):
   the fresh lane-B verdict for `EnergyTerminalBatchB13RefineSixteenTerminalCensus`
   and `LaneBArchiveRefineAll14` from the next completed run; if C01 is still in
   the target list, re-report the stall rather than assuming a lane-B red.
+
+## 2026-11-03 - session 173: fresh CI verdict + leaf packet-invariant audit
+
+- **Fresh CI verdict (run `41656715257`, head `7ea37808`, `completed cancelled`).**
+  Parsed `ops/ci/LATEST.md` with `audit_laneb_leaf_ci_verdict.py` (exit 0):
+  the `exits` block is still **truncated** (`exits_block_truncated: true`), so the
+  fourteen `LaneBArchiveRefineAll14` leaves still show `ci_exit: null` (no
+  verdict), and `EnergyTerminalBatchB13RefineSixteenTerminalCensus` is likewise
+  absent from the visible block.  The 7 `reds_in_summary` are
+  `EnergyTerminalResidualCensusRefine0039{,Refine3149}`, `...Refine0037Refine3149`,
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus{,Main}`,
+  `...ResidualCensusRefineTriple`, `...Refine385` -- **all in lane C's
+  `TARGETS.txt`** (`grep` confirms `RefineSixteenResidualCensus` is a C target).
+  So lane B is again *unreached*, not red; the C-lane census family is what the
+  cancelled run failed on.
+- **New: `audit_leaf_pk_invariants.py`** (SHA-256 `FD5F0F3ABA7C2C41DE661E2B6045974AEADBD11428F0F808AEB74B649B1616BE`)
+  and report `audit_leaf_pk_invariants-report.json` (SHA-256
+  `58A791B6790EAD4360ACA08B6F10131A455F350322C1B1E53142B56D360BDBE7`).
+  Motivation: the committed `preflight_lane_b_archive_leaves.py` reports
+  `RESULT PROBLEMS` / `ok:false` for **all 14** leaves with
+  `pk idx != 0..K-1; valid idx != 0..K-1`.  Diagnosis (session 173): that is a
+  **script-invariant artifact, not a leaf defect.**  The leaves *deduplicate*
+  packets: e.g. `EnergyRefineN0038` has `abbrev K := 27` but only 14 `pk<i>`
+  defs, and the length-27 `pk` vector is `![pk2,pk2,pk2,pk2,pk2,pk5,pk6,pk2,...]`
+  (repeats of `pk2` fill the unfilled slots).  The correct invariants are:
+  (a) vector length `== K`; (b) every entry names a defined `pk<i>`;
+  (c) `{valid<i>} == {pk<i>}`; (d) `newIDs == {id}`.
+- Result: all 14 leaves satisfy (a)-(d); script exit 0, `RESULT OK`.  Per-leaf
+  `(K, #pk_defs, #valids)`: `3(35,18,18) 23(31,16,16) 38(27,14,14) 3432(51,26,26)
+  3490(69,35,35) 3517(29,15,15) 3550(41,21,21) 3564(23,12,12) 3569(29,15,15)
+  3578(33,17,17) 3738(47,24,24) 3781(17,9,9) 3825(25,13,13) 3854(25,13,13)`.
+  This removes the only *structural* objection to the All14 consumer; the open
+  risk remains elaboration time on the four large leaves, and the CI verdict.
+- Checks run: `audit_laneb_leaf_ci_verdict.py` exit 0; `audit_leaf_pk_invariants.py`
+  exit 0; `preflight_lane_b_archive_leaves.py` re-run (still `PROBLEMS`, now
+  explained); committed report byte-identical (`git status` clean for it).  No Lean
+  build attempted (local box is 2 cores).
+- Scope: static source/CI-log parsing only -- **not** kernel credit, not a build,
+  not a proof.  Nothing here pays a radius.
+- Still unproved/unpaid: kernel acceptance of `LaneBArchiveRefineAll14` + 14 leaves
+  and of `EnergyTerminalBatchB13RefineSixteenTerminalCensus` (both unreached in CI);
+  the 332 residual radius certificates; 327 source-missing payloads;
+  `SevenClassExclusions` (0/7); the arbitrary-centre full-disk theorem.
+- Very next concrete step: request that the supervisor either drop lane-C's
+  `EnergyTerminalBatchB13RefineSixteenResidualCensus{,Main}` family from
+  `lanes/C/TARGETS.txt` or build lane B *before* lane C (`.github/workflows/n11-lean-build.yml:45`
+  hard-codes the order `C B A` via `cat ../ops/lanes/C/TARGETS.txt ../ops/lanes/B/TARGETS.txt ...`),
+  so that a completed run
+  finally reaches `EnergyTerminalBatchB13RefineSixteenTerminalCensus` and
+  `LaneBArchiveRefineAll14`; then read their exit codes from `ops/ci/LATEST.md`.
+  Do NOT add new lane-B modules meanwhile (FOCUS MODE: one countable target).
