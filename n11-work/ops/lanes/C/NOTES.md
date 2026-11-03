@@ -166,3 +166,36 @@ SevenClassExclusions; arbitrary-centre theorem. Next concrete step: after CI, if
 (replacing its `EnergyTerminalBatchB13RefineSixteenMain` import) so the two RefineSixteen
 census consumers inherit a green dependency; else bisect the next non-target import.
 
+
+## 2026-11-03 - part 294 (base-census block-scale kernel probe)
+
+Re-read GUIDANCE/LANES/C-NOTES/LATEST. Newest CI run `41656715257` (sha `7ea37808`)
+is still `in_progress`; `LATEST.md` (run `41600479881`, sha `55890d94`) predates the
+part-293 TARGETS edit, so it contains NO exit code for `EnergyTerminalResidualCensusBase`
+or `...C01..C04` - the added owning-error targets have not been built yet.
+
+Kernel-scale probe (new file `tools/mathlib-probe/tmp/CensusBlockProbe.lean`, Mathlib-only):
+rebuilt the real `chunk0..chunk3` (389 literals, sizes 100/100/100/89, extracted
+verbatim from `EnergyTerminalResidualCensusBase.lean`) as `residualIDs` and a duplicate
+`target`, then proved `mem_iff_block00` with the EXACT C01 tactic
+`rcases n with ⟨k,hk⟩; interval_cases k <;> decide +kernel +revert` (100 cases).
+Result: `lake env lean` did not finish in 170 s (`rc=124`, empty output). INCONCLUSIVE:
+could not separate `import Mathlib` cost from the 100 kernel decisions, and no partial
+Lean output was flushed before the kill. Scope: Mathlib-probe timing only; not a kernel
+verdict on the project modules.
+
+Also noted: untracked `n11-work/ops/lanes/C/repair_refine_3490_3825.py` (from an earlier
+session; repairs the monolithic `pk_ok` block of `EnergyRefineN3490`/`N3825` by
+enumerating `Fin K` cases - not yet emitted/targeted).
+
+Still unproved (unchanged): elaboration of Base/C01..C04 and the assembly, the 7 red
+Refine0039/RefineSixteen/Refine385 modules, all residual radius certificates, 327
+source-missing ids, canonical packet production, SevenClassExclusions, arbitrary-centre
+theorem. Nothing above is kernel credit.
+
+Next concrete step: (1) measure the `import Mathlib`-only baseline in the probe
+(`echo 'import Mathlib' > tmp/b.lean; time lake env lean tmp/b.lean`) and, if the block is
+the bottleneck, bisect block size (100 -> 50 -> 25) to find the per-decision kernel limit;
+(2) once CI reports `EnergyTerminalResidualCensusBase/C01..C04` exit codes, if red from
+kernel scale, split each `mem_iff_blockNN` into per-chunk `mem_iff` over the 100/100/100/89
+sub-finsets (reuse `chunkN_card`) so no single `decide +kernel` sees the 389-union.
