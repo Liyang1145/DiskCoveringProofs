@@ -177,3 +177,5 @@ arbitrary-centre full-disk theorem all remain open.
 **Very next concrete step.** Supervisor-only: uncomment root lines 1952--1953,
 push, let `n11-lean-build` run to completion; if green lift the q0 pause and
 resume at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.
+
+<!-- session-190 marker -->
