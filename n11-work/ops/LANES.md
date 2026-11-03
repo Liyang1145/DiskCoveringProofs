@@ -1,5 +1,5 @@
 # FOCUS MODE (user 2026-11-02 22:19 CST: fewer workers, go slow, quality over churn)
-- ONE worker per supervisor cycle, rotating B -> A -> B -> A ... Lane C PAUSED (no new files).
+- A, B, C run concurrently each cycle. C: only fix its own existing CI exit-1 modules (FrozenCap row-cap etc.) to compile, no new files.
 - Each lane has exactly ONE countable target; do not open new families of modules.
   - B: make every module currently in lanes/B/TARGETS.txt compile (the ~10 B13 Refine/Census modules that exit 1 in CI run 41352871085 first). No new Refine/Census files until those are green.
   - A: restore C450ChainCompletion + C450ChainCompletionMain (root HARK-MISSING lines 1952-1953). SevenClass q0 work is PAUSED until C450 is root-imported and green.
