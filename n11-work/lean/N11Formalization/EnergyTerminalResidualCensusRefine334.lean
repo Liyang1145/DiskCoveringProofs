@@ -37,6 +37,7 @@ private theorem mem_336_3578 :
     (3578 : Fin 5011) ∈ EnergyTerminalResidualCensusRefine336.refinedResidualIDs := by
   rw [
     EnergyTerminalResidualCensusRefine336.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine338.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine340.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine342.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine344.mem_refinedResidualIDs_iff,
@@ -71,6 +72,7 @@ private theorem mem_336_3738 :
     (3738 : Fin 5011) ∈ EnergyTerminalResidualCensusRefine336.refinedResidualIDs := by
   rw [
     EnergyTerminalResidualCensusRefine336.mem_refinedResidualIDs_iff,
+    EnergyTerminalResidualCensusRefine338.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine340.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine342.mem_refinedResidualIDs_iff,
     EnergyTerminalResidualCensusRefine344.mem_refinedResidualIDs_iff,
