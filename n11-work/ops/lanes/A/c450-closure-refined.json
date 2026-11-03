@@ -1,0 +1,9 @@
+{
+ "closure_size": 1799,
+ "c450_bad": {},
+ "nonc450_bad": [
+  "N11Formalization.DrowBallBox_compIvBoxBox",
+  "N11Formalization.GridBridge",
+  "N11Formalization.Ladder49_jt_kkt_z"
+ ]
+}
