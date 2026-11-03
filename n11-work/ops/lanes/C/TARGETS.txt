@@ -5,6 +5,15 @@
 N11Formalization.EnergyRefineN0039Repair
 N11Formalization.EnergyTerminalBatchB13Refine0039
 N11Formalization.EnergyTerminalBatchB13Refine0039Main
+# Owning-error localization: the shared 389-census base and its four chunks
+# are imported by every red Refine0039/RefineSixteen/Refine385 module but were
+# not lane-C targets, so CI never reported their own exit codes.  Build them
+# first so the next serial run pins the first failing module.
+N11Formalization.EnergyTerminalResidualCensusC01
+N11Formalization.EnergyTerminalResidualCensusC02
+N11Formalization.EnergyTerminalResidualCensusC03
+N11Formalization.EnergyTerminalResidualCensusC04
+N11Formalization.EnergyTerminalResidualCensus
 N11Formalization.EnergyTerminalResidualCensusRefine0039
 N11Formalization.EnergyTerminalResidualCensusRefine0039Refine3149
 # Green-dependency alternative: remove 37 and 3149 without the red N39 chain.
