@@ -1,0 +1,261 @@
+{
+ "leaves": [
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN0003Restored.lean",
+   "sha256": "94DC0256BA289A6AD482E25AE21F675F6DF4DBEC86BC00C6E5ECA7D425115CF4",
+   "bytes": 235711,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 22,
+   "nativeDecide": 0,
+   "maxLine": 11260,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN0023Restored.lean",
+   "sha256": "8824219E83C644B3E1F816471DB770D65519A83BC15506EBC0C0D213B7A65465",
+   "bytes": 213049,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 20,
+   "nativeDecide": 0,
+   "maxLine": 11266,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN0038.lean",
+   "sha256": "AA4049EC985B7485BE8CEB25797F1A0B8B8D06E1AE206CBE4ADBD9718980DF95",
+   "bytes": 187356,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 18,
+   "nativeDecide": 0,
+   "maxLine": 11337,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3432.lean",
+   "sha256": "1050675AB66E1943EC780B6BAF5844AF7993BF85BB996F1535BEBEF9F64862BA",
+   "bytes": 361967,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 30,
+   "nativeDecide": 0,
+   "maxLine": 12070,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3490.lean",
+   "sha256": "515B48FEADA7A256F556A763B17FEFD310963F8C53BDA81DCE43E17B6850877B",
+   "bytes": 488085,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 39,
+   "nativeDecide": 0,
+   "maxLine": 11919,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3517.lean",
+   "sha256": "F7A9A0BD1E5AD04947E2E1512BEF5E9955CC48EB019BF232A23475C456DF7856",
+   "bytes": 206361,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 19,
+   "nativeDecide": 0,
+   "maxLine": 11496,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3550.lean",
+   "sha256": "589AC920AD3B1ACAE2A5F349EE04902CABFB920BF4BAC0989F95ACB6ECF01098",
+   "bytes": 292390,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 25,
+   "nativeDecide": 0,
+   "maxLine": 11987,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3564.lean",
+   "sha256": "04DBF5CC3089725E3CA16E5B2189944E0EB38274D1E0D96FAF4666747C4193EA",
+   "bytes": 165575,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 16,
+   "nativeDecide": 0,
+   "maxLine": 11461,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3569.lean",
+   "sha256": "5DE5A87F9BA46F6660CA4BFED96781609300F302B8A1A1C3FC91BA3410178400",
+   "bytes": 207103,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 19,
+   "nativeDecide": 0,
+   "maxLine": 11605,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3578.lean",
+   "sha256": "BD8A0E6A3F239A343860B13D05A549BA7CD3D446486CF84F09E9272AB85D8A26",
+   "bytes": 236738,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 21,
+   "nativeDecide": 0,
+   "maxLine": 11795,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3738.lean",
+   "sha256": "16310141D6C81012B87FE767734BB909BDABA331A3CA88653C17D2D07A871EE9",
+   "bytes": 340997,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 28,
+   "nativeDecide": 0,
+   "maxLine": 12098,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3781.lean",
+   "sha256": "1D5020B479FD6AE777116F3BCB2AD4DD042B1522C64FEBDAAD5546D4DEAE6BFB",
+   "bytes": 125897,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 13,
+   "nativeDecide": 0,
+   "maxLine": 11713,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3825.lean",
+   "sha256": "E2E9831A7518E9EF692D7A1A40862C6BEC290CFD1BC058A7760A315B5A5B237B",
+   "bytes": 185992,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 17,
+   "nativeDecide": 0,
+   "maxLine": 12098,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3854.lean",
+   "sha256": "DD834D8F629548AD29C48FE0CFD5238B0293358EABD52CAF8031D4A33737BA7C",
+   "bytes": 183468,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 17,
+   "nativeDecide": 0,
+   "maxLine": 11951,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  }
+ ],
+ "green_reference": [
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3783.lean",
+   "sha256": "7AA910EB6659DF826CF6AAC46FF88E3A1049A7BE1359CC995953CAF4FD436074",
+   "bytes": 197480,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 18,
+   "nativeDecide": 0,
+   "maxLine": 12178,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3841.lean",
+   "sha256": "04BBC41A370D737E3C86508FCB6613057C3DC61354E5A7EA790EED8AC4A12C5C",
+   "bytes": 242290,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 21,
+   "nativeDecide": 0,
+   "maxLine": 12164,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3851.lean",
+   "sha256": "2003B274E5A40069FA0A07F6CFB73032023E161B32C5AC656CCF2C306926AAF6",
+   "bytes": 210539,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 19,
+   "nativeDecide": 0,
+   "maxLine": 11958,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3522.lean",
+   "sha256": "9C515CCB2FD21EAD8A3977A27072224EC2B62F8C580490E19D18B0E65131DAB0",
+   "bytes": 179431,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 17,
+   "nativeDecide": 0,
+   "maxLine": 11743,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN4162.lean",
+   "sha256": "0F60192025E5BF0D20B3F9D3C708DB0C1B523023167B98B57D87DF11EFD1FD34",
+   "bytes": 189483,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 17,
+   "nativeDecide": 0,
+   "maxLine": 12375,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN4244.lean",
+   "sha256": "B77A426C86253587281FA0BB5196B97B82808042DB629A3A838AF1B39914C22A",
+   "bytes": 187867,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 17,
+   "nativeDecide": 0,
+   "maxLine": 12199,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3807.lean",
+   "sha256": "496377DE7090BD70AD007D91F3B2585BC9A5154A2DB9AFF31CC3A7E8C22A7141",
+   "bytes": 114451,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 12,
+   "nativeDecide": 0,
+   "maxLine": 12049,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3802.lean",
+   "sha256": "193C1AFDB9FAEE7BA42393A6CC73CEBE1153B27A28BCDBF58826CCA60866746A",
+   "bytes": 126831,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 13,
+   "nativeDecide": 0,
+   "maxLine": 12010,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  },
+  {
+   "file": "n11-work/lean/N11Formalization/EnergyRefineN3821.lean",
+   "sha256": "0B7E4D8882FDB5CE0D9EDF1FA64AD42F886198836115DBC89B0123E93551EB85",
+   "bytes": 129118,
+   "maxRecDepth": 1,
+   "maxHeartbeats0": 0,
+   "decideKernel": 13,
+   "nativeDecide": 0,
+   "maxLine": 11995,
+   "shape": "green-shape(maxRecDepth,giant-line)"
+  }
+ ],
+ "leaves_all_green_shape": true,
+ "green_reference_all_green_shape": true
+}
