@@ -1,0 +1,43 @@
+{
+  "chain_module_sha256": {
+    "C450ChainCompletion": "d04b9dcfcb0a06ce84ff0412de48faa00af53627f643352a033af68aa81eaf2a",
+    "C450ChainCompletionMain": "3f6088615e0a88e2a8927562c947c0c685e3e57bb15376ca3467fc7f6a33539c"
+  },
+  "checks": [
+    {
+      "detail": "rc=0: report sha256 1fd9aff3ea39137df9bd88a82a5aeeebb0ab1303eb0d7519de4eaeac6296842e",
+      "name": "import_closure",
+      "ok": true
+    },
+    {
+      "detail": "rc=0: report: c450-transfer-shapes.json",
+      "name": "transfer_shapes",
+      "ok": true
+    },
+    {
+      "detail": "rc=0: report sha256 24a6a5ad10c969d091821e4b2ee55d76a7277ca685592214d2b27d4b66cf5e01",
+      "name": "consumer_signatures",
+      "ok": true
+    },
+    {
+      "detail": "rc=0: PASS checked 115 explicit q0-degree3 references across 76 modules",
+      "name": "q0_preflight",
+      "ok": true
+    },
+    {
+      "detail": "markers=['C450ChainCompletion', 'C450ChainCompletionMain']",
+      "name": "root_hark_missing_exactly_two",
+      "ok": true
+    }
+  ],
+  "committed_reports": {
+    "c450-consumer-signatures.json": "24a6a5ad10c969d091821e4b2ee55d76a7277ca685592214d2b27d4b66cf5e01",
+    "c450-import-closure.json": "1fd9aff3ea39137df9bd88a82a5aeeebb0ab1303eb0d7519de4eaeac6296842e",
+    "c450-root-import-safety.json": "dcfd27ee80eb0da38e8e0dd22d71c5e82bf2e189b7d0e7f5bcf8d8ba18201438",
+    "c450-transfer-shapes.json": "0de9470176034101c34c5cfa0fc5badfd63935bb8c0f87ebfcd614176704b8ae"
+  },
+  "failures": [],
+  "root_sha256": "022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914",
+  "scope": "static source audits; NOT a kernel verdict",
+  "verdict": "PASS_LANE_A_CLOSURE"
+}

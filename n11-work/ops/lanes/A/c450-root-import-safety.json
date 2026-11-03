@@ -63,15 +63,15 @@
     },
     {
       "ok": true,
+      "label": "exported name `c450_atom` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
+    },
+    {
+      "ok": true,
       "label": "exported name `chain_step_count` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
     },
     {
       "ok": true,
       "label": "exported name `h450` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
-    },
-    {
-      "ok": true,
-      "label": "exported name `c450_atom` declared exactly once, in the chain (owners=['C450ChainCompletion'])"
     },
     {
       "ok": true,
