@@ -40,88 +40,30 @@ EXPERT (2026-11-02):
 
 ## 2026-10-31/11-02 - parts 202-290 (condensed)
 
-- Serial conditional census chain 389->334: parts 202-290 emitted `emit_census_*.py`
-  + `EnergyTerminalResidualCensusRefine{350,...,334}.lean`, each removing green ids
-  exactly (card 389->334, 55 removed), always a conditional B13 map, no payment.
-  Static `verify_census_*.py` PASS; **CI pending** throughout.
-- Low-id repair: `EnergyRefineN0039Repair` restored; `repair_refine_0039_40.py`,
-  `repair_census_membership_chains.py`; `False.elim` for false leaves, 25-block Next505
-  nonmembership, namespace `N0040`.
-- 336->334 added archive drafts 3578/3738 (byte-restored minus the banned unbounded-
-  heartbeat directive) + conditional wrapper/Main triples; TARGETS orders them after 336.
-- Inventory: 773 files, 7 public payloads, 382 missing, 62/389 ids complete source,
-  327 source-missing. No host-side audit or byte check is kernel credit.
-- Unproved remains: CI through 334, all 334 radius certificates, canonical/geometric
-  packet production, MPacket validity, SevenClassExclusions, arbitrary-centre theorem.
-
+- Conditional census chain 389->334 (`emit_census_*.py`,
+  `EnergyTerminalResidualCensusRefine{350,...,334}.lean`): 55 green ids removed as a
+  conditional B13 map, no payment; static verifiers PASS, **CI pending**. Low-id
+  repair `EnergyRefineN0039Repair`; archive drafts 3578/3738 + wrappers. Inventory:
+  773 files, 7 public payloads, 382 missing, 62/389 source-complete. No id paid.
 
 ## 2026-11-03 - parts 291-295 (condensed)
 
-- CI `41449154413`/`41656715257`/`41706645384` all `cancelled`; stored
-  `LATEST.md` = run `41706645384` (sha `bd5573e5`). Exit map: `CensusBase`=0,
-  but `C01`,`C02`,`C03`,`C04`=1 and every consumer (`Census`, `Refine0039*`,
-  `Refine0037Refine3149`, `RefineSixteen*Census*`) =1; the rest of the
-  ~200 lane-C targets are 0. So C01-C04 are the owning reds.
-- Static checks: the four `chunk0..chunk3` literals (100/100/100/89) match
-  `residual389-census.json` exactly (`verify_census_334.py` PASS; part-293).
-  `C01..C04` tile the 51 blocks `[100NN,100NN+100)` covering `[0,5011)`.
-  `mem_iff_blockNN` closes with `rw [B13.mem_residualIDs_iff] <;>
-  decide +kernel +revert`, so the kernel must decide `(data n).terminal`
-  (4 MB `data` def) plus `n ∉ paidIDs` (`B12 ∪ Next1182`, ~1997 literals)
-  for all 5011 indices - a per-declaration accumulation that violates the
-  GUIDANCE kernel-scale rule (~170-500 literals) and is the likely exit-1
-  cause. Memory in the cancelled run grew to ~11.9 GB (later Refine352).
-- Probe `/workspace/tools/mathlib-probe` cannot even load `import Mathlib`
-  inside 190 s (`rc=124`), so local kernel-scale bisection is INFEASIBLE.
-- No exit-code/error text is stored for C01-C04 (`LATEST.md` keeps only a
-  build-log tail), so the fix must be robust to heartbeat AND memory.
-- Unchanged: no id paid; 334 bridge conditional only.
+- CI `41449154413`/`41656715257`/`41706645384` `cancelled`; stored run
+  `41706645384` (sha `bd5573e5`) exit map: `CensusBase`=0, `C01`-`C04`=1, all
+  consumers=1, rest of ~200 lane-C targets 0 -> C01-C04 are the owning reds.
+  `chunk0..3` (100/100/100/89) match `residual389-census.json` (static PASS).
+  Local bisection INFEASIBLE (`import Mathlib` > 190 s in the probe). No id paid.
 
 ## 2026-11-03 - part 296 (C01-C04 rewritten: per-index kernel isolation)
 
-Re-read GUIDANCE/LANES/C-NOTES/LATEST (run `41706645384`, sha `bd5573e5`).
-Lane-C reds are exactly `C01..C04` plus their consumers; `CensusBase` is green.
-
-Action (new emitter `n11-work/ops/lanes/C/emit_census_c01_c04.py`, deterministic,
-self-checking): regenerated the four modules so that each source index gets its
-own theorem `mem_iff_id_<id>` (5011 total) with a single `decide +kernel +revert`
-in its own declaration (its own heartbeat budget). Each `mem_iff_blockNN` now
-covers 100 indices but delegates to those per-index lemmas via explicit bullets
-(`interval_cases k` then `exact mem_iff_id_<id> _ rfl`), so NO declaration
-accumulates 100 heavy kernel decisions. Per-index proof shape:
-`rcases n with ⟨k,hk⟩; change k = <id> at hn; subst hn;
-rw [B13.mem_residualIDs_iff]; decide +kernel +revert`. Exported interface
-(`mem_iff_block00..50`, signature `(n) (hlo) (hhi)`) is UNCHANGED, so
-`EnergyTerminalResidualCensus.lean` needs no edit. Only C01-C04 touched; Base,
-assembly, root, lakefile, toolchain, frozen modules untouched.
-
-Files: `n11-work/lean/N11Formalization/EnergyTerminalResidualCensusC0{1,2,3,4}.lean`
-(now ~386/386/360/356 KB), `n11-work/ops/lanes/C/emit_census_c01_c04.py`.
-Checks (scope: source/static only, NOT elaboration or kernel credit):
-- emitter self-check: 13+13+13+12 blocks, 5011 unique ids, total = 5011.
-- independent parse: ids = 0..5010 exactly (no dup/gap); 51 blocks; each block
-  bullet list == `range(100*b, min(100*b+100,5011))`; STRUCTURE OK.
-- forbidden-token scan of the four files: none (no sorry/admit/axiom/
-  native_decide/ofReduceBool/implemented_by/maxHeartbeats).
-- `TARGETS.txt` already lists C01-C04 (parts-293 edit); unchanged.
-
-Scope/limits: this is a scale/robustness repair, not a proof of new
-mathematics; the per-index `decide` still unfolds `data` and `paidIDs` once
-per index. **CI pending** (sha will be the supervisor commit): C01-C04 and all
-downstream consumers (Census, Refine0039*, Refine0037Refine3149,
-RefineSixteen*Census*) must go exit 0 with axioms
-`[propext, Classical.choice, Quot.sound]`. If a per-index `decide` itself is
-still red, the next step is the part-295 hierarchical `mem_paidIDs_iff` split
-(`mem_union`/`new_mem`/`fin_cases`) so no single decision sees the 1997-literal
-`paidIDs`, and, for `data`, precompute a `terminalIDs` literal lemma.
-
-Still unproved (unchanged, nothing here is kernel credit): CI green for
-C01-C04 + assembly; the 7 red Refine0039/RefineSixteen/Refine385 modules; all
-residual radius certificates; 327 source-missing ids; canonical/geometric
-packet production; MPacket validity; SevenClassExclusions; arbitrary-centre
-theorem. Next concrete step: after CI, if C01-C04 are green, mark lane-C
-TARGET-DONE; if still red, read the first owning error line and apply the
-hierarchical paidIDs/data split above.
+Part 296 rewrote C01-C04 so each source index gets its own theorem
+`mem_iff_id_<id>` (5011 total) with one `decide +kernel +revert` in its own
+declaration; each `mem_iff_blockNN` delegates to 100 per-index lemmas via
+`interval_cases k` + `exact mem_iff_id_<id> _ rfl`. Interface
+(`mem_iff_block00..50`) UNCHANGED. Emitter `emit_census_c01_c04.py`; only
+C01-C04 touched. Static checks (source only): 5011 unique ids, 51 blocks,
+bullet lists == `range(100*b, min(100*b+100,5011))`, STRUCTURE OK. Part 299
+below shows this was still **CI red** (whnf heartbeat timeouts).
 
 ## 2026-11-04 - part 297 (independent C01-C04 structure audit)
 
@@ -219,3 +161,67 @@ hierarchical split to the per-index proof: replace the single decide on
 lemmas + B12 split for `n ∉ paidIDs`, and a precomputed literal `terminalIDs`
 lemma for `(data n).terminal` -- so no `decide` ever sees the 1997-literal
 `paidIDs` or re-unfolds `data` per index.
+
+## 2026-11-04 - part 299 (read the real CI log; exact owning error)
+
+Re-read GUIDANCE/LANES/C-NOTES/LATEST. Fetched the ACTUAL `n11-lean-build` job
+log for run `41769569707` (sha `da6f0ed3`, the part-296 commit) from the GitHub
+API (`/actions/jobs/126375831147/logs`, ~25 MB; repo
+`Liyang1145/DiskCoveringProofs`). Job conclusion: **failure** after 2h51m.
+This replaces the guesswork in parts 295/297/298. (`LATEST.md` still showed
+that run as `in_progress` and its stored summary.json was the PRE-part-296 run
+`bd5573e5`; a newer run `41787355746` also failed on sha `25c66cd6`.)
+
+Exact owning error, C01 (C02-C04 identical in form): repeated
+`error: .../EnergyTerminalResidualCensusC01.lean:<line>:0: (deterministic)
+timeout at whnf, maximum number of heartbeats (200000) has been reached` at the
+`decide +kernel +revert` line of each `mem_iff_id_KKKK`. So the part-296
+per-index split did NOT fix C01-C04: they are still **CI red**.
+
+Failing-id pattern (C01): timeouts hit exactly `mem_iff_id_{0003,0005,0009,
+...}` i.e. the TERMINAL source ids; the non-terminal ids (0000,0001,0002,0004,
+0006,0007,0008,...) pass. Cause: after
+`rw [EnergyTerminalBatchB13.mem_residualIDs_iff]` the goal RHS is
+`(data n).terminal = true ∧ n ∉ sharpIDs ∧ n ∉ paidIDs`; `Decidable.and`
+short-circuits, so non-terminal ids stop at `(data n).terminal = false` and
+never touch `paidIDs`, while terminal ids must kernel-decide `n ∉ paidIDs`
+(`paidIDs = B11.paidIDs ∪ Next505.newIDs`, `B12.paidIDs ∪ Next1182.newIDs`,
+~1997 literal ids) and `n ∉ sharpIDs`. Verified in the probe's Mathlib
+(`Mathlib/Data/Multiset/UnionInter.lean:45`): `Multiset.union s t := s - t + t`
+(difference then append), and `Finset.union`'s val is that multiset union; so a
+kernel `decide` of `n ∈ paidIDs` forces the quadratic differences/erases of the
+nested unions (~1997^2 comparisons) -> whnf heartbeat exhaustion. Not a false
+id, and not the per-index cost per se: the union *value* reduction is the blowup.
+
+Concrete fix (next session; emitter change only, no new Lean families): stop
+letting `decide` unfold `Finset.union`. Decompose membership structurally with
+the already-green, already-existing pattern of
+`EnergyTerminalBatchB13Refine0039.lean` (exit 0): `Finset.mem_union` for the
+B12/B13 unions, `Paid16GeneralNext1182.new_mem` (8-way) + per-sub
+`Paid16GeneralNext1182S0X.new_mem` / `mem_idsKK`, and the interval-bound lemmas
+(`block_s01_00_bounds : 2565 ≤ n.val ≤ 2585`; the parts are consecutive
+intervals; Next505 is "bounded below 2565"). Emit, per terminal index, a
+`not_paid_*` / `mem_paid_*` lemma list, then a `decide +kernel` only on the
+resulting atomic `n = c` / Bool comparisons (<= ~168 literals each).
+Short-circuit non-terminal ids by proving `(data n).terminal = false` first.
+Keep the `Census.residualIDs` literal chunks unchanged.
+
+Checks run this session (scope noted): `git log`/`git status` (tree clean);
+fetched and grepped the real job log (authoritative for exits of run
+`41769569707`); no Lean build run locally (2 cores; `import Mathlib` > 190 s in
+`/workspace/tools/mathlib-probe`). No files edited except this NOTES entry.
+`verify_census_c01_c04.py` not re-run (no source change). Nothing here is
+kernel credit.
+
+Still unproved (unchanged): CI green for C01-C04 + the red consumers
+(`Census`, `Refine0039*`, `Refine0037Refine3149`, `RefineSixteen*Census*`);
+all 389 residual radius certificates; 327 source-missing ids;
+canonical/geometric packet production; MPacket validity; SevenClassExclusions;
+arbitrary-centre root theorem.
+
+Very next concrete step: edit `n11-work/ops/lanes/C/emit_census_c01_c04.py` to
+emit the structural `not_paid`/`mem_paid` decomposition above (reusing the
+Refine0039 lemma names), regenerate C01-C04, re-run
+`verify_census_c01_c04.py`, keep C01-C04 in `TARGETS.txt`, and request a CI
+cycle. Do not claim green until the job log shows exit 0 for all four with
+axioms `[propext, Classical.choice, Quot.sound]`.
