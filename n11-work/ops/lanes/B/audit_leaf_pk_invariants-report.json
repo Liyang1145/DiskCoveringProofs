@@ -1,0 +1,152 @@
+{
+ "ok": true,
+ "scope": "static source invariants; not a build, not a proof",
+ "invariants": [
+  "veclen==K",
+  "all entries defined",
+  "valid set == pk def set",
+  "newIDs==id"
+ ],
+ "leaves": [
+  {
+   "module": "EnergyRefineN0003Restored",
+   "id": 3,
+   "problems": [],
+   "K": 35,
+   "pk_defs": 18,
+   "valids": 18,
+   "pk_vector_len": 35,
+   "newIDs": 3
+  },
+  {
+   "module": "EnergyRefineN0023Restored",
+   "id": 23,
+   "problems": [],
+   "K": 31,
+   "pk_defs": 16,
+   "valids": 16,
+   "pk_vector_len": 31,
+   "newIDs": 23
+  },
+  {
+   "module": "EnergyRefineN0038",
+   "id": 38,
+   "problems": [],
+   "K": 27,
+   "pk_defs": 14,
+   "valids": 14,
+   "pk_vector_len": 27,
+   "newIDs": 38
+  },
+  {
+   "module": "EnergyRefineN3432",
+   "id": 3432,
+   "problems": [],
+   "K": 51,
+   "pk_defs": 26,
+   "valids": 26,
+   "pk_vector_len": 51,
+   "newIDs": 3432
+  },
+  {
+   "module": "EnergyRefineN3490",
+   "id": 3490,
+   "problems": [],
+   "K": 69,
+   "pk_defs": 35,
+   "valids": 35,
+   "pk_vector_len": 69,
+   "newIDs": 3490
+  },
+  {
+   "module": "EnergyRefineN3517",
+   "id": 3517,
+   "problems": [],
+   "K": 29,
+   "pk_defs": 15,
+   "valids": 15,
+   "pk_vector_len": 29,
+   "newIDs": 3517
+  },
+  {
+   "module": "EnergyRefineN3550",
+   "id": 3550,
+   "problems": [],
+   "K": 41,
+   "pk_defs": 21,
+   "valids": 21,
+   "pk_vector_len": 41,
+   "newIDs": 3550
+  },
+  {
+   "module": "EnergyRefineN3564",
+   "id": 3564,
+   "problems": [],
+   "K": 23,
+   "pk_defs": 12,
+   "valids": 12,
+   "pk_vector_len": 23,
+   "newIDs": 3564
+  },
+  {
+   "module": "EnergyRefineN3569",
+   "id": 3569,
+   "problems": [],
+   "K": 29,
+   "pk_defs": 15,
+   "valids": 15,
+   "pk_vector_len": 29,
+   "newIDs": 3569
+  },
+  {
+   "module": "EnergyRefineN3578",
+   "id": 3578,
+   "problems": [],
+   "K": 33,
+   "pk_defs": 17,
+   "valids": 17,
+   "pk_vector_len": 33,
+   "newIDs": 3578
+  },
+  {
+   "module": "EnergyRefineN3738",
+   "id": 3738,
+   "problems": [],
+   "K": 47,
+   "pk_defs": 24,
+   "valids": 24,
+   "pk_vector_len": 47,
+   "newIDs": 3738
+  },
+  {
+   "module": "EnergyRefineN3781",
+   "id": 3781,
+   "problems": [],
+   "K": 17,
+   "pk_defs": 9,
+   "valids": 9,
+   "pk_vector_len": 17,
+   "newIDs": 3781
+  },
+  {
+   "module": "EnergyRefineN3825",
+   "id": 3825,
+   "problems": [],
+   "K": 25,
+   "pk_defs": 13,
+   "valids": 13,
+   "pk_vector_len": 25,
+   "newIDs": 3825
+  },
+  {
+   "module": "EnergyRefineN3854",
+   "id": 3854,
+   "problems": [],
+   "K": 25,
+   "pk_defs": 13,
+   "valids": 13,
+   "pk_vector_len": 25,
+   "newIDs": 3854
+  }
+ ]
+}
