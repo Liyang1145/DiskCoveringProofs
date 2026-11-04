@@ -2,6 +2,9 @@
 # Critical dependency order.  Bins imports Mono (not Cos); EndpointChecks
 # imports Bins.  The numbered targets below were CI-green at commit 1b2fa7a8;
 # the split base/peak modules added in session 142 are CI pending.
+# Session 193: list the root's first HARK-MISSING module explicitly (the root
+# imports both C450ChainCompletion and C450ChainCompletionMain).
+N11Formalization.C450ChainCompletion
 N11Formalization.C450ChainCompletionMain
 N11Formalization.C450ChainCompletionAudit
 N11Formalization.SevenClassQ0Deg3Cos
