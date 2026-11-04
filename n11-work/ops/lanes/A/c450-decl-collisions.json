@@ -1,0 +1,69 @@
+{
+ "checks": [
+  {
+   "label": "module file C450ChainCompletion.lean present",
+   "ok": true
+  },
+  {
+   "label": "module file C450ChainCompletionMain.lean present",
+   "ok": true
+  },
+  {
+   "label": "no declaration name shared between the two new modules",
+   "ok": true
+  },
+  {
+   "label": "every other .lean module scanned (incl. >3 MB generated tables)",
+   "ok": true
+  },
+  {
+   "label": "all >3 MB modules covered by the scan",
+   "ok": true
+  },
+  {
+   "label": "no new-module declaration name already declared elsewhere in the tree",
+   "ok": true
+  }
+ ],
+ "collisions_with_tree": {},
+ "large_modules_scanned": [
+  {
+   "bytes": 69873533,
+   "module": "Ladder49_jt_kkt_z",
+   "n_decls": 6338
+  },
+  {
+   "bytes": 4480178,
+   "module": "DrowBallBox_compIvBoxBox",
+   "n_decls": 1213
+  },
+  {
+   "bytes": 4003382,
+   "module": "DBMSourceTreeData",
+   "n_decls": 5012
+  },
+  {
+   "bytes": 3779323,
+   "module": "SharedMomentConcreteSwitchBatch",
+   "n_decls": 7996
+  }
+ ],
+ "module_sha256": {
+  "C450ChainCompletion": "d04b9dcfcb0a06ce84ff0412de48faa00af53627f643352a033af68aa81eaf2a",
+  "C450ChainCompletionMain": "3f6088615e0a88e2a8927562c947c0c685e3e57bb15376ca3467fc7f6a33539c"
+ },
+ "n_checks": 6,
+ "n_failures": 0,
+ "n_modules_scanned": 2480,
+ "new_decl_counts": {
+  "C450ChainCompletion": 8,
+  "C450ChainCompletionMain": 2
+ },
+ "new_modules": [
+  "C450ChainCompletion",
+  "C450ChainCompletionMain"
+ ],
+ "scope": "STATIC source-text audit; NOT a kernel verdict and NOT a build",
+ "shared_between_new": {},
+ "verdict": "PASS_C450_DECL_NO_COLLISION"
+}

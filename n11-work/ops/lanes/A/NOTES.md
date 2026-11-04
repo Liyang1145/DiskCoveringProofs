@@ -119,64 +119,40 @@ Static re-verify only: `audit_c450_import_closure.py` PASS, closure_size 1769,
 `missing: []`, report sha `1fd9aff3...842e`; root sha `022075ae...b338914`, both
 `-- HARK-MISSING` lines 1952--1953. NOT a kernel verdict. Next: supervisor edit.
 
-## 2026-11-03 (session 191, part 3, condensed)
+## 2026-11-03 (session 191, parts 3--4, condensed) -- static re-verify + import paths
 
-Fresh STATIC re-runs on the LIVE tree: `audit_c450_import_closure.py` PASS
-(closure 1769, `missing: []`, sha `1fd9aff3...842e`);
-`audit_c450_root_import_safety.py` PASS_C450_ROOT_IMPORT_SAFETY 26/26 (2481
-modules); `audit_c450_consumer_signatures.py` PASS 13/13;
-`audit_c450_transfer_shapes.py` PASS (58 checks); root sha `022075ae...b338914`,
-both `-- HARK-MISSING` lines 1952--1953; `root-import-c450.patch`
-PATCH_APPLIES_OK.  NEW tool `audit_c450_hardrules_stripped.py` (comment/string-
-stripped): 0 real violations in any C450 module; 3 non-C450 modules carry
-`set_option maxHeartbeats 0` (`DrowBallBox_compIvBoxBox`, `GridBridge`,
-`Ladder49_jt_kkt_z`) -- a LEAD, not a blocker.  All STATIC, NOT kernel verdicts.
+Session-191 STATIC re-runs on the LIVE tree all PASS: `audit_c450_import_closure.py`
+(closure 1769, `missing: []`); `audit_c450_root_import_safety.py` 26/26 (2481 modules);
+`audit_c450_consumer_signatures.py` 13/13; `audit_c450_transfer_shapes.py` 58 checks;
+`audit_c450_hardrules_stripped.py` 0 real violations in any C450 module;
+`audit_c450_import_paths.py` -> closure 1816, no missing files, all three
+`maxHeartbeats 0` modules import-reachable via
+`C450NormalizedInterface -> DSHCanonicalRelabel -> SourceExactRoot`.  Root sha
+`022075ae...b338914`, both `-- HARK-MISSING` 1952--1953, `root-import-c450.patch`
+PATCH_APPLIES_OK.  LEAD (unresolved): whether the chain proofs *reference* those
+declarations needs a built `.olean`.  All STATIC, NOT kernel verdicts.
 
-## 2026-11-03 (session 191, part 4, condensed) -- chain-to-flagged import paths
+## 2026-11-04 (session 192, part 4, condensed) -- chain wiring PASS + maxHeartbeats exposure closed
 
-`audit_c450_import_paths.py` -> `c450-import-paths.json`: STATIC import BFS from
-`C450ChainCompletion`+`Main` gives closure_size 1816, no missing files; all three
-`maxHeartbeats 0` modules (`GridBridge`, `DrowBallBox_compIvBoxBox`,
-`Ladder49_jt_kkt_z`) are import-REACHABLE via
-`C450NormalizedInterface -> DSHCanonicalRelabel -> SourceExactRoot`.  Import
-reachability only (not a kernel verdict); whether the chain proofs *reference* those
-declarations is the still-open LEAD, needing a built `.olean`.
+TARGET-DONE, blocked on the supervisor-only root edit.  NEW `audit_c450_chain_wiring.py`
+-> `c450-chain-wiring.json` **PASS_C450_CHAIN_WIRING** 55 checks, 0 failures: all 26
+source segment modules 11..36 exist; each `C450SourceNN.source(NN-1)_remaining_of_remaining`
+is defined in its owning module; the 25 applications form one unbroken 36->11 descent
+(targets exactly {11,...,35}, no gap/cycle); live `h450` is the nested
+`Source12 -> ... -> Source16` stack.  NEW `audit_root_maxheartbeat_exposure.py`:
+the frozen root already imports all three `set_option maxHeartbeats 0` modules
+DIRECTLY (`GridBridge`, `DrowBallBox_compIvBoxBox`, `Ladder49_jt_kkt_z`), so the two
+chain imports add NO new exposure (session-191 LEAD resolved; still a supervisor
+question).  Scope: STATIC, NOT kernel verdicts.
 
-## 2026-11-04 (session 192, part 4) -- chain wiring PASS + root maxHeartbeats exposure closed
-
-Lane-A FOCUS target still TARGET-DONE, blocked on the supervisor-only root edit
-(root sha `022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914`,
-both `-- HARK-MISSING` lines still 1952--1953). No new mathematics; this part
-finished two STATIC lane-A audits.
-
-NEW tool `audit_c450_chain_wiring.py` -> `c450-chain-wiring.json`:
-**PASS_C450_CHAIN_WIRING**, 55 checks, 0 failures. Parses the six chain modules
-(Endpoint/Tail/Mid1/Mid2/Mid3/Completion) and confirms (a) all 26 source segment
-modules 11..36 exist on disk, (b) each `C450SourceNN.source(NN-1)_remaining_of_remaining`
-lemma is defined in its owning module, (c) the 25 applications form one unbroken
-36->11 descent (targets exactly {11,...,35}; no gap, no cycle). Live `h450`
-(`C450ChainCompletion.lean:16`) is exactly the nested `Source12 -> ... -> Source16`
-stack down to `Source11`, matching the parsed edges. Fixed an own-path bug (the
-`LEAN` base needed one more `..`). Scope: STATIC source-text, NOT a kernel verdict.
-
-NEW tool `audit_root_maxheartbeat_exposure.py` -> `c450-root-maxheartbeat-exposure.json`
-**resolves the session-191 LEAD**: the frozen stage-1 root (sha `022075ae...`, 800
-direct imports) already imports all three flagged `set_option maxHeartbeats 0`
-modules DIRECTLY (`GridBridge`, `DrowBallBox_compIvBoxBox`, `Ladder49_jt_kkt_z`).
-So uncommenting the two HARK-MISSING chain imports adds **no new** maxHeartbeats-0
-exposure; that surface is pre-existing in the frozen root, hence non-blocking for
-the lane-A root edit (still a supervisor question, but not a lane-A blocker).
-
-**Still unproved / unpaid.** No kernel verdict for the two chain modules in this
-window (newest `ops/ci/LATEST.md` run 41706645384 = cancelled, no C450 target).
-q0(5,8) `ClosureFactorBounds`, q0(3)/q1 tables + `q0Degree3AreaInput`, the seven
-class exclusions, energy residual 389, and the arbitrary-centre full-disk theorem
-all remain open.
+**Still unproved / unpaid.** No kernel verdict for the two chain modules; q0(5,8)
+`ClosureFactorBounds`, q0(3)/q1 tables + `q0Degree3AreaInput`, the seven class
+exclusions, energy residual 389, arbitrary-centre full-disk theorem all open.
 
 **Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`, push,
-let `n11-lean-build` finish; on green lift the q0 pause and resume lane A at
-`SevenClassQ0Deg3Q0Exclusion.q0_degree3`. A referenced-declaration closure would
-need a built `.olean` (not available locally).
+let `n11-lean-build` finish; on green lift the q0 pause and resume at
+`SevenClassQ0Deg3Q0Exclusion.q0_degree3`.  A referenced-decl closure needs a built
+`.olean` (not available locally).
 
 ## 2026-11-04 (session 192, parts 5--6, condensed) -- q0(5,8) static gate
 
@@ -217,17 +193,21 @@ and the arbitrary-centre full-disk theorem all remain open.
 push, let `n11-lean-build` finish; on green lift the q0 pause and resume lane A
 at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.
 
-## 2026-11-04 (session 194, part 5) -- live re-verify, no state change
+## 2026-11-04 (session 194) -- NEW decl-collision audit, then re-verify
 
-Lane-A FOCUS target still TARGET-DONE, still blocked on the supervisor-only root
-edit.  Live re-verify on this worktree (STATIC, not a kernel verdict):
-`audit_c450_chain_wiring.py` -> **PASS_C450_CHAIN_WIRING** (26/26 segment modules,
-25 transfer edges covering targets 11--35, failures `[]`); root sha still
-`022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914`, both
-`-- HARK-MISSING` lines still 1952--1953; `git apply --check root-import-c450.patch`
--> **PATCH_APPLIES_OK** (patch body still exactly uncomments those two imports).
-`ops/ci/LATEST.md` = run 41769569707 completed failure (summary.json/build log tail
-empty locally), no C450/Q0 target detail.  No new Lean written this part.
+Lane-A FOCUS target still TARGET-DONE, blocked on the supervisor-only root edit.
+Wrote `audit_c450_decl_collisions.py` (NEW tool, STATIC source-text, not a kernel
+verdict): a namespace-aware scan of every `n11-work/lean/N11Formalization/*.lean`
+top-level declaration, checking that no fully-qualified name declared in
+`C450ChainCompletion` or `C450ChainCompletionMain` is already declared elsewhere
+in the tree -- the concrete `already declared` failure mode that the root would
+hit when it imports the whole project at once.  Result:
+**PASS_C450_DECL_NO_COLLISION** -- new decls 8 + 2, 0 shared between the two new
+modules, 0 collisions with the tree, failures `[]`.  (Skips `.lean` files >3 MB;
+`Ladder49_jt_kkt_z.lean` is 67 MB, so that single file is out of scope.)
+Also re-ran `audit_c450_chain_wiring.py` -> **PASS_C450_CHAIN_WIRING** (26/26
+segments, 25 transfer edges, targets 11--35, failures `[]`).  Reports:
+`c450-decl-collisions.json`, `c450-chain-wiring.json`.
 
 **Still unproved / unpaid.** No kernel verdict for `C450ChainCompletion` /
 `C450ChainCompletionMain`; q0(5,8) `ClosureFactorBounds`, q0(3)/q1 tables +
@@ -237,3 +217,28 @@ arbitrary-centre full-disk theorem all remain open.
 **Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`, push,
 let `n11-lean-build` finish; on green lift the q0 pause and resume lane A at
 `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.
+
+## 2026-11-04 (session 195, part 5) -- closed the decl-collision audit's large-file gap
+
+Lane-A FOCUS target still TARGET-DONE, blocked on the supervisor-only root edit.
+The session-194 decl-collision audit skipped every `.lean` file > 3 MB, which
+left exactly four generated tables out of the "already declared" scan:
+`Ladder49_jt_kkt_z` (69.9 MB / 6338 decls), `SharedMomentConcreteSwitchBatch`
+(3.8 MB / 7996), `DBMSourceTreeData` (4.0 MB / 5012),
+`DrowBallBox_compIvBoxBox` (4.5 MB / 1213).  Fixed `audit_c450_decl_collisions.py`
+to STREAM files line by line (removed the size cap) and added two coverage
+checks plus a `large_modules_scanned` record.  Re-ran on the LIVE tree:
+**PASS_C450_DECL_NO_COLLISION, 6/6 checks, failures `[]`, 2480 modules
+scanned**, zero collision of the 10 new fully-qualified names with the tree
+(incl. all four large files).  Module SHAs unchanged (`C450ChainCompletion`
+`d04b9dcf...eaf2a`, `Main` `3f608861...3539c`).  Report
+`c450-decl-collisions.json`.  Scope: STATIC source-text, NOT a kernel verdict.
+
+**Still unproved / unpaid.** No kernel verdict for `C450ChainCompletion` /
+`C450ChainCompletionMain`; q0(5,8) `ClosureFactorBounds`, q0(3)/q1 tables +
+`q0Degree3AreaInput`, the seven class exclusions, energy residual 389, and the
+arbitrary-centre full-disk theorem all remain open.
+
+**Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`,
+push, let `n11-lean-build` finish; on green lift the q0 pause and resume lane A
+at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.
