@@ -15,6 +15,33 @@ import os
 
 ROOT = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'lean', 'N11Formalization')
 
+# Part 301: split every `∪` in the paid-chain value BEFORE deciding.  The
+# kernel failure (run 41769569707) is that `decide +kernel` reduced the
+# `Finset.union` value `s - t + t` (Mathlib/Data/Multiset/UnionInter.lean:45)
+# over the full ~1997-element paid set, ~10^6 diff comparisons per terminal id.
+# Rewriting with `Finset.mem_union`/`Finset.mem_insert`/`Finset.mem_singleton`
+# first makes every `decide` atom a literal `idsNN` / image membership instead.
+PAID_SIMP = [
+    'EnergyTerminalBatchB13.paidIDs', 'EnergyTerminalBatchB12.paidIDs',
+    'EnergyTerminalBatchB11.paidIDs', 'EnergyTerminalBatchB10.paidIDs',
+    'EnergyTerminalBatchB09.paidIDs', 'EnergyTerminalBatchB08.paidIDs',
+    'EnergyTerminalBatchB07.paidIDs', 'EnergyTerminalBatchB06.paidIDs',
+    'EnergyTerminalBatchB05.paidIDs', 'EnergyTerminalBatchB04.paidIDs',
+    'EnergyTerminalBatchB03.paidIDs', 'EnergyTerminalBatchB02.paidIDs',
+    'EnergyTerminalBatchB01.paidIDs',
+    'Paid16GeneralFirst42.newIDs',
+    'Paid16GeneralRemaining210.newIDs',
+    'Paid16GeneralNext505.newIDs',
+    'Paid16GeneralNext1182.new_mem',
+    'Paid16GeneralNext1182S01.newIDs', 'Paid16GeneralNext1182S02.newIDs',
+    'Paid16GeneralNext1182S03.newIDs', 'Paid16GeneralNext1182S04.newIDs',
+    'Paid16GeneralNext1182S05.newIDs', 'Paid16GeneralNext1182S06.newIDs',
+    'Paid16GeneralNext1182S07.newIDs', 'Paid16GeneralNext1182S08.newIDs',
+    'Finset.mem_union', 'Finset.mem_insert', 'Finset.mem_singleton', 'not_or',
+]
+PAID_SIMP_BLOCK = '  simp only [\n' + ',\n'.join(
+    '    ' + x for x in PAID_SIMP) + ']'
+
 BLOCK_FILES = {
     'C01': [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48],
     'C02': [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49],
@@ -50,6 +77,7 @@ def emit_part(name, blocks):
             L.append('  change k = %d at hn' % i)
             L.append('  subst hn')
             L.append('  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]')
+            L.append(PAID_SIMP_BLOCK)
             L.append('  decide +kernel +revert')
             L.append('')
     for bb in blocks:
