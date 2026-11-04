@@ -113,59 +113,24 @@ forbidden token. Own-check bug found+fixed: prefix-substring marker count
 SOURCE static only, NOT a kernel verdict and not a build. Next step: supervisor
 uncomments root 1952--1953, pushes, on green lifts the q0 pause.
 
-## 2026-11-02 (session 189) -- live re-verify of C450 root-import state
+## 2026-11-02 (session 189, condensed)
 
-Condensed: static re-verify of C450 root-import state. No new mathematics.
-`audit_c450_import_closure.py` -> **PASS**, closure_size 1769, `missing: []`; report sha256
-`1fd9aff3ea39137df9bd88a82a5aeeebb0ab1303eb0d7519de4eaeac6296842e` (unchanged).
-Live: root sha `022075ae...b338914`, both `-- HARK-MISSING` lines 1952--1953; chain modules
-present. Scope: static import-closure + byte/hash only, NOT a kernel verdict. Very next step:
-supervisor uncomments root 1952--1953, pushes, on green lifts the q0 pause.
+Static re-verify only: `audit_c450_import_closure.py` PASS, closure_size 1769,
+`missing: []`, report sha `1fd9aff3...842e`; root sha `022075ae...b338914`, both
+`-- HARK-MISSING` lines 1952--1953. NOT a kernel verdict. Next: supervisor edit.
 
-## 2026-11-03 (session 191, part 3) -- fresh C450 pre-import evidence + hard-rule false-positive fix
+## 2026-11-03 (session 191, part 3, condensed)
 
-Lane-A FOCUS target still TARGET-DONE and blocked on the supervisor-only root edit.
-No new mathematics; this session re-ran the cheap STATIC gates on the LIVE tree and
-wrote ONE new tool.
-
-Fresh re-runs (repo root, bounded, `source /workspace/tools/env.sh`):
-- `audit_c450_import_closure.py` -> **PASS**, closure_size 1769, `missing: []`,
-  report sha256 `1fd9aff3ea39137df9bd88a82a5aeeebb0ab1303eb0d7519de4eaeac6296842e`
-  (unchanged). 95 s.
-- `audit_c450_root_import_safety.py` -> **PASS_C450_ROOT_IMPORT_SAFETY 26/26**,
-  2481 modules; report sha `74407e339b8608cc7eb486f3c703682a244c4b6c5facf856630b70db578957c5`
-  (varies run-to-run from set-order; verdict stable). 63 s.
-- `audit_c450_consumer_signatures.py` -> **PASS 13/13**; `audit_c450_transfer_shapes.py`
-  -> **PASS (58 checks)**.
-- Live bytes: root sha `022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914`
-  (unchanged), both `-- HARK-MISSING` lines still 1952--1953;
-  `git apply --check n11-work/ops/lanes/A/root-import-c450.patch` -> **PATCH_APPLIES_OK**.
-
-NEW tool: `audit_c450_hardrules_stripped.py` -> `c450-hardrules-stripped.json`.
-The session-190 raw scan (`audit_c450_closure_hardrules.py`) regexes the raw file text,
-so it false-FLAGs ~120 modules whose *comments* merely contain the word "sorry"
-(e.g. Chinese headers `无 sorry`). The new scan strips line comments, nested `/- -/`
-block comments and string/char literals first. Result over the 1799-module chain
-closure: **0 real violations in any C450 module**; 3 non-C450 modules carry real
-hits, all `set_option maxHeartbeats 0` -- `DrowBallBox_compIvBoxBox`,
-`GridBridge`, `Ladder49_jt_kkt_z`. Scope: STATIC text scan, NOT a kernel verdict
-and NOT a build; it does not resolve whether the chain *proofs* reference those
-three modules (the `maxHeartbeats 0` hard-rule question is a LEAD, not a blocker
-until the chain's referenced-declaration closure is computed).
-
-**Still unproved / unpaid.** Unchanged: no kernel verdict for the two chain modules
-in this window (newest `ops/ci/LATEST.md` summary lists no C450 target; last real
-C450 CI-green evidence is run 40818062141, head a201da0d, 2026-10-29). q0(5,8)
-`ClosureFactorBounds`, q0(3)/q1 tables + `q0Degree3AreaInput`, the seven class
-exclusions, energy residual 389, and the arbitrary-centre full-disk theorem all
-remain open.
-
-**Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`
-(verified to apply cleanly), push, let `n11-lean-build` finish; on green lift the
-q0 pause and resume lane A at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`. If a later
-cycle computes the referenced-declaration closure of `C450ChainCompletion`
-(`h450`/`source_obligation`), check whether it touches the three `maxHeartbeats 0`
-modules above.
+Fresh STATIC re-runs on the LIVE tree: `audit_c450_import_closure.py` PASS
+(closure 1769, `missing: []`, sha `1fd9aff3...842e`);
+`audit_c450_root_import_safety.py` PASS_C450_ROOT_IMPORT_SAFETY 26/26 (2481
+modules); `audit_c450_consumer_signatures.py` PASS 13/13;
+`audit_c450_transfer_shapes.py` PASS (58 checks); root sha `022075ae...b338914`,
+both `-- HARK-MISSING` lines 1952--1953; `root-import-c450.patch`
+PATCH_APPLIES_OK.  NEW tool `audit_c450_hardrules_stripped.py` (comment/string-
+stripped): 0 real violations in any C450 module; 3 non-C450 modules carry
+`set_option maxHeartbeats 0` (`DrowBallBox_compIvBoxBox`, `GridBridge`,
+`Ladder49_jt_kkt_z`) -- a LEAD, not a blocker.  All STATIC, NOT kernel verdicts.
 
 ## 2026-11-03 (session 191, part 4) -- chain-to-flagged-module import paths
 
@@ -241,32 +206,41 @@ let `n11-lean-build` finish; on green lift the q0 pause and resume lane A at
 `SevenClassQ0Deg3Q0Exclusion.q0_degree3`. A referenced-declaration closure would
 need a built `.olean` (not available locally).
 
-## 2026-11-04 (session 192, part 6) -- live-state re-verify, lane still supervisor-blocked
+## 2026-11-04 (session 192, part 6, condensed)
 
-Lane-A FOCUS target unchanged (TARGET-DONE). No new mathematics; re-verified the
-LIVE tree and the supervisor hand-off artifacts, all bounded (<7 s total).
+Live re-verify (STATIC only): root sha `022075ae...b338914` unchanged, both
+`-- HARK-MISSING` lines 1952--1953; `root-import-c450.patch` -> PATCH_APPLIES_OK;
+`c450-maxheartbeat-refs.json` shows no C450 chain module among the flagged
+namespace users (import-reachability, not a kernel verdict).
 
-- Root `n11-work/lean/N11Formalization.lean` sha256
-  `022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914` (unchanged);
-  both `-- HARK-MISSING` lines still 1952--1953 (exact text re-read).
-- `git apply --check n11-work/ops/lanes/A/root-import-c450.patch` -> **PATCH_APPLIES_OK**
-  (patch 775 B, still byte-compatible with the live root).
-- Re-read `c450-maxheartbeat-refs.json` (session-191/192 static lower bound):
-  the flagged `maxHeartbeats 0` namespaces (`DrowBallBox`, `GridBridge`, `Ladder49`)
-  are used only from `RootRangeBoxFull`, `SourceExactRoot`, `Flash*`, `Resume*`,
-  `TcRootHook` -- **no C450 chain module is in the user list**, so the chain
-  proofs do not appear to reference them (import-reachability only).
+## 2026-11-04 (session 192, part 5) -- q0(5,8) static CI-red gate + live re-verify
 
-Scope: STATIC byte/hash + patch-apply + static namespace scan, NOT a kernel verdict
-and NOT a build. Newest `ops/ci/LATEST.md` (run 41706645384) = cancelled, no C450
-target, so still no new kernel verdict for the two chain modules.
+Lane-A FOCUS target unchanged (C450 TARGET-DONE, supervisor-blocked on the root
+edit; q0 PAUSED). This part added ONE new static gate and re-verified the LIVE
+tree (bounded, `source /workspace/tools/env.sh`).
+
+NEW tool `audit_q0_degree5_static.py` -> `q0-degree5-static.json`.  For the two
+CI-pending q0(5,8) modules (`Q0Degree5SourceData`, `Q0Degree5ClosureExtension`)
+it runs a comment/string-stripped hard-rule scan, checks every *local* direct
+import exists on disk, and checks namespace open/end balance.  Result: **2/2
+PASS, failures `[]`** -- no `sorry`/`admit`/`axiom`/`native_decide`/`ofReduceBool`
+/`implemented_by`/`maxHeartbeats 0`, all local imports present, `namespace` 1/1.
+This only rules out cheap CI-red modes; it is NOT a kernel verdict and NOT a build.
+
+Live re-verify (cheap, <5 s): root sha256
+`022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914` (unchanged),
+both `-- HARK-MISSING` lines still 1952--1953; `git apply --check
+n11-work/ops/lanes/A/root-import-c450.patch` -> **PATCH_APPLIES_OK**.  Newest
+`ops/ci/LATEST.md` (run 41706645384) = cancelled, no C450/Q0 target, so still no
+new kernel verdict for the chain modules.
 
 **Still unproved / unpaid.** No kernel verdict for `C450ChainCompletion` /
-`C450ChainCompletionMain` in this window. q0(5,8) `ClosureFactorBounds`, q0(3)/q1
+`C450ChainCompletionMain` or for the two q0(5,8) modules.  q0(5,8)
+`ClosureFactorBounds` (11 face, 9 switch, 9 sector + strict total), q0(3)/q1
 tables + `q0Degree3AreaInput`, the seven class exclusions, energy residual 389,
 and the arbitrary-centre full-disk theorem all remain open.
 
-**Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`
-(PATCH_APPLIES_OK), push, let `n11-lean-build` finish; on green lift the q0 pause
-and resume lane A at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`. Lane A has nothing
-else actionable while the q0 pause holds.
+**Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`,
+push, let `n11-lean-build` finish; on green lift the q0 pause and resume lane A
+at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.  A referenced-declaration closure
+needs a built `.olean` (not available locally).
