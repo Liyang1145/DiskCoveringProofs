@@ -1,11 +1,11 @@
 # CI latest (run 41706645384)
 
 ```
+41769569707 in_progress null da6f0ed3 2026-11-04T03:50:31Z
 41706645384 completed cancelled bd5573e5 2026-11-03T19:48:10Z
 41656715257 completed cancelled 7ea37808 2026-11-03T14:44:47Z
 41600479881 completed cancelled 55890d94 2026-11-03T08:03:35Z
 41449154413 completed cancelled f6f73fc8 2026-11-02T12:59:31Z
-41449062259 completed cancelled 6b9c9f05 2026-11-02T12:58:48Z
 ```
 
 ## summary.json
