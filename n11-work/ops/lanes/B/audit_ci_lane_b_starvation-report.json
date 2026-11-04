@@ -1,0 +1,41 @@
+{
+ "scope": "CI build-order audit from ops/ci/LATEST.md; not a kernel check",
+ "exits_entries": 172,
+ "lane_target_counts": {
+  "C": 239,
+  "B": 34,
+  "A": 76
+ },
+ "lane_reached_counts": {
+  "C": 172,
+  "B": 2,
+  "A": 0
+ },
+ "lane_b_reached": [
+  "N11Formalization.EnergyTerminalBatchB13Refine0037",
+  "N11Formalization.EnergyTerminalBatchB13RefineTwelve"
+ ],
+ "reds": [
+  "N11Formalization.EnergyTerminalResidualCensusRefine0039",
+  "N11Formalization.EnergyTerminalResidualCensusRefine0039Refine3149",
+  "N11Formalization.EnergyTerminalResidualCensusRefine0037Refine3149",
+  "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
+  "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusMain",
+  "N11Formalization.EnergyTerminalResidualCensusRefineTriple",
+  "N11Formalization.EnergyTerminalResidualCensusRefine385"
+ ],
+ "reds_by_lane": {
+  "C": [
+   "N11Formalization.EnergyTerminalResidualCensusRefine0039",
+   "N11Formalization.EnergyTerminalResidualCensusRefine0039Refine3149",
+   "N11Formalization.EnergyTerminalResidualCensusRefine0037Refine3149",
+   "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
+   "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensusMain",
+   "N11Formalization.EnergyTerminalResidualCensusRefineTriple",
+   "N11Formalization.EnergyTerminalResidualCensusRefine385"
+  ],
+  "B": [],
+  "A": []
+ },
+ "lane_b_starved": false
+}

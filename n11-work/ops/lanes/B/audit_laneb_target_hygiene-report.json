@@ -1,0 +1,1513 @@
+{
+ "script": "audit_laneb_target_hygiene.py",
+ "scope": "static token/option scan of lanes/B/TARGETS.txt sources; not a build",
+ "targets": 34,
+ "forbidden_or_missing": 0,
+ "ok": true,
+ "closure_modules": 67,
+ "closure_forbidden": 0,
+ "rows": [
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenTerminalCensus",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenTerminalCensus.lean",
+   "lines": 1327,
+   "max_line_bytes": 127,
+   "sha256": "943A296CAFB75ECABB01A80D993016FF91D9758CF6F4CF5ADFAF0884259EFDBB",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCard",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualCard.lean",
+   "lines": 122,
+   "max_line_bytes": 104,
+   "sha256": "E0415B0EBD46DB0BA9B3A5A792EA506EBAAA2C91BEFAAB8DD119EB5667FB6F40",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBResidual373Incremental",
+   "path": "N11Formalization/LaneBResidual373Incremental.lean",
+   "lines": 58,
+   "max_line_bytes": 97,
+   "sha256": "54A90F00E446C69BBC5E957297D5851A0687488219EC239AA076F8CB5E67E083",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBResidual373Seed1409",
+   "path": "N11Formalization/LaneBResidual373Seed1409.lean",
+   "lines": 72,
+   "max_line_bytes": 104,
+   "sha256": "B555D57FF146633E9265D4012E547F4D6C5F30DC6BB1F01FA8F35FEDB793A6F6",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN0040",
+   "path": "N11Formalization/EnergyRefineN0040.lean",
+   "lines": 7,
+   "max_line_bytes": 77,
+   "sha256": "B6C68B2CC66C5A0CEFE108810F6670D6B3D70D3E6EC22ED417BBAAA1829A7127",
+   "forbidden": {},
+   "options": {},
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBResidual346Bridge",
+   "path": "N11Formalization/LaneBResidual346Bridge.lean",
+   "lines": 67,
+   "max_line_bytes": 119,
+   "sha256": "6F108923BAC7304F8D599ED2E00522C449E62991B1A6F62C3538F66F22CB09B6",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBArchiveRefine3And23",
+   "path": "N11Formalization/LaneBArchiveRefine3And23.lean",
+   "lines": 46,
+   "max_line_bytes": 98,
+   "sha256": "BED389F7689F432F52025537B53921DC471DC2EE7E3A3EB4863C731F4F6C7A6D",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBArchiveRefineAll14",
+   "path": "N11Formalization/LaneBArchiveRefineAll14.lean",
+   "lines": 173,
+   "max_line_bytes": 123,
+   "sha256": "DE4C1C4DB7622C0E47CEF6FE04DE0CEF3CFF5A432A00B0CC892EB99775D8783A",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructuralCensus.lean",
+   "lines": 26,
+   "max_line_bytes": 111,
+   "sha256": "42B6582D690E02CC8B204E5D7028E258A77A9A8B8312AB7B3551830C4974E7E4",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructural",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructural.lean",
+   "lines": 49,
+   "max_line_bytes": 133,
+   "sha256": "A9EF7A7EC0BF192A82AAEE1A625519211C76943ED577919B384014BDCE08CA0C",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualStructuralMain",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualStructuralMain.lean",
+   "lines": 64,
+   "max_line_bytes": 154,
+   "sha256": "7CE25F5DF035E68DE463561E589A674B793386369FDCF81FA0378BB995FC34A7",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBRowCapDecideProbe",
+   "path": "N11Formalization/LaneBRowCapDecideProbe.lean",
+   "lines": 28,
+   "max_line_bytes": 70,
+   "sha256": "8975A4DB4431CEA8C38654C3B7775CB3330F25D31BC93B0CBC49CF55A2A3BC24",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBFrozenCapRowCap1409",
+   "path": "N11Formalization/LaneBFrozenCapRowCap1409.lean",
+   "lines": 17,
+   "max_line_bytes": 69,
+   "sha256": "D72CC7C654DFB2A0FBF9480682513707FFDE0BA06D1A73EF91B7B02BD20D4381",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBFrozenCapRowCap2337",
+   "path": "N11Formalization/LaneBFrozenCapRowCap2337.lean",
+   "lines": 17,
+   "max_line_bytes": 69,
+   "sha256": "A18E361843C6C68C98869F365CF52E1D5827544001E9791B8CF4F71B85AD9B38",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBFrozenCapRowCap2341",
+   "path": "N11Formalization/LaneBFrozenCapRowCap2341.lean",
+   "lines": 17,
+   "max_line_bytes": 69,
+   "sha256": "44194AF0539B28A174AAAF59C954BB99FD701E215BC4301FD32D3DF70F589AFF",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBFrozenCapRowCap2356",
+   "path": "N11Formalization/LaneBFrozenCapRowCap2356.lean",
+   "lines": 17,
+   "max_line_bytes": 69,
+   "sha256": "7EB548EAA98E07BCF82C4013DAF6D90AEE216A388AA1EFC73072749B73C60B05",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBFrozenCapRowCap2360",
+   "path": "N11Formalization/LaneBFrozenCapRowCap2360.lean",
+   "lines": 17,
+   "max_line_bytes": 69,
+   "sha256": "14BD2FBDE1CACF7BB2CE36ABD2DB29A3BD18F411B0794FA76700068A324CC8F9",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBFrozenCapRowCap2368",
+   "path": "N11Formalization/LaneBFrozenCapRowCap2368.lean",
+   "lines": 17,
+   "max_line_bytes": 69,
+   "sha256": "CE62034323E5E2B95594362FE048AD3C85FDA2AC3BAE2097AEB2D65B498A5F74",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.LaneBFrozenCapRowCap2370",
+   "path": "N11Formalization/LaneBFrozenCapRowCap2370.lean",
+   "lines": 17,
+   "max_line_bytes": 69,
+   "sha256": "C5D066713E31664E1791390EEC4B2E792E363DB83894B0B5833BE7F4A6AE3117",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182",
+   "path": "N11Formalization/Paid16GeneralNext1182.lean",
+   "lines": 840,
+   "max_line_bytes": 387,
+   "sha256": "5D941203EDF2222D28389F467BEC254D71F486CA26EC7F8414E629EA34FAA9B1",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13Next505Bounds",
+   "path": "N11Formalization/EnergyTerminalBatchB13Next505Bounds.lean",
+   "lines": 143,
+   "max_line_bytes": 190,
+   "sha256": "FA5CA6EB9CD75158085EDDD3C0CB464AB7F96CF124FCE40C303EB176D31D46F2",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13DescentBounds",
+   "path": "N11Formalization/EnergyTerminalBatchB13DescentBounds.lean",
+   "lines": 1177,
+   "max_line_bytes": 341,
+   "sha256": "F5E3C49DC61FC031CBB32C2686BBA721909EC695850A661BD8E789DC59EB8794",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13",
+   "path": "N11Formalization/EnergyTerminalBatchB13.lean",
+   "lines": 131,
+   "max_line_bytes": 92,
+   "sha256": "3DD37313505E0E8D608D50D42D3AFB1F1E08CEBBDF1ACD5DB570F57D9DC8FD03",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13Main",
+   "path": "N11Formalization/EnergyTerminalBatchB13Main.lean",
+   "lines": 31,
+   "max_line_bytes": 106,
+   "sha256": "521CA436A8745EF197F76FCADEDCE2CF232B3B3643B977B997153E463FA41837",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13Refine0037",
+   "path": "N11Formalization/EnergyTerminalBatchB13Refine0037.lean",
+   "lines": 307,
+   "max_line_bytes": 228,
+   "sha256": "83D464E788D0D014C214EBAC96D2EAF3AC6F29087597F866B572B4F965CEC727",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineTwelve",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineTwelve.lean",
+   "lines": 87,
+   "max_line_bytes": 86,
+   "sha256": "1479D68D7DB45C6631E0E8B856E9CAA9BAA3A2E8E8F1E6DBE5C74548173471B8",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineThirteen",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineThirteen.lean",
+   "lines": 123,
+   "max_line_bytes": 86,
+   "sha256": "F62B93EB0B60B812CB30767A745CCD2D57C197269D1E78A8C2B0CBFCC9E9252E",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineThirteenMain",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineThirteenMain.lean",
+   "lines": 28,
+   "max_line_bytes": 119,
+   "sha256": "D46E758CFB3B6997FD5BCE098192FAFC776AC8A388A514F412F7A733D2784375",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineFourteen",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineFourteen.lean",
+   "lines": 114,
+   "max_line_bytes": 88,
+   "sha256": "0BCDA68789D4DF1FDDE918C418DE1F34D67E0F9D5F15211AFDDE40CEAA80AB4F",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineFourteenMain",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineFourteenMain.lean",
+   "lines": 30,
+   "max_line_bytes": 130,
+   "sha256": "9478C19FA149AC0E8721EA03902C2483D001D55CDCD49C393DB3663E772C3FE7",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteen",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteen.lean",
+   "lines": 141,
+   "max_line_bytes": 80,
+   "sha256": "094F9C9B3917180EF1BD19654B984E93C2F5DBC32AF4613F212F796BA52D003A",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenMain",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenMain.lean",
+   "lines": 30,
+   "max_line_bytes": 128,
+   "sha256": "A3103831CB770E50A0ABA35ADC2927011781E16EDE529163F729CD695028FECF",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalResidualCensus",
+   "path": "N11Formalization/EnergyTerminalResidualCensus.lean",
+   "lines": 130,
+   "max_line_bytes": 1903,
+   "sha256": "84593DBA542ED58A3FAFDB9211C8622659FB509773DB1A5251B3C32C3EE24D6B",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalResidualCensusRefineSixteen",
+   "path": "N11Formalization/EnergyTerminalResidualCensusRefineSixteen.lean",
+   "lines": 216,
+   "max_line_bytes": 120,
+   "sha256": "45288BEECE991975ED67EE8410EF43EECE94E4032890687BE33FA33F7B02B8CD",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  }
+ ],
+ "closure_rows": [
+  {
+   "module": "N11Formalization.DBMSourceTreeData",
+   "path": "N11Formalization/DBMSourceTreeData.lean",
+   "lines": 90205,
+   "max_line_bytes": 183163,
+   "sha256": "BD4E71CB29804A5A3D5953727558F4656D23253A83B69F5C3D6E25EEB4EA8ED5",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidual",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenResidual.lean",
+   "lines": 79,
+   "max_line_bytes": 120,
+   "sha256": "6B34B72736ABB8DC67E6D392098241812A18A206470E78FBD171C259CC39B902",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapResidualMembership",
+   "path": "N11Formalization/FrozenCapResidualMembership.lean",
+   "lines": 78,
+   "max_line_bytes": 95,
+   "sha256": "6CA0351E87976D1E1FC0B6E19A6DCAC983883A5B8BE6D0D7DC8B0A29F2E498AC",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13PublicResidualCanonical",
+   "path": "N11Formalization/EnergyTerminalBatchB13PublicResidualCanonical.lean",
+   "lines": 63,
+   "max_line_bytes": 119,
+   "sha256": "D55AA9A67864887D1C75D2FD6713627BB88ADAFBBFD8D85118C423ECD1559C96",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN40",
+   "path": "N11Formalization/EnergyRefineN40.lean",
+   "lines": 83,
+   "max_line_bytes": 12035,
+   "sha256": "BBB5EBF192558976F1685BF6966E2360E8F0FA9B15217AF1E1C49D9F53CE1F00",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalResidualCensusRefine346",
+   "path": "N11Formalization/EnergyTerminalResidualCensusRefine346.lean",
+   "lines": 164,
+   "max_line_bytes": 97,
+   "sha256": "EA12788B26A0A6552C9F2F1007B8A70FA56B1755E7E2AF2DF1FADDBE5A24545A",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13ResidualCertificates",
+   "path": "N11Formalization/EnergyTerminalBatchB13ResidualCertificates.lean",
+   "lines": 197,
+   "max_line_bytes": 111,
+   "sha256": "6E19343D207165D8F6A0675A09EB508C28524D57412D5299D2EA39B73D5C3E40",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN0003Restored",
+   "path": "N11Formalization/EnergyRefineN0003Restored.lean",
+   "lines": 128,
+   "max_line_bytes": 11960,
+   "sha256": "94DC0256BA289A6AD482E25AE21F675F6DF4DBEC86BC00C6E5ECA7D425115CF4",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN0023Restored",
+   "path": "N11Formalization/EnergyRefineN0023Restored.lean",
+   "lines": 118,
+   "max_line_bytes": 11966,
+   "sha256": "8824219E83C644B3E1F816471DB770D65519A83BC15506EBC0C0D213B7A65465",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN0038",
+   "path": "N11Formalization/EnergyRefineN0038.lean",
+   "lines": 108,
+   "max_line_bytes": 12037,
+   "sha256": "AA4049EC985B7485BE8CEB25797F1A0B8B8D06E1AE206CBE4ADBD9718980DF95",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3432",
+   "path": "N11Formalization/EnergyRefineN3432.lean",
+   "lines": 168,
+   "max_line_bytes": 12770,
+   "sha256": "1050675AB66E1943EC780B6BAF5844AF7993BF85BB996F1535BEBEF9F64862BA",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3490",
+   "path": "N11Formalization/EnergyRefineN3490.lean",
+   "lines": 213,
+   "max_line_bytes": 12619,
+   "sha256": "515B48FEADA7A256F556A763B17FEFD310963F8C53BDA81DCE43E17B6850877B",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3517",
+   "path": "N11Formalization/EnergyRefineN3517.lean",
+   "lines": 113,
+   "max_line_bytes": 12196,
+   "sha256": "F7A9A0BD1E5AD04947E2E1512BEF5E9955CC48EB019BF232A23475C456DF7856",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3550",
+   "path": "N11Formalization/EnergyRefineN3550.lean",
+   "lines": 143,
+   "max_line_bytes": 12687,
+   "sha256": "589AC920AD3B1ACAE2A5F349EE04902CABFB920BF4BAC0989F95ACB6ECF01098",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3564",
+   "path": "N11Formalization/EnergyRefineN3564.lean",
+   "lines": 98,
+   "max_line_bytes": 12161,
+   "sha256": "04DBF5CC3089725E3CA16E5B2189944E0EB38274D1E0D96FAF4666747C4193EA",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3569",
+   "path": "N11Formalization/EnergyRefineN3569.lean",
+   "lines": 113,
+   "max_line_bytes": 12305,
+   "sha256": "5DE5A87F9BA46F6660CA4BFED96781609300F302B8A1A1C3FC91BA3410178400",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3578",
+   "path": "N11Formalization/EnergyRefineN3578.lean",
+   "lines": 123,
+   "max_line_bytes": 12495,
+   "sha256": "BD8A0E6A3F239A343860B13D05A549BA7CD3D446486CF84F09E9272AB85D8A26",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3738",
+   "path": "N11Formalization/EnergyRefineN3738.lean",
+   "lines": 158,
+   "max_line_bytes": 12798,
+   "sha256": "16310141D6C81012B87FE767734BB909BDABA331A3CA88653C17D2D07A871EE9",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3781",
+   "path": "N11Formalization/EnergyRefineN3781.lean",
+   "lines": 83,
+   "max_line_bytes": 12413,
+   "sha256": "1D5020B479FD6AE777116F3BCB2AD4DD042B1522C64FEBDAAD5546D4DEAE6BFB",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3825",
+   "path": "N11Formalization/EnergyRefineN3825.lean",
+   "lines": 103,
+   "max_line_bytes": 12798,
+   "sha256": "E2E9831A7518E9EF692D7A1A40862C6BEC290CFD1BC058A7760A315B5A5B237B",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN3854",
+   "path": "N11Formalization/EnergyRefineN3854.lean",
+   "lines": 103,
+   "max_line_bytes": 12651,
+   "sha256": "DD834D8F629548AD29C48FE0CFD5238B0293358EABD52CAF8031D4A33737BA7C",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapRowCap1409",
+   "path": "N11Formalization/FrozenCapRowCap1409.lean",
+   "lines": 676,
+   "max_line_bytes": 69,
+   "sha256": "9652ECF3C38A4DFEEA126F788BCC80EE5E568E9FC53C9F6684829876D02FB3BC",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapRowCap2337",
+   "path": "N11Formalization/FrozenCapRowCap2337.lean",
+   "lines": 676,
+   "max_line_bytes": 69,
+   "sha256": "FEA8C1C6E80D64CCAA216FCF8D920B255D24B5416A4DB8B4E95B4DD154FC525F",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapRowCap2341",
+   "path": "N11Formalization/FrozenCapRowCap2341.lean",
+   "lines": 676,
+   "max_line_bytes": 69,
+   "sha256": "E87CF4EFC39CA9A685ADC076EAFB9B06D5B5AC58B2046F94BFC4F20655C4B6D9",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapRowCap2356",
+   "path": "N11Formalization/FrozenCapRowCap2356.lean",
+   "lines": 676,
+   "max_line_bytes": 69,
+   "sha256": "5448644D140EC2BBCE55EA860BD82376301997065E8AC487350E4D5CC04E6574",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapRowCap2360",
+   "path": "N11Formalization/FrozenCapRowCap2360.lean",
+   "lines": 676,
+   "max_line_bytes": 69,
+   "sha256": "76EB718359D82145E242D351CBA70AF7EAFE8DE60273704B351226D708B71DA6",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapRowCap2368",
+   "path": "N11Formalization/FrozenCapRowCap2368.lean",
+   "lines": 676,
+   "max_line_bytes": 69,
+   "sha256": "22390E0DCC1DABBC7C147D5EBE391452334FFC400C48DDD0C218BD101697B339",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.FrozenCapRowCap2370",
+   "path": "N11Formalization/FrozenCapRowCap2370.lean",
+   "lines": 676,
+   "max_line_bytes": 69,
+   "sha256": "A58BAD285BF1C1A4578995994ADC721C48C41B2920FA2DE3FF3FBE13EFA82B33",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S01",
+   "path": "N11Formalization/Paid16GeneralNext1182S01.lean",
+   "lines": 267,
+   "max_line_bytes": 325,
+   "sha256": "D7BFEA1C4FC64322CA8C1F18944B4A943634CE84C1FE2AC64C0D68971ACBBB14",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S02",
+   "path": "N11Formalization/Paid16GeneralNext1182S02.lean",
+   "lines": 267,
+   "max_line_bytes": 325,
+   "sha256": "8F06CA3BDE0D58D1E4A91046423A1C8921E203FBBAD8D32D965BDBC9BFC2CD9A",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S03",
+   "path": "N11Formalization/Paid16GeneralNext1182S03.lean",
+   "lines": 267,
+   "max_line_bytes": 325,
+   "sha256": "D89C3427F5A5201A7FD7DA2C545E0210789A88D92AB2D13BB742F366ADF8CA89",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S04",
+   "path": "N11Formalization/Paid16GeneralNext1182S04.lean",
+   "lines": 267,
+   "max_line_bytes": 325,
+   "sha256": "2F39391EE79F2E9D9A18ACD825C2F4DBA98C401AEBEBC8F216DC8D05F909C54F",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S05",
+   "path": "N11Formalization/Paid16GeneralNext1182S05.lean",
+   "lines": 267,
+   "max_line_bytes": 325,
+   "sha256": "C1F56607A9972F75F26A3483B40C4C5C47DE00069B8C47A46D0520B808398927",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S06",
+   "path": "N11Formalization/Paid16GeneralNext1182S06.lean",
+   "lines": 267,
+   "max_line_bytes": 325,
+   "sha256": "1498B8F24EB0D32CF4F69E8B676FD4FA91A1F144929B8E7C2B750200B6A0B1C7",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S07",
+   "path": "N11Formalization/Paid16GeneralNext1182S07.lean",
+   "lines": 267,
+   "max_line_bytes": 325,
+   "sha256": "99D9CBE825CDD0D9000B3931972E74F2AA5BFE208EA85C6B6D92CC404997CF97",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext1182S08",
+   "path": "N11Formalization/Paid16GeneralNext1182S08.lean",
+   "lines": 42,
+   "max_line_bytes": 130,
+   "sha256": "68AC386C2D7AFD31C63412E467AA510F5FD3DFD9DECB6B318CAF196A6A86BE4F",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB12",
+   "path": "N11Formalization/EnergyTerminalBatchB12.lean",
+   "lines": 77,
+   "max_line_bytes": 87,
+   "sha256": "FF479557E311757F05772D22A8A98A749EF9984389EF01CD08AD6CCB1C68ADFC",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralNext505",
+   "path": "N11Formalization/Paid16GeneralNext505.lean",
+   "lines": 766,
+   "max_line_bytes": 451,
+   "sha256": "8F20BBBDB5289BA5D90C4E7D52BE8894EFE5CF07A84FBB6C4F5D22F3D85404A7",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG01",
+   "path": "N11Formalization/Paid16GeneralG01.lean",
+   "lines": 142,
+   "max_line_bytes": 11831,
+   "sha256": "09E658E0862467302D345A594404A0935E273E515E748933E0A23701E7F27050",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG02",
+   "path": "N11Formalization/Paid16GeneralG02.lean",
+   "lines": 142,
+   "max_line_bytes": 11726,
+   "sha256": "2E1856C818D1B1C38C3F8C6A5795D3D6BBD49609F5D4957077FFF5F78F37EFF6",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG03",
+   "path": "N11Formalization/Paid16GeneralG03.lean",
+   "lines": 142,
+   "max_line_bytes": 11780,
+   "sha256": "04C94747290E710890D76D83404EB45C4C8B8FDC0BE6295E9B0176E40BAD67EA",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG04",
+   "path": "N11Formalization/Paid16GeneralG04.lean",
+   "lines": 142,
+   "max_line_bytes": 11823,
+   "sha256": "43D2C0B576DD12267F20CE5787B0B408D8F43D0A5ECBFC2C0D4804054A1D6485",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG05",
+   "path": "N11Formalization/Paid16GeneralG05.lean",
+   "lines": 142,
+   "max_line_bytes": 11813,
+   "sha256": "39950A7404C90B1C08BE53C427EB8064D284C5912EC58F664144AE5E8FD8EFF8",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG06",
+   "path": "N11Formalization/Paid16GeneralG06.lean",
+   "lines": 142,
+   "max_line_bytes": 11814,
+   "sha256": "3F1003722FC1F223D3A793D7D6731F484F963943627BFA95880D203ADF3A5A0C",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG07",
+   "path": "N11Formalization/Paid16GeneralG07.lean",
+   "lines": 142,
+   "max_line_bytes": 11766,
+   "sha256": "CACDD890C42886848C41ABA48D7C7D07C83D86E050FE812A1EA622873D0ACDEC",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG08",
+   "path": "N11Formalization/Paid16GeneralG08.lean",
+   "lines": 142,
+   "max_line_bytes": 11820,
+   "sha256": "A7CD424EC57ED6605E1BE5BFB23083AC507A25C1C0536DBFC789ED2C9F76C88B",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG09",
+   "path": "N11Formalization/Paid16GeneralG09.lean",
+   "lines": 142,
+   "max_line_bytes": 11856,
+   "sha256": "C7752402A27C6B0CE6480879F88D7EB38EDF03C43591B769A090C6996274923A",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG10",
+   "path": "N11Formalization/Paid16GeneralG10.lean",
+   "lines": 142,
+   "max_line_bytes": 11779,
+   "sha256": "F790B7D170735BAB912547A81D4BACC2CF1FAB27FDE078AFA1F4465F8B42342D",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG11",
+   "path": "N11Formalization/Paid16GeneralG11.lean",
+   "lines": 142,
+   "max_line_bytes": 11805,
+   "sha256": "4AB888039EA0AFDEE3A11350EF5EE70CAF5FFE96253B949A08108845D66F4032",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralG12",
+   "path": "N11Formalization/Paid16GeneralG12.lean",
+   "lines": 142,
+   "max_line_bytes": 11831,
+   "sha256": "1E3F00853684EDE71C1CFC447C19E97516D44B61DCC0D0303A0AB1705CE7C763",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB10",
+   "path": "N11Formalization/EnergyTerminalBatchB10.lean",
+   "lines": 62,
+   "max_line_bytes": 87,
+   "sha256": "D8F6E348BFC2543323B78ECD95FE015DB31E4359344D7EA0C7A5562F5C3147EC",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB11",
+   "path": "N11Formalization/EnergyTerminalBatchB11.lean",
+   "lines": 62,
+   "max_line_bytes": 92,
+   "sha256": "F291ABB5BBCFB20F9221678A22A40D4D3E53C224C410126B65024237C66E634A",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.Paid16GeneralRemaining210",
+   "path": "N11Formalization/Paid16GeneralRemaining210.lean",
+   "lines": 56,
+   "max_line_bytes": 353,
+   "sha256": "BDCDAF317E5245043EF48B5BBE4DD1CB86CD1A5120D7856D310DF719688E4CC4",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.C450ChainCompletionMain",
+   "path": "N11Formalization/C450ChainCompletionMain.lean",
+   "lines": 23,
+   "max_line_bytes": 81,
+   "sha256": "3F6088615E0A88E2A8927562C947C0C685E3E57BB15376CA3467FC7F6A33539C",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.ActualMetricClassReduction",
+   "path": "N11Formalization/ActualMetricClassReduction.lean",
+   "lines": 77,
+   "max_line_bytes": 99,
+   "sha256": "4C6B872ADBD37A812898A80C39DECF1CB500937A6E79A695D06F6FC3320C8936",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyRefineN0037",
+   "path": "N11Formalization/EnergyRefineN0037.lean",
+   "lines": 58,
+   "max_line_bytes": 11826,
+   "sha256": "7A0137826C2EA9C5975EE9D3B19952E409E86551B93262778933C3752240D0AC",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "100000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineEleven",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineEleven.lean",
+   "lines": 95,
+   "max_line_bytes": 81,
+   "sha256": "8BC3459F021C6AFC4C01EA5FF587CB0C1C9DFF77C19118B1474D3A7FEA4D4017",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13Refine3112",
+   "path": "N11Formalization/EnergyTerminalBatchB13Refine3112.lean",
+   "lines": 302,
+   "max_line_bytes": 228,
+   "sha256": "4F127D75B46C0F711DD065F2C44E941B261922862C02E3351223A61E140C7C21",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13Refine3116",
+   "path": "N11Formalization/EnergyTerminalBatchB13Refine3116.lean",
+   "lines": 302,
+   "max_line_bytes": 228,
+   "sha256": "20BB1E1F6111FC50E5EA2F4E8EA4AB1B4EA216CC1B186F9D0F8F20255169C672",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13Refine3431",
+   "path": "N11Formalization/EnergyTerminalBatchB13Refine3431.lean",
+   "lines": 302,
+   "max_line_bytes": 228,
+   "sha256": "D3209AB4244F95C6F8A31D841FF3979F14CDE97BD6AB21FE560566E848B1CD85",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13Refine3573",
+   "path": "N11Formalization/EnergyTerminalBatchB13Refine3573.lean",
+   "lines": 302,
+   "max_line_bytes": 228,
+   "sha256": "A13F1838967B1EAB374D7D510A7D6C9D64ED270F446B92611428F6E376288E9A",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalResidualCensusC01",
+   "path": "N11Formalization/EnergyTerminalResidualCensusC01.lean",
+   "lines": 103,
+   "max_line_bytes": 78,
+   "sha256": "6E90C8EA7968DA2E525D1335C1931AC5C13D03541F17F666132B9FFDD7EF07F4",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalResidualCensusC02",
+   "path": "N11Formalization/EnergyTerminalResidualCensusC02.lean",
+   "lines": 103,
+   "max_line_bytes": 78,
+   "sha256": "ABB36C8059A7D82CF57902854D88B820EB5C373CEC43283796F6ABD47EC46C49",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalResidualCensusC03",
+   "path": "N11Formalization/EnergyTerminalResidualCensusC03.lean",
+   "lines": 103,
+   "max_line_bytes": 78,
+   "sha256": "4E53CD56DD018820DD80BAABCFF81ECB5BE4D6184B496D96A653879A2C712AF7",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalResidualCensusC04",
+   "path": "N11Formalization/EnergyTerminalResidualCensusC04.lean",
+   "lines": 96,
+   "max_line_bytes": 78,
+   "sha256": "2981D3C2BC2D4B8C5687691013A758174F19091114FF15355A506A9F211DDD64",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenRepair",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenRepair.lean",
+   "lines": 143,
+   "max_line_bytes": 85,
+   "sha256": "47A05CA2B725BDE9465B67507D5DECE4A3BA3BEC0B762694634C0DC87B06FDB6",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ],
+    "maxRecDepth": [
+     "10000"
+    ]
+   },
+   "status": "CLEAN"
+  },
+  {
+   "module": "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain",
+   "path": "N11Formalization/EnergyTerminalBatchB13RefineSixteenResidualMain.lean",
+   "lines": 60,
+   "max_line_bytes": 141,
+   "sha256": "D694A018EC0FB517A914EC0E3C8423367C43D6361A535E1364E7E598B8487261",
+   "forbidden": {},
+   "options": {
+    "autoImplicit": [
+     "false"
+    ]
+   },
+   "status": "CLEAN"
+  }
+ ]
+}
