@@ -1,7 +1,7 @@
-# CI latest (run 41656715257)
+# CI latest (run 41706645384)
 
 ```
-41706645384 in_progress null bd5573e5 2026-11-03T19:48:10Z
+41706645384 completed cancelled bd5573e5 2026-11-03T19:48:10Z
 41656715257 completed cancelled 7ea37808 2026-11-03T14:44:47Z
 41600479881 completed cancelled 55890d94 2026-11-03T08:03:35Z
 41449154413 completed cancelled f6f73fc8 2026-11-02T12:59:31Z
@@ -11,7 +11,7 @@
 ## summary.json
 ```json
 {
- "sha": "7ea3780898d7c5be8844a2bb23725506d0be0bfa",
+ "sha": "bd5573e58d23d69cbdb4a154c9c382e7956962b4",
  "exits": [
   [
    "N11Formalization.EnergyRefineN0039Repair",
@@ -24,6 +24,30 @@
   [
    "N11Formalization.EnergyTerminalBatchB13Refine0039Main",
    "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusBase",
+   "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusC01",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusC02",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusC03",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusC04",
+   "1"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensus",
+   "1"
   ],
   [
    "N11Formalization.EnergyTerminalResidualCensusRefine0039",
@@ -52,6 +76,10 @@
   [
    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualMain",
    "0"
+  ],
+  [
+   "N11Formalization.EnergyTerminalResidualCensusRefineSixteen",
+   "1"
   ],
   [
    "N11Formalization.EnergyTerminalBatchB13RefineSixteenResidualCensus",
@@ -674,67 +702,95 @@
    "0"
   ],
   [
-   "N11Formalization.EnergyTerminalBatchB13Refine4162",
-   "0"
-  ],
-  [
-   "N11Formalization.EnergyTerminalBatchB13Refine4162Main",
-   "0"
-  ],
-  [
-   "N11Formalization.EnergyRefineN4244",
-   "0"
-  ],
-  [
-   "N11Formalization.EnergyTerminalBatchB13Refine4244",
-   "0"
-  ],
-  [
-   "N11Formalization.EnergyTerminalBatchB13Refine4244Main",
-   "0"
-  ],
-  [
-   "N11Formalization.EnergyTerminalResidualCensusRefineTriple",
-   "1"
-  ],
-  [
-   "N11Formalization.EnergyTerminalResidualCensusRefine385",
-   "1"
-  ],
-  [
-   "N11Formalization.En```
+   "N11Formalization.EnergyT```
 ## build log tail
 ```
-tion.EnergyTerminalResidualCensusRefine346
-MEM 20:32:45 avail=13830MB top: 7093700 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:33:05 avail=12176MB top: 8688448 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:33:25 avail=10173MB top: 10709652 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:33:45 avail=8526MB top: 13161088 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:34:05 avail=6702MB top: 13888568 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:34:25 avail=8437MB top: 10188816 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:34:45 avail=8360MB top: 10159588 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:35:05 avail=8344MB top: 10139536 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:35:25 avail=8299MB top: 10172416 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:35:45 avail=8338MB top: 10140552 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:36:05 avail=6944MB top: 11593576 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:36:25 avail=5053MB top: 12523148 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:36:45 avail=8168MB top: 7936840 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:37:05 avail=6972MB top: 9178144 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:37:25 avail=4924MB top: 11453108 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:37:46 avail=3796MB top: 12132356 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:38:06 avail=8242MB top: 7216892 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:38:26 avail=8289MB top: 7261428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:38:46 avail=6956MB top: 8623724 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:39:06 avail=4414MB top: 11240368 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:39:26 avail=5801MB top: 9214948 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:39:46 avail=5885MB top: 8871736 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:40:06 avail=3775MB top: 11352428 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:40:26 avail=8322MB top: 6882128 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:40:46 avail=6246MB top: 9234272 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:41:06 avail=3933MB top: 11670580 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
-MEM 20:41:26 avail=11965MB top: 1922492 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:41:46 avail=11117MB top: 3226744 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:42:06 avail=8506MB top: 5876192 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:42:26 avail=6280MB top: 8264860 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
-MEM 20:42:46 avail=4230MB top: 7111448 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+assical.choice,
+ Quot.sound]
+ℹ [9376/9399] Replayed N11Formalization.EnergyRefineN3623
+info: N11Formalization/EnergyRefineN3623.lean:48:0: 'N11Formalization.EnergyRefineN3623.new_radius' depends on axioms: [propext, Classical.choice, Quot.sound]
+⚠ [9377/9399] Replayed N11Formalization.EnergyTerminalBatchB13Refine3623
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:43:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:72:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:93:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:125:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:154:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:183:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:212:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:220:2: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+info: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:298:0: N11Formalization.EnergyTerminalBatchB13Refine3623.paid_count : N11Formalization.EnergyTerminalBatchB13Refine3623.paidIDs.card =
+  1998
+info: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:299:0: N11Formalization.EnergyTerminalBatchB13Refine3623.paid_radius : ∀
+  n ∈ N11Formalization.EnergyTerminalBatchB13Refine3623.paidIDs,
+  ∀ (y : Fin 9 → ℝ),
+    (∀ (q : Fin 9), 0 ≤ y q) →
+      ∑ q, y q = 1 →
+        N11Formalization.FlashLeafSplit.Cell
+            (N11Formalization.DBMTreeKernel.matrix N11Formalization.DBMSourceTree.data 4096 n)
+            (N11Formalization.FlashLeafSplit.tlift y) →
+          ∀ (C Z : Fin 11 → N11Formalization.Point) (r : ℝ),
+            N11Formalization.ResumeNetwork.Feasible (N11Formalization.SourceChartIsometry.chartAnchors y) C Z r →
+              N11Formalization.SourceExactRoot.sourceRadius < r
+info: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:300:0: N11Formalization.EnergyTerminalBatchB13Refine3623.remaining_of : N11Formalization.EnergyTerminalBatchB13Refine3623.RemainingTerminalRadius →
+  N11Formalization.EnergyTerminalBatchB13.RemainingTerminalRadius
+info: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:301:0: 'N11Formalization.EnergyTerminalBatchB13Refine3623.paid_radius' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+info: N11Formalization/EnergyTerminalBatchB13Refine3623.lean:302:0: 'N11Formalization.EnergyTerminalBatchB13Refine3623.remaining_of' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+MEM 02:38:29 avail=14260MB top: 1247856 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lake build N11Formalization.EnergyTerminalResidualCensusRefine352
+MEM 02:38:49 avail=13590MB top: 4835932 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 02:39:09 avail=13638MB top: 7209136 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 02:39:30 avail=12168MB top: 8681856 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 02:39:50 avail=11771MB top: 9123884 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizatio
+MEM 02:40:10 avail=8979MB top: 11892040 /home/runner/.elan/toolchains/leanprover--lean4---v4.33.1/bin/lean /home/runner/work/DiskCoveringProofs/DiskCoveringProofs/n11-work/lean/N11Formalizati
 ```
