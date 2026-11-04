@@ -1,0 +1,274 @@
+{
+ "chain_modules": [
+  "C450ChainCompletionEndpoint",
+  "C450ChainCompletionTail",
+  "C450ChainCompletionMid1",
+  "C450ChainCompletionMid2",
+  "C450ChainCompletionMid3",
+  "C450ChainCompletion"
+ ],
+ "checks": [
+  {
+   "label": "all 26 source segment modules 11..36 present on disk",
+   "ok": true
+  },
+  {
+   "label": "lemma source31_remaining_of_remaining defined in C450Source32Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 32 transfers to its predecessor 31",
+   "ok": true
+  },
+  {
+   "label": "lemma source32_remaining_of_remaining defined in C450Source33Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 33 transfers to its predecessor 32",
+   "ok": true
+  },
+  {
+   "label": "lemma source33_remaining_of_remaining defined in C450Source34Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 34 transfers to its predecessor 33",
+   "ok": true
+  },
+  {
+   "label": "lemma source34_remaining_of_remaining defined in C450Source35Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 35 transfers to its predecessor 34",
+   "ok": true
+  },
+  {
+   "label": "lemma source35_remaining_of_remaining defined in C450Source36Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 36 transfers to its predecessor 35",
+   "ok": true
+  },
+  {
+   "label": "lemma source26_remaining_of_remaining defined in C450Source27Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 27 transfers to its predecessor 26",
+   "ok": true
+  },
+  {
+   "label": "lemma source27_remaining_of_remaining defined in C450Source28Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 28 transfers to its predecessor 27",
+   "ok": true
+  },
+  {
+   "label": "lemma source28_remaining_of_remaining defined in C450Source29Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 29 transfers to its predecessor 28",
+   "ok": true
+  },
+  {
+   "label": "lemma source29_remaining_of_remaining defined in C450Source30Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 30 transfers to its predecessor 29",
+   "ok": true
+  },
+  {
+   "label": "lemma source30_remaining_of_remaining defined in C450Source31Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 31 transfers to its predecessor 30",
+   "ok": true
+  },
+  {
+   "label": "lemma source21_remaining_of_remaining defined in C450Source22Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 22 transfers to its predecessor 21",
+   "ok": true
+  },
+  {
+   "label": "lemma source22_remaining_of_remaining defined in C450Source23Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 23 transfers to its predecessor 22",
+   "ok": true
+  },
+  {
+   "label": "lemma source23_remaining_of_remaining defined in C450Source24Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 24 transfers to its predecessor 23",
+   "ok": true
+  },
+  {
+   "label": "lemma source24_remaining_of_remaining defined in C450Source25Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 25 transfers to its predecessor 24",
+   "ok": true
+  },
+  {
+   "label": "lemma source25_remaining_of_remaining defined in C450Source26Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 26 transfers to its predecessor 25",
+   "ok": true
+  },
+  {
+   "label": "lemma source16_remaining_of_remaining defined in C450Source17Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 17 transfers to its predecessor 16",
+   "ok": true
+  },
+  {
+   "label": "lemma source17_remaining_of_remaining defined in C450Source18Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 18 transfers to its predecessor 17",
+   "ok": true
+  },
+  {
+   "label": "lemma source18_remaining_of_remaining defined in C450Source19Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 19 transfers to its predecessor 18",
+   "ok": true
+  },
+  {
+   "label": "lemma source19_remaining_of_remaining defined in C450Source20Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 20 transfers to its predecessor 19",
+   "ok": true
+  },
+  {
+   "label": "lemma source20_remaining_of_remaining defined in C450Source21Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 21 transfers to its predecessor 20",
+   "ok": true
+  },
+  {
+   "label": "lemma source11_remaining_of_remaining defined in C450Source12Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 12 transfers to its predecessor 11",
+   "ok": true
+  },
+  {
+   "label": "lemma source12_remaining_of_remaining defined in C450Source13Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 13 transfers to its predecessor 12",
+   "ok": true
+  },
+  {
+   "label": "lemma source13_remaining_of_remaining defined in C450Source14Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 14 transfers to its predecessor 13",
+   "ok": true
+  },
+  {
+   "label": "lemma source14_remaining_of_remaining defined in C450Source15Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 15 transfers to its predecessor 14",
+   "ok": true
+  },
+  {
+   "label": "lemma source15_remaining_of_remaining defined in C450Source16Segment.lean",
+   "ok": true
+  },
+  {
+   "label": "lemma in segment 16 transfers to its predecessor 15",
+   "ok": true
+  },
+  {
+   "label": "every step 11..35 has an of_remaining transfer",
+   "ok": true
+  },
+  {
+   "label": "no gap in the 25-link descent 36->11",
+   "ok": true
+  },
+  {
+   "label": "no duplicated transfer lemma (no ambiguous/cyclic link)",
+   "ok": true
+  },
+  {
+   "label": "transfer lemma targets are exactly {11,...,35}",
+   "ok": true
+  }
+ ],
+ "missing_targets": [],
+ "module_sha256": {
+  "C450ChainCompletion": "d04b9dcfcb0a06ce84ff0412de48faa00af53627f643352a033af68aa81eaf2a",
+  "C450ChainCompletionEndpoint": "a9af56174578f04b9b1bae5f05784473edea11c83cd2bffa6e4094f176b2d9f1",
+  "C450ChainCompletionMid1": "522f2c609aab4c43da7b0189a6c05b42cab426251eaa5c84675c94673cdaedce",
+  "C450ChainCompletionMid2": "ebdcd8e92235d2774af2ba6d80b0223259fc13d6f3328ff69fd2213c76b4c766",
+  "C450ChainCompletionMid3": "f95882a7d411d158e209d7a3a5fd8cdefa7065f2fb82ed6b71e9b950f9ee4229",
+  "C450ChainCompletionTail": "05d8bf4b24589eef70aeb2eff6fa37a40ab1a5b442d56e5c9fba4adee8304bc1"
+ },
+ "n_checks": 55,
+ "n_failures": 0,
+ "scope": "STATIC source-text audit; NOT a kernel verdict and NOT a build",
+ "segment_modules_present": 26,
+ "transfer_edges": 25,
+ "transfer_lemma_targets": [
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35
+ ],
+ "verdict": "PASS_C450_CHAIN_WIRING"
+}

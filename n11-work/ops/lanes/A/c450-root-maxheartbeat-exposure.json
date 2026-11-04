@@ -1,0 +1,16 @@
+{
+ "flagged_trio": [
+  "N11Formalization.GridBridge",
+  "N11Formalization.DrowBallBox_compIvBoxBox",
+  "N11Formalization.Ladder49_jt_kkt_z"
+ ],
+ "lane_a_root_edit_adds_new_maxheartbeat_exposure": false,
+ "root_import_count": 800,
+ "root_imports_flagged_directly": {
+  "N11Formalization.DrowBallBox_compIvBoxBox": true,
+  "N11Formalization.GridBridge": true,
+  "N11Formalization.Ladder49_jt_kkt_z": true
+ },
+ "root_sha256": "022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914",
+ "scope": "STATIC direct-import scan of frozen stage-1 root; NOT a kernel verdict"
+}
