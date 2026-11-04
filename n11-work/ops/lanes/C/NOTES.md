@@ -199,3 +199,51 @@ the bottleneck, bisect block size (100 -> 50 -> 25) to find the per-decision ker
 (2) once CI reports `EnergyTerminalResidualCensusBase/C01..C04` exit codes, if red from
 kernel scale, split each `mem_iff_blockNN` into per-chunk `mem_iff` over the 100/100/100/89
 sub-finsets (reuse `chunkN_card`) so no single `decide +kernel` sees the 389-union.
+
+## 2026-11-03 - part 295 (probe baseline measured; C01-C04 OOM root cause pinned)
+
+Re-read GUIDANCE/LANES/C-NOTES/LATEST. Newest run `41706645384` (sha `bd5573e5`) is
+`in_progress`; the stored `LATEST.md` summary is run `41656715257` (sha `7ea37808`,
+`cancelled`) whose exits still do NOT list the part-293 base-census targets, so no exit
+code for `EnergyTerminalResidualCensusBase/C01..C04` has been observed yet.
+
+Probe baseline (bounded, `timeout 190`): `cd /workspace/tools/mathlib-probe &&
+time lake env lean tmp/b.lean` where `tmp/b.lean` is exactly `import Mathlib` -> rc=124,
+`real 3m10s`, `user 0m0.24s`, `sys 0m0.82s`. The near-zero CPU with 190 s wall means the
+probe spends the whole budget loading Mathlib oleans/blocking, NOT on kernel decisions.
+Consequence: the part-294 plan to bisect block size (100->50->25) in this probe is
+INFEASIBLE - the Mathlib-import cost alone exceeds any bounded window, so the probe can
+never separate import cost from `decide +kernel` cost. Scope: probe timing only; not a
+kernel verdict on the project modules.
+
+Structural facts checked (static, source text): the four census chunks in
+`EnergyTerminalResidualCensusBase.lean` are `chunk0..chunk3` of sizes 100/100/100/89 =
+389, and `residualIDs = chunk0 ∪ (chunk1 ∪ (chunk2 ∪ chunk3))` (389 literals).
+`C01..C04` declare 13+13+13+12 = 51 `mem_iff_blockNN` lemmas with labels `00..50`;
+block `NN` is `[100*NN, 100*NN+100)` and the labels tile `00..50`, i.e. `[0,5100)`,
+which strictly covers every id (max literal 4992). So the coverage tiling is sound.
+
+OOM root cause pinned (static, by import/definition trace): each `mem_iff_blockNN` closes
+with `rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert`. After
+that rewrite the goal is `n ∈ residualIDs ↔ ((DBMSourceTree.data n).terminal = true ∧
+n ∉ Patch120SharpDispatch.sharpIDs ∧ n ∉ paidIDs)`. The kernel `decide` must therefore
+evaluate `n ∉ EnergyTerminalBatchB13.paidIDs`, and `paidIDs = EnergyTerminalBatchB12.paidIDs
+∪ Paid16GeneralNext1182.newIDs` with `newIDs = Finset.univ.biUnion part` over `Fin 8`
+(`Paid16GeneralNext1182.lean:21,30`); plus it must reduce the 5011-element
+`Finset.univ.filter` that defines `residualIDs`. That heavy structure is decided 100x per
+block and ~51 blocks, i.e. ~5100 giant `decide +kernel` evaluations - a violation of the
+GUIDANCE kernel-scale rule (~170-500 literals), and the likely C01-C04 OOM, NOT the
+389-literal chunk union. `rg -l 'mem_paidIDs_iff' N11Formalization` over 2490 files returns
+nothing, so no cheap hierarchical paid-membership lemma exists to substitute.
+
+Still unproved (unchanged): elaboration of Base/C01..C04 + assembly; the 7 red
+Refine0039/RefineSixteen/Refine385 modules; all residual radius certificates; 327
+source-missing ids; canonical packet production; SevenClassExclusions; arbitrary-centre
+theorem. Nothing above is kernel credit.
+
+Next concrete step: give `mem_iff_blockNN` a cheap decision path - add (or reuse) a
+hierarchical `mem_paidIDs_iff` that splits `paidIDs` via `Finset.mem_union` / `mem_biUnion`
++ `fin_cases` into the same small per-part decides used by the green B13 refinement
+chain, then replace `decide +kernel +revert` with `rw [B13.mem_residualIDs_iff,
+B13.paidIDs, ...] <;> simp only [Finset.mem_union, Finset.mem_biUnion, ...] <;>
+decide +kernel` so no single decision sees the 1997-element union; re-target C01..C04.
