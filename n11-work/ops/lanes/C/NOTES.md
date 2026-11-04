@@ -163,3 +163,59 @@ with `EnergyTerminalBatchB13.mem_residualIDs_iff` decomposed structurally --
 `Paid16GeneralNext1182.new_mem` (8-way disjunction) + per-part `mem`/interval
 lemmas + B12 split -- so no `decide` ever sees the 1997-literal `paidIDs`; keep
 `decide +kernel` only for `(DBMSourceTree.data n).terminal` and `sharpIDs`.
+
+## 2026-11-04 - part 298 (independent exact-complement check)
+
+Re-read GUIDANCE/LANES/C-NOTES/LATEST. Key correction of my earlier reading:
+the stored CI run `41706645384` (sha `bd5573e5`) is dated 2026-11-03T19:48Z,
+BEFORE the part-296 per-index split commit (`da6f0ed3`, 2026-11-04 03:47). So
+its exit map (C01-C04 = 1, plus the red consumers) is the PRE-part-296 state;
+part-296 is **CI pending**, not confirmed red. Its build tail shows lane C
+still reaching `EnergyTerminalResidualCensusRefine352` at ~11.9 GB before the
+run was cancelled, i.e. the serial 232-target load + memory is itself a risk.
+
+Action this session: extended the independent verifier
+`n11-work/ops/lanes/C/verify_census_c01_c04.py` (existing lane-C file, no new
+Lean modules) with the exact-complement check the EXPERT asked for. It now
+parses the four `chunkN` literals out of
+`n11-work/lean/N11Formalization/EnergyTerminalResidualCensusBase.lean` and,
+independently of the emitter, asserts:
+- `chunk0..3` equal `residual389-census.json` `residual_ids[0:100]/[100:200]/
+  [200:300]/[300:389]` exactly (as ordered lists);
+- `residual_ids` is strictly sorted and duplicate-free;
+- the four-chunk union equals the census `residual_ids` (389) and the chunk
+  total has no overlap (389);
+- `counts.residual == len(residual_ids)`;
+- (retained) per-index ids 0..5010 exactly once; 51 blocks with the right
+  intervals/bullets; consumer calls block00..50 once; forbidden-token scan.
+
+Check result: `cd n11-work/ops/lanes/C && python3 verify_census_c01_c04.py` ->
+`PASS  per-index ids: 5011 (0..5010); blocks: 51; consumer: 51 calls;
+chunks==census (389); forbidden tokens: none` (rc=0). Scope: SOURCE-LEVEL
+EXACT-COMPLEMENT + STRUCTURE ONLY -- not elaboration, not kernel credit. This
+closes the "no committed independent exact-complement check" gap for the
+chunk literals; it does NOT pay any id.
+
+Kernel-scale diagnosis (unchanged, unproved locally): each `mem_iff_id_KKKK`
+still runs one `decide +kernel +revert` over `(data KKKK).terminal ∧
+KKKK ∉ sharpIDs ∧ KKKK ∉ paidIDs`; the `paidIDs` union has 1997 literals and
+`data` is the 4 MB source table, so per-declaration cost is still above the
+GUIDANCE ~170-500-literal bound for the ~2506 terminal indices. Local bisection
+is infeasible (`import Mathlib` > 190 s in the probe). CI is the authority.
+
+Still unproved (nothing here is kernel credit): CI green for C01-C04 + the red
+consumers (`Census`, `Refine0039*`, `Refine0037Refine3149`,
+`RefineSixteen*Census*`); the 7 red Refine0039/RefineSixteen/Refine385 modules;
+all 389 residual radius certificates; 327 source-missing ids;
+canonical/geometric packet production; MPacket validity; SevenClassExclusions;
+arbitrary-centre root theorem.
+
+Very next concrete step (unchanged priority): once CI runs on the committed
+part-296 + part-298 state, read the FIRST owning error line for C01. If green ->
+mark lane-C TARGET-DONE. If still red on kernel/`decide`, apply the part-295
+hierarchical split to the per-index proof: replace the single decide on
+`n ∈ EnergyTerminalBatchB13.residualIDs` with a structural conjunction --
+`Paid16GeneralNext1182.new_mem` (8-way disjunction) + per-part interval `mem`
+lemmas + B12 split for `n ∉ paidIDs`, and a precomputed literal `terminalIDs`
+lemma for `(data n).terminal` -- so no `decide` ever sees the 1997-literal
+`paidIDs` or re-unfolds `data` per index.

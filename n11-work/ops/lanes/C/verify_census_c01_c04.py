@@ -86,10 +86,42 @@ for f in FILES + [CONSUMER]:
         if pat.search(text):
             errors.append(f"forbidden token {tok!r} in {f.name}")
 
+# ---- exact complement vs frozen residual389-census.json (independent) ----
+import json
+BASE = LEAN / "EnergyTerminalResidualCensusBase.lean"
+CENSUS = ROOT / "ops/lanes/C/residual389-census.json"
+chunk_re = re.compile(r"^def (chunk\d) : Finset \(Fin 5011\) := \{([0-9,]*)\}", re.M)
+base_txt = BASE.read_text()
+chunks = {}
+for name, body in chunk_re.findall(base_txt):
+    chunks[name] = [int(x) for x in body.split(",") if x]
+if sorted(chunks) != ["chunk0", "chunk1", "chunk2", "chunk3"]:
+    errors.append(f"base chunk defs: {sorted(chunks)}")
+else:
+    census = json.loads(CENSUS.read_text())
+    ids = census["residual_ids"]
+    if ids != sorted(ids) or len(ids) != len(set(ids)):
+        errors.append("census residual_ids not strictly sorted/unique")
+    want = {"chunk0": ids[0:100], "chunk1": ids[100:200],
+            "chunk2": ids[200:300], "chunk3": ids[300:389]}
+    for name in ("chunk0", "chunk1", "chunk2", "chunk3"):
+        if chunks[name] != want[name]:
+            errors.append(f"{name} != census slice "
+                          f"(len {len(chunks[name])} vs {len(want[name])})")
+    union = sorted(set().union(*chunks.values()))
+    if union != sorted(ids):
+        errors.append(f"chunk union ({len(union)}) != census residual_ids ({len(ids)})")
+    total = sum(len(v) for v in chunks.values())
+    if total != len(union):
+        errors.append(f"chunk total {total} != union {len(union)} (overlap)")
+    c = census.get("counts", {})
+    if c.get("residual") != len(ids):
+        errors.append(f"counts.residual {c.get('residual')} != {len(ids)}")
+
 if errors:
     print("FAIL")
     for e in errors[:40]:
         print("  -", e)
     sys.exit(1)
 print(f"PASS  per-index ids: {len(seen)} (0..{N-1}); blocks: {len(blocks)}; "
-      f"consumer: 51 calls; forbidden tokens: none")
+      f"consumer: 51 calls; chunks==census (389); forbidden tokens: none")
