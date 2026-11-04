@@ -1,103 +1,11779 @@
-import N11Formalization.EnergyTerminalResidualCensusC01
+import N11Formalization.EnergyTerminalResidualCensusBase
 
-/-! Census part 2/4: source-index equivalence blocks congruent to
-1 modulo 4.  Every kernel decision below covers at most 100 source
-indices.  Importing part 1 serializes the four memory-heavy parts in CI. -/
+/-! Census part 02.  Every single source index has its own theorem so no
+declaration carries more than one heavy `decide +kernel`; each block
+lemma (`mem_iff_blockNN`) delegates to its 100 per-index lemmas via
+explicit bullets.  The exported interface is unchanged.
+-/
 set_option autoImplicit false
 namespace N11Formalization.EnergyTerminalResidualCensus
 open Finset
 noncomputable section
 
-theorem mem_iff_block01 (n : Fin 5011)
-    (hlo : 100 ≤ n.val) (hhi : n.val < 200) :
+theorem mem_iff_id_0100 (n : Fin 5011) (hn : n.val = 100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 100 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block05 (n : Fin 5011)
-    (hlo : 500 ≤ n.val) (hhi : n.val < 600) :
+theorem mem_iff_id_0101 (n : Fin 5011) (hn : n.val = 101) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 101 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block09 (n : Fin 5011)
-    (hlo : 900 ≤ n.val) (hhi : n.val < 1000) :
+theorem mem_iff_id_0102 (n : Fin 5011) (hn : n.val = 102) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 102 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block13 (n : Fin 5011)
-    (hlo : 1300 ≤ n.val) (hhi : n.val < 1400) :
+theorem mem_iff_id_0103 (n : Fin 5011) (hn : n.val = 103) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 103 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block17 (n : Fin 5011)
-    (hlo : 1700 ≤ n.val) (hhi : n.val < 1800) :
+theorem mem_iff_id_0104 (n : Fin 5011) (hn : n.val = 104) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 104 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block21 (n : Fin 5011)
-    (hlo : 2100 ≤ n.val) (hhi : n.val < 2200) :
+theorem mem_iff_id_0105 (n : Fin 5011) (hn : n.val = 105) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 105 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block25 (n : Fin 5011)
-    (hlo : 2500 ≤ n.val) (hhi : n.val < 2600) :
+theorem mem_iff_id_0106 (n : Fin 5011) (hn : n.val = 106) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 106 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block29 (n : Fin 5011)
-    (hlo : 2900 ≤ n.val) (hhi : n.val < 3000) :
+theorem mem_iff_id_0107 (n : Fin 5011) (hn : n.val = 107) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 107 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block33 (n : Fin 5011)
-    (hlo : 3300 ≤ n.val) (hhi : n.val < 3400) :
+theorem mem_iff_id_0108 (n : Fin 5011) (hn : n.val = 108) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 108 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block37 (n : Fin 5011)
-    (hlo : 3700 ≤ n.val) (hhi : n.val < 3800) :
+theorem mem_iff_id_0109 (n : Fin 5011) (hn : n.val = 109) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 109 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block41 (n : Fin 5011)
-    (hlo : 4100 ≤ n.val) (hhi : n.val < 4200) :
+theorem mem_iff_id_0110 (n : Fin 5011) (hn : n.val = 110) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 110 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block45 (n : Fin 5011)
-    (hlo : 4500 ≤ n.val) (hhi : n.val < 4600) :
+theorem mem_iff_id_0111 (n : Fin 5011) (hn : n.val = 111) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 111 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
 
-theorem mem_iff_block49 (n : Fin 5011)
-    (hlo : 4900 ≤ n.val) (hhi : n.val < 5000) :
+theorem mem_iff_id_0112 (n : Fin 5011) (hn : n.val = 112) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
   rcases n with ⟨k, hk⟩
-  interval_cases k <;>
-    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert
+  change k = 112 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0113 (n : Fin 5011) (hn : n.val = 113) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 113 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0114 (n : Fin 5011) (hn : n.val = 114) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 114 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0115 (n : Fin 5011) (hn : n.val = 115) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 115 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0116 (n : Fin 5011) (hn : n.val = 116) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 116 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0117 (n : Fin 5011) (hn : n.val = 117) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 117 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0118 (n : Fin 5011) (hn : n.val = 118) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 118 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0119 (n : Fin 5011) (hn : n.val = 119) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 119 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0120 (n : Fin 5011) (hn : n.val = 120) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 120 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0121 (n : Fin 5011) (hn : n.val = 121) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 121 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0122 (n : Fin 5011) (hn : n.val = 122) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 122 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0123 (n : Fin 5011) (hn : n.val = 123) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 123 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0124 (n : Fin 5011) (hn : n.val = 124) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 124 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0125 (n : Fin 5011) (hn : n.val = 125) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 125 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0126 (n : Fin 5011) (hn : n.val = 126) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 126 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0127 (n : Fin 5011) (hn : n.val = 127) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 127 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0128 (n : Fin 5011) (hn : n.val = 128) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 128 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0129 (n : Fin 5011) (hn : n.val = 129) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 129 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0130 (n : Fin 5011) (hn : n.val = 130) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 130 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0131 (n : Fin 5011) (hn : n.val = 131) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 131 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0132 (n : Fin 5011) (hn : n.val = 132) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 132 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0133 (n : Fin 5011) (hn : n.val = 133) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 133 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0134 (n : Fin 5011) (hn : n.val = 134) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 134 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0135 (n : Fin 5011) (hn : n.val = 135) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 135 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0136 (n : Fin 5011) (hn : n.val = 136) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 136 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0137 (n : Fin 5011) (hn : n.val = 137) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 137 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0138 (n : Fin 5011) (hn : n.val = 138) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 138 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0139 (n : Fin 5011) (hn : n.val = 139) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 139 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0140 (n : Fin 5011) (hn : n.val = 140) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 140 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0141 (n : Fin 5011) (hn : n.val = 141) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 141 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0142 (n : Fin 5011) (hn : n.val = 142) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 142 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0143 (n : Fin 5011) (hn : n.val = 143) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 143 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0144 (n : Fin 5011) (hn : n.val = 144) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 144 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0145 (n : Fin 5011) (hn : n.val = 145) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 145 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0146 (n : Fin 5011) (hn : n.val = 146) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 146 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0147 (n : Fin 5011) (hn : n.val = 147) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 147 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0148 (n : Fin 5011) (hn : n.val = 148) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 148 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0149 (n : Fin 5011) (hn : n.val = 149) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 149 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0150 (n : Fin 5011) (hn : n.val = 150) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 150 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0151 (n : Fin 5011) (hn : n.val = 151) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 151 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0152 (n : Fin 5011) (hn : n.val = 152) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 152 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0153 (n : Fin 5011) (hn : n.val = 153) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 153 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0154 (n : Fin 5011) (hn : n.val = 154) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 154 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0155 (n : Fin 5011) (hn : n.val = 155) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 155 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0156 (n : Fin 5011) (hn : n.val = 156) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 156 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0157 (n : Fin 5011) (hn : n.val = 157) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 157 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0158 (n : Fin 5011) (hn : n.val = 158) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 158 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0159 (n : Fin 5011) (hn : n.val = 159) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 159 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0160 (n : Fin 5011) (hn : n.val = 160) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 160 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0161 (n : Fin 5011) (hn : n.val = 161) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 161 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0162 (n : Fin 5011) (hn : n.val = 162) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 162 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0163 (n : Fin 5011) (hn : n.val = 163) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 163 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0164 (n : Fin 5011) (hn : n.val = 164) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 164 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0165 (n : Fin 5011) (hn : n.val = 165) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 165 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0166 (n : Fin 5011) (hn : n.val = 166) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 166 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0167 (n : Fin 5011) (hn : n.val = 167) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 167 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0168 (n : Fin 5011) (hn : n.val = 168) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 168 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0169 (n : Fin 5011) (hn : n.val = 169) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 169 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0170 (n : Fin 5011) (hn : n.val = 170) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 170 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0171 (n : Fin 5011) (hn : n.val = 171) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 171 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0172 (n : Fin 5011) (hn : n.val = 172) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 172 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0173 (n : Fin 5011) (hn : n.val = 173) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 173 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0174 (n : Fin 5011) (hn : n.val = 174) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 174 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0175 (n : Fin 5011) (hn : n.val = 175) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 175 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0176 (n : Fin 5011) (hn : n.val = 176) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 176 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0177 (n : Fin 5011) (hn : n.val = 177) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 177 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0178 (n : Fin 5011) (hn : n.val = 178) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 178 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0179 (n : Fin 5011) (hn : n.val = 179) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 179 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0180 (n : Fin 5011) (hn : n.val = 180) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 180 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0181 (n : Fin 5011) (hn : n.val = 181) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 181 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0182 (n : Fin 5011) (hn : n.val = 182) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 182 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0183 (n : Fin 5011) (hn : n.val = 183) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 183 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0184 (n : Fin 5011) (hn : n.val = 184) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 184 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0185 (n : Fin 5011) (hn : n.val = 185) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 185 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0186 (n : Fin 5011) (hn : n.val = 186) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 186 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0187 (n : Fin 5011) (hn : n.val = 187) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 187 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0188 (n : Fin 5011) (hn : n.val = 188) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 188 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0189 (n : Fin 5011) (hn : n.val = 189) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 189 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0190 (n : Fin 5011) (hn : n.val = 190) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 190 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0191 (n : Fin 5011) (hn : n.val = 191) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 191 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0192 (n : Fin 5011) (hn : n.val = 192) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 192 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0193 (n : Fin 5011) (hn : n.val = 193) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 193 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0194 (n : Fin 5011) (hn : n.val = 194) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 194 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0195 (n : Fin 5011) (hn : n.val = 195) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 195 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0196 (n : Fin 5011) (hn : n.val = 196) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 196 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0197 (n : Fin 5011) (hn : n.val = 197) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 197 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0198 (n : Fin 5011) (hn : n.val = 198) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 198 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0199 (n : Fin 5011) (hn : n.val = 199) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 199 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0500 (n : Fin 5011) (hn : n.val = 500) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 500 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0501 (n : Fin 5011) (hn : n.val = 501) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 501 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0502 (n : Fin 5011) (hn : n.val = 502) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 502 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0503 (n : Fin 5011) (hn : n.val = 503) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 503 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0504 (n : Fin 5011) (hn : n.val = 504) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 504 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0505 (n : Fin 5011) (hn : n.val = 505) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 505 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0506 (n : Fin 5011) (hn : n.val = 506) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 506 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0507 (n : Fin 5011) (hn : n.val = 507) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 507 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0508 (n : Fin 5011) (hn : n.val = 508) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 508 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0509 (n : Fin 5011) (hn : n.val = 509) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 509 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0510 (n : Fin 5011) (hn : n.val = 510) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 510 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0511 (n : Fin 5011) (hn : n.val = 511) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 511 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0512 (n : Fin 5011) (hn : n.val = 512) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 512 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0513 (n : Fin 5011) (hn : n.val = 513) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 513 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0514 (n : Fin 5011) (hn : n.val = 514) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 514 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0515 (n : Fin 5011) (hn : n.val = 515) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 515 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0516 (n : Fin 5011) (hn : n.val = 516) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 516 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0517 (n : Fin 5011) (hn : n.val = 517) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 517 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0518 (n : Fin 5011) (hn : n.val = 518) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 518 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0519 (n : Fin 5011) (hn : n.val = 519) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 519 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0520 (n : Fin 5011) (hn : n.val = 520) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 520 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0521 (n : Fin 5011) (hn : n.val = 521) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 521 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0522 (n : Fin 5011) (hn : n.val = 522) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 522 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0523 (n : Fin 5011) (hn : n.val = 523) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 523 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0524 (n : Fin 5011) (hn : n.val = 524) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 524 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0525 (n : Fin 5011) (hn : n.val = 525) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 525 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0526 (n : Fin 5011) (hn : n.val = 526) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 526 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0527 (n : Fin 5011) (hn : n.val = 527) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 527 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0528 (n : Fin 5011) (hn : n.val = 528) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 528 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0529 (n : Fin 5011) (hn : n.val = 529) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 529 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0530 (n : Fin 5011) (hn : n.val = 530) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 530 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0531 (n : Fin 5011) (hn : n.val = 531) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 531 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0532 (n : Fin 5011) (hn : n.val = 532) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 532 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0533 (n : Fin 5011) (hn : n.val = 533) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 533 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0534 (n : Fin 5011) (hn : n.val = 534) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 534 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0535 (n : Fin 5011) (hn : n.val = 535) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 535 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0536 (n : Fin 5011) (hn : n.val = 536) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 536 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0537 (n : Fin 5011) (hn : n.val = 537) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 537 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0538 (n : Fin 5011) (hn : n.val = 538) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 538 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0539 (n : Fin 5011) (hn : n.val = 539) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 539 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0540 (n : Fin 5011) (hn : n.val = 540) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 540 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0541 (n : Fin 5011) (hn : n.val = 541) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 541 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0542 (n : Fin 5011) (hn : n.val = 542) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 542 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0543 (n : Fin 5011) (hn : n.val = 543) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 543 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0544 (n : Fin 5011) (hn : n.val = 544) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 544 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0545 (n : Fin 5011) (hn : n.val = 545) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 545 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0546 (n : Fin 5011) (hn : n.val = 546) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 546 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0547 (n : Fin 5011) (hn : n.val = 547) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 547 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0548 (n : Fin 5011) (hn : n.val = 548) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 548 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0549 (n : Fin 5011) (hn : n.val = 549) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 549 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0550 (n : Fin 5011) (hn : n.val = 550) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 550 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0551 (n : Fin 5011) (hn : n.val = 551) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 551 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0552 (n : Fin 5011) (hn : n.val = 552) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 552 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0553 (n : Fin 5011) (hn : n.val = 553) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 553 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0554 (n : Fin 5011) (hn : n.val = 554) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 554 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0555 (n : Fin 5011) (hn : n.val = 555) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 555 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0556 (n : Fin 5011) (hn : n.val = 556) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 556 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0557 (n : Fin 5011) (hn : n.val = 557) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 557 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0558 (n : Fin 5011) (hn : n.val = 558) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 558 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0559 (n : Fin 5011) (hn : n.val = 559) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 559 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0560 (n : Fin 5011) (hn : n.val = 560) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 560 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0561 (n : Fin 5011) (hn : n.val = 561) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 561 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0562 (n : Fin 5011) (hn : n.val = 562) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 562 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0563 (n : Fin 5011) (hn : n.val = 563) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 563 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0564 (n : Fin 5011) (hn : n.val = 564) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 564 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0565 (n : Fin 5011) (hn : n.val = 565) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 565 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0566 (n : Fin 5011) (hn : n.val = 566) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 566 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0567 (n : Fin 5011) (hn : n.val = 567) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 567 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0568 (n : Fin 5011) (hn : n.val = 568) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 568 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0569 (n : Fin 5011) (hn : n.val = 569) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 569 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0570 (n : Fin 5011) (hn : n.val = 570) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 570 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0571 (n : Fin 5011) (hn : n.val = 571) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 571 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0572 (n : Fin 5011) (hn : n.val = 572) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 572 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0573 (n : Fin 5011) (hn : n.val = 573) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 573 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0574 (n : Fin 5011) (hn : n.val = 574) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 574 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0575 (n : Fin 5011) (hn : n.val = 575) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 575 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0576 (n : Fin 5011) (hn : n.val = 576) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 576 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0577 (n : Fin 5011) (hn : n.val = 577) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 577 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0578 (n : Fin 5011) (hn : n.val = 578) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 578 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0579 (n : Fin 5011) (hn : n.val = 579) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 579 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0580 (n : Fin 5011) (hn : n.val = 580) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 580 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0581 (n : Fin 5011) (hn : n.val = 581) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 581 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0582 (n : Fin 5011) (hn : n.val = 582) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 582 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0583 (n : Fin 5011) (hn : n.val = 583) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 583 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0584 (n : Fin 5011) (hn : n.val = 584) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 584 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0585 (n : Fin 5011) (hn : n.val = 585) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 585 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0586 (n : Fin 5011) (hn : n.val = 586) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 586 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0587 (n : Fin 5011) (hn : n.val = 587) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 587 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0588 (n : Fin 5011) (hn : n.val = 588) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 588 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0589 (n : Fin 5011) (hn : n.val = 589) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 589 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0590 (n : Fin 5011) (hn : n.val = 590) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 590 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0591 (n : Fin 5011) (hn : n.val = 591) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 591 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0592 (n : Fin 5011) (hn : n.val = 592) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 592 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0593 (n : Fin 5011) (hn : n.val = 593) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 593 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0594 (n : Fin 5011) (hn : n.val = 594) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 594 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0595 (n : Fin 5011) (hn : n.val = 595) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 595 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0596 (n : Fin 5011) (hn : n.val = 596) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 596 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0597 (n : Fin 5011) (hn : n.val = 597) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 597 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0598 (n : Fin 5011) (hn : n.val = 598) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 598 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0599 (n : Fin 5011) (hn : n.val = 599) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 599 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0900 (n : Fin 5011) (hn : n.val = 900) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 900 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0901 (n : Fin 5011) (hn : n.val = 901) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 901 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0902 (n : Fin 5011) (hn : n.val = 902) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 902 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0903 (n : Fin 5011) (hn : n.val = 903) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 903 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0904 (n : Fin 5011) (hn : n.val = 904) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 904 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0905 (n : Fin 5011) (hn : n.val = 905) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 905 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0906 (n : Fin 5011) (hn : n.val = 906) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 906 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0907 (n : Fin 5011) (hn : n.val = 907) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 907 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0908 (n : Fin 5011) (hn : n.val = 908) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 908 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0909 (n : Fin 5011) (hn : n.val = 909) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 909 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0910 (n : Fin 5011) (hn : n.val = 910) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 910 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0911 (n : Fin 5011) (hn : n.val = 911) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 911 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0912 (n : Fin 5011) (hn : n.val = 912) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 912 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0913 (n : Fin 5011) (hn : n.val = 913) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 913 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0914 (n : Fin 5011) (hn : n.val = 914) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 914 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0915 (n : Fin 5011) (hn : n.val = 915) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 915 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0916 (n : Fin 5011) (hn : n.val = 916) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 916 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0917 (n : Fin 5011) (hn : n.val = 917) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 917 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0918 (n : Fin 5011) (hn : n.val = 918) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 918 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0919 (n : Fin 5011) (hn : n.val = 919) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 919 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0920 (n : Fin 5011) (hn : n.val = 920) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 920 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0921 (n : Fin 5011) (hn : n.val = 921) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 921 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0922 (n : Fin 5011) (hn : n.val = 922) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 922 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0923 (n : Fin 5011) (hn : n.val = 923) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 923 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0924 (n : Fin 5011) (hn : n.val = 924) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 924 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0925 (n : Fin 5011) (hn : n.val = 925) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 925 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0926 (n : Fin 5011) (hn : n.val = 926) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 926 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0927 (n : Fin 5011) (hn : n.val = 927) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 927 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0928 (n : Fin 5011) (hn : n.val = 928) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 928 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0929 (n : Fin 5011) (hn : n.val = 929) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 929 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0930 (n : Fin 5011) (hn : n.val = 930) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 930 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0931 (n : Fin 5011) (hn : n.val = 931) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 931 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0932 (n : Fin 5011) (hn : n.val = 932) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 932 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0933 (n : Fin 5011) (hn : n.val = 933) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 933 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0934 (n : Fin 5011) (hn : n.val = 934) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 934 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0935 (n : Fin 5011) (hn : n.val = 935) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 935 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0936 (n : Fin 5011) (hn : n.val = 936) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 936 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0937 (n : Fin 5011) (hn : n.val = 937) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 937 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0938 (n : Fin 5011) (hn : n.val = 938) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 938 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0939 (n : Fin 5011) (hn : n.val = 939) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 939 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0940 (n : Fin 5011) (hn : n.val = 940) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 940 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0941 (n : Fin 5011) (hn : n.val = 941) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 941 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0942 (n : Fin 5011) (hn : n.val = 942) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 942 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0943 (n : Fin 5011) (hn : n.val = 943) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 943 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0944 (n : Fin 5011) (hn : n.val = 944) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 944 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0945 (n : Fin 5011) (hn : n.val = 945) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 945 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0946 (n : Fin 5011) (hn : n.val = 946) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 946 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0947 (n : Fin 5011) (hn : n.val = 947) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 947 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0948 (n : Fin 5011) (hn : n.val = 948) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 948 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0949 (n : Fin 5011) (hn : n.val = 949) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 949 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0950 (n : Fin 5011) (hn : n.val = 950) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 950 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0951 (n : Fin 5011) (hn : n.val = 951) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 951 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0952 (n : Fin 5011) (hn : n.val = 952) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 952 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0953 (n : Fin 5011) (hn : n.val = 953) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 953 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0954 (n : Fin 5011) (hn : n.val = 954) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 954 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0955 (n : Fin 5011) (hn : n.val = 955) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 955 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0956 (n : Fin 5011) (hn : n.val = 956) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 956 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0957 (n : Fin 5011) (hn : n.val = 957) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 957 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0958 (n : Fin 5011) (hn : n.val = 958) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 958 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0959 (n : Fin 5011) (hn : n.val = 959) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 959 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0960 (n : Fin 5011) (hn : n.val = 960) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 960 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0961 (n : Fin 5011) (hn : n.val = 961) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 961 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0962 (n : Fin 5011) (hn : n.val = 962) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 962 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0963 (n : Fin 5011) (hn : n.val = 963) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 963 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0964 (n : Fin 5011) (hn : n.val = 964) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 964 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0965 (n : Fin 5011) (hn : n.val = 965) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 965 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0966 (n : Fin 5011) (hn : n.val = 966) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 966 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0967 (n : Fin 5011) (hn : n.val = 967) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 967 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0968 (n : Fin 5011) (hn : n.val = 968) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 968 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0969 (n : Fin 5011) (hn : n.val = 969) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 969 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0970 (n : Fin 5011) (hn : n.val = 970) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 970 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0971 (n : Fin 5011) (hn : n.val = 971) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 971 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0972 (n : Fin 5011) (hn : n.val = 972) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 972 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0973 (n : Fin 5011) (hn : n.val = 973) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 973 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0974 (n : Fin 5011) (hn : n.val = 974) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 974 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0975 (n : Fin 5011) (hn : n.val = 975) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 975 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0976 (n : Fin 5011) (hn : n.val = 976) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 976 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0977 (n : Fin 5011) (hn : n.val = 977) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 977 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0978 (n : Fin 5011) (hn : n.val = 978) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 978 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0979 (n : Fin 5011) (hn : n.val = 979) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 979 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0980 (n : Fin 5011) (hn : n.val = 980) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 980 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0981 (n : Fin 5011) (hn : n.val = 981) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 981 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0982 (n : Fin 5011) (hn : n.val = 982) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 982 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0983 (n : Fin 5011) (hn : n.val = 983) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 983 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0984 (n : Fin 5011) (hn : n.val = 984) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 984 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0985 (n : Fin 5011) (hn : n.val = 985) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 985 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0986 (n : Fin 5011) (hn : n.val = 986) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 986 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0987 (n : Fin 5011) (hn : n.val = 987) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 987 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0988 (n : Fin 5011) (hn : n.val = 988) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 988 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0989 (n : Fin 5011) (hn : n.val = 989) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 989 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0990 (n : Fin 5011) (hn : n.val = 990) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 990 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0991 (n : Fin 5011) (hn : n.val = 991) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 991 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0992 (n : Fin 5011) (hn : n.val = 992) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 992 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0993 (n : Fin 5011) (hn : n.val = 993) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 993 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0994 (n : Fin 5011) (hn : n.val = 994) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 994 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0995 (n : Fin 5011) (hn : n.val = 995) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 995 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0996 (n : Fin 5011) (hn : n.val = 996) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 996 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0997 (n : Fin 5011) (hn : n.val = 997) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 997 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0998 (n : Fin 5011) (hn : n.val = 998) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 998 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_0999 (n : Fin 5011) (hn : n.val = 999) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 999 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1300 (n : Fin 5011) (hn : n.val = 1300) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1300 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1301 (n : Fin 5011) (hn : n.val = 1301) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1301 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1302 (n : Fin 5011) (hn : n.val = 1302) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1302 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1303 (n : Fin 5011) (hn : n.val = 1303) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1303 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1304 (n : Fin 5011) (hn : n.val = 1304) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1304 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1305 (n : Fin 5011) (hn : n.val = 1305) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1305 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1306 (n : Fin 5011) (hn : n.val = 1306) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1306 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1307 (n : Fin 5011) (hn : n.val = 1307) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1307 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1308 (n : Fin 5011) (hn : n.val = 1308) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1308 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1309 (n : Fin 5011) (hn : n.val = 1309) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1309 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1310 (n : Fin 5011) (hn : n.val = 1310) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1310 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1311 (n : Fin 5011) (hn : n.val = 1311) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1311 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1312 (n : Fin 5011) (hn : n.val = 1312) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1312 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1313 (n : Fin 5011) (hn : n.val = 1313) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1313 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1314 (n : Fin 5011) (hn : n.val = 1314) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1314 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1315 (n : Fin 5011) (hn : n.val = 1315) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1315 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1316 (n : Fin 5011) (hn : n.val = 1316) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1316 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1317 (n : Fin 5011) (hn : n.val = 1317) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1317 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1318 (n : Fin 5011) (hn : n.val = 1318) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1318 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1319 (n : Fin 5011) (hn : n.val = 1319) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1319 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1320 (n : Fin 5011) (hn : n.val = 1320) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1320 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1321 (n : Fin 5011) (hn : n.val = 1321) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1321 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1322 (n : Fin 5011) (hn : n.val = 1322) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1322 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1323 (n : Fin 5011) (hn : n.val = 1323) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1323 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1324 (n : Fin 5011) (hn : n.val = 1324) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1324 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1325 (n : Fin 5011) (hn : n.val = 1325) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1325 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1326 (n : Fin 5011) (hn : n.val = 1326) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1326 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1327 (n : Fin 5011) (hn : n.val = 1327) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1327 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1328 (n : Fin 5011) (hn : n.val = 1328) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1328 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1329 (n : Fin 5011) (hn : n.val = 1329) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1329 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1330 (n : Fin 5011) (hn : n.val = 1330) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1330 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1331 (n : Fin 5011) (hn : n.val = 1331) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1331 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1332 (n : Fin 5011) (hn : n.val = 1332) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1332 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1333 (n : Fin 5011) (hn : n.val = 1333) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1333 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1334 (n : Fin 5011) (hn : n.val = 1334) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1334 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1335 (n : Fin 5011) (hn : n.val = 1335) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1335 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1336 (n : Fin 5011) (hn : n.val = 1336) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1336 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1337 (n : Fin 5011) (hn : n.val = 1337) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1337 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1338 (n : Fin 5011) (hn : n.val = 1338) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1338 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1339 (n : Fin 5011) (hn : n.val = 1339) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1339 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1340 (n : Fin 5011) (hn : n.val = 1340) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1340 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1341 (n : Fin 5011) (hn : n.val = 1341) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1341 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1342 (n : Fin 5011) (hn : n.val = 1342) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1342 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1343 (n : Fin 5011) (hn : n.val = 1343) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1343 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1344 (n : Fin 5011) (hn : n.val = 1344) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1344 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1345 (n : Fin 5011) (hn : n.val = 1345) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1345 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1346 (n : Fin 5011) (hn : n.val = 1346) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1346 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1347 (n : Fin 5011) (hn : n.val = 1347) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1347 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1348 (n : Fin 5011) (hn : n.val = 1348) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1348 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1349 (n : Fin 5011) (hn : n.val = 1349) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1349 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1350 (n : Fin 5011) (hn : n.val = 1350) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1350 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1351 (n : Fin 5011) (hn : n.val = 1351) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1351 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1352 (n : Fin 5011) (hn : n.val = 1352) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1352 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1353 (n : Fin 5011) (hn : n.val = 1353) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1353 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1354 (n : Fin 5011) (hn : n.val = 1354) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1354 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1355 (n : Fin 5011) (hn : n.val = 1355) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1355 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1356 (n : Fin 5011) (hn : n.val = 1356) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1356 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1357 (n : Fin 5011) (hn : n.val = 1357) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1357 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1358 (n : Fin 5011) (hn : n.val = 1358) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1358 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1359 (n : Fin 5011) (hn : n.val = 1359) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1359 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1360 (n : Fin 5011) (hn : n.val = 1360) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1360 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1361 (n : Fin 5011) (hn : n.val = 1361) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1361 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1362 (n : Fin 5011) (hn : n.val = 1362) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1362 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1363 (n : Fin 5011) (hn : n.val = 1363) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1363 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1364 (n : Fin 5011) (hn : n.val = 1364) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1364 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1365 (n : Fin 5011) (hn : n.val = 1365) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1365 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1366 (n : Fin 5011) (hn : n.val = 1366) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1366 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1367 (n : Fin 5011) (hn : n.val = 1367) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1367 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1368 (n : Fin 5011) (hn : n.val = 1368) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1368 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1369 (n : Fin 5011) (hn : n.val = 1369) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1369 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1370 (n : Fin 5011) (hn : n.val = 1370) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1370 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1371 (n : Fin 5011) (hn : n.val = 1371) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1371 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1372 (n : Fin 5011) (hn : n.val = 1372) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1372 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1373 (n : Fin 5011) (hn : n.val = 1373) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1373 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1374 (n : Fin 5011) (hn : n.val = 1374) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1374 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1375 (n : Fin 5011) (hn : n.val = 1375) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1375 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1376 (n : Fin 5011) (hn : n.val = 1376) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1376 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1377 (n : Fin 5011) (hn : n.val = 1377) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1377 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1378 (n : Fin 5011) (hn : n.val = 1378) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1378 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1379 (n : Fin 5011) (hn : n.val = 1379) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1379 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1380 (n : Fin 5011) (hn : n.val = 1380) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1380 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1381 (n : Fin 5011) (hn : n.val = 1381) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1381 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1382 (n : Fin 5011) (hn : n.val = 1382) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1382 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1383 (n : Fin 5011) (hn : n.val = 1383) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1383 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1384 (n : Fin 5011) (hn : n.val = 1384) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1384 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1385 (n : Fin 5011) (hn : n.val = 1385) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1385 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1386 (n : Fin 5011) (hn : n.val = 1386) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1386 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1387 (n : Fin 5011) (hn : n.val = 1387) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1387 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1388 (n : Fin 5011) (hn : n.val = 1388) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1388 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1389 (n : Fin 5011) (hn : n.val = 1389) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1389 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1390 (n : Fin 5011) (hn : n.val = 1390) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1390 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1391 (n : Fin 5011) (hn : n.val = 1391) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1391 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1392 (n : Fin 5011) (hn : n.val = 1392) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1392 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1393 (n : Fin 5011) (hn : n.val = 1393) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1393 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1394 (n : Fin 5011) (hn : n.val = 1394) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1394 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1395 (n : Fin 5011) (hn : n.val = 1395) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1395 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1396 (n : Fin 5011) (hn : n.val = 1396) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1396 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1397 (n : Fin 5011) (hn : n.val = 1397) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1397 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1398 (n : Fin 5011) (hn : n.val = 1398) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1398 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1399 (n : Fin 5011) (hn : n.val = 1399) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1399 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1700 (n : Fin 5011) (hn : n.val = 1700) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1700 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1701 (n : Fin 5011) (hn : n.val = 1701) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1701 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1702 (n : Fin 5011) (hn : n.val = 1702) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1702 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1703 (n : Fin 5011) (hn : n.val = 1703) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1703 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1704 (n : Fin 5011) (hn : n.val = 1704) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1704 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1705 (n : Fin 5011) (hn : n.val = 1705) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1705 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1706 (n : Fin 5011) (hn : n.val = 1706) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1706 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1707 (n : Fin 5011) (hn : n.val = 1707) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1707 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1708 (n : Fin 5011) (hn : n.val = 1708) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1708 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1709 (n : Fin 5011) (hn : n.val = 1709) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1709 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1710 (n : Fin 5011) (hn : n.val = 1710) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1710 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1711 (n : Fin 5011) (hn : n.val = 1711) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1711 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1712 (n : Fin 5011) (hn : n.val = 1712) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1712 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1713 (n : Fin 5011) (hn : n.val = 1713) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1713 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1714 (n : Fin 5011) (hn : n.val = 1714) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1714 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1715 (n : Fin 5011) (hn : n.val = 1715) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1715 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1716 (n : Fin 5011) (hn : n.val = 1716) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1716 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1717 (n : Fin 5011) (hn : n.val = 1717) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1717 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1718 (n : Fin 5011) (hn : n.val = 1718) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1718 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1719 (n : Fin 5011) (hn : n.val = 1719) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1719 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1720 (n : Fin 5011) (hn : n.val = 1720) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1720 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1721 (n : Fin 5011) (hn : n.val = 1721) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1721 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1722 (n : Fin 5011) (hn : n.val = 1722) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1722 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1723 (n : Fin 5011) (hn : n.val = 1723) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1723 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1724 (n : Fin 5011) (hn : n.val = 1724) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1724 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1725 (n : Fin 5011) (hn : n.val = 1725) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1725 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1726 (n : Fin 5011) (hn : n.val = 1726) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1726 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1727 (n : Fin 5011) (hn : n.val = 1727) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1727 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1728 (n : Fin 5011) (hn : n.val = 1728) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1728 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1729 (n : Fin 5011) (hn : n.val = 1729) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1729 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1730 (n : Fin 5011) (hn : n.val = 1730) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1730 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1731 (n : Fin 5011) (hn : n.val = 1731) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1731 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1732 (n : Fin 5011) (hn : n.val = 1732) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1732 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1733 (n : Fin 5011) (hn : n.val = 1733) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1733 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1734 (n : Fin 5011) (hn : n.val = 1734) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1734 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1735 (n : Fin 5011) (hn : n.val = 1735) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1735 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1736 (n : Fin 5011) (hn : n.val = 1736) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1736 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1737 (n : Fin 5011) (hn : n.val = 1737) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1737 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1738 (n : Fin 5011) (hn : n.val = 1738) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1738 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1739 (n : Fin 5011) (hn : n.val = 1739) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1739 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1740 (n : Fin 5011) (hn : n.val = 1740) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1740 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1741 (n : Fin 5011) (hn : n.val = 1741) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1741 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1742 (n : Fin 5011) (hn : n.val = 1742) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1742 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1743 (n : Fin 5011) (hn : n.val = 1743) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1743 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1744 (n : Fin 5011) (hn : n.val = 1744) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1744 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1745 (n : Fin 5011) (hn : n.val = 1745) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1745 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1746 (n : Fin 5011) (hn : n.val = 1746) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1746 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1747 (n : Fin 5011) (hn : n.val = 1747) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1747 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1748 (n : Fin 5011) (hn : n.val = 1748) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1748 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1749 (n : Fin 5011) (hn : n.val = 1749) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1749 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1750 (n : Fin 5011) (hn : n.val = 1750) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1750 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1751 (n : Fin 5011) (hn : n.val = 1751) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1751 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1752 (n : Fin 5011) (hn : n.val = 1752) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1752 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1753 (n : Fin 5011) (hn : n.val = 1753) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1753 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1754 (n : Fin 5011) (hn : n.val = 1754) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1754 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1755 (n : Fin 5011) (hn : n.val = 1755) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1755 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1756 (n : Fin 5011) (hn : n.val = 1756) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1756 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1757 (n : Fin 5011) (hn : n.val = 1757) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1757 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1758 (n : Fin 5011) (hn : n.val = 1758) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1758 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1759 (n : Fin 5011) (hn : n.val = 1759) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1759 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1760 (n : Fin 5011) (hn : n.val = 1760) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1760 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1761 (n : Fin 5011) (hn : n.val = 1761) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1761 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1762 (n : Fin 5011) (hn : n.val = 1762) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1762 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1763 (n : Fin 5011) (hn : n.val = 1763) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1763 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1764 (n : Fin 5011) (hn : n.val = 1764) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1764 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1765 (n : Fin 5011) (hn : n.val = 1765) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1765 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1766 (n : Fin 5011) (hn : n.val = 1766) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1766 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1767 (n : Fin 5011) (hn : n.val = 1767) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1767 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1768 (n : Fin 5011) (hn : n.val = 1768) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1768 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1769 (n : Fin 5011) (hn : n.val = 1769) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1769 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1770 (n : Fin 5011) (hn : n.val = 1770) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1770 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1771 (n : Fin 5011) (hn : n.val = 1771) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1771 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1772 (n : Fin 5011) (hn : n.val = 1772) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1772 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1773 (n : Fin 5011) (hn : n.val = 1773) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1773 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1774 (n : Fin 5011) (hn : n.val = 1774) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1774 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1775 (n : Fin 5011) (hn : n.val = 1775) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1775 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1776 (n : Fin 5011) (hn : n.val = 1776) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1776 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1777 (n : Fin 5011) (hn : n.val = 1777) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1777 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1778 (n : Fin 5011) (hn : n.val = 1778) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1778 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1779 (n : Fin 5011) (hn : n.val = 1779) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1779 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1780 (n : Fin 5011) (hn : n.val = 1780) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1780 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1781 (n : Fin 5011) (hn : n.val = 1781) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1781 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1782 (n : Fin 5011) (hn : n.val = 1782) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1782 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1783 (n : Fin 5011) (hn : n.val = 1783) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1783 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1784 (n : Fin 5011) (hn : n.val = 1784) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1784 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1785 (n : Fin 5011) (hn : n.val = 1785) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1785 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1786 (n : Fin 5011) (hn : n.val = 1786) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1786 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1787 (n : Fin 5011) (hn : n.val = 1787) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1787 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1788 (n : Fin 5011) (hn : n.val = 1788) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1788 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1789 (n : Fin 5011) (hn : n.val = 1789) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1789 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1790 (n : Fin 5011) (hn : n.val = 1790) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1790 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1791 (n : Fin 5011) (hn : n.val = 1791) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1791 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1792 (n : Fin 5011) (hn : n.val = 1792) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1792 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1793 (n : Fin 5011) (hn : n.val = 1793) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1793 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1794 (n : Fin 5011) (hn : n.val = 1794) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1794 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1795 (n : Fin 5011) (hn : n.val = 1795) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1795 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1796 (n : Fin 5011) (hn : n.val = 1796) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1796 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1797 (n : Fin 5011) (hn : n.val = 1797) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1797 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1798 (n : Fin 5011) (hn : n.val = 1798) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1798 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_1799 (n : Fin 5011) (hn : n.val = 1799) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 1799 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2100 (n : Fin 5011) (hn : n.val = 2100) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2100 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2101 (n : Fin 5011) (hn : n.val = 2101) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2101 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2102 (n : Fin 5011) (hn : n.val = 2102) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2102 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2103 (n : Fin 5011) (hn : n.val = 2103) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2103 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2104 (n : Fin 5011) (hn : n.val = 2104) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2104 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2105 (n : Fin 5011) (hn : n.val = 2105) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2105 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2106 (n : Fin 5011) (hn : n.val = 2106) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2106 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2107 (n : Fin 5011) (hn : n.val = 2107) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2107 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2108 (n : Fin 5011) (hn : n.val = 2108) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2108 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2109 (n : Fin 5011) (hn : n.val = 2109) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2109 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2110 (n : Fin 5011) (hn : n.val = 2110) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2110 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2111 (n : Fin 5011) (hn : n.val = 2111) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2111 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2112 (n : Fin 5011) (hn : n.val = 2112) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2112 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2113 (n : Fin 5011) (hn : n.val = 2113) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2113 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2114 (n : Fin 5011) (hn : n.val = 2114) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2114 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2115 (n : Fin 5011) (hn : n.val = 2115) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2115 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2116 (n : Fin 5011) (hn : n.val = 2116) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2116 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2117 (n : Fin 5011) (hn : n.val = 2117) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2117 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2118 (n : Fin 5011) (hn : n.val = 2118) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2118 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2119 (n : Fin 5011) (hn : n.val = 2119) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2119 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2120 (n : Fin 5011) (hn : n.val = 2120) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2120 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2121 (n : Fin 5011) (hn : n.val = 2121) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2121 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2122 (n : Fin 5011) (hn : n.val = 2122) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2122 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2123 (n : Fin 5011) (hn : n.val = 2123) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2123 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2124 (n : Fin 5011) (hn : n.val = 2124) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2124 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2125 (n : Fin 5011) (hn : n.val = 2125) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2125 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2126 (n : Fin 5011) (hn : n.val = 2126) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2126 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2127 (n : Fin 5011) (hn : n.val = 2127) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2127 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2128 (n : Fin 5011) (hn : n.val = 2128) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2128 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2129 (n : Fin 5011) (hn : n.val = 2129) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2129 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2130 (n : Fin 5011) (hn : n.val = 2130) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2130 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2131 (n : Fin 5011) (hn : n.val = 2131) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2131 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2132 (n : Fin 5011) (hn : n.val = 2132) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2132 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2133 (n : Fin 5011) (hn : n.val = 2133) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2133 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2134 (n : Fin 5011) (hn : n.val = 2134) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2134 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2135 (n : Fin 5011) (hn : n.val = 2135) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2135 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2136 (n : Fin 5011) (hn : n.val = 2136) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2136 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2137 (n : Fin 5011) (hn : n.val = 2137) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2137 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2138 (n : Fin 5011) (hn : n.val = 2138) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2138 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2139 (n : Fin 5011) (hn : n.val = 2139) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2139 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2140 (n : Fin 5011) (hn : n.val = 2140) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2140 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2141 (n : Fin 5011) (hn : n.val = 2141) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2141 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2142 (n : Fin 5011) (hn : n.val = 2142) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2142 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2143 (n : Fin 5011) (hn : n.val = 2143) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2143 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2144 (n : Fin 5011) (hn : n.val = 2144) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2144 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2145 (n : Fin 5011) (hn : n.val = 2145) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2145 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2146 (n : Fin 5011) (hn : n.val = 2146) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2146 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2147 (n : Fin 5011) (hn : n.val = 2147) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2147 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2148 (n : Fin 5011) (hn : n.val = 2148) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2148 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2149 (n : Fin 5011) (hn : n.val = 2149) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2149 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2150 (n : Fin 5011) (hn : n.val = 2150) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2150 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2151 (n : Fin 5011) (hn : n.val = 2151) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2151 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2152 (n : Fin 5011) (hn : n.val = 2152) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2152 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2153 (n : Fin 5011) (hn : n.val = 2153) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2153 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2154 (n : Fin 5011) (hn : n.val = 2154) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2154 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2155 (n : Fin 5011) (hn : n.val = 2155) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2155 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2156 (n : Fin 5011) (hn : n.val = 2156) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2156 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2157 (n : Fin 5011) (hn : n.val = 2157) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2157 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2158 (n : Fin 5011) (hn : n.val = 2158) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2158 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2159 (n : Fin 5011) (hn : n.val = 2159) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2159 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2160 (n : Fin 5011) (hn : n.val = 2160) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2160 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2161 (n : Fin 5011) (hn : n.val = 2161) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2161 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2162 (n : Fin 5011) (hn : n.val = 2162) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2162 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2163 (n : Fin 5011) (hn : n.val = 2163) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2163 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2164 (n : Fin 5011) (hn : n.val = 2164) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2164 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2165 (n : Fin 5011) (hn : n.val = 2165) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2165 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2166 (n : Fin 5011) (hn : n.val = 2166) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2166 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2167 (n : Fin 5011) (hn : n.val = 2167) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2167 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2168 (n : Fin 5011) (hn : n.val = 2168) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2168 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2169 (n : Fin 5011) (hn : n.val = 2169) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2169 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2170 (n : Fin 5011) (hn : n.val = 2170) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2170 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2171 (n : Fin 5011) (hn : n.val = 2171) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2171 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2172 (n : Fin 5011) (hn : n.val = 2172) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2172 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2173 (n : Fin 5011) (hn : n.val = 2173) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2173 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2174 (n : Fin 5011) (hn : n.val = 2174) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2174 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2175 (n : Fin 5011) (hn : n.val = 2175) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2175 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2176 (n : Fin 5011) (hn : n.val = 2176) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2176 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2177 (n : Fin 5011) (hn : n.val = 2177) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2177 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2178 (n : Fin 5011) (hn : n.val = 2178) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2178 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2179 (n : Fin 5011) (hn : n.val = 2179) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2179 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2180 (n : Fin 5011) (hn : n.val = 2180) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2180 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2181 (n : Fin 5011) (hn : n.val = 2181) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2181 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2182 (n : Fin 5011) (hn : n.val = 2182) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2182 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2183 (n : Fin 5011) (hn : n.val = 2183) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2183 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2184 (n : Fin 5011) (hn : n.val = 2184) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2184 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2185 (n : Fin 5011) (hn : n.val = 2185) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2185 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2186 (n : Fin 5011) (hn : n.val = 2186) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2186 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2187 (n : Fin 5011) (hn : n.val = 2187) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2187 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2188 (n : Fin 5011) (hn : n.val = 2188) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2188 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2189 (n : Fin 5011) (hn : n.val = 2189) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2189 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2190 (n : Fin 5011) (hn : n.val = 2190) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2190 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2191 (n : Fin 5011) (hn : n.val = 2191) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2191 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2192 (n : Fin 5011) (hn : n.val = 2192) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2192 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2193 (n : Fin 5011) (hn : n.val = 2193) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2193 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2194 (n : Fin 5011) (hn : n.val = 2194) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2194 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2195 (n : Fin 5011) (hn : n.val = 2195) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2195 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2196 (n : Fin 5011) (hn : n.val = 2196) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2196 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2197 (n : Fin 5011) (hn : n.val = 2197) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2197 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2198 (n : Fin 5011) (hn : n.val = 2198) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2198 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2199 (n : Fin 5011) (hn : n.val = 2199) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2199 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2500 (n : Fin 5011) (hn : n.val = 2500) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2500 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2501 (n : Fin 5011) (hn : n.val = 2501) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2501 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2502 (n : Fin 5011) (hn : n.val = 2502) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2502 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2503 (n : Fin 5011) (hn : n.val = 2503) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2503 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2504 (n : Fin 5011) (hn : n.val = 2504) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2504 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2505 (n : Fin 5011) (hn : n.val = 2505) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2505 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2506 (n : Fin 5011) (hn : n.val = 2506) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2506 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2507 (n : Fin 5011) (hn : n.val = 2507) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2507 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2508 (n : Fin 5011) (hn : n.val = 2508) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2508 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2509 (n : Fin 5011) (hn : n.val = 2509) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2509 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2510 (n : Fin 5011) (hn : n.val = 2510) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2510 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2511 (n : Fin 5011) (hn : n.val = 2511) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2511 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2512 (n : Fin 5011) (hn : n.val = 2512) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2512 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2513 (n : Fin 5011) (hn : n.val = 2513) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2513 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2514 (n : Fin 5011) (hn : n.val = 2514) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2514 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2515 (n : Fin 5011) (hn : n.val = 2515) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2515 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2516 (n : Fin 5011) (hn : n.val = 2516) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2516 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2517 (n : Fin 5011) (hn : n.val = 2517) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2517 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2518 (n : Fin 5011) (hn : n.val = 2518) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2518 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2519 (n : Fin 5011) (hn : n.val = 2519) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2519 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2520 (n : Fin 5011) (hn : n.val = 2520) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2520 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2521 (n : Fin 5011) (hn : n.val = 2521) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2521 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2522 (n : Fin 5011) (hn : n.val = 2522) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2522 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2523 (n : Fin 5011) (hn : n.val = 2523) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2523 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2524 (n : Fin 5011) (hn : n.val = 2524) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2524 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2525 (n : Fin 5011) (hn : n.val = 2525) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2525 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2526 (n : Fin 5011) (hn : n.val = 2526) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2526 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2527 (n : Fin 5011) (hn : n.val = 2527) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2527 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2528 (n : Fin 5011) (hn : n.val = 2528) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2528 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2529 (n : Fin 5011) (hn : n.val = 2529) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2529 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2530 (n : Fin 5011) (hn : n.val = 2530) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2530 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2531 (n : Fin 5011) (hn : n.val = 2531) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2531 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2532 (n : Fin 5011) (hn : n.val = 2532) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2532 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2533 (n : Fin 5011) (hn : n.val = 2533) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2533 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2534 (n : Fin 5011) (hn : n.val = 2534) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2534 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2535 (n : Fin 5011) (hn : n.val = 2535) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2535 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2536 (n : Fin 5011) (hn : n.val = 2536) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2536 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2537 (n : Fin 5011) (hn : n.val = 2537) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2537 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2538 (n : Fin 5011) (hn : n.val = 2538) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2538 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2539 (n : Fin 5011) (hn : n.val = 2539) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2539 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2540 (n : Fin 5011) (hn : n.val = 2540) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2540 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2541 (n : Fin 5011) (hn : n.val = 2541) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2541 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2542 (n : Fin 5011) (hn : n.val = 2542) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2542 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2543 (n : Fin 5011) (hn : n.val = 2543) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2543 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2544 (n : Fin 5011) (hn : n.val = 2544) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2544 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2545 (n : Fin 5011) (hn : n.val = 2545) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2545 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2546 (n : Fin 5011) (hn : n.val = 2546) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2546 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2547 (n : Fin 5011) (hn : n.val = 2547) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2547 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2548 (n : Fin 5011) (hn : n.val = 2548) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2548 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2549 (n : Fin 5011) (hn : n.val = 2549) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2549 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2550 (n : Fin 5011) (hn : n.val = 2550) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2550 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2551 (n : Fin 5011) (hn : n.val = 2551) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2551 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2552 (n : Fin 5011) (hn : n.val = 2552) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2552 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2553 (n : Fin 5011) (hn : n.val = 2553) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2553 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2554 (n : Fin 5011) (hn : n.val = 2554) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2554 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2555 (n : Fin 5011) (hn : n.val = 2555) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2555 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2556 (n : Fin 5011) (hn : n.val = 2556) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2556 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2557 (n : Fin 5011) (hn : n.val = 2557) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2557 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2558 (n : Fin 5011) (hn : n.val = 2558) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2558 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2559 (n : Fin 5011) (hn : n.val = 2559) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2559 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2560 (n : Fin 5011) (hn : n.val = 2560) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2560 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2561 (n : Fin 5011) (hn : n.val = 2561) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2561 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2562 (n : Fin 5011) (hn : n.val = 2562) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2562 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2563 (n : Fin 5011) (hn : n.val = 2563) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2563 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2564 (n : Fin 5011) (hn : n.val = 2564) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2564 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2565 (n : Fin 5011) (hn : n.val = 2565) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2565 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2566 (n : Fin 5011) (hn : n.val = 2566) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2566 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2567 (n : Fin 5011) (hn : n.val = 2567) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2567 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2568 (n : Fin 5011) (hn : n.val = 2568) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2568 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2569 (n : Fin 5011) (hn : n.val = 2569) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2569 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2570 (n : Fin 5011) (hn : n.val = 2570) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2570 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2571 (n : Fin 5011) (hn : n.val = 2571) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2571 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2572 (n : Fin 5011) (hn : n.val = 2572) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2572 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2573 (n : Fin 5011) (hn : n.val = 2573) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2573 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2574 (n : Fin 5011) (hn : n.val = 2574) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2574 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2575 (n : Fin 5011) (hn : n.val = 2575) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2575 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2576 (n : Fin 5011) (hn : n.val = 2576) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2576 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2577 (n : Fin 5011) (hn : n.val = 2577) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2577 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2578 (n : Fin 5011) (hn : n.val = 2578) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2578 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2579 (n : Fin 5011) (hn : n.val = 2579) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2579 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2580 (n : Fin 5011) (hn : n.val = 2580) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2580 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2581 (n : Fin 5011) (hn : n.val = 2581) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2581 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2582 (n : Fin 5011) (hn : n.val = 2582) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2582 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2583 (n : Fin 5011) (hn : n.val = 2583) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2583 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2584 (n : Fin 5011) (hn : n.val = 2584) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2584 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2585 (n : Fin 5011) (hn : n.val = 2585) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2585 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2586 (n : Fin 5011) (hn : n.val = 2586) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2586 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2587 (n : Fin 5011) (hn : n.val = 2587) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2587 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2588 (n : Fin 5011) (hn : n.val = 2588) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2588 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2589 (n : Fin 5011) (hn : n.val = 2589) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2589 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2590 (n : Fin 5011) (hn : n.val = 2590) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2590 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2591 (n : Fin 5011) (hn : n.val = 2591) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2591 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2592 (n : Fin 5011) (hn : n.val = 2592) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2592 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2593 (n : Fin 5011) (hn : n.val = 2593) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2593 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2594 (n : Fin 5011) (hn : n.val = 2594) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2594 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2595 (n : Fin 5011) (hn : n.val = 2595) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2595 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2596 (n : Fin 5011) (hn : n.val = 2596) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2596 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2597 (n : Fin 5011) (hn : n.val = 2597) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2597 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2598 (n : Fin 5011) (hn : n.val = 2598) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2598 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2599 (n : Fin 5011) (hn : n.val = 2599) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2599 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2900 (n : Fin 5011) (hn : n.val = 2900) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2900 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2901 (n : Fin 5011) (hn : n.val = 2901) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2901 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2902 (n : Fin 5011) (hn : n.val = 2902) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2902 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2903 (n : Fin 5011) (hn : n.val = 2903) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2903 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2904 (n : Fin 5011) (hn : n.val = 2904) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2904 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2905 (n : Fin 5011) (hn : n.val = 2905) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2905 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2906 (n : Fin 5011) (hn : n.val = 2906) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2906 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2907 (n : Fin 5011) (hn : n.val = 2907) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2907 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2908 (n : Fin 5011) (hn : n.val = 2908) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2908 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2909 (n : Fin 5011) (hn : n.val = 2909) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2909 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2910 (n : Fin 5011) (hn : n.val = 2910) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2910 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2911 (n : Fin 5011) (hn : n.val = 2911) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2911 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2912 (n : Fin 5011) (hn : n.val = 2912) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2912 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2913 (n : Fin 5011) (hn : n.val = 2913) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2913 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2914 (n : Fin 5011) (hn : n.val = 2914) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2914 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2915 (n : Fin 5011) (hn : n.val = 2915) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2915 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2916 (n : Fin 5011) (hn : n.val = 2916) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2916 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2917 (n : Fin 5011) (hn : n.val = 2917) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2917 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2918 (n : Fin 5011) (hn : n.val = 2918) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2918 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2919 (n : Fin 5011) (hn : n.val = 2919) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2919 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2920 (n : Fin 5011) (hn : n.val = 2920) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2920 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2921 (n : Fin 5011) (hn : n.val = 2921) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2921 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2922 (n : Fin 5011) (hn : n.val = 2922) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2922 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2923 (n : Fin 5011) (hn : n.val = 2923) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2923 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2924 (n : Fin 5011) (hn : n.val = 2924) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2924 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2925 (n : Fin 5011) (hn : n.val = 2925) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2925 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2926 (n : Fin 5011) (hn : n.val = 2926) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2926 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2927 (n : Fin 5011) (hn : n.val = 2927) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2927 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2928 (n : Fin 5011) (hn : n.val = 2928) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2928 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2929 (n : Fin 5011) (hn : n.val = 2929) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2929 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2930 (n : Fin 5011) (hn : n.val = 2930) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2930 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2931 (n : Fin 5011) (hn : n.val = 2931) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2931 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2932 (n : Fin 5011) (hn : n.val = 2932) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2932 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2933 (n : Fin 5011) (hn : n.val = 2933) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2933 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2934 (n : Fin 5011) (hn : n.val = 2934) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2934 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2935 (n : Fin 5011) (hn : n.val = 2935) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2935 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2936 (n : Fin 5011) (hn : n.val = 2936) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2936 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2937 (n : Fin 5011) (hn : n.val = 2937) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2937 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2938 (n : Fin 5011) (hn : n.val = 2938) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2938 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2939 (n : Fin 5011) (hn : n.val = 2939) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2939 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2940 (n : Fin 5011) (hn : n.val = 2940) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2940 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2941 (n : Fin 5011) (hn : n.val = 2941) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2941 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2942 (n : Fin 5011) (hn : n.val = 2942) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2942 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2943 (n : Fin 5011) (hn : n.val = 2943) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2943 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2944 (n : Fin 5011) (hn : n.val = 2944) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2944 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2945 (n : Fin 5011) (hn : n.val = 2945) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2945 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2946 (n : Fin 5011) (hn : n.val = 2946) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2946 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2947 (n : Fin 5011) (hn : n.val = 2947) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2947 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2948 (n : Fin 5011) (hn : n.val = 2948) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2948 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2949 (n : Fin 5011) (hn : n.val = 2949) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2949 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2950 (n : Fin 5011) (hn : n.val = 2950) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2950 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2951 (n : Fin 5011) (hn : n.val = 2951) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2951 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2952 (n : Fin 5011) (hn : n.val = 2952) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2952 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2953 (n : Fin 5011) (hn : n.val = 2953) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2953 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2954 (n : Fin 5011) (hn : n.val = 2954) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2954 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2955 (n : Fin 5011) (hn : n.val = 2955) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2955 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2956 (n : Fin 5011) (hn : n.val = 2956) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2956 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2957 (n : Fin 5011) (hn : n.val = 2957) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2957 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2958 (n : Fin 5011) (hn : n.val = 2958) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2958 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2959 (n : Fin 5011) (hn : n.val = 2959) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2959 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2960 (n : Fin 5011) (hn : n.val = 2960) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2960 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2961 (n : Fin 5011) (hn : n.val = 2961) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2961 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2962 (n : Fin 5011) (hn : n.val = 2962) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2962 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2963 (n : Fin 5011) (hn : n.val = 2963) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2963 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2964 (n : Fin 5011) (hn : n.val = 2964) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2964 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2965 (n : Fin 5011) (hn : n.val = 2965) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2965 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2966 (n : Fin 5011) (hn : n.val = 2966) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2966 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2967 (n : Fin 5011) (hn : n.val = 2967) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2967 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2968 (n : Fin 5011) (hn : n.val = 2968) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2968 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2969 (n : Fin 5011) (hn : n.val = 2969) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2969 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2970 (n : Fin 5011) (hn : n.val = 2970) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2970 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2971 (n : Fin 5011) (hn : n.val = 2971) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2971 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2972 (n : Fin 5011) (hn : n.val = 2972) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2972 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2973 (n : Fin 5011) (hn : n.val = 2973) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2973 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2974 (n : Fin 5011) (hn : n.val = 2974) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2974 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2975 (n : Fin 5011) (hn : n.val = 2975) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2975 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2976 (n : Fin 5011) (hn : n.val = 2976) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2976 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2977 (n : Fin 5011) (hn : n.val = 2977) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2977 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2978 (n : Fin 5011) (hn : n.val = 2978) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2978 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2979 (n : Fin 5011) (hn : n.val = 2979) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2979 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2980 (n : Fin 5011) (hn : n.val = 2980) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2980 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2981 (n : Fin 5011) (hn : n.val = 2981) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2981 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2982 (n : Fin 5011) (hn : n.val = 2982) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2982 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2983 (n : Fin 5011) (hn : n.val = 2983) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2983 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2984 (n : Fin 5011) (hn : n.val = 2984) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2984 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2985 (n : Fin 5011) (hn : n.val = 2985) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2985 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2986 (n : Fin 5011) (hn : n.val = 2986) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2986 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2987 (n : Fin 5011) (hn : n.val = 2987) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2987 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2988 (n : Fin 5011) (hn : n.val = 2988) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2988 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2989 (n : Fin 5011) (hn : n.val = 2989) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2989 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2990 (n : Fin 5011) (hn : n.val = 2990) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2990 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2991 (n : Fin 5011) (hn : n.val = 2991) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2991 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2992 (n : Fin 5011) (hn : n.val = 2992) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2992 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2993 (n : Fin 5011) (hn : n.val = 2993) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2993 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2994 (n : Fin 5011) (hn : n.val = 2994) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2994 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2995 (n : Fin 5011) (hn : n.val = 2995) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2995 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2996 (n : Fin 5011) (hn : n.val = 2996) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2996 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2997 (n : Fin 5011) (hn : n.val = 2997) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2997 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2998 (n : Fin 5011) (hn : n.val = 2998) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2998 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_2999 (n : Fin 5011) (hn : n.val = 2999) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 2999 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3300 (n : Fin 5011) (hn : n.val = 3300) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3300 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3301 (n : Fin 5011) (hn : n.val = 3301) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3301 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3302 (n : Fin 5011) (hn : n.val = 3302) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3302 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3303 (n : Fin 5011) (hn : n.val = 3303) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3303 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3304 (n : Fin 5011) (hn : n.val = 3304) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3304 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3305 (n : Fin 5011) (hn : n.val = 3305) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3305 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3306 (n : Fin 5011) (hn : n.val = 3306) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3306 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3307 (n : Fin 5011) (hn : n.val = 3307) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3307 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3308 (n : Fin 5011) (hn : n.val = 3308) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3308 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3309 (n : Fin 5011) (hn : n.val = 3309) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3309 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3310 (n : Fin 5011) (hn : n.val = 3310) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3310 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3311 (n : Fin 5011) (hn : n.val = 3311) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3311 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3312 (n : Fin 5011) (hn : n.val = 3312) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3312 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3313 (n : Fin 5011) (hn : n.val = 3313) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3313 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3314 (n : Fin 5011) (hn : n.val = 3314) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3314 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3315 (n : Fin 5011) (hn : n.val = 3315) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3315 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3316 (n : Fin 5011) (hn : n.val = 3316) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3316 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3317 (n : Fin 5011) (hn : n.val = 3317) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3317 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3318 (n : Fin 5011) (hn : n.val = 3318) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3318 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3319 (n : Fin 5011) (hn : n.val = 3319) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3319 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3320 (n : Fin 5011) (hn : n.val = 3320) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3320 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3321 (n : Fin 5011) (hn : n.val = 3321) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3321 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3322 (n : Fin 5011) (hn : n.val = 3322) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3322 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3323 (n : Fin 5011) (hn : n.val = 3323) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3323 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3324 (n : Fin 5011) (hn : n.val = 3324) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3324 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3325 (n : Fin 5011) (hn : n.val = 3325) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3325 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3326 (n : Fin 5011) (hn : n.val = 3326) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3326 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3327 (n : Fin 5011) (hn : n.val = 3327) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3327 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3328 (n : Fin 5011) (hn : n.val = 3328) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3328 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3329 (n : Fin 5011) (hn : n.val = 3329) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3329 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3330 (n : Fin 5011) (hn : n.val = 3330) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3330 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3331 (n : Fin 5011) (hn : n.val = 3331) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3331 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3332 (n : Fin 5011) (hn : n.val = 3332) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3332 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3333 (n : Fin 5011) (hn : n.val = 3333) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3333 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3334 (n : Fin 5011) (hn : n.val = 3334) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3334 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3335 (n : Fin 5011) (hn : n.val = 3335) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3335 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3336 (n : Fin 5011) (hn : n.val = 3336) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3336 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3337 (n : Fin 5011) (hn : n.val = 3337) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3337 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3338 (n : Fin 5011) (hn : n.val = 3338) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3338 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3339 (n : Fin 5011) (hn : n.val = 3339) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3339 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3340 (n : Fin 5011) (hn : n.val = 3340) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3340 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3341 (n : Fin 5011) (hn : n.val = 3341) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3341 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3342 (n : Fin 5011) (hn : n.val = 3342) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3342 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3343 (n : Fin 5011) (hn : n.val = 3343) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3343 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3344 (n : Fin 5011) (hn : n.val = 3344) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3344 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3345 (n : Fin 5011) (hn : n.val = 3345) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3345 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3346 (n : Fin 5011) (hn : n.val = 3346) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3346 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3347 (n : Fin 5011) (hn : n.val = 3347) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3347 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3348 (n : Fin 5011) (hn : n.val = 3348) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3348 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3349 (n : Fin 5011) (hn : n.val = 3349) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3349 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3350 (n : Fin 5011) (hn : n.val = 3350) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3350 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3351 (n : Fin 5011) (hn : n.val = 3351) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3351 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3352 (n : Fin 5011) (hn : n.val = 3352) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3352 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3353 (n : Fin 5011) (hn : n.val = 3353) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3353 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3354 (n : Fin 5011) (hn : n.val = 3354) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3354 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3355 (n : Fin 5011) (hn : n.val = 3355) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3355 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3356 (n : Fin 5011) (hn : n.val = 3356) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3356 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3357 (n : Fin 5011) (hn : n.val = 3357) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3357 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3358 (n : Fin 5011) (hn : n.val = 3358) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3358 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3359 (n : Fin 5011) (hn : n.val = 3359) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3359 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3360 (n : Fin 5011) (hn : n.val = 3360) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3360 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3361 (n : Fin 5011) (hn : n.val = 3361) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3361 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3362 (n : Fin 5011) (hn : n.val = 3362) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3362 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3363 (n : Fin 5011) (hn : n.val = 3363) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3363 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3364 (n : Fin 5011) (hn : n.val = 3364) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3364 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3365 (n : Fin 5011) (hn : n.val = 3365) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3365 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3366 (n : Fin 5011) (hn : n.val = 3366) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3366 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3367 (n : Fin 5011) (hn : n.val = 3367) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3367 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3368 (n : Fin 5011) (hn : n.val = 3368) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3368 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3369 (n : Fin 5011) (hn : n.val = 3369) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3369 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3370 (n : Fin 5011) (hn : n.val = 3370) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3370 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3371 (n : Fin 5011) (hn : n.val = 3371) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3371 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3372 (n : Fin 5011) (hn : n.val = 3372) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3372 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3373 (n : Fin 5011) (hn : n.val = 3373) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3373 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3374 (n : Fin 5011) (hn : n.val = 3374) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3374 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3375 (n : Fin 5011) (hn : n.val = 3375) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3375 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3376 (n : Fin 5011) (hn : n.val = 3376) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3376 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3377 (n : Fin 5011) (hn : n.val = 3377) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3377 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3378 (n : Fin 5011) (hn : n.val = 3378) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3378 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3379 (n : Fin 5011) (hn : n.val = 3379) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3379 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3380 (n : Fin 5011) (hn : n.val = 3380) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3380 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3381 (n : Fin 5011) (hn : n.val = 3381) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3381 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3382 (n : Fin 5011) (hn : n.val = 3382) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3382 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3383 (n : Fin 5011) (hn : n.val = 3383) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3383 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3384 (n : Fin 5011) (hn : n.val = 3384) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3384 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3385 (n : Fin 5011) (hn : n.val = 3385) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3385 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3386 (n : Fin 5011) (hn : n.val = 3386) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3386 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3387 (n : Fin 5011) (hn : n.val = 3387) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3387 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3388 (n : Fin 5011) (hn : n.val = 3388) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3388 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3389 (n : Fin 5011) (hn : n.val = 3389) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3389 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3390 (n : Fin 5011) (hn : n.val = 3390) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3390 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3391 (n : Fin 5011) (hn : n.val = 3391) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3391 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3392 (n : Fin 5011) (hn : n.val = 3392) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3392 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3393 (n : Fin 5011) (hn : n.val = 3393) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3393 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3394 (n : Fin 5011) (hn : n.val = 3394) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3394 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3395 (n : Fin 5011) (hn : n.val = 3395) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3395 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3396 (n : Fin 5011) (hn : n.val = 3396) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3396 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3397 (n : Fin 5011) (hn : n.val = 3397) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3397 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3398 (n : Fin 5011) (hn : n.val = 3398) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3398 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3399 (n : Fin 5011) (hn : n.val = 3399) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3399 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3700 (n : Fin 5011) (hn : n.val = 3700) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3700 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3701 (n : Fin 5011) (hn : n.val = 3701) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3701 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3702 (n : Fin 5011) (hn : n.val = 3702) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3702 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3703 (n : Fin 5011) (hn : n.val = 3703) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3703 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3704 (n : Fin 5011) (hn : n.val = 3704) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3704 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3705 (n : Fin 5011) (hn : n.val = 3705) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3705 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3706 (n : Fin 5011) (hn : n.val = 3706) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3706 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3707 (n : Fin 5011) (hn : n.val = 3707) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3707 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3708 (n : Fin 5011) (hn : n.val = 3708) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3708 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3709 (n : Fin 5011) (hn : n.val = 3709) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3709 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3710 (n : Fin 5011) (hn : n.val = 3710) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3710 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3711 (n : Fin 5011) (hn : n.val = 3711) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3711 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3712 (n : Fin 5011) (hn : n.val = 3712) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3712 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3713 (n : Fin 5011) (hn : n.val = 3713) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3713 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3714 (n : Fin 5011) (hn : n.val = 3714) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3714 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3715 (n : Fin 5011) (hn : n.val = 3715) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3715 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3716 (n : Fin 5011) (hn : n.val = 3716) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3716 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3717 (n : Fin 5011) (hn : n.val = 3717) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3717 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3718 (n : Fin 5011) (hn : n.val = 3718) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3718 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3719 (n : Fin 5011) (hn : n.val = 3719) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3719 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3720 (n : Fin 5011) (hn : n.val = 3720) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3720 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3721 (n : Fin 5011) (hn : n.val = 3721) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3721 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3722 (n : Fin 5011) (hn : n.val = 3722) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3722 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3723 (n : Fin 5011) (hn : n.val = 3723) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3723 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3724 (n : Fin 5011) (hn : n.val = 3724) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3724 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3725 (n : Fin 5011) (hn : n.val = 3725) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3725 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3726 (n : Fin 5011) (hn : n.val = 3726) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3726 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3727 (n : Fin 5011) (hn : n.val = 3727) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3727 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3728 (n : Fin 5011) (hn : n.val = 3728) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3728 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3729 (n : Fin 5011) (hn : n.val = 3729) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3729 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3730 (n : Fin 5011) (hn : n.val = 3730) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3730 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3731 (n : Fin 5011) (hn : n.val = 3731) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3731 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3732 (n : Fin 5011) (hn : n.val = 3732) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3732 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3733 (n : Fin 5011) (hn : n.val = 3733) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3733 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3734 (n : Fin 5011) (hn : n.val = 3734) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3734 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3735 (n : Fin 5011) (hn : n.val = 3735) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3735 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3736 (n : Fin 5011) (hn : n.val = 3736) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3736 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3737 (n : Fin 5011) (hn : n.val = 3737) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3737 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3738 (n : Fin 5011) (hn : n.val = 3738) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3738 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3739 (n : Fin 5011) (hn : n.val = 3739) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3739 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3740 (n : Fin 5011) (hn : n.val = 3740) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3740 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3741 (n : Fin 5011) (hn : n.val = 3741) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3741 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3742 (n : Fin 5011) (hn : n.val = 3742) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3742 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3743 (n : Fin 5011) (hn : n.val = 3743) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3743 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3744 (n : Fin 5011) (hn : n.val = 3744) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3744 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3745 (n : Fin 5011) (hn : n.val = 3745) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3745 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3746 (n : Fin 5011) (hn : n.val = 3746) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3746 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3747 (n : Fin 5011) (hn : n.val = 3747) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3747 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3748 (n : Fin 5011) (hn : n.val = 3748) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3748 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3749 (n : Fin 5011) (hn : n.val = 3749) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3749 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3750 (n : Fin 5011) (hn : n.val = 3750) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3750 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3751 (n : Fin 5011) (hn : n.val = 3751) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3751 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3752 (n : Fin 5011) (hn : n.val = 3752) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3752 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3753 (n : Fin 5011) (hn : n.val = 3753) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3753 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3754 (n : Fin 5011) (hn : n.val = 3754) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3754 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3755 (n : Fin 5011) (hn : n.val = 3755) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3755 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3756 (n : Fin 5011) (hn : n.val = 3756) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3756 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3757 (n : Fin 5011) (hn : n.val = 3757) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3757 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3758 (n : Fin 5011) (hn : n.val = 3758) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3758 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3759 (n : Fin 5011) (hn : n.val = 3759) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3759 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3760 (n : Fin 5011) (hn : n.val = 3760) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3760 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3761 (n : Fin 5011) (hn : n.val = 3761) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3761 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3762 (n : Fin 5011) (hn : n.val = 3762) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3762 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3763 (n : Fin 5011) (hn : n.val = 3763) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3763 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3764 (n : Fin 5011) (hn : n.val = 3764) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3764 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3765 (n : Fin 5011) (hn : n.val = 3765) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3765 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3766 (n : Fin 5011) (hn : n.val = 3766) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3766 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3767 (n : Fin 5011) (hn : n.val = 3767) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3767 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3768 (n : Fin 5011) (hn : n.val = 3768) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3768 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3769 (n : Fin 5011) (hn : n.val = 3769) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3769 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3770 (n : Fin 5011) (hn : n.val = 3770) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3770 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3771 (n : Fin 5011) (hn : n.val = 3771) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3771 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3772 (n : Fin 5011) (hn : n.val = 3772) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3772 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3773 (n : Fin 5011) (hn : n.val = 3773) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3773 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3774 (n : Fin 5011) (hn : n.val = 3774) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3774 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3775 (n : Fin 5011) (hn : n.val = 3775) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3775 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3776 (n : Fin 5011) (hn : n.val = 3776) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3776 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3777 (n : Fin 5011) (hn : n.val = 3777) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3777 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3778 (n : Fin 5011) (hn : n.val = 3778) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3778 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3779 (n : Fin 5011) (hn : n.val = 3779) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3779 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3780 (n : Fin 5011) (hn : n.val = 3780) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3780 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3781 (n : Fin 5011) (hn : n.val = 3781) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3781 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3782 (n : Fin 5011) (hn : n.val = 3782) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3782 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3783 (n : Fin 5011) (hn : n.val = 3783) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3783 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3784 (n : Fin 5011) (hn : n.val = 3784) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3784 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3785 (n : Fin 5011) (hn : n.val = 3785) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3785 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3786 (n : Fin 5011) (hn : n.val = 3786) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3786 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3787 (n : Fin 5011) (hn : n.val = 3787) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3787 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3788 (n : Fin 5011) (hn : n.val = 3788) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3788 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3789 (n : Fin 5011) (hn : n.val = 3789) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3789 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3790 (n : Fin 5011) (hn : n.val = 3790) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3790 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3791 (n : Fin 5011) (hn : n.val = 3791) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3791 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3792 (n : Fin 5011) (hn : n.val = 3792) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3792 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3793 (n : Fin 5011) (hn : n.val = 3793) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3793 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3794 (n : Fin 5011) (hn : n.val = 3794) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3794 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3795 (n : Fin 5011) (hn : n.val = 3795) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3795 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3796 (n : Fin 5011) (hn : n.val = 3796) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3796 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3797 (n : Fin 5011) (hn : n.val = 3797) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3797 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3798 (n : Fin 5011) (hn : n.val = 3798) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3798 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_3799 (n : Fin 5011) (hn : n.val = 3799) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 3799 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4100 (n : Fin 5011) (hn : n.val = 4100) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4100 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4101 (n : Fin 5011) (hn : n.val = 4101) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4101 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4102 (n : Fin 5011) (hn : n.val = 4102) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4102 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4103 (n : Fin 5011) (hn : n.val = 4103) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4103 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4104 (n : Fin 5011) (hn : n.val = 4104) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4104 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4105 (n : Fin 5011) (hn : n.val = 4105) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4105 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4106 (n : Fin 5011) (hn : n.val = 4106) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4106 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4107 (n : Fin 5011) (hn : n.val = 4107) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4107 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4108 (n : Fin 5011) (hn : n.val = 4108) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4108 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4109 (n : Fin 5011) (hn : n.val = 4109) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4109 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4110 (n : Fin 5011) (hn : n.val = 4110) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4110 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4111 (n : Fin 5011) (hn : n.val = 4111) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4111 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4112 (n : Fin 5011) (hn : n.val = 4112) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4112 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4113 (n : Fin 5011) (hn : n.val = 4113) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4113 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4114 (n : Fin 5011) (hn : n.val = 4114) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4114 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4115 (n : Fin 5011) (hn : n.val = 4115) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4115 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4116 (n : Fin 5011) (hn : n.val = 4116) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4116 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4117 (n : Fin 5011) (hn : n.val = 4117) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4117 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4118 (n : Fin 5011) (hn : n.val = 4118) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4118 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4119 (n : Fin 5011) (hn : n.val = 4119) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4119 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4120 (n : Fin 5011) (hn : n.val = 4120) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4120 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4121 (n : Fin 5011) (hn : n.val = 4121) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4121 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4122 (n : Fin 5011) (hn : n.val = 4122) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4122 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4123 (n : Fin 5011) (hn : n.val = 4123) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4123 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4124 (n : Fin 5011) (hn : n.val = 4124) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4124 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4125 (n : Fin 5011) (hn : n.val = 4125) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4125 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4126 (n : Fin 5011) (hn : n.val = 4126) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4126 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4127 (n : Fin 5011) (hn : n.val = 4127) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4127 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4128 (n : Fin 5011) (hn : n.val = 4128) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4128 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4129 (n : Fin 5011) (hn : n.val = 4129) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4129 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4130 (n : Fin 5011) (hn : n.val = 4130) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4130 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4131 (n : Fin 5011) (hn : n.val = 4131) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4131 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4132 (n : Fin 5011) (hn : n.val = 4132) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4132 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4133 (n : Fin 5011) (hn : n.val = 4133) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4133 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4134 (n : Fin 5011) (hn : n.val = 4134) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4134 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4135 (n : Fin 5011) (hn : n.val = 4135) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4135 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4136 (n : Fin 5011) (hn : n.val = 4136) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4136 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4137 (n : Fin 5011) (hn : n.val = 4137) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4137 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4138 (n : Fin 5011) (hn : n.val = 4138) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4138 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4139 (n : Fin 5011) (hn : n.val = 4139) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4139 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4140 (n : Fin 5011) (hn : n.val = 4140) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4140 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4141 (n : Fin 5011) (hn : n.val = 4141) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4141 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4142 (n : Fin 5011) (hn : n.val = 4142) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4142 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4143 (n : Fin 5011) (hn : n.val = 4143) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4143 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4144 (n : Fin 5011) (hn : n.val = 4144) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4144 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4145 (n : Fin 5011) (hn : n.val = 4145) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4145 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4146 (n : Fin 5011) (hn : n.val = 4146) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4146 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4147 (n : Fin 5011) (hn : n.val = 4147) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4147 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4148 (n : Fin 5011) (hn : n.val = 4148) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4148 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4149 (n : Fin 5011) (hn : n.val = 4149) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4149 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4150 (n : Fin 5011) (hn : n.val = 4150) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4150 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4151 (n : Fin 5011) (hn : n.val = 4151) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4151 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4152 (n : Fin 5011) (hn : n.val = 4152) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4152 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4153 (n : Fin 5011) (hn : n.val = 4153) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4153 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4154 (n : Fin 5011) (hn : n.val = 4154) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4154 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4155 (n : Fin 5011) (hn : n.val = 4155) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4155 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4156 (n : Fin 5011) (hn : n.val = 4156) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4156 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4157 (n : Fin 5011) (hn : n.val = 4157) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4157 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4158 (n : Fin 5011) (hn : n.val = 4158) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4158 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4159 (n : Fin 5011) (hn : n.val = 4159) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4159 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4160 (n : Fin 5011) (hn : n.val = 4160) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4160 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4161 (n : Fin 5011) (hn : n.val = 4161) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4161 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4162 (n : Fin 5011) (hn : n.val = 4162) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4162 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4163 (n : Fin 5011) (hn : n.val = 4163) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4163 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4164 (n : Fin 5011) (hn : n.val = 4164) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4164 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4165 (n : Fin 5011) (hn : n.val = 4165) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4165 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4166 (n : Fin 5011) (hn : n.val = 4166) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4166 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4167 (n : Fin 5011) (hn : n.val = 4167) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4167 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4168 (n : Fin 5011) (hn : n.val = 4168) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4168 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4169 (n : Fin 5011) (hn : n.val = 4169) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4169 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4170 (n : Fin 5011) (hn : n.val = 4170) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4170 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4171 (n : Fin 5011) (hn : n.val = 4171) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4171 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4172 (n : Fin 5011) (hn : n.val = 4172) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4172 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4173 (n : Fin 5011) (hn : n.val = 4173) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4173 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4174 (n : Fin 5011) (hn : n.val = 4174) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4174 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4175 (n : Fin 5011) (hn : n.val = 4175) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4175 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4176 (n : Fin 5011) (hn : n.val = 4176) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4176 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4177 (n : Fin 5011) (hn : n.val = 4177) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4177 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4178 (n : Fin 5011) (hn : n.val = 4178) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4178 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4179 (n : Fin 5011) (hn : n.val = 4179) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4179 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4180 (n : Fin 5011) (hn : n.val = 4180) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4180 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4181 (n : Fin 5011) (hn : n.val = 4181) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4181 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4182 (n : Fin 5011) (hn : n.val = 4182) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4182 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4183 (n : Fin 5011) (hn : n.val = 4183) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4183 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4184 (n : Fin 5011) (hn : n.val = 4184) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4184 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4185 (n : Fin 5011) (hn : n.val = 4185) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4185 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4186 (n : Fin 5011) (hn : n.val = 4186) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4186 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4187 (n : Fin 5011) (hn : n.val = 4187) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4187 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4188 (n : Fin 5011) (hn : n.val = 4188) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4188 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4189 (n : Fin 5011) (hn : n.val = 4189) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4189 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4190 (n : Fin 5011) (hn : n.val = 4190) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4190 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4191 (n : Fin 5011) (hn : n.val = 4191) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4191 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4192 (n : Fin 5011) (hn : n.val = 4192) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4192 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4193 (n : Fin 5011) (hn : n.val = 4193) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4193 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4194 (n : Fin 5011) (hn : n.val = 4194) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4194 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4195 (n : Fin 5011) (hn : n.val = 4195) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4195 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4196 (n : Fin 5011) (hn : n.val = 4196) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4196 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4197 (n : Fin 5011) (hn : n.val = 4197) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4197 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4198 (n : Fin 5011) (hn : n.val = 4198) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4198 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4199 (n : Fin 5011) (hn : n.val = 4199) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4199 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4500 (n : Fin 5011) (hn : n.val = 4500) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4500 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4501 (n : Fin 5011) (hn : n.val = 4501) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4501 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4502 (n : Fin 5011) (hn : n.val = 4502) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4502 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4503 (n : Fin 5011) (hn : n.val = 4503) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4503 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4504 (n : Fin 5011) (hn : n.val = 4504) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4504 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4505 (n : Fin 5011) (hn : n.val = 4505) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4505 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4506 (n : Fin 5011) (hn : n.val = 4506) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4506 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4507 (n : Fin 5011) (hn : n.val = 4507) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4507 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4508 (n : Fin 5011) (hn : n.val = 4508) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4508 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4509 (n : Fin 5011) (hn : n.val = 4509) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4509 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4510 (n : Fin 5011) (hn : n.val = 4510) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4510 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4511 (n : Fin 5011) (hn : n.val = 4511) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4511 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4512 (n : Fin 5011) (hn : n.val = 4512) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4512 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4513 (n : Fin 5011) (hn : n.val = 4513) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4513 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4514 (n : Fin 5011) (hn : n.val = 4514) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4514 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4515 (n : Fin 5011) (hn : n.val = 4515) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4515 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4516 (n : Fin 5011) (hn : n.val = 4516) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4516 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4517 (n : Fin 5011) (hn : n.val = 4517) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4517 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4518 (n : Fin 5011) (hn : n.val = 4518) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4518 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4519 (n : Fin 5011) (hn : n.val = 4519) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4519 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4520 (n : Fin 5011) (hn : n.val = 4520) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4520 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4521 (n : Fin 5011) (hn : n.val = 4521) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4521 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4522 (n : Fin 5011) (hn : n.val = 4522) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4522 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4523 (n : Fin 5011) (hn : n.val = 4523) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4523 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4524 (n : Fin 5011) (hn : n.val = 4524) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4524 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4525 (n : Fin 5011) (hn : n.val = 4525) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4525 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4526 (n : Fin 5011) (hn : n.val = 4526) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4526 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4527 (n : Fin 5011) (hn : n.val = 4527) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4527 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4528 (n : Fin 5011) (hn : n.val = 4528) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4528 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4529 (n : Fin 5011) (hn : n.val = 4529) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4529 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4530 (n : Fin 5011) (hn : n.val = 4530) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4530 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4531 (n : Fin 5011) (hn : n.val = 4531) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4531 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4532 (n : Fin 5011) (hn : n.val = 4532) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4532 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4533 (n : Fin 5011) (hn : n.val = 4533) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4533 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4534 (n : Fin 5011) (hn : n.val = 4534) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4534 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4535 (n : Fin 5011) (hn : n.val = 4535) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4535 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4536 (n : Fin 5011) (hn : n.val = 4536) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4536 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4537 (n : Fin 5011) (hn : n.val = 4537) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4537 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4538 (n : Fin 5011) (hn : n.val = 4538) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4538 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4539 (n : Fin 5011) (hn : n.val = 4539) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4539 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4540 (n : Fin 5011) (hn : n.val = 4540) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4540 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4541 (n : Fin 5011) (hn : n.val = 4541) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4541 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4542 (n : Fin 5011) (hn : n.val = 4542) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4542 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4543 (n : Fin 5011) (hn : n.val = 4543) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4543 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4544 (n : Fin 5011) (hn : n.val = 4544) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4544 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4545 (n : Fin 5011) (hn : n.val = 4545) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4545 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4546 (n : Fin 5011) (hn : n.val = 4546) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4546 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4547 (n : Fin 5011) (hn : n.val = 4547) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4547 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4548 (n : Fin 5011) (hn : n.val = 4548) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4548 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4549 (n : Fin 5011) (hn : n.val = 4549) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4549 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4550 (n : Fin 5011) (hn : n.val = 4550) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4550 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4551 (n : Fin 5011) (hn : n.val = 4551) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4551 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4552 (n : Fin 5011) (hn : n.val = 4552) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4552 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4553 (n : Fin 5011) (hn : n.val = 4553) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4553 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4554 (n : Fin 5011) (hn : n.val = 4554) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4554 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4555 (n : Fin 5011) (hn : n.val = 4555) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4555 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4556 (n : Fin 5011) (hn : n.val = 4556) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4556 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4557 (n : Fin 5011) (hn : n.val = 4557) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4557 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4558 (n : Fin 5011) (hn : n.val = 4558) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4558 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4559 (n : Fin 5011) (hn : n.val = 4559) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4559 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4560 (n : Fin 5011) (hn : n.val = 4560) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4560 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4561 (n : Fin 5011) (hn : n.val = 4561) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4561 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4562 (n : Fin 5011) (hn : n.val = 4562) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4562 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4563 (n : Fin 5011) (hn : n.val = 4563) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4563 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4564 (n : Fin 5011) (hn : n.val = 4564) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4564 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4565 (n : Fin 5011) (hn : n.val = 4565) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4565 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4566 (n : Fin 5011) (hn : n.val = 4566) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4566 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4567 (n : Fin 5011) (hn : n.val = 4567) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4567 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4568 (n : Fin 5011) (hn : n.val = 4568) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4568 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4569 (n : Fin 5011) (hn : n.val = 4569) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4569 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4570 (n : Fin 5011) (hn : n.val = 4570) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4570 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4571 (n : Fin 5011) (hn : n.val = 4571) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4571 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4572 (n : Fin 5011) (hn : n.val = 4572) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4572 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4573 (n : Fin 5011) (hn : n.val = 4573) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4573 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4574 (n : Fin 5011) (hn : n.val = 4574) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4574 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4575 (n : Fin 5011) (hn : n.val = 4575) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4575 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4576 (n : Fin 5011) (hn : n.val = 4576) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4576 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4577 (n : Fin 5011) (hn : n.val = 4577) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4577 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4578 (n : Fin 5011) (hn : n.val = 4578) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4578 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4579 (n : Fin 5011) (hn : n.val = 4579) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4579 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4580 (n : Fin 5011) (hn : n.val = 4580) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4580 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4581 (n : Fin 5011) (hn : n.val = 4581) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4581 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4582 (n : Fin 5011) (hn : n.val = 4582) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4582 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4583 (n : Fin 5011) (hn : n.val = 4583) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4583 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4584 (n : Fin 5011) (hn : n.val = 4584) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4584 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4585 (n : Fin 5011) (hn : n.val = 4585) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4585 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4586 (n : Fin 5011) (hn : n.val = 4586) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4586 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4587 (n : Fin 5011) (hn : n.val = 4587) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4587 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4588 (n : Fin 5011) (hn : n.val = 4588) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4588 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4589 (n : Fin 5011) (hn : n.val = 4589) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4589 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4590 (n : Fin 5011) (hn : n.val = 4590) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4590 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4591 (n : Fin 5011) (hn : n.val = 4591) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4591 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4592 (n : Fin 5011) (hn : n.val = 4592) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4592 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4593 (n : Fin 5011) (hn : n.val = 4593) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4593 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4594 (n : Fin 5011) (hn : n.val = 4594) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4594 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4595 (n : Fin 5011) (hn : n.val = 4595) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4595 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4596 (n : Fin 5011) (hn : n.val = 4596) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4596 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4597 (n : Fin 5011) (hn : n.val = 4597) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4597 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4598 (n : Fin 5011) (hn : n.val = 4598) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4598 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4599 (n : Fin 5011) (hn : n.val = 4599) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4599 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4900 (n : Fin 5011) (hn : n.val = 4900) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4900 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4901 (n : Fin 5011) (hn : n.val = 4901) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4901 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4902 (n : Fin 5011) (hn : n.val = 4902) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4902 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4903 (n : Fin 5011) (hn : n.val = 4903) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4903 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4904 (n : Fin 5011) (hn : n.val = 4904) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4904 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4905 (n : Fin 5011) (hn : n.val = 4905) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4905 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4906 (n : Fin 5011) (hn : n.val = 4906) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4906 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4907 (n : Fin 5011) (hn : n.val = 4907) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4907 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4908 (n : Fin 5011) (hn : n.val = 4908) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4908 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4909 (n : Fin 5011) (hn : n.val = 4909) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4909 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4910 (n : Fin 5011) (hn : n.val = 4910) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4910 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4911 (n : Fin 5011) (hn : n.val = 4911) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4911 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4912 (n : Fin 5011) (hn : n.val = 4912) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4912 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4913 (n : Fin 5011) (hn : n.val = 4913) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4913 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4914 (n : Fin 5011) (hn : n.val = 4914) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4914 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4915 (n : Fin 5011) (hn : n.val = 4915) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4915 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4916 (n : Fin 5011) (hn : n.val = 4916) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4916 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4917 (n : Fin 5011) (hn : n.val = 4917) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4917 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4918 (n : Fin 5011) (hn : n.val = 4918) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4918 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4919 (n : Fin 5011) (hn : n.val = 4919) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4919 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4920 (n : Fin 5011) (hn : n.val = 4920) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4920 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4921 (n : Fin 5011) (hn : n.val = 4921) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4921 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4922 (n : Fin 5011) (hn : n.val = 4922) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4922 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4923 (n : Fin 5011) (hn : n.val = 4923) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4923 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4924 (n : Fin 5011) (hn : n.val = 4924) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4924 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4925 (n : Fin 5011) (hn : n.val = 4925) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4925 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4926 (n : Fin 5011) (hn : n.val = 4926) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4926 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4927 (n : Fin 5011) (hn : n.val = 4927) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4927 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4928 (n : Fin 5011) (hn : n.val = 4928) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4928 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4929 (n : Fin 5011) (hn : n.val = 4929) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4929 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4930 (n : Fin 5011) (hn : n.val = 4930) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4930 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4931 (n : Fin 5011) (hn : n.val = 4931) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4931 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4932 (n : Fin 5011) (hn : n.val = 4932) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4932 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4933 (n : Fin 5011) (hn : n.val = 4933) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4933 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4934 (n : Fin 5011) (hn : n.val = 4934) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4934 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4935 (n : Fin 5011) (hn : n.val = 4935) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4935 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4936 (n : Fin 5011) (hn : n.val = 4936) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4936 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4937 (n : Fin 5011) (hn : n.val = 4937) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4937 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4938 (n : Fin 5011) (hn : n.val = 4938) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4938 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4939 (n : Fin 5011) (hn : n.val = 4939) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4939 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4940 (n : Fin 5011) (hn : n.val = 4940) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4940 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4941 (n : Fin 5011) (hn : n.val = 4941) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4941 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4942 (n : Fin 5011) (hn : n.val = 4942) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4942 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4943 (n : Fin 5011) (hn : n.val = 4943) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4943 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4944 (n : Fin 5011) (hn : n.val = 4944) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4944 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4945 (n : Fin 5011) (hn : n.val = 4945) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4945 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4946 (n : Fin 5011) (hn : n.val = 4946) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4946 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4947 (n : Fin 5011) (hn : n.val = 4947) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4947 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4948 (n : Fin 5011) (hn : n.val = 4948) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4948 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4949 (n : Fin 5011) (hn : n.val = 4949) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4949 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4950 (n : Fin 5011) (hn : n.val = 4950) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4950 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4951 (n : Fin 5011) (hn : n.val = 4951) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4951 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4952 (n : Fin 5011) (hn : n.val = 4952) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4952 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4953 (n : Fin 5011) (hn : n.val = 4953) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4953 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4954 (n : Fin 5011) (hn : n.val = 4954) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4954 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4955 (n : Fin 5011) (hn : n.val = 4955) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4955 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4956 (n : Fin 5011) (hn : n.val = 4956) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4956 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4957 (n : Fin 5011) (hn : n.val = 4957) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4957 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4958 (n : Fin 5011) (hn : n.val = 4958) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4958 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4959 (n : Fin 5011) (hn : n.val = 4959) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4959 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4960 (n : Fin 5011) (hn : n.val = 4960) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4960 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4961 (n : Fin 5011) (hn : n.val = 4961) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4961 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4962 (n : Fin 5011) (hn : n.val = 4962) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4962 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4963 (n : Fin 5011) (hn : n.val = 4963) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4963 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4964 (n : Fin 5011) (hn : n.val = 4964) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4964 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4965 (n : Fin 5011) (hn : n.val = 4965) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4965 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4966 (n : Fin 5011) (hn : n.val = 4966) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4966 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4967 (n : Fin 5011) (hn : n.val = 4967) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4967 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4968 (n : Fin 5011) (hn : n.val = 4968) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4968 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4969 (n : Fin 5011) (hn : n.val = 4969) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4969 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4970 (n : Fin 5011) (hn : n.val = 4970) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4970 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4971 (n : Fin 5011) (hn : n.val = 4971) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4971 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4972 (n : Fin 5011) (hn : n.val = 4972) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4972 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4973 (n : Fin 5011) (hn : n.val = 4973) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4973 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4974 (n : Fin 5011) (hn : n.val = 4974) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4974 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4975 (n : Fin 5011) (hn : n.val = 4975) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4975 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4976 (n : Fin 5011) (hn : n.val = 4976) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4976 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4977 (n : Fin 5011) (hn : n.val = 4977) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4977 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4978 (n : Fin 5011) (hn : n.val = 4978) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4978 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4979 (n : Fin 5011) (hn : n.val = 4979) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4979 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4980 (n : Fin 5011) (hn : n.val = 4980) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4980 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4981 (n : Fin 5011) (hn : n.val = 4981) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4981 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4982 (n : Fin 5011) (hn : n.val = 4982) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4982 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4983 (n : Fin 5011) (hn : n.val = 4983) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4983 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4984 (n : Fin 5011) (hn : n.val = 4984) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4984 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4985 (n : Fin 5011) (hn : n.val = 4985) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4985 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4986 (n : Fin 5011) (hn : n.val = 4986) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4986 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4987 (n : Fin 5011) (hn : n.val = 4987) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4987 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4988 (n : Fin 5011) (hn : n.val = 4988) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4988 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4989 (n : Fin 5011) (hn : n.val = 4989) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4989 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4990 (n : Fin 5011) (hn : n.val = 4990) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4990 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4991 (n : Fin 5011) (hn : n.val = 4991) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4991 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4992 (n : Fin 5011) (hn : n.val = 4992) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4992 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4993 (n : Fin 5011) (hn : n.val = 4993) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4993 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4994 (n : Fin 5011) (hn : n.val = 4994) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4994 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4995 (n : Fin 5011) (hn : n.val = 4995) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4995 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4996 (n : Fin 5011) (hn : n.val = 4996) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4996 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4997 (n : Fin 5011) (hn : n.val = 4997) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4997 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4998 (n : Fin 5011) (hn : n.val = 4998) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4998 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_id_4999 (n : Fin 5011) (hn : n.val = 4999) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  change k = 4999 at hn
+  subst hn
+  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
+  decide +kernel +revert
+
+theorem mem_iff_block01 (n : Fin 5011) (hlo : 100 ≤ n.val) (hhi : n.val < 200) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_0100 _ rfl
+  · exact mem_iff_id_0101 _ rfl
+  · exact mem_iff_id_0102 _ rfl
+  · exact mem_iff_id_0103 _ rfl
+  · exact mem_iff_id_0104 _ rfl
+  · exact mem_iff_id_0105 _ rfl
+  · exact mem_iff_id_0106 _ rfl
+  · exact mem_iff_id_0107 _ rfl
+  · exact mem_iff_id_0108 _ rfl
+  · exact mem_iff_id_0109 _ rfl
+  · exact mem_iff_id_0110 _ rfl
+  · exact mem_iff_id_0111 _ rfl
+  · exact mem_iff_id_0112 _ rfl
+  · exact mem_iff_id_0113 _ rfl
+  · exact mem_iff_id_0114 _ rfl
+  · exact mem_iff_id_0115 _ rfl
+  · exact mem_iff_id_0116 _ rfl
+  · exact mem_iff_id_0117 _ rfl
+  · exact mem_iff_id_0118 _ rfl
+  · exact mem_iff_id_0119 _ rfl
+  · exact mem_iff_id_0120 _ rfl
+  · exact mem_iff_id_0121 _ rfl
+  · exact mem_iff_id_0122 _ rfl
+  · exact mem_iff_id_0123 _ rfl
+  · exact mem_iff_id_0124 _ rfl
+  · exact mem_iff_id_0125 _ rfl
+  · exact mem_iff_id_0126 _ rfl
+  · exact mem_iff_id_0127 _ rfl
+  · exact mem_iff_id_0128 _ rfl
+  · exact mem_iff_id_0129 _ rfl
+  · exact mem_iff_id_0130 _ rfl
+  · exact mem_iff_id_0131 _ rfl
+  · exact mem_iff_id_0132 _ rfl
+  · exact mem_iff_id_0133 _ rfl
+  · exact mem_iff_id_0134 _ rfl
+  · exact mem_iff_id_0135 _ rfl
+  · exact mem_iff_id_0136 _ rfl
+  · exact mem_iff_id_0137 _ rfl
+  · exact mem_iff_id_0138 _ rfl
+  · exact mem_iff_id_0139 _ rfl
+  · exact mem_iff_id_0140 _ rfl
+  · exact mem_iff_id_0141 _ rfl
+  · exact mem_iff_id_0142 _ rfl
+  · exact mem_iff_id_0143 _ rfl
+  · exact mem_iff_id_0144 _ rfl
+  · exact mem_iff_id_0145 _ rfl
+  · exact mem_iff_id_0146 _ rfl
+  · exact mem_iff_id_0147 _ rfl
+  · exact mem_iff_id_0148 _ rfl
+  · exact mem_iff_id_0149 _ rfl
+  · exact mem_iff_id_0150 _ rfl
+  · exact mem_iff_id_0151 _ rfl
+  · exact mem_iff_id_0152 _ rfl
+  · exact mem_iff_id_0153 _ rfl
+  · exact mem_iff_id_0154 _ rfl
+  · exact mem_iff_id_0155 _ rfl
+  · exact mem_iff_id_0156 _ rfl
+  · exact mem_iff_id_0157 _ rfl
+  · exact mem_iff_id_0158 _ rfl
+  · exact mem_iff_id_0159 _ rfl
+  · exact mem_iff_id_0160 _ rfl
+  · exact mem_iff_id_0161 _ rfl
+  · exact mem_iff_id_0162 _ rfl
+  · exact mem_iff_id_0163 _ rfl
+  · exact mem_iff_id_0164 _ rfl
+  · exact mem_iff_id_0165 _ rfl
+  · exact mem_iff_id_0166 _ rfl
+  · exact mem_iff_id_0167 _ rfl
+  · exact mem_iff_id_0168 _ rfl
+  · exact mem_iff_id_0169 _ rfl
+  · exact mem_iff_id_0170 _ rfl
+  · exact mem_iff_id_0171 _ rfl
+  · exact mem_iff_id_0172 _ rfl
+  · exact mem_iff_id_0173 _ rfl
+  · exact mem_iff_id_0174 _ rfl
+  · exact mem_iff_id_0175 _ rfl
+  · exact mem_iff_id_0176 _ rfl
+  · exact mem_iff_id_0177 _ rfl
+  · exact mem_iff_id_0178 _ rfl
+  · exact mem_iff_id_0179 _ rfl
+  · exact mem_iff_id_0180 _ rfl
+  · exact mem_iff_id_0181 _ rfl
+  · exact mem_iff_id_0182 _ rfl
+  · exact mem_iff_id_0183 _ rfl
+  · exact mem_iff_id_0184 _ rfl
+  · exact mem_iff_id_0185 _ rfl
+  · exact mem_iff_id_0186 _ rfl
+  · exact mem_iff_id_0187 _ rfl
+  · exact mem_iff_id_0188 _ rfl
+  · exact mem_iff_id_0189 _ rfl
+  · exact mem_iff_id_0190 _ rfl
+  · exact mem_iff_id_0191 _ rfl
+  · exact mem_iff_id_0192 _ rfl
+  · exact mem_iff_id_0193 _ rfl
+  · exact mem_iff_id_0194 _ rfl
+  · exact mem_iff_id_0195 _ rfl
+  · exact mem_iff_id_0196 _ rfl
+  · exact mem_iff_id_0197 _ rfl
+  · exact mem_iff_id_0198 _ rfl
+  · exact mem_iff_id_0199 _ rfl
+
+theorem mem_iff_block05 (n : Fin 5011) (hlo : 500 ≤ n.val) (hhi : n.val < 600) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_0500 _ rfl
+  · exact mem_iff_id_0501 _ rfl
+  · exact mem_iff_id_0502 _ rfl
+  · exact mem_iff_id_0503 _ rfl
+  · exact mem_iff_id_0504 _ rfl
+  · exact mem_iff_id_0505 _ rfl
+  · exact mem_iff_id_0506 _ rfl
+  · exact mem_iff_id_0507 _ rfl
+  · exact mem_iff_id_0508 _ rfl
+  · exact mem_iff_id_0509 _ rfl
+  · exact mem_iff_id_0510 _ rfl
+  · exact mem_iff_id_0511 _ rfl
+  · exact mem_iff_id_0512 _ rfl
+  · exact mem_iff_id_0513 _ rfl
+  · exact mem_iff_id_0514 _ rfl
+  · exact mem_iff_id_0515 _ rfl
+  · exact mem_iff_id_0516 _ rfl
+  · exact mem_iff_id_0517 _ rfl
+  · exact mem_iff_id_0518 _ rfl
+  · exact mem_iff_id_0519 _ rfl
+  · exact mem_iff_id_0520 _ rfl
+  · exact mem_iff_id_0521 _ rfl
+  · exact mem_iff_id_0522 _ rfl
+  · exact mem_iff_id_0523 _ rfl
+  · exact mem_iff_id_0524 _ rfl
+  · exact mem_iff_id_0525 _ rfl
+  · exact mem_iff_id_0526 _ rfl
+  · exact mem_iff_id_0527 _ rfl
+  · exact mem_iff_id_0528 _ rfl
+  · exact mem_iff_id_0529 _ rfl
+  · exact mem_iff_id_0530 _ rfl
+  · exact mem_iff_id_0531 _ rfl
+  · exact mem_iff_id_0532 _ rfl
+  · exact mem_iff_id_0533 _ rfl
+  · exact mem_iff_id_0534 _ rfl
+  · exact mem_iff_id_0535 _ rfl
+  · exact mem_iff_id_0536 _ rfl
+  · exact mem_iff_id_0537 _ rfl
+  · exact mem_iff_id_0538 _ rfl
+  · exact mem_iff_id_0539 _ rfl
+  · exact mem_iff_id_0540 _ rfl
+  · exact mem_iff_id_0541 _ rfl
+  · exact mem_iff_id_0542 _ rfl
+  · exact mem_iff_id_0543 _ rfl
+  · exact mem_iff_id_0544 _ rfl
+  · exact mem_iff_id_0545 _ rfl
+  · exact mem_iff_id_0546 _ rfl
+  · exact mem_iff_id_0547 _ rfl
+  · exact mem_iff_id_0548 _ rfl
+  · exact mem_iff_id_0549 _ rfl
+  · exact mem_iff_id_0550 _ rfl
+  · exact mem_iff_id_0551 _ rfl
+  · exact mem_iff_id_0552 _ rfl
+  · exact mem_iff_id_0553 _ rfl
+  · exact mem_iff_id_0554 _ rfl
+  · exact mem_iff_id_0555 _ rfl
+  · exact mem_iff_id_0556 _ rfl
+  · exact mem_iff_id_0557 _ rfl
+  · exact mem_iff_id_0558 _ rfl
+  · exact mem_iff_id_0559 _ rfl
+  · exact mem_iff_id_0560 _ rfl
+  · exact mem_iff_id_0561 _ rfl
+  · exact mem_iff_id_0562 _ rfl
+  · exact mem_iff_id_0563 _ rfl
+  · exact mem_iff_id_0564 _ rfl
+  · exact mem_iff_id_0565 _ rfl
+  · exact mem_iff_id_0566 _ rfl
+  · exact mem_iff_id_0567 _ rfl
+  · exact mem_iff_id_0568 _ rfl
+  · exact mem_iff_id_0569 _ rfl
+  · exact mem_iff_id_0570 _ rfl
+  · exact mem_iff_id_0571 _ rfl
+  · exact mem_iff_id_0572 _ rfl
+  · exact mem_iff_id_0573 _ rfl
+  · exact mem_iff_id_0574 _ rfl
+  · exact mem_iff_id_0575 _ rfl
+  · exact mem_iff_id_0576 _ rfl
+  · exact mem_iff_id_0577 _ rfl
+  · exact mem_iff_id_0578 _ rfl
+  · exact mem_iff_id_0579 _ rfl
+  · exact mem_iff_id_0580 _ rfl
+  · exact mem_iff_id_0581 _ rfl
+  · exact mem_iff_id_0582 _ rfl
+  · exact mem_iff_id_0583 _ rfl
+  · exact mem_iff_id_0584 _ rfl
+  · exact mem_iff_id_0585 _ rfl
+  · exact mem_iff_id_0586 _ rfl
+  · exact mem_iff_id_0587 _ rfl
+  · exact mem_iff_id_0588 _ rfl
+  · exact mem_iff_id_0589 _ rfl
+  · exact mem_iff_id_0590 _ rfl
+  · exact mem_iff_id_0591 _ rfl
+  · exact mem_iff_id_0592 _ rfl
+  · exact mem_iff_id_0593 _ rfl
+  · exact mem_iff_id_0594 _ rfl
+  · exact mem_iff_id_0595 _ rfl
+  · exact mem_iff_id_0596 _ rfl
+  · exact mem_iff_id_0597 _ rfl
+  · exact mem_iff_id_0598 _ rfl
+  · exact mem_iff_id_0599 _ rfl
+
+theorem mem_iff_block09 (n : Fin 5011) (hlo : 900 ≤ n.val) (hhi : n.val < 1000) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_0900 _ rfl
+  · exact mem_iff_id_0901 _ rfl
+  · exact mem_iff_id_0902 _ rfl
+  · exact mem_iff_id_0903 _ rfl
+  · exact mem_iff_id_0904 _ rfl
+  · exact mem_iff_id_0905 _ rfl
+  · exact mem_iff_id_0906 _ rfl
+  · exact mem_iff_id_0907 _ rfl
+  · exact mem_iff_id_0908 _ rfl
+  · exact mem_iff_id_0909 _ rfl
+  · exact mem_iff_id_0910 _ rfl
+  · exact mem_iff_id_0911 _ rfl
+  · exact mem_iff_id_0912 _ rfl
+  · exact mem_iff_id_0913 _ rfl
+  · exact mem_iff_id_0914 _ rfl
+  · exact mem_iff_id_0915 _ rfl
+  · exact mem_iff_id_0916 _ rfl
+  · exact mem_iff_id_0917 _ rfl
+  · exact mem_iff_id_0918 _ rfl
+  · exact mem_iff_id_0919 _ rfl
+  · exact mem_iff_id_0920 _ rfl
+  · exact mem_iff_id_0921 _ rfl
+  · exact mem_iff_id_0922 _ rfl
+  · exact mem_iff_id_0923 _ rfl
+  · exact mem_iff_id_0924 _ rfl
+  · exact mem_iff_id_0925 _ rfl
+  · exact mem_iff_id_0926 _ rfl
+  · exact mem_iff_id_0927 _ rfl
+  · exact mem_iff_id_0928 _ rfl
+  · exact mem_iff_id_0929 _ rfl
+  · exact mem_iff_id_0930 _ rfl
+  · exact mem_iff_id_0931 _ rfl
+  · exact mem_iff_id_0932 _ rfl
+  · exact mem_iff_id_0933 _ rfl
+  · exact mem_iff_id_0934 _ rfl
+  · exact mem_iff_id_0935 _ rfl
+  · exact mem_iff_id_0936 _ rfl
+  · exact mem_iff_id_0937 _ rfl
+  · exact mem_iff_id_0938 _ rfl
+  · exact mem_iff_id_0939 _ rfl
+  · exact mem_iff_id_0940 _ rfl
+  · exact mem_iff_id_0941 _ rfl
+  · exact mem_iff_id_0942 _ rfl
+  · exact mem_iff_id_0943 _ rfl
+  · exact mem_iff_id_0944 _ rfl
+  · exact mem_iff_id_0945 _ rfl
+  · exact mem_iff_id_0946 _ rfl
+  · exact mem_iff_id_0947 _ rfl
+  · exact mem_iff_id_0948 _ rfl
+  · exact mem_iff_id_0949 _ rfl
+  · exact mem_iff_id_0950 _ rfl
+  · exact mem_iff_id_0951 _ rfl
+  · exact mem_iff_id_0952 _ rfl
+  · exact mem_iff_id_0953 _ rfl
+  · exact mem_iff_id_0954 _ rfl
+  · exact mem_iff_id_0955 _ rfl
+  · exact mem_iff_id_0956 _ rfl
+  · exact mem_iff_id_0957 _ rfl
+  · exact mem_iff_id_0958 _ rfl
+  · exact mem_iff_id_0959 _ rfl
+  · exact mem_iff_id_0960 _ rfl
+  · exact mem_iff_id_0961 _ rfl
+  · exact mem_iff_id_0962 _ rfl
+  · exact mem_iff_id_0963 _ rfl
+  · exact mem_iff_id_0964 _ rfl
+  · exact mem_iff_id_0965 _ rfl
+  · exact mem_iff_id_0966 _ rfl
+  · exact mem_iff_id_0967 _ rfl
+  · exact mem_iff_id_0968 _ rfl
+  · exact mem_iff_id_0969 _ rfl
+  · exact mem_iff_id_0970 _ rfl
+  · exact mem_iff_id_0971 _ rfl
+  · exact mem_iff_id_0972 _ rfl
+  · exact mem_iff_id_0973 _ rfl
+  · exact mem_iff_id_0974 _ rfl
+  · exact mem_iff_id_0975 _ rfl
+  · exact mem_iff_id_0976 _ rfl
+  · exact mem_iff_id_0977 _ rfl
+  · exact mem_iff_id_0978 _ rfl
+  · exact mem_iff_id_0979 _ rfl
+  · exact mem_iff_id_0980 _ rfl
+  · exact mem_iff_id_0981 _ rfl
+  · exact mem_iff_id_0982 _ rfl
+  · exact mem_iff_id_0983 _ rfl
+  · exact mem_iff_id_0984 _ rfl
+  · exact mem_iff_id_0985 _ rfl
+  · exact mem_iff_id_0986 _ rfl
+  · exact mem_iff_id_0987 _ rfl
+  · exact mem_iff_id_0988 _ rfl
+  · exact mem_iff_id_0989 _ rfl
+  · exact mem_iff_id_0990 _ rfl
+  · exact mem_iff_id_0991 _ rfl
+  · exact mem_iff_id_0992 _ rfl
+  · exact mem_iff_id_0993 _ rfl
+  · exact mem_iff_id_0994 _ rfl
+  · exact mem_iff_id_0995 _ rfl
+  · exact mem_iff_id_0996 _ rfl
+  · exact mem_iff_id_0997 _ rfl
+  · exact mem_iff_id_0998 _ rfl
+  · exact mem_iff_id_0999 _ rfl
+
+theorem mem_iff_block13 (n : Fin 5011) (hlo : 1300 ≤ n.val) (hhi : n.val < 1400) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_1300 _ rfl
+  · exact mem_iff_id_1301 _ rfl
+  · exact mem_iff_id_1302 _ rfl
+  · exact mem_iff_id_1303 _ rfl
+  · exact mem_iff_id_1304 _ rfl
+  · exact mem_iff_id_1305 _ rfl
+  · exact mem_iff_id_1306 _ rfl
+  · exact mem_iff_id_1307 _ rfl
+  · exact mem_iff_id_1308 _ rfl
+  · exact mem_iff_id_1309 _ rfl
+  · exact mem_iff_id_1310 _ rfl
+  · exact mem_iff_id_1311 _ rfl
+  · exact mem_iff_id_1312 _ rfl
+  · exact mem_iff_id_1313 _ rfl
+  · exact mem_iff_id_1314 _ rfl
+  · exact mem_iff_id_1315 _ rfl
+  · exact mem_iff_id_1316 _ rfl
+  · exact mem_iff_id_1317 _ rfl
+  · exact mem_iff_id_1318 _ rfl
+  · exact mem_iff_id_1319 _ rfl
+  · exact mem_iff_id_1320 _ rfl
+  · exact mem_iff_id_1321 _ rfl
+  · exact mem_iff_id_1322 _ rfl
+  · exact mem_iff_id_1323 _ rfl
+  · exact mem_iff_id_1324 _ rfl
+  · exact mem_iff_id_1325 _ rfl
+  · exact mem_iff_id_1326 _ rfl
+  · exact mem_iff_id_1327 _ rfl
+  · exact mem_iff_id_1328 _ rfl
+  · exact mem_iff_id_1329 _ rfl
+  · exact mem_iff_id_1330 _ rfl
+  · exact mem_iff_id_1331 _ rfl
+  · exact mem_iff_id_1332 _ rfl
+  · exact mem_iff_id_1333 _ rfl
+  · exact mem_iff_id_1334 _ rfl
+  · exact mem_iff_id_1335 _ rfl
+  · exact mem_iff_id_1336 _ rfl
+  · exact mem_iff_id_1337 _ rfl
+  · exact mem_iff_id_1338 _ rfl
+  · exact mem_iff_id_1339 _ rfl
+  · exact mem_iff_id_1340 _ rfl
+  · exact mem_iff_id_1341 _ rfl
+  · exact mem_iff_id_1342 _ rfl
+  · exact mem_iff_id_1343 _ rfl
+  · exact mem_iff_id_1344 _ rfl
+  · exact mem_iff_id_1345 _ rfl
+  · exact mem_iff_id_1346 _ rfl
+  · exact mem_iff_id_1347 _ rfl
+  · exact mem_iff_id_1348 _ rfl
+  · exact mem_iff_id_1349 _ rfl
+  · exact mem_iff_id_1350 _ rfl
+  · exact mem_iff_id_1351 _ rfl
+  · exact mem_iff_id_1352 _ rfl
+  · exact mem_iff_id_1353 _ rfl
+  · exact mem_iff_id_1354 _ rfl
+  · exact mem_iff_id_1355 _ rfl
+  · exact mem_iff_id_1356 _ rfl
+  · exact mem_iff_id_1357 _ rfl
+  · exact mem_iff_id_1358 _ rfl
+  · exact mem_iff_id_1359 _ rfl
+  · exact mem_iff_id_1360 _ rfl
+  · exact mem_iff_id_1361 _ rfl
+  · exact mem_iff_id_1362 _ rfl
+  · exact mem_iff_id_1363 _ rfl
+  · exact mem_iff_id_1364 _ rfl
+  · exact mem_iff_id_1365 _ rfl
+  · exact mem_iff_id_1366 _ rfl
+  · exact mem_iff_id_1367 _ rfl
+  · exact mem_iff_id_1368 _ rfl
+  · exact mem_iff_id_1369 _ rfl
+  · exact mem_iff_id_1370 _ rfl
+  · exact mem_iff_id_1371 _ rfl
+  · exact mem_iff_id_1372 _ rfl
+  · exact mem_iff_id_1373 _ rfl
+  · exact mem_iff_id_1374 _ rfl
+  · exact mem_iff_id_1375 _ rfl
+  · exact mem_iff_id_1376 _ rfl
+  · exact mem_iff_id_1377 _ rfl
+  · exact mem_iff_id_1378 _ rfl
+  · exact mem_iff_id_1379 _ rfl
+  · exact mem_iff_id_1380 _ rfl
+  · exact mem_iff_id_1381 _ rfl
+  · exact mem_iff_id_1382 _ rfl
+  · exact mem_iff_id_1383 _ rfl
+  · exact mem_iff_id_1384 _ rfl
+  · exact mem_iff_id_1385 _ rfl
+  · exact mem_iff_id_1386 _ rfl
+  · exact mem_iff_id_1387 _ rfl
+  · exact mem_iff_id_1388 _ rfl
+  · exact mem_iff_id_1389 _ rfl
+  · exact mem_iff_id_1390 _ rfl
+  · exact mem_iff_id_1391 _ rfl
+  · exact mem_iff_id_1392 _ rfl
+  · exact mem_iff_id_1393 _ rfl
+  · exact mem_iff_id_1394 _ rfl
+  · exact mem_iff_id_1395 _ rfl
+  · exact mem_iff_id_1396 _ rfl
+  · exact mem_iff_id_1397 _ rfl
+  · exact mem_iff_id_1398 _ rfl
+  · exact mem_iff_id_1399 _ rfl
+
+theorem mem_iff_block17 (n : Fin 5011) (hlo : 1700 ≤ n.val) (hhi : n.val < 1800) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_1700 _ rfl
+  · exact mem_iff_id_1701 _ rfl
+  · exact mem_iff_id_1702 _ rfl
+  · exact mem_iff_id_1703 _ rfl
+  · exact mem_iff_id_1704 _ rfl
+  · exact mem_iff_id_1705 _ rfl
+  · exact mem_iff_id_1706 _ rfl
+  · exact mem_iff_id_1707 _ rfl
+  · exact mem_iff_id_1708 _ rfl
+  · exact mem_iff_id_1709 _ rfl
+  · exact mem_iff_id_1710 _ rfl
+  · exact mem_iff_id_1711 _ rfl
+  · exact mem_iff_id_1712 _ rfl
+  · exact mem_iff_id_1713 _ rfl
+  · exact mem_iff_id_1714 _ rfl
+  · exact mem_iff_id_1715 _ rfl
+  · exact mem_iff_id_1716 _ rfl
+  · exact mem_iff_id_1717 _ rfl
+  · exact mem_iff_id_1718 _ rfl
+  · exact mem_iff_id_1719 _ rfl
+  · exact mem_iff_id_1720 _ rfl
+  · exact mem_iff_id_1721 _ rfl
+  · exact mem_iff_id_1722 _ rfl
+  · exact mem_iff_id_1723 _ rfl
+  · exact mem_iff_id_1724 _ rfl
+  · exact mem_iff_id_1725 _ rfl
+  · exact mem_iff_id_1726 _ rfl
+  · exact mem_iff_id_1727 _ rfl
+  · exact mem_iff_id_1728 _ rfl
+  · exact mem_iff_id_1729 _ rfl
+  · exact mem_iff_id_1730 _ rfl
+  · exact mem_iff_id_1731 _ rfl
+  · exact mem_iff_id_1732 _ rfl
+  · exact mem_iff_id_1733 _ rfl
+  · exact mem_iff_id_1734 _ rfl
+  · exact mem_iff_id_1735 _ rfl
+  · exact mem_iff_id_1736 _ rfl
+  · exact mem_iff_id_1737 _ rfl
+  · exact mem_iff_id_1738 _ rfl
+  · exact mem_iff_id_1739 _ rfl
+  · exact mem_iff_id_1740 _ rfl
+  · exact mem_iff_id_1741 _ rfl
+  · exact mem_iff_id_1742 _ rfl
+  · exact mem_iff_id_1743 _ rfl
+  · exact mem_iff_id_1744 _ rfl
+  · exact mem_iff_id_1745 _ rfl
+  · exact mem_iff_id_1746 _ rfl
+  · exact mem_iff_id_1747 _ rfl
+  · exact mem_iff_id_1748 _ rfl
+  · exact mem_iff_id_1749 _ rfl
+  · exact mem_iff_id_1750 _ rfl
+  · exact mem_iff_id_1751 _ rfl
+  · exact mem_iff_id_1752 _ rfl
+  · exact mem_iff_id_1753 _ rfl
+  · exact mem_iff_id_1754 _ rfl
+  · exact mem_iff_id_1755 _ rfl
+  · exact mem_iff_id_1756 _ rfl
+  · exact mem_iff_id_1757 _ rfl
+  · exact mem_iff_id_1758 _ rfl
+  · exact mem_iff_id_1759 _ rfl
+  · exact mem_iff_id_1760 _ rfl
+  · exact mem_iff_id_1761 _ rfl
+  · exact mem_iff_id_1762 _ rfl
+  · exact mem_iff_id_1763 _ rfl
+  · exact mem_iff_id_1764 _ rfl
+  · exact mem_iff_id_1765 _ rfl
+  · exact mem_iff_id_1766 _ rfl
+  · exact mem_iff_id_1767 _ rfl
+  · exact mem_iff_id_1768 _ rfl
+  · exact mem_iff_id_1769 _ rfl
+  · exact mem_iff_id_1770 _ rfl
+  · exact mem_iff_id_1771 _ rfl
+  · exact mem_iff_id_1772 _ rfl
+  · exact mem_iff_id_1773 _ rfl
+  · exact mem_iff_id_1774 _ rfl
+  · exact mem_iff_id_1775 _ rfl
+  · exact mem_iff_id_1776 _ rfl
+  · exact mem_iff_id_1777 _ rfl
+  · exact mem_iff_id_1778 _ rfl
+  · exact mem_iff_id_1779 _ rfl
+  · exact mem_iff_id_1780 _ rfl
+  · exact mem_iff_id_1781 _ rfl
+  · exact mem_iff_id_1782 _ rfl
+  · exact mem_iff_id_1783 _ rfl
+  · exact mem_iff_id_1784 _ rfl
+  · exact mem_iff_id_1785 _ rfl
+  · exact mem_iff_id_1786 _ rfl
+  · exact mem_iff_id_1787 _ rfl
+  · exact mem_iff_id_1788 _ rfl
+  · exact mem_iff_id_1789 _ rfl
+  · exact mem_iff_id_1790 _ rfl
+  · exact mem_iff_id_1791 _ rfl
+  · exact mem_iff_id_1792 _ rfl
+  · exact mem_iff_id_1793 _ rfl
+  · exact mem_iff_id_1794 _ rfl
+  · exact mem_iff_id_1795 _ rfl
+  · exact mem_iff_id_1796 _ rfl
+  · exact mem_iff_id_1797 _ rfl
+  · exact mem_iff_id_1798 _ rfl
+  · exact mem_iff_id_1799 _ rfl
+
+theorem mem_iff_block21 (n : Fin 5011) (hlo : 2100 ≤ n.val) (hhi : n.val < 2200) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_2100 _ rfl
+  · exact mem_iff_id_2101 _ rfl
+  · exact mem_iff_id_2102 _ rfl
+  · exact mem_iff_id_2103 _ rfl
+  · exact mem_iff_id_2104 _ rfl
+  · exact mem_iff_id_2105 _ rfl
+  · exact mem_iff_id_2106 _ rfl
+  · exact mem_iff_id_2107 _ rfl
+  · exact mem_iff_id_2108 _ rfl
+  · exact mem_iff_id_2109 _ rfl
+  · exact mem_iff_id_2110 _ rfl
+  · exact mem_iff_id_2111 _ rfl
+  · exact mem_iff_id_2112 _ rfl
+  · exact mem_iff_id_2113 _ rfl
+  · exact mem_iff_id_2114 _ rfl
+  · exact mem_iff_id_2115 _ rfl
+  · exact mem_iff_id_2116 _ rfl
+  · exact mem_iff_id_2117 _ rfl
+  · exact mem_iff_id_2118 _ rfl
+  · exact mem_iff_id_2119 _ rfl
+  · exact mem_iff_id_2120 _ rfl
+  · exact mem_iff_id_2121 _ rfl
+  · exact mem_iff_id_2122 _ rfl
+  · exact mem_iff_id_2123 _ rfl
+  · exact mem_iff_id_2124 _ rfl
+  · exact mem_iff_id_2125 _ rfl
+  · exact mem_iff_id_2126 _ rfl
+  · exact mem_iff_id_2127 _ rfl
+  · exact mem_iff_id_2128 _ rfl
+  · exact mem_iff_id_2129 _ rfl
+  · exact mem_iff_id_2130 _ rfl
+  · exact mem_iff_id_2131 _ rfl
+  · exact mem_iff_id_2132 _ rfl
+  · exact mem_iff_id_2133 _ rfl
+  · exact mem_iff_id_2134 _ rfl
+  · exact mem_iff_id_2135 _ rfl
+  · exact mem_iff_id_2136 _ rfl
+  · exact mem_iff_id_2137 _ rfl
+  · exact mem_iff_id_2138 _ rfl
+  · exact mem_iff_id_2139 _ rfl
+  · exact mem_iff_id_2140 _ rfl
+  · exact mem_iff_id_2141 _ rfl
+  · exact mem_iff_id_2142 _ rfl
+  · exact mem_iff_id_2143 _ rfl
+  · exact mem_iff_id_2144 _ rfl
+  · exact mem_iff_id_2145 _ rfl
+  · exact mem_iff_id_2146 _ rfl
+  · exact mem_iff_id_2147 _ rfl
+  · exact mem_iff_id_2148 _ rfl
+  · exact mem_iff_id_2149 _ rfl
+  · exact mem_iff_id_2150 _ rfl
+  · exact mem_iff_id_2151 _ rfl
+  · exact mem_iff_id_2152 _ rfl
+  · exact mem_iff_id_2153 _ rfl
+  · exact mem_iff_id_2154 _ rfl
+  · exact mem_iff_id_2155 _ rfl
+  · exact mem_iff_id_2156 _ rfl
+  · exact mem_iff_id_2157 _ rfl
+  · exact mem_iff_id_2158 _ rfl
+  · exact mem_iff_id_2159 _ rfl
+  · exact mem_iff_id_2160 _ rfl
+  · exact mem_iff_id_2161 _ rfl
+  · exact mem_iff_id_2162 _ rfl
+  · exact mem_iff_id_2163 _ rfl
+  · exact mem_iff_id_2164 _ rfl
+  · exact mem_iff_id_2165 _ rfl
+  · exact mem_iff_id_2166 _ rfl
+  · exact mem_iff_id_2167 _ rfl
+  · exact mem_iff_id_2168 _ rfl
+  · exact mem_iff_id_2169 _ rfl
+  · exact mem_iff_id_2170 _ rfl
+  · exact mem_iff_id_2171 _ rfl
+  · exact mem_iff_id_2172 _ rfl
+  · exact mem_iff_id_2173 _ rfl
+  · exact mem_iff_id_2174 _ rfl
+  · exact mem_iff_id_2175 _ rfl
+  · exact mem_iff_id_2176 _ rfl
+  · exact mem_iff_id_2177 _ rfl
+  · exact mem_iff_id_2178 _ rfl
+  · exact mem_iff_id_2179 _ rfl
+  · exact mem_iff_id_2180 _ rfl
+  · exact mem_iff_id_2181 _ rfl
+  · exact mem_iff_id_2182 _ rfl
+  · exact mem_iff_id_2183 _ rfl
+  · exact mem_iff_id_2184 _ rfl
+  · exact mem_iff_id_2185 _ rfl
+  · exact mem_iff_id_2186 _ rfl
+  · exact mem_iff_id_2187 _ rfl
+  · exact mem_iff_id_2188 _ rfl
+  · exact mem_iff_id_2189 _ rfl
+  · exact mem_iff_id_2190 _ rfl
+  · exact mem_iff_id_2191 _ rfl
+  · exact mem_iff_id_2192 _ rfl
+  · exact mem_iff_id_2193 _ rfl
+  · exact mem_iff_id_2194 _ rfl
+  · exact mem_iff_id_2195 _ rfl
+  · exact mem_iff_id_2196 _ rfl
+  · exact mem_iff_id_2197 _ rfl
+  · exact mem_iff_id_2198 _ rfl
+  · exact mem_iff_id_2199 _ rfl
+
+theorem mem_iff_block25 (n : Fin 5011) (hlo : 2500 ≤ n.val) (hhi : n.val < 2600) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_2500 _ rfl
+  · exact mem_iff_id_2501 _ rfl
+  · exact mem_iff_id_2502 _ rfl
+  · exact mem_iff_id_2503 _ rfl
+  · exact mem_iff_id_2504 _ rfl
+  · exact mem_iff_id_2505 _ rfl
+  · exact mem_iff_id_2506 _ rfl
+  · exact mem_iff_id_2507 _ rfl
+  · exact mem_iff_id_2508 _ rfl
+  · exact mem_iff_id_2509 _ rfl
+  · exact mem_iff_id_2510 _ rfl
+  · exact mem_iff_id_2511 _ rfl
+  · exact mem_iff_id_2512 _ rfl
+  · exact mem_iff_id_2513 _ rfl
+  · exact mem_iff_id_2514 _ rfl
+  · exact mem_iff_id_2515 _ rfl
+  · exact mem_iff_id_2516 _ rfl
+  · exact mem_iff_id_2517 _ rfl
+  · exact mem_iff_id_2518 _ rfl
+  · exact mem_iff_id_2519 _ rfl
+  · exact mem_iff_id_2520 _ rfl
+  · exact mem_iff_id_2521 _ rfl
+  · exact mem_iff_id_2522 _ rfl
+  · exact mem_iff_id_2523 _ rfl
+  · exact mem_iff_id_2524 _ rfl
+  · exact mem_iff_id_2525 _ rfl
+  · exact mem_iff_id_2526 _ rfl
+  · exact mem_iff_id_2527 _ rfl
+  · exact mem_iff_id_2528 _ rfl
+  · exact mem_iff_id_2529 _ rfl
+  · exact mem_iff_id_2530 _ rfl
+  · exact mem_iff_id_2531 _ rfl
+  · exact mem_iff_id_2532 _ rfl
+  · exact mem_iff_id_2533 _ rfl
+  · exact mem_iff_id_2534 _ rfl
+  · exact mem_iff_id_2535 _ rfl
+  · exact mem_iff_id_2536 _ rfl
+  · exact mem_iff_id_2537 _ rfl
+  · exact mem_iff_id_2538 _ rfl
+  · exact mem_iff_id_2539 _ rfl
+  · exact mem_iff_id_2540 _ rfl
+  · exact mem_iff_id_2541 _ rfl
+  · exact mem_iff_id_2542 _ rfl
+  · exact mem_iff_id_2543 _ rfl
+  · exact mem_iff_id_2544 _ rfl
+  · exact mem_iff_id_2545 _ rfl
+  · exact mem_iff_id_2546 _ rfl
+  · exact mem_iff_id_2547 _ rfl
+  · exact mem_iff_id_2548 _ rfl
+  · exact mem_iff_id_2549 _ rfl
+  · exact mem_iff_id_2550 _ rfl
+  · exact mem_iff_id_2551 _ rfl
+  · exact mem_iff_id_2552 _ rfl
+  · exact mem_iff_id_2553 _ rfl
+  · exact mem_iff_id_2554 _ rfl
+  · exact mem_iff_id_2555 _ rfl
+  · exact mem_iff_id_2556 _ rfl
+  · exact mem_iff_id_2557 _ rfl
+  · exact mem_iff_id_2558 _ rfl
+  · exact mem_iff_id_2559 _ rfl
+  · exact mem_iff_id_2560 _ rfl
+  · exact mem_iff_id_2561 _ rfl
+  · exact mem_iff_id_2562 _ rfl
+  · exact mem_iff_id_2563 _ rfl
+  · exact mem_iff_id_2564 _ rfl
+  · exact mem_iff_id_2565 _ rfl
+  · exact mem_iff_id_2566 _ rfl
+  · exact mem_iff_id_2567 _ rfl
+  · exact mem_iff_id_2568 _ rfl
+  · exact mem_iff_id_2569 _ rfl
+  · exact mem_iff_id_2570 _ rfl
+  · exact mem_iff_id_2571 _ rfl
+  · exact mem_iff_id_2572 _ rfl
+  · exact mem_iff_id_2573 _ rfl
+  · exact mem_iff_id_2574 _ rfl
+  · exact mem_iff_id_2575 _ rfl
+  · exact mem_iff_id_2576 _ rfl
+  · exact mem_iff_id_2577 _ rfl
+  · exact mem_iff_id_2578 _ rfl
+  · exact mem_iff_id_2579 _ rfl
+  · exact mem_iff_id_2580 _ rfl
+  · exact mem_iff_id_2581 _ rfl
+  · exact mem_iff_id_2582 _ rfl
+  · exact mem_iff_id_2583 _ rfl
+  · exact mem_iff_id_2584 _ rfl
+  · exact mem_iff_id_2585 _ rfl
+  · exact mem_iff_id_2586 _ rfl
+  · exact mem_iff_id_2587 _ rfl
+  · exact mem_iff_id_2588 _ rfl
+  · exact mem_iff_id_2589 _ rfl
+  · exact mem_iff_id_2590 _ rfl
+  · exact mem_iff_id_2591 _ rfl
+  · exact mem_iff_id_2592 _ rfl
+  · exact mem_iff_id_2593 _ rfl
+  · exact mem_iff_id_2594 _ rfl
+  · exact mem_iff_id_2595 _ rfl
+  · exact mem_iff_id_2596 _ rfl
+  · exact mem_iff_id_2597 _ rfl
+  · exact mem_iff_id_2598 _ rfl
+  · exact mem_iff_id_2599 _ rfl
+
+theorem mem_iff_block29 (n : Fin 5011) (hlo : 2900 ≤ n.val) (hhi : n.val < 3000) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_2900 _ rfl
+  · exact mem_iff_id_2901 _ rfl
+  · exact mem_iff_id_2902 _ rfl
+  · exact mem_iff_id_2903 _ rfl
+  · exact mem_iff_id_2904 _ rfl
+  · exact mem_iff_id_2905 _ rfl
+  · exact mem_iff_id_2906 _ rfl
+  · exact mem_iff_id_2907 _ rfl
+  · exact mem_iff_id_2908 _ rfl
+  · exact mem_iff_id_2909 _ rfl
+  · exact mem_iff_id_2910 _ rfl
+  · exact mem_iff_id_2911 _ rfl
+  · exact mem_iff_id_2912 _ rfl
+  · exact mem_iff_id_2913 _ rfl
+  · exact mem_iff_id_2914 _ rfl
+  · exact mem_iff_id_2915 _ rfl
+  · exact mem_iff_id_2916 _ rfl
+  · exact mem_iff_id_2917 _ rfl
+  · exact mem_iff_id_2918 _ rfl
+  · exact mem_iff_id_2919 _ rfl
+  · exact mem_iff_id_2920 _ rfl
+  · exact mem_iff_id_2921 _ rfl
+  · exact mem_iff_id_2922 _ rfl
+  · exact mem_iff_id_2923 _ rfl
+  · exact mem_iff_id_2924 _ rfl
+  · exact mem_iff_id_2925 _ rfl
+  · exact mem_iff_id_2926 _ rfl
+  · exact mem_iff_id_2927 _ rfl
+  · exact mem_iff_id_2928 _ rfl
+  · exact mem_iff_id_2929 _ rfl
+  · exact mem_iff_id_2930 _ rfl
+  · exact mem_iff_id_2931 _ rfl
+  · exact mem_iff_id_2932 _ rfl
+  · exact mem_iff_id_2933 _ rfl
+  · exact mem_iff_id_2934 _ rfl
+  · exact mem_iff_id_2935 _ rfl
+  · exact mem_iff_id_2936 _ rfl
+  · exact mem_iff_id_2937 _ rfl
+  · exact mem_iff_id_2938 _ rfl
+  · exact mem_iff_id_2939 _ rfl
+  · exact mem_iff_id_2940 _ rfl
+  · exact mem_iff_id_2941 _ rfl
+  · exact mem_iff_id_2942 _ rfl
+  · exact mem_iff_id_2943 _ rfl
+  · exact mem_iff_id_2944 _ rfl
+  · exact mem_iff_id_2945 _ rfl
+  · exact mem_iff_id_2946 _ rfl
+  · exact mem_iff_id_2947 _ rfl
+  · exact mem_iff_id_2948 _ rfl
+  · exact mem_iff_id_2949 _ rfl
+  · exact mem_iff_id_2950 _ rfl
+  · exact mem_iff_id_2951 _ rfl
+  · exact mem_iff_id_2952 _ rfl
+  · exact mem_iff_id_2953 _ rfl
+  · exact mem_iff_id_2954 _ rfl
+  · exact mem_iff_id_2955 _ rfl
+  · exact mem_iff_id_2956 _ rfl
+  · exact mem_iff_id_2957 _ rfl
+  · exact mem_iff_id_2958 _ rfl
+  · exact mem_iff_id_2959 _ rfl
+  · exact mem_iff_id_2960 _ rfl
+  · exact mem_iff_id_2961 _ rfl
+  · exact mem_iff_id_2962 _ rfl
+  · exact mem_iff_id_2963 _ rfl
+  · exact mem_iff_id_2964 _ rfl
+  · exact mem_iff_id_2965 _ rfl
+  · exact mem_iff_id_2966 _ rfl
+  · exact mem_iff_id_2967 _ rfl
+  · exact mem_iff_id_2968 _ rfl
+  · exact mem_iff_id_2969 _ rfl
+  · exact mem_iff_id_2970 _ rfl
+  · exact mem_iff_id_2971 _ rfl
+  · exact mem_iff_id_2972 _ rfl
+  · exact mem_iff_id_2973 _ rfl
+  · exact mem_iff_id_2974 _ rfl
+  · exact mem_iff_id_2975 _ rfl
+  · exact mem_iff_id_2976 _ rfl
+  · exact mem_iff_id_2977 _ rfl
+  · exact mem_iff_id_2978 _ rfl
+  · exact mem_iff_id_2979 _ rfl
+  · exact mem_iff_id_2980 _ rfl
+  · exact mem_iff_id_2981 _ rfl
+  · exact mem_iff_id_2982 _ rfl
+  · exact mem_iff_id_2983 _ rfl
+  · exact mem_iff_id_2984 _ rfl
+  · exact mem_iff_id_2985 _ rfl
+  · exact mem_iff_id_2986 _ rfl
+  · exact mem_iff_id_2987 _ rfl
+  · exact mem_iff_id_2988 _ rfl
+  · exact mem_iff_id_2989 _ rfl
+  · exact mem_iff_id_2990 _ rfl
+  · exact mem_iff_id_2991 _ rfl
+  · exact mem_iff_id_2992 _ rfl
+  · exact mem_iff_id_2993 _ rfl
+  · exact mem_iff_id_2994 _ rfl
+  · exact mem_iff_id_2995 _ rfl
+  · exact mem_iff_id_2996 _ rfl
+  · exact mem_iff_id_2997 _ rfl
+  · exact mem_iff_id_2998 _ rfl
+  · exact mem_iff_id_2999 _ rfl
+
+theorem mem_iff_block33 (n : Fin 5011) (hlo : 3300 ≤ n.val) (hhi : n.val < 3400) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_3300 _ rfl
+  · exact mem_iff_id_3301 _ rfl
+  · exact mem_iff_id_3302 _ rfl
+  · exact mem_iff_id_3303 _ rfl
+  · exact mem_iff_id_3304 _ rfl
+  · exact mem_iff_id_3305 _ rfl
+  · exact mem_iff_id_3306 _ rfl
+  · exact mem_iff_id_3307 _ rfl
+  · exact mem_iff_id_3308 _ rfl
+  · exact mem_iff_id_3309 _ rfl
+  · exact mem_iff_id_3310 _ rfl
+  · exact mem_iff_id_3311 _ rfl
+  · exact mem_iff_id_3312 _ rfl
+  · exact mem_iff_id_3313 _ rfl
+  · exact mem_iff_id_3314 _ rfl
+  · exact mem_iff_id_3315 _ rfl
+  · exact mem_iff_id_3316 _ rfl
+  · exact mem_iff_id_3317 _ rfl
+  · exact mem_iff_id_3318 _ rfl
+  · exact mem_iff_id_3319 _ rfl
+  · exact mem_iff_id_3320 _ rfl
+  · exact mem_iff_id_3321 _ rfl
+  · exact mem_iff_id_3322 _ rfl
+  · exact mem_iff_id_3323 _ rfl
+  · exact mem_iff_id_3324 _ rfl
+  · exact mem_iff_id_3325 _ rfl
+  · exact mem_iff_id_3326 _ rfl
+  · exact mem_iff_id_3327 _ rfl
+  · exact mem_iff_id_3328 _ rfl
+  · exact mem_iff_id_3329 _ rfl
+  · exact mem_iff_id_3330 _ rfl
+  · exact mem_iff_id_3331 _ rfl
+  · exact mem_iff_id_3332 _ rfl
+  · exact mem_iff_id_3333 _ rfl
+  · exact mem_iff_id_3334 _ rfl
+  · exact mem_iff_id_3335 _ rfl
+  · exact mem_iff_id_3336 _ rfl
+  · exact mem_iff_id_3337 _ rfl
+  · exact mem_iff_id_3338 _ rfl
+  · exact mem_iff_id_3339 _ rfl
+  · exact mem_iff_id_3340 _ rfl
+  · exact mem_iff_id_3341 _ rfl
+  · exact mem_iff_id_3342 _ rfl
+  · exact mem_iff_id_3343 _ rfl
+  · exact mem_iff_id_3344 _ rfl
+  · exact mem_iff_id_3345 _ rfl
+  · exact mem_iff_id_3346 _ rfl
+  · exact mem_iff_id_3347 _ rfl
+  · exact mem_iff_id_3348 _ rfl
+  · exact mem_iff_id_3349 _ rfl
+  · exact mem_iff_id_3350 _ rfl
+  · exact mem_iff_id_3351 _ rfl
+  · exact mem_iff_id_3352 _ rfl
+  · exact mem_iff_id_3353 _ rfl
+  · exact mem_iff_id_3354 _ rfl
+  · exact mem_iff_id_3355 _ rfl
+  · exact mem_iff_id_3356 _ rfl
+  · exact mem_iff_id_3357 _ rfl
+  · exact mem_iff_id_3358 _ rfl
+  · exact mem_iff_id_3359 _ rfl
+  · exact mem_iff_id_3360 _ rfl
+  · exact mem_iff_id_3361 _ rfl
+  · exact mem_iff_id_3362 _ rfl
+  · exact mem_iff_id_3363 _ rfl
+  · exact mem_iff_id_3364 _ rfl
+  · exact mem_iff_id_3365 _ rfl
+  · exact mem_iff_id_3366 _ rfl
+  · exact mem_iff_id_3367 _ rfl
+  · exact mem_iff_id_3368 _ rfl
+  · exact mem_iff_id_3369 _ rfl
+  · exact mem_iff_id_3370 _ rfl
+  · exact mem_iff_id_3371 _ rfl
+  · exact mem_iff_id_3372 _ rfl
+  · exact mem_iff_id_3373 _ rfl
+  · exact mem_iff_id_3374 _ rfl
+  · exact mem_iff_id_3375 _ rfl
+  · exact mem_iff_id_3376 _ rfl
+  · exact mem_iff_id_3377 _ rfl
+  · exact mem_iff_id_3378 _ rfl
+  · exact mem_iff_id_3379 _ rfl
+  · exact mem_iff_id_3380 _ rfl
+  · exact mem_iff_id_3381 _ rfl
+  · exact mem_iff_id_3382 _ rfl
+  · exact mem_iff_id_3383 _ rfl
+  · exact mem_iff_id_3384 _ rfl
+  · exact mem_iff_id_3385 _ rfl
+  · exact mem_iff_id_3386 _ rfl
+  · exact mem_iff_id_3387 _ rfl
+  · exact mem_iff_id_3388 _ rfl
+  · exact mem_iff_id_3389 _ rfl
+  · exact mem_iff_id_3390 _ rfl
+  · exact mem_iff_id_3391 _ rfl
+  · exact mem_iff_id_3392 _ rfl
+  · exact mem_iff_id_3393 _ rfl
+  · exact mem_iff_id_3394 _ rfl
+  · exact mem_iff_id_3395 _ rfl
+  · exact mem_iff_id_3396 _ rfl
+  · exact mem_iff_id_3397 _ rfl
+  · exact mem_iff_id_3398 _ rfl
+  · exact mem_iff_id_3399 _ rfl
+
+theorem mem_iff_block37 (n : Fin 5011) (hlo : 3700 ≤ n.val) (hhi : n.val < 3800) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_3700 _ rfl
+  · exact mem_iff_id_3701 _ rfl
+  · exact mem_iff_id_3702 _ rfl
+  · exact mem_iff_id_3703 _ rfl
+  · exact mem_iff_id_3704 _ rfl
+  · exact mem_iff_id_3705 _ rfl
+  · exact mem_iff_id_3706 _ rfl
+  · exact mem_iff_id_3707 _ rfl
+  · exact mem_iff_id_3708 _ rfl
+  · exact mem_iff_id_3709 _ rfl
+  · exact mem_iff_id_3710 _ rfl
+  · exact mem_iff_id_3711 _ rfl
+  · exact mem_iff_id_3712 _ rfl
+  · exact mem_iff_id_3713 _ rfl
+  · exact mem_iff_id_3714 _ rfl
+  · exact mem_iff_id_3715 _ rfl
+  · exact mem_iff_id_3716 _ rfl
+  · exact mem_iff_id_3717 _ rfl
+  · exact mem_iff_id_3718 _ rfl
+  · exact mem_iff_id_3719 _ rfl
+  · exact mem_iff_id_3720 _ rfl
+  · exact mem_iff_id_3721 _ rfl
+  · exact mem_iff_id_3722 _ rfl
+  · exact mem_iff_id_3723 _ rfl
+  · exact mem_iff_id_3724 _ rfl
+  · exact mem_iff_id_3725 _ rfl
+  · exact mem_iff_id_3726 _ rfl
+  · exact mem_iff_id_3727 _ rfl
+  · exact mem_iff_id_3728 _ rfl
+  · exact mem_iff_id_3729 _ rfl
+  · exact mem_iff_id_3730 _ rfl
+  · exact mem_iff_id_3731 _ rfl
+  · exact mem_iff_id_3732 _ rfl
+  · exact mem_iff_id_3733 _ rfl
+  · exact mem_iff_id_3734 _ rfl
+  · exact mem_iff_id_3735 _ rfl
+  · exact mem_iff_id_3736 _ rfl
+  · exact mem_iff_id_3737 _ rfl
+  · exact mem_iff_id_3738 _ rfl
+  · exact mem_iff_id_3739 _ rfl
+  · exact mem_iff_id_3740 _ rfl
+  · exact mem_iff_id_3741 _ rfl
+  · exact mem_iff_id_3742 _ rfl
+  · exact mem_iff_id_3743 _ rfl
+  · exact mem_iff_id_3744 _ rfl
+  · exact mem_iff_id_3745 _ rfl
+  · exact mem_iff_id_3746 _ rfl
+  · exact mem_iff_id_3747 _ rfl
+  · exact mem_iff_id_3748 _ rfl
+  · exact mem_iff_id_3749 _ rfl
+  · exact mem_iff_id_3750 _ rfl
+  · exact mem_iff_id_3751 _ rfl
+  · exact mem_iff_id_3752 _ rfl
+  · exact mem_iff_id_3753 _ rfl
+  · exact mem_iff_id_3754 _ rfl
+  · exact mem_iff_id_3755 _ rfl
+  · exact mem_iff_id_3756 _ rfl
+  · exact mem_iff_id_3757 _ rfl
+  · exact mem_iff_id_3758 _ rfl
+  · exact mem_iff_id_3759 _ rfl
+  · exact mem_iff_id_3760 _ rfl
+  · exact mem_iff_id_3761 _ rfl
+  · exact mem_iff_id_3762 _ rfl
+  · exact mem_iff_id_3763 _ rfl
+  · exact mem_iff_id_3764 _ rfl
+  · exact mem_iff_id_3765 _ rfl
+  · exact mem_iff_id_3766 _ rfl
+  · exact mem_iff_id_3767 _ rfl
+  · exact mem_iff_id_3768 _ rfl
+  · exact mem_iff_id_3769 _ rfl
+  · exact mem_iff_id_3770 _ rfl
+  · exact mem_iff_id_3771 _ rfl
+  · exact mem_iff_id_3772 _ rfl
+  · exact mem_iff_id_3773 _ rfl
+  · exact mem_iff_id_3774 _ rfl
+  · exact mem_iff_id_3775 _ rfl
+  · exact mem_iff_id_3776 _ rfl
+  · exact mem_iff_id_3777 _ rfl
+  · exact mem_iff_id_3778 _ rfl
+  · exact mem_iff_id_3779 _ rfl
+  · exact mem_iff_id_3780 _ rfl
+  · exact mem_iff_id_3781 _ rfl
+  · exact mem_iff_id_3782 _ rfl
+  · exact mem_iff_id_3783 _ rfl
+  · exact mem_iff_id_3784 _ rfl
+  · exact mem_iff_id_3785 _ rfl
+  · exact mem_iff_id_3786 _ rfl
+  · exact mem_iff_id_3787 _ rfl
+  · exact mem_iff_id_3788 _ rfl
+  · exact mem_iff_id_3789 _ rfl
+  · exact mem_iff_id_3790 _ rfl
+  · exact mem_iff_id_3791 _ rfl
+  · exact mem_iff_id_3792 _ rfl
+  · exact mem_iff_id_3793 _ rfl
+  · exact mem_iff_id_3794 _ rfl
+  · exact mem_iff_id_3795 _ rfl
+  · exact mem_iff_id_3796 _ rfl
+  · exact mem_iff_id_3797 _ rfl
+  · exact mem_iff_id_3798 _ rfl
+  · exact mem_iff_id_3799 _ rfl
+
+theorem mem_iff_block41 (n : Fin 5011) (hlo : 4100 ≤ n.val) (hhi : n.val < 4200) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_4100 _ rfl
+  · exact mem_iff_id_4101 _ rfl
+  · exact mem_iff_id_4102 _ rfl
+  · exact mem_iff_id_4103 _ rfl
+  · exact mem_iff_id_4104 _ rfl
+  · exact mem_iff_id_4105 _ rfl
+  · exact mem_iff_id_4106 _ rfl
+  · exact mem_iff_id_4107 _ rfl
+  · exact mem_iff_id_4108 _ rfl
+  · exact mem_iff_id_4109 _ rfl
+  · exact mem_iff_id_4110 _ rfl
+  · exact mem_iff_id_4111 _ rfl
+  · exact mem_iff_id_4112 _ rfl
+  · exact mem_iff_id_4113 _ rfl
+  · exact mem_iff_id_4114 _ rfl
+  · exact mem_iff_id_4115 _ rfl
+  · exact mem_iff_id_4116 _ rfl
+  · exact mem_iff_id_4117 _ rfl
+  · exact mem_iff_id_4118 _ rfl
+  · exact mem_iff_id_4119 _ rfl
+  · exact mem_iff_id_4120 _ rfl
+  · exact mem_iff_id_4121 _ rfl
+  · exact mem_iff_id_4122 _ rfl
+  · exact mem_iff_id_4123 _ rfl
+  · exact mem_iff_id_4124 _ rfl
+  · exact mem_iff_id_4125 _ rfl
+  · exact mem_iff_id_4126 _ rfl
+  · exact mem_iff_id_4127 _ rfl
+  · exact mem_iff_id_4128 _ rfl
+  · exact mem_iff_id_4129 _ rfl
+  · exact mem_iff_id_4130 _ rfl
+  · exact mem_iff_id_4131 _ rfl
+  · exact mem_iff_id_4132 _ rfl
+  · exact mem_iff_id_4133 _ rfl
+  · exact mem_iff_id_4134 _ rfl
+  · exact mem_iff_id_4135 _ rfl
+  · exact mem_iff_id_4136 _ rfl
+  · exact mem_iff_id_4137 _ rfl
+  · exact mem_iff_id_4138 _ rfl
+  · exact mem_iff_id_4139 _ rfl
+  · exact mem_iff_id_4140 _ rfl
+  · exact mem_iff_id_4141 _ rfl
+  · exact mem_iff_id_4142 _ rfl
+  · exact mem_iff_id_4143 _ rfl
+  · exact mem_iff_id_4144 _ rfl
+  · exact mem_iff_id_4145 _ rfl
+  · exact mem_iff_id_4146 _ rfl
+  · exact mem_iff_id_4147 _ rfl
+  · exact mem_iff_id_4148 _ rfl
+  · exact mem_iff_id_4149 _ rfl
+  · exact mem_iff_id_4150 _ rfl
+  · exact mem_iff_id_4151 _ rfl
+  · exact mem_iff_id_4152 _ rfl
+  · exact mem_iff_id_4153 _ rfl
+  · exact mem_iff_id_4154 _ rfl
+  · exact mem_iff_id_4155 _ rfl
+  · exact mem_iff_id_4156 _ rfl
+  · exact mem_iff_id_4157 _ rfl
+  · exact mem_iff_id_4158 _ rfl
+  · exact mem_iff_id_4159 _ rfl
+  · exact mem_iff_id_4160 _ rfl
+  · exact mem_iff_id_4161 _ rfl
+  · exact mem_iff_id_4162 _ rfl
+  · exact mem_iff_id_4163 _ rfl
+  · exact mem_iff_id_4164 _ rfl
+  · exact mem_iff_id_4165 _ rfl
+  · exact mem_iff_id_4166 _ rfl
+  · exact mem_iff_id_4167 _ rfl
+  · exact mem_iff_id_4168 _ rfl
+  · exact mem_iff_id_4169 _ rfl
+  · exact mem_iff_id_4170 _ rfl
+  · exact mem_iff_id_4171 _ rfl
+  · exact mem_iff_id_4172 _ rfl
+  · exact mem_iff_id_4173 _ rfl
+  · exact mem_iff_id_4174 _ rfl
+  · exact mem_iff_id_4175 _ rfl
+  · exact mem_iff_id_4176 _ rfl
+  · exact mem_iff_id_4177 _ rfl
+  · exact mem_iff_id_4178 _ rfl
+  · exact mem_iff_id_4179 _ rfl
+  · exact mem_iff_id_4180 _ rfl
+  · exact mem_iff_id_4181 _ rfl
+  · exact mem_iff_id_4182 _ rfl
+  · exact mem_iff_id_4183 _ rfl
+  · exact mem_iff_id_4184 _ rfl
+  · exact mem_iff_id_4185 _ rfl
+  · exact mem_iff_id_4186 _ rfl
+  · exact mem_iff_id_4187 _ rfl
+  · exact mem_iff_id_4188 _ rfl
+  · exact mem_iff_id_4189 _ rfl
+  · exact mem_iff_id_4190 _ rfl
+  · exact mem_iff_id_4191 _ rfl
+  · exact mem_iff_id_4192 _ rfl
+  · exact mem_iff_id_4193 _ rfl
+  · exact mem_iff_id_4194 _ rfl
+  · exact mem_iff_id_4195 _ rfl
+  · exact mem_iff_id_4196 _ rfl
+  · exact mem_iff_id_4197 _ rfl
+  · exact mem_iff_id_4198 _ rfl
+  · exact mem_iff_id_4199 _ rfl
+
+theorem mem_iff_block45 (n : Fin 5011) (hlo : 4500 ≤ n.val) (hhi : n.val < 4600) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_4500 _ rfl
+  · exact mem_iff_id_4501 _ rfl
+  · exact mem_iff_id_4502 _ rfl
+  · exact mem_iff_id_4503 _ rfl
+  · exact mem_iff_id_4504 _ rfl
+  · exact mem_iff_id_4505 _ rfl
+  · exact mem_iff_id_4506 _ rfl
+  · exact mem_iff_id_4507 _ rfl
+  · exact mem_iff_id_4508 _ rfl
+  · exact mem_iff_id_4509 _ rfl
+  · exact mem_iff_id_4510 _ rfl
+  · exact mem_iff_id_4511 _ rfl
+  · exact mem_iff_id_4512 _ rfl
+  · exact mem_iff_id_4513 _ rfl
+  · exact mem_iff_id_4514 _ rfl
+  · exact mem_iff_id_4515 _ rfl
+  · exact mem_iff_id_4516 _ rfl
+  · exact mem_iff_id_4517 _ rfl
+  · exact mem_iff_id_4518 _ rfl
+  · exact mem_iff_id_4519 _ rfl
+  · exact mem_iff_id_4520 _ rfl
+  · exact mem_iff_id_4521 _ rfl
+  · exact mem_iff_id_4522 _ rfl
+  · exact mem_iff_id_4523 _ rfl
+  · exact mem_iff_id_4524 _ rfl
+  · exact mem_iff_id_4525 _ rfl
+  · exact mem_iff_id_4526 _ rfl
+  · exact mem_iff_id_4527 _ rfl
+  · exact mem_iff_id_4528 _ rfl
+  · exact mem_iff_id_4529 _ rfl
+  · exact mem_iff_id_4530 _ rfl
+  · exact mem_iff_id_4531 _ rfl
+  · exact mem_iff_id_4532 _ rfl
+  · exact mem_iff_id_4533 _ rfl
+  · exact mem_iff_id_4534 _ rfl
+  · exact mem_iff_id_4535 _ rfl
+  · exact mem_iff_id_4536 _ rfl
+  · exact mem_iff_id_4537 _ rfl
+  · exact mem_iff_id_4538 _ rfl
+  · exact mem_iff_id_4539 _ rfl
+  · exact mem_iff_id_4540 _ rfl
+  · exact mem_iff_id_4541 _ rfl
+  · exact mem_iff_id_4542 _ rfl
+  · exact mem_iff_id_4543 _ rfl
+  · exact mem_iff_id_4544 _ rfl
+  · exact mem_iff_id_4545 _ rfl
+  · exact mem_iff_id_4546 _ rfl
+  · exact mem_iff_id_4547 _ rfl
+  · exact mem_iff_id_4548 _ rfl
+  · exact mem_iff_id_4549 _ rfl
+  · exact mem_iff_id_4550 _ rfl
+  · exact mem_iff_id_4551 _ rfl
+  · exact mem_iff_id_4552 _ rfl
+  · exact mem_iff_id_4553 _ rfl
+  · exact mem_iff_id_4554 _ rfl
+  · exact mem_iff_id_4555 _ rfl
+  · exact mem_iff_id_4556 _ rfl
+  · exact mem_iff_id_4557 _ rfl
+  · exact mem_iff_id_4558 _ rfl
+  · exact mem_iff_id_4559 _ rfl
+  · exact mem_iff_id_4560 _ rfl
+  · exact mem_iff_id_4561 _ rfl
+  · exact mem_iff_id_4562 _ rfl
+  · exact mem_iff_id_4563 _ rfl
+  · exact mem_iff_id_4564 _ rfl
+  · exact mem_iff_id_4565 _ rfl
+  · exact mem_iff_id_4566 _ rfl
+  · exact mem_iff_id_4567 _ rfl
+  · exact mem_iff_id_4568 _ rfl
+  · exact mem_iff_id_4569 _ rfl
+  · exact mem_iff_id_4570 _ rfl
+  · exact mem_iff_id_4571 _ rfl
+  · exact mem_iff_id_4572 _ rfl
+  · exact mem_iff_id_4573 _ rfl
+  · exact mem_iff_id_4574 _ rfl
+  · exact mem_iff_id_4575 _ rfl
+  · exact mem_iff_id_4576 _ rfl
+  · exact mem_iff_id_4577 _ rfl
+  · exact mem_iff_id_4578 _ rfl
+  · exact mem_iff_id_4579 _ rfl
+  · exact mem_iff_id_4580 _ rfl
+  · exact mem_iff_id_4581 _ rfl
+  · exact mem_iff_id_4582 _ rfl
+  · exact mem_iff_id_4583 _ rfl
+  · exact mem_iff_id_4584 _ rfl
+  · exact mem_iff_id_4585 _ rfl
+  · exact mem_iff_id_4586 _ rfl
+  · exact mem_iff_id_4587 _ rfl
+  · exact mem_iff_id_4588 _ rfl
+  · exact mem_iff_id_4589 _ rfl
+  · exact mem_iff_id_4590 _ rfl
+  · exact mem_iff_id_4591 _ rfl
+  · exact mem_iff_id_4592 _ rfl
+  · exact mem_iff_id_4593 _ rfl
+  · exact mem_iff_id_4594 _ rfl
+  · exact mem_iff_id_4595 _ rfl
+  · exact mem_iff_id_4596 _ rfl
+  · exact mem_iff_id_4597 _ rfl
+  · exact mem_iff_id_4598 _ rfl
+  · exact mem_iff_id_4599 _ rfl
+
+theorem mem_iff_block49 (n : Fin 5011) (hlo : 4900 ≤ n.val) (hhi : n.val < 5000) :
+    n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
+  rcases n with ⟨k, hk⟩
+  interval_cases k
+  · exact mem_iff_id_4900 _ rfl
+  · exact mem_iff_id_4901 _ rfl
+  · exact mem_iff_id_4902 _ rfl
+  · exact mem_iff_id_4903 _ rfl
+  · exact mem_iff_id_4904 _ rfl
+  · exact mem_iff_id_4905 _ rfl
+  · exact mem_iff_id_4906 _ rfl
+  · exact mem_iff_id_4907 _ rfl
+  · exact mem_iff_id_4908 _ rfl
+  · exact mem_iff_id_4909 _ rfl
+  · exact mem_iff_id_4910 _ rfl
+  · exact mem_iff_id_4911 _ rfl
+  · exact mem_iff_id_4912 _ rfl
+  · exact mem_iff_id_4913 _ rfl
+  · exact mem_iff_id_4914 _ rfl
+  · exact mem_iff_id_4915 _ rfl
+  · exact mem_iff_id_4916 _ rfl
+  · exact mem_iff_id_4917 _ rfl
+  · exact mem_iff_id_4918 _ rfl
+  · exact mem_iff_id_4919 _ rfl
+  · exact mem_iff_id_4920 _ rfl
+  · exact mem_iff_id_4921 _ rfl
+  · exact mem_iff_id_4922 _ rfl
+  · exact mem_iff_id_4923 _ rfl
+  · exact mem_iff_id_4924 _ rfl
+  · exact mem_iff_id_4925 _ rfl
+  · exact mem_iff_id_4926 _ rfl
+  · exact mem_iff_id_4927 _ rfl
+  · exact mem_iff_id_4928 _ rfl
+  · exact mem_iff_id_4929 _ rfl
+  · exact mem_iff_id_4930 _ rfl
+  · exact mem_iff_id_4931 _ rfl
+  · exact mem_iff_id_4932 _ rfl
+  · exact mem_iff_id_4933 _ rfl
+  · exact mem_iff_id_4934 _ rfl
+  · exact mem_iff_id_4935 _ rfl
+  · exact mem_iff_id_4936 _ rfl
+  · exact mem_iff_id_4937 _ rfl
+  · exact mem_iff_id_4938 _ rfl
+  · exact mem_iff_id_4939 _ rfl
+  · exact mem_iff_id_4940 _ rfl
+  · exact mem_iff_id_4941 _ rfl
+  · exact mem_iff_id_4942 _ rfl
+  · exact mem_iff_id_4943 _ rfl
+  · exact mem_iff_id_4944 _ rfl
+  · exact mem_iff_id_4945 _ rfl
+  · exact mem_iff_id_4946 _ rfl
+  · exact mem_iff_id_4947 _ rfl
+  · exact mem_iff_id_4948 _ rfl
+  · exact mem_iff_id_4949 _ rfl
+  · exact mem_iff_id_4950 _ rfl
+  · exact mem_iff_id_4951 _ rfl
+  · exact mem_iff_id_4952 _ rfl
+  · exact mem_iff_id_4953 _ rfl
+  · exact mem_iff_id_4954 _ rfl
+  · exact mem_iff_id_4955 _ rfl
+  · exact mem_iff_id_4956 _ rfl
+  · exact mem_iff_id_4957 _ rfl
+  · exact mem_iff_id_4958 _ rfl
+  · exact mem_iff_id_4959 _ rfl
+  · exact mem_iff_id_4960 _ rfl
+  · exact mem_iff_id_4961 _ rfl
+  · exact mem_iff_id_4962 _ rfl
+  · exact mem_iff_id_4963 _ rfl
+  · exact mem_iff_id_4964 _ rfl
+  · exact mem_iff_id_4965 _ rfl
+  · exact mem_iff_id_4966 _ rfl
+  · exact mem_iff_id_4967 _ rfl
+  · exact mem_iff_id_4968 _ rfl
+  · exact mem_iff_id_4969 _ rfl
+  · exact mem_iff_id_4970 _ rfl
+  · exact mem_iff_id_4971 _ rfl
+  · exact mem_iff_id_4972 _ rfl
+  · exact mem_iff_id_4973 _ rfl
+  · exact mem_iff_id_4974 _ rfl
+  · exact mem_iff_id_4975 _ rfl
+  · exact mem_iff_id_4976 _ rfl
+  · exact mem_iff_id_4977 _ rfl
+  · exact mem_iff_id_4978 _ rfl
+  · exact mem_iff_id_4979 _ rfl
+  · exact mem_iff_id_4980 _ rfl
+  · exact mem_iff_id_4981 _ rfl
+  · exact mem_iff_id_4982 _ rfl
+  · exact mem_iff_id_4983 _ rfl
+  · exact mem_iff_id_4984 _ rfl
+  · exact mem_iff_id_4985 _ rfl
+  · exact mem_iff_id_4986 _ rfl
+  · exact mem_iff_id_4987 _ rfl
+  · exact mem_iff_id_4988 _ rfl
+  · exact mem_iff_id_4989 _ rfl
+  · exact mem_iff_id_4990 _ rfl
+  · exact mem_iff_id_4991 _ rfl
+  · exact mem_iff_id_4992 _ rfl
+  · exact mem_iff_id_4993 _ rfl
+  · exact mem_iff_id_4994 _ rfl
+  · exact mem_iff_id_4995 _ rfl
+  · exact mem_iff_id_4996 _ rfl
+  · exact mem_iff_id_4997 _ rfl
+  · exact mem_iff_id_4998 _ rfl
+  · exact mem_iff_id_4999 _ rfl
 
 end
 end N11Formalization.EnergyTerminalResidualCensus

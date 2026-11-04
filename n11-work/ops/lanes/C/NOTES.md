@@ -54,196 +54,112 @@ EXPERT (2026-11-02):
 - Unproved remains: CI through 334, all 334 radius certificates, canonical/geometric
   packet production, MPacket validity, SevenClassExclusions, arbitrary-centre theorem.
 
-## 2026-11-03 - part 291 (lane recon; CI exit-1 map; 334 static audit)
 
-Read GUIDANCE/LANES/C-NOTES/LATEST. CI `41449154413` (sha `f6f73fc8`) is
-`cancelled`; its `summary.json` is truncated at `N11Formalization.En`, so the
-visible exit-1 set is exactly: `EnergyTerminalResidualCensusRefine0039`,
-`...Refine0039Refine3149`, `...Refine0037Refine3149`,
-`EnergyTerminalBatchB13RefineSixteenResidualCensus`, `...CensusMain`,
-`EnergyTerminalResidualCensusRefineTriple`, `...Refine385` (all in
-`TARGETS.txt`). No per-target error text is stored: `LATEST.md` keeps only a
-3-line build-log tail (memory samples), not the Lean diagnostics.
+## 2026-11-03 - parts 291-295 (condensed)
 
-Ran `verify_census_334.py`: PASS `{census 389, refined 334, removed 55,
-static_checks PASS}` - confirms the newest 334 conditional bridge is
-internally consistent. Scope source/static/exact-set only; **CI pending** for
-334, no elaboration/kernel credit, no rational-payload recheck.
+- CI `41449154413`/`41656715257`/`41706645384` all `cancelled`; stored
+  `LATEST.md` = run `41706645384` (sha `bd5573e5`). Exit map: `CensusBase`=0,
+  but `C01`,`C02`,`C03`,`C04`=1 and every consumer (`Census`, `Refine0039*`,
+  `Refine0037Refine3149`, `RefineSixteen*Census*`) =1; the rest of the
+  ~200 lane-C targets are 0. So C01-C04 are the owning reds.
+- Static checks: the four `chunk0..chunk3` literals (100/100/100/89) match
+  `residual389-census.json` exactly (`verify_census_334.py` PASS; part-293).
+  `C01..C04` tile the 51 blocks `[100NN,100NN+100)` covering `[0,5011)`.
+  `mem_iff_blockNN` closes with `rw [B13.mem_residualIDs_iff] <;>
+  decide +kernel +revert`, so the kernel must decide `(data n).terminal`
+  (4 MB `data` def) plus `n ∉ paidIDs` (`B12 ∪ Next1182`, ~1997 literals)
+  for all 5011 indices - a per-declaration accumulation that violates the
+  GUIDANCE kernel-scale rule (~170-500 literals) and is the likely exit-1
+  cause. Memory in the cancelled run grew to ~11.9 GB (later Refine352).
+- Probe `/workspace/tools/mathlib-probe` cannot even load `import Mathlib`
+  inside 190 s (`rc=124`), so local kernel-scale bisection is INFEASIBLE.
+- No exit-code/error text is stored for C01-C04 (`LATEST.md` keeps only a
+  build-log tail), so the fix must be robust to heartbeat AND memory.
+- Unchanged: no id paid; 334 bridge conditional only.
 
-Cross-referenced the 7 exit-1 modules by hand against their imports: every
-qualified identifier they use exists in a green/in-lane dependency
-(`EnergyTerminalBatchB13RefineSixteenResidual.mem_residualIDs_iff` /
-`remaining_of_residual_radius_certificates` / `b13_...`;
-`EnergyTerminalResidualCensusRefineSixteen.refinedResidualIDs[_card]` /
-`mem_refinedResidualIDs_iff`; `EnergyTerminalBatchB13Main.
-main_of_energy_b13_and_seven_classes`; `EnergyRefineN0039.new_radius`).
-So the names resolve; the failures are either inside-module elaboration
-(e.g. `RefineSixteenResidualCensus.residualIDs_eq_residual373` closes with
-`rfl`) or come from a NON-TARGETED base dependency. Key: the earliest exit-1
-`EnergyTerminalResidualCensusRefine0039` (TARGETS line 8) imports
-`EnergyTerminalResidualCensus` (C01-C04 chunks), which is NOT a target, so CI
-never reports its own exit code; the `LATEST.md` build-log tail shows memory
-dropping to ~2.4GB, consistent with the known C01-C04 census OOM. That would
-cascade exit 1 into every importer (Refine0039/Refine0039Refine3149/
-Refine0037Refine3149). Same pattern for `EnergyTerminalResidualCensusRefineSixteen`
-(not a target) feeding `RefineSixteenResidualCensus`/`...CensusMain`.
+## 2026-11-03 - part 296 (C01-C04 rewritten: per-index kernel isolation)
 
-Still unproved: nothing above is kernel credit; all 334 radius certificates,
-327 source-missing ids, canonical packet production, SevenClassExclusions and
-the arbitrary-centre theorem remain open. Next: obtain the first owning error
-per module (ask supervisor for the full `n11-lean-build` log, or re-run one
-target alone), then repair the smallest (`RefineSixteenResidualCensus`) and
-re-target CI.
+Re-read GUIDANCE/LANES/C-NOTES/LATEST (run `41706645384`, sha `bd5573e5`).
+Lane-C reds are exactly `C01..C04` plus their consumers; `CensusBase` is green.
 
-## 2026-11-03 - part 292 (owning-error localization targets)
+Action (new emitter `n11-work/ops/lanes/C/emit_census_c01_c04.py`, deterministic,
+self-checking): regenerated the four modules so that each source index gets its
+own theorem `mem_iff_id_<id>` (5011 total) with a single `decide +kernel +revert`
+in its own declaration (its own heartbeat budget). Each `mem_iff_blockNN` now
+covers 100 indices but delegates to those per-index lemmas via explicit bullets
+(`interval_cases k` then `exact mem_iff_id_<id> _ rfl`), so NO declaration
+accumulates 100 heavy kernel decisions. Per-index proof shape:
+`rcases n with ⟨k,hk⟩; change k = <id> at hn; subst hn;
+rw [B13.mem_residualIDs_iff]; decide +kernel +revert`. Exported interface
+(`mem_iff_block00..50`, signature `(n) (hlo) (hhi)`) is UNCHANGED, so
+`EnergyTerminalResidualCensus.lean` needs no edit. Only C01-C04 touched; Base,
+assembly, root, lakefile, toolchain, frozen modules untouched.
 
-Re-read GUIDANCE/LANES/C-NOTES/LATEST (run `41600479881`, sha `55890d94`,
-`cancelled`; `summary.json` truncated at `N11Formalization.En`). Confirmed the
-visible exit-1 set is exactly the seven lane-C modules already in `TARGETS.txt`:
-`EnergyTerminalResidualCensusRefine0039`, `...Refine0039Refine3149`,
-`...Refine0037Refine3149`, `EnergyTerminalBatchB13RefineSixteenResidualCensus`,
-`...ResidualCensusMain`, `EnergyTerminalResidualCensusRefineTriple`,
-`...Refine385`; every `EnergyTerminalBatchB13RefineNNNN`/`...Main` and all
-`FrozenCap*` are exit 0.
+Files: `n11-work/lean/N11Formalization/EnergyTerminalResidualCensusC0{1,2,3,4}.lean`
+(now ~386/386/360/356 KB), `n11-work/ops/lanes/C/emit_census_c01_c04.py`.
+Checks (scope: source/static only, NOT elaboration or kernel credit):
+- emitter self-check: 13+13+13+12 blocks, 5011 unique ids, total = 5011.
+- independent parse: ids = 0..5010 exactly (no dup/gap); 51 blocks; each block
+  bullet list == `range(100*b, min(100*b+100,5011))`; STRUCTURE OK.
+- forbidden-token scan of the four files: none (no sorry/admit/axiom/
+  native_decide/ofReduceBool/implemented_by/maxHeartbeats).
+- `TARGETS.txt` already lists C01-C04 (parts-293 edit); unchanged.
 
-Root-cause trace (static, by import): all seven red modules import the shared
-base `N11Formalization.EnergyTerminalResidualCensus` (assembly of the four
-C01-C04 chunks, `decide +kernel` disjointness only). That base is a lane-B
-target, not a lane-C target, so lane-C serial CI never built it and never
-reported its own exit code - the red status is inherited, and the first owning
-error is invisible. Same shape for the RefineSixteen pair via
-`EnergyTerminalResidualCensusRefineSixteen` (non-target).
+Scope/limits: this is a scale/robustness repair, not a proof of new
+mathematics; the per-index `decide` still unfolds `data` and `paidIDs` once
+per index. **CI pending** (sha will be the supervisor commit): C01-C04 and all
+downstream consumers (Census, Refine0039*, Refine0037Refine3149,
+RefineSixteen*Census*) must go exit 0 with axioms
+`[propext, Classical.choice, Quot.sound]`. If a per-index `decide` itself is
+still red, the next step is the part-295 hierarchical `mem_paidIDs_iff` split
+(`mem_union`/`new_mem`/`fin_cases`) so no single decision sees the 1997-literal
+`paidIDs`, and, for `data`, precompute a `terminalIDs` literal lemma.
 
-Action: inserted the owning-error localization block into
-`ops/lanes/C/TARGETS.txt` immediately before the Refine0039 consumers, listing
-`EnergyTerminalResidualCensusC01..C04` then `EnergyTerminalResidualCensus`, so
-the next serial lane-C run pins the first failing module. Checked the lane
-verifiers still pass: `python3 ops/lanes/C/verify_census_334.py` ->
-`{census_count:389, refined_count:334, removed_count:55, static_checks:PASS}`
-(they assert only uniqueness/count of their own target). Scope: static/config
-only; **CI pending**, no elaboration or kernel credit, no new Lean modules.
+Still unproved (unchanged, nothing here is kernel credit): CI green for
+C01-C04 + assembly; the 7 red Refine0039/RefineSixteen/Refine385 modules; all
+residual radius certificates; 327 source-missing ids; canonical/geometric
+packet production; MPacket validity; SevenClassExclusions; arbitrary-centre
+theorem. Next concrete step: after CI, if C01-C04 are green, mark lane-C
+TARGET-DONE; if still red, read the first owning error line and apply the
+hierarchical paidIDs/data split above.
 
-Still unproved: elaboration of every census/Refine chain, all residual radius
-certificates, 327 source-missing ids, canonical packet production,
-SevenClassExclusions, the arbitrary-centre theorem. Next concrete step: after CI
-reports the base exit code, repair the first failing chunk/base lemma in place
-(or, if the base is green, bisect the next non-target import
-`EnergyTerminalResidualCensusRefineSixteen`), then re-target the RefineSixteen
-and Refine385 consumers.
-## 2026-11-03 - part 293 (chunk<->ground-truth exact check; remaining localization gap)
+## 2026-11-04 - part 297 (independent C01-C04 structure audit)
 
-Exact check (new): parsed the four Lean literal chunks in
-`EnergyTerminalResidualCensusBase.lean` and compared to the committed ground truth
-`residual389-census.json` (389 ids, sha-verified). Result: chunk sizes {100,100,100,89},
-total 389, no duplicates, `set(chunks) == set(json_ids)` True (missing 0, extra 0).
-Scope: static/exact-set on source text; not elaboration or kernel credit.
+Re-read GUIDANCE/LANES/C-NOTES/LATEST (run `41706645384`, sha `bd5573e5`);
+part-296 per-index split is on disk (uncommitted; C01-C04 ~370-400 KB,
+`emit_census_c01_c04.py` present) but CI has NOT re-run, so C01-C04 remain
+**CI pending** (last stored exits were 1 for C01-C04 + consumers).
 
-Import-graph localization: the two red `...RefineSixteenResidualCensus[/Main]` modules
-import `EnergyTerminalResidualCensusRefineSixteen`, which was NEVER a lane-C target, so
-CI never reported its own exit code. That module imports
-`EnergyTerminalBatchB13RefineSixteenMain`, whose import `EnergyTerminalBatchB13RefineSixteen`
-is documented (TARGETS.txt:24-26) as red only from elaborator recursion depth; so
-`EnergyTerminalResidualCensusRefineSixteen` is red by inheritance, not a failed radius
-fact. Likewise `EnergyTerminalResidualCensusBase` (imported by C01) was never a target.
-Edit: added `EnergyTerminalResidualCensusBase` before C01 and
-`EnergyTerminalResidualCensusRefineSixteen` before the RefineSixteen census consumers in
-`ops/lanes/C/TARGETS.txt` (forbidden-token scan of that file: none). Scope: config/static;
-**CI pending**, no Lean modules changed, no kernel credit.
+Action: committed an INDEPENDENT static verifier (separate from the emitter's
+own self-check, per the EXPERT note asking for an independent check)
+`n11-work/ops/lanes/C/verify_census_c01_c04.py`. It parses the four generated
+modules and checks, from source text only:
+- `mem_iff_id_<id>` theorems exist for exactly ids 0..5010, unique, no gap;
+  each theorem's name matches its declared `n.val = <id>`;
+- each `mem_iff_blockNN` has interval `[100*NN, min(100*NN+100,5011))` and its
+  bullets reference exactly the ids of that interval (5011 ids total, 51 blocks);
+- consumer `EnergyTerminalResidualCensus.lean` references `mem_iff_block00..50`
+  exactly once each (interface unchanged);
+- forbidden-token scan (sorry/admit/axiom/native_decide/ofReduceBool/
+  implemented_by/maxHeartbeats; `#print axioms` lines excluded, `axiom` matched
+  word-bounded).
 
-Re-ran `python3 verify_census_334.py` -> `{census_count:389, refined_count:334,
-removed_count:55, static_checks:PASS}` (exit 0). Scope: static/exact-set only.
+Check result: `python3 verify_census_c01_c04.py` -> `PASS  per-index ids: 5011
+(0..5010); blocks: 51; consumer: 51 calls; forbidden tokens: none`.
+Scope: SOURCE-LEVEL STRUCTURE ONLY, not elaboration and not kernel credit.
 
-Verified the census-module `rfl` claim: `EnergyTerminalBatchB13RefineSixteenRepair.paidIDs`
-and `EnergyTerminalBatchB13RefineSixteen.paidIDs` are both `RefineFourteen.paidIDs ∪ newIDs`
-with identical `newIDs = EnergyRefineN3431.newIDs ∪ EnergyRefineN3573.newIDs`, so
-`repair_paidIDs_eq_refineSixteen_paidIDs := rfl` is definitionally sound.
+Still unproved (unchanged, nothing here is kernel credit): CI green for C01-C04
++ the red consumers (`Census`, `Refine0039*`, `Refine0037Refine3149`,
+`RefineSixteen*Census*`); the 7 red Refine0039/RefineSixteen/Refine385 modules;
+all residual radius certificates; 327 source-missing ids; canonical/geometric
+packet production; MPacket validity; SevenClassExclusions; arbitrary-centre
+root theorem.
 
-Still unproved: CI build of Base/C01..C04/assembly and the 7 red modules; all residual
-radius certificates; 327 source-missing ids; canonical packet production;
-SevenClassExclusions; arbitrary-centre theorem. Next concrete step: after CI, if
-`EnergyTerminalResidualCensusRefineSixteen` is red, redirect it to the green
-`EnergyTerminalBatchB13RefineSixteenResidual` + `EnergyTerminalBatchB13Main` chain
-(replacing its `EnergyTerminalBatchB13RefineSixteenMain` import) so the two RefineSixteen
-census consumers inherit a green dependency; else bisect the next non-target import.
-
-
-## 2026-11-03 - part 294 (base-census block-scale kernel probe)
-
-Re-read GUIDANCE/LANES/C-NOTES/LATEST. Newest CI run `41656715257` (sha `7ea37808`)
-is still `in_progress`; `LATEST.md` (run `41600479881`, sha `55890d94`) predates the
-part-293 TARGETS edit, so it contains NO exit code for `EnergyTerminalResidualCensusBase`
-or `...C01..C04` - the added owning-error targets have not been built yet.
-
-Kernel-scale probe (new file `tools/mathlib-probe/tmp/CensusBlockProbe.lean`, Mathlib-only):
-rebuilt the real `chunk0..chunk3` (389 literals, sizes 100/100/100/89, extracted
-verbatim from `EnergyTerminalResidualCensusBase.lean`) as `residualIDs` and a duplicate
-`target`, then proved `mem_iff_block00` with the EXACT C01 tactic
-`rcases n with ⟨k,hk⟩; interval_cases k <;> decide +kernel +revert` (100 cases).
-Result: `lake env lean` did not finish in 170 s (`rc=124`, empty output). INCONCLUSIVE:
-could not separate `import Mathlib` cost from the 100 kernel decisions, and no partial
-Lean output was flushed before the kill. Scope: Mathlib-probe timing only; not a kernel
-verdict on the project modules.
-
-Also noted: untracked `n11-work/ops/lanes/C/repair_refine_3490_3825.py` (from an earlier
-session; repairs the monolithic `pk_ok` block of `EnergyRefineN3490`/`N3825` by
-enumerating `Fin K` cases - not yet emitted/targeted).
-
-Still unproved (unchanged): elaboration of Base/C01..C04 and the assembly, the 7 red
-Refine0039/RefineSixteen/Refine385 modules, all residual radius certificates, 327
-source-missing ids, canonical packet production, SevenClassExclusions, arbitrary-centre
-theorem. Nothing above is kernel credit.
-
-Next concrete step: (1) measure the `import Mathlib`-only baseline in the probe
-(`echo 'import Mathlib' > tmp/b.lean; time lake env lean tmp/b.lean`) and, if the block is
-the bottleneck, bisect block size (100 -> 50 -> 25) to find the per-decision kernel limit;
-(2) once CI reports `EnergyTerminalResidualCensusBase/C01..C04` exit codes, if red from
-kernel scale, split each `mem_iff_blockNN` into per-chunk `mem_iff` over the 100/100/100/89
-sub-finsets (reuse `chunkN_card`) so no single `decide +kernel` sees the 389-union.
-
-## 2026-11-03 - part 295 (probe baseline measured; C01-C04 OOM root cause pinned)
-
-Re-read GUIDANCE/LANES/C-NOTES/LATEST. Newest run `41706645384` (sha `bd5573e5`) is
-`in_progress`; the stored `LATEST.md` summary is run `41656715257` (sha `7ea37808`,
-`cancelled`) whose exits still do NOT list the part-293 base-census targets, so no exit
-code for `EnergyTerminalResidualCensusBase/C01..C04` has been observed yet.
-
-Probe baseline (bounded, `timeout 190`): `cd /workspace/tools/mathlib-probe &&
-time lake env lean tmp/b.lean` where `tmp/b.lean` is exactly `import Mathlib` -> rc=124,
-`real 3m10s`, `user 0m0.24s`, `sys 0m0.82s`. The near-zero CPU with 190 s wall means the
-probe spends the whole budget loading Mathlib oleans/blocking, NOT on kernel decisions.
-Consequence: the part-294 plan to bisect block size (100->50->25) in this probe is
-INFEASIBLE - the Mathlib-import cost alone exceeds any bounded window, so the probe can
-never separate import cost from `decide +kernel` cost. Scope: probe timing only; not a
-kernel verdict on the project modules.
-
-Structural facts checked (static, source text): the four census chunks in
-`EnergyTerminalResidualCensusBase.lean` are `chunk0..chunk3` of sizes 100/100/100/89 =
-389, and `residualIDs = chunk0 ∪ (chunk1 ∪ (chunk2 ∪ chunk3))` (389 literals).
-`C01..C04` declare 13+13+13+12 = 51 `mem_iff_blockNN` lemmas with labels `00..50`;
-block `NN` is `[100*NN, 100*NN+100)` and the labels tile `00..50`, i.e. `[0,5100)`,
-which strictly covers every id (max literal 4992). So the coverage tiling is sound.
-
-OOM root cause pinned (static, by import/definition trace): each `mem_iff_blockNN` closes
-with `rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert`. After
-that rewrite the goal is `n ∈ residualIDs ↔ ((DBMSourceTree.data n).terminal = true ∧
-n ∉ Patch120SharpDispatch.sharpIDs ∧ n ∉ paidIDs)`. The kernel `decide` must therefore
-evaluate `n ∉ EnergyTerminalBatchB13.paidIDs`, and `paidIDs = EnergyTerminalBatchB12.paidIDs
-∪ Paid16GeneralNext1182.newIDs` with `newIDs = Finset.univ.biUnion part` over `Fin 8`
-(`Paid16GeneralNext1182.lean:21,30`); plus it must reduce the 5011-element
-`Finset.univ.filter` that defines `residualIDs`. That heavy structure is decided 100x per
-block and ~51 blocks, i.e. ~5100 giant `decide +kernel` evaluations - a violation of the
-GUIDANCE kernel-scale rule (~170-500 literals), and the likely C01-C04 OOM, NOT the
-389-literal chunk union. `rg -l 'mem_paidIDs_iff' N11Formalization` over 2490 files returns
-nothing, so no cheap hierarchical paid-membership lemma exists to substitute.
-
-Still unproved (unchanged): elaboration of Base/C01..C04 + assembly; the 7 red
-Refine0039/RefineSixteen/Refine385 modules; all residual radius certificates; 327
-source-missing ids; canonical packet production; SevenClassExclusions; arbitrary-centre
-theorem. Nothing above is kernel credit.
-
-Next concrete step: give `mem_iff_blockNN` a cheap decision path - add (or reuse) a
-hierarchical `mem_paidIDs_iff` that splits `paidIDs` via `Finset.mem_union` / `mem_biUnion`
-+ `fin_cases` into the same small per-part decides used by the green B13 refinement
-chain, then replace `decide +kernel +revert` with `rw [B13.mem_residualIDs_iff,
-B13.paidIDs, ...] <;> simp only [Finset.mem_union, Finset.mem_biUnion, ...] <;>
-decide +kernel` so no single decision sees the 1997-element union; re-target C01..C04.
+Very next concrete step: after the supervisor commits and CI runs, read the
+first owning error line for C01. If green -> mark lane-C TARGET-DONE. If still
+red with a kernel/`decide` blowup, apply the part-295 hierarchical split:
+replace the single `decide +kernel` on `n ∈ EnergyTerminalBatchB13.residualIDs`
+with `EnergyTerminalBatchB13.mem_residualIDs_iff` decomposed structurally --
+`Paid16GeneralNext1182.new_mem` (8-way disjunction) + per-part `mem`/interval
+lemmas + B12 split -- so no `decide` ever sees the 1997-literal `paidIDs`; keep
+`decide +kernel` only for `(DBMSourceTree.data n).terminal` and `sharpIDs`.
