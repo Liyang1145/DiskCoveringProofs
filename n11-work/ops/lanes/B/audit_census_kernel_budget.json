@@ -1,0 +1,73 @@
+{
+ "budget": {
+  "exceeds_guidance": true,
+  "guidance_limit_literals": 500,
+  "max_decided_literals_per_mem_iff": 1997,
+  "paid_literals_declared": 1997,
+  "residual_literal_total": 389,
+  "sharp_literals": "not a literal"
+ },
+ "census_chunks": {
+  "EnergyTerminalResidualCensusC01.lean": {
+   "decide_kernel": 1301,
+   "decide_kernel_revert": 1300,
+   "every_mem_iff_is_full_revert_decide": true,
+   "lines": 11780,
+   "maxHeartbeats_0": 0,
+   "maxRecDepth": [],
+   "max_line_bytes": 82,
+   "mem_iff_id_theorems": 1300,
+   "sha256": "4094fdd184edbc9c9a718fc7bcdf597146eae15b39b87878b491b5865af85aa4"
+  },
+  "EnergyTerminalResidualCensusC02.lean": {
+   "decide_kernel": 1301,
+   "decide_kernel_revert": 1300,
+   "every_mem_iff_is_full_revert_decide": true,
+   "lines": 11780,
+   "maxHeartbeats_0": 0,
+   "maxRecDepth": [],
+   "max_line_bytes": 82,
+   "mem_iff_id_theorems": 1300,
+   "sha256": "abd6cc4884d2f6125b2ba04e847945a3ff91ded7076c765d3085b45236df9ab8"
+  },
+  "EnergyTerminalResidualCensusC03.lean": {
+   "decide_kernel": 1212,
+   "decide_kernel_revert": 1211,
+   "every_mem_iff_is_full_revert_decide": true,
+   "lines": 10979,
+   "maxHeartbeats_0": 0,
+   "maxRecDepth": [],
+   "max_line_bytes": 82,
+   "mem_iff_id_theorems": 1211,
+   "sha256": "ae025d0c5574e55c9a1e8bbf498a53fb82057fe6f47b08458dbc8f4ebad6b6e8"
+  },
+  "EnergyTerminalResidualCensusC04.lean": {
+   "decide_kernel": 1201,
+   "decide_kernel_revert": 1200,
+   "every_mem_iff_is_full_revert_decide": true,
+   "lines": 10875,
+   "maxHeartbeats_0": 0,
+   "maxRecDepth": [],
+   "max_line_bytes": 82,
+   "mem_iff_id_theorems": 1200,
+   "sha256": "1822d0a52602bbdf367cfa0ef53057f1e28ee8e929c4d36134d68795bf7d069b"
+  }
+ },
+ "declared_terminal_count": null,
+ "green_sibling_pattern": "EnergyTerminalBatchB13Refine0037 proves `(37:Fin 5011) \u2209 paidIDs` via 28 bounded `decide +kernel` facts on Next1182 part literals + `new_mem` + `push_neg`, i.e. a hierarchical split, not one whole-set decide.",
+ "paidIDs_definition": "def paidIDs : Finset (Fin 5011) :=",
+ "residualIDs_definition": "def residualIDs : Finset (Fin 5011) :=",
+ "residual_literal": {
+  "parts": {
+   "chunk0": 100,
+   "chunk1": 100,
+   "chunk2": 100,
+   "chunk3": 89
+  },
+  "sha256": "642f5a5bc18fd1f4d8da1889c3d4d5ebdff1bfe1658cdc5a94dabc25bfd4442d",
+  "source": "EnergyTerminalResidualCensusBase.lean",
+  "total": 389
+ },
+ "scope": "static source/token audit; not a build; not kernel credit; not a proof",
+ "sharpIDs_literal": "not a literal"
+}

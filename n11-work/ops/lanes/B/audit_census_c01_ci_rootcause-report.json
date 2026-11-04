@@ -1,0 +1,43 @@
+{
+ "current_source_state": {
+  "C01": {
+   "present": false
+  },
+  "C02": {
+   "present": false
+  },
+  "C03": {
+   "present": false
+  },
+  "C04": {
+   "present": false
+  }
+ },
+ "log_recheck": {
+  "build_seconds": [],
+  "deep_recursion": {},
+  "whnf_timeout": {}
+ },
+ "old_source_form": [
+  "theorem mem_iff_block00 (n : Fin 5011)",
+  "    (hlo : 0 \u2264 n.val) (hhi : n.val < 100) :",
+  "    n \u2208 residualIDs \u2194 n \u2208 EnergyTerminalBatchB13.residualIDs := by",
+  "  rcases n with \u27e8k, hk\u27e9",
+  "  interval_cases k <;>",
+  "    rw [EnergyTerminalBatchB13.mem_residualIDs_iff] <;> decide +kernel +revert"
+ ],
+ "recorded_facts": {
+  "build_attempts": 27,
+  "build_seconds_max": 766,
+  "build_seconds_min": 703,
+  "ci_head": "bd5573e58d23d69cbdb4a154c9c382e7956962b4",
+  "first_kernel_deep_recursion": "EnergyTerminalResidualCensusC01.lean:16:56",
+  "job_id": 126192939954,
+  "kernel_deep_recursion_count": 270,
+  "module": "N11Formalization.EnergyTerminalResidualCensusC01",
+  "old_c01_blob": "86f707fd524cfe71f654036aaae0236f4dc4b619",
+  "run_id": 41706645384,
+  "whnf_timeout_count": 351
+ },
+ "scope": "CI job log + source bytes; not a build, not kernel credit"
+}
