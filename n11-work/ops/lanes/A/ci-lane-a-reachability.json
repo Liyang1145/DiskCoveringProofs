@@ -1,0 +1,45 @@
+{
+ "scope": "GitHub Actions job logs, read-only; NOT a Lean kernel verdict",
+ "runs_analysed": 2,
+ "runs_reaching_lane_a": 0,
+ "runs_with_green_lane_a_exit": 0,
+ "records": [
+  {
+   "run_id": 41794012819,
+   "sha": "0005fa63",
+   "conclusion": "failure",
+   "job_id": 126453717422,
+   "targets_attempted": 10,
+   "targets_exited": 8,
+   "last_target_attempted": "N11Formalization.EnergyTerminalResidualCensus",
+   "lane_a_attempted": [],
+   "lane_a_exits": [],
+   "stopped_mid_target": true,
+   "non_zero_exits": [
+    "N11Formalization.EnergyTerminalResidualCensusC01",
+    "N11Formalization.EnergyTerminalResidualCensusC02",
+    "N11Formalization.EnergyTerminalResidualCensusC03",
+    "N11Formalization.EnergyTerminalResidualCensusC04"
+   ]
+  },
+  {
+   "run_id": 41769569707,
+   "sha": "da6f0ed3",
+   "conclusion": "failure",
+   "job_id": 126375831147,
+   "targets_attempted": 11,
+   "targets_exited": 9,
+   "last_target_attempted": "N11Formalization.EnergyTerminalResidualCensusRefine0039",
+   "lane_a_attempted": [],
+   "lane_a_exits": [],
+   "stopped_mid_target": true,
+   "non_zero_exits": [
+    "N11Formalization.EnergyTerminalResidualCensusC01",
+    "N11Formalization.EnergyTerminalResidualCensusC02",
+    "N11Formalization.EnergyTerminalResidualCensusC03",
+    "N11Formalization.EnergyTerminalResidualCensusC04",
+    "N11Formalization.EnergyTerminalResidualCensus"
+   ]
+  }
+ ]
+}
