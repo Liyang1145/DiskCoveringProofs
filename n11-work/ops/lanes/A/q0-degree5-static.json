@@ -1,0 +1,20 @@
+{
+ "failures": [],
+ "modules": {
+  "N11Formalization.Q0Degree5ClosureExtension": {
+   "forbidden_tokens": [],
+   "missing_local_imports": [],
+   "namespace_end": 1,
+   "namespace_open": 1,
+   "sha256": "f0949ed18d6814d26e2413475ea00e0df8971d9457720145b157f64bfec32577"
+  },
+  "N11Formalization.Q0Degree5SourceData": {
+   "forbidden_tokens": [],
+   "missing_local_imports": [],
+   "namespace_end": 1,
+   "namespace_open": 1,
+   "sha256": "f2f18661b1ad85b10e95d1f00443ac48cc07d9c436b5a6ad2817e8e8b0a660c8"
+  }
+ },
+ "scope": "static gate for CI-pending q0(5,8) modules; NOT a kernel verdict"
+}
