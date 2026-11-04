@@ -132,43 +132,15 @@ stripped): 0 real violations in any C450 module; 3 non-C450 modules carry
 `set_option maxHeartbeats 0` (`DrowBallBox_compIvBoxBox`, `GridBridge`,
 `Ladder49_jt_kkt_z`) -- a LEAD, not a blocker.  All STATIC, NOT kernel verdicts.
 
-## 2026-11-03 (session 191, part 4) -- chain-to-flagged-module import paths
+## 2026-11-03 (session 191, part 4, condensed) -- chain-to-flagged import paths
 
-Lane-A FOCUS target still TARGET-DONE, blocked on the supervisor-only root edit
-(root sha `022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914`,
-both `-- HARK-MISSING` lines still 1952--1953). This part resolved the open LEAD
-from session-191 part 3 ("does the chain closure touch the three `maxHeartbeats 0`
-modules?") at the **import** level.
-
-NEW tool: `n11-work/ops/lanes/A/audit_c450_import_paths.py` ->
-`c450-import-paths.json`. BFS over `import` lines from roots
-`C450ChainCompletion` + `C450ChainCompletionMain`. Result: closure_size 1816,
-`missing_module_files: []`. All three flagged modules are import-REACHABLE:
-
-- `GridBridge` path: C450ChainCompletion -> C450NormalizedInterface ->
-  DSHCanonicalRelabel -> **SourceExactRoot -> GridBridge**.
-- `DrowBallBox_compIvBoxBox`: same path + GridBridge -> DrowBallBox_compIvBoxBox.
-- `Ladder49_jt_kkt_z`: same path + GridBridge -> Ladder49_jt_kkt_z.
-
-Direct imports: `SourceExactRoot` imports `GridBridge`; `GridBridge` imports both
-`DrowBallBox_compIvBoxBox` and `Ladder49_jt_kkt_z` (each `set_option maxHeartbeats 0`).
-
-Scope: STATIC import-graph BFS only -- **not** a kernel verdict, not a build, and
-reachability does NOT prove the chain proofs reference any declaration in those
-modules. It does show the frozen `SourceExactRoot.sourceRadius` sits downstream of
-the three modules by import, so the hard-rule-#1 question (maxHeartbeats 0 on
-mathematics) is a real, still-unresolved LEAD for the supervisor.
-
-**Still unproved / unpaid.** Unchanged: no kernel verdict for the two chain modules
-in this window; q0(5,8) `ClosureFactorBounds`, q0(3)/q1 tables + `q0Degree3AreaInput`,
-the seven class exclusions, energy residual 389, and the arbitrary-centre full-disk
-theorem all remain open.
-
-**Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`, push,
-let `n11-lean-build` finish; on green lift the q0 pause and resume at
-`SevenClassQ0Deg3Q0Exclusion.q0_degree3`. If desired, a referenced-declaration
-closure (not just import) of `h450`/`source_obligation` can be computed from a built
-`.olean` to confirm the maxHeartbeats-0 modules are not load-bearing.
+`audit_c450_import_paths.py` -> `c450-import-paths.json`: STATIC import BFS from
+`C450ChainCompletion`+`Main` gives closure_size 1816, no missing files; all three
+`maxHeartbeats 0` modules (`GridBridge`, `DrowBallBox_compIvBoxBox`,
+`Ladder49_jt_kkt_z`) are import-REACHABLE via
+`C450NormalizedInterface -> DSHCanonicalRelabel -> SourceExactRoot`.  Import
+reachability only (not a kernel verdict); whether the chain proofs *reference* those
+declarations is the still-open LEAD, needing a built `.olean`.
 
 ## 2026-11-04 (session 192, part 4) -- chain wiring PASS + root maxHeartbeats exposure closed
 
@@ -244,3 +216,24 @@ and the arbitrary-centre full-disk theorem all remain open.
 **Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`,
 push, let `n11-lean-build` finish; on green lift the q0 pause and resume lane A
 at `SevenClassQ0Deg3Q0Exclusion.q0_degree3`.
+
+## 2026-11-04 (session 194, part 5) -- live re-verify, no state change
+
+Lane-A FOCUS target still TARGET-DONE, still blocked on the supervisor-only root
+edit.  Live re-verify on this worktree (STATIC, not a kernel verdict):
+`audit_c450_chain_wiring.py` -> **PASS_C450_CHAIN_WIRING** (26/26 segment modules,
+25 transfer edges covering targets 11--35, failures `[]`); root sha still
+`022075ae1389b94b01f9c7e8d5ee95288a9aab503349c862d9633db96b338914`, both
+`-- HARK-MISSING` lines still 1952--1953; `git apply --check root-import-c450.patch`
+-> **PATCH_APPLIES_OK** (patch body still exactly uncomments those two imports).
+`ops/ci/LATEST.md` = run 41769569707 completed failure (summary.json/build log tail
+empty locally), no C450/Q0 target detail.  No new Lean written this part.
+
+**Still unproved / unpaid.** No kernel verdict for `C450ChainCompletion` /
+`C450ChainCompletionMain`; q0(5,8) `ClosureFactorBounds`, q0(3)/q1 tables +
+`q0Degree3AreaInput`, the seven class exclusions, energy residual 389, and the
+arbitrary-centre full-disk theorem all remain open.
+
+**Very next concrete step.** Supervisor-only: apply `root-import-c450.patch`, push,
+let `n11-lean-build` finish; on green lift the q0 pause and resume lane A at
+`SevenClassQ0Deg3Q0Exclusion.q0_degree3`.
