@@ -7,6 +7,14 @@
 N11Formalization.C450ChainCompletion
 N11Formalization.C450ChainCompletionMain
 N11Formalization.C450ChainCompletionAudit
+# Session 197: give each C450 telescope chunk its own CI exit line so a red
+# chunk is attributable (hard rule 6).  Import order; all transitively
+# imported by C450ChainCompletion.
+N11Formalization.C450ChainCompletionEndpoint
+N11Formalization.C450ChainCompletionTail
+N11Formalization.C450ChainCompletionMid1
+N11Formalization.C450ChainCompletionMid2
+N11Formalization.C450ChainCompletionMid3
 N11Formalization.SevenClassQ0Deg3Cos
 N11Formalization.SevenClassQ0Deg3Mono
 N11Formalization.SevenClassQ0Deg3Bins
