@@ -1,4 +1,7 @@
 # n11 progress log (supervisor)
+
+> SUPERVISOR RULE (2026-11-05, user complained of silence): report a short Chinese status at least every 3 h even if counts are unchanged (what ran, CI result, blockers). Scheduled runs cannot call connect_service: on a ClinePass 429, tell the user once that the key is used up and that any message from them lets the main chat switch to the next key (#4, then #1; see /workspace/tools/n11/cline_keys.txt).
+
 - 2026-10-29: pipeline created (n11/work branch, CI n11-lean-build, 3 dsf lanes A/B/C).
   Baseline credits per 2026-10-28 handoff: C450 36/36 (but C450ChainCompletion modules
   missing from public assets), sharp 120/120, energy 815/2386, class exclusions 0/7.
