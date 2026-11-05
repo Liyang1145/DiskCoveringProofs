@@ -16,6 +16,11 @@ theorem mem_iff_id_0300 (n : Fin 5011) (hn : n.val = 300) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -53,6 +58,11 @@ theorem mem_iff_id_0301 (n : Fin 5011) (hn : n.val = 301) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -90,6 +100,11 @@ theorem mem_iff_id_0302 (n : Fin 5011) (hn : n.val = 302) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -127,6 +142,11 @@ theorem mem_iff_id_0303 (n : Fin 5011) (hn : n.val = 303) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -164,6 +184,11 @@ theorem mem_iff_id_0304 (n : Fin 5011) (hn : n.val = 304) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -201,6 +226,11 @@ theorem mem_iff_id_0305 (n : Fin 5011) (hn : n.val = 305) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -238,6 +268,11 @@ theorem mem_iff_id_0306 (n : Fin 5011) (hn : n.val = 306) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -275,6 +310,11 @@ theorem mem_iff_id_0307 (n : Fin 5011) (hn : n.val = 307) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -312,6 +352,11 @@ theorem mem_iff_id_0308 (n : Fin 5011) (hn : n.val = 308) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -349,6 +394,11 @@ theorem mem_iff_id_0309 (n : Fin 5011) (hn : n.val = 309) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -386,6 +436,11 @@ theorem mem_iff_id_0310 (n : Fin 5011) (hn : n.val = 310) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -423,6 +478,11 @@ theorem mem_iff_id_0311 (n : Fin 5011) (hn : n.val = 311) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -460,6 +520,11 @@ theorem mem_iff_id_0312 (n : Fin 5011) (hn : n.val = 312) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -497,6 +562,11 @@ theorem mem_iff_id_0313 (n : Fin 5011) (hn : n.val = 313) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -534,6 +604,11 @@ theorem mem_iff_id_0314 (n : Fin 5011) (hn : n.val = 314) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -571,6 +646,11 @@ theorem mem_iff_id_0315 (n : Fin 5011) (hn : n.val = 315) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -608,6 +688,11 @@ theorem mem_iff_id_0316 (n : Fin 5011) (hn : n.val = 316) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -645,6 +730,11 @@ theorem mem_iff_id_0317 (n : Fin 5011) (hn : n.val = 317) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -682,6 +772,11 @@ theorem mem_iff_id_0318 (n : Fin 5011) (hn : n.val = 318) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -719,6 +814,11 @@ theorem mem_iff_id_0319 (n : Fin 5011) (hn : n.val = 319) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -756,6 +856,11 @@ theorem mem_iff_id_0320 (n : Fin 5011) (hn : n.val = 320) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -793,6 +898,11 @@ theorem mem_iff_id_0321 (n : Fin 5011) (hn : n.val = 321) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -830,6 +940,11 @@ theorem mem_iff_id_0322 (n : Fin 5011) (hn : n.val = 322) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -867,6 +982,11 @@ theorem mem_iff_id_0323 (n : Fin 5011) (hn : n.val = 323) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -904,6 +1024,11 @@ theorem mem_iff_id_0324 (n : Fin 5011) (hn : n.val = 324) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -941,6 +1066,11 @@ theorem mem_iff_id_0325 (n : Fin 5011) (hn : n.val = 325) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -978,6 +1108,11 @@ theorem mem_iff_id_0326 (n : Fin 5011) (hn : n.val = 326) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1015,6 +1150,11 @@ theorem mem_iff_id_0327 (n : Fin 5011) (hn : n.val = 327) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1052,6 +1192,11 @@ theorem mem_iff_id_0328 (n : Fin 5011) (hn : n.val = 328) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1089,6 +1234,11 @@ theorem mem_iff_id_0329 (n : Fin 5011) (hn : n.val = 329) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1126,6 +1276,11 @@ theorem mem_iff_id_0330 (n : Fin 5011) (hn : n.val = 330) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1163,6 +1318,11 @@ theorem mem_iff_id_0331 (n : Fin 5011) (hn : n.val = 331) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1200,6 +1360,11 @@ theorem mem_iff_id_0332 (n : Fin 5011) (hn : n.val = 332) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1237,6 +1402,11 @@ theorem mem_iff_id_0333 (n : Fin 5011) (hn : n.val = 333) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1274,6 +1444,11 @@ theorem mem_iff_id_0334 (n : Fin 5011) (hn : n.val = 334) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1311,6 +1486,11 @@ theorem mem_iff_id_0335 (n : Fin 5011) (hn : n.val = 335) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1348,6 +1528,11 @@ theorem mem_iff_id_0336 (n : Fin 5011) (hn : n.val = 336) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1385,6 +1570,11 @@ theorem mem_iff_id_0337 (n : Fin 5011) (hn : n.val = 337) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1422,6 +1612,11 @@ theorem mem_iff_id_0338 (n : Fin 5011) (hn : n.val = 338) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1459,6 +1654,11 @@ theorem mem_iff_id_0339 (n : Fin 5011) (hn : n.val = 339) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1496,6 +1696,11 @@ theorem mem_iff_id_0340 (n : Fin 5011) (hn : n.val = 340) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1533,6 +1738,11 @@ theorem mem_iff_id_0341 (n : Fin 5011) (hn : n.val = 341) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1570,6 +1780,11 @@ theorem mem_iff_id_0342 (n : Fin 5011) (hn : n.val = 342) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1607,6 +1822,11 @@ theorem mem_iff_id_0343 (n : Fin 5011) (hn : n.val = 343) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1644,6 +1864,11 @@ theorem mem_iff_id_0344 (n : Fin 5011) (hn : n.val = 344) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1681,6 +1906,11 @@ theorem mem_iff_id_0345 (n : Fin 5011) (hn : n.val = 345) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1718,6 +1948,11 @@ theorem mem_iff_id_0346 (n : Fin 5011) (hn : n.val = 346) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1755,6 +1990,11 @@ theorem mem_iff_id_0347 (n : Fin 5011) (hn : n.val = 347) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1792,6 +2032,11 @@ theorem mem_iff_id_0348 (n : Fin 5011) (hn : n.val = 348) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1829,6 +2074,11 @@ theorem mem_iff_id_0349 (n : Fin 5011) (hn : n.val = 349) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1866,6 +2116,11 @@ theorem mem_iff_id_0350 (n : Fin 5011) (hn : n.val = 350) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1903,6 +2158,11 @@ theorem mem_iff_id_0351 (n : Fin 5011) (hn : n.val = 351) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1940,6 +2200,11 @@ theorem mem_iff_id_0352 (n : Fin 5011) (hn : n.val = 352) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -1977,6 +2242,11 @@ theorem mem_iff_id_0353 (n : Fin 5011) (hn : n.val = 353) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2014,6 +2284,11 @@ theorem mem_iff_id_0354 (n : Fin 5011) (hn : n.val = 354) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2051,6 +2326,11 @@ theorem mem_iff_id_0355 (n : Fin 5011) (hn : n.val = 355) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2088,6 +2368,11 @@ theorem mem_iff_id_0356 (n : Fin 5011) (hn : n.val = 356) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2125,6 +2410,11 @@ theorem mem_iff_id_0357 (n : Fin 5011) (hn : n.val = 357) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2162,6 +2452,11 @@ theorem mem_iff_id_0358 (n : Fin 5011) (hn : n.val = 358) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2199,6 +2494,11 @@ theorem mem_iff_id_0359 (n : Fin 5011) (hn : n.val = 359) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2236,6 +2536,11 @@ theorem mem_iff_id_0360 (n : Fin 5011) (hn : n.val = 360) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2273,6 +2578,11 @@ theorem mem_iff_id_0361 (n : Fin 5011) (hn : n.val = 361) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2310,6 +2620,11 @@ theorem mem_iff_id_0362 (n : Fin 5011) (hn : n.val = 362) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2347,6 +2662,11 @@ theorem mem_iff_id_0363 (n : Fin 5011) (hn : n.val = 363) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2384,6 +2704,11 @@ theorem mem_iff_id_0364 (n : Fin 5011) (hn : n.val = 364) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2421,6 +2746,11 @@ theorem mem_iff_id_0365 (n : Fin 5011) (hn : n.val = 365) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2458,6 +2788,11 @@ theorem mem_iff_id_0366 (n : Fin 5011) (hn : n.val = 366) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2495,6 +2830,11 @@ theorem mem_iff_id_0367 (n : Fin 5011) (hn : n.val = 367) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2532,6 +2872,11 @@ theorem mem_iff_id_0368 (n : Fin 5011) (hn : n.val = 368) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2569,6 +2914,11 @@ theorem mem_iff_id_0369 (n : Fin 5011) (hn : n.val = 369) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2606,6 +2956,11 @@ theorem mem_iff_id_0370 (n : Fin 5011) (hn : n.val = 370) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2643,6 +2998,11 @@ theorem mem_iff_id_0371 (n : Fin 5011) (hn : n.val = 371) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2680,6 +3040,11 @@ theorem mem_iff_id_0372 (n : Fin 5011) (hn : n.val = 372) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2717,6 +3082,11 @@ theorem mem_iff_id_0373 (n : Fin 5011) (hn : n.val = 373) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2754,6 +3124,11 @@ theorem mem_iff_id_0374 (n : Fin 5011) (hn : n.val = 374) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2791,6 +3166,11 @@ theorem mem_iff_id_0375 (n : Fin 5011) (hn : n.val = 375) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2828,6 +3208,11 @@ theorem mem_iff_id_0376 (n : Fin 5011) (hn : n.val = 376) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2865,6 +3250,11 @@ theorem mem_iff_id_0377 (n : Fin 5011) (hn : n.val = 377) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2902,6 +3292,11 @@ theorem mem_iff_id_0378 (n : Fin 5011) (hn : n.val = 378) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2939,6 +3334,11 @@ theorem mem_iff_id_0379 (n : Fin 5011) (hn : n.val = 379) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -2976,6 +3376,11 @@ theorem mem_iff_id_0380 (n : Fin 5011) (hn : n.val = 380) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3013,6 +3418,11 @@ theorem mem_iff_id_0381 (n : Fin 5011) (hn : n.val = 381) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3050,6 +3460,11 @@ theorem mem_iff_id_0382 (n : Fin 5011) (hn : n.val = 382) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3087,6 +3502,11 @@ theorem mem_iff_id_0383 (n : Fin 5011) (hn : n.val = 383) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3124,6 +3544,11 @@ theorem mem_iff_id_0384 (n : Fin 5011) (hn : n.val = 384) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3161,6 +3586,11 @@ theorem mem_iff_id_0385 (n : Fin 5011) (hn : n.val = 385) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3198,6 +3628,11 @@ theorem mem_iff_id_0386 (n : Fin 5011) (hn : n.val = 386) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3235,6 +3670,11 @@ theorem mem_iff_id_0387 (n : Fin 5011) (hn : n.val = 387) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3272,6 +3712,11 @@ theorem mem_iff_id_0388 (n : Fin 5011) (hn : n.val = 388) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3309,6 +3754,11 @@ theorem mem_iff_id_0389 (n : Fin 5011) (hn : n.val = 389) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3346,6 +3796,11 @@ theorem mem_iff_id_0390 (n : Fin 5011) (hn : n.val = 390) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3383,6 +3838,11 @@ theorem mem_iff_id_0391 (n : Fin 5011) (hn : n.val = 391) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3420,6 +3880,11 @@ theorem mem_iff_id_0392 (n : Fin 5011) (hn : n.val = 392) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3457,6 +3922,11 @@ theorem mem_iff_id_0393 (n : Fin 5011) (hn : n.val = 393) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3494,6 +3964,11 @@ theorem mem_iff_id_0394 (n : Fin 5011) (hn : n.val = 394) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3531,6 +4006,11 @@ theorem mem_iff_id_0395 (n : Fin 5011) (hn : n.val = 395) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3568,6 +4048,11 @@ theorem mem_iff_id_0396 (n : Fin 5011) (hn : n.val = 396) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3605,6 +4090,11 @@ theorem mem_iff_id_0397 (n : Fin 5011) (hn : n.val = 397) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3642,6 +4132,11 @@ theorem mem_iff_id_0398 (n : Fin 5011) (hn : n.val = 398) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3679,6 +4174,11 @@ theorem mem_iff_id_0399 (n : Fin 5011) (hn : n.val = 399) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3716,6 +4216,11 @@ theorem mem_iff_id_0700 (n : Fin 5011) (hn : n.val = 700) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3753,6 +4258,11 @@ theorem mem_iff_id_0701 (n : Fin 5011) (hn : n.val = 701) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3790,6 +4300,11 @@ theorem mem_iff_id_0702 (n : Fin 5011) (hn : n.val = 702) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3827,6 +4342,11 @@ theorem mem_iff_id_0703 (n : Fin 5011) (hn : n.val = 703) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3864,6 +4384,11 @@ theorem mem_iff_id_0704 (n : Fin 5011) (hn : n.val = 704) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3901,6 +4426,11 @@ theorem mem_iff_id_0705 (n : Fin 5011) (hn : n.val = 705) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3938,6 +4468,11 @@ theorem mem_iff_id_0706 (n : Fin 5011) (hn : n.val = 706) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -3975,6 +4510,11 @@ theorem mem_iff_id_0707 (n : Fin 5011) (hn : n.val = 707) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4012,6 +4552,11 @@ theorem mem_iff_id_0708 (n : Fin 5011) (hn : n.val = 708) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4049,6 +4594,11 @@ theorem mem_iff_id_0709 (n : Fin 5011) (hn : n.val = 709) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4086,6 +4636,11 @@ theorem mem_iff_id_0710 (n : Fin 5011) (hn : n.val = 710) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4123,6 +4678,11 @@ theorem mem_iff_id_0711 (n : Fin 5011) (hn : n.val = 711) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4160,6 +4720,11 @@ theorem mem_iff_id_0712 (n : Fin 5011) (hn : n.val = 712) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4197,6 +4762,11 @@ theorem mem_iff_id_0713 (n : Fin 5011) (hn : n.val = 713) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4234,6 +4804,11 @@ theorem mem_iff_id_0714 (n : Fin 5011) (hn : n.val = 714) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4271,6 +4846,11 @@ theorem mem_iff_id_0715 (n : Fin 5011) (hn : n.val = 715) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4308,6 +4888,11 @@ theorem mem_iff_id_0716 (n : Fin 5011) (hn : n.val = 716) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4345,6 +4930,11 @@ theorem mem_iff_id_0717 (n : Fin 5011) (hn : n.val = 717) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4382,6 +4972,11 @@ theorem mem_iff_id_0718 (n : Fin 5011) (hn : n.val = 718) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4419,6 +5014,11 @@ theorem mem_iff_id_0719 (n : Fin 5011) (hn : n.val = 719) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4456,6 +5056,11 @@ theorem mem_iff_id_0720 (n : Fin 5011) (hn : n.val = 720) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4493,6 +5098,11 @@ theorem mem_iff_id_0721 (n : Fin 5011) (hn : n.val = 721) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4530,6 +5140,11 @@ theorem mem_iff_id_0722 (n : Fin 5011) (hn : n.val = 722) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4567,6 +5182,11 @@ theorem mem_iff_id_0723 (n : Fin 5011) (hn : n.val = 723) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4604,6 +5224,11 @@ theorem mem_iff_id_0724 (n : Fin 5011) (hn : n.val = 724) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4641,6 +5266,11 @@ theorem mem_iff_id_0725 (n : Fin 5011) (hn : n.val = 725) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4678,6 +5308,11 @@ theorem mem_iff_id_0726 (n : Fin 5011) (hn : n.val = 726) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4715,6 +5350,11 @@ theorem mem_iff_id_0727 (n : Fin 5011) (hn : n.val = 727) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4752,6 +5392,11 @@ theorem mem_iff_id_0728 (n : Fin 5011) (hn : n.val = 728) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4789,6 +5434,11 @@ theorem mem_iff_id_0729 (n : Fin 5011) (hn : n.val = 729) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4826,6 +5476,11 @@ theorem mem_iff_id_0730 (n : Fin 5011) (hn : n.val = 730) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4863,6 +5518,11 @@ theorem mem_iff_id_0731 (n : Fin 5011) (hn : n.val = 731) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4900,6 +5560,11 @@ theorem mem_iff_id_0732 (n : Fin 5011) (hn : n.val = 732) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4937,6 +5602,11 @@ theorem mem_iff_id_0733 (n : Fin 5011) (hn : n.val = 733) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -4974,6 +5644,11 @@ theorem mem_iff_id_0734 (n : Fin 5011) (hn : n.val = 734) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5011,6 +5686,11 @@ theorem mem_iff_id_0735 (n : Fin 5011) (hn : n.val = 735) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5048,6 +5728,11 @@ theorem mem_iff_id_0736 (n : Fin 5011) (hn : n.val = 736) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5085,6 +5770,11 @@ theorem mem_iff_id_0737 (n : Fin 5011) (hn : n.val = 737) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5122,6 +5812,11 @@ theorem mem_iff_id_0738 (n : Fin 5011) (hn : n.val = 738) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5159,6 +5854,11 @@ theorem mem_iff_id_0739 (n : Fin 5011) (hn : n.val = 739) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5196,6 +5896,11 @@ theorem mem_iff_id_0740 (n : Fin 5011) (hn : n.val = 740) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5233,6 +5938,11 @@ theorem mem_iff_id_0741 (n : Fin 5011) (hn : n.val = 741) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5270,6 +5980,11 @@ theorem mem_iff_id_0742 (n : Fin 5011) (hn : n.val = 742) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5307,6 +6022,11 @@ theorem mem_iff_id_0743 (n : Fin 5011) (hn : n.val = 743) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5344,6 +6064,11 @@ theorem mem_iff_id_0744 (n : Fin 5011) (hn : n.val = 744) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5381,6 +6106,11 @@ theorem mem_iff_id_0745 (n : Fin 5011) (hn : n.val = 745) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5418,6 +6148,11 @@ theorem mem_iff_id_0746 (n : Fin 5011) (hn : n.val = 746) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5455,6 +6190,11 @@ theorem mem_iff_id_0747 (n : Fin 5011) (hn : n.val = 747) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5492,6 +6232,11 @@ theorem mem_iff_id_0748 (n : Fin 5011) (hn : n.val = 748) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5529,6 +6274,11 @@ theorem mem_iff_id_0749 (n : Fin 5011) (hn : n.val = 749) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5566,6 +6316,11 @@ theorem mem_iff_id_0750 (n : Fin 5011) (hn : n.val = 750) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5603,6 +6358,11 @@ theorem mem_iff_id_0751 (n : Fin 5011) (hn : n.val = 751) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5640,6 +6400,11 @@ theorem mem_iff_id_0752 (n : Fin 5011) (hn : n.val = 752) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5677,6 +6442,11 @@ theorem mem_iff_id_0753 (n : Fin 5011) (hn : n.val = 753) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5714,6 +6484,11 @@ theorem mem_iff_id_0754 (n : Fin 5011) (hn : n.val = 754) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5751,6 +6526,11 @@ theorem mem_iff_id_0755 (n : Fin 5011) (hn : n.val = 755) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5788,6 +6568,11 @@ theorem mem_iff_id_0756 (n : Fin 5011) (hn : n.val = 756) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5825,6 +6610,11 @@ theorem mem_iff_id_0757 (n : Fin 5011) (hn : n.val = 757) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5862,6 +6652,11 @@ theorem mem_iff_id_0758 (n : Fin 5011) (hn : n.val = 758) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5899,6 +6694,11 @@ theorem mem_iff_id_0759 (n : Fin 5011) (hn : n.val = 759) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5936,6 +6736,11 @@ theorem mem_iff_id_0760 (n : Fin 5011) (hn : n.val = 760) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -5973,6 +6778,11 @@ theorem mem_iff_id_0761 (n : Fin 5011) (hn : n.val = 761) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6010,6 +6820,11 @@ theorem mem_iff_id_0762 (n : Fin 5011) (hn : n.val = 762) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6047,6 +6862,11 @@ theorem mem_iff_id_0763 (n : Fin 5011) (hn : n.val = 763) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6084,6 +6904,11 @@ theorem mem_iff_id_0764 (n : Fin 5011) (hn : n.val = 764) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6121,6 +6946,11 @@ theorem mem_iff_id_0765 (n : Fin 5011) (hn : n.val = 765) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6158,6 +6988,11 @@ theorem mem_iff_id_0766 (n : Fin 5011) (hn : n.val = 766) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6195,6 +7030,11 @@ theorem mem_iff_id_0767 (n : Fin 5011) (hn : n.val = 767) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6232,6 +7072,11 @@ theorem mem_iff_id_0768 (n : Fin 5011) (hn : n.val = 768) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6269,6 +7114,11 @@ theorem mem_iff_id_0769 (n : Fin 5011) (hn : n.val = 769) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6306,6 +7156,11 @@ theorem mem_iff_id_0770 (n : Fin 5011) (hn : n.val = 770) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6343,6 +7198,11 @@ theorem mem_iff_id_0771 (n : Fin 5011) (hn : n.val = 771) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6380,6 +7240,11 @@ theorem mem_iff_id_0772 (n : Fin 5011) (hn : n.val = 772) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6417,6 +7282,11 @@ theorem mem_iff_id_0773 (n : Fin 5011) (hn : n.val = 773) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6454,6 +7324,11 @@ theorem mem_iff_id_0774 (n : Fin 5011) (hn : n.val = 774) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6491,6 +7366,11 @@ theorem mem_iff_id_0775 (n : Fin 5011) (hn : n.val = 775) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6528,6 +7408,11 @@ theorem mem_iff_id_0776 (n : Fin 5011) (hn : n.val = 776) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6565,6 +7450,11 @@ theorem mem_iff_id_0777 (n : Fin 5011) (hn : n.val = 777) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6602,6 +7492,11 @@ theorem mem_iff_id_0778 (n : Fin 5011) (hn : n.val = 778) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6639,6 +7534,11 @@ theorem mem_iff_id_0779 (n : Fin 5011) (hn : n.val = 779) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6676,6 +7576,11 @@ theorem mem_iff_id_0780 (n : Fin 5011) (hn : n.val = 780) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6713,6 +7618,11 @@ theorem mem_iff_id_0781 (n : Fin 5011) (hn : n.val = 781) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6750,6 +7660,11 @@ theorem mem_iff_id_0782 (n : Fin 5011) (hn : n.val = 782) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6787,6 +7702,11 @@ theorem mem_iff_id_0783 (n : Fin 5011) (hn : n.val = 783) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6824,6 +7744,11 @@ theorem mem_iff_id_0784 (n : Fin 5011) (hn : n.val = 784) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6861,6 +7786,11 @@ theorem mem_iff_id_0785 (n : Fin 5011) (hn : n.val = 785) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6898,6 +7828,11 @@ theorem mem_iff_id_0786 (n : Fin 5011) (hn : n.val = 786) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6935,6 +7870,11 @@ theorem mem_iff_id_0787 (n : Fin 5011) (hn : n.val = 787) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -6972,6 +7912,11 @@ theorem mem_iff_id_0788 (n : Fin 5011) (hn : n.val = 788) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7009,6 +7954,11 @@ theorem mem_iff_id_0789 (n : Fin 5011) (hn : n.val = 789) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7046,6 +7996,11 @@ theorem mem_iff_id_0790 (n : Fin 5011) (hn : n.val = 790) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7083,6 +8038,11 @@ theorem mem_iff_id_0791 (n : Fin 5011) (hn : n.val = 791) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7120,6 +8080,11 @@ theorem mem_iff_id_0792 (n : Fin 5011) (hn : n.val = 792) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7157,6 +8122,11 @@ theorem mem_iff_id_0793 (n : Fin 5011) (hn : n.val = 793) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7194,6 +8164,11 @@ theorem mem_iff_id_0794 (n : Fin 5011) (hn : n.val = 794) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7231,6 +8206,11 @@ theorem mem_iff_id_0795 (n : Fin 5011) (hn : n.val = 795) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7268,6 +8248,11 @@ theorem mem_iff_id_0796 (n : Fin 5011) (hn : n.val = 796) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7305,6 +8290,11 @@ theorem mem_iff_id_0797 (n : Fin 5011) (hn : n.val = 797) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7342,6 +8332,11 @@ theorem mem_iff_id_0798 (n : Fin 5011) (hn : n.val = 798) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7379,6 +8374,11 @@ theorem mem_iff_id_0799 (n : Fin 5011) (hn : n.val = 799) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7416,6 +8416,11 @@ theorem mem_iff_id_1100 (n : Fin 5011) (hn : n.val = 1100) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7453,6 +8458,11 @@ theorem mem_iff_id_1101 (n : Fin 5011) (hn : n.val = 1101) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7490,6 +8500,11 @@ theorem mem_iff_id_1102 (n : Fin 5011) (hn : n.val = 1102) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7527,6 +8542,11 @@ theorem mem_iff_id_1103 (n : Fin 5011) (hn : n.val = 1103) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7564,6 +8584,11 @@ theorem mem_iff_id_1104 (n : Fin 5011) (hn : n.val = 1104) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7601,6 +8626,11 @@ theorem mem_iff_id_1105 (n : Fin 5011) (hn : n.val = 1105) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7638,6 +8668,11 @@ theorem mem_iff_id_1106 (n : Fin 5011) (hn : n.val = 1106) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7675,6 +8710,11 @@ theorem mem_iff_id_1107 (n : Fin 5011) (hn : n.val = 1107) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7712,6 +8752,11 @@ theorem mem_iff_id_1108 (n : Fin 5011) (hn : n.val = 1108) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7749,6 +8794,11 @@ theorem mem_iff_id_1109 (n : Fin 5011) (hn : n.val = 1109) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7786,6 +8836,11 @@ theorem mem_iff_id_1110 (n : Fin 5011) (hn : n.val = 1110) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7823,6 +8878,11 @@ theorem mem_iff_id_1111 (n : Fin 5011) (hn : n.val = 1111) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7860,6 +8920,11 @@ theorem mem_iff_id_1112 (n : Fin 5011) (hn : n.val = 1112) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7897,6 +8962,11 @@ theorem mem_iff_id_1113 (n : Fin 5011) (hn : n.val = 1113) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7934,6 +9004,11 @@ theorem mem_iff_id_1114 (n : Fin 5011) (hn : n.val = 1114) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -7971,6 +9046,11 @@ theorem mem_iff_id_1115 (n : Fin 5011) (hn : n.val = 1115) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8008,6 +9088,11 @@ theorem mem_iff_id_1116 (n : Fin 5011) (hn : n.val = 1116) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8045,6 +9130,11 @@ theorem mem_iff_id_1117 (n : Fin 5011) (hn : n.val = 1117) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8082,6 +9172,11 @@ theorem mem_iff_id_1118 (n : Fin 5011) (hn : n.val = 1118) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8119,6 +9214,11 @@ theorem mem_iff_id_1119 (n : Fin 5011) (hn : n.val = 1119) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8156,6 +9256,11 @@ theorem mem_iff_id_1120 (n : Fin 5011) (hn : n.val = 1120) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8193,6 +9298,11 @@ theorem mem_iff_id_1121 (n : Fin 5011) (hn : n.val = 1121) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8230,6 +9340,11 @@ theorem mem_iff_id_1122 (n : Fin 5011) (hn : n.val = 1122) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8267,6 +9382,11 @@ theorem mem_iff_id_1123 (n : Fin 5011) (hn : n.val = 1123) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8304,6 +9424,11 @@ theorem mem_iff_id_1124 (n : Fin 5011) (hn : n.val = 1124) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8341,6 +9466,11 @@ theorem mem_iff_id_1125 (n : Fin 5011) (hn : n.val = 1125) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8378,6 +9508,11 @@ theorem mem_iff_id_1126 (n : Fin 5011) (hn : n.val = 1126) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8415,6 +9550,11 @@ theorem mem_iff_id_1127 (n : Fin 5011) (hn : n.val = 1127) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8452,6 +9592,11 @@ theorem mem_iff_id_1128 (n : Fin 5011) (hn : n.val = 1128) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8489,6 +9634,11 @@ theorem mem_iff_id_1129 (n : Fin 5011) (hn : n.val = 1129) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8526,6 +9676,11 @@ theorem mem_iff_id_1130 (n : Fin 5011) (hn : n.val = 1130) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8563,6 +9718,11 @@ theorem mem_iff_id_1131 (n : Fin 5011) (hn : n.val = 1131) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8600,6 +9760,11 @@ theorem mem_iff_id_1132 (n : Fin 5011) (hn : n.val = 1132) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8637,6 +9802,11 @@ theorem mem_iff_id_1133 (n : Fin 5011) (hn : n.val = 1133) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8674,6 +9844,11 @@ theorem mem_iff_id_1134 (n : Fin 5011) (hn : n.val = 1134) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8711,6 +9886,11 @@ theorem mem_iff_id_1135 (n : Fin 5011) (hn : n.val = 1135) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8748,6 +9928,11 @@ theorem mem_iff_id_1136 (n : Fin 5011) (hn : n.val = 1136) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8785,6 +9970,11 @@ theorem mem_iff_id_1137 (n : Fin 5011) (hn : n.val = 1137) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8822,6 +10012,11 @@ theorem mem_iff_id_1138 (n : Fin 5011) (hn : n.val = 1138) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8859,6 +10054,11 @@ theorem mem_iff_id_1139 (n : Fin 5011) (hn : n.val = 1139) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8896,6 +10096,11 @@ theorem mem_iff_id_1140 (n : Fin 5011) (hn : n.val = 1140) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8933,6 +10138,11 @@ theorem mem_iff_id_1141 (n : Fin 5011) (hn : n.val = 1141) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -8970,6 +10180,11 @@ theorem mem_iff_id_1142 (n : Fin 5011) (hn : n.val = 1142) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9007,6 +10222,11 @@ theorem mem_iff_id_1143 (n : Fin 5011) (hn : n.val = 1143) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9044,6 +10264,11 @@ theorem mem_iff_id_1144 (n : Fin 5011) (hn : n.val = 1144) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9081,6 +10306,11 @@ theorem mem_iff_id_1145 (n : Fin 5011) (hn : n.val = 1145) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9118,6 +10348,11 @@ theorem mem_iff_id_1146 (n : Fin 5011) (hn : n.val = 1146) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9155,6 +10390,11 @@ theorem mem_iff_id_1147 (n : Fin 5011) (hn : n.val = 1147) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9192,6 +10432,11 @@ theorem mem_iff_id_1148 (n : Fin 5011) (hn : n.val = 1148) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9229,6 +10474,11 @@ theorem mem_iff_id_1149 (n : Fin 5011) (hn : n.val = 1149) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9266,6 +10516,11 @@ theorem mem_iff_id_1150 (n : Fin 5011) (hn : n.val = 1150) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9303,6 +10558,11 @@ theorem mem_iff_id_1151 (n : Fin 5011) (hn : n.val = 1151) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9340,6 +10600,11 @@ theorem mem_iff_id_1152 (n : Fin 5011) (hn : n.val = 1152) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9377,6 +10642,11 @@ theorem mem_iff_id_1153 (n : Fin 5011) (hn : n.val = 1153) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9414,6 +10684,11 @@ theorem mem_iff_id_1154 (n : Fin 5011) (hn : n.val = 1154) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9451,6 +10726,11 @@ theorem mem_iff_id_1155 (n : Fin 5011) (hn : n.val = 1155) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9488,6 +10768,11 @@ theorem mem_iff_id_1156 (n : Fin 5011) (hn : n.val = 1156) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9525,6 +10810,11 @@ theorem mem_iff_id_1157 (n : Fin 5011) (hn : n.val = 1157) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9562,6 +10852,11 @@ theorem mem_iff_id_1158 (n : Fin 5011) (hn : n.val = 1158) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9599,6 +10894,11 @@ theorem mem_iff_id_1159 (n : Fin 5011) (hn : n.val = 1159) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9636,6 +10936,11 @@ theorem mem_iff_id_1160 (n : Fin 5011) (hn : n.val = 1160) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9673,6 +10978,11 @@ theorem mem_iff_id_1161 (n : Fin 5011) (hn : n.val = 1161) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9710,6 +11020,11 @@ theorem mem_iff_id_1162 (n : Fin 5011) (hn : n.val = 1162) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9747,6 +11062,11 @@ theorem mem_iff_id_1163 (n : Fin 5011) (hn : n.val = 1163) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9784,6 +11104,11 @@ theorem mem_iff_id_1164 (n : Fin 5011) (hn : n.val = 1164) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9821,6 +11146,11 @@ theorem mem_iff_id_1165 (n : Fin 5011) (hn : n.val = 1165) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9858,6 +11188,11 @@ theorem mem_iff_id_1166 (n : Fin 5011) (hn : n.val = 1166) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9895,6 +11230,11 @@ theorem mem_iff_id_1167 (n : Fin 5011) (hn : n.val = 1167) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9932,6 +11272,11 @@ theorem mem_iff_id_1168 (n : Fin 5011) (hn : n.val = 1168) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -9969,6 +11314,11 @@ theorem mem_iff_id_1169 (n : Fin 5011) (hn : n.val = 1169) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10006,6 +11356,11 @@ theorem mem_iff_id_1170 (n : Fin 5011) (hn : n.val = 1170) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10043,6 +11398,11 @@ theorem mem_iff_id_1171 (n : Fin 5011) (hn : n.val = 1171) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10080,6 +11440,11 @@ theorem mem_iff_id_1172 (n : Fin 5011) (hn : n.val = 1172) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10117,6 +11482,11 @@ theorem mem_iff_id_1173 (n : Fin 5011) (hn : n.val = 1173) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10154,6 +11524,11 @@ theorem mem_iff_id_1174 (n : Fin 5011) (hn : n.val = 1174) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10191,6 +11566,11 @@ theorem mem_iff_id_1175 (n : Fin 5011) (hn : n.val = 1175) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10228,6 +11608,11 @@ theorem mem_iff_id_1176 (n : Fin 5011) (hn : n.val = 1176) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10265,6 +11650,11 @@ theorem mem_iff_id_1177 (n : Fin 5011) (hn : n.val = 1177) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10302,6 +11692,11 @@ theorem mem_iff_id_1178 (n : Fin 5011) (hn : n.val = 1178) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10339,6 +11734,11 @@ theorem mem_iff_id_1179 (n : Fin 5011) (hn : n.val = 1179) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10376,6 +11776,11 @@ theorem mem_iff_id_1180 (n : Fin 5011) (hn : n.val = 1180) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10413,6 +11818,11 @@ theorem mem_iff_id_1181 (n : Fin 5011) (hn : n.val = 1181) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10450,6 +11860,11 @@ theorem mem_iff_id_1182 (n : Fin 5011) (hn : n.val = 1182) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10487,6 +11902,11 @@ theorem mem_iff_id_1183 (n : Fin 5011) (hn : n.val = 1183) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10524,6 +11944,11 @@ theorem mem_iff_id_1184 (n : Fin 5011) (hn : n.val = 1184) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10561,6 +11986,11 @@ theorem mem_iff_id_1185 (n : Fin 5011) (hn : n.val = 1185) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10598,6 +12028,11 @@ theorem mem_iff_id_1186 (n : Fin 5011) (hn : n.val = 1186) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10635,6 +12070,11 @@ theorem mem_iff_id_1187 (n : Fin 5011) (hn : n.val = 1187) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10672,6 +12112,11 @@ theorem mem_iff_id_1188 (n : Fin 5011) (hn : n.val = 1188) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10709,6 +12154,11 @@ theorem mem_iff_id_1189 (n : Fin 5011) (hn : n.val = 1189) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10746,6 +12196,11 @@ theorem mem_iff_id_1190 (n : Fin 5011) (hn : n.val = 1190) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10783,6 +12238,11 @@ theorem mem_iff_id_1191 (n : Fin 5011) (hn : n.val = 1191) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10820,6 +12280,11 @@ theorem mem_iff_id_1192 (n : Fin 5011) (hn : n.val = 1192) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10857,6 +12322,11 @@ theorem mem_iff_id_1193 (n : Fin 5011) (hn : n.val = 1193) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10894,6 +12364,11 @@ theorem mem_iff_id_1194 (n : Fin 5011) (hn : n.val = 1194) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10931,6 +12406,11 @@ theorem mem_iff_id_1195 (n : Fin 5011) (hn : n.val = 1195) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -10968,6 +12448,11 @@ theorem mem_iff_id_1196 (n : Fin 5011) (hn : n.val = 1196) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11005,6 +12490,11 @@ theorem mem_iff_id_1197 (n : Fin 5011) (hn : n.val = 1197) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11042,6 +12532,11 @@ theorem mem_iff_id_1198 (n : Fin 5011) (hn : n.val = 1198) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11079,6 +12574,11 @@ theorem mem_iff_id_1199 (n : Fin 5011) (hn : n.val = 1199) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11116,6 +12616,11 @@ theorem mem_iff_id_1500 (n : Fin 5011) (hn : n.val = 1500) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11153,6 +12658,11 @@ theorem mem_iff_id_1501 (n : Fin 5011) (hn : n.val = 1501) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11190,6 +12700,11 @@ theorem mem_iff_id_1502 (n : Fin 5011) (hn : n.val = 1502) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11227,6 +12742,11 @@ theorem mem_iff_id_1503 (n : Fin 5011) (hn : n.val = 1503) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11264,6 +12784,11 @@ theorem mem_iff_id_1504 (n : Fin 5011) (hn : n.val = 1504) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11301,6 +12826,11 @@ theorem mem_iff_id_1505 (n : Fin 5011) (hn : n.val = 1505) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11338,6 +12868,11 @@ theorem mem_iff_id_1506 (n : Fin 5011) (hn : n.val = 1506) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11375,6 +12910,11 @@ theorem mem_iff_id_1507 (n : Fin 5011) (hn : n.val = 1507) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11412,6 +12952,11 @@ theorem mem_iff_id_1508 (n : Fin 5011) (hn : n.val = 1508) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11449,6 +12994,11 @@ theorem mem_iff_id_1509 (n : Fin 5011) (hn : n.val = 1509) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11486,6 +13036,11 @@ theorem mem_iff_id_1510 (n : Fin 5011) (hn : n.val = 1510) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11523,6 +13078,11 @@ theorem mem_iff_id_1511 (n : Fin 5011) (hn : n.val = 1511) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11560,6 +13120,11 @@ theorem mem_iff_id_1512 (n : Fin 5011) (hn : n.val = 1512) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11597,6 +13162,11 @@ theorem mem_iff_id_1513 (n : Fin 5011) (hn : n.val = 1513) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11634,6 +13204,11 @@ theorem mem_iff_id_1514 (n : Fin 5011) (hn : n.val = 1514) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11671,6 +13246,11 @@ theorem mem_iff_id_1515 (n : Fin 5011) (hn : n.val = 1515) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11708,6 +13288,11 @@ theorem mem_iff_id_1516 (n : Fin 5011) (hn : n.val = 1516) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11745,6 +13330,11 @@ theorem mem_iff_id_1517 (n : Fin 5011) (hn : n.val = 1517) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11782,6 +13372,11 @@ theorem mem_iff_id_1518 (n : Fin 5011) (hn : n.val = 1518) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11819,6 +13414,11 @@ theorem mem_iff_id_1519 (n : Fin 5011) (hn : n.val = 1519) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11856,6 +13456,11 @@ theorem mem_iff_id_1520 (n : Fin 5011) (hn : n.val = 1520) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11893,6 +13498,11 @@ theorem mem_iff_id_1521 (n : Fin 5011) (hn : n.val = 1521) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11930,6 +13540,11 @@ theorem mem_iff_id_1522 (n : Fin 5011) (hn : n.val = 1522) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -11967,6 +13582,11 @@ theorem mem_iff_id_1523 (n : Fin 5011) (hn : n.val = 1523) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12004,6 +13624,11 @@ theorem mem_iff_id_1524 (n : Fin 5011) (hn : n.val = 1524) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12041,6 +13666,11 @@ theorem mem_iff_id_1525 (n : Fin 5011) (hn : n.val = 1525) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12078,6 +13708,11 @@ theorem mem_iff_id_1526 (n : Fin 5011) (hn : n.val = 1526) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12115,6 +13750,11 @@ theorem mem_iff_id_1527 (n : Fin 5011) (hn : n.val = 1527) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12152,6 +13792,11 @@ theorem mem_iff_id_1528 (n : Fin 5011) (hn : n.val = 1528) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12189,6 +13834,11 @@ theorem mem_iff_id_1529 (n : Fin 5011) (hn : n.val = 1529) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12226,6 +13876,11 @@ theorem mem_iff_id_1530 (n : Fin 5011) (hn : n.val = 1530) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12263,6 +13918,11 @@ theorem mem_iff_id_1531 (n : Fin 5011) (hn : n.val = 1531) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12300,6 +13960,11 @@ theorem mem_iff_id_1532 (n : Fin 5011) (hn : n.val = 1532) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12337,6 +14002,11 @@ theorem mem_iff_id_1533 (n : Fin 5011) (hn : n.val = 1533) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12374,6 +14044,11 @@ theorem mem_iff_id_1534 (n : Fin 5011) (hn : n.val = 1534) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12411,6 +14086,11 @@ theorem mem_iff_id_1535 (n : Fin 5011) (hn : n.val = 1535) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12448,6 +14128,11 @@ theorem mem_iff_id_1536 (n : Fin 5011) (hn : n.val = 1536) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12485,6 +14170,11 @@ theorem mem_iff_id_1537 (n : Fin 5011) (hn : n.val = 1537) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12522,6 +14212,11 @@ theorem mem_iff_id_1538 (n : Fin 5011) (hn : n.val = 1538) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12559,6 +14254,11 @@ theorem mem_iff_id_1539 (n : Fin 5011) (hn : n.val = 1539) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12596,6 +14296,11 @@ theorem mem_iff_id_1540 (n : Fin 5011) (hn : n.val = 1540) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12633,6 +14338,11 @@ theorem mem_iff_id_1541 (n : Fin 5011) (hn : n.val = 1541) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12670,6 +14380,11 @@ theorem mem_iff_id_1542 (n : Fin 5011) (hn : n.val = 1542) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12707,6 +14422,11 @@ theorem mem_iff_id_1543 (n : Fin 5011) (hn : n.val = 1543) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12744,6 +14464,11 @@ theorem mem_iff_id_1544 (n : Fin 5011) (hn : n.val = 1544) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12781,6 +14506,11 @@ theorem mem_iff_id_1545 (n : Fin 5011) (hn : n.val = 1545) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12818,6 +14548,11 @@ theorem mem_iff_id_1546 (n : Fin 5011) (hn : n.val = 1546) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12855,6 +14590,11 @@ theorem mem_iff_id_1547 (n : Fin 5011) (hn : n.val = 1547) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12892,6 +14632,11 @@ theorem mem_iff_id_1548 (n : Fin 5011) (hn : n.val = 1548) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12929,6 +14674,11 @@ theorem mem_iff_id_1549 (n : Fin 5011) (hn : n.val = 1549) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -12966,6 +14716,11 @@ theorem mem_iff_id_1550 (n : Fin 5011) (hn : n.val = 1550) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13003,6 +14758,11 @@ theorem mem_iff_id_1551 (n : Fin 5011) (hn : n.val = 1551) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13040,6 +14800,11 @@ theorem mem_iff_id_1552 (n : Fin 5011) (hn : n.val = 1552) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13077,6 +14842,11 @@ theorem mem_iff_id_1553 (n : Fin 5011) (hn : n.val = 1553) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13114,6 +14884,11 @@ theorem mem_iff_id_1554 (n : Fin 5011) (hn : n.val = 1554) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13151,6 +14926,11 @@ theorem mem_iff_id_1555 (n : Fin 5011) (hn : n.val = 1555) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13188,6 +14968,11 @@ theorem mem_iff_id_1556 (n : Fin 5011) (hn : n.val = 1556) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13225,6 +15010,11 @@ theorem mem_iff_id_1557 (n : Fin 5011) (hn : n.val = 1557) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13262,6 +15052,11 @@ theorem mem_iff_id_1558 (n : Fin 5011) (hn : n.val = 1558) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13299,6 +15094,11 @@ theorem mem_iff_id_1559 (n : Fin 5011) (hn : n.val = 1559) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13336,6 +15136,11 @@ theorem mem_iff_id_1560 (n : Fin 5011) (hn : n.val = 1560) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13373,6 +15178,11 @@ theorem mem_iff_id_1561 (n : Fin 5011) (hn : n.val = 1561) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13410,6 +15220,11 @@ theorem mem_iff_id_1562 (n : Fin 5011) (hn : n.val = 1562) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13447,6 +15262,11 @@ theorem mem_iff_id_1563 (n : Fin 5011) (hn : n.val = 1563) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13484,6 +15304,11 @@ theorem mem_iff_id_1564 (n : Fin 5011) (hn : n.val = 1564) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13521,6 +15346,11 @@ theorem mem_iff_id_1565 (n : Fin 5011) (hn : n.val = 1565) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13558,6 +15388,11 @@ theorem mem_iff_id_1566 (n : Fin 5011) (hn : n.val = 1566) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13595,6 +15430,11 @@ theorem mem_iff_id_1567 (n : Fin 5011) (hn : n.val = 1567) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13632,6 +15472,11 @@ theorem mem_iff_id_1568 (n : Fin 5011) (hn : n.val = 1568) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13669,6 +15514,11 @@ theorem mem_iff_id_1569 (n : Fin 5011) (hn : n.val = 1569) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13706,6 +15556,11 @@ theorem mem_iff_id_1570 (n : Fin 5011) (hn : n.val = 1570) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13743,6 +15598,11 @@ theorem mem_iff_id_1571 (n : Fin 5011) (hn : n.val = 1571) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13780,6 +15640,11 @@ theorem mem_iff_id_1572 (n : Fin 5011) (hn : n.val = 1572) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13817,6 +15682,11 @@ theorem mem_iff_id_1573 (n : Fin 5011) (hn : n.val = 1573) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13854,6 +15724,11 @@ theorem mem_iff_id_1574 (n : Fin 5011) (hn : n.val = 1574) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13891,6 +15766,11 @@ theorem mem_iff_id_1575 (n : Fin 5011) (hn : n.val = 1575) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13928,6 +15808,11 @@ theorem mem_iff_id_1576 (n : Fin 5011) (hn : n.val = 1576) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -13965,6 +15850,11 @@ theorem mem_iff_id_1577 (n : Fin 5011) (hn : n.val = 1577) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14002,6 +15892,11 @@ theorem mem_iff_id_1578 (n : Fin 5011) (hn : n.val = 1578) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14039,6 +15934,11 @@ theorem mem_iff_id_1579 (n : Fin 5011) (hn : n.val = 1579) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14076,6 +15976,11 @@ theorem mem_iff_id_1580 (n : Fin 5011) (hn : n.val = 1580) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14113,6 +16018,11 @@ theorem mem_iff_id_1581 (n : Fin 5011) (hn : n.val = 1581) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14150,6 +16060,11 @@ theorem mem_iff_id_1582 (n : Fin 5011) (hn : n.val = 1582) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14187,6 +16102,11 @@ theorem mem_iff_id_1583 (n : Fin 5011) (hn : n.val = 1583) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14224,6 +16144,11 @@ theorem mem_iff_id_1584 (n : Fin 5011) (hn : n.val = 1584) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14261,6 +16186,11 @@ theorem mem_iff_id_1585 (n : Fin 5011) (hn : n.val = 1585) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14298,6 +16228,11 @@ theorem mem_iff_id_1586 (n : Fin 5011) (hn : n.val = 1586) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14335,6 +16270,11 @@ theorem mem_iff_id_1587 (n : Fin 5011) (hn : n.val = 1587) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14372,6 +16312,11 @@ theorem mem_iff_id_1588 (n : Fin 5011) (hn : n.val = 1588) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14409,6 +16354,11 @@ theorem mem_iff_id_1589 (n : Fin 5011) (hn : n.val = 1589) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14446,6 +16396,11 @@ theorem mem_iff_id_1590 (n : Fin 5011) (hn : n.val = 1590) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14483,6 +16438,11 @@ theorem mem_iff_id_1591 (n : Fin 5011) (hn : n.val = 1591) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14520,6 +16480,11 @@ theorem mem_iff_id_1592 (n : Fin 5011) (hn : n.val = 1592) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14557,6 +16522,11 @@ theorem mem_iff_id_1593 (n : Fin 5011) (hn : n.val = 1593) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14594,6 +16564,11 @@ theorem mem_iff_id_1594 (n : Fin 5011) (hn : n.val = 1594) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14631,6 +16606,11 @@ theorem mem_iff_id_1595 (n : Fin 5011) (hn : n.val = 1595) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14668,6 +16648,11 @@ theorem mem_iff_id_1596 (n : Fin 5011) (hn : n.val = 1596) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14705,6 +16690,11 @@ theorem mem_iff_id_1597 (n : Fin 5011) (hn : n.val = 1597) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14742,6 +16732,11 @@ theorem mem_iff_id_1598 (n : Fin 5011) (hn : n.val = 1598) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14779,6 +16774,11 @@ theorem mem_iff_id_1599 (n : Fin 5011) (hn : n.val = 1599) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14816,6 +16816,11 @@ theorem mem_iff_id_1900 (n : Fin 5011) (hn : n.val = 1900) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14853,6 +16858,11 @@ theorem mem_iff_id_1901 (n : Fin 5011) (hn : n.val = 1901) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14890,6 +16900,11 @@ theorem mem_iff_id_1902 (n : Fin 5011) (hn : n.val = 1902) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14927,6 +16942,11 @@ theorem mem_iff_id_1903 (n : Fin 5011) (hn : n.val = 1903) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -14964,6 +16984,11 @@ theorem mem_iff_id_1904 (n : Fin 5011) (hn : n.val = 1904) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15001,6 +17026,11 @@ theorem mem_iff_id_1905 (n : Fin 5011) (hn : n.val = 1905) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15038,6 +17068,11 @@ theorem mem_iff_id_1906 (n : Fin 5011) (hn : n.val = 1906) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15075,6 +17110,11 @@ theorem mem_iff_id_1907 (n : Fin 5011) (hn : n.val = 1907) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15112,6 +17152,11 @@ theorem mem_iff_id_1908 (n : Fin 5011) (hn : n.val = 1908) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15149,6 +17194,11 @@ theorem mem_iff_id_1909 (n : Fin 5011) (hn : n.val = 1909) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15186,6 +17236,11 @@ theorem mem_iff_id_1910 (n : Fin 5011) (hn : n.val = 1910) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15223,6 +17278,11 @@ theorem mem_iff_id_1911 (n : Fin 5011) (hn : n.val = 1911) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15260,6 +17320,11 @@ theorem mem_iff_id_1912 (n : Fin 5011) (hn : n.val = 1912) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15297,6 +17362,11 @@ theorem mem_iff_id_1913 (n : Fin 5011) (hn : n.val = 1913) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15334,6 +17404,11 @@ theorem mem_iff_id_1914 (n : Fin 5011) (hn : n.val = 1914) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15371,6 +17446,11 @@ theorem mem_iff_id_1915 (n : Fin 5011) (hn : n.val = 1915) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15408,6 +17488,11 @@ theorem mem_iff_id_1916 (n : Fin 5011) (hn : n.val = 1916) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15445,6 +17530,11 @@ theorem mem_iff_id_1917 (n : Fin 5011) (hn : n.val = 1917) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15482,6 +17572,11 @@ theorem mem_iff_id_1918 (n : Fin 5011) (hn : n.val = 1918) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15519,6 +17614,11 @@ theorem mem_iff_id_1919 (n : Fin 5011) (hn : n.val = 1919) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15556,6 +17656,11 @@ theorem mem_iff_id_1920 (n : Fin 5011) (hn : n.val = 1920) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15593,6 +17698,11 @@ theorem mem_iff_id_1921 (n : Fin 5011) (hn : n.val = 1921) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15630,6 +17740,11 @@ theorem mem_iff_id_1922 (n : Fin 5011) (hn : n.val = 1922) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15667,6 +17782,11 @@ theorem mem_iff_id_1923 (n : Fin 5011) (hn : n.val = 1923) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15704,6 +17824,11 @@ theorem mem_iff_id_1924 (n : Fin 5011) (hn : n.val = 1924) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15741,6 +17866,11 @@ theorem mem_iff_id_1925 (n : Fin 5011) (hn : n.val = 1925) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15778,6 +17908,11 @@ theorem mem_iff_id_1926 (n : Fin 5011) (hn : n.val = 1926) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15815,6 +17950,11 @@ theorem mem_iff_id_1927 (n : Fin 5011) (hn : n.val = 1927) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15852,6 +17992,11 @@ theorem mem_iff_id_1928 (n : Fin 5011) (hn : n.val = 1928) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15889,6 +18034,11 @@ theorem mem_iff_id_1929 (n : Fin 5011) (hn : n.val = 1929) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15926,6 +18076,11 @@ theorem mem_iff_id_1930 (n : Fin 5011) (hn : n.val = 1930) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -15963,6 +18118,11 @@ theorem mem_iff_id_1931 (n : Fin 5011) (hn : n.val = 1931) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16000,6 +18160,11 @@ theorem mem_iff_id_1932 (n : Fin 5011) (hn : n.val = 1932) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16037,6 +18202,11 @@ theorem mem_iff_id_1933 (n : Fin 5011) (hn : n.val = 1933) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16074,6 +18244,11 @@ theorem mem_iff_id_1934 (n : Fin 5011) (hn : n.val = 1934) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16111,6 +18286,11 @@ theorem mem_iff_id_1935 (n : Fin 5011) (hn : n.val = 1935) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16148,6 +18328,11 @@ theorem mem_iff_id_1936 (n : Fin 5011) (hn : n.val = 1936) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16185,6 +18370,11 @@ theorem mem_iff_id_1937 (n : Fin 5011) (hn : n.val = 1937) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16222,6 +18412,11 @@ theorem mem_iff_id_1938 (n : Fin 5011) (hn : n.val = 1938) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16259,6 +18454,11 @@ theorem mem_iff_id_1939 (n : Fin 5011) (hn : n.val = 1939) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16296,6 +18496,11 @@ theorem mem_iff_id_1940 (n : Fin 5011) (hn : n.val = 1940) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16333,6 +18538,11 @@ theorem mem_iff_id_1941 (n : Fin 5011) (hn : n.val = 1941) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16370,6 +18580,11 @@ theorem mem_iff_id_1942 (n : Fin 5011) (hn : n.val = 1942) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16407,6 +18622,11 @@ theorem mem_iff_id_1943 (n : Fin 5011) (hn : n.val = 1943) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16444,6 +18664,11 @@ theorem mem_iff_id_1944 (n : Fin 5011) (hn : n.val = 1944) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16481,6 +18706,11 @@ theorem mem_iff_id_1945 (n : Fin 5011) (hn : n.val = 1945) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16518,6 +18748,11 @@ theorem mem_iff_id_1946 (n : Fin 5011) (hn : n.val = 1946) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16555,6 +18790,11 @@ theorem mem_iff_id_1947 (n : Fin 5011) (hn : n.val = 1947) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16592,6 +18832,11 @@ theorem mem_iff_id_1948 (n : Fin 5011) (hn : n.val = 1948) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16629,6 +18874,11 @@ theorem mem_iff_id_1949 (n : Fin 5011) (hn : n.val = 1949) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16666,6 +18916,11 @@ theorem mem_iff_id_1950 (n : Fin 5011) (hn : n.val = 1950) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16703,6 +18958,11 @@ theorem mem_iff_id_1951 (n : Fin 5011) (hn : n.val = 1951) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16740,6 +19000,11 @@ theorem mem_iff_id_1952 (n : Fin 5011) (hn : n.val = 1952) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16777,6 +19042,11 @@ theorem mem_iff_id_1953 (n : Fin 5011) (hn : n.val = 1953) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16814,6 +19084,11 @@ theorem mem_iff_id_1954 (n : Fin 5011) (hn : n.val = 1954) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16851,6 +19126,11 @@ theorem mem_iff_id_1955 (n : Fin 5011) (hn : n.val = 1955) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16888,6 +19168,11 @@ theorem mem_iff_id_1956 (n : Fin 5011) (hn : n.val = 1956) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16925,6 +19210,11 @@ theorem mem_iff_id_1957 (n : Fin 5011) (hn : n.val = 1957) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16962,6 +19252,11 @@ theorem mem_iff_id_1958 (n : Fin 5011) (hn : n.val = 1958) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -16999,6 +19294,11 @@ theorem mem_iff_id_1959 (n : Fin 5011) (hn : n.val = 1959) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17036,6 +19336,11 @@ theorem mem_iff_id_1960 (n : Fin 5011) (hn : n.val = 1960) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17073,6 +19378,11 @@ theorem mem_iff_id_1961 (n : Fin 5011) (hn : n.val = 1961) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17110,6 +19420,11 @@ theorem mem_iff_id_1962 (n : Fin 5011) (hn : n.val = 1962) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17147,6 +19462,11 @@ theorem mem_iff_id_1963 (n : Fin 5011) (hn : n.val = 1963) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17184,6 +19504,11 @@ theorem mem_iff_id_1964 (n : Fin 5011) (hn : n.val = 1964) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17221,6 +19546,11 @@ theorem mem_iff_id_1965 (n : Fin 5011) (hn : n.val = 1965) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17258,6 +19588,11 @@ theorem mem_iff_id_1966 (n : Fin 5011) (hn : n.val = 1966) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17295,6 +19630,11 @@ theorem mem_iff_id_1967 (n : Fin 5011) (hn : n.val = 1967) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17332,6 +19672,11 @@ theorem mem_iff_id_1968 (n : Fin 5011) (hn : n.val = 1968) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17369,6 +19714,11 @@ theorem mem_iff_id_1969 (n : Fin 5011) (hn : n.val = 1969) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17406,6 +19756,11 @@ theorem mem_iff_id_1970 (n : Fin 5011) (hn : n.val = 1970) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17443,6 +19798,11 @@ theorem mem_iff_id_1971 (n : Fin 5011) (hn : n.val = 1971) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17480,6 +19840,11 @@ theorem mem_iff_id_1972 (n : Fin 5011) (hn : n.val = 1972) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17517,6 +19882,11 @@ theorem mem_iff_id_1973 (n : Fin 5011) (hn : n.val = 1973) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17554,6 +19924,11 @@ theorem mem_iff_id_1974 (n : Fin 5011) (hn : n.val = 1974) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17591,6 +19966,11 @@ theorem mem_iff_id_1975 (n : Fin 5011) (hn : n.val = 1975) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17628,6 +20008,11 @@ theorem mem_iff_id_1976 (n : Fin 5011) (hn : n.val = 1976) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17665,6 +20050,11 @@ theorem mem_iff_id_1977 (n : Fin 5011) (hn : n.val = 1977) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17702,6 +20092,11 @@ theorem mem_iff_id_1978 (n : Fin 5011) (hn : n.val = 1978) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17739,6 +20134,11 @@ theorem mem_iff_id_1979 (n : Fin 5011) (hn : n.val = 1979) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17776,6 +20176,11 @@ theorem mem_iff_id_1980 (n : Fin 5011) (hn : n.val = 1980) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17813,6 +20218,11 @@ theorem mem_iff_id_1981 (n : Fin 5011) (hn : n.val = 1981) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17850,6 +20260,11 @@ theorem mem_iff_id_1982 (n : Fin 5011) (hn : n.val = 1982) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17887,6 +20302,11 @@ theorem mem_iff_id_1983 (n : Fin 5011) (hn : n.val = 1983) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17924,6 +20344,11 @@ theorem mem_iff_id_1984 (n : Fin 5011) (hn : n.val = 1984) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17961,6 +20386,11 @@ theorem mem_iff_id_1985 (n : Fin 5011) (hn : n.val = 1985) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -17998,6 +20428,11 @@ theorem mem_iff_id_1986 (n : Fin 5011) (hn : n.val = 1986) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18035,6 +20470,11 @@ theorem mem_iff_id_1987 (n : Fin 5011) (hn : n.val = 1987) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18072,6 +20512,11 @@ theorem mem_iff_id_1988 (n : Fin 5011) (hn : n.val = 1988) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18109,6 +20554,11 @@ theorem mem_iff_id_1989 (n : Fin 5011) (hn : n.val = 1989) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18146,6 +20596,11 @@ theorem mem_iff_id_1990 (n : Fin 5011) (hn : n.val = 1990) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18183,6 +20638,11 @@ theorem mem_iff_id_1991 (n : Fin 5011) (hn : n.val = 1991) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18220,6 +20680,11 @@ theorem mem_iff_id_1992 (n : Fin 5011) (hn : n.val = 1992) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18257,6 +20722,11 @@ theorem mem_iff_id_1993 (n : Fin 5011) (hn : n.val = 1993) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18294,6 +20764,11 @@ theorem mem_iff_id_1994 (n : Fin 5011) (hn : n.val = 1994) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18331,6 +20806,11 @@ theorem mem_iff_id_1995 (n : Fin 5011) (hn : n.val = 1995) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18368,6 +20848,11 @@ theorem mem_iff_id_1996 (n : Fin 5011) (hn : n.val = 1996) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18405,6 +20890,11 @@ theorem mem_iff_id_1997 (n : Fin 5011) (hn : n.val = 1997) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18442,6 +20932,11 @@ theorem mem_iff_id_1998 (n : Fin 5011) (hn : n.val = 1998) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18479,6 +20974,11 @@ theorem mem_iff_id_1999 (n : Fin 5011) (hn : n.val = 1999) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18516,6 +21016,11 @@ theorem mem_iff_id_2300 (n : Fin 5011) (hn : n.val = 2300) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18553,6 +21058,11 @@ theorem mem_iff_id_2301 (n : Fin 5011) (hn : n.val = 2301) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18590,6 +21100,11 @@ theorem mem_iff_id_2302 (n : Fin 5011) (hn : n.val = 2302) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18627,6 +21142,11 @@ theorem mem_iff_id_2303 (n : Fin 5011) (hn : n.val = 2303) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18664,6 +21184,11 @@ theorem mem_iff_id_2304 (n : Fin 5011) (hn : n.val = 2304) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18701,6 +21226,11 @@ theorem mem_iff_id_2305 (n : Fin 5011) (hn : n.val = 2305) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18738,6 +21268,11 @@ theorem mem_iff_id_2306 (n : Fin 5011) (hn : n.val = 2306) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18775,6 +21310,11 @@ theorem mem_iff_id_2307 (n : Fin 5011) (hn : n.val = 2307) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18812,6 +21352,11 @@ theorem mem_iff_id_2308 (n : Fin 5011) (hn : n.val = 2308) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18849,6 +21394,11 @@ theorem mem_iff_id_2309 (n : Fin 5011) (hn : n.val = 2309) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18886,6 +21436,11 @@ theorem mem_iff_id_2310 (n : Fin 5011) (hn : n.val = 2310) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18923,6 +21478,11 @@ theorem mem_iff_id_2311 (n : Fin 5011) (hn : n.val = 2311) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18960,6 +21520,11 @@ theorem mem_iff_id_2312 (n : Fin 5011) (hn : n.val = 2312) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -18997,6 +21562,11 @@ theorem mem_iff_id_2313 (n : Fin 5011) (hn : n.val = 2313) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19034,6 +21604,11 @@ theorem mem_iff_id_2314 (n : Fin 5011) (hn : n.val = 2314) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19071,6 +21646,11 @@ theorem mem_iff_id_2315 (n : Fin 5011) (hn : n.val = 2315) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19108,6 +21688,11 @@ theorem mem_iff_id_2316 (n : Fin 5011) (hn : n.val = 2316) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19145,6 +21730,11 @@ theorem mem_iff_id_2317 (n : Fin 5011) (hn : n.val = 2317) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19182,6 +21772,11 @@ theorem mem_iff_id_2318 (n : Fin 5011) (hn : n.val = 2318) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19219,6 +21814,11 @@ theorem mem_iff_id_2319 (n : Fin 5011) (hn : n.val = 2319) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19256,6 +21856,11 @@ theorem mem_iff_id_2320 (n : Fin 5011) (hn : n.val = 2320) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19293,6 +21898,11 @@ theorem mem_iff_id_2321 (n : Fin 5011) (hn : n.val = 2321) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19330,6 +21940,11 @@ theorem mem_iff_id_2322 (n : Fin 5011) (hn : n.val = 2322) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19367,6 +21982,11 @@ theorem mem_iff_id_2323 (n : Fin 5011) (hn : n.val = 2323) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19404,6 +22024,11 @@ theorem mem_iff_id_2324 (n : Fin 5011) (hn : n.val = 2324) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19441,6 +22066,11 @@ theorem mem_iff_id_2325 (n : Fin 5011) (hn : n.val = 2325) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19478,6 +22108,11 @@ theorem mem_iff_id_2326 (n : Fin 5011) (hn : n.val = 2326) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19515,6 +22150,11 @@ theorem mem_iff_id_2327 (n : Fin 5011) (hn : n.val = 2327) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19552,6 +22192,11 @@ theorem mem_iff_id_2328 (n : Fin 5011) (hn : n.val = 2328) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19589,6 +22234,11 @@ theorem mem_iff_id_2329 (n : Fin 5011) (hn : n.val = 2329) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19626,6 +22276,11 @@ theorem mem_iff_id_2330 (n : Fin 5011) (hn : n.val = 2330) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19663,6 +22318,11 @@ theorem mem_iff_id_2331 (n : Fin 5011) (hn : n.val = 2331) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19700,6 +22360,11 @@ theorem mem_iff_id_2332 (n : Fin 5011) (hn : n.val = 2332) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19737,6 +22402,11 @@ theorem mem_iff_id_2333 (n : Fin 5011) (hn : n.val = 2333) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19774,6 +22444,11 @@ theorem mem_iff_id_2334 (n : Fin 5011) (hn : n.val = 2334) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19811,6 +22486,11 @@ theorem mem_iff_id_2335 (n : Fin 5011) (hn : n.val = 2335) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19848,6 +22528,11 @@ theorem mem_iff_id_2336 (n : Fin 5011) (hn : n.val = 2336) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19885,6 +22570,11 @@ theorem mem_iff_id_2337 (n : Fin 5011) (hn : n.val = 2337) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19922,6 +22612,11 @@ theorem mem_iff_id_2338 (n : Fin 5011) (hn : n.val = 2338) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19959,6 +22654,11 @@ theorem mem_iff_id_2339 (n : Fin 5011) (hn : n.val = 2339) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -19996,6 +22696,11 @@ theorem mem_iff_id_2340 (n : Fin 5011) (hn : n.val = 2340) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20033,6 +22738,11 @@ theorem mem_iff_id_2341 (n : Fin 5011) (hn : n.val = 2341) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20070,6 +22780,11 @@ theorem mem_iff_id_2342 (n : Fin 5011) (hn : n.val = 2342) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20107,6 +22822,11 @@ theorem mem_iff_id_2343 (n : Fin 5011) (hn : n.val = 2343) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20144,6 +22864,11 @@ theorem mem_iff_id_2344 (n : Fin 5011) (hn : n.val = 2344) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20181,6 +22906,11 @@ theorem mem_iff_id_2345 (n : Fin 5011) (hn : n.val = 2345) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20218,6 +22948,11 @@ theorem mem_iff_id_2346 (n : Fin 5011) (hn : n.val = 2346) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20255,6 +22990,11 @@ theorem mem_iff_id_2347 (n : Fin 5011) (hn : n.val = 2347) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20292,6 +23032,11 @@ theorem mem_iff_id_2348 (n : Fin 5011) (hn : n.val = 2348) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20329,6 +23074,11 @@ theorem mem_iff_id_2349 (n : Fin 5011) (hn : n.val = 2349) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20366,6 +23116,11 @@ theorem mem_iff_id_2350 (n : Fin 5011) (hn : n.val = 2350) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20403,6 +23158,11 @@ theorem mem_iff_id_2351 (n : Fin 5011) (hn : n.val = 2351) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20440,6 +23200,11 @@ theorem mem_iff_id_2352 (n : Fin 5011) (hn : n.val = 2352) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20477,6 +23242,11 @@ theorem mem_iff_id_2353 (n : Fin 5011) (hn : n.val = 2353) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20514,6 +23284,11 @@ theorem mem_iff_id_2354 (n : Fin 5011) (hn : n.val = 2354) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20551,6 +23326,11 @@ theorem mem_iff_id_2355 (n : Fin 5011) (hn : n.val = 2355) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20588,6 +23368,11 @@ theorem mem_iff_id_2356 (n : Fin 5011) (hn : n.val = 2356) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20625,6 +23410,11 @@ theorem mem_iff_id_2357 (n : Fin 5011) (hn : n.val = 2357) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20662,6 +23452,11 @@ theorem mem_iff_id_2358 (n : Fin 5011) (hn : n.val = 2358) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20699,6 +23494,11 @@ theorem mem_iff_id_2359 (n : Fin 5011) (hn : n.val = 2359) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20736,6 +23536,11 @@ theorem mem_iff_id_2360 (n : Fin 5011) (hn : n.val = 2360) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20773,6 +23578,11 @@ theorem mem_iff_id_2361 (n : Fin 5011) (hn : n.val = 2361) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20810,6 +23620,11 @@ theorem mem_iff_id_2362 (n : Fin 5011) (hn : n.val = 2362) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20847,6 +23662,11 @@ theorem mem_iff_id_2363 (n : Fin 5011) (hn : n.val = 2363) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20884,6 +23704,11 @@ theorem mem_iff_id_2364 (n : Fin 5011) (hn : n.val = 2364) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20921,6 +23746,11 @@ theorem mem_iff_id_2365 (n : Fin 5011) (hn : n.val = 2365) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20958,6 +23788,11 @@ theorem mem_iff_id_2366 (n : Fin 5011) (hn : n.val = 2366) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -20995,6 +23830,11 @@ theorem mem_iff_id_2367 (n : Fin 5011) (hn : n.val = 2367) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21032,6 +23872,11 @@ theorem mem_iff_id_2368 (n : Fin 5011) (hn : n.val = 2368) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21069,6 +23914,11 @@ theorem mem_iff_id_2369 (n : Fin 5011) (hn : n.val = 2369) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21106,6 +23956,11 @@ theorem mem_iff_id_2370 (n : Fin 5011) (hn : n.val = 2370) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21143,6 +23998,11 @@ theorem mem_iff_id_2371 (n : Fin 5011) (hn : n.val = 2371) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21180,6 +24040,11 @@ theorem mem_iff_id_2372 (n : Fin 5011) (hn : n.val = 2372) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21217,6 +24082,11 @@ theorem mem_iff_id_2373 (n : Fin 5011) (hn : n.val = 2373) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21254,6 +24124,11 @@ theorem mem_iff_id_2374 (n : Fin 5011) (hn : n.val = 2374) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21291,6 +24166,11 @@ theorem mem_iff_id_2375 (n : Fin 5011) (hn : n.val = 2375) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21328,6 +24208,11 @@ theorem mem_iff_id_2376 (n : Fin 5011) (hn : n.val = 2376) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21365,6 +24250,11 @@ theorem mem_iff_id_2377 (n : Fin 5011) (hn : n.val = 2377) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21402,6 +24292,11 @@ theorem mem_iff_id_2378 (n : Fin 5011) (hn : n.val = 2378) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21439,6 +24334,11 @@ theorem mem_iff_id_2379 (n : Fin 5011) (hn : n.val = 2379) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21476,6 +24376,11 @@ theorem mem_iff_id_2380 (n : Fin 5011) (hn : n.val = 2380) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21513,6 +24418,11 @@ theorem mem_iff_id_2381 (n : Fin 5011) (hn : n.val = 2381) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21550,6 +24460,11 @@ theorem mem_iff_id_2382 (n : Fin 5011) (hn : n.val = 2382) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21587,6 +24502,11 @@ theorem mem_iff_id_2383 (n : Fin 5011) (hn : n.val = 2383) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21624,6 +24544,11 @@ theorem mem_iff_id_2384 (n : Fin 5011) (hn : n.val = 2384) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21661,6 +24586,11 @@ theorem mem_iff_id_2385 (n : Fin 5011) (hn : n.val = 2385) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21698,6 +24628,11 @@ theorem mem_iff_id_2386 (n : Fin 5011) (hn : n.val = 2386) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21735,6 +24670,11 @@ theorem mem_iff_id_2387 (n : Fin 5011) (hn : n.val = 2387) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21772,6 +24712,11 @@ theorem mem_iff_id_2388 (n : Fin 5011) (hn : n.val = 2388) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21809,6 +24754,11 @@ theorem mem_iff_id_2389 (n : Fin 5011) (hn : n.val = 2389) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21846,6 +24796,11 @@ theorem mem_iff_id_2390 (n : Fin 5011) (hn : n.val = 2390) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21883,6 +24838,11 @@ theorem mem_iff_id_2391 (n : Fin 5011) (hn : n.val = 2391) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21920,6 +24880,11 @@ theorem mem_iff_id_2392 (n : Fin 5011) (hn : n.val = 2392) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21957,6 +24922,11 @@ theorem mem_iff_id_2393 (n : Fin 5011) (hn : n.val = 2393) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -21994,6 +24964,11 @@ theorem mem_iff_id_2394 (n : Fin 5011) (hn : n.val = 2394) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22031,6 +25006,11 @@ theorem mem_iff_id_2395 (n : Fin 5011) (hn : n.val = 2395) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22068,6 +25048,11 @@ theorem mem_iff_id_2396 (n : Fin 5011) (hn : n.val = 2396) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22105,6 +25090,11 @@ theorem mem_iff_id_2397 (n : Fin 5011) (hn : n.val = 2397) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22142,6 +25132,11 @@ theorem mem_iff_id_2398 (n : Fin 5011) (hn : n.val = 2398) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22179,6 +25174,11 @@ theorem mem_iff_id_2399 (n : Fin 5011) (hn : n.val = 2399) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22216,6 +25216,11 @@ theorem mem_iff_id_2700 (n : Fin 5011) (hn : n.val = 2700) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22253,6 +25258,11 @@ theorem mem_iff_id_2701 (n : Fin 5011) (hn : n.val = 2701) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22290,6 +25300,11 @@ theorem mem_iff_id_2702 (n : Fin 5011) (hn : n.val = 2702) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22327,6 +25342,11 @@ theorem mem_iff_id_2703 (n : Fin 5011) (hn : n.val = 2703) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22364,6 +25384,11 @@ theorem mem_iff_id_2704 (n : Fin 5011) (hn : n.val = 2704) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22401,6 +25426,11 @@ theorem mem_iff_id_2705 (n : Fin 5011) (hn : n.val = 2705) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22438,6 +25468,11 @@ theorem mem_iff_id_2706 (n : Fin 5011) (hn : n.val = 2706) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22475,6 +25510,11 @@ theorem mem_iff_id_2707 (n : Fin 5011) (hn : n.val = 2707) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22512,6 +25552,11 @@ theorem mem_iff_id_2708 (n : Fin 5011) (hn : n.val = 2708) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22549,6 +25594,11 @@ theorem mem_iff_id_2709 (n : Fin 5011) (hn : n.val = 2709) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22586,6 +25636,11 @@ theorem mem_iff_id_2710 (n : Fin 5011) (hn : n.val = 2710) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22623,6 +25678,11 @@ theorem mem_iff_id_2711 (n : Fin 5011) (hn : n.val = 2711) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22660,6 +25720,11 @@ theorem mem_iff_id_2712 (n : Fin 5011) (hn : n.val = 2712) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22697,6 +25762,11 @@ theorem mem_iff_id_2713 (n : Fin 5011) (hn : n.val = 2713) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22734,6 +25804,11 @@ theorem mem_iff_id_2714 (n : Fin 5011) (hn : n.val = 2714) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22771,6 +25846,11 @@ theorem mem_iff_id_2715 (n : Fin 5011) (hn : n.val = 2715) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22808,6 +25888,11 @@ theorem mem_iff_id_2716 (n : Fin 5011) (hn : n.val = 2716) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22845,6 +25930,11 @@ theorem mem_iff_id_2717 (n : Fin 5011) (hn : n.val = 2717) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22882,6 +25972,11 @@ theorem mem_iff_id_2718 (n : Fin 5011) (hn : n.val = 2718) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22919,6 +26014,11 @@ theorem mem_iff_id_2719 (n : Fin 5011) (hn : n.val = 2719) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22956,6 +26056,11 @@ theorem mem_iff_id_2720 (n : Fin 5011) (hn : n.val = 2720) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -22993,6 +26098,11 @@ theorem mem_iff_id_2721 (n : Fin 5011) (hn : n.val = 2721) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23030,6 +26140,11 @@ theorem mem_iff_id_2722 (n : Fin 5011) (hn : n.val = 2722) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23067,6 +26182,11 @@ theorem mem_iff_id_2723 (n : Fin 5011) (hn : n.val = 2723) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23104,6 +26224,11 @@ theorem mem_iff_id_2724 (n : Fin 5011) (hn : n.val = 2724) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23141,6 +26266,11 @@ theorem mem_iff_id_2725 (n : Fin 5011) (hn : n.val = 2725) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23178,6 +26308,11 @@ theorem mem_iff_id_2726 (n : Fin 5011) (hn : n.val = 2726) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23215,6 +26350,11 @@ theorem mem_iff_id_2727 (n : Fin 5011) (hn : n.val = 2727) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23252,6 +26392,11 @@ theorem mem_iff_id_2728 (n : Fin 5011) (hn : n.val = 2728) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23289,6 +26434,11 @@ theorem mem_iff_id_2729 (n : Fin 5011) (hn : n.val = 2729) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23326,6 +26476,11 @@ theorem mem_iff_id_2730 (n : Fin 5011) (hn : n.val = 2730) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23363,6 +26518,11 @@ theorem mem_iff_id_2731 (n : Fin 5011) (hn : n.val = 2731) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23400,6 +26560,11 @@ theorem mem_iff_id_2732 (n : Fin 5011) (hn : n.val = 2732) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23437,6 +26602,11 @@ theorem mem_iff_id_2733 (n : Fin 5011) (hn : n.val = 2733) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23474,6 +26644,11 @@ theorem mem_iff_id_2734 (n : Fin 5011) (hn : n.val = 2734) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23511,6 +26686,11 @@ theorem mem_iff_id_2735 (n : Fin 5011) (hn : n.val = 2735) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23548,6 +26728,11 @@ theorem mem_iff_id_2736 (n : Fin 5011) (hn : n.val = 2736) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23585,6 +26770,11 @@ theorem mem_iff_id_2737 (n : Fin 5011) (hn : n.val = 2737) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23622,6 +26812,11 @@ theorem mem_iff_id_2738 (n : Fin 5011) (hn : n.val = 2738) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23659,6 +26854,11 @@ theorem mem_iff_id_2739 (n : Fin 5011) (hn : n.val = 2739) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23696,6 +26896,11 @@ theorem mem_iff_id_2740 (n : Fin 5011) (hn : n.val = 2740) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23733,6 +26938,11 @@ theorem mem_iff_id_2741 (n : Fin 5011) (hn : n.val = 2741) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23770,6 +26980,11 @@ theorem mem_iff_id_2742 (n : Fin 5011) (hn : n.val = 2742) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23807,6 +27022,11 @@ theorem mem_iff_id_2743 (n : Fin 5011) (hn : n.val = 2743) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23844,6 +27064,11 @@ theorem mem_iff_id_2744 (n : Fin 5011) (hn : n.val = 2744) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23881,6 +27106,11 @@ theorem mem_iff_id_2745 (n : Fin 5011) (hn : n.val = 2745) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23918,6 +27148,11 @@ theorem mem_iff_id_2746 (n : Fin 5011) (hn : n.val = 2746) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23955,6 +27190,11 @@ theorem mem_iff_id_2747 (n : Fin 5011) (hn : n.val = 2747) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -23992,6 +27232,11 @@ theorem mem_iff_id_2748 (n : Fin 5011) (hn : n.val = 2748) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24029,6 +27274,11 @@ theorem mem_iff_id_2749 (n : Fin 5011) (hn : n.val = 2749) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24066,6 +27316,11 @@ theorem mem_iff_id_2750 (n : Fin 5011) (hn : n.val = 2750) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24103,6 +27358,11 @@ theorem mem_iff_id_2751 (n : Fin 5011) (hn : n.val = 2751) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24140,6 +27400,11 @@ theorem mem_iff_id_2752 (n : Fin 5011) (hn : n.val = 2752) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24177,6 +27442,11 @@ theorem mem_iff_id_2753 (n : Fin 5011) (hn : n.val = 2753) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24214,6 +27484,11 @@ theorem mem_iff_id_2754 (n : Fin 5011) (hn : n.val = 2754) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24251,6 +27526,11 @@ theorem mem_iff_id_2755 (n : Fin 5011) (hn : n.val = 2755) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24288,6 +27568,11 @@ theorem mem_iff_id_2756 (n : Fin 5011) (hn : n.val = 2756) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24325,6 +27610,11 @@ theorem mem_iff_id_2757 (n : Fin 5011) (hn : n.val = 2757) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24362,6 +27652,11 @@ theorem mem_iff_id_2758 (n : Fin 5011) (hn : n.val = 2758) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24399,6 +27694,11 @@ theorem mem_iff_id_2759 (n : Fin 5011) (hn : n.val = 2759) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24436,6 +27736,11 @@ theorem mem_iff_id_2760 (n : Fin 5011) (hn : n.val = 2760) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24473,6 +27778,11 @@ theorem mem_iff_id_2761 (n : Fin 5011) (hn : n.val = 2761) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24510,6 +27820,11 @@ theorem mem_iff_id_2762 (n : Fin 5011) (hn : n.val = 2762) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24547,6 +27862,11 @@ theorem mem_iff_id_2763 (n : Fin 5011) (hn : n.val = 2763) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24584,6 +27904,11 @@ theorem mem_iff_id_2764 (n : Fin 5011) (hn : n.val = 2764) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24621,6 +27946,11 @@ theorem mem_iff_id_2765 (n : Fin 5011) (hn : n.val = 2765) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24658,6 +27988,11 @@ theorem mem_iff_id_2766 (n : Fin 5011) (hn : n.val = 2766) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24695,6 +28030,11 @@ theorem mem_iff_id_2767 (n : Fin 5011) (hn : n.val = 2767) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24732,6 +28072,11 @@ theorem mem_iff_id_2768 (n : Fin 5011) (hn : n.val = 2768) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24769,6 +28114,11 @@ theorem mem_iff_id_2769 (n : Fin 5011) (hn : n.val = 2769) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24806,6 +28156,11 @@ theorem mem_iff_id_2770 (n : Fin 5011) (hn : n.val = 2770) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24843,6 +28198,11 @@ theorem mem_iff_id_2771 (n : Fin 5011) (hn : n.val = 2771) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24880,6 +28240,11 @@ theorem mem_iff_id_2772 (n : Fin 5011) (hn : n.val = 2772) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24917,6 +28282,11 @@ theorem mem_iff_id_2773 (n : Fin 5011) (hn : n.val = 2773) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24954,6 +28324,11 @@ theorem mem_iff_id_2774 (n : Fin 5011) (hn : n.val = 2774) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -24991,6 +28366,11 @@ theorem mem_iff_id_2775 (n : Fin 5011) (hn : n.val = 2775) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25028,6 +28408,11 @@ theorem mem_iff_id_2776 (n : Fin 5011) (hn : n.val = 2776) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25065,6 +28450,11 @@ theorem mem_iff_id_2777 (n : Fin 5011) (hn : n.val = 2777) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25102,6 +28492,11 @@ theorem mem_iff_id_2778 (n : Fin 5011) (hn : n.val = 2778) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25139,6 +28534,11 @@ theorem mem_iff_id_2779 (n : Fin 5011) (hn : n.val = 2779) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25176,6 +28576,11 @@ theorem mem_iff_id_2780 (n : Fin 5011) (hn : n.val = 2780) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25213,6 +28618,11 @@ theorem mem_iff_id_2781 (n : Fin 5011) (hn : n.val = 2781) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25250,6 +28660,11 @@ theorem mem_iff_id_2782 (n : Fin 5011) (hn : n.val = 2782) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25287,6 +28702,11 @@ theorem mem_iff_id_2783 (n : Fin 5011) (hn : n.val = 2783) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25324,6 +28744,11 @@ theorem mem_iff_id_2784 (n : Fin 5011) (hn : n.val = 2784) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25361,6 +28786,11 @@ theorem mem_iff_id_2785 (n : Fin 5011) (hn : n.val = 2785) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25398,6 +28828,11 @@ theorem mem_iff_id_2786 (n : Fin 5011) (hn : n.val = 2786) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25435,6 +28870,11 @@ theorem mem_iff_id_2787 (n : Fin 5011) (hn : n.val = 2787) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25472,6 +28912,11 @@ theorem mem_iff_id_2788 (n : Fin 5011) (hn : n.val = 2788) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25509,6 +28954,11 @@ theorem mem_iff_id_2789 (n : Fin 5011) (hn : n.val = 2789) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25546,6 +28996,11 @@ theorem mem_iff_id_2790 (n : Fin 5011) (hn : n.val = 2790) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25583,6 +29038,11 @@ theorem mem_iff_id_2791 (n : Fin 5011) (hn : n.val = 2791) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25620,6 +29080,11 @@ theorem mem_iff_id_2792 (n : Fin 5011) (hn : n.val = 2792) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25657,6 +29122,11 @@ theorem mem_iff_id_2793 (n : Fin 5011) (hn : n.val = 2793) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25694,6 +29164,11 @@ theorem mem_iff_id_2794 (n : Fin 5011) (hn : n.val = 2794) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25731,6 +29206,11 @@ theorem mem_iff_id_2795 (n : Fin 5011) (hn : n.val = 2795) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25768,6 +29248,11 @@ theorem mem_iff_id_2796 (n : Fin 5011) (hn : n.val = 2796) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25805,6 +29290,11 @@ theorem mem_iff_id_2797 (n : Fin 5011) (hn : n.val = 2797) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25842,6 +29332,11 @@ theorem mem_iff_id_2798 (n : Fin 5011) (hn : n.val = 2798) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25879,6 +29374,11 @@ theorem mem_iff_id_2799 (n : Fin 5011) (hn : n.val = 2799) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25916,6 +29416,11 @@ theorem mem_iff_id_3100 (n : Fin 5011) (hn : n.val = 3100) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25953,6 +29458,11 @@ theorem mem_iff_id_3101 (n : Fin 5011) (hn : n.val = 3101) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -25990,6 +29500,11 @@ theorem mem_iff_id_3102 (n : Fin 5011) (hn : n.val = 3102) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26027,6 +29542,11 @@ theorem mem_iff_id_3103 (n : Fin 5011) (hn : n.val = 3103) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26064,6 +29584,11 @@ theorem mem_iff_id_3104 (n : Fin 5011) (hn : n.val = 3104) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26101,6 +29626,11 @@ theorem mem_iff_id_3105 (n : Fin 5011) (hn : n.val = 3105) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26138,6 +29668,11 @@ theorem mem_iff_id_3106 (n : Fin 5011) (hn : n.val = 3106) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26175,6 +29710,11 @@ theorem mem_iff_id_3107 (n : Fin 5011) (hn : n.val = 3107) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26212,6 +29752,11 @@ theorem mem_iff_id_3108 (n : Fin 5011) (hn : n.val = 3108) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26249,6 +29794,11 @@ theorem mem_iff_id_3109 (n : Fin 5011) (hn : n.val = 3109) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26286,6 +29836,11 @@ theorem mem_iff_id_3110 (n : Fin 5011) (hn : n.val = 3110) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26323,6 +29878,11 @@ theorem mem_iff_id_3111 (n : Fin 5011) (hn : n.val = 3111) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26360,6 +29920,11 @@ theorem mem_iff_id_3112 (n : Fin 5011) (hn : n.val = 3112) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26397,6 +29962,11 @@ theorem mem_iff_id_3113 (n : Fin 5011) (hn : n.val = 3113) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26434,6 +30004,11 @@ theorem mem_iff_id_3114 (n : Fin 5011) (hn : n.val = 3114) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26471,6 +30046,11 @@ theorem mem_iff_id_3115 (n : Fin 5011) (hn : n.val = 3115) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26508,6 +30088,11 @@ theorem mem_iff_id_3116 (n : Fin 5011) (hn : n.val = 3116) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26545,6 +30130,11 @@ theorem mem_iff_id_3117 (n : Fin 5011) (hn : n.val = 3117) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26582,6 +30172,11 @@ theorem mem_iff_id_3118 (n : Fin 5011) (hn : n.val = 3118) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26619,6 +30214,11 @@ theorem mem_iff_id_3119 (n : Fin 5011) (hn : n.val = 3119) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26656,6 +30256,11 @@ theorem mem_iff_id_3120 (n : Fin 5011) (hn : n.val = 3120) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26693,6 +30298,11 @@ theorem mem_iff_id_3121 (n : Fin 5011) (hn : n.val = 3121) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26730,6 +30340,11 @@ theorem mem_iff_id_3122 (n : Fin 5011) (hn : n.val = 3122) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26767,6 +30382,11 @@ theorem mem_iff_id_3123 (n : Fin 5011) (hn : n.val = 3123) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26804,6 +30424,11 @@ theorem mem_iff_id_3124 (n : Fin 5011) (hn : n.val = 3124) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26841,6 +30466,11 @@ theorem mem_iff_id_3125 (n : Fin 5011) (hn : n.val = 3125) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26878,6 +30508,11 @@ theorem mem_iff_id_3126 (n : Fin 5011) (hn : n.val = 3126) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26915,6 +30550,11 @@ theorem mem_iff_id_3127 (n : Fin 5011) (hn : n.val = 3127) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26952,6 +30592,11 @@ theorem mem_iff_id_3128 (n : Fin 5011) (hn : n.val = 3128) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -26989,6 +30634,11 @@ theorem mem_iff_id_3129 (n : Fin 5011) (hn : n.val = 3129) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27026,6 +30676,11 @@ theorem mem_iff_id_3130 (n : Fin 5011) (hn : n.val = 3130) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27063,6 +30718,11 @@ theorem mem_iff_id_3131 (n : Fin 5011) (hn : n.val = 3131) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27100,6 +30760,11 @@ theorem mem_iff_id_3132 (n : Fin 5011) (hn : n.val = 3132) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27137,6 +30802,11 @@ theorem mem_iff_id_3133 (n : Fin 5011) (hn : n.val = 3133) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27174,6 +30844,11 @@ theorem mem_iff_id_3134 (n : Fin 5011) (hn : n.val = 3134) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27211,6 +30886,11 @@ theorem mem_iff_id_3135 (n : Fin 5011) (hn : n.val = 3135) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27248,6 +30928,11 @@ theorem mem_iff_id_3136 (n : Fin 5011) (hn : n.val = 3136) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27285,6 +30970,11 @@ theorem mem_iff_id_3137 (n : Fin 5011) (hn : n.val = 3137) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27322,6 +31012,11 @@ theorem mem_iff_id_3138 (n : Fin 5011) (hn : n.val = 3138) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27359,6 +31054,11 @@ theorem mem_iff_id_3139 (n : Fin 5011) (hn : n.val = 3139) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27396,6 +31096,11 @@ theorem mem_iff_id_3140 (n : Fin 5011) (hn : n.val = 3140) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27433,6 +31138,11 @@ theorem mem_iff_id_3141 (n : Fin 5011) (hn : n.val = 3141) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27470,6 +31180,11 @@ theorem mem_iff_id_3142 (n : Fin 5011) (hn : n.val = 3142) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27507,6 +31222,11 @@ theorem mem_iff_id_3143 (n : Fin 5011) (hn : n.val = 3143) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27544,6 +31264,11 @@ theorem mem_iff_id_3144 (n : Fin 5011) (hn : n.val = 3144) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27581,6 +31306,11 @@ theorem mem_iff_id_3145 (n : Fin 5011) (hn : n.val = 3145) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27618,6 +31348,11 @@ theorem mem_iff_id_3146 (n : Fin 5011) (hn : n.val = 3146) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27655,6 +31390,11 @@ theorem mem_iff_id_3147 (n : Fin 5011) (hn : n.val = 3147) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27692,6 +31432,11 @@ theorem mem_iff_id_3148 (n : Fin 5011) (hn : n.val = 3148) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27729,6 +31474,11 @@ theorem mem_iff_id_3149 (n : Fin 5011) (hn : n.val = 3149) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27766,6 +31516,11 @@ theorem mem_iff_id_3150 (n : Fin 5011) (hn : n.val = 3150) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27803,6 +31558,11 @@ theorem mem_iff_id_3151 (n : Fin 5011) (hn : n.val = 3151) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27840,6 +31600,11 @@ theorem mem_iff_id_3152 (n : Fin 5011) (hn : n.val = 3152) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27877,6 +31642,11 @@ theorem mem_iff_id_3153 (n : Fin 5011) (hn : n.val = 3153) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27914,6 +31684,11 @@ theorem mem_iff_id_3154 (n : Fin 5011) (hn : n.val = 3154) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27951,6 +31726,11 @@ theorem mem_iff_id_3155 (n : Fin 5011) (hn : n.val = 3155) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -27988,6 +31768,11 @@ theorem mem_iff_id_3156 (n : Fin 5011) (hn : n.val = 3156) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28025,6 +31810,11 @@ theorem mem_iff_id_3157 (n : Fin 5011) (hn : n.val = 3157) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28062,6 +31852,11 @@ theorem mem_iff_id_3158 (n : Fin 5011) (hn : n.val = 3158) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28099,6 +31894,11 @@ theorem mem_iff_id_3159 (n : Fin 5011) (hn : n.val = 3159) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28136,6 +31936,11 @@ theorem mem_iff_id_3160 (n : Fin 5011) (hn : n.val = 3160) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28173,6 +31978,11 @@ theorem mem_iff_id_3161 (n : Fin 5011) (hn : n.val = 3161) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28210,6 +32020,11 @@ theorem mem_iff_id_3162 (n : Fin 5011) (hn : n.val = 3162) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28247,6 +32062,11 @@ theorem mem_iff_id_3163 (n : Fin 5011) (hn : n.val = 3163) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28284,6 +32104,11 @@ theorem mem_iff_id_3164 (n : Fin 5011) (hn : n.val = 3164) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28321,6 +32146,11 @@ theorem mem_iff_id_3165 (n : Fin 5011) (hn : n.val = 3165) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28358,6 +32188,11 @@ theorem mem_iff_id_3166 (n : Fin 5011) (hn : n.val = 3166) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28395,6 +32230,11 @@ theorem mem_iff_id_3167 (n : Fin 5011) (hn : n.val = 3167) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28432,6 +32272,11 @@ theorem mem_iff_id_3168 (n : Fin 5011) (hn : n.val = 3168) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28469,6 +32314,11 @@ theorem mem_iff_id_3169 (n : Fin 5011) (hn : n.val = 3169) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28506,6 +32356,11 @@ theorem mem_iff_id_3170 (n : Fin 5011) (hn : n.val = 3170) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28543,6 +32398,11 @@ theorem mem_iff_id_3171 (n : Fin 5011) (hn : n.val = 3171) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28580,6 +32440,11 @@ theorem mem_iff_id_3172 (n : Fin 5011) (hn : n.val = 3172) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28617,6 +32482,11 @@ theorem mem_iff_id_3173 (n : Fin 5011) (hn : n.val = 3173) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28654,6 +32524,11 @@ theorem mem_iff_id_3174 (n : Fin 5011) (hn : n.val = 3174) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28691,6 +32566,11 @@ theorem mem_iff_id_3175 (n : Fin 5011) (hn : n.val = 3175) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28728,6 +32608,11 @@ theorem mem_iff_id_3176 (n : Fin 5011) (hn : n.val = 3176) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28765,6 +32650,11 @@ theorem mem_iff_id_3177 (n : Fin 5011) (hn : n.val = 3177) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28802,6 +32692,11 @@ theorem mem_iff_id_3178 (n : Fin 5011) (hn : n.val = 3178) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28839,6 +32734,11 @@ theorem mem_iff_id_3179 (n : Fin 5011) (hn : n.val = 3179) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28876,6 +32776,11 @@ theorem mem_iff_id_3180 (n : Fin 5011) (hn : n.val = 3180) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28913,6 +32818,11 @@ theorem mem_iff_id_3181 (n : Fin 5011) (hn : n.val = 3181) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28950,6 +32860,11 @@ theorem mem_iff_id_3182 (n : Fin 5011) (hn : n.val = 3182) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -28987,6 +32902,11 @@ theorem mem_iff_id_3183 (n : Fin 5011) (hn : n.val = 3183) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29024,6 +32944,11 @@ theorem mem_iff_id_3184 (n : Fin 5011) (hn : n.val = 3184) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29061,6 +32986,11 @@ theorem mem_iff_id_3185 (n : Fin 5011) (hn : n.val = 3185) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29098,6 +33028,11 @@ theorem mem_iff_id_3186 (n : Fin 5011) (hn : n.val = 3186) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29135,6 +33070,11 @@ theorem mem_iff_id_3187 (n : Fin 5011) (hn : n.val = 3187) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29172,6 +33112,11 @@ theorem mem_iff_id_3188 (n : Fin 5011) (hn : n.val = 3188) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29209,6 +33154,11 @@ theorem mem_iff_id_3189 (n : Fin 5011) (hn : n.val = 3189) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29246,6 +33196,11 @@ theorem mem_iff_id_3190 (n : Fin 5011) (hn : n.val = 3190) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29283,6 +33238,11 @@ theorem mem_iff_id_3191 (n : Fin 5011) (hn : n.val = 3191) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29320,6 +33280,11 @@ theorem mem_iff_id_3192 (n : Fin 5011) (hn : n.val = 3192) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29357,6 +33322,11 @@ theorem mem_iff_id_3193 (n : Fin 5011) (hn : n.val = 3193) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29394,6 +33364,11 @@ theorem mem_iff_id_3194 (n : Fin 5011) (hn : n.val = 3194) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29431,6 +33406,11 @@ theorem mem_iff_id_3195 (n : Fin 5011) (hn : n.val = 3195) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29468,6 +33448,11 @@ theorem mem_iff_id_3196 (n : Fin 5011) (hn : n.val = 3196) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29505,6 +33490,11 @@ theorem mem_iff_id_3197 (n : Fin 5011) (hn : n.val = 3197) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29542,6 +33532,11 @@ theorem mem_iff_id_3198 (n : Fin 5011) (hn : n.val = 3198) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29579,6 +33574,11 @@ theorem mem_iff_id_3199 (n : Fin 5011) (hn : n.val = 3199) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29616,6 +33616,11 @@ theorem mem_iff_id_3500 (n : Fin 5011) (hn : n.val = 3500) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29653,6 +33658,11 @@ theorem mem_iff_id_3501 (n : Fin 5011) (hn : n.val = 3501) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29690,6 +33700,11 @@ theorem mem_iff_id_3502 (n : Fin 5011) (hn : n.val = 3502) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29727,6 +33742,11 @@ theorem mem_iff_id_3503 (n : Fin 5011) (hn : n.val = 3503) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29764,6 +33784,11 @@ theorem mem_iff_id_3504 (n : Fin 5011) (hn : n.val = 3504) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29801,6 +33826,11 @@ theorem mem_iff_id_3505 (n : Fin 5011) (hn : n.val = 3505) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29838,6 +33868,11 @@ theorem mem_iff_id_3506 (n : Fin 5011) (hn : n.val = 3506) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29875,6 +33910,11 @@ theorem mem_iff_id_3507 (n : Fin 5011) (hn : n.val = 3507) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29912,6 +33952,11 @@ theorem mem_iff_id_3508 (n : Fin 5011) (hn : n.val = 3508) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29949,6 +33994,11 @@ theorem mem_iff_id_3509 (n : Fin 5011) (hn : n.val = 3509) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -29986,6 +34036,11 @@ theorem mem_iff_id_3510 (n : Fin 5011) (hn : n.val = 3510) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30023,6 +34078,11 @@ theorem mem_iff_id_3511 (n : Fin 5011) (hn : n.val = 3511) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30060,6 +34120,11 @@ theorem mem_iff_id_3512 (n : Fin 5011) (hn : n.val = 3512) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30097,6 +34162,11 @@ theorem mem_iff_id_3513 (n : Fin 5011) (hn : n.val = 3513) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30134,6 +34204,11 @@ theorem mem_iff_id_3514 (n : Fin 5011) (hn : n.val = 3514) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30171,6 +34246,11 @@ theorem mem_iff_id_3515 (n : Fin 5011) (hn : n.val = 3515) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30208,6 +34288,11 @@ theorem mem_iff_id_3516 (n : Fin 5011) (hn : n.val = 3516) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30245,6 +34330,11 @@ theorem mem_iff_id_3517 (n : Fin 5011) (hn : n.val = 3517) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30282,6 +34372,11 @@ theorem mem_iff_id_3518 (n : Fin 5011) (hn : n.val = 3518) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30319,6 +34414,11 @@ theorem mem_iff_id_3519 (n : Fin 5011) (hn : n.val = 3519) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30356,6 +34456,11 @@ theorem mem_iff_id_3520 (n : Fin 5011) (hn : n.val = 3520) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30393,6 +34498,11 @@ theorem mem_iff_id_3521 (n : Fin 5011) (hn : n.val = 3521) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30430,6 +34540,11 @@ theorem mem_iff_id_3522 (n : Fin 5011) (hn : n.val = 3522) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30467,6 +34582,11 @@ theorem mem_iff_id_3523 (n : Fin 5011) (hn : n.val = 3523) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30504,6 +34624,11 @@ theorem mem_iff_id_3524 (n : Fin 5011) (hn : n.val = 3524) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30541,6 +34666,11 @@ theorem mem_iff_id_3525 (n : Fin 5011) (hn : n.val = 3525) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30578,6 +34708,11 @@ theorem mem_iff_id_3526 (n : Fin 5011) (hn : n.val = 3526) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30615,6 +34750,11 @@ theorem mem_iff_id_3527 (n : Fin 5011) (hn : n.val = 3527) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30652,6 +34792,11 @@ theorem mem_iff_id_3528 (n : Fin 5011) (hn : n.val = 3528) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30689,6 +34834,11 @@ theorem mem_iff_id_3529 (n : Fin 5011) (hn : n.val = 3529) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30726,6 +34876,11 @@ theorem mem_iff_id_3530 (n : Fin 5011) (hn : n.val = 3530) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30763,6 +34918,11 @@ theorem mem_iff_id_3531 (n : Fin 5011) (hn : n.val = 3531) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30800,6 +34960,11 @@ theorem mem_iff_id_3532 (n : Fin 5011) (hn : n.val = 3532) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30837,6 +35002,11 @@ theorem mem_iff_id_3533 (n : Fin 5011) (hn : n.val = 3533) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30874,6 +35044,11 @@ theorem mem_iff_id_3534 (n : Fin 5011) (hn : n.val = 3534) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30911,6 +35086,11 @@ theorem mem_iff_id_3535 (n : Fin 5011) (hn : n.val = 3535) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30948,6 +35128,11 @@ theorem mem_iff_id_3536 (n : Fin 5011) (hn : n.val = 3536) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -30985,6 +35170,11 @@ theorem mem_iff_id_3537 (n : Fin 5011) (hn : n.val = 3537) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31022,6 +35212,11 @@ theorem mem_iff_id_3538 (n : Fin 5011) (hn : n.val = 3538) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31059,6 +35254,11 @@ theorem mem_iff_id_3539 (n : Fin 5011) (hn : n.val = 3539) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31096,6 +35296,11 @@ theorem mem_iff_id_3540 (n : Fin 5011) (hn : n.val = 3540) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31133,6 +35338,11 @@ theorem mem_iff_id_3541 (n : Fin 5011) (hn : n.val = 3541) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31170,6 +35380,11 @@ theorem mem_iff_id_3542 (n : Fin 5011) (hn : n.val = 3542) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31207,6 +35422,11 @@ theorem mem_iff_id_3543 (n : Fin 5011) (hn : n.val = 3543) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31244,6 +35464,11 @@ theorem mem_iff_id_3544 (n : Fin 5011) (hn : n.val = 3544) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31281,6 +35506,11 @@ theorem mem_iff_id_3545 (n : Fin 5011) (hn : n.val = 3545) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31318,6 +35548,11 @@ theorem mem_iff_id_3546 (n : Fin 5011) (hn : n.val = 3546) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31355,6 +35590,11 @@ theorem mem_iff_id_3547 (n : Fin 5011) (hn : n.val = 3547) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31392,6 +35632,11 @@ theorem mem_iff_id_3548 (n : Fin 5011) (hn : n.val = 3548) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31429,6 +35674,11 @@ theorem mem_iff_id_3549 (n : Fin 5011) (hn : n.val = 3549) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31466,6 +35716,11 @@ theorem mem_iff_id_3550 (n : Fin 5011) (hn : n.val = 3550) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31503,6 +35758,11 @@ theorem mem_iff_id_3551 (n : Fin 5011) (hn : n.val = 3551) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31540,6 +35800,11 @@ theorem mem_iff_id_3552 (n : Fin 5011) (hn : n.val = 3552) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31577,6 +35842,11 @@ theorem mem_iff_id_3553 (n : Fin 5011) (hn : n.val = 3553) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31614,6 +35884,11 @@ theorem mem_iff_id_3554 (n : Fin 5011) (hn : n.val = 3554) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31651,6 +35926,11 @@ theorem mem_iff_id_3555 (n : Fin 5011) (hn : n.val = 3555) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31688,6 +35968,11 @@ theorem mem_iff_id_3556 (n : Fin 5011) (hn : n.val = 3556) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31725,6 +36010,11 @@ theorem mem_iff_id_3557 (n : Fin 5011) (hn : n.val = 3557) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31762,6 +36052,11 @@ theorem mem_iff_id_3558 (n : Fin 5011) (hn : n.val = 3558) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31799,6 +36094,11 @@ theorem mem_iff_id_3559 (n : Fin 5011) (hn : n.val = 3559) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31836,6 +36136,11 @@ theorem mem_iff_id_3560 (n : Fin 5011) (hn : n.val = 3560) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31873,6 +36178,11 @@ theorem mem_iff_id_3561 (n : Fin 5011) (hn : n.val = 3561) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31910,6 +36220,11 @@ theorem mem_iff_id_3562 (n : Fin 5011) (hn : n.val = 3562) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31947,6 +36262,11 @@ theorem mem_iff_id_3563 (n : Fin 5011) (hn : n.val = 3563) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -31984,6 +36304,11 @@ theorem mem_iff_id_3564 (n : Fin 5011) (hn : n.val = 3564) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32021,6 +36346,11 @@ theorem mem_iff_id_3565 (n : Fin 5011) (hn : n.val = 3565) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32058,6 +36388,11 @@ theorem mem_iff_id_3566 (n : Fin 5011) (hn : n.val = 3566) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32095,6 +36430,11 @@ theorem mem_iff_id_3567 (n : Fin 5011) (hn : n.val = 3567) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32132,6 +36472,11 @@ theorem mem_iff_id_3568 (n : Fin 5011) (hn : n.val = 3568) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32169,6 +36514,11 @@ theorem mem_iff_id_3569 (n : Fin 5011) (hn : n.val = 3569) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32206,6 +36556,11 @@ theorem mem_iff_id_3570 (n : Fin 5011) (hn : n.val = 3570) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32243,6 +36598,11 @@ theorem mem_iff_id_3571 (n : Fin 5011) (hn : n.val = 3571) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32280,6 +36640,11 @@ theorem mem_iff_id_3572 (n : Fin 5011) (hn : n.val = 3572) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32317,6 +36682,11 @@ theorem mem_iff_id_3573 (n : Fin 5011) (hn : n.val = 3573) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32354,6 +36724,11 @@ theorem mem_iff_id_3574 (n : Fin 5011) (hn : n.val = 3574) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32391,6 +36766,11 @@ theorem mem_iff_id_3575 (n : Fin 5011) (hn : n.val = 3575) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32428,6 +36808,11 @@ theorem mem_iff_id_3576 (n : Fin 5011) (hn : n.val = 3576) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32465,6 +36850,11 @@ theorem mem_iff_id_3577 (n : Fin 5011) (hn : n.val = 3577) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32502,6 +36892,11 @@ theorem mem_iff_id_3578 (n : Fin 5011) (hn : n.val = 3578) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32539,6 +36934,11 @@ theorem mem_iff_id_3579 (n : Fin 5011) (hn : n.val = 3579) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32576,6 +36976,11 @@ theorem mem_iff_id_3580 (n : Fin 5011) (hn : n.val = 3580) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32613,6 +37018,11 @@ theorem mem_iff_id_3581 (n : Fin 5011) (hn : n.val = 3581) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32650,6 +37060,11 @@ theorem mem_iff_id_3582 (n : Fin 5011) (hn : n.val = 3582) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32687,6 +37102,11 @@ theorem mem_iff_id_3583 (n : Fin 5011) (hn : n.val = 3583) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32724,6 +37144,11 @@ theorem mem_iff_id_3584 (n : Fin 5011) (hn : n.val = 3584) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32761,6 +37186,11 @@ theorem mem_iff_id_3585 (n : Fin 5011) (hn : n.val = 3585) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32798,6 +37228,11 @@ theorem mem_iff_id_3586 (n : Fin 5011) (hn : n.val = 3586) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32835,6 +37270,11 @@ theorem mem_iff_id_3587 (n : Fin 5011) (hn : n.val = 3587) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32872,6 +37312,11 @@ theorem mem_iff_id_3588 (n : Fin 5011) (hn : n.val = 3588) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32909,6 +37354,11 @@ theorem mem_iff_id_3589 (n : Fin 5011) (hn : n.val = 3589) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32946,6 +37396,11 @@ theorem mem_iff_id_3590 (n : Fin 5011) (hn : n.val = 3590) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -32983,6 +37438,11 @@ theorem mem_iff_id_3591 (n : Fin 5011) (hn : n.val = 3591) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33020,6 +37480,11 @@ theorem mem_iff_id_3592 (n : Fin 5011) (hn : n.val = 3592) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33057,6 +37522,11 @@ theorem mem_iff_id_3593 (n : Fin 5011) (hn : n.val = 3593) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33094,6 +37564,11 @@ theorem mem_iff_id_3594 (n : Fin 5011) (hn : n.val = 3594) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33131,6 +37606,11 @@ theorem mem_iff_id_3595 (n : Fin 5011) (hn : n.val = 3595) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33168,6 +37648,11 @@ theorem mem_iff_id_3596 (n : Fin 5011) (hn : n.val = 3596) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33205,6 +37690,11 @@ theorem mem_iff_id_3597 (n : Fin 5011) (hn : n.val = 3597) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33242,6 +37732,11 @@ theorem mem_iff_id_3598 (n : Fin 5011) (hn : n.val = 3598) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33279,6 +37774,11 @@ theorem mem_iff_id_3599 (n : Fin 5011) (hn : n.val = 3599) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33316,6 +37816,11 @@ theorem mem_iff_id_3900 (n : Fin 5011) (hn : n.val = 3900) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33353,6 +37858,11 @@ theorem mem_iff_id_3901 (n : Fin 5011) (hn : n.val = 3901) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33390,6 +37900,11 @@ theorem mem_iff_id_3902 (n : Fin 5011) (hn : n.val = 3902) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33427,6 +37942,11 @@ theorem mem_iff_id_3903 (n : Fin 5011) (hn : n.val = 3903) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33464,6 +37984,11 @@ theorem mem_iff_id_3904 (n : Fin 5011) (hn : n.val = 3904) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33501,6 +38026,11 @@ theorem mem_iff_id_3905 (n : Fin 5011) (hn : n.val = 3905) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33538,6 +38068,11 @@ theorem mem_iff_id_3906 (n : Fin 5011) (hn : n.val = 3906) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33575,6 +38110,11 @@ theorem mem_iff_id_3907 (n : Fin 5011) (hn : n.val = 3907) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33612,6 +38152,11 @@ theorem mem_iff_id_3908 (n : Fin 5011) (hn : n.val = 3908) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33649,6 +38194,11 @@ theorem mem_iff_id_3909 (n : Fin 5011) (hn : n.val = 3909) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33686,6 +38236,11 @@ theorem mem_iff_id_3910 (n : Fin 5011) (hn : n.val = 3910) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33723,6 +38278,11 @@ theorem mem_iff_id_3911 (n : Fin 5011) (hn : n.val = 3911) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33760,6 +38320,11 @@ theorem mem_iff_id_3912 (n : Fin 5011) (hn : n.val = 3912) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33797,6 +38362,11 @@ theorem mem_iff_id_3913 (n : Fin 5011) (hn : n.val = 3913) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33834,6 +38404,11 @@ theorem mem_iff_id_3914 (n : Fin 5011) (hn : n.val = 3914) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33871,6 +38446,11 @@ theorem mem_iff_id_3915 (n : Fin 5011) (hn : n.val = 3915) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33908,6 +38488,11 @@ theorem mem_iff_id_3916 (n : Fin 5011) (hn : n.val = 3916) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33945,6 +38530,11 @@ theorem mem_iff_id_3917 (n : Fin 5011) (hn : n.val = 3917) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -33982,6 +38572,11 @@ theorem mem_iff_id_3918 (n : Fin 5011) (hn : n.val = 3918) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34019,6 +38614,11 @@ theorem mem_iff_id_3919 (n : Fin 5011) (hn : n.val = 3919) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34056,6 +38656,11 @@ theorem mem_iff_id_3920 (n : Fin 5011) (hn : n.val = 3920) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34093,6 +38698,11 @@ theorem mem_iff_id_3921 (n : Fin 5011) (hn : n.val = 3921) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34130,6 +38740,11 @@ theorem mem_iff_id_3922 (n : Fin 5011) (hn : n.val = 3922) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34167,6 +38782,11 @@ theorem mem_iff_id_3923 (n : Fin 5011) (hn : n.val = 3923) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34204,6 +38824,11 @@ theorem mem_iff_id_3924 (n : Fin 5011) (hn : n.val = 3924) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34241,6 +38866,11 @@ theorem mem_iff_id_3925 (n : Fin 5011) (hn : n.val = 3925) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34278,6 +38908,11 @@ theorem mem_iff_id_3926 (n : Fin 5011) (hn : n.val = 3926) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34315,6 +38950,11 @@ theorem mem_iff_id_3927 (n : Fin 5011) (hn : n.val = 3927) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34352,6 +38992,11 @@ theorem mem_iff_id_3928 (n : Fin 5011) (hn : n.val = 3928) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34389,6 +39034,11 @@ theorem mem_iff_id_3929 (n : Fin 5011) (hn : n.val = 3929) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34426,6 +39076,11 @@ theorem mem_iff_id_3930 (n : Fin 5011) (hn : n.val = 3930) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34463,6 +39118,11 @@ theorem mem_iff_id_3931 (n : Fin 5011) (hn : n.val = 3931) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34500,6 +39160,11 @@ theorem mem_iff_id_3932 (n : Fin 5011) (hn : n.val = 3932) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34537,6 +39202,11 @@ theorem mem_iff_id_3933 (n : Fin 5011) (hn : n.val = 3933) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34574,6 +39244,11 @@ theorem mem_iff_id_3934 (n : Fin 5011) (hn : n.val = 3934) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34611,6 +39286,11 @@ theorem mem_iff_id_3935 (n : Fin 5011) (hn : n.val = 3935) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34648,6 +39328,11 @@ theorem mem_iff_id_3936 (n : Fin 5011) (hn : n.val = 3936) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34685,6 +39370,11 @@ theorem mem_iff_id_3937 (n : Fin 5011) (hn : n.val = 3937) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34722,6 +39412,11 @@ theorem mem_iff_id_3938 (n : Fin 5011) (hn : n.val = 3938) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34759,6 +39454,11 @@ theorem mem_iff_id_3939 (n : Fin 5011) (hn : n.val = 3939) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34796,6 +39496,11 @@ theorem mem_iff_id_3940 (n : Fin 5011) (hn : n.val = 3940) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34833,6 +39538,11 @@ theorem mem_iff_id_3941 (n : Fin 5011) (hn : n.val = 3941) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34870,6 +39580,11 @@ theorem mem_iff_id_3942 (n : Fin 5011) (hn : n.val = 3942) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34907,6 +39622,11 @@ theorem mem_iff_id_3943 (n : Fin 5011) (hn : n.val = 3943) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34944,6 +39664,11 @@ theorem mem_iff_id_3944 (n : Fin 5011) (hn : n.val = 3944) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -34981,6 +39706,11 @@ theorem mem_iff_id_3945 (n : Fin 5011) (hn : n.val = 3945) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35018,6 +39748,11 @@ theorem mem_iff_id_3946 (n : Fin 5011) (hn : n.val = 3946) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35055,6 +39790,11 @@ theorem mem_iff_id_3947 (n : Fin 5011) (hn : n.val = 3947) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35092,6 +39832,11 @@ theorem mem_iff_id_3948 (n : Fin 5011) (hn : n.val = 3948) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35129,6 +39874,11 @@ theorem mem_iff_id_3949 (n : Fin 5011) (hn : n.val = 3949) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35166,6 +39916,11 @@ theorem mem_iff_id_3950 (n : Fin 5011) (hn : n.val = 3950) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35203,6 +39958,11 @@ theorem mem_iff_id_3951 (n : Fin 5011) (hn : n.val = 3951) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35240,6 +40000,11 @@ theorem mem_iff_id_3952 (n : Fin 5011) (hn : n.val = 3952) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35277,6 +40042,11 @@ theorem mem_iff_id_3953 (n : Fin 5011) (hn : n.val = 3953) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35314,6 +40084,11 @@ theorem mem_iff_id_3954 (n : Fin 5011) (hn : n.val = 3954) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35351,6 +40126,11 @@ theorem mem_iff_id_3955 (n : Fin 5011) (hn : n.val = 3955) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35388,6 +40168,11 @@ theorem mem_iff_id_3956 (n : Fin 5011) (hn : n.val = 3956) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35425,6 +40210,11 @@ theorem mem_iff_id_3957 (n : Fin 5011) (hn : n.val = 3957) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35462,6 +40252,11 @@ theorem mem_iff_id_3958 (n : Fin 5011) (hn : n.val = 3958) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35499,6 +40294,11 @@ theorem mem_iff_id_3959 (n : Fin 5011) (hn : n.val = 3959) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35536,6 +40336,11 @@ theorem mem_iff_id_3960 (n : Fin 5011) (hn : n.val = 3960) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35573,6 +40378,11 @@ theorem mem_iff_id_3961 (n : Fin 5011) (hn : n.val = 3961) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35610,6 +40420,11 @@ theorem mem_iff_id_3962 (n : Fin 5011) (hn : n.val = 3962) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35647,6 +40462,11 @@ theorem mem_iff_id_3963 (n : Fin 5011) (hn : n.val = 3963) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35684,6 +40504,11 @@ theorem mem_iff_id_3964 (n : Fin 5011) (hn : n.val = 3964) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35721,6 +40546,11 @@ theorem mem_iff_id_3965 (n : Fin 5011) (hn : n.val = 3965) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35758,6 +40588,11 @@ theorem mem_iff_id_3966 (n : Fin 5011) (hn : n.val = 3966) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35795,6 +40630,11 @@ theorem mem_iff_id_3967 (n : Fin 5011) (hn : n.val = 3967) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35832,6 +40672,11 @@ theorem mem_iff_id_3968 (n : Fin 5011) (hn : n.val = 3968) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35869,6 +40714,11 @@ theorem mem_iff_id_3969 (n : Fin 5011) (hn : n.val = 3969) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35906,6 +40756,11 @@ theorem mem_iff_id_3970 (n : Fin 5011) (hn : n.val = 3970) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35943,6 +40798,11 @@ theorem mem_iff_id_3971 (n : Fin 5011) (hn : n.val = 3971) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -35980,6 +40840,11 @@ theorem mem_iff_id_3972 (n : Fin 5011) (hn : n.val = 3972) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36017,6 +40882,11 @@ theorem mem_iff_id_3973 (n : Fin 5011) (hn : n.val = 3973) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36054,6 +40924,11 @@ theorem mem_iff_id_3974 (n : Fin 5011) (hn : n.val = 3974) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36091,6 +40966,11 @@ theorem mem_iff_id_3975 (n : Fin 5011) (hn : n.val = 3975) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36128,6 +41008,11 @@ theorem mem_iff_id_3976 (n : Fin 5011) (hn : n.val = 3976) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36165,6 +41050,11 @@ theorem mem_iff_id_3977 (n : Fin 5011) (hn : n.val = 3977) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36202,6 +41092,11 @@ theorem mem_iff_id_3978 (n : Fin 5011) (hn : n.val = 3978) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36239,6 +41134,11 @@ theorem mem_iff_id_3979 (n : Fin 5011) (hn : n.val = 3979) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36276,6 +41176,11 @@ theorem mem_iff_id_3980 (n : Fin 5011) (hn : n.val = 3980) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36313,6 +41218,11 @@ theorem mem_iff_id_3981 (n : Fin 5011) (hn : n.val = 3981) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36350,6 +41260,11 @@ theorem mem_iff_id_3982 (n : Fin 5011) (hn : n.val = 3982) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36387,6 +41302,11 @@ theorem mem_iff_id_3983 (n : Fin 5011) (hn : n.val = 3983) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36424,6 +41344,11 @@ theorem mem_iff_id_3984 (n : Fin 5011) (hn : n.val = 3984) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36461,6 +41386,11 @@ theorem mem_iff_id_3985 (n : Fin 5011) (hn : n.val = 3985) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36498,6 +41428,11 @@ theorem mem_iff_id_3986 (n : Fin 5011) (hn : n.val = 3986) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36535,6 +41470,11 @@ theorem mem_iff_id_3987 (n : Fin 5011) (hn : n.val = 3987) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36572,6 +41512,11 @@ theorem mem_iff_id_3988 (n : Fin 5011) (hn : n.val = 3988) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36609,6 +41554,11 @@ theorem mem_iff_id_3989 (n : Fin 5011) (hn : n.val = 3989) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36646,6 +41596,11 @@ theorem mem_iff_id_3990 (n : Fin 5011) (hn : n.val = 3990) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36683,6 +41638,11 @@ theorem mem_iff_id_3991 (n : Fin 5011) (hn : n.val = 3991) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36720,6 +41680,11 @@ theorem mem_iff_id_3992 (n : Fin 5011) (hn : n.val = 3992) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36757,6 +41722,11 @@ theorem mem_iff_id_3993 (n : Fin 5011) (hn : n.val = 3993) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36794,6 +41764,11 @@ theorem mem_iff_id_3994 (n : Fin 5011) (hn : n.val = 3994) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36831,6 +41806,11 @@ theorem mem_iff_id_3995 (n : Fin 5011) (hn : n.val = 3995) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36868,6 +41848,11 @@ theorem mem_iff_id_3996 (n : Fin 5011) (hn : n.val = 3996) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36905,6 +41890,11 @@ theorem mem_iff_id_3997 (n : Fin 5011) (hn : n.val = 3997) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36942,6 +41932,11 @@ theorem mem_iff_id_3998 (n : Fin 5011) (hn : n.val = 3998) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -36979,6 +41974,11 @@ theorem mem_iff_id_3999 (n : Fin 5011) (hn : n.val = 3999) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37016,6 +42016,11 @@ theorem mem_iff_id_4300 (n : Fin 5011) (hn : n.val = 4300) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37053,6 +42058,11 @@ theorem mem_iff_id_4301 (n : Fin 5011) (hn : n.val = 4301) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37090,6 +42100,11 @@ theorem mem_iff_id_4302 (n : Fin 5011) (hn : n.val = 4302) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37127,6 +42142,11 @@ theorem mem_iff_id_4303 (n : Fin 5011) (hn : n.val = 4303) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37164,6 +42184,11 @@ theorem mem_iff_id_4304 (n : Fin 5011) (hn : n.val = 4304) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37201,6 +42226,11 @@ theorem mem_iff_id_4305 (n : Fin 5011) (hn : n.val = 4305) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37238,6 +42268,11 @@ theorem mem_iff_id_4306 (n : Fin 5011) (hn : n.val = 4306) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37275,6 +42310,11 @@ theorem mem_iff_id_4307 (n : Fin 5011) (hn : n.val = 4307) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37312,6 +42352,11 @@ theorem mem_iff_id_4308 (n : Fin 5011) (hn : n.val = 4308) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37349,6 +42394,11 @@ theorem mem_iff_id_4309 (n : Fin 5011) (hn : n.val = 4309) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37386,6 +42436,11 @@ theorem mem_iff_id_4310 (n : Fin 5011) (hn : n.val = 4310) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37423,6 +42478,11 @@ theorem mem_iff_id_4311 (n : Fin 5011) (hn : n.val = 4311) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37460,6 +42520,11 @@ theorem mem_iff_id_4312 (n : Fin 5011) (hn : n.val = 4312) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37497,6 +42562,11 @@ theorem mem_iff_id_4313 (n : Fin 5011) (hn : n.val = 4313) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37534,6 +42604,11 @@ theorem mem_iff_id_4314 (n : Fin 5011) (hn : n.val = 4314) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37571,6 +42646,11 @@ theorem mem_iff_id_4315 (n : Fin 5011) (hn : n.val = 4315) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37608,6 +42688,11 @@ theorem mem_iff_id_4316 (n : Fin 5011) (hn : n.val = 4316) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37645,6 +42730,11 @@ theorem mem_iff_id_4317 (n : Fin 5011) (hn : n.val = 4317) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37682,6 +42772,11 @@ theorem mem_iff_id_4318 (n : Fin 5011) (hn : n.val = 4318) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37719,6 +42814,11 @@ theorem mem_iff_id_4319 (n : Fin 5011) (hn : n.val = 4319) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37756,6 +42856,11 @@ theorem mem_iff_id_4320 (n : Fin 5011) (hn : n.val = 4320) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37793,6 +42898,11 @@ theorem mem_iff_id_4321 (n : Fin 5011) (hn : n.val = 4321) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37830,6 +42940,11 @@ theorem mem_iff_id_4322 (n : Fin 5011) (hn : n.val = 4322) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37867,6 +42982,11 @@ theorem mem_iff_id_4323 (n : Fin 5011) (hn : n.val = 4323) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37904,6 +43024,11 @@ theorem mem_iff_id_4324 (n : Fin 5011) (hn : n.val = 4324) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37941,6 +43066,11 @@ theorem mem_iff_id_4325 (n : Fin 5011) (hn : n.val = 4325) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -37978,6 +43108,11 @@ theorem mem_iff_id_4326 (n : Fin 5011) (hn : n.val = 4326) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38015,6 +43150,11 @@ theorem mem_iff_id_4327 (n : Fin 5011) (hn : n.val = 4327) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38052,6 +43192,11 @@ theorem mem_iff_id_4328 (n : Fin 5011) (hn : n.val = 4328) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38089,6 +43234,11 @@ theorem mem_iff_id_4329 (n : Fin 5011) (hn : n.val = 4329) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38126,6 +43276,11 @@ theorem mem_iff_id_4330 (n : Fin 5011) (hn : n.val = 4330) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38163,6 +43318,11 @@ theorem mem_iff_id_4331 (n : Fin 5011) (hn : n.val = 4331) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38200,6 +43360,11 @@ theorem mem_iff_id_4332 (n : Fin 5011) (hn : n.val = 4332) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38237,6 +43402,11 @@ theorem mem_iff_id_4333 (n : Fin 5011) (hn : n.val = 4333) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38274,6 +43444,11 @@ theorem mem_iff_id_4334 (n : Fin 5011) (hn : n.val = 4334) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38311,6 +43486,11 @@ theorem mem_iff_id_4335 (n : Fin 5011) (hn : n.val = 4335) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38348,6 +43528,11 @@ theorem mem_iff_id_4336 (n : Fin 5011) (hn : n.val = 4336) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38385,6 +43570,11 @@ theorem mem_iff_id_4337 (n : Fin 5011) (hn : n.val = 4337) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38422,6 +43612,11 @@ theorem mem_iff_id_4338 (n : Fin 5011) (hn : n.val = 4338) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38459,6 +43654,11 @@ theorem mem_iff_id_4339 (n : Fin 5011) (hn : n.val = 4339) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38496,6 +43696,11 @@ theorem mem_iff_id_4340 (n : Fin 5011) (hn : n.val = 4340) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38533,6 +43738,11 @@ theorem mem_iff_id_4341 (n : Fin 5011) (hn : n.val = 4341) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38570,6 +43780,11 @@ theorem mem_iff_id_4342 (n : Fin 5011) (hn : n.val = 4342) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38607,6 +43822,11 @@ theorem mem_iff_id_4343 (n : Fin 5011) (hn : n.val = 4343) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38644,6 +43864,11 @@ theorem mem_iff_id_4344 (n : Fin 5011) (hn : n.val = 4344) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38681,6 +43906,11 @@ theorem mem_iff_id_4345 (n : Fin 5011) (hn : n.val = 4345) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38718,6 +43948,11 @@ theorem mem_iff_id_4346 (n : Fin 5011) (hn : n.val = 4346) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38755,6 +43990,11 @@ theorem mem_iff_id_4347 (n : Fin 5011) (hn : n.val = 4347) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38792,6 +44032,11 @@ theorem mem_iff_id_4348 (n : Fin 5011) (hn : n.val = 4348) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38829,6 +44074,11 @@ theorem mem_iff_id_4349 (n : Fin 5011) (hn : n.val = 4349) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38866,6 +44116,11 @@ theorem mem_iff_id_4350 (n : Fin 5011) (hn : n.val = 4350) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38903,6 +44158,11 @@ theorem mem_iff_id_4351 (n : Fin 5011) (hn : n.val = 4351) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38940,6 +44200,11 @@ theorem mem_iff_id_4352 (n : Fin 5011) (hn : n.val = 4352) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -38977,6 +44242,11 @@ theorem mem_iff_id_4353 (n : Fin 5011) (hn : n.val = 4353) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39014,6 +44284,11 @@ theorem mem_iff_id_4354 (n : Fin 5011) (hn : n.val = 4354) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39051,6 +44326,11 @@ theorem mem_iff_id_4355 (n : Fin 5011) (hn : n.val = 4355) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39088,6 +44368,11 @@ theorem mem_iff_id_4356 (n : Fin 5011) (hn : n.val = 4356) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39125,6 +44410,11 @@ theorem mem_iff_id_4357 (n : Fin 5011) (hn : n.val = 4357) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39162,6 +44452,11 @@ theorem mem_iff_id_4358 (n : Fin 5011) (hn : n.val = 4358) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39199,6 +44494,11 @@ theorem mem_iff_id_4359 (n : Fin 5011) (hn : n.val = 4359) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39236,6 +44536,11 @@ theorem mem_iff_id_4360 (n : Fin 5011) (hn : n.val = 4360) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39273,6 +44578,11 @@ theorem mem_iff_id_4361 (n : Fin 5011) (hn : n.val = 4361) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39310,6 +44620,11 @@ theorem mem_iff_id_4362 (n : Fin 5011) (hn : n.val = 4362) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39347,6 +44662,11 @@ theorem mem_iff_id_4363 (n : Fin 5011) (hn : n.val = 4363) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39384,6 +44704,11 @@ theorem mem_iff_id_4364 (n : Fin 5011) (hn : n.val = 4364) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39421,6 +44746,11 @@ theorem mem_iff_id_4365 (n : Fin 5011) (hn : n.val = 4365) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39458,6 +44788,11 @@ theorem mem_iff_id_4366 (n : Fin 5011) (hn : n.val = 4366) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39495,6 +44830,11 @@ theorem mem_iff_id_4367 (n : Fin 5011) (hn : n.val = 4367) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39532,6 +44872,11 @@ theorem mem_iff_id_4368 (n : Fin 5011) (hn : n.val = 4368) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39569,6 +44914,11 @@ theorem mem_iff_id_4369 (n : Fin 5011) (hn : n.val = 4369) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39606,6 +44956,11 @@ theorem mem_iff_id_4370 (n : Fin 5011) (hn : n.val = 4370) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39643,6 +44998,11 @@ theorem mem_iff_id_4371 (n : Fin 5011) (hn : n.val = 4371) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39680,6 +45040,11 @@ theorem mem_iff_id_4372 (n : Fin 5011) (hn : n.val = 4372) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39717,6 +45082,11 @@ theorem mem_iff_id_4373 (n : Fin 5011) (hn : n.val = 4373) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39754,6 +45124,11 @@ theorem mem_iff_id_4374 (n : Fin 5011) (hn : n.val = 4374) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39791,6 +45166,11 @@ theorem mem_iff_id_4375 (n : Fin 5011) (hn : n.val = 4375) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39828,6 +45208,11 @@ theorem mem_iff_id_4376 (n : Fin 5011) (hn : n.val = 4376) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39865,6 +45250,11 @@ theorem mem_iff_id_4377 (n : Fin 5011) (hn : n.val = 4377) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39902,6 +45292,11 @@ theorem mem_iff_id_4378 (n : Fin 5011) (hn : n.val = 4378) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39939,6 +45334,11 @@ theorem mem_iff_id_4379 (n : Fin 5011) (hn : n.val = 4379) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -39976,6 +45376,11 @@ theorem mem_iff_id_4380 (n : Fin 5011) (hn : n.val = 4380) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40013,6 +45418,11 @@ theorem mem_iff_id_4381 (n : Fin 5011) (hn : n.val = 4381) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40050,6 +45460,11 @@ theorem mem_iff_id_4382 (n : Fin 5011) (hn : n.val = 4382) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40087,6 +45502,11 @@ theorem mem_iff_id_4383 (n : Fin 5011) (hn : n.val = 4383) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40124,6 +45544,11 @@ theorem mem_iff_id_4384 (n : Fin 5011) (hn : n.val = 4384) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40161,6 +45586,11 @@ theorem mem_iff_id_4385 (n : Fin 5011) (hn : n.val = 4385) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40198,6 +45628,11 @@ theorem mem_iff_id_4386 (n : Fin 5011) (hn : n.val = 4386) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40235,6 +45670,11 @@ theorem mem_iff_id_4387 (n : Fin 5011) (hn : n.val = 4387) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40272,6 +45712,11 @@ theorem mem_iff_id_4388 (n : Fin 5011) (hn : n.val = 4388) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40309,6 +45754,11 @@ theorem mem_iff_id_4389 (n : Fin 5011) (hn : n.val = 4389) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40346,6 +45796,11 @@ theorem mem_iff_id_4390 (n : Fin 5011) (hn : n.val = 4390) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40383,6 +45838,11 @@ theorem mem_iff_id_4391 (n : Fin 5011) (hn : n.val = 4391) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40420,6 +45880,11 @@ theorem mem_iff_id_4392 (n : Fin 5011) (hn : n.val = 4392) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40457,6 +45922,11 @@ theorem mem_iff_id_4393 (n : Fin 5011) (hn : n.val = 4393) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40494,6 +45964,11 @@ theorem mem_iff_id_4394 (n : Fin 5011) (hn : n.val = 4394) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40531,6 +46006,11 @@ theorem mem_iff_id_4395 (n : Fin 5011) (hn : n.val = 4395) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40568,6 +46048,11 @@ theorem mem_iff_id_4396 (n : Fin 5011) (hn : n.val = 4396) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40605,6 +46090,11 @@ theorem mem_iff_id_4397 (n : Fin 5011) (hn : n.val = 4397) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40642,6 +46132,11 @@ theorem mem_iff_id_4398 (n : Fin 5011) (hn : n.val = 4398) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40679,6 +46174,11 @@ theorem mem_iff_id_4399 (n : Fin 5011) (hn : n.val = 4399) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40716,6 +46216,11 @@ theorem mem_iff_id_4700 (n : Fin 5011) (hn : n.val = 4700) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40753,6 +46258,11 @@ theorem mem_iff_id_4701 (n : Fin 5011) (hn : n.val = 4701) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40790,6 +46300,11 @@ theorem mem_iff_id_4702 (n : Fin 5011) (hn : n.val = 4702) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40827,6 +46342,11 @@ theorem mem_iff_id_4703 (n : Fin 5011) (hn : n.val = 4703) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40864,6 +46384,11 @@ theorem mem_iff_id_4704 (n : Fin 5011) (hn : n.val = 4704) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40901,6 +46426,11 @@ theorem mem_iff_id_4705 (n : Fin 5011) (hn : n.val = 4705) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40938,6 +46468,11 @@ theorem mem_iff_id_4706 (n : Fin 5011) (hn : n.val = 4706) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -40975,6 +46510,11 @@ theorem mem_iff_id_4707 (n : Fin 5011) (hn : n.val = 4707) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41012,6 +46552,11 @@ theorem mem_iff_id_4708 (n : Fin 5011) (hn : n.val = 4708) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41049,6 +46594,11 @@ theorem mem_iff_id_4709 (n : Fin 5011) (hn : n.val = 4709) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41086,6 +46636,11 @@ theorem mem_iff_id_4710 (n : Fin 5011) (hn : n.val = 4710) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41123,6 +46678,11 @@ theorem mem_iff_id_4711 (n : Fin 5011) (hn : n.val = 4711) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41160,6 +46720,11 @@ theorem mem_iff_id_4712 (n : Fin 5011) (hn : n.val = 4712) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41197,6 +46762,11 @@ theorem mem_iff_id_4713 (n : Fin 5011) (hn : n.val = 4713) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41234,6 +46804,11 @@ theorem mem_iff_id_4714 (n : Fin 5011) (hn : n.val = 4714) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41271,6 +46846,11 @@ theorem mem_iff_id_4715 (n : Fin 5011) (hn : n.val = 4715) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41308,6 +46888,11 @@ theorem mem_iff_id_4716 (n : Fin 5011) (hn : n.val = 4716) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41345,6 +46930,11 @@ theorem mem_iff_id_4717 (n : Fin 5011) (hn : n.val = 4717) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41382,6 +46972,11 @@ theorem mem_iff_id_4718 (n : Fin 5011) (hn : n.val = 4718) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41419,6 +47014,11 @@ theorem mem_iff_id_4719 (n : Fin 5011) (hn : n.val = 4719) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41456,6 +47056,11 @@ theorem mem_iff_id_4720 (n : Fin 5011) (hn : n.val = 4720) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41493,6 +47098,11 @@ theorem mem_iff_id_4721 (n : Fin 5011) (hn : n.val = 4721) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41530,6 +47140,11 @@ theorem mem_iff_id_4722 (n : Fin 5011) (hn : n.val = 4722) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41567,6 +47182,11 @@ theorem mem_iff_id_4723 (n : Fin 5011) (hn : n.val = 4723) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41604,6 +47224,11 @@ theorem mem_iff_id_4724 (n : Fin 5011) (hn : n.val = 4724) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41641,6 +47266,11 @@ theorem mem_iff_id_4725 (n : Fin 5011) (hn : n.val = 4725) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41678,6 +47308,11 @@ theorem mem_iff_id_4726 (n : Fin 5011) (hn : n.val = 4726) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41715,6 +47350,11 @@ theorem mem_iff_id_4727 (n : Fin 5011) (hn : n.val = 4727) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41752,6 +47392,11 @@ theorem mem_iff_id_4728 (n : Fin 5011) (hn : n.val = 4728) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41789,6 +47434,11 @@ theorem mem_iff_id_4729 (n : Fin 5011) (hn : n.val = 4729) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41826,6 +47476,11 @@ theorem mem_iff_id_4730 (n : Fin 5011) (hn : n.val = 4730) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41863,6 +47518,11 @@ theorem mem_iff_id_4731 (n : Fin 5011) (hn : n.val = 4731) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41900,6 +47560,11 @@ theorem mem_iff_id_4732 (n : Fin 5011) (hn : n.val = 4732) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41937,6 +47602,11 @@ theorem mem_iff_id_4733 (n : Fin 5011) (hn : n.val = 4733) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -41974,6 +47644,11 @@ theorem mem_iff_id_4734 (n : Fin 5011) (hn : n.val = 4734) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42011,6 +47686,11 @@ theorem mem_iff_id_4735 (n : Fin 5011) (hn : n.val = 4735) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42048,6 +47728,11 @@ theorem mem_iff_id_4736 (n : Fin 5011) (hn : n.val = 4736) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42085,6 +47770,11 @@ theorem mem_iff_id_4737 (n : Fin 5011) (hn : n.val = 4737) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42122,6 +47812,11 @@ theorem mem_iff_id_4738 (n : Fin 5011) (hn : n.val = 4738) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42159,6 +47854,11 @@ theorem mem_iff_id_4739 (n : Fin 5011) (hn : n.val = 4739) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42196,6 +47896,11 @@ theorem mem_iff_id_4740 (n : Fin 5011) (hn : n.val = 4740) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42233,6 +47938,11 @@ theorem mem_iff_id_4741 (n : Fin 5011) (hn : n.val = 4741) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42270,6 +47980,11 @@ theorem mem_iff_id_4742 (n : Fin 5011) (hn : n.val = 4742) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42307,6 +48022,11 @@ theorem mem_iff_id_4743 (n : Fin 5011) (hn : n.val = 4743) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42344,6 +48064,11 @@ theorem mem_iff_id_4744 (n : Fin 5011) (hn : n.val = 4744) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42381,6 +48106,11 @@ theorem mem_iff_id_4745 (n : Fin 5011) (hn : n.val = 4745) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42418,6 +48148,11 @@ theorem mem_iff_id_4746 (n : Fin 5011) (hn : n.val = 4746) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42455,6 +48190,11 @@ theorem mem_iff_id_4747 (n : Fin 5011) (hn : n.val = 4747) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42492,6 +48232,11 @@ theorem mem_iff_id_4748 (n : Fin 5011) (hn : n.val = 4748) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42529,6 +48274,11 @@ theorem mem_iff_id_4749 (n : Fin 5011) (hn : n.val = 4749) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42566,6 +48316,11 @@ theorem mem_iff_id_4750 (n : Fin 5011) (hn : n.val = 4750) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42603,6 +48358,11 @@ theorem mem_iff_id_4751 (n : Fin 5011) (hn : n.val = 4751) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42640,6 +48400,11 @@ theorem mem_iff_id_4752 (n : Fin 5011) (hn : n.val = 4752) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42677,6 +48442,11 @@ theorem mem_iff_id_4753 (n : Fin 5011) (hn : n.val = 4753) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42714,6 +48484,11 @@ theorem mem_iff_id_4754 (n : Fin 5011) (hn : n.val = 4754) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42751,6 +48526,11 @@ theorem mem_iff_id_4755 (n : Fin 5011) (hn : n.val = 4755) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42788,6 +48568,11 @@ theorem mem_iff_id_4756 (n : Fin 5011) (hn : n.val = 4756) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42825,6 +48610,11 @@ theorem mem_iff_id_4757 (n : Fin 5011) (hn : n.val = 4757) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42862,6 +48652,11 @@ theorem mem_iff_id_4758 (n : Fin 5011) (hn : n.val = 4758) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42899,6 +48694,11 @@ theorem mem_iff_id_4759 (n : Fin 5011) (hn : n.val = 4759) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42936,6 +48736,11 @@ theorem mem_iff_id_4760 (n : Fin 5011) (hn : n.val = 4760) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -42973,6 +48778,11 @@ theorem mem_iff_id_4761 (n : Fin 5011) (hn : n.val = 4761) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43010,6 +48820,11 @@ theorem mem_iff_id_4762 (n : Fin 5011) (hn : n.val = 4762) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43047,6 +48862,11 @@ theorem mem_iff_id_4763 (n : Fin 5011) (hn : n.val = 4763) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43084,6 +48904,11 @@ theorem mem_iff_id_4764 (n : Fin 5011) (hn : n.val = 4764) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43121,6 +48946,11 @@ theorem mem_iff_id_4765 (n : Fin 5011) (hn : n.val = 4765) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43158,6 +48988,11 @@ theorem mem_iff_id_4766 (n : Fin 5011) (hn : n.val = 4766) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43195,6 +49030,11 @@ theorem mem_iff_id_4767 (n : Fin 5011) (hn : n.val = 4767) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43232,6 +49072,11 @@ theorem mem_iff_id_4768 (n : Fin 5011) (hn : n.val = 4768) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43269,6 +49114,11 @@ theorem mem_iff_id_4769 (n : Fin 5011) (hn : n.val = 4769) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43306,6 +49156,11 @@ theorem mem_iff_id_4770 (n : Fin 5011) (hn : n.val = 4770) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43343,6 +49198,11 @@ theorem mem_iff_id_4771 (n : Fin 5011) (hn : n.val = 4771) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43380,6 +49240,11 @@ theorem mem_iff_id_4772 (n : Fin 5011) (hn : n.val = 4772) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43417,6 +49282,11 @@ theorem mem_iff_id_4773 (n : Fin 5011) (hn : n.val = 4773) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43454,6 +49324,11 @@ theorem mem_iff_id_4774 (n : Fin 5011) (hn : n.val = 4774) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43491,6 +49366,11 @@ theorem mem_iff_id_4775 (n : Fin 5011) (hn : n.val = 4775) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43528,6 +49408,11 @@ theorem mem_iff_id_4776 (n : Fin 5011) (hn : n.val = 4776) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43565,6 +49450,11 @@ theorem mem_iff_id_4777 (n : Fin 5011) (hn : n.val = 4777) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43602,6 +49492,11 @@ theorem mem_iff_id_4778 (n : Fin 5011) (hn : n.val = 4778) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43639,6 +49534,11 @@ theorem mem_iff_id_4779 (n : Fin 5011) (hn : n.val = 4779) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43676,6 +49576,11 @@ theorem mem_iff_id_4780 (n : Fin 5011) (hn : n.val = 4780) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43713,6 +49618,11 @@ theorem mem_iff_id_4781 (n : Fin 5011) (hn : n.val = 4781) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43750,6 +49660,11 @@ theorem mem_iff_id_4782 (n : Fin 5011) (hn : n.val = 4782) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43787,6 +49702,11 @@ theorem mem_iff_id_4783 (n : Fin 5011) (hn : n.val = 4783) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43824,6 +49744,11 @@ theorem mem_iff_id_4784 (n : Fin 5011) (hn : n.val = 4784) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43861,6 +49786,11 @@ theorem mem_iff_id_4785 (n : Fin 5011) (hn : n.val = 4785) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43898,6 +49828,11 @@ theorem mem_iff_id_4786 (n : Fin 5011) (hn : n.val = 4786) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43935,6 +49870,11 @@ theorem mem_iff_id_4787 (n : Fin 5011) (hn : n.val = 4787) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -43972,6 +49912,11 @@ theorem mem_iff_id_4788 (n : Fin 5011) (hn : n.val = 4788) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44009,6 +49954,11 @@ theorem mem_iff_id_4789 (n : Fin 5011) (hn : n.val = 4789) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44046,6 +49996,11 @@ theorem mem_iff_id_4790 (n : Fin 5011) (hn : n.val = 4790) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44083,6 +50038,11 @@ theorem mem_iff_id_4791 (n : Fin 5011) (hn : n.val = 4791) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44120,6 +50080,11 @@ theorem mem_iff_id_4792 (n : Fin 5011) (hn : n.val = 4792) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44157,6 +50122,11 @@ theorem mem_iff_id_4793 (n : Fin 5011) (hn : n.val = 4793) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44194,6 +50164,11 @@ theorem mem_iff_id_4794 (n : Fin 5011) (hn : n.val = 4794) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44231,6 +50206,11 @@ theorem mem_iff_id_4795 (n : Fin 5011) (hn : n.val = 4795) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44268,6 +50248,11 @@ theorem mem_iff_id_4796 (n : Fin 5011) (hn : n.val = 4796) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44305,6 +50290,11 @@ theorem mem_iff_id_4797 (n : Fin 5011) (hn : n.val = 4797) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44342,6 +50332,11 @@ theorem mem_iff_id_4798 (n : Fin 5011) (hn : n.val = 4798) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
@@ -44379,6 +50374,11 @@ theorem mem_iff_id_4799 (n : Fin 5011) (hn : n.val = 4799) :
   subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
+    residualIDs,
+    chunk0,
+    chunk1,
+    chunk2,
+    chunk3,
     EnergyTerminalBatchB13.paidIDs,
     EnergyTerminalBatchB12.paidIDs,
     EnergyTerminalBatchB11.paidIDs,
