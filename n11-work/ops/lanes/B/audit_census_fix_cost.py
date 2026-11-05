@@ -31,6 +31,8 @@ def resolve(m, name):
     out |= {int(x) for x in re.findall(r"insert (\d+) ", r)}
     if "image patchID" in r:
         out |= _vector("Patch120DomainPacket", "patchID")
+    for vname in re.findall(r"univ\.image\s+([A-Za-z0-9_]+)", r):
+        out |= _vector(m, vname)
     for mod, nm in re.findall(r"([A-Z][A-Za-z0-9_]*)\.([A-Za-z0-9_]+)", r):
         if mod in ("Finset", "Fin") or not (LEAN / f"{mod}.lean").exists():
             continue
