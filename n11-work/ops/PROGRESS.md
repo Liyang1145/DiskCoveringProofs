@@ -119,3 +119,5 @@ LANE-RAN: A,B,C
 2026-11-04 11:44 CST LANE-RAN: A,B,C (CI idle, merged+pushed). LAST-REPORT: 2026-11-02 21:45 CST
 2026-11-04 21:40 CST LANE-RAN: A,B,C (CI 41794012819 failure; merge per CI). LAST-REPORT: 2026-11-02 21:45 CST
 2026-11-04 22:30 CST LANE-RAN: A,B,C (CI idle, merged+pushed). LAST-REPORT: 2026-11-02 21:45 CST
+2026-11-04 15:47 CST LANE-RAN: A,B,C (CI 41847982412 status checked; merge per CI). LAST-REPORT: 2026-11-02 21:45 CST
+2026-11-05 10:16 CST report sent (key rotated #2->#3; CI 41847982412 success-run but 11 census modules exit 1; C450 still not in root). LAST-REPORT: 2026-11-05 10:16 CST
