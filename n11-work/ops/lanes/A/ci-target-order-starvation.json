@@ -1,0 +1,16 @@
+{
+ "scope": "TARGETS-file ordering + observed CI budget; STATIC, NOT a kernel verdict",
+ "counts": {
+  "C": 239,
+  "B": 34,
+  "A": 78
+ },
+ "total_after_dedup": 346,
+ "first_lane_a_target": "N11Formalization.C450ChainCompletion",
+ "first_lane_a_position_1based": 270,
+ "targets_preceding_lane_a": 269,
+ "observed_budget_targets": 11,
+ "lane_a_reachable_within_budget": false,
+ "verdict": "LANE_A_STARVED",
+ "recommendation": "Put lane A first in the build loop (or add a lane-A-only build run); otherwise no lane-A target can ever be kernel-checked under the 355-min job wall clock."
+}
