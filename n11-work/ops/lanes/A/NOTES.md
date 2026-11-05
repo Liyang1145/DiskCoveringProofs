@@ -10,6 +10,37 @@ EXPERT (2026-11-02):
 
 # Lane A notes
 
+CURRENT (session 197, 2026-11-05): **TARGET-DONE, CI-GREEN, waiting on
+supervisor-only root import.**  No new Lean modules.  Concrete work this
+session (STATIC / CI-config only, not new kernel runs):
+
+- Re-ran `verify_chain_completion.py` (scope: lane-A source + TARGETS + root
+  markers, pure static, no Lean build): all 7 PASS lines reproduced, incl.
+  "five telescoping chunks contain all 25 transfers exactly once" and "root
+  still exposes both C450 HARK-MISSING markers".  The live source has 7
+  emitted modules: `C450ChainCompletion{Endpoint,Tail,Mid1,Mid2,Mid3}`,
+  `C450ChainCompletion`, `C450ChainCompletionMain` (the chunk split from
+  session ~193; NOTES below had only named the two top modules).
+- `git apply --check ../ops/lanes/A/root-import-c450.patch` -> **PATCH_APPLIES_
+  CLEAN**; the patch uncomments exactly root lines 1952--1953.
+- Edited `TARGETS.txt` (lane-A file): added the five chunk modules
+  `...Endpoint/Tail/Mid1/Mid2/Mid3` as explicit CI targets after
+  `...Audit`, in import order.  They are already transitively imported by
+  `C450ChainCompletion`, so this adds ~0 build cost but gives each chunk its
+  own `=== EXIT` line (hard rule 6: read the error line).  Re-ran the verifier
+  after the edit -> still all 7 PASS.
+
+Still unproved / unpaid: unchanged from the entry below (q0(5,8)
+`ClosureFactorBounds`; q0(3) tables + `q0Degree3AreaInput`; seven metric-class
+exclusions; energy residual 389; arbitrary-centre full-disk theorem).  q0 stays
+PAUSED per FOCUS until C450 is root-imported AND the root is green.
+
+Very next concrete step: supervisor applies `root-import-c450.patch`, pushes,
+and lets `n11-lean-build` finish.  Root will still exit 1 until lane B/C fix
+`SharedMomentConcreteSwitchBatch` (OOM-guard kill), so the q0 pause cannot lift
+on lane A alone.  On green: resume lane A at
+`SevenClassQ0Deg3Q0Exclusion.q0_degree3`.
+
 CURRENT (session 196, 2026-11-05): **TARGET-DONE and now CI-GREEN.**  Lane-A
 FOCUS target = restore `C450ChainCompletion` + `C450ChainCompletionMain` (root
 `-- HARK-MISSING` lines 1952--1953).  Both modules exist and, per the FULL CI
