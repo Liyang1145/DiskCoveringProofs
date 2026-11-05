@@ -21,6 +21,17 @@ ROOT = os.path.join(os.path.dirname(__file__), '..', '..', '..', 'lean', 'N11For
 # over the full ~1997-element paid set, ~10^6 diff comparisons per terminal id.
 # Rewriting with `Finset.mem_union`/`Finset.mem_insert`/`Finset.mem_singleton`
 # first makes every `decide` atom a literal `idsNN` / image membership instead.
+# Part 303: also decompose the *census* side.  The theorem's left-hand
+# `n ∈ residualIDs` is the local `def residualIDs := chunk0 ∪ (chunk1 ∪ (chunk2 ∪ chunk3))`.
+# Leaving it to `decide +kernel` forces the kernel to reduce the
+# `Finset.union` value `s - t + t` over up to 389 literal ids for EVERY one of
+# the 5011 per-index theorems (~5e4-1e5 diff comparisons each).  Unfolding the
+# four chunk defs and splitting with `Finset.mem_union`/`mem_insert`/
+# `mem_singleton` turns that into ~400 literal `Fin 5011` equalities.
+CENSUS_SIMP = [
+    'residualIDs', 'chunk0', 'chunk1', 'chunk2', 'chunk3',
+]
+
 PAID_SIMP = [
     'EnergyTerminalBatchB13.paidIDs', 'EnergyTerminalBatchB12.paidIDs',
     'EnergyTerminalBatchB11.paidIDs', 'EnergyTerminalBatchB10.paidIDs',
@@ -39,8 +50,9 @@ PAID_SIMP = [
     'Paid16GeneralNext1182S07.newIDs', 'Paid16GeneralNext1182S08.newIDs',
     'Finset.mem_union', 'Finset.mem_insert', 'Finset.mem_singleton', 'not_or',
 ]
+SIMP_LEMMAS = CENSUS_SIMP + PAID_SIMP
 PAID_SIMP_BLOCK = '  simp only [\n' + ',\n'.join(
-    '    ' + x for x in PAID_SIMP) + ']'
+    '    ' + x for x in SIMP_LEMMAS) + ']'
 
 BLOCK_FILES = {
     'C01': [0, 4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48],

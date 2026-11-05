@@ -54,6 +54,28 @@ EXPERT (2026-11-02):
   `chunk0..3` (100/100/100/89) match `residual389-census.json` (static PASS).
   Local bisection INFEASIBLE (`import Mathlib` > 190 s in the probe). No id paid.
 
+## 2026-11-03/04 - parts 296-303 (condensed; C01-C04 kernel hardening)
+
+- parts 296-299: split each 100-index block into 5011 per-index theorems
+  `mem_iff_id_<id>` (`emit_census_c01_c04.py`), each a single closed
+  `decide +kernel`; block lemmas delegate via `interval_cases` + bullets.
+  Interface `mem_iff_blockNN`, the 51 consumer calls, `chunk0..chunk3`
+  unchanged. Independent static verifier `verify_census_c01_c04.py` PASSes the
+  exact-complement check vs `residual389-census.json` (SOURCE-LEVEL only).
+- part 299: real CI log (run `41769569707`) showed the owning error = heartbeat
+  timeout at `decide +kernel +revert` for TERMINAL ids only; cause = kernel
+  reducing the `Finset.union` *value* `s - t + t` over the full ~1997-id paid
+  set (non-terminal ids short-circuited on `(data n).terminal = false`).
+- parts 301/302: `simp only` with `Finset.mem_union/mem_insert/mem_singleton`
+  splits every paid-chain `∪` into literal atoms BEFORE `decide`; per-index
+  goal closed with `Fin.ext hn` + `subst` (no `+revert`).
+- part 303: same for the CENSUS side -- added `CENSUS_SIMP =
+  [residualIDs, chunk0..chunk3]` so `n ∈ residualIDs` is also split.
+- Probe tooling dead-end (do NOT repeat): `/workspace/tools/mathlib-probe` has
+  NO built Mathlib oleans (`import Mathlib` = local prelude stub; `Finset.Basic`
+  missing). Local Lean validation impossible; CI is the only authority.
+
+
 ## 2026-11-03/04 - parts 296-299 (condensed)
 
 - Part 296 rewrote C01-C04 so each source index gets its own theorem
@@ -76,111 +98,49 @@ EXPERT (2026-11-02):
   `n ∈ paidIDs` (~1997 nested literals) forces ~10^6 diff comparisons. NOT a
   false id, NOT per-index cost per se: the union *value* reduction is the blowup.
 
-## 2026-11-04 - part 300 (exact per-index leaf plan + emitter design)
+## 2026-11-05 - part 304 (CI-failure re-attribution; simp-coverage audit)
 
-Re-read GUIDANCE/LANES/C-NOTES/LATEST. No Lean build locally (2 cores; project
-not built, `import Mathlib` > 190 s in `/workspace/tools/mathlib-probe`). CI is
-the authority. This session did the quantitative extraction needed to emit the
-structural (union-free) `mem_iff_id` proof.
+State on entry: worktree HEAD `7fe98db8`; uncommitted = part-303 C01-C04 +
+`emit_census_c01_c04.py` + this NOTES (the part-303 fix is NOT yet CI-checked).
 
-New artifact: `n11-work/ops/lanes/C/plan_census_c01_c04.py` (run this session,
-rc=0) reads the actual Lean literals and writes
-`census-c01-c04-plan.json`. Measured numbers:
-- `Paid16GeneralNext505`: 25 literal parts, 505 ids, range `[1160, 2564]`.
-- `Paid16GeneralNext1182`: 1182 ids over `[2565, 5007]`, 57 literal sub-blocks
-  (8 parts S01..S08; S08 has 1 sub-block of 6 ids). `Next505` is entirely below
-  `Next1182` (disjoint ranges, confirmed).
-- Terminals (`(data n).terminal = true`, 2506 total) by value range:
-  `<1160`: 293; `1160..2564`: 516; `2565..5010`: 1697.
-- Consequence: the only indices needing the expensive high-range
-  decomposition are the 1697 terminals in `[2565, 5010]`; the 293 low ones need
-  no Next1182 reasoning (below its `lower_bound` 2565) and the 516 mid ones need
-  no Next1182 reasoning either (same bound); Next505 is below 2565 so the 1697
-  high ones need no Next505 reasoning (its `next505_lt` gives `< 2565`).
+New concrete finding (`ops/ci/LATEST.md`, run `41847982412`, sha `6e67ed3a`):
+that run failed in TWO distinct ways. (a) `summary.json` still lists
+`EnergyTerminalResidualCensusC01..C04` exit `1` (elaboration error, not 137).
+(b) the *build log tail* shows the ROOT build reaching
+`[10725/10727] Building N11Formalization.SharedMomentConcreteSwitchBatch
+(1002s)` then `OOM-GUARD killing lean (avail=722MB)` / `error: Lean exited
+with code 137` / `=== EXIT N11Formalization 1`. So the run's overall failure is
+an OOM in a lane-C-unrelated frozen-sized module, NOT the C01 heartbeat; no
+per-module C01 error line is stored anywhere readable.
 
-Emitter design (union-free, decided only on literals <=~210 elements):
-1. Non-terminal id: `(data KKKK).terminal = false` by `decide +kernel`, then
-   `simp` the iff to `False` and close the census side with `Finset.mem_union`
-   decomposition into the four `chunk` literals (each a <=100 linear scan).
-2. Terminal id: `rw [EnergyTerminalBatchB13.mem_residualIDs_iff]`, `constructor`.
-   Forward needs `(data KKKK).terminal = true`, `KKKK ∉ sharpIDs` (both
-   `decide +kernel`) and `KKKK ∉ paidIDs` structural:
-   `paidIDs -> B12 | Next1182`, `B12 -> B11 | Next505`, `B11 -> B10 | Rem210`,
-   each via `Finset.mem_union`/`not_or`/`push_neg`; leaves: `B10.paidIDs`,
-   `Paid16GeneralRemaining210.newIDs` (small nested literal unions, green for
-   id 39 in `EnergyTerminalBatchB13Refine0039.lean`), `Next505.newIDs` (one
-   `rw [Paid16GeneralNext505.new_mem]; decide +kernel`, <=525 literal compares),
-   `Next1182.newIDs` (8 per-part `rw [S0X.new_mem]; decide +kernel`, <=8*168).
-   Reverse needs `KKKK ∈ residualIDs` (census), decided per chunk via
-   `Finset.mem_union` (<=100 scan each), never the whole union.
-3. `mem_iff_blockNN` and the consumer `EnergyTerminalResidualCensus.lean`
-   interface stay byte-identical; `chunk0..3` stay byte-identical.
+Simp-coverage audit (static): after the part-303 simp the paid side decomposes
+to ~101 leaf `Finset` atoms -- `Paid16GeneralG01..G12.newIDs` (`univ.image
+nodeID`, 21 elts; NOT unfolded), `Paid16GeneralNext505.ids00..24`,
+`Paid16GeneralNext1182S01..S08.ids00..07` -- because every UNION def
+(`B01..B13`, `First42`, `Remaining210`, `Next505`, `Next1182` via `new_mem`,
+`S01..S08`) is in the simp list while the image/leaf defs are not. Hence the
+kernel `decide` now sees `n = i`-substituted `∨`-trees of small closed
+`Finset.mem` atoms (<=168 elts each), with `not_or` pushing the `∉ paidIDs`
+complement, instead of a `s - t + t` union *value* over 1997 ids. Residual
+risk is therefore elaboration/simp recursion depth over ~2400 literals per
+per-index theorem (5011 of them), not the multiset-diff kernel blowup.
 
-Checks run this session (scope): `plan_census_c01_c04.py` (rc=0, wrote
-`census-c01-c04-plan.json`); `git log`/`git status`. NO Lean built locally, no
-CI cycle triggered, nothing kernel-checked. Nothing here is kernel credit.
+Checks run (scope): re-ran `python3 emit_census_c01_c04.py` -> rc 0, self-check
+5011, output byte-identical (git diff unchanged: only 4 C01-C04 + emitter);
+`python3 verify_census_c01_c04.py` -> `PASS  per-index ids: 5011 (0..5010);
+blocks: 51; consumer: 51 calls; chunks==census (389); forbidden tokens: none`
+(SOURCE-LEVEL STRUCTURE + exact-complement only). No Lean built locally (2
+cores; probe has no Mathlib oleans), no CI triggered, no new files (FOCUS
+mode). Nothing here is kernel credit.
 
-Still unproved (unchanged): CI green for C01-C04 + the red consumers
-(`Census`, `Refine0039*`, `Refine0037Refine3149`, `RefineSixteen*Census*`); the
-7 red Refine0039/RefineSixteen/Refine385 modules; all 389 residual radius
-certificates; 327 source-missing ids; canonical/geometric packet production;
-MPacket validity; SevenClassExclusions; arbitrary-centre root theorem.
-
-Very next concrete step: edit `emit_census_c01_c04.py` to emit design (1)/(2)
-above (union-free, literal-only `decide`), regenerate C01-C04, re-run
-`verify_census_c01_c04.py` (must still PASS; chunk literals unchanged), then
-request one CI cycle. Read the FIRST owning error; do not claim green until the
-job log shows exit 0 for C01-C04 with axioms
-`[propext, Classical.choice, Quot.sound]`.
-
-## 2026-11-05 - part 302 (real CI error found; emitter fixed; CI pending)
-
-Fetched the ACTUAL job log for run `41847982412` (sha `6e67ed3a`, the run
-that includes the part-301 `mem_union` split). Command used:
-`curl -sL https://api.github.com/repos/Liyang1145/DiskCoveringProofs/actions/jobs/126636432190/logs`
-(698 MB; the OOM-guard lines dominate). PROGRESS.md confirms `41847982412`
-`success-run but 11 census modules exit 1`.
-
-Owning error (C01, identical form C02-C04, repeated for EVERY per-index
-theorem at `EnergyTerminalResidualCensusC01.lean:49:2, 87:2, 125:2, ...`):
-```
-error: ...C01.lean:49:2: failed to synthesize
-  Decidable
-    (\u2200 (hk : 0 < 5011),
-      \u27e80, hk\u27e9 \u2208 residualIDs \u2194
-        (DBMSourceTree.data \u27e80, hk\u27e9).terminal = true \u2227 ...
-```
-NOT a heartbeat timeout. The part-296 proof wrote `decide +kernel +revert`;
-`+revert` lifts the `Fin` bound proof `hk : 0 < 5011` into a `\u2200`, and
-`Decidable (\u2200 hk : 0 < 5011, P hk)` is not synthesizable (no `Fintype` on a
-`Prop`), so synthesis fails before any kernel reduction. (The pre-301
-version reached a *timeout* because its goal after `simp only` still had
-`n \u2208 paidIDs` as a single union-value atom; adding `mem_union` made the
-goal a big `\u2227`/`\u2228` of small atoms and exposed the `\u2200 hk` synthesis bug.)
-
-Fix (emitter `emit_census_c01_c04.py`, part 302): replace
-`rcases n with \u27e8k, hk\u27e9; change k = N at hn; subst hn` with
-`have hn' : n = (N : Fin 5011) := Fin.ext hn; subst hn'` so `n` becomes the
-CLOSED literal `(N : Fin 5011)` (no dependent proof in the term), and use
-`decide +kernel` WITHOUT `+revert` (goal is already closed). Regenerated
-C01..C04 this session (C01 1300, C02 1300, C03 1211, C04 1200 ids; 5011
-total). Interface `mem_iff_blockNN` and the 51 consumer calls are unchanged.
-
-Checks run (scope): `emit_census_c01_c04.py` (rc=0, self-check 5011);
-`verify_census_c01_c04.py` -> `PASS  per-index ids: 5011 (0..5010); blocks: 51;
-consumer: 51 calls; chunks==census (389); forbidden tokens: none` (SOURCE-LEVEL
-STRUCTURE ONLY, exact-complement vs `residual389-census.json`);
-`git diff --stat` (C01-C04 rewritten). NO Lean built locally, no CI cycle
-triggered, nothing kernel-checked. Nothing here is kernel credit.
-
-Still unproved: CI green for C01-C04 + the 11 red census consumers; all 389
+Still unproved: CI green for C01-C04 and the 11 red census consumers; all 389
 residual radius certificates; 382 non-public payloads; MPacket validity;
-SevenClassExclusions; arbitrary-centre root theorem. (`decide +kernel` on the
-full closed disjunction may now be slow/OK; unknown until CI.)
+SevenClassExclusions; arbitrary-centre root theorem. Also unpaid (not lane C):
+the root-build OOM on `SharedMomentConcreteSwitchBatch`.
 
-Very next concrete step: request ONE CI cycle (supervisor pushes); read the
-FIRST owning error for C01. If it is again a timeout at the `decide +kernel`
-line, apply the NOTES part-300 design (2): split `n \u2208 paidIDs` structurally
-via `Finset.mem_union`/`not_or` over the B12/Next505/Next1182 chain and close
-leaves with per-part `mem` lemmas, instead of one `decide` over the whole
-disjunction.
+Very next concrete step: request ONE CI cycle and read the FIRST owning C01
+error. If it is a heartbeat at the `decide +kernel` line, the remaining heavy
+atom is `(DBMSourceTree.data (i:Fin 5011)).terminal = true` (or `sharpIDs`),
+not the paid set: split that atom off and decide it in its own small lemma. Do
+not claim green until the job log shows exit 0 for C01-C04 with axioms
+`[propext, Classical.choice, Quot.sound]`.
