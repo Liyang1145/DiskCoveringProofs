@@ -73,12 +73,11 @@ def emit_part(name, blocks):
             L.append('theorem mem_iff_id_%04d (n : Fin 5011) (hn : n.val = %d) :'
                      % (i, i))
             L.append('    n \u2208 residualIDs \u2194 n \u2208 EnergyTerminalBatchB13.residualIDs := by')
-            L.append('  rcases n with \u27e8k, hk\u27e9')
-            L.append('  change k = %d at hn' % i)
-            L.append('  subst hn')
+            L.append("  have hn' : n = (%d : Fin 5011) := Fin.ext hn" % i)
+            L.append("  subst hn'")
             L.append('  rw [EnergyTerminalBatchB13.mem_residualIDs_iff]')
             L.append(PAID_SIMP_BLOCK)
-            L.append('  decide +kernel +revert')
+            L.append('  decide +kernel')
             L.append('')
     for bb in blocks:
         lo = 100 * bb

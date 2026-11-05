@@ -12,9 +12,8 @@ noncomputable section
 
 theorem mem_iff_id_0100 (n : Fin 5011) (hn : n.val = 100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 100 at hn
-  subst hn
+  have hn' : n = (100 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46,13 +45,12 @@ theorem mem_iff_id_0100 (n : Fin 5011) (hn : n.val = 100) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0101 (n : Fin 5011) (hn : n.val = 101) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 101 at hn
-  subst hn
+  have hn' : n = (101 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -84,13 +82,12 @@ theorem mem_iff_id_0101 (n : Fin 5011) (hn : n.val = 101) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0102 (n : Fin 5011) (hn : n.val = 102) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 102 at hn
-  subst hn
+  have hn' : n = (102 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -122,13 +119,12 @@ theorem mem_iff_id_0102 (n : Fin 5011) (hn : n.val = 102) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0103 (n : Fin 5011) (hn : n.val = 103) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 103 at hn
-  subst hn
+  have hn' : n = (103 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -160,13 +156,12 @@ theorem mem_iff_id_0103 (n : Fin 5011) (hn : n.val = 103) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0104 (n : Fin 5011) (hn : n.val = 104) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 104 at hn
-  subst hn
+  have hn' : n = (104 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -198,13 +193,12 @@ theorem mem_iff_id_0104 (n : Fin 5011) (hn : n.val = 104) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0105 (n : Fin 5011) (hn : n.val = 105) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 105 at hn
-  subst hn
+  have hn' : n = (105 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -236,13 +230,12 @@ theorem mem_iff_id_0105 (n : Fin 5011) (hn : n.val = 105) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0106 (n : Fin 5011) (hn : n.val = 106) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 106 at hn
-  subst hn
+  have hn' : n = (106 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -274,13 +267,12 @@ theorem mem_iff_id_0106 (n : Fin 5011) (hn : n.val = 106) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0107 (n : Fin 5011) (hn : n.val = 107) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 107 at hn
-  subst hn
+  have hn' : n = (107 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -312,13 +304,12 @@ theorem mem_iff_id_0107 (n : Fin 5011) (hn : n.val = 107) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0108 (n : Fin 5011) (hn : n.val = 108) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 108 at hn
-  subst hn
+  have hn' : n = (108 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -350,13 +341,12 @@ theorem mem_iff_id_0108 (n : Fin 5011) (hn : n.val = 108) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0109 (n : Fin 5011) (hn : n.val = 109) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 109 at hn
-  subst hn
+  have hn' : n = (109 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -388,13 +378,12 @@ theorem mem_iff_id_0109 (n : Fin 5011) (hn : n.val = 109) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0110 (n : Fin 5011) (hn : n.val = 110) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 110 at hn
-  subst hn
+  have hn' : n = (110 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -426,13 +415,12 @@ theorem mem_iff_id_0110 (n : Fin 5011) (hn : n.val = 110) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0111 (n : Fin 5011) (hn : n.val = 111) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 111 at hn
-  subst hn
+  have hn' : n = (111 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -464,13 +452,12 @@ theorem mem_iff_id_0111 (n : Fin 5011) (hn : n.val = 111) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0112 (n : Fin 5011) (hn : n.val = 112) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 112 at hn
-  subst hn
+  have hn' : n = (112 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -502,13 +489,12 @@ theorem mem_iff_id_0112 (n : Fin 5011) (hn : n.val = 112) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0113 (n : Fin 5011) (hn : n.val = 113) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 113 at hn
-  subst hn
+  have hn' : n = (113 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -540,13 +526,12 @@ theorem mem_iff_id_0113 (n : Fin 5011) (hn : n.val = 113) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0114 (n : Fin 5011) (hn : n.val = 114) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 114 at hn
-  subst hn
+  have hn' : n = (114 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -578,13 +563,12 @@ theorem mem_iff_id_0114 (n : Fin 5011) (hn : n.val = 114) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0115 (n : Fin 5011) (hn : n.val = 115) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 115 at hn
-  subst hn
+  have hn' : n = (115 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -616,13 +600,12 @@ theorem mem_iff_id_0115 (n : Fin 5011) (hn : n.val = 115) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0116 (n : Fin 5011) (hn : n.val = 116) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 116 at hn
-  subst hn
+  have hn' : n = (116 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -654,13 +637,12 @@ theorem mem_iff_id_0116 (n : Fin 5011) (hn : n.val = 116) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0117 (n : Fin 5011) (hn : n.val = 117) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 117 at hn
-  subst hn
+  have hn' : n = (117 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -692,13 +674,12 @@ theorem mem_iff_id_0117 (n : Fin 5011) (hn : n.val = 117) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0118 (n : Fin 5011) (hn : n.val = 118) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 118 at hn
-  subst hn
+  have hn' : n = (118 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -730,13 +711,12 @@ theorem mem_iff_id_0118 (n : Fin 5011) (hn : n.val = 118) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0119 (n : Fin 5011) (hn : n.val = 119) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 119 at hn
-  subst hn
+  have hn' : n = (119 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -768,13 +748,12 @@ theorem mem_iff_id_0119 (n : Fin 5011) (hn : n.val = 119) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0120 (n : Fin 5011) (hn : n.val = 120) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 120 at hn
-  subst hn
+  have hn' : n = (120 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -806,13 +785,12 @@ theorem mem_iff_id_0120 (n : Fin 5011) (hn : n.val = 120) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0121 (n : Fin 5011) (hn : n.val = 121) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 121 at hn
-  subst hn
+  have hn' : n = (121 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -844,13 +822,12 @@ theorem mem_iff_id_0121 (n : Fin 5011) (hn : n.val = 121) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0122 (n : Fin 5011) (hn : n.val = 122) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 122 at hn
-  subst hn
+  have hn' : n = (122 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -882,13 +859,12 @@ theorem mem_iff_id_0122 (n : Fin 5011) (hn : n.val = 122) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0123 (n : Fin 5011) (hn : n.val = 123) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 123 at hn
-  subst hn
+  have hn' : n = (123 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -920,13 +896,12 @@ theorem mem_iff_id_0123 (n : Fin 5011) (hn : n.val = 123) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0124 (n : Fin 5011) (hn : n.val = 124) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 124 at hn
-  subst hn
+  have hn' : n = (124 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -958,13 +933,12 @@ theorem mem_iff_id_0124 (n : Fin 5011) (hn : n.val = 124) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0125 (n : Fin 5011) (hn : n.val = 125) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 125 at hn
-  subst hn
+  have hn' : n = (125 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -996,13 +970,12 @@ theorem mem_iff_id_0125 (n : Fin 5011) (hn : n.val = 125) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0126 (n : Fin 5011) (hn : n.val = 126) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 126 at hn
-  subst hn
+  have hn' : n = (126 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1034,13 +1007,12 @@ theorem mem_iff_id_0126 (n : Fin 5011) (hn : n.val = 126) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0127 (n : Fin 5011) (hn : n.val = 127) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 127 at hn
-  subst hn
+  have hn' : n = (127 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1072,13 +1044,12 @@ theorem mem_iff_id_0127 (n : Fin 5011) (hn : n.val = 127) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0128 (n : Fin 5011) (hn : n.val = 128) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 128 at hn
-  subst hn
+  have hn' : n = (128 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1110,13 +1081,12 @@ theorem mem_iff_id_0128 (n : Fin 5011) (hn : n.val = 128) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0129 (n : Fin 5011) (hn : n.val = 129) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 129 at hn
-  subst hn
+  have hn' : n = (129 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1148,13 +1118,12 @@ theorem mem_iff_id_0129 (n : Fin 5011) (hn : n.val = 129) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0130 (n : Fin 5011) (hn : n.val = 130) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 130 at hn
-  subst hn
+  have hn' : n = (130 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1186,13 +1155,12 @@ theorem mem_iff_id_0130 (n : Fin 5011) (hn : n.val = 130) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0131 (n : Fin 5011) (hn : n.val = 131) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 131 at hn
-  subst hn
+  have hn' : n = (131 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1224,13 +1192,12 @@ theorem mem_iff_id_0131 (n : Fin 5011) (hn : n.val = 131) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0132 (n : Fin 5011) (hn : n.val = 132) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 132 at hn
-  subst hn
+  have hn' : n = (132 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1262,13 +1229,12 @@ theorem mem_iff_id_0132 (n : Fin 5011) (hn : n.val = 132) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0133 (n : Fin 5011) (hn : n.val = 133) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 133 at hn
-  subst hn
+  have hn' : n = (133 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1300,13 +1266,12 @@ theorem mem_iff_id_0133 (n : Fin 5011) (hn : n.val = 133) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0134 (n : Fin 5011) (hn : n.val = 134) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 134 at hn
-  subst hn
+  have hn' : n = (134 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1338,13 +1303,12 @@ theorem mem_iff_id_0134 (n : Fin 5011) (hn : n.val = 134) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0135 (n : Fin 5011) (hn : n.val = 135) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 135 at hn
-  subst hn
+  have hn' : n = (135 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1376,13 +1340,12 @@ theorem mem_iff_id_0135 (n : Fin 5011) (hn : n.val = 135) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0136 (n : Fin 5011) (hn : n.val = 136) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 136 at hn
-  subst hn
+  have hn' : n = (136 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1414,13 +1377,12 @@ theorem mem_iff_id_0136 (n : Fin 5011) (hn : n.val = 136) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0137 (n : Fin 5011) (hn : n.val = 137) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 137 at hn
-  subst hn
+  have hn' : n = (137 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1452,13 +1414,12 @@ theorem mem_iff_id_0137 (n : Fin 5011) (hn : n.val = 137) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0138 (n : Fin 5011) (hn : n.val = 138) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 138 at hn
-  subst hn
+  have hn' : n = (138 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1490,13 +1451,12 @@ theorem mem_iff_id_0138 (n : Fin 5011) (hn : n.val = 138) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0139 (n : Fin 5011) (hn : n.val = 139) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 139 at hn
-  subst hn
+  have hn' : n = (139 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1528,13 +1488,12 @@ theorem mem_iff_id_0139 (n : Fin 5011) (hn : n.val = 139) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0140 (n : Fin 5011) (hn : n.val = 140) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 140 at hn
-  subst hn
+  have hn' : n = (140 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1566,13 +1525,12 @@ theorem mem_iff_id_0140 (n : Fin 5011) (hn : n.val = 140) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0141 (n : Fin 5011) (hn : n.val = 141) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 141 at hn
-  subst hn
+  have hn' : n = (141 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1604,13 +1562,12 @@ theorem mem_iff_id_0141 (n : Fin 5011) (hn : n.val = 141) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0142 (n : Fin 5011) (hn : n.val = 142) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 142 at hn
-  subst hn
+  have hn' : n = (142 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1642,13 +1599,12 @@ theorem mem_iff_id_0142 (n : Fin 5011) (hn : n.val = 142) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0143 (n : Fin 5011) (hn : n.val = 143) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 143 at hn
-  subst hn
+  have hn' : n = (143 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1680,13 +1636,12 @@ theorem mem_iff_id_0143 (n : Fin 5011) (hn : n.val = 143) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0144 (n : Fin 5011) (hn : n.val = 144) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 144 at hn
-  subst hn
+  have hn' : n = (144 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1718,13 +1673,12 @@ theorem mem_iff_id_0144 (n : Fin 5011) (hn : n.val = 144) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0145 (n : Fin 5011) (hn : n.val = 145) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 145 at hn
-  subst hn
+  have hn' : n = (145 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1756,13 +1710,12 @@ theorem mem_iff_id_0145 (n : Fin 5011) (hn : n.val = 145) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0146 (n : Fin 5011) (hn : n.val = 146) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 146 at hn
-  subst hn
+  have hn' : n = (146 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1794,13 +1747,12 @@ theorem mem_iff_id_0146 (n : Fin 5011) (hn : n.val = 146) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0147 (n : Fin 5011) (hn : n.val = 147) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 147 at hn
-  subst hn
+  have hn' : n = (147 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1832,13 +1784,12 @@ theorem mem_iff_id_0147 (n : Fin 5011) (hn : n.val = 147) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0148 (n : Fin 5011) (hn : n.val = 148) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 148 at hn
-  subst hn
+  have hn' : n = (148 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1870,13 +1821,12 @@ theorem mem_iff_id_0148 (n : Fin 5011) (hn : n.val = 148) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0149 (n : Fin 5011) (hn : n.val = 149) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 149 at hn
-  subst hn
+  have hn' : n = (149 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1908,13 +1858,12 @@ theorem mem_iff_id_0149 (n : Fin 5011) (hn : n.val = 149) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0150 (n : Fin 5011) (hn : n.val = 150) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 150 at hn
-  subst hn
+  have hn' : n = (150 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1946,13 +1895,12 @@ theorem mem_iff_id_0150 (n : Fin 5011) (hn : n.val = 150) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0151 (n : Fin 5011) (hn : n.val = 151) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 151 at hn
-  subst hn
+  have hn' : n = (151 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -1984,13 +1932,12 @@ theorem mem_iff_id_0151 (n : Fin 5011) (hn : n.val = 151) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0152 (n : Fin 5011) (hn : n.val = 152) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 152 at hn
-  subst hn
+  have hn' : n = (152 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2022,13 +1969,12 @@ theorem mem_iff_id_0152 (n : Fin 5011) (hn : n.val = 152) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0153 (n : Fin 5011) (hn : n.val = 153) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 153 at hn
-  subst hn
+  have hn' : n = (153 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2060,13 +2006,12 @@ theorem mem_iff_id_0153 (n : Fin 5011) (hn : n.val = 153) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0154 (n : Fin 5011) (hn : n.val = 154) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 154 at hn
-  subst hn
+  have hn' : n = (154 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2098,13 +2043,12 @@ theorem mem_iff_id_0154 (n : Fin 5011) (hn : n.val = 154) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0155 (n : Fin 5011) (hn : n.val = 155) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 155 at hn
-  subst hn
+  have hn' : n = (155 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2136,13 +2080,12 @@ theorem mem_iff_id_0155 (n : Fin 5011) (hn : n.val = 155) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0156 (n : Fin 5011) (hn : n.val = 156) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 156 at hn
-  subst hn
+  have hn' : n = (156 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2174,13 +2117,12 @@ theorem mem_iff_id_0156 (n : Fin 5011) (hn : n.val = 156) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0157 (n : Fin 5011) (hn : n.val = 157) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 157 at hn
-  subst hn
+  have hn' : n = (157 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2212,13 +2154,12 @@ theorem mem_iff_id_0157 (n : Fin 5011) (hn : n.val = 157) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0158 (n : Fin 5011) (hn : n.val = 158) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 158 at hn
-  subst hn
+  have hn' : n = (158 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2250,13 +2191,12 @@ theorem mem_iff_id_0158 (n : Fin 5011) (hn : n.val = 158) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0159 (n : Fin 5011) (hn : n.val = 159) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 159 at hn
-  subst hn
+  have hn' : n = (159 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2288,13 +2228,12 @@ theorem mem_iff_id_0159 (n : Fin 5011) (hn : n.val = 159) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0160 (n : Fin 5011) (hn : n.val = 160) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 160 at hn
-  subst hn
+  have hn' : n = (160 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2326,13 +2265,12 @@ theorem mem_iff_id_0160 (n : Fin 5011) (hn : n.val = 160) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0161 (n : Fin 5011) (hn : n.val = 161) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 161 at hn
-  subst hn
+  have hn' : n = (161 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2364,13 +2302,12 @@ theorem mem_iff_id_0161 (n : Fin 5011) (hn : n.val = 161) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0162 (n : Fin 5011) (hn : n.val = 162) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 162 at hn
-  subst hn
+  have hn' : n = (162 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2402,13 +2339,12 @@ theorem mem_iff_id_0162 (n : Fin 5011) (hn : n.val = 162) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0163 (n : Fin 5011) (hn : n.val = 163) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 163 at hn
-  subst hn
+  have hn' : n = (163 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2440,13 +2376,12 @@ theorem mem_iff_id_0163 (n : Fin 5011) (hn : n.val = 163) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0164 (n : Fin 5011) (hn : n.val = 164) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 164 at hn
-  subst hn
+  have hn' : n = (164 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2478,13 +2413,12 @@ theorem mem_iff_id_0164 (n : Fin 5011) (hn : n.val = 164) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0165 (n : Fin 5011) (hn : n.val = 165) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 165 at hn
-  subst hn
+  have hn' : n = (165 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2516,13 +2450,12 @@ theorem mem_iff_id_0165 (n : Fin 5011) (hn : n.val = 165) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0166 (n : Fin 5011) (hn : n.val = 166) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 166 at hn
-  subst hn
+  have hn' : n = (166 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2554,13 +2487,12 @@ theorem mem_iff_id_0166 (n : Fin 5011) (hn : n.val = 166) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0167 (n : Fin 5011) (hn : n.val = 167) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 167 at hn
-  subst hn
+  have hn' : n = (167 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2592,13 +2524,12 @@ theorem mem_iff_id_0167 (n : Fin 5011) (hn : n.val = 167) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0168 (n : Fin 5011) (hn : n.val = 168) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 168 at hn
-  subst hn
+  have hn' : n = (168 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2630,13 +2561,12 @@ theorem mem_iff_id_0168 (n : Fin 5011) (hn : n.val = 168) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0169 (n : Fin 5011) (hn : n.val = 169) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 169 at hn
-  subst hn
+  have hn' : n = (169 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2668,13 +2598,12 @@ theorem mem_iff_id_0169 (n : Fin 5011) (hn : n.val = 169) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0170 (n : Fin 5011) (hn : n.val = 170) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 170 at hn
-  subst hn
+  have hn' : n = (170 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2706,13 +2635,12 @@ theorem mem_iff_id_0170 (n : Fin 5011) (hn : n.val = 170) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0171 (n : Fin 5011) (hn : n.val = 171) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 171 at hn
-  subst hn
+  have hn' : n = (171 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2744,13 +2672,12 @@ theorem mem_iff_id_0171 (n : Fin 5011) (hn : n.val = 171) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0172 (n : Fin 5011) (hn : n.val = 172) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 172 at hn
-  subst hn
+  have hn' : n = (172 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2782,13 +2709,12 @@ theorem mem_iff_id_0172 (n : Fin 5011) (hn : n.val = 172) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0173 (n : Fin 5011) (hn : n.val = 173) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 173 at hn
-  subst hn
+  have hn' : n = (173 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2820,13 +2746,12 @@ theorem mem_iff_id_0173 (n : Fin 5011) (hn : n.val = 173) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0174 (n : Fin 5011) (hn : n.val = 174) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 174 at hn
-  subst hn
+  have hn' : n = (174 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2858,13 +2783,12 @@ theorem mem_iff_id_0174 (n : Fin 5011) (hn : n.val = 174) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0175 (n : Fin 5011) (hn : n.val = 175) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 175 at hn
-  subst hn
+  have hn' : n = (175 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2896,13 +2820,12 @@ theorem mem_iff_id_0175 (n : Fin 5011) (hn : n.val = 175) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0176 (n : Fin 5011) (hn : n.val = 176) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 176 at hn
-  subst hn
+  have hn' : n = (176 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2934,13 +2857,12 @@ theorem mem_iff_id_0176 (n : Fin 5011) (hn : n.val = 176) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0177 (n : Fin 5011) (hn : n.val = 177) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 177 at hn
-  subst hn
+  have hn' : n = (177 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -2972,13 +2894,12 @@ theorem mem_iff_id_0177 (n : Fin 5011) (hn : n.val = 177) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0178 (n : Fin 5011) (hn : n.val = 178) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 178 at hn
-  subst hn
+  have hn' : n = (178 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3010,13 +2931,12 @@ theorem mem_iff_id_0178 (n : Fin 5011) (hn : n.val = 178) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0179 (n : Fin 5011) (hn : n.val = 179) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 179 at hn
-  subst hn
+  have hn' : n = (179 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3048,13 +2968,12 @@ theorem mem_iff_id_0179 (n : Fin 5011) (hn : n.val = 179) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0180 (n : Fin 5011) (hn : n.val = 180) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 180 at hn
-  subst hn
+  have hn' : n = (180 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3086,13 +3005,12 @@ theorem mem_iff_id_0180 (n : Fin 5011) (hn : n.val = 180) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0181 (n : Fin 5011) (hn : n.val = 181) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 181 at hn
-  subst hn
+  have hn' : n = (181 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3124,13 +3042,12 @@ theorem mem_iff_id_0181 (n : Fin 5011) (hn : n.val = 181) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0182 (n : Fin 5011) (hn : n.val = 182) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 182 at hn
-  subst hn
+  have hn' : n = (182 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3162,13 +3079,12 @@ theorem mem_iff_id_0182 (n : Fin 5011) (hn : n.val = 182) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0183 (n : Fin 5011) (hn : n.val = 183) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 183 at hn
-  subst hn
+  have hn' : n = (183 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3200,13 +3116,12 @@ theorem mem_iff_id_0183 (n : Fin 5011) (hn : n.val = 183) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0184 (n : Fin 5011) (hn : n.val = 184) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 184 at hn
-  subst hn
+  have hn' : n = (184 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3238,13 +3153,12 @@ theorem mem_iff_id_0184 (n : Fin 5011) (hn : n.val = 184) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0185 (n : Fin 5011) (hn : n.val = 185) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 185 at hn
-  subst hn
+  have hn' : n = (185 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3276,13 +3190,12 @@ theorem mem_iff_id_0185 (n : Fin 5011) (hn : n.val = 185) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0186 (n : Fin 5011) (hn : n.val = 186) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 186 at hn
-  subst hn
+  have hn' : n = (186 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3314,13 +3227,12 @@ theorem mem_iff_id_0186 (n : Fin 5011) (hn : n.val = 186) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0187 (n : Fin 5011) (hn : n.val = 187) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 187 at hn
-  subst hn
+  have hn' : n = (187 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3352,13 +3264,12 @@ theorem mem_iff_id_0187 (n : Fin 5011) (hn : n.val = 187) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0188 (n : Fin 5011) (hn : n.val = 188) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 188 at hn
-  subst hn
+  have hn' : n = (188 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3390,13 +3301,12 @@ theorem mem_iff_id_0188 (n : Fin 5011) (hn : n.val = 188) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0189 (n : Fin 5011) (hn : n.val = 189) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 189 at hn
-  subst hn
+  have hn' : n = (189 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3428,13 +3338,12 @@ theorem mem_iff_id_0189 (n : Fin 5011) (hn : n.val = 189) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0190 (n : Fin 5011) (hn : n.val = 190) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 190 at hn
-  subst hn
+  have hn' : n = (190 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3466,13 +3375,12 @@ theorem mem_iff_id_0190 (n : Fin 5011) (hn : n.val = 190) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0191 (n : Fin 5011) (hn : n.val = 191) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 191 at hn
-  subst hn
+  have hn' : n = (191 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3504,13 +3412,12 @@ theorem mem_iff_id_0191 (n : Fin 5011) (hn : n.val = 191) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0192 (n : Fin 5011) (hn : n.val = 192) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 192 at hn
-  subst hn
+  have hn' : n = (192 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3542,13 +3449,12 @@ theorem mem_iff_id_0192 (n : Fin 5011) (hn : n.val = 192) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0193 (n : Fin 5011) (hn : n.val = 193) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 193 at hn
-  subst hn
+  have hn' : n = (193 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3580,13 +3486,12 @@ theorem mem_iff_id_0193 (n : Fin 5011) (hn : n.val = 193) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0194 (n : Fin 5011) (hn : n.val = 194) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 194 at hn
-  subst hn
+  have hn' : n = (194 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3618,13 +3523,12 @@ theorem mem_iff_id_0194 (n : Fin 5011) (hn : n.val = 194) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0195 (n : Fin 5011) (hn : n.val = 195) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 195 at hn
-  subst hn
+  have hn' : n = (195 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3656,13 +3560,12 @@ theorem mem_iff_id_0195 (n : Fin 5011) (hn : n.val = 195) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0196 (n : Fin 5011) (hn : n.val = 196) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 196 at hn
-  subst hn
+  have hn' : n = (196 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3694,13 +3597,12 @@ theorem mem_iff_id_0196 (n : Fin 5011) (hn : n.val = 196) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0197 (n : Fin 5011) (hn : n.val = 197) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 197 at hn
-  subst hn
+  have hn' : n = (197 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3732,13 +3634,12 @@ theorem mem_iff_id_0197 (n : Fin 5011) (hn : n.val = 197) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0198 (n : Fin 5011) (hn : n.val = 198) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 198 at hn
-  subst hn
+  have hn' : n = (198 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3770,13 +3671,12 @@ theorem mem_iff_id_0198 (n : Fin 5011) (hn : n.val = 198) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0199 (n : Fin 5011) (hn : n.val = 199) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 199 at hn
-  subst hn
+  have hn' : n = (199 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3808,13 +3708,12 @@ theorem mem_iff_id_0199 (n : Fin 5011) (hn : n.val = 199) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0500 (n : Fin 5011) (hn : n.val = 500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 500 at hn
-  subst hn
+  have hn' : n = (500 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3846,13 +3745,12 @@ theorem mem_iff_id_0500 (n : Fin 5011) (hn : n.val = 500) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0501 (n : Fin 5011) (hn : n.val = 501) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 501 at hn
-  subst hn
+  have hn' : n = (501 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3884,13 +3782,12 @@ theorem mem_iff_id_0501 (n : Fin 5011) (hn : n.val = 501) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0502 (n : Fin 5011) (hn : n.val = 502) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 502 at hn
-  subst hn
+  have hn' : n = (502 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3922,13 +3819,12 @@ theorem mem_iff_id_0502 (n : Fin 5011) (hn : n.val = 502) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0503 (n : Fin 5011) (hn : n.val = 503) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 503 at hn
-  subst hn
+  have hn' : n = (503 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3960,13 +3856,12 @@ theorem mem_iff_id_0503 (n : Fin 5011) (hn : n.val = 503) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0504 (n : Fin 5011) (hn : n.val = 504) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 504 at hn
-  subst hn
+  have hn' : n = (504 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -3998,13 +3893,12 @@ theorem mem_iff_id_0504 (n : Fin 5011) (hn : n.val = 504) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0505 (n : Fin 5011) (hn : n.val = 505) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 505 at hn
-  subst hn
+  have hn' : n = (505 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4036,13 +3930,12 @@ theorem mem_iff_id_0505 (n : Fin 5011) (hn : n.val = 505) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0506 (n : Fin 5011) (hn : n.val = 506) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 506 at hn
-  subst hn
+  have hn' : n = (506 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4074,13 +3967,12 @@ theorem mem_iff_id_0506 (n : Fin 5011) (hn : n.val = 506) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0507 (n : Fin 5011) (hn : n.val = 507) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 507 at hn
-  subst hn
+  have hn' : n = (507 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4112,13 +4004,12 @@ theorem mem_iff_id_0507 (n : Fin 5011) (hn : n.val = 507) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0508 (n : Fin 5011) (hn : n.val = 508) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 508 at hn
-  subst hn
+  have hn' : n = (508 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4150,13 +4041,12 @@ theorem mem_iff_id_0508 (n : Fin 5011) (hn : n.val = 508) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0509 (n : Fin 5011) (hn : n.val = 509) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 509 at hn
-  subst hn
+  have hn' : n = (509 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4188,13 +4078,12 @@ theorem mem_iff_id_0509 (n : Fin 5011) (hn : n.val = 509) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0510 (n : Fin 5011) (hn : n.val = 510) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 510 at hn
-  subst hn
+  have hn' : n = (510 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4226,13 +4115,12 @@ theorem mem_iff_id_0510 (n : Fin 5011) (hn : n.val = 510) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0511 (n : Fin 5011) (hn : n.val = 511) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 511 at hn
-  subst hn
+  have hn' : n = (511 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4264,13 +4152,12 @@ theorem mem_iff_id_0511 (n : Fin 5011) (hn : n.val = 511) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0512 (n : Fin 5011) (hn : n.val = 512) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 512 at hn
-  subst hn
+  have hn' : n = (512 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4302,13 +4189,12 @@ theorem mem_iff_id_0512 (n : Fin 5011) (hn : n.val = 512) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0513 (n : Fin 5011) (hn : n.val = 513) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 513 at hn
-  subst hn
+  have hn' : n = (513 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4340,13 +4226,12 @@ theorem mem_iff_id_0513 (n : Fin 5011) (hn : n.val = 513) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0514 (n : Fin 5011) (hn : n.val = 514) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 514 at hn
-  subst hn
+  have hn' : n = (514 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4378,13 +4263,12 @@ theorem mem_iff_id_0514 (n : Fin 5011) (hn : n.val = 514) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0515 (n : Fin 5011) (hn : n.val = 515) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 515 at hn
-  subst hn
+  have hn' : n = (515 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4416,13 +4300,12 @@ theorem mem_iff_id_0515 (n : Fin 5011) (hn : n.val = 515) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0516 (n : Fin 5011) (hn : n.val = 516) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 516 at hn
-  subst hn
+  have hn' : n = (516 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4454,13 +4337,12 @@ theorem mem_iff_id_0516 (n : Fin 5011) (hn : n.val = 516) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0517 (n : Fin 5011) (hn : n.val = 517) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 517 at hn
-  subst hn
+  have hn' : n = (517 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4492,13 +4374,12 @@ theorem mem_iff_id_0517 (n : Fin 5011) (hn : n.val = 517) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0518 (n : Fin 5011) (hn : n.val = 518) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 518 at hn
-  subst hn
+  have hn' : n = (518 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4530,13 +4411,12 @@ theorem mem_iff_id_0518 (n : Fin 5011) (hn : n.val = 518) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0519 (n : Fin 5011) (hn : n.val = 519) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 519 at hn
-  subst hn
+  have hn' : n = (519 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4568,13 +4448,12 @@ theorem mem_iff_id_0519 (n : Fin 5011) (hn : n.val = 519) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0520 (n : Fin 5011) (hn : n.val = 520) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 520 at hn
-  subst hn
+  have hn' : n = (520 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4606,13 +4485,12 @@ theorem mem_iff_id_0520 (n : Fin 5011) (hn : n.val = 520) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0521 (n : Fin 5011) (hn : n.val = 521) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 521 at hn
-  subst hn
+  have hn' : n = (521 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4644,13 +4522,12 @@ theorem mem_iff_id_0521 (n : Fin 5011) (hn : n.val = 521) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0522 (n : Fin 5011) (hn : n.val = 522) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 522 at hn
-  subst hn
+  have hn' : n = (522 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4682,13 +4559,12 @@ theorem mem_iff_id_0522 (n : Fin 5011) (hn : n.val = 522) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0523 (n : Fin 5011) (hn : n.val = 523) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 523 at hn
-  subst hn
+  have hn' : n = (523 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4720,13 +4596,12 @@ theorem mem_iff_id_0523 (n : Fin 5011) (hn : n.val = 523) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0524 (n : Fin 5011) (hn : n.val = 524) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 524 at hn
-  subst hn
+  have hn' : n = (524 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4758,13 +4633,12 @@ theorem mem_iff_id_0524 (n : Fin 5011) (hn : n.val = 524) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0525 (n : Fin 5011) (hn : n.val = 525) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 525 at hn
-  subst hn
+  have hn' : n = (525 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4796,13 +4670,12 @@ theorem mem_iff_id_0525 (n : Fin 5011) (hn : n.val = 525) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0526 (n : Fin 5011) (hn : n.val = 526) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 526 at hn
-  subst hn
+  have hn' : n = (526 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4834,13 +4707,12 @@ theorem mem_iff_id_0526 (n : Fin 5011) (hn : n.val = 526) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0527 (n : Fin 5011) (hn : n.val = 527) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 527 at hn
-  subst hn
+  have hn' : n = (527 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4872,13 +4744,12 @@ theorem mem_iff_id_0527 (n : Fin 5011) (hn : n.val = 527) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0528 (n : Fin 5011) (hn : n.val = 528) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 528 at hn
-  subst hn
+  have hn' : n = (528 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4910,13 +4781,12 @@ theorem mem_iff_id_0528 (n : Fin 5011) (hn : n.val = 528) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0529 (n : Fin 5011) (hn : n.val = 529) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 529 at hn
-  subst hn
+  have hn' : n = (529 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4948,13 +4818,12 @@ theorem mem_iff_id_0529 (n : Fin 5011) (hn : n.val = 529) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0530 (n : Fin 5011) (hn : n.val = 530) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 530 at hn
-  subst hn
+  have hn' : n = (530 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -4986,13 +4855,12 @@ theorem mem_iff_id_0530 (n : Fin 5011) (hn : n.val = 530) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0531 (n : Fin 5011) (hn : n.val = 531) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 531 at hn
-  subst hn
+  have hn' : n = (531 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5024,13 +4892,12 @@ theorem mem_iff_id_0531 (n : Fin 5011) (hn : n.val = 531) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0532 (n : Fin 5011) (hn : n.val = 532) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 532 at hn
-  subst hn
+  have hn' : n = (532 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5062,13 +4929,12 @@ theorem mem_iff_id_0532 (n : Fin 5011) (hn : n.val = 532) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0533 (n : Fin 5011) (hn : n.val = 533) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 533 at hn
-  subst hn
+  have hn' : n = (533 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5100,13 +4966,12 @@ theorem mem_iff_id_0533 (n : Fin 5011) (hn : n.val = 533) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0534 (n : Fin 5011) (hn : n.val = 534) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 534 at hn
-  subst hn
+  have hn' : n = (534 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5138,13 +5003,12 @@ theorem mem_iff_id_0534 (n : Fin 5011) (hn : n.val = 534) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0535 (n : Fin 5011) (hn : n.val = 535) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 535 at hn
-  subst hn
+  have hn' : n = (535 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5176,13 +5040,12 @@ theorem mem_iff_id_0535 (n : Fin 5011) (hn : n.val = 535) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0536 (n : Fin 5011) (hn : n.val = 536) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 536 at hn
-  subst hn
+  have hn' : n = (536 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5214,13 +5077,12 @@ theorem mem_iff_id_0536 (n : Fin 5011) (hn : n.val = 536) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0537 (n : Fin 5011) (hn : n.val = 537) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 537 at hn
-  subst hn
+  have hn' : n = (537 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5252,13 +5114,12 @@ theorem mem_iff_id_0537 (n : Fin 5011) (hn : n.val = 537) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0538 (n : Fin 5011) (hn : n.val = 538) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 538 at hn
-  subst hn
+  have hn' : n = (538 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5290,13 +5151,12 @@ theorem mem_iff_id_0538 (n : Fin 5011) (hn : n.val = 538) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0539 (n : Fin 5011) (hn : n.val = 539) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 539 at hn
-  subst hn
+  have hn' : n = (539 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5328,13 +5188,12 @@ theorem mem_iff_id_0539 (n : Fin 5011) (hn : n.val = 539) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0540 (n : Fin 5011) (hn : n.val = 540) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 540 at hn
-  subst hn
+  have hn' : n = (540 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5366,13 +5225,12 @@ theorem mem_iff_id_0540 (n : Fin 5011) (hn : n.val = 540) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0541 (n : Fin 5011) (hn : n.val = 541) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 541 at hn
-  subst hn
+  have hn' : n = (541 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5404,13 +5262,12 @@ theorem mem_iff_id_0541 (n : Fin 5011) (hn : n.val = 541) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0542 (n : Fin 5011) (hn : n.val = 542) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 542 at hn
-  subst hn
+  have hn' : n = (542 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5442,13 +5299,12 @@ theorem mem_iff_id_0542 (n : Fin 5011) (hn : n.val = 542) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0543 (n : Fin 5011) (hn : n.val = 543) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 543 at hn
-  subst hn
+  have hn' : n = (543 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5480,13 +5336,12 @@ theorem mem_iff_id_0543 (n : Fin 5011) (hn : n.val = 543) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0544 (n : Fin 5011) (hn : n.val = 544) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 544 at hn
-  subst hn
+  have hn' : n = (544 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5518,13 +5373,12 @@ theorem mem_iff_id_0544 (n : Fin 5011) (hn : n.val = 544) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0545 (n : Fin 5011) (hn : n.val = 545) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 545 at hn
-  subst hn
+  have hn' : n = (545 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5556,13 +5410,12 @@ theorem mem_iff_id_0545 (n : Fin 5011) (hn : n.val = 545) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0546 (n : Fin 5011) (hn : n.val = 546) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 546 at hn
-  subst hn
+  have hn' : n = (546 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5594,13 +5447,12 @@ theorem mem_iff_id_0546 (n : Fin 5011) (hn : n.val = 546) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0547 (n : Fin 5011) (hn : n.val = 547) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 547 at hn
-  subst hn
+  have hn' : n = (547 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5632,13 +5484,12 @@ theorem mem_iff_id_0547 (n : Fin 5011) (hn : n.val = 547) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0548 (n : Fin 5011) (hn : n.val = 548) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 548 at hn
-  subst hn
+  have hn' : n = (548 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5670,13 +5521,12 @@ theorem mem_iff_id_0548 (n : Fin 5011) (hn : n.val = 548) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0549 (n : Fin 5011) (hn : n.val = 549) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 549 at hn
-  subst hn
+  have hn' : n = (549 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5708,13 +5558,12 @@ theorem mem_iff_id_0549 (n : Fin 5011) (hn : n.val = 549) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0550 (n : Fin 5011) (hn : n.val = 550) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 550 at hn
-  subst hn
+  have hn' : n = (550 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5746,13 +5595,12 @@ theorem mem_iff_id_0550 (n : Fin 5011) (hn : n.val = 550) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0551 (n : Fin 5011) (hn : n.val = 551) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 551 at hn
-  subst hn
+  have hn' : n = (551 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5784,13 +5632,12 @@ theorem mem_iff_id_0551 (n : Fin 5011) (hn : n.val = 551) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0552 (n : Fin 5011) (hn : n.val = 552) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 552 at hn
-  subst hn
+  have hn' : n = (552 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5822,13 +5669,12 @@ theorem mem_iff_id_0552 (n : Fin 5011) (hn : n.val = 552) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0553 (n : Fin 5011) (hn : n.val = 553) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 553 at hn
-  subst hn
+  have hn' : n = (553 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5860,13 +5706,12 @@ theorem mem_iff_id_0553 (n : Fin 5011) (hn : n.val = 553) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0554 (n : Fin 5011) (hn : n.val = 554) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 554 at hn
-  subst hn
+  have hn' : n = (554 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5898,13 +5743,12 @@ theorem mem_iff_id_0554 (n : Fin 5011) (hn : n.val = 554) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0555 (n : Fin 5011) (hn : n.val = 555) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 555 at hn
-  subst hn
+  have hn' : n = (555 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5936,13 +5780,12 @@ theorem mem_iff_id_0555 (n : Fin 5011) (hn : n.val = 555) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0556 (n : Fin 5011) (hn : n.val = 556) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 556 at hn
-  subst hn
+  have hn' : n = (556 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -5974,13 +5817,12 @@ theorem mem_iff_id_0556 (n : Fin 5011) (hn : n.val = 556) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0557 (n : Fin 5011) (hn : n.val = 557) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 557 at hn
-  subst hn
+  have hn' : n = (557 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6012,13 +5854,12 @@ theorem mem_iff_id_0557 (n : Fin 5011) (hn : n.val = 557) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0558 (n : Fin 5011) (hn : n.val = 558) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 558 at hn
-  subst hn
+  have hn' : n = (558 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6050,13 +5891,12 @@ theorem mem_iff_id_0558 (n : Fin 5011) (hn : n.val = 558) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0559 (n : Fin 5011) (hn : n.val = 559) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 559 at hn
-  subst hn
+  have hn' : n = (559 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6088,13 +5928,12 @@ theorem mem_iff_id_0559 (n : Fin 5011) (hn : n.val = 559) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0560 (n : Fin 5011) (hn : n.val = 560) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 560 at hn
-  subst hn
+  have hn' : n = (560 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6126,13 +5965,12 @@ theorem mem_iff_id_0560 (n : Fin 5011) (hn : n.val = 560) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0561 (n : Fin 5011) (hn : n.val = 561) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 561 at hn
-  subst hn
+  have hn' : n = (561 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6164,13 +6002,12 @@ theorem mem_iff_id_0561 (n : Fin 5011) (hn : n.val = 561) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0562 (n : Fin 5011) (hn : n.val = 562) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 562 at hn
-  subst hn
+  have hn' : n = (562 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6202,13 +6039,12 @@ theorem mem_iff_id_0562 (n : Fin 5011) (hn : n.val = 562) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0563 (n : Fin 5011) (hn : n.val = 563) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 563 at hn
-  subst hn
+  have hn' : n = (563 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6240,13 +6076,12 @@ theorem mem_iff_id_0563 (n : Fin 5011) (hn : n.val = 563) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0564 (n : Fin 5011) (hn : n.val = 564) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 564 at hn
-  subst hn
+  have hn' : n = (564 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6278,13 +6113,12 @@ theorem mem_iff_id_0564 (n : Fin 5011) (hn : n.val = 564) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0565 (n : Fin 5011) (hn : n.val = 565) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 565 at hn
-  subst hn
+  have hn' : n = (565 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6316,13 +6150,12 @@ theorem mem_iff_id_0565 (n : Fin 5011) (hn : n.val = 565) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0566 (n : Fin 5011) (hn : n.val = 566) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 566 at hn
-  subst hn
+  have hn' : n = (566 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6354,13 +6187,12 @@ theorem mem_iff_id_0566 (n : Fin 5011) (hn : n.val = 566) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0567 (n : Fin 5011) (hn : n.val = 567) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 567 at hn
-  subst hn
+  have hn' : n = (567 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6392,13 +6224,12 @@ theorem mem_iff_id_0567 (n : Fin 5011) (hn : n.val = 567) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0568 (n : Fin 5011) (hn : n.val = 568) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 568 at hn
-  subst hn
+  have hn' : n = (568 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6430,13 +6261,12 @@ theorem mem_iff_id_0568 (n : Fin 5011) (hn : n.val = 568) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0569 (n : Fin 5011) (hn : n.val = 569) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 569 at hn
-  subst hn
+  have hn' : n = (569 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6468,13 +6298,12 @@ theorem mem_iff_id_0569 (n : Fin 5011) (hn : n.val = 569) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0570 (n : Fin 5011) (hn : n.val = 570) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 570 at hn
-  subst hn
+  have hn' : n = (570 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6506,13 +6335,12 @@ theorem mem_iff_id_0570 (n : Fin 5011) (hn : n.val = 570) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0571 (n : Fin 5011) (hn : n.val = 571) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 571 at hn
-  subst hn
+  have hn' : n = (571 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6544,13 +6372,12 @@ theorem mem_iff_id_0571 (n : Fin 5011) (hn : n.val = 571) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0572 (n : Fin 5011) (hn : n.val = 572) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 572 at hn
-  subst hn
+  have hn' : n = (572 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6582,13 +6409,12 @@ theorem mem_iff_id_0572 (n : Fin 5011) (hn : n.val = 572) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0573 (n : Fin 5011) (hn : n.val = 573) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 573 at hn
-  subst hn
+  have hn' : n = (573 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6620,13 +6446,12 @@ theorem mem_iff_id_0573 (n : Fin 5011) (hn : n.val = 573) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0574 (n : Fin 5011) (hn : n.val = 574) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 574 at hn
-  subst hn
+  have hn' : n = (574 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6658,13 +6483,12 @@ theorem mem_iff_id_0574 (n : Fin 5011) (hn : n.val = 574) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0575 (n : Fin 5011) (hn : n.val = 575) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 575 at hn
-  subst hn
+  have hn' : n = (575 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6696,13 +6520,12 @@ theorem mem_iff_id_0575 (n : Fin 5011) (hn : n.val = 575) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0576 (n : Fin 5011) (hn : n.val = 576) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 576 at hn
-  subst hn
+  have hn' : n = (576 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6734,13 +6557,12 @@ theorem mem_iff_id_0576 (n : Fin 5011) (hn : n.val = 576) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0577 (n : Fin 5011) (hn : n.val = 577) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 577 at hn
-  subst hn
+  have hn' : n = (577 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6772,13 +6594,12 @@ theorem mem_iff_id_0577 (n : Fin 5011) (hn : n.val = 577) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0578 (n : Fin 5011) (hn : n.val = 578) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 578 at hn
-  subst hn
+  have hn' : n = (578 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6810,13 +6631,12 @@ theorem mem_iff_id_0578 (n : Fin 5011) (hn : n.val = 578) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0579 (n : Fin 5011) (hn : n.val = 579) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 579 at hn
-  subst hn
+  have hn' : n = (579 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6848,13 +6668,12 @@ theorem mem_iff_id_0579 (n : Fin 5011) (hn : n.val = 579) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0580 (n : Fin 5011) (hn : n.val = 580) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 580 at hn
-  subst hn
+  have hn' : n = (580 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6886,13 +6705,12 @@ theorem mem_iff_id_0580 (n : Fin 5011) (hn : n.val = 580) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0581 (n : Fin 5011) (hn : n.val = 581) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 581 at hn
-  subst hn
+  have hn' : n = (581 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6924,13 +6742,12 @@ theorem mem_iff_id_0581 (n : Fin 5011) (hn : n.val = 581) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0582 (n : Fin 5011) (hn : n.val = 582) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 582 at hn
-  subst hn
+  have hn' : n = (582 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -6962,13 +6779,12 @@ theorem mem_iff_id_0582 (n : Fin 5011) (hn : n.val = 582) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0583 (n : Fin 5011) (hn : n.val = 583) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 583 at hn
-  subst hn
+  have hn' : n = (583 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7000,13 +6816,12 @@ theorem mem_iff_id_0583 (n : Fin 5011) (hn : n.val = 583) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0584 (n : Fin 5011) (hn : n.val = 584) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 584 at hn
-  subst hn
+  have hn' : n = (584 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7038,13 +6853,12 @@ theorem mem_iff_id_0584 (n : Fin 5011) (hn : n.val = 584) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0585 (n : Fin 5011) (hn : n.val = 585) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 585 at hn
-  subst hn
+  have hn' : n = (585 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7076,13 +6890,12 @@ theorem mem_iff_id_0585 (n : Fin 5011) (hn : n.val = 585) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0586 (n : Fin 5011) (hn : n.val = 586) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 586 at hn
-  subst hn
+  have hn' : n = (586 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7114,13 +6927,12 @@ theorem mem_iff_id_0586 (n : Fin 5011) (hn : n.val = 586) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0587 (n : Fin 5011) (hn : n.val = 587) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 587 at hn
-  subst hn
+  have hn' : n = (587 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7152,13 +6964,12 @@ theorem mem_iff_id_0587 (n : Fin 5011) (hn : n.val = 587) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0588 (n : Fin 5011) (hn : n.val = 588) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 588 at hn
-  subst hn
+  have hn' : n = (588 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7190,13 +7001,12 @@ theorem mem_iff_id_0588 (n : Fin 5011) (hn : n.val = 588) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0589 (n : Fin 5011) (hn : n.val = 589) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 589 at hn
-  subst hn
+  have hn' : n = (589 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7228,13 +7038,12 @@ theorem mem_iff_id_0589 (n : Fin 5011) (hn : n.val = 589) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0590 (n : Fin 5011) (hn : n.val = 590) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 590 at hn
-  subst hn
+  have hn' : n = (590 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7266,13 +7075,12 @@ theorem mem_iff_id_0590 (n : Fin 5011) (hn : n.val = 590) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0591 (n : Fin 5011) (hn : n.val = 591) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 591 at hn
-  subst hn
+  have hn' : n = (591 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7304,13 +7112,12 @@ theorem mem_iff_id_0591 (n : Fin 5011) (hn : n.val = 591) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0592 (n : Fin 5011) (hn : n.val = 592) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 592 at hn
-  subst hn
+  have hn' : n = (592 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7342,13 +7149,12 @@ theorem mem_iff_id_0592 (n : Fin 5011) (hn : n.val = 592) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0593 (n : Fin 5011) (hn : n.val = 593) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 593 at hn
-  subst hn
+  have hn' : n = (593 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7380,13 +7186,12 @@ theorem mem_iff_id_0593 (n : Fin 5011) (hn : n.val = 593) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0594 (n : Fin 5011) (hn : n.val = 594) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 594 at hn
-  subst hn
+  have hn' : n = (594 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7418,13 +7223,12 @@ theorem mem_iff_id_0594 (n : Fin 5011) (hn : n.val = 594) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0595 (n : Fin 5011) (hn : n.val = 595) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 595 at hn
-  subst hn
+  have hn' : n = (595 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7456,13 +7260,12 @@ theorem mem_iff_id_0595 (n : Fin 5011) (hn : n.val = 595) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0596 (n : Fin 5011) (hn : n.val = 596) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 596 at hn
-  subst hn
+  have hn' : n = (596 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7494,13 +7297,12 @@ theorem mem_iff_id_0596 (n : Fin 5011) (hn : n.val = 596) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0597 (n : Fin 5011) (hn : n.val = 597) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 597 at hn
-  subst hn
+  have hn' : n = (597 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7532,13 +7334,12 @@ theorem mem_iff_id_0597 (n : Fin 5011) (hn : n.val = 597) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0598 (n : Fin 5011) (hn : n.val = 598) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 598 at hn
-  subst hn
+  have hn' : n = (598 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7570,13 +7371,12 @@ theorem mem_iff_id_0598 (n : Fin 5011) (hn : n.val = 598) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0599 (n : Fin 5011) (hn : n.val = 599) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 599 at hn
-  subst hn
+  have hn' : n = (599 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7608,13 +7408,12 @@ theorem mem_iff_id_0599 (n : Fin 5011) (hn : n.val = 599) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0900 (n : Fin 5011) (hn : n.val = 900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 900 at hn
-  subst hn
+  have hn' : n = (900 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7646,13 +7445,12 @@ theorem mem_iff_id_0900 (n : Fin 5011) (hn : n.val = 900) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0901 (n : Fin 5011) (hn : n.val = 901) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 901 at hn
-  subst hn
+  have hn' : n = (901 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7684,13 +7482,12 @@ theorem mem_iff_id_0901 (n : Fin 5011) (hn : n.val = 901) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0902 (n : Fin 5011) (hn : n.val = 902) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 902 at hn
-  subst hn
+  have hn' : n = (902 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7722,13 +7519,12 @@ theorem mem_iff_id_0902 (n : Fin 5011) (hn : n.val = 902) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0903 (n : Fin 5011) (hn : n.val = 903) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 903 at hn
-  subst hn
+  have hn' : n = (903 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7760,13 +7556,12 @@ theorem mem_iff_id_0903 (n : Fin 5011) (hn : n.val = 903) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0904 (n : Fin 5011) (hn : n.val = 904) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 904 at hn
-  subst hn
+  have hn' : n = (904 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7798,13 +7593,12 @@ theorem mem_iff_id_0904 (n : Fin 5011) (hn : n.val = 904) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0905 (n : Fin 5011) (hn : n.val = 905) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 905 at hn
-  subst hn
+  have hn' : n = (905 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7836,13 +7630,12 @@ theorem mem_iff_id_0905 (n : Fin 5011) (hn : n.val = 905) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0906 (n : Fin 5011) (hn : n.val = 906) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 906 at hn
-  subst hn
+  have hn' : n = (906 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7874,13 +7667,12 @@ theorem mem_iff_id_0906 (n : Fin 5011) (hn : n.val = 906) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0907 (n : Fin 5011) (hn : n.val = 907) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 907 at hn
-  subst hn
+  have hn' : n = (907 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7912,13 +7704,12 @@ theorem mem_iff_id_0907 (n : Fin 5011) (hn : n.val = 907) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0908 (n : Fin 5011) (hn : n.val = 908) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 908 at hn
-  subst hn
+  have hn' : n = (908 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7950,13 +7741,12 @@ theorem mem_iff_id_0908 (n : Fin 5011) (hn : n.val = 908) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0909 (n : Fin 5011) (hn : n.val = 909) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 909 at hn
-  subst hn
+  have hn' : n = (909 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -7988,13 +7778,12 @@ theorem mem_iff_id_0909 (n : Fin 5011) (hn : n.val = 909) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0910 (n : Fin 5011) (hn : n.val = 910) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 910 at hn
-  subst hn
+  have hn' : n = (910 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8026,13 +7815,12 @@ theorem mem_iff_id_0910 (n : Fin 5011) (hn : n.val = 910) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0911 (n : Fin 5011) (hn : n.val = 911) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 911 at hn
-  subst hn
+  have hn' : n = (911 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8064,13 +7852,12 @@ theorem mem_iff_id_0911 (n : Fin 5011) (hn : n.val = 911) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0912 (n : Fin 5011) (hn : n.val = 912) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 912 at hn
-  subst hn
+  have hn' : n = (912 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8102,13 +7889,12 @@ theorem mem_iff_id_0912 (n : Fin 5011) (hn : n.val = 912) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0913 (n : Fin 5011) (hn : n.val = 913) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 913 at hn
-  subst hn
+  have hn' : n = (913 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8140,13 +7926,12 @@ theorem mem_iff_id_0913 (n : Fin 5011) (hn : n.val = 913) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0914 (n : Fin 5011) (hn : n.val = 914) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 914 at hn
-  subst hn
+  have hn' : n = (914 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8178,13 +7963,12 @@ theorem mem_iff_id_0914 (n : Fin 5011) (hn : n.val = 914) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0915 (n : Fin 5011) (hn : n.val = 915) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 915 at hn
-  subst hn
+  have hn' : n = (915 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8216,13 +8000,12 @@ theorem mem_iff_id_0915 (n : Fin 5011) (hn : n.val = 915) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0916 (n : Fin 5011) (hn : n.val = 916) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 916 at hn
-  subst hn
+  have hn' : n = (916 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8254,13 +8037,12 @@ theorem mem_iff_id_0916 (n : Fin 5011) (hn : n.val = 916) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0917 (n : Fin 5011) (hn : n.val = 917) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 917 at hn
-  subst hn
+  have hn' : n = (917 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8292,13 +8074,12 @@ theorem mem_iff_id_0917 (n : Fin 5011) (hn : n.val = 917) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0918 (n : Fin 5011) (hn : n.val = 918) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 918 at hn
-  subst hn
+  have hn' : n = (918 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8330,13 +8111,12 @@ theorem mem_iff_id_0918 (n : Fin 5011) (hn : n.val = 918) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0919 (n : Fin 5011) (hn : n.val = 919) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 919 at hn
-  subst hn
+  have hn' : n = (919 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8368,13 +8148,12 @@ theorem mem_iff_id_0919 (n : Fin 5011) (hn : n.val = 919) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0920 (n : Fin 5011) (hn : n.val = 920) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 920 at hn
-  subst hn
+  have hn' : n = (920 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8406,13 +8185,12 @@ theorem mem_iff_id_0920 (n : Fin 5011) (hn : n.val = 920) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0921 (n : Fin 5011) (hn : n.val = 921) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 921 at hn
-  subst hn
+  have hn' : n = (921 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8444,13 +8222,12 @@ theorem mem_iff_id_0921 (n : Fin 5011) (hn : n.val = 921) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0922 (n : Fin 5011) (hn : n.val = 922) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 922 at hn
-  subst hn
+  have hn' : n = (922 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8482,13 +8259,12 @@ theorem mem_iff_id_0922 (n : Fin 5011) (hn : n.val = 922) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0923 (n : Fin 5011) (hn : n.val = 923) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 923 at hn
-  subst hn
+  have hn' : n = (923 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8520,13 +8296,12 @@ theorem mem_iff_id_0923 (n : Fin 5011) (hn : n.val = 923) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0924 (n : Fin 5011) (hn : n.val = 924) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 924 at hn
-  subst hn
+  have hn' : n = (924 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8558,13 +8333,12 @@ theorem mem_iff_id_0924 (n : Fin 5011) (hn : n.val = 924) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0925 (n : Fin 5011) (hn : n.val = 925) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 925 at hn
-  subst hn
+  have hn' : n = (925 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8596,13 +8370,12 @@ theorem mem_iff_id_0925 (n : Fin 5011) (hn : n.val = 925) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0926 (n : Fin 5011) (hn : n.val = 926) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 926 at hn
-  subst hn
+  have hn' : n = (926 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8634,13 +8407,12 @@ theorem mem_iff_id_0926 (n : Fin 5011) (hn : n.val = 926) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0927 (n : Fin 5011) (hn : n.val = 927) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 927 at hn
-  subst hn
+  have hn' : n = (927 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8672,13 +8444,12 @@ theorem mem_iff_id_0927 (n : Fin 5011) (hn : n.val = 927) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0928 (n : Fin 5011) (hn : n.val = 928) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 928 at hn
-  subst hn
+  have hn' : n = (928 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8710,13 +8481,12 @@ theorem mem_iff_id_0928 (n : Fin 5011) (hn : n.val = 928) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0929 (n : Fin 5011) (hn : n.val = 929) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 929 at hn
-  subst hn
+  have hn' : n = (929 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8748,13 +8518,12 @@ theorem mem_iff_id_0929 (n : Fin 5011) (hn : n.val = 929) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0930 (n : Fin 5011) (hn : n.val = 930) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 930 at hn
-  subst hn
+  have hn' : n = (930 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8786,13 +8555,12 @@ theorem mem_iff_id_0930 (n : Fin 5011) (hn : n.val = 930) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0931 (n : Fin 5011) (hn : n.val = 931) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 931 at hn
-  subst hn
+  have hn' : n = (931 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8824,13 +8592,12 @@ theorem mem_iff_id_0931 (n : Fin 5011) (hn : n.val = 931) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0932 (n : Fin 5011) (hn : n.val = 932) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 932 at hn
-  subst hn
+  have hn' : n = (932 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8862,13 +8629,12 @@ theorem mem_iff_id_0932 (n : Fin 5011) (hn : n.val = 932) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0933 (n : Fin 5011) (hn : n.val = 933) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 933 at hn
-  subst hn
+  have hn' : n = (933 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8900,13 +8666,12 @@ theorem mem_iff_id_0933 (n : Fin 5011) (hn : n.val = 933) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0934 (n : Fin 5011) (hn : n.val = 934) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 934 at hn
-  subst hn
+  have hn' : n = (934 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8938,13 +8703,12 @@ theorem mem_iff_id_0934 (n : Fin 5011) (hn : n.val = 934) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0935 (n : Fin 5011) (hn : n.val = 935) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 935 at hn
-  subst hn
+  have hn' : n = (935 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -8976,13 +8740,12 @@ theorem mem_iff_id_0935 (n : Fin 5011) (hn : n.val = 935) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0936 (n : Fin 5011) (hn : n.val = 936) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 936 at hn
-  subst hn
+  have hn' : n = (936 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9014,13 +8777,12 @@ theorem mem_iff_id_0936 (n : Fin 5011) (hn : n.val = 936) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0937 (n : Fin 5011) (hn : n.val = 937) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 937 at hn
-  subst hn
+  have hn' : n = (937 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9052,13 +8814,12 @@ theorem mem_iff_id_0937 (n : Fin 5011) (hn : n.val = 937) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0938 (n : Fin 5011) (hn : n.val = 938) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 938 at hn
-  subst hn
+  have hn' : n = (938 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9090,13 +8851,12 @@ theorem mem_iff_id_0938 (n : Fin 5011) (hn : n.val = 938) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0939 (n : Fin 5011) (hn : n.val = 939) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 939 at hn
-  subst hn
+  have hn' : n = (939 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9128,13 +8888,12 @@ theorem mem_iff_id_0939 (n : Fin 5011) (hn : n.val = 939) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0940 (n : Fin 5011) (hn : n.val = 940) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 940 at hn
-  subst hn
+  have hn' : n = (940 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9166,13 +8925,12 @@ theorem mem_iff_id_0940 (n : Fin 5011) (hn : n.val = 940) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0941 (n : Fin 5011) (hn : n.val = 941) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 941 at hn
-  subst hn
+  have hn' : n = (941 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9204,13 +8962,12 @@ theorem mem_iff_id_0941 (n : Fin 5011) (hn : n.val = 941) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0942 (n : Fin 5011) (hn : n.val = 942) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 942 at hn
-  subst hn
+  have hn' : n = (942 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9242,13 +8999,12 @@ theorem mem_iff_id_0942 (n : Fin 5011) (hn : n.val = 942) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0943 (n : Fin 5011) (hn : n.val = 943) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 943 at hn
-  subst hn
+  have hn' : n = (943 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9280,13 +9036,12 @@ theorem mem_iff_id_0943 (n : Fin 5011) (hn : n.val = 943) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0944 (n : Fin 5011) (hn : n.val = 944) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 944 at hn
-  subst hn
+  have hn' : n = (944 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9318,13 +9073,12 @@ theorem mem_iff_id_0944 (n : Fin 5011) (hn : n.val = 944) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0945 (n : Fin 5011) (hn : n.val = 945) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 945 at hn
-  subst hn
+  have hn' : n = (945 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9356,13 +9110,12 @@ theorem mem_iff_id_0945 (n : Fin 5011) (hn : n.val = 945) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0946 (n : Fin 5011) (hn : n.val = 946) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 946 at hn
-  subst hn
+  have hn' : n = (946 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9394,13 +9147,12 @@ theorem mem_iff_id_0946 (n : Fin 5011) (hn : n.val = 946) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0947 (n : Fin 5011) (hn : n.val = 947) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 947 at hn
-  subst hn
+  have hn' : n = (947 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9432,13 +9184,12 @@ theorem mem_iff_id_0947 (n : Fin 5011) (hn : n.val = 947) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0948 (n : Fin 5011) (hn : n.val = 948) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 948 at hn
-  subst hn
+  have hn' : n = (948 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9470,13 +9221,12 @@ theorem mem_iff_id_0948 (n : Fin 5011) (hn : n.val = 948) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0949 (n : Fin 5011) (hn : n.val = 949) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 949 at hn
-  subst hn
+  have hn' : n = (949 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9508,13 +9258,12 @@ theorem mem_iff_id_0949 (n : Fin 5011) (hn : n.val = 949) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0950 (n : Fin 5011) (hn : n.val = 950) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 950 at hn
-  subst hn
+  have hn' : n = (950 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9546,13 +9295,12 @@ theorem mem_iff_id_0950 (n : Fin 5011) (hn : n.val = 950) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0951 (n : Fin 5011) (hn : n.val = 951) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 951 at hn
-  subst hn
+  have hn' : n = (951 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9584,13 +9332,12 @@ theorem mem_iff_id_0951 (n : Fin 5011) (hn : n.val = 951) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0952 (n : Fin 5011) (hn : n.val = 952) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 952 at hn
-  subst hn
+  have hn' : n = (952 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9622,13 +9369,12 @@ theorem mem_iff_id_0952 (n : Fin 5011) (hn : n.val = 952) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0953 (n : Fin 5011) (hn : n.val = 953) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 953 at hn
-  subst hn
+  have hn' : n = (953 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9660,13 +9406,12 @@ theorem mem_iff_id_0953 (n : Fin 5011) (hn : n.val = 953) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0954 (n : Fin 5011) (hn : n.val = 954) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 954 at hn
-  subst hn
+  have hn' : n = (954 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9698,13 +9443,12 @@ theorem mem_iff_id_0954 (n : Fin 5011) (hn : n.val = 954) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0955 (n : Fin 5011) (hn : n.val = 955) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 955 at hn
-  subst hn
+  have hn' : n = (955 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9736,13 +9480,12 @@ theorem mem_iff_id_0955 (n : Fin 5011) (hn : n.val = 955) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0956 (n : Fin 5011) (hn : n.val = 956) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 956 at hn
-  subst hn
+  have hn' : n = (956 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9774,13 +9517,12 @@ theorem mem_iff_id_0956 (n : Fin 5011) (hn : n.val = 956) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0957 (n : Fin 5011) (hn : n.val = 957) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 957 at hn
-  subst hn
+  have hn' : n = (957 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9812,13 +9554,12 @@ theorem mem_iff_id_0957 (n : Fin 5011) (hn : n.val = 957) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0958 (n : Fin 5011) (hn : n.val = 958) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 958 at hn
-  subst hn
+  have hn' : n = (958 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9850,13 +9591,12 @@ theorem mem_iff_id_0958 (n : Fin 5011) (hn : n.val = 958) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0959 (n : Fin 5011) (hn : n.val = 959) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 959 at hn
-  subst hn
+  have hn' : n = (959 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9888,13 +9628,12 @@ theorem mem_iff_id_0959 (n : Fin 5011) (hn : n.val = 959) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0960 (n : Fin 5011) (hn : n.val = 960) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 960 at hn
-  subst hn
+  have hn' : n = (960 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9926,13 +9665,12 @@ theorem mem_iff_id_0960 (n : Fin 5011) (hn : n.val = 960) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0961 (n : Fin 5011) (hn : n.val = 961) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 961 at hn
-  subst hn
+  have hn' : n = (961 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -9964,13 +9702,12 @@ theorem mem_iff_id_0961 (n : Fin 5011) (hn : n.val = 961) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0962 (n : Fin 5011) (hn : n.val = 962) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 962 at hn
-  subst hn
+  have hn' : n = (962 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10002,13 +9739,12 @@ theorem mem_iff_id_0962 (n : Fin 5011) (hn : n.val = 962) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0963 (n : Fin 5011) (hn : n.val = 963) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 963 at hn
-  subst hn
+  have hn' : n = (963 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10040,13 +9776,12 @@ theorem mem_iff_id_0963 (n : Fin 5011) (hn : n.val = 963) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0964 (n : Fin 5011) (hn : n.val = 964) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 964 at hn
-  subst hn
+  have hn' : n = (964 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10078,13 +9813,12 @@ theorem mem_iff_id_0964 (n : Fin 5011) (hn : n.val = 964) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0965 (n : Fin 5011) (hn : n.val = 965) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 965 at hn
-  subst hn
+  have hn' : n = (965 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10116,13 +9850,12 @@ theorem mem_iff_id_0965 (n : Fin 5011) (hn : n.val = 965) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0966 (n : Fin 5011) (hn : n.val = 966) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 966 at hn
-  subst hn
+  have hn' : n = (966 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10154,13 +9887,12 @@ theorem mem_iff_id_0966 (n : Fin 5011) (hn : n.val = 966) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0967 (n : Fin 5011) (hn : n.val = 967) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 967 at hn
-  subst hn
+  have hn' : n = (967 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10192,13 +9924,12 @@ theorem mem_iff_id_0967 (n : Fin 5011) (hn : n.val = 967) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0968 (n : Fin 5011) (hn : n.val = 968) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 968 at hn
-  subst hn
+  have hn' : n = (968 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10230,13 +9961,12 @@ theorem mem_iff_id_0968 (n : Fin 5011) (hn : n.val = 968) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0969 (n : Fin 5011) (hn : n.val = 969) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 969 at hn
-  subst hn
+  have hn' : n = (969 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10268,13 +9998,12 @@ theorem mem_iff_id_0969 (n : Fin 5011) (hn : n.val = 969) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0970 (n : Fin 5011) (hn : n.val = 970) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 970 at hn
-  subst hn
+  have hn' : n = (970 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10306,13 +10035,12 @@ theorem mem_iff_id_0970 (n : Fin 5011) (hn : n.val = 970) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0971 (n : Fin 5011) (hn : n.val = 971) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 971 at hn
-  subst hn
+  have hn' : n = (971 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10344,13 +10072,12 @@ theorem mem_iff_id_0971 (n : Fin 5011) (hn : n.val = 971) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0972 (n : Fin 5011) (hn : n.val = 972) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 972 at hn
-  subst hn
+  have hn' : n = (972 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10382,13 +10109,12 @@ theorem mem_iff_id_0972 (n : Fin 5011) (hn : n.val = 972) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0973 (n : Fin 5011) (hn : n.val = 973) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 973 at hn
-  subst hn
+  have hn' : n = (973 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10420,13 +10146,12 @@ theorem mem_iff_id_0973 (n : Fin 5011) (hn : n.val = 973) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0974 (n : Fin 5011) (hn : n.val = 974) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 974 at hn
-  subst hn
+  have hn' : n = (974 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10458,13 +10183,12 @@ theorem mem_iff_id_0974 (n : Fin 5011) (hn : n.val = 974) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0975 (n : Fin 5011) (hn : n.val = 975) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 975 at hn
-  subst hn
+  have hn' : n = (975 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10496,13 +10220,12 @@ theorem mem_iff_id_0975 (n : Fin 5011) (hn : n.val = 975) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0976 (n : Fin 5011) (hn : n.val = 976) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 976 at hn
-  subst hn
+  have hn' : n = (976 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10534,13 +10257,12 @@ theorem mem_iff_id_0976 (n : Fin 5011) (hn : n.val = 976) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0977 (n : Fin 5011) (hn : n.val = 977) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 977 at hn
-  subst hn
+  have hn' : n = (977 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10572,13 +10294,12 @@ theorem mem_iff_id_0977 (n : Fin 5011) (hn : n.val = 977) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0978 (n : Fin 5011) (hn : n.val = 978) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 978 at hn
-  subst hn
+  have hn' : n = (978 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10610,13 +10331,12 @@ theorem mem_iff_id_0978 (n : Fin 5011) (hn : n.val = 978) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0979 (n : Fin 5011) (hn : n.val = 979) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 979 at hn
-  subst hn
+  have hn' : n = (979 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10648,13 +10368,12 @@ theorem mem_iff_id_0979 (n : Fin 5011) (hn : n.val = 979) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0980 (n : Fin 5011) (hn : n.val = 980) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 980 at hn
-  subst hn
+  have hn' : n = (980 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10686,13 +10405,12 @@ theorem mem_iff_id_0980 (n : Fin 5011) (hn : n.val = 980) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0981 (n : Fin 5011) (hn : n.val = 981) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 981 at hn
-  subst hn
+  have hn' : n = (981 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10724,13 +10442,12 @@ theorem mem_iff_id_0981 (n : Fin 5011) (hn : n.val = 981) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0982 (n : Fin 5011) (hn : n.val = 982) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 982 at hn
-  subst hn
+  have hn' : n = (982 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10762,13 +10479,12 @@ theorem mem_iff_id_0982 (n : Fin 5011) (hn : n.val = 982) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0983 (n : Fin 5011) (hn : n.val = 983) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 983 at hn
-  subst hn
+  have hn' : n = (983 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10800,13 +10516,12 @@ theorem mem_iff_id_0983 (n : Fin 5011) (hn : n.val = 983) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0984 (n : Fin 5011) (hn : n.val = 984) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 984 at hn
-  subst hn
+  have hn' : n = (984 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10838,13 +10553,12 @@ theorem mem_iff_id_0984 (n : Fin 5011) (hn : n.val = 984) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0985 (n : Fin 5011) (hn : n.val = 985) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 985 at hn
-  subst hn
+  have hn' : n = (985 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10876,13 +10590,12 @@ theorem mem_iff_id_0985 (n : Fin 5011) (hn : n.val = 985) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0986 (n : Fin 5011) (hn : n.val = 986) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 986 at hn
-  subst hn
+  have hn' : n = (986 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10914,13 +10627,12 @@ theorem mem_iff_id_0986 (n : Fin 5011) (hn : n.val = 986) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0987 (n : Fin 5011) (hn : n.val = 987) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 987 at hn
-  subst hn
+  have hn' : n = (987 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10952,13 +10664,12 @@ theorem mem_iff_id_0987 (n : Fin 5011) (hn : n.val = 987) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0988 (n : Fin 5011) (hn : n.val = 988) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 988 at hn
-  subst hn
+  have hn' : n = (988 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -10990,13 +10701,12 @@ theorem mem_iff_id_0988 (n : Fin 5011) (hn : n.val = 988) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0989 (n : Fin 5011) (hn : n.val = 989) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 989 at hn
-  subst hn
+  have hn' : n = (989 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11028,13 +10738,12 @@ theorem mem_iff_id_0989 (n : Fin 5011) (hn : n.val = 989) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0990 (n : Fin 5011) (hn : n.val = 990) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 990 at hn
-  subst hn
+  have hn' : n = (990 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11066,13 +10775,12 @@ theorem mem_iff_id_0990 (n : Fin 5011) (hn : n.val = 990) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0991 (n : Fin 5011) (hn : n.val = 991) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 991 at hn
-  subst hn
+  have hn' : n = (991 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11104,13 +10812,12 @@ theorem mem_iff_id_0991 (n : Fin 5011) (hn : n.val = 991) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0992 (n : Fin 5011) (hn : n.val = 992) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 992 at hn
-  subst hn
+  have hn' : n = (992 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11142,13 +10849,12 @@ theorem mem_iff_id_0992 (n : Fin 5011) (hn : n.val = 992) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0993 (n : Fin 5011) (hn : n.val = 993) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 993 at hn
-  subst hn
+  have hn' : n = (993 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11180,13 +10886,12 @@ theorem mem_iff_id_0993 (n : Fin 5011) (hn : n.val = 993) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0994 (n : Fin 5011) (hn : n.val = 994) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 994 at hn
-  subst hn
+  have hn' : n = (994 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11218,13 +10923,12 @@ theorem mem_iff_id_0994 (n : Fin 5011) (hn : n.val = 994) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0995 (n : Fin 5011) (hn : n.val = 995) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 995 at hn
-  subst hn
+  have hn' : n = (995 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11256,13 +10960,12 @@ theorem mem_iff_id_0995 (n : Fin 5011) (hn : n.val = 995) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0996 (n : Fin 5011) (hn : n.val = 996) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 996 at hn
-  subst hn
+  have hn' : n = (996 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11294,13 +10997,12 @@ theorem mem_iff_id_0996 (n : Fin 5011) (hn : n.val = 996) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0997 (n : Fin 5011) (hn : n.val = 997) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 997 at hn
-  subst hn
+  have hn' : n = (997 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11332,13 +11034,12 @@ theorem mem_iff_id_0997 (n : Fin 5011) (hn : n.val = 997) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0998 (n : Fin 5011) (hn : n.val = 998) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 998 at hn
-  subst hn
+  have hn' : n = (998 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11370,13 +11071,12 @@ theorem mem_iff_id_0998 (n : Fin 5011) (hn : n.val = 998) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_0999 (n : Fin 5011) (hn : n.val = 999) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 999 at hn
-  subst hn
+  have hn' : n = (999 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11408,13 +11108,12 @@ theorem mem_iff_id_0999 (n : Fin 5011) (hn : n.val = 999) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1300 (n : Fin 5011) (hn : n.val = 1300) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1300 at hn
-  subst hn
+  have hn' : n = (1300 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11446,13 +11145,12 @@ theorem mem_iff_id_1300 (n : Fin 5011) (hn : n.val = 1300) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1301 (n : Fin 5011) (hn : n.val = 1301) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1301 at hn
-  subst hn
+  have hn' : n = (1301 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11484,13 +11182,12 @@ theorem mem_iff_id_1301 (n : Fin 5011) (hn : n.val = 1301) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1302 (n : Fin 5011) (hn : n.val = 1302) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1302 at hn
-  subst hn
+  have hn' : n = (1302 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11522,13 +11219,12 @@ theorem mem_iff_id_1302 (n : Fin 5011) (hn : n.val = 1302) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1303 (n : Fin 5011) (hn : n.val = 1303) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1303 at hn
-  subst hn
+  have hn' : n = (1303 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11560,13 +11256,12 @@ theorem mem_iff_id_1303 (n : Fin 5011) (hn : n.val = 1303) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1304 (n : Fin 5011) (hn : n.val = 1304) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1304 at hn
-  subst hn
+  have hn' : n = (1304 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11598,13 +11293,12 @@ theorem mem_iff_id_1304 (n : Fin 5011) (hn : n.val = 1304) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1305 (n : Fin 5011) (hn : n.val = 1305) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1305 at hn
-  subst hn
+  have hn' : n = (1305 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11636,13 +11330,12 @@ theorem mem_iff_id_1305 (n : Fin 5011) (hn : n.val = 1305) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1306 (n : Fin 5011) (hn : n.val = 1306) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1306 at hn
-  subst hn
+  have hn' : n = (1306 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11674,13 +11367,12 @@ theorem mem_iff_id_1306 (n : Fin 5011) (hn : n.val = 1306) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1307 (n : Fin 5011) (hn : n.val = 1307) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1307 at hn
-  subst hn
+  have hn' : n = (1307 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11712,13 +11404,12 @@ theorem mem_iff_id_1307 (n : Fin 5011) (hn : n.val = 1307) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1308 (n : Fin 5011) (hn : n.val = 1308) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1308 at hn
-  subst hn
+  have hn' : n = (1308 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11750,13 +11441,12 @@ theorem mem_iff_id_1308 (n : Fin 5011) (hn : n.val = 1308) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1309 (n : Fin 5011) (hn : n.val = 1309) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1309 at hn
-  subst hn
+  have hn' : n = (1309 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11788,13 +11478,12 @@ theorem mem_iff_id_1309 (n : Fin 5011) (hn : n.val = 1309) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1310 (n : Fin 5011) (hn : n.val = 1310) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1310 at hn
-  subst hn
+  have hn' : n = (1310 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11826,13 +11515,12 @@ theorem mem_iff_id_1310 (n : Fin 5011) (hn : n.val = 1310) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1311 (n : Fin 5011) (hn : n.val = 1311) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1311 at hn
-  subst hn
+  have hn' : n = (1311 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11864,13 +11552,12 @@ theorem mem_iff_id_1311 (n : Fin 5011) (hn : n.val = 1311) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1312 (n : Fin 5011) (hn : n.val = 1312) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1312 at hn
-  subst hn
+  have hn' : n = (1312 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11902,13 +11589,12 @@ theorem mem_iff_id_1312 (n : Fin 5011) (hn : n.val = 1312) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1313 (n : Fin 5011) (hn : n.val = 1313) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1313 at hn
-  subst hn
+  have hn' : n = (1313 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11940,13 +11626,12 @@ theorem mem_iff_id_1313 (n : Fin 5011) (hn : n.val = 1313) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1314 (n : Fin 5011) (hn : n.val = 1314) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1314 at hn
-  subst hn
+  have hn' : n = (1314 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -11978,13 +11663,12 @@ theorem mem_iff_id_1314 (n : Fin 5011) (hn : n.val = 1314) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1315 (n : Fin 5011) (hn : n.val = 1315) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1315 at hn
-  subst hn
+  have hn' : n = (1315 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12016,13 +11700,12 @@ theorem mem_iff_id_1315 (n : Fin 5011) (hn : n.val = 1315) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1316 (n : Fin 5011) (hn : n.val = 1316) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1316 at hn
-  subst hn
+  have hn' : n = (1316 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12054,13 +11737,12 @@ theorem mem_iff_id_1316 (n : Fin 5011) (hn : n.val = 1316) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1317 (n : Fin 5011) (hn : n.val = 1317) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1317 at hn
-  subst hn
+  have hn' : n = (1317 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12092,13 +11774,12 @@ theorem mem_iff_id_1317 (n : Fin 5011) (hn : n.val = 1317) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1318 (n : Fin 5011) (hn : n.val = 1318) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1318 at hn
-  subst hn
+  have hn' : n = (1318 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12130,13 +11811,12 @@ theorem mem_iff_id_1318 (n : Fin 5011) (hn : n.val = 1318) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1319 (n : Fin 5011) (hn : n.val = 1319) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1319 at hn
-  subst hn
+  have hn' : n = (1319 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12168,13 +11848,12 @@ theorem mem_iff_id_1319 (n : Fin 5011) (hn : n.val = 1319) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1320 (n : Fin 5011) (hn : n.val = 1320) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1320 at hn
-  subst hn
+  have hn' : n = (1320 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12206,13 +11885,12 @@ theorem mem_iff_id_1320 (n : Fin 5011) (hn : n.val = 1320) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1321 (n : Fin 5011) (hn : n.val = 1321) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1321 at hn
-  subst hn
+  have hn' : n = (1321 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12244,13 +11922,12 @@ theorem mem_iff_id_1321 (n : Fin 5011) (hn : n.val = 1321) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1322 (n : Fin 5011) (hn : n.val = 1322) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1322 at hn
-  subst hn
+  have hn' : n = (1322 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12282,13 +11959,12 @@ theorem mem_iff_id_1322 (n : Fin 5011) (hn : n.val = 1322) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1323 (n : Fin 5011) (hn : n.val = 1323) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1323 at hn
-  subst hn
+  have hn' : n = (1323 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12320,13 +11996,12 @@ theorem mem_iff_id_1323 (n : Fin 5011) (hn : n.val = 1323) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1324 (n : Fin 5011) (hn : n.val = 1324) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1324 at hn
-  subst hn
+  have hn' : n = (1324 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12358,13 +12033,12 @@ theorem mem_iff_id_1324 (n : Fin 5011) (hn : n.val = 1324) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1325 (n : Fin 5011) (hn : n.val = 1325) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1325 at hn
-  subst hn
+  have hn' : n = (1325 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12396,13 +12070,12 @@ theorem mem_iff_id_1325 (n : Fin 5011) (hn : n.val = 1325) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1326 (n : Fin 5011) (hn : n.val = 1326) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1326 at hn
-  subst hn
+  have hn' : n = (1326 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12434,13 +12107,12 @@ theorem mem_iff_id_1326 (n : Fin 5011) (hn : n.val = 1326) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1327 (n : Fin 5011) (hn : n.val = 1327) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1327 at hn
-  subst hn
+  have hn' : n = (1327 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12472,13 +12144,12 @@ theorem mem_iff_id_1327 (n : Fin 5011) (hn : n.val = 1327) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1328 (n : Fin 5011) (hn : n.val = 1328) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1328 at hn
-  subst hn
+  have hn' : n = (1328 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12510,13 +12181,12 @@ theorem mem_iff_id_1328 (n : Fin 5011) (hn : n.val = 1328) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1329 (n : Fin 5011) (hn : n.val = 1329) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1329 at hn
-  subst hn
+  have hn' : n = (1329 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12548,13 +12218,12 @@ theorem mem_iff_id_1329 (n : Fin 5011) (hn : n.val = 1329) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1330 (n : Fin 5011) (hn : n.val = 1330) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1330 at hn
-  subst hn
+  have hn' : n = (1330 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12586,13 +12255,12 @@ theorem mem_iff_id_1330 (n : Fin 5011) (hn : n.val = 1330) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1331 (n : Fin 5011) (hn : n.val = 1331) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1331 at hn
-  subst hn
+  have hn' : n = (1331 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12624,13 +12292,12 @@ theorem mem_iff_id_1331 (n : Fin 5011) (hn : n.val = 1331) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1332 (n : Fin 5011) (hn : n.val = 1332) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1332 at hn
-  subst hn
+  have hn' : n = (1332 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12662,13 +12329,12 @@ theorem mem_iff_id_1332 (n : Fin 5011) (hn : n.val = 1332) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1333 (n : Fin 5011) (hn : n.val = 1333) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1333 at hn
-  subst hn
+  have hn' : n = (1333 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12700,13 +12366,12 @@ theorem mem_iff_id_1333 (n : Fin 5011) (hn : n.val = 1333) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1334 (n : Fin 5011) (hn : n.val = 1334) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1334 at hn
-  subst hn
+  have hn' : n = (1334 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12738,13 +12403,12 @@ theorem mem_iff_id_1334 (n : Fin 5011) (hn : n.val = 1334) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1335 (n : Fin 5011) (hn : n.val = 1335) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1335 at hn
-  subst hn
+  have hn' : n = (1335 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12776,13 +12440,12 @@ theorem mem_iff_id_1335 (n : Fin 5011) (hn : n.val = 1335) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1336 (n : Fin 5011) (hn : n.val = 1336) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1336 at hn
-  subst hn
+  have hn' : n = (1336 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12814,13 +12477,12 @@ theorem mem_iff_id_1336 (n : Fin 5011) (hn : n.val = 1336) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1337 (n : Fin 5011) (hn : n.val = 1337) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1337 at hn
-  subst hn
+  have hn' : n = (1337 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12852,13 +12514,12 @@ theorem mem_iff_id_1337 (n : Fin 5011) (hn : n.val = 1337) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1338 (n : Fin 5011) (hn : n.val = 1338) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1338 at hn
-  subst hn
+  have hn' : n = (1338 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12890,13 +12551,12 @@ theorem mem_iff_id_1338 (n : Fin 5011) (hn : n.val = 1338) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1339 (n : Fin 5011) (hn : n.val = 1339) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1339 at hn
-  subst hn
+  have hn' : n = (1339 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12928,13 +12588,12 @@ theorem mem_iff_id_1339 (n : Fin 5011) (hn : n.val = 1339) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1340 (n : Fin 5011) (hn : n.val = 1340) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1340 at hn
-  subst hn
+  have hn' : n = (1340 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -12966,13 +12625,12 @@ theorem mem_iff_id_1340 (n : Fin 5011) (hn : n.val = 1340) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1341 (n : Fin 5011) (hn : n.val = 1341) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1341 at hn
-  subst hn
+  have hn' : n = (1341 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13004,13 +12662,12 @@ theorem mem_iff_id_1341 (n : Fin 5011) (hn : n.val = 1341) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1342 (n : Fin 5011) (hn : n.val = 1342) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1342 at hn
-  subst hn
+  have hn' : n = (1342 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13042,13 +12699,12 @@ theorem mem_iff_id_1342 (n : Fin 5011) (hn : n.val = 1342) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1343 (n : Fin 5011) (hn : n.val = 1343) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1343 at hn
-  subst hn
+  have hn' : n = (1343 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13080,13 +12736,12 @@ theorem mem_iff_id_1343 (n : Fin 5011) (hn : n.val = 1343) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1344 (n : Fin 5011) (hn : n.val = 1344) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1344 at hn
-  subst hn
+  have hn' : n = (1344 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13118,13 +12773,12 @@ theorem mem_iff_id_1344 (n : Fin 5011) (hn : n.val = 1344) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1345 (n : Fin 5011) (hn : n.val = 1345) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1345 at hn
-  subst hn
+  have hn' : n = (1345 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13156,13 +12810,12 @@ theorem mem_iff_id_1345 (n : Fin 5011) (hn : n.val = 1345) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1346 (n : Fin 5011) (hn : n.val = 1346) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1346 at hn
-  subst hn
+  have hn' : n = (1346 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13194,13 +12847,12 @@ theorem mem_iff_id_1346 (n : Fin 5011) (hn : n.val = 1346) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1347 (n : Fin 5011) (hn : n.val = 1347) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1347 at hn
-  subst hn
+  have hn' : n = (1347 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13232,13 +12884,12 @@ theorem mem_iff_id_1347 (n : Fin 5011) (hn : n.val = 1347) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1348 (n : Fin 5011) (hn : n.val = 1348) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1348 at hn
-  subst hn
+  have hn' : n = (1348 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13270,13 +12921,12 @@ theorem mem_iff_id_1348 (n : Fin 5011) (hn : n.val = 1348) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1349 (n : Fin 5011) (hn : n.val = 1349) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1349 at hn
-  subst hn
+  have hn' : n = (1349 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13308,13 +12958,12 @@ theorem mem_iff_id_1349 (n : Fin 5011) (hn : n.val = 1349) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1350 (n : Fin 5011) (hn : n.val = 1350) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1350 at hn
-  subst hn
+  have hn' : n = (1350 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13346,13 +12995,12 @@ theorem mem_iff_id_1350 (n : Fin 5011) (hn : n.val = 1350) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1351 (n : Fin 5011) (hn : n.val = 1351) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1351 at hn
-  subst hn
+  have hn' : n = (1351 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13384,13 +13032,12 @@ theorem mem_iff_id_1351 (n : Fin 5011) (hn : n.val = 1351) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1352 (n : Fin 5011) (hn : n.val = 1352) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1352 at hn
-  subst hn
+  have hn' : n = (1352 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13422,13 +13069,12 @@ theorem mem_iff_id_1352 (n : Fin 5011) (hn : n.val = 1352) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1353 (n : Fin 5011) (hn : n.val = 1353) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1353 at hn
-  subst hn
+  have hn' : n = (1353 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13460,13 +13106,12 @@ theorem mem_iff_id_1353 (n : Fin 5011) (hn : n.val = 1353) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1354 (n : Fin 5011) (hn : n.val = 1354) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1354 at hn
-  subst hn
+  have hn' : n = (1354 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13498,13 +13143,12 @@ theorem mem_iff_id_1354 (n : Fin 5011) (hn : n.val = 1354) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1355 (n : Fin 5011) (hn : n.val = 1355) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1355 at hn
-  subst hn
+  have hn' : n = (1355 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13536,13 +13180,12 @@ theorem mem_iff_id_1355 (n : Fin 5011) (hn : n.val = 1355) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1356 (n : Fin 5011) (hn : n.val = 1356) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1356 at hn
-  subst hn
+  have hn' : n = (1356 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13574,13 +13217,12 @@ theorem mem_iff_id_1356 (n : Fin 5011) (hn : n.val = 1356) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1357 (n : Fin 5011) (hn : n.val = 1357) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1357 at hn
-  subst hn
+  have hn' : n = (1357 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13612,13 +13254,12 @@ theorem mem_iff_id_1357 (n : Fin 5011) (hn : n.val = 1357) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1358 (n : Fin 5011) (hn : n.val = 1358) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1358 at hn
-  subst hn
+  have hn' : n = (1358 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13650,13 +13291,12 @@ theorem mem_iff_id_1358 (n : Fin 5011) (hn : n.val = 1358) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1359 (n : Fin 5011) (hn : n.val = 1359) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1359 at hn
-  subst hn
+  have hn' : n = (1359 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13688,13 +13328,12 @@ theorem mem_iff_id_1359 (n : Fin 5011) (hn : n.val = 1359) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1360 (n : Fin 5011) (hn : n.val = 1360) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1360 at hn
-  subst hn
+  have hn' : n = (1360 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13726,13 +13365,12 @@ theorem mem_iff_id_1360 (n : Fin 5011) (hn : n.val = 1360) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1361 (n : Fin 5011) (hn : n.val = 1361) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1361 at hn
-  subst hn
+  have hn' : n = (1361 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13764,13 +13402,12 @@ theorem mem_iff_id_1361 (n : Fin 5011) (hn : n.val = 1361) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1362 (n : Fin 5011) (hn : n.val = 1362) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1362 at hn
-  subst hn
+  have hn' : n = (1362 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13802,13 +13439,12 @@ theorem mem_iff_id_1362 (n : Fin 5011) (hn : n.val = 1362) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1363 (n : Fin 5011) (hn : n.val = 1363) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1363 at hn
-  subst hn
+  have hn' : n = (1363 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13840,13 +13476,12 @@ theorem mem_iff_id_1363 (n : Fin 5011) (hn : n.val = 1363) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1364 (n : Fin 5011) (hn : n.val = 1364) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1364 at hn
-  subst hn
+  have hn' : n = (1364 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13878,13 +13513,12 @@ theorem mem_iff_id_1364 (n : Fin 5011) (hn : n.val = 1364) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1365 (n : Fin 5011) (hn : n.val = 1365) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1365 at hn
-  subst hn
+  have hn' : n = (1365 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13916,13 +13550,12 @@ theorem mem_iff_id_1365 (n : Fin 5011) (hn : n.val = 1365) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1366 (n : Fin 5011) (hn : n.val = 1366) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1366 at hn
-  subst hn
+  have hn' : n = (1366 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13954,13 +13587,12 @@ theorem mem_iff_id_1366 (n : Fin 5011) (hn : n.val = 1366) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1367 (n : Fin 5011) (hn : n.val = 1367) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1367 at hn
-  subst hn
+  have hn' : n = (1367 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -13992,13 +13624,12 @@ theorem mem_iff_id_1367 (n : Fin 5011) (hn : n.val = 1367) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1368 (n : Fin 5011) (hn : n.val = 1368) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1368 at hn
-  subst hn
+  have hn' : n = (1368 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14030,13 +13661,12 @@ theorem mem_iff_id_1368 (n : Fin 5011) (hn : n.val = 1368) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1369 (n : Fin 5011) (hn : n.val = 1369) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1369 at hn
-  subst hn
+  have hn' : n = (1369 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14068,13 +13698,12 @@ theorem mem_iff_id_1369 (n : Fin 5011) (hn : n.val = 1369) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1370 (n : Fin 5011) (hn : n.val = 1370) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1370 at hn
-  subst hn
+  have hn' : n = (1370 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14106,13 +13735,12 @@ theorem mem_iff_id_1370 (n : Fin 5011) (hn : n.val = 1370) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1371 (n : Fin 5011) (hn : n.val = 1371) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1371 at hn
-  subst hn
+  have hn' : n = (1371 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14144,13 +13772,12 @@ theorem mem_iff_id_1371 (n : Fin 5011) (hn : n.val = 1371) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1372 (n : Fin 5011) (hn : n.val = 1372) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1372 at hn
-  subst hn
+  have hn' : n = (1372 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14182,13 +13809,12 @@ theorem mem_iff_id_1372 (n : Fin 5011) (hn : n.val = 1372) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1373 (n : Fin 5011) (hn : n.val = 1373) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1373 at hn
-  subst hn
+  have hn' : n = (1373 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14220,13 +13846,12 @@ theorem mem_iff_id_1373 (n : Fin 5011) (hn : n.val = 1373) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1374 (n : Fin 5011) (hn : n.val = 1374) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1374 at hn
-  subst hn
+  have hn' : n = (1374 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14258,13 +13883,12 @@ theorem mem_iff_id_1374 (n : Fin 5011) (hn : n.val = 1374) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1375 (n : Fin 5011) (hn : n.val = 1375) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1375 at hn
-  subst hn
+  have hn' : n = (1375 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14296,13 +13920,12 @@ theorem mem_iff_id_1375 (n : Fin 5011) (hn : n.val = 1375) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1376 (n : Fin 5011) (hn : n.val = 1376) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1376 at hn
-  subst hn
+  have hn' : n = (1376 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14334,13 +13957,12 @@ theorem mem_iff_id_1376 (n : Fin 5011) (hn : n.val = 1376) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1377 (n : Fin 5011) (hn : n.val = 1377) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1377 at hn
-  subst hn
+  have hn' : n = (1377 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14372,13 +13994,12 @@ theorem mem_iff_id_1377 (n : Fin 5011) (hn : n.val = 1377) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1378 (n : Fin 5011) (hn : n.val = 1378) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1378 at hn
-  subst hn
+  have hn' : n = (1378 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14410,13 +14031,12 @@ theorem mem_iff_id_1378 (n : Fin 5011) (hn : n.val = 1378) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1379 (n : Fin 5011) (hn : n.val = 1379) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1379 at hn
-  subst hn
+  have hn' : n = (1379 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14448,13 +14068,12 @@ theorem mem_iff_id_1379 (n : Fin 5011) (hn : n.val = 1379) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1380 (n : Fin 5011) (hn : n.val = 1380) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1380 at hn
-  subst hn
+  have hn' : n = (1380 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14486,13 +14105,12 @@ theorem mem_iff_id_1380 (n : Fin 5011) (hn : n.val = 1380) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1381 (n : Fin 5011) (hn : n.val = 1381) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1381 at hn
-  subst hn
+  have hn' : n = (1381 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14524,13 +14142,12 @@ theorem mem_iff_id_1381 (n : Fin 5011) (hn : n.val = 1381) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1382 (n : Fin 5011) (hn : n.val = 1382) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1382 at hn
-  subst hn
+  have hn' : n = (1382 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14562,13 +14179,12 @@ theorem mem_iff_id_1382 (n : Fin 5011) (hn : n.val = 1382) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1383 (n : Fin 5011) (hn : n.val = 1383) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1383 at hn
-  subst hn
+  have hn' : n = (1383 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14600,13 +14216,12 @@ theorem mem_iff_id_1383 (n : Fin 5011) (hn : n.val = 1383) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1384 (n : Fin 5011) (hn : n.val = 1384) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1384 at hn
-  subst hn
+  have hn' : n = (1384 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14638,13 +14253,12 @@ theorem mem_iff_id_1384 (n : Fin 5011) (hn : n.val = 1384) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1385 (n : Fin 5011) (hn : n.val = 1385) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1385 at hn
-  subst hn
+  have hn' : n = (1385 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14676,13 +14290,12 @@ theorem mem_iff_id_1385 (n : Fin 5011) (hn : n.val = 1385) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1386 (n : Fin 5011) (hn : n.val = 1386) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1386 at hn
-  subst hn
+  have hn' : n = (1386 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14714,13 +14327,12 @@ theorem mem_iff_id_1386 (n : Fin 5011) (hn : n.val = 1386) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1387 (n : Fin 5011) (hn : n.val = 1387) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1387 at hn
-  subst hn
+  have hn' : n = (1387 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14752,13 +14364,12 @@ theorem mem_iff_id_1387 (n : Fin 5011) (hn : n.val = 1387) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1388 (n : Fin 5011) (hn : n.val = 1388) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1388 at hn
-  subst hn
+  have hn' : n = (1388 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14790,13 +14401,12 @@ theorem mem_iff_id_1388 (n : Fin 5011) (hn : n.val = 1388) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1389 (n : Fin 5011) (hn : n.val = 1389) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1389 at hn
-  subst hn
+  have hn' : n = (1389 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14828,13 +14438,12 @@ theorem mem_iff_id_1389 (n : Fin 5011) (hn : n.val = 1389) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1390 (n : Fin 5011) (hn : n.val = 1390) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1390 at hn
-  subst hn
+  have hn' : n = (1390 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14866,13 +14475,12 @@ theorem mem_iff_id_1390 (n : Fin 5011) (hn : n.val = 1390) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1391 (n : Fin 5011) (hn : n.val = 1391) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1391 at hn
-  subst hn
+  have hn' : n = (1391 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14904,13 +14512,12 @@ theorem mem_iff_id_1391 (n : Fin 5011) (hn : n.val = 1391) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1392 (n : Fin 5011) (hn : n.val = 1392) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1392 at hn
-  subst hn
+  have hn' : n = (1392 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14942,13 +14549,12 @@ theorem mem_iff_id_1392 (n : Fin 5011) (hn : n.val = 1392) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1393 (n : Fin 5011) (hn : n.val = 1393) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1393 at hn
-  subst hn
+  have hn' : n = (1393 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -14980,13 +14586,12 @@ theorem mem_iff_id_1393 (n : Fin 5011) (hn : n.val = 1393) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1394 (n : Fin 5011) (hn : n.val = 1394) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1394 at hn
-  subst hn
+  have hn' : n = (1394 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15018,13 +14623,12 @@ theorem mem_iff_id_1394 (n : Fin 5011) (hn : n.val = 1394) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1395 (n : Fin 5011) (hn : n.val = 1395) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1395 at hn
-  subst hn
+  have hn' : n = (1395 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15056,13 +14660,12 @@ theorem mem_iff_id_1395 (n : Fin 5011) (hn : n.val = 1395) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1396 (n : Fin 5011) (hn : n.val = 1396) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1396 at hn
-  subst hn
+  have hn' : n = (1396 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15094,13 +14697,12 @@ theorem mem_iff_id_1396 (n : Fin 5011) (hn : n.val = 1396) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1397 (n : Fin 5011) (hn : n.val = 1397) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1397 at hn
-  subst hn
+  have hn' : n = (1397 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15132,13 +14734,12 @@ theorem mem_iff_id_1397 (n : Fin 5011) (hn : n.val = 1397) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1398 (n : Fin 5011) (hn : n.val = 1398) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1398 at hn
-  subst hn
+  have hn' : n = (1398 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15170,13 +14771,12 @@ theorem mem_iff_id_1398 (n : Fin 5011) (hn : n.val = 1398) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1399 (n : Fin 5011) (hn : n.val = 1399) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1399 at hn
-  subst hn
+  have hn' : n = (1399 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15208,13 +14808,12 @@ theorem mem_iff_id_1399 (n : Fin 5011) (hn : n.val = 1399) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1700 (n : Fin 5011) (hn : n.val = 1700) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1700 at hn
-  subst hn
+  have hn' : n = (1700 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15246,13 +14845,12 @@ theorem mem_iff_id_1700 (n : Fin 5011) (hn : n.val = 1700) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1701 (n : Fin 5011) (hn : n.val = 1701) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1701 at hn
-  subst hn
+  have hn' : n = (1701 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15284,13 +14882,12 @@ theorem mem_iff_id_1701 (n : Fin 5011) (hn : n.val = 1701) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1702 (n : Fin 5011) (hn : n.val = 1702) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1702 at hn
-  subst hn
+  have hn' : n = (1702 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15322,13 +14919,12 @@ theorem mem_iff_id_1702 (n : Fin 5011) (hn : n.val = 1702) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1703 (n : Fin 5011) (hn : n.val = 1703) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1703 at hn
-  subst hn
+  have hn' : n = (1703 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15360,13 +14956,12 @@ theorem mem_iff_id_1703 (n : Fin 5011) (hn : n.val = 1703) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1704 (n : Fin 5011) (hn : n.val = 1704) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1704 at hn
-  subst hn
+  have hn' : n = (1704 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15398,13 +14993,12 @@ theorem mem_iff_id_1704 (n : Fin 5011) (hn : n.val = 1704) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1705 (n : Fin 5011) (hn : n.val = 1705) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1705 at hn
-  subst hn
+  have hn' : n = (1705 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15436,13 +15030,12 @@ theorem mem_iff_id_1705 (n : Fin 5011) (hn : n.val = 1705) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1706 (n : Fin 5011) (hn : n.val = 1706) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1706 at hn
-  subst hn
+  have hn' : n = (1706 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15474,13 +15067,12 @@ theorem mem_iff_id_1706 (n : Fin 5011) (hn : n.val = 1706) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1707 (n : Fin 5011) (hn : n.val = 1707) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1707 at hn
-  subst hn
+  have hn' : n = (1707 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15512,13 +15104,12 @@ theorem mem_iff_id_1707 (n : Fin 5011) (hn : n.val = 1707) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1708 (n : Fin 5011) (hn : n.val = 1708) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1708 at hn
-  subst hn
+  have hn' : n = (1708 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15550,13 +15141,12 @@ theorem mem_iff_id_1708 (n : Fin 5011) (hn : n.val = 1708) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1709 (n : Fin 5011) (hn : n.val = 1709) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1709 at hn
-  subst hn
+  have hn' : n = (1709 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15588,13 +15178,12 @@ theorem mem_iff_id_1709 (n : Fin 5011) (hn : n.val = 1709) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1710 (n : Fin 5011) (hn : n.val = 1710) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1710 at hn
-  subst hn
+  have hn' : n = (1710 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15626,13 +15215,12 @@ theorem mem_iff_id_1710 (n : Fin 5011) (hn : n.val = 1710) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1711 (n : Fin 5011) (hn : n.val = 1711) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1711 at hn
-  subst hn
+  have hn' : n = (1711 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15664,13 +15252,12 @@ theorem mem_iff_id_1711 (n : Fin 5011) (hn : n.val = 1711) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1712 (n : Fin 5011) (hn : n.val = 1712) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1712 at hn
-  subst hn
+  have hn' : n = (1712 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15702,13 +15289,12 @@ theorem mem_iff_id_1712 (n : Fin 5011) (hn : n.val = 1712) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1713 (n : Fin 5011) (hn : n.val = 1713) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1713 at hn
-  subst hn
+  have hn' : n = (1713 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15740,13 +15326,12 @@ theorem mem_iff_id_1713 (n : Fin 5011) (hn : n.val = 1713) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1714 (n : Fin 5011) (hn : n.val = 1714) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1714 at hn
-  subst hn
+  have hn' : n = (1714 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15778,13 +15363,12 @@ theorem mem_iff_id_1714 (n : Fin 5011) (hn : n.val = 1714) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1715 (n : Fin 5011) (hn : n.val = 1715) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1715 at hn
-  subst hn
+  have hn' : n = (1715 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15816,13 +15400,12 @@ theorem mem_iff_id_1715 (n : Fin 5011) (hn : n.val = 1715) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1716 (n : Fin 5011) (hn : n.val = 1716) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1716 at hn
-  subst hn
+  have hn' : n = (1716 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15854,13 +15437,12 @@ theorem mem_iff_id_1716 (n : Fin 5011) (hn : n.val = 1716) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1717 (n : Fin 5011) (hn : n.val = 1717) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1717 at hn
-  subst hn
+  have hn' : n = (1717 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15892,13 +15474,12 @@ theorem mem_iff_id_1717 (n : Fin 5011) (hn : n.val = 1717) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1718 (n : Fin 5011) (hn : n.val = 1718) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1718 at hn
-  subst hn
+  have hn' : n = (1718 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15930,13 +15511,12 @@ theorem mem_iff_id_1718 (n : Fin 5011) (hn : n.val = 1718) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1719 (n : Fin 5011) (hn : n.val = 1719) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1719 at hn
-  subst hn
+  have hn' : n = (1719 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -15968,13 +15548,12 @@ theorem mem_iff_id_1719 (n : Fin 5011) (hn : n.val = 1719) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1720 (n : Fin 5011) (hn : n.val = 1720) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1720 at hn
-  subst hn
+  have hn' : n = (1720 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16006,13 +15585,12 @@ theorem mem_iff_id_1720 (n : Fin 5011) (hn : n.val = 1720) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1721 (n : Fin 5011) (hn : n.val = 1721) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1721 at hn
-  subst hn
+  have hn' : n = (1721 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16044,13 +15622,12 @@ theorem mem_iff_id_1721 (n : Fin 5011) (hn : n.val = 1721) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1722 (n : Fin 5011) (hn : n.val = 1722) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1722 at hn
-  subst hn
+  have hn' : n = (1722 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16082,13 +15659,12 @@ theorem mem_iff_id_1722 (n : Fin 5011) (hn : n.val = 1722) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1723 (n : Fin 5011) (hn : n.val = 1723) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1723 at hn
-  subst hn
+  have hn' : n = (1723 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16120,13 +15696,12 @@ theorem mem_iff_id_1723 (n : Fin 5011) (hn : n.val = 1723) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1724 (n : Fin 5011) (hn : n.val = 1724) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1724 at hn
-  subst hn
+  have hn' : n = (1724 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16158,13 +15733,12 @@ theorem mem_iff_id_1724 (n : Fin 5011) (hn : n.val = 1724) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1725 (n : Fin 5011) (hn : n.val = 1725) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1725 at hn
-  subst hn
+  have hn' : n = (1725 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16196,13 +15770,12 @@ theorem mem_iff_id_1725 (n : Fin 5011) (hn : n.val = 1725) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1726 (n : Fin 5011) (hn : n.val = 1726) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1726 at hn
-  subst hn
+  have hn' : n = (1726 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16234,13 +15807,12 @@ theorem mem_iff_id_1726 (n : Fin 5011) (hn : n.val = 1726) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1727 (n : Fin 5011) (hn : n.val = 1727) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1727 at hn
-  subst hn
+  have hn' : n = (1727 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16272,13 +15844,12 @@ theorem mem_iff_id_1727 (n : Fin 5011) (hn : n.val = 1727) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1728 (n : Fin 5011) (hn : n.val = 1728) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1728 at hn
-  subst hn
+  have hn' : n = (1728 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16310,13 +15881,12 @@ theorem mem_iff_id_1728 (n : Fin 5011) (hn : n.val = 1728) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1729 (n : Fin 5011) (hn : n.val = 1729) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1729 at hn
-  subst hn
+  have hn' : n = (1729 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16348,13 +15918,12 @@ theorem mem_iff_id_1729 (n : Fin 5011) (hn : n.val = 1729) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1730 (n : Fin 5011) (hn : n.val = 1730) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1730 at hn
-  subst hn
+  have hn' : n = (1730 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16386,13 +15955,12 @@ theorem mem_iff_id_1730 (n : Fin 5011) (hn : n.val = 1730) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1731 (n : Fin 5011) (hn : n.val = 1731) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1731 at hn
-  subst hn
+  have hn' : n = (1731 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16424,13 +15992,12 @@ theorem mem_iff_id_1731 (n : Fin 5011) (hn : n.val = 1731) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1732 (n : Fin 5011) (hn : n.val = 1732) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1732 at hn
-  subst hn
+  have hn' : n = (1732 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16462,13 +16029,12 @@ theorem mem_iff_id_1732 (n : Fin 5011) (hn : n.val = 1732) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1733 (n : Fin 5011) (hn : n.val = 1733) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1733 at hn
-  subst hn
+  have hn' : n = (1733 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16500,13 +16066,12 @@ theorem mem_iff_id_1733 (n : Fin 5011) (hn : n.val = 1733) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1734 (n : Fin 5011) (hn : n.val = 1734) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1734 at hn
-  subst hn
+  have hn' : n = (1734 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16538,13 +16103,12 @@ theorem mem_iff_id_1734 (n : Fin 5011) (hn : n.val = 1734) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1735 (n : Fin 5011) (hn : n.val = 1735) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1735 at hn
-  subst hn
+  have hn' : n = (1735 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16576,13 +16140,12 @@ theorem mem_iff_id_1735 (n : Fin 5011) (hn : n.val = 1735) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1736 (n : Fin 5011) (hn : n.val = 1736) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1736 at hn
-  subst hn
+  have hn' : n = (1736 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16614,13 +16177,12 @@ theorem mem_iff_id_1736 (n : Fin 5011) (hn : n.val = 1736) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1737 (n : Fin 5011) (hn : n.val = 1737) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1737 at hn
-  subst hn
+  have hn' : n = (1737 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16652,13 +16214,12 @@ theorem mem_iff_id_1737 (n : Fin 5011) (hn : n.val = 1737) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1738 (n : Fin 5011) (hn : n.val = 1738) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1738 at hn
-  subst hn
+  have hn' : n = (1738 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16690,13 +16251,12 @@ theorem mem_iff_id_1738 (n : Fin 5011) (hn : n.val = 1738) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1739 (n : Fin 5011) (hn : n.val = 1739) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1739 at hn
-  subst hn
+  have hn' : n = (1739 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16728,13 +16288,12 @@ theorem mem_iff_id_1739 (n : Fin 5011) (hn : n.val = 1739) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1740 (n : Fin 5011) (hn : n.val = 1740) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1740 at hn
-  subst hn
+  have hn' : n = (1740 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16766,13 +16325,12 @@ theorem mem_iff_id_1740 (n : Fin 5011) (hn : n.val = 1740) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1741 (n : Fin 5011) (hn : n.val = 1741) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1741 at hn
-  subst hn
+  have hn' : n = (1741 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16804,13 +16362,12 @@ theorem mem_iff_id_1741 (n : Fin 5011) (hn : n.val = 1741) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1742 (n : Fin 5011) (hn : n.val = 1742) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1742 at hn
-  subst hn
+  have hn' : n = (1742 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16842,13 +16399,12 @@ theorem mem_iff_id_1742 (n : Fin 5011) (hn : n.val = 1742) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1743 (n : Fin 5011) (hn : n.val = 1743) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1743 at hn
-  subst hn
+  have hn' : n = (1743 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16880,13 +16436,12 @@ theorem mem_iff_id_1743 (n : Fin 5011) (hn : n.val = 1743) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1744 (n : Fin 5011) (hn : n.val = 1744) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1744 at hn
-  subst hn
+  have hn' : n = (1744 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16918,13 +16473,12 @@ theorem mem_iff_id_1744 (n : Fin 5011) (hn : n.val = 1744) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1745 (n : Fin 5011) (hn : n.val = 1745) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1745 at hn
-  subst hn
+  have hn' : n = (1745 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16956,13 +16510,12 @@ theorem mem_iff_id_1745 (n : Fin 5011) (hn : n.val = 1745) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1746 (n : Fin 5011) (hn : n.val = 1746) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1746 at hn
-  subst hn
+  have hn' : n = (1746 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -16994,13 +16547,12 @@ theorem mem_iff_id_1746 (n : Fin 5011) (hn : n.val = 1746) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1747 (n : Fin 5011) (hn : n.val = 1747) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1747 at hn
-  subst hn
+  have hn' : n = (1747 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17032,13 +16584,12 @@ theorem mem_iff_id_1747 (n : Fin 5011) (hn : n.val = 1747) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1748 (n : Fin 5011) (hn : n.val = 1748) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1748 at hn
-  subst hn
+  have hn' : n = (1748 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17070,13 +16621,12 @@ theorem mem_iff_id_1748 (n : Fin 5011) (hn : n.val = 1748) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1749 (n : Fin 5011) (hn : n.val = 1749) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1749 at hn
-  subst hn
+  have hn' : n = (1749 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17108,13 +16658,12 @@ theorem mem_iff_id_1749 (n : Fin 5011) (hn : n.val = 1749) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1750 (n : Fin 5011) (hn : n.val = 1750) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1750 at hn
-  subst hn
+  have hn' : n = (1750 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17146,13 +16695,12 @@ theorem mem_iff_id_1750 (n : Fin 5011) (hn : n.val = 1750) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1751 (n : Fin 5011) (hn : n.val = 1751) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1751 at hn
-  subst hn
+  have hn' : n = (1751 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17184,13 +16732,12 @@ theorem mem_iff_id_1751 (n : Fin 5011) (hn : n.val = 1751) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1752 (n : Fin 5011) (hn : n.val = 1752) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1752 at hn
-  subst hn
+  have hn' : n = (1752 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17222,13 +16769,12 @@ theorem mem_iff_id_1752 (n : Fin 5011) (hn : n.val = 1752) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1753 (n : Fin 5011) (hn : n.val = 1753) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1753 at hn
-  subst hn
+  have hn' : n = (1753 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17260,13 +16806,12 @@ theorem mem_iff_id_1753 (n : Fin 5011) (hn : n.val = 1753) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1754 (n : Fin 5011) (hn : n.val = 1754) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1754 at hn
-  subst hn
+  have hn' : n = (1754 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17298,13 +16843,12 @@ theorem mem_iff_id_1754 (n : Fin 5011) (hn : n.val = 1754) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1755 (n : Fin 5011) (hn : n.val = 1755) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1755 at hn
-  subst hn
+  have hn' : n = (1755 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17336,13 +16880,12 @@ theorem mem_iff_id_1755 (n : Fin 5011) (hn : n.val = 1755) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1756 (n : Fin 5011) (hn : n.val = 1756) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1756 at hn
-  subst hn
+  have hn' : n = (1756 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17374,13 +16917,12 @@ theorem mem_iff_id_1756 (n : Fin 5011) (hn : n.val = 1756) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1757 (n : Fin 5011) (hn : n.val = 1757) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1757 at hn
-  subst hn
+  have hn' : n = (1757 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17412,13 +16954,12 @@ theorem mem_iff_id_1757 (n : Fin 5011) (hn : n.val = 1757) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1758 (n : Fin 5011) (hn : n.val = 1758) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1758 at hn
-  subst hn
+  have hn' : n = (1758 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17450,13 +16991,12 @@ theorem mem_iff_id_1758 (n : Fin 5011) (hn : n.val = 1758) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1759 (n : Fin 5011) (hn : n.val = 1759) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1759 at hn
-  subst hn
+  have hn' : n = (1759 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17488,13 +17028,12 @@ theorem mem_iff_id_1759 (n : Fin 5011) (hn : n.val = 1759) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1760 (n : Fin 5011) (hn : n.val = 1760) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1760 at hn
-  subst hn
+  have hn' : n = (1760 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17526,13 +17065,12 @@ theorem mem_iff_id_1760 (n : Fin 5011) (hn : n.val = 1760) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1761 (n : Fin 5011) (hn : n.val = 1761) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1761 at hn
-  subst hn
+  have hn' : n = (1761 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17564,13 +17102,12 @@ theorem mem_iff_id_1761 (n : Fin 5011) (hn : n.val = 1761) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1762 (n : Fin 5011) (hn : n.val = 1762) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1762 at hn
-  subst hn
+  have hn' : n = (1762 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17602,13 +17139,12 @@ theorem mem_iff_id_1762 (n : Fin 5011) (hn : n.val = 1762) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1763 (n : Fin 5011) (hn : n.val = 1763) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1763 at hn
-  subst hn
+  have hn' : n = (1763 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17640,13 +17176,12 @@ theorem mem_iff_id_1763 (n : Fin 5011) (hn : n.val = 1763) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1764 (n : Fin 5011) (hn : n.val = 1764) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1764 at hn
-  subst hn
+  have hn' : n = (1764 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17678,13 +17213,12 @@ theorem mem_iff_id_1764 (n : Fin 5011) (hn : n.val = 1764) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1765 (n : Fin 5011) (hn : n.val = 1765) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1765 at hn
-  subst hn
+  have hn' : n = (1765 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17716,13 +17250,12 @@ theorem mem_iff_id_1765 (n : Fin 5011) (hn : n.val = 1765) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1766 (n : Fin 5011) (hn : n.val = 1766) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1766 at hn
-  subst hn
+  have hn' : n = (1766 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17754,13 +17287,12 @@ theorem mem_iff_id_1766 (n : Fin 5011) (hn : n.val = 1766) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1767 (n : Fin 5011) (hn : n.val = 1767) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1767 at hn
-  subst hn
+  have hn' : n = (1767 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17792,13 +17324,12 @@ theorem mem_iff_id_1767 (n : Fin 5011) (hn : n.val = 1767) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1768 (n : Fin 5011) (hn : n.val = 1768) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1768 at hn
-  subst hn
+  have hn' : n = (1768 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17830,13 +17361,12 @@ theorem mem_iff_id_1768 (n : Fin 5011) (hn : n.val = 1768) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1769 (n : Fin 5011) (hn : n.val = 1769) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1769 at hn
-  subst hn
+  have hn' : n = (1769 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17868,13 +17398,12 @@ theorem mem_iff_id_1769 (n : Fin 5011) (hn : n.val = 1769) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1770 (n : Fin 5011) (hn : n.val = 1770) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1770 at hn
-  subst hn
+  have hn' : n = (1770 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17906,13 +17435,12 @@ theorem mem_iff_id_1770 (n : Fin 5011) (hn : n.val = 1770) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1771 (n : Fin 5011) (hn : n.val = 1771) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1771 at hn
-  subst hn
+  have hn' : n = (1771 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17944,13 +17472,12 @@ theorem mem_iff_id_1771 (n : Fin 5011) (hn : n.val = 1771) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1772 (n : Fin 5011) (hn : n.val = 1772) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1772 at hn
-  subst hn
+  have hn' : n = (1772 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -17982,13 +17509,12 @@ theorem mem_iff_id_1772 (n : Fin 5011) (hn : n.val = 1772) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1773 (n : Fin 5011) (hn : n.val = 1773) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1773 at hn
-  subst hn
+  have hn' : n = (1773 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18020,13 +17546,12 @@ theorem mem_iff_id_1773 (n : Fin 5011) (hn : n.val = 1773) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1774 (n : Fin 5011) (hn : n.val = 1774) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1774 at hn
-  subst hn
+  have hn' : n = (1774 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18058,13 +17583,12 @@ theorem mem_iff_id_1774 (n : Fin 5011) (hn : n.val = 1774) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1775 (n : Fin 5011) (hn : n.val = 1775) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1775 at hn
-  subst hn
+  have hn' : n = (1775 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18096,13 +17620,12 @@ theorem mem_iff_id_1775 (n : Fin 5011) (hn : n.val = 1775) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1776 (n : Fin 5011) (hn : n.val = 1776) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1776 at hn
-  subst hn
+  have hn' : n = (1776 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18134,13 +17657,12 @@ theorem mem_iff_id_1776 (n : Fin 5011) (hn : n.val = 1776) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1777 (n : Fin 5011) (hn : n.val = 1777) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1777 at hn
-  subst hn
+  have hn' : n = (1777 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18172,13 +17694,12 @@ theorem mem_iff_id_1777 (n : Fin 5011) (hn : n.val = 1777) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1778 (n : Fin 5011) (hn : n.val = 1778) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1778 at hn
-  subst hn
+  have hn' : n = (1778 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18210,13 +17731,12 @@ theorem mem_iff_id_1778 (n : Fin 5011) (hn : n.val = 1778) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1779 (n : Fin 5011) (hn : n.val = 1779) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1779 at hn
-  subst hn
+  have hn' : n = (1779 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18248,13 +17768,12 @@ theorem mem_iff_id_1779 (n : Fin 5011) (hn : n.val = 1779) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1780 (n : Fin 5011) (hn : n.val = 1780) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1780 at hn
-  subst hn
+  have hn' : n = (1780 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18286,13 +17805,12 @@ theorem mem_iff_id_1780 (n : Fin 5011) (hn : n.val = 1780) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1781 (n : Fin 5011) (hn : n.val = 1781) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1781 at hn
-  subst hn
+  have hn' : n = (1781 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18324,13 +17842,12 @@ theorem mem_iff_id_1781 (n : Fin 5011) (hn : n.val = 1781) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1782 (n : Fin 5011) (hn : n.val = 1782) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1782 at hn
-  subst hn
+  have hn' : n = (1782 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18362,13 +17879,12 @@ theorem mem_iff_id_1782 (n : Fin 5011) (hn : n.val = 1782) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1783 (n : Fin 5011) (hn : n.val = 1783) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1783 at hn
-  subst hn
+  have hn' : n = (1783 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18400,13 +17916,12 @@ theorem mem_iff_id_1783 (n : Fin 5011) (hn : n.val = 1783) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1784 (n : Fin 5011) (hn : n.val = 1784) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1784 at hn
-  subst hn
+  have hn' : n = (1784 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18438,13 +17953,12 @@ theorem mem_iff_id_1784 (n : Fin 5011) (hn : n.val = 1784) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1785 (n : Fin 5011) (hn : n.val = 1785) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1785 at hn
-  subst hn
+  have hn' : n = (1785 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18476,13 +17990,12 @@ theorem mem_iff_id_1785 (n : Fin 5011) (hn : n.val = 1785) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1786 (n : Fin 5011) (hn : n.val = 1786) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1786 at hn
-  subst hn
+  have hn' : n = (1786 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18514,13 +18027,12 @@ theorem mem_iff_id_1786 (n : Fin 5011) (hn : n.val = 1786) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1787 (n : Fin 5011) (hn : n.val = 1787) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1787 at hn
-  subst hn
+  have hn' : n = (1787 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18552,13 +18064,12 @@ theorem mem_iff_id_1787 (n : Fin 5011) (hn : n.val = 1787) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1788 (n : Fin 5011) (hn : n.val = 1788) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1788 at hn
-  subst hn
+  have hn' : n = (1788 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18590,13 +18101,12 @@ theorem mem_iff_id_1788 (n : Fin 5011) (hn : n.val = 1788) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1789 (n : Fin 5011) (hn : n.val = 1789) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1789 at hn
-  subst hn
+  have hn' : n = (1789 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18628,13 +18138,12 @@ theorem mem_iff_id_1789 (n : Fin 5011) (hn : n.val = 1789) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1790 (n : Fin 5011) (hn : n.val = 1790) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1790 at hn
-  subst hn
+  have hn' : n = (1790 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18666,13 +18175,12 @@ theorem mem_iff_id_1790 (n : Fin 5011) (hn : n.val = 1790) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1791 (n : Fin 5011) (hn : n.val = 1791) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1791 at hn
-  subst hn
+  have hn' : n = (1791 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18704,13 +18212,12 @@ theorem mem_iff_id_1791 (n : Fin 5011) (hn : n.val = 1791) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1792 (n : Fin 5011) (hn : n.val = 1792) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1792 at hn
-  subst hn
+  have hn' : n = (1792 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18742,13 +18249,12 @@ theorem mem_iff_id_1792 (n : Fin 5011) (hn : n.val = 1792) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1793 (n : Fin 5011) (hn : n.val = 1793) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1793 at hn
-  subst hn
+  have hn' : n = (1793 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18780,13 +18286,12 @@ theorem mem_iff_id_1793 (n : Fin 5011) (hn : n.val = 1793) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1794 (n : Fin 5011) (hn : n.val = 1794) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1794 at hn
-  subst hn
+  have hn' : n = (1794 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18818,13 +18323,12 @@ theorem mem_iff_id_1794 (n : Fin 5011) (hn : n.val = 1794) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1795 (n : Fin 5011) (hn : n.val = 1795) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1795 at hn
-  subst hn
+  have hn' : n = (1795 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18856,13 +18360,12 @@ theorem mem_iff_id_1795 (n : Fin 5011) (hn : n.val = 1795) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1796 (n : Fin 5011) (hn : n.val = 1796) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1796 at hn
-  subst hn
+  have hn' : n = (1796 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18894,13 +18397,12 @@ theorem mem_iff_id_1796 (n : Fin 5011) (hn : n.val = 1796) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1797 (n : Fin 5011) (hn : n.val = 1797) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1797 at hn
-  subst hn
+  have hn' : n = (1797 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18932,13 +18434,12 @@ theorem mem_iff_id_1797 (n : Fin 5011) (hn : n.val = 1797) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1798 (n : Fin 5011) (hn : n.val = 1798) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1798 at hn
-  subst hn
+  have hn' : n = (1798 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -18970,13 +18471,12 @@ theorem mem_iff_id_1798 (n : Fin 5011) (hn : n.val = 1798) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_1799 (n : Fin 5011) (hn : n.val = 1799) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 1799 at hn
-  subst hn
+  have hn' : n = (1799 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19008,13 +18508,12 @@ theorem mem_iff_id_1799 (n : Fin 5011) (hn : n.val = 1799) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2100 (n : Fin 5011) (hn : n.val = 2100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2100 at hn
-  subst hn
+  have hn' : n = (2100 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19046,13 +18545,12 @@ theorem mem_iff_id_2100 (n : Fin 5011) (hn : n.val = 2100) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2101 (n : Fin 5011) (hn : n.val = 2101) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2101 at hn
-  subst hn
+  have hn' : n = (2101 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19084,13 +18582,12 @@ theorem mem_iff_id_2101 (n : Fin 5011) (hn : n.val = 2101) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2102 (n : Fin 5011) (hn : n.val = 2102) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2102 at hn
-  subst hn
+  have hn' : n = (2102 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19122,13 +18619,12 @@ theorem mem_iff_id_2102 (n : Fin 5011) (hn : n.val = 2102) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2103 (n : Fin 5011) (hn : n.val = 2103) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2103 at hn
-  subst hn
+  have hn' : n = (2103 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19160,13 +18656,12 @@ theorem mem_iff_id_2103 (n : Fin 5011) (hn : n.val = 2103) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2104 (n : Fin 5011) (hn : n.val = 2104) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2104 at hn
-  subst hn
+  have hn' : n = (2104 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19198,13 +18693,12 @@ theorem mem_iff_id_2104 (n : Fin 5011) (hn : n.val = 2104) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2105 (n : Fin 5011) (hn : n.val = 2105) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2105 at hn
-  subst hn
+  have hn' : n = (2105 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19236,13 +18730,12 @@ theorem mem_iff_id_2105 (n : Fin 5011) (hn : n.val = 2105) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2106 (n : Fin 5011) (hn : n.val = 2106) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2106 at hn
-  subst hn
+  have hn' : n = (2106 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19274,13 +18767,12 @@ theorem mem_iff_id_2106 (n : Fin 5011) (hn : n.val = 2106) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2107 (n : Fin 5011) (hn : n.val = 2107) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2107 at hn
-  subst hn
+  have hn' : n = (2107 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19312,13 +18804,12 @@ theorem mem_iff_id_2107 (n : Fin 5011) (hn : n.val = 2107) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2108 (n : Fin 5011) (hn : n.val = 2108) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2108 at hn
-  subst hn
+  have hn' : n = (2108 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19350,13 +18841,12 @@ theorem mem_iff_id_2108 (n : Fin 5011) (hn : n.val = 2108) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2109 (n : Fin 5011) (hn : n.val = 2109) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2109 at hn
-  subst hn
+  have hn' : n = (2109 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19388,13 +18878,12 @@ theorem mem_iff_id_2109 (n : Fin 5011) (hn : n.val = 2109) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2110 (n : Fin 5011) (hn : n.val = 2110) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2110 at hn
-  subst hn
+  have hn' : n = (2110 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19426,13 +18915,12 @@ theorem mem_iff_id_2110 (n : Fin 5011) (hn : n.val = 2110) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2111 (n : Fin 5011) (hn : n.val = 2111) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2111 at hn
-  subst hn
+  have hn' : n = (2111 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19464,13 +18952,12 @@ theorem mem_iff_id_2111 (n : Fin 5011) (hn : n.val = 2111) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2112 (n : Fin 5011) (hn : n.val = 2112) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2112 at hn
-  subst hn
+  have hn' : n = (2112 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19502,13 +18989,12 @@ theorem mem_iff_id_2112 (n : Fin 5011) (hn : n.val = 2112) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2113 (n : Fin 5011) (hn : n.val = 2113) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2113 at hn
-  subst hn
+  have hn' : n = (2113 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19540,13 +19026,12 @@ theorem mem_iff_id_2113 (n : Fin 5011) (hn : n.val = 2113) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2114 (n : Fin 5011) (hn : n.val = 2114) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2114 at hn
-  subst hn
+  have hn' : n = (2114 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19578,13 +19063,12 @@ theorem mem_iff_id_2114 (n : Fin 5011) (hn : n.val = 2114) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2115 (n : Fin 5011) (hn : n.val = 2115) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2115 at hn
-  subst hn
+  have hn' : n = (2115 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19616,13 +19100,12 @@ theorem mem_iff_id_2115 (n : Fin 5011) (hn : n.val = 2115) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2116 (n : Fin 5011) (hn : n.val = 2116) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2116 at hn
-  subst hn
+  have hn' : n = (2116 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19654,13 +19137,12 @@ theorem mem_iff_id_2116 (n : Fin 5011) (hn : n.val = 2116) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2117 (n : Fin 5011) (hn : n.val = 2117) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2117 at hn
-  subst hn
+  have hn' : n = (2117 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19692,13 +19174,12 @@ theorem mem_iff_id_2117 (n : Fin 5011) (hn : n.val = 2117) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2118 (n : Fin 5011) (hn : n.val = 2118) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2118 at hn
-  subst hn
+  have hn' : n = (2118 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19730,13 +19211,12 @@ theorem mem_iff_id_2118 (n : Fin 5011) (hn : n.val = 2118) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2119 (n : Fin 5011) (hn : n.val = 2119) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2119 at hn
-  subst hn
+  have hn' : n = (2119 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19768,13 +19248,12 @@ theorem mem_iff_id_2119 (n : Fin 5011) (hn : n.val = 2119) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2120 (n : Fin 5011) (hn : n.val = 2120) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2120 at hn
-  subst hn
+  have hn' : n = (2120 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19806,13 +19285,12 @@ theorem mem_iff_id_2120 (n : Fin 5011) (hn : n.val = 2120) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2121 (n : Fin 5011) (hn : n.val = 2121) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2121 at hn
-  subst hn
+  have hn' : n = (2121 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19844,13 +19322,12 @@ theorem mem_iff_id_2121 (n : Fin 5011) (hn : n.val = 2121) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2122 (n : Fin 5011) (hn : n.val = 2122) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2122 at hn
-  subst hn
+  have hn' : n = (2122 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19882,13 +19359,12 @@ theorem mem_iff_id_2122 (n : Fin 5011) (hn : n.val = 2122) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2123 (n : Fin 5011) (hn : n.val = 2123) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2123 at hn
-  subst hn
+  have hn' : n = (2123 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19920,13 +19396,12 @@ theorem mem_iff_id_2123 (n : Fin 5011) (hn : n.val = 2123) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2124 (n : Fin 5011) (hn : n.val = 2124) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2124 at hn
-  subst hn
+  have hn' : n = (2124 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19958,13 +19433,12 @@ theorem mem_iff_id_2124 (n : Fin 5011) (hn : n.val = 2124) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2125 (n : Fin 5011) (hn : n.val = 2125) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2125 at hn
-  subst hn
+  have hn' : n = (2125 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -19996,13 +19470,12 @@ theorem mem_iff_id_2125 (n : Fin 5011) (hn : n.val = 2125) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2126 (n : Fin 5011) (hn : n.val = 2126) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2126 at hn
-  subst hn
+  have hn' : n = (2126 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20034,13 +19507,12 @@ theorem mem_iff_id_2126 (n : Fin 5011) (hn : n.val = 2126) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2127 (n : Fin 5011) (hn : n.val = 2127) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2127 at hn
-  subst hn
+  have hn' : n = (2127 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20072,13 +19544,12 @@ theorem mem_iff_id_2127 (n : Fin 5011) (hn : n.val = 2127) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2128 (n : Fin 5011) (hn : n.val = 2128) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2128 at hn
-  subst hn
+  have hn' : n = (2128 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20110,13 +19581,12 @@ theorem mem_iff_id_2128 (n : Fin 5011) (hn : n.val = 2128) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2129 (n : Fin 5011) (hn : n.val = 2129) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2129 at hn
-  subst hn
+  have hn' : n = (2129 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20148,13 +19618,12 @@ theorem mem_iff_id_2129 (n : Fin 5011) (hn : n.val = 2129) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2130 (n : Fin 5011) (hn : n.val = 2130) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2130 at hn
-  subst hn
+  have hn' : n = (2130 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20186,13 +19655,12 @@ theorem mem_iff_id_2130 (n : Fin 5011) (hn : n.val = 2130) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2131 (n : Fin 5011) (hn : n.val = 2131) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2131 at hn
-  subst hn
+  have hn' : n = (2131 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20224,13 +19692,12 @@ theorem mem_iff_id_2131 (n : Fin 5011) (hn : n.val = 2131) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2132 (n : Fin 5011) (hn : n.val = 2132) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2132 at hn
-  subst hn
+  have hn' : n = (2132 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20262,13 +19729,12 @@ theorem mem_iff_id_2132 (n : Fin 5011) (hn : n.val = 2132) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2133 (n : Fin 5011) (hn : n.val = 2133) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2133 at hn
-  subst hn
+  have hn' : n = (2133 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20300,13 +19766,12 @@ theorem mem_iff_id_2133 (n : Fin 5011) (hn : n.val = 2133) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2134 (n : Fin 5011) (hn : n.val = 2134) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2134 at hn
-  subst hn
+  have hn' : n = (2134 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20338,13 +19803,12 @@ theorem mem_iff_id_2134 (n : Fin 5011) (hn : n.val = 2134) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2135 (n : Fin 5011) (hn : n.val = 2135) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2135 at hn
-  subst hn
+  have hn' : n = (2135 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20376,13 +19840,12 @@ theorem mem_iff_id_2135 (n : Fin 5011) (hn : n.val = 2135) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2136 (n : Fin 5011) (hn : n.val = 2136) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2136 at hn
-  subst hn
+  have hn' : n = (2136 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20414,13 +19877,12 @@ theorem mem_iff_id_2136 (n : Fin 5011) (hn : n.val = 2136) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2137 (n : Fin 5011) (hn : n.val = 2137) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2137 at hn
-  subst hn
+  have hn' : n = (2137 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20452,13 +19914,12 @@ theorem mem_iff_id_2137 (n : Fin 5011) (hn : n.val = 2137) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2138 (n : Fin 5011) (hn : n.val = 2138) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2138 at hn
-  subst hn
+  have hn' : n = (2138 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20490,13 +19951,12 @@ theorem mem_iff_id_2138 (n : Fin 5011) (hn : n.val = 2138) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2139 (n : Fin 5011) (hn : n.val = 2139) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2139 at hn
-  subst hn
+  have hn' : n = (2139 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20528,13 +19988,12 @@ theorem mem_iff_id_2139 (n : Fin 5011) (hn : n.val = 2139) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2140 (n : Fin 5011) (hn : n.val = 2140) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2140 at hn
-  subst hn
+  have hn' : n = (2140 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20566,13 +20025,12 @@ theorem mem_iff_id_2140 (n : Fin 5011) (hn : n.val = 2140) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2141 (n : Fin 5011) (hn : n.val = 2141) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2141 at hn
-  subst hn
+  have hn' : n = (2141 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20604,13 +20062,12 @@ theorem mem_iff_id_2141 (n : Fin 5011) (hn : n.val = 2141) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2142 (n : Fin 5011) (hn : n.val = 2142) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2142 at hn
-  subst hn
+  have hn' : n = (2142 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20642,13 +20099,12 @@ theorem mem_iff_id_2142 (n : Fin 5011) (hn : n.val = 2142) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2143 (n : Fin 5011) (hn : n.val = 2143) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2143 at hn
-  subst hn
+  have hn' : n = (2143 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20680,13 +20136,12 @@ theorem mem_iff_id_2143 (n : Fin 5011) (hn : n.val = 2143) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2144 (n : Fin 5011) (hn : n.val = 2144) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2144 at hn
-  subst hn
+  have hn' : n = (2144 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20718,13 +20173,12 @@ theorem mem_iff_id_2144 (n : Fin 5011) (hn : n.val = 2144) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2145 (n : Fin 5011) (hn : n.val = 2145) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2145 at hn
-  subst hn
+  have hn' : n = (2145 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20756,13 +20210,12 @@ theorem mem_iff_id_2145 (n : Fin 5011) (hn : n.val = 2145) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2146 (n : Fin 5011) (hn : n.val = 2146) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2146 at hn
-  subst hn
+  have hn' : n = (2146 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20794,13 +20247,12 @@ theorem mem_iff_id_2146 (n : Fin 5011) (hn : n.val = 2146) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2147 (n : Fin 5011) (hn : n.val = 2147) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2147 at hn
-  subst hn
+  have hn' : n = (2147 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20832,13 +20284,12 @@ theorem mem_iff_id_2147 (n : Fin 5011) (hn : n.val = 2147) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2148 (n : Fin 5011) (hn : n.val = 2148) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2148 at hn
-  subst hn
+  have hn' : n = (2148 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20870,13 +20321,12 @@ theorem mem_iff_id_2148 (n : Fin 5011) (hn : n.val = 2148) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2149 (n : Fin 5011) (hn : n.val = 2149) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2149 at hn
-  subst hn
+  have hn' : n = (2149 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20908,13 +20358,12 @@ theorem mem_iff_id_2149 (n : Fin 5011) (hn : n.val = 2149) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2150 (n : Fin 5011) (hn : n.val = 2150) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2150 at hn
-  subst hn
+  have hn' : n = (2150 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20946,13 +20395,12 @@ theorem mem_iff_id_2150 (n : Fin 5011) (hn : n.val = 2150) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2151 (n : Fin 5011) (hn : n.val = 2151) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2151 at hn
-  subst hn
+  have hn' : n = (2151 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -20984,13 +20432,12 @@ theorem mem_iff_id_2151 (n : Fin 5011) (hn : n.val = 2151) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2152 (n : Fin 5011) (hn : n.val = 2152) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2152 at hn
-  subst hn
+  have hn' : n = (2152 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21022,13 +20469,12 @@ theorem mem_iff_id_2152 (n : Fin 5011) (hn : n.val = 2152) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2153 (n : Fin 5011) (hn : n.val = 2153) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2153 at hn
-  subst hn
+  have hn' : n = (2153 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21060,13 +20506,12 @@ theorem mem_iff_id_2153 (n : Fin 5011) (hn : n.val = 2153) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2154 (n : Fin 5011) (hn : n.val = 2154) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2154 at hn
-  subst hn
+  have hn' : n = (2154 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21098,13 +20543,12 @@ theorem mem_iff_id_2154 (n : Fin 5011) (hn : n.val = 2154) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2155 (n : Fin 5011) (hn : n.val = 2155) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2155 at hn
-  subst hn
+  have hn' : n = (2155 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21136,13 +20580,12 @@ theorem mem_iff_id_2155 (n : Fin 5011) (hn : n.val = 2155) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2156 (n : Fin 5011) (hn : n.val = 2156) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2156 at hn
-  subst hn
+  have hn' : n = (2156 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21174,13 +20617,12 @@ theorem mem_iff_id_2156 (n : Fin 5011) (hn : n.val = 2156) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2157 (n : Fin 5011) (hn : n.val = 2157) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2157 at hn
-  subst hn
+  have hn' : n = (2157 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21212,13 +20654,12 @@ theorem mem_iff_id_2157 (n : Fin 5011) (hn : n.val = 2157) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2158 (n : Fin 5011) (hn : n.val = 2158) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2158 at hn
-  subst hn
+  have hn' : n = (2158 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21250,13 +20691,12 @@ theorem mem_iff_id_2158 (n : Fin 5011) (hn : n.val = 2158) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2159 (n : Fin 5011) (hn : n.val = 2159) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2159 at hn
-  subst hn
+  have hn' : n = (2159 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21288,13 +20728,12 @@ theorem mem_iff_id_2159 (n : Fin 5011) (hn : n.val = 2159) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2160 (n : Fin 5011) (hn : n.val = 2160) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2160 at hn
-  subst hn
+  have hn' : n = (2160 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21326,13 +20765,12 @@ theorem mem_iff_id_2160 (n : Fin 5011) (hn : n.val = 2160) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2161 (n : Fin 5011) (hn : n.val = 2161) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2161 at hn
-  subst hn
+  have hn' : n = (2161 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21364,13 +20802,12 @@ theorem mem_iff_id_2161 (n : Fin 5011) (hn : n.val = 2161) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2162 (n : Fin 5011) (hn : n.val = 2162) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2162 at hn
-  subst hn
+  have hn' : n = (2162 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21402,13 +20839,12 @@ theorem mem_iff_id_2162 (n : Fin 5011) (hn : n.val = 2162) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2163 (n : Fin 5011) (hn : n.val = 2163) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2163 at hn
-  subst hn
+  have hn' : n = (2163 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21440,13 +20876,12 @@ theorem mem_iff_id_2163 (n : Fin 5011) (hn : n.val = 2163) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2164 (n : Fin 5011) (hn : n.val = 2164) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2164 at hn
-  subst hn
+  have hn' : n = (2164 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21478,13 +20913,12 @@ theorem mem_iff_id_2164 (n : Fin 5011) (hn : n.val = 2164) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2165 (n : Fin 5011) (hn : n.val = 2165) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2165 at hn
-  subst hn
+  have hn' : n = (2165 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21516,13 +20950,12 @@ theorem mem_iff_id_2165 (n : Fin 5011) (hn : n.val = 2165) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2166 (n : Fin 5011) (hn : n.val = 2166) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2166 at hn
-  subst hn
+  have hn' : n = (2166 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21554,13 +20987,12 @@ theorem mem_iff_id_2166 (n : Fin 5011) (hn : n.val = 2166) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2167 (n : Fin 5011) (hn : n.val = 2167) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2167 at hn
-  subst hn
+  have hn' : n = (2167 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21592,13 +21024,12 @@ theorem mem_iff_id_2167 (n : Fin 5011) (hn : n.val = 2167) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2168 (n : Fin 5011) (hn : n.val = 2168) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2168 at hn
-  subst hn
+  have hn' : n = (2168 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21630,13 +21061,12 @@ theorem mem_iff_id_2168 (n : Fin 5011) (hn : n.val = 2168) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2169 (n : Fin 5011) (hn : n.val = 2169) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2169 at hn
-  subst hn
+  have hn' : n = (2169 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21668,13 +21098,12 @@ theorem mem_iff_id_2169 (n : Fin 5011) (hn : n.val = 2169) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2170 (n : Fin 5011) (hn : n.val = 2170) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2170 at hn
-  subst hn
+  have hn' : n = (2170 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21706,13 +21135,12 @@ theorem mem_iff_id_2170 (n : Fin 5011) (hn : n.val = 2170) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2171 (n : Fin 5011) (hn : n.val = 2171) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2171 at hn
-  subst hn
+  have hn' : n = (2171 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21744,13 +21172,12 @@ theorem mem_iff_id_2171 (n : Fin 5011) (hn : n.val = 2171) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2172 (n : Fin 5011) (hn : n.val = 2172) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2172 at hn
-  subst hn
+  have hn' : n = (2172 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21782,13 +21209,12 @@ theorem mem_iff_id_2172 (n : Fin 5011) (hn : n.val = 2172) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2173 (n : Fin 5011) (hn : n.val = 2173) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2173 at hn
-  subst hn
+  have hn' : n = (2173 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21820,13 +21246,12 @@ theorem mem_iff_id_2173 (n : Fin 5011) (hn : n.val = 2173) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2174 (n : Fin 5011) (hn : n.val = 2174) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2174 at hn
-  subst hn
+  have hn' : n = (2174 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21858,13 +21283,12 @@ theorem mem_iff_id_2174 (n : Fin 5011) (hn : n.val = 2174) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2175 (n : Fin 5011) (hn : n.val = 2175) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2175 at hn
-  subst hn
+  have hn' : n = (2175 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21896,13 +21320,12 @@ theorem mem_iff_id_2175 (n : Fin 5011) (hn : n.val = 2175) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2176 (n : Fin 5011) (hn : n.val = 2176) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2176 at hn
-  subst hn
+  have hn' : n = (2176 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21934,13 +21357,12 @@ theorem mem_iff_id_2176 (n : Fin 5011) (hn : n.val = 2176) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2177 (n : Fin 5011) (hn : n.val = 2177) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2177 at hn
-  subst hn
+  have hn' : n = (2177 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -21972,13 +21394,12 @@ theorem mem_iff_id_2177 (n : Fin 5011) (hn : n.val = 2177) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2178 (n : Fin 5011) (hn : n.val = 2178) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2178 at hn
-  subst hn
+  have hn' : n = (2178 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22010,13 +21431,12 @@ theorem mem_iff_id_2178 (n : Fin 5011) (hn : n.val = 2178) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2179 (n : Fin 5011) (hn : n.val = 2179) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2179 at hn
-  subst hn
+  have hn' : n = (2179 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22048,13 +21468,12 @@ theorem mem_iff_id_2179 (n : Fin 5011) (hn : n.val = 2179) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2180 (n : Fin 5011) (hn : n.val = 2180) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2180 at hn
-  subst hn
+  have hn' : n = (2180 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22086,13 +21505,12 @@ theorem mem_iff_id_2180 (n : Fin 5011) (hn : n.val = 2180) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2181 (n : Fin 5011) (hn : n.val = 2181) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2181 at hn
-  subst hn
+  have hn' : n = (2181 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22124,13 +21542,12 @@ theorem mem_iff_id_2181 (n : Fin 5011) (hn : n.val = 2181) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2182 (n : Fin 5011) (hn : n.val = 2182) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2182 at hn
-  subst hn
+  have hn' : n = (2182 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22162,13 +21579,12 @@ theorem mem_iff_id_2182 (n : Fin 5011) (hn : n.val = 2182) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2183 (n : Fin 5011) (hn : n.val = 2183) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2183 at hn
-  subst hn
+  have hn' : n = (2183 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22200,13 +21616,12 @@ theorem mem_iff_id_2183 (n : Fin 5011) (hn : n.val = 2183) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2184 (n : Fin 5011) (hn : n.val = 2184) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2184 at hn
-  subst hn
+  have hn' : n = (2184 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22238,13 +21653,12 @@ theorem mem_iff_id_2184 (n : Fin 5011) (hn : n.val = 2184) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2185 (n : Fin 5011) (hn : n.val = 2185) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2185 at hn
-  subst hn
+  have hn' : n = (2185 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22276,13 +21690,12 @@ theorem mem_iff_id_2185 (n : Fin 5011) (hn : n.val = 2185) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2186 (n : Fin 5011) (hn : n.val = 2186) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2186 at hn
-  subst hn
+  have hn' : n = (2186 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22314,13 +21727,12 @@ theorem mem_iff_id_2186 (n : Fin 5011) (hn : n.val = 2186) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2187 (n : Fin 5011) (hn : n.val = 2187) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2187 at hn
-  subst hn
+  have hn' : n = (2187 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22352,13 +21764,12 @@ theorem mem_iff_id_2187 (n : Fin 5011) (hn : n.val = 2187) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2188 (n : Fin 5011) (hn : n.val = 2188) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2188 at hn
-  subst hn
+  have hn' : n = (2188 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22390,13 +21801,12 @@ theorem mem_iff_id_2188 (n : Fin 5011) (hn : n.val = 2188) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2189 (n : Fin 5011) (hn : n.val = 2189) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2189 at hn
-  subst hn
+  have hn' : n = (2189 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22428,13 +21838,12 @@ theorem mem_iff_id_2189 (n : Fin 5011) (hn : n.val = 2189) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2190 (n : Fin 5011) (hn : n.val = 2190) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2190 at hn
-  subst hn
+  have hn' : n = (2190 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22466,13 +21875,12 @@ theorem mem_iff_id_2190 (n : Fin 5011) (hn : n.val = 2190) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2191 (n : Fin 5011) (hn : n.val = 2191) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2191 at hn
-  subst hn
+  have hn' : n = (2191 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22504,13 +21912,12 @@ theorem mem_iff_id_2191 (n : Fin 5011) (hn : n.val = 2191) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2192 (n : Fin 5011) (hn : n.val = 2192) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2192 at hn
-  subst hn
+  have hn' : n = (2192 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22542,13 +21949,12 @@ theorem mem_iff_id_2192 (n : Fin 5011) (hn : n.val = 2192) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2193 (n : Fin 5011) (hn : n.val = 2193) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2193 at hn
-  subst hn
+  have hn' : n = (2193 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22580,13 +21986,12 @@ theorem mem_iff_id_2193 (n : Fin 5011) (hn : n.val = 2193) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2194 (n : Fin 5011) (hn : n.val = 2194) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2194 at hn
-  subst hn
+  have hn' : n = (2194 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22618,13 +22023,12 @@ theorem mem_iff_id_2194 (n : Fin 5011) (hn : n.val = 2194) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2195 (n : Fin 5011) (hn : n.val = 2195) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2195 at hn
-  subst hn
+  have hn' : n = (2195 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22656,13 +22060,12 @@ theorem mem_iff_id_2195 (n : Fin 5011) (hn : n.val = 2195) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2196 (n : Fin 5011) (hn : n.val = 2196) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2196 at hn
-  subst hn
+  have hn' : n = (2196 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22694,13 +22097,12 @@ theorem mem_iff_id_2196 (n : Fin 5011) (hn : n.val = 2196) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2197 (n : Fin 5011) (hn : n.val = 2197) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2197 at hn
-  subst hn
+  have hn' : n = (2197 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22732,13 +22134,12 @@ theorem mem_iff_id_2197 (n : Fin 5011) (hn : n.val = 2197) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2198 (n : Fin 5011) (hn : n.val = 2198) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2198 at hn
-  subst hn
+  have hn' : n = (2198 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22770,13 +22171,12 @@ theorem mem_iff_id_2198 (n : Fin 5011) (hn : n.val = 2198) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2199 (n : Fin 5011) (hn : n.val = 2199) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2199 at hn
-  subst hn
+  have hn' : n = (2199 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22808,13 +22208,12 @@ theorem mem_iff_id_2199 (n : Fin 5011) (hn : n.val = 2199) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2500 (n : Fin 5011) (hn : n.val = 2500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2500 at hn
-  subst hn
+  have hn' : n = (2500 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22846,13 +22245,12 @@ theorem mem_iff_id_2500 (n : Fin 5011) (hn : n.val = 2500) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2501 (n : Fin 5011) (hn : n.val = 2501) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2501 at hn
-  subst hn
+  have hn' : n = (2501 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22884,13 +22282,12 @@ theorem mem_iff_id_2501 (n : Fin 5011) (hn : n.val = 2501) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2502 (n : Fin 5011) (hn : n.val = 2502) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2502 at hn
-  subst hn
+  have hn' : n = (2502 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22922,13 +22319,12 @@ theorem mem_iff_id_2502 (n : Fin 5011) (hn : n.val = 2502) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2503 (n : Fin 5011) (hn : n.val = 2503) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2503 at hn
-  subst hn
+  have hn' : n = (2503 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22960,13 +22356,12 @@ theorem mem_iff_id_2503 (n : Fin 5011) (hn : n.val = 2503) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2504 (n : Fin 5011) (hn : n.val = 2504) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2504 at hn
-  subst hn
+  have hn' : n = (2504 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -22998,13 +22393,12 @@ theorem mem_iff_id_2504 (n : Fin 5011) (hn : n.val = 2504) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2505 (n : Fin 5011) (hn : n.val = 2505) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2505 at hn
-  subst hn
+  have hn' : n = (2505 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23036,13 +22430,12 @@ theorem mem_iff_id_2505 (n : Fin 5011) (hn : n.val = 2505) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2506 (n : Fin 5011) (hn : n.val = 2506) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2506 at hn
-  subst hn
+  have hn' : n = (2506 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23074,13 +22467,12 @@ theorem mem_iff_id_2506 (n : Fin 5011) (hn : n.val = 2506) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2507 (n : Fin 5011) (hn : n.val = 2507) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2507 at hn
-  subst hn
+  have hn' : n = (2507 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23112,13 +22504,12 @@ theorem mem_iff_id_2507 (n : Fin 5011) (hn : n.val = 2507) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2508 (n : Fin 5011) (hn : n.val = 2508) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2508 at hn
-  subst hn
+  have hn' : n = (2508 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23150,13 +22541,12 @@ theorem mem_iff_id_2508 (n : Fin 5011) (hn : n.val = 2508) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2509 (n : Fin 5011) (hn : n.val = 2509) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2509 at hn
-  subst hn
+  have hn' : n = (2509 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23188,13 +22578,12 @@ theorem mem_iff_id_2509 (n : Fin 5011) (hn : n.val = 2509) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2510 (n : Fin 5011) (hn : n.val = 2510) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2510 at hn
-  subst hn
+  have hn' : n = (2510 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23226,13 +22615,12 @@ theorem mem_iff_id_2510 (n : Fin 5011) (hn : n.val = 2510) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2511 (n : Fin 5011) (hn : n.val = 2511) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2511 at hn
-  subst hn
+  have hn' : n = (2511 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23264,13 +22652,12 @@ theorem mem_iff_id_2511 (n : Fin 5011) (hn : n.val = 2511) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2512 (n : Fin 5011) (hn : n.val = 2512) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2512 at hn
-  subst hn
+  have hn' : n = (2512 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23302,13 +22689,12 @@ theorem mem_iff_id_2512 (n : Fin 5011) (hn : n.val = 2512) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2513 (n : Fin 5011) (hn : n.val = 2513) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2513 at hn
-  subst hn
+  have hn' : n = (2513 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23340,13 +22726,12 @@ theorem mem_iff_id_2513 (n : Fin 5011) (hn : n.val = 2513) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2514 (n : Fin 5011) (hn : n.val = 2514) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2514 at hn
-  subst hn
+  have hn' : n = (2514 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23378,13 +22763,12 @@ theorem mem_iff_id_2514 (n : Fin 5011) (hn : n.val = 2514) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2515 (n : Fin 5011) (hn : n.val = 2515) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2515 at hn
-  subst hn
+  have hn' : n = (2515 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23416,13 +22800,12 @@ theorem mem_iff_id_2515 (n : Fin 5011) (hn : n.val = 2515) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2516 (n : Fin 5011) (hn : n.val = 2516) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2516 at hn
-  subst hn
+  have hn' : n = (2516 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23454,13 +22837,12 @@ theorem mem_iff_id_2516 (n : Fin 5011) (hn : n.val = 2516) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2517 (n : Fin 5011) (hn : n.val = 2517) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2517 at hn
-  subst hn
+  have hn' : n = (2517 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23492,13 +22874,12 @@ theorem mem_iff_id_2517 (n : Fin 5011) (hn : n.val = 2517) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2518 (n : Fin 5011) (hn : n.val = 2518) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2518 at hn
-  subst hn
+  have hn' : n = (2518 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23530,13 +22911,12 @@ theorem mem_iff_id_2518 (n : Fin 5011) (hn : n.val = 2518) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2519 (n : Fin 5011) (hn : n.val = 2519) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2519 at hn
-  subst hn
+  have hn' : n = (2519 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23568,13 +22948,12 @@ theorem mem_iff_id_2519 (n : Fin 5011) (hn : n.val = 2519) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2520 (n : Fin 5011) (hn : n.val = 2520) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2520 at hn
-  subst hn
+  have hn' : n = (2520 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23606,13 +22985,12 @@ theorem mem_iff_id_2520 (n : Fin 5011) (hn : n.val = 2520) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2521 (n : Fin 5011) (hn : n.val = 2521) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2521 at hn
-  subst hn
+  have hn' : n = (2521 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23644,13 +23022,12 @@ theorem mem_iff_id_2521 (n : Fin 5011) (hn : n.val = 2521) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2522 (n : Fin 5011) (hn : n.val = 2522) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2522 at hn
-  subst hn
+  have hn' : n = (2522 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23682,13 +23059,12 @@ theorem mem_iff_id_2522 (n : Fin 5011) (hn : n.val = 2522) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2523 (n : Fin 5011) (hn : n.val = 2523) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2523 at hn
-  subst hn
+  have hn' : n = (2523 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23720,13 +23096,12 @@ theorem mem_iff_id_2523 (n : Fin 5011) (hn : n.val = 2523) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2524 (n : Fin 5011) (hn : n.val = 2524) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2524 at hn
-  subst hn
+  have hn' : n = (2524 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23758,13 +23133,12 @@ theorem mem_iff_id_2524 (n : Fin 5011) (hn : n.val = 2524) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2525 (n : Fin 5011) (hn : n.val = 2525) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2525 at hn
-  subst hn
+  have hn' : n = (2525 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23796,13 +23170,12 @@ theorem mem_iff_id_2525 (n : Fin 5011) (hn : n.val = 2525) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2526 (n : Fin 5011) (hn : n.val = 2526) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2526 at hn
-  subst hn
+  have hn' : n = (2526 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23834,13 +23207,12 @@ theorem mem_iff_id_2526 (n : Fin 5011) (hn : n.val = 2526) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2527 (n : Fin 5011) (hn : n.val = 2527) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2527 at hn
-  subst hn
+  have hn' : n = (2527 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23872,13 +23244,12 @@ theorem mem_iff_id_2527 (n : Fin 5011) (hn : n.val = 2527) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2528 (n : Fin 5011) (hn : n.val = 2528) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2528 at hn
-  subst hn
+  have hn' : n = (2528 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23910,13 +23281,12 @@ theorem mem_iff_id_2528 (n : Fin 5011) (hn : n.val = 2528) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2529 (n : Fin 5011) (hn : n.val = 2529) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2529 at hn
-  subst hn
+  have hn' : n = (2529 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23948,13 +23318,12 @@ theorem mem_iff_id_2529 (n : Fin 5011) (hn : n.val = 2529) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2530 (n : Fin 5011) (hn : n.val = 2530) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2530 at hn
-  subst hn
+  have hn' : n = (2530 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -23986,13 +23355,12 @@ theorem mem_iff_id_2530 (n : Fin 5011) (hn : n.val = 2530) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2531 (n : Fin 5011) (hn : n.val = 2531) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2531 at hn
-  subst hn
+  have hn' : n = (2531 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24024,13 +23392,12 @@ theorem mem_iff_id_2531 (n : Fin 5011) (hn : n.val = 2531) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2532 (n : Fin 5011) (hn : n.val = 2532) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2532 at hn
-  subst hn
+  have hn' : n = (2532 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24062,13 +23429,12 @@ theorem mem_iff_id_2532 (n : Fin 5011) (hn : n.val = 2532) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2533 (n : Fin 5011) (hn : n.val = 2533) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2533 at hn
-  subst hn
+  have hn' : n = (2533 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24100,13 +23466,12 @@ theorem mem_iff_id_2533 (n : Fin 5011) (hn : n.val = 2533) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2534 (n : Fin 5011) (hn : n.val = 2534) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2534 at hn
-  subst hn
+  have hn' : n = (2534 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24138,13 +23503,12 @@ theorem mem_iff_id_2534 (n : Fin 5011) (hn : n.val = 2534) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2535 (n : Fin 5011) (hn : n.val = 2535) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2535 at hn
-  subst hn
+  have hn' : n = (2535 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24176,13 +23540,12 @@ theorem mem_iff_id_2535 (n : Fin 5011) (hn : n.val = 2535) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2536 (n : Fin 5011) (hn : n.val = 2536) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2536 at hn
-  subst hn
+  have hn' : n = (2536 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24214,13 +23577,12 @@ theorem mem_iff_id_2536 (n : Fin 5011) (hn : n.val = 2536) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2537 (n : Fin 5011) (hn : n.val = 2537) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2537 at hn
-  subst hn
+  have hn' : n = (2537 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24252,13 +23614,12 @@ theorem mem_iff_id_2537 (n : Fin 5011) (hn : n.val = 2537) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2538 (n : Fin 5011) (hn : n.val = 2538) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2538 at hn
-  subst hn
+  have hn' : n = (2538 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24290,13 +23651,12 @@ theorem mem_iff_id_2538 (n : Fin 5011) (hn : n.val = 2538) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2539 (n : Fin 5011) (hn : n.val = 2539) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2539 at hn
-  subst hn
+  have hn' : n = (2539 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24328,13 +23688,12 @@ theorem mem_iff_id_2539 (n : Fin 5011) (hn : n.val = 2539) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2540 (n : Fin 5011) (hn : n.val = 2540) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2540 at hn
-  subst hn
+  have hn' : n = (2540 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24366,13 +23725,12 @@ theorem mem_iff_id_2540 (n : Fin 5011) (hn : n.val = 2540) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2541 (n : Fin 5011) (hn : n.val = 2541) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2541 at hn
-  subst hn
+  have hn' : n = (2541 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24404,13 +23762,12 @@ theorem mem_iff_id_2541 (n : Fin 5011) (hn : n.val = 2541) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2542 (n : Fin 5011) (hn : n.val = 2542) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2542 at hn
-  subst hn
+  have hn' : n = (2542 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24442,13 +23799,12 @@ theorem mem_iff_id_2542 (n : Fin 5011) (hn : n.val = 2542) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2543 (n : Fin 5011) (hn : n.val = 2543) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2543 at hn
-  subst hn
+  have hn' : n = (2543 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24480,13 +23836,12 @@ theorem mem_iff_id_2543 (n : Fin 5011) (hn : n.val = 2543) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2544 (n : Fin 5011) (hn : n.val = 2544) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2544 at hn
-  subst hn
+  have hn' : n = (2544 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24518,13 +23873,12 @@ theorem mem_iff_id_2544 (n : Fin 5011) (hn : n.val = 2544) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2545 (n : Fin 5011) (hn : n.val = 2545) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2545 at hn
-  subst hn
+  have hn' : n = (2545 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24556,13 +23910,12 @@ theorem mem_iff_id_2545 (n : Fin 5011) (hn : n.val = 2545) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2546 (n : Fin 5011) (hn : n.val = 2546) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2546 at hn
-  subst hn
+  have hn' : n = (2546 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24594,13 +23947,12 @@ theorem mem_iff_id_2546 (n : Fin 5011) (hn : n.val = 2546) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2547 (n : Fin 5011) (hn : n.val = 2547) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2547 at hn
-  subst hn
+  have hn' : n = (2547 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24632,13 +23984,12 @@ theorem mem_iff_id_2547 (n : Fin 5011) (hn : n.val = 2547) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2548 (n : Fin 5011) (hn : n.val = 2548) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2548 at hn
-  subst hn
+  have hn' : n = (2548 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24670,13 +24021,12 @@ theorem mem_iff_id_2548 (n : Fin 5011) (hn : n.val = 2548) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2549 (n : Fin 5011) (hn : n.val = 2549) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2549 at hn
-  subst hn
+  have hn' : n = (2549 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24708,13 +24058,12 @@ theorem mem_iff_id_2549 (n : Fin 5011) (hn : n.val = 2549) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2550 (n : Fin 5011) (hn : n.val = 2550) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2550 at hn
-  subst hn
+  have hn' : n = (2550 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24746,13 +24095,12 @@ theorem mem_iff_id_2550 (n : Fin 5011) (hn : n.val = 2550) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2551 (n : Fin 5011) (hn : n.val = 2551) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2551 at hn
-  subst hn
+  have hn' : n = (2551 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24784,13 +24132,12 @@ theorem mem_iff_id_2551 (n : Fin 5011) (hn : n.val = 2551) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2552 (n : Fin 5011) (hn : n.val = 2552) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2552 at hn
-  subst hn
+  have hn' : n = (2552 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24822,13 +24169,12 @@ theorem mem_iff_id_2552 (n : Fin 5011) (hn : n.val = 2552) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2553 (n : Fin 5011) (hn : n.val = 2553) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2553 at hn
-  subst hn
+  have hn' : n = (2553 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24860,13 +24206,12 @@ theorem mem_iff_id_2553 (n : Fin 5011) (hn : n.val = 2553) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2554 (n : Fin 5011) (hn : n.val = 2554) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2554 at hn
-  subst hn
+  have hn' : n = (2554 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24898,13 +24243,12 @@ theorem mem_iff_id_2554 (n : Fin 5011) (hn : n.val = 2554) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2555 (n : Fin 5011) (hn : n.val = 2555) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2555 at hn
-  subst hn
+  have hn' : n = (2555 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24936,13 +24280,12 @@ theorem mem_iff_id_2555 (n : Fin 5011) (hn : n.val = 2555) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2556 (n : Fin 5011) (hn : n.val = 2556) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2556 at hn
-  subst hn
+  have hn' : n = (2556 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -24974,13 +24317,12 @@ theorem mem_iff_id_2556 (n : Fin 5011) (hn : n.val = 2556) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2557 (n : Fin 5011) (hn : n.val = 2557) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2557 at hn
-  subst hn
+  have hn' : n = (2557 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25012,13 +24354,12 @@ theorem mem_iff_id_2557 (n : Fin 5011) (hn : n.val = 2557) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2558 (n : Fin 5011) (hn : n.val = 2558) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2558 at hn
-  subst hn
+  have hn' : n = (2558 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25050,13 +24391,12 @@ theorem mem_iff_id_2558 (n : Fin 5011) (hn : n.val = 2558) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2559 (n : Fin 5011) (hn : n.val = 2559) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2559 at hn
-  subst hn
+  have hn' : n = (2559 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25088,13 +24428,12 @@ theorem mem_iff_id_2559 (n : Fin 5011) (hn : n.val = 2559) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2560 (n : Fin 5011) (hn : n.val = 2560) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2560 at hn
-  subst hn
+  have hn' : n = (2560 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25126,13 +24465,12 @@ theorem mem_iff_id_2560 (n : Fin 5011) (hn : n.val = 2560) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2561 (n : Fin 5011) (hn : n.val = 2561) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2561 at hn
-  subst hn
+  have hn' : n = (2561 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25164,13 +24502,12 @@ theorem mem_iff_id_2561 (n : Fin 5011) (hn : n.val = 2561) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2562 (n : Fin 5011) (hn : n.val = 2562) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2562 at hn
-  subst hn
+  have hn' : n = (2562 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25202,13 +24539,12 @@ theorem mem_iff_id_2562 (n : Fin 5011) (hn : n.val = 2562) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2563 (n : Fin 5011) (hn : n.val = 2563) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2563 at hn
-  subst hn
+  have hn' : n = (2563 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25240,13 +24576,12 @@ theorem mem_iff_id_2563 (n : Fin 5011) (hn : n.val = 2563) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2564 (n : Fin 5011) (hn : n.val = 2564) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2564 at hn
-  subst hn
+  have hn' : n = (2564 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25278,13 +24613,12 @@ theorem mem_iff_id_2564 (n : Fin 5011) (hn : n.val = 2564) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2565 (n : Fin 5011) (hn : n.val = 2565) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2565 at hn
-  subst hn
+  have hn' : n = (2565 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25316,13 +24650,12 @@ theorem mem_iff_id_2565 (n : Fin 5011) (hn : n.val = 2565) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2566 (n : Fin 5011) (hn : n.val = 2566) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2566 at hn
-  subst hn
+  have hn' : n = (2566 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25354,13 +24687,12 @@ theorem mem_iff_id_2566 (n : Fin 5011) (hn : n.val = 2566) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2567 (n : Fin 5011) (hn : n.val = 2567) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2567 at hn
-  subst hn
+  have hn' : n = (2567 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25392,13 +24724,12 @@ theorem mem_iff_id_2567 (n : Fin 5011) (hn : n.val = 2567) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2568 (n : Fin 5011) (hn : n.val = 2568) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2568 at hn
-  subst hn
+  have hn' : n = (2568 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25430,13 +24761,12 @@ theorem mem_iff_id_2568 (n : Fin 5011) (hn : n.val = 2568) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2569 (n : Fin 5011) (hn : n.val = 2569) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2569 at hn
-  subst hn
+  have hn' : n = (2569 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25468,13 +24798,12 @@ theorem mem_iff_id_2569 (n : Fin 5011) (hn : n.val = 2569) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2570 (n : Fin 5011) (hn : n.val = 2570) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2570 at hn
-  subst hn
+  have hn' : n = (2570 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25506,13 +24835,12 @@ theorem mem_iff_id_2570 (n : Fin 5011) (hn : n.val = 2570) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2571 (n : Fin 5011) (hn : n.val = 2571) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2571 at hn
-  subst hn
+  have hn' : n = (2571 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25544,13 +24872,12 @@ theorem mem_iff_id_2571 (n : Fin 5011) (hn : n.val = 2571) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2572 (n : Fin 5011) (hn : n.val = 2572) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2572 at hn
-  subst hn
+  have hn' : n = (2572 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25582,13 +24909,12 @@ theorem mem_iff_id_2572 (n : Fin 5011) (hn : n.val = 2572) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2573 (n : Fin 5011) (hn : n.val = 2573) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2573 at hn
-  subst hn
+  have hn' : n = (2573 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25620,13 +24946,12 @@ theorem mem_iff_id_2573 (n : Fin 5011) (hn : n.val = 2573) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2574 (n : Fin 5011) (hn : n.val = 2574) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2574 at hn
-  subst hn
+  have hn' : n = (2574 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25658,13 +24983,12 @@ theorem mem_iff_id_2574 (n : Fin 5011) (hn : n.val = 2574) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2575 (n : Fin 5011) (hn : n.val = 2575) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2575 at hn
-  subst hn
+  have hn' : n = (2575 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25696,13 +25020,12 @@ theorem mem_iff_id_2575 (n : Fin 5011) (hn : n.val = 2575) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2576 (n : Fin 5011) (hn : n.val = 2576) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2576 at hn
-  subst hn
+  have hn' : n = (2576 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25734,13 +25057,12 @@ theorem mem_iff_id_2576 (n : Fin 5011) (hn : n.val = 2576) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2577 (n : Fin 5011) (hn : n.val = 2577) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2577 at hn
-  subst hn
+  have hn' : n = (2577 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25772,13 +25094,12 @@ theorem mem_iff_id_2577 (n : Fin 5011) (hn : n.val = 2577) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2578 (n : Fin 5011) (hn : n.val = 2578) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2578 at hn
-  subst hn
+  have hn' : n = (2578 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25810,13 +25131,12 @@ theorem mem_iff_id_2578 (n : Fin 5011) (hn : n.val = 2578) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2579 (n : Fin 5011) (hn : n.val = 2579) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2579 at hn
-  subst hn
+  have hn' : n = (2579 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25848,13 +25168,12 @@ theorem mem_iff_id_2579 (n : Fin 5011) (hn : n.val = 2579) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2580 (n : Fin 5011) (hn : n.val = 2580) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2580 at hn
-  subst hn
+  have hn' : n = (2580 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25886,13 +25205,12 @@ theorem mem_iff_id_2580 (n : Fin 5011) (hn : n.val = 2580) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2581 (n : Fin 5011) (hn : n.val = 2581) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2581 at hn
-  subst hn
+  have hn' : n = (2581 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25924,13 +25242,12 @@ theorem mem_iff_id_2581 (n : Fin 5011) (hn : n.val = 2581) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2582 (n : Fin 5011) (hn : n.val = 2582) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2582 at hn
-  subst hn
+  have hn' : n = (2582 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -25962,13 +25279,12 @@ theorem mem_iff_id_2582 (n : Fin 5011) (hn : n.val = 2582) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2583 (n : Fin 5011) (hn : n.val = 2583) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2583 at hn
-  subst hn
+  have hn' : n = (2583 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26000,13 +25316,12 @@ theorem mem_iff_id_2583 (n : Fin 5011) (hn : n.val = 2583) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2584 (n : Fin 5011) (hn : n.val = 2584) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2584 at hn
-  subst hn
+  have hn' : n = (2584 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26038,13 +25353,12 @@ theorem mem_iff_id_2584 (n : Fin 5011) (hn : n.val = 2584) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2585 (n : Fin 5011) (hn : n.val = 2585) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2585 at hn
-  subst hn
+  have hn' : n = (2585 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26076,13 +25390,12 @@ theorem mem_iff_id_2585 (n : Fin 5011) (hn : n.val = 2585) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2586 (n : Fin 5011) (hn : n.val = 2586) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2586 at hn
-  subst hn
+  have hn' : n = (2586 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26114,13 +25427,12 @@ theorem mem_iff_id_2586 (n : Fin 5011) (hn : n.val = 2586) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2587 (n : Fin 5011) (hn : n.val = 2587) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2587 at hn
-  subst hn
+  have hn' : n = (2587 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26152,13 +25464,12 @@ theorem mem_iff_id_2587 (n : Fin 5011) (hn : n.val = 2587) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2588 (n : Fin 5011) (hn : n.val = 2588) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2588 at hn
-  subst hn
+  have hn' : n = (2588 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26190,13 +25501,12 @@ theorem mem_iff_id_2588 (n : Fin 5011) (hn : n.val = 2588) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2589 (n : Fin 5011) (hn : n.val = 2589) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2589 at hn
-  subst hn
+  have hn' : n = (2589 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26228,13 +25538,12 @@ theorem mem_iff_id_2589 (n : Fin 5011) (hn : n.val = 2589) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2590 (n : Fin 5011) (hn : n.val = 2590) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2590 at hn
-  subst hn
+  have hn' : n = (2590 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26266,13 +25575,12 @@ theorem mem_iff_id_2590 (n : Fin 5011) (hn : n.val = 2590) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2591 (n : Fin 5011) (hn : n.val = 2591) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2591 at hn
-  subst hn
+  have hn' : n = (2591 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26304,13 +25612,12 @@ theorem mem_iff_id_2591 (n : Fin 5011) (hn : n.val = 2591) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2592 (n : Fin 5011) (hn : n.val = 2592) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2592 at hn
-  subst hn
+  have hn' : n = (2592 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26342,13 +25649,12 @@ theorem mem_iff_id_2592 (n : Fin 5011) (hn : n.val = 2592) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2593 (n : Fin 5011) (hn : n.val = 2593) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2593 at hn
-  subst hn
+  have hn' : n = (2593 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26380,13 +25686,12 @@ theorem mem_iff_id_2593 (n : Fin 5011) (hn : n.val = 2593) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2594 (n : Fin 5011) (hn : n.val = 2594) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2594 at hn
-  subst hn
+  have hn' : n = (2594 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26418,13 +25723,12 @@ theorem mem_iff_id_2594 (n : Fin 5011) (hn : n.val = 2594) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2595 (n : Fin 5011) (hn : n.val = 2595) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2595 at hn
-  subst hn
+  have hn' : n = (2595 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26456,13 +25760,12 @@ theorem mem_iff_id_2595 (n : Fin 5011) (hn : n.val = 2595) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2596 (n : Fin 5011) (hn : n.val = 2596) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2596 at hn
-  subst hn
+  have hn' : n = (2596 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26494,13 +25797,12 @@ theorem mem_iff_id_2596 (n : Fin 5011) (hn : n.val = 2596) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2597 (n : Fin 5011) (hn : n.val = 2597) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2597 at hn
-  subst hn
+  have hn' : n = (2597 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26532,13 +25834,12 @@ theorem mem_iff_id_2597 (n : Fin 5011) (hn : n.val = 2597) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2598 (n : Fin 5011) (hn : n.val = 2598) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2598 at hn
-  subst hn
+  have hn' : n = (2598 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26570,13 +25871,12 @@ theorem mem_iff_id_2598 (n : Fin 5011) (hn : n.val = 2598) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2599 (n : Fin 5011) (hn : n.val = 2599) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2599 at hn
-  subst hn
+  have hn' : n = (2599 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26608,13 +25908,12 @@ theorem mem_iff_id_2599 (n : Fin 5011) (hn : n.val = 2599) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2900 (n : Fin 5011) (hn : n.val = 2900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2900 at hn
-  subst hn
+  have hn' : n = (2900 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26646,13 +25945,12 @@ theorem mem_iff_id_2900 (n : Fin 5011) (hn : n.val = 2900) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2901 (n : Fin 5011) (hn : n.val = 2901) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2901 at hn
-  subst hn
+  have hn' : n = (2901 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26684,13 +25982,12 @@ theorem mem_iff_id_2901 (n : Fin 5011) (hn : n.val = 2901) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2902 (n : Fin 5011) (hn : n.val = 2902) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2902 at hn
-  subst hn
+  have hn' : n = (2902 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26722,13 +26019,12 @@ theorem mem_iff_id_2902 (n : Fin 5011) (hn : n.val = 2902) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2903 (n : Fin 5011) (hn : n.val = 2903) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2903 at hn
-  subst hn
+  have hn' : n = (2903 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26760,13 +26056,12 @@ theorem mem_iff_id_2903 (n : Fin 5011) (hn : n.val = 2903) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2904 (n : Fin 5011) (hn : n.val = 2904) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2904 at hn
-  subst hn
+  have hn' : n = (2904 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26798,13 +26093,12 @@ theorem mem_iff_id_2904 (n : Fin 5011) (hn : n.val = 2904) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2905 (n : Fin 5011) (hn : n.val = 2905) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2905 at hn
-  subst hn
+  have hn' : n = (2905 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26836,13 +26130,12 @@ theorem mem_iff_id_2905 (n : Fin 5011) (hn : n.val = 2905) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2906 (n : Fin 5011) (hn : n.val = 2906) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2906 at hn
-  subst hn
+  have hn' : n = (2906 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26874,13 +26167,12 @@ theorem mem_iff_id_2906 (n : Fin 5011) (hn : n.val = 2906) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2907 (n : Fin 5011) (hn : n.val = 2907) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2907 at hn
-  subst hn
+  have hn' : n = (2907 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26912,13 +26204,12 @@ theorem mem_iff_id_2907 (n : Fin 5011) (hn : n.val = 2907) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2908 (n : Fin 5011) (hn : n.val = 2908) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2908 at hn
-  subst hn
+  have hn' : n = (2908 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26950,13 +26241,12 @@ theorem mem_iff_id_2908 (n : Fin 5011) (hn : n.val = 2908) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2909 (n : Fin 5011) (hn : n.val = 2909) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2909 at hn
-  subst hn
+  have hn' : n = (2909 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -26988,13 +26278,12 @@ theorem mem_iff_id_2909 (n : Fin 5011) (hn : n.val = 2909) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2910 (n : Fin 5011) (hn : n.val = 2910) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2910 at hn
-  subst hn
+  have hn' : n = (2910 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27026,13 +26315,12 @@ theorem mem_iff_id_2910 (n : Fin 5011) (hn : n.val = 2910) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2911 (n : Fin 5011) (hn : n.val = 2911) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2911 at hn
-  subst hn
+  have hn' : n = (2911 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27064,13 +26352,12 @@ theorem mem_iff_id_2911 (n : Fin 5011) (hn : n.val = 2911) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2912 (n : Fin 5011) (hn : n.val = 2912) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2912 at hn
-  subst hn
+  have hn' : n = (2912 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27102,13 +26389,12 @@ theorem mem_iff_id_2912 (n : Fin 5011) (hn : n.val = 2912) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2913 (n : Fin 5011) (hn : n.val = 2913) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2913 at hn
-  subst hn
+  have hn' : n = (2913 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27140,13 +26426,12 @@ theorem mem_iff_id_2913 (n : Fin 5011) (hn : n.val = 2913) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2914 (n : Fin 5011) (hn : n.val = 2914) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2914 at hn
-  subst hn
+  have hn' : n = (2914 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27178,13 +26463,12 @@ theorem mem_iff_id_2914 (n : Fin 5011) (hn : n.val = 2914) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2915 (n : Fin 5011) (hn : n.val = 2915) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2915 at hn
-  subst hn
+  have hn' : n = (2915 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27216,13 +26500,12 @@ theorem mem_iff_id_2915 (n : Fin 5011) (hn : n.val = 2915) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2916 (n : Fin 5011) (hn : n.val = 2916) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2916 at hn
-  subst hn
+  have hn' : n = (2916 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27254,13 +26537,12 @@ theorem mem_iff_id_2916 (n : Fin 5011) (hn : n.val = 2916) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2917 (n : Fin 5011) (hn : n.val = 2917) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2917 at hn
-  subst hn
+  have hn' : n = (2917 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27292,13 +26574,12 @@ theorem mem_iff_id_2917 (n : Fin 5011) (hn : n.val = 2917) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2918 (n : Fin 5011) (hn : n.val = 2918) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2918 at hn
-  subst hn
+  have hn' : n = (2918 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27330,13 +26611,12 @@ theorem mem_iff_id_2918 (n : Fin 5011) (hn : n.val = 2918) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2919 (n : Fin 5011) (hn : n.val = 2919) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2919 at hn
-  subst hn
+  have hn' : n = (2919 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27368,13 +26648,12 @@ theorem mem_iff_id_2919 (n : Fin 5011) (hn : n.val = 2919) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2920 (n : Fin 5011) (hn : n.val = 2920) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2920 at hn
-  subst hn
+  have hn' : n = (2920 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27406,13 +26685,12 @@ theorem mem_iff_id_2920 (n : Fin 5011) (hn : n.val = 2920) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2921 (n : Fin 5011) (hn : n.val = 2921) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2921 at hn
-  subst hn
+  have hn' : n = (2921 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27444,13 +26722,12 @@ theorem mem_iff_id_2921 (n : Fin 5011) (hn : n.val = 2921) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2922 (n : Fin 5011) (hn : n.val = 2922) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2922 at hn
-  subst hn
+  have hn' : n = (2922 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27482,13 +26759,12 @@ theorem mem_iff_id_2922 (n : Fin 5011) (hn : n.val = 2922) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2923 (n : Fin 5011) (hn : n.val = 2923) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2923 at hn
-  subst hn
+  have hn' : n = (2923 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27520,13 +26796,12 @@ theorem mem_iff_id_2923 (n : Fin 5011) (hn : n.val = 2923) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2924 (n : Fin 5011) (hn : n.val = 2924) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2924 at hn
-  subst hn
+  have hn' : n = (2924 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27558,13 +26833,12 @@ theorem mem_iff_id_2924 (n : Fin 5011) (hn : n.val = 2924) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2925 (n : Fin 5011) (hn : n.val = 2925) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2925 at hn
-  subst hn
+  have hn' : n = (2925 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27596,13 +26870,12 @@ theorem mem_iff_id_2925 (n : Fin 5011) (hn : n.val = 2925) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2926 (n : Fin 5011) (hn : n.val = 2926) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2926 at hn
-  subst hn
+  have hn' : n = (2926 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27634,13 +26907,12 @@ theorem mem_iff_id_2926 (n : Fin 5011) (hn : n.val = 2926) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2927 (n : Fin 5011) (hn : n.val = 2927) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2927 at hn
-  subst hn
+  have hn' : n = (2927 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27672,13 +26944,12 @@ theorem mem_iff_id_2927 (n : Fin 5011) (hn : n.val = 2927) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2928 (n : Fin 5011) (hn : n.val = 2928) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2928 at hn
-  subst hn
+  have hn' : n = (2928 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27710,13 +26981,12 @@ theorem mem_iff_id_2928 (n : Fin 5011) (hn : n.val = 2928) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2929 (n : Fin 5011) (hn : n.val = 2929) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2929 at hn
-  subst hn
+  have hn' : n = (2929 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27748,13 +27018,12 @@ theorem mem_iff_id_2929 (n : Fin 5011) (hn : n.val = 2929) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2930 (n : Fin 5011) (hn : n.val = 2930) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2930 at hn
-  subst hn
+  have hn' : n = (2930 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27786,13 +27055,12 @@ theorem mem_iff_id_2930 (n : Fin 5011) (hn : n.val = 2930) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2931 (n : Fin 5011) (hn : n.val = 2931) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2931 at hn
-  subst hn
+  have hn' : n = (2931 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27824,13 +27092,12 @@ theorem mem_iff_id_2931 (n : Fin 5011) (hn : n.val = 2931) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2932 (n : Fin 5011) (hn : n.val = 2932) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2932 at hn
-  subst hn
+  have hn' : n = (2932 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27862,13 +27129,12 @@ theorem mem_iff_id_2932 (n : Fin 5011) (hn : n.val = 2932) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2933 (n : Fin 5011) (hn : n.val = 2933) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2933 at hn
-  subst hn
+  have hn' : n = (2933 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27900,13 +27166,12 @@ theorem mem_iff_id_2933 (n : Fin 5011) (hn : n.val = 2933) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2934 (n : Fin 5011) (hn : n.val = 2934) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2934 at hn
-  subst hn
+  have hn' : n = (2934 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27938,13 +27203,12 @@ theorem mem_iff_id_2934 (n : Fin 5011) (hn : n.val = 2934) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2935 (n : Fin 5011) (hn : n.val = 2935) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2935 at hn
-  subst hn
+  have hn' : n = (2935 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -27976,13 +27240,12 @@ theorem mem_iff_id_2935 (n : Fin 5011) (hn : n.val = 2935) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2936 (n : Fin 5011) (hn : n.val = 2936) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2936 at hn
-  subst hn
+  have hn' : n = (2936 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28014,13 +27277,12 @@ theorem mem_iff_id_2936 (n : Fin 5011) (hn : n.val = 2936) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2937 (n : Fin 5011) (hn : n.val = 2937) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2937 at hn
-  subst hn
+  have hn' : n = (2937 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28052,13 +27314,12 @@ theorem mem_iff_id_2937 (n : Fin 5011) (hn : n.val = 2937) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2938 (n : Fin 5011) (hn : n.val = 2938) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2938 at hn
-  subst hn
+  have hn' : n = (2938 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28090,13 +27351,12 @@ theorem mem_iff_id_2938 (n : Fin 5011) (hn : n.val = 2938) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2939 (n : Fin 5011) (hn : n.val = 2939) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2939 at hn
-  subst hn
+  have hn' : n = (2939 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28128,13 +27388,12 @@ theorem mem_iff_id_2939 (n : Fin 5011) (hn : n.val = 2939) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2940 (n : Fin 5011) (hn : n.val = 2940) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2940 at hn
-  subst hn
+  have hn' : n = (2940 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28166,13 +27425,12 @@ theorem mem_iff_id_2940 (n : Fin 5011) (hn : n.val = 2940) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2941 (n : Fin 5011) (hn : n.val = 2941) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2941 at hn
-  subst hn
+  have hn' : n = (2941 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28204,13 +27462,12 @@ theorem mem_iff_id_2941 (n : Fin 5011) (hn : n.val = 2941) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2942 (n : Fin 5011) (hn : n.val = 2942) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2942 at hn
-  subst hn
+  have hn' : n = (2942 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28242,13 +27499,12 @@ theorem mem_iff_id_2942 (n : Fin 5011) (hn : n.val = 2942) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2943 (n : Fin 5011) (hn : n.val = 2943) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2943 at hn
-  subst hn
+  have hn' : n = (2943 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28280,13 +27536,12 @@ theorem mem_iff_id_2943 (n : Fin 5011) (hn : n.val = 2943) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2944 (n : Fin 5011) (hn : n.val = 2944) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2944 at hn
-  subst hn
+  have hn' : n = (2944 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28318,13 +27573,12 @@ theorem mem_iff_id_2944 (n : Fin 5011) (hn : n.val = 2944) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2945 (n : Fin 5011) (hn : n.val = 2945) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2945 at hn
-  subst hn
+  have hn' : n = (2945 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28356,13 +27610,12 @@ theorem mem_iff_id_2945 (n : Fin 5011) (hn : n.val = 2945) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2946 (n : Fin 5011) (hn : n.val = 2946) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2946 at hn
-  subst hn
+  have hn' : n = (2946 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28394,13 +27647,12 @@ theorem mem_iff_id_2946 (n : Fin 5011) (hn : n.val = 2946) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2947 (n : Fin 5011) (hn : n.val = 2947) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2947 at hn
-  subst hn
+  have hn' : n = (2947 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28432,13 +27684,12 @@ theorem mem_iff_id_2947 (n : Fin 5011) (hn : n.val = 2947) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2948 (n : Fin 5011) (hn : n.val = 2948) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2948 at hn
-  subst hn
+  have hn' : n = (2948 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28470,13 +27721,12 @@ theorem mem_iff_id_2948 (n : Fin 5011) (hn : n.val = 2948) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2949 (n : Fin 5011) (hn : n.val = 2949) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2949 at hn
-  subst hn
+  have hn' : n = (2949 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28508,13 +27758,12 @@ theorem mem_iff_id_2949 (n : Fin 5011) (hn : n.val = 2949) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2950 (n : Fin 5011) (hn : n.val = 2950) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2950 at hn
-  subst hn
+  have hn' : n = (2950 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28546,13 +27795,12 @@ theorem mem_iff_id_2950 (n : Fin 5011) (hn : n.val = 2950) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2951 (n : Fin 5011) (hn : n.val = 2951) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2951 at hn
-  subst hn
+  have hn' : n = (2951 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28584,13 +27832,12 @@ theorem mem_iff_id_2951 (n : Fin 5011) (hn : n.val = 2951) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2952 (n : Fin 5011) (hn : n.val = 2952) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2952 at hn
-  subst hn
+  have hn' : n = (2952 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28622,13 +27869,12 @@ theorem mem_iff_id_2952 (n : Fin 5011) (hn : n.val = 2952) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2953 (n : Fin 5011) (hn : n.val = 2953) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2953 at hn
-  subst hn
+  have hn' : n = (2953 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28660,13 +27906,12 @@ theorem mem_iff_id_2953 (n : Fin 5011) (hn : n.val = 2953) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2954 (n : Fin 5011) (hn : n.val = 2954) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2954 at hn
-  subst hn
+  have hn' : n = (2954 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28698,13 +27943,12 @@ theorem mem_iff_id_2954 (n : Fin 5011) (hn : n.val = 2954) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2955 (n : Fin 5011) (hn : n.val = 2955) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2955 at hn
-  subst hn
+  have hn' : n = (2955 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28736,13 +27980,12 @@ theorem mem_iff_id_2955 (n : Fin 5011) (hn : n.val = 2955) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2956 (n : Fin 5011) (hn : n.val = 2956) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2956 at hn
-  subst hn
+  have hn' : n = (2956 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28774,13 +28017,12 @@ theorem mem_iff_id_2956 (n : Fin 5011) (hn : n.val = 2956) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2957 (n : Fin 5011) (hn : n.val = 2957) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2957 at hn
-  subst hn
+  have hn' : n = (2957 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28812,13 +28054,12 @@ theorem mem_iff_id_2957 (n : Fin 5011) (hn : n.val = 2957) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2958 (n : Fin 5011) (hn : n.val = 2958) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2958 at hn
-  subst hn
+  have hn' : n = (2958 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28850,13 +28091,12 @@ theorem mem_iff_id_2958 (n : Fin 5011) (hn : n.val = 2958) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2959 (n : Fin 5011) (hn : n.val = 2959) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2959 at hn
-  subst hn
+  have hn' : n = (2959 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28888,13 +28128,12 @@ theorem mem_iff_id_2959 (n : Fin 5011) (hn : n.val = 2959) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2960 (n : Fin 5011) (hn : n.val = 2960) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2960 at hn
-  subst hn
+  have hn' : n = (2960 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28926,13 +28165,12 @@ theorem mem_iff_id_2960 (n : Fin 5011) (hn : n.val = 2960) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2961 (n : Fin 5011) (hn : n.val = 2961) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2961 at hn
-  subst hn
+  have hn' : n = (2961 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -28964,13 +28202,12 @@ theorem mem_iff_id_2961 (n : Fin 5011) (hn : n.val = 2961) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2962 (n : Fin 5011) (hn : n.val = 2962) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2962 at hn
-  subst hn
+  have hn' : n = (2962 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29002,13 +28239,12 @@ theorem mem_iff_id_2962 (n : Fin 5011) (hn : n.val = 2962) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2963 (n : Fin 5011) (hn : n.val = 2963) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2963 at hn
-  subst hn
+  have hn' : n = (2963 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29040,13 +28276,12 @@ theorem mem_iff_id_2963 (n : Fin 5011) (hn : n.val = 2963) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2964 (n : Fin 5011) (hn : n.val = 2964) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2964 at hn
-  subst hn
+  have hn' : n = (2964 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29078,13 +28313,12 @@ theorem mem_iff_id_2964 (n : Fin 5011) (hn : n.val = 2964) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2965 (n : Fin 5011) (hn : n.val = 2965) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2965 at hn
-  subst hn
+  have hn' : n = (2965 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29116,13 +28350,12 @@ theorem mem_iff_id_2965 (n : Fin 5011) (hn : n.val = 2965) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2966 (n : Fin 5011) (hn : n.val = 2966) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2966 at hn
-  subst hn
+  have hn' : n = (2966 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29154,13 +28387,12 @@ theorem mem_iff_id_2966 (n : Fin 5011) (hn : n.val = 2966) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2967 (n : Fin 5011) (hn : n.val = 2967) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2967 at hn
-  subst hn
+  have hn' : n = (2967 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29192,13 +28424,12 @@ theorem mem_iff_id_2967 (n : Fin 5011) (hn : n.val = 2967) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2968 (n : Fin 5011) (hn : n.val = 2968) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2968 at hn
-  subst hn
+  have hn' : n = (2968 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29230,13 +28461,12 @@ theorem mem_iff_id_2968 (n : Fin 5011) (hn : n.val = 2968) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2969 (n : Fin 5011) (hn : n.val = 2969) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2969 at hn
-  subst hn
+  have hn' : n = (2969 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29268,13 +28498,12 @@ theorem mem_iff_id_2969 (n : Fin 5011) (hn : n.val = 2969) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2970 (n : Fin 5011) (hn : n.val = 2970) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2970 at hn
-  subst hn
+  have hn' : n = (2970 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29306,13 +28535,12 @@ theorem mem_iff_id_2970 (n : Fin 5011) (hn : n.val = 2970) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2971 (n : Fin 5011) (hn : n.val = 2971) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2971 at hn
-  subst hn
+  have hn' : n = (2971 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29344,13 +28572,12 @@ theorem mem_iff_id_2971 (n : Fin 5011) (hn : n.val = 2971) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2972 (n : Fin 5011) (hn : n.val = 2972) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2972 at hn
-  subst hn
+  have hn' : n = (2972 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29382,13 +28609,12 @@ theorem mem_iff_id_2972 (n : Fin 5011) (hn : n.val = 2972) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2973 (n : Fin 5011) (hn : n.val = 2973) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2973 at hn
-  subst hn
+  have hn' : n = (2973 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29420,13 +28646,12 @@ theorem mem_iff_id_2973 (n : Fin 5011) (hn : n.val = 2973) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2974 (n : Fin 5011) (hn : n.val = 2974) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2974 at hn
-  subst hn
+  have hn' : n = (2974 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29458,13 +28683,12 @@ theorem mem_iff_id_2974 (n : Fin 5011) (hn : n.val = 2974) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2975 (n : Fin 5011) (hn : n.val = 2975) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2975 at hn
-  subst hn
+  have hn' : n = (2975 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29496,13 +28720,12 @@ theorem mem_iff_id_2975 (n : Fin 5011) (hn : n.val = 2975) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2976 (n : Fin 5011) (hn : n.val = 2976) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2976 at hn
-  subst hn
+  have hn' : n = (2976 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29534,13 +28757,12 @@ theorem mem_iff_id_2976 (n : Fin 5011) (hn : n.val = 2976) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2977 (n : Fin 5011) (hn : n.val = 2977) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2977 at hn
-  subst hn
+  have hn' : n = (2977 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29572,13 +28794,12 @@ theorem mem_iff_id_2977 (n : Fin 5011) (hn : n.val = 2977) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2978 (n : Fin 5011) (hn : n.val = 2978) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2978 at hn
-  subst hn
+  have hn' : n = (2978 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29610,13 +28831,12 @@ theorem mem_iff_id_2978 (n : Fin 5011) (hn : n.val = 2978) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2979 (n : Fin 5011) (hn : n.val = 2979) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2979 at hn
-  subst hn
+  have hn' : n = (2979 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29648,13 +28868,12 @@ theorem mem_iff_id_2979 (n : Fin 5011) (hn : n.val = 2979) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2980 (n : Fin 5011) (hn : n.val = 2980) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2980 at hn
-  subst hn
+  have hn' : n = (2980 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29686,13 +28905,12 @@ theorem mem_iff_id_2980 (n : Fin 5011) (hn : n.val = 2980) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2981 (n : Fin 5011) (hn : n.val = 2981) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2981 at hn
-  subst hn
+  have hn' : n = (2981 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29724,13 +28942,12 @@ theorem mem_iff_id_2981 (n : Fin 5011) (hn : n.val = 2981) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2982 (n : Fin 5011) (hn : n.val = 2982) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2982 at hn
-  subst hn
+  have hn' : n = (2982 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29762,13 +28979,12 @@ theorem mem_iff_id_2982 (n : Fin 5011) (hn : n.val = 2982) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2983 (n : Fin 5011) (hn : n.val = 2983) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2983 at hn
-  subst hn
+  have hn' : n = (2983 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29800,13 +29016,12 @@ theorem mem_iff_id_2983 (n : Fin 5011) (hn : n.val = 2983) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2984 (n : Fin 5011) (hn : n.val = 2984) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2984 at hn
-  subst hn
+  have hn' : n = (2984 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29838,13 +29053,12 @@ theorem mem_iff_id_2984 (n : Fin 5011) (hn : n.val = 2984) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2985 (n : Fin 5011) (hn : n.val = 2985) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2985 at hn
-  subst hn
+  have hn' : n = (2985 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29876,13 +29090,12 @@ theorem mem_iff_id_2985 (n : Fin 5011) (hn : n.val = 2985) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2986 (n : Fin 5011) (hn : n.val = 2986) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2986 at hn
-  subst hn
+  have hn' : n = (2986 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29914,13 +29127,12 @@ theorem mem_iff_id_2986 (n : Fin 5011) (hn : n.val = 2986) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2987 (n : Fin 5011) (hn : n.val = 2987) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2987 at hn
-  subst hn
+  have hn' : n = (2987 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29952,13 +29164,12 @@ theorem mem_iff_id_2987 (n : Fin 5011) (hn : n.val = 2987) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2988 (n : Fin 5011) (hn : n.val = 2988) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2988 at hn
-  subst hn
+  have hn' : n = (2988 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -29990,13 +29201,12 @@ theorem mem_iff_id_2988 (n : Fin 5011) (hn : n.val = 2988) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2989 (n : Fin 5011) (hn : n.val = 2989) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2989 at hn
-  subst hn
+  have hn' : n = (2989 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30028,13 +29238,12 @@ theorem mem_iff_id_2989 (n : Fin 5011) (hn : n.val = 2989) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2990 (n : Fin 5011) (hn : n.val = 2990) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2990 at hn
-  subst hn
+  have hn' : n = (2990 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30066,13 +29275,12 @@ theorem mem_iff_id_2990 (n : Fin 5011) (hn : n.val = 2990) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2991 (n : Fin 5011) (hn : n.val = 2991) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2991 at hn
-  subst hn
+  have hn' : n = (2991 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30104,13 +29312,12 @@ theorem mem_iff_id_2991 (n : Fin 5011) (hn : n.val = 2991) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2992 (n : Fin 5011) (hn : n.val = 2992) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2992 at hn
-  subst hn
+  have hn' : n = (2992 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30142,13 +29349,12 @@ theorem mem_iff_id_2992 (n : Fin 5011) (hn : n.val = 2992) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2993 (n : Fin 5011) (hn : n.val = 2993) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2993 at hn
-  subst hn
+  have hn' : n = (2993 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30180,13 +29386,12 @@ theorem mem_iff_id_2993 (n : Fin 5011) (hn : n.val = 2993) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2994 (n : Fin 5011) (hn : n.val = 2994) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2994 at hn
-  subst hn
+  have hn' : n = (2994 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30218,13 +29423,12 @@ theorem mem_iff_id_2994 (n : Fin 5011) (hn : n.val = 2994) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2995 (n : Fin 5011) (hn : n.val = 2995) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2995 at hn
-  subst hn
+  have hn' : n = (2995 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30256,13 +29460,12 @@ theorem mem_iff_id_2995 (n : Fin 5011) (hn : n.val = 2995) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2996 (n : Fin 5011) (hn : n.val = 2996) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2996 at hn
-  subst hn
+  have hn' : n = (2996 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30294,13 +29497,12 @@ theorem mem_iff_id_2996 (n : Fin 5011) (hn : n.val = 2996) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2997 (n : Fin 5011) (hn : n.val = 2997) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2997 at hn
-  subst hn
+  have hn' : n = (2997 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30332,13 +29534,12 @@ theorem mem_iff_id_2997 (n : Fin 5011) (hn : n.val = 2997) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2998 (n : Fin 5011) (hn : n.val = 2998) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2998 at hn
-  subst hn
+  have hn' : n = (2998 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30370,13 +29571,12 @@ theorem mem_iff_id_2998 (n : Fin 5011) (hn : n.val = 2998) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_2999 (n : Fin 5011) (hn : n.val = 2999) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 2999 at hn
-  subst hn
+  have hn' : n = (2999 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30408,13 +29608,12 @@ theorem mem_iff_id_2999 (n : Fin 5011) (hn : n.val = 2999) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3300 (n : Fin 5011) (hn : n.val = 3300) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3300 at hn
-  subst hn
+  have hn' : n = (3300 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30446,13 +29645,12 @@ theorem mem_iff_id_3300 (n : Fin 5011) (hn : n.val = 3300) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3301 (n : Fin 5011) (hn : n.val = 3301) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3301 at hn
-  subst hn
+  have hn' : n = (3301 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30484,13 +29682,12 @@ theorem mem_iff_id_3301 (n : Fin 5011) (hn : n.val = 3301) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3302 (n : Fin 5011) (hn : n.val = 3302) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3302 at hn
-  subst hn
+  have hn' : n = (3302 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30522,13 +29719,12 @@ theorem mem_iff_id_3302 (n : Fin 5011) (hn : n.val = 3302) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3303 (n : Fin 5011) (hn : n.val = 3303) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3303 at hn
-  subst hn
+  have hn' : n = (3303 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30560,13 +29756,12 @@ theorem mem_iff_id_3303 (n : Fin 5011) (hn : n.val = 3303) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3304 (n : Fin 5011) (hn : n.val = 3304) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3304 at hn
-  subst hn
+  have hn' : n = (3304 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30598,13 +29793,12 @@ theorem mem_iff_id_3304 (n : Fin 5011) (hn : n.val = 3304) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3305 (n : Fin 5011) (hn : n.val = 3305) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3305 at hn
-  subst hn
+  have hn' : n = (3305 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30636,13 +29830,12 @@ theorem mem_iff_id_3305 (n : Fin 5011) (hn : n.val = 3305) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3306 (n : Fin 5011) (hn : n.val = 3306) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3306 at hn
-  subst hn
+  have hn' : n = (3306 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30674,13 +29867,12 @@ theorem mem_iff_id_3306 (n : Fin 5011) (hn : n.val = 3306) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3307 (n : Fin 5011) (hn : n.val = 3307) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3307 at hn
-  subst hn
+  have hn' : n = (3307 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30712,13 +29904,12 @@ theorem mem_iff_id_3307 (n : Fin 5011) (hn : n.val = 3307) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3308 (n : Fin 5011) (hn : n.val = 3308) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3308 at hn
-  subst hn
+  have hn' : n = (3308 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30750,13 +29941,12 @@ theorem mem_iff_id_3308 (n : Fin 5011) (hn : n.val = 3308) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3309 (n : Fin 5011) (hn : n.val = 3309) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3309 at hn
-  subst hn
+  have hn' : n = (3309 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30788,13 +29978,12 @@ theorem mem_iff_id_3309 (n : Fin 5011) (hn : n.val = 3309) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3310 (n : Fin 5011) (hn : n.val = 3310) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3310 at hn
-  subst hn
+  have hn' : n = (3310 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30826,13 +30015,12 @@ theorem mem_iff_id_3310 (n : Fin 5011) (hn : n.val = 3310) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3311 (n : Fin 5011) (hn : n.val = 3311) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3311 at hn
-  subst hn
+  have hn' : n = (3311 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30864,13 +30052,12 @@ theorem mem_iff_id_3311 (n : Fin 5011) (hn : n.val = 3311) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3312 (n : Fin 5011) (hn : n.val = 3312) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3312 at hn
-  subst hn
+  have hn' : n = (3312 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30902,13 +30089,12 @@ theorem mem_iff_id_3312 (n : Fin 5011) (hn : n.val = 3312) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3313 (n : Fin 5011) (hn : n.val = 3313) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3313 at hn
-  subst hn
+  have hn' : n = (3313 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30940,13 +30126,12 @@ theorem mem_iff_id_3313 (n : Fin 5011) (hn : n.val = 3313) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3314 (n : Fin 5011) (hn : n.val = 3314) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3314 at hn
-  subst hn
+  have hn' : n = (3314 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -30978,13 +30163,12 @@ theorem mem_iff_id_3314 (n : Fin 5011) (hn : n.val = 3314) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3315 (n : Fin 5011) (hn : n.val = 3315) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3315 at hn
-  subst hn
+  have hn' : n = (3315 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31016,13 +30200,12 @@ theorem mem_iff_id_3315 (n : Fin 5011) (hn : n.val = 3315) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3316 (n : Fin 5011) (hn : n.val = 3316) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3316 at hn
-  subst hn
+  have hn' : n = (3316 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31054,13 +30237,12 @@ theorem mem_iff_id_3316 (n : Fin 5011) (hn : n.val = 3316) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3317 (n : Fin 5011) (hn : n.val = 3317) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3317 at hn
-  subst hn
+  have hn' : n = (3317 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31092,13 +30274,12 @@ theorem mem_iff_id_3317 (n : Fin 5011) (hn : n.val = 3317) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3318 (n : Fin 5011) (hn : n.val = 3318) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3318 at hn
-  subst hn
+  have hn' : n = (3318 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31130,13 +30311,12 @@ theorem mem_iff_id_3318 (n : Fin 5011) (hn : n.val = 3318) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3319 (n : Fin 5011) (hn : n.val = 3319) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3319 at hn
-  subst hn
+  have hn' : n = (3319 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31168,13 +30348,12 @@ theorem mem_iff_id_3319 (n : Fin 5011) (hn : n.val = 3319) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3320 (n : Fin 5011) (hn : n.val = 3320) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3320 at hn
-  subst hn
+  have hn' : n = (3320 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31206,13 +30385,12 @@ theorem mem_iff_id_3320 (n : Fin 5011) (hn : n.val = 3320) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3321 (n : Fin 5011) (hn : n.val = 3321) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3321 at hn
-  subst hn
+  have hn' : n = (3321 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31244,13 +30422,12 @@ theorem mem_iff_id_3321 (n : Fin 5011) (hn : n.val = 3321) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3322 (n : Fin 5011) (hn : n.val = 3322) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3322 at hn
-  subst hn
+  have hn' : n = (3322 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31282,13 +30459,12 @@ theorem mem_iff_id_3322 (n : Fin 5011) (hn : n.val = 3322) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3323 (n : Fin 5011) (hn : n.val = 3323) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3323 at hn
-  subst hn
+  have hn' : n = (3323 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31320,13 +30496,12 @@ theorem mem_iff_id_3323 (n : Fin 5011) (hn : n.val = 3323) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3324 (n : Fin 5011) (hn : n.val = 3324) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3324 at hn
-  subst hn
+  have hn' : n = (3324 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31358,13 +30533,12 @@ theorem mem_iff_id_3324 (n : Fin 5011) (hn : n.val = 3324) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3325 (n : Fin 5011) (hn : n.val = 3325) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3325 at hn
-  subst hn
+  have hn' : n = (3325 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31396,13 +30570,12 @@ theorem mem_iff_id_3325 (n : Fin 5011) (hn : n.val = 3325) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3326 (n : Fin 5011) (hn : n.val = 3326) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3326 at hn
-  subst hn
+  have hn' : n = (3326 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31434,13 +30607,12 @@ theorem mem_iff_id_3326 (n : Fin 5011) (hn : n.val = 3326) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3327 (n : Fin 5011) (hn : n.val = 3327) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3327 at hn
-  subst hn
+  have hn' : n = (3327 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31472,13 +30644,12 @@ theorem mem_iff_id_3327 (n : Fin 5011) (hn : n.val = 3327) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3328 (n : Fin 5011) (hn : n.val = 3328) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3328 at hn
-  subst hn
+  have hn' : n = (3328 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31510,13 +30681,12 @@ theorem mem_iff_id_3328 (n : Fin 5011) (hn : n.val = 3328) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3329 (n : Fin 5011) (hn : n.val = 3329) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3329 at hn
-  subst hn
+  have hn' : n = (3329 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31548,13 +30718,12 @@ theorem mem_iff_id_3329 (n : Fin 5011) (hn : n.val = 3329) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3330 (n : Fin 5011) (hn : n.val = 3330) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3330 at hn
-  subst hn
+  have hn' : n = (3330 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31586,13 +30755,12 @@ theorem mem_iff_id_3330 (n : Fin 5011) (hn : n.val = 3330) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3331 (n : Fin 5011) (hn : n.val = 3331) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3331 at hn
-  subst hn
+  have hn' : n = (3331 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31624,13 +30792,12 @@ theorem mem_iff_id_3331 (n : Fin 5011) (hn : n.val = 3331) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3332 (n : Fin 5011) (hn : n.val = 3332) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3332 at hn
-  subst hn
+  have hn' : n = (3332 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31662,13 +30829,12 @@ theorem mem_iff_id_3332 (n : Fin 5011) (hn : n.val = 3332) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3333 (n : Fin 5011) (hn : n.val = 3333) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3333 at hn
-  subst hn
+  have hn' : n = (3333 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31700,13 +30866,12 @@ theorem mem_iff_id_3333 (n : Fin 5011) (hn : n.val = 3333) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3334 (n : Fin 5011) (hn : n.val = 3334) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3334 at hn
-  subst hn
+  have hn' : n = (3334 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31738,13 +30903,12 @@ theorem mem_iff_id_3334 (n : Fin 5011) (hn : n.val = 3334) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3335 (n : Fin 5011) (hn : n.val = 3335) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3335 at hn
-  subst hn
+  have hn' : n = (3335 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31776,13 +30940,12 @@ theorem mem_iff_id_3335 (n : Fin 5011) (hn : n.val = 3335) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3336 (n : Fin 5011) (hn : n.val = 3336) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3336 at hn
-  subst hn
+  have hn' : n = (3336 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31814,13 +30977,12 @@ theorem mem_iff_id_3336 (n : Fin 5011) (hn : n.val = 3336) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3337 (n : Fin 5011) (hn : n.val = 3337) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3337 at hn
-  subst hn
+  have hn' : n = (3337 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31852,13 +31014,12 @@ theorem mem_iff_id_3337 (n : Fin 5011) (hn : n.val = 3337) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3338 (n : Fin 5011) (hn : n.val = 3338) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3338 at hn
-  subst hn
+  have hn' : n = (3338 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31890,13 +31051,12 @@ theorem mem_iff_id_3338 (n : Fin 5011) (hn : n.val = 3338) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3339 (n : Fin 5011) (hn : n.val = 3339) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3339 at hn
-  subst hn
+  have hn' : n = (3339 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31928,13 +31088,12 @@ theorem mem_iff_id_3339 (n : Fin 5011) (hn : n.val = 3339) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3340 (n : Fin 5011) (hn : n.val = 3340) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3340 at hn
-  subst hn
+  have hn' : n = (3340 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -31966,13 +31125,12 @@ theorem mem_iff_id_3340 (n : Fin 5011) (hn : n.val = 3340) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3341 (n : Fin 5011) (hn : n.val = 3341) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3341 at hn
-  subst hn
+  have hn' : n = (3341 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32004,13 +31162,12 @@ theorem mem_iff_id_3341 (n : Fin 5011) (hn : n.val = 3341) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3342 (n : Fin 5011) (hn : n.val = 3342) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3342 at hn
-  subst hn
+  have hn' : n = (3342 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32042,13 +31199,12 @@ theorem mem_iff_id_3342 (n : Fin 5011) (hn : n.val = 3342) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3343 (n : Fin 5011) (hn : n.val = 3343) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3343 at hn
-  subst hn
+  have hn' : n = (3343 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32080,13 +31236,12 @@ theorem mem_iff_id_3343 (n : Fin 5011) (hn : n.val = 3343) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3344 (n : Fin 5011) (hn : n.val = 3344) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3344 at hn
-  subst hn
+  have hn' : n = (3344 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32118,13 +31273,12 @@ theorem mem_iff_id_3344 (n : Fin 5011) (hn : n.val = 3344) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3345 (n : Fin 5011) (hn : n.val = 3345) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3345 at hn
-  subst hn
+  have hn' : n = (3345 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32156,13 +31310,12 @@ theorem mem_iff_id_3345 (n : Fin 5011) (hn : n.val = 3345) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3346 (n : Fin 5011) (hn : n.val = 3346) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3346 at hn
-  subst hn
+  have hn' : n = (3346 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32194,13 +31347,12 @@ theorem mem_iff_id_3346 (n : Fin 5011) (hn : n.val = 3346) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3347 (n : Fin 5011) (hn : n.val = 3347) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3347 at hn
-  subst hn
+  have hn' : n = (3347 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32232,13 +31384,12 @@ theorem mem_iff_id_3347 (n : Fin 5011) (hn : n.val = 3347) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3348 (n : Fin 5011) (hn : n.val = 3348) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3348 at hn
-  subst hn
+  have hn' : n = (3348 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32270,13 +31421,12 @@ theorem mem_iff_id_3348 (n : Fin 5011) (hn : n.val = 3348) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3349 (n : Fin 5011) (hn : n.val = 3349) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3349 at hn
-  subst hn
+  have hn' : n = (3349 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32308,13 +31458,12 @@ theorem mem_iff_id_3349 (n : Fin 5011) (hn : n.val = 3349) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3350 (n : Fin 5011) (hn : n.val = 3350) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3350 at hn
-  subst hn
+  have hn' : n = (3350 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32346,13 +31495,12 @@ theorem mem_iff_id_3350 (n : Fin 5011) (hn : n.val = 3350) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3351 (n : Fin 5011) (hn : n.val = 3351) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3351 at hn
-  subst hn
+  have hn' : n = (3351 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32384,13 +31532,12 @@ theorem mem_iff_id_3351 (n : Fin 5011) (hn : n.val = 3351) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3352 (n : Fin 5011) (hn : n.val = 3352) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3352 at hn
-  subst hn
+  have hn' : n = (3352 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32422,13 +31569,12 @@ theorem mem_iff_id_3352 (n : Fin 5011) (hn : n.val = 3352) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3353 (n : Fin 5011) (hn : n.val = 3353) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3353 at hn
-  subst hn
+  have hn' : n = (3353 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32460,13 +31606,12 @@ theorem mem_iff_id_3353 (n : Fin 5011) (hn : n.val = 3353) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3354 (n : Fin 5011) (hn : n.val = 3354) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3354 at hn
-  subst hn
+  have hn' : n = (3354 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32498,13 +31643,12 @@ theorem mem_iff_id_3354 (n : Fin 5011) (hn : n.val = 3354) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3355 (n : Fin 5011) (hn : n.val = 3355) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3355 at hn
-  subst hn
+  have hn' : n = (3355 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32536,13 +31680,12 @@ theorem mem_iff_id_3355 (n : Fin 5011) (hn : n.val = 3355) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3356 (n : Fin 5011) (hn : n.val = 3356) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3356 at hn
-  subst hn
+  have hn' : n = (3356 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32574,13 +31717,12 @@ theorem mem_iff_id_3356 (n : Fin 5011) (hn : n.val = 3356) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3357 (n : Fin 5011) (hn : n.val = 3357) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3357 at hn
-  subst hn
+  have hn' : n = (3357 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32612,13 +31754,12 @@ theorem mem_iff_id_3357 (n : Fin 5011) (hn : n.val = 3357) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3358 (n : Fin 5011) (hn : n.val = 3358) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3358 at hn
-  subst hn
+  have hn' : n = (3358 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32650,13 +31791,12 @@ theorem mem_iff_id_3358 (n : Fin 5011) (hn : n.val = 3358) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3359 (n : Fin 5011) (hn : n.val = 3359) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3359 at hn
-  subst hn
+  have hn' : n = (3359 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32688,13 +31828,12 @@ theorem mem_iff_id_3359 (n : Fin 5011) (hn : n.val = 3359) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3360 (n : Fin 5011) (hn : n.val = 3360) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3360 at hn
-  subst hn
+  have hn' : n = (3360 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32726,13 +31865,12 @@ theorem mem_iff_id_3360 (n : Fin 5011) (hn : n.val = 3360) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3361 (n : Fin 5011) (hn : n.val = 3361) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3361 at hn
-  subst hn
+  have hn' : n = (3361 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32764,13 +31902,12 @@ theorem mem_iff_id_3361 (n : Fin 5011) (hn : n.val = 3361) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3362 (n : Fin 5011) (hn : n.val = 3362) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3362 at hn
-  subst hn
+  have hn' : n = (3362 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32802,13 +31939,12 @@ theorem mem_iff_id_3362 (n : Fin 5011) (hn : n.val = 3362) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3363 (n : Fin 5011) (hn : n.val = 3363) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3363 at hn
-  subst hn
+  have hn' : n = (3363 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32840,13 +31976,12 @@ theorem mem_iff_id_3363 (n : Fin 5011) (hn : n.val = 3363) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3364 (n : Fin 5011) (hn : n.val = 3364) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3364 at hn
-  subst hn
+  have hn' : n = (3364 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32878,13 +32013,12 @@ theorem mem_iff_id_3364 (n : Fin 5011) (hn : n.val = 3364) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3365 (n : Fin 5011) (hn : n.val = 3365) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3365 at hn
-  subst hn
+  have hn' : n = (3365 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32916,13 +32050,12 @@ theorem mem_iff_id_3365 (n : Fin 5011) (hn : n.val = 3365) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3366 (n : Fin 5011) (hn : n.val = 3366) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3366 at hn
-  subst hn
+  have hn' : n = (3366 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32954,13 +32087,12 @@ theorem mem_iff_id_3366 (n : Fin 5011) (hn : n.val = 3366) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3367 (n : Fin 5011) (hn : n.val = 3367) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3367 at hn
-  subst hn
+  have hn' : n = (3367 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -32992,13 +32124,12 @@ theorem mem_iff_id_3367 (n : Fin 5011) (hn : n.val = 3367) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3368 (n : Fin 5011) (hn : n.val = 3368) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3368 at hn
-  subst hn
+  have hn' : n = (3368 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33030,13 +32161,12 @@ theorem mem_iff_id_3368 (n : Fin 5011) (hn : n.val = 3368) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3369 (n : Fin 5011) (hn : n.val = 3369) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3369 at hn
-  subst hn
+  have hn' : n = (3369 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33068,13 +32198,12 @@ theorem mem_iff_id_3369 (n : Fin 5011) (hn : n.val = 3369) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3370 (n : Fin 5011) (hn : n.val = 3370) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3370 at hn
-  subst hn
+  have hn' : n = (3370 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33106,13 +32235,12 @@ theorem mem_iff_id_3370 (n : Fin 5011) (hn : n.val = 3370) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3371 (n : Fin 5011) (hn : n.val = 3371) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3371 at hn
-  subst hn
+  have hn' : n = (3371 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33144,13 +32272,12 @@ theorem mem_iff_id_3371 (n : Fin 5011) (hn : n.val = 3371) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3372 (n : Fin 5011) (hn : n.val = 3372) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3372 at hn
-  subst hn
+  have hn' : n = (3372 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33182,13 +32309,12 @@ theorem mem_iff_id_3372 (n : Fin 5011) (hn : n.val = 3372) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3373 (n : Fin 5011) (hn : n.val = 3373) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3373 at hn
-  subst hn
+  have hn' : n = (3373 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33220,13 +32346,12 @@ theorem mem_iff_id_3373 (n : Fin 5011) (hn : n.val = 3373) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3374 (n : Fin 5011) (hn : n.val = 3374) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3374 at hn
-  subst hn
+  have hn' : n = (3374 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33258,13 +32383,12 @@ theorem mem_iff_id_3374 (n : Fin 5011) (hn : n.val = 3374) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3375 (n : Fin 5011) (hn : n.val = 3375) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3375 at hn
-  subst hn
+  have hn' : n = (3375 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33296,13 +32420,12 @@ theorem mem_iff_id_3375 (n : Fin 5011) (hn : n.val = 3375) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3376 (n : Fin 5011) (hn : n.val = 3376) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3376 at hn
-  subst hn
+  have hn' : n = (3376 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33334,13 +32457,12 @@ theorem mem_iff_id_3376 (n : Fin 5011) (hn : n.val = 3376) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3377 (n : Fin 5011) (hn : n.val = 3377) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3377 at hn
-  subst hn
+  have hn' : n = (3377 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33372,13 +32494,12 @@ theorem mem_iff_id_3377 (n : Fin 5011) (hn : n.val = 3377) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3378 (n : Fin 5011) (hn : n.val = 3378) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3378 at hn
-  subst hn
+  have hn' : n = (3378 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33410,13 +32531,12 @@ theorem mem_iff_id_3378 (n : Fin 5011) (hn : n.val = 3378) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3379 (n : Fin 5011) (hn : n.val = 3379) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3379 at hn
-  subst hn
+  have hn' : n = (3379 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33448,13 +32568,12 @@ theorem mem_iff_id_3379 (n : Fin 5011) (hn : n.val = 3379) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3380 (n : Fin 5011) (hn : n.val = 3380) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3380 at hn
-  subst hn
+  have hn' : n = (3380 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33486,13 +32605,12 @@ theorem mem_iff_id_3380 (n : Fin 5011) (hn : n.val = 3380) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3381 (n : Fin 5011) (hn : n.val = 3381) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3381 at hn
-  subst hn
+  have hn' : n = (3381 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33524,13 +32642,12 @@ theorem mem_iff_id_3381 (n : Fin 5011) (hn : n.val = 3381) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3382 (n : Fin 5011) (hn : n.val = 3382) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3382 at hn
-  subst hn
+  have hn' : n = (3382 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33562,13 +32679,12 @@ theorem mem_iff_id_3382 (n : Fin 5011) (hn : n.val = 3382) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3383 (n : Fin 5011) (hn : n.val = 3383) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3383 at hn
-  subst hn
+  have hn' : n = (3383 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33600,13 +32716,12 @@ theorem mem_iff_id_3383 (n : Fin 5011) (hn : n.val = 3383) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3384 (n : Fin 5011) (hn : n.val = 3384) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3384 at hn
-  subst hn
+  have hn' : n = (3384 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33638,13 +32753,12 @@ theorem mem_iff_id_3384 (n : Fin 5011) (hn : n.val = 3384) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3385 (n : Fin 5011) (hn : n.val = 3385) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3385 at hn
-  subst hn
+  have hn' : n = (3385 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33676,13 +32790,12 @@ theorem mem_iff_id_3385 (n : Fin 5011) (hn : n.val = 3385) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3386 (n : Fin 5011) (hn : n.val = 3386) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3386 at hn
-  subst hn
+  have hn' : n = (3386 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33714,13 +32827,12 @@ theorem mem_iff_id_3386 (n : Fin 5011) (hn : n.val = 3386) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3387 (n : Fin 5011) (hn : n.val = 3387) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3387 at hn
-  subst hn
+  have hn' : n = (3387 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33752,13 +32864,12 @@ theorem mem_iff_id_3387 (n : Fin 5011) (hn : n.val = 3387) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3388 (n : Fin 5011) (hn : n.val = 3388) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3388 at hn
-  subst hn
+  have hn' : n = (3388 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33790,13 +32901,12 @@ theorem mem_iff_id_3388 (n : Fin 5011) (hn : n.val = 3388) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3389 (n : Fin 5011) (hn : n.val = 3389) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3389 at hn
-  subst hn
+  have hn' : n = (3389 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33828,13 +32938,12 @@ theorem mem_iff_id_3389 (n : Fin 5011) (hn : n.val = 3389) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3390 (n : Fin 5011) (hn : n.val = 3390) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3390 at hn
-  subst hn
+  have hn' : n = (3390 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33866,13 +32975,12 @@ theorem mem_iff_id_3390 (n : Fin 5011) (hn : n.val = 3390) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3391 (n : Fin 5011) (hn : n.val = 3391) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3391 at hn
-  subst hn
+  have hn' : n = (3391 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33904,13 +33012,12 @@ theorem mem_iff_id_3391 (n : Fin 5011) (hn : n.val = 3391) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3392 (n : Fin 5011) (hn : n.val = 3392) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3392 at hn
-  subst hn
+  have hn' : n = (3392 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33942,13 +33049,12 @@ theorem mem_iff_id_3392 (n : Fin 5011) (hn : n.val = 3392) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3393 (n : Fin 5011) (hn : n.val = 3393) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3393 at hn
-  subst hn
+  have hn' : n = (3393 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -33980,13 +33086,12 @@ theorem mem_iff_id_3393 (n : Fin 5011) (hn : n.val = 3393) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3394 (n : Fin 5011) (hn : n.val = 3394) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3394 at hn
-  subst hn
+  have hn' : n = (3394 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34018,13 +33123,12 @@ theorem mem_iff_id_3394 (n : Fin 5011) (hn : n.val = 3394) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3395 (n : Fin 5011) (hn : n.val = 3395) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3395 at hn
-  subst hn
+  have hn' : n = (3395 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34056,13 +33160,12 @@ theorem mem_iff_id_3395 (n : Fin 5011) (hn : n.val = 3395) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3396 (n : Fin 5011) (hn : n.val = 3396) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3396 at hn
-  subst hn
+  have hn' : n = (3396 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34094,13 +33197,12 @@ theorem mem_iff_id_3396 (n : Fin 5011) (hn : n.val = 3396) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3397 (n : Fin 5011) (hn : n.val = 3397) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3397 at hn
-  subst hn
+  have hn' : n = (3397 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34132,13 +33234,12 @@ theorem mem_iff_id_3397 (n : Fin 5011) (hn : n.val = 3397) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3398 (n : Fin 5011) (hn : n.val = 3398) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3398 at hn
-  subst hn
+  have hn' : n = (3398 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34170,13 +33271,12 @@ theorem mem_iff_id_3398 (n : Fin 5011) (hn : n.val = 3398) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3399 (n : Fin 5011) (hn : n.val = 3399) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3399 at hn
-  subst hn
+  have hn' : n = (3399 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34208,13 +33308,12 @@ theorem mem_iff_id_3399 (n : Fin 5011) (hn : n.val = 3399) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3700 (n : Fin 5011) (hn : n.val = 3700) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3700 at hn
-  subst hn
+  have hn' : n = (3700 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34246,13 +33345,12 @@ theorem mem_iff_id_3700 (n : Fin 5011) (hn : n.val = 3700) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3701 (n : Fin 5011) (hn : n.val = 3701) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3701 at hn
-  subst hn
+  have hn' : n = (3701 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34284,13 +33382,12 @@ theorem mem_iff_id_3701 (n : Fin 5011) (hn : n.val = 3701) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3702 (n : Fin 5011) (hn : n.val = 3702) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3702 at hn
-  subst hn
+  have hn' : n = (3702 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34322,13 +33419,12 @@ theorem mem_iff_id_3702 (n : Fin 5011) (hn : n.val = 3702) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3703 (n : Fin 5011) (hn : n.val = 3703) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3703 at hn
-  subst hn
+  have hn' : n = (3703 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34360,13 +33456,12 @@ theorem mem_iff_id_3703 (n : Fin 5011) (hn : n.val = 3703) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3704 (n : Fin 5011) (hn : n.val = 3704) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3704 at hn
-  subst hn
+  have hn' : n = (3704 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34398,13 +33493,12 @@ theorem mem_iff_id_3704 (n : Fin 5011) (hn : n.val = 3704) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3705 (n : Fin 5011) (hn : n.val = 3705) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3705 at hn
-  subst hn
+  have hn' : n = (3705 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34436,13 +33530,12 @@ theorem mem_iff_id_3705 (n : Fin 5011) (hn : n.val = 3705) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3706 (n : Fin 5011) (hn : n.val = 3706) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3706 at hn
-  subst hn
+  have hn' : n = (3706 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34474,13 +33567,12 @@ theorem mem_iff_id_3706 (n : Fin 5011) (hn : n.val = 3706) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3707 (n : Fin 5011) (hn : n.val = 3707) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3707 at hn
-  subst hn
+  have hn' : n = (3707 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34512,13 +33604,12 @@ theorem mem_iff_id_3707 (n : Fin 5011) (hn : n.val = 3707) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3708 (n : Fin 5011) (hn : n.val = 3708) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3708 at hn
-  subst hn
+  have hn' : n = (3708 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34550,13 +33641,12 @@ theorem mem_iff_id_3708 (n : Fin 5011) (hn : n.val = 3708) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3709 (n : Fin 5011) (hn : n.val = 3709) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3709 at hn
-  subst hn
+  have hn' : n = (3709 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34588,13 +33678,12 @@ theorem mem_iff_id_3709 (n : Fin 5011) (hn : n.val = 3709) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3710 (n : Fin 5011) (hn : n.val = 3710) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3710 at hn
-  subst hn
+  have hn' : n = (3710 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34626,13 +33715,12 @@ theorem mem_iff_id_3710 (n : Fin 5011) (hn : n.val = 3710) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3711 (n : Fin 5011) (hn : n.val = 3711) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3711 at hn
-  subst hn
+  have hn' : n = (3711 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34664,13 +33752,12 @@ theorem mem_iff_id_3711 (n : Fin 5011) (hn : n.val = 3711) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3712 (n : Fin 5011) (hn : n.val = 3712) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3712 at hn
-  subst hn
+  have hn' : n = (3712 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34702,13 +33789,12 @@ theorem mem_iff_id_3712 (n : Fin 5011) (hn : n.val = 3712) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3713 (n : Fin 5011) (hn : n.val = 3713) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3713 at hn
-  subst hn
+  have hn' : n = (3713 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34740,13 +33826,12 @@ theorem mem_iff_id_3713 (n : Fin 5011) (hn : n.val = 3713) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3714 (n : Fin 5011) (hn : n.val = 3714) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3714 at hn
-  subst hn
+  have hn' : n = (3714 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34778,13 +33863,12 @@ theorem mem_iff_id_3714 (n : Fin 5011) (hn : n.val = 3714) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3715 (n : Fin 5011) (hn : n.val = 3715) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3715 at hn
-  subst hn
+  have hn' : n = (3715 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34816,13 +33900,12 @@ theorem mem_iff_id_3715 (n : Fin 5011) (hn : n.val = 3715) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3716 (n : Fin 5011) (hn : n.val = 3716) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3716 at hn
-  subst hn
+  have hn' : n = (3716 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34854,13 +33937,12 @@ theorem mem_iff_id_3716 (n : Fin 5011) (hn : n.val = 3716) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3717 (n : Fin 5011) (hn : n.val = 3717) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3717 at hn
-  subst hn
+  have hn' : n = (3717 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34892,13 +33974,12 @@ theorem mem_iff_id_3717 (n : Fin 5011) (hn : n.val = 3717) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3718 (n : Fin 5011) (hn : n.val = 3718) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3718 at hn
-  subst hn
+  have hn' : n = (3718 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34930,13 +34011,12 @@ theorem mem_iff_id_3718 (n : Fin 5011) (hn : n.val = 3718) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3719 (n : Fin 5011) (hn : n.val = 3719) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3719 at hn
-  subst hn
+  have hn' : n = (3719 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -34968,13 +34048,12 @@ theorem mem_iff_id_3719 (n : Fin 5011) (hn : n.val = 3719) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3720 (n : Fin 5011) (hn : n.val = 3720) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3720 at hn
-  subst hn
+  have hn' : n = (3720 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35006,13 +34085,12 @@ theorem mem_iff_id_3720 (n : Fin 5011) (hn : n.val = 3720) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3721 (n : Fin 5011) (hn : n.val = 3721) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3721 at hn
-  subst hn
+  have hn' : n = (3721 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35044,13 +34122,12 @@ theorem mem_iff_id_3721 (n : Fin 5011) (hn : n.val = 3721) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3722 (n : Fin 5011) (hn : n.val = 3722) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3722 at hn
-  subst hn
+  have hn' : n = (3722 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35082,13 +34159,12 @@ theorem mem_iff_id_3722 (n : Fin 5011) (hn : n.val = 3722) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3723 (n : Fin 5011) (hn : n.val = 3723) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3723 at hn
-  subst hn
+  have hn' : n = (3723 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35120,13 +34196,12 @@ theorem mem_iff_id_3723 (n : Fin 5011) (hn : n.val = 3723) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3724 (n : Fin 5011) (hn : n.val = 3724) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3724 at hn
-  subst hn
+  have hn' : n = (3724 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35158,13 +34233,12 @@ theorem mem_iff_id_3724 (n : Fin 5011) (hn : n.val = 3724) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3725 (n : Fin 5011) (hn : n.val = 3725) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3725 at hn
-  subst hn
+  have hn' : n = (3725 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35196,13 +34270,12 @@ theorem mem_iff_id_3725 (n : Fin 5011) (hn : n.val = 3725) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3726 (n : Fin 5011) (hn : n.val = 3726) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3726 at hn
-  subst hn
+  have hn' : n = (3726 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35234,13 +34307,12 @@ theorem mem_iff_id_3726 (n : Fin 5011) (hn : n.val = 3726) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3727 (n : Fin 5011) (hn : n.val = 3727) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3727 at hn
-  subst hn
+  have hn' : n = (3727 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35272,13 +34344,12 @@ theorem mem_iff_id_3727 (n : Fin 5011) (hn : n.val = 3727) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3728 (n : Fin 5011) (hn : n.val = 3728) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3728 at hn
-  subst hn
+  have hn' : n = (3728 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35310,13 +34381,12 @@ theorem mem_iff_id_3728 (n : Fin 5011) (hn : n.val = 3728) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3729 (n : Fin 5011) (hn : n.val = 3729) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3729 at hn
-  subst hn
+  have hn' : n = (3729 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35348,13 +34418,12 @@ theorem mem_iff_id_3729 (n : Fin 5011) (hn : n.val = 3729) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3730 (n : Fin 5011) (hn : n.val = 3730) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3730 at hn
-  subst hn
+  have hn' : n = (3730 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35386,13 +34455,12 @@ theorem mem_iff_id_3730 (n : Fin 5011) (hn : n.val = 3730) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3731 (n : Fin 5011) (hn : n.val = 3731) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3731 at hn
-  subst hn
+  have hn' : n = (3731 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35424,13 +34492,12 @@ theorem mem_iff_id_3731 (n : Fin 5011) (hn : n.val = 3731) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3732 (n : Fin 5011) (hn : n.val = 3732) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3732 at hn
-  subst hn
+  have hn' : n = (3732 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35462,13 +34529,12 @@ theorem mem_iff_id_3732 (n : Fin 5011) (hn : n.val = 3732) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3733 (n : Fin 5011) (hn : n.val = 3733) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3733 at hn
-  subst hn
+  have hn' : n = (3733 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35500,13 +34566,12 @@ theorem mem_iff_id_3733 (n : Fin 5011) (hn : n.val = 3733) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3734 (n : Fin 5011) (hn : n.val = 3734) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3734 at hn
-  subst hn
+  have hn' : n = (3734 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35538,13 +34603,12 @@ theorem mem_iff_id_3734 (n : Fin 5011) (hn : n.val = 3734) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3735 (n : Fin 5011) (hn : n.val = 3735) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3735 at hn
-  subst hn
+  have hn' : n = (3735 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35576,13 +34640,12 @@ theorem mem_iff_id_3735 (n : Fin 5011) (hn : n.val = 3735) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3736 (n : Fin 5011) (hn : n.val = 3736) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3736 at hn
-  subst hn
+  have hn' : n = (3736 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35614,13 +34677,12 @@ theorem mem_iff_id_3736 (n : Fin 5011) (hn : n.val = 3736) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3737 (n : Fin 5011) (hn : n.val = 3737) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3737 at hn
-  subst hn
+  have hn' : n = (3737 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35652,13 +34714,12 @@ theorem mem_iff_id_3737 (n : Fin 5011) (hn : n.val = 3737) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3738 (n : Fin 5011) (hn : n.val = 3738) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3738 at hn
-  subst hn
+  have hn' : n = (3738 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35690,13 +34751,12 @@ theorem mem_iff_id_3738 (n : Fin 5011) (hn : n.val = 3738) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3739 (n : Fin 5011) (hn : n.val = 3739) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3739 at hn
-  subst hn
+  have hn' : n = (3739 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35728,13 +34788,12 @@ theorem mem_iff_id_3739 (n : Fin 5011) (hn : n.val = 3739) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3740 (n : Fin 5011) (hn : n.val = 3740) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3740 at hn
-  subst hn
+  have hn' : n = (3740 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35766,13 +34825,12 @@ theorem mem_iff_id_3740 (n : Fin 5011) (hn : n.val = 3740) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3741 (n : Fin 5011) (hn : n.val = 3741) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3741 at hn
-  subst hn
+  have hn' : n = (3741 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35804,13 +34862,12 @@ theorem mem_iff_id_3741 (n : Fin 5011) (hn : n.val = 3741) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3742 (n : Fin 5011) (hn : n.val = 3742) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3742 at hn
-  subst hn
+  have hn' : n = (3742 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35842,13 +34899,12 @@ theorem mem_iff_id_3742 (n : Fin 5011) (hn : n.val = 3742) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3743 (n : Fin 5011) (hn : n.val = 3743) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3743 at hn
-  subst hn
+  have hn' : n = (3743 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35880,13 +34936,12 @@ theorem mem_iff_id_3743 (n : Fin 5011) (hn : n.val = 3743) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3744 (n : Fin 5011) (hn : n.val = 3744) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3744 at hn
-  subst hn
+  have hn' : n = (3744 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35918,13 +34973,12 @@ theorem mem_iff_id_3744 (n : Fin 5011) (hn : n.val = 3744) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3745 (n : Fin 5011) (hn : n.val = 3745) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3745 at hn
-  subst hn
+  have hn' : n = (3745 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35956,13 +35010,12 @@ theorem mem_iff_id_3745 (n : Fin 5011) (hn : n.val = 3745) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3746 (n : Fin 5011) (hn : n.val = 3746) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3746 at hn
-  subst hn
+  have hn' : n = (3746 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -35994,13 +35047,12 @@ theorem mem_iff_id_3746 (n : Fin 5011) (hn : n.val = 3746) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3747 (n : Fin 5011) (hn : n.val = 3747) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3747 at hn
-  subst hn
+  have hn' : n = (3747 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36032,13 +35084,12 @@ theorem mem_iff_id_3747 (n : Fin 5011) (hn : n.val = 3747) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3748 (n : Fin 5011) (hn : n.val = 3748) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3748 at hn
-  subst hn
+  have hn' : n = (3748 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36070,13 +35121,12 @@ theorem mem_iff_id_3748 (n : Fin 5011) (hn : n.val = 3748) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3749 (n : Fin 5011) (hn : n.val = 3749) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3749 at hn
-  subst hn
+  have hn' : n = (3749 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36108,13 +35158,12 @@ theorem mem_iff_id_3749 (n : Fin 5011) (hn : n.val = 3749) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3750 (n : Fin 5011) (hn : n.val = 3750) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3750 at hn
-  subst hn
+  have hn' : n = (3750 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36146,13 +35195,12 @@ theorem mem_iff_id_3750 (n : Fin 5011) (hn : n.val = 3750) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3751 (n : Fin 5011) (hn : n.val = 3751) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3751 at hn
-  subst hn
+  have hn' : n = (3751 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36184,13 +35232,12 @@ theorem mem_iff_id_3751 (n : Fin 5011) (hn : n.val = 3751) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3752 (n : Fin 5011) (hn : n.val = 3752) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3752 at hn
-  subst hn
+  have hn' : n = (3752 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36222,13 +35269,12 @@ theorem mem_iff_id_3752 (n : Fin 5011) (hn : n.val = 3752) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3753 (n : Fin 5011) (hn : n.val = 3753) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3753 at hn
-  subst hn
+  have hn' : n = (3753 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36260,13 +35306,12 @@ theorem mem_iff_id_3753 (n : Fin 5011) (hn : n.val = 3753) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3754 (n : Fin 5011) (hn : n.val = 3754) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3754 at hn
-  subst hn
+  have hn' : n = (3754 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36298,13 +35343,12 @@ theorem mem_iff_id_3754 (n : Fin 5011) (hn : n.val = 3754) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3755 (n : Fin 5011) (hn : n.val = 3755) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3755 at hn
-  subst hn
+  have hn' : n = (3755 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36336,13 +35380,12 @@ theorem mem_iff_id_3755 (n : Fin 5011) (hn : n.val = 3755) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3756 (n : Fin 5011) (hn : n.val = 3756) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3756 at hn
-  subst hn
+  have hn' : n = (3756 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36374,13 +35417,12 @@ theorem mem_iff_id_3756 (n : Fin 5011) (hn : n.val = 3756) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3757 (n : Fin 5011) (hn : n.val = 3757) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3757 at hn
-  subst hn
+  have hn' : n = (3757 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36412,13 +35454,12 @@ theorem mem_iff_id_3757 (n : Fin 5011) (hn : n.val = 3757) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3758 (n : Fin 5011) (hn : n.val = 3758) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3758 at hn
-  subst hn
+  have hn' : n = (3758 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36450,13 +35491,12 @@ theorem mem_iff_id_3758 (n : Fin 5011) (hn : n.val = 3758) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3759 (n : Fin 5011) (hn : n.val = 3759) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3759 at hn
-  subst hn
+  have hn' : n = (3759 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36488,13 +35528,12 @@ theorem mem_iff_id_3759 (n : Fin 5011) (hn : n.val = 3759) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3760 (n : Fin 5011) (hn : n.val = 3760) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3760 at hn
-  subst hn
+  have hn' : n = (3760 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36526,13 +35565,12 @@ theorem mem_iff_id_3760 (n : Fin 5011) (hn : n.val = 3760) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3761 (n : Fin 5011) (hn : n.val = 3761) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3761 at hn
-  subst hn
+  have hn' : n = (3761 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36564,13 +35602,12 @@ theorem mem_iff_id_3761 (n : Fin 5011) (hn : n.val = 3761) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3762 (n : Fin 5011) (hn : n.val = 3762) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3762 at hn
-  subst hn
+  have hn' : n = (3762 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36602,13 +35639,12 @@ theorem mem_iff_id_3762 (n : Fin 5011) (hn : n.val = 3762) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3763 (n : Fin 5011) (hn : n.val = 3763) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3763 at hn
-  subst hn
+  have hn' : n = (3763 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36640,13 +35676,12 @@ theorem mem_iff_id_3763 (n : Fin 5011) (hn : n.val = 3763) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3764 (n : Fin 5011) (hn : n.val = 3764) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3764 at hn
-  subst hn
+  have hn' : n = (3764 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36678,13 +35713,12 @@ theorem mem_iff_id_3764 (n : Fin 5011) (hn : n.val = 3764) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3765 (n : Fin 5011) (hn : n.val = 3765) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3765 at hn
-  subst hn
+  have hn' : n = (3765 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36716,13 +35750,12 @@ theorem mem_iff_id_3765 (n : Fin 5011) (hn : n.val = 3765) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3766 (n : Fin 5011) (hn : n.val = 3766) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3766 at hn
-  subst hn
+  have hn' : n = (3766 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36754,13 +35787,12 @@ theorem mem_iff_id_3766 (n : Fin 5011) (hn : n.val = 3766) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3767 (n : Fin 5011) (hn : n.val = 3767) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3767 at hn
-  subst hn
+  have hn' : n = (3767 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36792,13 +35824,12 @@ theorem mem_iff_id_3767 (n : Fin 5011) (hn : n.val = 3767) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3768 (n : Fin 5011) (hn : n.val = 3768) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3768 at hn
-  subst hn
+  have hn' : n = (3768 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36830,13 +35861,12 @@ theorem mem_iff_id_3768 (n : Fin 5011) (hn : n.val = 3768) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3769 (n : Fin 5011) (hn : n.val = 3769) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3769 at hn
-  subst hn
+  have hn' : n = (3769 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36868,13 +35898,12 @@ theorem mem_iff_id_3769 (n : Fin 5011) (hn : n.val = 3769) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3770 (n : Fin 5011) (hn : n.val = 3770) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3770 at hn
-  subst hn
+  have hn' : n = (3770 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36906,13 +35935,12 @@ theorem mem_iff_id_3770 (n : Fin 5011) (hn : n.val = 3770) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3771 (n : Fin 5011) (hn : n.val = 3771) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3771 at hn
-  subst hn
+  have hn' : n = (3771 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36944,13 +35972,12 @@ theorem mem_iff_id_3771 (n : Fin 5011) (hn : n.val = 3771) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3772 (n : Fin 5011) (hn : n.val = 3772) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3772 at hn
-  subst hn
+  have hn' : n = (3772 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -36982,13 +36009,12 @@ theorem mem_iff_id_3772 (n : Fin 5011) (hn : n.val = 3772) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3773 (n : Fin 5011) (hn : n.val = 3773) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3773 at hn
-  subst hn
+  have hn' : n = (3773 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37020,13 +36046,12 @@ theorem mem_iff_id_3773 (n : Fin 5011) (hn : n.val = 3773) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3774 (n : Fin 5011) (hn : n.val = 3774) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3774 at hn
-  subst hn
+  have hn' : n = (3774 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37058,13 +36083,12 @@ theorem mem_iff_id_3774 (n : Fin 5011) (hn : n.val = 3774) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3775 (n : Fin 5011) (hn : n.val = 3775) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3775 at hn
-  subst hn
+  have hn' : n = (3775 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37096,13 +36120,12 @@ theorem mem_iff_id_3775 (n : Fin 5011) (hn : n.val = 3775) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3776 (n : Fin 5011) (hn : n.val = 3776) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3776 at hn
-  subst hn
+  have hn' : n = (3776 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37134,13 +36157,12 @@ theorem mem_iff_id_3776 (n : Fin 5011) (hn : n.val = 3776) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3777 (n : Fin 5011) (hn : n.val = 3777) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3777 at hn
-  subst hn
+  have hn' : n = (3777 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37172,13 +36194,12 @@ theorem mem_iff_id_3777 (n : Fin 5011) (hn : n.val = 3777) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3778 (n : Fin 5011) (hn : n.val = 3778) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3778 at hn
-  subst hn
+  have hn' : n = (3778 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37210,13 +36231,12 @@ theorem mem_iff_id_3778 (n : Fin 5011) (hn : n.val = 3778) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3779 (n : Fin 5011) (hn : n.val = 3779) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3779 at hn
-  subst hn
+  have hn' : n = (3779 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37248,13 +36268,12 @@ theorem mem_iff_id_3779 (n : Fin 5011) (hn : n.val = 3779) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3780 (n : Fin 5011) (hn : n.val = 3780) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3780 at hn
-  subst hn
+  have hn' : n = (3780 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37286,13 +36305,12 @@ theorem mem_iff_id_3780 (n : Fin 5011) (hn : n.val = 3780) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3781 (n : Fin 5011) (hn : n.val = 3781) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3781 at hn
-  subst hn
+  have hn' : n = (3781 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37324,13 +36342,12 @@ theorem mem_iff_id_3781 (n : Fin 5011) (hn : n.val = 3781) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3782 (n : Fin 5011) (hn : n.val = 3782) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3782 at hn
-  subst hn
+  have hn' : n = (3782 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37362,13 +36379,12 @@ theorem mem_iff_id_3782 (n : Fin 5011) (hn : n.val = 3782) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3783 (n : Fin 5011) (hn : n.val = 3783) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3783 at hn
-  subst hn
+  have hn' : n = (3783 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37400,13 +36416,12 @@ theorem mem_iff_id_3783 (n : Fin 5011) (hn : n.val = 3783) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3784 (n : Fin 5011) (hn : n.val = 3784) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3784 at hn
-  subst hn
+  have hn' : n = (3784 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37438,13 +36453,12 @@ theorem mem_iff_id_3784 (n : Fin 5011) (hn : n.val = 3784) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3785 (n : Fin 5011) (hn : n.val = 3785) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3785 at hn
-  subst hn
+  have hn' : n = (3785 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37476,13 +36490,12 @@ theorem mem_iff_id_3785 (n : Fin 5011) (hn : n.val = 3785) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3786 (n : Fin 5011) (hn : n.val = 3786) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3786 at hn
-  subst hn
+  have hn' : n = (3786 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37514,13 +36527,12 @@ theorem mem_iff_id_3786 (n : Fin 5011) (hn : n.val = 3786) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3787 (n : Fin 5011) (hn : n.val = 3787) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3787 at hn
-  subst hn
+  have hn' : n = (3787 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37552,13 +36564,12 @@ theorem mem_iff_id_3787 (n : Fin 5011) (hn : n.val = 3787) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3788 (n : Fin 5011) (hn : n.val = 3788) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3788 at hn
-  subst hn
+  have hn' : n = (3788 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37590,13 +36601,12 @@ theorem mem_iff_id_3788 (n : Fin 5011) (hn : n.val = 3788) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3789 (n : Fin 5011) (hn : n.val = 3789) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3789 at hn
-  subst hn
+  have hn' : n = (3789 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37628,13 +36638,12 @@ theorem mem_iff_id_3789 (n : Fin 5011) (hn : n.val = 3789) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3790 (n : Fin 5011) (hn : n.val = 3790) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3790 at hn
-  subst hn
+  have hn' : n = (3790 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37666,13 +36675,12 @@ theorem mem_iff_id_3790 (n : Fin 5011) (hn : n.val = 3790) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3791 (n : Fin 5011) (hn : n.val = 3791) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3791 at hn
-  subst hn
+  have hn' : n = (3791 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37704,13 +36712,12 @@ theorem mem_iff_id_3791 (n : Fin 5011) (hn : n.val = 3791) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3792 (n : Fin 5011) (hn : n.val = 3792) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3792 at hn
-  subst hn
+  have hn' : n = (3792 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37742,13 +36749,12 @@ theorem mem_iff_id_3792 (n : Fin 5011) (hn : n.val = 3792) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3793 (n : Fin 5011) (hn : n.val = 3793) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3793 at hn
-  subst hn
+  have hn' : n = (3793 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37780,13 +36786,12 @@ theorem mem_iff_id_3793 (n : Fin 5011) (hn : n.val = 3793) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3794 (n : Fin 5011) (hn : n.val = 3794) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3794 at hn
-  subst hn
+  have hn' : n = (3794 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37818,13 +36823,12 @@ theorem mem_iff_id_3794 (n : Fin 5011) (hn : n.val = 3794) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3795 (n : Fin 5011) (hn : n.val = 3795) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3795 at hn
-  subst hn
+  have hn' : n = (3795 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37856,13 +36860,12 @@ theorem mem_iff_id_3795 (n : Fin 5011) (hn : n.val = 3795) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3796 (n : Fin 5011) (hn : n.val = 3796) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3796 at hn
-  subst hn
+  have hn' : n = (3796 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37894,13 +36897,12 @@ theorem mem_iff_id_3796 (n : Fin 5011) (hn : n.val = 3796) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3797 (n : Fin 5011) (hn : n.val = 3797) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3797 at hn
-  subst hn
+  have hn' : n = (3797 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37932,13 +36934,12 @@ theorem mem_iff_id_3797 (n : Fin 5011) (hn : n.val = 3797) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3798 (n : Fin 5011) (hn : n.val = 3798) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3798 at hn
-  subst hn
+  have hn' : n = (3798 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -37970,13 +36971,12 @@ theorem mem_iff_id_3798 (n : Fin 5011) (hn : n.val = 3798) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_3799 (n : Fin 5011) (hn : n.val = 3799) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 3799 at hn
-  subst hn
+  have hn' : n = (3799 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38008,13 +37008,12 @@ theorem mem_iff_id_3799 (n : Fin 5011) (hn : n.val = 3799) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4100 (n : Fin 5011) (hn : n.val = 4100) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4100 at hn
-  subst hn
+  have hn' : n = (4100 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38046,13 +37045,12 @@ theorem mem_iff_id_4100 (n : Fin 5011) (hn : n.val = 4100) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4101 (n : Fin 5011) (hn : n.val = 4101) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4101 at hn
-  subst hn
+  have hn' : n = (4101 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38084,13 +37082,12 @@ theorem mem_iff_id_4101 (n : Fin 5011) (hn : n.val = 4101) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4102 (n : Fin 5011) (hn : n.val = 4102) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4102 at hn
-  subst hn
+  have hn' : n = (4102 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38122,13 +37119,12 @@ theorem mem_iff_id_4102 (n : Fin 5011) (hn : n.val = 4102) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4103 (n : Fin 5011) (hn : n.val = 4103) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4103 at hn
-  subst hn
+  have hn' : n = (4103 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38160,13 +37156,12 @@ theorem mem_iff_id_4103 (n : Fin 5011) (hn : n.val = 4103) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4104 (n : Fin 5011) (hn : n.val = 4104) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4104 at hn
-  subst hn
+  have hn' : n = (4104 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38198,13 +37193,12 @@ theorem mem_iff_id_4104 (n : Fin 5011) (hn : n.val = 4104) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4105 (n : Fin 5011) (hn : n.val = 4105) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4105 at hn
-  subst hn
+  have hn' : n = (4105 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38236,13 +37230,12 @@ theorem mem_iff_id_4105 (n : Fin 5011) (hn : n.val = 4105) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4106 (n : Fin 5011) (hn : n.val = 4106) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4106 at hn
-  subst hn
+  have hn' : n = (4106 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38274,13 +37267,12 @@ theorem mem_iff_id_4106 (n : Fin 5011) (hn : n.val = 4106) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4107 (n : Fin 5011) (hn : n.val = 4107) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4107 at hn
-  subst hn
+  have hn' : n = (4107 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38312,13 +37304,12 @@ theorem mem_iff_id_4107 (n : Fin 5011) (hn : n.val = 4107) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4108 (n : Fin 5011) (hn : n.val = 4108) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4108 at hn
-  subst hn
+  have hn' : n = (4108 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38350,13 +37341,12 @@ theorem mem_iff_id_4108 (n : Fin 5011) (hn : n.val = 4108) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4109 (n : Fin 5011) (hn : n.val = 4109) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4109 at hn
-  subst hn
+  have hn' : n = (4109 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38388,13 +37378,12 @@ theorem mem_iff_id_4109 (n : Fin 5011) (hn : n.val = 4109) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4110 (n : Fin 5011) (hn : n.val = 4110) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4110 at hn
-  subst hn
+  have hn' : n = (4110 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38426,13 +37415,12 @@ theorem mem_iff_id_4110 (n : Fin 5011) (hn : n.val = 4110) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4111 (n : Fin 5011) (hn : n.val = 4111) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4111 at hn
-  subst hn
+  have hn' : n = (4111 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38464,13 +37452,12 @@ theorem mem_iff_id_4111 (n : Fin 5011) (hn : n.val = 4111) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4112 (n : Fin 5011) (hn : n.val = 4112) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4112 at hn
-  subst hn
+  have hn' : n = (4112 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38502,13 +37489,12 @@ theorem mem_iff_id_4112 (n : Fin 5011) (hn : n.val = 4112) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4113 (n : Fin 5011) (hn : n.val = 4113) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4113 at hn
-  subst hn
+  have hn' : n = (4113 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38540,13 +37526,12 @@ theorem mem_iff_id_4113 (n : Fin 5011) (hn : n.val = 4113) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4114 (n : Fin 5011) (hn : n.val = 4114) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4114 at hn
-  subst hn
+  have hn' : n = (4114 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38578,13 +37563,12 @@ theorem mem_iff_id_4114 (n : Fin 5011) (hn : n.val = 4114) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4115 (n : Fin 5011) (hn : n.val = 4115) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4115 at hn
-  subst hn
+  have hn' : n = (4115 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38616,13 +37600,12 @@ theorem mem_iff_id_4115 (n : Fin 5011) (hn : n.val = 4115) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4116 (n : Fin 5011) (hn : n.val = 4116) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4116 at hn
-  subst hn
+  have hn' : n = (4116 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38654,13 +37637,12 @@ theorem mem_iff_id_4116 (n : Fin 5011) (hn : n.val = 4116) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4117 (n : Fin 5011) (hn : n.val = 4117) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4117 at hn
-  subst hn
+  have hn' : n = (4117 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38692,13 +37674,12 @@ theorem mem_iff_id_4117 (n : Fin 5011) (hn : n.val = 4117) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4118 (n : Fin 5011) (hn : n.val = 4118) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4118 at hn
-  subst hn
+  have hn' : n = (4118 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38730,13 +37711,12 @@ theorem mem_iff_id_4118 (n : Fin 5011) (hn : n.val = 4118) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4119 (n : Fin 5011) (hn : n.val = 4119) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4119 at hn
-  subst hn
+  have hn' : n = (4119 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38768,13 +37748,12 @@ theorem mem_iff_id_4119 (n : Fin 5011) (hn : n.val = 4119) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4120 (n : Fin 5011) (hn : n.val = 4120) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4120 at hn
-  subst hn
+  have hn' : n = (4120 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38806,13 +37785,12 @@ theorem mem_iff_id_4120 (n : Fin 5011) (hn : n.val = 4120) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4121 (n : Fin 5011) (hn : n.val = 4121) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4121 at hn
-  subst hn
+  have hn' : n = (4121 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38844,13 +37822,12 @@ theorem mem_iff_id_4121 (n : Fin 5011) (hn : n.val = 4121) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4122 (n : Fin 5011) (hn : n.val = 4122) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4122 at hn
-  subst hn
+  have hn' : n = (4122 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38882,13 +37859,12 @@ theorem mem_iff_id_4122 (n : Fin 5011) (hn : n.val = 4122) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4123 (n : Fin 5011) (hn : n.val = 4123) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4123 at hn
-  subst hn
+  have hn' : n = (4123 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38920,13 +37896,12 @@ theorem mem_iff_id_4123 (n : Fin 5011) (hn : n.val = 4123) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4124 (n : Fin 5011) (hn : n.val = 4124) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4124 at hn
-  subst hn
+  have hn' : n = (4124 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38958,13 +37933,12 @@ theorem mem_iff_id_4124 (n : Fin 5011) (hn : n.val = 4124) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4125 (n : Fin 5011) (hn : n.val = 4125) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4125 at hn
-  subst hn
+  have hn' : n = (4125 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -38996,13 +37970,12 @@ theorem mem_iff_id_4125 (n : Fin 5011) (hn : n.val = 4125) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4126 (n : Fin 5011) (hn : n.val = 4126) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4126 at hn
-  subst hn
+  have hn' : n = (4126 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39034,13 +38007,12 @@ theorem mem_iff_id_4126 (n : Fin 5011) (hn : n.val = 4126) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4127 (n : Fin 5011) (hn : n.val = 4127) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4127 at hn
-  subst hn
+  have hn' : n = (4127 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39072,13 +38044,12 @@ theorem mem_iff_id_4127 (n : Fin 5011) (hn : n.val = 4127) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4128 (n : Fin 5011) (hn : n.val = 4128) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4128 at hn
-  subst hn
+  have hn' : n = (4128 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39110,13 +38081,12 @@ theorem mem_iff_id_4128 (n : Fin 5011) (hn : n.val = 4128) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4129 (n : Fin 5011) (hn : n.val = 4129) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4129 at hn
-  subst hn
+  have hn' : n = (4129 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39148,13 +38118,12 @@ theorem mem_iff_id_4129 (n : Fin 5011) (hn : n.val = 4129) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4130 (n : Fin 5011) (hn : n.val = 4130) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4130 at hn
-  subst hn
+  have hn' : n = (4130 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39186,13 +38155,12 @@ theorem mem_iff_id_4130 (n : Fin 5011) (hn : n.val = 4130) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4131 (n : Fin 5011) (hn : n.val = 4131) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4131 at hn
-  subst hn
+  have hn' : n = (4131 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39224,13 +38192,12 @@ theorem mem_iff_id_4131 (n : Fin 5011) (hn : n.val = 4131) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4132 (n : Fin 5011) (hn : n.val = 4132) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4132 at hn
-  subst hn
+  have hn' : n = (4132 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39262,13 +38229,12 @@ theorem mem_iff_id_4132 (n : Fin 5011) (hn : n.val = 4132) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4133 (n : Fin 5011) (hn : n.val = 4133) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4133 at hn
-  subst hn
+  have hn' : n = (4133 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39300,13 +38266,12 @@ theorem mem_iff_id_4133 (n : Fin 5011) (hn : n.val = 4133) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4134 (n : Fin 5011) (hn : n.val = 4134) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4134 at hn
-  subst hn
+  have hn' : n = (4134 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39338,13 +38303,12 @@ theorem mem_iff_id_4134 (n : Fin 5011) (hn : n.val = 4134) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4135 (n : Fin 5011) (hn : n.val = 4135) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4135 at hn
-  subst hn
+  have hn' : n = (4135 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39376,13 +38340,12 @@ theorem mem_iff_id_4135 (n : Fin 5011) (hn : n.val = 4135) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4136 (n : Fin 5011) (hn : n.val = 4136) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4136 at hn
-  subst hn
+  have hn' : n = (4136 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39414,13 +38377,12 @@ theorem mem_iff_id_4136 (n : Fin 5011) (hn : n.val = 4136) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4137 (n : Fin 5011) (hn : n.val = 4137) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4137 at hn
-  subst hn
+  have hn' : n = (4137 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39452,13 +38414,12 @@ theorem mem_iff_id_4137 (n : Fin 5011) (hn : n.val = 4137) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4138 (n : Fin 5011) (hn : n.val = 4138) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4138 at hn
-  subst hn
+  have hn' : n = (4138 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39490,13 +38451,12 @@ theorem mem_iff_id_4138 (n : Fin 5011) (hn : n.val = 4138) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4139 (n : Fin 5011) (hn : n.val = 4139) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4139 at hn
-  subst hn
+  have hn' : n = (4139 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39528,13 +38488,12 @@ theorem mem_iff_id_4139 (n : Fin 5011) (hn : n.val = 4139) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4140 (n : Fin 5011) (hn : n.val = 4140) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4140 at hn
-  subst hn
+  have hn' : n = (4140 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39566,13 +38525,12 @@ theorem mem_iff_id_4140 (n : Fin 5011) (hn : n.val = 4140) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4141 (n : Fin 5011) (hn : n.val = 4141) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4141 at hn
-  subst hn
+  have hn' : n = (4141 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39604,13 +38562,12 @@ theorem mem_iff_id_4141 (n : Fin 5011) (hn : n.val = 4141) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4142 (n : Fin 5011) (hn : n.val = 4142) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4142 at hn
-  subst hn
+  have hn' : n = (4142 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39642,13 +38599,12 @@ theorem mem_iff_id_4142 (n : Fin 5011) (hn : n.val = 4142) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4143 (n : Fin 5011) (hn : n.val = 4143) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4143 at hn
-  subst hn
+  have hn' : n = (4143 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39680,13 +38636,12 @@ theorem mem_iff_id_4143 (n : Fin 5011) (hn : n.val = 4143) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4144 (n : Fin 5011) (hn : n.val = 4144) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4144 at hn
-  subst hn
+  have hn' : n = (4144 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39718,13 +38673,12 @@ theorem mem_iff_id_4144 (n : Fin 5011) (hn : n.val = 4144) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4145 (n : Fin 5011) (hn : n.val = 4145) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4145 at hn
-  subst hn
+  have hn' : n = (4145 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39756,13 +38710,12 @@ theorem mem_iff_id_4145 (n : Fin 5011) (hn : n.val = 4145) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4146 (n : Fin 5011) (hn : n.val = 4146) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4146 at hn
-  subst hn
+  have hn' : n = (4146 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39794,13 +38747,12 @@ theorem mem_iff_id_4146 (n : Fin 5011) (hn : n.val = 4146) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4147 (n : Fin 5011) (hn : n.val = 4147) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4147 at hn
-  subst hn
+  have hn' : n = (4147 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39832,13 +38784,12 @@ theorem mem_iff_id_4147 (n : Fin 5011) (hn : n.val = 4147) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4148 (n : Fin 5011) (hn : n.val = 4148) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4148 at hn
-  subst hn
+  have hn' : n = (4148 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39870,13 +38821,12 @@ theorem mem_iff_id_4148 (n : Fin 5011) (hn : n.val = 4148) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4149 (n : Fin 5011) (hn : n.val = 4149) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4149 at hn
-  subst hn
+  have hn' : n = (4149 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39908,13 +38858,12 @@ theorem mem_iff_id_4149 (n : Fin 5011) (hn : n.val = 4149) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4150 (n : Fin 5011) (hn : n.val = 4150) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4150 at hn
-  subst hn
+  have hn' : n = (4150 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39946,13 +38895,12 @@ theorem mem_iff_id_4150 (n : Fin 5011) (hn : n.val = 4150) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4151 (n : Fin 5011) (hn : n.val = 4151) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4151 at hn
-  subst hn
+  have hn' : n = (4151 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -39984,13 +38932,12 @@ theorem mem_iff_id_4151 (n : Fin 5011) (hn : n.val = 4151) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4152 (n : Fin 5011) (hn : n.val = 4152) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4152 at hn
-  subst hn
+  have hn' : n = (4152 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40022,13 +38969,12 @@ theorem mem_iff_id_4152 (n : Fin 5011) (hn : n.val = 4152) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4153 (n : Fin 5011) (hn : n.val = 4153) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4153 at hn
-  subst hn
+  have hn' : n = (4153 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40060,13 +39006,12 @@ theorem mem_iff_id_4153 (n : Fin 5011) (hn : n.val = 4153) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4154 (n : Fin 5011) (hn : n.val = 4154) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4154 at hn
-  subst hn
+  have hn' : n = (4154 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40098,13 +39043,12 @@ theorem mem_iff_id_4154 (n : Fin 5011) (hn : n.val = 4154) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4155 (n : Fin 5011) (hn : n.val = 4155) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4155 at hn
-  subst hn
+  have hn' : n = (4155 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40136,13 +39080,12 @@ theorem mem_iff_id_4155 (n : Fin 5011) (hn : n.val = 4155) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4156 (n : Fin 5011) (hn : n.val = 4156) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4156 at hn
-  subst hn
+  have hn' : n = (4156 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40174,13 +39117,12 @@ theorem mem_iff_id_4156 (n : Fin 5011) (hn : n.val = 4156) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4157 (n : Fin 5011) (hn : n.val = 4157) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4157 at hn
-  subst hn
+  have hn' : n = (4157 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40212,13 +39154,12 @@ theorem mem_iff_id_4157 (n : Fin 5011) (hn : n.val = 4157) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4158 (n : Fin 5011) (hn : n.val = 4158) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4158 at hn
-  subst hn
+  have hn' : n = (4158 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40250,13 +39191,12 @@ theorem mem_iff_id_4158 (n : Fin 5011) (hn : n.val = 4158) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4159 (n : Fin 5011) (hn : n.val = 4159) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4159 at hn
-  subst hn
+  have hn' : n = (4159 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40288,13 +39228,12 @@ theorem mem_iff_id_4159 (n : Fin 5011) (hn : n.val = 4159) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4160 (n : Fin 5011) (hn : n.val = 4160) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4160 at hn
-  subst hn
+  have hn' : n = (4160 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40326,13 +39265,12 @@ theorem mem_iff_id_4160 (n : Fin 5011) (hn : n.val = 4160) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4161 (n : Fin 5011) (hn : n.val = 4161) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4161 at hn
-  subst hn
+  have hn' : n = (4161 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40364,13 +39302,12 @@ theorem mem_iff_id_4161 (n : Fin 5011) (hn : n.val = 4161) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4162 (n : Fin 5011) (hn : n.val = 4162) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4162 at hn
-  subst hn
+  have hn' : n = (4162 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40402,13 +39339,12 @@ theorem mem_iff_id_4162 (n : Fin 5011) (hn : n.val = 4162) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4163 (n : Fin 5011) (hn : n.val = 4163) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4163 at hn
-  subst hn
+  have hn' : n = (4163 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40440,13 +39376,12 @@ theorem mem_iff_id_4163 (n : Fin 5011) (hn : n.val = 4163) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4164 (n : Fin 5011) (hn : n.val = 4164) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4164 at hn
-  subst hn
+  have hn' : n = (4164 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40478,13 +39413,12 @@ theorem mem_iff_id_4164 (n : Fin 5011) (hn : n.val = 4164) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4165 (n : Fin 5011) (hn : n.val = 4165) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4165 at hn
-  subst hn
+  have hn' : n = (4165 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40516,13 +39450,12 @@ theorem mem_iff_id_4165 (n : Fin 5011) (hn : n.val = 4165) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4166 (n : Fin 5011) (hn : n.val = 4166) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4166 at hn
-  subst hn
+  have hn' : n = (4166 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40554,13 +39487,12 @@ theorem mem_iff_id_4166 (n : Fin 5011) (hn : n.val = 4166) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4167 (n : Fin 5011) (hn : n.val = 4167) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4167 at hn
-  subst hn
+  have hn' : n = (4167 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40592,13 +39524,12 @@ theorem mem_iff_id_4167 (n : Fin 5011) (hn : n.val = 4167) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4168 (n : Fin 5011) (hn : n.val = 4168) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4168 at hn
-  subst hn
+  have hn' : n = (4168 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40630,13 +39561,12 @@ theorem mem_iff_id_4168 (n : Fin 5011) (hn : n.val = 4168) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4169 (n : Fin 5011) (hn : n.val = 4169) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4169 at hn
-  subst hn
+  have hn' : n = (4169 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40668,13 +39598,12 @@ theorem mem_iff_id_4169 (n : Fin 5011) (hn : n.val = 4169) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4170 (n : Fin 5011) (hn : n.val = 4170) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4170 at hn
-  subst hn
+  have hn' : n = (4170 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40706,13 +39635,12 @@ theorem mem_iff_id_4170 (n : Fin 5011) (hn : n.val = 4170) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4171 (n : Fin 5011) (hn : n.val = 4171) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4171 at hn
-  subst hn
+  have hn' : n = (4171 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40744,13 +39672,12 @@ theorem mem_iff_id_4171 (n : Fin 5011) (hn : n.val = 4171) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4172 (n : Fin 5011) (hn : n.val = 4172) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4172 at hn
-  subst hn
+  have hn' : n = (4172 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40782,13 +39709,12 @@ theorem mem_iff_id_4172 (n : Fin 5011) (hn : n.val = 4172) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4173 (n : Fin 5011) (hn : n.val = 4173) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4173 at hn
-  subst hn
+  have hn' : n = (4173 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40820,13 +39746,12 @@ theorem mem_iff_id_4173 (n : Fin 5011) (hn : n.val = 4173) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4174 (n : Fin 5011) (hn : n.val = 4174) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4174 at hn
-  subst hn
+  have hn' : n = (4174 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40858,13 +39783,12 @@ theorem mem_iff_id_4174 (n : Fin 5011) (hn : n.val = 4174) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4175 (n : Fin 5011) (hn : n.val = 4175) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4175 at hn
-  subst hn
+  have hn' : n = (4175 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40896,13 +39820,12 @@ theorem mem_iff_id_4175 (n : Fin 5011) (hn : n.val = 4175) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4176 (n : Fin 5011) (hn : n.val = 4176) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4176 at hn
-  subst hn
+  have hn' : n = (4176 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40934,13 +39857,12 @@ theorem mem_iff_id_4176 (n : Fin 5011) (hn : n.val = 4176) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4177 (n : Fin 5011) (hn : n.val = 4177) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4177 at hn
-  subst hn
+  have hn' : n = (4177 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -40972,13 +39894,12 @@ theorem mem_iff_id_4177 (n : Fin 5011) (hn : n.val = 4177) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4178 (n : Fin 5011) (hn : n.val = 4178) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4178 at hn
-  subst hn
+  have hn' : n = (4178 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41010,13 +39931,12 @@ theorem mem_iff_id_4178 (n : Fin 5011) (hn : n.val = 4178) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4179 (n : Fin 5011) (hn : n.val = 4179) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4179 at hn
-  subst hn
+  have hn' : n = (4179 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41048,13 +39968,12 @@ theorem mem_iff_id_4179 (n : Fin 5011) (hn : n.val = 4179) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4180 (n : Fin 5011) (hn : n.val = 4180) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4180 at hn
-  subst hn
+  have hn' : n = (4180 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41086,13 +40005,12 @@ theorem mem_iff_id_4180 (n : Fin 5011) (hn : n.val = 4180) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4181 (n : Fin 5011) (hn : n.val = 4181) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4181 at hn
-  subst hn
+  have hn' : n = (4181 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41124,13 +40042,12 @@ theorem mem_iff_id_4181 (n : Fin 5011) (hn : n.val = 4181) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4182 (n : Fin 5011) (hn : n.val = 4182) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4182 at hn
-  subst hn
+  have hn' : n = (4182 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41162,13 +40079,12 @@ theorem mem_iff_id_4182 (n : Fin 5011) (hn : n.val = 4182) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4183 (n : Fin 5011) (hn : n.val = 4183) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4183 at hn
-  subst hn
+  have hn' : n = (4183 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41200,13 +40116,12 @@ theorem mem_iff_id_4183 (n : Fin 5011) (hn : n.val = 4183) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4184 (n : Fin 5011) (hn : n.val = 4184) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4184 at hn
-  subst hn
+  have hn' : n = (4184 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41238,13 +40153,12 @@ theorem mem_iff_id_4184 (n : Fin 5011) (hn : n.val = 4184) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4185 (n : Fin 5011) (hn : n.val = 4185) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4185 at hn
-  subst hn
+  have hn' : n = (4185 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41276,13 +40190,12 @@ theorem mem_iff_id_4185 (n : Fin 5011) (hn : n.val = 4185) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4186 (n : Fin 5011) (hn : n.val = 4186) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4186 at hn
-  subst hn
+  have hn' : n = (4186 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41314,13 +40227,12 @@ theorem mem_iff_id_4186 (n : Fin 5011) (hn : n.val = 4186) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4187 (n : Fin 5011) (hn : n.val = 4187) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4187 at hn
-  subst hn
+  have hn' : n = (4187 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41352,13 +40264,12 @@ theorem mem_iff_id_4187 (n : Fin 5011) (hn : n.val = 4187) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4188 (n : Fin 5011) (hn : n.val = 4188) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4188 at hn
-  subst hn
+  have hn' : n = (4188 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41390,13 +40301,12 @@ theorem mem_iff_id_4188 (n : Fin 5011) (hn : n.val = 4188) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4189 (n : Fin 5011) (hn : n.val = 4189) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4189 at hn
-  subst hn
+  have hn' : n = (4189 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41428,13 +40338,12 @@ theorem mem_iff_id_4189 (n : Fin 5011) (hn : n.val = 4189) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4190 (n : Fin 5011) (hn : n.val = 4190) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4190 at hn
-  subst hn
+  have hn' : n = (4190 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41466,13 +40375,12 @@ theorem mem_iff_id_4190 (n : Fin 5011) (hn : n.val = 4190) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4191 (n : Fin 5011) (hn : n.val = 4191) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4191 at hn
-  subst hn
+  have hn' : n = (4191 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41504,13 +40412,12 @@ theorem mem_iff_id_4191 (n : Fin 5011) (hn : n.val = 4191) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4192 (n : Fin 5011) (hn : n.val = 4192) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4192 at hn
-  subst hn
+  have hn' : n = (4192 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41542,13 +40449,12 @@ theorem mem_iff_id_4192 (n : Fin 5011) (hn : n.val = 4192) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4193 (n : Fin 5011) (hn : n.val = 4193) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4193 at hn
-  subst hn
+  have hn' : n = (4193 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41580,13 +40486,12 @@ theorem mem_iff_id_4193 (n : Fin 5011) (hn : n.val = 4193) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4194 (n : Fin 5011) (hn : n.val = 4194) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4194 at hn
-  subst hn
+  have hn' : n = (4194 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41618,13 +40523,12 @@ theorem mem_iff_id_4194 (n : Fin 5011) (hn : n.val = 4194) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4195 (n : Fin 5011) (hn : n.val = 4195) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4195 at hn
-  subst hn
+  have hn' : n = (4195 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41656,13 +40560,12 @@ theorem mem_iff_id_4195 (n : Fin 5011) (hn : n.val = 4195) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4196 (n : Fin 5011) (hn : n.val = 4196) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4196 at hn
-  subst hn
+  have hn' : n = (4196 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41694,13 +40597,12 @@ theorem mem_iff_id_4196 (n : Fin 5011) (hn : n.val = 4196) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4197 (n : Fin 5011) (hn : n.val = 4197) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4197 at hn
-  subst hn
+  have hn' : n = (4197 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41732,13 +40634,12 @@ theorem mem_iff_id_4197 (n : Fin 5011) (hn : n.val = 4197) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4198 (n : Fin 5011) (hn : n.val = 4198) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4198 at hn
-  subst hn
+  have hn' : n = (4198 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41770,13 +40671,12 @@ theorem mem_iff_id_4198 (n : Fin 5011) (hn : n.val = 4198) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4199 (n : Fin 5011) (hn : n.val = 4199) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4199 at hn
-  subst hn
+  have hn' : n = (4199 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41808,13 +40708,12 @@ theorem mem_iff_id_4199 (n : Fin 5011) (hn : n.val = 4199) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4500 (n : Fin 5011) (hn : n.val = 4500) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4500 at hn
-  subst hn
+  have hn' : n = (4500 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41846,13 +40745,12 @@ theorem mem_iff_id_4500 (n : Fin 5011) (hn : n.val = 4500) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4501 (n : Fin 5011) (hn : n.val = 4501) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4501 at hn
-  subst hn
+  have hn' : n = (4501 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41884,13 +40782,12 @@ theorem mem_iff_id_4501 (n : Fin 5011) (hn : n.val = 4501) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4502 (n : Fin 5011) (hn : n.val = 4502) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4502 at hn
-  subst hn
+  have hn' : n = (4502 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41922,13 +40819,12 @@ theorem mem_iff_id_4502 (n : Fin 5011) (hn : n.val = 4502) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4503 (n : Fin 5011) (hn : n.val = 4503) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4503 at hn
-  subst hn
+  have hn' : n = (4503 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41960,13 +40856,12 @@ theorem mem_iff_id_4503 (n : Fin 5011) (hn : n.val = 4503) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4504 (n : Fin 5011) (hn : n.val = 4504) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4504 at hn
-  subst hn
+  have hn' : n = (4504 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -41998,13 +40893,12 @@ theorem mem_iff_id_4504 (n : Fin 5011) (hn : n.val = 4504) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4505 (n : Fin 5011) (hn : n.val = 4505) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4505 at hn
-  subst hn
+  have hn' : n = (4505 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42036,13 +40930,12 @@ theorem mem_iff_id_4505 (n : Fin 5011) (hn : n.val = 4505) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4506 (n : Fin 5011) (hn : n.val = 4506) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4506 at hn
-  subst hn
+  have hn' : n = (4506 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42074,13 +40967,12 @@ theorem mem_iff_id_4506 (n : Fin 5011) (hn : n.val = 4506) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4507 (n : Fin 5011) (hn : n.val = 4507) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4507 at hn
-  subst hn
+  have hn' : n = (4507 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42112,13 +41004,12 @@ theorem mem_iff_id_4507 (n : Fin 5011) (hn : n.val = 4507) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4508 (n : Fin 5011) (hn : n.val = 4508) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4508 at hn
-  subst hn
+  have hn' : n = (4508 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42150,13 +41041,12 @@ theorem mem_iff_id_4508 (n : Fin 5011) (hn : n.val = 4508) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4509 (n : Fin 5011) (hn : n.val = 4509) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4509 at hn
-  subst hn
+  have hn' : n = (4509 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42188,13 +41078,12 @@ theorem mem_iff_id_4509 (n : Fin 5011) (hn : n.val = 4509) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4510 (n : Fin 5011) (hn : n.val = 4510) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4510 at hn
-  subst hn
+  have hn' : n = (4510 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42226,13 +41115,12 @@ theorem mem_iff_id_4510 (n : Fin 5011) (hn : n.val = 4510) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4511 (n : Fin 5011) (hn : n.val = 4511) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4511 at hn
-  subst hn
+  have hn' : n = (4511 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42264,13 +41152,12 @@ theorem mem_iff_id_4511 (n : Fin 5011) (hn : n.val = 4511) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4512 (n : Fin 5011) (hn : n.val = 4512) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4512 at hn
-  subst hn
+  have hn' : n = (4512 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42302,13 +41189,12 @@ theorem mem_iff_id_4512 (n : Fin 5011) (hn : n.val = 4512) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4513 (n : Fin 5011) (hn : n.val = 4513) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4513 at hn
-  subst hn
+  have hn' : n = (4513 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42340,13 +41226,12 @@ theorem mem_iff_id_4513 (n : Fin 5011) (hn : n.val = 4513) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4514 (n : Fin 5011) (hn : n.val = 4514) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4514 at hn
-  subst hn
+  have hn' : n = (4514 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42378,13 +41263,12 @@ theorem mem_iff_id_4514 (n : Fin 5011) (hn : n.val = 4514) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4515 (n : Fin 5011) (hn : n.val = 4515) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4515 at hn
-  subst hn
+  have hn' : n = (4515 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42416,13 +41300,12 @@ theorem mem_iff_id_4515 (n : Fin 5011) (hn : n.val = 4515) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4516 (n : Fin 5011) (hn : n.val = 4516) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4516 at hn
-  subst hn
+  have hn' : n = (4516 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42454,13 +41337,12 @@ theorem mem_iff_id_4516 (n : Fin 5011) (hn : n.val = 4516) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4517 (n : Fin 5011) (hn : n.val = 4517) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4517 at hn
-  subst hn
+  have hn' : n = (4517 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42492,13 +41374,12 @@ theorem mem_iff_id_4517 (n : Fin 5011) (hn : n.val = 4517) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4518 (n : Fin 5011) (hn : n.val = 4518) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4518 at hn
-  subst hn
+  have hn' : n = (4518 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42530,13 +41411,12 @@ theorem mem_iff_id_4518 (n : Fin 5011) (hn : n.val = 4518) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4519 (n : Fin 5011) (hn : n.val = 4519) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4519 at hn
-  subst hn
+  have hn' : n = (4519 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42568,13 +41448,12 @@ theorem mem_iff_id_4519 (n : Fin 5011) (hn : n.val = 4519) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4520 (n : Fin 5011) (hn : n.val = 4520) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4520 at hn
-  subst hn
+  have hn' : n = (4520 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42606,13 +41485,12 @@ theorem mem_iff_id_4520 (n : Fin 5011) (hn : n.val = 4520) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4521 (n : Fin 5011) (hn : n.val = 4521) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4521 at hn
-  subst hn
+  have hn' : n = (4521 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42644,13 +41522,12 @@ theorem mem_iff_id_4521 (n : Fin 5011) (hn : n.val = 4521) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4522 (n : Fin 5011) (hn : n.val = 4522) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4522 at hn
-  subst hn
+  have hn' : n = (4522 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42682,13 +41559,12 @@ theorem mem_iff_id_4522 (n : Fin 5011) (hn : n.val = 4522) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4523 (n : Fin 5011) (hn : n.val = 4523) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4523 at hn
-  subst hn
+  have hn' : n = (4523 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42720,13 +41596,12 @@ theorem mem_iff_id_4523 (n : Fin 5011) (hn : n.val = 4523) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4524 (n : Fin 5011) (hn : n.val = 4524) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4524 at hn
-  subst hn
+  have hn' : n = (4524 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42758,13 +41633,12 @@ theorem mem_iff_id_4524 (n : Fin 5011) (hn : n.val = 4524) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4525 (n : Fin 5011) (hn : n.val = 4525) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4525 at hn
-  subst hn
+  have hn' : n = (4525 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42796,13 +41670,12 @@ theorem mem_iff_id_4525 (n : Fin 5011) (hn : n.val = 4525) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4526 (n : Fin 5011) (hn : n.val = 4526) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4526 at hn
-  subst hn
+  have hn' : n = (4526 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42834,13 +41707,12 @@ theorem mem_iff_id_4526 (n : Fin 5011) (hn : n.val = 4526) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4527 (n : Fin 5011) (hn : n.val = 4527) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4527 at hn
-  subst hn
+  have hn' : n = (4527 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42872,13 +41744,12 @@ theorem mem_iff_id_4527 (n : Fin 5011) (hn : n.val = 4527) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4528 (n : Fin 5011) (hn : n.val = 4528) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4528 at hn
-  subst hn
+  have hn' : n = (4528 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42910,13 +41781,12 @@ theorem mem_iff_id_4528 (n : Fin 5011) (hn : n.val = 4528) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4529 (n : Fin 5011) (hn : n.val = 4529) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4529 at hn
-  subst hn
+  have hn' : n = (4529 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42948,13 +41818,12 @@ theorem mem_iff_id_4529 (n : Fin 5011) (hn : n.val = 4529) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4530 (n : Fin 5011) (hn : n.val = 4530) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4530 at hn
-  subst hn
+  have hn' : n = (4530 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -42986,13 +41855,12 @@ theorem mem_iff_id_4530 (n : Fin 5011) (hn : n.val = 4530) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4531 (n : Fin 5011) (hn : n.val = 4531) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4531 at hn
-  subst hn
+  have hn' : n = (4531 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43024,13 +41892,12 @@ theorem mem_iff_id_4531 (n : Fin 5011) (hn : n.val = 4531) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4532 (n : Fin 5011) (hn : n.val = 4532) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4532 at hn
-  subst hn
+  have hn' : n = (4532 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43062,13 +41929,12 @@ theorem mem_iff_id_4532 (n : Fin 5011) (hn : n.val = 4532) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4533 (n : Fin 5011) (hn : n.val = 4533) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4533 at hn
-  subst hn
+  have hn' : n = (4533 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43100,13 +41966,12 @@ theorem mem_iff_id_4533 (n : Fin 5011) (hn : n.val = 4533) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4534 (n : Fin 5011) (hn : n.val = 4534) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4534 at hn
-  subst hn
+  have hn' : n = (4534 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43138,13 +42003,12 @@ theorem mem_iff_id_4534 (n : Fin 5011) (hn : n.val = 4534) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4535 (n : Fin 5011) (hn : n.val = 4535) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4535 at hn
-  subst hn
+  have hn' : n = (4535 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43176,13 +42040,12 @@ theorem mem_iff_id_4535 (n : Fin 5011) (hn : n.val = 4535) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4536 (n : Fin 5011) (hn : n.val = 4536) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4536 at hn
-  subst hn
+  have hn' : n = (4536 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43214,13 +42077,12 @@ theorem mem_iff_id_4536 (n : Fin 5011) (hn : n.val = 4536) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4537 (n : Fin 5011) (hn : n.val = 4537) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4537 at hn
-  subst hn
+  have hn' : n = (4537 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43252,13 +42114,12 @@ theorem mem_iff_id_4537 (n : Fin 5011) (hn : n.val = 4537) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4538 (n : Fin 5011) (hn : n.val = 4538) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4538 at hn
-  subst hn
+  have hn' : n = (4538 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43290,13 +42151,12 @@ theorem mem_iff_id_4538 (n : Fin 5011) (hn : n.val = 4538) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4539 (n : Fin 5011) (hn : n.val = 4539) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4539 at hn
-  subst hn
+  have hn' : n = (4539 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43328,13 +42188,12 @@ theorem mem_iff_id_4539 (n : Fin 5011) (hn : n.val = 4539) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4540 (n : Fin 5011) (hn : n.val = 4540) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4540 at hn
-  subst hn
+  have hn' : n = (4540 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43366,13 +42225,12 @@ theorem mem_iff_id_4540 (n : Fin 5011) (hn : n.val = 4540) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4541 (n : Fin 5011) (hn : n.val = 4541) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4541 at hn
-  subst hn
+  have hn' : n = (4541 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43404,13 +42262,12 @@ theorem mem_iff_id_4541 (n : Fin 5011) (hn : n.val = 4541) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4542 (n : Fin 5011) (hn : n.val = 4542) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4542 at hn
-  subst hn
+  have hn' : n = (4542 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43442,13 +42299,12 @@ theorem mem_iff_id_4542 (n : Fin 5011) (hn : n.val = 4542) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4543 (n : Fin 5011) (hn : n.val = 4543) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4543 at hn
-  subst hn
+  have hn' : n = (4543 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43480,13 +42336,12 @@ theorem mem_iff_id_4543 (n : Fin 5011) (hn : n.val = 4543) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4544 (n : Fin 5011) (hn : n.val = 4544) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4544 at hn
-  subst hn
+  have hn' : n = (4544 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43518,13 +42373,12 @@ theorem mem_iff_id_4544 (n : Fin 5011) (hn : n.val = 4544) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4545 (n : Fin 5011) (hn : n.val = 4545) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4545 at hn
-  subst hn
+  have hn' : n = (4545 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43556,13 +42410,12 @@ theorem mem_iff_id_4545 (n : Fin 5011) (hn : n.val = 4545) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4546 (n : Fin 5011) (hn : n.val = 4546) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4546 at hn
-  subst hn
+  have hn' : n = (4546 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43594,13 +42447,12 @@ theorem mem_iff_id_4546 (n : Fin 5011) (hn : n.val = 4546) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4547 (n : Fin 5011) (hn : n.val = 4547) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4547 at hn
-  subst hn
+  have hn' : n = (4547 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43632,13 +42484,12 @@ theorem mem_iff_id_4547 (n : Fin 5011) (hn : n.val = 4547) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4548 (n : Fin 5011) (hn : n.val = 4548) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4548 at hn
-  subst hn
+  have hn' : n = (4548 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43670,13 +42521,12 @@ theorem mem_iff_id_4548 (n : Fin 5011) (hn : n.val = 4548) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4549 (n : Fin 5011) (hn : n.val = 4549) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4549 at hn
-  subst hn
+  have hn' : n = (4549 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43708,13 +42558,12 @@ theorem mem_iff_id_4549 (n : Fin 5011) (hn : n.val = 4549) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4550 (n : Fin 5011) (hn : n.val = 4550) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4550 at hn
-  subst hn
+  have hn' : n = (4550 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43746,13 +42595,12 @@ theorem mem_iff_id_4550 (n : Fin 5011) (hn : n.val = 4550) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4551 (n : Fin 5011) (hn : n.val = 4551) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4551 at hn
-  subst hn
+  have hn' : n = (4551 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43784,13 +42632,12 @@ theorem mem_iff_id_4551 (n : Fin 5011) (hn : n.val = 4551) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4552 (n : Fin 5011) (hn : n.val = 4552) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4552 at hn
-  subst hn
+  have hn' : n = (4552 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43822,13 +42669,12 @@ theorem mem_iff_id_4552 (n : Fin 5011) (hn : n.val = 4552) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4553 (n : Fin 5011) (hn : n.val = 4553) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4553 at hn
-  subst hn
+  have hn' : n = (4553 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43860,13 +42706,12 @@ theorem mem_iff_id_4553 (n : Fin 5011) (hn : n.val = 4553) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4554 (n : Fin 5011) (hn : n.val = 4554) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4554 at hn
-  subst hn
+  have hn' : n = (4554 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43898,13 +42743,12 @@ theorem mem_iff_id_4554 (n : Fin 5011) (hn : n.val = 4554) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4555 (n : Fin 5011) (hn : n.val = 4555) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4555 at hn
-  subst hn
+  have hn' : n = (4555 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43936,13 +42780,12 @@ theorem mem_iff_id_4555 (n : Fin 5011) (hn : n.val = 4555) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4556 (n : Fin 5011) (hn : n.val = 4556) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4556 at hn
-  subst hn
+  have hn' : n = (4556 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -43974,13 +42817,12 @@ theorem mem_iff_id_4556 (n : Fin 5011) (hn : n.val = 4556) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4557 (n : Fin 5011) (hn : n.val = 4557) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4557 at hn
-  subst hn
+  have hn' : n = (4557 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44012,13 +42854,12 @@ theorem mem_iff_id_4557 (n : Fin 5011) (hn : n.val = 4557) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4558 (n : Fin 5011) (hn : n.val = 4558) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4558 at hn
-  subst hn
+  have hn' : n = (4558 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44050,13 +42891,12 @@ theorem mem_iff_id_4558 (n : Fin 5011) (hn : n.val = 4558) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4559 (n : Fin 5011) (hn : n.val = 4559) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4559 at hn
-  subst hn
+  have hn' : n = (4559 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44088,13 +42928,12 @@ theorem mem_iff_id_4559 (n : Fin 5011) (hn : n.val = 4559) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4560 (n : Fin 5011) (hn : n.val = 4560) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4560 at hn
-  subst hn
+  have hn' : n = (4560 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44126,13 +42965,12 @@ theorem mem_iff_id_4560 (n : Fin 5011) (hn : n.val = 4560) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4561 (n : Fin 5011) (hn : n.val = 4561) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4561 at hn
-  subst hn
+  have hn' : n = (4561 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44164,13 +43002,12 @@ theorem mem_iff_id_4561 (n : Fin 5011) (hn : n.val = 4561) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4562 (n : Fin 5011) (hn : n.val = 4562) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4562 at hn
-  subst hn
+  have hn' : n = (4562 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44202,13 +43039,12 @@ theorem mem_iff_id_4562 (n : Fin 5011) (hn : n.val = 4562) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4563 (n : Fin 5011) (hn : n.val = 4563) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4563 at hn
-  subst hn
+  have hn' : n = (4563 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44240,13 +43076,12 @@ theorem mem_iff_id_4563 (n : Fin 5011) (hn : n.val = 4563) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4564 (n : Fin 5011) (hn : n.val = 4564) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4564 at hn
-  subst hn
+  have hn' : n = (4564 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44278,13 +43113,12 @@ theorem mem_iff_id_4564 (n : Fin 5011) (hn : n.val = 4564) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4565 (n : Fin 5011) (hn : n.val = 4565) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4565 at hn
-  subst hn
+  have hn' : n = (4565 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44316,13 +43150,12 @@ theorem mem_iff_id_4565 (n : Fin 5011) (hn : n.val = 4565) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4566 (n : Fin 5011) (hn : n.val = 4566) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4566 at hn
-  subst hn
+  have hn' : n = (4566 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44354,13 +43187,12 @@ theorem mem_iff_id_4566 (n : Fin 5011) (hn : n.val = 4566) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4567 (n : Fin 5011) (hn : n.val = 4567) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4567 at hn
-  subst hn
+  have hn' : n = (4567 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44392,13 +43224,12 @@ theorem mem_iff_id_4567 (n : Fin 5011) (hn : n.val = 4567) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4568 (n : Fin 5011) (hn : n.val = 4568) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4568 at hn
-  subst hn
+  have hn' : n = (4568 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44430,13 +43261,12 @@ theorem mem_iff_id_4568 (n : Fin 5011) (hn : n.val = 4568) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4569 (n : Fin 5011) (hn : n.val = 4569) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4569 at hn
-  subst hn
+  have hn' : n = (4569 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44468,13 +43298,12 @@ theorem mem_iff_id_4569 (n : Fin 5011) (hn : n.val = 4569) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4570 (n : Fin 5011) (hn : n.val = 4570) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4570 at hn
-  subst hn
+  have hn' : n = (4570 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44506,13 +43335,12 @@ theorem mem_iff_id_4570 (n : Fin 5011) (hn : n.val = 4570) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4571 (n : Fin 5011) (hn : n.val = 4571) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4571 at hn
-  subst hn
+  have hn' : n = (4571 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44544,13 +43372,12 @@ theorem mem_iff_id_4571 (n : Fin 5011) (hn : n.val = 4571) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4572 (n : Fin 5011) (hn : n.val = 4572) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4572 at hn
-  subst hn
+  have hn' : n = (4572 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44582,13 +43409,12 @@ theorem mem_iff_id_4572 (n : Fin 5011) (hn : n.val = 4572) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4573 (n : Fin 5011) (hn : n.val = 4573) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4573 at hn
-  subst hn
+  have hn' : n = (4573 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44620,13 +43446,12 @@ theorem mem_iff_id_4573 (n : Fin 5011) (hn : n.val = 4573) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4574 (n : Fin 5011) (hn : n.val = 4574) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4574 at hn
-  subst hn
+  have hn' : n = (4574 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44658,13 +43483,12 @@ theorem mem_iff_id_4574 (n : Fin 5011) (hn : n.val = 4574) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4575 (n : Fin 5011) (hn : n.val = 4575) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4575 at hn
-  subst hn
+  have hn' : n = (4575 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44696,13 +43520,12 @@ theorem mem_iff_id_4575 (n : Fin 5011) (hn : n.val = 4575) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4576 (n : Fin 5011) (hn : n.val = 4576) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4576 at hn
-  subst hn
+  have hn' : n = (4576 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44734,13 +43557,12 @@ theorem mem_iff_id_4576 (n : Fin 5011) (hn : n.val = 4576) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4577 (n : Fin 5011) (hn : n.val = 4577) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4577 at hn
-  subst hn
+  have hn' : n = (4577 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44772,13 +43594,12 @@ theorem mem_iff_id_4577 (n : Fin 5011) (hn : n.val = 4577) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4578 (n : Fin 5011) (hn : n.val = 4578) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4578 at hn
-  subst hn
+  have hn' : n = (4578 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44810,13 +43631,12 @@ theorem mem_iff_id_4578 (n : Fin 5011) (hn : n.val = 4578) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4579 (n : Fin 5011) (hn : n.val = 4579) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4579 at hn
-  subst hn
+  have hn' : n = (4579 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44848,13 +43668,12 @@ theorem mem_iff_id_4579 (n : Fin 5011) (hn : n.val = 4579) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4580 (n : Fin 5011) (hn : n.val = 4580) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4580 at hn
-  subst hn
+  have hn' : n = (4580 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44886,13 +43705,12 @@ theorem mem_iff_id_4580 (n : Fin 5011) (hn : n.val = 4580) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4581 (n : Fin 5011) (hn : n.val = 4581) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4581 at hn
-  subst hn
+  have hn' : n = (4581 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44924,13 +43742,12 @@ theorem mem_iff_id_4581 (n : Fin 5011) (hn : n.val = 4581) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4582 (n : Fin 5011) (hn : n.val = 4582) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4582 at hn
-  subst hn
+  have hn' : n = (4582 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -44962,13 +43779,12 @@ theorem mem_iff_id_4582 (n : Fin 5011) (hn : n.val = 4582) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4583 (n : Fin 5011) (hn : n.val = 4583) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4583 at hn
-  subst hn
+  have hn' : n = (4583 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45000,13 +43816,12 @@ theorem mem_iff_id_4583 (n : Fin 5011) (hn : n.val = 4583) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4584 (n : Fin 5011) (hn : n.val = 4584) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4584 at hn
-  subst hn
+  have hn' : n = (4584 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45038,13 +43853,12 @@ theorem mem_iff_id_4584 (n : Fin 5011) (hn : n.val = 4584) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4585 (n : Fin 5011) (hn : n.val = 4585) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4585 at hn
-  subst hn
+  have hn' : n = (4585 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45076,13 +43890,12 @@ theorem mem_iff_id_4585 (n : Fin 5011) (hn : n.val = 4585) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4586 (n : Fin 5011) (hn : n.val = 4586) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4586 at hn
-  subst hn
+  have hn' : n = (4586 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45114,13 +43927,12 @@ theorem mem_iff_id_4586 (n : Fin 5011) (hn : n.val = 4586) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4587 (n : Fin 5011) (hn : n.val = 4587) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4587 at hn
-  subst hn
+  have hn' : n = (4587 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45152,13 +43964,12 @@ theorem mem_iff_id_4587 (n : Fin 5011) (hn : n.val = 4587) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4588 (n : Fin 5011) (hn : n.val = 4588) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4588 at hn
-  subst hn
+  have hn' : n = (4588 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45190,13 +44001,12 @@ theorem mem_iff_id_4588 (n : Fin 5011) (hn : n.val = 4588) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4589 (n : Fin 5011) (hn : n.val = 4589) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4589 at hn
-  subst hn
+  have hn' : n = (4589 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45228,13 +44038,12 @@ theorem mem_iff_id_4589 (n : Fin 5011) (hn : n.val = 4589) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4590 (n : Fin 5011) (hn : n.val = 4590) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4590 at hn
-  subst hn
+  have hn' : n = (4590 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45266,13 +44075,12 @@ theorem mem_iff_id_4590 (n : Fin 5011) (hn : n.val = 4590) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4591 (n : Fin 5011) (hn : n.val = 4591) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4591 at hn
-  subst hn
+  have hn' : n = (4591 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45304,13 +44112,12 @@ theorem mem_iff_id_4591 (n : Fin 5011) (hn : n.val = 4591) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4592 (n : Fin 5011) (hn : n.val = 4592) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4592 at hn
-  subst hn
+  have hn' : n = (4592 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45342,13 +44149,12 @@ theorem mem_iff_id_4592 (n : Fin 5011) (hn : n.val = 4592) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4593 (n : Fin 5011) (hn : n.val = 4593) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4593 at hn
-  subst hn
+  have hn' : n = (4593 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45380,13 +44186,12 @@ theorem mem_iff_id_4593 (n : Fin 5011) (hn : n.val = 4593) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4594 (n : Fin 5011) (hn : n.val = 4594) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4594 at hn
-  subst hn
+  have hn' : n = (4594 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45418,13 +44223,12 @@ theorem mem_iff_id_4594 (n : Fin 5011) (hn : n.val = 4594) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4595 (n : Fin 5011) (hn : n.val = 4595) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4595 at hn
-  subst hn
+  have hn' : n = (4595 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45456,13 +44260,12 @@ theorem mem_iff_id_4595 (n : Fin 5011) (hn : n.val = 4595) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4596 (n : Fin 5011) (hn : n.val = 4596) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4596 at hn
-  subst hn
+  have hn' : n = (4596 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45494,13 +44297,12 @@ theorem mem_iff_id_4596 (n : Fin 5011) (hn : n.val = 4596) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4597 (n : Fin 5011) (hn : n.val = 4597) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4597 at hn
-  subst hn
+  have hn' : n = (4597 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45532,13 +44334,12 @@ theorem mem_iff_id_4597 (n : Fin 5011) (hn : n.val = 4597) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4598 (n : Fin 5011) (hn : n.val = 4598) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4598 at hn
-  subst hn
+  have hn' : n = (4598 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45570,13 +44371,12 @@ theorem mem_iff_id_4598 (n : Fin 5011) (hn : n.val = 4598) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4599 (n : Fin 5011) (hn : n.val = 4599) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4599 at hn
-  subst hn
+  have hn' : n = (4599 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45608,13 +44408,12 @@ theorem mem_iff_id_4599 (n : Fin 5011) (hn : n.val = 4599) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4900 (n : Fin 5011) (hn : n.val = 4900) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4900 at hn
-  subst hn
+  have hn' : n = (4900 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45646,13 +44445,12 @@ theorem mem_iff_id_4900 (n : Fin 5011) (hn : n.val = 4900) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4901 (n : Fin 5011) (hn : n.val = 4901) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4901 at hn
-  subst hn
+  have hn' : n = (4901 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45684,13 +44482,12 @@ theorem mem_iff_id_4901 (n : Fin 5011) (hn : n.val = 4901) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4902 (n : Fin 5011) (hn : n.val = 4902) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4902 at hn
-  subst hn
+  have hn' : n = (4902 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45722,13 +44519,12 @@ theorem mem_iff_id_4902 (n : Fin 5011) (hn : n.val = 4902) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4903 (n : Fin 5011) (hn : n.val = 4903) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4903 at hn
-  subst hn
+  have hn' : n = (4903 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45760,13 +44556,12 @@ theorem mem_iff_id_4903 (n : Fin 5011) (hn : n.val = 4903) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4904 (n : Fin 5011) (hn : n.val = 4904) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4904 at hn
-  subst hn
+  have hn' : n = (4904 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45798,13 +44593,12 @@ theorem mem_iff_id_4904 (n : Fin 5011) (hn : n.val = 4904) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4905 (n : Fin 5011) (hn : n.val = 4905) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4905 at hn
-  subst hn
+  have hn' : n = (4905 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45836,13 +44630,12 @@ theorem mem_iff_id_4905 (n : Fin 5011) (hn : n.val = 4905) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4906 (n : Fin 5011) (hn : n.val = 4906) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4906 at hn
-  subst hn
+  have hn' : n = (4906 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45874,13 +44667,12 @@ theorem mem_iff_id_4906 (n : Fin 5011) (hn : n.val = 4906) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4907 (n : Fin 5011) (hn : n.val = 4907) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4907 at hn
-  subst hn
+  have hn' : n = (4907 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45912,13 +44704,12 @@ theorem mem_iff_id_4907 (n : Fin 5011) (hn : n.val = 4907) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4908 (n : Fin 5011) (hn : n.val = 4908) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4908 at hn
-  subst hn
+  have hn' : n = (4908 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45950,13 +44741,12 @@ theorem mem_iff_id_4908 (n : Fin 5011) (hn : n.val = 4908) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4909 (n : Fin 5011) (hn : n.val = 4909) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4909 at hn
-  subst hn
+  have hn' : n = (4909 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -45988,13 +44778,12 @@ theorem mem_iff_id_4909 (n : Fin 5011) (hn : n.val = 4909) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4910 (n : Fin 5011) (hn : n.val = 4910) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4910 at hn
-  subst hn
+  have hn' : n = (4910 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46026,13 +44815,12 @@ theorem mem_iff_id_4910 (n : Fin 5011) (hn : n.val = 4910) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4911 (n : Fin 5011) (hn : n.val = 4911) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4911 at hn
-  subst hn
+  have hn' : n = (4911 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46064,13 +44852,12 @@ theorem mem_iff_id_4911 (n : Fin 5011) (hn : n.val = 4911) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4912 (n : Fin 5011) (hn : n.val = 4912) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4912 at hn
-  subst hn
+  have hn' : n = (4912 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46102,13 +44889,12 @@ theorem mem_iff_id_4912 (n : Fin 5011) (hn : n.val = 4912) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4913 (n : Fin 5011) (hn : n.val = 4913) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4913 at hn
-  subst hn
+  have hn' : n = (4913 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46140,13 +44926,12 @@ theorem mem_iff_id_4913 (n : Fin 5011) (hn : n.val = 4913) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4914 (n : Fin 5011) (hn : n.val = 4914) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4914 at hn
-  subst hn
+  have hn' : n = (4914 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46178,13 +44963,12 @@ theorem mem_iff_id_4914 (n : Fin 5011) (hn : n.val = 4914) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4915 (n : Fin 5011) (hn : n.val = 4915) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4915 at hn
-  subst hn
+  have hn' : n = (4915 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46216,13 +45000,12 @@ theorem mem_iff_id_4915 (n : Fin 5011) (hn : n.val = 4915) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4916 (n : Fin 5011) (hn : n.val = 4916) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4916 at hn
-  subst hn
+  have hn' : n = (4916 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46254,13 +45037,12 @@ theorem mem_iff_id_4916 (n : Fin 5011) (hn : n.val = 4916) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4917 (n : Fin 5011) (hn : n.val = 4917) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4917 at hn
-  subst hn
+  have hn' : n = (4917 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46292,13 +45074,12 @@ theorem mem_iff_id_4917 (n : Fin 5011) (hn : n.val = 4917) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4918 (n : Fin 5011) (hn : n.val = 4918) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4918 at hn
-  subst hn
+  have hn' : n = (4918 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46330,13 +45111,12 @@ theorem mem_iff_id_4918 (n : Fin 5011) (hn : n.val = 4918) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4919 (n : Fin 5011) (hn : n.val = 4919) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4919 at hn
-  subst hn
+  have hn' : n = (4919 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46368,13 +45148,12 @@ theorem mem_iff_id_4919 (n : Fin 5011) (hn : n.val = 4919) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4920 (n : Fin 5011) (hn : n.val = 4920) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4920 at hn
-  subst hn
+  have hn' : n = (4920 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46406,13 +45185,12 @@ theorem mem_iff_id_4920 (n : Fin 5011) (hn : n.val = 4920) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4921 (n : Fin 5011) (hn : n.val = 4921) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4921 at hn
-  subst hn
+  have hn' : n = (4921 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46444,13 +45222,12 @@ theorem mem_iff_id_4921 (n : Fin 5011) (hn : n.val = 4921) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4922 (n : Fin 5011) (hn : n.val = 4922) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4922 at hn
-  subst hn
+  have hn' : n = (4922 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46482,13 +45259,12 @@ theorem mem_iff_id_4922 (n : Fin 5011) (hn : n.val = 4922) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4923 (n : Fin 5011) (hn : n.val = 4923) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4923 at hn
-  subst hn
+  have hn' : n = (4923 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46520,13 +45296,12 @@ theorem mem_iff_id_4923 (n : Fin 5011) (hn : n.val = 4923) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4924 (n : Fin 5011) (hn : n.val = 4924) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4924 at hn
-  subst hn
+  have hn' : n = (4924 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46558,13 +45333,12 @@ theorem mem_iff_id_4924 (n : Fin 5011) (hn : n.val = 4924) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4925 (n : Fin 5011) (hn : n.val = 4925) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4925 at hn
-  subst hn
+  have hn' : n = (4925 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46596,13 +45370,12 @@ theorem mem_iff_id_4925 (n : Fin 5011) (hn : n.val = 4925) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4926 (n : Fin 5011) (hn : n.val = 4926) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4926 at hn
-  subst hn
+  have hn' : n = (4926 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46634,13 +45407,12 @@ theorem mem_iff_id_4926 (n : Fin 5011) (hn : n.val = 4926) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4927 (n : Fin 5011) (hn : n.val = 4927) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4927 at hn
-  subst hn
+  have hn' : n = (4927 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46672,13 +45444,12 @@ theorem mem_iff_id_4927 (n : Fin 5011) (hn : n.val = 4927) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4928 (n : Fin 5011) (hn : n.val = 4928) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4928 at hn
-  subst hn
+  have hn' : n = (4928 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46710,13 +45481,12 @@ theorem mem_iff_id_4928 (n : Fin 5011) (hn : n.val = 4928) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4929 (n : Fin 5011) (hn : n.val = 4929) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4929 at hn
-  subst hn
+  have hn' : n = (4929 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46748,13 +45518,12 @@ theorem mem_iff_id_4929 (n : Fin 5011) (hn : n.val = 4929) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4930 (n : Fin 5011) (hn : n.val = 4930) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4930 at hn
-  subst hn
+  have hn' : n = (4930 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46786,13 +45555,12 @@ theorem mem_iff_id_4930 (n : Fin 5011) (hn : n.val = 4930) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4931 (n : Fin 5011) (hn : n.val = 4931) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4931 at hn
-  subst hn
+  have hn' : n = (4931 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46824,13 +45592,12 @@ theorem mem_iff_id_4931 (n : Fin 5011) (hn : n.val = 4931) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4932 (n : Fin 5011) (hn : n.val = 4932) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4932 at hn
-  subst hn
+  have hn' : n = (4932 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46862,13 +45629,12 @@ theorem mem_iff_id_4932 (n : Fin 5011) (hn : n.val = 4932) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4933 (n : Fin 5011) (hn : n.val = 4933) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4933 at hn
-  subst hn
+  have hn' : n = (4933 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46900,13 +45666,12 @@ theorem mem_iff_id_4933 (n : Fin 5011) (hn : n.val = 4933) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4934 (n : Fin 5011) (hn : n.val = 4934) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4934 at hn
-  subst hn
+  have hn' : n = (4934 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46938,13 +45703,12 @@ theorem mem_iff_id_4934 (n : Fin 5011) (hn : n.val = 4934) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4935 (n : Fin 5011) (hn : n.val = 4935) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4935 at hn
-  subst hn
+  have hn' : n = (4935 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -46976,13 +45740,12 @@ theorem mem_iff_id_4935 (n : Fin 5011) (hn : n.val = 4935) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4936 (n : Fin 5011) (hn : n.val = 4936) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4936 at hn
-  subst hn
+  have hn' : n = (4936 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47014,13 +45777,12 @@ theorem mem_iff_id_4936 (n : Fin 5011) (hn : n.val = 4936) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4937 (n : Fin 5011) (hn : n.val = 4937) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4937 at hn
-  subst hn
+  have hn' : n = (4937 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47052,13 +45814,12 @@ theorem mem_iff_id_4937 (n : Fin 5011) (hn : n.val = 4937) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4938 (n : Fin 5011) (hn : n.val = 4938) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4938 at hn
-  subst hn
+  have hn' : n = (4938 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47090,13 +45851,12 @@ theorem mem_iff_id_4938 (n : Fin 5011) (hn : n.val = 4938) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4939 (n : Fin 5011) (hn : n.val = 4939) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4939 at hn
-  subst hn
+  have hn' : n = (4939 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47128,13 +45888,12 @@ theorem mem_iff_id_4939 (n : Fin 5011) (hn : n.val = 4939) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4940 (n : Fin 5011) (hn : n.val = 4940) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4940 at hn
-  subst hn
+  have hn' : n = (4940 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47166,13 +45925,12 @@ theorem mem_iff_id_4940 (n : Fin 5011) (hn : n.val = 4940) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4941 (n : Fin 5011) (hn : n.val = 4941) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4941 at hn
-  subst hn
+  have hn' : n = (4941 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47204,13 +45962,12 @@ theorem mem_iff_id_4941 (n : Fin 5011) (hn : n.val = 4941) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4942 (n : Fin 5011) (hn : n.val = 4942) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4942 at hn
-  subst hn
+  have hn' : n = (4942 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47242,13 +45999,12 @@ theorem mem_iff_id_4942 (n : Fin 5011) (hn : n.val = 4942) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4943 (n : Fin 5011) (hn : n.val = 4943) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4943 at hn
-  subst hn
+  have hn' : n = (4943 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47280,13 +46036,12 @@ theorem mem_iff_id_4943 (n : Fin 5011) (hn : n.val = 4943) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4944 (n : Fin 5011) (hn : n.val = 4944) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4944 at hn
-  subst hn
+  have hn' : n = (4944 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47318,13 +46073,12 @@ theorem mem_iff_id_4944 (n : Fin 5011) (hn : n.val = 4944) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4945 (n : Fin 5011) (hn : n.val = 4945) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4945 at hn
-  subst hn
+  have hn' : n = (4945 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47356,13 +46110,12 @@ theorem mem_iff_id_4945 (n : Fin 5011) (hn : n.val = 4945) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4946 (n : Fin 5011) (hn : n.val = 4946) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4946 at hn
-  subst hn
+  have hn' : n = (4946 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47394,13 +46147,12 @@ theorem mem_iff_id_4946 (n : Fin 5011) (hn : n.val = 4946) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4947 (n : Fin 5011) (hn : n.val = 4947) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4947 at hn
-  subst hn
+  have hn' : n = (4947 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47432,13 +46184,12 @@ theorem mem_iff_id_4947 (n : Fin 5011) (hn : n.val = 4947) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4948 (n : Fin 5011) (hn : n.val = 4948) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4948 at hn
-  subst hn
+  have hn' : n = (4948 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47470,13 +46221,12 @@ theorem mem_iff_id_4948 (n : Fin 5011) (hn : n.val = 4948) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4949 (n : Fin 5011) (hn : n.val = 4949) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4949 at hn
-  subst hn
+  have hn' : n = (4949 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47508,13 +46258,12 @@ theorem mem_iff_id_4949 (n : Fin 5011) (hn : n.val = 4949) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4950 (n : Fin 5011) (hn : n.val = 4950) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4950 at hn
-  subst hn
+  have hn' : n = (4950 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47546,13 +46295,12 @@ theorem mem_iff_id_4950 (n : Fin 5011) (hn : n.val = 4950) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4951 (n : Fin 5011) (hn : n.val = 4951) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4951 at hn
-  subst hn
+  have hn' : n = (4951 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47584,13 +46332,12 @@ theorem mem_iff_id_4951 (n : Fin 5011) (hn : n.val = 4951) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4952 (n : Fin 5011) (hn : n.val = 4952) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4952 at hn
-  subst hn
+  have hn' : n = (4952 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47622,13 +46369,12 @@ theorem mem_iff_id_4952 (n : Fin 5011) (hn : n.val = 4952) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4953 (n : Fin 5011) (hn : n.val = 4953) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4953 at hn
-  subst hn
+  have hn' : n = (4953 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47660,13 +46406,12 @@ theorem mem_iff_id_4953 (n : Fin 5011) (hn : n.val = 4953) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4954 (n : Fin 5011) (hn : n.val = 4954) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4954 at hn
-  subst hn
+  have hn' : n = (4954 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47698,13 +46443,12 @@ theorem mem_iff_id_4954 (n : Fin 5011) (hn : n.val = 4954) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4955 (n : Fin 5011) (hn : n.val = 4955) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4955 at hn
-  subst hn
+  have hn' : n = (4955 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47736,13 +46480,12 @@ theorem mem_iff_id_4955 (n : Fin 5011) (hn : n.val = 4955) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4956 (n : Fin 5011) (hn : n.val = 4956) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4956 at hn
-  subst hn
+  have hn' : n = (4956 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47774,13 +46517,12 @@ theorem mem_iff_id_4956 (n : Fin 5011) (hn : n.val = 4956) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4957 (n : Fin 5011) (hn : n.val = 4957) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4957 at hn
-  subst hn
+  have hn' : n = (4957 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47812,13 +46554,12 @@ theorem mem_iff_id_4957 (n : Fin 5011) (hn : n.val = 4957) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4958 (n : Fin 5011) (hn : n.val = 4958) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4958 at hn
-  subst hn
+  have hn' : n = (4958 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47850,13 +46591,12 @@ theorem mem_iff_id_4958 (n : Fin 5011) (hn : n.val = 4958) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4959 (n : Fin 5011) (hn : n.val = 4959) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4959 at hn
-  subst hn
+  have hn' : n = (4959 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47888,13 +46628,12 @@ theorem mem_iff_id_4959 (n : Fin 5011) (hn : n.val = 4959) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4960 (n : Fin 5011) (hn : n.val = 4960) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4960 at hn
-  subst hn
+  have hn' : n = (4960 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47926,13 +46665,12 @@ theorem mem_iff_id_4960 (n : Fin 5011) (hn : n.val = 4960) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4961 (n : Fin 5011) (hn : n.val = 4961) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4961 at hn
-  subst hn
+  have hn' : n = (4961 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -47964,13 +46702,12 @@ theorem mem_iff_id_4961 (n : Fin 5011) (hn : n.val = 4961) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4962 (n : Fin 5011) (hn : n.val = 4962) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4962 at hn
-  subst hn
+  have hn' : n = (4962 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48002,13 +46739,12 @@ theorem mem_iff_id_4962 (n : Fin 5011) (hn : n.val = 4962) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4963 (n : Fin 5011) (hn : n.val = 4963) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4963 at hn
-  subst hn
+  have hn' : n = (4963 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48040,13 +46776,12 @@ theorem mem_iff_id_4963 (n : Fin 5011) (hn : n.val = 4963) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4964 (n : Fin 5011) (hn : n.val = 4964) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4964 at hn
-  subst hn
+  have hn' : n = (4964 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48078,13 +46813,12 @@ theorem mem_iff_id_4964 (n : Fin 5011) (hn : n.val = 4964) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4965 (n : Fin 5011) (hn : n.val = 4965) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4965 at hn
-  subst hn
+  have hn' : n = (4965 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48116,13 +46850,12 @@ theorem mem_iff_id_4965 (n : Fin 5011) (hn : n.val = 4965) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4966 (n : Fin 5011) (hn : n.val = 4966) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4966 at hn
-  subst hn
+  have hn' : n = (4966 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48154,13 +46887,12 @@ theorem mem_iff_id_4966 (n : Fin 5011) (hn : n.val = 4966) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4967 (n : Fin 5011) (hn : n.val = 4967) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4967 at hn
-  subst hn
+  have hn' : n = (4967 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48192,13 +46924,12 @@ theorem mem_iff_id_4967 (n : Fin 5011) (hn : n.val = 4967) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4968 (n : Fin 5011) (hn : n.val = 4968) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4968 at hn
-  subst hn
+  have hn' : n = (4968 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48230,13 +46961,12 @@ theorem mem_iff_id_4968 (n : Fin 5011) (hn : n.val = 4968) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4969 (n : Fin 5011) (hn : n.val = 4969) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4969 at hn
-  subst hn
+  have hn' : n = (4969 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48268,13 +46998,12 @@ theorem mem_iff_id_4969 (n : Fin 5011) (hn : n.val = 4969) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4970 (n : Fin 5011) (hn : n.val = 4970) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4970 at hn
-  subst hn
+  have hn' : n = (4970 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48306,13 +47035,12 @@ theorem mem_iff_id_4970 (n : Fin 5011) (hn : n.val = 4970) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4971 (n : Fin 5011) (hn : n.val = 4971) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4971 at hn
-  subst hn
+  have hn' : n = (4971 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48344,13 +47072,12 @@ theorem mem_iff_id_4971 (n : Fin 5011) (hn : n.val = 4971) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4972 (n : Fin 5011) (hn : n.val = 4972) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4972 at hn
-  subst hn
+  have hn' : n = (4972 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48382,13 +47109,12 @@ theorem mem_iff_id_4972 (n : Fin 5011) (hn : n.val = 4972) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4973 (n : Fin 5011) (hn : n.val = 4973) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4973 at hn
-  subst hn
+  have hn' : n = (4973 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48420,13 +47146,12 @@ theorem mem_iff_id_4973 (n : Fin 5011) (hn : n.val = 4973) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4974 (n : Fin 5011) (hn : n.val = 4974) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4974 at hn
-  subst hn
+  have hn' : n = (4974 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48458,13 +47183,12 @@ theorem mem_iff_id_4974 (n : Fin 5011) (hn : n.val = 4974) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4975 (n : Fin 5011) (hn : n.val = 4975) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4975 at hn
-  subst hn
+  have hn' : n = (4975 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48496,13 +47220,12 @@ theorem mem_iff_id_4975 (n : Fin 5011) (hn : n.val = 4975) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4976 (n : Fin 5011) (hn : n.val = 4976) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4976 at hn
-  subst hn
+  have hn' : n = (4976 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48534,13 +47257,12 @@ theorem mem_iff_id_4976 (n : Fin 5011) (hn : n.val = 4976) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4977 (n : Fin 5011) (hn : n.val = 4977) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4977 at hn
-  subst hn
+  have hn' : n = (4977 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48572,13 +47294,12 @@ theorem mem_iff_id_4977 (n : Fin 5011) (hn : n.val = 4977) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4978 (n : Fin 5011) (hn : n.val = 4978) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4978 at hn
-  subst hn
+  have hn' : n = (4978 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48610,13 +47331,12 @@ theorem mem_iff_id_4978 (n : Fin 5011) (hn : n.val = 4978) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4979 (n : Fin 5011) (hn : n.val = 4979) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4979 at hn
-  subst hn
+  have hn' : n = (4979 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48648,13 +47368,12 @@ theorem mem_iff_id_4979 (n : Fin 5011) (hn : n.val = 4979) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4980 (n : Fin 5011) (hn : n.val = 4980) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4980 at hn
-  subst hn
+  have hn' : n = (4980 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48686,13 +47405,12 @@ theorem mem_iff_id_4980 (n : Fin 5011) (hn : n.val = 4980) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4981 (n : Fin 5011) (hn : n.val = 4981) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4981 at hn
-  subst hn
+  have hn' : n = (4981 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48724,13 +47442,12 @@ theorem mem_iff_id_4981 (n : Fin 5011) (hn : n.val = 4981) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4982 (n : Fin 5011) (hn : n.val = 4982) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4982 at hn
-  subst hn
+  have hn' : n = (4982 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48762,13 +47479,12 @@ theorem mem_iff_id_4982 (n : Fin 5011) (hn : n.val = 4982) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4983 (n : Fin 5011) (hn : n.val = 4983) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4983 at hn
-  subst hn
+  have hn' : n = (4983 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48800,13 +47516,12 @@ theorem mem_iff_id_4983 (n : Fin 5011) (hn : n.val = 4983) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4984 (n : Fin 5011) (hn : n.val = 4984) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4984 at hn
-  subst hn
+  have hn' : n = (4984 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48838,13 +47553,12 @@ theorem mem_iff_id_4984 (n : Fin 5011) (hn : n.val = 4984) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4985 (n : Fin 5011) (hn : n.val = 4985) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4985 at hn
-  subst hn
+  have hn' : n = (4985 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48876,13 +47590,12 @@ theorem mem_iff_id_4985 (n : Fin 5011) (hn : n.val = 4985) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4986 (n : Fin 5011) (hn : n.val = 4986) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4986 at hn
-  subst hn
+  have hn' : n = (4986 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48914,13 +47627,12 @@ theorem mem_iff_id_4986 (n : Fin 5011) (hn : n.val = 4986) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4987 (n : Fin 5011) (hn : n.val = 4987) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4987 at hn
-  subst hn
+  have hn' : n = (4987 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48952,13 +47664,12 @@ theorem mem_iff_id_4987 (n : Fin 5011) (hn : n.val = 4987) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4988 (n : Fin 5011) (hn : n.val = 4988) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4988 at hn
-  subst hn
+  have hn' : n = (4988 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -48990,13 +47701,12 @@ theorem mem_iff_id_4988 (n : Fin 5011) (hn : n.val = 4988) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4989 (n : Fin 5011) (hn : n.val = 4989) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4989 at hn
-  subst hn
+  have hn' : n = (4989 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49028,13 +47738,12 @@ theorem mem_iff_id_4989 (n : Fin 5011) (hn : n.val = 4989) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4990 (n : Fin 5011) (hn : n.val = 4990) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4990 at hn
-  subst hn
+  have hn' : n = (4990 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49066,13 +47775,12 @@ theorem mem_iff_id_4990 (n : Fin 5011) (hn : n.val = 4990) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4991 (n : Fin 5011) (hn : n.val = 4991) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4991 at hn
-  subst hn
+  have hn' : n = (4991 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49104,13 +47812,12 @@ theorem mem_iff_id_4991 (n : Fin 5011) (hn : n.val = 4991) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4992 (n : Fin 5011) (hn : n.val = 4992) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4992 at hn
-  subst hn
+  have hn' : n = (4992 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49142,13 +47849,12 @@ theorem mem_iff_id_4992 (n : Fin 5011) (hn : n.val = 4992) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4993 (n : Fin 5011) (hn : n.val = 4993) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4993 at hn
-  subst hn
+  have hn' : n = (4993 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49180,13 +47886,12 @@ theorem mem_iff_id_4993 (n : Fin 5011) (hn : n.val = 4993) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4994 (n : Fin 5011) (hn : n.val = 4994) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4994 at hn
-  subst hn
+  have hn' : n = (4994 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49218,13 +47923,12 @@ theorem mem_iff_id_4994 (n : Fin 5011) (hn : n.val = 4994) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4995 (n : Fin 5011) (hn : n.val = 4995) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4995 at hn
-  subst hn
+  have hn' : n = (4995 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49256,13 +47960,12 @@ theorem mem_iff_id_4995 (n : Fin 5011) (hn : n.val = 4995) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4996 (n : Fin 5011) (hn : n.val = 4996) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4996 at hn
-  subst hn
+  have hn' : n = (4996 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49294,13 +47997,12 @@ theorem mem_iff_id_4996 (n : Fin 5011) (hn : n.val = 4996) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4997 (n : Fin 5011) (hn : n.val = 4997) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4997 at hn
-  subst hn
+  have hn' : n = (4997 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49332,13 +48034,12 @@ theorem mem_iff_id_4997 (n : Fin 5011) (hn : n.val = 4997) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4998 (n : Fin 5011) (hn : n.val = 4998) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4998 at hn
-  subst hn
+  have hn' : n = (4998 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49370,13 +48071,12 @@ theorem mem_iff_id_4998 (n : Fin 5011) (hn : n.val = 4998) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_id_4999 (n : Fin 5011) (hn : n.val = 4999) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
-  rcases n with ⟨k, hk⟩
-  change k = 4999 at hn
-  subst hn
+  have hn' : n = (4999 : Fin 5011) := Fin.ext hn
+  subst hn'
   rw [EnergyTerminalBatchB13.mem_residualIDs_iff]
   simp only [
     EnergyTerminalBatchB13.paidIDs,
@@ -49408,7 +48108,7 @@ theorem mem_iff_id_4999 (n : Fin 5011) (hn : n.val = 4999) :
     Finset.mem_insert,
     Finset.mem_singleton,
     not_or]
-  decide +kernel +revert
+  decide +kernel
 
 theorem mem_iff_block01 (n : Fin 5011) (hlo : 100 ≤ n.val) (hhi : n.val < 200) :
     n ∈ residualIDs ↔ n ∈ EnergyTerminalBatchB13.residualIDs := by
