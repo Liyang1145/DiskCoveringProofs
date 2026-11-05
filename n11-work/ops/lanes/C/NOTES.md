@@ -132,3 +132,55 @@ above (union-free, literal-only `decide`), regenerate C01-C04, re-run
 request one CI cycle. Read the FIRST owning error; do not claim green until the
 job log shows exit 0 for C01-C04 with axioms
 `[propext, Classical.choice, Quot.sound]`.
+
+## 2026-11-05 - part 302 (real CI error found; emitter fixed; CI pending)
+
+Fetched the ACTUAL job log for run `41847982412` (sha `6e67ed3a`, the run
+that includes the part-301 `mem_union` split). Command used:
+`curl -sL https://api.github.com/repos/Liyang1145/DiskCoveringProofs/actions/jobs/126636432190/logs`
+(698 MB; the OOM-guard lines dominate). PROGRESS.md confirms `41847982412`
+`success-run but 11 census modules exit 1`.
+
+Owning error (C01, identical form C02-C04, repeated for EVERY per-index
+theorem at `EnergyTerminalResidualCensusC01.lean:49:2, 87:2, 125:2, ...`):
+```
+error: ...C01.lean:49:2: failed to synthesize
+  Decidable
+    (\u2200 (hk : 0 < 5011),
+      \u27e80, hk\u27e9 \u2208 residualIDs \u2194
+        (DBMSourceTree.data \u27e80, hk\u27e9).terminal = true \u2227 ...
+```
+NOT a heartbeat timeout. The part-296 proof wrote `decide +kernel +revert`;
+`+revert` lifts the `Fin` bound proof `hk : 0 < 5011` into a `\u2200`, and
+`Decidable (\u2200 hk : 0 < 5011, P hk)` is not synthesizable (no `Fintype` on a
+`Prop`), so synthesis fails before any kernel reduction. (The pre-301
+version reached a *timeout* because its goal after `simp only` still had
+`n \u2208 paidIDs` as a single union-value atom; adding `mem_union` made the
+goal a big `\u2227`/`\u2228` of small atoms and exposed the `\u2200 hk` synthesis bug.)
+
+Fix (emitter `emit_census_c01_c04.py`, part 302): replace
+`rcases n with \u27e8k, hk\u27e9; change k = N at hn; subst hn` with
+`have hn' : n = (N : Fin 5011) := Fin.ext hn; subst hn'` so `n` becomes the
+CLOSED literal `(N : Fin 5011)` (no dependent proof in the term), and use
+`decide +kernel` WITHOUT `+revert` (goal is already closed). Regenerated
+C01..C04 this session (C01 1300, C02 1300, C03 1211, C04 1200 ids; 5011
+total). Interface `mem_iff_blockNN` and the 51 consumer calls are unchanged.
+
+Checks run (scope): `emit_census_c01_c04.py` (rc=0, self-check 5011);
+`verify_census_c01_c04.py` -> `PASS  per-index ids: 5011 (0..5010); blocks: 51;
+consumer: 51 calls; chunks==census (389); forbidden tokens: none` (SOURCE-LEVEL
+STRUCTURE ONLY, exact-complement vs `residual389-census.json`);
+`git diff --stat` (C01-C04 rewritten). NO Lean built locally, no CI cycle
+triggered, nothing kernel-checked. Nothing here is kernel credit.
+
+Still unproved: CI green for C01-C04 + the 11 red census consumers; all 389
+residual radius certificates; 382 non-public payloads; MPacket validity;
+SevenClassExclusions; arbitrary-centre root theorem. (`decide +kernel` on the
+full closed disjunction may now be slow/OK; unknown until CI.)
+
+Very next concrete step: request ONE CI cycle (supervisor pushes); read the
+FIRST owning error for C01. If it is again a timeout at the `decide +kernel`
+line, apply the NOTES part-300 design (2): split `n \u2208 paidIDs` structurally
+via `Finset.mem_union`/`not_or` over the B12/Next505/Next1182 chain and close
+leaves with per-part `mem` lemmas, instead of one `decide` over the whole
+disjunction.
