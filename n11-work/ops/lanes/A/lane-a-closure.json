@@ -33,7 +33,7 @@
   "committed_reports": {
     "c450-consumer-signatures.json": "24a6a5ad10c969d091821e4b2ee55d76a7277ca685592214d2b27d4b66cf5e01",
     "c450-import-closure.json": "1fd9aff3ea39137df9bd88a82a5aeeebb0ab1303eb0d7519de4eaeac6296842e",
-    "c450-root-import-safety.json": "dcfd27ee80eb0da38e8e0dd22d71c5e82bf2e189b7d0e7f5bcf8d8ba18201438",
+    "c450-root-import-safety.json": "74407e339b8608cc7eb486f3c703682a244c4b6c5facf856630b70db578957c5",
     "c450-transfer-shapes.json": "0de9470176034101c34c5cfa0fc5badfd63935bb8c0f87ebfcd614176704b8ae"
   },
   "failures": [],

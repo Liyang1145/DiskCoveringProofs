@@ -1,0 +1,27 @@
+{
+ "scope": "GitHub Actions job log (read-only); observation of CI output, NOT a kernel verdict by this script",
+ "repo": "Liyang1145/DiskCoveringProofs",
+ "run_id": "41847982412",
+ "job_id": "126636432190",
+ "exit_lines_total": 347,
+ "exit_zero": 211,
+ "exit_nonzero": 136,
+ "lane_a_targets": [
+  "N11Formalization.C450ChainCompletion",
+  "N11Formalization.C450ChainCompletionMain",
+  "N11Formalization.C450ChainCompletionAudit"
+ ],
+ "lane_a_exits": {
+  "N11Formalization.C450ChainCompletion": "0",
+  "N11Formalization.C450ChainCompletionMain": "0",
+  "N11Formalization.C450ChainCompletionAudit": "0"
+ },
+ "lane_a_all_green": true,
+ "c450_exits": {
+  "N11Formalization.C450ChainCompletion": "0",
+  "N11Formalization.C450ChainCompletionMain": "0",
+  "N11Formalization.C450ChainCompletionAudit": "0"
+ },
+ "c450_axiom_decls_seen": 18181,
+ "c450_axiom_dirty": {}
+}

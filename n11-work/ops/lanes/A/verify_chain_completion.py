@@ -150,7 +150,8 @@ def main():
 
     targets = (HERE / "TARGETS.txt").read_text(encoding="utf-8").splitlines()
     targets = [line.strip() for line in targets if line.strip() and not line.startswith("#")]
-    assert targets[:2] == [
+    assert targets[:3] == [
+        "N11Formalization.C450ChainCompletion",
         "N11Formalization.C450ChainCompletionMain",
         "N11Formalization.C450ChainCompletionAudit",
     ], targets
