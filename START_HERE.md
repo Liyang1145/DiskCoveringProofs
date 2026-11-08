@@ -46,3 +46,4 @@ STATUS 中随意挑一个 ACTIVE 标记替代这里指向的最新状态。
 
 [n=26 本机进度与暂停点](cover26/continuations/2026-11-08-terra/README.md)已同步；范围为 0.229 < r_D(26) <= rho，原生 16/4957/344 不变。
 [外来 n=11/n=14 证明审查](external-submissions/2026-11-08-sol-review/REVIEW.md)包含 n=14 完整算术复算和拒绝控制；n=11 同版代码缺失。持续研究目标仍暂停。
+[n=11、12、14 离线复证材料](external-submissions/2026-11-08-offline-proofs/README.md)汇集外来证明、证书与本次复算范围。

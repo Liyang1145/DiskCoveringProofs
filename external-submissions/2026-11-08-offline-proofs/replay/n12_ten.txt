@@ -1,0 +1,3 @@
+=== full ten-boundary certificate ===
+certified ten boundary disks impossible at 397044643907 / 1099511627776 using 539 measures and 80 pruned inner boxes; 6395771 outer boxes
+exit=0

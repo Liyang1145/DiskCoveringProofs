@@ -1,0 +1,12 @@
+=== upper and interval prerequisites ===
+root: signs verified on both the coarse and refined isolation rectangles
+sector: all strict geometric inequalities verified
+local geometry: strict separation of witness arcs and intersection points verified
+local lower bound: all three Hessian minor signs verified at the candidate
+boundary: count, nine-disk ring and small-inner-center inequalities verified
+sharp certificates: dyadic constants, angle caps and tangent slope verified
+11 boundary disks: verified 444 boxes; 14 outside |d-e| <= 0.086
+10 boundary disks with far inner center: verified/pruned boxes (7849, 28) outer, (103, 7) far
+9 boundary disks at radius 709/2000: verified 780 outer and 32 inner intervals
+10 boundary disks at radius 71/200: verified 200 outer and 103 inner intervals
+exit=0

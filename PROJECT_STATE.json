@@ -25,7 +25,8 @@
         "Finish serial C450 gates/builds, preserving timeout/failure logs. Then root-integrate Source14..36 and prove the telescope from empty drop36 to h450; an empty tail does not pay the last segment itself.",
         "Run frozen root builds first, then fresh type/axiom/control probes and a newly tagged manifest/acceptance for the actual current root.",
         "Instantiate the balanced two-table and six other class inputs. Fix switch aggregation/identity bridge first; qualify LeafControls bound 1/2000 versus SwitchBatch bound 141/1000000.",
-        "Complete the remaining energy certificates; 389 require actual mathematical certificate/refinement work."
+        "Complete the remaining energy certificates; 389 require actual mathematical certificate/refinement work.",
+        "Review the submitted written reduction and check equivalence of the two exact radius definitions."
       ],
       "complete_fresh_global_replay": false,
       "latest_source_handoff": "assets/replay/n11-wip/HANDOFF.json",
@@ -45,7 +46,11 @@
       "wip_snapshot_root_sha256": "f6e3419a258b0afc0b62cb50317661d3bcc5a9538ae5a0fa4037918366b0fce0",
       "last_accepted_root_sha256": "4f470af507f320488dfbc168f9ae39645904af569ae46b9ffb8f5e520bc5edaf",
       "external_submission_review": "external-submissions/2026-11-08-sol-review/REVIEW.md",
-      "external_review_scope": "Submitted n11 proof text only; matching executors and terminal certificates missing; no new arithmetic acceptance."
+      "external_review_scope": "Submitted n11 proof text only; matching executors and terminal certificates missing; no new arithmetic acceptance.",
+      "external_offline_submission": {
+        "path": "external-submissions/2026-11-08-offline-proofs/README.md",
+        "scope": "Same-version executors and regenerated inputs for the prior external n11 manuscript. Full supplied double-fan arithmetic replay passed."
+      }
     },
     {
       "n": 12,
@@ -63,9 +68,14 @@
       ],
       "asset_availability": "Selected Git archive; historical full-chain dependency closure not guaranteed.",
       "next_actions": [
-        "Complete the analytic/global-chain replay around the freshly checked full k10 arithmetic."
+        "Complete the analytic/global-chain replay around the freshly checked full k10 arithmetic.",
+        "Review the submitted general-cover reduction and check equivalence of the two exact radius definitions."
       ],
-      "complete_fresh_global_replay": false
+      "complete_fresh_global_replay": false,
+      "external_offline_submission": {
+        "path": "external-submissions/2026-11-08-offline-proofs/README.md",
+        "scope": "Separate external n12 proof, sources and both boundary-domain certificates. k10 and tangent replay passed; full k9 replay interrupted during host memory pressure."
+      }
     },
     {
       "n": 14,
@@ -81,11 +91,16 @@
       "fresh_portable_commands": [],
       "asset_availability": "Selected Git archive; historical full-chain dependency closure not guaranteed.",
       "next_actions": [
-        "Port the archived mathematical acceptance chain with exact input closure; preserve qualifications."
+        "Port the archived mathematical acceptance chain with exact input closure; preserve qualifications.",
+        "Compare the external exact root definition with the archived canonical root."
       ],
       "complete_fresh_global_replay": false,
       "external_submission_review": "external-submissions/2026-11-08-sol-review/REVIEW.md",
-      "external_review_scope": "Complete submitted n14 arithmetic replay plus five rejection controls; written geometric reduction reviewed separately; original authority retained."
+      "external_review_scope": "Complete submitted n14 arithmetic replay plus five rejection controls; written geometric reduction reviewed separately; original authority retained.",
+      "external_offline_submission": {
+        "path": "external-submissions/2026-11-08-offline-proofs/README.md",
+        "scope": "The existing n14 submission matches byte for byte; its supplied verifier passed again."
+      }
     },
     {
       "n": 21,
