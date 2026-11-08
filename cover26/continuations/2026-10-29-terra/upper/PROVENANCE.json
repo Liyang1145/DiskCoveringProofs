@@ -1,0 +1,17 @@
+{
+  "source_url": "https://minmaxarena.com/en/problems/circles-cover-disc/p87-n26-v1",
+  "family_data_url": "https://minmaxarena.com/data/circles-cover-disc.json",
+  "retrieved_date": "2026-10-29",
+  "source_record_date": "2026-10-05",
+  "record_holder": "pikachu345",
+  "source_disclosed_method": "AI, OpenAI GPT-6 Astra",
+  "license": "CC BY 4.0 (family data and coordinates, as stated on the family page)",
+  "source_status": "verified construction, not proven optimal",
+  "transcription": "The 26 placements and radius were transcribed from the current leader JSON printed on the retrieved instance page. Independent exact verification is required.",
+  "source_target_center": ["1", "1"],
+  "local_target_center": ["0", "0"],
+  "coordinate_change": "subtract 1 from both coordinates, interpreting all decimal strings as exact rationals",
+  "reported_score": "4.260756762",
+  "score_definition": "R=1/r; its displayed decimal is rounded and is not an exact radius definition",
+  "original_same_root_claim": "No identification with the archived exact isolated root is asserted by this transcription."
+}

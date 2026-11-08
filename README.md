@@ -169,3 +169,9 @@ version, and record the repository commit and the fresh report's scope when
 describing a replay.
 
 The [frozen replay asset release](docs/FROZEN_REPLAY_ASSETS.md) additionally supplies n11 generator/gate records, the complete n21/n22 snapshot inputs and the complete migrated n23–25 input union. All indexed release assets have confirmed remote digests. These are byte-bound inputs; portable global mathematical replay remains separate.
+
+
+## Latest continuation / 最新接续（2026-11-08）
+
+[n=26 checked bounds, exact candidate, and paused checkpoint](cover26/continuations/2026-11-08-terra/README.md): `0.229 < r_D(26) <= rho`; global optimality remains open.
+[Submitted n11/n14 proofs and review](external-submissions/2026-11-08-sol-review/REVIEW.md): full supplied n14 arithmetic replay and five rejection controls passed; the n11 text lacks its matching code. Original authorities and qualifications are retained.

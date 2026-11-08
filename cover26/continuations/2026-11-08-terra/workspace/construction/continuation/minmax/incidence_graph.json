@@ -1,0 +1,871 @@
+{
+  "source": "rational_geometry.json",
+  "source_sha256": "90f23ed3075f70e1eecc04a8a2219fd013bea1df4a43699cd19dc4493fdd4053",
+  "center_count": 26,
+  "interior_face_count": 34,
+  "boundary_anchor_count": 16,
+  "incidence_count": 134,
+  "face_vertices": [
+    [
+      0,
+      1,
+      18
+    ],
+    [
+      0,
+      15,
+      18
+    ],
+    [
+      1,
+      2,
+      19
+    ],
+    [
+      1,
+      18,
+      19
+    ],
+    [
+      2,
+      3,
+      19
+    ],
+    [
+      3,
+      4,
+      20
+    ],
+    [
+      3,
+      19,
+      20
+    ],
+    [
+      4,
+      5,
+      20
+    ],
+    [
+      5,
+      6,
+      21
+    ],
+    [
+      5,
+      20,
+      21
+    ],
+    [
+      6,
+      7,
+      21
+    ],
+    [
+      7,
+      8,
+      22
+    ],
+    [
+      7,
+      21,
+      22
+    ],
+    [
+      8,
+      9,
+      22
+    ],
+    [
+      9,
+      10,
+      23
+    ],
+    [
+      9,
+      22,
+      23
+    ],
+    [
+      10,
+      11,
+      23
+    ],
+    [
+      11,
+      12,
+      24
+    ],
+    [
+      11,
+      23,
+      24
+    ],
+    [
+      12,
+      13,
+      24
+    ],
+    [
+      13,
+      14,
+      25
+    ],
+    [
+      13,
+      24,
+      25
+    ],
+    [
+      14,
+      15,
+      25
+    ],
+    [
+      15,
+      18,
+      25
+    ],
+    [
+      16,
+      17,
+      20
+    ],
+    [
+      16,
+      17,
+      24
+    ],
+    [
+      16,
+      18,
+      19
+    ],
+    [
+      16,
+      18,
+      25
+    ],
+    [
+      16,
+      19,
+      20
+    ],
+    [
+      16,
+      24,
+      25
+    ],
+    [
+      17,
+      20,
+      21
+    ],
+    [
+      17,
+      21,
+      22
+    ],
+    [
+      17,
+      22,
+      23
+    ],
+    [
+      17,
+      23,
+      24
+    ]
+  ],
+  "boundary_center_order": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "incidences": [
+    {
+      "witness": "F00",
+      "center": "C00",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F00",
+      "center": "C01",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F00",
+      "center": "C18",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F01",
+      "center": "C00",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F01",
+      "center": "C15",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F01",
+      "center": "C18",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F02",
+      "center": "C01",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F02",
+      "center": "C02",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F02",
+      "center": "C19",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F03",
+      "center": "C01",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F03",
+      "center": "C18",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F03",
+      "center": "C19",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F04",
+      "center": "C02",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F04",
+      "center": "C03",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F04",
+      "center": "C19",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F05",
+      "center": "C03",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F05",
+      "center": "C04",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F05",
+      "center": "C20",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F06",
+      "center": "C03",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F06",
+      "center": "C19",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F06",
+      "center": "C20",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F07",
+      "center": "C04",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F07",
+      "center": "C05",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F07",
+      "center": "C20",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F08",
+      "center": "C05",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F08",
+      "center": "C06",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F08",
+      "center": "C21",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F09",
+      "center": "C05",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F09",
+      "center": "C20",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F09",
+      "center": "C21",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F10",
+      "center": "C06",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F10",
+      "center": "C07",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F10",
+      "center": "C21",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F11",
+      "center": "C07",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F11",
+      "center": "C08",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F11",
+      "center": "C22",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F12",
+      "center": "C07",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F12",
+      "center": "C21",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F12",
+      "center": "C22",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F13",
+      "center": "C08",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F13",
+      "center": "C09",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F13",
+      "center": "C22",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F14",
+      "center": "C09",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F14",
+      "center": "C10",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F14",
+      "center": "C23",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F15",
+      "center": "C09",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F15",
+      "center": "C22",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F15",
+      "center": "C23",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F16",
+      "center": "C10",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F16",
+      "center": "C11",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F16",
+      "center": "C23",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F17",
+      "center": "C11",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F17",
+      "center": "C12",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F17",
+      "center": "C24",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F18",
+      "center": "C11",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F18",
+      "center": "C23",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F18",
+      "center": "C24",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F19",
+      "center": "C12",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F19",
+      "center": "C13",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F19",
+      "center": "C24",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F20",
+      "center": "C13",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F20",
+      "center": "C14",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F20",
+      "center": "C25",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F21",
+      "center": "C13",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F21",
+      "center": "C24",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F21",
+      "center": "C25",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F22",
+      "center": "C14",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F22",
+      "center": "C15",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F22",
+      "center": "C25",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F23",
+      "center": "C15",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F23",
+      "center": "C18",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F23",
+      "center": "C25",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F24",
+      "center": "C16",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F24",
+      "center": "C17",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F24",
+      "center": "C20",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F25",
+      "center": "C16",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F25",
+      "center": "C17",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F25",
+      "center": "C24",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F26",
+      "center": "C16",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F26",
+      "center": "C18",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F26",
+      "center": "C19",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F27",
+      "center": "C16",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F27",
+      "center": "C18",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F27",
+      "center": "C25",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F28",
+      "center": "C16",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F28",
+      "center": "C19",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F28",
+      "center": "C20",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F29",
+      "center": "C16",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F29",
+      "center": "C24",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F29",
+      "center": "C25",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F30",
+      "center": "C17",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F30",
+      "center": "C20",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F30",
+      "center": "C21",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F31",
+      "center": "C17",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F31",
+      "center": "C21",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F31",
+      "center": "C22",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F32",
+      "center": "C17",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F32",
+      "center": "C22",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F32",
+      "center": "C23",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F33",
+      "center": "C17",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F33",
+      "center": "C23",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "F33",
+      "center": "C24",
+      "kind": "interior-circumcenter"
+    },
+    {
+      "witness": "B00",
+      "center": "C00",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B00",
+      "center": "C01",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B01",
+      "center": "C01",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B01",
+      "center": "C02",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B02",
+      "center": "C02",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B02",
+      "center": "C03",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B03",
+      "center": "C03",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B03",
+      "center": "C04",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B04",
+      "center": "C04",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B04",
+      "center": "C05",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B05",
+      "center": "C05",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B05",
+      "center": "C06",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B06",
+      "center": "C06",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B06",
+      "center": "C07",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B07",
+      "center": "C07",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B07",
+      "center": "C08",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B08",
+      "center": "C08",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B08",
+      "center": "C09",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B09",
+      "center": "C09",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B09",
+      "center": "C10",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B10",
+      "center": "C10",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B10",
+      "center": "C11",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B11",
+      "center": "C11",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B11",
+      "center": "C12",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B12",
+      "center": "C12",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B12",
+      "center": "C13",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B13",
+      "center": "C13",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B13",
+      "center": "C14",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B14",
+      "center": "C14",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B14",
+      "center": "C15",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B15",
+      "center": "C15",
+      "kind": "rational-boundary-anchor"
+    },
+    {
+      "witness": "B15",
+      "center": "C00",
+      "kind": "rational-boundary-anchor"
+    }
+  ],
+  "warning": "Incidences establish valid covering witness constraints; they are not necessarily equal-length contacts. Four faces have circumradius < 0.232. This is not proved identical to the archived 134-rod model or its isolated root."
+}

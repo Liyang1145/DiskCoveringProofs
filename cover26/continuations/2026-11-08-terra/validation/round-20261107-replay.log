@@ -1,0 +1,9 @@
+previous_02285 PASS
+previous_02287 PASS
+new_bigint PASS
+new_fraction PASS
+upper_exact PASS
+bigint_reject_0230001 PASS
+fraction_reject_0230001 PASS
+PASS: all 7 checks; inputs unchanged
+

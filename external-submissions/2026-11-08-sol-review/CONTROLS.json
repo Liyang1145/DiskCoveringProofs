@@ -1,0 +1,46 @@
+{
+  "scope": "supplied n14 package arithmetic replay and corruption controls; analytic reduction separately reviewed",
+  "input_sha256": {
+    "extracted/N=14/cover-proof.json.gz": "2fa3e4f28f0e79b58047760284858fccc71b20e1cabd543c9fc195d271596fe3",
+    "extracted/N=14/eleven.py": "6b69bf68fde65689ca45fc8910dfac617b6e562cdf106a506c679cefc41f98e4",
+    "extracted/N=14/interval.py": "bf1d7523743cec2f4ac2cc4de84f7d6b1f85781256fd396f823a2e845bebf221",
+    "extracted/N=14/local.py": "4104fdbf3264db89d7dc1ffb53ae55c7e037293d3a98db656ec976680c96e49e",
+    "extracted/N=14/lower.py": "201ebcc7495c34c1be75c455d9bc87acfb75f278d8c4b479b65f307c87e65d5d",
+    "extracted/N=14/neighborhood.py": "df1c4d51da6148a8f43564d68bfbfda48670725b8f465ddd00cde6bf0a65442b",
+    "extracted/N=14/network.py": "76d2f973183f6b57eb14380e54f1a304df5382810a233a9ec01bbf52aef12ef0",
+    "extracted/N=14/search.py": "f75fd9fee92b84ac69916392939df59bb37d729f4ed433d3f867c680409fa705",
+    "extracted/N=14/topology.py": "4cea13d48d5479b12117c602a65800d46c436b4fdddeca2789c3e4ec90fc3b9c",
+    "extracted/N=14/upper.py": "9960a7808e53ca14e7aa8fd315556f80211b0ca883f6b80267eb9c546cfa8172",
+    "extracted/N=14/verify.py": "8dfcd49e394c119d3b0e223ff48cca56e7b16cf4ae9170b8329fdf61dc09bbfa",
+    "extracted/N=14/复算说明.txt": "0036c801bc20046b5746d1cb83bb8d07920ae2d79487fd85b109515bace64c01",
+    "extracted/N=14/证明.md": "feab060fcd17fed1bb620c8b336f7bae791c3a90886daf02ce1b4c2aad63fefd"
+  },
+  "independent_pi_and_trig_checks": true,
+  "inventory": {
+    "10": {
+      "representatives": 424,
+      "tree_node_kinds": {
+        "f": 476,
+        "s": 66,
+        "n": 14
+      }
+    },
+    "11": {
+      "representatives": 200,
+      "tree_node_kinds": {
+        "s": 230,
+        "f": 430
+      }
+    }
+  },
+  "negative_controls_rejected": [
+    "unbalanced-force",
+    "dropped-child-not-accepted-as-complete",
+    "whole-domain-fake-near-leaf",
+    "omitted-representative",
+    "assertions-disabled"
+  ],
+  "source_bytes_unchanged": true,
+  "new_unrestricted_theorem_adoption": false,
+  "n26_payments": 0
+}

@@ -1,0 +1,239 @@
+{
+  "source_sha256": "c1675552b56d762de0bca83ca3adbb28e06c71e95c94b387d7f216eee41187c9",
+  "source_bytes": 480441790,
+  "parser": "ijson 3.6.0",
+  "parser_backend": "yajl2_c",
+  "fields": [
+    {
+      "key": "schema",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "verified",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "source_OPEN_index",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_source_closed_box",
+      "events": 84,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "source_file_sha256",
+      "events": 8,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_current_predecessor_file",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_current_predecessor_sha256",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_current_predecessor_controls_file",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_current_predecessor_controls_sha256",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_checked_current_origin_admission_file",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_checked_current_origin_admission_sha256",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_checked_current_origin_controls_file",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_checked_current_origin_controls_sha256",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "parameter_pilot_sha256",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "new_whole_actual_current_leaf_indices",
+      "events": 4,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "nodes",
+      "events": 109347,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "arithmetic_ledger",
+      "events": 207733,
+      "projected": false,
+      "deliberately_skipped": true
+    },
+    {
+      "key": "alternative_supports",
+      "events": 595202,
+      "projected": false,
+      "deliberately_skipped": true
+    },
+    {
+      "key": "full134rod_supports",
+      "events": 112899,
+      "projected": false,
+      "deliberately_skipped": true
+    },
+    {
+      "key": "fresh_joint_origin_supports",
+      "events": 62034,
+      "projected": false,
+      "deliberately_skipped": true
+    },
+    {
+      "key": "pending_closed_leaf_boxes",
+      "events": 14450,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "remaining_OPEN_leaf_count",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "total_whole_original_v4_OPEN_leaves_excluded",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "actual_current_support_count",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "retained_old_current_nodes_supports_and_rows",
+      "events": 5,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "all_old_physical_prefix_and_origin_donors_unchanged_only_selected_new_bases_appended",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "BOTH_whole_actual_origin_branches_checked_before_each_new_payment",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "all_old_origin_branch_forest_fresh_shared_and_physical_histories_retained",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "old_ANDnew_mathematics_qualified_checked_REUSE_NOT_fresh_all_history_replay",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "honest_distinct_append_schema_NOT_unchanged_table_reuse",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "latest_source_geometry_current_admission_and_independent_retention_STILL_required",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "new_geometric_payments",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "candidate_whole_roots_removed",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "global_lower_bound_proved",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "global_optimality_proved",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "n27_started",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "input_sha256",
+      "events": 2338,
+      "projected": true,
+      "deliberately_skipped": false
+    },
+    {
+      "key": "executed_producer_sha256",
+      "events": 1,
+      "projected": true,
+      "deliberately_skipped": false
+    }
+  ],
+  "projection_is_not_complete_snapshot": true,
+  "historical_arithmetic_ledger_replayed": false,
+  "new_geometric_payments": 0
+}

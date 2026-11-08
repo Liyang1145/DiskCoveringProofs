@@ -1,0 +1,207 @@
+{
+  "schema": "n26-second-supplement-replay-v1",
+  "client_date": "2026-10-30",
+  "execution_clock_utc": "2026-10-29T17:16:12.365205+00:00",
+  "strict_global_lower": "28/125",
+  "upper_from_prior_supplement": "234700091/1000000000",
+  "fixed_radius_branch_exclusions": {
+    "radius": "9/40",
+    "actual_boundary_counts": [
+      14,
+      17
+    ],
+    "remaining_after_uniform_enlargement": [
+      15,
+      16
+    ]
+  },
+  "n8_n9_geometry": "published Fejes Toth theorem cited, not freshly reproved",
+  "conditional_geometry_interface_replayed": false,
+  "dense_finite_witness_status": "PENDING",
+  "exact_optimum_proved": false,
+  "native_formal_payments": 0,
+  "native_counts_unchanged": [
+    16,
+    4957,
+    344
+  ],
+  "fresh_runs": [
+    {
+      "path": "lower/radial_28_125_check.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "group maxima 30180725031/250000 15095027437/125000 60384317183/500000\nargmax bins [3301, 8902, 16131]\nmargin 41706129239/26500000 ~ 1573.8161976981132 seconds 40.398328399984166\nPROVED: r_D(26)>28/125\n",
+      "stderr": "",
+      "sha256": "6c3a85d6424ae765198ff05b0e44803345270c8a885b0b77148c39b781156ba6"
+    },
+    {
+      "path": "audit/independent_28_125_atan.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "finished cells 5000 seconds 6.0\nfinished cells 10000 seconds 9.9\nfinished cells 15000 seconds 12.8\nfinished cells 20000 seconds 14.5\nweights sum 1000001 scaled group maxima [120723803992, 120770709562, 120816461966] argmax [3298, 8903, 16127]\ngap 9996391737/26500000 decimal 377.2223296981132 cells 24480 cache CacheInfo(hits=441936, misses=59875, maxsize=None, currsize=59875)\nPASS: independent atan certificate, radius 28/125 impossible\n",
+      "stderr": "",
+      "sha256": "461ee58eb7f11e6645a93273cc7336587c8c9d00eb716c00f7b1a8a7f6fce315"
+    },
+    {
+      "path": "lower/radial_9_40_branches.py",
+      "arguments": [
+        "14"
+      ],
+      "exit_code": 0,
+      "stdout": "group maxima 31779204309/500000 63660193/1000 83160370907/500000\nargmax bins [880, 1947, 3424]\nmargin 1303843949129/26500000 ~ 49201.65845769811 seconds 5.905804099980742\nPROVED: no 26 radius 9/40 cover has exactly 14 boundary-intersecting disks\n",
+      "stderr": "",
+      "sha256": "96fef2b466ea2eeb7935542bdb6b529821bc43c3b9cb3ee90621610788e8424d"
+    },
+    {
+      "path": "lower/radial_9_40_branches.py",
+      "arguments": [
+        "17"
+      ],
+      "exit_code": 0,
+      "stdout": "group maxima 87151882333/500000 8726450411/50000 45245525741/500000\nargmax bins [426, 1750, 3119]\nmargin 86449855107/2650000 ~ 32622.586832830188 seconds 4.824821199988946\nPROVED: no 26 radius 9/40 cover has exactly 17 boundary-intersecting disks\n",
+      "stderr": "",
+      "sha256": "96fef2b466ea2eeb7935542bdb6b529821bc43c3b9cb3ee90621610788e8424d"
+    },
+    {
+      "path": "audit/independent_9_40_atan.py",
+      "arguments": [
+        "14"
+      ],
+      "exit_code": 0,
+      "stdout": "weights sum 1000001 scaled group maxima [63559068410, 63667301506, 166359004451] argmax [880, 1947, 3425]\ngap 257511779363/5300000 decimal 48587.12818169811 cells 4900 cache CacheInfo(hits=47670, misses=29768, maxsize=None, currsize=29768)\nPASS: independent atan certificate, radius 9/40 impossible for boundary count 14\n",
+      "stderr": "",
+      "sha256": "a9b9ff3a8d0fb2c0abe84cffb662cbb8006a5276f9feed7976e793121c2db3a5"
+    },
+    {
+      "path": "audit/independent_9_40_atan.py",
+      "arguments": [
+        "17"
+      ],
+      "exit_code": 0,
+      "stdout": "weights sum 999999 scaled group maxima [174321857348, 174544019305, 90555897284] argmax [404, 1750, 3119]\ngap 103952963897/3312500 decimal 31382.026836830188 cells 4900 cache CacheInfo(hits=39626, misses=23403, maxsize=None, currsize=23403)\nPASS: independent atan certificate, radius 9/40 impossible for boundary count 17\n",
+      "stderr": "",
+      "sha256": "a9b9ff3a8d0fb2c0abe84cffb662cbb8006a5276f9feed7976e793121c2db3a5"
+    },
+    {
+      "path": "lower/verify_reductions.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "All rational boundary and inner-core thresholds passed.\n",
+      "stderr": "",
+      "sha256": "3ebfa8058ccc73df70add82fdb996a28d0dd613b6c61d5aef0c92890af321803"
+    },
+    {
+      "path": "audit/verify_boundary_counts.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS U 234700091/1000000000 core 234700091/530599818 < 885/2000\nPASS boundary lower: sin(pi/13)> 1252348065/5233324304 > U\nPASS conditional on Fejes Toth: r_D(8)> 885/2000\nPASS conditional on Fejes Toth: core for r<=9/40 is < r_D(9)=sqrt(2)-1\n",
+      "stderr": "",
+      "sha256": "a263344dc0dd167fff81ec75cda26a19b31eee4eec9a7f1c0093dd4cd2b57937"
+    },
+    {
+      "path": "geometry/verify_b14.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS: all exact; B=14 implies total cross > 4573/10000\nAt least 6 cross > 1/50; at least 2 cross > 3/100\nFor both adjacent half-gaps >= 0.2368, cross < 3/100\nFor both adjacent half-gaps >= 0.234, cross < 0.0391\nNo whole-branch exclusion claimed\n",
+      "stderr": "",
+      "sha256": "bbbfbcb4275cebf05e1b2950f5ba4ce667b042b9a1c6aac9ce0637b6d70e83c0"
+    },
+    {
+      "path": "geometry/local_obstruction_exact.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS exact independent lenses witness: X= 48521/1000000 ; 14 X > 4573/10000\nWitness is local only: no claimed global sharing of centres\nEven independent-area upper relaxation has surplus > 1/10, so this route cannot exclude B=14 without coupling\n",
+      "stderr": "",
+      "sha256": "3acd5a5fef9c6c52bb57935d9ee60a6dae8783a5c786af80a9d74c3a5ee7cb38"
+    },
+    {
+      "path": "finite-witness/geometry/verify_finite_cover.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS: 241 rational unit-disk points covered by 23 explicit radius-9/40 disks\nAll input points and 23 centers certified with exact integer/square-root comparisons\n",
+      "stderr": "",
+      "sha256": "baeaf9301e8881548f4fa67e6dcaeffcfda57f8af695eee35367c99d2e0c6053"
+    },
+    {
+      "path": "finite-witness/audit/independent_cover23.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "PASS 241 exact points covered by 23 explicit radius-9/40 disks\n",
+      "stderr": "",
+      "sha256": "bf63c3dd53d8d8f268fe3c4e664bb166eff06f38be1faa84d5611b42d1866d67"
+    },
+    {
+      "path": "finite-witness/audit/test_exact_masks.py",
+      "arguments": [],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n",
+      "sha256": "cede30d9a3c5de5fe65028ef80e1ed66743081b4d282df0330910b644dfd47fd"
+    },
+    {
+      "path": "finite-witness/solver/verify.py",
+      "arguments": [
+        "finite-witness/solver/toy_integer_gap.json",
+        "finite-witness/solver/toy_integer_gap_certificate.json"
+      ],
+      "exit_code": 0,
+      "stdout": "VERIFIED finite set cover requires more than 2 masks; tree nodes 7\nGeometry is not verified here; independently verify coverage of all possible disk centers.\n",
+      "stderr": "",
+      "sha256": "24da3122f0e2315584d418217dd94c90f95d8c8308cb76eaa961a532b04ca427"
+    }
+  ],
+  "controls": [
+    {
+      "path": "lower/radial_28_125_check.py",
+      "control": "python-O-rejected",
+      "exit_code": 1
+    },
+    {
+      "path": "audit/independent_28_125_atan.py",
+      "control": "python-O-rejected",
+      "exit_code": 1
+    },
+    {
+      "path": "geometry/verify_b14.py",
+      "control": "python-O-rejected",
+      "exit_code": 1
+    }
+  ],
+  "input_sha256": {
+    "README.md": "3e9c4dece0ba7daa4784382298f8fe37c887b60fc5bdab3a46b7eeb7edcb9ff6",
+    "replay.py": "e33c195e1060a76412d046f8e73ab77ad7e81a0f970128ad36f925df347b09b4",
+    "audit/BOUNDARY-REDUCTION.md": "e13c0a75f2f6e6e57731e2062ce5d5b40efccfc14568e8d702414daf93fbafd5",
+    "audit/independent_28_125_atan.py": "461ee58eb7f11e6645a93273cc7336587c8c9d00eb716c00f7b1a8a7f6fce315",
+    "audit/independent_9_40_atan.py": "a9b9ff3a8d0fb2c0abe84cffb662cbb8006a5276f9feed7976e793121c2db3a5",
+    "audit/RADIAL-28-125-REVIEW.md": "f9beecf792e46744dfb2bb345802aa9790f39d764cb2aa9be6697cde32ba37a4",
+    "audit/RADIAL-9-40-REVIEW.md": "f37c441bb004e7a535db7edd03a57bb5630b1f5ef38a4a6665b2afad91901baf",
+    "audit/verify_boundary_counts.py": "a263344dc0dd167fff81ec75cda26a19b31eee4eec9a7f1c0093dd4cd2b57937",
+    "finite-witness/dense-status.json": "5a68c91dd97f8c39e533eed316d5fe90069dce27fdfe0de5442ed7aa3c51fcd9",
+    "geometry/lens_polygon.py": "09deb6c6d978ba1ea5d6102ff50722e193de3b9a34454883d30d9e133f85323f",
+    "geometry/local_obstruction_exact.py": "3acd5a5fef9c6c52bb57935d9ee60a6dae8783a5c786af80a9d74c3a5ee7cb38",
+    "geometry/REPORT.md": "a62b5f3ac741c791bc577895148a4a6a00604c908f4e29507cb31d6da9d96e9a",
+    "geometry/verify_b14.py": "bbbfbcb4275cebf05e1b2950f5ba4ce667b042b9a1c6aac9ce0637b6d70e83c0",
+    "lower/radial_28_125_check.py": "6c3a85d6424ae765198ff05b0e44803345270c8a885b0b77148c39b781156ba6",
+    "lower/radial_28_125_proposal.json": "3fbff4d8d6e2a8272672746ee7eeef62ac6f494d0bbb2351890aa37d4cd787ad",
+    "lower/radial_9_40_B14.json": "41ca5e8b6444c4bb29afaf285024a0b3a117520ea6505cc9293581ac6f98d54b",
+    "lower/radial_9_40_B17.json": "9f9517dbefa05015b7c05b9bcd233db5469e97754806623c555e63fb625c6b4c",
+    "lower/radial_9_40_branches.py": "96fef2b466ea2eeb7935542bdb6b529821bc43c3b9cb3ee90621610788e8424d",
+    "lower/REPORT.md": "6bdd73d42817c9a161625dd90a731fc80962d8cd5537c2f14faa28850ac48d58",
+    "lower/verify_reductions.py": "3ebfa8058ccc73df70add82fdb996a28d0dd613b6c61d5aef0c92890af321803",
+    "finite-witness/audit/exact_masks.py": "36bf3a8e259d344f5136477042d104d0a425535ee958dee6314c5ea8cc323a39",
+    "finite-witness/audit/GEOMETRY.md": "faa3c4fe89ee6ef9b7e39fd4da5a30730e404714f55c30fe7bfc9e415358d8c7",
+    "finite-witness/audit/independent_cover23.py": "bf63c3dd53d8d8f268fe3c4e664bb166eff06f38be1faa84d5611b42d1866d67",
+    "finite-witness/audit/test_exact_masks.py": "cede30d9a3c5de5fe65028ef80e1ed66743081b4d282df0330910b644dfd47fd",
+    "finite-witness/geometry/finite_cover_23.json": "9943b993947c83ae507fba1ec0f1e21de4ba0c820ff10ca379c25bcada809893",
+    "finite-witness/geometry/five_ring_exact.json": "7e8bdf16b885cab4e1c552d8a854a3ed77fa5595b6afa70cd1863858ac8ae239",
+    "finite-witness/geometry/REPORT.md": "8e31cd1a62bcf7227d128cb96717c20e3abff4e74cb162826186524f5dcc0556",
+    "finite-witness/geometry/verify_finite_cover.py": "baeaf9301e8881548f4fa67e6dcaeffcfda57f8af695eee35367c99d2e0c6053",
+    "finite-witness/solver/five_ring_cover23.json": "3c8c7bf0a006d963adad2b01d9325379f79a575f417d32a66de9a8d29cc1d715",
+    "finite-witness/solver/project_subset.py": "3231519a51827676a257514c6eb7436fe9eb5062d9a2ba84ae583d542c18b465",
+    "finite-witness/solver/REPORT.md": "7dff7a236581a125b1f3452723af4934a014f30e00b6f29bb17c9b7f3a701849",
+    "finite-witness/solver/solve.py": "7a3eac2062048d9b8bdd01a6d44fc3df4276fa8ac8a6cb98246083ed9be0f5f3",
+    "finite-witness/solver/toy_integer_gap.json": "0348db57f5f3e41f24638033911be51e5be7e99587281687ac4aa15086fa8643",
+    "finite-witness/solver/toy_integer_gap_certificate.json": "ba1800e67733fd66666c930af7d44fd8f61eaa04f07c1c756e7eb4c0a1d3407f",
+    "finite-witness/solver/verify.py": "24da3122f0e2315584d418217dd94c90f95d8c8308cb76eaa961a532b04ca427"
+  }
+}

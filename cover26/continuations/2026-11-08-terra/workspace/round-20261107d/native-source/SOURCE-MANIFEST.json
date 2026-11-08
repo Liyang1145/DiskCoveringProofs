@@ -1,0 +1,22 @@
+[
+  {
+    "local": "EMBEDDED-CORNER-SHADOW-BRIDGE-PROOF.md",
+    "blob_sha": "8729eeb7e11d1e5893a9910958322e7d92dfed7f",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/main/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/EMBEDDED-CORNER-SHADOW-BRIDGE-PROOF.md"
+  },
+  {
+    "local": "GENERIC-SLACK-PROOF.md",
+    "blob_sha": "e57ac2723af7fff688a9c59a02594b2b002700ac",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/main/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/GENERIC-SLACK-PROOF.md"
+  },
+  {
+    "local": "verify_degree_area.py",
+    "blob_sha": "52b057da6e9b3c554df72fa76460788da7260568",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/main/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/verify_degree_area.py"
+  },
+  {
+    "local": "DEGREE-AREA-PROOF.md",
+    "blob_sha": "0d1ca36506827dee8851dcc17674417e47fa5ca0",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-degree-area-lower-v1/PROOF.md"
+  }
+]

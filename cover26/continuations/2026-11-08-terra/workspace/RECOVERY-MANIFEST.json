@@ -1,0 +1,618 @@
+[
+  {
+    "source": ".tmp/dcp-sparse/AGENTS.md",
+    "part": 9,
+    "sha256": "2e5a6f3ec0b9aecd5c05aae3fdbb5aac5188fc7f02fd066fd33d43e87b3b1e7e",
+    "bytes": 1701,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\AGENTS.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/PROJECT_STATE.json",
+    "part": 9,
+    "sha256": "c959d716c5a3868e9a02431237ae9668995b92511fe25d7b5ad0d9fb8371c088",
+    "bytes": 13983,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\PROJECT_STATE.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/README.md",
+    "part": 9,
+    "sha256": "190e5eb82e213fc840093838dc58aa82fad00949169c757b03715bc4817c81b2",
+    "bytes": 11417,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\README.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/START_HERE.md",
+    "part": 9,
+    "sha256": "ef022451aa61a9238be5a0be9d1105da364a752a4b3fbc9caef35aa35f640d44",
+    "bytes": 2949,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\START_HERE.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/verification/reproducibility/HANDOFF_VALIDATION.md",
+    "part": 9,
+    "sha256": "2220c8f1996454d35ba75b9d5575120d96698106953a86191f7490eabfee53ed",
+    "bytes": 1377,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\verification\\reproducibility\\HANDOFF_VALIDATION.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/verification/reproducibility/n23-n25-public-content-audit-20261014.json",
+    "part": 9,
+    "sha256": "c9a6e0969ee981672b50253d0b08a9380888f561f3f814d26e46f2d761b0a60a",
+    "bytes": 3311,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\verification\\reproducibility\\n23-n25-public-content-audit-20261014.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/verification/reproducibility/n26-arithmetic-export-inputs.jsonl.gz",
+    "part": 9,
+    "sha256": "4629401d5e6b28a83c3be5c685d3b9a92821f4802be1a7f6cd6bc9933cfc5bd0",
+    "bytes": 55613,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\verification\\reproducibility\\n26-arithmetic-export-inputs.jsonl.gz"
+  },
+  {
+    "source": ".tmp/dcp-sparse/verification/reproducibility/n26-public-content-audit-20261014.json",
+    "part": 9,
+    "sha256": "8bce8d1f014ab5f4a4e2e31a46ce554a3d6ba0d42ffed96ddd6c3666324390b9",
+    "bytes": 563328,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\verification\\reproducibility\\n26-public-content-audit-20261014.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/verification/reproducibility/n26-root-map.example.json",
+    "part": 9,
+    "sha256": "fc2460e8d9662b193abf1c6175250e3a46376363e5f4511c5c919a2a8d52e366",
+    "bytes": 412,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\verification\\reproducibility\\n26-root-map.example.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/verification/reproducibility/orders21-26-handoff.json",
+    "part": 9,
+    "sha256": "fc61d5af808b22539b19cb45c03f0a9f5ace962973d6333d6d596967378fa0fa",
+    "bytes": 45840,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\verification\\reproducibility\\orders21-26-handoff.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/verification/public-math/n11-scoped-20261014.json",
+    "part": 9,
+    "sha256": "409dedb10829268b90951aed6896e0fc306316b1a9b045b7988f0b15a27e7d61",
+    "bytes": 9656,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\verification\\public-math\\n11-scoped-20261014.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/audit_replay_inventory.py",
+    "part": 9,
+    "sha256": "4e85378cadc2ed9d5285f469d0b3dd433fd0ed307e7fe5da7c7b876c4b62506a",
+    "bytes": 7259,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\audit_replay_inventory.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/bundle_io.py",
+    "part": 9,
+    "sha256": "fc1d4dd9e6449f381b73cad78eba677208174c05c07384cda5b3940f141116a4",
+    "bytes": 1607,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\bundle_io.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/check_math.py",
+    "part": 9,
+    "sha256": "4f17a061084d962a3ea3d8c567ef01b767cb78b3ad7e8e96e43c4b5f7ae7549e",
+    "bytes": 2586,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\check_math.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/export_frozen_assets.py",
+    "part": 9,
+    "sha256": "5567f17493f474d118e47c6ca51eba6a9cfd20af48a63b6c956b132acd42e258",
+    "bytes": 23508,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\export_frozen_assets.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/generate_gallery.py",
+    "part": 9,
+    "sha256": "697e839faaf0d41828183af26aa290898b7b366e95c8294c3df100af74bb263b",
+    "bytes": 25229,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\generate_gallery.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/mathcheck_n11.py",
+    "part": 9,
+    "sha256": "d65870fe5dbe73577ffb7900ea6b11202b92b211ee303de4464310a2649f67bb",
+    "bytes": 27175,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\mathcheck_n11.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/mathcheck_n12.py",
+    "part": 9,
+    "sha256": "7116efaa0561dae302b5316ac65e4f734ff8c28adcd5f86ac0ab5b923f061c17",
+    "bytes": 17430,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\mathcheck_n12.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/project_status.py",
+    "part": 9,
+    "sha256": "6a574d27e66703fad46712f65a29cb3c3e434276dc3e0146b7137e96551caea1",
+    "bytes": 2485,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\project_status.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/restore_frozen_assets.py",
+    "part": 9,
+    "sha256": "b172ba0a54ba34aaa66250c93cf3d4b73725595bff6f6dadf07342a156215a0d",
+    "bytes": 11981,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\restore_frozen_assets.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/restore_large_files.py",
+    "part": 9,
+    "sha256": "ef6acf2a970a2b63191df86a889704dbdc1605643d16739b4adce77ae61ecd3e",
+    "bytes": 2018,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\restore_large_files.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/scan_sensitive.py",
+    "part": 9,
+    "sha256": "215564e72bbb2bf3e69761a76b8e7605c8f5f1c0a8e7a79db7c2918f2e47e95c",
+    "bytes": 2047,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\scan_sensitive.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/test_delivery_checks.py",
+    "part": 9,
+    "sha256": "f060cd9ce0527d35e129a7135738426867d6e91b584e964825af4ecc5c66fbef",
+    "bytes": 4159,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\test_delivery_checks.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/test_frozen_assets.py",
+    "part": 9,
+    "sha256": "1369a27db1b080ef2a999e8ba606c58c99c935e954f10d2dd7509f424ea1dc28",
+    "bytes": 27487,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\test_frozen_assets.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/test_math_checks.py",
+    "part": 9,
+    "sha256": "cf73999d7eb58758e5f0052cfc976b2473c82e7f24cd1df25243e38de79cbf43",
+    "bytes": 3970,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\test_math_checks.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/tools/verify_delivery.py",
+    "part": 9,
+    "sha256": "de1135c2c5c7b043c60e5f2705b58f0ea0f20f672b74fece47fd16c8403defe1",
+    "bytes": 2597,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\tools\\verify_delivery.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/math_data/n12/core-points.json",
+    "part": 10,
+    "sha256": "e8cba6006e4cad5fa85f5fd3358452ff18a4c7c15ef606ac44db1c828e90a748",
+    "bytes": 5158,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\math_data\\n12\\core-points.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/math_data/n12/PROVENANCE.json",
+    "part": 10,
+    "sha256": "66695156090af85801d8d884de111e242bc790c4e7a5dad93dcee28ce5853e5a",
+    "bytes": 1827,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\math_data\\n12\\PROVENANCE.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/math_data/n12/root.json",
+    "part": 10,
+    "sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+    "bytes": 6975,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\math_data\\n12\\root.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/math_data/n12/scales.json",
+    "part": 10,
+    "sha256": "79befc66c3cd93ea1a415726feea74af923231b4d75823f7917feda2b7b03709",
+    "bytes": 26892,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\math_data\\n12\\scales.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/math_data/n12/vectors-2048.json",
+    "part": 10,
+    "sha256": "acc14b2c954c91748e38a0e78720d717de8f45ce17456d4f121dc6a4c1085481",
+    "bytes": 157926,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\math_data\\n12\\vectors-2048.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/math_data/n12/vectors-8192.json",
+    "part": 10,
+    "sha256": "e2fe3e7d6f0ab37587e83a9214b1abbe1127f8a83593732de1a584d88b7fb77a",
+    "bytes": 763337,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\math_data\\n12\\vectors-8192.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/math_data/n11/root_input.json",
+    "part": 10,
+    "sha256": "7907b84488af7f23324fa8e4e22d5ff925a01102828f1fce6397f4bdcfa6d702",
+    "bytes": 747,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\math_data\\n11\\root_input.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/manifests/BASELINE-20261013.json",
+    "part": 10,
+    "sha256": "462ed8ef3bc0c69fe5738a503bfa6d1a48b76e5772ff31ed3583179f01c1b963",
+    "bytes": 534,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\manifests\\BASELINE-20261013.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/manifests/NOT-DELIVERED-SCOPE.json",
+    "part": 10,
+    "sha256": "d73c03e1ee581c9df4b3b6d940f349cfd5333b59fdfb66bf9fbc143546a01317",
+    "bytes": 1382,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\manifests\\NOT-DELIVERED-SCOPE.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/manifests/SUMMARY.json",
+    "part": 10,
+    "sha256": "87514b0315073429ce10dac5965a4c405fb8020750ed58b1245f5ca88fddc65d",
+    "bytes": 1819,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\manifests\\SUMMARY.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/manifests/history/FILES-20261013.jsonl.gz",
+    "part": 10,
+    "sha256": "79a7f0c7d7bb4526305472426bec038a79698832b7c2b90c80c66a74f4381cfe",
+    "bytes": 758794,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\manifests\\history\\FILES-20261013.jsonl.gz"
+  },
+  {
+    "source": ".tmp/dcp-sparse/manifests/history/SUMMARY-20261013.json",
+    "part": 10,
+    "sha256": "e79ee47bb8c9cdaab9e0df9a6ec8c520ad124e8938195d2641e1c58cb6cbe4b7",
+    "bytes": 1127,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\manifests\\history\\SUMMARY-20261013.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/CONFIGURATIONS.md",
+    "part": 10,
+    "sha256": "ae758a9de0e2ef713c01ed67af05c4ecc9458179c9736646bb8d3e09b9bff918",
+    "bytes": 12142,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\CONFIGURATIONS.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/DELIVERY_SCOPE.md",
+    "part": 10,
+    "sha256": "7bebbe381f4d513f2050c63cd39e3e5c77cad4311306f941915f3c9d8ea808dc",
+    "bytes": 2402,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\DELIVERY_SCOPE.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/FROZEN_REPLAY_ASSETS.md",
+    "part": 10,
+    "sha256": "25a37aad4b7e623009c7e9d88c02cf2e1e2fefac8531cf260fb200a1917ff96c",
+    "bytes": 4197,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\FROZEN_REPLAY_ASSETS.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/LICENSE_SCOPE.md",
+    "part": 10,
+    "sha256": "e78019ecfce5578ed4de816a24a80847b273dd1db79f5e31531e8ed939cb7e32",
+    "bytes": 3066,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\LICENSE_SCOPE.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/MATHEMATICAL_GUIDE.md",
+    "part": 10,
+    "sha256": "5496a537b42b363d79dc4bc22a6653d766a844234863772b5673bd7c82704cbd",
+    "bytes": 11418,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\MATHEMATICAL_GUIDE.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/N11_CHECK_SCOPE.md",
+    "part": 10,
+    "sha256": "3237261f51ef38af597d96187dbadb1bb40349584e7e354e5376244052048139",
+    "bytes": 8286,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\N11_CHECK_SCOPE.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/NOTATION.md",
+    "part": 10,
+    "sha256": "195669a95b997c1352ccde65a9d3dbe4c556160913f4b77baa3036e8e7c9f6a2",
+    "bytes": 8510,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\NOTATION.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/PROVENANCE.md",
+    "part": 10,
+    "sha256": "4ca88e44eb94a09bcccf202605e6ded0a7efaabdc1208c98aa8a42c64b881b0d",
+    "bytes": 1891,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\PROVENANCE.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/REPLAY_ASSET_PLAN.md",
+    "part": 10,
+    "sha256": "c3ba9cbecdaea5367b6e80703cbbfee7563c913ec12e981165f1fbc012141348",
+    "bytes": 8576,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\REPLAY_ASSET_PLAN.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/REPRODUCIBILITY.md",
+    "part": 10,
+    "sha256": "869cb4c38d6de9ab4ee06e7a8466e945c12160118c18cdf4ce38868c2995fed6",
+    "bytes": 4752,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\REPRODUCIBILITY.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/docs/VALIDATION_2026-10-14.md",
+    "part": 10,
+    "sha256": "49110381e650fd475ed82c7543e04c29d00ee48ce62f32486ff3cf9ea61e7cec",
+    "bytes": 3307,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\docs\\VALIDATION_2026-10-14.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n23-n25-full/ORIGINAL-PATH-MAP.json",
+    "part": 10,
+    "sha256": "4c639c80383fbcc98d2d7bf1599a5aeb50cf449aabbf520087df777e41fb1007",
+    "bytes": 1930,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n23-n25-full\\ORIGINAL-PATH-MAP.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n23-n25-full/PACKAGES.json",
+    "part": 10,
+    "sha256": "eafd8adbe6f4f69a820c680191dd41abaa5978f3658ebe1f4807d37c249de947",
+    "bytes": 114427,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n23-n25-full\\PACKAGES.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n23-n25-full/SERVER-PACKAGE-AUDIT.json",
+    "part": 10,
+    "sha256": "38090b2a0fd5acd85bb9961c8eb2f12a9037d35fb8eee7d938f1a124a80d3802",
+    "bytes": 187,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n23-n25-full\\SERVER-PACKAGE-AUDIT.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n23-n25-core/FILES.jsonl.gz",
+    "part": 10,
+    "sha256": "faf86a417d5cb398543e20053157e68f566b67c4b74c7490ad751835a7f55b51",
+    "bytes": 3425,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n23-n25-core\\FILES.jsonl.gz"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n23-n25-core/PACKAGES.json",
+    "part": 10,
+    "sha256": "2e4e58e7347d1acd603ecddba74dfe801c802db31e4c4ad3ad2db452db0fc042",
+    "bytes": 684,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n23-n25-core\\PACKAGES.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n23-n25-core/PROFILE.json",
+    "part": 10,
+    "sha256": "1cbaaf6bd93fa521da831478fd8fce5cc52b132ef8a6f85a286e2e3862fe7675",
+    "bytes": 41215,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n23-n25-core\\PROFILE.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n21-n22/CREDENTIAL-SCAN.json",
+    "part": 10,
+    "sha256": "ac6e66a1ed1e3584b880983539c97c55ccededf050951ccd681cafb79d3c71b6",
+    "bytes": 639,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n21-n22\\CREDENTIAL-SCAN.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n21-n22/PACKAGES.json",
+    "part": 10,
+    "sha256": "f85cfa72c58ef099fb58c41b2e695500738fdc495bbd07293432a48caced38f5",
+    "bytes": 2061,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n21-n22\\PACKAGES.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n21-n22/PROFILE.json",
+    "part": 10,
+    "sha256": "f41380f9d8952a8a0c1a89fc52f90c9dc4ef90396ddd2b74ed498c2d97d377a9",
+    "bytes": 3722,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n21-n22\\PROFILE.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n11-wip/HANDOFF.json",
+    "part": 10,
+    "sha256": "9b2ad8f3273dd7b9da4c2554abb16716f02850e441fd3bfd748f747da9c9f542",
+    "bytes": 12144,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n11-wip\\HANDOFF.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n11-wip/n11-wip-FILES.jsonl.gz",
+    "part": 10,
+    "sha256": "2aa324a3b127cd207bccdfc1cb7249acc96d6df7b1b80825ca373ef2030ba15d",
+    "bytes": 123387,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n11-wip\\n11-wip-FILES.jsonl.gz"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n11-wip/PACKAGES.json",
+    "part": 10,
+    "sha256": "1ac2cde365ca2e0979e7bc3ef94b7d814eb49463906f1197a35e28550dc01a55",
+    "bytes": 712,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n11-wip\\PACKAGES.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n11-supplement/PACKAGES.json",
+    "part": 10,
+    "sha256": "7c5378ce29750a6ad3fce0fb6f4116d77ae9c4b4fce41790508a8e324e54dfd2",
+    "bytes": 953,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n11-supplement\\PACKAGES.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/replay/n11-supplement/PROFILE.json",
+    "part": 10,
+    "sha256": "c46ba26b194ffde5cc1522472cc7331fc9eac7b4a4696be2a1540b11ec9f4a25",
+    "bytes": 2036,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\replay\\n11-supplement\\PROFILE.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/configurations.json",
+    "part": 10,
+    "sha256": "d214d04f323bdbf4b1bc8f1a529977e07617c55a262cf01fe7eb611ea258afb0",
+    "bytes": 85389,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\configurations.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/provenance.json",
+    "part": 10,
+    "sha256": "58d2e5f696e1311c3c6033f0115d64148a93bc250484b80b218745a67e03db32",
+    "bytes": 12749,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\provenance.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/radius-index.json",
+    "part": 10,
+    "sha256": "998d1db1af3fce9dc365056bc3510f8b49330ee1c73895120851974c10c56954",
+    "bytes": 19970,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\radius-index.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n11-geometry-source.py",
+    "part": 10,
+    "sha256": "1767b2f777136b29119e18d6091cdab457c938fb2398d3759a6c089d60be14fa",
+    "bytes": 5081,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n11-geometry-source.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n11-radius.json",
+    "part": 10,
+    "sha256": "2a06ce96f5fa2490f4526cfce9e2151bb3f272aaed77a8c2d5bf6fe4c645415d",
+    "bytes": 3663,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n11-radius.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n11-root.json",
+    "part": 10,
+    "sha256": "0154400192cf677e22d8f06b14dda67a4fe1c53500f3f8551c492c69b07ffdc5",
+    "bytes": 12694,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n11-root.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n11-triangulation.json",
+    "part": 10,
+    "sha256": "d78ded55c29de7b4b6b31f1350ec5112235fcf78f1711499158ce33c08505b99",
+    "bytes": 5327,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n11-triangulation.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n12-geometry-source.py",
+    "part": 10,
+    "sha256": "a492a2a9dbb3dccc0801adcfc7417fc7eea13aeff130dd910f1c9176d2794c22",
+    "bytes": 3111,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n12-geometry-source.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n12-geometry.json",
+    "part": 10,
+    "sha256": "cca45eed54d4e3cf83c01e9c37895ac859ba73dc8f5d26cd2088e5d1aed13f9e",
+    "bytes": 9473,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n12-geometry.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n12-root.json",
+    "part": 10,
+    "sha256": "e392a49269f68ffdd8ad0b17db898a1b177cd6ad3a929a402ab739c3861f1bb0",
+    "bytes": 6975,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n12-root.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n14-definition.md",
+    "part": 10,
+    "sha256": "a7f6ed1bfa53d8329f25c6dfeb345518fa976bba3b6a3802549d186c99ae144e",
+    "bytes": 4990,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n14-definition.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n14-geometry.json",
+    "part": 10,
+    "sha256": "edcfbd5290345d4cc2fae1806a1c54947ea549c3e085f310aedef8a508ab77ce",
+    "bytes": 8071,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n14-geometry.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n14-root.json",
+    "part": 10,
+    "sha256": "15b1fda5d835114bbde38fd3d52df69043b7b084c60134c65fb91f8a93cb5fe9",
+    "bytes": 4873,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n14-root.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n21-root-verified.json",
+    "part": 10,
+    "sha256": "cc4af689cae5b2d232d49f8e6d6678d392d7fc385a8cd2a5eec91ff2add7ca3c",
+    "bytes": 2342,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n21-root-verified.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n22-core-root-extract.json",
+    "part": 10,
+    "sha256": "9fd60320dbdbc141d940d575cf8da5cf97261689bf3c987c4d99e86121045f12",
+    "bytes": 12846,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n22-core-root-extract.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n22-core-system.json",
+    "part": 10,
+    "sha256": "1d91c88518b928a2523b9a0b4468dcbc5eb53f653bdf25c02c25b079c9aa5c55",
+    "bytes": 14842,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n22-core-system.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n22-radius-link.md",
+    "part": 10,
+    "sha256": "f495f615a5fa68098e9fcab6e41c8aca070a8fd5c444f04ca02061cdbb32c225",
+    "bytes": 4581,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n22-radius-link.md"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n22-root-verified.json",
+    "part": 10,
+    "sha256": "7b03b9f0b21c9d214b8ae2c34e69d911489da5b6f9bb4f9a9c5aca24439e1963",
+    "bytes": 2292,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n22-root-verified.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n22-symmetry.json",
+    "part": 10,
+    "sha256": "f8c5248761fd98b0ef97951df71f8384897f5d8544b98c44d97057b8501e5f6d",
+    "bytes": 7130,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n22-symmetry.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n22-upper-verified.json",
+    "part": 10,
+    "sha256": "2522ac4b676e47211aff1aa41a53bb635d19a4b47134d21e108fe83afefdbce7",
+    "bytes": 408,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n22-upper-verified.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n23-root-verified.json",
+    "part": 10,
+    "sha256": "74181d04d0b3c900deaea4ffa18b60711c668ec6eb7cc519fb4d0cf7f2877e52",
+    "bytes": 2293,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n23-root-verified.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n24-root-verified.json",
+    "part": 10,
+    "sha256": "91e48e25ce5cfc91bc9609fca81d964b0d7c6d229ce15545652d38aed16460ff",
+    "bytes": 2293,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n24-root-verified.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n25-geometry-source.py",
+    "part": 10,
+    "sha256": "9b40e47eb87c563552f3bd6ecf74fac76e89f6d38ac5800798dad5150eab9a88",
+    "bytes": 8322,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n25-geometry-source.py"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n25-geometry.json",
+    "part": 10,
+    "sha256": "261a5956d3e02cf9b21f07ee4ef8d3d89c5c1310f8e8dce8858d6c86deb21b1e",
+    "bytes": 12956,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n25-geometry.json"
+  },
+  {
+    "source": ".tmp/dcp-sparse/assets/configurations/sources/n25-upper-verified.json",
+    "part": 10,
+    "sha256": "31be4173ab599ee18cbcd0a29cd646b6679dc1f9f26357a0eac6bbd656862340",
+    "bytes": 897,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\assets\\configurations\\sources\\n25-upper-verified.json"
+  }
+]

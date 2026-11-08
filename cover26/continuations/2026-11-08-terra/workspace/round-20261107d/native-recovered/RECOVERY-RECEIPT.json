@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-07T20:31:24.587314+08:00",
+  "source_commit": "11bf26e8b9ca601ab7220a93c1ef39451513aed0",
+  "url": "https://raw.githubusercontent.com/Liyang1145/DiskCoveringProofs/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json.gz.part0001",
+  "compressed_bytes": 12645909,
+  "compressed_git_sha1": "7334217a39b2f93b32c4a8f95be91f9b79b4f565",
+  "decoded_bytes": 54342803,
+  "decoded_sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+  "restored_original_bytes": true,
+  "semantic_replay_performed": false,
+  "native_frontier_paid": 0,
+  "path": "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107d\\native-recovered\\n26-mixed-after-six-midarc-supplemental-current-v1.json"
+}

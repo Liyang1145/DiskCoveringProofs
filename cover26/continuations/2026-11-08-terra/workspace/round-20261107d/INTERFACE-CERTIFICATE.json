@@ -1,0 +1,154 @@
+{
+  "U": "234701/1000000",
+  "owner_count_range": [
+    14,
+    18
+  ],
+  "central_boundary_vertices_at_least": 11,
+  "central_nonowner_vertices_at_least": 8,
+  "central_boundary_inequality_gap": "6111440599/1000000000000",
+  "central_nonowner_inequality_gap": "34836965391/1000000000000",
+  "interior_incident_original_boundary_faces_at_least": {
+    "14": 8,
+    "15": 7,
+    "16": 6,
+    "17": 5,
+    "18": 4
+  },
+  "universal_symbolic_identities": [
+    "edge-variance",
+    "empty-circle-crossing",
+    "equal-anchor midpoint direction"
+  ],
+  "finite_subset_controls": [
+    {
+      "b": 14,
+      "subsets_checked": 470,
+      "minimum_original_edges_by_subset_size": {
+        "11": 8,
+        "12": 10,
+        "13": 12,
+        "14": 14
+      }
+    },
+    {
+      "b": 15,
+      "subsets_checked": 1941,
+      "minimum_original_edges_by_subset_size": {
+        "11": 7,
+        "12": 9,
+        "13": 11,
+        "14": 13,
+        "15": 15
+      }
+    },
+    {
+      "b": 16,
+      "subsets_checked": 6885,
+      "minimum_original_edges_by_subset_size": {
+        "11": 6,
+        "12": 8,
+        "13": 10,
+        "14": 12,
+        "15": 14,
+        "16": 16
+      }
+    },
+    {
+      "b": 17,
+      "subsets_checked": 21778,
+      "minimum_original_edges_by_subset_size": {
+        "11": 5,
+        "12": 7,
+        "13": 9,
+        "14": 11,
+        "15": 13,
+        "16": 15,
+        "17": 17
+      }
+    },
+    {
+      "b": 18,
+      "subsets_checked": 63004,
+      "minimum_original_edges_by_subset_size": {
+        "11": 4,
+        "12": 6,
+        "13": 8,
+        "14": 10,
+        "15": 12,
+        "16": 14,
+        "17": 16,
+        "18": 18
+      }
+    }
+  ],
+  "candidate_incidence_control": {
+    "corners": [
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      2,
+      3,
+      6,
+      6,
+      6,
+      6,
+      7,
+      6,
+      6,
+      6,
+      7,
+      6
+    ],
+    "boundary_face_incidence": [
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      0,
+      0,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "group_counts_by_cycle_edge_count": [
+      18,
+      16,
+      0
+    ],
+    "total_nonowner_incidence": 16,
+    "scope": "finite bookkeeping control only"
+  },
+  "passed": true,
+  "new_global_radius_lower_bound": null,
+  "native_frontier_payments": 0,
+  "written_continuous_geometry_required": true
+}

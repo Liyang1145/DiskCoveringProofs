@@ -1,0 +1,120 @@
+{
+  "date": "2026-11-08T15:21:33.814562+08:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "node": "v24.16.0",
+  "claim": "229/1000 < r_D(26) <= 234700091/1000000000",
+  "scope": "bounded exact arithmetic and upper-cover replay; written geometric proof in PROOF.md",
+  "inputs": {
+    "construction/rational_voronoi.py": "98581db30e138b1142755763b14e84e6185eb87790cdae4d13610926e183b1d2",
+    "minmaxarena/n26-origin-certificate.json": "dc0d6c8270df011723be476e45222eda77db50a1d086a713b396aa812a1e168d",
+    "round-20261030b/area/FAN-BOXES.md": "51ebc2cc1c9c8d256c0923f02f7cac035a907dc123602babe375a816e4315c92",
+    "round-20261030b/area/FAN-CORRECTION.md": "0ba3ea14f17407d6c430e9fb600a58ebfdb6282383d966036f157efab0f59cd1",
+    "round-20261030b/area/PROOF.md": "9abda7606c2895430e304af5af5e1201fd626cc6e62197da235d92a9a097aa12",
+    "round-20261030b/area/verify_fan_boxes.js": "9b3c75168b89d5ecbc39df159a5bdfb5bfa06e3be5a54a36c5f6d492beae3644",
+    "round-20261030b/area/verify_fan_correction.js": "8f23176cc0c4c0ba1ce99d41a2ce8874f5646edb8ed825129c32d6db08cc51d1",
+    "round-20261030b/audit/AREA-REVIEW.md": "6fa5c3d2acd929ff7945ca0291b3c29ffb0728305489d2085f382059b0320df4",
+    "round-20261030b/audit/SHARP-EAR-REVIEW.md": "59a9f4e8686f3a858bc5494d41240a774063cc219cad7353f7f9bb9e3c43a3de",
+    "round-20261107/check_independent.py": "59db146143545a8180526f9882261f945d37b22b752ccc3233422e6650bc2210",
+    "round-20261107/explore_groups.py": "6e4261be71da1238e4c9c9c84c1a9fcbcdebbf2c584b8e5a7f19d16ccf985dee",
+    "round-20261107/interval.js": "904a2cdeb8f7c2b5494f6af7000b655ff60c4c801f7d84883dcea1153ea01716",
+    "round-20261107/PROOF.md": "01450bec83ea7d688e85c6835cf0b96130a3b4120bd0e1b525b87eafd753e947",
+    "round-20261107/propose_windows.py": "874e0941a3d06b0596e6175acacd0b5619be7e31eb9cef9dc53727742d7cb7ef",
+    "round-20261107/replay.py": "b00078c4e9a31febf66adc5ac560edb01a4592162e1ddaf073693ddfbbfe5398",
+    "round-20261107/REPORT.md": "f3ff1e91e9859d7a3aece272ddfc1e072a068f90a7beaa0ae11f18fdb1fe75ab",
+    "round-20261107/verify_shifted_fans.js": "db7d220bfd096fce9d8b463ccb9fa29b0b112aa8bfb7267bf9b496f46024ce64"
+  },
+  "checks": [
+    {
+      "name": "previous_02285",
+      "command": [
+        "node",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261030b\\area\\verify_fan_correction.js"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "[\n  [ 14, 0.09644976519596986 ],\n  [ 15, 0.01969460064411538 ],\n  [ 16, 0.00016544787725483837 ],\n  [ 17, 0.00014010660721791628 ],\n  [ 18, 0.009964032396768093 ],\n  [ 19, 0.028733557271177577 ],\n  [ 20, 0.05256405270329257 ],\n  [ 21, 0.08006220055091304 ],\n  [ 22, 0.1103160278629809 ],\n  [ 23, 0.14269760846092358 ],\n  [ 24, 0.17675786898162807 ],\n  [ 25, 0.21216597162350448 ],\n  [ 26, 0.24867227133909486 ]\n]\n",
+      "stderr": ""
+    },
+    {
+      "name": "previous_02287",
+      "command": [
+        "node",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261030b\\area\\verify_fan_boxes.js"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{ b: 16, boxes: 129 }\n{ b: 17, boxes: 11 }\n[\n  [ 14, 0.08886328548963551 ],\n  [ 15, 0.013404015760179704 ],\n  [ 16, 0.00011486794526423999 ],\n  [ 17, 0.0006799475660323191 ],\n  [ 18, 0.004442471983601431 ],\n  [ 19, 0.023348504822435424 ],\n  [ 20, 0.04729875813716739 ],\n  [ 21, 0.07490607101419221 ],\n  [ 22, 0.10526191553144033 ],\n  [ 23, 0.13774045414409303 ],\n  [ 24, 0.17189395784838216 ],\n  [ 25, 0.2073924952470106 ],\n  [ 26, 0.2439870555078066 ]\n]\n",
+      "stderr": ""
+    },
+    {
+      "name": "new_bigint",
+      "command": [
+        "node",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107\\verify_shifted_fans.js",
+        "--write"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  b: 14,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.07755354749668017\n}\n{\n  b: 15,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.003971943611033858\n}\n{\n  b: 16,\n  oneEdgeBoxes: 239,\n  twoEdgeBoxes: 183,\n  gapLowerDecimal: 0.0015172437335001226\n}\n{\n  b: 17,\n  oneEdgeBoxes: 59,\n  twoEdgeBoxes: 17,\n  gapLowerDecimal: 0.0033090960836368905\n}\n{\n  b: 18,\n  oneEdgeBoxes: 1,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.0011577075938297202\n}\n{\n  b: 19,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.01526515668436356\n}\n{\n  b: 20,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.039394822401427436\n}\n{\n  b: 21,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.06716577103941698\n}\n{\n  b: 22,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.09767459705277344\n}\n{\n  b: 23,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.13029857161731648\n}\n{\n  b: 24,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.1645919682120226\n}\n{\n  b: 25,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.20022620638232394\n}\n{\n  b: 26,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.23695322101434885\n}\nPASS: scalar inequalities at U=229001/1000000; written geometry required.\n",
+      "stderr": ""
+    },
+    {
+      "name": "new_fraction",
+      "command": [
+        "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107\\check_independent.py"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "verified b 14 one-edge boxes 0 ear boxes 0\nverified b 15 one-edge boxes 0 ear boxes 0\nverified b 16 one-edge boxes 239 ear boxes 183\nverified b 17 one-edge boxes 59 ear boxes 17\nverified b 18 one-edge boxes 1 ear boxes 0\nverified b 19 one-edge boxes 0 ear boxes 0\nverified b 20 one-edge boxes 0 ear boxes 0\nverified b 21 one-edge boxes 0 ear boxes 0\nverified b 22 one-edge boxes 0 ear boxes 0\nverified b 23 one-edge boxes 0 ear boxes 0\nverified b 24 one-edge boxes 0 ear boxes 0\nverified b 25 one-edge boxes 0 ear boxes 0\nverified b 26 one-edge boxes 0 ear boxes 0\n{\n  \"passed\": true,\n  \"radius\": \"229001/1000000\",\n  \"cases\": [\n    {\n      \"b\": 14,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"3877677374834008457/50000000000000000000\"\n    },\n    {\n      \"b\": 15,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"4964929513792322797/1250000000000000000000\"\n    },\n    {\n      \"b\": 16,\n      \"one_edge_boxes\": 239,\n      \"two_edge_boxes\": 183,\n      \"gap_lower\": \"3034487467000245419/2000000000000000000000\"\n    },\n    {\n      \"b\": 17,\n      \"one_edge_boxes\": 59,\n      \"two_edge_boxes\": 17,\n      \"gap_lower\": \"33090960836368901709/10000000000000000000000\"\n    },\n    {\n      \"b\": 18,\n      \"one_edge_boxes\": 1,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"11577075938297201961/10000000000000000000000\"\n    },\n    {\n      \"b\": 19,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"30530313368727121089/2000000000000000000000\"\n    },\n    {\n      \"b\": 20,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"98487056003568589177/2500000000000000000000\"\n    },\n    {\n      \"b\": 21,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"671657710394169803831/10000000000000000000000\"\n    },\n    {\n      \"b\": 22,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"976745970527734459659/10000000000000000000000\"\n    },\n    {\n      \"b\": 23,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"651492858086582325921/5000000000000000000000\"\n    },\n    {\n      \"b\": 24,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"822959841060112894929/5000000000000000000000\"\n    },\n    {\n      \"b\": 25,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"100113103191161978057/500000000000000000000\"\n    },\n    {\n      \"b\": 26,\n      \"one_edge_boxes\": 0,\n      \"two_edge_boxes\": 0,\n      \"gap_lower\": \"118476610507174424013/500000000000000000000\"\n    }\n  ],\n  \"scope\": \"scalar certificate; written geometric proof required\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "upper_exact",
+      "command": [
+        "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\construction\\rational_voronoi.py",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\minmaxarena\\n26-origin-certificate.json"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "PASS: 26 rational centers cover unit disk at exact radius 234700091/1000000000\nInterior active circumcenters: 34; active boundary candidates: 32\n",
+      "stderr": ""
+    },
+    {
+      "name": "bigint_reject_0230001",
+      "command": [
+        "node",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107\\verify_shifted_fans.js",
+        "--negative-control"
+      ],
+      "exit_code": 1,
+      "expected_exit_code": 1,
+      "passed": true,
+      "stdout": "{\n  b: 14,\n  oneEdgeBoxes: 0,\n  twoEdgeBoxes: 0,\n  gapLowerDecimal: 0.04038748525120146\n}\n",
+      "stderr": "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107\\interval.js:23\nconst check=(p,m)=>{if(!p)throw Error(m);};\n                          ^\n\nError: area contradiction 15\n    at check (C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107\\interval.js:23:33)\n    at Object.<anonymous> (C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107\\verify_shifted_fans.js:143:3)\n    at Module._compile (node:internal/modules/cjs/loader:1854:14)\n    at Object..js (node:internal/modules/cjs/loader:1985:10)\n    at Module.load (node:internal/modules/cjs/loader:1577:32)\n    at Module._load (node:internal/modules/cjs/loader:1379:12)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:255:19)\n    at Module.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:154:5)\n    at node:internal/main/run_main_module:33:47\n\nNode.js v24.16.0\n"
+    },
+    {
+      "name": "fraction_reject_0230001",
+      "command": [
+        "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107\\check_independent.py",
+        "--negative-control"
+      ],
+      "exit_code": 0,
+      "expected_exit_code": 0,
+      "passed": true,
+      "stdout": "verified b 14 one-edge boxes 0 ear boxes 0\n{\"passed\": true, \"control\": \"reject larger radius\", \"rejected_owner_count\": 15}\n",
+      "stderr": ""
+    }
+  ],
+  "all_passed": true,
+  "certificate_sha256": "1e88dfa45d01ea1a29e800b01e5023a4a7b5e85fd13c32a9d8cc70d082fada6e",
+  "inputs_unchanged": true
+}

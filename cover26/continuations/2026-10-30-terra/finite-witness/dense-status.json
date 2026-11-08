@@ -1,0 +1,13 @@
+{
+  "scope": "unverified numerical diagnostic only",
+  "points": 1361,
+  "radius": "9/40",
+  "status": "TIME_LIMIT_PENDING",
+  "time_limit_seconds": 90,
+  "observed_solver_seconds": 89.17,
+  "numerical_incumbent_disks": 28,
+  "numerical_lower_bound": 24,
+  "exact_capture_masks_verified": false,
+  "excludes_26_disks": false,
+  "full_local_checkpoint_sha256": "bbe3470362fd9438a1357c4fa613ef2c8627d45518dbe911e819a293ca211cfd"
+}

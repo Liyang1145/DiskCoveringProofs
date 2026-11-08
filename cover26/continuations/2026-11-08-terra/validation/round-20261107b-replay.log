@@ -1,0 +1,8 @@
+root_contraction PASS
+same_root_cover PASS
+reject_perturbed_box PASS
+reject_shrunk_fixed_cover PASS
+previous_lower_bigint PASS
+previous_lower_fraction PASS
+PASS: all 6 checks; inputs unchanged
+

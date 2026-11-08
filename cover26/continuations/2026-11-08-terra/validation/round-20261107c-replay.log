@@ -1,0 +1,5 @@
+bigint_full_domain PASS
+fraction_full_partition PASS
+reject_false_constant PASS
+PASS: all 3 checks; inputs unchanged
+

@@ -1,0 +1,303 @@
+{
+  "schema": "N26-independent-midarc-source-current-final-rehash-v1",
+  "all_current_file_digests_rehashed": true,
+  "current_file_digests_rechecked": 273731,
+  "current_audit_sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+  "actual_own_publication_AND_complete_current_semantic_reports_byte_identical": true,
+  "independent_complete_ORIGINAL_source_prefix_reconstruction": 5637,
+  "independent_exact_NEW_midarc_source_accounting": {
+    "entire_actual_SIX_filtered_source_prefixes_independently_scanned": 5637,
+    "strict_NEW_midarc_whole_prefixes": 680,
+    "retained_unpaid_source_prefixes": 4957,
+    "original_physical_count_and_all_shadow_cases": 9172,
+    "independent_family_conservation": [
+      {
+        "B": 14,
+        "actual_SIX_filtered_source_subtrees": 296,
+        "strict_NEW_midarc_whole_subtrees": 0,
+        "retained_subtrees": 296,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 15,
+        "actual_SIX_filtered_source_subtrees": 694,
+        "strict_NEW_midarc_whole_subtrees": 47,
+        "retained_subtrees": 647,
+        "all_raw_terminals_retained": 0
+      },
+      {
+        "B": 16,
+        "actual_SIX_filtered_source_subtrees": 2703,
+        "strict_NEW_midarc_whole_subtrees": 539,
+        "retained_subtrees": 2164,
+        "all_raw_terminals_retained": 2
+      },
+      {
+        "B": 17,
+        "actual_SIX_filtered_source_subtrees": 1944,
+        "strict_NEW_midarc_whole_subtrees": 94,
+        "retained_subtrees": 1850,
+        "all_raw_terminals_retained": 0
+      }
+    ],
+    "independent_exact_midarc_core_target_identities": {
+      "3": {
+        "consecutive_original_owners": 3,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 7,
+        "target_coordinate_description": "sqrt3*x_coefficient,y",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "265299/500000"
+          ],
+          [
+            "265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "0",
+            "-265299/500000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "24/25",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "1857093/4000000",
+        "exact_patch_to_target_horizontal_margin_above_U": "105299/4000000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      },
+      "4": {
+        "consecutive_original_owners": 4,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 6,
+        "target_coordinate_description": "x,sqrt3*y_coefficient",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "-265299/500000",
+            "0"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "4/5",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "265299/1000000",
+        "exact_patch_to_target_horizontal_margin_above_U": "65299/1000000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      },
+      "5": {
+        "consecutive_original_owners": 5,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 5,
+        "target_coordinate_description": "sqrt3*x_coefficient,y",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "265299/500000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "0",
+            "-265299/500000"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "7/10",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "0",
+        "exact_patch_to_target_horizontal_margin_above_U": "115299/500000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      },
+      "6": {
+        "consecutive_original_owners": 6,
+        "required_DISTINCT_ORIGINAL_outside_nonowners": 5,
+        "target_coordinate_description": "sqrt3*x_coefficient,y",
+        "exact_target_coefficients": [
+          [
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "265299/500000"
+          ],
+          [
+            "-265299/1000000",
+            "265299/1000000"
+          ],
+          [
+            "-265299/1000000",
+            "-265299/1000000"
+          ],
+          [
+            "0",
+            "-265299/500000"
+          ]
+        ],
+        "exact_core_radius": "265299/500000",
+        "exact_cosine_rational_lower": "1/2",
+        "exact_minimum_squared_pair_distance": "70383559401/250000000000",
+        "exact_squared_pair_margin_above_four_U_squared": "15299/250000",
+        "exact_target_x_rational_upper": "0",
+        "exact_patch_to_target_horizontal_margin_above_U": "15299/500000",
+        "written_continuous_midarc_and_embedding_proof_STILL_explicit": true
+      }
+    },
+    "all_unpaid_siblings_and_raw_terminals_retained_identically": true,
+    "old5546_SIX_payments_NOT_repaid": true,
+    "candidate_whole_roots_removed": 0
+  },
+  "actual_preserved_candidate_source_identity": {
+    "schema": "N26-candidate-identity-through-midarc-enumeration-supplement-v1",
+    "actual_current_parent_sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+    "latest_candidate_current_audit_sha256": "531b176affed718a818bc93d6c31df859276258047636656e88ea63693bb7007",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "new_enumeration_schema": "N26-complete-current-with-midarc-source-geometry-audit-v1",
+        "actual_midarc_current_sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current28-six-target-mixed-candidate-current-v1.json",
+        "sha256": "531b176affed718a818bc93d6c31df859276258047636656e88ea63693bb7007"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-mixed-curvature-covers-v1/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "57682c5616e4df044da9719ee7f04ce7b92f020a875347e6e7242d4f5d83b77f",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-mixed-curvature-covers-v1/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "b42c421f2acb60eb9d609e2f79d87a0ce339ea79801907213ab65d5410a5afe2",
+    "actual_remaining_candidate_whole_roots": 16,
+    "new_schema_not_relabelled_as_old_owned_source": true,
+    "identity_only_not_a_model_or_geometry_replay": true,
+    "new_geometric_candidate_payments": 0,
+    "explicit_NEW_midarc_schema_not_relabelled_as_old_enumeration_or_mixed_candidate_admission": true,
+    "identity_only_NOT_current_final_or_whole_model_geometry_acceptance": true
+  },
+  "Rstar_conditional_frontier_pending_subtrees": 4957,
+  "Rstar_conditional_frontier_families": [
+    {
+      "B": 14,
+      "I": 12,
+      "split": 800,
+      "force": 37,
+      "force_tree": 0,
+      "area": 190,
+      "empty": 173,
+      "terminal": 0,
+      "pending_subtrees": 296,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 0,
+      "midarc_filled_patch_NEW_whole_subtrees": 0
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "split": 714,
+      "force": 0,
+      "force_tree": 0,
+      "area": 64,
+      "empty": 422,
+      "terminal": 0,
+      "pending_subtrees": 647,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 530,
+      "midarc_filled_patch_NEW_whole_subtrees": 47
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "split": 1002,
+      "force": 3,
+      "force_tree": 5,
+      "area": 37,
+      "empty": 151,
+      "terminal": 2,
+      "pending_subtrees": 2164,
+      "unresolved_terminal_subtrees": 2,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 1839,
+      "midarc_filled_patch_NEW_whole_subtrees": 539
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "split": 801,
+      "force": 0,
+      "force_tree": 0,
+      "area": 0,
+      "empty": 399,
+      "terminal": 0,
+      "pending_subtrees": 1850,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 3177,
+      "midarc_filled_patch_NEW_whole_subtrees": 94
+    }
+  ],
+  "new_strict_whole_prefixes": 680,
+  "candidate_whole_roots_removed": 0,
+  "candidate_angle_unresolved_closed_boxes": 16,
+  "all_actual16_candidate_roots_histories_and_raw_terminal_obligations_retained": true,
+  "retained_closed_full_type_codes": 87,
+  "retained_checked_proof_receipts": 215,
+  "radius_scope": "at-most-same-root-Rstar-not-original-U",
+  "r_strict_interval": [
+    "0.234700090400448239616790133776692127560495963654971391785924",
+    "0.234700090400448239616790133776692127560495963654971391785925"
+  ],
+  "original_U_frontier_nodes_removed": 0,
+  "original_LOCAL_unchanged": "7/800000",
+  "unrestricted_reduction_final_joint_acceptance": false,
+  "full_catalog_complete": false,
+  "global_lower_bound_proved": false,
+  "global_optimality_proved": false,
+  "n27_started": false,
+  "executed_checker_sha256": "42a022139bb1175d0f0a127b6d26b3e6b32885db3cf1c7b6b8dbb9aec4a1076e",
+  "executed_independent_accounting_sha256": "ceb35e425deb35dddc787028b54220d3bc180fd4b535f95b2a5c535005a4e92c"
+}

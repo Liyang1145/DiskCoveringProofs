@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-08T15:32:02.738937+08:00",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "sympy": "1.14.0",
+  "scope": "exact premises and byte restoration; continuous proof in PROOF.md; no new global radius bound",
+  "inputs": {
+    "audit/native-recovered/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-independent-final-v1.json": "6099c25ff78f074c5a02dd90c33c2d3f481df350ea71b2e853ca9fc2deeabbbc",
+    "round-20261107b/topology.json": "6a50ae0621d983d7679db4a1fb17efb2ec5972cb6184adddc2672cc239ead78d",
+    "round-20261107d/explore_cyclic_dual.py": "bb2ae25d65c6625e56ce46033b9066ae7e2e5b33be72fc7358aed32d3667e24f",
+    "round-20261107d/explore_degree_capacity.py": "404680e20dd030082bc44689588ad52e8ec029dae8b45301cfb23dbe78effbb0",
+    "round-20261107d/explore_group_angle_lemma.py": "bfa941212a68577243af1441e46a607f3c1b9d75bb000fef7fdf8106ed13677f",
+    "round-20261107d/explore_group_dual.py": "b884847f29fb7f79b6aa944f2aeaef18bca7e4e7b9d4ce8e8c26518631e66e96",
+    "round-20261107d/explore_joint_regular.py": "9ce6bfaf9a91b6968df389fdf8a47c6c76d91bdd72b077a81eb3e2ef8d36c22b",
+    "round-20261107d/explore_shifted_corner_dp.py": "6b854ca8eea161a24ea5f96d719775f8c246ecd8cad5dccb261528ce3892d2ba",
+    "round-20261107d/native-recovered/n26-mixed-after-six-midarc-supplemental-current-v1.json": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+    "round-20261107d/native-source/DEGREE-AREA-PROOF.md": "9b3174eec007486577336b6439b247b39342d032377123246c7c463e2f72b3df",
+    "round-20261107d/native-source/EMBEDDED-CORNER-SHADOW-BRIDGE-PROOF.md": "a6e8466bd722cd9ae0a267ee9a3060502489dd45200967cc8994ccbdbcffdd2d",
+    "round-20261107d/native-source/exact_arcs.py": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b",
+    "round-20261107d/native-source/GENERIC-SLACK-PROOF.md": "edaf23d0f00b65c263875e87dd1d4185005b814f43a7dc3f5e666e29d9facfe2",
+    "round-20261107d/native-source/n26_embedded_dual_bridge_algebra.py": "9662e5042c16116b3019bf9697076f360e403150b0047c794f2855b854e33e91",
+    "round-20261107d/native-source/n26_generic_position_universal_polynomials.py": "599b526e2771fa6a6e692942baa3091a4c83ec83df0c33a1c852d555c43a6c94",
+    "round-20261107d/native-source/PUBLIC-OUTPUT-TREE.json": "c86c000b0186cbdf126ec8913cd25a0d0c80e3bfbdeabc01ca08e2bcb9f0ce48",
+    "round-20261107d/native-source/PUBLIC-OUTPUT-TREE.json.gz.part0001": "70d76b46aaed818a322dfa081a2788893e5f59e49bc6c28e9ec5380f884010a0",
+    "round-20261107d/native-source/SOURCE-MANIFEST-ADDITIONAL.json": "6249e032091f4ec020c25e9964635c0f5f9dedf443380169901cb954a708600b",
+    "round-20261107d/native-source/SOURCE-MANIFEST.json": "42f0ee896380b3c0714a3c14a01a11d1bdd68d9383e5ef69e1c6ac2d48446f9d",
+    "round-20261107d/native-source/test_embedded_dual_bridge_algebra.py": "409bd0446744a041d38844fb6a5314598acb98d16660e7976b34fe8acf112dad",
+    "round-20261107d/native-source/verify_degree_area.py": "a8affb8f8f9e20bbd597abde7869147bb8e50f88666590f279665f94b534fb69",
+    "round-20261107d/PROOF.md": "51040c73b4af97de89bb581a47c1bd05520737febdf9506dd5b64a738903d47d",
+    "round-20261107d/recover_native_current.py": "88f3cd04c7739cf1a91482815705cf585e35d8043e516f9b1b94f4d8530b3b32",
+    "round-20261107d/replay.py": "9739a8def9c047a5b67f7c80e209c468845fc4d34071b9581aea238f15a079ee",
+    "round-20261107d/REPORT.md": "535a10986f373361ae6da24b41464d9a287d1ccb1a0d3bc33aa8303ff31304a5",
+    "round-20261107d/verify_interface.py": "2aa9b5bfd4b8d54118290861cb2f6c9e0dc8a432cd1f81150c95d9781f7adc49",
+    "round-20261107d/verify_native_receipts.py": "d98ce5cae7562ae2ca3bff5aa6f8a94ee02157cc5dbf4868b13002ee5d8def5c"
+  },
+  "checks": [
+    {
+      "name": "geometry_interface",
+      "command": [
+        "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\sync-20261108\\repository\\cover26\\continuations\\2026-11-08-terra\\workspace\\round-20261107d\\verify_interface.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"U\": \"234701/1000000\",\n  \"owner_count_range\": [\n    14,\n    18\n  ],\n  \"central_boundary_vertices_at_least\": 11,\n  \"central_nonowner_vertices_at_least\": 8,\n  \"central_boundary_inequality_gap\": \"6111440599/1000000000000\",\n  \"central_nonowner_inequality_gap\": \"34836965391/1000000000000\",\n  \"interior_incident_original_boundary_faces_at_least\": {\n    \"14\": 8,\n    \"15\": 7,\n    \"16\": 6,\n    \"17\": 5,\n    \"18\": 4\n  },\n  \"universal_symbolic_identities\": [\n    \"edge-variance\",\n    \"empty-circle-crossing\",\n    \"equal-anchor midpoint direction\"\n  ],\n  \"finite_subset_controls\": [\n    {\n      \"b\": 14,\n      \"subsets_checked\": 470,\n      \"minimum_original_edges_by_subset_size\": {\n        \"11\": 8,\n        \"12\": 10,\n        \"13\": 12,\n        \"14\": 14\n      }\n    },\n    {\n      \"b\": 15,\n      \"subsets_checked\": 1941,\n      \"minimum_original_edges_by_subset_size\": {\n        \"11\": 7,\n        \"12\": 9,\n        \"13\": 11,\n        \"14\": 13,\n        \"15\": 15\n      }\n    },\n    {\n      \"b\": 16,\n      \"subsets_checked\": 6885,\n      \"minimum_original_edges_by_subset_size\": {\n        \"11\": 6,\n        \"12\": 8,\n        \"13\": 10,\n        \"14\": 12,\n        \"15\": 14,\n        \"16\": 16\n      }\n    },\n    {\n      \"b\": 17,\n      \"subsets_checked\": 21778,\n      \"minimum_original_edges_by_subset_size\": {\n        \"11\": 5,\n        \"12\": 7,\n        \"13\": 9,\n        \"14\": 11,\n        \"15\": 13,\n        \"16\": 15,\n        \"17\": 17\n      }\n    },\n    {\n      \"b\": 18,\n      \"subsets_checked\": 63004,\n      \"minimum_original_edges_by_subset_size\": {\n        \"11\": 4,\n        \"12\": 6,\n        \"13\": 8,\n        \"14\": 10,\n        \"15\": 12,\n        \"16\": 14,\n        \"17\": 16,\n        \"18\": 18\n      }\n    }\n  ],\n  \"candidate_incidence_control\": {\n    \"corners\": [\n      2,\n      3,\n      2,\n      3,\n      2,\n      3,\n      2,\n      3,\n      2,\n      3,\n      2,\n      3,\n      2,\n      3,\n      2,\n      3,\n      6,\n      6,\n      6,\n      6,\n      7,\n      6,\n      6,\n      6,\n      7,\n      6\n    ],\n    \"boundary_face_incidence\": [\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      0,\n      0,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2,\n      2\n    ],\n    \"group_counts_by_cycle_edge_count\": [\n      18,\n      16,\n      0\n    ],\n    \"total_nonowner_incidence\": 16,\n    \"scope\": \"finite bookkeeping control only\"\n  },\n  \"passed\": true,\n  \"new_global_radius_lower_bound\": null,\n  \"native_frontier_payments\": 0,\n  \"written_continuous_geometry_required\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "reject_wrong_radius_scope",
+      "command": [
+        "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\sync-20261108\\repository\\cover26\\continuations\\2026-11-08-terra\\workspace\\round-20261107d\\verify_interface.py",
+        "--negative-control"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "{\"passed\": true, \"negative_control\": \"out-of-scope threshold rejected\", \"reason\": \"8 nonowners without external theorem\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "native_report_and_sources",
+      "command": [
+        "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\sync-20261108\\repository\\cover26\\continuations\\2026-11-08-terra\\workspace\\round-20261107d\\verify_native_receipts.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "PASS original current/final byte identities and 8 public sources; no full semantic replay\n",
+      "stderr": ""
+    }
+  ],
+  "inputs_unchanged": true,
+  "all_passed": true,
+  "outputs": {
+    "INTERFACE-CERTIFICATE.json": "6eb742efba44367b7ad0e1b041b69ea1bd45e7a859dbdb2af42b32743cd28440",
+    "NATIVE-RECEIPTS.json": "53fdb66480b4440de65a88c746066e8c720f9009e6f7e1130459c558740d48f3"
+  }
+}

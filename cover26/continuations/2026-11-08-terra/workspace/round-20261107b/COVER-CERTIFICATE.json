@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "exact_radius_definition": "unique real zero in root-proposal.json of the polynomial system in exact_model.py",
+  "radius_decimal_upper": "234700090400448239616790133776693/1000000000000000000000000000000000",
+  "tight_center_faces": 30,
+  "slack_center_faces": [
+    [
+      2,
+      3,
+      19
+    ],
+    [
+      5,
+      6,
+      21
+    ],
+    [
+      10,
+      11,
+      23
+    ],
+    [
+      13,
+      14,
+      25
+    ]
+  ],
+  "boundary_anchors": 16,
+  "boundary_contacts": 32,
+  "vertices": 42,
+  "edges": 107,
+  "oriented_faces": 66,
+  "degenerate_owner_faces_allowed": [
+    0,
+    8
+  ],
+  "claim": "The 26 algebraic centers cover the closed unit disk at this same algebraic radius.",
+  "global_optimality_proved": false
+}

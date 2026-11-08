@@ -1,0 +1,377 @@
+{
+  "schema": "n26-selected-recovery-priorities-v1",
+  "source_sha256": {
+    "publication-context\\PROJECT_STATE.json": "c959d716c5a3868e9a02431237ae9668995b92511fe25d7b5ad0d9fb8371c088",
+    "publication-context\\verification\\reproducibility\\orders21-26-handoff.json": "fc61d5af808b22539b19cb45c03f0a9f5ace962973d6333d6d596967378fa0fa",
+    "publication-context\\verification\\reproducibility\\n26-public-content-audit-20261014.json": "8bce8d1f014ab5f4a4e2e31a46ce554a3d6ba0d42ffed96ddd6c3666324390b9"
+  },
+  "formal_authorities": {
+    "current": {
+      "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json",
+      "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-mixed-after-six-midarc-supplemental-current-v1.json",
+      "category": "n26-authoritative-pair-and-independent-mathematics",
+      "bytes": 54342803,
+      "sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+      "encoding": "gzip-parts-v1",
+      "parts": [
+        {
+          "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json.gz.part0001",
+          "bytes": 12645909,
+          "sha256": "97397b6d339d672aba44527c2d21923366340000eda3358028ed77aa52003faf"
+        }
+      ]
+    },
+    "independent_final": {
+      "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-independent-final-v1.json",
+      "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-mixed-after-six-midarc-independent-final-v1.json",
+      "category": "n26-authoritative-pair-and-independent-mathematics",
+      "bytes": 10760,
+      "sha256": "6099c25ff78f074c5a02dd90c33c2d3f481df350ea71b2e853ca9fc2deeabbbc",
+      "encoding": "identity"
+    }
+  },
+  "formal_required_missing_candidates": [
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/MANIFEST.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/SOURCE-CURRENT.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/SOURCE-FINAL.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/SOURCE-FRONTIER.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/SOURCE-ACCEPTANCE.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/FRONTIER.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/LOWER-LEDGER.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/FAMILY-CONSTANTS.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/MIDARC-MATHEMATICAL-SCAN.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/MIDARC-INDEPENDENT-CONTROLS.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/REMAINING-SOURCE-ACCOUNTING-CONTROLS.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/SOURCE-MATHEMATICAL-SEMANTICS.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    },
+    {
+      "original_path": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/VERIFIED.json",
+      "required_by": "verify_midarc_source_geometry.py / recheck_midarc_source_current.py",
+      "expected_sha256": null,
+      "finding": "source path absent from public manifest; byte-level identity cannot be resolved without the formal current or frozen MANIFEST"
+    }
+  ],
+  "arithmetic_authorities": {
+    "current": {
+      "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json",
+      "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-root25-current346-refit2-origin-append-composition-v1.json",
+      "category": "n26-authoritative-pair-and-independent-mathematics",
+      "bytes": 480441790,
+      "sha256": "c1675552b56d762de0bca83ca3adbb28e06c71e95c94b387d7f216eee41187c9",
+      "encoding": "gzip-parts-v1",
+      "parts": [
+        {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0001",
+          "bytes": 41943040,
+          "sha256": "a4dbdaec816b859cb9d9b8f105d743a6944a725cd3156b332c6979026c5d0c74"
+        },
+        {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0002",
+          "bytes": 41943040,
+          "sha256": "0d02d34c65b296fa4935e351d7505f9e4167795804254e2daa2207721be38218"
+        },
+        {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0003",
+          "bytes": 41943040,
+          "sha256": "854d639d04e8be97b000fa212111bcc4115684db7626637005d3a32c81a10130"
+        },
+        {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0004",
+          "bytes": 41943040,
+          "sha256": "0052832be7ae2b1b54391b45cc7d920c21c2fda310f02417a3a08b3a73d14616"
+        },
+        {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0005",
+          "bytes": 41943040,
+          "sha256": "69104deffbfb8503af1ebbb948254b83adb6739f64e25a3801c60301e7e93ab4"
+        },
+        {
+          "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0006",
+          "bytes": 7437048,
+          "sha256": "7c62e3e91349a2b026e41dca9abec229df7452fc0d1318954b6fe0c1cd037df9"
+        }
+      ]
+    },
+    "controls": {
+      "path": "cover26/proof_bundle/outputs/n26-root25-current346-refit2-origin-append-independent-controls-v1.json",
+      "source": "C:\\Users\\Administrator\\Documents\\Codex\\2026-10-09\\n-26\\outputs\\n26-root25-current346-refit2-origin-append-independent-controls-v1.json",
+      "category": "n26-authoritative-pair-and-independent-mathematics",
+      "bytes": 247001,
+      "sha256": "8bed44fd9d1c2dfbba0d26c8cfe2a2e2e231aca36037829ce7de3432b7c858ef",
+      "encoding": "identity"
+    }
+  },
+  "arithmetic_replay": {
+    "executor": "work/test_current_missing_origin_refit_composition_v1.py",
+    "arguments": {
+      "--seed": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-root25-current347-untried274-physical-composition-v1.json",
+      "--seed-sha256": "17c634f94787816db7f2d7a676f08ad1561891951b215c81c3d0da2787e9fb2c",
+      "--seed-controls": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-root25-current347-untried274-physical-independent-controls-v1.json",
+      "--seed-controls-sha256": "df4659a98833c129e13e30921076b3be095eab4f9586fb77a52afd3fcea089d6",
+      "--expected-open": 346,
+      "--expected-supports": 27,
+      "--pilot": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current347-missing-origin-owner-joint-refit2-pilot-v1.json",
+      "--pilot-sha256": "542c89c00096218510fa06c2733d4dc57b271103534be319ec1284bd5f024216",
+      "--batch": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current346-refit2-origin-admission-diagnostic-v1.json",
+      "--batch-sha256": "6a264940a71b607428085d9ea563aa759adbe5a7ebae87e3f017e36cfc21be7f",
+      "--batch-controls": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current346-refit2-origin-admission-independent-controls-v1.json",
+      "--batch-controls-sha256": "14fc3984c338d3a336cf3191d26f7bc2b2ed8c73dd44f80d3245bea248bda881",
+      "--diagnosis": "C:/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-root25-current346-refit2-origin-append-composition-v1.json",
+      "--diagnosis-sha256": "c1675552b56d762de0bca83ca3adbb28e06c71e95c94b387d7f216eee41187c9",
+      "--report": "FRESH_SEPARATE_OUTPUT_NEVER_OVERWRITE_PRESERVED_REPORT"
+    },
+    "scope": "These are mathematical arithmetic/retention replay arguments, not a new optimization/search and not formal geometric admission. No replay was run during this inventory audit."
+  },
+  "arithmetic_missing_noncheckpoint_direct_inputs": [
+    {
+      "path": "outputs/n26-current28-six-target-supplemental-current-v1.json",
+      "sha256": "c85e130c935e68e2275e53fa457c9c4d95d8be5416b128f4307a76061057911b"
+    },
+    {
+      "path": "outputs/n26-candidate-root25-preserved-full134rod-regions-forest-diagnosis-v4.json",
+      "sha256": "4914725c65f3995014a30484f2e4a37428701efe02bbed2edce98f70d96626cc"
+    },
+    {
+      "path": "outputs/n26-current-partial-prefix-energy-v1/CAP-CERTIFICATE.json",
+      "sha256": "4b14c48b235a71c461041cc216543c42e482227df6419f145dcccf8b09bea531"
+    },
+    {
+      "path": "outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+      "sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/VERIFIED.json",
+      "sha256": "cf4be3c59c99cda2e1afc0eab36384d7308028b73ff05c19e2620d68160fa679"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/SYSTEM.json",
+      "sha256": "61b2fbfe4b0f6b02bbeb1a296c055f4cc936e46dd6456dca82581e33a3b5c83d"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/ROOT-CERTIFICATE.json",
+      "sha256": "0d2c6dcfe8e4a6aef3eb82fef73fcf41f59e261245ccd5fcf5964fefce5186ee"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/ORIGINAL-SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/ORIGINAL-ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/STRESS-LEDGER.json",
+      "sha256": "b45ad1944a56120f855e648d97da06a22c13f8d02db2ee718d379edc9c98fb1d"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/original/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "outputs/n26-positive-stress-v1/original/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "outputs/n26-centered-local-barrier-v2/VERIFIED.json",
+      "sha256": "b3a665a485a09461d9093af14193da623e8b061c1e08d43337bfb596f10b87ec"
+    },
+    {
+      "path": "outputs/n26-candidate-transport-control-v1/VERIFIED.json",
+      "sha256": "f51c08b8aa34891964e9cda11a4ef581c5d1352e35440df43c86c1d845510ad5"
+    },
+    {
+      "path": "outputs/n26-same-root-cover-v2/VERIFIED.json",
+      "sha256": "5d0f54da9d1648069a65c40661cc4b758700412ccec6d3787bebacf8e04bfe43"
+    },
+    {
+      "path": "outputs/n26-same-root-cover-v2/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "outputs/n26-same-root-cover-v2/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "outputs/n26-candidate-transport-control-v1/CANDIDATE-PATH.json",
+      "sha256": "d294177a0dea1924aafc6614256e7c662b9355df10427eed8027c33f6e1732c4"
+    },
+    {
+      "path": "outputs/n26-candidate-transport-control-v1/NATIVE-LAUNCH.json",
+      "sha256": "6498f97996ed293f1a58b5d4bec9b2d801f8f905a79d239987c203dd5afae907"
+    },
+    {
+      "path": "work/prefix-origin-v1/peel_prefix_origin.linux",
+      "sha256": "b07a612b71d7535a3d667dc764bcafadd104e14b6ce560f6810e56cfc9ba3a25"
+    },
+    {
+      "path": "outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+      "sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914"
+    },
+    {
+      "path": "outputs/n26-current-candidate-owned-forest-v8/PROPOSAL.json",
+      "sha256": "2dfaad3bde510872e9874d12d409797e9c77ebb2b15a9c66a5160fc67d24eee7"
+    },
+    {
+      "path": "outputs/n26-current-candidate-owned-forest-v8/SOURCE-ROOT-HISTORY.json",
+      "sha256": "b2c315d6603be1e72511604946862b1f83369405ce7bc8a8096905885b44bc73"
+    },
+    {
+      "path": "outputs/n26-root25v4-balanced-whole-leaf-energy-diagnostic-v1.json",
+      "sha256": "172b937b92e97a22e9bc24c4b0e8214582c374e95d52541d62cfb5d2c4c7e959"
+    },
+    {
+      "path": "outputs/n26-root25-balanced-whole-leaf-successor-v2.json",
+      "sha256": "7fd490f90fcf38bec2dafb8fd1c9a87312c1aab21013724ff718da1f09740d7a"
+    },
+    {
+      "path": "outputs/n26-root25-latest920-two-origin-whole-leaf-diagnostic-v1.json",
+      "sha256": "3889054d0b151b4daa951c0dd9553fed78facf415229e75be075221ccc3634b8"
+    },
+    {
+      "path": "outputs/n26-latest-origin25-joint-fresh-stress-successor-diagnostic-v1.json",
+      "sha256": "b0a3cd4ad31fefab2772d775cf1707b9a0117645c00659076531e77e7b4b2339"
+    },
+    {
+      "path": "outputs/n26-root25-latest918-checked-origin-forest-composition-v1.json",
+      "sha256": "4630f1ee82d81e386c7a174fe7ae46f11f6691800d884671bb92213de81cab15"
+    },
+    {
+      "path": "outputs/n26-latest918-joint-origin-fresh-stress-batch-diagnostic-v1.json",
+      "sha256": "2d17d01e3db16cbc99c91f7af50c47ae3679180ce5910495cceb997717ad4606"
+    },
+    {
+      "path": "outputs/n26-root25-latest910-checked-joint-origin-batch-composition-v1.json",
+      "sha256": "aad070ed13b708b6cf6979761aaaa156016b6278e928321f61605c7b1115dab0"
+    },
+    {
+      "path": "outputs/n26-latest910-shared-fresh-origin-support-sweep-diagnostic-v1.json",
+      "sha256": "569b1d97606feeaad270a88500df074aabed4642c442fc1340292024e3d86292"
+    },
+    {
+      "path": "outputs/n26-root25-latest878-checked-shared-origin-sweep-composition-v1.json",
+      "sha256": "0258d0f045317c03d70aa7bc8b2421460aa441c89020d1f2acbda7edde1b4ef4"
+    },
+    {
+      "path": "outputs/n26-latest878-physical-donor-whole-leaf-sweep-diagnostic-v1.json",
+      "sha256": "44ed402bc615198de6457bcf36eaad11055cbaae06ed8f2f6c3bebbd6ad622a6"
+    },
+    {
+      "path": "outputs/n26-root25-latest-physical128-donor-composition-v1.json",
+      "sha256": "cdcf4af2f24410908ce9bd59f82d521d4d62927e3fa97f631dc1d191ae59d0d2"
+    },
+    {
+      "path": "outputs/n26-current750-physical-support-reuse256-diagnostic-v1.json",
+      "sha256": "2960609b6de9ff58541e237222e5caa0afb74c3b5b1e4f2645c77b173d99ac7f"
+    },
+    {
+      "path": "outputs/n26-root25-current750-physical-reuse256-composition-v1.json",
+      "sha256": "b5d5fc771171a4fa95dcf5b2b8e7afef3c839fd297e1fedee292dcf08ed11c4f"
+    },
+    {
+      "path": "outputs/n26-current538-failed-joint-fresh-physical-diagnostic-v1.json",
+      "sha256": "a98ab3499cf76087719dc79c03c1e779148e345383b6908b2f47358e61b44458"
+    },
+    {
+      "path": "outputs/n26-root25-current538-failed-joint-physical-composition-v1.json",
+      "sha256": "de2a583077d85c25483f893d0593d6e8878ebaaf78aade3268feea1507542a47"
+    },
+    {
+      "path": "outputs/n26-current530-expanded-physical-reuse256-diagnostic-v2.json",
+      "sha256": "081ea375f0005fb63900ef0f128bd6d753fe6b1f9702c4efb938cb290069895b"
+    },
+    {
+      "path": "outputs/n26-root25-current530-expanded-reuse256-composition-v2.json",
+      "sha256": "ba69850bb2c562badbfe38408d166e48548e4d4d6a45b68e85fa6ef9aaba2b61"
+    },
+    {
+      "path": "outputs/n26-root25-current351-failed77-preserved-diagonal-composition-v1.json",
+      "sha256": "4083e23465e71ce6098f3aa48c40c6769ecfabd8ba0ab2665ded903b905f637c"
+    },
+    {
+      "path": "outputs/n26-current347-untried274-physical-reuse-diagnostic-v1.json",
+      "sha256": "7cdbe5baf1e6f8b6f3e7d905209c0150afc564448fcd9e146921a66ab4fc278a"
+    },
+    {
+      "path": "outputs/n26-root25-current347-untried274-physical-composition-v1.json",
+      "sha256": "17c634f94787816db7f2d7a676f08ad1561891951b215c81c3d0da2787e9fb2c"
+    },
+    {
+      "path": "outputs/n26-current347-missing-origin-owner-joint-refit2-pilot-v1.json",
+      "sha256": "542c89c00096218510fa06c2733d4dc57b271103534be319ec1284bd5f024216"
+    }
+  ],
+  "mathematical_pending": {
+    "formal": {
+      "candidate_angle_roots": 16,
+      "same_root_conditional_frontier": 4957,
+      "mathematical_pending_is_not_file_missing": true
+    },
+    "arithmetic": {
+      "OPEN_subdomains": 344,
+      "physical_supports": 29,
+      "formal_geometry_payments": 0,
+      "verified": false,
+      "mathematical_pending_is_not_file_missing": true
+    }
+  },
+  "qualification": "Hash-bound direct inputs, not necessarily recursive closure. Formal candidate paths lack expected hashes; obtain them from the authoritative current files map. OPEN counts are recorded source status, not a freshly replayed mathematical theorem."
+}

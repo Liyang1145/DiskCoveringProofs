@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "restored_current_sha256": "ba52dbb56f9d273c30e1b356c55bdb0d3ff8fdaa36061248e5c8ec1e490a81a1",
+  "paired_final_sha256": "6099c25ff78f074c5a02dd90c33c2d3f481df350ea71b2e853ca9fc2deeabbbc",
+  "historical_formal_roots": 16,
+  "historical_conditional_prefixes": 4957,
+  "historical_inventory_entries": 273731,
+  "original_system_and_root_certificate_references": [
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/ORIGINAL-SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/ORIGINAL-ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/original/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-v1/original/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-published-replay-v1/ORIGINAL-SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-published-replay-v1/ORIGINAL-ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-published-replay-v1/original/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-positive-stress-published-replay-v1/original/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-same-root-cover-v2/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v1/STRESS-SOURCE/ORIGINAL-SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v1/STRESS-SOURCE/ORIGINAL-ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v1/STRESS-SOURCE/original/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v1/STRESS-SOURCE/original/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v2/STRESS-SOURCE/ORIGINAL-SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v2/STRESS-SOURCE/ORIGINAL-ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v2/STRESS-SOURCE/original/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v2/STRESS-SOURCE/original/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v3/STRESS-SOURCE/ORIGINAL-SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v3/STRESS-SOURCE/ORIGINAL-ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v3/STRESS-SOURCE/original/SYSTEM.json",
+      "sha256": "e555cb470ef4a3a8c5167f95307e7b0220c8b77a0fe7b435010220450eb44ef7"
+    },
+    {
+      "path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-selected-type-sharp-trees-v3/STRESS-SOURCE/original/ROOT-CERTIFICATE.json",
+      "sha256": "598d65cbc3d839780e3f6b8dbdc3cd36331a391f716eacc1cae83144903b2794"
+    }
+  ],
+  "public_sources": [
+    {
+      "local": "n26_embedded_dual_bridge_algebra.py",
+      "blob_sha": "1090480d1d357a700f85d0d0ffb4c4aafa92aa25",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/n26_embedded_dual_bridge_algebra.py",
+      "bytes": 6211,
+      "sha256": "9662e5042c16116b3019bf9697076f360e403150b0047c794f2855b854e33e91"
+    },
+    {
+      "local": "test_embedded_dual_bridge_algebra.py",
+      "blob_sha": "3a2231e5a5253cee6981365887bfec76ddea404f",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/test_embedded_dual_bridge_algebra.py",
+      "bytes": 9275,
+      "sha256": "409bd0446744a041d38844fb6a5314598acb98d16660e7976b34fe8acf112dad"
+    },
+    {
+      "local": "n26_generic_position_universal_polynomials.py",
+      "blob_sha": "fd289958a770c17e49e01056b497e26ad317fee6",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/n26_generic_position_universal_polynomials.py",
+      "bytes": 8672,
+      "sha256": "599b526e2771fa6a6e692942baa3091a4c83ec83df0c33a1c852d555c43a6c94"
+    },
+    {
+      "local": "exact_arcs.py",
+      "blob_sha": "82bd9ee32b108eea2de5ba8fd26ebe302f8e9a1f",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/exact_arcs.py",
+      "bytes": 2488,
+      "sha256": "836517e7597085151d68bd663d9906340ed0f4b64c3042e8265645718f4d599b"
+    },
+    {
+      "local": "EMBEDDED-CORNER-SHADOW-BRIDGE-PROOF.md",
+      "blob_sha": "8729eeb7e11d1e5893a9910958322e7d92dfed7f",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/main/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/EMBEDDED-CORNER-SHADOW-BRIDGE-PROOF.md",
+      "bytes": 11488,
+      "sha256": "a6e8466bd722cd9ae0a267ee9a3060502489dd45200967cc8994ccbdbcffdd2d"
+    },
+    {
+      "local": "GENERIC-SLACK-PROOF.md",
+      "blob_sha": "e57ac2723af7fff688a9c59a02594b2b002700ac",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/main/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/GENERIC-SLACK-PROOF.md",
+      "bytes": 5621,
+      "sha256": "edaf23d0f00b65c263875e87dd1d4185005b814f43a7dc3f5e666e29d9facfe2"
+    },
+    {
+      "local": "verify_degree_area.py",
+      "blob_sha": "52b057da6e9b3c554df72fa76460788da7260568",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/main/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/verify_degree_area.py",
+      "bytes": 14178,
+      "sha256": "a8affb8f8f9e20bbd597abde7869147bb8e50f88666590f279665f94b534fb69"
+    },
+    {
+      "local": "DEGREE-AREA-PROOF.md",
+      "blob_sha": "0d1ca36506827dee8851dcc17674417e47fa5ca0",
+      "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-degree-area-lower-v1/PROOF.md",
+      "bytes": 7214,
+      "sha256": "9b3174eec007486577336b6439b247b39342d032377123246c7c463e2f72b3df"
+    }
+  ],
+  "all_273731_original_dependency_bytes_replayed_now": false,
+  "mathematical_frontier_payments": 0,
+  "global_optimality_proved": false
+}

@@ -1,0 +1,145 @@
+{
+  "current_frontier_actual_file": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/FRONTIER.json",
+  "midarc_actual_prior_candidate_layer_identity": {
+    "schema": "N26-explicit-mixed-curvature-latest-candidate-layer-identity-v1",
+    "actual_current_parent_sha256": "531b176affed718a818bc93d6c31df859276258047636656e88ea63693bb7007",
+    "latest_candidate_current_audit_sha256": "531b176affed718a818bc93d6c31df859276258047636656e88ea63693bb7007",
+    "enumeration_only_bound_ancestors_followed": [],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-mixed-curvature-covers-v1/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "57682c5616e4df044da9719ee7f04ce7b92f020a875347e6e7242d4f5d83b77f",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-mixed-curvature-covers-v1/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "b42c421f2acb60eb9d609e2f79d87a0ce339ea79801907213ab65d5410a5afe2",
+    "actual_remaining_candidate_whole_roots": 16,
+    "new_schema_not_relabelled_as_old_owned_source": true,
+    "identity_only_not_a_model_or_geometry_replay": true,
+    "new_geometric_candidate_payments": 0
+  },
+  "mixed_curvature_actual_source_layer_identity": {
+    "schema": "N26-candidate-identity-through-six-target-enumeration-supplement-v1",
+    "actual_current_parent_sha256": "c85e130c935e68e2275e53fa457c9c4d95d8be5416b128f4307a76061057911b",
+    "latest_candidate_current_audit_sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138",
+    "enumeration_only_bound_ancestors_followed": [
+      {
+        "new_enumeration_schema": "N26-complete-current-with-six-target-source-geometry-audit-v1",
+        "actual_six_target_current_sha256": "c85e130c935e68e2275e53fa457c9c4d95d8be5416b128f4307a76061057911b",
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-eighth-conditional-current-audit-v28-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "d306ec18c476fc4dc40d19284cb0281db82e457201a97f85e361c1b37c6a17ea"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-seventh-conditional-current-audit-v27-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "26d274a012b6ec816313110c488ba79df77133c2fb9c4063f85c306ef0f1afe3"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-sixth-conditional-current-audit-v26-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "91e9ec1f31ab26cfd6f924cc3c4e7ab4acb14b820d1873cd08436e76d8175688"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fifth-conditional-current-audit-v25-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "10c31954c30a42227040cdc507c0390c7312d75f16c02362ba13ddbe8aacb49f"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-fourth-conditional-current-audit-v24-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "4ad5cda43ef2b9606ed8a054844e0fa43485429bd2fdee2f39b925691ef078bd"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-third-conditional-current-audit-v23-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "cdd3af2afa13028d63d9378480b31ef479972d956af4b9a85704788b88fa0b61"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-second-conditional-current-audit-v22-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f211ad82c936ee0e4c0d50f663dd181b6fec55ebb625490e702004d3c2aec39b"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twenty-first-conditional-current-audit-v21-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "351270611f0273abd38730c99bc268a9338116627164327c8358dd37a1e4fe49"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-twentieth-conditional-current-audit-v20-sparse-v1-strict-with-owned8-scope.json",
+        "sha256": "f722f716e125c1ca8896b9bea83f49b43b0a9d296c3149dc582a5c6c0d2adf37"
+      },
+      {
+        "bound_parent_path": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-current-audit-v8-strict-parent-v1.json",
+        "sha256": "341731721b8338f5424327f78cbe7b2ed3c89715d57dc719d982bba27eb85138"
+      }
+    ],
+    "actual_latest_candidate_acceptance": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/VERIFIED.json",
+    "actual_latest_candidate_acceptance_sha256": "be3e9e69de30bfa29af94b86764d8f8004752a89d78b000c60f6c079860072c2",
+    "actual_latest_candidate_pending_angles": "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-current-candidate-owned-forest-v8/PENDING-ANGLES.json",
+    "actual_latest_candidate_pending_angles_sha256": "bb6feb6f826f69d450c7320dd27c26c97bb4f6c4b1a097448701c91e17398914",
+    "actual_remaining_candidate_whole_roots": 25,
+    "equal_whole_root_count_and_rows_are_not_a_source_identity_substitute": true,
+    "new_geometric_candidate_payments": 0,
+    "explicit_NEW_six_schema_not_relabelled_as_old_enumeration": true,
+    "identity_only_NOT_current_final_or_whole_geometry_acceptance": true
+  },
+  "remaining_latest_partial_root_histories": 1,
+  "r_strict_interval": [
+    "0.234700090400448239616790133776692127560495963654971391785924",
+    "0.234700090400448239616790133776692127560495963654971391785925"
+  ],
+  "Rstar_conditional_frontier_families": [
+    {
+      "B": 14,
+      "I": 12,
+      "split": 800,
+      "force": 37,
+      "force_tree": 0,
+      "area": 190,
+      "empty": 173,
+      "terminal": 0,
+      "pending_subtrees": 296,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 0,
+      "midarc_filled_patch_NEW_whole_subtrees": 0
+    },
+    {
+      "B": 15,
+      "I": 11,
+      "split": 714,
+      "force": 0,
+      "force_tree": 0,
+      "area": 64,
+      "empty": 422,
+      "terminal": 0,
+      "pending_subtrees": 647,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 530,
+      "midarc_filled_patch_NEW_whole_subtrees": 47
+    },
+    {
+      "B": 16,
+      "I": 10,
+      "split": 1002,
+      "force": 3,
+      "force_tree": 5,
+      "area": 37,
+      "empty": 151,
+      "terminal": 2,
+      "pending_subtrees": 2164,
+      "unresolved_terminal_subtrees": 2,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 1839,
+      "midarc_filled_patch_NEW_whole_subtrees": 539
+    },
+    {
+      "B": 17,
+      "I": 9,
+      "split": 801,
+      "force": 0,
+      "force_tree": 0,
+      "area": 0,
+      "empty": 399,
+      "terminal": 0,
+      "pending_subtrees": 1850,
+      "unresolved_terminal_subtrees": 0,
+      "family_exhausted": false,
+      "six_core_target_filled_ear_whole_subtrees": 3177,
+      "midarc_filled_patch_NEW_whole_subtrees": 94
+    }
+  ],
+  "direct_next_paths_with_sha256": {
+    "/mnt/c/Users/Administrator/Documents/Codex/2026-10-09/n-26/outputs/n26-mixed-after-six-midarc-source-geometry-v1/FRONTIER.json": "f8e90095a8aabde3dce22c3dcac792ae12a3beec105903cc000f2082950784f5"
+  }
+}

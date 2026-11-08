@@ -1,0 +1,39 @@
+verified exact physical kernel 0
+verified exact physical kernel 1
+verified exact physical kernel 2
+verified exact physical kernel 3
+verified exact physical kernel 4
+verified exact physical kernel 5
+verified exact physical kernel 6
+verified exact physical kernel 7
+verified exact physical kernel 8
+verified exact physical kernel 9
+verified exact physical kernel 10
+verified exact physical kernel 11
+verified exact physical kernel 12
+verified exact physical kernel 13
+verified exact physical kernel 14
+verified exact physical kernel 15
+verified exact physical kernel 16
+verified exact physical kernel 17
+verified exact physical kernel 18
+verified exact physical kernel 19
+verified exact physical kernel 20
+verified exact physical kernel 21
+verified exact physical kernel 22
+verified exact physical kernel 23
+verified exact physical kernel 24
+verified exact physical kernel 25
+verified exact physical kernel 26
+verified exact physical kernel 27
+verified exact physical kernel 28
+PASS all 29 exact grounded kernels; no old history or geometry acceptance
+replayed failed whole-domain attempt base 16 -0.0005374778120389342
+replayed failed whole-domain attempt base 25 -0.0005374778120332417
+replayed failed whole-domain attempt v01 16 -0.002190768725049425
+replayed failed whole-domain attempt v01 25 -0.002190768724926329
+replayed failed whole-domain attempt mix50 16 -0.0009189693566894964
+replayed failed whole-domain attempt mix50 25 -0.0009189693566497184
+replayed failed whole-domain attempt mix75 16 -0.0004685856845792034
+replayed failed whole-domain attempt mix75 25 -0.00046858568455764287
+PASS checkpoint replay; zero new exclusions; 16 / 4957 / 344 retained

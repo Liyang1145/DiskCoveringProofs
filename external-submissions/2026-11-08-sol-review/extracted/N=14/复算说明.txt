@@ -1,0 +1,9 @@
+N=14 圆盘覆盖完整证明
+
+阅读 证明.md 查看精确半径、构造和全局下界证明。
+在解压出的 N=14 文件夹中运行
+
+    python -B -S verify.py
+
+复算使用 Python 标准库，cover-proof.json.gz 与 verify.py 须在同一目录。
+search.py 是构造搜索记录，复算无需运行它。

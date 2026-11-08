@@ -1,0 +1,22 @@
+[
+  {
+    "local": "n26_embedded_dual_bridge_algebra.py",
+    "blob_sha": "1090480d1d357a700f85d0d0ffb4c4aafa92aa25",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/n26_embedded_dual_bridge_algebra.py"
+  },
+  {
+    "local": "test_embedded_dual_bridge_algebra.py",
+    "blob_sha": "3a2231e5a5253cee6981365887bfec76ddea404f",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/test_embedded_dual_bridge_algebra.py"
+  },
+  {
+    "local": "n26_generic_position_universal_polynomials.py",
+    "blob_sha": "fd289958a770c17e49e01056b497e26ad317fee6",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/n26_generic_position_universal_polynomials.py"
+  },
+  {
+    "local": "exact_arcs.py",
+    "blob_sha": "82bd9ee32b108eea2de5ba8fd26ebe302f8e9a1f",
+    "url": "https://github.com/Liyang1145/DiskCoveringProofs/blob/11bf26e8b9ca601ab7220a93c1ef39451513aed0/cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-source-geometry-v1/exact_arcs.py"
+  }
+]

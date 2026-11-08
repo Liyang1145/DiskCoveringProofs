@@ -1,0 +1,15 @@
+{
+  "client_date": "2026-10-30",
+  "commit": "4e9e1bd0053d65f59626188d76cf17efdbaf7cd4",
+  "strict_lower": "28/125",
+  "upper": "234700091/1000000000",
+  "fixed_radius_9_40_remaining_actual_B": [
+    15,
+    16
+  ],
+  "global_optimality_proved": false,
+  "native_frontier_payments": 0,
+  "background_jobs": 0,
+  "executed_programs": 14,
+  "rejection_controls": 3
+}

@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-07T20:53:46.670265+08:00",
+  "source_commit": "11bf26e8b9ca601ab7220a93c1ef39451513aed0",
+  "decoded_file": "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\n26-terra\\round-20261107e\\native-recovered\\n26-root25-current346-refit2-origin-append-composition-v1.json",
+  "decoded_bytes": 480441790,
+  "decoded_sha256": "c1675552b56d762de0bca83ca3adbb28e06c71e95c94b387d7f216eee41187c9",
+  "compressed_parts": [
+    {
+      "file": "n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0001",
+      "bytes": 41943040,
+      "git_sha1": "e3edabc1e0fc9607a535f348bde0802bf9192e4f"
+    },
+    {
+      "file": "n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0002",
+      "bytes": 41943040,
+      "git_sha1": "d9fe2feb6774ba55be74eef05d0fee9b0999ab5a"
+    },
+    {
+      "file": "n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0003",
+      "bytes": 41943040,
+      "git_sha1": "92ecb7a206e7e4d7c73c577da9658c76e9f0b883"
+    },
+    {
+      "file": "n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0004",
+      "bytes": 41943040,
+      "git_sha1": "b5ecf7323cb0f565d7b9e6c986988fcedbb9b137"
+    },
+    {
+      "file": "n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0005",
+      "bytes": 41943040,
+      "git_sha1": "b97c692977e3523f53b2a15ec87436d255f0b117"
+    },
+    {
+      "file": "n26-root25-current346-refit2-origin-append-composition-v1.json.gz.part0006",
+      "bytes": 7437048,
+      "git_sha1": "d5265ef15aece3ada75c81f426d2e8f037257a7e"
+    }
+  ],
+  "restored_original_bytes": true,
+  "semantic_replay_performed": false,
+  "new_geometric_payments": 0,
+  "global_optimality_proved": false
+}

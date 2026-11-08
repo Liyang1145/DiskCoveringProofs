@@ -1,0 +1,2264 @@
+[
+  {
+    "source": ".tmp/dcp-sparse/manifests/FILES.jsonl",
+    "sha256": "d5ef37859d2026dcded0621b3254f8635b235c3f957071f00268f37566c46970",
+    "bytes": 6482346,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\publication-context\\manifests\\FILES.jsonl"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.idx",
+    "sha256": "c58abb275a7d749333851e695f94b063f627fb9bcf72896808694880df2a12f0",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.pack",
+    "sha256": "78ae947784752cecd281374b557642961e158ea8668c8fe1284ccce44f0b07fc",
+    "bytes": 55504,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.rev",
+    "sha256": "d09086ed7d438a22030e8eb73c6cd24313378ed734cd5d14e380fe6dedfed082",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-0179e09a57bd6a00b5309985d0baebeb4401adb7.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.idx",
+    "sha256": "ed0a3016079764045cf042577d55437d00ef673373f8fe6b45958792f9ba63b2",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.pack",
+    "sha256": "e448ae3731fd4cb390f10fb05297d9e820eed971dda440406f134f35ac532917",
+    "bytes": 1502,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.rev",
+    "sha256": "85e389e36f439b5e3e6631249e93dc6167b3076ac7524c74693723d116d35421",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-01b8a9d0549f704fd6b2e26e4e3e83ce56ebb625.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04340c7fded2b327a22474bec8c9c295569d8531.idx",
+    "sha256": "618d64c2dbad677ef01f668f5e92cdcef32d9ac1c3c6a4b22444dce18548b904",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04340c7fded2b327a22474bec8c9c295569d8531.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04340c7fded2b327a22474bec8c9c295569d8531.pack",
+    "sha256": "026c042ac9e05e3b1c55e000f97236bc2e3548554c30a3431aa793098d981dd6",
+    "bytes": 2653,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04340c7fded2b327a22474bec8c9c295569d8531.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04340c7fded2b327a22474bec8c9c295569d8531.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04340c7fded2b327a22474bec8c9c295569d8531.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04340c7fded2b327a22474bec8c9c295569d8531.rev",
+    "sha256": "383e467bb143e6a8c359b144f5aca82b07bd52e6e93ce504edcd32e7cfb98c04",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04340c7fded2b327a22474bec8c9c295569d8531.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04859c502172e7de4b849ff09faeabfccf1436ad.idx",
+    "sha256": "8fa086ac0f636dfe2632333c6c155ca8166111b475a45e5fe27d42c103131a52",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04859c502172e7de4b849ff09faeabfccf1436ad.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04859c502172e7de4b849ff09faeabfccf1436ad.pack",
+    "sha256": "4fb289be680c4ecf3bef295da916be070ecd87b2eef9f353c5b9a6695f0d221c",
+    "bytes": 1288,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04859c502172e7de4b849ff09faeabfccf1436ad.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04859c502172e7de4b849ff09faeabfccf1436ad.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04859c502172e7de4b849ff09faeabfccf1436ad.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-04859c502172e7de4b849ff09faeabfccf1436ad.rev",
+    "sha256": "156c1bc14a413012ab53d4f87f87aa4e582e8748f69ef74d138ebf780980375d",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-04859c502172e7de4b849ff09faeabfccf1436ad.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-174fdadf88e10738eb292bec3a873a88e1504f91.idx",
+    "sha256": "ef81ef9d785d9402ae993187cb8606558781484f0fcc4bc328179640103f744f",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-174fdadf88e10738eb292bec3a873a88e1504f91.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-174fdadf88e10738eb292bec3a873a88e1504f91.pack",
+    "sha256": "3585eb838a953a584074cdf7a5dff5fdf565f0fe40ce5e96f9df7bbf92b777ea",
+    "bytes": 6226,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-174fdadf88e10738eb292bec3a873a88e1504f91.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-174fdadf88e10738eb292bec3a873a88e1504f91.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-174fdadf88e10738eb292bec3a873a88e1504f91.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-174fdadf88e10738eb292bec3a873a88e1504f91.rev",
+    "sha256": "c880981be78e1232119370855e08dfe37aa4ca7c3648dc86c37a4c7b21fe012d",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-174fdadf88e10738eb292bec3a873a88e1504f91.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.idx",
+    "sha256": "e704de3583bf4b6f5360c60cb35e93dd0a5e36855886bdc5fcf81409ff8a005e",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.pack",
+    "sha256": "1ae849c85dcbc0ba5c8f6fbaf76579ccfdfcdac0995e14b7591b32218b062650",
+    "bytes": 728085,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.rev",
+    "sha256": "470bb00068fed69273985362a6a0d057d4e532bd84a39ffd82e98e2636e61dac",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-20313aa3c810201d39be12feeb3bcf48ca6cfe15.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2746a5a8a5394365bc75f9c91880e773f51a7587.idx",
+    "sha256": "90da806f835b87be23a2c70b72f1e0cc54dbd73df1d7e4baf254158ff36665c4",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2746a5a8a5394365bc75f9c91880e773f51a7587.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2746a5a8a5394365bc75f9c91880e773f51a7587.pack",
+    "sha256": "04eb5549379234723b663fab21686d6c4d2ac064f7496d0d6e97ea3bb5e8d31e",
+    "bytes": 3738,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2746a5a8a5394365bc75f9c91880e773f51a7587.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2746a5a8a5394365bc75f9c91880e773f51a7587.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2746a5a8a5394365bc75f9c91880e773f51a7587.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2746a5a8a5394365bc75f9c91880e773f51a7587.rev",
+    "sha256": "ff7fb95135851e9c3f35be617c90b86b4617f611832704d535deeb380fedc27f",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2746a5a8a5394365bc75f9c91880e773f51a7587.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.idx",
+    "sha256": "b01a5458fb4ec0b564f684323496912dccdbb50eb2c020a6e61abd9c0418aaea",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.pack",
+    "sha256": "92c07273e3b6c603be48a890430f28a8c4c2a058f3b7da91f9a0443e71baee04",
+    "bytes": 2484,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.rev",
+    "sha256": "4d45aad5e1cca345859ab9e28788b2b1c118a6dc2c23a4010f3e7f6a7eece3d5",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-28f0c6cc1aa5fceb0b75166be24bb2105330c920.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.idx",
+    "sha256": "ba09bf01ba7d4fd5027ef1edd6b5dc5db6d2ad5cdc1dcb94dfd460103af3a1c9",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.pack",
+    "sha256": "df28e08290f4945d793086bed631f3f7a9fcc14fac6b7f162be696ef14359a47",
+    "bytes": 459,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.rev",
+    "sha256": "67512608e24f5e4de894bcae127c8f2f7dbea0341e1fe5019f335c2efee7d9c4",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2982661ea9df0ba4b3f31b1b32b9ec7e1f0394ec.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.idx",
+    "sha256": "4ab3a81554f1b2a3d9be1aa4ce99fbe9dee17ec3721e3d84ee970cdd780dae7c",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.pack",
+    "sha256": "356e8641a6e6b5ae7b906886f1af855cee51ce7952cea5056e46eef95b301696",
+    "bytes": 523,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.rev",
+    "sha256": "e0f5417cd56fcd724a1731f4040ae3bc0497651c376d23fcd5248045cca40719",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-2b7db1e32d3dbf4186b26bb9b70b15cfc6bc7fd4.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34459fab14216891213a04b98485b4e6f8de5a8c.idx",
+    "sha256": "fac3dfc1f1be1a06cbfb8d90a627989259f2ecc40abfd7733c14bda3498906db",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34459fab14216891213a04b98485b4e6f8de5a8c.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34459fab14216891213a04b98485b4e6f8de5a8c.pack",
+    "sha256": "5c0dfdeaae5a825c388637f6bb7d317cd9e4170031faf0d2a9995076d022828c",
+    "bytes": 2126,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34459fab14216891213a04b98485b4e6f8de5a8c.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34459fab14216891213a04b98485b4e6f8de5a8c.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34459fab14216891213a04b98485b4e6f8de5a8c.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34459fab14216891213a04b98485b4e6f8de5a8c.rev",
+    "sha256": "9fbce91332385173252d196e2844698b770dfbe3bdbe10d15a361b2d44424f62",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34459fab14216891213a04b98485b4e6f8de5a8c.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34d1f3cfdb287338134a86cb9d8104319457faf8.idx",
+    "sha256": "036f2e5b9b556407136338f386d6c91706685219a18b958b56d9c765103a2ee3",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34d1f3cfdb287338134a86cb9d8104319457faf8.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34d1f3cfdb287338134a86cb9d8104319457faf8.pack",
+    "sha256": "e471d43cb136bf7bc9bf05c921de7e37f004d6fbff5fc4683fbfed2fc4aa297a",
+    "bytes": 2941,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34d1f3cfdb287338134a86cb9d8104319457faf8.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34d1f3cfdb287338134a86cb9d8104319457faf8.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34d1f3cfdb287338134a86cb9d8104319457faf8.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-34d1f3cfdb287338134a86cb9d8104319457faf8.rev",
+    "sha256": "4b2de886476143e30113be0f985010535582b1813df375d79f6f54914b55f54e",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-34d1f3cfdb287338134a86cb9d8104319457faf8.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.idx",
+    "sha256": "8974b546fc47c2c48e7681430f2daeaefd1dce4fdd85eb34d2767a04f1667627",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.pack",
+    "sha256": "f828bb3d5eb5a31f63a0861635dc3bd13cba2684dd77330e384f8a5a7c0188fb",
+    "bytes": 481,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.rev",
+    "sha256": "5936812b446dd148a7e8db8e96c8aa123ee799473daef752458cffd87225169f",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-35ac13175da3460d00dbde3447a867d3bc05dbe6.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-461f263810400ce53c5b89139d1f2f838c667022.idx",
+    "sha256": "0ea14e7eceabf168e5a7da0fa541f1a38399c6f7a6f64734cc7119b3d7d8681e",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-461f263810400ce53c5b89139d1f2f838c667022.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-461f263810400ce53c5b89139d1f2f838c667022.pack",
+    "sha256": "fa79bac666349df6889fea732972896b177f731f3fb1645a17411a91c5ca1f0d",
+    "bytes": 3336,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-461f263810400ce53c5b89139d1f2f838c667022.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-461f263810400ce53c5b89139d1f2f838c667022.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-461f263810400ce53c5b89139d1f2f838c667022.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-461f263810400ce53c5b89139d1f2f838c667022.rev",
+    "sha256": "a8c2f62b453af699f0eda2f3f42a3f6b46d4c3f4fdc915185cdee9c7d4766891",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-461f263810400ce53c5b89139d1f2f838c667022.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-49252194922a56805d51d487f7a870c2744a4cf9.idx",
+    "sha256": "7b69b134a58da06f35de38117129dfd332f7e112921b96f1b820a9ec5bc9b277",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-49252194922a56805d51d487f7a870c2744a4cf9.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-49252194922a56805d51d487f7a870c2744a4cf9.pack",
+    "sha256": "f0ab400d1ef4901b5d8456e97bcd70866f8339da8f04fa3de15dc1d952d3bd28",
+    "bytes": 566,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-49252194922a56805d51d487f7a870c2744a4cf9.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-49252194922a56805d51d487f7a870c2744a4cf9.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-49252194922a56805d51d487f7a870c2744a4cf9.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-49252194922a56805d51d487f7a870c2744a4cf9.rev",
+    "sha256": "aee684a1107a15f4f16a3a85108bb78159e904f4b9bbc7304de2055b0e71717d",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-49252194922a56805d51d487f7a870c2744a4cf9.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.idx",
+    "sha256": "7b356e31dc392b5f9c67145b64fa55bfb1b8e5491f64a7a3ee5d619abb9d9f93",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.pack",
+    "sha256": "94c70b7d4b78ced2a1dec5ca03d7fc0b1fac60dda08bf605f4da51a2dec529df",
+    "bytes": 1038,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.rev",
+    "sha256": "b5fe0aa9a48aaf2281f662a32465607b44c53a7512012815a7a14ad4edf24975",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-4d9ba54e1860a802556517fb2d4aaf69740ad479.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-5adf00142e6e435dca0569bcc75a256218b34c68.idx",
+    "sha256": "97e9d69ad056f3ddb1dd469d67195634d9e0a646afceac0abef1720fdae72d20",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-5adf00142e6e435dca0569bcc75a256218b34c68.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-5adf00142e6e435dca0569bcc75a256218b34c68.pack",
+    "sha256": "4c0e9c3fd1b00036e163cb4d12c2fc251bbc7929dbbcbf509791ed790d565358",
+    "bytes": 4393,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-5adf00142e6e435dca0569bcc75a256218b34c68.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-5adf00142e6e435dca0569bcc75a256218b34c68.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-5adf00142e6e435dca0569bcc75a256218b34c68.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-5adf00142e6e435dca0569bcc75a256218b34c68.rev",
+    "sha256": "6fc49afea934789a349523bc1992adfb7cc5a11613a21a602f5b6b64bd1aa9b2",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-5adf00142e6e435dca0569bcc75a256218b34c68.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6adad2840c297a2b05b347da62ff4f6903897b45.idx",
+    "sha256": "ede226b251acd374cba3a5c531f6e7a966f8ae559623697dbe282a117925e119",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6adad2840c297a2b05b347da62ff4f6903897b45.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6adad2840c297a2b05b347da62ff4f6903897b45.pack",
+    "sha256": "4907a54599ef36c6b94cfb11434cca33a69fd5f432617d313312c6c4c1d3ed66",
+    "bytes": 7324,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6adad2840c297a2b05b347da62ff4f6903897b45.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6adad2840c297a2b05b347da62ff4f6903897b45.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6adad2840c297a2b05b347da62ff4f6903897b45.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6adad2840c297a2b05b347da62ff4f6903897b45.rev",
+    "sha256": "8bf62980d7c34a8ea3d2f8594709cdb157ce512f352c77b4265904419710d0f7",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6adad2840c297a2b05b347da62ff4f6903897b45.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.idx",
+    "sha256": "ba5b6827c9ce7a90ef5947ed069b53d05838f3118242346fc30d95c13fcb90db",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.pack",
+    "sha256": "dd7bb1992737055c577d5d015b439e2d55a969aec3b6d0feb67ac6a403f07dac",
+    "bytes": 2756,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.rev",
+    "sha256": "744e8d817b280444c1554bf48c8164d825180ca132cf383d18350ff2a40a18d8",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6d97ba1f0748d0d201049099034e9e1ba91836d0.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.idx",
+    "sha256": "bacc4eba680cd520566ba1afcd460128a5319742d4871e70bde175c38a6fbcd1",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.pack",
+    "sha256": "706df5f1d4ef9d1db85f2d9651ef95717faa5d149203c05ef605b4575353c543",
+    "bytes": 2238,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.rev",
+    "sha256": "68b616fea830631e81ce00ea27ac24126af12f1bc7538644b3688cddb9a83ace",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-6f68f1616711eea4e221bb5bc247a570b7b34b3a.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.idx",
+    "sha256": "40d26973a001feee327a562e5da619f2223d9dd93ee183b9c3c8bb83f86606cc",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.pack",
+    "sha256": "5fd0ebd70df18325e40aff6b22860505ff920e3dc72774c428bc0be3ec767d47",
+    "bytes": 3183,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.rev",
+    "sha256": "9d58bf78ffbed8b93c4218e4109a63e5ad68bb10abc434d69859f83c66595993",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-729d0b81762e6315d73c2855d2f4b8b7f8bd59c6.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.idx",
+    "sha256": "536d03817b56001d0a7052795da2f4a12eae86f3b2e1283ba4e9dbcc7433f9ad",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.pack",
+    "sha256": "7590aabb47591ea1a3f26a85ce65b78290e0508a1e2ba7390ebd71853ed058e3",
+    "bytes": 533,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.rev",
+    "sha256": "601c1925655cbb1509cf3960fae819e8140315deb483e2b48197fa29be1e13d3",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-79e3ef91b77bc53e982dd0fc83b8173b90050c44.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8285d998d2cb058fc8a41a2127f0efe375956986.idx",
+    "sha256": "f7bec511548c85367c396ffbc6bdf157abbc6381bfe61a7802dca2d55ce76400",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8285d998d2cb058fc8a41a2127f0efe375956986.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8285d998d2cb058fc8a41a2127f0efe375956986.pack",
+    "sha256": "ac456b08839e2a11d3baf3a90ec775084816581b68b9ea17318752504ae06ce8",
+    "bytes": 1316,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8285d998d2cb058fc8a41a2127f0efe375956986.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8285d998d2cb058fc8a41a2127f0efe375956986.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8285d998d2cb058fc8a41a2127f0efe375956986.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8285d998d2cb058fc8a41a2127f0efe375956986.rev",
+    "sha256": "b91d5f4805ceb4aee8671f87a4c9f6f7d793c031ae5207b33d71105168382a9e",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8285d998d2cb058fc8a41a2127f0efe375956986.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.idx",
+    "sha256": "4c0d2cbf80d17bb848eb75a36dbe8042a27bafdbb92bdd699e36118faef92ff8",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.pack",
+    "sha256": "6c1be917da1e95173c700249e3f7d864251eb76d218e190646a7977a2a0b83ca",
+    "bytes": 3795,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.rev",
+    "sha256": "f1ee5de39501c74ef37ada4762db9e17c20ffec0bd342644f4de4f97a0a79ece",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-83fe3b726d82c6c9793a2e22d2c32bed6039b28c.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.idx",
+    "sha256": "92bacfae217fa3ec53217163797e5a1cd705a61e156e179dbc916d5b1a8e5080",
+    "bytes": 3592,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.pack",
+    "sha256": "693d95ac6101646becc1cf89ff3cc97d4115a373ad4b14b29f5e02038b6a5655",
+    "bytes": 4246881,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.rev",
+    "sha256": "6eb65d83b3df101aa6c9476cca15635fa94826a5c0b222fb7260dff0fb707894",
+    "bytes": 412,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-86b6345ca16ad2dfe18006dee901ca2dc713b2c0.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.idx",
+    "sha256": "7720fa62615bc7d97dfb1306630acf93033d6105efbe2785937e62317e4bc370",
+    "bytes": 1184,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.pack",
+    "sha256": "0c195599092eb9b49ad70592f6eb1c5a79a5864c7c7d64a0ca2b823db55b87cf",
+    "bytes": 2051,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.rev",
+    "sha256": "cd028bf4b39ab13379da339550e007f1afd0bdff13a7bde20272790902b7faa5",
+    "bytes": 68,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-89d1e5ffe2b59363fe985cbb8fa4444531685f9f.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.idx",
+    "sha256": "92aace5aebd0ee2a576653e4ff88d85639d4a922d36e6a3a204982b60448eb3c",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.pack",
+    "sha256": "923b397d8df4eb5dbbef1fbbbb063e1d2cddf41eb4b65197beaee7005617e21a",
+    "bytes": 2748,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.rev",
+    "sha256": "e309319d933c5d01e6695b7648602ed46584a4abc02478877e017f0cce41ee16",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-8ca6c4479b668b4e4afe3530c0048f5112a12f01.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.idx",
+    "sha256": "03ecbe84e892dce44630add739f29ea3487ad5d601c33043dcb9e920028d6f65",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.pack",
+    "sha256": "dae313fb30fc3fd67e292e8c06060d9b19618f76172447c2b40cc5feba40719e",
+    "bytes": 1160,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.rev",
+    "sha256": "8986a9e72889b2dd9f1b95979beb0ca7d76c4671937175c3cd094fefcbeabf60",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97a398b90347ebf07f2f9a1caa798e3d8249e85c.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.idx",
+    "sha256": "e8eee8ba9d745eeb71f5018d47d8f280e2768c45ec299158fa2e9b69d969e010",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.pack",
+    "sha256": "1a227b23ff3bf392e1ac87608c791c7dbde6cb5f3b7b432dcf1c6798a10bc8c3",
+    "bytes": 1040,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.rev",
+    "sha256": "b1bb5a20539d5fe237a700f34d07a0bea8eeba083d86f9b28803611d8a07b68f",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97d9824c1337d8dae3b3129cbad4ecdcc8b142ef.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97eb261af452c783e3c87032494c47830399d27a.idx",
+    "sha256": "b98ccf189df7cba5a12540a00d9edbcbe428c4e35125f6cb57946eae576d1e1f",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97eb261af452c783e3c87032494c47830399d27a.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97eb261af452c783e3c87032494c47830399d27a.pack",
+    "sha256": "0d9c459b1ffbe8348260c25ee087668706455cd38d553531b12bf042edb0ee69",
+    "bytes": 987,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97eb261af452c783e3c87032494c47830399d27a.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97eb261af452c783e3c87032494c47830399d27a.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97eb261af452c783e3c87032494c47830399d27a.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-97eb261af452c783e3c87032494c47830399d27a.rev",
+    "sha256": "28be543dc06062e70a236e2143fd13e51a881e8d2d951fbfb5391623d6b3b066",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-97eb261af452c783e3c87032494c47830399d27a.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.idx",
+    "sha256": "af684254108c79e028ab5f4edff26e05d7f2a3f752aca87105dcc729a757a634",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.pack",
+    "sha256": "b8dcfe26e60b734c8ce11b2332c8d99129469caa5c1ca7e980023498a7dd75ab",
+    "bytes": 3908,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.rev",
+    "sha256": "e2d6305f354db91313da2ec4a978501cf8dc88d212eae74180060edc2e3c29e2",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-9d239dbbdbb2b3b10b07e11e2777022de99c45a8.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.idx",
+    "sha256": "93362a75a41798dd3333bde8e182a5de332b85c0896518db964509ae1e1335e4",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.pack",
+    "sha256": "886c0fc646599b463e3b932f1f6b9506ea5db67b8e3d2eef97e9998df9b555c8",
+    "bytes": 9127,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.rev",
+    "sha256": "904010b4fe464e048becfeda5feb1c7dbd80b9e1ad24aff50fc8c7dec9f6e275",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a03248e5c6b70d7302857307a942a1dbfa932aa7.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.idx",
+    "sha256": "4d8c42c7164d69b5fc0cd87836f93506de4c90769db94ebbbd095f9aa3e02353",
+    "bytes": 1296,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.pack",
+    "sha256": "a0ba4e6d4ae959be80d6b53f293cb2d349ef11ea6a90850f41bf810b4a7f0e1b",
+    "bytes": 733306,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.rev",
+    "sha256": "afe006a0e260bc4905e9c83f9fb8041882009fcc032ce2d7eeafaeb4b61954bd",
+    "bytes": 84,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a04ea5806f78a31f940dc0f804cc99d4fd33f4f4.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a158132a6f33a44a103cb421ccbac7297b64425a.idx",
+    "sha256": "928689988fe2870248289ccae2d9e17d2760713907e92d3992958fa4755f6456",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a158132a6f33a44a103cb421ccbac7297b64425a.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a158132a6f33a44a103cb421ccbac7297b64425a.pack",
+    "sha256": "f4ecd39fa798d77f072ac50507a10398de0659d061a0e3f6a6a09c47067bc8a2",
+    "bytes": 472,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a158132a6f33a44a103cb421ccbac7297b64425a.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a158132a6f33a44a103cb421ccbac7297b64425a.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a158132a6f33a44a103cb421ccbac7297b64425a.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a158132a6f33a44a103cb421ccbac7297b64425a.rev",
+    "sha256": "388193768e38627446d4610e8cd7fc2f0ab527a31b763241343e6ad1976912e0",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a158132a6f33a44a103cb421ccbac7297b64425a.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.idx",
+    "sha256": "59acfb4e857baddaaf620f48f5c06e9312ea01584e0567c294733d64593a59bc",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.pack",
+    "sha256": "e67827d60e81b51f89baa1ed43abd20d9a92f21aa571a924abe8145fb14523b9",
+    "bytes": 5479,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.rev",
+    "sha256": "7367b7e39016add03a8ff9b9e07cab6535ac3ae231bc896886db1b25261db2b1",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-a2bcd9f2a407472b5fd407d06edd8e2f51d8894b.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.idx",
+    "sha256": "b596f5c769f8b467208b20c18a40f88e50d7b07390512de4d1f01e378c4c0b50",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.pack",
+    "sha256": "da81c0613974396ca534920085e6e2eba6ee9bdd6a2f5b9857b726d686c9684b",
+    "bytes": 469,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.rev",
+    "sha256": "356488f13e58224c02a3ed307ae0c9e5d16084a9d7a8d3b8b4ad0d226389abf9",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-b2474401ccecb2a9a652c829d75c7c05ee1347fa.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.idx",
+    "sha256": "51f7db7a3f0d6f58bb4ad869c7b6993671a09f874afb88697c1914d662a70b00",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.pack",
+    "sha256": "c648d8028def8a99e1ac18765b8fa64b5227f8f96be43cd9c23dcc6a81107293",
+    "bytes": 877,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.rev",
+    "sha256": "04c53c9a7b0cc2ae2c6849cf1b0e4423de348b880a6f530a8b804cb1104c3122",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-c18a7bb5a10a8291e355df45c6db15545d85b9fc.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.idx",
+    "sha256": "cca66b5da8e01dddfc0f10fd0ce05eae68b3ba890163c7791f398febe9af0eb0",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.pack",
+    "sha256": "65a7400a99434423e13f4b20c1edbe75242896402ced974d2bae6a875826e388",
+    "bytes": 6009,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.rev",
+    "sha256": "435f57cc87fe3b3285fb99a1b76b559c082fbdb75c4cd80c773109efc097986c",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-cafa2aeae68c98787e054ff600f7c561d77b48d9.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.idx",
+    "sha256": "63d23ae30b20424da25751929af413d5ac8553485ab9a68ad11ee86065773669",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.pack",
+    "sha256": "89bfae86842968b4d26ed9ab347ef875ab7531d3f6144d67af4779a32315e3aa",
+    "bytes": 2825,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.rev",
+    "sha256": "3885f1c08d41efe088cf3d97712b86f5827ec022d48e1aaaa9d6712d6ed9fb16",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-d7b5378fc3dee9429af8711e22dbac412fad5a5d.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.idx",
+    "sha256": "b3e294258b00be03430535c4470dfa45da9be351fb45a66ef8d4f2ec6369cf38",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.pack",
+    "sha256": "2d80da7f438b0b7e1e76b6eb7043c132b8af8701481dd73c98ecea58d8958c76",
+    "bytes": 1719,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.rev",
+    "sha256": "da6008e820e7ac4a0d48cd61d5c3ff77e42ff902060e401487de01f370e5b15d",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ddb2aafd8fe61fffe100e216ccb6e9c63b88a459.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.idx",
+    "sha256": "07c6d5f9baf287b042e0e24b8d2662f2a22b4d04acb03937c53e99e584a14010",
+    "bytes": 18208,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.pack",
+    "sha256": "34d96e5897a475a50bbff175b3930bb5ff37195f1554def8b598482b05439a26",
+    "bytes": 381097,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.promisor",
+    "sha256": "019e5c3df36bce2db75eef7bc9bc70d9de9d5b2f016a3cfa197a7428bc08f323",
+    "bytes": 103,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.rev",
+    "sha256": "6055713f752393ae12bbcc3b8cfd2af4bb1a7aef1d514b0ef1954a1878c9204f",
+    "bytes": 2500,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2c85863cfcd5bddff405a8d0f89e526e299d898.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.idx",
+    "sha256": "2aeaf8ba10800f36455d504acaf685ca5cf1acdc158170383ee712beed98fa03",
+    "bytes": 1184,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.pack",
+    "sha256": "5322b04d827b5072655c691396dfbc40a2e52f7c83cabc93d95618974b586597",
+    "bytes": 1202,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.rev",
+    "sha256": "1ff019c9e3f7248bcef455ed34716183f1ed116cb328e2388f9a823bc57a047a",
+    "bytes": 68,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e2df9c96b5b346089b5cbed7e94117802c68ef5d.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.idx",
+    "sha256": "194d546bb524273ee15fc83608c32ccf64431c1ce86de876a80d9e7e03c2bbd8",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.pack",
+    "sha256": "f26d2f3a558aa33df88ada8e58ec579b028b99fd548ef1ffb0a67cdd6104d446",
+    "bytes": 526,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.rev",
+    "sha256": "3e2d49e8c9c9651e2f54645e3e9166df5dfc0aeb96e948c796ad4d0c41d3e3b0",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e49258b8d1ceeeaab7ab529b6077d5ab5259e3c2.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.idx",
+    "sha256": "826a2b77a159991c76bf10e4c6499ed3bb54b43d77b922b3d564b4ba0db83f53",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.pack",
+    "sha256": "2dc2dd1913f1951ad3ab3c91ff17a0397e4df6c6ffd6755d6ad9b28fd5055989",
+    "bytes": 833,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.rev",
+    "sha256": "7c7328181ce28f34d0b620246861d5b53014a44f1fe6ae8ffba7f4c2ff4191f2",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-e62294baf09551e78b93fdbf75fbf5fd5282600c.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ec6eea0b223c85b3217a296a520502a5c328b260.idx",
+    "sha256": "0e0429fb94159376f6cdf382f4dc0f672017d074c31759252c0c4d1afc7d13c9",
+    "bytes": 1100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ec6eea0b223c85b3217a296a520502a5c328b260.idx"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ec6eea0b223c85b3217a296a520502a5c328b260.pack",
+    "sha256": "402d77c08cba389202826e0eb94c8354374ea8c7fcd5143024d9b1021dd7dc3b",
+    "bytes": 2400,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ec6eea0b223c85b3217a296a520502a5c328b260.pack"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ec6eea0b223c85b3217a296a520502a5c328b260.promisor",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ec6eea0b223c85b3217a296a520502a5c328b260.promisor"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/pack/pack-ec6eea0b223c85b3217a296a520502a5c328b260.rev",
+    "sha256": "36907302cc9c7b9a6dd2dc6935a57aa2da1faa1a0d4ab5a756566863d4ace4c2",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\pack\\pack-ec6eea0b223c85b3217a296a520502a5c328b260.rev"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/fc/ba3c2009bef94be13da31ef63b81a29d51d3bb",
+    "sha256": "64cbac35b70f9fbd555183d39411a9d1a244b0f4d06c5da48269afdb98196aea",
+    "bytes": 1594,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\fc\\ba3c2009bef94be13da31ef63b81a29d51d3bb"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/f9/02956322414ac99a9b0069cc0833fa9a8542db",
+    "sha256": "8e59dcf94dc69c260d2385f4fd2275672bb2bcab70577a2d42e983b086d4b717",
+    "bytes": 371,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\f9\\02956322414ac99a9b0069cc0833fa9a8542db"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/f9/d561b6fa7e98564d2af8a0f561ec39ca027864",
+    "sha256": "91578eb2b0434c24ec99c020866452fb78223a314dfb264d1b753b514c1d52ff",
+    "bytes": 1306,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\f9\\d561b6fa7e98564d2af8a0f561ec39ca027864"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/f7/4e63dfbf0f82cb7f562c96d76b99c7bb2e1828",
+    "sha256": "724dfcdc2e6f3a0be9346afa34fa4ff984e811f27c0bf3d4ef426a789255727f",
+    "bytes": 1327,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\f7\\4e63dfbf0f82cb7f562c96d76b99c7bb2e1828"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/f5/227ebcfd2fefb3275ac086f9de7bbb80dba0ae",
+    "sha256": "2d0e975713e8ea6e9e547f1e53565e2f7e221f55bca89c0d082d31ba8f5ce306",
+    "bytes": 790,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\f5\\227ebcfd2fefb3275ac086f9de7bbb80dba0ae"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/f5/77038b6148306f153c3d72ad3548580699f719",
+    "sha256": "21f85b37a928ef9bfdf6107a4f7a255bf8c30496b268446390b33cd98be45eca",
+    "bytes": 810,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\f5\\77038b6148306f153c3d72ad3548580699f719"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/f2/50743caebc871fed9bf5cdba430494c3429034",
+    "sha256": "c20500fce72d01b3ebc126d2ef2e24316e25d57159b6bfedcaf4089e04e13101",
+    "bytes": 845,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\f2\\50743caebc871fed9bf5cdba430494c3429034"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/f0/f35f663de6b49789e3733c4c2d220950fc7504",
+    "sha256": "901bffa2bbf09009dc7cae003074cbfd16576a8b41d10cdfdca0b89b2d334e53",
+    "bytes": 792,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\f0\\f35f663de6b49789e3733c4c2d220950fc7504"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ee/785951506d909e8a83589d7ad61d1efb6191a5",
+    "sha256": "2a9796ab129a407ffe8e32af817e142589db3a330d923bd4994f865ce08a8448",
+    "bytes": 5295,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ee\\785951506d909e8a83589d7ad61d1efb6191a5"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/eb/4f7cc00b4fbd3b22b3fa7458e971178ec83edf",
+    "sha256": "df8a9669af22425cd618431cb2c9829739667b558010d028c81def848bbf9f19",
+    "bytes": 1203,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\eb\\4f7cc00b4fbd3b22b3fa7458e971178ec83edf"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/eb/5c1288f08675cd04638fde0a49b49b848ae902",
+    "sha256": "beb9dbb70ada41c831e4c493ec4be50446edc28123c9df096d8556673661ce04",
+    "bytes": 209,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\eb\\5c1288f08675cd04638fde0a49b49b848ae902"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e8/516f160c2ff18df171a2ef4b9733e6a16d7c1e",
+    "sha256": "58576ca6ca0b811ea65bd7361de92fb6895c9f5819cba1a809b2e16f4ffbcaf4",
+    "bytes": 1673,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e8\\516f160c2ff18df171a2ef4b9733e6a16d7c1e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e8/ea8a819d28191a9ce0f29c74d3cdd65139ba01",
+    "sha256": "7f5888dc0e883b538a8b0ace334c3d3be25e68dec5979a6af7faedf01e09c46a",
+    "bytes": 1549,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e8\\ea8a819d28191a9ce0f29c74d3cdd65139ba01"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e7/12fdc9cb207020a3887a946e1ac656cccd47c2",
+    "sha256": "558de49440a534034bd86ef84658fd49749b522c331149984c973ee0255c1786",
+    "bytes": 196,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e7\\12fdc9cb207020a3887a946e1ac656cccd47c2"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e7/44505e0917774fcff2b69000282856b7caf45c",
+    "sha256": "482d736c78b07b03296009ba31d3a91f95c46efb8ef17e201d65894d5ce714a0",
+    "bytes": 5584,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e7\\44505e0917774fcff2b69000282856b7caf45c"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e7/c4544f3a76d5907943b90430d598cd9aca7826",
+    "sha256": "f791a37b7edadb1126eab55341b247a03e7038f51c5a4150c74be9257be74407",
+    "bytes": 2728,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e7\\c4544f3a76d5907943b90430d598cd9aca7826"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e5/06d75155dc42a6d1234611b7913ecbafe8064a",
+    "sha256": "30c58729638b12043ec354b5f98aa9fcb08a15116de883209eba3e9ed19280eb",
+    "bytes": 1647,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e5\\06d75155dc42a6d1234611b7913ecbafe8064a"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e5/51e786d5080940c63fd521dddfa01c34d2e71b",
+    "sha256": "14af52314e8c52b7bd9964bd78b60702acbbc175ec3aa4cb2d57ed5f99585860",
+    "bytes": 813,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e5\\51e786d5080940c63fd521dddfa01c34d2e71b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e5/71bb2230502a04888b022a0ca762314b83de22",
+    "sha256": "f8fce1a0517f41a9f2b4d7e1b6a03fe02b49ef56bd7f5b61b6236bbe249395a1",
+    "bytes": 738,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e5\\71bb2230502a04888b022a0ca762314b83de22"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/e1/76be3090f0e1fa72be33cf10bc4fbed47c7dd3",
+    "sha256": "9c5aa312211d134fef09d2d865236f5b17dd8a302ee1d6477f613abbd4e343f6",
+    "bytes": 122,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\e1\\76be3090f0e1fa72be33cf10bc4fbed47c7dd3"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/d8/2111138466ce801d3ccbcf57368cae76689f30",
+    "sha256": "6da5c32cadcf7ceb0ba8c7fc33a0821e5d3562f49e7922783d4c64f91298c90f",
+    "bytes": 554,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\d8\\2111138466ce801d3ccbcf57368cae76689f30"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/d2/05e78a9a3fcd69931d3def87cbfd83c6e8b477",
+    "sha256": "bc68a545f23ca2894124003946a382a7ff871d77c8353e22ea9f7f9424671050",
+    "bytes": 730,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\d2\\05e78a9a3fcd69931d3def87cbfd83c6e8b477"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/d1/46bdddd58347975e9281f3cc0e9f6d38685c22",
+    "sha256": "7f7d8557419315ede86be58747e248eb18384b9ae732ec25d7c574d72334eb54",
+    "bytes": 1777,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\d1\\46bdddd58347975e9281f3cc0e9f6d38685c22"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/d1/db9fa719d8eb9b80d087fe0c502feb8c8e134b",
+    "sha256": "4b01a6df287ed2e93aff401520d4ee13c6b2a1d153af8b041cea079a789e641c",
+    "bytes": 1661,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\d1\\db9fa719d8eb9b80d087fe0c502feb8c8e134b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/d0/9466449a60d11cda64d2bc06f146e10f430ee4",
+    "sha256": "24681fabb5d119e15e2f05f718aa566a8047207d5ddcae73bb0131f09e21a2ab",
+    "bytes": 404,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\d0\\9466449a60d11cda64d2bc06f146e10f430ee4"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/cf/00ecfa112df3e0c71378f0cfb2f1cacc466ebe",
+    "sha256": "2cf023f25abd067766535a27594a404b3bbb7a5e0e6de2331ad3aee15d7137e2",
+    "bytes": 101,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\cf\\00ecfa112df3e0c71378f0cfb2f1cacc466ebe"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/cf/0d24499f97376cfe010f388d42ea3fd19b4662",
+    "sha256": "784b9ee3bc0b1ac080acce3617e1d077d867d957302a4742b2de2b37b4b024cf",
+    "bytes": 368,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\cf\\0d24499f97376cfe010f388d42ea3fd19b4662"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ce/96677b0c956f9c1c4c99ee23fa597985d4dd99",
+    "sha256": "f4e72abd902c781ceea04e82be3a9a77f47e935f79650e22887d28f9c68cbc6a",
+    "bytes": 9211,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ce\\96677b0c956f9c1c4c99ee23fa597985d4dd99"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ce/ad74700c9d98815aea742ed4fb5daf9bf84453",
+    "sha256": "69ee0f508a75aaafd2773613cfc816d97309275c0ced43d39b206f2604a211dc",
+    "bytes": 801,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ce\\ad74700c9d98815aea742ed4fb5daf9bf84453"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/cb/5465d3d91883631ce41fde073d0d0ac4e9ecdc",
+    "sha256": "b89938dcb4dc49b805df083b8fcabb09fd9213c77357d18df2285d0a8959980e",
+    "bytes": 51,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\cb\\5465d3d91883631ce41fde073d0d0ac4e9ecdc"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ca/b192361970e544d3374d0be0eee39236553321",
+    "sha256": "4f6b0193468f2442aace3b730733ae164baab0fc53f1831ffe7d7a8c5fde7754",
+    "bytes": 1647,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ca\\b192361970e544d3374d0be0eee39236553321"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/c8/edd1bff77442a41aa3a778009a1f9a13da191b",
+    "sha256": "4ea81dadd901da446c74199f41b9f075b1294f8914b1f3e72c63509a05b31339",
+    "bytes": 2632,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\c8\\edd1bff77442a41aa3a778009a1f9a13da191b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/c6/5617c6acccfde29e8a1d9f672dffe1e01e1f1c",
+    "sha256": "af66a0d6731cb73a6166c16b4cd157ce880d104c82378afdb4d416d65dbd777f",
+    "bytes": 7137,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\c6\\5617c6acccfde29e8a1d9f672dffe1e01e1f1c"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/c6/afef9c001c31aef8f3107d210dbcbf1a0e90c1",
+    "sha256": "91b061ed793062701df68701069141c73688ea055963a4e509773257bc081ef1",
+    "bytes": 1587,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\c6\\afef9c001c31aef8f3107d210dbcbf1a0e90c1"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/c4/6848cdf40f03651b1181f912ec5c8060daa381",
+    "sha256": "bd455c6796df792a06bcfeb3b90ee6a8275dacb95dce8d3b8ee1ba0c786cdd1c",
+    "bytes": 2531,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\c4\\6848cdf40f03651b1181f912ec5c8060daa381"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/be/16cc9111e5ffbf3f4ecbfff59c8e0fc196759e",
+    "sha256": "fa331901bb9f08395f2e845dc4441f5de675d4fb4adee8a59c5a142c009f2d22",
+    "bytes": 367,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\be\\16cc9111e5ffbf3f4ecbfff59c8e0fc196759e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/be/40f93657a1a9725127e21fc72df3155de1f707",
+    "sha256": "0f12ca68f64166242c88fa058725d016760a699a4b4dcd5776fce2bd87fdbfa1",
+    "bytes": 3584,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\be\\40f93657a1a9725127e21fc72df3155de1f707"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/bd/d4d2f72d675df0bbdb8469bfae925d63830930",
+    "sha256": "1224eedd3380b5586a6c242b0f3d22e7623623053c40bb2fd9fd0af612781f78",
+    "bytes": 1143,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\bd\\d4d2f72d675df0bbdb8469bfae925d63830930"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/bb/c506ed9d353c7daad8a39230f61f330dcb7d7b",
+    "sha256": "db71c3cc016ecf81a71dc1f72e112084eb33171cf4f8fc3d5f73e7c06c9609f8",
+    "bytes": 4351,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\bb\\c506ed9d353c7daad8a39230f61f330dcb7d7b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ba/1c29453b822dbfc214b8be1c597b42b12aee78",
+    "sha256": "3a93bc795eaf8f1e3674ef496a234007deefbd0e31bb94208761b97d68331e38",
+    "bytes": 1899,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ba\\1c29453b822dbfc214b8be1c597b42b12aee78"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ba/7c2e188d297cc7802f61a42232be99f8641b5b",
+    "sha256": "302eb7dddddcffdb8e9080363b9437ed0ed6c92d087f3bd9f4b580d889270820",
+    "bytes": 1072420,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ba\\7c2e188d297cc7802f61a42232be99f8641b5b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b8/464a5dabb5db81e03e9efcfa59a477c5e7839e",
+    "sha256": "1af49845ab0c32ea8f0e160f04ed1d1f5ca4b5dba0445eaab1a90e355c087b70",
+    "bytes": 142,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b8\\464a5dabb5db81e03e9efcfa59a477c5e7839e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b7/84baff7553886a93e6d2ac5b9ee04c8ae6fa3e",
+    "sha256": "0b4dc987bb6f29baef3426960bb4909c339469cc95e054317f71f380ab4479eb",
+    "bytes": 1565,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b7\\84baff7553886a93e6d2ac5b9ee04c8ae6fa3e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b7/939cc8f36c68d56ff482676b0e87d3d72b2e99",
+    "sha256": "9ef61bff1199db2d67efa8d97ae6d556f830df0598f82ffcbe71484bdcb9288c",
+    "bytes": 802,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b7\\939cc8f36c68d56ff482676b0e87d3d72b2e99"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b6/33b32617e3529c22107d0f9252e0a8bda15832",
+    "sha256": "cac0116ad01e7dd154396b2ce45d9a09d848a8540662182a086cef461b148b45",
+    "bytes": 2625,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b6\\33b32617e3529c22107d0f9252e0a8bda15832"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b6/fb5b72aaba10164eee7c5b7127a56d2089096e",
+    "sha256": "612801fdeb0923cc413554c447a38edc679463fbdbdbd6ccb9dde7e26ed37e2a",
+    "bytes": 376,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b6\\fb5b72aaba10164eee7c5b7127a56d2089096e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b5/615f8c8f1a3d510384d0755442b845021ca951",
+    "sha256": "4654f762d1d7b71e981ccfb49b3a38e1dd459abf902cd4a603322629d0791030",
+    "bytes": 4430,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b5\\615f8c8f1a3d510384d0755442b845021ca951"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b4/d70ccddb96a3dea59cb08ce1635d674f43a4b8",
+    "sha256": "c9b16e7b3f7fe54c5bf5332c6ca383830773cd046bdafca78294ed6fcd817c4c",
+    "bytes": 5100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b4\\d70ccddb96a3dea59cb08ce1635d674f43a4b8"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/b0/e604973ccc0689139f69696e0b8a55451a3fa0",
+    "sha256": "1c8153b04c65cd3a69574f1ca5ae4e239e2a0bf18031a825fe16b22f0c820f1a",
+    "bytes": 513,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\b0\\e604973ccc0689139f69696e0b8a55451a3fa0"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ab/6213c09f4561b9bae7e159835fc63095d2d7af",
+    "sha256": "034b698a130c180b8e3d82e9a60e9c2122128cfd003c7e561401c65d7f92a21a",
+    "bytes": 1095,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ab\\6213c09f4561b9bae7e159835fc63095d2d7af"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/ab/ae080ff2853f1efeb73288de8adabcff77b79f",
+    "sha256": "768f76f9491c023d580bfc6e07172329e594a735f479b1e4aaffa553e5cb942a",
+    "bytes": 209,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\ab\\ae080ff2853f1efeb73288de8adabcff77b79f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/aa/b3e2bbdcc54d04cdeb75c0c9d463618760d1ce",
+    "sha256": "96c91d8f11676e29d1bcfa30fb186e4b33c9d3cedf87ec7acff63c6fd41dffad",
+    "bytes": 2316,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\aa\\b3e2bbdcc54d04cdeb75c0c9d463618760d1ce"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a9/511f32321d066097e00523293c804255eb3b4a",
+    "sha256": "38cd3c83a6d50198878c622c526f154d2a60f6b1ef8b06b04261d5d9d1725427",
+    "bytes": 123,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a9\\511f32321d066097e00523293c804255eb3b4a"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a9/759067bcef264ec6b11a35f2546429c28125ea",
+    "sha256": "4ef1b2bf2d5d9aa1a59608335c8b056e5cc43da4edba82af7a1e373afee247c4",
+    "bytes": 1222,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a9\\759067bcef264ec6b11a35f2546429c28125ea"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a8/935306f2e5d82ff6d337d831c60cf1dd7bb8c3",
+    "sha256": "124d02382ddb568cda882f5b51745b1a5583ef3bafc158cc809d8f34844d1e98",
+    "bytes": 752933,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a8\\935306f2e5d82ff6d337d831c60cf1dd7bb8c3"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a6/f8d2820f6f6a599f0d4bec26ba2370fe21f124",
+    "sha256": "a43b7c0f3e1d603e0331bf4d1a6daeddce65171ce17847b32bcb8aec7d1233d8",
+    "bytes": 177,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a6\\f8d2820f6f6a599f0d4bec26ba2370fe21f124"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a5/191e0e54543403e5d6131cbd5e81dde8b81ec3",
+    "sha256": "ed992aa04983eaa056f5f63c7ac85719d42792e60e9c149e15bb28b868360bcd",
+    "bytes": 85,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a5\\191e0e54543403e5d6131cbd5e81dde8b81ec3"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a5/80f851197f8a6a364558825a24933f1689a728",
+    "sha256": "fb0b7da259c1b6512268649915e9382705f070225a3f7424f86a1f99568701de",
+    "bytes": 9737,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a5\\80f851197f8a6a364558825a24933f1689a728"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a5/e620ee7ba6abcdd124bcb98390075b0e90be72",
+    "sha256": "6cdf68fcbe5131e836933ab9a5f1fe8d76c7d93f8930b610ae3bc870b462cb31",
+    "bytes": 594,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a5\\e620ee7ba6abcdd124bcb98390075b0e90be72"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a4/1a09a998ab234b2603fe44dccc1ee9d197692e",
+    "sha256": "c8c9e75496f21d73397e9cd1d1c6a75c86a2d36575580ebe9141c933182bbde7",
+    "bytes": 115,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a4\\1a09a998ab234b2603fe44dccc1ee9d197692e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a4/86f6625a9973213ae736c6a6d6259535e23e98",
+    "sha256": "7f57e43f932c9caeeddb1aad2b85b290b9aea2f54984c3073b1fe7f2a7af6607",
+    "bytes": 2278,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a4\\86f6625a9973213ae736c6a6d6259535e23e98"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a3/e63cdbc37a251b517a578d6f0e25ee4b06f79d",
+    "sha256": "85074b909145c17da3a8a953958b63912a4978b4688105f42c08899511a41653",
+    "bytes": 260,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a3\\e63cdbc37a251b517a578d6f0e25ee4b06f79d"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a2/0e360fa0620485d9b30a9b9c8a1f0bd658ec6c",
+    "sha256": "856be82ad5c3a06cf8b51cd7be787b45d48bf6c386d4fbdddd259c54a7e6098d",
+    "bytes": 98,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a2\\0e360fa0620485d9b30a9b9c8a1f0bd658ec6c"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a2/b4a3154898e45d872b62fb16f687ed4f28233e",
+    "sha256": "3c2a33d2809a4e8fc91cb4751a5edc5dd51111a39234c308238b2e7558e0a930",
+    "bytes": 910,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a2\\b4a3154898e45d872b62fb16f687ed4f28233e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a2/bdeb336c9985129123f4d183c6d893f563b655",
+    "sha256": "7f7ad35512c3536bfd17d201a1d8f384cf68b63f10da5bbeb7dc19b952a395f8",
+    "bytes": 51,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a2\\bdeb336c9985129123f4d183c6d893f563b655"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a0/06b38f411949d3dcdd0b05be10992f070dc965",
+    "sha256": "15d78996c911a9faed74cefb44a2b674201e58449e06b85d025e2dc6b260dd0d",
+    "bytes": 70,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a0\\06b38f411949d3dcdd0b05be10992f070dc965"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/a0/46b576079e526b52459aa26947e849e5f5c59e",
+    "sha256": "eb07a858070456f3b06f0bb142102e0b6eec0ad73a05d255ff35bde72fa006d2",
+    "bytes": 193537,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\a0\\46b576079e526b52459aa26947e849e5f5c59e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/9f/eb77ad1aa53680520f565fee603cc31588bdc1",
+    "sha256": "44147f789be36af83cd9d866e7a437cd014dde21e0f30702bfb13a647a0c0c93",
+    "bytes": 1189245,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\9f\\eb77ad1aa53680520f565fee603cc31588bdc1"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/9d/1a0a802527e5d332fda5926cd7bf490ebf1c50",
+    "sha256": "c19d4508fad57f8d0dbcd6bc7d248a4b0b844a42749a999bd3ff8131a5c52ef8",
+    "bytes": 2623,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\9d\\1a0a802527e5d332fda5926cd7bf490ebf1c50"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/9d/716363a8c8ca4a00c5da6e57ab0208bc41c95b",
+    "sha256": "a9e97463053643778156d745e115e807e7c9593ba25c75dbf8633f4b20b27068",
+    "bytes": 5047,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\9d\\716363a8c8ca4a00c5da6e57ab0208bc41c95b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/9d/d103a60de744018a0fae11c6277d44c16aad3f",
+    "sha256": "8018a8e4acb6058128b5068334e54afd10e7ed809f53cb4bc5605257dc26cedd",
+    "bytes": 430,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\9d\\d103a60de744018a0fae11c6277d44c16aad3f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/9c/0eb2e626b37cf78da4c1b38dd9136754cf97ab",
+    "sha256": "1c434a2d874761fa9550f2b8a791e9afffe76d6e8b325702c1d0c36d95284a7c",
+    "bytes": 3336,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\9c\\0eb2e626b37cf78da4c1b38dd9136754cf97ab"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/9a/1916855973b8037a10e39956233b534da1945e",
+    "sha256": "aa37fabbff226b369a115140731ef88e2f8590cfe0ea67f628b01608a0a54929",
+    "bytes": 53,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\9a\\1916855973b8037a10e39956233b534da1945e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/9a/ce4901c517f2e8526a7fe26ce2ce8769e4f9a6",
+    "sha256": "5ade1fb5eafc94cb1c57eac60ba61a6e57328c812ab26c87c9e7603f6d3b039c",
+    "bytes": 92,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\9a\\ce4901c517f2e8526a7fe26ce2ce8769e4f9a6"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/99/e515b9ebb538446740b28a98f0d94c0508ee5f",
+    "sha256": "b7a92c93fe9e70b6f527fcd3ce62b994ef7effa40833a5de0a16a9eff20a3f15",
+    "bytes": 391,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\99\\e515b9ebb538446740b28a98f0d94c0508ee5f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/97/c414adb26b221c220cf955b0163d66f963bf2f",
+    "sha256": "6e6f6eddc818083117db656d395e742b9e78f0c95177f8812f803a7f2a8060ee",
+    "bytes": 738,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\97\\c414adb26b221c220cf955b0163d66f963bf2f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/95/a67cef8924040fd4c84347b2dd7099f88a28c1",
+    "sha256": "a3a4f42e5ee79bcaacf9369cd3fe7e96f1f2708bf06dc8c63c655aec9fe6a2f5",
+    "bytes": 6487,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\95\\a67cef8924040fd4c84347b2dd7099f88a28c1"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/94/433e319a576a0c88fc50fff4b3884e7883083c",
+    "sha256": "20ec99bb6d84dcb35269cd1e69e3b907bba27aed4dbd41f1b75580e13007aae9",
+    "bytes": 2599,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\94\\433e319a576a0c88fc50fff4b3884e7883083c"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/93/fb784c4cb98e3c5595fbf9854ae73a5e0223b0",
+    "sha256": "abdf3a9bc5afc29f67330a02a889ff77c33f04f376762df6e573e06b6913e9f8",
+    "bytes": 98,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\93\\fb784c4cb98e3c5595fbf9854ae73a5e0223b0"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/91/7384db97273dd90ff81479d3e0f27c29f51ea8",
+    "sha256": "3358e6b26b1e56662c9c61d26c25fc3b9d43cebe435fac08a75533975e98dd1c",
+    "bytes": 1624,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\91\\7384db97273dd90ff81479d3e0f27c29f51ea8"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/91/f0ed58e92158eeec5d43f65ba152f41f19b8f9",
+    "sha256": "47835c13998cc18c61837246c4aeee7e6784a48e02315e81012918e97a83ee78",
+    "bytes": 183,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\91\\f0ed58e92158eeec5d43f65ba152f41f19b8f9"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/90/97842cece783a7b94369ab1f5206eb642d2d0f",
+    "sha256": "baffb50a2c72f32d4598769de39c827b09e349b669c50cf658bcbfaf784bcecb",
+    "bytes": 258,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\90\\97842cece783a7b94369ab1f5206eb642d2d0f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/8f/1fda8351b91933b5e6707c0890c2fdca8773c5",
+    "sha256": "990d901193afbee7f75e2d5a8cd2e7f91e1afa27f96512f0045b620f123f6ec9",
+    "bytes": 146,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\8f\\1fda8351b91933b5e6707c0890c2fdca8773c5"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/8c/0cd15547a2a709bbb378948ebe087a23c07345",
+    "sha256": "f56a17140baec83ab653a2b1024857b8ee9ad6a097dfaa4e148e894f008a2e35",
+    "bytes": 4864,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\8c\\0cd15547a2a709bbb378948ebe087a23c07345"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/8c/d14fece946b784cc97a8ddf3e13ad2c5cf658b",
+    "sha256": "3b8046a61bbb2ff39d4853af1b599b1136d8522002f9576b010a8276240db7a5",
+    "bytes": 86,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\8c\\d14fece946b784cc97a8ddf3e13ad2c5cf658b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/87/50c296e1c3ff5370e3888f0c2fc4c3a9cb855c",
+    "sha256": "a22411049f748dccc3e916cd380e93a630056dc1da999c411437ad4884f264cc",
+    "bytes": 997,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\87\\50c296e1c3ff5370e3888f0c2fc4c3a9cb855c"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/86/71bccea081af7c8a1e5fef8b044694a3153428",
+    "sha256": "b2629f0f308037aa1214b2c49329d9246062e853de290210fa0b7e5f6a980b46",
+    "bytes": 255,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\86\\71bccea081af7c8a1e5fef8b044694a3153428"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/85/9c5193ac5cae56f04d8889110f5f91dd3f3dcd",
+    "sha256": "c40eaf77e323beedbc1b9fca8b320fa1881243667f5deac82adc49afda5fa139",
+    "bytes": 2172,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\85\\9c5193ac5cae56f04d8889110f5f91dd3f3dcd"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/83/334bb5f5b9127dff94644f1bb4cef1c51e8618",
+    "sha256": "a3a334c87b2dc2822ff99d30f33b43d5ae8bf9cccfcdba01f6d42f333bdc4000",
+    "bytes": 7889,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\83\\334bb5f5b9127dff94644f1bb4cef1c51e8618"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/83/76671cedae610f1c4264f993ba3da5db71124f",
+    "sha256": "a7420a5a3a55bd5a49e7cf87462e4d9fcaab5f0b63340c2014bdeb90cd5356b2",
+    "bytes": 2237,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\83\\76671cedae610f1c4264f993ba3da5db71124f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/83/81e04ff44fe7d748be6f5e28922498eb4b8525",
+    "sha256": "20991dd248322b06ae3402dc8a55cc860dc9fab63dd867e1d67823d069647916",
+    "bytes": 592,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\83\\81e04ff44fe7d748be6f5e28922498eb4b8525"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/81/0b1d95a2dc58dfcfa4a7ff06dcd3ca60ef4d1f",
+    "sha256": "89d12e7f75deaf4df394851f6ee3ba791a4de0b480fba7821d60ff770f9e5053",
+    "bytes": 1520,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\81\\0b1d95a2dc58dfcfa4a7ff06dcd3ca60ef4d1f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/81/b05277993cbd4b287696f37392c764ed68e8c1",
+    "sha256": "00fb6fe1f0169304409b08f23fb80890bfb1ec5a40ca84cd1cbf1ba1d46520ab",
+    "bytes": 2771,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\81\\b05277993cbd4b287696f37392c764ed68e8c1"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/80/abda8f3ce41c925470e1e778579082ff91aeee",
+    "sha256": "f74b11d4d7877140789202eabda7f23041b215aa727359c64fcb5ab93e1f8c7d",
+    "bytes": 6150,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\80\\abda8f3ce41c925470e1e778579082ff91aeee"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/80/c003afe48635f2f63fe5978d28846877df8fcb",
+    "sha256": "4f24927682f5cba8229f4e204692ff4d2b1e3e33503032050899185159a01fa6",
+    "bytes": 4058,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\80\\c003afe48635f2f63fe5978d28846877df8fcb"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/7f/07d36dacc6844c177845599e2df06e6c5babc9",
+    "sha256": "97f407441a89d361a005cf00a6a584c21b237f4940b80d1f6e74adf1e50f1af9",
+    "bytes": 574,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\7f\\07d36dacc6844c177845599e2df06e6c5babc9"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/7b/61d2732faaed75af3901bf6e07b356e7bfe938",
+    "sha256": "cf02e20255941d4b8f10dd9865b18dfced0e6532a64238d5a0b4fec4be96c357",
+    "bytes": 1072418,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\7b\\61d2732faaed75af3901bf6e07b356e7bfe938"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/7a/0b698ff2dea43799a0a7a7d1aa95da7b951526",
+    "sha256": "5d9f7065e363e134890264cd093ae64a68e1be1c2944e1f385d3ee0de1b4203f",
+    "bytes": 1506,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\7a\\0b698ff2dea43799a0a7a7d1aa95da7b951526"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/7a/6c3919c8bc3e867cb212ff4b94a06808847e7a",
+    "sha256": "16afba48f8833151ad3c476f675eafe530638e22d9560cf4932137b0c2ec7f01",
+    "bytes": 1417,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\7a\\6c3919c8bc3e867cb212ff4b94a06808847e7a"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/78/75ec612efc27d56645a7f3a906116ffb1c86da",
+    "sha256": "eb5a59f21a6d21f922ba570bc639abf3a092133bc6d528e1c1bbc34935b052db",
+    "bytes": 1528,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\78\\75ec612efc27d56645a7f3a906116ffb1c86da"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/77/940359ea5ca047b41314bec84634efe6d83388",
+    "sha256": "858475a26599d97007039654288cea38f9bb7c6afac0412ff0b483f2ae314d08",
+    "bytes": 3728,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\77\\940359ea5ca047b41314bec84634efe6d83388"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/76/ebe3ac1deec13f1cb01ce29e20baf7c36b6b4c",
+    "sha256": "093ee66bde15cd0ce8054d7c2040f9638463b2ef03c090a40d4c45263a2d50d7",
+    "bytes": 89,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\76\\ebe3ac1deec13f1cb01ce29e20baf7c36b6b4c"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/73/139e8de1a2dc7b03a3a2467c6167e76eafc8ff",
+    "sha256": "544fd493aa1e6ca8efde074985a8442b1867492c63f0e7a2e67f307e1f068eec",
+    "bytes": 448,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\73\\139e8de1a2dc7b03a3a2467c6167e76eafc8ff"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/73/4bc6dd9706e9ede395c2201bda83fca7547def",
+    "sha256": "21501a00bfa858523134c4a3838c0016decb75c591ae7a343924e4aa375be6ce",
+    "bytes": 1145,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\73\\4bc6dd9706e9ede395c2201bda83fca7547def"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/72/2e5b3c5d09bb5209ff78255a9f373bc4e69c12",
+    "sha256": "1d07f05ee79152abaab5a30db6049e5a2b9c45d36c83facd46f36be37f8d510f",
+    "bytes": 1435,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\72\\2e5b3c5d09bb5209ff78255a9f373bc4e69c12"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/6e/057f06031ed5fad7f36fd0a7344f67311db92f",
+    "sha256": "3571ce4ce0f903811bd281fdaa5b928e96156880763f88ea4593308fa709b01c",
+    "bytes": 56,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\6e\\057f06031ed5fad7f36fd0a7344f67311db92f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/6e/96b6f8a268b44ff325610e8b9974ddce0145fe",
+    "sha256": "a9f9b772fe82c431ed12dd1f2351aef34147619ce083822ca7a160314e754f15",
+    "bytes": 155,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\6e\\96b6f8a268b44ff325610e8b9974ddce0145fe"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/6d/af2ac81c88205da930a0f54aae1590752b692d",
+    "sha256": "009bad2886d576a14c29c16c52bcb9159c61cbc9099d011f2b33b3ab6defec18",
+    "bytes": 501,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\6d\\af2ac81c88205da930a0f54aae1590752b692d"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/6c/1809d4331b61487d81fcf318efabf7c8c3d5f0",
+    "sha256": "285a6201a31cf2018fa377fa4b008c0c365e6921d898cd3eab4a09b66f66eefa",
+    "bytes": 343,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\6c\\1809d4331b61487d81fcf318efabf7c8c3d5f0"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/6b/1f51354de8faba8465376ec9f6c809171adc7b",
+    "sha256": "9216f8149b0e19c97b88b5fc6e8c865675e77b14403e3194282f0d398523491f",
+    "bytes": 2181,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\6b\\1f51354de8faba8465376ec9f6c809171adc7b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/6a/6ae1aac6ca55d47952954d7b7546dd02ac751b",
+    "sha256": "a2e486ab4e4852fe0dba93c27a911d66ddfc7e464cc542eddeb34aed4769f919",
+    "bytes": 221958,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\6a\\6ae1aac6ca55d47952954d7b7546dd02ac751b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/69/9729917169ef5f8a0cde9f34e4a9a87ba6432b",
+    "sha256": "0a4e6fe4f573731841f47e9dfe85ae1433276f4063d0f81c077fdf4620601215",
+    "bytes": 97,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\69\\9729917169ef5f8a0cde9f34e4a9a87ba6432b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/68/4e27ab35fe8612d0c4c3b2153a9bd6a9529793",
+    "sha256": "59621c8f3649ab067ad7289f90bc4dd9792547104a8f2ff0b8dcc2f677fec842",
+    "bytes": 209,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\68\\4e27ab35fe8612d0c4c3b2153a9bd6a9529793"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/68/e8e58962718199590cc3cae68e84fd97073ac7",
+    "sha256": "6d67d663ee33208560b143511f38fc6e47c4e666dc5842a3e86159f8eb68e8df",
+    "bytes": 169,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\68\\e8e58962718199590cc3cae68e84fd97073ac7"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/67/702f9b91770dcd06d5a2a1c101c16097b5e20f",
+    "sha256": "f95a42d7ae6b18bdf0411b1b08ebe0bf491a31c03427c13d006e2aeeef1dd598",
+    "bytes": 132,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\67\\702f9b91770dcd06d5a2a1c101c16097b5e20f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/65/9c797f676010a17b9fa1ff55c919277fbd1595",
+    "sha256": "e181dcf11c40ed3da43a3fef3181ffa53716511d3cc8b28bd832321e63c33e1c",
+    "bytes": 1099,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\65\\9c797f676010a17b9fa1ff55c919277fbd1595"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/64/05795e74d5cf02b69558802988f00bf9a8e3fc",
+    "sha256": "4653c01e42f767368b3536312a861a477439335485954a55e842601239be623b",
+    "bytes": 939,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\64\\05795e74d5cf02b69558802988f00bf9a8e3fc"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/64/0a462b7fb42d3252edc343b6292f69e8707a66",
+    "sha256": "9e145ca2a8bd3d09ac5ab7ba2d6b47a72cd574ad31d8d1458100238ba6519039",
+    "bytes": 14840,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\64\\0a462b7fb42d3252edc343b6292f69e8707a66"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/64/1053072125853f2cbfc574b32d722d85c21acd",
+    "sha256": "28fa897e8d9b6fb0549cc6c44869a4dd93908f89768f61a9dad24143b2d50026",
+    "bytes": 853750,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\64\\1053072125853f2cbfc574b32d722d85c21acd"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/64/ea3a07c46a65d7ec9e29e6a414d8ec1d922c1d",
+    "sha256": "372ba476138f8095619f495128bef49697eb88ba6ae51dc0173f51089708fa49",
+    "bytes": 4053,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\64\\ea3a07c46a65d7ec9e29e6a414d8ec1d922c1d"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/63/08476712a47c6674c654dc5b87237e75ba895b",
+    "sha256": "6121e5ae08c2ad3aaeccd4238112fb5629a7502b920b3bdc7b7e9098601594cc",
+    "bytes": 444,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\63\\08476712a47c6674c654dc5b87237e75ba895b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/60/61d9e5f5d2a8b87dc95163a218e69dbf673888",
+    "sha256": "c3dcf5dcc26c27fb02bc339cb2613807c6e92a80c1632e7d8028378e1a59b994",
+    "bytes": 1475,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\60\\61d9e5f5d2a8b87dc95163a218e69dbf673888"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5f/3d9e9819fee2b55d64b8872572f46a29a2ef60",
+    "sha256": "7e543decbbd27cda63021ed7fe4ea77783e3787e1fdfe1b049ba3fcdbad5a040",
+    "bytes": 806,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5f\\3d9e9819fee2b55d64b8872572f46a29a2ef60"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5f/43e5b45747ebb205f17cd5a57789ea7a4b8070",
+    "sha256": "ac1c1a9ff99f58905a51898abef360906129b277fde58fdbda278cc52b0301ac",
+    "bytes": 394,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5f\\43e5b45747ebb205f17cd5a57789ea7a4b8070"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5f/acef96cd390e9e6b5048f0da53e8269adcf5e4",
+    "sha256": "f7ef7edac72e65587d022084860b56efdf62298bd3d105707040511357f2ecfc",
+    "bytes": 2478,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5f\\acef96cd390e9e6b5048f0da53e8269adcf5e4"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5f/dd3e38eba9cc906900a7a4815118e38fcaee6f",
+    "sha256": "377c98c43981f1a1ce31fe26a8debdb409fa483f41ec04e727be4ab7728153f5",
+    "bytes": 86,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5f\\dd3e38eba9cc906900a7a4815118e38fcaee6f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5e/4d5bf6420eb7c31a1f50abb44c2b92bcaaf33e",
+    "sha256": "44a3cf19fbdb2948780784f9f04e4d92b105795d0a79907d38db942345989ebc",
+    "bytes": 210,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5e\\4d5bf6420eb7c31a1f50abb44c2b92bcaaf33e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5d/99793cb6398c45a45d271503b9c31db98967eb",
+    "sha256": "40dc1a43a9366fb3bd9e9c272257008bc5c17f91889c5bb5877af6a6df0e0098",
+    "bytes": 1750,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5d\\99793cb6398c45a45d271503b9c31db98967eb"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5c/2b3aa853789bddd88c5223d5faf890238d8d35",
+    "sha256": "dc0247ed2f64734e14b443d50b755285b97146e823e9291d19348898c8fa1548",
+    "bytes": 280,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5c\\2b3aa853789bddd88c5223d5faf890238d8d35"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5b/4c84af7a500afb6d8c01dcef91281cac6b120d",
+    "sha256": "b51941faf4afaaa0779f4017bc1616567820c79df5ffb0d5df00f3b61f74bda8",
+    "bytes": 123408,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5b\\4c84af7a500afb6d8c01dcef91281cac6b120d"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5b/c077112f549d5682499765b355b986b123a73f",
+    "sha256": "9a369a1d3f1ef259c20f9183875bf0ff2ca93a17e8ca21f6d5be45240c4413d3",
+    "bytes": 3446,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5b\\c077112f549d5682499765b355b986b123a73f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/5a/efd744c7e2c1e8ae5bbdbcf10835efb6f4ac5e",
+    "sha256": "bf1b6808ca33773243c1b40e9251ece254b10245df2bd233857d05ad70cdbb21",
+    "bytes": 1491,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\5a\\efd744c7e2c1e8ae5bbdbcf10835efb6f4ac5e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/59/ef750196eb851b381aed36c069004bdafe3e7a",
+    "sha256": "b8e88cbde7022485cfe9b2354f25647147b31a2f6623ea74a29629cd3b0c7abf",
+    "bytes": 4038,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\59\\ef750196eb851b381aed36c069004bdafe3e7a"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/55/2c75fd52333950c1c0e3ec669af481911baf50",
+    "sha256": "8c4331fe22fdcfe2a142ca0c0e3af99f6ef4c206ac870acf3345e09e3b56e3e9",
+    "bytes": 1295,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\55\\2c75fd52333950c1c0e3ec669af481911baf50"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/55/b57a27d7e3bc42aac5f246c476c2421cf8f6f3",
+    "sha256": "0b23a26f5be9319c46eb07df3d40fd5974f7d9bc42cb6a35d795f92a9e583685",
+    "bytes": 186,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\55\\b57a27d7e3bc42aac5f246c476c2421cf8f6f3"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/54/fb8012d25affa0d6d15c305441b0534dfecec0",
+    "sha256": "8a040687065ebc6e733222e84c5dd4ede635d65c36d9a2cc1f18065ee6b66324",
+    "bytes": 131,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\54\\fb8012d25affa0d6d15c305441b0534dfecec0"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/53/9c79ce5b3d40070e6589a59f80362d17179445",
+    "sha256": "36a9ffcb7612c3880ab4663683a4f6a784a3b6ef85ddac1564cc23321b8f114d",
+    "bytes": 795,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\53\\9c79ce5b3d40070e6589a59f80362d17179445"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/53/e054ef2ce844036444e585d6ef45dad39dc07d",
+    "sha256": "a474486682e86ae4f9713ece31a5ea8bc1adb86994664f725c7ab7e12276ca3a",
+    "bytes": 5736,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\53\\e054ef2ce844036444e585d6ef45dad39dc07d"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/52/a605f299217673054d4c4cf93bb4c5ea4587fd",
+    "sha256": "6266f0a2d84a0ba8ab83fd772da1450a008c2171d1dec796d47660f49f56b843",
+    "bytes": 100,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\52\\a605f299217673054d4c4cf93bb4c5ea4587fd"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/52/ddca2d81635562d67e033e2e214b01001f4c3b",
+    "sha256": "0559c500abd6cef1d076f9c0a8aac607645ba320cea16a1bb84f94489e26b9a8",
+    "bytes": 4119,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\52\\ddca2d81635562d67e033e2e214b01001f4c3b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/50/281bdd58e266deb728c138af0588aca44d2b73",
+    "sha256": "fc4022e4b5696ff01ba4d4254e592e4e1102f5a78057861cdbf58830ecefac78",
+    "bytes": 210,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\50\\281bdd58e266deb728c138af0588aca44d2b73"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/4d/38ad98f9d8108585daba0c6a9d7afa402e2a32",
+    "sha256": "fbbc2a7a17216685781bb3f4a6b37acf50e6890a8bc5eb576ae624571737b410",
+    "bytes": 519,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\4d\\38ad98f9d8108585daba0c6a9d7afa402e2a32"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/49/a43b05696a4c5267d69e28840e788b96805903",
+    "sha256": "07da6828bff8ffb49ef9c89cc9c2bfbb2be758864455918212c88afb32fdf8a4",
+    "bytes": 513,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\49\\a43b05696a4c5267d69e28840e788b96805903"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/49/f1a3052fa52a6539e363d8e8791d95cae3a446",
+    "sha256": "61a4745ebef9dcd3f69b12a10b6a55d4af371907bc3da6671b9d538fe8c4fecc",
+    "bytes": 299,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\49\\f1a3052fa52a6539e363d8e8791d95cae3a446"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/48/0478c6798199fd16eca86c55841c1149940823",
+    "sha256": "d21c7c55dc0737318feb93df17e69cd897d8bea55b764935ce5687af0043ce6b",
+    "bytes": 2202,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\48\\0478c6798199fd16eca86c55841c1149940823"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/46/7c3cc7482acc5284ebc6490a50e9a0b6c1fcaf",
+    "sha256": "7fc9221e89953faf79f7bc822cdbfca21d060d5a941ba54912432fcc6771d499",
+    "bytes": 752825,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\46\\7c3cc7482acc5284ebc6490a50e9a0b6c1fcaf"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/46/901e0334b6472783dcf48bd8677b3e40bdab0e",
+    "sha256": "7fb8281c5a7d5242d34bf8c880537cb8b92492028c4f62c47345144abca881b9",
+    "bytes": 783,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\46\\901e0334b6472783dcf48bd8677b3e40bdab0e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/43/afaf94a3ae2e4df1b58836b1c0b4e42b68ec2d",
+    "sha256": "131185c5bdaec28da7543994775c81a97730b55b61ac4ca38cae956c818f0083",
+    "bytes": 219449,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\43\\afaf94a3ae2e4df1b58836b1c0b4e42b68ec2d"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/40/209cf81b0f245813dd2068083d9e4e33f4ea63",
+    "sha256": "b3db2fcac40052d673615512bef38504fdaa601e4c05f3229a234f148bf6c6d6",
+    "bytes": 4368,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\40\\209cf81b0f245813dd2068083d9e4e33f4ea63"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/40/fd23c0d89e341b9bb73549c30e9f4608e57ddd",
+    "sha256": "c8170f8f6bc54fd68c686ed68648e0282c1018f4457960d600428c9375248009",
+    "bytes": 6741,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\40\\fd23c0d89e341b9bb73549c30e9f4608e57ddd"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/3e/2edbb4160afda6ba424da577d12f75f3378798",
+    "sha256": "188588c06f88936df9fa8b3385aa1a266830613e7674a6b2263d7fdecba0b88d",
+    "bytes": 9965,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\3e\\2edbb4160afda6ba424da577d12f75f3378798"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/3c/2c1a53f800101c75f29e973b26bfc3ae4915da",
+    "sha256": "2b668ffd03ee15801b03b8cc7935495c6cc3d5a3dd6d70691228dcc774f4c59f",
+    "bytes": 4625,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\3c\\2c1a53f800101c75f29e973b26bfc3ae4915da"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/3c/e32961b0c5c41bfe2fe3f94460da81ceabac34",
+    "sha256": "0e4c48ac32fb27cc6fb2a083a9ef5667f779b9d58045ff241abc27ab4efd5a01",
+    "bytes": 853045,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\3c\\e32961b0c5c41bfe2fe3f94460da81ceabac34"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/3b/ff00c79d6432af63cede514b83543a2089425e",
+    "sha256": "d99d322c7408229a7f1790a8db36adc309b62aaf482edae97440bda69c5a4d9a",
+    "bytes": 1344,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\3b\\ff00c79d6432af63cede514b83543a2089425e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/3a/1512afb3b663a5b7a70b1fd362a87378c89dd9",
+    "sha256": "a46bc23843b588bdfbfe91a045eb3094e9c2195f0b455171e8176ec78b213a09",
+    "bytes": 4280,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\3a\\1512afb3b663a5b7a70b1fd362a87378c89dd9"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/38/fef7252f2d126ad4e735a287462dac47a422a3",
+    "sha256": "410d74a93e5ff8f33eb1a6805dc3b1b92f3113263efe902ce08652fc4e2cc803",
+    "bytes": 30685,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\38\\fef7252f2d126ad4e735a287462dac47a422a3"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/34/9bd87013edf83df8e92b1a1284e40c07355c4f",
+    "sha256": "feb1b31c27445cad980244bbc8d03ba8395ee17e553e315cf155bb6974bc4c7d",
+    "bytes": 844,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\34\\9bd87013edf83df8e92b1a1284e40c07355c4f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/34/b15b97e6af7c0a657ab46a0d65d7d9c732d7fb",
+    "sha256": "0b5e08979d7df49157634b65dd3ab8d8fc7c7776960fc64cd720e4a31dfe5c6e",
+    "bytes": 854913,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\34\\b15b97e6af7c0a657ab46a0d65d7d9c732d7fb"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/33/bc553ef5fccaa7689c56ce65223adfb4a423d5",
+    "sha256": "6f5c799955ed32385ce0885ce0d91a23b88d1dca23a84685b51f0cd87ea50e74",
+    "bytes": 797,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\33\\bc553ef5fccaa7689c56ce65223adfb4a423d5"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/32/297527853c34c1141b516fe2c07ff10345d1ea",
+    "sha256": "3735ba85b724e4acd3c5dca426a8449117f613d4a25614f7856030e00c885b88",
+    "bytes": 808,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\32\\297527853c34c1141b516fe2c07ff10345d1ea"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/32/94d355beb15184cfcb7a8dc34dcebc1f60369e",
+    "sha256": "4084b1ee0fbec9f1f96d5406de05179ea762b44e3c4f8231a35a5329f1a5bbc7",
+    "bytes": 852979,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\32\\94d355beb15184cfcb7a8dc34dcebc1f60369e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/31/6ce0a53cb123e5ab19e091f8c0b420aeb66417",
+    "sha256": "e5b724c380969156ef3f9c7d0588348483a8f44e1ff789cc9159abc419c03c19",
+    "bytes": 2859,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\31\\6ce0a53cb123e5ab19e091f8c0b420aeb66417"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/2f/00a743e21271896c875f4a5d27e849e3feea3a",
+    "sha256": "31a4c9f3ea4b1a16b73c41a2e3fa95e2ed93f1d3d701f73f666c5dda40b50289",
+    "bytes": 1386,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\2f\\00a743e21271896c875f4a5d27e849e3feea3a"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/2f/cd329a87e91a6059b1a72afcbff667e1944b71",
+    "sha256": "c1aafd9897fd047c3ed9a31a36a12ac68c67e01a108d5a5f310cacdc8d39dccc",
+    "bytes": 1664,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\2f\\cd329a87e91a6059b1a72afcbff667e1944b71"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/2d/40566566c96ead6e75b179c6f14a61a69cb1c2",
+    "sha256": "a9cf6c9476561ac562931a20252c402ba83be21f962f4fff76f594eda693ab86",
+    "bytes": 2706,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\2d\\40566566c96ead6e75b179c6f14a61a69cb1c2"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/2c/43bd48dafa279fa1d369d49b4210d66b2fbeb1",
+    "sha256": "8b772b0df506482757f33428b67c176f880a83789cd2a4b8c01f8143e924d1bf",
+    "bytes": 187,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\2c\\43bd48dafa279fa1d369d49b4210d66b2fbeb1"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/2a/4903e3f6204822f6e8cf72777d5a44006bef61",
+    "sha256": "6263144c1b60c613a9874ee8776c0c17f9df8b50302dc7aa5f1d8cf7eb1337f5",
+    "bytes": 702,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\2a\\4903e3f6204822f6e8cf72777d5a44006bef61"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/2a/73194f28e7c17bfcb4f43f1790b1603be61e6b",
+    "sha256": "c192bf1bb802630dbee7ae0e9924be46d5a00f7b21991a308d78d6f0b26d5d71",
+    "bytes": 7281,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\2a\\73194f28e7c17bfcb4f43f1790b1603be61e6b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/24/2fee7d7d877c1aaabfbd115503c0eab4e354f5",
+    "sha256": "b64ca3b903a33a846e4c03493b8110b8275872d8a88301cc0166b7ba16c5661f",
+    "bytes": 5235,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\24\\2fee7d7d877c1aaabfbd115503c0eab4e354f5"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/23/96dff15a5e21b2ba44073a3e3665a1a749b6cf",
+    "sha256": "05e6b2c6f714440aa0f4824637a4b0ce1848916180263ab87d30f2a4f4f4d10a",
+    "bytes": 55650,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\23\\96dff15a5e21b2ba44073a3e3665a1a749b6cf"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/21/e2c685a76e812102a77f3c1ee4ceb99148f0e2",
+    "sha256": "49809ddd265bff7eaf473ae8265d2503089230a6655094921eda4968c9011227",
+    "bytes": 354,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\21\\e2c685a76e812102a77f3c1ee4ceb99148f0e2"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1f/3afcec48ce43e5d7ff6535feb2e687ad53bafb",
+    "sha256": "2a79aebf25991d857706a1b15a551ce64c3879aac577471df79c79ba912ac406",
+    "bytes": 555,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1f\\3afcec48ce43e5d7ff6535feb2e687ad53bafb"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1f/488216572a036ec8498a12b91ad12a7e880b77",
+    "sha256": "b961a08c2c0fcbc8c1faefb74a43f057d1f2cf49dfdc50f6b22f6bcebb00b3e7",
+    "bytes": 789,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1f\\488216572a036ec8498a12b91ad12a7e880b77"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1f/4e3ac88b889f42cf8ee2c18677a964ef286fa2",
+    "sha256": "b5c23abda7442cf30540404b09be8f1351d43c52a14b9afd1ac8bf9b0a033ca5",
+    "bytes": 145,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1f\\4e3ac88b889f42cf8ee2c18677a964ef286fa2"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1e/092cbb194195a03e996a613afc9787243b30fe",
+    "sha256": "1369ef0e21a4b89a2e55c8284a25eb782cc524e7a633f7221d781f5135a4d742",
+    "bytes": 5857,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1e\\092cbb194195a03e996a613afc9787243b30fe"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1d/7f3ebd0530cb4cfcb5ce59bfc5f7fec93a4693",
+    "sha256": "d45433674c41f93823ba3fcc33bc4ed6aaf75fc067178682907f9178dd487643",
+    "bytes": 197,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1d\\7f3ebd0530cb4cfcb5ce59bfc5f7fec93a4693"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1c/3ff9913971f68bbda49f591b8757989d225293",
+    "sha256": "c013581ad8bb380c99a164cc429e1727ff2ee132a4a200d1f950cb542d9c19f9",
+    "bytes": 655,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1c\\3ff9913971f68bbda49f591b8757989d225293"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1c/493538ee9ac8a4565f513bfc40a9ee60bd7748",
+    "sha256": "d99f0623534e1f0248aef870b0489bd11453ec7b6d7697468d7b694e705cc995",
+    "bytes": 270,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1c\\493538ee9ac8a4565f513bfc40a9ee60bd7748"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1c/aa527f3697291f170d641cfb788db707b05616",
+    "sha256": "a8a17646b5878e59468cadec2d8a63d1ebd168de644686984e046266d1c00d12",
+    "bytes": 3789,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1c\\aa527f3697291f170d641cfb788db707b05616"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/1a/939194bd7703db46d7b5599ee2ad47d88e0b58",
+    "sha256": "ef12ecf517180bb40776a6858b1ae0768f7f957ad0d081fb70026159e2a06bec",
+    "bytes": 405,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\1a\\939194bd7703db46d7b5599ee2ad47d88e0b58"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/16/118fb295c260e9db36516e89dab4e8a71ca9a8",
+    "sha256": "6f9e8c71b6349709eb3e57f76730bc4f0bdfdc3a108e5b41310ccedc053ed792",
+    "bytes": 844,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\16\\118fb295c260e9db36516e89dab4e8a71ca9a8"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/16/7b542c750fda2865383d12f5a7c83bc274c0b9",
+    "sha256": "a995bbadff25c9d08acd6daf0a5405da8de36af40d4bc999cede61dc32d4f1c3",
+    "bytes": 105,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\16\\7b542c750fda2865383d12f5a7c83bc274c0b9"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/15/fe295bb815be7d953c3d3e23251a1236f81c12",
+    "sha256": "e972332343346ef4f1fd30b820960e3ece5a84031285d8c13becc59da486334d",
+    "bytes": 77623,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\15\\fe295bb815be7d953c3d3e23251a1236f81c12"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/14/266ae1296b226c06444d63faebc899afbf04ab",
+    "sha256": "57bbf0330a41d4ee954d0a48f4e9e0fad34ac8bea0f917a41afb95fd5f21db1a",
+    "bytes": 793,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\14\\266ae1296b226c06444d63faebc899afbf04ab"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/12/e973c05465efb27c011a42e734970f2c983e0b",
+    "sha256": "69d0b7b6091761e0e49bb8ea41530f88e919500a80b321d540bcce28f5962ad6",
+    "bytes": 812,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\12\\e973c05465efb27c011a42e734970f2c983e0b"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/10/26880acf307c20e170f60d78acb80d10d6e3b5",
+    "sha256": "3d1c622cb21afb94db62eae8c08c336084ceebbe5f4e02ab3d2f897fd0376cd4",
+    "bytes": 481,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\10\\26880acf307c20e170f60d78acb80d10d6e3b5"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/0e/b4bea78399064ee0ebcb3ab33dfe5f7b5ae9b2",
+    "sha256": "31d8ca701719f7da48c1d4db67db96aa781c51b2cd6495b26310b5c483025a74",
+    "bytes": 1430,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\0e\\b4bea78399064ee0ebcb3ab33dfe5f7b5ae9b2"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/0d/12962d402c0d9800f1f0503ede529e8b972d30",
+    "sha256": "244cb6b143301d1bf7172b492901da203c06bdad26f97c0fb48d81c24e83e21c",
+    "bytes": 1234,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\0d\\12962d402c0d9800f1f0503ede529e8b972d30"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/0d/2a913caf6302171ea47982d0c5a60a5e4e182f",
+    "sha256": "cc152de34d582a272c29b57184454941ecfa33ab1f23f4caf3738fe1f091bede",
+    "bytes": 4368,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\0d\\2a913caf6302171ea47982d0c5a60a5e4e182f"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/0b/37ffd700bf4009e2fe596d7eb1f619fa2251cc",
+    "sha256": "49912b91fa12ec40cf5a1f21bee0027d6b4f57a8d9850195b4d4d488912c7e59",
+    "bytes": 853043,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\0b\\37ffd700bf4009e2fe596d7eb1f619fa2251cc"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/06/fe51d39dfd693a4809eb8cbe49e078c594bdbf",
+    "sha256": "573c10b91d4a8512344382ddbfc6f8cf496beb5d5f59f36dff7eaee1a0329b0c",
+    "bytes": 393,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\06\\fe51d39dfd693a4809eb8cbe49e078c594bdbf"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/04/7e41a1c9e21160dbf3f017238930bdb2009869",
+    "sha256": "eb428e8e173e4b08da73ca646855a9d0d3c8ee003414f9591edb64034c0b4d44",
+    "bytes": 196,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\04\\7e41a1c9e21160dbf3f017238930bdb2009869"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/02/9204495143d59d97a05f0c1f4abae4311fa0e9",
+    "sha256": "0e216adfcb964a5441003b742d6e2d3ee6049a60f22d1bf2f8dd3eeac49a25ba",
+    "bytes": 53048,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\02\\9204495143d59d97a05f0c1f4abae4311fa0e9"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/02/9532f000c3b60647557bda2c8f8a23a22660a2",
+    "sha256": "cf14fba18ebb9a0c18c54ea15da36e85c8913296a7265085193b29ba7a0ba5f2",
+    "bytes": 2654,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\02\\9532f000c3b60647557bda2c8f8a23a22660a2"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/00/9441df2931bfabaa499bbe38a66e5b06e9837e",
+    "sha256": "c8fd370440639fc6aa120c72abe7a928aecea4317ce60067274fca03d6b46c75",
+    "bytes": 800,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\00\\9441df2931bfabaa499bbe38a66e5b06e9837e"
+  },
+  {
+    "source": ".tmp/dcp-sparse/.git/objects/00/ed4d99d263d48e70b815879d58bfe9a27afa89",
+    "sha256": "d0a9930e9bac6f00e1eec570ca10bd19a73de98dc3f844a6c1c0faf43a6b82a6",
+    "bytes": 854341,
+    "local": "C:\\Users\\袁力阳\\Desktop\\ai4math2\\research-2026\\n26-terra\\git-cache\\objects\\00\\ed4d99d263d48e70b815879d58bfe9a27afa89"
+  }
+]

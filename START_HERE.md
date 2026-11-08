@@ -40,3 +40,9 @@ python tools/project_status.py --json
 STATUS 中随意挑一个 ACTIVE 标记替代这里指向的最新状态。
 
 完整 n21–25 冻结输入与 n11 生成／验证补充包已公开。见 [下载与范围](docs/FROZEN_REPLAY_ASSETS.md)。完整清单、全部对应分包及远端摘要均已确认；旧路径的数学入口迁移和新鲜全局重放仍须继续。
+
+
+## 2026-11-08 接续
+
+[n=26 本机进度与暂停点](cover26/continuations/2026-11-08-terra/README.md)已同步；范围为 0.229 < r_D(26) <= rho，原生 16/4957/344 不变。
+[外来 n=11/n=14 证明审查](external-submissions/2026-11-08-sol-review/REVIEW.md)包含 n=14 完整算术复算和拒绝控制；n=11 同版代码缺失。持续研究目标仍暂停。

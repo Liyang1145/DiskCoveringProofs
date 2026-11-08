@@ -1,0 +1,82 @@
+{
+  "schema": "n26-supplemental-bound-replay-v1",
+  "executed_at": "2026-10-29T02:10:07.803661+00:00",
+  "accepted_scope": "2/9 < r_D(26) <= 234700091/1000000000",
+  "global_optimality_proved": false,
+  "native_formal_payments": 0,
+  "native_formal_roots_pending": 16,
+  "native_same_root_prefixes_pending": 4957,
+  "native_arithmetic_open_domains": 344,
+  "fresh_runs": [
+    {
+      "exit_code": 0,
+      "stdout": "intervals 4400 maximum interval 2896\nmax_score 1002929389/10000 pi_weight_lower 139482711/53\nstrict margin 6395205979/265000 approx 24132.852750943395\nseconds 1.46\nPROVED: no 26 radius-2/9 disks cover the unit disk\n",
+      "stderr": "",
+      "path": "lower/radial_certificate_2_9.py",
+      "sha256": "41914d756dd73fd1c56e7b3ceb45e4821356d496be00a034fbd61af4b0be25e6"
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PASS: independent rational atan proof, all 4400 closed distance intervals\nlargest interval index 2898\nExact rational checks: weighted maximum < 100269 and margin > 24700\npi sum(weights) - 26 max_score > 0 by exact Fraction arithmetic\n",
+      "stderr": "",
+      "path": "lower/independent_atan_2_9.py",
+      "sha256": "be5b9b0017b506606fe811f673698f60433a47a28881ab1e8dbce4418226daf9"
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PASS: 26 rational centers cover unit disk at exact radius 234700091/1000000000\nInterior active circumcenters: 34; active boundary candidates: 32\n",
+      "stderr": "",
+      "path": "upper/rational_voronoi.py",
+      "sha256": "458cd1dc3ab5657ac89e7e6c66fcf452479cfda54d5e64cbf2208e06666b899c"
+    },
+    {
+      "exit_code": 0,
+      "stdout": "PASS: 26 disks of radius 234700091/10^9 cover unit disk\n42 vertices, 107 edges, 66 oriented triangles; 34 interior witnesses, 16 rational boundary anchors\nFour interior witnesses are strictly nearer than 0.232; 134 incidences are not 134 tight contacts\n",
+      "stderr": "",
+      "path": "upper/verify_triangles.py",
+      "sha256": "06fd283252cbbb4d121903bdb554a16961142015fe105953bdc66d5c269cc6e8"
+    },
+    {
+      "exit_code": 0,
+      "stdout": "indices, zero-based: 0 1 18\nwitness coordinates: 217402005346499756018259071/284727092641224338000000000 -901848087593781376356421/11389083705648973520000000\nnearest center indices: [0, 1, 18]\nnearest distance squared minus r squared: 1753881801289116062706830270707615178677921/8106951728392434656789884364353824400000000000000000\nnearest distance squared minus archived candidate upper squared: 920056906662884974571191798612062582414178503971741098885660718766653644414731423774223937034985723919196024773078931925310138286455278576391/32427806913569738627159537457415297600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000\nwitness radius squared: 23885981580932429489811100024237942796377631564779333/40534758641962173283949421821769122000000000000000000\n",
+      "stderr": "",
+      "path": "upper/minmax_negative.py",
+      "sha256": "1d23824eca96f691e439b08b6cb691acd9f8ce37f61c1e3cebecc21388d52b58"
+    },
+    {
+      "exit_code": 0,
+      "stdout": "at least 14 centers satisfy |c| > 77/100 via half-angle > 59/1000\nat least 13 centers satisfy |c| > 4/5 via half-angle > 37/250\nat least 12 centers satisfy |c| > 41/50 via half-angle > 177/1000\nat least 11 centers satisfy |c| > 21/25 via half-angle > 24/125\nat least 10 centers satisfy |c| > 17/20 via half-angle > 201/1000\nAll exact rational strict inequalities passed.\n",
+      "stderr": "",
+      "path": "boundary14/b14_boundary_norms.py",
+      "sha256": "f96159d31a7691e05f6dc7866881ad3b88bdba22f614a892e2650cdd4ec7dd19"
+    },
+    {
+      "exit_code": 0,
+      "stdout": "Lens prerequisite 2 sin(delta0)-U < 0, exact bound: -358317199/7000000000\nRHS minus LHS > 8561513379604468917/500000000000000000000 = 0.01712302675920894\nOnly proves failure of this sufficient exclusion criterion; says nothing about B14 realizability.\n",
+      "stderr": "",
+      "path": "boundary14/lens_b14_failure.py",
+      "sha256": "e5eb131edab91a56eed07123e9fb82210778d09c71a0a1c5e79f40d33b9b9983"
+    }
+  ],
+  "rejection_controls": [
+    {
+      "control": "reject-python-O",
+      "path": "lower/radial_certificate_2_9.py",
+      "exit_code": 1
+    },
+    {
+      "control": "reject-python-O",
+      "path": "lower/independent_atan_2_9.py",
+      "exit_code": 1
+    },
+    {
+      "control": "reject-python-O",
+      "path": "upper/verify_triangles.py",
+      "exit_code": 1
+    },
+    {
+      "control": "same-centers-smaller-radius-rejected",
+      "exit_code": 1
+    }
+  ]
+}

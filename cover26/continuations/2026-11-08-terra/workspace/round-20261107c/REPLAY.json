@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-08T15:31:54.359537+08:00",
+  "scope": "triangle-shape lemma; no new global n26 radius exclusion",
+  "inputs": {
+    "round-20261107/interval.js": "904a2cdeb8f7c2b5494f6af7000b655ff60c4c801f7d84883dcea1153ea01716",
+    "round-20261107b/rational_interval.py": "f423067869c7aa1c370f50fee6a12f9e9642c011ec7a6fd1e4a52c13ff642868",
+    "round-20261107c/check_angle_independent.py": "b8c8fa812feabcf56177ce8f984c20535bee9661959db98f1537feee1262123f",
+    "round-20261107c/PROOF.md": "1027789b63f9dbdc718b65895ef38415236a4142a74faf80c450450d70143678",
+    "round-20261107c/replay.py": "b7d00988dc9c4f6feb14b2fbc739cb5e4c610a1d904280c0677a6672ecfe39ca",
+    "round-20261107c/verify_angle_defect.js": "cbbfa87270e7c78855c3171ee0b4be62a996565654ff6994dbde62948a970e08"
+  },
+  "checks": [
+    {
+      "name": "bigint_full_domain",
+      "command": [
+        "node",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\sync-20261108\\repository\\cover26\\continuations\\2026-11-08-terra\\workspace\\round-20261107c\\verify_angle_defect.js",
+        "--write"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"passed\": true,\n  \"boxes\": 18591,\n  \"analyticLeaves\": 32,\n  \"intervalLeaves\": 9264,\n  \"minimumIntervalMargin\": \"107321285690421446/1000000000000000000000000\",\n  \"claim\": \"For every triangle of circumradius <= R, area <= R^2 [3sqrt(3)/4 -(4/5) sum H_(1/5)(angle-pi/3)].\",\n  \"scope\": \"Triangle lemma only. Boundary-angle coupling for arbitrary 26-disk covers is not proved here.\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "fraction_full_partition",
+      "command": [
+        "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\sync-20261108\\repository\\cover26\\continuations\\2026-11-08-terra\\workspace\\round-20261107c\\check_angle_independent.py"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "{\n  \"passed\": true,\n  \"original_leaves\": 9296,\n  \"processed_boxes\": 9296,\n  \"analytic_leaves\": 32,\n  \"interval_leaves\": 9264,\n  \"independent_refinements\": 0,\n  \"scope\": \"triangle-angle lemma only; no new global 26-disk bound\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "reject_false_constant",
+      "command": [
+        "node",
+        "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\sync-20261108\\repository\\cover26\\continuations\\2026-11-08-terra\\workspace\\round-20261107c\\verify_angle_defect.js",
+        "--negative-control"
+      ],
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "PASS: kappa=0.9 is false at angles pi/3-0.01, pi/3, pi/3+0.01.\n",
+      "stderr": ""
+    }
+  ],
+  "inputs_unchanged": true,
+  "certificate_sha256": "bf0065fecaf7e5c816cc6467d0b7bbb724e7452c6cd0e4120b74f4fe3fd99289",
+  "all_passed": true
+}
