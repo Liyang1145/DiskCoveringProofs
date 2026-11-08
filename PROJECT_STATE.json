@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-agent-handoff-v1",
-  "updated_at": "2026-11-08T00:00:00+08:00",
+  "updated_at": "2026-11-08T22:33:15.253965+08:00",
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
@@ -46,11 +46,17 @@
       "wip_snapshot_root_sha256": "f6e3419a258b0afc0b62cb50317661d3bcc5a9538ae5a0fa4037918366b0fce0",
       "last_accepted_root_sha256": "4f470af507f320488dfbc168f9ae39645904af569ae46b9ffb8f5e520bc5edaf",
       "external_submission_review": "external-submissions/2026-11-08-sol-review/REVIEW.md",
-      "external_review_scope": "Submitted n11 proof text only; matching executors and terminal certificates missing; no new arithmetic acceptance.",
+      "external_review_scope": "Same-version executors now archived via PR #4. Maintainer exact root, finite inequalities, chain, regenerated inputs, local and near certificates passed; full far-fan replay is the submitter report, not a new maintainer full replay.",
       "external_offline_submission": {
         "path": "external-submissions/2026-11-08-offline-proofs/README.md",
-        "scope": "Same-version executors and regenerated inputs for the prior external n11 manuscript. Full supplied double-fan arithmetic replay passed."
-      }
+        "scope": "Same-version executors and regenerated inputs for the prior external n11 manuscript. Full supplied double-fan arithmetic replay passed.",
+        "submitter_replay_scope": "Same-version executors and regenerated inputs for the prior external n11 manuscript. Full supplied double-fan arithmetic replay passed.",
+        "maintainer_checks": "external-submissions/2026-11-08-offline-proofs/maintainer/INTEGRATION-CHECKS.json",
+        "source_pr": 4,
+        "canonical_root_equivalence_proved": false
+      },
+      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md",
+      "initial_external_review_scope": "Submitted n11 proof text only; matching executors and terminal certificates missing; no new arithmetic acceptance."
     },
     {
       "n": 12,
@@ -74,8 +80,13 @@
       "complete_fresh_global_replay": false,
       "external_offline_submission": {
         "path": "external-submissions/2026-11-08-offline-proofs/README.md",
-        "scope": "Separate external n12 proof, sources and both boundary-domain certificates. k10 and tangent replay passed; full k9 replay interrupted during host memory pressure."
-      }
+        "scope": "Separate external n12 proof, sources and both boundary-domain certificates. k10 and tangent replay passed; full k9 replay interrupted during host memory pressure.",
+        "submitter_replay_scope": "Separate external n12 proof, sources and both boundary-domain certificates. k10 and tangent replay passed; full k9 replay interrupted during host memory pressure.",
+        "maintainer_checks": "external-submissions/2026-11-08-offline-proofs/maintainer/INTEGRATION-CHECKS.json",
+        "source_pr": 4,
+        "canonical_root_equivalence_proved": false
+      },
+      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md"
     },
     {
       "n": 14,
@@ -99,8 +110,13 @@
       "external_review_scope": "Complete submitted n14 arithmetic replay plus five rejection controls; written geometric reduction reviewed separately; original authority retained.",
       "external_offline_submission": {
         "path": "external-submissions/2026-11-08-offline-proofs/README.md",
-        "scope": "The existing n14 submission matches byte for byte; its supplied verifier passed again."
-      }
+        "scope": "The existing n14 submission matches byte for byte; its supplied verifier passed again.",
+        "submitter_replay_scope": "The existing n14 submission matches byte for byte; its supplied verifier passed again.",
+        "maintainer_checks": "external-submissions/2026-11-08-offline-proofs/maintainer/INTEGRATION-CHECKS.json",
+        "source_pr": 4,
+        "canonical_root_equivalence_proved": false
+      },
+      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md"
     },
     {
       "n": 21,
@@ -193,7 +209,8 @@
         "Route freshly recomputed local/stress results into n25 angle-tree math; archived flags alone are insufficient.",
         "Freshly replay the supplied global/catalog chains with explicit path relocation and mathematical checks."
       ],
-      "complete_fresh_global_replay": false
+      "complete_fresh_global_replay": false,
+      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md"
     },
     {
       "n": 26,
@@ -299,5 +316,6 @@
     "Content hashes and accepted frameworks do not prove an unrestricted theorem.",
     "Keep existing frozen sources unchanged; preserve exact roots and explicit unpaid premises."
   ],
-  "detailed_orders21_26": "verification/reproducibility/orders21-26-handoff.json"
+  "detailed_orders21_26": "verification/reproducibility/orders21-26-handoff.json",
+  "latest_proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md"
 }

@@ -1,0 +1,2 @@
+Inner Schur margin: 0.6899852654281458
+Positive definite dual on inner radius 1/5000, site radius 1/500.

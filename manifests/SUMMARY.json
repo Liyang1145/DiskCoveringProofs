@@ -18,8 +18,8 @@
     12,
     14
   ],
-  "delivered_files": 14978,
-  "delivered_original_bytes": 3036619897,
+  "delivered_files": 14993,
+  "delivered_original_bytes": 3036666353,
   "complete_historical_dependency_mirror": false,
   "complete_not_delivered_file_inventory": false,
   "this_delivery_is_new_mathematical_acceptance": false,
@@ -52,5 +52,7 @@
   "n26_independently_checked_range": "0.229 < r_D(26) <= rho < 0.234700090400448239616790133776693",
   "external_review": "external-submissions/2026-11-08-sol-review/REVIEW.md",
   "navigation_manifest_repair_report": "verification/reproducibility/navigation-manifest-repair-20261108.json",
-  "external_offline_submission": "external-submissions/2026-11-08-offline-proofs/README.md"
+  "external_offline_submission": "external-submissions/2026-11-08-offline-proofs/README.md",
+  "latest_proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md",
+  "external_k9_full_maintainer_replay": false
 }

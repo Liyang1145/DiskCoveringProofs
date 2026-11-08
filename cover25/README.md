@@ -11,3 +11,7 @@
 
 共享代码见 `../shared/proof_bundle/research-2026/n21-25-synthesis/`。
 本次不把文件哈希或上传成功当成新数学证明。
+
+## 2026-11-08 资产整合
+
+[统一入口与维护者复验范围](../docs/PROOF-ASSET-INTEGRATION-20261108.md)记录 PR #4 的全部归档材料和当前验证范围。原权威证明及限定保留。

@@ -174,4 +174,6 @@ The [frozen replay asset release](docs/FROZEN_REPLAY_ASSETS.md) additionally sup
 ## Latest continuation / 最新接续（2026-11-08）
 
 [n=26 checked bounds, exact candidate, and paused checkpoint](cover26/continuations/2026-11-08-terra/README.md): `0.229 < r_D(26) <= rho`; global optimality remains open.
-[Submitted n11/n14 proofs and review](external-submissions/2026-11-08-sol-review/REVIEW.md): full supplied n14 arithmetic replay and five rejection controls passed; the n11 text lacks its matching code. Original authorities and qualifications are retained.
+[Submitted n11/n14 proofs and review](external-submissions/2026-11-08-sol-review/REVIEW.md): full supplied n14 arithmetic replay and five rejection controls passed; the matching n11 executors have since been integrated through PR #4. Original authorities and qualifications are retained.
+
+[Integrated proof assets and current review scopes](docs/PROOF-ASSET-INTEGRATION-20261108.md): PR #4 is merged; n11 executors are available, n12 full k9 arithmetic remains unrerun, and the existing n25 accepted source archive is linked.

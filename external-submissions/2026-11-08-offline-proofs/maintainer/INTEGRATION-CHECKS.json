@@ -1,0 +1,30 @@
+{
+  "source_pr": 4,
+  "source_head": "00b05471dba021a9db34957364a5df0f8b212b8d",
+  "merge_commit": "d2fc6bb9d4dcfc19f81845167f12076fdb91f1c2",
+  "source_frozen_bytes_preserved": true,
+  "canonical_authority_hashes_unchanged": true,
+  "maintainer_n11_scope": [
+    "exact root and geometry",
+    "finite geometric inequalities",
+    "ordinary and lower chain certificates",
+    "regenerated window/constant tokens equal submitted inputs",
+    "local positive definiteness",
+    "near-configuration certificate"
+  ],
+  "maintainer_n11_full_far_fan_replayed": false,
+  "maintainer_n12_scope": [
+    "construction and finite bounds",
+    "full external k10: 539 measures, 80 prunes, 6395771 outer boxes",
+    "all compressed/uncompressed k9 certificate hashes",
+    "complete prefix-free 515029-leaf binary partition"
+  ],
+  "maintainer_n12_full_k9_arithmetic_replayed": false,
+  "n14_previous_maintainer_replay_reused_without_source_changes": true,
+  "n25_scope": "existing accepted source archive linked; no fresh complete mathematical replay or new adoption",
+  "build_environment_note": "Inherited non-ASCII MinGW temp path failed; compilation then passed using an ASCII workspace temp directory. No proof source was changed.",
+  "original_replay_logs_retained": true,
+  "exact_root_equivalence_not_assumed": true,
+  "global_mathematical_acceptance_added": false,
+  "n26_continuous_goal_status": "paused"
+}

@@ -1,0 +1,251 @@
+{
+  "source_head": "00b05471dba021a9db34957364a5df0f8b212b8d",
+  "base": "ee00bd0e6627b00a2393e94a3e59d9e9cd6cceb1",
+  "files": [
+    {
+      "path": "PROJECT_STATE.json",
+      "sha": "02055cdad2d2fa8c083cfe7e6ecbc38ed4074db5",
+      "status": "modified",
+      "bytes": 15918,
+      "sha256": "024e4ed173316d11daff30a2054c39627036d332898c77e09fd585cba16b6770"
+    },
+    {
+      "path": "START_HERE.md",
+      "sha": "a603a5b5e7068c88aece753235c2596e6b8899e6",
+      "status": "modified",
+      "bytes": 3423,
+      "sha256": "db45d9157dcade6a51b0b58c71e1fba6ebd87c87b5c63c4d58200ba57f0bf043"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/README.md",
+      "sha": "2e3ca933ad8842b59ecc5a16a534a613373dd7df",
+      "status": "added",
+      "bytes": 4079,
+      "sha256": "3555d93ccac27dfd62ce54c70794377ee5146ec1a26a9db8a78b51ad695286e6"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/chain_certificate.cpp",
+      "sha": "462b882c7a2f76290d9acf1f48cbd5a64c9c5531",
+      "status": "added",
+      "bytes": 16837,
+      "sha256": "cc348d4585382d7d27b4254019be0f880f1c2b994d7e840335a9915cb2091e8f"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/chain_windows.txt",
+      "sha": "dd2b39a49824d6adc4b0af3041d3304f03f31efe",
+      "status": "added",
+      "bytes": 17708,
+      "sha256": "f12d712ef5ade23649d94a226e9034818401aaaa05117cbd3fd0253f41fbb5ac"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/construction.py",
+      "sha": "25f8efef55657cfc82dffbe048feb6ee1a38b8bd",
+      "status": "added",
+      "bytes": 8006,
+      "sha256": "23d02b7137270cfc5754523871c4056e8a3db4137c917ff1f3f90bcca9b10c30"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/fan_constants.txt",
+      "sha": "c42c15e5b7f1d1a8c5e88241705c18fcdaf930e2",
+      "status": "added",
+      "bytes": 1258,
+      "sha256": "724806b014cbf364a82d91aadbe28d567030c1528a294aaa7e5115be6d56ad18"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/fan_dual.cpp",
+      "sha": "148d3cfc6f7cab500df9aacfceb84737776770b6",
+      "status": "added",
+      "bytes": 30997,
+      "sha256": "fa0c332a4135b288ce97e6ffa94c530aff0f0129a7b6f78b7357c21cd9d5ff82"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/fan_interval.hpp",
+      "sha": "c8b5dec0cd4e1281298ba7b81037e02ce3f91dc3",
+      "status": "added",
+      "bytes": 5933,
+      "sha256": "9e7b51b87e21d79c6e8ecf8d97b8ce2fcf9396e5372cc66ac80d7743a1a6cbc6"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/fan_local.py",
+      "sha": "aca6d3b09c1c9175c99f6e92c27e58a26f1c0bf4",
+      "status": "added",
+      "bytes": 17207,
+      "sha256": "43002d5d2699f459fb387652e2f2bf535a7541dfde1541e886ea9d756f20e7ca"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/intervals.py",
+      "sha": "5e900e5d3783abc6a909af559e27bc399bf0429a",
+      "status": "added",
+      "bytes": 2899,
+      "sha256": "8c6a42c8dd977f472961686f5663620dc90cd451348549ece0635cad6cc617d4"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n11/lower_bounds.py",
+      "sha": "a269ea2b1df4eb835924e9699be6b1cdfc1d8507",
+      "status": "added",
+      "bytes": 6161,
+      "sha256": "4cd9dc7c61e6b35641dcdb16d232378906c00ebe3da41059fa87b5824fa4ca5c"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/explore.py",
+      "sha": "978e575304d72b9000c2b8976a6941c10a677111",
+      "status": "added",
+      "bytes": 3741,
+      "sha256": "6e68da25997947e5c231093d9478f6c25fea6b8db440c06cbf061db48e7b4a46"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/nine_certificate.jsonl.gz.part0001",
+      "sha": "27e3063a0cef2fda161ea348e38e19de8c603949",
+      "status": "added",
+      "bytes": 4194304,
+      "sha256": "1a6b62437ccef4ee70b627c99e396f331284066786debab9515c9238b506c2d1"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/nine_certificate.jsonl.gz.part0002",
+      "sha": "108343f9ef1a7df6953af9dcc18aeec42d18ef96",
+      "status": "added",
+      "bytes": 4194304,
+      "sha256": "0df375bee86caf0834735e908f24b50a2ebec87e51a3e81f51d8abeaee9d9a61"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/nine_certificate.jsonl.gz.part0003",
+      "sha": "f156d433435924e3baa70e1eaeb4926ea0e6399a",
+      "status": "added",
+      "bytes": 4194304,
+      "sha256": "b7eff5e05d3e34b6ffa3f3a8f37f16c20d3f35987460b80eea90ce741ba4c57f"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/nine_certificate.jsonl.gz.part0004",
+      "sha": "c68ada9f20178297cf42b986e3b7f0a2e70b9367",
+      "status": "added",
+      "bytes": 4194304,
+      "sha256": "de8b52fdd7cb5b5bb97f6e2fc59e3c72f5d74d78363f577cf0e4ee737ece4635"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/nine_certificate.jsonl.gz.part0005",
+      "sha": "377b59ef436fdd69876e6f4a421c8c355329f288",
+      "status": "added",
+      "bytes": 4194304,
+      "sha256": "77baf3121adf85f090aef562cb38947fbafa23220059f2700759175ad9c2bed8"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/nine_certificate.jsonl.gz.part0006",
+      "sha": "a84882bd78c500574075d3575afa029c7108ed27",
+      "status": "added",
+      "bytes": 3287856,
+      "sha256": "d1b2c121b45e24caa09d396e17c5c6f192aa2a5465eeabf7fd58e4f9f0e000d8"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/nine_driver.py",
+      "sha": "da528f02c2e5d3fe9d662622c4ab62eca6ddab5e",
+      "status": "added",
+      "bytes": 28778,
+      "sha256": "5ab830abe930d6c340c7549dcd99df4ff408c5ab2cfb9ccc9cbf122215c1c830"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/ten_certificate.jsonl",
+      "sha": "1792ee01e0d0b51e9f1d160312ce07efda4298e0",
+      "status": "added",
+      "bytes": 292084,
+      "sha256": "79b39695463bc47426e0535df6c500d35ee9d443b59a5c3d58f1640bac6afba0"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/ten_driver.py",
+      "sha": "c863170474b18f6ab6c6b4cec14ee337d4b60d5f",
+      "status": "added",
+      "bytes": 9239,
+      "sha256": "f43e6b9943fe1e14b6e1a0d8117076331ce154073e0ea29c2b50d29c18238cb4"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/ten_intervals.cpp",
+      "sha": "bbd89c8b94875b5f72b91a91fba8266872ac2074",
+      "status": "added",
+      "bytes": 50109,
+      "sha256": "12d448e031d45f2a811ea6a494e4d7536879b123fe0e20010992b735e1e0457c"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/ten_search.py",
+      "sha": "4d3c2b32fa5cb804cf2bb9a80c2b64b632c418a4",
+      "status": "added",
+      "bytes": 3502,
+      "sha256": "a667d666294cf86bc7329396315719428a983d6e0998f29d81abf4abbb8a5dba"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/verify.py",
+      "sha": "d11904b063da16e40455237162500ffecd4e4d5e",
+      "status": "added",
+      "bytes": 21235,
+      "sha256": "cbdf96585cdc14a92c8287ed6287ebecec2481ac72693e1b838428019d484eff"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/全局下界.md",
+      "sha": "342ff6a121711a95ba4890a6b377c5169751a9b3",
+      "status": "added",
+      "bytes": 21565,
+      "sha256": "8b3ee3b7c244516dcc1c1a9cc32fff9ea7f79e0e9c5c483b32e6057fac2e83ac"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/n12/证明.md",
+      "sha": "8716b0de5028fdc6c23320f9a9384f818e82367a",
+      "status": "added",
+      "bytes": 21337,
+      "sha256": "bfea55129c3cb9d88953c80b132644751cfce101ee3a572c2f9f8eec721807db"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/replay/n11.txt",
+      "sha": "fd5129f9e131fe52703cd0814f96f6fb485aa464",
+      "status": "added",
+      "bytes": 3187,
+      "sha256": "2e10b0bdf62ae894088edac2052fc1bfbfbaaf56765ba5c14865b8df6312f86e"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/replay/n12_build.txt",
+      "sha": "50a9525a07741c163fef66e0c9c353f59fc42b86",
+      "status": "added",
+      "bytes": 48,
+      "sha256": "320e853b79d9c2db376b849c5adf11a7a3ca00a7b9bd5648b5942fd303635c20"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/replay/n12_nine.txt",
+      "sha": "b259be990ca4f37b9cb303de5288440f8453de49",
+      "status": "added",
+      "bytes": 1458,
+      "sha256": "963dc90d11efbb99095c69cf7dc7762e6eaaa27fd2326f0ed0725c3a0bbfa42c"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/replay/n12_ten.txt",
+      "sha": "1689708fd43dca34ff49b83316412559ca2c9942",
+      "status": "added",
+      "bytes": 183,
+      "sha256": "c4e66a1ad1eca871bafe917edea24c03062339d93df477f5cfe44c0153b4ef98"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/replay/n12_verify.txt",
+      "sha": "6523f14cf488b1f0c87347fbe44cbae927a82f43",
+      "status": "added",
+      "bytes": 800,
+      "sha256": "3273d2e7a7327f702c133cc716d239b1de2ba8725f200b6dd70a4d6179a8b82a"
+    },
+    {
+      "path": "external-submissions/2026-11-08-offline-proofs/replay/n14.txt",
+      "sha": "5bee5aac89ed747385a4843baac3f88b3a3c02da",
+      "status": "added",
+      "bytes": 3895,
+      "sha256": "73a03146dacf0e0a79f30983d6fc4f05a7012fe2d4509d7516ab5d48a139533b"
+    },
+    {
+      "path": "manifests/FILES.jsonl",
+      "sha": "b08f1900ae5a456375ebdb9e8ceedbdde1ce0a63",
+      "status": "modified",
+      "bytes": 6624091,
+      "sha256": "6fdbdb9033a845c267579c0ebcde28ccefd8c92cb7f06d9330a3ecf6adbdc0a0"
+    },
+    {
+      "path": "manifests/SUMMARY.json",
+      "sha": "6363ea8f3f279a1609b6ccf3f6cd910e0fd9003a",
+      "status": "modified",
+      "bytes": 2316,
+      "sha256": "6f43f0de0258185aae0d99cd5514c4f7f4ffa078ee6864911c70ceba16c44bf3"
+    }
+  ]
+}

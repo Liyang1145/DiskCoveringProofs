@@ -45,5 +45,7 @@ STATUS 中随意挑一个 ACTIVE 标记替代这里指向的最新状态。
 ## 2026-11-08 接续
 
 [n=26 本机进度与暂停点](cover26/continuations/2026-11-08-terra/README.md)已同步；范围为 0.229 < r_D(26) <= rho，原生 16/4957/344 不变。
-[外来 n=11/n=14 证明审查](external-submissions/2026-11-08-sol-review/REVIEW.md)包含 n=14 完整算术复算和拒绝控制；n=11 同版代码缺失。持续研究目标仍暂停。
+[外来 n=11/n=14 证明审查](external-submissions/2026-11-08-sol-review/REVIEW.md)保留初次审查范围；n=11 同版执行器现已由 PR #4 补齐，最新复验范围见下方统一入口。持续研究目标仍暂停。
 [n=11、12、14 离线复证材料](external-submissions/2026-11-08-offline-proofs/README.md)汇集外来证明、证书与本次复算范围。
+
+[维护者整合与各阶当前范围](docs/PROOF-ASSET-INTEGRATION-20261108.md)列出 n=11/12/14 的实测范围及既有 n=25 全局源证明入口。

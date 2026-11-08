@@ -1,0 +1,9 @@
+Ordinary chain 6 links: span at most 91776/20000 radians.
+Ordinary chain 7 links: span at most 102647/20000 radians.
+Ordinary chain 8 links: span at most 114570/20000 radians.
+Chain with one diagonal 4 links: span at most 75254/20000 radians.
+Chain with one diagonal 5 links: span at most 84717/20000 radians.
+Chain with one diagonal 6 links: span at most 94896/20000 radians.
+Chain with one diagonal 7 links: span at most 103085/20000 radians.
+All six vertices outside diagonal block 5 links: span at most 77280/20000 radians.
+Last vertex shared with diagonal block 5 links: span at most 73041/20000 radians.

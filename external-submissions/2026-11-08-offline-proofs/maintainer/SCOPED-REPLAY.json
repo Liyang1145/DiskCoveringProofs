@@ -1,0 +1,216 @@
+{
+  "date": "2026-11-08T14:30:30.490715+00:00",
+  "source_head": "00b05471dba021a9db34957364a5df0f8b212b8d",
+  "python": "3.14.6 (tags/v3.14.6:c63aec6, Jun 10 2026, 10:26:10) [MSC v.1944 64 bit (AMD64)]",
+  "compiler": "g++.exe (MinGW-W64 x86_64-ucrt-posix-seh, built by Brecht Sanders, r4) 16.1.0",
+  "scope": "bounded maintainer mathematics and native compilation; no n11 full fan search or n12 full k9 leaf replay",
+  "families": [
+    {
+      "family": 11,
+      "checks": [
+        {
+          "name": "n11-construction",
+          "command": [
+            "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+            "-B",
+            "-S",
+            "construction.py"
+          ],
+          "exit_code": 0,
+          "seconds": 0.07247749999805819,
+          "timed_out": false,
+          "passed": true,
+          "reused_current_integration_check": true
+        },
+        {
+          "name": "n11-finite-inequalities",
+          "command": [
+            "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+            "-B",
+            "-S",
+            "lower_bounds.py"
+          ],
+          "exit_code": 0,
+          "seconds": 65.49170939999749,
+          "timed_out": false,
+          "passed": true,
+          "reused_current_integration_check": true
+        },
+        {
+          "name": "n11-compile-chain",
+          "command": [
+            "C:\\mingw64\\bin\\g++.exe",
+            "-std=c++17",
+            "-O3",
+            "-static",
+            "-ftrapv",
+            "chain_certificate.cpp",
+            "-o",
+            "chain_certificate.exe"
+          ],
+          "exit_code": 0,
+          "seconds": 2.0343840999994427,
+          "timed_out": false,
+          "passed": true
+        },
+        {
+          "name": "n11-compile-fan",
+          "command": [
+            "C:\\mingw64\\bin\\g++.exe",
+            "-std=c++17",
+            "-O3",
+            "-static",
+            "-pthread",
+            "-ftrapv",
+            "fan_dual.cpp",
+            "-o",
+            "fan_dual.exe"
+          ],
+          "exit_code": 0,
+          "seconds": 2.4345033999998122,
+          "timed_out": false,
+          "passed": true
+        },
+        {
+          "name": "n11-chain",
+          "command": [
+            "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\integrate-pr4-20261108\\build\\n11\\chain_certificate.exe"
+          ],
+          "exit_code": 0,
+          "seconds": 11.491066499991575,
+          "timed_out": false,
+          "passed": true
+        },
+        {
+          "name": "n11-chain-lower",
+          "command": [
+            "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\integrate-pr4-20261108\\build\\n11\\chain_certificate.exe",
+            "lower"
+          ],
+          "exit_code": 0,
+          "seconds": 182.23757360001036,
+          "timed_out": false,
+          "passed": true
+        },
+        {
+          "name": "n11-regenerate-windows",
+          "command": [
+            "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\integrate-pr4-20261108\\build\\n11\\chain_certificate.exe",
+            "windows"
+          ],
+          "exit_code": 0,
+          "seconds": 4.512807999999495,
+          "timed_out": false,
+          "passed": true,
+          "regenerated_tokens_equal": true
+        },
+        {
+          "name": "n11-regenerate-constants",
+          "command": [
+            "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+            "-B",
+            "-S",
+            "fan_local.py",
+            "constants"
+          ],
+          "exit_code": 0,
+          "seconds": 0.2213288999919314,
+          "timed_out": false,
+          "passed": true,
+          "regenerated_tokens_equal": true
+        },
+        {
+          "name": "n11-local-positive-definiteness",
+          "command": [
+            "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+            "-B",
+            "-S",
+            "fan_local.py",
+            "dual-cells",
+            ".0002",
+            ".002",
+            ".00013"
+          ],
+          "exit_code": 0,
+          "seconds": 7.091183500000625,
+          "timed_out": false,
+          "passed": true
+        },
+        {
+          "name": "n11-near-configuration",
+          "command": [
+            "C:\\Users\\UserX\\Desktop\\ai4math2\\research-2026\\integrate-pr4-20261108\\build\\n11\\fan_dual.exe",
+            "chain_windows.txt",
+            "fan_constants.txt",
+            "near"
+          ],
+          "exit_code": 0,
+          "seconds": 3.063790300002438,
+          "timed_out": false,
+          "passed": true
+        }
+      ],
+      "all_scoped_checks_passed": true,
+      "full_external_global_proof_replayed": false,
+      "full_k9_arithmetic_replayed": false
+    },
+    {
+      "family": 12,
+      "checks": [
+        {
+          "name": "n12-construction-and-finite-bounds",
+          "command": [
+            "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+            "-B",
+            "-S",
+            "verify.py"
+          ],
+          "exit_code": 0,
+          "seconds": 3.485538799999631,
+          "timed_out": false,
+          "passed": true,
+          "reused_current_integration_check": true
+        },
+        {
+          "name": "n12-compile-interval-library",
+          "command": [
+            "C:\\mingw64\\bin\\g++.exe",
+            "-std=c++20",
+            "-O3",
+            "-shared",
+            "-static",
+            "-ftrapv",
+            "-o",
+            "ten_intervals.dll",
+            "ten_intervals.cpp"
+          ],
+          "exit_code": 0,
+          "seconds": 2.6423939999949653,
+          "timed_out": false,
+          "passed": true
+        },
+        {
+          "name": "n12-complete-k10",
+          "command": [
+            "C:\\Users\\UserX\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+            "-B",
+            "-S",
+            "ten_driver.py",
+            "replay",
+            "--file",
+            "ten_certificate.jsonl"
+          ],
+          "exit_code": 0,
+          "seconds": 24.229777400003513,
+          "timed_out": false,
+          "passed": true
+        }
+      ],
+      "all_scoped_checks_passed": true,
+      "full_external_global_proof_replayed": false,
+      "full_k9_arithmetic_replayed": false
+    }
+  ],
+  "original_submission_bytes_unchanged": true,
+  "passed": true
+}

@@ -1,0 +1,4 @@
+Angular bounds for the outer diagonals verified.
+Ten-boundary branch excluded at 19/50 (96082 verified boxes).
+Small-separation weights positive (367 verified boxes).
+Interior half-separation at most 0.068 excluded (73152 verified boxes).

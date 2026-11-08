@@ -1,0 +1,2 @@
+Refining p in [112, 184]/1000.
+Refined universal lower bound 5 links: span at most 79004/20000 radians.

@@ -1,0 +1,21 @@
+{
+  "scope": "PR bytes, authority preservation and the complete finite binary leaf partition; not fresh k9 leaf arithmetic",
+  "source_head": "00b05471dba021a9db34957364a5df0f8b212b8d",
+  "new_logical_assets": 26,
+  "unchanged_existing_manifest_lines": 14950,
+  "canonical_authorities_unchanged": true,
+  "nine_certificate_records": 515029,
+  "nine_complete_prefix_partition": true,
+  "nine_compressed_sha256": "baa3df55282d91445774e5682f9263d726c76acaa7f9b9f685a5d31ca25e83fc",
+  "nine_record_types": {
+    "witness": 37502,
+    "prune": 4944,
+    "measure-or-geometry-data": 323042,
+    "budget": 27652,
+    "shape": 111958,
+    "rank": 9931
+  },
+  "nine_full_arithmetic_replayed": false,
+  "continuous_goal_status": "paused",
+  "passed": true
+}

@@ -1,0 +1,9 @@
+Near candidate, outer site 0 certified.
+Near candidate, outer site 1 certified.
+Near candidate, outer site 2 certified.
+Near candidate, outer site 3 certified.
+Near candidate, outer site 4 certified.
+Near candidate, outer site 5 certified.
+Near candidate, outer site 6 certified.
+Near candidate, outer site 7 certified.
+Near candidate, outer site 8 certified.
