@@ -1,0 +1,70 @@
+=== construction.py ===
+Certified a unique root in the specified box.
+All geometric checks passed.
+Strict local minimum within the symmetric contact family.
+E ([0.89252172991336054, 0.89252172991336054], [-3.471659243157591e-31, 3.4716978221712799e-31])
+A ([0.61581166879025484, 0.61581166879025484], [0.59860856618621205, 0.59860856618621205])
+C ([0.094836554370096318, 0.094836554370096318], [0.69442412154406419, 0.69442412154406419])
+L ([-0.35578739297353229, -0.35578739297353229], [0.67361111770932303, 0.67361111770932303])
+D ([-0.76470617602339763, -0.76470617602339763], [0.29836981253180889, 0.29836981253180889])
+P ([0.27297746634636338, 0.27297746634636338], [0, 0])
+Q ([-0.14942849892695648, -0.14942849892695648], [0, 0])
+exit=0
+=== lower_bounds.py ===
+Angular bounds for the outer diagonals verified.
+Ten-boundary branch excluded at 19/50 (96082 verified boxes).
+Small-separation weights positive (367 verified boxes).
+Interior half-separation at most 0.068 excluded (73152 verified boxes).
+exit=0
+=== compile chain ===
+exit=0
+=== chain certificate ===
+Ordinary chain 6 links: span at most 91776/20000 radians.
+Ordinary chain 7 links: span at most 102647/20000 radians.
+Ordinary chain 8 links: span at most 114570/20000 radians.
+Chain with one diagonal 4 links: span at most 75254/20000 radians.
+Chain with one diagonal 5 links: span at most 84717/20000 radians.
+Chain with one diagonal 6 links: span at most 94896/20000 radians.
+Chain with one diagonal 7 links: span at most 103085/20000 radians.
+All six vertices outside diagonal block 5 links: span at most 77280/20000 radians.
+Last vertex shared with diagonal block 5 links: span at most 73041/20000 radians.
+exit=0
+=== chain lower ===
+Refining p in [112, 184]/1000.
+Refined universal lower bound 5 links: span at most 79004/20000 radians.
+exit=0
+=== regenerate chain windows ===
+
+Name              Length
+----              ------
+chain_windows.txt  17708
+exit=0
+=== regenerate fan constants ===
+fan_constants.txt   1258
+exit=0
+=== fan local ===
+Inner Schur margin: 0.6899852654281458
+Positive definite dual on inner radius 1/5000, site radius 1/500.
+exit=0
+=== compile fan ===
+exit=0
+=== fan dual full ===
+Near candidate, outer site 0 certified.
+Near candidate, outer site 1 certified.
+Near candidate, outer site 2 certified.
+Near candidate, outer site 3 certified.
+Near candidate, outer site 4 certified.
+Near candidate, outer site 5 certified.
+Near candidate, outer site 6 certified.
+Near candidate, outer site 7 certified.
+Near candidate, outer site 8 certified.
+1000 boxes (500 excluded, 0 near), current 0.281797 0.156000 0.010937.
+2000 boxes (1002 excluded, 0 near), current 0.273215 0.149375 0.000205.
+3000 boxes (1501 excluded, 0 near), current 0.272402 0.152500 0.001641.
+4000 boxes (1994 excluded, 0 near), current 0.272990 0.149187 0.000103.
+5000 boxes (2471 excluded, 28 near), current 0.271951 0.149875 0.000068.
+6000 boxes (2970 excluded, 28 near), current 0.260117 0.158000 0.005469.
+7000 boxes (3498 excluded, 28 near), current 0.290469 0.088000 0.008750.
+8000 boxes (3999 excluded, 28 near), current 0.099687 0.168000 0.061250.
+Full 4+5 branch certified: 4475 excluded leaves, 28 near leaves.
+exit=0

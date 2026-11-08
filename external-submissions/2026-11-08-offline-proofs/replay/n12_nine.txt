@@ -1,0 +1,13 @@
+=== full nine-boundary certificate plus global tangent bound ===
+tangent bound: 53073 local Hessian boxes, 372717 exterior boxes and 471 boxes inside the local domain
+indexed 515029 proof records
+replay progress {'prune': 106, 'witness': 6286, 'measure': 27918, 'budget': 1313, 'geo': 4483}
+replay progress {'prune': 106, 'witness': 18048, 'measure': 45326, 'budget': 4229, 'geo': 12397}
+replay progress {'prune': 106, 'witness': 24123, 'measure': 69822, 'budget': 8955, 'geo': 17100}
+replay progress {'prune': 113, 'witness': 26288, 'measure': 96671, 'budget': 13968, 'geo': 23073}
+replay progress {'prune': 133, 'witness': 31137, 'measure': 124574, 'budget': 16375, 'geo': 27914}
+replay progress {'prune': 202, 'witness': 34961, 'measure': 137205, 'budget': 22109, 'geo': 31519, 'rank': 1833, 'shape': 12373}
+replay progress {'prune': 315, 'witness': 35756, 'measure': 153583, 'budget': 22886, 'geo': 37715, 'rank': 4048, 'shape': 26012}
+replay progress {'prune': 504, 'witness': 35756, 'measure': 164116, 'budget': 23700, 'geo': 53254, 'rank': 5108, 'shape': 38066}
+replay progress {'prune': 865, 'witness': 35756, 'measure': 177268, 'budget': 23700, 'geo': 71357, 'rank': 5345, 'shape': 46574}
+replay progress {'prune': 1711, 'witness': 35775, 'measure': 184027, 'budget': 24986, 'geo': 82470, 'rank': 6812, 'shape': 65930}
