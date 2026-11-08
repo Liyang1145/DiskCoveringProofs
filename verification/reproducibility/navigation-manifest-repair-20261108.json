@@ -1,0 +1,24 @@
+{
+  "schema": "navigation-manifest-metadata-repair-v1",
+  "date": "2026-11-08",
+  "preexisting_source_commit": "11bf26e8b9ca601ab7220a93c1ef39451513aed0",
+  "synchronized_parent_commit": "39c9f316ae49b3c2544610bbf7bbc58e3f3b9de4",
+  "unchanged_navigation_git_blob": "c6ab93bc9c8bfdba817310f27c9a6a35f0bfa8bb",
+  "old_manifest_record": {
+    "path": "cover11/README.md",
+    "bytes": 557,
+    "sha256": "9f204a3357446c78cc55ac4e7558bc520dee2486af4a3220e10729e4793262e9",
+    "encoding": "identity",
+    "category": "delivery-documentation-and-verification-tooling"
+  },
+  "new_manifest_record": {
+    "path": "cover11/README.md",
+    "bytes": 1245,
+    "sha256": "28c591043737a2898d6e50de780c265d73e07502f9c9ca008446ecd0ef4f9644",
+    "encoding": "identity",
+    "category": "delivery-documentation-and-verification-tooling"
+  },
+  "source_of_staleness": "The navigation page changed after the last manifest update; the mismatch existed in the reviewed base.",
+  "repair_scope": "Update navigation byte metadata and summary only. Keep the actual README, frozen source proofs, exact authority hashes and mathematical acceptance states unchanged.",
+  "global_mathematical_acceptance_added": false
+}

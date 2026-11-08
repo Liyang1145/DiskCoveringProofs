@@ -18,8 +18,8 @@
     12,
     14
   ],
-  "delivered_files": 14951,
-  "delivered_original_bytes": 2795923452,
+  "delivered_files": 14952,
+  "delivered_original_bytes": 2795925336,
   "complete_historical_dependency_mirror": false,
   "complete_not_delivered_file_inventory": false,
   "this_delivery_is_new_mathematical_acceptance": false,
@@ -50,5 +50,6 @@
   "latest_n26_continuation": "cover26/continuations/2026-11-08-terra/README.md",
   "n26_continuous_goal_status": "paused",
   "n26_independently_checked_range": "0.229 < r_D(26) <= rho < 0.234700090400448239616790133776693",
-  "external_review": "external-submissions/2026-11-08-sol-review/REVIEW.md"
+  "external_review": "external-submissions/2026-11-08-sol-review/REVIEW.md",
+  "navigation_manifest_repair_report": "verification/reproducibility/navigation-manifest-repair-20261108.json"
 }
