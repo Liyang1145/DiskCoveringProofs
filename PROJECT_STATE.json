@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-agent-handoff-v1",
-  "updated_at": "2026-11-08T22:33:15.253965+08:00",
+  "updated_at": "2026-11-09T18:00:53+08:00",
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
@@ -214,7 +214,7 @@
     },
     {
       "n": 26,
-      "current_scope": "Global theorem incomplete; independent 0.229 < r_D(26) <= rho with exact root and same-root cover; native 16 / 4957 / 344 unchanged; continuous goal paused.",
+      "current_scope": "Independent external computational proof of the exact arbitrary-center optimum is archived with replay inputs. Repository-native handoff: Global theorem incomplete; independent 0.229 < r_D(26) <= rho with exact root and same-root cover; native 16 / 4957 / 344 unchanged; continuous goal paused.",
       "authorities": [
         {
           "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json",
@@ -236,12 +236,30 @@
       ],
       "asset_availability": "Complete formal/arithmetic current snapshot bytes restored and hash-checked; explicit physical graph, 29 kernels and 344 exact OPEN domains independently checked; historical dependency closure and native geometry acceptance remain incomplete.",
       "next_actions": [
+        "Review the independent written reduction and replay the exact checker from its pinned shards.",
         "On explicit user resumption, continue the preserved 344 closed domains with new certificates; retain formal 16/4957 obligations and complete general-cover reduction.",
         "See external n14 vector-force and near-configuration quadratic methods; no n26 exclusion has yet been made with them."
       ],
       "complete_fresh_global_replay": false,
       "latest_continuation": "cover26/continuations/2026-11-08-terra/README.md",
-      "continuous_goal_status": "paused"
+      "continuous_goal_status": "paused",
+      "external_offline_submission": {
+        "path": "external-submissions/2026-11-09-n26-offline-proof/README.md",
+        "scope": "Independent computer-assisted proof for the closed unit disk, using Python and C++ exact certificate replay.",
+        "proof": {
+          "path": "external-submissions/2026-11-09-n26-offline-proof/n26/proof.md",
+          "bytes": 50480,
+          "sha256": "e235992ec6d53865cb6861625d99904a4f2d28b59aa43f9ca7b30efc87cf3dae"
+        },
+        "certificate_manifest": {
+          "path": "external-submissions/2026-11-09-n26-offline-proof/n26/certificates/manifest.json",
+          "bytes": 14264,
+          "sha256": "0856c1d5605f529238e021f8bac4f9cd3ab84861fd9e92bcd103e2ed2759c281"
+        },
+        "replay_record": "external-submissions/2026-11-09-n26-offline-proof/replay/n26.txt",
+        "submitter_replay_scope": "Original research passed every component of the exact proof. The archive run restored 45 original files byte for byte and reran the analytic and local checks, both 25-site exterior groups and the complete candidate angular partition. See the replay record for commands and exits.",
+        "canonical_root_equivalence_proved": false
+      }
     }
   ],
   "bundles": [

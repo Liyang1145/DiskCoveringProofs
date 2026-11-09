@@ -1,0 +1,6 @@
+/*.gz
+/round4/
+__pycache__/
+*.exe
+*.restoring
+reproduced_*.json
