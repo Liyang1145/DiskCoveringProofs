@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-agent-handoff-v1",
-  "updated_at": "2026-11-08T22:33:15.253965+08:00",
+  "updated_at": "2026-11-09T18:03:11+08:00",
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
@@ -138,7 +138,7 @@
     },
     {
       "n": 22,
-      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "current_scope": "Archived canonical source proof; its portable replay remains pending. A separate external n22 proof package has a full submitter replay.",
       "authorities": [
         {
           "path": "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/N22-GLOBAL-PROOF.md",
@@ -150,9 +150,35 @@
       "fresh_portable_commands": [],
       "asset_availability": "Complete snapshot-bound input union publicly downloadable; historical unrelated files excluded.",
       "next_actions": [
-        "Port and freshly replay the mathematical acceptance chain with explicit path relocation; preserve written-reduction qualifications."
+        "Port and freshly replay the mathematical acceptance chain with explicit path relocation; preserve written-reduction qualifications.",
+        "Independently review the external n22 geometric classification and compare its exact root to the canonical authority."
       ],
-      "complete_fresh_global_replay": false
+      "complete_fresh_global_replay": false,
+      "external_offline_submission": {
+        "path": "external-submissions/2026-11-09-n22-offline-proof/README.md",
+        "proof": {
+          "path": "external-submissions/2026-11-09-n22-offline-proof/n22/proof.md",
+          "bytes": 32089,
+          "sha256": "dcd5f10f5b0e593893d418516216f6b4e7a97204905fd29e720f34be7384ee7e",
+          "encoding": "identity"
+        },
+        "replay": {
+          "path": "external-submissions/2026-11-09-n22-offline-proof/replay/n22.txt",
+          "bytes": 10878,
+          "sha256": "f13ec34694520dd3d1b44a1881a742697132e04add9dc28588299362ba443748",
+          "encoding": "identity"
+        },
+        "original_result_log": {
+          "path": "external-submissions/2026-11-09-n22-offline-proof/n22/b14-certification.jsonl",
+          "bytes": 357751,
+          "sha256": "d1138bead3d02952790bc5bf8339122c8455154310fca3cbddb35f8c9f423b40",
+          "encoding": "identity"
+        },
+        "scope": "Independent arbitrary-center unit closed-disk covering proof for n22.",
+        "submitter_replay_scope": "Construction and finite geometric inequalities, 657 exact b=13 LP bounds, target incidence energy matrix, and all 231658 labeled b=14 cases across 7500 strips replayed with zero open cases.",
+        "maintainer_review_status": "pending",
+        "canonical_root_equivalence_proved": false
+      }
     },
     {
       "n": 23,
