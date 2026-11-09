@@ -49,3 +49,7 @@ STATUS 中随意挑一个 ACTIVE 标记替代这里指向的最新状态。
 [n=11、12、14 离线复证材料](external-submissions/2026-11-08-offline-proofs/README.md)汇集外来证明、证书与本次复算范围。
 
 [维护者整合与各阶当前范围](docs/PROOF-ASSET-INTEGRATION-20261108.md)列出 n=11/12/14 的实测范围及既有 n=25 全局源证明入口。
+
+## 2026-11-09 接续
+
+[n=22 独立证明与离线复证](external-submissions/2026-11-09-n22-offline-proof/README.md)汇集提交者文稿、同版源码和全量复算记录。仓库原有 n=22 权威入口见项目状态索引。

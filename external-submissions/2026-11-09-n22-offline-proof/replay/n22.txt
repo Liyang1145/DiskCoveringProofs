@@ -1,0 +1,202 @@
+n=22 submitter replay, 2026-11-09 (Asia/Shanghai)
+Windows AMD64, Python 3.11.9, NumPy 2.4.6, SciPy 1.17.1
+Working directory: n22/ (fresh temporary copy of the archived bytes)
+OPENBLAS_NUM_THREADS=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1
+Scope: submitted construction constants and geometric inequalities, 13-boundary exclusions,
+target incidence energy bound, and both 14-boundary incidence families.
+This is the submitter's replay of the separate archive.
+
+$ python -B verify.py
+Construction and constants for the sevenfold proof
+t (lower)                              certified margin ~ 3.630191e-05
+t (upper)                              certified margin ~ 6.369809e-05
+r_star (lower)                         certified margin ~ 8.077649e-18
+r_star (upper)                         certified margin ~ 1.192235e-17
+r_star < r_hi                          certified margin ~ 5.401649e-07
+cos(theta) (lower)                     certified margin ~ 0.0009688679
+cos(theta) (upper)                     certified margin ~ 0.004031132
+sin(theta) (lower)                     certified margin ~ 0.003883739
+sin(theta) (upper)                     certified margin ~ 0.006116261
+R_star (lower)                         certified margin ~ 0.008644563
+R_star (upper)                         certified margin ~ 0.001355437
+rho_star (lower)                       certified margin ~ 0.007509673
+rho_star (upper)                       certified margin ~ 0.01249033
+2 beta < theta                         certified margin ~ 0.108799
+rho at D=3.7                           certified margin ~ 0.03103456
+maximum outer half arc                 certified margin ~ 0.0009601882
+
+Universal area inequality
+one marked side                        certified margin ~ 5.512631e-06
+two marked sides                       certified margin ~ 0.01948337
+three marked sides                     certified margin ~ 0.08438189
+edge between two boundary points       certified margin ~ 0.207888
+G < M                                  certified margin ~ 0.8378981
+concavity of arc-area bound            certified margin ~ 0.4538548
+
+Boundary counts
+at least 13 distinct disks             certified margin ~ 0.06910821
+central half-arc monotonicity          certified margin ~ 0.1353436
+at most 15 boundary disks              certified margin ~ 0.2200432
+
+Exclude 15 boundary disks at r_hi
+central pair arc monotonicity          certified margin ~ 0.1572984
+five other disks arc monotonicity      certified margin ~ 0.07030641
+five disks miss the small circle       certified margin ~ 0.02121909
+central pair covers less than a circle  certified margin ~ 0.003580604
+outer disks miss the small circle      certified margin ~ 0.393496
+central disk misses witness circle     certified margin ~ 0.014496
+witness disk arc monotonicity          certified margin ~ 0.1931483
+inner arc bound > outer arc bound      certified margin ~ 0.2828448
+at least four witness gaps             certified margin ~ 0.004226226
+q=0 boundary interval                  certified margin ~ 0.04595853
+four witnesses, q=1                    certified margin ~ 0.04123938
+four witnesses, q>=2                   certified margin ~ 0.032294
+five witnesses, q=1                    certified margin ~ 0.490766
+four witnesses need >=2 used arcs      certified margin ~ 0.1946118
+five witnesses need all five arcs      certified margin ~ 0.05904182
+six witnesses: arcs too short          certified margin ~ 0.05400862
+
+Remaining generic branches at r <= r_star
+excluded: b=13, k>=14                  certified margin ~ 0.01602981
+excluded: b=14, k>=16                  certified margin ~ 0.02106585
+excluded: b=14, one enclosed arc       certified margin ~ 0.009965958
+b=13 also needs r > 0.25201            certified margin ~ 0.001756668
+
+Geometric restrictions on the remaining Voronoi graphs
+short-span orientation                 certified margin ~ 0.4606638
+exclude long boundary chords           certified margin ~ 0.05006358
+exclude two disjoint chords for b=14   certified margin ~ 0.03101895
+small angular block, b=13              certified margin ~ 0.02592653
+exclude a common neighbor, b=13        certified margin ~ 0.01828248
+small angular block, b=14              certified margin ~ 0.05181192
+exclude a common neighbor, b=14        certified margin ~ 0.03756502
+origin-neighbor arc monotonicity       certified margin ~ 0.2076443
+origin-neighbor arc is short           certified margin ~ 0.008047609
+thin arc below equal share             certified margin ~ 0.141661
+b=13: origin disk has no boundary neighbor  certified margin ~ 0.08180946
+b=13: no 3-cycle enclosing 1 sites     certified margin ~ 0.09367262
+b=13: no 4-cycle enclosing 1 sites     certified margin ~ 0.02903763
+b=14: no 3-cycle enclosing 1 sites     certified margin ~ 0.04496874
+b=14: no 4-cycle enclosing 2 sites     certified margin ~ 0.1469655
+b=14: origin disk has at most one boundary neighbor  certified margin ~ 0.01963139
+b=14: no filled 4-cycle with 1 boundary edges  certified margin ~ 0.006934091
+b=14: no filled 4-cycle with 2 boundary edges  certified margin ~ 0.02356504
+b=14: no filled 4-cycle with 3 boundary edges  certified margin ~ 0.02107269
+b=14: no filled 4-cycle with 4 boundary edges  certified margin ~ 0.01858035
+b=14: no 5-cycle enclosing two sites   certified margin ~ 0.04295316
+b=14: no two disjoint degree-four stars  certified margin ~ 0.06702026
+b=14: no degree >=9 with <=2 marked faces  certified margin ~ 0.003178374
+b=14: four-arc block below average     certified margin ~ 0.008665033
+b=14: no degree >=9 with 3 marked faces  certified margin ~ 0.002709259
+
+Exclude all generic covers at the lower test radius
+excluded: b=13, k>=b                   certified margin ~ 0.06038415
+excluded: b=14, k>=b                   certified margin ~ 1.960147e-05
+Exit code: 0; elapsed: 7.3 s
+
+$ python -B verify_b13.py
+(1, 2, 1, 2, 2, 1, 2, 2) None excluded with 93 core cases
+(1, 2, 1, 2, 1, 2, 2, 2) None excluded with 93 core cases
+(1, 1, 2, 2, 1, 2, 2, 2) None excluded with 93 core cases
+(1, 1, 2, 1, 2, 2, 2, 2) None excluded with 93 core cases
+(1, 1, 1, 2, 2, 2, 2, 2) None excluded by strip alone
+(1, 2, 2, 2, 2, 2, 2) None excluded by strip alone
+(1, 2, 2, 2, 2, 2, 2) 0 excluded by strip alone
+(1, 2, 2, 2, 2, 2, 2) 1 excluded by strip alone
+(1, 2, 2, 2, 2, 2, 2) 2 excluded with 93 core cases
+(1, 2, 2, 2, 2, 2, 2) 3 excluded with 93 core cases
+(1, 2, 2, 2, 2, 2, 2) 4 excluded with 93 core cases
+(1, 2, 2, 2, 2, 2, 2) 5 excluded by strip alone
+(1, 2, 2, 2, 2, 2, 2) 6 excluded by strip alone
+b=13 excluded. 657 exact LP bounds. Smallest certified margin ~ 0.0006529983
+Exit code: 0; elapsed: 41.3 s
+
+$ python -B verify_topology.py
+All witness-to-nonincident-site squared distances > 3.445042
+Taylor lower matrix positive definite after fixing d_0=0. Min pivot 0.037523199
+Exit code: 0; elapsed: 25.9 s
+
+$ python -B verify_b14.py --all --workers 4 --nodes 48 --log b14-rerun.jsonl
+{"index":99,"total":26,"open":[],"ear":false}
+{"index":199,"total":9,"open":[],"ear":false}
+{"index":301,"total":40,"open":[],"ear":false}
+{"index":401,"total":6,"open":[],"ear":false}
+{"index":502,"total":36,"open":[],"ear":false}
+{"index":601,"total":28,"open":[],"ear":false}
+{"index":702,"total":38,"open":[],"ear":false}
+{"index":801,"total":20,"open":[],"ear":false}
+{"index":879,"total":45,"open":[],"ear":false}
+{"index":1002,"total":18,"open":[],"ear":false}
+ear=False: 1015 strips, 29687 exact exclusions, 0 open
+{"index":99,"total":20,"open":[],"ear":true}
+{"index":201,"total":51,"open":[],"ear":true}
+{"index":300,"total":51,"open":[],"ear":true}
+{"index":400,"total":28,"open":[],"ear":true}
+{"index":501,"total":16,"open":[],"ear":true}
+{"index":598,"total":24,"open":[],"ear":true}
+{"index":701,"total":8,"open":[],"ear":true}
+{"index":797,"total":6,"open":[],"ear":true}
+{"index":897,"total":57,"open":[],"ear":true}
+{"index":997,"total":24,"open":[],"ear":true}
+{"index":1097,"total":28,"open":[],"ear":true}
+{"index":1197,"total":9,"open":[],"ear":true}
+{"index":1300,"total":26,"open":[],"ear":true}
+{"index":1401,"total":2,"open":[],"ear":true}
+{"index":1502,"total":0,"open":[],"ear":true}
+{"index":1597,"total":3,"open":[],"ear":true}
+{"index":1701,"total":30,"open":[],"ear":true}
+{"index":1801,"total":7,"open":[],"ear":true}
+{"index":1899,"total":44,"open":[],"ear":true}
+{"index":1998,"total":54,"open":[],"ear":true}
+{"index":2099,"total":16,"open":[],"ear":true}
+{"index":2199,"total":58,"open":[],"ear":true}
+{"index":2300,"total":42,"open":[],"ear":true}
+{"index":2398,"total":15,"open":[],"ear":true}
+{"index":2498,"total":48,"open":[],"ear":true}
+{"index":2599,"total":38,"open":[],"ear":true}
+{"index":2699,"total":9,"open":[],"ear":true}
+{"index":2801,"total":36,"open":[],"ear":true}
+{"index":2902,"total":46,"open":[],"ear":true}
+{"index":2999,"total":70,"open":[],"ear":true}
+{"index":3099,"total":21,"open":[],"ear":true}
+{"index":3199,"total":46,"open":[],"ear":true}
+{"index":3300,"total":62,"open":[],"ear":true}
+{"index":3398,"total":17,"open":[],"ear":true}
+{"index":3497,"total":46,"open":[],"ear":true}
+{"index":3596,"total":32,"open":[],"ear":true}
+{"index":3699,"total":68,"open":[],"ear":true}
+{"index":3799,"total":15,"open":[],"ear":true}
+{"index":3900,"total":82,"open":[],"ear":true}
+{"index":4002,"total":40,"open":[],"ear":true}
+{"index":4101,"total":17,"open":[],"ear":true}
+{"index":4199,"total":116,"open":[],"ear":true}
+{"index":4300,"total":48,"open":[],"ear":true}
+{"index":4399,"total":80,"open":[],"ear":true}
+{"index":4499,"total":24,"open":[],"ear":true}
+{"index":4599,"total":4,"open":[],"ear":true}
+{"index":4699,"total":17,"open":[],"ear":true}
+{"index":4798,"total":2,"open":[],"ear":true}
+{"index":4900,"total":16,"open":[],"ear":true}
+{"index":5000,"total":21,"open":[],"ear":true}
+{"index":5100,"total":11,"open":[],"ear":true}
+{"index":5198,"total":42,"open":[],"ear":true}
+{"index":5301,"total":26,"open":[],"ear":true}
+{"index":5402,"total":8,"open":[],"ear":true}
+{"index":5498,"total":9,"open":[],"ear":true}
+{"index":5600,"total":19,"open":[],"ear":true}
+{"index":5699,"total":18,"open":[],"ear":true}
+{"index":5799,"total":23,"open":[],"ear":true}
+{"index":5899,"total":46,"open":[],"ear":true}
+{"index":6000,"total":19,"open":[],"ear":true}
+{"index":6101,"total":24,"open":[],"ear":true}
+{"index":6202,"total":20,"open":[],"ear":true}
+{"index":6298,"total":30,"open":[],"ear":true}
+{"index":6401,"total":32,"open":[],"ear":true}
+ear=True: 6485 strips, 201971 exact exclusions, 0 open
+Exit code: 0; elapsed: 337.8 s
+
+ear=False: verified all 1015 strip IDs, 29687 labeled cases, 0 open
+ear=True: verified all 6485 strip IDs, 201971 labeled cases, 0 open
+Keyed comparison with the archived JSONL: passed (worker order may vary).
+Archived JSONL SHA-256: d1138bead3d02952790bc5bf8339122c8455154310fca3cbddb35f8c9f423b40
+All four replay commands completed; total elapsed: 412.3 s
