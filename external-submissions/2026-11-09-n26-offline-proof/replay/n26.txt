@@ -1,0 +1,195 @@
+n=26 independent offline proof
+Original research replay summary
+The exact proof was replayed component by component in the source workspace.
+- check_all.py: passed both rational covers, root isolation, analytic and local certificates.
+- check_belt14.py and check_transfer14.py: passed regenerated b=14 enumeration, h=10/11 residuals 33,666 and 307,702, with zero open.
+- check_outer_layers.py --disks 25 --boundary 15: passed 12,965 fillings.
+- check_outer_layers.py --disks 25 --boundary 16: passed 4,968 fillings.
+- check_outer_layers.py --disks 26 --boundary 15: passed 599,398 fillings, zero open.
+- check_outer_layers.py --disks 26 --boundary 16 --require-complete: passed all 20 chorded classes, 153,206 fillings, zero open.
+- check_outer_layers.py --disks 26 --boundary 17: passed all 156 classes, 30,048 fillings, zero open.
+- check_outer_layers.py --disks 26 --boundary 16 --candidate-shell --halfturn --candidate-partition round4/candidate_halfturn_finish.json --require-complete: 56,350 excluded, 4 isomorphic candidate fills, angle partition 1,751 excluded leaves, 4 local, 0 open.
+
+2026-11-09 archive verification from a clean replay directory
+Python 3.11.9
+g++ (Rev3, Built by MSYS2 project) 16.2.0
+Command: python restore_certificates.py --destination <clean replay directory>
+Exit: 0
+Wall time: 4.59 s
+PASS 39 shard hashes, archive SHA-256, and 45 certificate files (45 restored)
+Byte comparison: all 45 restored certificates match the original proof byte for byte.
+Scope: the following commands were rerun on the restored archive.
+
+Command: python check_all.py
+Exit: 0
+Wall time: 128.42 s
+PASS  U = 234701/1000000  (0.234701)
+Feasible candidate checks by cell: {'interior': 102, 'circle_line': 32, 'circle_stationary': 16}
+PASS  U = 4694001808013/20000000000000  (0.23470009040065)
+Feasible candidate checks by cell: {'interior': 102, 'circle_line': 32, 'circle_stationary': 16}
+PASS  U = 28649913378960966750096451877037613227599604938351/122070312500000000000000000000000000000000000000000  (0.2347000904004482)
+Feasible candidate checks by cell: {'interior': 102, 'circle_line': 32, 'circle_stationary': 16}
+PASS: all exact inequalities in the eight-disk proof and k=14..17 reduction
+PASS k=14, r in [0.2238, 0.2238], weighted sum <= 0.993953149829, boxes=[1, 31, 25]
+PASS k=15, r in [0.2238, 0.2238], weighted sum <= 0.998875498438, boxes=[20, 200, 179]
+PASS k=16, r in [0.2238, 0.2238], weighted sum <= 0.997958390628, boxes=[25, 166, 129]
+PASS k=17, r in [0.2238, 0.2238], weighted sum <= 0.991140783429, boxes=[37, 83, 29]
+PASS k=14, r in [0.2265, 0.2265], weighted sum <= 0.997938718636, boxes=[5, 64, 59]
+PASS k=17, r in [0.2265, 0.2265], weighted sum <= 0.998719018699, boxes=[165, 351, 182]
+PASS repeated arcs at r=0.2265: area+cap <= 3.129304392445, boxes=207
+PASS b<=16 at r=0.2265: area <= 3.141078623272, boxes=325
+PASS b<=14 at r=0.23185: area <= 3.141504882583, boxes=461
+PASS 25 disks, b<=14 at r=0.234701: area <= 3.114173613915, boxes=105
+PASS: k=14 nonconsecutive exterior disks are disjoint at r<=0.235
+PASS: 24 disks at r<=0.235 require area <= 3.108964422605, boxes=154
+PASS: no repeated Voronoi boundary arcs for 25 disks in this radius range
+PASS: 25 disks at r<=0.231 require area <= 3.137866857210, boxes=246
+PASS: no repeated Voronoi boundary arcs for 26 disks in this radius range
+PASS: exact graph-distance pruning constants for fourteen boundary vertices
+PASS n=26, k=15, low=None, r in [0.2275, 0.2275], area <= 3.130274781886, boxes=[9, 25, 16]
+PASS n=26, k=16, low=None, r in [0.2275, 0.2275], area <= 3.140901251090, boxes=[149, 375, 401]
+PASS n=26, k=17, low=None, r in [0.2275, 0.2275], area <= 3.138492093451, boxes=[158, 367, 268]
+PASS n=26, k=15, low=None, r in [0.22835, 0.22835], area <= 3.134200106587, boxes=[9, 35, 25]
+PASS n=26, k=16, low=None, r in [0.22835, 0.22835], area <= 3.140071680282, boxes=[93, 176, 104]
+PASS n=26, k=17, low=None, r in [0.22835, 0.22835], area <= 3.136535104960, boxes=[44, 113, 90]
+PASS n=26, k=14, low=4, r in [0.23185, 0.234701], area <= 3.013297074599, boxes=[1, 1, 19, 58]
+PASS n=26, k=15, low=None, r in [0.2275, 0.22862], area <= 3.140864674758, boxes=[346, 2346, 118]
+PASS n=26, k=15, low=None, r in [0.22862, 0.22905], area <= 3.140247673708, boxes=[23, 109, 60]
+PASS n=26, k=16, low=None, r in [0.22846, 0.22846], area <= 3.140945760591, boxes=[100, 261, 184]
+PASS n=26, k=16, low=0, r in [0.22855, 0.22855], area <= 3.140210772740, boxes=[103, 0, 144, 155]
+PASS n=26, k=16, low=1, r in [0.22855, 0.22855], area <= 3.141243131321, boxes=[92, 93, 355, 373]
+PASS n=26, k=16, low=0, r in [0.22861, 0.22861], area <= 3.140491277219, boxes=[108, 0, 179, 196]
+PASS n=26, k=16, low=1, r in [0.22861, 0.22861], area <= 3.141472532814, boxes=[168, 191, 755, 747]
+PASS n=26, k=16, low=0, r in [0.22862, 0.22862], area <= 3.140650206094, boxes=[159, 0, 209, 221]
+PASS n=26, k=16, low=1, r in [0.22862, 0.22862], area <= 3.141565568686, boxes=[402, 436, 1818, 1937]
+PASS n=26, k=17, low=None, r in [0.22765, 0.22765], area <= 3.141292851401, boxes=[356, 859, 1069]
+PASS n=26, k=17, low=None, r in [0.2287, 0.2287], area <= 3.140926739874, boxes=[131, 299, 260]
+PASS n=25, k=15, low=None, r in [0.2328, 0.2328], area <= 3.134068749490, boxes=[25, 47, 25]
+PASS n=25, k=16, low=None, r in [0.2328, 0.2328], area <= 3.138255084989, boxes=[37, 75, 58]
+PASS: algebraic template zero exists and is unique in the stated box
+contraction <= 1.89118e-55, center movement <= 8.30979e-64
+PASS: seam order, slack triangle, and strict local minimum in the template
+PASS: 36 locally necessary contacts, full row rank, all multipliers positive
+PASS: positive Hessian on the 16-dimensional tangent, min LDL pivot > 0.037
+PASS: explicit local box of coordinate half-width 1e-09 (including q = r^2)
+PASS candidate contact graph with fixed seam 14, distances <= 0.0255; lower endpoints (rounded): weight 0.0041065519, LDL pivot 0.0060017256
+PASS labeled candidate filling and its closed prefix box
+PASS: analytic bounds, exact covers and local candidate certificates
+
+Command: python check_outer_layers.py --disks 25 --boundary 15
+Exit: 0
+Wall time: 63.75 s
+PASS b=15 rooted=31 dihedral_classes=3
+chords/rooted/classes [(0, 1, 1), (1, 15, 1), (2, 15, 1)]
+PASS b=16 rooted=441 dihedral_classes=21
+chords/rooted/classes [(0, 1, 1), (1, 32, 2), (2, 168, 9), (3, 224, 8), (4, 16, 1)]
+PASS b=17 rooted=4676 dihedral_classes=156
+chords/rooted/classes [(0, 1, 1), (1, 51, 3), (2, 510, 20), (3, 1717, 55), (4, 2023, 65), (5, 357, 11), (6, 17, 1)]
+PASS b=17, shared interior neighbor across six steps: area <= 3.130623201685, boxes=[348, 232]
+PASS n=26 b=15, shared interior neighbor across 4 steps: area <= 3.140358242342, boxes=[377, 225]
+PASS n=26 b=16, shared interior neighbor across 5 steps: area <= 3.129938395908, boxes=[337, 219]
+PASS n=25 b=15, shared interior neighbor across 4 steps: area <= 3.011867308866, boxes=[401, 231]
+PASS n=25 b=16, shared interior neighbor across 5 steps: area <= 3.007716739081, boxes=[377, 231]
+PASS n=25 b=16, three-step chord: area <= 3.134095510904, boxes=[291, 317]
+PASS n=25 b=15, two chords: area <= 3.133783860990, boxes=[338, 312, 304]
+PASS n=25 b=16 with two-step chords only, rooted=297, dihedral_classes=16
+b=15 n=25 chords=none visited=1464813 shells=172610 representatives=5823 truncated=0
+7 8
+8 268
+9 5547
+PASS n=25 b=15 excluded=5367 leaves=5367 remaining=456
+remaining by first layer [(8, 14), (9, 442)]
+b=15 n=25 visited=43427 fillings=11848 truncated=0
+PASS n=25 b=15 shells=456 proofs=9750 leaves=9757 excluded=11848 remaining=0
+b=15 n=25 chords=0,2 visited=274500 shells=16133 representatives=8075 truncated=0
+7 6
+8 318
+9 7751
+PASS n=25 b=15 excluded=7984 leaves=7984 remaining=91
+remaining by first layer [(9, 91)]
+b=15 n=25 visited=5456 fillings=1117 truncated=0
+PASS n=25 b=15 shells=91 proofs=1100 leaves=1100 excluded=1117 remaining=0
+PASS n=25 b=15: excluded chord classes [0, 1]
+
+Command: python check_outer_layers.py --disks 25 --boundary 16
+Exit: 0
+Wall time: 109.12 s
+PASS b=15 rooted=31 dihedral_classes=3
+chords/rooted/classes [(0, 1, 1), (1, 15, 1), (2, 15, 1)]
+PASS b=16 rooted=441 dihedral_classes=21
+chords/rooted/classes [(0, 1, 1), (1, 32, 2), (2, 168, 9), (3, 224, 8), (4, 16, 1)]
+PASS b=17 rooted=4676 dihedral_classes=156
+chords/rooted/classes [(0, 1, 1), (1, 51, 3), (2, 510, 20), (3, 1717, 55), (4, 2023, 65), (5, 357, 11), (6, 17, 1)]
+PASS b=17, shared interior neighbor across six steps: area <= 3.130623201685, boxes=[348, 232]
+PASS n=26 b=15, shared interior neighbor across 4 steps: area <= 3.140358242342, boxes=[377, 225]
+PASS n=26 b=16, shared interior neighbor across 5 steps: area <= 3.129938395908, boxes=[337, 219]
+PASS n=25 b=15, shared interior neighbor across 4 steps: area <= 3.011867308866, boxes=[401, 231]
+PASS n=25 b=16, shared interior neighbor across 5 steps: area <= 3.007716739081, boxes=[377, 231]
+PASS n=25 b=16, three-step chord: area <= 3.134095510904, boxes=[291, 317]
+PASS n=25 b=15, two chords: area <= 3.133783860990, boxes=[338, 312, 304]
+PASS n=25 b=16 with two-step chords only, rooted=297, dihedral_classes=16
+b=16 n=25 chords=none visited=942689 shells=69042 representatives=2213 truncated=0
+6 2
+7 75
+8 2136
+b=16 n=25 chords=0,2 visited=326482 shells=17869 representatives=8950 truncated=0
+6 3
+7 269
+8 8678
+b=16 n=25 chords=0,2:0,14 visited=105224 shells=5571 representatives=2800 truncated=0
+7 74
+8 2726
+b=16 n=25 chords=0,2:0,14:2,4 visited=51918 shells=2404 representatives=1209 truncated=0
+7 33
+8 1176
+b=16 n=25 chords=0,2:0,14:2,4:4,6 visited=21036 shells=649 representatives=331 truncated=0
+7 10
+8 321
+b=16 n=25 chords=0,2:0,14:3,5 visited=14899 shells=754 representatives=754 truncated=0
+7 20
+8 734
+b=16 n=25 chords=0,2:0,14:4,6 visited=28915 shells=1066 representatives=1066 truncated=0
+7 28
+8 1038
+b=16 n=25 chords=0,2:0,14:5,7 visited=14335 shells=597 representatives=597 truncated=0
+7 15
+8 582
+b=16 n=25 chords=0,2:0,14:6,8 visited=21429 shells=624 representatives=624 truncated=0
+7 15
+8 609
+b=16 n=25 chords=0,2:0,14:7,9 visited=17033 shells=809 representatives=408 truncated=0
+7 11
+8 397
+b=16 n=25 chords=0,2:3,5 visited=98508 shells=6742 representatives=3374 truncated=0
+6 1
+7 104
+8 3269
+b=16 n=25 chords=0,2:4,6 visited=90836 shells=3879 representatives=1952 truncated=0
+7 50
+8 1902
+b=16 n=25 chords=0,2:5,7 visited=84480 shells=3917 representatives=1978 truncated=0
+6 1
+7 59
+8 1918
+b=16 n=25 chords=0,2:6,8 visited=99524 shells=3268 representatives=1649 truncated=0
+7 41
+8 1608
+b=16 n=25 chords=0,2:7,9 visited=66314 shells=1585 representatives=796 truncated=0
+7 17
+8 779
+b=16 n=25 chords=0,2:8,10 visited=77784 shells=2052 representatives=526 truncated=0
+7 13
+8 513
+checked exterior proofs=20000
+PASS n=25 b=16 excluded=28739 leaves=28739 remaining=488
+remaining by first layer [(7, 5), (8, 483)]
+b=16 n=25 visited=21399 fillings=4968 truncated=0
+PASS n=25 b=16 shells=488 proofs=4749 leaves=5770 excluded=4968 remaining=0
+PASS n=25 b=16: excluded chord classes [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+
+Command: python verify_candidate_cell.py --partition round4/candidate_halfturn_finish.json --halfturn --require-complete
+Exit: 0
+Wall time: 42.17 s
+PASS candidate contact graph with fixed seam 14, distances <= 0.0255; lower endpoints (rounded): weight 0.0041065519, LDL pivot 0.0060017256
+PASS labeled candidate filling and its closed prefix box
+PASS candidate partition: excluded=1751 local=4 open=0
