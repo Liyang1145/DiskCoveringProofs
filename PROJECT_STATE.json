@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-agent-handoff-v1",
-  "updated_at": "2026-11-08T22:33:15.253965+08:00",
+  "updated_at": "2026-11-10T18:10:22+08:00",
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
@@ -194,7 +194,7 @@
     },
     {
       "n": 25,
-      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "current_scope": "Archived global source proof; complete portable global replay unavailable. Independent offline proof and scoped replay archived separately.",
       "authorities": [
         {
           "path": "cover25/verification/final-acceptance/ACCEPTED/GLOBAL-SOURCE-ACCEPTED.json",
@@ -207,10 +207,45 @@
       "asset_availability": "Core bundle and complete 1020085-file migrated frozen union publicly downloadable; 260 hash-bound packages, not a proved minimal proof package.",
       "next_actions": [
         "Route freshly recomputed local/stress results into n25 angle-tree math; archived flags alone are insufficient.",
-        "Freshly replay the supplied global/catalog chains with explicit path relocation and mathematical checks."
+        "Freshly replay the supplied global/catalog chains with explicit path relocation and mathematical checks.",
+        "Audit the independent archive's written reductions and replay the other documented C++ modes separately from the native n25 chain."
       ],
       "complete_fresh_global_replay": false,
-      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md"
+      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md",
+      "external_offline_proof": {
+        "archive": "external-submissions/2026-11-10-offline-proofs/README.md",
+        "replay_report": "external-submissions/2026-11-10-offline-proofs/replay/n25.txt",
+        "result_as_stated": "r_D(25) = 1/(sqrt(6)+sqrt(3))",
+        "source_files": [
+          {
+            "path": "external-submissions/2026-11-10-offline-proofs/n25/proof.md",
+            "bytes": 272151,
+            "sha256": "6f4954aee68f18f25f6162e9d6d40b9739be664957d74eb30b9186c5c202a91a",
+            "encoding": "identity"
+          },
+          {
+            "path": "external-submissions/2026-11-10-offline-proofs/n25/verify.py",
+            "bytes": 189041,
+            "sha256": "5473ad1ec45614ecb40fd80cb1c80735a1a202756e48e239dcc79e34389fd05d",
+            "encoding": "identity"
+          },
+          {
+            "path": "external-submissions/2026-11-10-offline-proofs/n25/verify_k7.cpp",
+            "bytes": 281140,
+            "sha256": "c3120096621091142f3288f500b80093beea4218ca476e5c6476288faee12ae1",
+            "encoding": "identity"
+          }
+        ],
+        "fresh_replay": [
+          "verify.py",
+          "high-fourteen-mark-pair",
+          "tighter-octagon-fan",
+          "nine-joint"
+        ],
+        "joint_cases": 8,
+        "joint_layouts": 64,
+        "full_cpp_replay_in_this_batch": false
+      }
     },
     {
       "n": 26,

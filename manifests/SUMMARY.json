@@ -18,8 +18,8 @@
     12,
     14
   ],
-  "delivered_files": 14993,
-  "delivered_original_bytes": 3036666353,
+  "delivered_files": 14998,
+  "delivered_original_bytes": 3037468699,
   "complete_historical_dependency_mirror": false,
   "complete_not_delivered_file_inventory": false,
   "this_delivery_is_new_mathematical_acceptance": false,
@@ -46,7 +46,7 @@
   "full_n23_n25_asset_content_public": true,
   "n21_n22_frozen_input_content_public": true,
   "release_input_math_replayed": false,
-  "snapshot_update_date": "2026-11-08",
+  "snapshot_update_date": "2026-11-10",
   "latest_n26_continuation": "cover26/continuations/2026-11-08-terra/README.md",
   "n26_continuous_goal_status": "paused",
   "n26_independently_checked_range": "0.229 < r_D(26) <= rho < 0.234700090400448239616790133776693",
@@ -54,5 +54,7 @@
   "navigation_manifest_repair_report": "verification/reproducibility/navigation-manifest-repair-20261108.json",
   "external_offline_submission": "external-submissions/2026-11-08-offline-proofs/README.md",
   "latest_proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md",
-  "external_k9_full_maintainer_replay": false
+  "external_k9_full_maintainer_replay": false,
+  "external_n25_offline_submission": "external-submissions/2026-11-10-offline-proofs/README.md",
+  "external_n25_replay_scope": "Complete supplied Python verifier and selected C++ modes, including 64 nine-joint layouts."
 }

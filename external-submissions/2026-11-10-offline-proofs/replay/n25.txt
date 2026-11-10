@@ -1,0 +1,657 @@
+n=25 独立离线证明的复算记录
+本批次日期 2026-11-10（Asia/Shanghai）
+环境 Windows x64，Python 3.11.9，MSYS2 UCRT64 GCC 16.2.0
+各命令在三份原稿的同字节副本目录执行，复算目录以相对路径表示。
+
+=== 本批次编译 ===
+& 'C:\msys64\ucrt64\bin\g++.exe' -std=c++17 -O3 -ffp-contract=off -fno-fast-math -pthread .\verify_k7.cpp -o .\verify_k7.exe
+诊断：GCC 在内联 std::vector<int> 赋值 groups = {0}（verify_k7.cpp 第 1725 行）时报告 -Wstringop-overflow。
+In file included from C:/msys64/ucrt64/include/c++/16.2.0/memory:71,
+                 from .\verify_k7.cpp:13:
+In function '_ForwardIterator std::uninitialized_copy(_InputIterator, _InputIterator, _ForwardIterator) [with _InputIterator = const int*; _ForwardIterator = int*]',
+    inlined from '_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _Sentinel, _ForwardIterator, allocator<_Tp>&) [with _InputIterator = const int*; _Sentinel = const int*; _ForwardIterator = int*; _Tp = int]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_uninitialized.h:661:37,
+    inlined from 'void std::vector<_Tp, _Alloc>::_M_assign_aux(_ForwardIterator, _ForwardIterator, std::forward_iterator_tag) [with _ForwardIterator = const int*; _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/vector.tcc:356:35,
+    inlined from 'std::vector<_Tp, _Alloc>& std::vector<_Tp, _Alloc>::operator=(std::initializer_list<_Tp>) [with _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:847:21,
+    inlined from 'bool verify_radial_gap_patterns(int, RimPathCase, int, int, int, bool, int, const SharedGapCells*, const std::vector<std::array<int, 3> >*)' at .\verify_k7.cpp:1725:35:
+C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_uninitialized.h:294:31: warning: writing 4 bytes into a region of size 0 [-Wstringop-overflow=]
+  294 |               __builtin_memcpy(std::__niter_base(__result),
+      |               ~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  295 |                                std::__niter_base(__first),
+      |                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  296 |                                __n * sizeof(_ValT));
+      |                                ~~~~~~~~~~~~~~~~~~~~
+In file included from C:/msys64/ucrt64/include/c++/16.2.0/x86_64-w64-mingw32/bits/c++allocator.h:33,
+                 from C:/msys64/ucrt64/include/c++/16.2.0/bits/allocator.h:46,
+                 from C:/msys64/ucrt64/include/c++/16.2.0/bits/alloc_traits.h:39,
+                 from C:/msys64/ucrt64/include/c++/16.2.0/condition_variable:46,
+                 from C:/msys64/ucrt64/include/c++/16.2.0/future:44,
+                 from .\verify_k7.cpp:9:
+In member function '_Tp* std::__new_allocator<_Tp>::allocate(size_type, const void*) [with _Tp = int]',
+    inlined from 'static _Tp* std::allocator_traits<std::allocator<_Tp1> >::allocate(allocator_type&, size_type) [with _Tp = int]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/alloc_traits.h:638:28,
+    inlined from 'std::_Vector_base<_Tp, _Alloc>::pointer std::_Vector_base<_Tp, _Alloc>::_M_allocate(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:389:33,
+    inlined from 'void std::vector<_Tp, _Alloc>::_M_range_initialize_n(_Iterator, _Sentinel, size_type) [with _Iterator = const int*; _Sentinel = const int*; _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:1975:23,
+    inlined from 'std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:702:23,
+    inlined from 'bool verify_radial_gap_patterns(int, RimPathCase, int, int, int, bool, int, const SharedGapCells*, const std::vector<std::array<int, 3> >*)' at .\verify_k7.cpp:1724:78:
+C:/msys64/ucrt64/include/c++/16.2.0/bits/new_allocator.h:162:75: note: at offset 20 into destination object of size 20 allocated by 'operator new'
+  162 |           return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+      |                                                                           ^
+In member function '_Tp* std::__new_allocator<_Tp>::allocate(size_type, const void*) [with _Tp = int]',
+    inlined from 'static _Tp* std::allocator_traits<std::allocator<_Tp1> >::allocate(allocator_type&, size_type) [with _Tp = int]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/alloc_traits.h:638:28,
+    inlined from 'std::_Vector_base<_Tp, _Alloc>::pointer std::_Vector_base<_Tp, _Alloc>::_M_allocate(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:389:33,
+    inlined from 'void std::vector<_Tp, _Alloc>::_M_range_initialize_n(_Iterator, _Sentinel, size_type) [with _Iterator = const int*; _Sentinel = const int*; _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:1975:23,
+    inlined from 'std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:702:23,
+    inlined from 'bool verify_radial_gap_patterns(int, RimPathCase, int, int, int, bool, int, const SharedGapCells*, const std::vector<std::array<int, 3> >*)' at .\verify_k7.cpp:1724:78:
+C:/msys64/ucrt64/include/c++/16.2.0/bits/new_allocator.h:162:75: note: at offset 20 into destination object of size 20 allocated by 'operator new'
+  162 |           return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+      |                                                                           ^
+In member function '_Tp* std::__new_allocator<_Tp>::allocate(size_type, const void*) [with _Tp = int]',
+    inlined from 'static _Tp* std::allocator_traits<std::allocator<_Tp1> >::allocate(allocator_type&, size_type) [with _Tp = int]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/alloc_traits.h:638:28,
+    inlined from 'std::_Vector_base<_Tp, _Alloc>::pointer std::_Vector_base<_Tp, _Alloc>::_M_allocate(std::size_t) [with _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:389:33,
+    inlined from 'void std::vector<_Tp, _Alloc>::_M_range_initialize_n(_Iterator, _Sentinel, size_type) [with _Iterator = const int*; _Sentinel = const int*; _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:1975:23,
+    inlined from 'std::vector<_Tp, _Alloc>::vector(std::initializer_list<_Tp>, const allocator_type&) [with _Tp = int; _Alloc = std::allocator<int>]' at C:/msys64/ucrt64/include/c++/16.2.0/bits/stl_vector.h:702:23,
+    inlined from 'bool verify_radial_gap_patterns(int, RimPathCase, int, int, int, bool, int, const SharedGapCells*, const std::vector<std::array<int, 3> >*)' at .\verify_k7.cpp:1724:78:
+C:/msys64/ucrt64/include/c++/16.2.0/bits/new_allocator.h:162:75: note: at offset 20 into destination object of size 20 allocated by 'operator new'
+  162 |           return static_cast<_Tp*>(_GLIBCXX_OPERATOR_NEW(__n * sizeof(_Tp)));
+      |                                                                           ^
+exit=0
+
+=== 本批次 Python ===
+python -I -B .\verify.py
+rim classification and rotational-case constants verified
+construction radius: [0.23914631173810026822, 0.23914631173810026823]
+seven inner disks excluded with b <= 16: 73 intervals, rim half-angle deficit [0.044213647, 0.044213648]
+17 boundary disks excluded: 1405 boxes, rim half-angle deficit [0.026727091, 0.026727092]
+1 repeated connectors: paired-star area deduction [2.094305610, 2.094305611]
+2 repeated connectors: paired-star area deduction [2.829650049, 2.829650050]
+16 active cells, degree-8 core: repeated connector excluded on 789 intervals, area deficit [0.002831688, 0.002831689]
+degree-8 single-edge charges verified on 8747 boxes
+degree-8 double-edge charges verified on 41 intervals
+16 outer, 14 active, degree-8 core excluded: rim half-angle deficit [0.008780866, 0.008780867]
+every origin-covering core needs an all-inner exterior triangle
+wide-side two-core annulus is within radius [1.068048885, 1.068048886]
+six-edge side of the two-core nine-ring is within radius [1.454850638, 1.454850639]
+two interface repeat groups excluded on 184 intervals, rim half-angle deficit [0.049789388, 0.049789389]
+nine positive interface edges with fifteen outer sites need at least six connectors; six means three pairs
+fourteen-arc connector-span charge certified on 272 intervals
+fourteen outer sites: fans have at most three gaps, three gaps need apex radius above 1.98
+inner octagon degree 4: 330 labeled triangulations, 24 dihedral types, 150 types with connector repeats
+inner octagon degree 5: 120 labeled triangulations, 9 dihedral types, 57 types with connector repeats
+inner octagon degree 6: 36 labeled triangulations, 4 dihedral types, 20 types with connector repeats
+inner octagon degree 7: 8 labeled triangulations, 1 dihedral types, 5 types with connector repeats
+14 outer, 8 inner reaching R-2 excluded: 571 intervals, residual rim budget [0.004099133, 0.004099134]
+14 outer disks require at least nine positive edges in every winding inner interface cycle
+m=14: test R=[4.2525, 4.2525], area deficit [0.004412553, 0.004412554]
+m=15: test R=[4.2770, 4.2770], area deficit [0.001405959, 0.001405960]
+m=16: test R=[4.2694, 4.2694], area deficit [0.136317119, 0.136317120]
+m=14: polar mean at R=[4.2465, 4.2465], area deficit [0.006425652, 0.006425653]
+m=14: polar mean at R=[4.2425, 4.2425], area deficit [0.010508312, 0.010508313]
+R=[4.2694, 4.2694] excluded by rim angle stability; annular triangle bound verified on 3455 boxes, deficit [0.000276294, 0.000276295]
+R=[4.2600, 4.2600] excluded by angle dual: 9615 outer-face boxes, 14316 intervals, deficit [0.003400834, 0.003400835]
+m=14: overlapping polar projections span at most 1 gaps, cluster area deficit [0.431343962, 0.431343963]
+m=15: overlapping polar projections span at most 2 gaps, cluster area deficit [0.626215333, 0.626215334]
+m=16: overlapping polar projections span at most 3 gaps, cluster area deficit [0.971455985, 0.971455986]
+14-outer reverse-seam mean radius lower bound: [3.053123948, 3.053123949]
+m=14: degree-3 star at an interior site excluded with area deficit [0.182600381, 0.182600382]; degree-8 core angles are acute
+m=14, core degree >= 9 excluded from R=[4.181540550, 4.181540551], area deficit [0.647763320, 0.647763321]
+m=14, core degree >= 8 excluded from R=[4.208000000, 4.208000000], area deficit [0.014292509, 0.014292510]
+m=14, core degree >= 7 excluded from R=[4.240000000, 4.240000000], area deficit [0.004949672, 0.004949673]
+m=14, core degree 4 excluded from R=[4.217000000, 4.217000000], area deficit [0.030798058, 0.030798059]
+m=14, core degree 5 excluded from R=[4.245000000, 4.245000000], area deficit [0.024803311, 0.024803312]
+m=15: degree-3 star without rim marks excluded with area deficit [0.000713480, 0.000713481]; degree-8 core angles are acute
+m=15, core degree >= 9 excluded from R=[4.181540550, 4.181540551], area deficit [0.351876420, 0.351876421]
+m=15, core degree >= 8 excluded from R=[4.225000000, 4.225000000], area deficit [0.015785958, 0.015785959]
+m=15, core degree >= 7 excluded from R=[4.265000000, 4.265000000], area deficit [0.031740378, 0.031740379]
+m=15, core degree 4 excluded from R=[4.236000000, 4.236000000], area deficit [0.033554478, 0.033554479]
+m=15, core degree 5 excluded from R=[4.270000000, 4.270000000], area deficit [0.020920657, 0.020920658]
+m=16: degree-3 star at an interior site excluded with area deficit [0.085907899, 0.085907900]; degree-8 core angles are acute
+m=16, core degree >= 9 excluded from R=[4.181540550, 4.181540551], area deficit [0.773070838, 0.773070839]
+m=16, core degree >= 8 excluded from R=[4.210000000, 4.210000000], area deficit [0.022788867, 0.022788868]
+m=16, core degree >= 7 excluded from R=[4.250000000, 4.250000000], area deficit [0.004743108, 0.004743109]
+m=16, core degree 4 excluded from R=[4.220000000, 4.220000000], area deficit [0.005703631, 0.005703632]
+m=16, core degree 5 excluded from R=[4.256000000, 4.256000000], area deficit [0.015601643, 0.015601644]
+m=15: degree-8 core with two disjoint 3-site clusters excluded, area deficit [0.433858083, 0.433858084]
+16 outer, 15 active, degree-8 core: repeated connector excluded, area deficit [0.321368397, 0.321368398]
+16 outer, 15 active, degree-8 core: inactive connector with four neighbors excluded, area deficit [0.457273079, 0.457273080]
+16 outer, 15 active, degree-8 core excluded on 41655 boxes, area deficit [0.001627626, 0.001627627]
+sharp nonconnector fan bound verified on 1772 boxes
+joint nonconnector fan bound verified on 936 intervals and boxes
+sharp seam Hessian verified on 653 boxes
+sharp seam supporting plane outside the Hessian rectangle verified on 304 boxes
+16 outer, 16 active, degree-8 core excluded by the sharp area bound
+degree-7 combined seam plane verified on 33779 boxes
+degree-7 joint area and rim deficit given the two local bounds: [0.025778473, 0.025778474]
+degree-6 isolated caps, split 2+2: joint deficit [2.736768995, 2.736768996]
+degree-6 isolated caps, split 1+3: joint deficit [2.561521364, 2.561521365]
+degree-6 isolated caps, split 0+4: joint deficit [1.066273734, 1.066273735]
+ordinary repeated groups checked on 162 intervals, degree-7 joint deficits [0.707509555, 0.707509556] and [0.272261925, 0.272261926]
+mixed repeat joint deficit, shared disk inactive=False: [0.537891904, 0.537891905]
+mixed repeat joint deficit, shared disk inactive=True: [0.526562106, 0.526562107]
+degree-7 distinct: 3 cases using the annulus correction, joint deficit [0.001143622, 0.001143623]
+degree-7 ordinary pair: 0 cases using the annulus correction, joint deficit [0.261727570, 0.261727571]
+degree-7 priced ordinary pair: 1 cases using the annulus correction, joint deficit [0.002727570, 0.002727571]
+degree-7 mixed pair: 1 cases using the annulus correction, joint deficit [0.015727570, 0.015727571]
+distinct connectors, degree 4: 97 partition cases, joint deficit [2.805498936, 2.805498937]
+distinct connectors, degree 5: 75 partition cases, joint deficit [1.405498936, 1.405498937]
+distinct connectors, degree 6: 63 partition cases, joint deficit [0.021984679, 0.021984680]
+one shared connector, degree 4, (m, w): excluded/checked (14, 0): 1407/1407, (14, 1): 469/469, (14, 2): 67/67, (15, 0): 469/469, (15, 1): 67/67, (16, 0): 67/67, joint deficit [0.965727570, 0.965727571]
+fifteen outer sites, degree 4, nine-vertex inner component, one shared connector: joint deficit [3.347727570, 3.347727571]
+one shared connector, degree 5, (m, w): excluded/checked (14, 0): 966/966, (14, 1): 322/322, (14, 2): 46/46, (15, 0): 322/322, (15, 1): 46/46, (16, 0): 46/46, joint deficit [0.020479939, 0.020479940]
+fifteen outer sites, degree 5, nine-vertex inner component, one shared connector: joint deficit [2.642479939, 2.642479940]
+one shared connector, degree 6, (m, w): excluded/checked (14, 0): 546/546, (14, 1): 182/182, (14, 2): 26/26, (15, 0): 182/182, (15, 1): 26/26, (16, 0): 26/26, joint deficit [0.005232309, 0.005232310]
+fifteen outer sites, degree 6, nine-vertex inner component, one shared connector: joint deficit [2.217232309, 2.217232310]
+nine positive edges, fifteen outer sites, degree 4, excluded (lengths, repeat omissions): [((1, 1, 1, 6), 0), ((1, 1, 1, 6), 1), ((1, 1, 1, 6), 2), ((1, 1, 1, 6), 3), ((1, 1, 2, 5), 0), ((1, 1, 2, 5), 1), ((1, 1, 2, 5), 2), ((1, 1, 3, 4), 0), ((1, 2, 2, 4), 0), ((1, 2, 3, 3), 0), ((2, 2, 2, 3), 0)]
+nine positive edges, fifteen outer sites, degree 5, excluded (lengths, repeat omissions): [((1, 1, 1, 1, 5), 0), ((1, 1, 1, 1, 5), 1), ((1, 1, 1, 3, 3), 0)]
+nine positive edges, fourteen outer sites, degree 4, excluded (lengths, repeat omissions): [((1, 1, 1, 6), 0), ((1, 1, 1, 6), 1), ((1, 1, 1, 6), 2), ((1, 1, 2, 5), 0), ((1, 1, 2, 5), 1), ((1, 1, 2, 5), 2), ((1, 1, 3, 4), 0), ((1, 1, 3, 4), 1), ((1, 2, 2, 4), 0), ((1, 2, 2, 4), 1), ((1, 2, 3, 3), 0), ((1, 2, 3, 3), 1), ((2, 2, 2, 3), 0), ((2, 2, 2, 3), 1)]
+nine positive edges, fourteen outer sites, degree 5, excluded (lengths, repeat omissions): [((1, 1, 1, 1, 5), 0), ((1, 1, 1, 1, 5), 1), ((1, 1, 1, 1, 5), 2), ((1, 1, 1, 2, 4), 0), ((1, 1, 1, 3, 3), 0), ((1, 1, 1, 3, 3), 1), ((1, 1, 2, 2, 3), 0), ((1, 2, 2, 2, 2), 0)]
+nine positive edges, fourteen outer sites, degree 6, excluded (lengths, repeat omissions): [((1, 1, 1, 1, 1, 4), 0), ((1, 1, 1, 1, 2, 3), 0), ((1, 1, 1, 2, 2, 2), 0)]
+joined arcs, outer=14, ring=9, degree=4: 1764/1764 excluded, smallest deficit [2.904822777, 2.904822778]
+joined arcs, outer=14, ring=9, degree=5: 1764/1764 excluded, smallest deficit [1.484327517, 1.484327518]
+joined arcs, outer=14, ring=9, degree=6: 1260/1260 excluded, smallest deficit [0.063832256, 0.063832257]
+joined arcs, outer=14, ring=9, degree=7: 504/504 excluded, smallest deficit [0.187051411, 0.187051412]
+joined arcs, outer=14, ring=9, degree=8: 126/126 excluded, smallest deficit [0.246060890, 0.246060891]
+joined arcs, outer=14, ring=10, degree=4: 4025/4620 excluded, smallest deficit [-1.332577276, -1.332577275]
+joined arcs, outer=14, ring=10, degree=5: 4179/5460 excluded, smallest deficit [-2.650348642, -2.650348641]
+joined arcs, outer=14, ring=10, degree=6: 2852/4620 excluded, smallest deficit [-4.070843902, -4.070843901]
+joined arcs, outer=14, ring=10, degree=7: 1030/2520 excluded, smallest deficit [-4.140843902, -4.140843901]
+joined arcs, outer=14, ring=10, degree=8: 399/1050 excluded, smallest deficit [-3.669110529, -3.669110528]
+joined arcs, outer=15, ring=9, degree=4: 1176/1176 excluded, smallest deficit [1.059152575, 1.059152576]
+joined arcs, outer=15, ring=9, degree=5: 1066/1176 excluded, smallest deficit [-0.361342686, -0.361342685]
+joined arcs, outer=15, ring=9, degree=6: 553/840 excluded, smallest deficit [-1.781837947, -1.781837946]
+joined arcs, outer=15, ring=9, degree=7: 122/336 excluded, smallest deficit [-3.009114052, -3.009114051]
+joined arcs, outer=15, ring=9, degree=8: 21/84 excluded, smallest deficit [-2.950104573, -2.950104572]
+ten distinct connectors, degree 4: 9 partitions, deficit [1.180971520, 1.180971521]
+ten distinct connectors, degree 5: 7 partitions, deficit [0.100971520, 0.100971521]
+ten distinct connectors, degree 6: 5 partitions, deficit [0.160971520, 0.160971521]
+ten distinct connectors, degree 7: 3 partitions, deficit [0.220971520, 0.220971521]
+ten distinct connectors, degree 8: 2 partitions, deficit [0.280971520, 0.280971521]
+ten-edge ring with sharing, degree 4: 1490/1490 excluded; additional exclusions by strict shape and rim deficit [9, 16]
+ten-edge ring with sharing, degree 5: 2897/2897 excluded; additional exclusions by strict shape and rim deficit [25, 5]
+ten-edge ring with sharing, degree 6: 2460/2460 excluded; additional exclusions by strict shape and rim deficit [21, 1]
+ten-edge ring with sharing, degree 7: 1312/1312 excluded; additional exclusions by strict shape and rim deficit [2, 0]
+ten-edge ring with sharing, degree 8: 571/571 excluded; additional exclusions by strict shape and rim deficit [0, 0]
+adjacent two cores, degree 8, distinct, inactive=0: [0.327248895, 0.327248896]
+adjacent two cores, degree 8, distinct, inactive=1: [0.018819097, 0.018819098]
+adjacent two cores, degree 8, ordinary repeat, inactive=0: [0.935248895, 0.935248896]
+adjacent two cores, degree 8, ordinary repeat, inactive=1: [0.626819097, 0.626819098]
+adjacent two cores, degree 8, endpoint repeat, inactive=0: [0.845248895, 0.845248896]
+adjacent two cores, degree 8, endpoint repeat, inactive=1: [0.536819097, 0.536819098]
+adjacent two cores, degree 8, inside repeat, inactive=0: [1.095248895, 1.095248896]
+adjacent two cores, degree 8, inside repeat, inactive=1: [0.786819097, 0.786819098]
+two-core octagon, length two, degree 4, excluded by (m, sharing) [((14, False), 0, 0), ((14, True), 0, 0), ((15, False), 0, 0), ((15, True), 0, 0)]
+two-core octagon, length two, degree 5, excluded by (m, sharing) [((14, False), 63, 63), ((14, True), 376, 376), ((15, False), 7, 7), ((15, True), 47, 47)]
+two-core octagon, length two, degree 6, excluded by (m, sharing) [((14, False), 90, 90), ((14, True), 544, 544), ((15, False), 10, 10), ((15, True), 68, 68)]
+two-core octagon, length two, degree 7, excluded by (m, sharing) [((14, False), 45, 45), ((14, True), 280, 280), ((15, False), 5, 5), ((15, True), 35, 35)]
+two-core octagon, length two, degree 8, excluded by (m, sharing) [((14, False), 9, 9), ((14, True), 64, 64), ((15, False), 1, 1), ((15, True), 8, 8)]
+ten-edge alternatives without strict quadrilateral boxes: [52, 12, 15]
+nine-edge ring, fifteen active outer sites, degree 4, excluded by (reverse, repeats) [((False, 0), 6, 7), ((False, 1), 51, 51), ((False, 2), 155, 155), ((False, 3), 111, 111), ((True, 0), 13, 13), ((True, 1), 93, 93), ((True, 2), 275, 275)]
+nine-edge ring, chord transfer, degree 4: 125 additional exclusions, deficit [2.465929885, 2.465929886]
+nine-edge ring, inactive nonconnector, degree 4: 562 excluded
+forward nine-edge ring, distinct, m=15, degree 4: 7 excluded, deficit [0.760683383, 0.760683384]
+nine-edge ring, fifteen active outer sites, degree 5, excluded by (reverse, repeats) [((False, 0), 6, 13), ((False, 1), 97, 97), ((False, 2), 310, 310), ((False, 3), 228, 228), ((True, 0), 30, 30), ((True, 1), 214, 214), ((True, 2), 648, 648)]
+nine-edge ring, chord transfer, degree 5: 178 additional exclusions, deficit [1.085929885, 1.085929886]
+nine-edge ring, inactive nonconnector, degree 5: 1245 excluded
+forward nine-edge ring, distinct, m=15, degree 5: 13 excluded, deficit [0.390769066, 0.390769067]
+nine-edge ring, fifteen active outer sites, degree 6, excluded by (reverse, repeats) [((False, 0), 1, 10), ((False, 1), 73, 73), ((False, 2), 231, 231), ((False, 3), 166, 166), ((True, 0), 23, 23), ((True, 1), 161, 161), ((True, 2), 486, 486)]
+nine-edge ring, chord transfer, degree 6: 89 additional exclusions, deficit [0.175929885, 0.175929886]
+nine-edge ring, inactive nonconnector, degree 6: 933 excluded
+forward nine-edge ring, distinct, m=15, degree 6: 10 excluded, deficit [0.342769066, 0.342769067]
+nine-edge ring, fifteen active outer sites, degree 7, excluded by (reverse, repeats) [((False, 0), 1, 4), ((False, 1), 30, 30), ((False, 2), 98, 98), ((False, 3), 70, 70), ((True, 0), 7, 7), ((True, 1), 51, 51), ((True, 2), 161, 161)]
+nine-edge ring, seven-neighbor chord transfer: 2 excluded, deficit [0.197139681, 0.197139682]
+nine-edge ring, inactive nonconnector, degree 7: 328 excluded
+forward nine-edge ring, distinct, m=15, degree 7: 4 excluded, deficit [0.094683383, 0.094683384]
+nine-edge ring, fifteen active outer sites, degree 8, excluded by (reverse, repeats) [((False, 0), 0, 1), ((False, 1), 8, 8), ((False, 2), 28, 28), ((False, 3), 20, 20), ((True, 0), 1, 1), ((True, 1), 8, 8), ((True, 2), 28, 28)]
+nine-edge ring, inactive nonconnector, degree 8: 67 excluded
+forward nine-edge ring, distinct, m=15, degree 8: 1 excluded, deficit [0.008769066, 0.008769067]
+nine-edge ring, inactive connector, degree 4, by (reverse, inactive edges) [((False, 1), 780, 780), ((False, 2), 231, 231), ((True, 1), 3040, 3040), ((True, 2), 838, 838)]
+nine-edge ring, inactive connector, degree 4: 3302 signed span exclusions
+nine-edge ring, inactive connector, degree 4: 90 chord exclusions by neighbor regime, deficit [2.848690001, 2.848690002]
+nine-edge ring, inactive connector, degree 5, by (reverse, inactive edges) [((False, 1), 1510, 1510), ((False, 2), 451, 451), ((True, 1), 6580, 6580), ((True, 2), 1858, 1858)]
+nine-edge ring, inactive connector, degree 5: 7446 signed span exclusions
+nine-edge ring, inactive connector, degree 5: 127 chord exclusions by neighbor regime, deficit [1.417490001, 1.417490002]
+nine-edge ring, inactive connector, degree 6, by (reverse, inactive edges) [((False, 1), 1278, 1278), ((False, 2), 387, 387), ((True, 1), 5759, 5759), ((True, 2), 1706, 1706)]
+nine-edge ring, inactive connector, degree 6: 6889 signed span exclusions
+nine-edge ring, inactive connector, degree 6: 40 chord exclusions by neighbor regime, deficit [0.037490001, 0.037490002]
+nine-edge ring, inactive connector, degree 7, by (reverse, inactive edges) [((False, 1), 585, 585), ((False, 2), 180, 180), ((True, 1), 2142, 2142), ((True, 2), 657, 657)]
+nine-edge ring, inactive connector, degree 7: 2655 signed span exclusions
+nine-edge ring, inactive connector, degree 8, by (reverse, inactive edges) [((False, 1), 161, 161), ((False, 2), 50, 50), ((True, 1), 322, 322), ((True, 2), 100, 100)]
+nine-edge ring, inactive connector, degree 8: 406 signed span exclusions
+wide two-core swap, ring 8: 181 excluded, deficit [0.428819097, 0.428819098]
+wide two-core swap, ring 9: 1552 excluded, deficit [1.050895308, 1.050895309]
+three-edge two-core swap, ring 8: 105 excluded, deficit [1.298819097, 1.298819098]
+three-edge two-core swap, ring 9: 886 excluded, deficit [0.274895308, 0.274895309]
+three-edge fat block with degree-four core: 55 excluded, deficit [0.084895308, 0.084895309]
+4-edge fat block with degree-four core and one-edge side: 400 excluded, deficit [0.544895308, 0.544895309]
+5-edge fat block with degree-four core and one-edge side: 151 excluded, deficit [0.188895308, 0.188895309]
+three-edge two-core swap with distinct seams, inactive 0: 13 excluded, deficit [0.030248895, 0.030248896]
+three-edge two-core swap with distinct seams, inactive 1: 56 excluded, deficit [0.058819097, 0.058819098]
+two-core nine-edge ring, length two, degree 5: 363 excluded, deficit [1.058895308, 1.058895309]
+two-core nine-edge ring, length two, degree 6: 584 excluded, deficit [1.418895308, 1.418895309]
+two-core nine-edge ring, length two, degree 7: 425 excluded, deficit [1.868895308, 1.868895309]
+two-core nine-edge ring, length two, degree 8: 180 excluded, deficit [2.140895308, 2.140895309]
+nine-edge ring, fourteen outer sites, degree 4, repeats 1: 273/273 excluded, deficit [2.668199042, 2.668199043]
+nine-edge ring, fourteen outer sites, degree 4, repeats 2: 732/732 excluded, deficit [1.430951411, 1.430951412]
+nine-edge ring, fourteen outer sites, degree 5, repeats 1: 225/225 excluded, deficit [2.112951411, 2.112951412]
+nine-edge ring, fourteen outer sites, degree 5, repeats 2: 585/585 excluded, deficit [0.558895308, 0.558895309]
+nine-edge ring, fourteen outer sites, degree 6, repeats 1: 122/122 excluded, deficit [1.544895308, 1.544895309]
+nine-edge ring, fourteen outer sites, degree 6, repeats 2: 312/312 excluded, deficit [0.868895308, 0.868895309]
+nine-edge ring, fourteen outer sites, degree 7, repeats 1: 39/39 excluded, deficit [1.848895308, 1.848895309]
+nine-edge ring, fourteen outer sites, degree 7, repeats 2: 102/102 excluded, deficit [1.318895308, 1.318895309]
+nine-edge ring, fourteen outer sites, degree 8, repeats 1: 8/8 excluded, deficit [2.298895308, 2.298895309]
+nine-edge ring, fourteen outer sites, degree 8, repeats 2: 21/21 excluded, deficit [2.766895308, 2.766895309]
+backward triangular cap, ordinary repeats=0: all-active joint deficit [0.949895427, 0.949895428]
+backward triangular cap, ordinary repeats=1: all-active joint deficit [1.688390687, 1.688390688]
+local optimum verified: 146 positive pivots, smallest [0.439204339, 0.439204340]
+exit=0
+
+=== 本批次 C++ high-fourteen-mark-pair ===
+.\verify_k7.exe high-fourteen-mark-pair
+high-fourteen-mark-pair certified on 287195 boxes
+exit=0
+
+=== 本批次 C++ tighter-octagon-fan ===
+.\verify_k7.exe tighter-octagon-fan
+high-octagon-single-span certified on 133 boxes
+high-octagon-fan-3 certified on 99509 boxes
+high-octagon-fan-4 certified on 3471 boxes
+exit=0
+
+=== 本批次 C++ nine-joint ===
+.\verify_k7.exe nine-joint
+nine case 0 patterns 3
+nine case 1 patterns 7
+nine case 2 patterns 1
+nine case 3 patterns 33
+nine case 4 patterns 10
+nine case 5 patterns 4
+nine case 6 patterns 2
+nine case 7 patterns 4
+nine seam rows 8/65 cells 34841 boxes 17598379
+nine seam rows 16/65 cells 79163 boxes 61793403
+nine seam rows 24/65 cells 119242 boxes 114858276
+nine seam rows 32/65 cells 151862 boxes 168415633
+nine seam rows 40/65 cells 176386 boxes 209586596
+nine seam rows 48/65 cells 192308 boxes 232236754
+nine seam rows 56/65 cells 199786 boxes 242523267
+nine seam rows 64/65 cells 206090 boxes 251815489
+nine seam rows 65/65 cells 206979 boxes 253125820
+nine cap matrices ready
+nine case 0 layout grzrzrrrr tilt 0.36 score 3.15973459485 remaining 1495 worst 1.8125 2.0625 2.4609375
+nine case 0 layout grrrzrzrr tilt 0.36 score 3.14159195317 remaining 0 worst 1.65625 1.8125 2.78125
+nine case 0 layout grrrzrrzr tilt 0.36 score 3.14158782852 remaining 0 worst 1.84375 2.03125 2.65625
+nine case 0 layout grzrzrrrr tilt 0.42 score 3.14157568661 remaining 0 worst 1.84375 2.03125 2.53125
+nine result 0 1
+nine case 1 layout zrrgrzrrr tilt 0.36 score 3.08326684511 remaining 0 worst 2.125 1.8125 2.2734375
+nine case 1 layout rzrgrzrrr tilt 0.36 score 3.02665999612 remaining 0 worst 2.1875 1.84375 2.2265625
+nine case 1 layout rrrgrzzrr tilt 0.36 score 2.99981467453 remaining 0 worst 2.09375 1.84375 2.3359375
+nine case 1 layout rrrgrzrzr tilt 0.36 score 3.08157588398 remaining 0 worst 2.1875 1.78125 2.3359375
+nine case 1 layout rrrgrzrrz tilt 0.36 score 3.03738655714 remaining 0 worst 2.1875 1.78125 2.328125
+nine case 1 layout zrrzrgrrr tilt 0.36 score 3.12766955721 remaining 0 worst 2.21875 1.84375 2.0859375
+nine case 1 layout rrrzrgrzr tilt 0.36 score 3.1053315802 remaining 0 worst 2.125 1.875 2.1875
+nine result 1 1
+nine case 2 layout zrgrzrrrr tilt 0.36 score 2.7651113294 remaining 0 worst 1.78125 1.78125 2.3984375
+nine result 2 1
+nine case 3 layout grzrzrrrr tilt 0.36 score 3.05679561965 remaining 0 worst 1.84375 2.09375 2.359375
+nine case 3 layout grzrrzrrr tilt 0.36 score 3.00191315028 remaining 0 worst 1.8125 2.125 2.4375
+nine case 3 layout grzrrrzrr tilt 0.36 score 3.04377282295 remaining 0 worst 1.8125 2.09375 2.46875
+nine case 3 layout grrrzrzrr tilt 0.36 score 2.8731582906 remaining 0 worst 1.75 2.0625 2.5
+nine case 3 layout grzrzrzrd tilt 0.36 score 2.82140418846 remaining 0 worst 1.75 2.125 2.3671875
+nine case 3 layout grzrzrzdr tilt 0.36 score 2.6870481687 remaining 0 worst 1.84375 2.09375 2.359375
+nine case 3 layout grzrzdzrr tilt 0.36 score 2.71803709764 remaining 0 worst 1.84375 2.0625 2.390625
+nine case 3 layout grzdzrzrr tilt 0.36 score 2.74070533957 remaining 0 worst 1.78125 2 2.5625
+nine case 3 layout gdzrzrzrr tilt 0.36 score 2.74565351046 remaining 0 worst 1.625 2.125 2.5390625
+nine case 3 layout grzrrrrzr tilt 0.36 score 3.02894790884 remaining 0 worst 1.84375 2.0625 2.453125
+nine case 3 layout grrrzrrzr tilt 0.36 score 2.83857756785 remaining 0 worst 1.78125 2.0625 2.4453125
+nine case 3 layout grzrzrrzd tilt 0.36 score 2.81034411381 remaining 0 worst 1.78125 2.09375 2.375
+nine case 3 layout grzrzrdzr tilt 0.36 score 2.63348457939 remaining 0 worst 1.875 2.0625 2.3515625
+nine case 3 layout grzrzdrzr tilt 0.36 score 2.66819356849 remaining 0 worst 1.875 2 2.3515625
+nine case 3 layout grzdzrrzr tilt 0.36 score 2.71114431588 remaining 0 worst 1.8125 1.96875 2.5
+nine case 3 layout gdzrzrrzr tilt 0.36 score 2.70773849235 remaining 0 worst 1.6875 2.0625 2.5078125
+nine case 3 layout zrgrzrrrr tilt 0.36 score 3.01023588412 remaining 0 worst 1.84375 2.03125 2.515625
+nine case 3 layout zrgrrzrrr tilt 0.36 score 2.97057132144 remaining 0 worst 1.78125 2.0625 2.6328125
+nine case 3 layout zrgrrrzrr tilt 0.36 score 3.02066296938 remaining 0 worst 1.78125 2.0625 2.609375
+nine case 3 layout rrgrzrzrr tilt 0.36 score 2.76748586957 remaining 0 worst 1.875 2 2.578125
+nine case 3 layout zrgrzrzrd tilt 0.36 score 2.68970206316 remaining 0 worst 1.71875 2.0625 2.5546875
+nine case 3 layout zrgrzrzdr tilt 0.36 score 2.62293596485 remaining 0 worst 1.78125 2.0625 2.5
+nine case 3 layout zrgrzdzrr tilt 0.36 score 2.68011696803 remaining 0 worst 1.84375 1.96875 2.5390625
+nine case 3 layout zrgdzrzrr tilt 0.36 score 2.77682097148 remaining 0 worst 1.75 1.9375 2.7734375
+nine case 3 layout zdgrzrzrr tilt 0.36 score 2.72416882986 remaining 0 worst 1.65625 2.03125 2.7265625
+nine case 3 layout zrgrrrrzr tilt 0.36 score 3.03031113132 remaining 0 worst 1.8125 2.03125 2.625
+nine case 3 layout rrgrzrrzr tilt 0.36 score 2.748728101 remaining 0 worst 1.9375 1.96875 2.53125
+nine case 3 layout zrgrzrrzd tilt 0.36 score 2.69627420889 remaining 0 worst 1.71875 2 2.59375
+nine case 3 layout zrgrzrdzr tilt 0.36 score 2.61714110587 remaining 0 worst 1.875 1.96875 2.4921875
+nine case 3 layout zrgrzdrzr tilt 0.36 score 2.65854701483 remaining 0 worst 1.875 1.9375 2.5078125
+nine case 3 layout zrgdzrrzr tilt 0.36 score 2.76758790313 remaining 0 worst 1.78125 1.875 2.78125
+nine case 3 layout zdgrzrrzr tilt 0.36 score 2.70187240818 remaining 0 worst 1.6875 2 2.6953125
+nine case 3 layout zrgrrrrrz tilt 0.36 score 2.92253845679 remaining 0 worst 1.84375 2.03125 2.5546875
+nine result 3 1
+nine case 4 layout rgrzzrrrr tilt 0.36 score 2.85885978113 remaining 0 worst 1.9375 1.96875 2.5
+nine case 4 layout rgrzrzrrr tilt 0.36 score 2.87510192374 remaining 0 worst 1.90625 2.0625 2.515625
+nine case 4 layout rgrzrrzrr tilt 0.36 score 2.92690211641 remaining 0 worst 1.90625 2.03125 2.5234375
+nine case 4 layout rgrzrrrzr tilt 0.36 score 2.92199002555 remaining 0 worst 1.9375 2.03125 2.5234375
+nine case 4 layout rgrzrrrrz tilt 0.36 score 2.8627946168 remaining 0 worst 1.96875 1.96875 2.5234375
+nine case 4 layout zzrgrrrrr tilt 0.36 score 2.85885978113 remaining 0 worst 1.96875 1.9375 2.5
+nine case 4 layout rzrgrzrrr tilt 0.36 score 2.8627946168 remaining 0 worst 1.96875 1.96875 2.5234375
+nine case 4 layout rzrgrrzrr tilt 0.36 score 2.92199002555 remaining 0 worst 2.03125 1.9375 2.5234375
+nine case 4 layout rzrgrrrzr tilt 0.36 score 2.92690211641 remaining 0 worst 2.03125 1.90625 2.5234375
+nine case 4 layout rzrgrrrrz tilt 0.36 score 2.87510192374 remaining 0 worst 2.0625 1.90625 2.515625
+nine result 4 1
+nine case 5 layout zrrrgrzrr tilt 0.36 score 2.95880724827 remaining 0 worst 1.96875 1.6875 3.0390625
+nine case 5 layout rzrrgrzrr tilt 0.36 score 2.9163702725 remaining 0 worst 2.0625 1.6875 3.0234375
+nine case 5 layout rrzrgrzrr tilt 0.36 score 2.92838042185 remaining 0 worst 2.03125 1.6875 2.9921875
+nine case 5 layout rrrrgrzrz tilt 0.36 score 2.91518167334 remaining 0 worst 2.0625 1.6875 3.09375
+nine result 5 1
+nine case 6 layout grzrrzrrr tilt 0.36 score 2.95742008245 remaining 0 worst 1.6875 1.96875 3.234375
+nine case 6 layout grzrrrrzr tilt 0.36 score 2.92747028066 remaining 0 worst 1.6875 2 3.28125
+nine result 6 1
+nine case 7 layout zrrrrgrzr tilt 0.36 score 3.06223752125 remaining 0 worst 2.0625 1.84375 3.890625
+nine case 7 layout rzrrrgrzr tilt 0.36 score 3.01550014749 remaining 0 worst 2.09375 1.8125 3.8046875
+nine case 7 layout rrzrrgrzr tilt 0.36 score 3.04411715365 remaining 0 worst 2.09375 1.8125 3.8046875
+nine case 7 layout rrrzrgrzr tilt 0.36 score 3.03472812856 remaining 0 worst 2.09375 1.8125 3.796875
+nine result 7 1
+exit=0
+
+=== 原会话前置筛选与八边形复算记录 ===
+以下是原会话分阶段构建的实际模式和输出。本批次新执行范围列在上方。
+
+--- octagon-ear-pattern-three ---
+radial gap patterns 3 1 upper 1.704222069 target 1.692673316 remaining 44723
+radial gap patterns 3 1 upper 1.704896376 target 1.692673316 remaining 34683
+radial gap patterns 3 1 upper 1.737913667 target 1.692673316 remaining 34683
+radial gap patterns 3 1 upper 1.722591708 target 1.692673316 remaining 34683
+radial gap patterns 3 1 upper 1.71347533 target 1.692673316 remaining 34683
+remaining pattern 0g 2z: 914 cells
+remaining pattern 0g 2z: 914 cells
+remaining pattern 0g 3z: 10138 cells
+remaining pattern 0g 3z: 10143 cells
+remaining pattern 0g 4z: 1252 cells
+remaining pattern 0g 4z: 1253 cells
+remaining pattern 0g 5z: 3049 cells
+remaining pattern 0g 5z: 3051 cells
+remaining pattern 0g 6z: 1846 cells
+remaining pattern 0g 6z: 1846 cells
+remaining pattern 0z 4g: 277 cells
+exit=0
+
+--- octagon-joint-three ---
+seam rows 8/65 cells 24418 subboxes 9996882
+seam rows 16/65 cells 54272 subboxes 32909140
+seam rows 24/65 cells 81275 subboxes 58195786
+seam rows 32/65 cells 103095 subboxes 81976378
+seam rows 40/65 cells 119123 subboxes 98321651
+seam rows 48/65 cells 129724 subboxes 104857168
+seam rows 56/65 cells 135093 subboxes 106787805
+seam rows 64/65 cells 137546 subboxes 107517618
+seam rows 65/65 cells 138016 subboxes 107654929
+joint length 3 zero 0 ears -1,-1 tilt 0.24 area 0.2 score 3.41527251227 survivors 34464 worst 2.125 2.0625 2.2890625
+joint length 3 zero 1 ears -1,-1 tilt 0.24 area 0.2 score 3.38829379 survivors 26158 worst 2.15625 2.0625 2.2578125
+joint length 3 zero 4 ears -1,-1 tilt 0.24 area 0.2 score 3.35835341352 survivors 19945 worst 2.0625 2.15625 2.3359375
+joint length 3 zero 5 ears -1,-1 tilt 0.24 area 0.2 score 3.40114166495 survivors 25522 worst 2.0625 2.125 2.3515625
+joint length 3 zero 2 ears 0,-1 tilt 0.24 area 0.2 score 3.24957784696 survivors 8415 worst 2 2.21875 2.2890625
+joint length 3 zero 3 ears 0,-1 tilt 0.24 area 0.2 score 3.2947875945 survivors 16096 worst 2 2.15625 2.3046875
+joint length 3 zero 4 ears 0,-1 tilt 0.24 area 0.2 score 3.23626815124 survivors 6815 worst 1.96875 2.21875 2.3359375
+joint length 3 zero 5 ears 0,-1 tilt 0.24 area 0.2 score 3.28370166458 survivors 11585 worst 1.96875 2.15625 2.3828125
+joint length 3 zero 6 ears 0,-1 tilt 0.24 area 0.2 score 3.26412708584 survivors 9880 worst 2 2.125 2.359375
+joint length 3 zero 0 ears 4,-1 tilt 0.24 area 0.2 score 3.2985219429 survivors 17822 worst 2.1875 2 2.2421875
+joint length 3 zero 0 ears 3,4 tilt 0.24 area 0.2 score 3.17694593363 survivors 2517 worst 2.21875 1.96875 2.2421875
+joint length 3 zero 0 ears -1,-1 tilt 0.27 area 0.2 score 3.36030871442 survivors 25824 worst 2.125 2.0625 2.28125
+joint length 3 zero 1 ears -1,-1 tilt 0.27 area 0.2 score 3.33489917542 survivors 18832 worst 2.125 2.0625 2.265625
+joint length 3 zero 4 ears -1,-1 tilt 0.27 area 0.2 score 3.30559898791 survivors 13975 worst 2.03125 2.125 2.3359375
+joint length 3 zero 5 ears -1,-1 tilt 0.27 area 0.2 score 3.34964203027 survivors 19025 worst 2.03125 2.09375 2.3515625
+joint length 3 zero 2 ears 0,-1 tilt 0.27 area 0.2 score 3.19623565645 survivors 3116 worst 1.96875 2.21875 2.28125
+joint length 3 zero 3 ears 0,-1 tilt 0.27 area 0.2 score 3.24519484237 survivors 9456 worst 1.96875 2.15625 2.3125
+joint length 3 zero 4 ears 0,-1 tilt 0.27 area 0.2 score 3.18834064816 survivors 2575 worst 1.9375 2.1875 2.3671875
+joint length 3 zero 5 ears 0,-1 tilt 0.27 area 0.2 score 3.23533496782 survivors 6638 worst 1.96875 2.09375 2.3984375
+joint length 3 zero 6 ears 0,-1 tilt 0.27 area 0.2 score 3.21844163973 survivors 4984 worst 2 2.09375 2.375
+joint length 3 zero 0 ears 4,-1 tilt 0.27 area 0.2 score 3.24736253016 survivors 10297 worst 2.15625 2 2.2421875
+joint length 3 zero 0 ears 3,4 tilt 0.27 area 0.2 score 3.1293946079 survivors 0 worst 2.1875 1.9375 2.2421875
+joint length 3 zero 0 ears -1,-1 tilt 0.3 area 0.2 score 3.30954503795 survivors 18060 worst 2.09375 2.03125 2.3046875
+joint length 3 zero 1 ears -1,-1 tilt 0.3 area 0.2 score 3.2871857824 survivors 12324 worst 2.09375 2.0625 2.265625
+joint length 3 zero 4 ears -1,-1 tilt 0.3 area 0.2 score 3.25966883177 survivors 8808 worst 2.03125 2.09375 2.3359375
+joint length 3 zero 5 ears -1,-1 tilt 0.3 area 0.2 score 3.3042102285 survivors 13378 worst 2.03125 2.0625 2.3671875
+joint length 3 zero 2 ears 0,-1 tilt 0.3 area 0.2 score 3.14643753829 survivors 105 worst 1.9375 2.21875 2.28125
+joint length 3 zero 3 ears 0,-1 tilt 0.3 area 0.2 score 3.19910497262 survivors 4028 worst 1.9375 2.125 2.3203125
+joint length 3 zero 4 ears 0,-1 tilt 0.3 area 0.2 score 3.14621288524 survivors 92 worst 1.90625 2.15625 2.3828125
+joint length 3 zero 5 ears 0,-1 tilt 0.3 area 0.2 score 3.1929011301 survivors 2641 worst 1.9375 2.09375 2.3828125
+joint length 3 zero 6 ears 0,-1 tilt 0.3 area 0.2 score 3.17703272859 survivors 1461 worst 1.96875 2.09375 2.3828125
+joint length 3 zero 0 ears 4,-1 tilt 0.3 area 0.2 score 3.19962244177 survivors 4203 worst 2.125 2 2.25
+joint length 3 zero 0 ears -1,-1 tilt 0.33 area 0.2 score 3.26345167563 survivors 11526 worst 2.0625 2.03125 2.3125
+joint length 3 zero 1 ears -1,-1 tilt 0.33 area 0.2 score 3.24410750209 survivors 6926 worst 2.0625 2.0625 2.265625
+joint length 3 zero 4 ears -1,-1 tilt 0.33 area 0.2 score 3.21784618821 survivors 4657 worst 2 2.09375 2.3359375
+joint length 3 zero 5 ears -1,-1 tilt 0.33 area 0.2 score 3.2617433675 survivors 8623 worst 2.03125 2.03125 2.375
+joint length 3 zero 2 ears 0,-1 tilt 0.33 area 0.2 score 3.10553627338 survivors 0 worst 1.9375 2.09375 2.3046875
+joint length 3 zero 3 ears 0,-1 tilt 0.33 area 0.2 score 3.15849572011 survivors 572 worst 1.9375 2.09375 2.328125
+joint length 3 zero 4 ears 0,-1 tilt 0.33 area 0.2 score 3.1103898433 survivors 0 worst 1.90625 2.09375 2.390625
+joint length 3 zero 5 ears 0,-1 tilt 0.33 area 0.2 score 3.15343436147 survivors 298 worst 1.9375 2.09375 2.3828125
+joint length 3 zero 6 ears 0,-1 tilt 0.33 area 0.2 score 3.13930946927 survivors 0 worst 1.9375 2.0625 2.390625
+joint length 3 zero 0 ears 4,-1 tilt 0.33 area 0.2 score 3.15755882005 survivors 518 worst 2.125 1.96875 2.234375
+joint length 3 zero 0 ears -1,-1 tilt 0.36 area 0.2 score 3.22289552218 survivors 6507 worst 2.0625 2 2.3046875
+joint length 3 zero 1 ears -1,-1 tilt 0.36 area 0.2 score 3.20512557322 survivors 3094 worst 2.0625 2.03125 2.265625
+joint length 3 zero 4 ears -1,-1 tilt 0.36 area 0.2 score 3.17940524592 survivors 1759 worst 2 2.0625 2.3515625
+joint length 3 zero 5 ears -1,-1 tilt 0.36 area 0.2 score 3.2245936085 survivors 5016 worst 2 2.03125 2.3828125
+joint length 3 zero 3 ears 0,-1 tilt 0.36 area 0.2 score 3.12195420382 survivors 0 worst 1.90625 2.0625 2.328125
+joint length 3 zero 5 ears 0,-1 tilt 0.36 area 0.2 score 3.11808471286 survivors 0 worst 1.90625 2.0625 2.3984375
+joint length 3 zero 0 ears 4,-1 tilt 0.36 area 0.2 score 3.11828762063 survivors 0 worst 2.09375 1.9375 2.234375
+joint length 3 zero 0 ears -1,-1 tilt 0.39 area 0.2 score 3.18916810368 survivors 2986 worst 2.03125 2 2.2890625
+joint length 3 zero 1 ears -1,-1 tilt 0.39 area 0.2 score 3.16896413101 survivors 740 worst 2.03125 2.03125 2.2734375
+joint length 3 zero 4 ears -1,-1 tilt 0.39 area 0.2 score 3.14576403707 survivors 81 worst 1.96875 2.0625 2.3515625
+joint length 3 zero 5 ears -1,-1 tilt 0.39 area 0.2 score 3.19136793026 survivors 2468 worst 2 2 2.359375
+joint length 3 zero 0 ears -1,-1 tilt 0.42 area 0.2 score 3.16042248227 survivors 839 worst 1.96875 2 2.3046875
+joint length 3 zero 1 ears -1,-1 tilt 0.42 area 0.2 score 3.13684527726 survivors 0 worst 2.03125 2 2.2734375
+joint length 3 zero 4 ears -1,-1 tilt 0.42 area 0.2 score 3.11747040968 survivors 0 worst 1.96875 2 2.3671875
+joint length 3 zero 5 ears -1,-1 tilt 0.42 area 0.2 score 3.16212384793 survivors 730 worst 1.96875 2 2.3671875
+joint length 3 zero 0 ears -1,-1 tilt 0.45 area 0.2 score 3.13907575608 survivors 0 worst 1.96875 1.96875 2.3046875
+joint length 3 zero 5 ears -1,-1 tilt 0.45 area 0.2 score 3.13599134922 survivors 0 worst 1.96875 1.96875 2.375
+exit=0
+
+--- octagon-joint-four ---
+seam rows 8/65 cells 24418 subboxes 6991308
+seam rows 16/65 cells 54272 subboxes 24052805
+seam rows 24/65 cells 81275 subboxes 43686812
+seam rows 32/65 cells 103095 subboxes 62165117
+seam rows 40/65 cells 119123 subboxes 73786420
+seam rows 48/65 cells 128308 subboxes 75978761
+seam rows 56/65 cells 135042 subboxes 77763467
+seam rows 64/65 cells 137820 subboxes 78028712
+seam rows 65/65 cells 138016 subboxes 78045015
+joint length 4 zero 0 ears -1,-1 tilt 0.24 area 0.2 score 3.17996780023 survivors 959 worst 1.8125 1.96875 3.15625
+joint length 4 zero 1 ears -1,-1 tilt 0.24 area 0.2 score 3.1384777371 survivors 0 worst 2 1.8125 3.0546875
+joint length 4 zero 2 ears -1,-1 tilt 0.24 area 0.2 score 3.17386369518 survivors 591 worst 1.875 1.90625 3.046875
+joint length 4 zero 0 ears -1,-1 tilt 0.27 area 0.2 score 3.1479653685 survivors 23 worst 1.8125 1.96875 3.15625
+joint length 4 zero 2 ears -1,-1 tilt 0.27 area 0.2 score 3.13987969762 survivors 0 worst 1.875 1.90625 3.046875
+joint length 4 zero 0 ears -1,-1 tilt 0.3 area 0.2 score 3.11607119742 survivors 0 worst 1.8125 1.96875 3.15625
+exit=0
+
+--- nine-joint-reduce 0 ---
+radial gap patterns 4 0 upper 1.812678071 target 1.692673316 remaining 14127303
+radial gap patterns 4 0 upper 1.718997964 target 1.692673316 remaining 140714
+radial gap patterns 4 0 upper 1.710805623 target 1.692673316 remaining 52010
+radial gap patterns 4 0 upper 1.757871081 target 1.692673316 remaining 52010
+radial gap patterns 4 0 upper 1.711067069 target 1.692673316 remaining 28276
+radial gap patterns 4 0 upper 1.733687835 target 1.692673316 remaining 28191
+radial gap patterns 4 0 upper 1.767168364 target 1.692673316 remaining 28191
+radial gap patterns 4 0 upper 1.838246854 target 1.692673316 remaining 28191
+radial gap patterns 4 0 upper 1.773838128 target 1.692673316 remaining 28191
+radial gap patterns 4 0 upper 1.698634264 target 1.692673316 remaining 7080
+radial gap patterns 4 0 upper 1.712832991 target 1.692673316 remaining 7080
+radial gap patterns 4 0 upper 1.726598191 target 1.692673316 remaining 7080
+remaining pattern 0g 2z 4z: 2209 cells
+remaining pattern 0g 4z 6z: 2398 cells
+remaining pattern 0g 4z 7z: 2473 cells
+exit=0
+
+--- nine-joint-reduce 1 ---
+radial gap patterns 3 0 upper 1.819774049 target 1.692673316 remaining 3527365
+radial gap patterns 3 0 upper 1.733254574 target 1.692673316 remaining 179609
+radial gap patterns 3 0 upper 1.720596414 target 1.692673316 remaining 103318
+radial gap patterns 3 0 upper 1.828488327 target 1.692673316 remaining 102051
+radial gap patterns 3 0 upper 1.72864202 target 1.692673316 remaining 37464
+radial gap patterns 3 0 upper 1.749248856 target 1.692673316 remaining 34543
+radial gap patterns 3 0 upper 1.828650519 target 1.692673316 remaining 34543
+radial gap patterns 3 0 upper 1.882613635 target 1.692673316 remaining 34543
+radial gap patterns 3 0 upper 1.740565216 target 1.692673316 remaining 34534
+radial gap patterns 3 0 upper 1.736918607 target 1.692673316 remaining 32285
+radial gap patterns 3 0 upper 1.829370449 target 1.692673316 remaining 32285
+radial gap patterns 3 0 upper 1.743840863 target 1.692673316 remaining 27301
+radial gap patterns 3 0 upper 1.755327225 target 1.692673316 remaining 27080
+radial gap patterns 3 0 upper 1.815716061 target 1.692673316 remaining 27080
+radial gap patterns 3 0 upper 1.804656839 target 1.692673316 remaining 27060
+radial gap patterns 3 0 upper 1.731225315 target 1.692673316 remaining 24899
+remaining pattern 0z 3g 5z: 10773 cells
+remaining pattern 1z 3g 5z: 2417 cells
+remaining pattern 3g 5z 6z: 48 cells
+remaining pattern 3g 5z 7z: 7540 cells
+remaining pattern 3g 5z 8z: 3656 cells
+remaining pattern 0z 3z 5g: 394 cells
+remaining pattern 3z 5g 7z: 71 cells
+exit=0
+
+--- nine-joint-reduce 2 ---
+radial gap patterns 4 0 upper 1.815184949 target 1.692673316 remaining 1778215
+radial gap patterns 4 0 upper 1.752355913 target 1.692673316 remaining 128374
+radial gap patterns 4 0 upper 1.75865285 target 1.692673316 remaining 89185
+radial gap patterns 4 0 upper 1.74959607 target 1.692673316 remaining 88882
+radial gap patterns 4 0 upper 1.759015493 target 1.692673316 remaining 88807
+radial gap patterns 4 0 upper 1.767623554 target 1.692673316 remaining 88807
+radial gap patterns 4 0 upper 1.822625268 target 1.692673316 remaining 88807
+radial gap patterns 4 0 upper 1.840982761 target 1.692673316 remaining 88807
+radial gap patterns 4 0 upper 1.710115573 target 1.692673316 remaining 9259
+radial gap patterns 4 0 upper 1.816764408 target 1.692673316 remaining 9259
+radial gap patterns 4 0 upper 1.861129367 target 1.692673316 remaining 9259
+radial gap patterns 4 0 upper 1.696702776 target 1.692673316 remaining 59
+radial gap patterns 4 0 upper 1.764190761 target 1.692673316 remaining 59
+radial gap patterns 4 0 upper 1.832991516 target 1.692673316 remaining 59
+radial gap patterns 4 0 upper 1.764686506 target 1.692673316 remaining 59
+radial gap patterns 4 0 upper 1.722491749 target 1.692673316 remaining 59
+remaining pattern 0z 2g 4z: 59 cells
+exit=0
+
+--- nine-joint-reduce 3 ---
+radial gap patterns 4 0 upper 1.812528868 target 1.692673316 remaining 2770323
+radial gap patterns 4 0 upper 1.728123531 target 1.692673316 remaining 158260
+radial gap patterns 4 0 upper 1.727683084 target 1.692673316 remaining 91198
+radial gap patterns 4 0 upper 1.799710546 target 1.692673316 remaining 90347
+radial gap patterns 4 0 upper 1.749227815 target 1.692673316 remaining 75571
+radial gap patterns 4 0 upper 1.760362046 target 1.692673316 remaining 73976
+radial gap patterns 4 0 upper 1.82129562 target 1.692673316 remaining 73976
+radial gap patterns 4 0 upper 1.868282411 target 1.692673316 remaining 73976
+radial gap patterns 4 0 upper 1.743559843 target 1.692673316 remaining 72979
+radial gap patterns 4 0 upper 1.753500069 target 1.692673316 remaining 64960
+radial gap patterns 4 0 upper 1.820482723 target 1.692673316 remaining 64960
+radial gap patterns 4 0 upper 1.733624267 target 1.692673316 remaining 47563
+radial gap patterns 4 0 upper 1.764042076 target 1.692673316 remaining 47563
+radial gap patterns 4 0 upper 1.827095545 target 1.692673316 remaining 47563
+radial gap patterns 4 0 upper 1.762983291 target 1.692673316 remaining 47563
+radial gap patterns 4 0 upper 1.739291268 target 1.692673316 remaining 43336
+remaining pattern 0g 2z 4z: 8672 cells
+remaining pattern 0g 2z 5z: 1268 cells
+remaining pattern 0g 2z 6z: 4845 cells
+remaining pattern 0g 2z 7z: 5513 cells
+remaining pattern 0g 4z 6z: 50 cells
+remaining pattern 0g 4z 7z: 22 cells
+remaining pattern 0z 2g 4z: 5834 cells
+remaining pattern 0z 2g 5z: 3556 cells
+remaining pattern 0z 2g 6z: 5631 cells
+remaining pattern 0z 2g 7z: 6209 cells
+remaining pattern 0z 2g 8z: 821 cells
+remaining pattern 2g 4z 6z: 501 cells
+remaining pattern 2g 4z 7z: 414 cells
+exit=0
+
+--- nine-joint-reduce 4 ---
+radial gap patterns 4 0 upper 1.811656572 target 1.692673316 remaining 2566975
+radial gap patterns 4 0 upper 1.711211337 target 1.692673316 remaining 42965
+radial gap patterns 4 0 upper 1.706036065 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.73231928 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.721023792 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.733637329 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.82247457 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.825832394 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.720494748 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.723287796 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.759045376 target 1.692673316 remaining 13252
+radial gap patterns 4 0 upper 1.716380558 target 1.692673316 remaining 12008
+radial gap patterns 4 0 upper 1.749217598 target 1.692673316 remaining 12008
+radial gap patterns 4 0 upper 1.815156433 target 1.692673316 remaining 12008
+radial gap patterns 4 0 upper 1.74749103 target 1.692673316 remaining 12008
+radial gap patterns 4 0 upper 1.705751403 target 1.692673316 remaining 9145
+remaining pattern 1g 3z 4z: 427 cells
+remaining pattern 1g 3z 5z: 705 cells
+remaining pattern 1g 3z 6z: 1372 cells
+remaining pattern 1g 3z 7z: 1401 cells
+remaining pattern 1g 3z 8z: 761 cells
+remaining pattern 0z 1z 3g: 432 cells
+remaining pattern 1z 3g 5z: 697 cells
+remaining pattern 1z 3g 6z: 1318 cells
+remaining pattern 1z 3g 7z: 1333 cells
+remaining pattern 1z 3g 8z: 699 cells
+exit=0
+
+--- nine-joint-reduce 5 ---
+radial gap patterns 4 0 upper 1.784025152 target 1.692673316 remaining 1630012
+radial gap patterns 4 0 upper 1.737927952 target 1.692673316 remaining 133420
+radial gap patterns 4 0 upper 1.719615364 target 1.692673316 remaining 28412
+radial gap patterns 4 0 upper 1.793499543 target 1.692673316 remaining 27608
+radial gap patterns 4 0 upper 1.726664933 target 1.692673316 remaining 19561
+radial gap patterns 4 0 upper 1.747819991 target 1.692673316 remaining 13821
+radial gap patterns 4 0 upper 1.797552425 target 1.692673316 remaining 13821
+radial gap patterns 4 0 upper 1.831894458 target 1.692673316 remaining 13821
+radial gap patterns 4 0 upper 1.739481507 target 1.692673316 remaining 13821
+radial gap patterns 4 0 upper 1.742662387 target 1.692673316 remaining 13637
+radial gap patterns 4 0 upper 1.796445626 target 1.692673316 remaining 13637
+radial gap patterns 4 0 upper 1.726507953 target 1.692673316 remaining 9695
+radial gap patterns 4 0 upper 1.752356346 target 1.692673316 remaining 9632
+radial gap patterns 4 0 upper 1.780296729 target 1.692673316 remaining 9632
+radial gap patterns 4 0 upper 1.746766889 target 1.692673316 remaining 9632
+radial gap patterns 4 0 upper 1.732641885 target 1.692673316 remaining 9382
+remaining pattern 0z 4g 6z: 6250 cells
+remaining pattern 1z 4g 6z: 671 cells
+remaining pattern 2z 4g 6z: 1728 cells
+remaining pattern 4g 6z 8z: 733 cells
+exit=0
+
+--- nine-joint-reduce 6 ---
+radial gap patterns 5 0 upper 1.826475349 target 1.692673316 remaining 1888931
+radial gap patterns 5 0 upper 1.728896869 target 1.692673316 remaining 30167
+radial gap patterns 5 0 upper 1.713941948 target 1.692673316 remaining 1993
+radial gap patterns 5 0 upper 1.705240064 target 1.692673316 remaining 1491
+radial gap patterns 5 0 upper 1.723323391 target 1.692673316 remaining 1491
+radial gap patterns 5 0 upper 1.702419126 target 1.692673316 remaining 935
+radial gap patterns 5 0 upper 1.746741142 target 1.692673316 remaining 935
+radial gap patterns 5 0 upper 1.752187027 target 1.692673316 remaining 935
+radial gap patterns 5 0 upper 1.738175538 target 1.692673316 remaining 935
+radial gap patterns 5 0 upper 1.740871767 target 1.692673316 remaining 935
+radial gap patterns 5 0 upper 1.738806251 target 1.692673316 remaining 935
+radial gap patterns 5 0 upper 1.697345275 target 1.692673316 remaining 428
+radial gap patterns 5 0 upper 1.723176175 target 1.692673316 remaining 428
+radial gap patterns 5 0 upper 1.739716516 target 1.692673316 remaining 428
+radial gap patterns 5 0 upper 1.718235759 target 1.692673316 remaining 428
+radial gap patterns 5 0 upper 1.709515364 target 1.692673316 remaining 428
+remaining pattern 0g 2z 5z: 415 cells
+remaining pattern 0g 2z 7z: 13 cells
+exit=0
+
+--- nine-joint-reduce 7 ---
+radial gap patterns 5 0 upper 1.826026677 target 1.692673316 remaining 1934587
+radial gap patterns 5 0 upper 1.732283059 target 1.692673316 remaining 49289
+radial gap patterns 5 0 upper 1.725724604 target 1.692673316 remaining 15586
+radial gap patterns 5 0 upper 1.750318325 target 1.692673316 remaining 15027
+radial gap patterns 5 0 upper 1.726800946 target 1.692673316 remaining 12884
+radial gap patterns 5 0 upper 1.736171891 target 1.692673316 remaining 8546
+radial gap patterns 5 0 upper 1.83175189 target 1.692673316 remaining 8546
+radial gap patterns 5 0 upper 1.845839372 target 1.692673316 remaining 8546
+radial gap patterns 5 0 upper 1.738893239 target 1.692673316 remaining 8546
+radial gap patterns 5 0 upper 1.737161098 target 1.692673316 remaining 8546
+radial gap patterns 5 0 upper 1.806234904 target 1.692673316 remaining 8546
+radial gap patterns 5 0 upper 1.711677866 target 1.692673316 remaining 5020
+radial gap patterns 5 0 upper 1.752603048 target 1.692673316 remaining 5020
+radial gap patterns 5 0 upper 1.828499589 target 1.692673316 remaining 5020
+radial gap patterns 5 0 upper 1.734700947 target 1.692673316 remaining 5020
+radial gap patterns 5 0 upper 1.721249961 target 1.692673316 remaining 4711
+remaining pattern 0z 5g 7z: 3419 cells
+remaining pattern 1z 5g 7z: 106 cells
+remaining pattern 2z 5g 7z: 577 cells
+remaining pattern 3z 5g 7z: 609 cells
+exit=0
+
+完整模式见 ../n25/proof.md 第 24 节。前置筛选通过表示剩余空隙对全部进入联合界枚举。
+本次复算检查 Python 验证器和列出的 C++ 模式。逐模式全量重放及独立数学复审仍待开展。
