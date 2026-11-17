@@ -15,8 +15,9 @@ unpaid premises with decimal displays or cached verdicts.
 For n11 Lean, use the newest source handoff and its fixed toolchain. Build
 imports before auditing probes. Keep Lean builds serial and do not upgrade
 dependencies. The A25 framework acceptance is not the arbitrary-center
-full-disk theorem. For n26, keep formal geometric and arithmetic progress
-separate; neither is globally complete.
+full-disk theorem. For n26, use the replayed independent global proof linked
+from `cover26/REPLAY-20261112.md`. Keep the native geometric and arithmetic
+checkpoints scoped to their original branches.
 
 Never commit credentials, connection configurations or private keys. Server
 endpoints are maintainer-side storage, not public download services. Export

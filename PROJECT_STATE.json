@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-agent-handoff-v1",
-  "updated_at": "2026-11-08T22:33:15.253965+08:00",
+  "updated_at": "2026-11-17T00:00:00+08:00",
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
@@ -214,7 +214,7 @@
     },
     {
       "n": 26,
-      "current_scope": "Global theorem incomplete; independent 0.229 < r_D(26) <= rho with exact root and same-root cover; native 16 / 4957 / 344 unchanged; continuous goal paused.",
+      "current_scope": "Exact global optimality established by the independent proof in PR #6 and the 2026-11-12 maintainer replay. The external root equals the exact native covering radius. The native 16 / 4957 / 344 checkpoints retain their original scopes.",
       "authorities": [
         {
           "path": "cover26/proof_bundle/outputs/n26-mixed-after-six-midarc-supplemental-current-v1.json",
@@ -234,14 +234,22 @@
         "python cover26/continuations/2026-11-08-terra/workspace/round-20261107b/replay.py",
         "python cover26/continuations/2026-11-08-terra/workspace/round-20261107e/checkpoint_replay.py"
       ],
-      "asset_availability": "Complete formal/arithmetic current snapshot bytes restored and hash-checked; explicit physical graph, 29 kernels and 344 exact OPEN domains independently checked; historical dependency closure and native geometry acceptance remain incomplete.",
+      "asset_availability": "The pinned PR #6 commit supplies the independent proof and all 45 certificate files. Native current snapshot bytes are hash-checked. The native historical dependency closure remains incomplete.",
       "next_actions": [
-        "On explicit user resumption, continue the preserved 344 closed domains with new certificates; retain formal 16/4957 obligations and complete general-cover reduction.",
-        "See external n14 vector-force and near-configuration quadratic methods; no n26 exclusion has yet been made with them."
+        "For the global result, read cover26/REPLAY-20261112.md and use the fixed external proof tree and its check_global.py entry point.",
+        "If the paused native route is resumed, preserve the distinct 16 roots, 4957 conditional prefixes and 344 arithmetic open domains."
       ],
-      "complete_fresh_global_replay": false,
-      "latest_continuation": "cover26/continuations/2026-11-08-terra/README.md",
-      "continuous_goal_status": "paused"
+      "complete_fresh_global_replay": true,
+      "latest_continuation": "cover26/REPLAY-20261112.md",
+      "continuous_goal_status": "paused",
+      "independent_global_proof": {
+        "source_pr": "https://github.com/Liyang1145/DiskCoveringProofs/pull/6",
+        "source_commit": "9414602a6a8bbb743b7000b938556ec28a4cf4f9",
+        "proof": "https://github.com/nannnannan/DiskCoveringProofs/blob/9414602a6a8bbb743b7000b938556ec28a4cf4f9/external-submissions/2026-11-09-n26-offline-proof/n26/proof.md",
+        "replay_date": "2026-11-12",
+        "replay_report": "cover26/REPLAY-20261112.md",
+        "replay_receipt": "cover26/REPLAY-20261112.json"
+      }
     }
   ],
   "bundles": [

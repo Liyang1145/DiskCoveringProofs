@@ -79,7 +79,7 @@ and classification of all optimal configurations are not claimed.
 | 23 | $0.24995377658605018325$ | Square root of boxed core-system radius-squared coordinate / 核心系统隔离根 | [Accepted global source proof](cover23/README.md) / 已接受全局源证明 |
 | 24 | $0.24530165016852390995$ | Square root of boxed core-system radius-squared coordinate / 核心系统隔离根 | [Accepted global source proof](cover24/README.md) / 已接受全局源证明 |
 | 25 | $0.23914631173810026822$ | $1/(\sqrt6+\sqrt3)$ | [Accepted global source proof](cover25/README.md), original qualification retained. / 保留接受件限定 |
-| 26 | — | Candidate root only / 仅候选根 | [**Global proof incomplete**](cover26/README.md) / **全局证明未完成** |
+| 26 | $0.23470009040044823962$ | Radius coordinate of an isolated three-variable root / 三变量隔离根的半径坐标 | [Independent exact global proof replayed](cover26/REPLAY-20261112.md) / 独立全局证明已复验 |
 
 Decimals are displays, not exact root definitions. For the eleven-disk system,
 read the [boxed root definition](cover11/proof_bundle/research-2026/team-current/lead/N11-GLOBAL-OPTIMALITY-THEOREM.md);
@@ -136,7 +136,7 @@ supplies 55 source/input files, including 15 previously absent core inputs.
 `make restore-core-n23-n25` downloads and verifies it. This is a byte restoration
 entry; a portable mathematical dispatcher for these cores and the full
 global dependency release are still pending. The n26 guide includes a
-hash-bound server export seed and preserves its unfinished mathematical state.
+hash-bound server export seed for the native proof tracks.
 
 ## Layout and provenance / 目录与来源
 
@@ -144,7 +144,7 @@ hash-bound server export seed and preserves its unfinished mathematical state.
   from the reference repository's same-order proofs.
 - `cover21/` through `cover25/`: per-order guides, final acceptance records,
   and references to shared proof sources.
-- `cover26/`: unfinished research, original execution code, and selected
+- `cover26/`: independent global proof review, native research code, and selected
   current/check pairs. Its `root25` label refers to an **$n=26$ branch**.
 - `shared/proof_bundle/`: original cross-order proof bytes for 21–25.
 - `math_data/`, `tools/mathcheck_*.py`: bundled arithmetic inputs and new
@@ -171,9 +171,9 @@ describing a replay.
 The [frozen replay asset release](docs/FROZEN_REPLAY_ASSETS.md) additionally supplies n11 generator/gate records, the complete n21/n22 snapshot inputs and the complete migrated n23–25 input union. All indexed release assets have confirmed remote digests. These are byte-bound inputs; portable global mathematical replay remains separate.
 
 
-## Latest continuation / 最新接续（2026-11-08）
+## Latest continuation / 最新接续
 
-[n=26 checked bounds, exact candidate, and paused checkpoint](cover26/continuations/2026-11-08-terra/README.md): `0.229 < r_D(26) <= rho`; global optimality remains open.
+[n=26 exact global optimality replay（2026-11-12）](cover26/REPLAY-20261112.md): the independent proof establishes the matching global lower bound at the exact local covering radius. The [November 8 checkpoint](cover26/continuations/2026-11-08-terra/README.md) records the earlier native-track bounds.
 [Submitted n11/n14 proofs and review](external-submissions/2026-11-08-sol-review/REVIEW.md): full supplied n14 arithmetic replay and five rejection controls passed; the matching n11 executors have since been integrated through PR #4. Original authorities and qualifications are retained.
 
 [Integrated proof assets and current review scopes](docs/PROOF-ASSET-INTEGRATION-20261108.md): PR #4 is merged; n11 executors are available, n12 full k9 arithmetic remains unrerun, and the existing n25 accepted source archive is linked.

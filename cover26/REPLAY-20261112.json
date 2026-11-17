@@ -1,0 +1,81 @@
+{
+  "checked_at": "2026-11-11T16:11:07.654452+00:00",
+  "source_commit": "9414602a6a8bbb743b7000b938556ec28a4cf4f9",
+  "topology": {
+    "candidate-angular": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/candidate-angular.json",
+      "log_sha256": "7645c50db88c75dadb88a5d6b2b1527deec013ba65fef1d00f98c3c1dd25338e",
+      "receipt_sha256": "0ffb27831967d4ada1877267400a037ced82ab45bf8f8384f1cc3b64bd1d29d8"
+    },
+    "25-b15": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/25-b15.json",
+      "log_sha256": "b1f1e71dc53a78d50e1ca7496ef0fa80e0bb288d178aa6f64556e22cd6e93c22",
+      "receipt_sha256": "a5f22de2bc83293318972429665a0d600ee8d8d00a48ad6f81b4f5ce59a59495"
+    },
+    "25-b16": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/25-b16.json",
+      "log_sha256": "8ba432387c6bb3dc38cfa4a3894b1d0e29b4f7ec2ce40eb404d3a1225c3477cd",
+      "receipt_sha256": "dd9802d86f84f9040ff64d19d972aab19488221d91a8f1dc7b815337bb9508a7"
+    },
+    "b14": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/b14-priority/b14.json",
+      "log_sha256": "b3c1402eaa69aba1fb19e2d6b18586bec4d17b42742b449d3e796f332237db97",
+      "receipt_sha256": "2a1e5ae9e4495238725ab901a834555ca00ae1f252f47da86604d4f42f880010"
+    },
+    "26-b15": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/b15-priority/26-b15.json",
+      "log_sha256": "8617e46cac568ed63a056f7255ab59b30e13fb7721a14bfbfd1597fdc55fe16e",
+      "receipt_sha256": "158b852b3e57a397fbd96b27aeff949f2f741a86acb39fc0bc94be3213fa1a48"
+    },
+    "26-b16-candidate": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/26-b16-candidate.json",
+      "log_sha256": "32fc5ac0ecb2b921d06fa18ba7f73e4f1d4150c7ed7444671b2808d07d2c220c",
+      "receipt_sha256": "e54b1abe3ae7022040a0a16eed400de2f4028a3e2b839cd0d48d7f16e95eed84"
+    },
+    "26-b16-chorded": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/b16-chorded-priority/26-b16-chorded.json",
+      "log_sha256": "7999892d404aa8f8c0ed5565ef4c090e29dbeb1d6acf16799bd29e43043df93f",
+      "receipt_sha256": "2841a377b73af2698803b8da1039142028e6e0ab13e84c4a242c08a699be5ca7"
+    },
+    "26-b17": {
+      "status": "pass",
+      "passed": true,
+      "receipt": "topology-replay/b17-priority/26-b17.json",
+      "log_sha256": "8af51f024cfd252603326e3dd3629a6302d190407d42b16b664f90deba3905fe",
+      "receipt_sha256": "7be872bbc9209334c8352061766fa22b2c1382b37195150cad6c978427ae87ac"
+    }
+  },
+  "auxiliary": {
+    "archive": {
+      "passed": true,
+      "sha256": "9e54aa64d3099432ff235d6c0906943f7111b33f654e6fc0b42d0d8e97fb814a"
+    },
+    "analytic": {
+      "passed": true,
+      "sha256": "20388025c0d3f19001484440afa77acfe136f965f3cf19eb4a7ff6ef6ee19596"
+    },
+    "root_identity": {
+      "passed": true,
+      "sha256": "fde3226b4528ecf4f5d69e165500e2aff5d96d23a1b89084e562429f814d899c"
+    },
+    "local_cover": {
+      "passed": true,
+      "sha256": "22a3b05ff704864f1ec96519c53514f43453a7ce17065e2ca1f3c4aef89efcef"
+    }
+  },
+  "all_replay_stages_passed": true
+}

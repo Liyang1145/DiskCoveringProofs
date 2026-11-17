@@ -161,7 +161,7 @@ $29t^3-55t^2+19t-1=0$ in $(641/10000,321/5000)$. The polynomial is in the
 **squared radius**, not the radius. Its attaining candidate has $D_7$ symmetry;
 that symmetry is not a premise for competing covers.
 
-[The twenty-six-disk project](../cover26/README.md) remains incomplete.
+[The twenty-six-disk global proof](../cover26/REPLAY-20261112.md) was replayed from an independent submission. Its algebraic radius matches the exact attaining root of the native construction.
 Its `root25` arithmetic branch is an internal label within the **$n=26$** work.
 Formal candidate-root counts and arithmetic open-subdomain counts are different
 objects and cannot be substituted for one another or subtracted.
@@ -185,4 +185,4 @@ objects and cannot be substituted for one another or subtracted.
 $n=11$ 的源证明与另一个尚未完成的 Lean 形式化项目须区分；$n=12$ 的
 7041 个终端盒属于十个边界活跃盘分支，其中 318 个不可行、6723 个原子证书。
 字节完整性、同根关联、树的完备覆盖和逐叶数学不等式是不同检查。历史接受记录
-保存其原作用域；本次复现通过多少项目，应以新鲜执行报告为准。$n=26$ 仍未闭合。
+保存其原作用域；本次复现通过多少项目，应以新鲜执行报告为准。$n=26$ 的独立全局证明已复算，见[2026-11-12 记录](../cover26/REPLAY-20261112.md)。
