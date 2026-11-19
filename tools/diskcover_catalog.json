@@ -210,7 +210,7 @@
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/README.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
     ],
-    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. The optional local replay verifies a rational upper witness only, not the algebraic attainment or arbitrary-center lower bound."
   },
   {
     "n": 21,

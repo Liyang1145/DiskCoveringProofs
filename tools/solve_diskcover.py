@@ -14,6 +14,8 @@ def main():
     parser.add_argument("n", type=int, nargs="?", help="number of covering disks (1–22)")
     parser.add_argument("--all", action="store_true", help="report source status for all orders")
     parser.add_argument("--grid", type=int, help="also compute certified bounds using a grid of spacing 1/GRID")
+    parser.add_argument("--certified-upper", action="store_true",
+                        help="replay a bundled upper witness (currently n=19 and n=20; not a global proof)")
     parser.add_argument("--max-nodes", type=int, default=20_000, help="total grid search budget")
     parser.add_argument("--require-global-proof", action="store_true",
                         help="return a self-contained exact proof, or exit 2 if unavailable")
@@ -22,8 +24,10 @@ def main():
         parser.error("specify exactly one of n or --all")
     if args.n is not None and not 1 <= args.n <= 22:
         parser.error("n must be between 1 and 22")
-    if args.require_global_proof and (args.all or args.grid is not None):
-        parser.error("--require-global-proof requires a single order and cannot be combined with --grid")
+    if args.require_global_proof and (args.all or args.grid is not None or args.certified_upper):
+        parser.error("--require-global-proof cannot be combined with --all, --grid or --certified-upper")
+    if args.certified_upper and args.n not in (19, 20):
+        parser.error("--certified-upper requires n=19 or n=20")
     if args.require_global_proof:
         result = solve_global(args.n)
         if result is None:
@@ -41,6 +45,12 @@ def main():
         result = records
     else:
         result = {"source": next(entry for entry in records if entry["n"] == args.n)}
+        if args.certified_upper:
+            if args.n == 19:
+                from diskcover_n19_upper import check_n19_upper as check_upper
+            else:
+                from diskcover_n20_upper import check_n20_upper as check_upper
+            result["fresh_certified_upper"] = check_upper()
         if args.grid is not None:
             try:
                 result["fresh_certified_bounds"] = solve_grid(args.n, args.grid, args.max_nodes)
