@@ -15199,8 +15199,13 @@
 {"path": "cover28/README.md", "sha256": "4e30d7cea2271596bad7a1c86044f00a0236fc54df153af53350cde4300e68bd", "bytes": 902, "encoding": "identity", "category": "local-mathematical-assets-20261119"}
 {"path": "docs/PROOF-ASSET-INTEGRATION-20261119.md", "sha256": "e5910e005eb70340012e0714994153774fb8d37227c56be37ffa633eecb87b35", "bytes": 3196, "encoding": "identity", "category": "local-mathematical-assets-20261119"}
 {"path": "docs/DISKCOVER_EXTERNAL_17_20.md", "bytes": 4192, "sha256": "2dac5ed4993ddad2c4cf4adaa52b0588078251a10d99975dccb2127ae5470ed4", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
-{"path": "docs/DISKCOVER_SOLVER_1_22.md", "bytes": 3889, "sha256": "bc73e82d9bdb694b3c955f6e54f131832dc56783d8234458960329139db7e739", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_SOLVER_1_22.md", "bytes": 4219, "sha256": "aa5cdf86ff853699f9f4b36180ab8b5d9a168fdc6df4d9a3f63a1d276bf5e585", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/diskcover_catalog.json", "bytes": 10969, "sha256": "20756e77d8e1ee1c8e5e1a1f9b44f3e0c454d385ff34c8f7187c1a51af1368a6", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/diskcover_grid.py", "bytes": 5062, "sha256": "27d6cd2c9b22ea9e60624e01f08e10613b6dd086b2410969ed27f3b9969bf6ae", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
-{"path": "tools/solve_diskcover.py", "bytes": 1773, "sha256": "09a8ed987362d4e7c535e759abda686ad4a840ba275a52ef78936a69171d932c", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/solve_diskcover.py", "bytes": 2454, "sha256": "0f061ded7fed96af68cd00968ccf3ddabe448d422a6fb17d55c2f0058bf0bad4", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/test_diskcover_grid.py", "bytes": 2184, "sha256": "cba72174df6bf66a86a4da06e90f30166fb3f4358b1e8c2435ca0439a71f63a0", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_NATIVE_N19.md", "bytes": 3298, "sha256": "b19b1b545953e91daab195da14ee3abf30cadc7d2d23c4bf9870a002e09ee240", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/diskcover_global.py", "bytes": 2576, "sha256": "5fc8b9f9035bd5dcef27c59f0c19cf83896497afdb71a8bbdd315703c5e53839", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/diskcover_n19_upper.py", "bytes": 3655, "sha256": "4c172192d933c051cd848baa5c1ab76e5d226c1024958879528a3c94b681ea7b", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/test_diskcover_global.py", "bytes": 1099, "sha256": "638ba94c0600206b7ef854565589f02157082f93ba5a7a0a1fd282221671730d", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/test_diskcover_n19_upper.py", "bytes": 1141, "sha256": "0bc2e7b73e2db19989e2e1e8747d6011f33db9908d0203020c2bdf9c6bccf162", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}

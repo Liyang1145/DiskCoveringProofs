@@ -4,11 +4,14 @@
 ```sh
 python tools/solve_diskcover.py --all
 python tools/solve_diskcover.py 22
+python tools/solve_diskcover.py 4 --require-global-proof
 python tools/solve_diskcover.py 17 --grid 5 --max-nodes 20000
 python -m unittest discover -s tools -p 'test_diskcover*.py'
 ```
 
 默认输出归档来源与核验范围，**不表示重新证明**。经典定理、本仓库源证明、外部作者的全局最优性声明分开记录；带小数点的半径只是显示值。附加 `--grid` 才会重新计算有证明保证的连续上下界。离散最优值不是连续最优值。此入口不会运行外部执行器、修改冻结证书或把近似结果标记为精确解。
+
+`--require-global-proof` 仅在已有自包含证明和精确达到构型时返回成功；目前只支持 n=1–4。其他阶返回退出码 2，且不输出近似值作为解。n=19 的[独立上界和分支排除](DISKCOVER_NATIVE_N19.md)尚不足以开启该模式。
 
 ## 小阶全局证明（n = 1, 2, 3, 4）
 
