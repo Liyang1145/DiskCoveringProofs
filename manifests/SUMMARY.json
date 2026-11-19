@@ -11,15 +11,17 @@
     23,
     24,
     25,
-    26
+    26,
+    27,
+    28
   ],
   "duplicate_numbered_local_proofs_preserved": [
     11,
     12,
     14
   ],
-  "delivered_files": 14995,
-  "delivered_original_bytes": 3036666353,
+  "delivered_files": 15200,
+  "delivered_original_bytes": 3049529156,
   "complete_historical_dependency_mirror": false,
   "complete_not_delivered_file_inventory": false,
   "this_delivery_is_new_mathematical_acceptance": false,
@@ -37,7 +39,9 @@
   "original_snapshot_commit": "1790e4aad4d06a70c272c9608f186beaccc4e9f9",
   "fresh_portable_math_scopes": {
     "n11": "root, candidate geometry, 371 Schur fields; global not replayed",
-    "n12": "full root and k10 arithmetic: 7041 terminals, 6723 fresh atomic checks; analytic/global chain not replayed"
+    "n12": "Independent November proof finite verifier passed. Earlier full k10 arithmetic and historical chain scopes are retained.",
+    "n27": "Exact same-root construction, strict gauged local optimality, global lower bound 0.224645, core-fill catalogue and auxiliary thirteen-disk lower bound.",
+    "n28": "Global lower bound 0.220001 and rational closed-disk cover at radius 0.225724991191."
   },
   "new_unrestricted_global_acceptance": false,
   "global_agent_handoff": "START_HERE.md / PROJECT_STATE.json",
@@ -46,14 +50,14 @@
   "full_n23_n25_asset_content_public": true,
   "n21_n22_frozen_input_content_public": true,
   "release_input_math_replayed": false,
-  "snapshot_update_date": "2026-11-17",
+  "snapshot_update_date": "2026-11-19",
   "latest_n26_continuation": "cover26/REPLAY-20261112.md",
   "n26_continuous_goal_status": "paused",
   "n26_independently_checked_range": "r_D(26) = rho (exact isolated algebraic root)",
   "external_review": "external-submissions/2026-11-08-sol-review/REVIEW.md",
   "navigation_manifest_repair_report": "verification/reproducibility/navigation-manifest-repair-20261108.json",
   "external_offline_submission": "external-submissions/2026-11-08-offline-proofs/README.md",
-  "latest_proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md",
+  "latest_proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261119.md",
   "external_k9_full_maintainer_replay": false,
   "n26_native_continuous_goal_scope": "native geometric and arithmetic route",
   "n26_external_global_replay": "cover26/REPLAY-20261112.json"

@@ -1,6 +1,6 @@
 {
   "schema": "disk-covering-agent-handoff-v1",
-  "updated_at": "2026-11-17T00:00:00+08:00",
+  "updated_at": "2026-11-19T12:57:59+08:00",
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
@@ -60,24 +60,32 @@
     },
     {
       "n": 12,
-      "current_scope": "Archived global source proof; complete portable global replay unavailable.",
+      "current_scope": "Independent computer-assisted global proof and full finite verifier replayed on 2026-11-19. Historical n12 routes retain their recorded scopes.",
       "authorities": [
         {
           "path": "cover12/proof_bundle/research-2026/n12-global/lead/GLOBAL-SYNTHESIS.md",
           "sha256": "5c48386648de888d7dd126202a8701322a5441f9e33b5a492226034156e0f3c2",
           "bytes": 6112,
           "encoding": "identity"
+        },
+        {
+          "path": "cover12/proof_bundle/independent-2026-11/proof.md",
+          "sha256": "934881651f99cd72ed91087bcc8659c38832b77761a64e06b7b58b9c4336010d",
+          "bytes": 23663,
+          "encoding": "identity"
         }
       ],
       "fresh_portable_commands": [
-        "python tools/check_math.py n12 --workers 4"
+        "python tools/check_math.py n12 --workers 4",
+        "python -B cover12/proof_bundle/independent-2026-11/verify_global.py --jobs 4"
       ],
-      "asset_availability": "Selected Git archive; historical full-chain dependency closure not guaranteed.",
+      "asset_availability": "Independent November proof, sources and executable verifier are in Git. The earlier frozen archive retains its own dependency scope.",
       "next_actions": [
+        "Replay the independent proof via cover12/proof_bundle/independent-2026-11/verify_global.py. See docs/PROOF-ASSET-INTEGRATION-20261119.md for the finite checks.",
         "Complete the analytic/global-chain replay around the freshly checked full k10 arithmetic.",
         "Review the submitted general-cover reduction and check equivalence of the two exact radius definitions."
       ],
-      "complete_fresh_global_replay": false,
+      "complete_fresh_global_replay": true,
       "external_offline_submission": {
         "path": "external-submissions/2026-11-08-offline-proofs/README.md",
         "scope": "Separate external n12 proof, sources and both boundary-domain certificates. k10 and tangent replay passed; full k9 replay interrupted during host memory pressure.",
@@ -86,7 +94,9 @@
         "source_pr": 4,
         "canonical_root_equivalence_proved": false
       },
-      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md"
+      "proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261119.md",
+      "independent_replay": "docs/PROOF-ASSET-INTEGRATION-20261119.md",
+      "comparative_proof_packages": "cover12/proof_bundle/comparative-2026-11/README.md"
     },
     {
       "n": 14,
@@ -250,6 +260,79 @@
         "replay_report": "cover26/REPLAY-20261112.md",
         "replay_receipt": "cover26/REPLAY-20261112.json"
       }
+    },
+    {
+      "n": 27,
+      "current_scope": "Certified global lower bound 0.224645, exact covering construction near 0.23079558957419143671, and strict gauged local optimality. Global optimality remains open in this package.",
+      "authorities": [
+        {
+          "path": "cover27/README.md",
+          "sha256": "98dac8a576b48e9e03d22aa30a24c36e97b8efc8bed121b75a47d9ce1d3624a4",
+          "bytes": 2237,
+          "encoding": "identity"
+        },
+        {
+          "path": "cover27/proof_bundle/research-2026-11/baseline/proof.md",
+          "sha256": "d7549b47c1e447a7b1875f5190477e4ab62cc0149967abeb40d6cfef9000e197",
+          "bytes": 18354,
+          "encoding": "identity"
+        },
+        {
+          "path": "cover27/proof_bundle/research-2026-11/core-fills/proof.md",
+          "sha256": "d83d2e0107fbc357152261f00d88d8262ea2f4ba386e13ea18338abe5fde9948",
+          "bytes": 13512,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [
+        "python -B cover27/proof_bundle/research-2026-11/baseline/verify_cover27.py cover27/proof_bundle/research-2026-11/baseline/exact-27",
+        "python -B cover27/proof_bundle/research-2026-11/baseline/verify_local27.py cover27/proof_bundle/research-2026-11/baseline/exact-27",
+        "python -B cover27/proof_bundle/research-2026-11/core-fills/verify_bundle.py --global-lower",
+        "python -B cover27/proof_bundle/research-2026-11/core-fills/verify_bundle.py --only-aux13 --jobs 4"
+      ],
+      "asset_availability": "All six local mathematical stages and their replay inputs are in Git.",
+      "next_actions": [
+        "At U=0.230796, eliminate the remaining cases for 14 to 18 boundary owners or send them to the certified local box.",
+        "Use the surviving core completions and the auxiliary thirteen-disk bound from the core-fills stage."
+      ],
+      "complete_fresh_global_replay": false,
+      "global_optimality_proved": false,
+      "independent_replay": "docs/PROOF-ASSET-INTEGRATION-20261119.md"
+    },
+    {
+      "n": 28,
+      "current_scope": "Certified bounds 0.220001 <= r_D(28) <= 0.225724991191. Global optimality remains open in this package.",
+      "authorities": [
+        {
+          "path": "cover28/README.md",
+          "sha256": "4e30d7cea2271596bad7a1c86044f00a0236fc54df153af53350cde4300e68bd",
+          "bytes": 902,
+          "encoding": "identity"
+        },
+        {
+          "path": "cover27/proof_bundle/research-2026-11/baseline/proof.md",
+          "sha256": "d7549b47c1e447a7b1875f5190477e4ab62cc0149967abeb40d6cfef9000e197",
+          "bytes": 18354,
+          "encoding": "identity"
+        },
+        {
+          "path": "cover27/proof_bundle/research-2026-11/baseline/cover-28-rational.json",
+          "sha256": "ac2de87dbb47189c4bcbfaf40e602baca68a8f0f997c0480466f6bceae3999c1",
+          "bytes": 2056,
+          "encoding": "identity"
+        }
+      ],
+      "fresh_portable_commands": [
+        "node cover27/proof_bundle/research-2026-11/baseline/area27.js 28",
+        "python -B cover27/proof_bundle/research-2026-11/baseline/verify_rational_cover.py cover27/proof_bundle/research-2026-11/baseline/cover-28-rational.json"
+      ],
+      "asset_availability": "The rational construction and area lower-bound inputs are in the n27 baseline package.",
+      "next_actions": [
+        "Improve the certified covering construction or the arbitrary-center lower bound."
+      ],
+      "complete_fresh_global_replay": false,
+      "global_optimality_proved": false,
+      "independent_replay": "docs/PROOF-ASSET-INTEGRATION-20261119.md"
     }
   ],
   "bundles": [
@@ -325,5 +408,5 @@
     "Keep existing frozen sources unchanged; preserve exact roots and explicit unpaid premises."
   ],
   "detailed_orders21_26": "verification/reproducibility/orders21-26-handoff.json",
-  "latest_proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261108.md"
+  "latest_proof_asset_integration": "docs/PROOF-ASSET-INTEGRATION-20261119.md"
 }

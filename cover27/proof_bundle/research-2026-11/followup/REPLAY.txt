@@ -1,0 +1,32 @@
+Node.js v24.16.0
+
+$ node verify_wheel_core.js
+PASS: exact wheel bounds for 8 and 9, and area bounds for 10 and 11 disks.
+PASS: inward owner constraints for b=15,16,17,18 at U=0.230796.
+exit: 0
+
+$ node verify_boundary14_shared_angles.js
+PASS: b=14 at U=0.2293, 72195 angle boxes, 36143 paid leaves.
+exit: 0
+
+$ node verify_apex27.js global
+{ b: 15, goodBoxes: 0, badBoxes: 0, earBoxes: 0 }
+{ b: 16, goodBoxes: 28541, badBoxes: 41723, earBoxes: 339 }
+{ b: 17, goodBoxes: 691, badBoxes: 0, earBoxes: 441 }
+PASS: b=15,16,17 at U=224640/1000000, with apex sectors.
+exit: 0
+
+$ node verify_apex27.js b15
+{ b: 15, goodBoxes: 0, badBoxes: 2193, earBoxes: 7 }
+PASS: b=15 at U=225080/1000000, with apex sectors.
+exit: 0
+
+$ node verify_apex27.js b17
+{ b: 17, goodBoxes: 6559, badBoxes: 85125, earBoxes: 4543 }
+PASS: b=17 at U=225400/1000000, with apex sectors.
+exit: 0
+
+$ node verify_boundary14_degree_cap.js B14-residual-degrees.json
+PASS: b=14 at U=0.230796 requires outer degree sum at most 64 (901 boxes).
+PASS: b=14 degree profiles, 3023 excluded of 4059, 1036 retained.
+exit: 0

@@ -1,0 +1,4 @@
+PASS: the thirteen-disk cover cannot have 11 norms >= 1-0.342 ([197, 109]).
+PASS: the thirteen-disk cover cannot have 12 norms >= 1-0.342 ([31, 1]).
+PASS: all 48 auxiliary intervals excluded at radius 338900000/1e9 in 1296088 nodes.
+PASS B=14: the auxiliary lower bound gives D1 < 911811049/1e9.

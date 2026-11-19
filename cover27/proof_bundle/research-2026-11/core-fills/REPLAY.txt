@@ -1,0 +1,53 @@
+PASS: b=14 at U=0.230796 requires outer degree sum at most 64 (901 boxes).
+PASS: b=14 degree profiles, 3023 excluded of 4059, 1036 retained.
+PASS B=14: D1 >= 901500000/1e9 and the core cycle give outer degree sum 52.
+PASS B=14: 3990 labelled strips out of 3990 and 7 degree profiles.
+PASS B=14: 164 strips up to rotation and reflection.
+7 apices: 168 of 168 strips.
+8 apices: 1764 of 1764 strips.
+9 apices: 1764 of 1764 strips.
+10 apices: 294 of 294 strips.
+PASS B=14: outward-rounded area supports for seven outer profiles and internal cell areas.
+PASS B=14: at D1 >= 901500/1e6, 5030 core fills contradict the core-disk area.
+PASS B=14: at D1 >= 905600/1e6, 13820 core fills contradict the core-disk area.
+PASS B=14: at D1 >= 908500/1e6, 24975 core fills contradict the core-disk area.
+PASS B=14: at D1 >= 911500/1e6, 36145 core fills contradict the core-disk area.
+PASS B=14: 49805 core triangulations modulo permutations of three interior labels.
+0 core chords, 2 edges between enclosed centers: 825
+0 core chords, 3 edges between enclosed centers: 210
+1 core chords, 1 edges between enclosed centers: 390
+1 core chords, 2 edges between enclosed centers: 5400
+1 core chords, 3 edges between enclosed centers: 1560
+2 core chords, 0 edges between enclosed centers: 35
+2 core chords, 1 edges between enclosed centers: 2170
+2 core chords, 2 edges between enclosed centers: 11760
+2 core chords, 3 edges between enclosed centers: 3920
+3 core chords, 0 edges between enclosed centers: 150
+3 core chords, 1 edges between enclosed centers: 3600
+3 core chords, 2 edges between enclosed centers: 9800
+3 core chords, 3 edges between enclosed centers: 3850
+4 core chords, 0 edges between enclosed centers: 150
+4 core chords, 1 edges between enclosed centers: 1800
+4 core chords, 2 edges between enclosed centers: 2625
+4 core chords, 3 edges between enclosed centers: 1250
+5 core chords, 0 edges between enclosed centers: 20
+5 core chords, 1 edges between enclosed centers: 130
+5 core chords, 2 edges between enclosed centers: 100
+5 core chords, 3 edges between enclosed centers: 60
+Face-list SHA-256 7dd2abf65e7ca4ef5162f77180bc4b531e517018bad60daccfae7d1a248ad452
+PASS B=14: independent boundary-face recursion counts 298830 fully labelled core triangulations.
+PASS B=14: at D1 >= 901500000/1e9, 32 annuli and 4772 placements of the three short-norm core sites survive angular bounds.
+PASS B=14: at D1 >= 905600000/1e9, 32 annuli and 3480 placements of the three short-norm core sites survive angular bounds.
+PASS B=14: at D1 >= 908500000/1e9, 32 annuli and 3034 placements of the three short-norm core sites survive angular bounds.
+PASS B=14: at D1 >= 911500000/1e9, 24 annuli and 2192 placements of the three short-norm core sites survive angular bounds.
+PASS B=14: 5580195 of 8168020 annulus and core-fill pairs fail the Voronoi degree-area bound.
+164 annuli lose at least one completion; 0 annuli lose all completions.
+PASS B=14: at D1 >= 901500/1e6, at most 2587218 pairs remain after both area bounds.
+PASS B=14: at D1 >= 905600/1e6, at most 2561786 pairs remain after both area bounds.
+PASS B=14: at D1 >= 908500/1e6, at most 2349774 pairs remain after both area bounds.
+PASS B=14: at D1 >= 911500/1e6, at most 1695325 pairs remain after both area bounds.
+PASS B=14: at D1 >= 901500/1e6, at most 627990 pairs remain after area and angular tests.
+PASS B=14: at D1 >= 905600/1e6, at most 617840 pairs remain after area and angular tests.
+PASS B=14: at D1 >= 908500/1e6, at most 552291 pairs remain after area and angular tests.
+PASS B=14: at D1 >= 911500/1e6, at most 286478 pairs remain after area and angular tests.
+PASS: the core-fill catalogue, area comparisons, and angular exclusions reproduce.

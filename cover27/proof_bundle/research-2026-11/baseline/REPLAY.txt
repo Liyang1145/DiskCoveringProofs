@@ -1,0 +1,72 @@
+Python 3.14.6, SymPy 1.14.0, Node.js v24.16.0
+
+$ python -B verify_cover27.py exact-27
+{
+  "dimension": 18,
+  "box_half_width": "1/100000000000000000000000000000000000000000000000000000000000000000000000000",
+  "inclusion_ratio_strict_upper": "4809/1000000000000000000000000000000",
+  "contraction_ratio_strict_upper": "1/1000000000000000000000000000000",
+  "r_strict_interval": [
+    "0.230795589574191436708192288037835382313555924493258750321853",
+    "0.230795589574191436708192288037835382313555924493258750321854"
+  ],
+  "radius_squared_interval": [
+    "53266604166898622997342726474917732858871602396446112659471318137201094653875619989889669929591643/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "53266604166898622997342726474917732858871602396446112659471318137201094673875619989889669929591643/1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"
+  ],
+  "square_root_interval_checked_by_integer_squares": true
+}
+Verified the same-root cover using 21 active faces, 16 slack faces and 15 boundary anchors.
+exit: 0
+
+$ python -B verify_local27.py exact-27
+Verified 36 positive contact stresses (minimum > 0.038904).
+Verified strict diagonal dominance in all 53 gauged coordinates (minimum margin > 0.1774435982).
+Verified the local barrier throughout the gauged box of half-width 1/1000000.
+exit: 0
+
+$ node area27.js 27
+{ b: 16, boxes: 6443 }
+{ b: 16, earBoxes: 5439 }
+{ b: 17, boxes: 189 }
+{ b: 17, earBoxes: 87 }
+{ b: 18, boxes: 11 }
+[
+  [ 14, 0.1354968461607769 ],
+  [ 15, 0.018157038699930482 ],
+  [ 16, 8.057575696e-7 ],
+  [ 17, 8.561174177e-7 ],
+  [ 18, 9.064772658e-7 ]
+]
+PASS: all five strict n=27 area inequalities at U=224410/1000000
+exit: 0
+
+$ node verify_boundary14.js
+PASS: n=27 and b=14 excluded at U=0.2288, 1001 angle boxes.
+Upper bound on area minus pi: -0.004579063833511642
+exit: 0
+
+$ node area27.js 28
+{ b: 16, boxes: 261 }
+{ b: 16, earBoxes: 13 }
+{ b: 17, boxes: 79 }
+{ b: 17, earBoxes: 97 }
+{ b: 18, boxes: 23 }
+{ b: 18, earBoxes: 21 }
+[
+  [ 15, 0.03922143111658539 ],
+  [ 16, 7.74407040016e-7 ],
+  [ 17, 8.22807480017e-7 ],
+  [ 18, 8.71207920018e-7 ],
+  [ 19, 0.0033279950706320174 ]
+]
+PASS: all five strict n=28 area inequalities at U=220001/1000000
+exit: 0
+
+$ python -B verify_rational_cover.py cover-28-rational.json
+PASS: 28 rational disks of radius 0.225724991191 cover the closed unit disk.
+  interior triple: 2636
+  boundary bisector: 756
+  boundary stationary point: 56
+  reference boundary point: 1
+exit: 0

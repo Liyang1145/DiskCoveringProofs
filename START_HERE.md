@@ -8,7 +8,7 @@ python tools/project_status.py --check
 python tools/project_status.py --json
 ```
 
-[PROJECT_STATE.json](PROJECT_STATE.json) 给出九阶权威入口、冻结 SHA256、
+[PROJECT_STATE.json](PROJECT_STATE.json) 给出十一阶权威入口、冻结 SHA256、
 公开数据包、未公开资产的位置角色、可立即执行的检查和下一任务。
 状态命令检查索引与交付清单的一致性；它不执行数学证明。
 
@@ -28,10 +28,11 @@ python tools/project_status.py --json
    [缺件、下载与服务器导出方案](docs/REPLAY_ASSET_PLAN.md)。
 5. n26 的精确全局最优性已通过[独立证明的维护者复算](cover26/REPLAY-20261112.md)。
    原生路线的 16 个正式根、4,957 条条件前缀和 344 个算术 OPEN 另有记录。
-6. 根据状态索引的 next actions 开始工作；完成后按 [AGENTS.md](AGENTS.md)
+6. n12 有[独立全局证明包](cover12/proof_bundle/independent-2026-11/proof.md)。[n27](cover27/README.md) 和 [n28](cover28/README.md) 给出全局上下界和独立核验入口。
+7. 根据状态索引的 next actions 开始工作；完成后按 [AGENTS.md](AGENTS.md)
    留下哈希、实际执行结果和剩余义务。
 
-**当前完整全局数学重放并未覆盖九阶。** 23–25 的完整资产已经迁回维护者本机，
+**全库仍有待重放或待证明的阶数。** 23–25 的完整资产已经迁回维护者本机，
 21/22 大依赖树在本机。26 的原生历史依赖仍须按原冻结索引导出。本次固定中继和备用
 直连均 SSH 握手超时，未确认服务器原文件状态。任何地点的 agent 可以从公开
 索引掌握这些边界；不能把维护者机器上的路径当成自己已经下载的文件。
@@ -41,6 +42,10 @@ STATUS 中随意挑一个 ACTIVE 标记替代这里指向的最新状态。
 
 完整 n21–25 冻结输入与 n11 生成／验证补充包已公开。见 [下载与范围](docs/FROZEN_REPLAY_ASSETS.md)。完整清单、全部对应分包及远端摘要均已确认；旧路径的数学入口迁移和新鲜全局重放仍须继续。
 
+
+## 2026-11-19 接续
+
+[本地数学资产与独立复验记录](docs/PROOF-ASSET-INTEGRATION-20261119.md)汇集 n12 的独立证书及 n27、n28 的构造和已证范围。
 
 ## 2026-11-12 接续
 

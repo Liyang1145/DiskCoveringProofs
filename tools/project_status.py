@@ -31,7 +31,7 @@ def main():
                 item = manifest.get(authority["path"])
                 if item is None or (item["sha256"], item["bytes"]) != (authority["sha256"], authority["bytes"]):
                     raise ValueError("Authority differs from delivery manifest: " + authority["path"])
-        if seen != {11, 12, 14, 21, 22, 23, 24, 25, 26}:
+        if seen != {11, 12, 14, 21, 22, 23, 24, 25, 26, 27, 28}:
             raise ValueError("Incomplete order index")
         if state["complete_global_math_replay_available"] is not False:
             raise ValueError("Unexpected unrestricted replay claim")

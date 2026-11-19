@@ -1,0 +1,34 @@
+Symmetric optimum: .36110296374450864411 < r < .36110296374450864412.
+11 boundary disks excluded. Minimum weighted angular margin 0.069741
+Balanced-chain inequality verified: 2301 Hessian boxes and 4936 supporting-plane boxes.
+10 boundary arcs, slot 0 | excluded
+  nodes 10 conflicts 6 units 1334 arcs 2 alpha 0 elapsed 10.5140027
+10 boundary arcs, slot 1 | excluded
+  nodes 33 conflicts 22 units 4529 arcs 6 alpha 3 elapsed 11.3730806
+10 boundary arcs, slot 2 | excluded
+  nodes 94 conflicts 64 units 10994 arcs 12 alpha 4 elapsed 12.4693889
+10 boundary arcs, slot 3 | excluded
+  nodes 289 conflicts 196 units 28925 arcs 45 alpha 13 elapsed 16.8485825
+9 boundary disks, radial bins [0,12) | excluded
+  nodes 4 conflicts 4 units 335 arcs 0 alpha 2 elapsed 7.3051271
+  leaves 0 refinement nodes 0 refinement conflicts 0 pattern 0+0 refinement depth 0
+9 boundary arcs and one unused boundary disk | excluded
+  nodes 76 conflicts 54 units 7086 arcs 3 alpha 21 elapsed 12.0799496
+9 boundary disks, radial bins [12,24) | excluded
+  nodes 539 conflicts 155 units 18109 arcs 15 alpha 59 elapsed 9.4728785
+  leaves 0 refinement nodes 0 refinement conflicts 0 pattern 173+0 refinement depth 0
+10 boundary arcs, slot 4 | excluded
+  nodes 7096 conflicts 4411 units 389037 arcs 473 alpha 771 elapsed 36.8948802
+9 boundary disks, radial bins [40,44) | excluded
+  nodes 123050 conflicts 7420 units 570371 arcs 2384 alpha 3040 elapsed 46.5454784
+  leaves 0 refinement nodes 0 refinement conflicts 0 pattern 59359+0 refinement depth 0
+9 boundary disks, radial bins [36,40) | excluded
+  nodes 155140 conflicts 8416 units 731013 arcs 3247 alpha 3027 elapsed 53.4420197
+  leaves 0 refinement nodes 0 refinement conflicts 0 pattern 75243+0 refinement depth 0
+9 boundary disks, radial bins [44,48) | excluded
+  nodes 134350 conflicts 26177 units 464679 arcs 8737 alpha 9261 elapsed 33.5475561
+  leaves 11417 refinement nodes 11419 refinement conflicts 11418 pattern 33894+0 refinement depth 1
+9 boundary disks, radial bins [24,36) | excluded
+  nodes 208568 conflicts 13155 units 1312954 arcs 5145 alpha 4620 elapsed 74.5684947
+  leaves 0 refinement nodes 0 refinement conflicts 0 pattern 101089+0 refinement depth 0
+All cases excluded below the constructed radius.

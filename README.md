@@ -63,7 +63,7 @@ option turns that unmet requirement into a failed command.
 
 ## Results and archive status / 成果与归档状态
 
-The repository contains orders **11, 12, 14, 21, 22, 23, 24, 25, and 26**.
+The repository contains orders **11, 12, 14, and 21–28**. The table below lists the archived global-proof orders.
 These are archived source-proof and acceptance states. A new upload, byte
 verification, or partial mathematical replay does not establish a new global
 theorem. Complete Lean/Coq formalization, external peer review, novelty priority,
@@ -72,7 +72,7 @@ and classification of all optimal configurations are not claimed.
 | $n$ | Radius rounded to 20 decimal places | Exact object / 精确对象 | Archived source status / 原来源状态 |
 |---|---|---|---|
 | 11 | $0.37998385311983868972$ | Boxed contact/stationarity root, radius coordinate / 接触与驻定隔离根 | [Global source proof `C924`](cover11/README.md); separate Lean formalization incomplete. / 非完整 Lean 形式化 |
-| 12 | $0.36110296374450864411$ | Boxed algebraic solution $F=G=H=T=0$, radius coordinate / 四方程隔离根 | [Global source proof `C1141`](cover12/README.md) / 全局源证明 |
+| 12 | $0.36110296374450864411$ | Boxed algebraic solution $F=G=H=T=0$, radius coordinate / 四方程隔离根 | [Global source proof `C1141`](cover12/README.md) · [Independent proof and replay](cover12/proof_bundle/independent-2026-11/proof.md) |
 | 14 | $0.33173203427623412256$ | Boxed $F=G=H=0$ root with positive radical branches / 正根分支隔离根 | [Global source proof `C1372`](cover14/README.md) / 全局源证明 |
 | 21 | $0.26284507240358458065$ | Square root of boxed core-system radius-squared coordinate / 核心系统隔离根 | [Historical complete global delivery](cover21/README.md), recheck scope retained. / 保留复查范围 |
 | 22 | $0.25325145983509235808$ | $\sqrt{t_*}$, isolated root of $29t^3-55t^2+19t-1$ / 三次方程的平方半径根 | [Historical complete global delivery](cover22/README.md), recheck scope retained. / 保留复查范围 |
@@ -92,6 +92,13 @@ root proof, attainment, and lower-bound quantifiers.
 The [radius index](assets/configurations/radius-index.json) gives source-bound
 rounded displays for all eight completed source-proof orders, with their exact
 definition entries and available symmetry information.
+
+### Current certified bounds / 当前已证界
+
+| $n$ | Global lower bound / 全局下界 | Certified covering radius / 已证构造上界 | Scope / 状态 |
+|---:|---:|---:|---|
+| 27 | $0.224645$ | $\rho_{27}\approx0.23079558957419143671$ | [Exact construction and local optimality](cover27/README.md); global optimum open in this package / 全局最优性待证明 |
+| 28 | $0.220001$ | $0.225724991191$ | [Rational cover and area bound](cover28/README.md); global optimum open in this package / 全局最优性待证明 |
 
 ## Configuration atlas / 构型图集
 
@@ -146,6 +153,7 @@ hash-bound server export seed for the native proof tracks.
   and references to shared proof sources.
 - `cover26/`: independent global proof review, native research code, and selected
   current/check pairs. Its `root25` label refers to an **$n=26$ branch**.
+- `cover27/` and `cover28/`: current exact constructions, certified bounds, and conditional exclusions.
 - `shared/proof_bundle/`: original cross-order proof bytes for 21–25.
 - `math_data/`, `tools/mathcheck_*.py`: bundled arithmetic inputs and new
   portable mathematical checkers.
@@ -172,6 +180,8 @@ The [frozen replay asset release](docs/FROZEN_REPLAY_ASSETS.md) additionally sup
 
 
 ## Latest continuation / 最新接续
+
+[Independent n=12 proof, n=27 and n=28 bounds, and replay record（2026-11-19）](docs/PROOF-ASSET-INTEGRATION-20261119.md). [Other n=12 proof routes](cover12/proof_bundle/comparative-2026-11/README.md).
 
 [n=26 exact global optimality replay（2026-11-12）](cover26/REPLAY-20261112.md): the independent proof establishes the matching global lower bound at the exact local covering radius. The [November 8 checkpoint](cover26/continuations/2026-11-08-terra/README.md) records the earlier native-track bounds.
 [Submitted n11/n14 proofs and review](external-submissions/2026-11-08-sol-review/REVIEW.md): full supplied n14 arithmetic replay and five rejection controls passed; the matching n11 executors have since been integrated through PR #4. Original authorities and qualifications are retained.

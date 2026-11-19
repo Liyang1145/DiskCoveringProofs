@@ -1,0 +1,159 @@
+{
+  "schema": "disk-cover-27-core-search-v1",
+  "source_proofs": [
+    {
+      "path": "E:/Data/Codex/2026-11-11/new-chat/outputs/circle-cover-27/proof.md",
+      "sha256": "d7549b47c1e447a7b1875f5190477e4ab62cc0149967abeb40d6cfef9000e197"
+    },
+    {
+      "path": "E:/Data/Codex/2026-11-11/new-chat/outputs/circle-cover-27-followup/proof.md",
+      "sha256": "966c4c550e19295eb497fe0416e8eccdb2d92dc58a0fe79b2fc54652c5310b51"
+    },
+    {
+      "path": "E:/Data/Codex/2026-11-11/new-chat/outputs/circle-cover-12/proof.md",
+      "sha256": "934881651f99cd72ed91087bcc8659c38832b77761a64e06b7b58b9c4336010d"
+    },
+    {
+      "path": "E:/Data/Codex/2026-11-11/new-chat/outputs/circle-cover-12/exact_angles.py",
+      "sha256": "06255fdbe9eb9dba955e9a7adb302fb3ece13d21c607f35bd73cee828e9b2f54"
+    }
+  ],
+  "r_D_13_lower": "0.3385",
+  "n27": {
+    "unconditional_lower": "0.224640",
+    "known_feasible_radius": "0.23079558957419143670819...",
+    "test_radius": "0.230796",
+    "minimum_owner_radial_bounds": {
+      "14": {
+        "low": "0.812",
+        "high": "0.912615794"
+      },
+      "16": {
+        "high": "0.854",
+        "strict": true
+      },
+      "17": {
+        "high": "0.8285",
+        "strict": true
+      }
+    },
+    "global_optimality_proved": false,
+    "b14_sorted_outer_norm_strict_lower_2_through_7": [
+      "0.8424",
+      "0.8590",
+      "0.86949",
+      "0.8780",
+      "0.8847",
+      "0.8900"
+    ]
+  },
+  "radial_certificates": [
+    "top16-proposals.json",
+    "top17-proposals.json",
+    "count14-11-proposals.json",
+    "count14-12-certified.json",
+    "count16-10-proposals.json"
+  ],
+  "files": [
+    {
+      "path": "anchor-search/inner13_tables.py",
+      "bytes": 2752,
+      "sha256": "b1fe36037bd53b9f9a7c080490cb90f820136897fb1a16c6d883728b7d6209f7"
+    },
+    {
+      "path": "anchor-search/interval_search.cpp",
+      "bytes": 22560,
+      "sha256": "350f160e5ad55d199f7288a50886cce20e4d909a13e116acfcb2a156edebf5af"
+    },
+    {
+      "path": "anchor-search/polar_input.hpp",
+      "bytes": 4659,
+      "sha256": "5d90536720d56415594582298a8855cc2cf519cba9656ea541da6d20727a0c00"
+    },
+    {
+      "path": "anchor-search/polar_tables.py",
+      "bytes": 9275,
+      "sha256": "2014a374cb5de209371188d4fb508f40b0fd4bd3863801fc9c388fd53bab9229"
+    },
+    {
+      "path": "anchor-search/prefix13.py",
+      "bytes": 2301,
+      "sha256": "e79825d8e516dcd890b01b20e446e5c047b0959b94c6c3975721381ef1dc29d9"
+    },
+    {
+      "path": "anchor-search/verify_core_count.py",
+      "bytes": 878,
+      "sha256": "9f6d0f42393814e9ee1441c27cf6e706169d2c8ff49c6cbca24b5c98838af865"
+    },
+    {
+      "path": "anchor-search/verify_domains.js",
+      "bytes": 3890,
+      "sha256": "43352a847616c06e8039289237cde536daf3a3a347ef152672ea941879de29e0"
+    },
+    {
+      "path": "anchor-search/verify_norm_order.js",
+      "bytes": 2947,
+      "sha256": "2ff4035c30e2883c5c0deb0bf2415cbcbfb9db4eb47572a2e56bd54481214998"
+    },
+    {
+      "path": "anchor-search/verify_outer_radial.py",
+      "bytes": 2341,
+      "sha256": "273acdf9bcff21184c70389aca24ba85f244c0d5959eaf829044698c73e05d49"
+    },
+    {
+      "path": "anchor-search/verify_radial_core.py",
+      "bytes": 1268,
+      "sha256": "1681e245f6f08dda1674abaf7ec94dab6a55bd685b72aa406ca8afc5ba8e4fab"
+    },
+    {
+      "path": "anchor-search/weighted_rings.py",
+      "bytes": 1272,
+      "sha256": "6f9a56b5ac56a879ac71f63d77a6af0c3e6686121dc354a730bc8e2e0f9a0780"
+    },
+    {
+      "path": "exact-interval.js",
+      "bytes": 2099,
+      "sha256": "c7589241ee5a21e494edced06bcab71264aad4c793894d8f3aa6f3c4e58fd0f3"
+    },
+    {
+      "path": "proof.md",
+      "bytes": 15932,
+      "sha256": "db3793c7f745b963833777029566c77005bd78bfe47e45def89dc2018e43012f"
+    },
+    {
+      "path": "radial-proofs/count14-11-proposals.json",
+      "bytes": 17408,
+      "sha256": "07a538d29a4ccc5d03366f5342f7605bd2a2d11e5ceac24cc666da2b390fbce8"
+    },
+    {
+      "path": "radial-proofs/count14-12-certified.json",
+      "bytes": 37356,
+      "sha256": "1ba416dd31236b5387939267f53d8c9c31268604c40b5586839c4ca6258ccc56"
+    },
+    {
+      "path": "radial-proofs/count16-10-proposals.json",
+      "bytes": 5577,
+      "sha256": "c3c2d3d8f7bc4b248af43c2f2b90bb7a1d412649c42f32bf1a74147a3faf6bc8"
+    },
+    {
+      "path": "radial-proofs/top16-proposals.json",
+      "bytes": 40159,
+      "sha256": "18ffcdab88520d9143c5b6448d8cd581363cb4350114fa2a05ea8ad0618946f1"
+    },
+    {
+      "path": "radial-proofs/top17-proposals.json",
+      "bytes": 11395,
+      "sha256": "0531718b6c850a105de60e30c3f60f7147829e5efe588a8025de7ab3024b74db"
+    },
+    {
+      "path": "verify_bundle.py",
+      "bytes": 2487,
+      "sha256": "26d765715223b24f7eb7c395ae70c55b9b6e342aa313fb3c861bfa7bf1733400"
+    }
+  ],
+  "replay": {
+    "file": "REPLAY.txt",
+    "n13_search_nodes": 132364,
+    "radial_exclusion_boxes": 33
+  }
+}

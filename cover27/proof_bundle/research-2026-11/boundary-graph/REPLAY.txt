@@ -1,0 +1,73 @@
+PASS: all B=14 owner half-angles exceed 0.149 (1122 boxes).
+PASS: B=14 minimum owner norm lies in [0.812, 0.926] at U=0.230796.
+PASS: nested core radius constants for 1 through 12 disks and the 14–18 owner radial bounds.
+PASS B=14: sorted norm D[2] > 842400000/1e9 in 646 boxes.
+PASS B=14: sorted norm D[3] > 859000000/1e9 in 598 boxes.
+PASS B=14: sorted norm D[4] > 869490000/1e9 in 406 boxes.
+PASS B=14: sorted norm D[5] > 878000000/1e9 in 356 boxes.
+PASS B=14: sorted norm D[6] > 884700000/1e9 in 356 boxes.
+PASS B=14: sorted norm D[7] > 890000000/1e9 in 360 boxes.
+PASS B=14: no two-edge path between boundary owners at cyclic distance at least four.
+PASS B=14: no two-edge path at cyclic distance three (3433 area boxes).
+PASS B=14: common neighbor norm > 382000/1e6 for rank floors 812000,842400 and separation 2 (1640 boxes).
+PASS B=14: common neighbor norm > 400000/1e6 for rank floors 842400,859000 and separation 2 (1090 boxes).
+PASS B=14: common neighbor norm > 411000/1e6 for rank floors 859000,869490 and separation 2 (0 boxes).
+PASS B=14: common neighbor norm > 420000/1e6 for rank floors 869490,878000 and separation 2 (0 boxes).
+PASS B=14: common neighbor norm > 427000/1e6 for rank floors 878000,884700 and separation 2 (0 boxes).
+PASS B=14: common neighbor norm > 433000/1e6 for rank floors 884700,890000 and separation 2 (0 boxes).
+PASS B=14: D1 >= 812000/1e6 forces at least 8 interior neighbors of the boundary.
+PASS B=14: D1 >= 833896/1e6 forces at least 9 interior neighbors of the boundary.
+PASS B=14: D1 >= 905600/1e6 forces at least 10 interior neighbors of the boundary.
+PASS B=14: 12 distinct boundary-face apices require D1 < 876600/1e6.
+PASS B=14: 11 distinct boundary-face apices require D1 < 892960/1e6.
+PASS B=14: no path of length at most three spans 5 or more outer steps.
+PASS B=14: no path of length at most three spans 4 or more outer steps if both endpoint norms are at least 953569/1e6.
+PASS B=14: at D1 >= 868210/1e6 every repeated apex has norm > 461592/1e6.
+PASS B=14: at D1 >= 897775/1e6 every repeated apex has norm > 498000/1e6.
+PASS B=14: an inner neighbor can cover an outer owner's ray at radius >= D1-U only within two outer steps of every owner adjacent to that inner center.
+PASS B=14: the owner rays reached by any inner disk above D1-U are contained in three consecutive outer-owner rays.
+PASS B=14: at D1 >= 0.9085, each owner is closer than all other owners on its ray at radius 0.677704 (2620 norm bins).
+PASS B=14: a boundary-adjacent inner disk of norm <=0.5348 can reach an owner ray at radius >=0.677704 only within one outer step of every adjacent owner.
+PASS B=18: no strictly covered normalized configuration at radius 0.22672 (7 norm intervals, 0 outside the domain).
+PASS 13 disks: at test radius 0.3455, at most ten large-norm disks (11 excluded in 1148 boxes).
+PASS 13 disks: at test radius 0.3455, at most ten large-norm disks (12 excluded in 28 boxes).
+PASS B=14: D1 >= 901500000/1e9 forces exactly ten of the thirteen inner disks to reach radius 670703000/1e9.
+PASS B=14: D1 >= 901500000/1e9 admits 8 distinct core anchors in one of four phases, omitting a minimum-norm core disk.
+PASS B=14: D1 >= 905600000/1e9 admits 9 distinct core anchors in one of four phases, omitting a minimum-norm core disk.
+PASS B=14: D1 >= 901500000/1e9 allows at most 4 of the ten core norms at or below 0.498.
+PASS B=14: D1 >= 903910000/1e9 allows at most 3 of the ten core norms at or below 0.498.
+PASS B=14: D1 >= 912250000/1e9 allows at most 2 of the ten core norms at or below 0.498.
+PASS B=14: on D1 in [901500000,903000000]/1e9, all inner norms are < 901499000/1e9 (8650 radial boxes).
+PASS B=14: on D1 in [903000000,904500000]/1e9, all inner norms are < 902999000/1e9 (9214 radial boxes).
+PASS B=14: on D1 in [904500000,906000000]/1e9, all inner norms are < 904499000/1e9 (8264 radial boxes).
+PASS B=14: on D1 in [906000000,907500000]/1e9, all inner norms are < 905999000/1e9 (7600 radial boxes).
+PASS B=14: on D1 in [907500000,909000000]/1e9, all inner norms are < 907499000/1e9 (7880 radial boxes).
+PASS B=14: on D1 in [909000000,910500000]/1e9, all inner norms are < 908999000/1e9 (8112 radial boxes).
+PASS B=14: on D1 in [910500000,912000000]/1e9, all inner norms are < 910499000/1e9 (8322 radial boxes).
+PASS B=14: on D1 in [912000000,912615794]/1e9, all inner norms are < 911999000/1e9 (8852 radial boxes).
+PASS B=14: in each certified interval, the ten disks reaching its designated core circle include every inner neighbor of a boundary owner.
+PASS: b=14 at U=0.230796 requires outer degree sum at most 64 (901 boxes).
+PASS: b=14 degree profiles, 3023 excluded of 4059, 1036 retained.
+7 apex centers: 2; outer norm ceiling 912615794/1e9.
+8 apex centers: 49; outer norm ceiling 912615794/1e9.
+9 apex centers: 196; outer norm ceiling 912615794/1e9.
+10 apex centers: 294; outer norm ceiling 912615794/1e9.
+11 apex centers: 210; outer norm ceiling 892960000/1e9.
+12 apex centers: 77; outer norm ceiling 876600000/1e9.
+D1 >= 833896000/1e9: 828 patterns, at least 9 interior boundary neighbors.
+D1 >= 876600000/1e9: 751 patterns, at least 9 interior boundary neighbors.
+D1 >= 892960000/1e9: 541 patterns, at least 9 interior boundary neighbors.
+D1 >= 905600000/1e9: 541 patterns, at least 10 interior boundary neighbors.
+PASS B=14: 828 boundary-apex partitions.
+PASS B=14: 826 complete forced annuli when every outer degree is 3 or 4.
+D1 >= 833896000/1e9: 777 of these annuli retained.
+D1 >= 876600000/1e9: 700 of these annuli retained.
+D1 >= 892960000/1e9: 490 of these annuli retained.
+D1 >= 905600000/1e9: 294 of these annuli retained.
+D1 >= 812000000/1e9: 572 degree multisets and 76375 multiset-pattern pairs.
+D1 >= 833896000/1e9: 570 degree multisets and 76324 multiset-pattern pairs.
+D1 >= 876600000/1e9: 495 degree multisets and 70549 multiset-pattern pairs.
+D1 >= 892960000/1e9: 410 degree multisets and 52699 multiset-pattern pairs.
+D1 >= 901500000/1e9: 410 degree multisets and 52699 multiset-pattern pairs.
+D1 >= 905600000/1e9: 406 degree multisets and 52450 multiset-pattern pairs.
+PASS: the B=14 boundary graph and B=18 translated-core certificates reproduce.

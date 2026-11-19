@@ -1,0 +1,220 @@
+{
+  "schema": "disk-cover-27-core-fills-v1",
+  "B": 14,
+  "normalized_test_radius": "0.230796",
+  "min_owner_floor": "0.9015",
+  "auxiliary_13_bound": "0.3389",
+  "core_fills": 49805,
+  "annuli": 164,
+  "global_optimality_proved": false,
+  "files": [
+    {
+      "path": "anchor-search/inner13_tables.py",
+      "bytes": 2752,
+      "sha256": "b1fe36037bd53b9f9a7c080490cb90f820136897fb1a16c6d883728b7d6209f7"
+    },
+    {
+      "path": "anchor-search/interval_search.cpp",
+      "bytes": 22560,
+      "sha256": "350f160e5ad55d199f7288a50886cce20e4d909a13e116acfcb2a156edebf5af"
+    },
+    {
+      "path": "anchor-search/polar_input.hpp",
+      "bytes": 4659,
+      "sha256": "5d90536720d56415594582298a8855cc2cf519cba9656ea541da6d20727a0c00"
+    },
+    {
+      "path": "anchor-search/polar_tables.py",
+      "bytes": 9695,
+      "sha256": "ac45780fd8df049739a797fdac94e2f9468b34bb45b223952b81e3046e49a8f0"
+    },
+    {
+      "path": "anchor-search/verify_annulus_angles.py",
+      "bytes": 6830,
+      "sha256": "78c0e77a5dc46b6b2d29c811951755d65f529cea900ff25c859cee621fa31ea1"
+    },
+    {
+      "path": "anchor-search/verify_b14_core_marks.py",
+      "bytes": 1526,
+      "sha256": "0932eaad59a12b24e71d761e6863a7b2f0e764443337439035b08da90dd55cf8"
+    },
+    {
+      "path": "anchor-search/verify_b14_incidence.py",
+      "bytes": 2931,
+      "sha256": "97182990ef965d105cceed779f0124ae1f7876c8955a60b8ccb9bf6593f698b3"
+    },
+    {
+      "path": "anchor-search/verify_b14_ten_ring.py",
+      "bytes": 3868,
+      "sha256": "09de24816b76b3c3b6f0faa8447aeea7a29c99762b3ee1a23997bb7f491df963"
+    },
+    {
+      "path": "anchor-search/verify_boundary_residual.py",
+      "bytes": 3584,
+      "sha256": "e3d786838c402a6e36a8401aa753e44b1c00ed0011e3298b3a057b9cec09c9da"
+    },
+    {
+      "path": "anchor-search/verify_boundary_walk.py",
+      "bytes": 3049,
+      "sha256": "423023f361072f7f10a0d47bc9515c5247f11dd7401d4b18b30e821949608f88"
+    },
+    {
+      "path": "anchor-search/verify_core_count.py",
+      "bytes": 878,
+      "sha256": "9f6d0f42393814e9ee1441c27cf6e706169d2c8ff49c6cbca24b5c98838af865"
+    },
+    {
+      "path": "anchor-search/verify_core_degree_area.js",
+      "bytes": 2153,
+      "sha256": "c5dddf06db50de5828a065ef8e4d5c627501a8cb65f1bb9329481352222f0092"
+    },
+    {
+      "path": "anchor-search/verify_core_degree_join.py",
+      "bytes": 6019,
+      "sha256": "929245a78fadb4bd858cec51a5e19375297caba847079fb25ca80f8ddd660d76"
+    },
+    {
+      "path": "anchor-search/verify_core_disk_area.js",
+      "bytes": 3075,
+      "sha256": "e252d09631ead3d930271ddc95b0f9b8e1f2050f739636b8c194730ecaa16446"
+    },
+    {
+      "path": "anchor-search/verify_core_fill_count.py",
+      "bytes": 1881,
+      "sha256": "9ab36b0252357c6642d14c069feddcf0558063b5e9cfb1b39e55310ba1939751"
+    },
+    {
+      "path": "anchor-search/verify_core_fills.py",
+      "bytes": 8428,
+      "sha256": "ed30a00fb8a4e1156c23de460f245cc181395249ee98e4029fbcca9e81f81582"
+    },
+    {
+      "path": "anchor-search/verify_expanded_core_count.py",
+      "bytes": 2775,
+      "sha256": "78797abed465971102a9056be19007f3ccedb7ff85076f310eaeddc86498e862"
+    },
+    {
+      "path": "anchor-search/verify_ten_boundary_neighbors.py",
+      "bytes": 931,
+      "sha256": "20d02e02e34c9675d1afa4b54ed9509ab5742a8193f923a6af559c1bbd21e217"
+    },
+    {
+      "path": "anchor-search/verify_translated_core.js",
+      "bytes": 2899,
+      "sha256": "bcd892f179d6399bfce1d6ca4146b44cfbbe994c92b15685b7a50ec6ee774cef"
+    },
+    {
+      "path": "anchor-search/weighted_rings.py",
+      "bytes": 1272,
+      "sha256": "6f9a56b5ac56a879ac71f63d77a6af0c3e6686121dc354a730bc8e2e0f9a0780"
+    },
+    {
+      "path": "B14-annulus-angles.json",
+      "bytes": 1698,
+      "sha256": "ecd3bcf2e814632717330a6f437dee72865d066c2105d331e32025ab6d32330f"
+    },
+    {
+      "path": "B14-core-degree-groups.json",
+      "bytes": 21850,
+      "sha256": "0da3befde914f9b1a3ab1aa1f27f95373918bc7a3d88e56f69985cc224ef5612"
+    },
+    {
+      "path": "B14-core-degree-join.json",
+      "bytes": 1896,
+      "sha256": "2f40ecd72e280e762b83d120cccaa5b2aa657dce4196b544275b549f0f29520e"
+    },
+    {
+      "path": "B14-core-disk-area.json",
+      "bytes": 14023,
+      "sha256": "556f9176f3ca490b08b0c51dabff75eee1a3fdac95e885ea823d8d6ccca73a55"
+    },
+    {
+      "path": "B14-core-fills.json",
+      "bytes": 6456442,
+      "sha256": "60b02750e226437f628815fe732314ae28393aa89a2424e57b3d5331030d2021"
+    },
+    {
+      "path": "B14-degree-area-supports.json",
+      "bytes": 1117,
+      "sha256": "a96628ca2d027ed7c6d0114e0fc8349801d3dd0e4d6a5e86453b56ac84df130c"
+    },
+    {
+      "path": "B14-ten-ring.json",
+      "bytes": 1728418,
+      "sha256": "6ac736cf200f9e063825b4984c29939487da905b987186f910294295f220fcba"
+    },
+    {
+      "path": "exact-interval.js",
+      "bytes": 2099,
+      "sha256": "c7589241ee5a21e494edced06bcab71264aad4c793894d8f3aa6f3c4e58fd0f3"
+    },
+    {
+      "path": "prior-proofs/baseline.md",
+      "bytes": 18354,
+      "sha256": "d7549b47c1e447a7b1875f5190477e4ab62cc0149967abeb40d6cfef9000e197"
+    },
+    {
+      "path": "prior-proofs/boundary-graph.md",
+      "bytes": 18782,
+      "sha256": "6d071143173ccab3348b1b4ca188f653f49b848de475d5e1553690422bb3572f"
+    },
+    {
+      "path": "prior-proofs/core-cycle.md",
+      "bytes": 12006,
+      "sha256": "00948e8430969f74008106df20aa61a53f04b9a0946595a7675e9d56a7a484f5"
+    },
+    {
+      "path": "prior-proofs/core-search.md",
+      "bytes": 15932,
+      "sha256": "db3793c7f745b963833777029566c77005bd78bfe47e45def89dc2018e43012f"
+    },
+    {
+      "path": "prior-proofs/followup.md",
+      "bytes": 17747,
+      "sha256": "966c4c550e19295eb497fe0416e8eccdb2d92dc58a0fe79b2fc54652c5310b51"
+    },
+    {
+      "path": "prior-proofs/twelve-disks.md",
+      "bytes": 23663,
+      "sha256": "934881651f99cd72ed91087bcc8659c38832b77761a64e06b7b58b9c4336010d"
+    },
+    {
+      "path": "proof.md",
+      "bytes": 13512,
+      "sha256": "d83d2e0107fbc357152261f00d88d8262ea2f4ba386e13ea18338abe5fde9948"
+    },
+    {
+      "path": "verify_apex27_b16.js",
+      "bytes": 11575,
+      "sha256": "e9479437b8d5898723512b2b28c7cdfcd4a557ae3a11ca42ddb7a42884fa0af1"
+    },
+    {
+      "path": "verify_boundary14_degree_cap.js",
+      "bytes": 4568,
+      "sha256": "bb975bbf9932ee5115af4bcfdc1e1b027ba9a42931d0e84b2af7de44f4c1a747"
+    },
+    {
+      "path": "verify_boundary14_shared_angles_229360.js",
+      "bytes": 5039,
+      "sha256": "3956732c1aa52f99176dd33e2e945c7f8c78e698703ead85db36c8375d1f9431"
+    },
+    {
+      "path": "verify_bundle.py",
+      "bytes": 5231,
+      "sha256": "8c19835826f312be29253d6da345ebc5d9416bed3ecdfeaf1e2f41b085979952"
+    },
+    {
+      "path": "verify_global_lower.py",
+      "bytes": 751,
+      "sha256": "21c9f550223588d9625809ce8a8efc723d023d528e0211b07c2f7a31cd222cee"
+    },
+    {
+      "path": "verify_wheel_core.js",
+      "bytes": 3100,
+      "sha256": "80e9072f61218415fc73ad91a289e3490f366b0c1faf8cd3d1471bafbb89e9a6"
+    }
+  ],
+  "max_owner_norm": "0.911811049",
+  "remaining_pair_bound": 627990,
+  "global_lower_bound": "0.224645"
+}

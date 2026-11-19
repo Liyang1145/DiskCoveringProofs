@@ -1,0 +1,113 @@
+{
+  "schema": "disk-cover-27-28-handoff-v1",
+  "source_repository": {
+    "name": "Liyang1145/DiskCoveringProofs",
+    "main_read_revision": "509c43f21eae7a84e97f7132bfb5ee825aaf2948",
+    "local_read_revision": "11bf26e8b9ca601ab7220a93c1ef39451513aed0"
+  },
+  "n27": {
+    "unconditional_lower": "0.224410",
+    "cover_radius_open_interval": [
+      "0.230795589574191436708192288037835382313555924493258750321853",
+      "0.230795589574191436708192288037835382313555924493258750321854"
+    ],
+    "exact_cover": true,
+    "gauged_local_halfwidth": "0.000001",
+    "normalized_boundary_owner_counts_at_0.230796": [
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "global_optimality_proved": false
+  },
+  "n28": {
+    "unconditional_lower": "0.220001",
+    "rational_cover_radius": "0.225724991191",
+    "global_optimality_proved": false
+  },
+  "replayed": "REPLAY.txt",
+  "files": [
+    {
+      "path": "area27.js",
+      "bytes": 6559,
+      "sha256": "ca23e942f56014c8c83151653ded00d27c136f01b13b5e57ad08aaeac8baec3e"
+    },
+    {
+      "path": "construction.png",
+      "bytes": 80502,
+      "sha256": "f27c9859e3e165acd966c96a80e28b3d590b8035cf05c6b1b3bf8b70af5cd56f"
+    },
+    {
+      "path": "cover-28-rational.json",
+      "bytes": 2056,
+      "sha256": "ac2de87dbb47189c4bcbfaf40e602baca68a8f0f997c0480466f6bceae3999c1"
+    },
+    {
+      "path": "cover27_model.py",
+      "bytes": 2373,
+      "sha256": "593d5504799ddee4a69e74747353b9e7fcb78a99ad6e064d1b120f632d02c9a0"
+    },
+    {
+      "path": "exact-27/LOCAL-MATRIX.json",
+      "bytes": 52934,
+      "sha256": "d75cdeea667fefc6d8c8c6f97339b72089fe50343c42cec27af48fcb158f4612"
+    },
+    {
+      "path": "exact-27/ROOT-CERTIFICATE.json",
+      "bytes": 35446,
+      "sha256": "ede9063189070b3d0dcadf90eb44fb56c89b5d28e83402a58b7a953267770600"
+    },
+    {
+      "path": "exact-27/SYSTEM.json",
+      "bytes": 627098,
+      "sha256": "8004bfbdcc89b92481bbb2bf0d21c9cb296f7c1d19bf7d7c1498458e9ef29861"
+    },
+    {
+      "path": "exact-27/TRIANGULATION.json",
+      "bytes": 1872,
+      "sha256": "5a8ba97b0da1d114111b2cdc7fcf92038dcd73b0bbd4f7980d2a78a33fcfef71"
+    },
+    {
+      "path": "exact-interval.js",
+      "bytes": 2099,
+      "sha256": "c7589241ee5a21e494edced06bcab71264aad4c793894d8f3aa6f3c4e58fd0f3"
+    },
+    {
+      "path": "proof.md",
+      "bytes": 18354,
+      "sha256": "d7549b47c1e447a7b1875f5190477e4ab62cc0149967abeb40d6cfef9000e197"
+    },
+    {
+      "path": "REPLAY.txt",
+      "bytes": 2556,
+      "sha256": "1faf902e53c60bd906de473e0d75486665b80518afbbfec8579a03193d90ef85"
+    },
+    {
+      "path": "verify_boundary14.js",
+      "bytes": 2757,
+      "sha256": "548169e545dfc0fa9572d920ce0f86e96633de2f527ade26386e73b2779f9609"
+    },
+    {
+      "path": "verify_contact_root.py",
+      "bytes": 9509,
+      "sha256": "52c896946029c412e87f81daa5d116934fc20d8a60a50ee4acb64ddfda48ec5e"
+    },
+    {
+      "path": "verify_cover27.py",
+      "bytes": 5674,
+      "sha256": "27f1fcafa10a41aa6c418d6227a2e673bf02a7e1593e4011b24d5401307551e3"
+    },
+    {
+      "path": "verify_local27.py",
+      "bytes": 10556,
+      "sha256": "e1db792d269f256b20e154e4f6ed4e8bb762fb3293552822b46f0c1d8dc66cf8"
+    },
+    {
+      "path": "verify_rational_cover.py",
+      "bytes": 3193,
+      "sha256": "c6dc8d395ca48558d004ae3152d0afa9f4c6e241c820f11f183be0d2def1e203"
+    }
+  ]
+}
