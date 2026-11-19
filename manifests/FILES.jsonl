@@ -15214,5 +15214,5 @@
 {"path": "docs/DISKCOVER_NATIVE_N13.md", "bytes": 5765, "sha256": "fe971dcd0d757f34d2f1ee788f6803afe2ed1a6393fc3b75465da3f04a0295cd", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "docs/DISKCOVER_NATIVE_N15_N16.md", "bytes": 3553, "sha256": "470e0592d6770bc272458a6b813c55686761b3c613e4a336f7c8ad36b387c48b", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "docs/DISKCOVER_NATIVE_N17.md", "bytes": 2944, "sha256": "fa1631d6119bc27da6fa4458fd30a13c303d5ef05d4160dace82cb9899352dcb", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
-{"path": "docs/DISKCOVER_NATIVE_N20.md", "bytes": 4077, "sha256": "de942da7880c38481ee47852c8798d02d2b4aacb619693d8c47c1dd35201b153", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
-{"path": "docs/DISKCOVER_NATIVE_ROADMAP_1_21.md", "bytes": 3100, "sha256": "c5c307261127b8577c17c5e84de64578c98d0ea7138fe4b6e11ced6cb98d371d", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_NATIVE_N20.md", "bytes": 4239, "sha256": "dff97ddd6257d21b583f563217c1a903aadf18e3b8c1e6611b6c87e053e99330", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_NATIVE_ROADMAP_1_21.md", "bytes": 3103, "sha256": "9301f8cac84f94c0f82b2295610c7d6bec6925e0e362bb8dc11538f6fc9f4334", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
