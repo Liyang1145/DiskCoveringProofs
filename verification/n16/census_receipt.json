@@ -1,0 +1,20 @@
+[
+  {
+    "owners": 11,
+    "orbits": 93,
+    "dfs_calls": 77464,
+    "audit_calls": 45310,
+    "orbit_sha256": "e2d68f83761b17fea37d1bdee156ca695da3eb56c8e7e3f3c6f82b4973a3fea0",
+    "attaining_candidate_topology_stabilizers": []
+  },
+  {
+    "owners": 12,
+    "orbits": 71,
+    "dfs_calls": 74623,
+    "audit_calls": 47313,
+    "orbit_sha256": "07576661db992eb54a66e2e0b0579d3ea8da0f55c5ee6f3f4386ec1de6fbb4aa",
+    "attaining_candidate_topology_stabilizers": [
+      4
+    ]
+  }
+]

@@ -285,3 +285,86 @@ The second command is a separate certificate using only the printed
 It checks 237 interior triple intersections, 156 boundary intersections
 of pair bisectors, 26 boundary stationary points, and one fixed boundary
 reference. This bound is strictly below the branch test radius used above.
+
+## Complete necessary-topology census for the surviving branches
+
+Run `python tools/check_native_n13_census.py` (requires `g++`).
+Optionally pass `--out DIRECTORY` for fresh canonical topology files to use
+in the next metric exclusion stage. The two traversals give:
+
+| Boundary owners | Interior centers | Canonical orbits after necessary cuts | Fixed-boundary rooted classes |
+|---:|---:|---:|---:|
+| 9 | 4 | 610 | 10,128 |
+| 10 | 3 | 718 | 13,495 |
+| 11 | 2 | 351 | 7,282 |
+
+**Scope of normalization.** If \(r_D(13)<r_*\), choose an actual cover of radius
+\(r<r_*<U\); an infimum need not be assumed attained. If it has fewer than
+thirteen listed centers, pad by duplicates. Normalize as above, still strictly
+covering at \(U\). Strict cover on the compact disk gives a uniform positive
+margin (nearest distance is continuous); hence all thirteen centers can be
+moved a sufficiently small amount to become distinct and lie strictly inside
+\(\sqrt{1-U^2}\), while avoiding triple boundary ties, collinear triples, and
+cocircular quadruples. These bad conditions are finite unions of zero sets of
+nonzero polynomials. Do not require a perturbation to preserve a boundary count:
+the bounds \(9\le B\le11\) apply to the normalized perturbed cover itself (at
+most twelve since the origin-covering disk cannot meet the boundary; twelve
+then excluded above).
+
+**Topological scope.** Each ordinary clipped Voronoi cell is convex and has
+an interior neighborhood at its own center. A cell's boundary footprint, if
+nonempty, is one connected arc by the bisector chord argument. In generic
+position no nearest cell can have only an isolated boundary contact: a two-way
+tie crosses the circumference transversally and a three-way tie on it was
+excluded. Two cells share at most one nondegenerate connected edge, since
+their intersection is convex. Adding the exterior as one cell gives a sphere
+cellulation in which every vertex meets three cells (interior Voronoi junctions
+or boundary switches), so the dual is a simple sphere triangulation. Removing
+the exterior dual vertex and its open star leaves a disk triangulation with
+the \(B\) owners in boundary order. Every center edge has a common witness
+within \(U\) of both ends, so its length is below \(2U\). At a boundary
+switch the unit anchor belongs to the two neighboring disks.
+
+The source is the repository's frozen [n21 root-face peeler](../cover21/proof_bundle/research-2026/n21-global/peel21.cpp),
+SHA-256 `7063d6fbd45786696873b13c5d8b07e657bcdf47c685b0aae8392876373e53d0`.
+The wrapper applies a narrowly checked patch in temporary storage, not to the
+frozen source. As in the native peeler, removing the unique triangle incident
+to a chosen boundary edge has exactly two possibilities. Its third vertex is
+a boundary vertex (partition the interior budget between the two resulting
+subregions), or its third vertex is interior (remove the face and promote the
+third vertex to the residual boundary). These cases are exhaustive; recurse on
+the pending regions until they are empty. Edges cannot be added across previously
+separated regions. The peeler checks face uniqueness, edge incidence, vertex
+use, Euler characteristic and canonicalizes under the dihedral boundary
+action while discarding transient interior labels. DFS with Bellman–Ford and
+a distinct peeling order with Floyd–Warshall independently reproduce the
+full canonical lists, not just their counts. Each rooted count equals the
+sum of \(2B/\lvert\operatorname{Stab}\rvert\) over the displayed orbits.
+An unpruned fixed hexagon returns Catalan number 14 and stabilizers 2, 2, 6.
+A one-node limit is separately forced to fail without writing an output.
+
+**Exact angular cuts.** A boundary anchor incident to a covering center
+has distance below \(U\) from it. If two anchors share a center, their
+distance is below \(2U\); if their incident centers are adjacent, it is
+below \(4U\). As fractions of a full turn the corresponding *shorter*
+arc distances are below \(\arcsin(U)/\pi\) and \(\arcsin(2U)/\pi\).
+The wrapper checks that \(112680/10^6\) and \(244000/10^6\) are respective
+outward upper bounds, by rational Taylor enclosures. An arc gap between
+successive anchors belongs to one owner and is always below the first cap.
+For any nonconsecutive pair, if one cyclic direction has upper bound strictly
+below \(1-\text{cap}\), the other direction cannot be the short admissible
+direction. If both do, the branch contradicts this necessary condition;
+if one does, the short direction gives a difference constraint on anchor
+angles. Only forced linear constraints are used, and a negative cycle
+proves infeasibility. The alternative three-center path only gives a
+six-rod chord bound, \(6U>2\), so it is vacuous on the unit circle:
+the patch explicitly disables these constraints, and does not evaluate
+\(\arcsin(3U)\). The other patch applies the independently justified
+long outer chord exclusion proved above. Both types of cut remain valid
+while peeling is incomplete, since adding edges cannot remove an existing
+path or a forbidden chord.
+
+This is a complete census **of survivor topologies for these necessary cuts**,
+not a continuous feasibility test. The candidate construction is
+checked separately; the census neither establishes feasibility nor excludes
+any of the 1,679 survivors.

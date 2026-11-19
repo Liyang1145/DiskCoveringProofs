@@ -1,0 +1,36 @@
+{
+  "status": "topological_necessary_conditions_not_global_lower_bound",
+  "origin_sha256": "7063d6fbd45786696873b13c5d8b07e657bcdf47c685b0aae8392876373e53d0",
+  "radius_cap": "145083859/500000000",
+  "angle_cap_scale": 100000,
+  "angle_cap_numerators": [
+    9372,
+    19708,
+    33621
+  ],
+  "results": [
+    {
+      "owners": 11,
+      "orbits": 397,
+      "dfs_calls": 286067,
+      "audit_calls": 148544,
+      "orbit_sha256": "e181f0669728de0caacc048c9a2e93ce1033a41935ea9d7e951f6f6dc3c8b55c"
+    },
+    {
+      "owners": 12,
+      "orbits": 6971,
+      "dfs_calls": 3854699,
+      "audit_calls": 2242802,
+      "orbit_sha256": "064d8f5e0bc8b54a54bc02485b1f38dd4a378013fa06c52e391a708f9daaadb0",
+      "candidate_stabilizer": 2,
+      "candidate_orbit_sha256": "718ece487ae4c524ada08b908b4b0dd4cdfe56b0458558b9d633e9e617f721f6"
+    },
+    {
+      "owners": 13,
+      "orbits": 7191,
+      "dfs_calls": 4587352,
+      "audit_calls": 2798918,
+      "orbit_sha256": "6a4e00b37e23f4bd3b9e3a0699d2f5ceb1310e098bf28e605a662fbd07068578"
+    }
+  ]
+}
