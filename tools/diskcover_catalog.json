@@ -97,9 +97,10 @@
     "radius_display": "0.394930843634698",
     "exact_description": "1/(1+2*cos(2*pi/(n-1)))",
     "sources": [
-      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf",
+      "docs/DISKCOVER_CLASSICAL_N10.md"
     ],
-    "verification_scope": "Gábor Fejes Tóth (2005), main theorem; not a new formal proof or replay."
+    "verification_scope": "Gábor Fejes Tóth (2005), main theorem. Native arbitrary-center proof and attaining configuration are available in strict mode, with fresh directed rational checks; not a Lean formalization."
   },
   {
     "n": 11,

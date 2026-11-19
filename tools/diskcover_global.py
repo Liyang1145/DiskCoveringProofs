@@ -1,5 +1,5 @@
 # SPDX-License-Identifier: MIT
-"""Exact optima with analytic lower and matching upper proofs for n = 1–4 and 7–9.
+"""Exact optima with analytic lower and matching upper proofs for n = 1–4 and 7–10.
 
 This module reports written proofs, not Lean or kernel-checked proofs.
 It refuses to claim an optimum for any unimplemented order.
@@ -21,8 +21,8 @@ _CASES = {
                         ("-sqrt(3)/4", "-3/4"), ("sqrt(3)/4", "-3/4"))),
 }
 
-for _b in (7, 8):
-    _radius = "1/(1+2*cos(2*pi/7))" if _b == 7 else "sqrt(2)-1"
+for _b in (7, 8, 9):
+    _radius = "sqrt(2)-1" if _b == 8 else f"1/(1+2*cos(2*pi/{_b}))"
     _d = f"pi/{_b}"
     _rho = f"2*({_radius})*cos({_d})"
     _CASES[_b+1] = (
@@ -148,12 +148,35 @@ _RING_UPPER = (
 
 
 def solve_global(n: int) -> dict | None:
-    """Return a proof for n=1–4 or 7–9, or None for the other supported orders."""
+    """Return a proof for n=1–4 or 7–10, or None for the other supported orders."""
     if type(n) is not int or not 1 <= n <= 22:
         raise ValueError("n must be an integer in 1..22")
     if n not in _CASES:
         return None
     radius, squared, centers = _CASES[n]
+    if n == 10:
+        from diskcover_n10_area import check_n10_area, check_n10_eight_owner
+        return {
+            "n": 10, "status": "exact_global", "radius_exact": radius,
+            "radius_squared": squared, "centers": [list(c) for c in centers],
+            "proof": {
+                "kind": "analytic_with_directed_arithmetic",
+                "lower": (
+                    "Assuming a smaller radius, normalize the strict cover and classify "
+                    "its boundary owners. Fewer than eight cannot cover the boundary; "
+                    "eight are excluded by the inward-pair distance obstruction. Nine "
+                    "owners with outer triples are excluded by the two area comparisons; "
+                    "the remaining wheel contradicts the strict perimeter bound."
+                ),
+                "upper": _RING_UPPER,
+                "documents": [
+                    "docs/DISKCOVER_CLASSICAL_N10.md",
+                    "docs/DISKCOVER_N10_EIGHT_OWNERS.md",
+                    "docs/DISKCOVER_N10_OUTER_JUNCTIONS.md",
+                ],
+                "directed_checks": [check_n10_area(), check_n10_eight_owner()],
+            },
+        }
     return {
         "n": n, "status": "exact_global", "radius_exact": radius,
         "radius_squared": squared, "centers": [list(c) for c in centers],

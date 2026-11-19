@@ -27,8 +27,17 @@ class DiskCoverGlobalTest(unittest.TestCase):
             self.assertEqual(len(case["centers"]), n)
             self.assertIn("Voronoi", case["proof"]["lower"])
 
+    def test_ten_disks(self):
+        proof = solve_global(10)
+        self.assertEqual(proof["status"], "exact_global")
+        self.assertEqual(proof["radius_exact"], "1/(1+2*cos(2*pi/9))")
+        self.assertEqual(len(proof["centers"]), 10)
+        self.assertEqual(proof["proof"]["kind"], "analytic_with_directed_arithmetic")
+        self.assertEqual(len(proof["proof"]["documents"]), 3)
+        self.assertEqual(len(proof["proof"]["directed_checks"]), 2)
+
     def test_not_implemented_is_not_success(self):
-        for n in sorted(set(range(5, 23)) - {7, 8, 9}):
+        for n in sorted(set(range(5, 23)) - {7, 8, 9, 10}):
             self.assertIsNone(solve_global(n))
 
     def test_invalid_order(self):
