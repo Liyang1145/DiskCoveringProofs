@@ -1,0 +1,68 @@
+{
+  "n": 17,
+  "status": "exact_global_optimality_native_checked",
+  "exact": "sqrt(t), coordinate 82 of the unique n17 boxed integer-polynomial root",
+  "strict_radius_bracket": [
+    "0.298531589256428059869843774423980703734387603913740470124900",
+    "0.298531589256428059869843774423980703734387603913740470124901"
+  ],
+  "fresh_generated_noncandidate_orbits": 1317,
+  "data_assisted_noncandidate": {
+    "status": "specified_noncandidate_orbits_excluded",
+    "forest_witness_sha256": "0bb19fb51bf7a9d99f9b149d5040352200138e46b288383d17c2a6dce973cb1d",
+    "count": 2,
+    "counts": {
+      "SPLIT": 132,
+      "DUAL": 134
+    },
+    "minimum_exact_force_margin_display": 3.3193318496882176e-06,
+    "negative_controls_rejected": 1,
+    "matches": [
+      {
+        "owners": 12,
+        "index": 612,
+        "source_residual_index": 1093,
+        "node_counts": {
+          "SPLIT": 45,
+          "DUAL": 46
+        },
+        "minimum_margin_display": 3.3193318496882176e-06
+      },
+      {
+        "owners": 12,
+        "index": 628,
+        "source_residual_index": 1115,
+        "node_counts": {
+          "SPLIT": 87,
+          "DUAL": 88
+        },
+        "minimum_margin_display": 3.586637529948708e-06
+      }
+    ]
+  },
+  "data_assisted_candidate": {
+    "status": "candidate_orbit_only_full_angle_domain_excluded",
+    "witness_tree_sha256": "a0b2b799879f290898c6d3d15dcf745611f99cf1ff5e9f05e8ea147ec403e3e9",
+    "candidate_stabilizer": 2,
+    "count": {
+      "SPLIT": 1393,
+      "DUAL": 1357,
+      "LOCAL": 37
+    },
+    "nodes": 2787,
+    "negative_controls_rejected": 3,
+    "min_exact_force_separation_display": 5.229195392332374e-08,
+    "max_squared_anchor_displacement_display": 0.011593862715193557,
+    "anchor_distance_threshold": "27/250",
+    "force_radius_upper": "29853158925642805986984377443/100000000000000000000000000000"
+  },
+  "fresh_generated_certificate_sha256": {
+    "B11-force.json": "58dc9c39624e3d9153e56e93debc35ff37038474bd26793a927b3d4ba1d48a5d",
+    "B12-force.json": "3799748f34b7c6e780f3c7b058eb5c585e399c4894b71e4fe907ed3a32c6a317",
+    "B12-deep-force.json": "d8dce391ccc87f882737c1ad39c1c2f902dbecb3ad853bad91b5b0e583eb33ed",
+    "B13-force.json": "5385538fca0005dfdf56d0288ae8ce044c4febce73b5b6cb8440e4a902bc8773",
+    "B13-deep-force.json": "daed75c91bc9ac566d931ac12d76cab3e46611f5bf56f1f438caff3c2aeb86f4",
+    "B12-pairs-force.json": "328290fce76852529fb20c5be8b429f328c221ffd0d17cf16fb526fa8f30a30e",
+    "B13-pairs-force.json": "6803cfb7391e0dd068fcdd9554dc79a2fa56d545491bd788ded1f2dc0160f797"
+  }
+}
