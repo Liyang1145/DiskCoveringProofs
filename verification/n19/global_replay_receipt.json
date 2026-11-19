@@ -1,0 +1,43 @@
+[
+  {
+    "by_certificate": {
+      "candidate_energy": 34,
+      "excluded_force": 6221,
+      "septagon_force": 22
+    },
+    "force_tree_nodes": {
+      "empty": 0,
+      "force": 6230,
+      "split": 9
+    },
+    "orbits": 6277,
+    "owners": 12,
+    "sha256": "e8d69e0647f011ebc8213b06de9934b82a76f6e8c1736b7d952db27c38fc4f07"
+  },
+  {
+    "by_certificate": {
+      "excluded_force": 12867
+    },
+    "force_tree_nodes": {
+      "empty": 0,
+      "force": 14611,
+      "split": 1744
+    },
+    "orbits": 12867,
+    "owners": 13,
+    "sha256": "bcc2caf240262bb8c245bac1d9f733591c242905d7a0cc5675742565ed710bef"
+  },
+  {
+    "by_certificate": {
+      "excluded_force": 4391
+    },
+    "force_tree_nodes": {
+      "empty": 0,
+      "force": 5835,
+      "split": 1444
+    },
+    "orbits": 4391,
+    "owners": 14,
+    "sha256": "9b5f728c16e2c4fe17bb456e505ddff74b28fedfdff5a404dcf3f0e63253d92a"
+  }
+]

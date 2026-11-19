@@ -15204,7 +15204,7 @@
 {"path": "tools/diskcover_grid.py", "bytes": 5062, "sha256": "27d6cd2c9b22ea9e60624e01f08e10613b6dd086b2410969ed27f3b9969bf6ae", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/solve_diskcover.py", "bytes": 3071, "sha256": "e96a4db8491ad40b4edb2cfe6db8aecab3d36e69436411a35e3759a445420f98", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/test_diskcover_grid.py", "bytes": 2184, "sha256": "cba72174df6bf66a86a4da06e90f30166fb3f4358b1e8c2435ca0439a71f63a0", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
-{"path": "docs/DISKCOVER_NATIVE_N19.md", "bytes": 3922, "sha256": "2d89308dc4eb7acbc768dbc84c4ab6071afa1d9a8d85fd9280f44de69839640b", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_NATIVE_N19.md", "bytes": 4006, "sha256": "99b3e0e0888205cfd01dfd1efbc38810346f09e13a3790736ed4ddf9c1db4574", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/diskcover_global.py", "bytes": 10157, "sha256": "b747cfdae7a601f8eb7fc8cacbcc372d58f51aeb3d9cfd4b848424183019640b", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/diskcover_n19_upper.py", "bytes": 3655, "sha256": "4c172192d933c051cd848baa5c1ab76e5d226c1024958879528a3c94b681ea7b", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/test_diskcover_global.py", "bytes": 2013, "sha256": "a4b1e8c3cf131a63abd0262298276f471093a3d0d56340fffe14dbc5e22fd3d7", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
@@ -15215,7 +15215,7 @@
 {"path": "docs/DISKCOVER_NATIVE_N15_N16.md", "bytes": 3553, "sha256": "470e0592d6770bc272458a6b813c55686761b3c613e4a336f7c8ad36b387c48b", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "docs/DISKCOVER_NATIVE_N17.md", "bytes": 10564, "sha256": "56059f3ac2ac5f1164d26d3cb795138d07c9f1a02161f269b0581235ea200f7a", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "docs/DISKCOVER_NATIVE_N20.md", "bytes": 5380, "sha256": "fbfd53cebbb6e10031eaaaa39686afb13f5dcb2f52da4656a009846a4a131706", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
-{"path": "docs/DISKCOVER_NATIVE_ROADMAP_1_21.md", "bytes": 3556, "sha256": "ae96907b67f29f1d07ae4beeb321362850d8cf661ec303219af5d7475d2f5823", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_NATIVE_ROADMAP_1_21.md", "bytes": 3287, "sha256": "c6e04cc3a163ff51f77acb301c8df7bd97c33be8678359bc84b423ee3c2ff286", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/diskcover_n20_upper.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 5135, "sha256": "bc764e936b14969855504e397bb00b10db51460adca4ca8f05bff9e8101ab7c5"}
 {"path": "tools/test_diskcover_n20_upper.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 1173, "sha256": "44fa6d916c48d2b87c753cb5e9bf5dfd94de4eb3f00a26a86b7fbcb366df391c"}
 {"path": "docs/DISKCOVER_N10_EIGHT_OWNERS.md", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 7210, "sha256": "b256b01aa3df504efaca128f77fb3bfa008455e6c014d3c0181e3d308064a592"}
@@ -15272,3 +15272,15 @@
 {"path": "verification/n16/force_exclusion.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 15860, "sha256": "b3daae007b6c1f1fc29e362347ed979edee520282fd033a24061c7fb51af6910"}
 {"path": "verification/n16/force_receipt.json", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 431, "sha256": "b8c23533a92b44cf070301a857916c1525ca949ff96760ac15ef568fc38dce08"}
 {"path": "verification/n16/replay_global.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 2821, "sha256": "66e402585f8ba995b9fed4ddeee6e979b7f1a8fb570028e4cc8873b5c9cf3951"}
+{"path": "docs/DISKCOVER_NATIVE_N19_FORCE.md", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 7462, "sha256": "941d4bf440360e0a84214f5b24d547b44bae51de3098383f9403d8bf7ac82fe9"}
+{"path": "docs/DISKCOVER_NATIVE_N19_GLOBAL.md", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 1905, "sha256": "b5476d09692f85b3f8ef67a6a3a025f879d7de51772b775a50d205a813bf0422"}
+{"path": "verification/n19/force-b12.jsonl.gz", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 3734637, "sha256": "e8d69e0647f011ebc8213b06de9934b82a76f6e8c1736b7d952db27c38fc4f07"}
+{"path": "verification/n19/force-b13.jsonl.gz", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 11068419, "sha256": "bcc2caf240262bb8c245bac1d9f733591c242905d7a0cc5675742565ed710bef"}
+{"path": "verification/n19/force-b14.jsonl.gz", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 4708912, "sha256": "9b5f728c16e2c4fe17bb456e505ddff74b28fedfdff5a404dcf3f0e63253d92a"}
+{"path": "verification/n19/force_census.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 8007, "sha256": "92ed64d190ca874d2ed438cd809065f707e06b65c18542e32420ceb38c7882e0"}
+{"path": "verification/n19/force_prototype.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 12017, "sha256": "108b98cfdfa8bb458b61c2bec8ebc2616d8c226ac6df30004c0c7d3cbb76635c"}
+{"path": "verification/n19/force_prototype_sample.json", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 12458, "sha256": "37f6291aff7d3de9e9cf1a9bb5218159a05062a20bd468936646021ad10c2839"}
+{"path": "verification/n19/global_replay_receipt.json", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 901, "sha256": "35a2182b7f29bba434a53995dc41d55a8aade270c0d5b1ad5973c3b7b9697da1"}
+{"path": "verification/n19/replay_force_archive.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 3880, "sha256": "5adbea0ce8f7d97c80042e302dcad11f45e1109cdca6fb11a40e03f700310e40"}
+{"path": "verification/n19/replay_global.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 2235, "sha256": "b1c821580e0428ee2b8d3231dcc2695984d8d6483c0443a1d4eca95afa342c86"}
+{"path": "verification/n19/test_force_prototype.py", "encoding": "identity", "category": "diskcover-solver-and-proof-scope", "bytes": 2425, "sha256": "3379bc7a74565d8d923899debf4d95264c6714e5658d6c18b83240245cade651"}

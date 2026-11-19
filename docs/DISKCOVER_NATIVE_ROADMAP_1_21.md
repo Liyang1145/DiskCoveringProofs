@@ -15,7 +15,7 @@
 | 16 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N16_GLOBAL.md)；同根精确达到 | 保留原生复验入口，最后接入求解器 |
 | 17 | [精确构型已验证，接触盘数 11–13](DISKCOVER_NATIVE_N17.md) | 排除已完成原生普查的 1,320 个连续分支 |
 | 18 | [精确构型和严格的双圆下界](DISKCOVER_NATIVE_N18.md) | 排除[原生普查](DISKCOVER_NATIVE_N18_CENSUS.md)中的 14,559 个连续分支 |
-| 19 | [精确达到上界与 12–14 边界盘归约](DISKCOVER_NATIVE_N19.md)；[候选图已排除严格改善](DISKCOVER_NATIVE_N19_CANDIDATE_GRAPH.md)，[12–13 拥有者](DISKCOVER_NATIVE_N19_B12_B13.md)与[14 拥有者](DISKCOVER_NATIVE_N19_B14.md)均有精确剪枝 | [拓扑普查](DISKCOVER_NATIVE_N19_CENSUS.md)后，已有[七边形分支证书](DISKCOVER_NATIVE_N19_B12_SEPTAGON.md)，继续排除其余连续域 |
+| 19 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N19_GLOBAL.md)，精确半径 $1/\sqrt{13}$ | 保留原生复验入口，最后接入求解器 |
 | 20 | [已验证有理上界；半径 ≤ 0.272 时仅 12–14 个边界盘](DISKCOVER_NATIVE_N20.md) | 精确重建候选、统一边界标签，再逐分支核验下界 |
 
 验收顺序：候选的精确对象和隔离盒；覆盖整个闭盘（非采样）；任意圆心、退化与严格余量的归约；完整的分支目录和每个分支可复核的排除；匹配上下界。望见某个候选、程序成功退出、命中缓存或单个局部分支通过，均不能代替其中其余环节。
