@@ -2,8 +2,10 @@
 # n=13: native reductions and remaining exact obligations
 
 The target is the minimum common radius for 13 disks covering the **closed**
-unit disk, with unrestricted centers. This note proves reductions and an independently checked attaining configuration
-at the candidate algebraic radius. It does not prove the matching global lower bound.
+unit disk, with unrestricted centers. This note gives the geometric reductions and attaining configuration.
+The [native metric replay](DISKCOVER_NATIVE_N13_FORCE.md) closes the matching
+lower bound, with all proof components replayable via
+`python tools/check_native_n13_global.py`.
 
 ## Reference candidate and archived work
 
@@ -290,7 +292,7 @@ reference. This bound is strictly below the branch test radius used above.
 
 Run `python tools/check_native_n13_census.py` (requires `g++`).
 Optionally pass `--out DIRECTORY` for fresh canonical topology files to use
-in the next metric exclusion stage. The two traversals give:
+in the metric exclusion stage. The two traversals give:
 
 | Boundary owners | Interior centers | Canonical orbits after necessary cuts | Fixed-boundary rooted classes |
 |---:|---:|---:|---:|
@@ -365,6 +367,6 @@ while peeling is incomplete, since adding edges cannot remove an existing
 path or a forbidden chord.
 
 This is a complete census **of survivor topologies for these necessary cuts**,
-not a continuous feasibility test. The candidate construction is
-checked separately; the census neither establishes feasibility nor excludes
-any of the 1,679 survivors.
+not a continuous feasibility test. The candidate construction and the completed lower-bound metric exclusions
+are [checked separately](DISKCOVER_NATIVE_N13_FORCE.md); the census itself
+neither establishes feasibility nor excludes any of the 1,679 survivors.

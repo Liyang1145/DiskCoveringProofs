@@ -1,0 +1,22 @@
+[
+  {
+    "owners": 11,
+    "excluded_graphs": 93,
+    "sha256": "e991599daf928d50b4bc6fccb3427870f37e3283af8428a40f3802ffe59c8eb5",
+    "nodes": {
+      "force": 260,
+      "empty": 0,
+      "split": 167
+    }
+  },
+  {
+    "owners": 12,
+    "excluded_graphs": 70,
+    "sha256": "24a2cd5c371ae71c785fcd6eb30d4bf9d329e12e55f717618f7401e0afd7e360",
+    "nodes": {
+      "force": 569,
+      "empty": 0,
+      "split": 499
+    }
+  }
+]
