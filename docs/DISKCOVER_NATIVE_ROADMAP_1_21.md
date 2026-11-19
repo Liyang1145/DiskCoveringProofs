@@ -14,7 +14,7 @@
 | 15 | [边界数缩到 10–12](DISKCOVER_NATIVE_N15_N16.md) | 用 12 拥有者分支的角度/径向限制枚举剩余类型 |
 | 16 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N16_GLOBAL.md)；同根精确达到 | 保留原生复验入口，最后接入求解器 |
 | 17 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N17.md)，同根精确达到 | 保留原生复验入口，最后接入求解器 |
-| 18 | [精确构型和严格的双圆下界](DISKCOVER_NATIVE_N18.md) | 排除[原生普查](DISKCOVER_NATIVE_N18_CENSUS.md)中的 14,559 个连续分支 |
+| 18 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N18_GLOBAL.md)，同根精确达到 | 保留原生复验入口，最后接入求解器 |
 | 19 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N19_GLOBAL.md)，精确半径 $1/\sqrt{13}$ | 保留原生复验入口，最后接入求解器 |
 | 20 | [已验证有理上界；半径 ≤ 0.272 时仅 12–14 个边界盘](DISKCOVER_NATIVE_N20.md) | 精确重建候选、统一边界标签，再逐分支核验下界 |
 

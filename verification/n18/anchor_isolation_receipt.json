@@ -1,0 +1,12 @@
+{
+  "n": 18,
+  "status": "candidate_active_rod_graph_anchor_neighborhood_only",
+  "anchor_distance_bound": "7/60",
+  "positive_leading_determinants": 90,
+  "exact_positive_contact_weights": 72,
+  "max_degree": 6,
+  "root_input_sha256": "446d47409d67bd6d6d2af39813b6c4b974f29d896ea8b25f7ec15bf78dd13c34",
+  "operator_perturbation_upper": "500130000000040000000000001/5000000000000000000000000000000000000",
+  "buffered_matrix_sha256": "8d6a3dfc947a7e12e4f547833cdb451fab7bb3452bb6e0d31f4dcecf1011b891",
+  "negative_controls_rejected": 1
+}

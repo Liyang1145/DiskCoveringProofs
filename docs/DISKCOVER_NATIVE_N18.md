@@ -6,7 +6,8 @@ Fresh independent checks certify the interval
   0.26590 < r_D(18) \le
   0.290167717640566729113154525601061718306280885754041798808099.
 \]
-The gap is not closed. Neither inequality relies on an external proof's
+These two preliminary bounds alone do not close the gap; the later
+[matching global proof](DISKCOVER_NATIVE_N18_GLOBAL.md) is separate. Neither inequality relies on an external proof's
 acceptance marker. The upper construction uses external coordinate data as a
 seed only. The lower bound has no candidate premise.
 

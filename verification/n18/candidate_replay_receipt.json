@@ -1,0 +1,18 @@
+{
+  "status": "candidate_orbit_only_full_angle_domain_excluded",
+  "witness_tree_sha256": "b0b5add76b82c2682e8447d7721860524fcaafe158de1181fc71ffa1472a3c2b",
+  "candidate_stabilizer": 2,
+  "count": {
+    "SPLIT": 609,
+    "DUAL": 548,
+    "LOCAL": 62
+  },
+  "nodes": 1219,
+  "negative_controls_rejected": 3,
+  "strict_force_separation_floor": "1/50000000",
+  "strict_local_squared_ceiling": "17/1250",
+  "min_exact_force_separation_display": 2.0791384627644185e-08,
+  "max_squared_anchor_displacement_display": 0.013593688982936756,
+  "anchor_distance_threshold": "7/60",
+  "force_radius_upper": "58033543528113345822630905120212343661256177150808359761619/200000000000000000000000000000000000000000000000000000000000"
+}
