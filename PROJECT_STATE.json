@@ -6,6 +6,7 @@
   "instructions": "AGENTS.md",
   "solver_1_through_22": {
     "guide": "docs/DISKCOVER_SOLVER_1_22.md",
+    "native_roadmap": "docs/DISKCOVER_NATIVE_ROADMAP_1_21.md",
     "catalog_command": "python tools/solve_diskcover.py --all",
     "certified_bounds_example": "python tools/solve_diskcover.py 17 --grid 5",
     "external_replay_guide": "docs/DISKCOVER_EXTERNAL_17_20.md",

@@ -148,3 +148,62 @@ maximum at equal angles, and the total increases with the first group's
 sum up to the ungrouped mean. Numerical evaluation gives about
 3.24345, still about 0.10186 **above** (\pi). This diagnostic is
 not a certified closure of the fourteen-owner branch.
+
+## A closed subcase: adjacent shallow owners with a distant third
+
+Write (p_i=D_i v_i) for the first two centers, with (v_i) unit,
+and let (\theta\in[0,\pi]) be the angle between their directions.
+There exists a unit direction (w) with
+(w\cdot v_1=w\cdot v_2=-\cos(\theta/2)): use the opposite of the
+direction bisector, or a perpendicular if (v_1=-v_2).
+For (z=sw), where (0<s<1+U-L), both squared distances are
+strictly greater than
+[
+d_0^2+s^2+2d_0s\cos(\theta/2),\qquad d_0=.722,
+]
+because (D_i>d_0). If (D_3>L+s), every remaining owner is
+farther than (L) from (z), by the reverse triangle inequality.
+The translated-core cover therefore gives the necessary condition
+[
+\cos(\theta/2)<\frac{L^2-d_0^2-s^2}{2d_0s}.
+]
+If the right side is nonpositive, this subcase is impossible for
+all directions.
+
+If the first two owners are adjacent in the boundary cycle, their
+shared boundary switch point lies within (U) of each center, so
+[
+4U^2\ge |p_1-p_2|^2
+=(D_1-D_2)^2+2D_1D_2(1-\cos\theta).
+]
+It follows that
+(\cos^2(\theta/2)\ge 1-U^2/D_1D_2>1-(1/13)/d_0^2>.9^2).
+With (s=.013), the distance estimate already exceeds (.733^2>L^2).
+Thus the two (L)-disks cannot cover (z), so a third owner must
+reach it and (D_3\le L+.013<.746). This excludes adjacency combined
+with (D_3\ge.746). In fact the same implication holds whenever
+(\cos(\theta/2)\ge.9), without adjacency.
+
+Separately, when (D_3\ge.780), use (s=.047). Because (L<.733),
+the remaining owners cannot reach (z) even when (D_3=.780).
+The distance estimate rules out (\cos(\theta/2)\ge.21), so the
+angular separation must be strictly larger than (2\arccos(.21)).
+For both tests (s<1+U-L), since (1+U-L>1-.733>.047).
+
+```python
+from fractions import Fraction as F
+
+d0, Lmax, U2 = F(".722"), F(".733"), F(1, 13)
+assert 1-U2/d0**2 > F(".9")**2
+for s, c, threshold in [
+    (F(".013"), F(".9"), F(".746")),
+    (F(".047"), F(".21"), F(".780")),
+]:
+    assert 0 < s < 1-Lmax
+    assert Lmax+s == threshold
+    assert d0**2+s**2+2*d0*s*c > Lmax**2
+```
+
+This does not rule out the required shallow third owner, nor does it
+rule out sufficiently separated first two directions. Consequently
+it does not close the fourteen-owner branch.

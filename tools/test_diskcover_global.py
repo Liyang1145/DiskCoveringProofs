@@ -19,8 +19,16 @@ class DiskCoverGlobalTest(unittest.TestCase):
                 self.assertTrue(case["proof"]["lower"])
                 self.assertTrue(case["proof"]["upper"])
 
+    def test_ring_cases(self):
+        for n, radius in ((8, "1/(1+2*cos(2*pi/7))"), (9, "sqrt(2)-1")):
+            case = solve_global(n)
+            self.assertEqual(case["status"], "exact_global")
+            self.assertEqual(case["radius_exact"], radius)
+            self.assertEqual(len(case["centers"]), n)
+            self.assertIn("Voronoi", case["proof"]["lower"])
+
     def test_not_implemented_is_not_success(self):
-        for n in sorted(set(range(5, 23)) - {7}):
+        for n in sorted(set(range(5, 23)) - {7, 8, 9}):
             self.assertIsNone(solve_global(n))
 
     def test_invalid_order(self):
