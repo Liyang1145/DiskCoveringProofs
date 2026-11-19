@@ -15204,8 +15204,9 @@
 {"path": "tools/diskcover_grid.py", "bytes": 5062, "sha256": "27d6cd2c9b22ea9e60624e01f08e10613b6dd086b2410969ed27f3b9969bf6ae", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/solve_diskcover.py", "bytes": 2454, "sha256": "0f061ded7fed96af68cd00968ccf3ddabe448d422a6fb17d55c2f0058bf0bad4", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/test_diskcover_grid.py", "bytes": 2184, "sha256": "cba72174df6bf66a86a4da06e90f30166fb3f4358b1e8c2435ca0439a71f63a0", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
-{"path": "docs/DISKCOVER_NATIVE_N19.md", "bytes": 3298, "sha256": "b19b1b545953e91daab195da14ee3abf30cadc7d2d23c4bf9870a002e09ee240", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_NATIVE_N19.md", "bytes": 3428, "sha256": "2b016708c6e26fb5f64d5265bb0b6040a03a84ed452ffaea96334ea9c43d79f4", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/diskcover_global.py", "bytes": 2576, "sha256": "5fc8b9f9035bd5dcef27c59f0c19cf83896497afdb71a8bbdd315703c5e53839", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/diskcover_n19_upper.py", "bytes": 3655, "sha256": "4c172192d933c051cd848baa5c1ab76e5d226c1024958879528a3c94b681ea7b", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/test_diskcover_global.py", "bytes": 1099, "sha256": "638ba94c0600206b7ef854565589f02157082f93ba5a7a0a1fd282221671730d", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
 {"path": "tools/test_diskcover_n19_upper.py", "bytes": 1141, "sha256": "0bc2e7b73e2db19989e2e1e8747d6011f33db9908d0203020c2bdf9c6bccf162", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_NATIVE_N19_B14.md", "bytes": 7154, "sha256": "996286daf47aa19950565bb6598fceef1b4c0e3a20927b63e7229e9c4ff6ff65", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
