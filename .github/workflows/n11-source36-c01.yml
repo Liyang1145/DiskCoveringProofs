@@ -1,0 +1,52 @@
+name: Lean n11 Source36 C01
+on:
+  push:
+    branches: ['dot/n11-ci-source36']
+    paths: ['.github/workflows/n11-source36-c01.yml']
+permissions:
+  contents: read
+concurrency:
+  group: n11-source36-c01
+  cancel-in-progress: false
+jobs:
+  kernel-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      LEAN_NUM_THREADS: '1'
+      MATHLIB_CACHE_GET_URL: https://cache.mathlib.org/mathlib4-master
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+          sparse-checkout: |
+            assets/replay/n11-wip
+            tools
+            Makefile
+      - name: Verify and restore frozen n11 assets
+        run: make restore-n11-wip
+      - name: Install pinned Lean binary
+        run: |
+          set -euo pipefail
+          archive="$RUNNER_TEMP/lean-4.33.1-linux.tar.zst"
+          curl --fail --location --retry 3 --max-time 900 \
+            https://github.com/leanprover/lean4/releases/download/v4.33.1/lean-4.33.1-linux.tar.zst \
+            -o "$archive"
+          echo "890afd185370f85666025b883914ab4f4b339136f8c96167b69cfb62aecaf235  $archive" | sha256sum --check
+          tar --zstd -xf "$archive" -C "$RUNNER_TEMP"
+          echo "$RUNNER_TEMP/lean-4.33.1-linux/bin" >> "$GITHUB_PATH"
+      - name: Check pinned Mathlib and restore cache
+        working-directory: build/n11-wip/assets/lean
+        run: |
+          set -euo pipefail
+          test "$(cat lean-toolchain | tr -d '\r')" = 'leanprover/lean4:v4.33.1'
+          lean --version
+          lake exe cache get
+          test "$(git -C .lake/packages/mathlib rev-parse HEAD)" = '0df444a360eaa60ab8c11dca51a86af692955474'
+      - name: Build Source36 group C01 only
+        working-directory: build/n11-wip/assets/lean
+        run: |
+          set -euo pipefail
+          sha256sum N11Formalization/C450Source36GroupedC01.lean
+          timeout --kill-after=30s 65m lake build N11Formalization.C450Source36GroupedC01
+          test -s .lake/build/lib/lean/N11Formalization/C450Source36GroupedC01.olean
