@@ -5,8 +5,8 @@
 {"path": "AGENTS.md", "bytes": 1787, "sha256": "100fbb2dfd507b07b4e9cc41d476bc0e9fdd382c680c47d51493faf89bac9e55", "encoding": "identity", "category": "public-global-agent-handoff-20261014"}
 {"path": "LICENSE", "bytes": 1067, "sha256": "47035a4576af238f71019548149ff8f8db7d130b1928d04ec4556e07c1d305c4", "encoding": "identity", "category": "portable-public-verification-layer-20261014"}
 {"path": "Makefile", "bytes": 2149, "sha256": "8087c8d03464ddfbebdf4eae251d3511a57bd5f29d41681caa2b40b555878dd8", "encoding": "identity", "category": "portable-public-verification-layer-20261014"}
-{"path": "PROJECT_STATE.json", "bytes": 22540, "sha256": "bbd71c47963457ea3c443b22b3583d3788124e9dc1a5f9492ef7fef605a66080", "encoding": "identity", "category": "public-global-agent-handoff-20261014"}
-{"path": "README.md", "bytes": 13147, "sha256": "de3f929d2fd6eabd5e90f6c917199cc3190685bad0a99ea5b88276d1e55fd976", "encoding": "identity", "category": "portable-public-verification-layer-20261014"}
+{"path": "PROJECT_STATE.json", "bytes": 23037, "sha256": "8f50795570ef68200281c5a29aad0fe2584faf0f9e2c0c2e4ae0b6d192dd5df7", "encoding": "identity", "category": "public-global-agent-handoff-20261014"}
+{"path": "README.md", "bytes": 13598, "sha256": "54e8e72e5e1e8d457c18dbead06dc39f8fdff8a8c448c68494906d9103113316", "encoding": "identity", "category": "portable-public-verification-layer-20261014"}
 {"path": "START_HERE.md", "bytes": 4165, "sha256": "e3cf51f89e0d0a75eb9cec3c1dbd5d2e0eebba96a1c12265daecbe3db17b3ce2", "encoding": "identity", "category": "public-global-agent-handoff-20261014"}
 {"path": "assets/configurations/configurations.json", "bytes": 85389, "sha256": "d214d04f323bdbf4b1bc8f1a529977e07617c55a262cf01fe7eb611ea258afb0", "encoding": "identity", "category": "portable-public-verification-layer-20261014"}
 {"path": "assets/configurations/coordinates.csv", "bytes": 5017, "sha256": "25db97806980b96e9f12f052323a9627747d450ad0f8fcb48fdb155e5df17988", "encoding": "identity", "category": "portable-public-verification-layer-20261014"}
@@ -15198,3 +15198,9 @@
 {"path": "cover27/proof_bundle/research-2026-11/followup/verify_wheel_core.js", "sha256": "80e9072f61218415fc73ad91a289e3490f366b0c1faf8cd3d1471bafbb89e9a6", "bytes": 3100, "encoding": "identity", "category": "local-mathematical-assets-20261119"}
 {"path": "cover28/README.md", "sha256": "4e30d7cea2271596bad7a1c86044f00a0236fc54df153af53350cde4300e68bd", "bytes": 902, "encoding": "identity", "category": "local-mathematical-assets-20261119"}
 {"path": "docs/PROOF-ASSET-INTEGRATION-20261119.md", "sha256": "e5910e005eb70340012e0714994153774fb8d37227c56be37ffa633eecb87b35", "bytes": 3196, "encoding": "identity", "category": "local-mathematical-assets-20261119"}
+{"path": "docs/DISKCOVER_EXTERNAL_17_20.md", "bytes": 4192, "sha256": "2dac5ed4993ddad2c4cf4adaa52b0588078251a10d99975dccb2127ae5470ed4", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "docs/DISKCOVER_SOLVER_1_22.md", "bytes": 3889, "sha256": "bc73e82d9bdb694b3c955f6e54f131832dc56783d8234458960329139db7e739", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/diskcover_catalog.json", "bytes": 10969, "sha256": "20756e77d8e1ee1c8e5e1a1f9b44f3e0c454d385ff34c8f7187c1a51af1368a6", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/diskcover_grid.py", "bytes": 5062, "sha256": "27d6cd2c9b22ea9e60624e01f08e10613b6dd086b2410969ed27f3b9969bf6ae", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/solve_diskcover.py", "bytes": 1773, "sha256": "09a8ed987362d4e7c535e759abda686ad4a840ba275a52ef78936a69171d932c", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}
+{"path": "tools/test_diskcover_grid.py", "bytes": 2184, "sha256": "cba72174df6bf66a86a4da06e90f30166fb3f4358b1e8c2435ca0439a71f63a0", "encoding": "identity", "category": "diskcover-solver-and-proof-scope"}

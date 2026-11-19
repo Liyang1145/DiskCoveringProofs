@@ -24,6 +24,13 @@ Start with the [mathematical reader's guide](docs/MATHEMATICAL_GUIDE.md) and
 `C891`, `C924`, `k10`, and `root25` into mathematical statements and domains.
 编号是归档索引；先看数学名称、量词、证明链与实际执行范围。
 
+## Solver for 1–22 / 1–22 阶求解入口
+
+`python tools/solve_diskcover.py --all` lists the source and verification scope for each order.
+`python tools/solve_diskcover.py 17 --grid 5` also computes fresh certified bounds for the continuous problem.
+See the [solver guide and mathematical guarantee](docs/DISKCOVER_SOLVER_1_22.md).
+The certified interval is not an exact optimum, and linking external proof packages is not a fresh global replay.
+
 ## Run mathematical checks / 运行数学检查
 
 Use Python 3.10 or later. The twelve-disk atomic replay additionally requires

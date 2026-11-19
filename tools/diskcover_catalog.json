@@ -1,0 +1,237 @@
+[
+  {
+    "n": 1,
+    "status": "classical_theorem",
+    "radius_display": "1",
+    "exact_description": "1",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Classical result cited in Fejes Tóth (2005), introduction; not a new formal proof or replay."
+  },
+  {
+    "n": 2,
+    "status": "classical_theorem",
+    "radius_display": "1",
+    "exact_description": "1",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Classical result cited in Fejes Tóth (2005), introduction; not a new formal proof or replay."
+  },
+  {
+    "n": 3,
+    "status": "classical_theorem",
+    "radius_display": "0.866025403784439",
+    "exact_description": "sqrt(3)/2",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Classical result cited in Fejes Tóth (2005), introduction; not a new formal proof or replay."
+  },
+  {
+    "n": 4,
+    "status": "classical_theorem",
+    "radius_display": "0.707106781186548",
+    "exact_description": "1/sqrt(2)",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Classical result cited in Fejes Tóth (2005), introduction; not a new formal proof or replay."
+  },
+  {
+    "n": 5,
+    "status": "classical_theorem",
+    "radius_display": "0.60938",
+    "exact_description": "Reciprocal of the maximal covered radius in Bezdek, Satz 1 and Fig. 3.",
+    "sources": [
+      "https://www.digizeitschriften.de/download/pdf/301416052_0014/log6.pdf",
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Bezdek (1983) states the geometric result and refers to his 1979 thesis for full details. Display is rounded from the classical sources; no local algebraic isolation or replay."
+  },
+  {
+    "n": 6,
+    "status": "classical_theorem",
+    "radius_display": "0.5559",
+    "exact_description": "Reciprocal of the maximal covered radius in Bezdek, Satz 2 and Fig. 9.",
+    "sources": [
+      "https://www.digizeitschriften.de/download/pdf/301416052_0014/log6.pdf",
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Bezdek (1983) states the geometric result and refers to his 1979 thesis for full details. Display is rounded from the classical sources; no local algebraic isolation or replay."
+  },
+  {
+    "n": 7,
+    "status": "classical_theorem",
+    "radius_display": "0.5",
+    "exact_description": "1/2",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Classical result cited in Fejes Tóth (2005), introduction; not a new formal proof or replay."
+  },
+  {
+    "n": 8,
+    "status": "classical_theorem",
+    "radius_display": "0.445041867912629",
+    "exact_description": "1/(1+2*cos(2*pi/(n-1)))",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Gábor Fejes Tóth (2005), main theorem; not a new formal proof or replay."
+  },
+  {
+    "n": 9,
+    "status": "classical_theorem",
+    "radius_display": "0.414213562373095",
+    "exact_description": "1/(1+2*cos(2*pi/(n-1)))",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Gábor Fejes Tóth (2005), main theorem; not a new formal proof or replay."
+  },
+  {
+    "n": 10,
+    "status": "classical_theorem",
+    "radius_display": "0.394930843634698",
+    "exact_description": "1/(1+2*cos(2*pi/(n-1)))",
+    "sources": [
+      "https://library.slmath.org/books/Book52/files/18fejes.pdf"
+    ],
+    "verification_scope": "Gábor Fejes Tóth (2005), main theorem; not a new formal proof or replay."
+  },
+  {
+    "n": 11,
+    "status": "local_source_proof",
+    "radius_display": "0.37998385311983868972",
+    "exact_description": "Radius coordinate of the C924 boxed contact/stationarity root.",
+    "sources": [
+      "cover11/README.md",
+      "docs/N11_CHECK_SCOPE.md"
+    ],
+    "verification_scope": "Archived global source proof; public arithmetic check is scoped, and the arbitrary-center full-disk Lean theorem is incomplete."
+  },
+  {
+    "n": 12,
+    "status": "local_source_proof",
+    "radius_display": "0.36110296374450864411",
+    "exact_description": "Radius coordinate of the boxed algebraic solution F=G=H=T=0.",
+    "sources": [
+      "cover12/README.md",
+      "cover12/proof_bundle/independent-2026-11/proof.md",
+      "docs/PROOF-ASSET-INTEGRATION-20261119.md"
+    ],
+    "verification_scope": "Independent computer-assisted global proof and full finite verifier replayed by the maintainer on 2026-11-19; catalog lookup is not a new replay."
+  },
+  {
+    "n": 13,
+    "status": "external_proof_claim",
+    "radius_display": "0.34664545692738964346786973819387878953718745",
+    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "sources": [
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover13/README.md",
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
+    ],
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+  },
+  {
+    "n": 14,
+    "status": "local_source_proof",
+    "radius_display": "0.33173203427623412256",
+    "exact_description": "Radius of boxed F=G=H=0 root on the stipulated positive radical branches.",
+    "sources": [
+      "cover14/README.md",
+      "docs/PROOF-ASSET-INTEGRATION-20261108.md"
+    ],
+    "verification_scope": "Archived global source proof; no complete portable global replay."
+  },
+  {
+    "n": 15,
+    "status": "external_proof_claim",
+    "radius_display": "0.31814293085926283635949118164993500518666386",
+    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "sources": [
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover15/README.md",
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
+    ],
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+  },
+  {
+    "n": 16,
+    "status": "external_proof_claim",
+    "radius_display": "0.30821980189861784887010326922181483200610642",
+    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "sources": [
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover16/README.md",
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
+    ],
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+  },
+  {
+    "n": 17,
+    "status": "external_proof_claim",
+    "radius_display": "0.29853158925642805986984377442398070373438760",
+    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "sources": [
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover17/README.md",
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
+    ],
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+  },
+  {
+    "n": 18,
+    "status": "external_proof_claim",
+    "radius_display": "0.29016771764056672911315452560106171830628088",
+    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "sources": [
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover18/README.md",
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
+    ],
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+  },
+  {
+    "n": 19,
+    "status": "external_proof_claim",
+    "radius_display": "0.27735009811261456100917086672849968817317665",
+    "exact_description": "1/sqrt(13).",
+    "sources": [
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover19/README.md",
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
+    ],
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+  },
+  {
+    "n": 20,
+    "status": "external_proof_claim",
+    "radius_display": "0.27084817843997736519402387625893583587132712",
+    "exact_description": "Radius specified by an external 198-variable integer quadratic system and two nested rational contraction boxes.",
+    "sources": [
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover20/README.md",
+      "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
+    ],
+    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+  },
+  {
+    "n": 21,
+    "status": "local_source_proof",
+    "radius_display": "0.26284507240358458065",
+    "exact_description": "Square root of the radius-squared coordinate of the 173-variable boxed core-system root.",
+    "sources": [
+      "cover21/README.md",
+      "shared/proof_bundle/research-2026/n21-25-synthesis/round2-grouped/N21-GLOBAL-PROOF.md"
+    ],
+    "verification_scope": "Historical computer-assisted global source proof; no complete portable global replay."
+  },
+  {
+    "n": 22,
+    "status": "local_source_proof",
+    "radius_display": "0.25325145983509235808",
+    "exact_description": "sqrt(t), where t is the unique root of 29*t^3-55*t^2+19*t-1 in (641/10000,321/5000).",
+    "sources": [
+      "cover22/README.md",
+      "shared/proof_bundle/research-2026/n21-25-synthesis/round3-high/N22-GLOBAL-PROOF.md"
+    ],
+    "verification_scope": "Historical computer-assisted global source proof; no complete portable global replay."
+  }
+]

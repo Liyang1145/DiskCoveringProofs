@@ -4,6 +4,14 @@
   "complete_global_math_replay_available": false,
   "entry": "START_HERE.md",
   "instructions": "AGENTS.md",
+  "solver_1_through_22": {
+    "guide": "docs/DISKCOVER_SOLVER_1_22.md",
+    "catalog_command": "python tools/solve_diskcover.py --all",
+    "certified_bounds_example": "python tools/solve_diskcover.py 17 --grid 5",
+    "external_replay_guide": "docs/DISKCOVER_EXTERNAL_17_20.md",
+    "fresh_global_optimum_replays_added": [],
+    "remaining": "Review external n=13,15–20 proofs independently; do not promote the bounds solver, citation, or author replay to independent global acceptance."
+  },
   "delivery_base_commit": "6869e8ad9a92693e88b891e74ec3e10f703b4146",
   "orders": [
     {
