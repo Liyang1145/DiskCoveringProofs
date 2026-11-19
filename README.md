@@ -28,6 +28,8 @@ Start with the [mathematical reader's guide](docs/MATHEMATICAL_GUIDE.md) and
 
 `python tools/solve_diskcover.py --all` lists the source and verification scope for each order.
 `python tools/solve_diskcover.py 17 --grid 5` also computes fresh certified bounds for the continuous problem.
+`python tools/solve_diskcover.py 19 --require-global-proof` freshly replays the exact arbitrary-center proof.
+Strict exact mode is available for n = 1–4, 7–10, 13 and 16–19; unproved or unconnected orders are rejected.
 See the [solver guide and mathematical guarantee](docs/DISKCOVER_SOLVER_1_22.md).
 The certified interval is not an exact optimum, and linking external proof packages is not a fresh global replay.
 

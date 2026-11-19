@@ -9,13 +9,13 @@
 | 5–6 | 有已发表的精确定理，严格模式尚不接受 | 单独核对并整理解析证明及构型 |
 | 11 | 有全局源证明；Lean 的加权弧、C450 恒等式及内圆弧归约已复验 | 固定 Lean 4.33.1，复用已编译依赖，按独立目标检查 C450 归一化桥接及源段；其余能量、分类与最终定理另计 |
 | 12 | 仓库有独立全局源证明和有限复验记录 | 在求解器中绑定同一个候选根、达到证明与全局排除 |
-| 13 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N13_FORCE.md)；同根精确达到 | 保留原生复验入口，按用户顺序最后接入求解器 |
+| 13 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N13_FORCE.md)；同根精确达到 | `python tools/solve_diskcover.py 13 --require-global-proof` |
 | 14、21 | 有仓库全局源证明，未做本轮完整复验 | 按各阶冻结文档接通可重复核验入口 |
 | 15 | [边界数缩到 10–12](DISKCOVER_NATIVE_N15_N16.md) | 用 12 拥有者分支的角度/径向限制枚举剩余类型 |
-| 16 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N16_GLOBAL.md)；同根精确达到 | 保留原生复验入口，最后接入求解器 |
-| 17 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N17.md)，同根精确达到 | 保留原生复验入口，最后接入求解器 |
-| 18 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N18_GLOBAL.md)，同根精确达到 | 保留原生复验入口，最后接入求解器 |
-| 19 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N19_GLOBAL.md)，精确半径 $1/\sqrt{13}$ | 保留原生复验入口，最后接入求解器 |
+| 16 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N16_GLOBAL.md)；同根精确达到 | `python tools/solve_diskcover.py 16 --require-global-proof` |
+| 17 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N17.md)，同根精确达到 | `python tools/solve_diskcover.py 17 --require-global-proof` |
+| 18 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N18_GLOBAL.md)，同根精确达到 | `python tools/solve_diskcover.py 18 --require-global-proof` |
+| 19 | [已完成的任意圆心全局证明](DISKCOVER_NATIVE_N19_GLOBAL.md)，精确半径 $1/\sqrt{13}$ | `python tools/solve_diskcover.py 19 --require-global-proof` |
 | 20 | [已验证有理上界；半径 ≤ 0.272 时仅 12–14 个边界盘](DISKCOVER_NATIVE_N20.md) | 精确重建候选、统一边界标签，再逐分支核验下界 |
 
 验收顺序：候选的精确对象和隔离盒；覆盖整个闭盘（非采样）；任意圆心、退化与严格余量的归约；完整的分支目录和每个分支可复核的排除；匹配上下界。望见某个候选、程序成功退出、命中缓存或单个局部分支通过，均不能代替其中其余环节。

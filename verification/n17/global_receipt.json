@@ -6,39 +6,11 @@
     "0.298531589256428059869843774423980703734387603913740470124900",
     "0.298531589256428059869843774423980703734387603913740470124901"
   ],
-  "fresh_generated_noncandidate_orbits": 1317,
+  "fresh_generated_noncandidate_orbits": 1319,
   "data_assisted_noncandidate": {
-    "status": "specified_noncandidate_orbits_excluded",
-    "forest_witness_sha256": "0bb19fb51bf7a9d99f9b149d5040352200138e46b288383d17c2a6dce973cb1d",
-    "count": 2,
-    "counts": {
-      "SPLIT": 132,
-      "DUAL": 134
-    },
-    "minimum_exact_force_margin_display": 3.3193318496882176e-06,
-    "negative_controls_rejected": 1,
-    "matches": [
-      {
-        "owners": 12,
-        "index": 612,
-        "source_residual_index": 1093,
-        "node_counts": {
-          "SPLIT": 45,
-          "DUAL": 46
-        },
-        "minimum_margin_display": 3.3193318496882176e-06
-      },
-      {
-        "owners": 12,
-        "index": 628,
-        "source_residual_index": 1115,
-        "node_counts": {
-          "SPLIT": 87,
-          "DUAL": 88
-        },
-        "minimum_margin_display": 3.586637529948708e-06
-      }
-    ]
+    "status": "not_needed",
+    "count": 0,
+    "matches": []
   },
   "data_assisted_candidate": {
     "status": "candidate_orbit_only_full_angle_domain_excluded",
@@ -63,6 +35,7 @@
     "B13-force.json": "5385538fca0005dfdf56d0288ae8ce044c4febce73b5b6cb8440e4a902bc8773",
     "B13-deep-force.json": "daed75c91bc9ac566d931ac12d76cab3e46611f5bf56f1f438caff3c2aeb86f4",
     "B12-pairs-force.json": "328290fce76852529fb20c5be8b429f328c221ffd0d17cf16fb526fa8f30a30e",
-    "B13-pairs-force.json": "6803cfb7391e0dd068fcdd9554dc79a2fa56d545491bd788ded1f2dc0160f797"
+    "B13-pairs-force.json": "6803cfb7391e0dd068fcdd9554dc79a2fa56d545491bd788ded1f2dc0160f797",
+    "B12-final-pairs-force.json": "718f66ad218c0f15dd737acb4dacdf792f0289dd4517b8e3951880b9f3e0d6e4"
   }
 }

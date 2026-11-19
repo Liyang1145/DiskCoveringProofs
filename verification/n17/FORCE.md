@@ -126,33 +126,37 @@ canonical census anchor zero matches that anchor.
 
 ## Complete native replay
 
-The baseline generated archives in `runs/` are exactly
+The normal two-input replay uses exactly eight native-generated archives:
 `B11-force.json`, `B12-force.json`, `B12-deep-force.json`,
-`B13-force.json`, `B13-deep-force.json`, `B12-pairs-force.json`, and
-`B13-pairs-force.json`. With these seven archives only B=12 IDs 612
-and 628 remain. They were independently relabeled to two rows in the
-fixed external numeric forest. The relabeling exhausts cyclic shifts,
-cycle reversals, and interior permutations preserving graph degrees
-then compares full triangle masks; invariant prefilters alone do not
-certify matching. Every matched row is checked over its entire root
-angle domain with native rational arithmetic. The replay ignored
-the source summary verdicts, chart offsets and all non-matching trees.
+`B13-force.json`, `B13-deep-force.json`, `B12-pairs-force.json`,
+`B13-pairs-force.json`, and `B12-final-pairs-force.json`.
+The last archive independently closes B=12 IDs 612 and 628 with 85 and
+133 strict force leaves, respectively. All 1,319 noncandidate trees
+are therefore native-generated. The only remaining external witness
+inputs are the pinned algebraic candidate data and its candidate-angle
+tree. Inputs supply numbers, not acceptance verdicts or executable code.
 
 ```sh
 pin=089584973f41e6374ce110f6e5b5ee456df19352
 base="https://raw.githubusercontent.com/VonEquinox/DiskCoveringSolve/$pin/cover17/proof_bundle"
 curl --fail --location --output /tmp/n17-root.json "$base/core/root17.json"
 curl --fail --location --output /tmp/n17-candidate-tree.json.gz "$base/core/candidate17_tree.json.gz"
-curl --fail --location --output /tmp/n17-noncandidate.jsonl.gz "$base/enumeration/noncandidate17_trees.jsonl.gz"
-python verification/n17/check_global.py /tmp/n17-root.json /tmp/n17-candidate-tree.json.gz /tmp/n17-noncandidate.jsonl.gz
+python verification/n17/check_global.py /tmp/n17-root.json /tmp/n17-candidate-tree.json.gz
 ```
 
-The numeric forest digest is
-`0bb19fb51bf7a9d99f9b149d5040352200138e46b288383d17c2a6dce973cb1d`.
-The integrated checker regenerates the topological census, replays the
-seven generated files, rechecks the two numerical trees and the original
-candidate tree, verifies exact attainment and isolation for the same
-root, and rejects gaps or duplicate coverage in the orbit inventory.
-It needs Python 3.10+ and a C++17 compiler, and does not require SciPy.
+The integrated checker regenerates the topological census, replays all
+eight generated archives, rechecks the original candidate tree,
+verifies exact attainment and isolation for the same root, and rejects
+gaps or duplicate coverage in the orbit inventory. It needs Python
+3.10+ and a C++17 compiler, and does not require SciPy.
+
+The historical seven-archive run is still supported: if the final
+archive is absent, the optional third positional argument can supply
+the pinned `enumeration/noncandidate17_trees.jsonl.gz` numerical input
+(SHA-256 `0bb19fb51bf7a9d99f9b149d5040352200138e46b288383d17c2a6dce973cb1d`).
+It is not read when the native inventory is complete. In legacy mode
+the remaining canonical orbits are matched by exhaustive cyclic
+relabelling and degree-preserving interior permutations, then their
+complete trees are checked, not merely their vertex-degree signatures.
 The exact geometric reductions supporting the calculation are in
 [the native n=17 proof](../../docs/DISKCOVER_NATIVE_N17.md).

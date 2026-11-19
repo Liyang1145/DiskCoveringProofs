@@ -127,14 +127,15 @@
   },
   {
     "n": 13,
-    "status": "external_proof_claim",
+    "status": "independent_global_replay",
     "radius_display": "0.34664545692738964346786973819387878953718745",
-    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "exact_description": "Square root of the radius-squared coordinate of the uniquely verified boxed algebraic root.",
     "sources": [
+      "docs/DISKCOVER_NATIVE_N13_FORCE.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover13/README.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
     ],
-    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+    "verification_scope": "Native topology and exact continuous exclusions with a matching attaining construction; fresh replay via --require-global-proof. Catalog lookup alone does not rerun the proof."
   },
   {
     "n": 14,
@@ -160,47 +161,51 @@
   },
   {
     "n": 16,
-    "status": "external_proof_claim",
+    "status": "independent_global_replay",
     "radius_display": "0.30821980189861784887010326922181483200610642",
-    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "exact_description": "Square root of the radius-squared coordinate of the uniquely verified boxed algebraic root.",
     "sources": [
+      "docs/DISKCOVER_NATIVE_N16_GLOBAL.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover16/README.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
     ],
-    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+    "verification_scope": "Native topology and exact continuous exclusions with a matching attaining construction; fresh replay via --require-global-proof. Catalog lookup alone does not rerun the proof."
   },
   {
     "n": 17,
-    "status": "external_proof_claim",
+    "status": "independent_global_replay",
     "radius_display": "0.29853158925642805986984377442398070373438760",
-    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "exact_description": "Square root of the radius-squared coordinate of the uniquely verified boxed algebraic root.",
     "sources": [
+      "docs/DISKCOVER_NATIVE_N17.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover17/README.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
     ],
-    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+    "verification_scope": "Native topology and exact continuous exclusions with a matching attaining construction; fresh replay via --require-global-proof. Catalog lookup alone does not rerun the proof."
   },
   {
     "n": 18,
-    "status": "external_proof_claim",
+    "status": "independent_global_replay",
     "radius_display": "0.29016771764056672911315452560106171830628088",
-    "exact_description": "Radius specified by the external rational Krawczyk isolated algebraic root.",
+    "exact_description": "Square root of the radius-squared coordinate of the uniquely verified boxed algebraic root.",
     "sources": [
+      "docs/DISKCOVER_NATIVE_N18_GLOBAL.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover18/README.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
     ],
-    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+    "verification_scope": "Native topology and exact continuous exclusions with a matching attaining construction; fresh replay via --require-global-proof. Catalog lookup alone does not rerun the proof."
   },
   {
     "n": 19,
-    "status": "external_proof_claim",
+    "status": "independent_global_replay",
     "radius_display": "0.27735009811261456100917086672849968817317665",
     "exact_description": "1/sqrt(13).",
     "sources": [
+      "docs/DISKCOVER_NATIVE_N19_GLOBAL.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/cover19/README.md",
       "https://github.com/VonEquinox/DiskCoveringSolve/blob/089584973f41e6374ce110f6e5b5ee456df19352/README.md"
     ],
-    "verification_scope": "Author-side global optimality claim with exact certificate package; full independent mathematical and software review is pending. This catalog does not replay the proof."
+    "verification_scope": "Native topology and exact continuous exclusions with a matching attaining construction; fresh replay via --require-global-proof. Catalog lookup alone does not rerun the proof."
   },
   {
     "n": 20,

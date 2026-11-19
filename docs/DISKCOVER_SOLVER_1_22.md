@@ -5,13 +5,39 @@
 python tools/solve_diskcover.py --all
 python tools/solve_diskcover.py 22
 python tools/solve_diskcover.py 4 --require-global-proof
+python tools/solve_diskcover.py 13 --require-global-proof
+python tools/solve_diskcover.py 19 --require-global-proof --offline --proof-workers 4
 python tools/solve_diskcover.py 17 --grid 5 --max-nodes 20000
 python -m unittest discover -s tools -p 'test_diskcover*.py'
 ```
 
 默认输出归档来源与核验范围，**不表示重新证明**。经典定理、本仓库源证明、外部作者的全局最优性声明分开记录；带小数点的半径只是显示值。附加 `--grid` 才会重新计算有证明保证的连续上下界。离散最优值不是连续最优值。此入口不会运行外部执行器、修改冻结证书或把近似结果标记为精确解。
 
-`--require-global-proof` 仅在已有自包含证明和精确达到构型时返回成功；目前支持 n=1–4、7–10。n=10 的[任意圆心下界与精确构造](DISKCOVER_CLASSICAL_N10.md)随严格模式给出，并复验全部数值比较。其他阶返回退出码 2，且不输出近似值作为解。n=19 的[独立上界和分支排除](DISKCOVER_NATIVE_N19.md)尚不足以开启该模式。
+`--require-global-proof` 仅在有精确达到构型及任意圆心下界的阶数
+输出全局精确解。当前支持 **n=1–4、7–10、13、16–19**。其余阶返回
+退出码 2，不输出近似值作为解。n=10 的[书面证明和有理检查](DISKCOVER_CLASSICAL_N10.md)
+仍由严格模式提供。
+
+## 五个新阶的全量精确复验
+
+n=13、16、17、18、19 的严格模式会**现场执行**对应证明入口，
+重新检查同根达到构型、任意圆心归约后的完整图域与每个精确证书。
+成功时标准输出才有单个 JSON 对象；运行进度送到标准错误。
+半径及圆心以精确公式或同一个隔离代数根的坐标索引表示，
+不是把小数当作精确圆心。输入缺失、散列不符、编译失败或
+任何证明检查失败时返回非零，绝不倒退到目录或上界冒充答案。
+
+- 需要 Python 3.10+ 和 C++17 编译器 `g++`。接受路径不需要 SciPy
+  或 Lean。完整复验可能花几分钟，依赖机器速度与阶数。
+- n=13 和 19 不需要下载。n=16、17、18 首次可从固定公开提交获取
+  **数字见证数据**，不下载或执行上游代码，并逐文件验证 SHA-256。
+- 数据默认放在仓库 `build/proof-data/`，可用 `--proof-data-dir DIR`
+  指定位置。下载后可加 `--offline` 复验；该选项绝不联网，
+  缺件即拒绝。仍每次复验，不缓存旧通过状态。
+- `--proof-workers 1–6` 设置支持多进程证明的并发上限，默认 4。
+
+这些模式重放已经构造的证明，不是任意阶的自动发现程序。
+各阶的几何说明、数据来源及可独立复验入口见[验收清单](DISKCOVER_NATIVE_ROADMAP_1_21.md)。
 
 ## 小阶全局证明（n = 1, 2, 3, 4）
 
@@ -40,5 +66,5 @@ python -m unittest discover -s tools -p 'test_diskcover*.py'
 见 [n<22 原生证明验收清单](DISKCOVER_NATIVE_ROADMAP_1_21.md)，其中分开记录已证、可复验、尚待排除三类结果。
 
 - 本仓库的历史源证明与新鲜全局重放不是一回事。n=11、14、21、22 不因这个入口而得到新的全局复验；n=12 的独立证明见原归档与适用的复验范围。
-- n=13、15–20 的上游资料作为外部全局最优性声明登记，不将上游作者自验当作本仓库独立验收；同根关系、达到构型、任意圆心下界、关键有限判定边界及必要的负对照仍须逐项按来源核对。见 [n=17–20 外部复验清单](DISKCOVER_EXTERNAL_17_20.md)。
+- n=15 和 n=20 的原生全局证明仍待补完。n=20 的有理上界复验只证明覆盖可行，不排除更小半径。旧外部复验清单仅记录历史入口，不覆盖上文已经重新证明的阶数。
 - 不把外部证明包和大量冻结资产复制入仓；不修改原证明或旧哈希。小阶解析证明和离散误差保证不填补高阶全局下界。
