@@ -2,8 +2,8 @@
 # n=13: native reductions and remaining exact obligations
 
 The target is the minimum common radius for 13 disks covering the **closed**
-unit disk, with unrestricted centers. This note proves reductions, not the
-matching global lower bound or an attaining configuration.
+unit disk, with unrestricted centers. This note proves reductions and an independently checked attaining configuration
+at the candidate algebraic radius. It does not prove the matching global lower bound.
 
 ## Reference candidate and archived work
 
@@ -92,10 +92,10 @@ ties, parallel bisectors (intersect only nonparallel pairs), and the
 one-distinct-center case. Feasibility and squared distances can be checked
 exactly over real algebraic coordinates without boundary sampling.
 
-This separates two missing tasks: (a) provide and certify native attaining
-centers at the reference root (the finite test is a sufficient exact
-acceptance condition); (b) exclude every smaller radius in the remaining
-arbitrary-center branches. The twelve-owner branch is excluded below. In (b), center variables may be confined to the
+The independent upper replay below certifies an attaining configuration at the
+reference root. To obtain global exactness one still needs to exclude every smaller
+radius in the remaining arbitrary-center branches. The twelve-owner branch is
+excluded below. In the other branches, center variables may be confined to the
 closed unit disk by projection, but symmetry and candidate topology may not be
 assumed. The clipped-cell tests offer an exact semialgebraic route, not a claim
 that it is tractable without additional branch reductions. No global verdict
@@ -213,3 +213,75 @@ assert 12*T<F(34,25)*F('3.14')
 print("n13 twelve-owner exclusion and long-chord arithmetic passed")
 PY
 ```
+
+## Independent exact attaining configuration at the algebraic candidate
+
+Run:
+
+```sh
+python tools/check_native_n13_root.py
+python tools/diskcover_n13_upper.py
+```
+
+The first command proves existence of a real algebraic radius \(r_*=\sqrt{t_*}\)
+in \((0.346645456927389643467869738193878789537187452966783984053969,
+0.346645456927389643467869738193878789537187452966783984053970)\) and a full
+cover at that radius. The 119-variable rational input in
+[`verification/n13/candidate_midpoint.json`](../verification/n13/candidate_midpoint.json)
+contains only the midpoint and box radius extracted from the pinned upstream
+candidate certificate, whose SHA-256 is
+`d7f5d30fbeb1196f4232b6b7cc2509c67bdaf48cbd969389459c91e58dc360ee`.
+In particular the replay does not use the upstream approximate inverse,
+geometry routines, proof trees or verdicts.
+
+The checker independently constructs the forty-seven equations
+\(|z_u-z_v|^2=t\) for the listed contacts, nine unit anchor equations,
+and sixty-three stationarity equations of their Lagrangian with objective
+\(t\). At the rational midpoint \(m\) it constructs \(J=DF(m)\) and
+finds a proposed inverse \(Y\) by decimal elimination. Nothing depends on
+the accuracy of decimal arithmetic: with \(\varepsilon=10^{-65}\) and
+\(b_i\) the checker’s sum of absolute Hessian bounds for component \(i\),
+every row is certified by exact rational arithmetic to satisfy
+\[
+ \frac{|(YF(m))_i|}{\varepsilon}
+ +\sum_j |(I-YJ)_{ij}|+\varepsilon\sum_j |Y_{ij}|b_j<1.
+\]
+The last term bounds infinity-norm row variation of \(YDF\) throughout
+the box from the monomial coefficients. This simultaneously gives strict
+inclusion and contraction of \(x\mapsto x-YF(x)\). Since \(I-YJ\) has norm
+below one, \(YJ\), hence \(Y\), is invertible; the unique fixed point in
+the box is a zero of \(F\).
+
+The 34-face geometric argument is checked from that box. Each of nine
+active center triangles has an equal-distance witness by the defining
+equations; five inactive center triangles have strictly closer rational
+witnesses from the midpoint circumcenters. A triangle whose centers share
+a point of distance at most \(r_*\) covers its convex hull: with barycentric
+weights at \(x\), the weighted sum of squared distances to the centers is
+the weighted sum at the witness minus the squared distance from the witness
+to \(x\). For a boundary triangle with one anchor and two centers, the
+anchor lies in both disks and the line segment connecting centers is covered
+because their distance is at most \(2r_*\); convexity then covers the triangle.
+A boundary triangle with two anchors and one center is covered immediately
+by both anchor contacts and convexity.
+
+The interval checker orients each actual triangle positively. Internal
+edges cancel in the formal oriented boundary sum, leaving precisely the
+positive convex decagon on the unit anchors. For a point off all triangle
+edges the winding number of the chain's boundary is the sum of its
+individual oriented triangle winding numbers. Inside the decagon it is
+one, hence the point belongs to a triangle. Closure gives the entire
+decagon. For each consecutive anchor pair the owner's direction lies in
+their acute angular cone. The maximum squared distance to that center
+along the short unit-circle arc is at an endpoint. Both endpoint contacts
+are tight, so the corresponding circular cap is covered by convexity.
+This certifies the whole closed disk; it does not require assuming global
+nonoverlap of the triangular faces. At one anchor all remaining disks
+are strictly farther than \(r_*\), proving this construction is tight
+for its own centers, not that other arrangements cannot improve it.
+
+The second command is a separate certificate using only the printed
+18-decimal centers as exact rationals, with radius \(0.346645456927389645\).
+It checks 237 interior triple intersections, 156 boundary intersections
+of pair bisectors, 26 boundary stationary points, and one fixed boundary
+reference. This bound is strictly below the branch test radius used above.

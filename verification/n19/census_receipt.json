@@ -1,0 +1,24 @@
+[
+  {
+    "owners": 12,
+    "orbits": 6277,
+    "dfs_calls": 3887035,
+    "audit_calls": 2189094,
+    "orbit_sha256": "afa40b377df80ff65d032dd899f28c30065dc0b1ad0fcd2402483435a3d2d446",
+    "energy_subgraph_orbits": 34
+  },
+  {
+    "owners": 13,
+    "orbits": 12867,
+    "dfs_calls": 9319643,
+    "audit_calls": 5420663,
+    "orbit_sha256": "58d2a779e4f4c6b00b5bcc2341b8b4bea8ca77b984c291ebe54d8a315f4b81e9"
+  },
+  {
+    "owners": 14,
+    "orbits": 4391,
+    "dfs_calls": 4235601,
+    "audit_calls": 2833462,
+    "orbit_sha256": "9f5b0cb399e106214a5fcdb83c5f1f2c60d140a81ac50e6b46f7ef86b66b9a0d"
+  }
+]

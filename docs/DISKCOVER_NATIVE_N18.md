@@ -88,12 +88,75 @@ python -B tools/test_diskcover_n18_lower.py
 python -B tools/test_diskcover_n18_upper.py
 ```
 
+## Independent exact algebraic upper bound
+
+The separate polynomial checker proves that the specified isolated root
+itself supplies a cover:
+\[
+ r_D(18)\le r_*:=\sqrt{t_*},\qquad
+ 0.290167717640566729113154525601061718306280885754041798808094
+ <r_*<
+ 0.290167717640566729113154525601061718306280885754041798808095.
+\]
+
+Save the hash-pinned root18.json data file linked above and run this
+command from the repository root. No external executable or stored
+verification verdict is used.
+
+    python -B tools/diskcover_n18_algebraic.py path/to/root18.json --negative-controls
+
+The verifier reconstructs the 72 rod equations, eleven anchor norm equations,
+and 91 stationarity equations by their monomials. For the complete polynomial
+map \(F\) and supplied rational preconditioner \(Y\), it uses the exact
+displacement term \(|YF(x_0)|/\rho\), derivative-row errors \(I-YDF(x_0)\),
+and a bound for derivative variation on each box of half-width \(\rho =
+10^{-60}\) and \(10^{-80}\). A quadratic monomial with coefficient \(c\)
+contributes at most \(2|c|\rho\) to the derivative row variation in the
+one-norm, also for a repeated variable. The sum of the three terms is
+strictly less than one in every row. Thus \(x\mapsto x-YF(x)\) is a
+strict contraction sending each closed box inside itself. The matrix
+\(Y\) is invertible since \(\|I-YDF(x_0)\|_\infty<1\). The fixed point
+therefore zeros the 174 equations, and uniqueness with nested boxes
+identifies the same root. The 72 contacts and unit-anchor constraints
+are exact there.
+
+For each active center triangle the incident rods give a common point
+\(p\) at distance \(r_*\) from its centers \(c_j\). For
+\(x=\sum_j\lambda_j c_j\) with nonnegative weights summing to one,
+\(\sum_j\lambda_j\|x-c_j\|^2=
+\sum_j\lambda_j\|p-c_j\|^2-\|x-p\|^2\le t_*\).
+Thus every point of the triangle belongs to at least one center disk.
+For the six inactive center triangles, the midpoint circumcenters are
+rational witnesses with strictly greater squared-distance slack than
+\(303/250000\) throughout the root box, so the same argument applies.
+
+For each boundary center there is one outer triangle with both unit
+anchors in its disk and one triangle with the common anchor shared by
+two disks. All 46 triangles are strictly positively oriented and their
+directed boundary sum is exactly the boundary chain of the strictly
+convex anchor polygon. Additivity of winding number gives coverage
+off the triangle edges, and closedness extends it to all polygon points.
+
+The verified interval signs also say that each short boundary arc has
+length \(<\pi/2\) in angle and contains the direction of its corresponding
+center. The squared distance to that center is maximized at an arc
+endpoint, both exact rod contacts. The convex disk therefore contains
+the whole arc and its circular cap. The polygon and the twelve caps
+cover the unit disk. All sign, slack and acceptance decisions use
+exact rational arithmetic. Negative controls reject a corrupted
+preconditioner, invalid center direction, and incorrect radius.
+
 ## Remaining global proof
 
-At the candidate scale, the existing native peeling argument still allows
-11, 12, or 13 boundary disks. Up to the strict exclusions above, all the
-Voronoi reductions, topology coverage, and continuity-domain exclusions must
-still be paid for a matching lower bound. The rational upper construction
-does not by itself verify exact algebraic attainment or a candidate-only
-local rigidity proof. Nothing here promotes the external exact claim to
-native global proof.
+At the candidate scale the native peeling argument still allows 11, 12,
+or 13 boundary disks. The arbitrary-center Voronoi reduction and
+exhaustive continuous exclusion of the surviving types must still be
+paid, including strict exclusion below the candidate within its own
+topology. The isolated-root and exact-attainment check supplies the upper
+half of the exact-radius argument only. The strict native lower bound
+remains \(0.26590\), not \(r_*\).
+
+The boundary anchor $q_0$ is also checked to be strictly farther than
+$\sqrt{t_*}$ from every nonincident disk center. The two incidence rods
+have length $\sqrt{t_*}$, so the radius for this fixed configuration is
+exactly $\sqrt{t_*}$; this does not prove optimality over all configurations.

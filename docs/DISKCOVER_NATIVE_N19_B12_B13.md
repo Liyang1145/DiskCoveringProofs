@@ -213,3 +213,115 @@ assert 14*a_hi + 4*b_hi - 2*pi_lo < F(".005")
 assert 3*F(".277")-b_hi > F(".005")  # a > U > .277
 assert F(".277")**2 < F(1, 13)
 ```
+
+## Twelve-owner split assignments and the core contour
+
+A radius-$3U$ disk meeting the unit circumference has one minor
+footprint arc (or a singleton); its half-width is at most
+$\arcsin(3U)<1$. It cannot contain five whole owner arcs: the
+other seven arcs contribute at most $7a$, so any five contribute
+at least $\pi-7a>1$. A core assignee's footprint contains every
+owner arc incident to any of its assigned edges. If two assigned
+edges are separated by at least three slots in both cyclic
+directions, a connected footprint containing their endpoints'
+owner arcs would have to contain at least five owner arcs.
+Thus a split doubleton consists of two edges at cycle distance
+exactly two, with exactly one intervening edge.
+
+This intervening edge must be a singleton assignment. To see
+this, join each boundary-edge midpoint to the assigned core
+vertex by a spoke inside that edge's unique incident open
+triangle (with the endpoints included). Distinct labels have
+disjoint spoke stars because these triangles have disjoint
+interiors; the spoke home vertices are distinct. Four alternating
+midpoints with two labels would force the two connecting paths
+to intersect by the Jordan arc theorem in the topological disk.
+The only midpoint in the short gap of a split doubleton is the
+intervening edge; if its own label occurred again in the
+complementary gap, the two labels would alternate. In particular:
+
+* In multiplicity pattern $(3,3,2,2,2)$, none of the doubletons
+  can split, because no assignee is a singleton.
+* In multiplicity pattern $(3,3,3,2,1)$, the only possible split
+  encloses the singleton in its short gap.
+* In pattern $(2,2,2,2,2,2)$, all labels are consecutive pairs;
+  the six transition owners occupy alternating boundary slots.
+
+For the remaining statements use the induced graph on the seven
+core (nonowner) vertices. Let $\ell$ be the number of edges
+traversed by its exterior facial boundary walk, counting a bridge
+twice. For a boundary owner, consider its link in the full
+triangulation: it is an ordered path starting at one adjacent
+boundary owner and ending at the other. The absence of exterior
+diagonals ensures all intermediate vertices of this path are
+core sites. The two outermost core vertices are the labels of
+the two exterior edges. The portion of the link between these
+labels is simple and consists of core edges, each incident to a
+triangle with one boundary owner. Concatenating the core portions
+over the twelve owners gives the exterior core boundary walk.
+Indeed, a face made entirely of core vertices in the original
+triangulation is still a bounded face: any outer vertex is on the
+topological boundary and cannot lie inside any core cycle.
+Conversely, every bounded face of the induced core graph was an
+all-core face, because its interior cannot contain any deleted
+boundary vertex or incident edge.
+
+The graph is connected: all core sites adjacent to boundary
+sites lie on the just-described concatenation of links and
+are in one component, while every other core site has, by the
+connectedness of the full dual, a path to the boundary whose
+first boundary entry comes from that same component. Thus the
+exterior walk is well-defined. Its occurrences are exactly the
+triangles with one owner, and the triangles with two owners are
+exactly the twelve with exterior edges. The full triangulation
+has $2\cdot19-12-2=24$ triangles by the disk Euler formula.
+The all-core triangle count is therefore $12-\ell$.
+In particular, if $\ell=6$ and exactly six labels occur, the
+six cyclic changes (at least one per distinct label) must each
+be direct link edges, with no repeated labels. The exterior walk
+is then a simple hexagon on those six sites.
+
+For the all-doubleton pattern a stronger conclusion holds without
+assuming $\ell=6$. Each of the six assigned core sites is adjacent
+to three consecutive outer owners, and its two end owners are
+already transition owners. Every other transition is separated
+from this block by at least one additional owner slot in either
+direction; more precisely any circular interval containing the
+three consecutive owners and an additional alternating transition
+owner contains at least five owners. That assignee cannot be adjacent
+to any other transition, by the five-arc capacity exclusion. Hence
+each transition has a direct core edge or its link passes through
+only the seventh, unassigned core site. The unassigned site can
+interrupt at most two transitions: any interval containing three
+alternating transition owners contains five owners. Two interrupted
+transitions must themselves be consecutive in the six-cycle by the
+same arc argument. If the unassigned site covers the origin and has
+norm at most $1-3U$, it has no outer neighbors and cannot interrupt.
+Thus we have reduced this multiplicity pattern to three cases:
+
+1. No interruption. The alternating six faces in
+   [the energy certificate](DISKCOVER_NATIVE_N19_CANDIDATE_GRAPH.md)
+   are present, so the strict cover is ruled out.
+2. One interruption by the unassigned core site.
+3. Two consecutive interruptions by the unassigned core site.
+
+Cases 2 and 3 are still unpaid, as are other multiplicity patterns.
+
+```python
+from fractions import Fraction as F
+assert F("3.14159") - 7*F(".2811") > 1
+```
+
+The two interrupted topologies can also be specified independently of
+any metric inputs. A single interruption replaces one edge of the
+six-label contour by a two-edge path through the otherwise unused
+site. The resulting exterior core contour is a simple septagon and
+uses all seven core vertices. If two consecutive transitions are
+interrupted, their labels can be written \(A\to B\to C\), and their
+contour portion is \(A,z,B,z,C\). The edge \(zB\) then occurs twice
+on the exterior walk, in opposite directions, so it is a bridge.
+The other six vertices already appear on a simple contour cycle;
+they stay connected when that bridge is deleted. Consequently \(B\)
+is a leaf of the core graph: the core graph is an outer hexagon
+with triangulated bounded faces and this one attached leaf. These
+two topological descriptions do not assert metric feasibility.

@@ -42,7 +42,8 @@ r\ge\frac{1}{2+\sqrt2}>\frac{1}{\sqrt{13}},
 后续已复验 [12–13 位拥有者的拓扑剪枝](DISKCOVER_NATIVE_N19_B12_B13.md)，
 并完整排除了[候选格点图拓扑下的严格改进](DISKCOVER_NATIVE_N19_CANDIDATE_GRAPH.md)：
 用有理应力和统一 Hessian 下界覆盖该图的整个角域，而不只是候选附近。
-这些结果不能代替非候选图的排除。
+[原生根面普查](DISKCOVER_NATIVE_N19_CENSUS.md)覆盖三个拥有者数并逐项复核，
+其中 34 个轨道含应力子图；其余轨道的连续域仍待排除。
 
 ## 已独立通过的达到构型上界
 
